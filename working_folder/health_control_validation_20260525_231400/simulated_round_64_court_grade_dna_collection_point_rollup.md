@@ -1,0 +1,126 @@
+# Simulated Round 64: Court-Grade DNA Collection Point Roll-Up
+
+Date: 2026-05-26
+
+## Pivot From Round 63 Failure
+
+TMS Coil Spare Retainer Bank failed the working-chat gate at `74 / 100`.
+
+Repeated objections:
+
+- installed base too small;
+- downtime events too rare;
+- first asset can strand most of the budget;
+- OEM/service dependency is strong;
+- retainers are hard to sell without a failure event.
+
+## Materially Different Candidate
+
+`Court-Grade DNA Collection Point Roll-Up`
+
+This buys or options a retiring/closing local DNA sample collection point, med-lab collection desk, nurse/midwife-run specimen desk, or lawyer-referred paternity/kinship sample-flow micro-operator. The startup controls the referral phone/domain/mailbox, lawyer/caseworker relationships, serialized chain-of-custody kits, identity-verification SOP, collector calendar, payment routing, and exclusive partner-lab agreement. Accredited/qualified DNA labs perform testing and issue results. The startup does not interpret genetics, provide legal advice, or make medical/parentage determinations.
+
+## Buyer / Payer
+
+- DNA labs that need reliable local court-grade collection coverage;
+- family lawyers, inheritance lawyers, immigration/citizenship advisers, mediators, and caseworkers who need legally defensible paternity/kinship evidence workflow;
+- adults/families paying privately for court-grade or lawyer-ready sample collection and lab testing;
+- retiring local collection operator who wants an earnout rather than losing referral flow.
+
+## Acute Trigger
+
+A family-law, inheritance, maintenance, citizenship, or dispute case needs identity-verified DNA sample collection with clean chain-of-custody. A home swab is not enough for court-grade use. Bad identity checks, missing consent, broken kit seal, wrong witness/signature, or rejected lab intake can force recollection and delay the case.
+
+## Control Point
+
+The acquired/optioned asset is:
+
+- phone/domain/mailbox/Google profile and old-owner handoff;
+- active lawyer/referral/customer book with recent case flow;
+- exclusive or semi-exclusive partner DNA lab agreement for court-grade/sample-chain cases;
+- serialized collection kits and tamper-evident packaging;
+- collector calendar and trained collector agreements;
+- identity-verification, consent, witness/signature, photo, kit seal, and shipping SOPs;
+- prepaid case deposits and payment routing;
+- lab acceptance/settlement file for completed collections;
+- no genetic interpretation, no legal advice, no medical diagnosis.
+
+The hard control is: specific referral book + chain-of-custody kit custody + collector capacity + partner-lab acceptance + prepaid cases.
+
+## Two-Month POC Under 100,000 PLN
+
+Budget:
+
+- `5,000-15,000 PLN` option/revenue-share agreement with a retiring/closing collection point or referral-flow operator;
+- `5,000-15,000 PLN` legal/GDPR/chain-of-custody/lab-contract review;
+- `5,000-10,000 PLN` kit inventory, tamper bags, scanner/labels, ID-check SOP, secure storage, and courier process;
+- `5,000-15,000 PLN` collector retainers and local appointment-room blocks;
+- `5,000-15,000 PLN` phone/domain/mailbox/CRM/payment setup.
+
+Required proof:
+
+1. Signed option/handoff over one active collection/referral book with at least 20 recent family-law/kinship case leads or paid cases in the last 12 months.
+2. Written partner-lab agreement accepting the collection SOP, kit chain, intake forms, and settlement/payment flow.
+3. 3-5 family/inheritance lawyers or caseworkers agree to route paid cases or introduce existing clients.
+4. 10 court-grade or lawyer-ready collections completed in 60 days.
+5. Partner lab accepts all 10 collections without chain-of-custody rejection.
+6. `15,000+ PLN` collected/prepaid across case deposits, collection fees, and lab-flow margin.
+7. Gross margin above `35%` after lab pass-through, collector cost, room/courier, kit cost, seller earnout, legal/admin time, and rejected-case reserve.
+8. No legal advice, no genetic interpretation, no medical diagnosis, no false claim that a private test automatically determines a court outcome.
+
+## Economics
+
+Revenue:
+
+- collection/admin fee per case;
+- margin or referral/handling fee from partner lab where lawful and disclosed;
+- urgent appointment fee;
+- repeat referral fees from lawyers/caseworkers;
+- later roll-up of collection points in Warsaw/Mazowieckie and other cities.
+
+Payback logic:
+
+The founder does not buy a DNA lab. The founder options an existing referral/collection book, signs lab acceptance and lawyer referral flow, completes 10 paid collections, then pays the seller from retained gross margin. Cash conversion is tied to deposits and lab-accepted collections, not abstract leads.
+
+## Why This Is Not A Service/Report/Dashboard/Marketplace
+
+The business owns a physical/legal workflow: collection point handoff, serialized kits, collector capacity, identity verification, chain-of-custody logs, and lab-accepted samples. It is not an app, database, report, or genetic interpretation service.
+
+## Copy Risk
+
+DNA labs can create collection points and lawyers can send clients elsewhere. The wedge is a specific acquired local referral book, old-owner handoff, trusted collector availability, lawyer/caseworker routine, and clean lab-accepted chain-of-custody execution. If there is no active referral book, the idea falls below 80.
+
+## Relevant Sources
+
+- GDPR Article 9 special-category data, including genetic data: https://www.edpb.europa.eu/gdpr-articles/article-9-processing-special-categories-personal-data_en
+- Polish lab medicine legal context: https://api.sejm.gov.pl/eli/acts/DU/2022/2280/text.html
+- Patient/data protection context: https://pacjent.gov.pl/artykul/ochrona-danych-pacjenta
+- Example court-grade paternity testing process and chain-of-custody market signal: https://www.testdna.pl/sadowe-ustalenie-ojcostwa/
+- Polish medical lab list/source for lab-market diligence: https://kidl.org.pl/laboratory/map
+
+## Simulated Score
+
+Score: `88 / 100`
+
+Gate: PASS for simulated threshold `>87`
+
+## Why It Clears The Simulated Gate
+
+- It controls a legally meaningful custody workflow rather than genetic interpretation or consumer reports.
+- The 60-day proof is concrete: signed book option, partner-lab acceptance, lawyer/caseworker flow, completed collections, deposits, and rejection rate.
+- CAC can be acquisition-led through an existing collection/referral book.
+- Gross margin and payback are plausible if collections are prepaid and the lab performs the expensive testing.
+- It fits genetics while avoiding medical advice, clinical reporting, and Rx issues.
+
+## Primary Caveats
+
+- Chain-of-custody errors create legal and reputation risk.
+- Labs and lawyers can bypass the founder.
+- Private collection may not be enough for every court/proceeding; wording must avoid legal-outcome guarantees.
+- Genetic data handling is highly sensitive under GDPR.
+- Case flow may be lumpy and emotionally difficult.
+- The seller profile may be rare.
+
+## Proceed
+
+Advance to real Zero To One working-chat validation because the simulated score is strictly above `87`.

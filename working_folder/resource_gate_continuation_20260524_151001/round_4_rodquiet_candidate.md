@@ -1,0 +1,62 @@
+# Round 4 Candidate: RODQuiet 50-60 Plot Option Rail
+
+## Exact Scored Idea Wording
+
+**RODQuiet** secures short exclusive seller-side mandates over named Warsaw ROD garden-plot transfer opportunities, then sells board-procedure-ready, deposit-backed access to 50-60-year-old apartment owners planning active semi-retirement before they become elderly.
+
+The business does not sell land and does not pretend ROD plots are normal real estate. It controls the short transaction window around named plot-right transfers: seller exclusivity, buyer deposit, notary-ready transfer documents, ROD board submission packet, and refund/kill rules if the board refuses approval.
+
+## Buyer
+
+50-60-year-old Warsaw apartment owners, couples, and adult children buying for parents who want a nearby outdoor place before retirement, mobility decline, grandchildren, summer heat, or stress from apartment living makes the need feel urgent.
+
+## Acute Trigger
+
+Spring/summer demand, first health/mobility scare, grandchildren, remote-work fatigue, heat waves in apartments, or fear that affordable Warsaw ROD plots will disappear or become more expensive. Buyers do not want a generic listing feed; they want a specific plot held long enough to verify board procedure, rules, utilities, altana legality, access, and transfer path.
+
+## Primary Control Point
+
+Signed 14-30 day seller mandate/option over a named ROD plot transfer:
+
+> ROD name, plot number/area, current user basis, seller identity, asking price, inclusions, known board/fee status, exclusivity window, no parallel OLX/Facebook sale during mandate, buyer-deposit authority, notary/PZD packet process, refund conditions if PZD/ROD board refuses transfer.
+
+This is not a marketplace. It is temporary contractual control over named transfer opportunities before they are lost in OLX/Facebook chaos.
+
+## Legal / Transaction Gate
+
+PZD materials state that ROD plot-right transfer requires a written transfer agreement with notarized signatures and ROD board approval. The board has a two-month window to approve/refuse, and ineffective expiry can equal approval. This creates a real transaction gate that casual buyers and sellers often misunderstand.
+
+## 2-Month POC Under 100,000 PLN
+
+- Use current Warsaw OLX/Facebook listings plus ROD-local outreach to identify 50-80 sellers, focusing on stale listings, retiring users, overgrown plots, estate/family exits, and users who want a clean transfer.
+- Pay small seller option/mandate fees only for named plots with clear current-user status and realistic board process.
+- Secure 8-12 signed seller mandates/options for 14-30 days.
+- Collect 10-20 buyer search deposits of 500-1,500 PLN and 3-5 plot-specific reservation deposits of 3,000-8,000 PLN, held/refundable against clear rules.
+- Produce 3 complete transfer packets with notarized-signature appointment, PZD/ROD board submission checklist, plot-condition photos, fee/rule checklist, and buyer/seller refund terms.
+- Kill if boards refuse the process, sellers will not sign exclusivity, or buyers will not pay deposits for named plots.
+
+## Why An Unknown Founder Can Secure It
+
+This is a messy local transaction, not status sales. Sellers with stale listings, family exits, or poorly maintained plots want fewer random calls and a clean procedure. Buyers want safety and speed. A founder can start with precise outbound, template documents checked by a Polish lawyer, small option fees, deposit escrow rules, and photographed plot packets. No celebrity or institutional partnership is needed for the POC.
+
+## Why Incumbents Cannot Copy Quickly
+
+Real-estate agents usually dislike ROD because it is not land ownership, cannot be mortgage-financed like standard real estate, requires garden-board approval, has awkward rules, and generates smaller/less standard commissions. OLX/Facebook expose chaotic supply but do not reserve it. ROD boards control approval but are not buyer-acquisition businesses. The defensible wedge is signed named-plot mandates plus a procedure map across Warsaw RODs.
+
+## Economics
+
+- Seller option fee: 200-1,000 PLN where needed.
+- Buyer search deposit: 500-1,500 PLN.
+- Plot-specific reservation deposit: 3,000-8,000 PLN, refundable/creditable under written rules.
+- Success fee: 3,000-8,000 PLN or 5-8% of transfer compensation where legally and ethically structured.
+- Current Warsaw listing values visible on OLX range from roughly 29,000 PLN to over 100,000 PLN for some ROD plots, so fees are meaningful without large capital.
+
+## Why This Could Compound
+
+The first wedge builds a proprietary Warsaw ROD procedure map: which boards are responsive, which gardens reject/approve transfers smoothly, typical fee/rule issues, utility/altana risks, seller archetypes, and actual buyer deposit behavior. After Warsaw, it can expand to Krakow, Wroclaw, Gdansk, Poznan, and Lodz, then into a trusted active-aging outdoor-access brand for pre-retirement urban households.
+
+## Sources Checked
+
+- PZD transfer-right procedure and document templates.
+- PZD pages stating written agreement with notarized signatures and board approval/two-month window.
+- OLX Warsaw ROD listings showing active supply and current asking prices.

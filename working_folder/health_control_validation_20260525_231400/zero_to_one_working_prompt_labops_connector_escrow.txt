@@ -1,0 +1,84 @@
+Evaluate this business idea from 0-100 and include the strongest objections or caveats behind the score.
+
+Founder constraints: Warsaw-based data scientist with neuroscience/data/business background; unknown solo founder, possibly with a few contractors; maximum 100,000 PLN starting capital; 2-month POC/POV; low personal-brand/camera fit; part-time start.
+
+Please cap the score below 85 if the idea lacks a concrete control point that can be secured, reserved, owned, routed, prepaid, uniquely produced, or credibly proven during a 2-month POC/POV cycle by an unknown solo founder under these constraints. Weight profitability, willingness to pay, CAC, margins, payback, retention, repeatability, cash conversion, and defensibility more heavily than originality.
+
+Scored idea:
+
+LabOps Connector Succession Escrow acquires or options a tired one-person/small-team vendor's already-paid connector book for Polish private molecular, genetic, pathology, sleep, and neurodiagnostic labs. It is not a LIMS, diagnostics provider, medical AI tool, clinical decision system, data marketplace, or integration agency. It does not perform tests, interpret results, diagnose, prescribe, sell patient data, or build net-new bespoke integrations during the proof. It buys continuity custody over production "lab glue" that already exists and that labs already depend on.
+
+Target seller:
+- one-person or small-team vendor, freelancer, ex-lab IT person, retiring integrator, or small agency maintaining paid connectors/scripts for multiple labs;
+- has 10-30 small lab customers or several high-value lab customers;
+- is tired of support, wants exit, is underpricing maintenance, or has no successor;
+- owns or can assign source code, deployment/update credentials, support inbox, issue history, customer list, data-processing agreements, and maintenance contracts.
+
+Buyer:
+- private molecular/genetic/pathology labs;
+- sleep labs and neurodiagnostic labs only if already in the acquired vendor's existing book;
+- small lab groups using LIMS/ELN/result portals but dependent on fragile custom exports/imports;
+- clinics/labs whose instrument/result/billing/data flows break when one old script or connector stops being maintained.
+
+Acute trigger:
+The original vendor is retiring, disappearing, slow to patch, underpricing support, or unable to keep up with LIMS/instrument/OS/API/security changes. Labs fear broken result delivery, delayed reporting, failed instrument exports, lost billing/private-portal exports, security risk, or inability to update old production scripts.
+
+Control point:
+The acquired asset is the continuity layer already running in production:
+- source code and repositories;
+- deployment/update credentials and release paths;
+- support inbox and historical tickets;
+- customer list and seller-mediated customer handoff;
+- issue history, runbooks, environment notes, known edge cases;
+- data-processing agreements / processor terms where applicable;
+- assignable maintenance contracts or new continuity contracts signed before closing;
+- existing production connectors for instrument exports, HL7/FHIR/PDF/email/SFTP result flows, FASTQ/CSV/QC transfers, billing/private-portal exports, and EDF/PSG upload scripts.
+
+The control point is not "technical skill." It is custody of existing production connectors, credentials, weird edge cases, issue history, and named lab customers before the retiring/tired vendor disappears. A competitor can build an integration, but cannot instantly copy the exact production code, customer trust, deployment access, and historical context already embedded in the labs.
+
+Two-month POC under 100,000 PLN:
+- 5,000-15,000 PLN refundable/creditable option fee to the seller;
+- 10,000-25,000 PLN legal/IP/GDPR/data-processing/contract-assignment review;
+- 10,000-30,000 PLN technical diligence, credential rotation, backups, access logging, security review, and one scoped patch;
+- 0-40,000 PLN closing payment only after prepaid customer continuity money clears, with remaining seller consideration structured as earnout from retained customers.
+
+Required POC proof:
+1. One signed conditional acquisition option with a named tired vendor covering source code, repositories, update/deployment credentials, support inbox, customer list, issue history, seller handoff, assignable contracts, and transition support.
+2. Clean IP and contract-assignment review: no obvious lab-owned code, contractor ownership blocker, prior-employer issue, unlicensed library issue, or transfer prohibition that kills the deal.
+3. 10-20 lab customer re-consents or novated/new continuity contracts signed through seller-mediated handoff.
+4. 25,000+ PLN prepaid maintenance/transition cash from existing lab customers before closing. This prevents buying dead code or imaginary support revenue.
+5. Credentials rotated, access logs established, processor/security terms updated where applicable.
+6. One narrow compatibility/security patch completed for an existing customer without selling net-new bespoke integrations.
+7. Explicit scope boundary: maintenance, security patches, uptime, transport/mapping/format compatibility, and emergency support only; no clinical interpretation, diagnostic logic, medical-device claims, or new custom projects during proof.
+
+Economics:
+The business is acquisition-led, not ad-led. Customers are inherited through the seller handoff, and the first cash comes from prepaid continuity contracts before closing. Labs pay because the production connector is already embedded in operations and failure would disrupt result delivery, instrument export, billing, private portal uploads, or data handoff.
+
+Initial pricing logic:
+- annual continuity/security/API compatibility maintenance per lab;
+- emergency support fee for production breakage;
+- paid transition package for credential rotation/backups/security patching;
+- strict exclusion of bespoke new integrations unless quoted separately after the POC.
+
+Why this is not a service/report/dashboard/database/marketplace:
+The foundational asset is acquired custody of a live production connector book: code, credentials, support history, deployment path, named customers, and prepaid continuity contracts. Service work exists only to maintain an acquired asset. If a competitor wants the same accounts, it must win the labs away from a functioning inherited production connector and seller-endorsed continuity path.
+
+Regulatory and data guardrails:
+- Health/genetic data are GDPR special-category data, so processor agreements, access logging, credential rotation, least-privilege, breach procedure, and data minimization are mandatory.
+- The connectors must stay in transport, mapping, uptime, audit, and format compatibility. If a connector interprets, transforms clinically meaningful logic, changes diagnostic device output, or influences medical decisions, that part is excluded or requires separate medical/IVD software review.
+- The startup does not sell patient data, create clinical reports, recommend treatments, or market diagnostic claims.
+
+Main risks acknowledged:
+- IP may be dirty or non-transferable.
+- Contracts may block assignment or require customer re-consent.
+- Support history may reveal bespoke chaos rather than reusable connector maintenance.
+- LIMS vendors and larger integration firms can compete, but the wedge is continuity for abandoned production glue, not a better LIMS.
+- 25,000+ PLN prepaid cash may be hard if customers do not perceive continuity risk.
+- Gross margins collapse if the business becomes custom lab IT consulting.
+- Security liability is real because production lab connectors may touch sensitive health/genetic data.
+- The founder must reject targets with unclear data access, credential sprawl, no deployment control, or code requiring a rewrite.
+
+Relevant sources to consider:
+- EDPB GDPR Article 9 on special-category data: https://www.edpb.europa.eu/gdpr-articles/article-9-processing-special-categories-personal-data_en
+- EU medical-device economic operator / boundary context: https://health.ec.europa.eu/medical-devices-topics-interest/economic-operators_en
+- Example LIMS competitors showing the broader market already exists: https://www.inform-tech.pl/ , https://kotrak.com/pl/oferta/system-lims/ , https://www.softsystem.pl/en/products/
