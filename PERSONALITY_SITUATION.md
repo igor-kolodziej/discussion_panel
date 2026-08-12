@@ -13,8 +13,8 @@ My academic background combines neuroscience, data science, business analysis, a
 
 ## Current Situation
 
-I work roughly 8 hours per day, but part of that time can sometimes be directed toward useful AI-assisted work, research, or business-building if it does not interfere with my responsibilities.
-Max daily time commitment is 5 hours.
+I work roughly 8 hours per day, but part of that time can sometimes be directed toward useful AI-assisted work, or business-building.
+Max daily time that I can commit is 5 hours.
 
 My available free capital is around 100,000 PLN.
 
@@ -33,7 +33,7 @@ My parents run a renewable-energy installation company based around Ostrow Wielk
 - AI tools for small service businesses,
 - family-business leverage.
 
-I currently live in Warsaw, Poland. I am originally from Ostrow Wielkopolski, where my parents' company is based.
+I currently live in Warsaw, Poland. I am originally from Ostrow Wielkopolski.
 
 ## Personality
 
@@ -47,7 +47,7 @@ I prefer practical action over vague motivation. I respond well to concrete plan
 
 ## Health And Lifestyle
 
-I attend the gym frequently.
+I attend the gym frequently. And I like gambling (like bets/casionos etc).
 
 I am very interested in wellbeing and proactive health optimization, including:
 
@@ -64,15 +64,21 @@ I am very interested in wellbeing and proactive health optimization, including:
 - biohacking,
 - prevention rather than reactive care.
 
-This means I naturally understand and care about users who want better health, energy, performance, longevity, and self-knowledge.
+I naturally understand and care about users who want better health, energy, performance, longevity, and self-knowledge.
 
 ## Money And Ambition
 
-My long-term goal is to become wealthy at a very large scale: tens or hundreds of millions.
+My explicit business-screening target is a plausible path to at least 5 million PLN of founder net worth. There is no fixed deadline, but every serious candidate must estimate the timing and intermediate milestones rather than treating the outcome as an indefinite possibility.
+
+For this purpose, founder net worth means my founder-owned business equity plus accumulated personal cash and distributions, minus liabilities and excluding my primary residence. Do not double-count retained business earnings in both the company valuation and founder distributions.
 
 I am interested in FIRE, but my ambition goes beyond ordinary financial independence. I want asymmetric upside and business/investment paths that could compound into serious wealth.
 
 I am open to risk, but I prefer to bootstrap things where possible so that downside stays controlled. I like experiments that can start small, validate demand, and then scale. I do not want to burn capital on speculative ideas without evidence.
+
+Prefer profitable scale-ups: an initial cash-generating wedge that can compound into valuable equity without requiring venture capital or a company sale. While I retain my corporate job, assume that 95% of after-tax business cash available for distribution is reinvested in conservative and expected scenarios, and up to 100% is reinvested in a strong-growth scenario. Optional founder distributions during this period should not exceed 5%.
+
+I may leave corporate employment only after the business shows objective traction, positive contribution economics, repeatable demand, and at least 12 months of personal runway. Until then, the business must remain executable alongside my job.
 
 Good opportunities for me usually have at least one of these traits:
 
@@ -89,71 +95,4 @@ Good opportunities for me usually have at least one of these traits:
 
 ## Work Preferences
 
-I prefer a part-time commitment at the beginning (max 5 hours per day, full time on the weekends) because I already work full-time.
-
 I can commit energy outside work, but the work should be focused and high-leverage. I do not want projects that depend mainly on brute-force manual effort, constant meetings, or continuous social energy.
-
-I am especially suited for:
-
-- AI-assisted product building,
-- data products,
-- analytics tools,
-- automation,
-- research-heavy businesses,
-- health/wellbeing technology,
-- bio-signal or wearable-data products,
-- financial analysis tools,
-- small-business automation,
-- niche B2B software,
-- decision-support systems,
-- content or products that can be produced mostly without being on camera.
-
-## Decision-Making Style
-
-When evaluating ideas for me, prioritize:
-
-1. Expected upside.
-2. Evidence of demand.
-3. Ability to validate cheaply.
-4. Fit with my skills and interests.
-5. relatively low social-energy cost.
-6. Potential for AI leverage.
-7. Time required each week.
-8. Capital required and downside risk.
-9. Path to compounding advantage.
-10. Whether it can realistically reach meaningful scale.
-
-Avoid recommending ideas only because they are trendy. I want ideas that can survive rigorous thinking.
-
-## Communication Preferences
-
-When advising me, be direct, practical, and specific.
-
-Do not give generic motivational advice. I prefer concrete steps and clear tradeoffs.
-
-Useful outputs include:
-
-- ranked options,
-- experiment plans,
-- risk/reward analysis,
-- business models,
-- validation plans,
-- financial assumptions,
-- opportunity maps,
-- technical architectures,
-- weekly execution plans,
-- scripts, prompts, automations, and templates.
-
-Challenge weak assumptions. If something sounds unrealistic, say so clearly and explain why. I would rather hear a sharp critique than receive comforting but useless advice.
-
-## Poor-Fit Opportunity Areas
-
-These are less suitable unless there is a strong workaround:
-
-- businesses requiring me to be constantly on camera,
-- influencer-first businesses built around my personal charisma,
-- heavy networking businesses with unclear leverage,
-- capital-intensive ideas without validation,
-- ideas requiring full-time commitment immediately,
-- businesses where the main work is low-skill manual execution,
-- opportunities with no realistic path to scale or compounding advantage.
