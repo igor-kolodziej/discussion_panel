@@ -36,7 +36,7 @@ Preserved run roots use `sha256-tree-v1`. First verify that the archive manifest
 3. for each path, append `<lowercase-file-sha256>  <relative-path>\n` encoded as UTF-8; and
 4. SHA-256 the concatenated bytes.
 
-An empty directory therefore has the SHA-256 of the empty byte string. Directory hashes are normalized index provenance, not additional file-level manifest rows. A missing normalized fingerprint or business conclusion remains `null` with a reason; it is never reconstructed from a directory name or score.
+An empty directory therefore has the SHA-256 of the empty byte string. Git exports do not materialize empty directories, so a missing archived run root is accepted only when its indexed file count is zero, its tree hash is the empty-tree hash, and no manifest row exists beneath that prefix. Directory hashes are normalized index provenance, not additional file-level manifest rows. A missing normalized fingerprint or business conclusion remains `null` with a reason; it is never reconstructed from a directory name or score.
 
 ## Use and restoration
 

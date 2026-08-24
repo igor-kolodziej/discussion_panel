@@ -185,9 +185,9 @@ class HistoryIndexContractTest(unittest.TestCase):
                 continue
             identity = row.get("idea_id") or row["run_id"]
             archive_root = ROOT / row["archive_path"]
-            self.assertTrue(archive_root.exists(), identity)
 
             if row["source_kind"] == "file":
+                self.assertTrue(archive_root.is_file(), identity)
                 self.assertEqual(row["source_hash_algorithm"], "sha256-file-v1")
                 self.assertEqual(row["source_file_count"], 1)
                 digest = sha256_file(archive_root)
@@ -201,17 +201,23 @@ class HistoryIndexContractTest(unittest.TestCase):
 
             self.assertEqual(row["source_kind"], "directory", identity)
             self.assertEqual(row["source_hash_algorithm"], "sha256-tree-v1", identity)
-            digest, files = sha256_tree(archive_root)
-            self.assertEqual(digest, row["source_sha256"], identity)
-            self.assertEqual(len(files), row["source_file_count"], identity)
-
             archive_prefix = row["archive_path"] + "/"
             original_prefix = row["original_path"] + "/"
-            raw_relpaths = [candidate.relative_to(archive_root).as_posix() for candidate in files]
             manifest_rows = [
                 entry for entry in self.manifest if entry.get("new_path", "").startswith(archive_prefix)
             ]
             manifest_rows.sort(key=lambda entry: entry["new_path"][len(archive_prefix):].encode("utf-8"))
+            if not archive_root.exists():
+                self.assertEqual(row["source_file_count"], 0, identity)
+                self.assertEqual(row["source_sha256"], hashlib.sha256(b"").hexdigest(), identity)
+                self.assertEqual(manifest_rows, [], identity)
+                continue
+            self.assertTrue(archive_root.is_dir(), identity)
+            digest, files = sha256_tree(archive_root)
+            self.assertEqual(digest, row["source_sha256"], identity)
+            self.assertEqual(len(files), row["source_file_count"], identity)
+
+            raw_relpaths = [candidate.relative_to(archive_root).as_posix() for candidate in files]
             manifest_relpaths = [entry["new_path"][len(archive_prefix):] for entry in manifest_rows]
             self.assertEqual(manifest_relpaths, raw_relpaths, identity)
 
