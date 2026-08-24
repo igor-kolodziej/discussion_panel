@@ -13,6 +13,8 @@ The replacement is designed to produce one of two honest results: a score-qualif
 - Primary archive move: `ff12af0` (`chore: archive legacy opportunity machinery`).
 - Archive reconciliation: `c7f8ec4` (`chore: complete legacy archive boundary`).
 - Final tracked browser-setup reconciliation: `daf7104` (`chore: reconcile remaining legacy browser setup`).
+- Replacement implementation: `4483cb9` (`feat: add resumable Codex-native opportunity workflow`).
+- Clean-export empty-tree verification: `8f9d153` (`test: verify empty archived runs in clean exports`).
 - Manifest: `archive/manifest.jsonl`.
 - Manifest SHA-256: `b3f93cae5150023c5a32af5a6b4caa3d47b3da73bff4d69a974a15e8716b224e`.
 - Reconciled destinations: 2,441, comprising 2,436 moved repository files and five external protocol snapshots.
@@ -85,6 +87,9 @@ workflow integrity.
   files and one empty tree match the manifest and canonical tree-hash contract.
 - Deterministic and fault-injection suite: 48 tests pass with warnings treated
   as errors.
+- A clean Git export of `8f9d153` passes all 48 tests, configuration/rubric
+  validation, Python compilation, repository-skill validation, active-reference
+  scans, and a full 2,441-destination archive size/hash/membership audit.
 - Python compilation, environment/config check, skill validation, completed-run
   check, and whitespace/diff validation pass.
 - Independent adversarial replay found no remaining blockers. It re-tested raw
