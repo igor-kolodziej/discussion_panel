@@ -23,7 +23,20 @@ Each JSON line has:
 - `size`: the source byte count at migration time;
 - `sha256`: the SHA-256 digest of those exact bytes.
 
-The manifest contains 2,434 move records and five external-snapshot records. All 2,439 destinations (23,867,032 bytes total) were independently checked against their recorded sizes and hashes after the move.
+The manifest contains 2,436 move records and five external-snapshot records. All 2,441 destinations (23,867,597 bytes total) were independently checked against their recorded sizes and hashes after the move.
+
+## History-index source hashes
+
+`knowledge/history_index.jsonl` uses `sha256-file-v1` for a preserved idea file: SHA-256 over its exact archived bytes.
+
+Preserved run roots use `sha256-tree-v1`. First verify that the archive manifest and raw directory have identical regular-file membership and that every file's size and SHA-256 match. Then:
+
+1. express each file path relative to the run root with POSIX `/` separators;
+2. sort those paths by their UTF-8 byte sequence;
+3. for each path, append `<lowercase-file-sha256>  <relative-path>\n` encoded as UTF-8; and
+4. SHA-256 the concatenated bytes.
+
+An empty directory therefore has the SHA-256 of the empty byte string. Directory hashes are normalized index provenance, not additional file-level manifest rows. A missing normalized fingerprint or business conclusion remains `null` with a reason; it is never reconstructed from a directory name or score.
 
 ## Use and restoration
 
