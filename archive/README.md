@@ -11,7 +11,7 @@ This directory is the byte-preserving archive created during the agent-native ta
 - `legacy-v2/external-contracts/` contains exact snapshots of the five external skill, protocol, and auditor files referenced by v2 at migration time.
 - `manifest.jsonl` is the file-level provenance ledger.
 
-Nothing was deleted as part of the migration. One carried-over Finder cache, `legacy-history/working_folder/.DS_Store`, is intentionally excluded from the manifest and may be deleted after review. Python caches were not moved.
+Nothing historical was deleted as part of the migration. One carried-over Finder cache, `legacy-history/working_folder/.DS_Store`, was intentionally excluded from the manifest and removed after preservation review. Python caches were not moved.
 
 ## Manifest contract
 
@@ -23,7 +23,7 @@ Each JSON line has:
 - `size`: the source byte count at migration time;
 - `sha256`: the SHA-256 digest of those exact bytes.
 
-The manifest contains 2,432 move records and five external-snapshot records. All 2,437 destinations (23,864,829 bytes total) were independently checked against their recorded sizes and hashes after the move.
+The manifest contains 2,434 move records and five external-snapshot records. All 2,439 destinations (23,867,032 bytes total) were independently checked against their recorded sizes and hashes after the move.
 
 ## Use and restoration
 
