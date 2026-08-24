@@ -1,5 +1,17 @@
 .DS_Store
 .gstack/*
 !.gstack/
-!.gstack/README.md
-!.gstack/browse.example.json
+
+# Generated opportunity runs. Keep only the operator note in version control.
+runs/*
+!runs/README.md
+
+# Local browser and Python runtime state.
+.playwright-cli/
+browser*.log
+browse*.log
+playwright*.log
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
