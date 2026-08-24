@@ -1,0 +1,329 @@
+{
+  "agent_id": "baseline-gen-rsa",
+  "role": "rule_structure_analyst",
+  "assigned_ids": [
+    "RAW-040",
+    "RAW-041",
+    "RAW-042",
+    "RAW-043",
+    "RAW-044",
+    "RAW-045",
+    "RAW-046",
+    "RAW-047",
+    "RAW-048"
+  ],
+  "output_ids": [
+    "RAW-040",
+    "RAW-041",
+    "RAW-042",
+    "RAW-043",
+    "RAW-044",
+    "RAW-045",
+    "RAW-046",
+    "RAW-047",
+    "RAW-048"
+  ],
+  "queries": [
+    {
+      "search_text": "site:digital-strategy.ec.europa.eu Cyber Resilience Act reporting obligations 11 September 2026 official",
+      "opened_url": "https://digital-strategy.ec.europa.eu/en/policies/cra-reporting",
+      "source_title": "Cyber Resilience Act - Reporting obligations | Shaping Europe’s digital future",
+      "source_date": "2026-07-31",
+      "evidence_id": "EV-B-DISC-009",
+      "entity_ids": [
+        "RAW-040",
+        "RAW-041",
+        "RAW-042",
+        "RAW-043",
+        "RAW-044"
+      ],
+      "proposition": "The Commission states that, from 11 September 2026, manufacturers of products with digital elements must report actively exploited vulnerabilities and severe incidents, with an early warning within 24 hours, a full notification within 72 hours, and later final reports through a single ENISA platform.",
+      "status": "SUPPORTED_WITH_LIMITS",
+      "contradiction": "The source establishes a binding reporting mechanism and deadlines, but it does not establish customer budgets, willingness to pay, the reportability of any particular event, or the CRA status of a specific product or supply-chain actor.",
+      "cheapest_resolving_test": "Show a clickable incident-clock prototype and fixed-price pilot offer to ten EU connected-product manufacturers, asking each security or compliance owner to map one recent incident and identify who could authorize a report and a purchase."
+    },
+    {
+      "search_text": "site:environment.ec.europa.eu EUDR application date 30 December 2026 official 2026 simplification due diligence statement",
+      "opened_url": "https://environment.ec.europa.eu/news/commission-updates-product-scope-and-tools-support-eudr-2026-07-13_en",
+      "source_title": "Commission updates product scope and digital tools to support implementation of EU Deforestation Regulation",
+      "source_date": "2026-07-13",
+      "evidence_id": "EV-B-DISC-010",
+      "entity_ids": [
+        "RAW-045",
+        "RAW-046",
+        "RAW-047",
+        "RAW-048"
+      ],
+      "proposition": "The Commission says EUDR applies from 30 December 2026 to large and medium operators and certain timber-regulated small operators, covers seven named commodities and derived products, requires operators to demonstrate deforestation-free and legally produced goods, and now has technical rules for an Information System with APIs and simplified declarations for micro and small primary operators.",
+      "status": "SUPPORTED_WITH_LIMITS",
+      "contradiction": "The same update removes some products, adds others only from 30 December 2027, exempts certain categories, and says more system functionality is forthcoming; therefore static scope assumptions and a finished-interface assumption are unsafe, and the source does not prove private purchasing demand.",
+      "cheapest_resolving_test": "Ask eight first operators or their customs advisers to process a real ten-SKU sample through a scope-and-data preflight, then request a paid pilot tied to their next supplier shipment or Information System integration sprint."
+    }
+  ],
+  "concepts": [
+    {
+      "raw_id": "RAW-040",
+      "title": "CRA Incident Clock Desk",
+      "one_sentence_thesis": "A lightweight case-management subscription plus on-call desk can help small connected-product manufacturers assemble authorized 24-hour, 72-hour, and final CRA submissions without building a full product-security response team.",
+      "customer": "EU SME manufacturers of connected industrial controls, energy devices, and smart appliances",
+      "loss_event": "An exploited vulnerability or severe incident is discovered, but fragmented ownership and evidence cause a missed reporting window, duplicated work, or an inaccurate submission.",
+      "payer": "Head of product security, compliance director, or managing director",
+      "beneficiary": "The manufacturer’s incident-response, engineering, legal, and executive teams",
+      "authority_holder": "The legal manufacturer’s designated incident commander or authorized reporting officer",
+      "distributor": "Cyber insurers, penetration-testing firms, and product-compliance consultancies serving device SMEs",
+      "risk_bearer": "The legal manufacturer placing the digital product on the EU market",
+      "transaction_owner": "The security or compliance lead controlling readiness and response spend",
+      "first_paid_event": "A paid setup that configures one product family, reporting roles, evidence fields, and a tabletop run before the reporting regime is used in production",
+      "acquisition_route": "Partner referrals and narrow webinars for Polish and DACH connected-device manufacturers",
+      "compounding_asset": "A privacy-minimized library of incident field mappings, escalation patterns, and product-category playbooks",
+      "mechanism_class": "Workflow SaaS with a bounded expert-response retainer",
+      "evidence_id": "EV-B-DISC-009",
+      "hypotheses": [
+        "Target manufacturers lack a dependable internal clock-and-approval workflow.",
+        "A compliance or security owner will pay before an incident rather than rely on ad hoc counsel.",
+        "The service can remain useful without retaining exploit details beyond what the customer authorizes."
+      ],
+      "constraint_class": {
+        "CRA reporting duty and deadlines": "LAW / BINDING RULE",
+        "Customer-specific reportability decision": "TECHNICAL LIMITATION",
+        "Pre-incident budget and willingness to pay": "ECONOMIC LIMITATION"
+      },
+      "prohibited_reliance": "Must not auto-submit, disclose vulnerability details, or make legal determinations without the manufacturer’s explicit authorization and qualified review."
+    },
+    {
+      "raw_id": "RAW-041",
+      "title": "OEM Responsibility Graph",
+      "one_sentence_thesis": "A productized mapping service can give private-label device brands a maintained responsibility graph linking firmware vendors, contract manufacturers, support providers, approvers, and evidence obligations before a vulnerability starts the CRA clock.",
+      "customer": "Private-label hardware brands and industrial OEMs with outsourced firmware or manufacturing",
+      "loss_event": "A live vulnerability triggers delay while the brand, factory, and software suppliers dispute who investigates, supplies evidence, patches, approves, and reports.",
+      "payer": "General counsel, procurement director, or product compliance lead",
+      "beneficiary": "Brand-owner incident teams and the suppliers expected to respond",
+      "authority_holder": "The brand or legal manufacturer that approves contractual roles and any regulatory submission",
+      "distributor": "Technology law firms, contract-manufacturing advisers, and hardware sourcing consultancies",
+      "risk_bearer": "The entity bearing manufacturer obligations and commercial recall or delay exposure",
+      "transaction_owner": "Procurement or legal operations owner for supplier onboarding and contract renewal",
+      "first_paid_event": "A fixed-fee mapping workshop attached to a new product launch or renewal of a critical firmware supplier",
+      "acquisition_route": "Co-selling through boutique technology counsel and hardware sourcing advisers at launch and renewal events",
+      "compounding_asset": "A versioned clause-and-role ontology showing recurring handoff failures by supply-chain configuration",
+      "mechanism_class": "Contract operations and responsibility-mapping service",
+      "evidence_id": "EV-B-DISC-009",
+      "hypotheses": [
+        "Outsourced product stacks create material ambiguity that existing vendor lists do not resolve.",
+        "Launch and renewal owners have a budget trigger for a fixed-scope mapping engagement.",
+        "Reusable role patterns can reduce delivery time without pretending that contracts are uniform."
+      ],
+      "constraint_class": {
+        "Manufacturer reporting responsibility": "LAW / BINDING RULE",
+        "Expectation that every supplier accepts standard clauses": "ASSUMED CONVENTION",
+        "Access to complete supplier and product records": "TECHNICAL LIMITATION"
+      },
+      "prohibited_reliance": "Must not present generic responsibility maps as legal advice or shift statutory responsibility through misleading contract language."
+    },
+    {
+      "raw_id": "RAW-042",
+      "title": "Firmware Exposure Graph",
+      "one_sentence_thesis": "A component-to-product-version graph can help embedded-device makers determine which shipped products are plausibly affected by an actively exploited dependency and assemble the engineering evidence needed for response decisions.",
+      "customer": "Embedded-device manufacturers with multiple firmware branches and long-lived installed products",
+      "loss_event": "Teams cannot quickly connect a vulnerable dependency to shipped firmware, supported models, and customers, causing over-reporting, under-reporting, or slow remediation.",
+      "payer": "VP engineering, CISO, or product security lead",
+      "beneficiary": "Firmware engineering, support, incident response, and compliance teams",
+      "authority_holder": "The manufacturer’s product security and release owners, with legal approval for reporting conclusions",
+      "distributor": "Embedded-software integrators, SBOM vendors needing a services layer, and security-testing partners",
+      "risk_bearer": "The manufacturer supporting the affected product line",
+      "transaction_owner": "Engineering or security leader owning dependency and release tooling",
+      "first_paid_event": "A paid ingestion pilot covering one firmware repository, one bill-of-materials format, and one historical vulnerability",
+      "acquisition_route": "Technical partner referrals and direct outreach to firms maintaining several firmware generations",
+      "compounding_asset": "Normalized mappings among components, versions, reachability evidence, firmware branches, and device families",
+      "mechanism_class": "Technical graph analysis and evidence-generation software",
+      "evidence_id": "EV-B-DISC-009",
+      "hypotheses": [
+        "Existing SBOM inventories do not reliably answer affected-product and reachability questions.",
+        "A narrow read-only ingestion pilot can prove value without replacing development tooling.",
+        "Manufacturers will pay for faster engineering certainty even though the tool cannot decide legal reportability."
+      ],
+      "constraint_class": {
+        "CRA notification deadlines after awareness": "LAW / BINDING RULE",
+        "Accurate component reachability and version mapping": "TECHNICAL LIMITATION",
+        "Perceived sufficiency of existing SBOM tools": "ECONOMIC LIMITATION"
+      },
+      "prohibited_reliance": "Must not perform unauthorized scanning, weaponize vulnerabilities, or label an event legally reportable solely from automated reachability output."
+    },
+    {
+      "raw_id": "RAW-043",
+      "title": "CRA Deal Exposure Diligence",
+      "one_sentence_thesis": "A fixed-scope diligence module can help buyers of digital-product companies identify incident-reporting ownership, unsupported product lines, and response-workflow gaps before price and remediation covenants are locked.",
+      "customer": "Private-equity funds, strategic acquirers, and transaction counsel buying EU digital-product manufacturers",
+      "loss_event": "After signing or close, the buyer discovers an unbudgeted product-security response burden, unclear reporting ownership, or a portfolio that cannot meet rapid incident deadlines.",
+      "payer": "Deal partner, operating partner, or transaction counsel",
+      "beneficiary": "Investment committee, post-close security team, and acquired manufacturer",
+      "authority_holder": "The buyer’s deal lead for diligence scope and the target manufacturer for protected evidence access",
+      "distributor": "M&A law firms, quality-of-earnings providers, and cyber-insurance brokers",
+      "risk_bearer": "The acquirer and, before close, the target manufacturer",
+      "transaction_owner": "Deal lead controlling third-party diligence spend",
+      "first_paid_event": "A paid red-flag review immediately after a letter of intent, limited to product inventory, incident ownership, and reporting readiness",
+      "acquisition_route": "Referral agreements with lower-middle-market M&A counsel and cyber diligence providers",
+      "compounding_asset": "An anonymized findings taxonomy linking product architectures and ownership models to recurring remediation work",
+      "mechanism_class": "Transaction-triggered specialist diligence",
+      "evidence_id": "EV-B-DISC-009",
+      "hypotheses": [
+        "General cyber diligence underweights product-specific reporting operations.",
+        "Deal teams will add a narrow module when it can affect covenants or the first-100-day plan.",
+        "Targets can provide enough evidence under controlled access to form useful operational findings."
+      ],
+      "constraint_class": {
+        "Target manufacturer obligations": "LAW / BINDING RULE",
+        "Deal-team expectation that standard cyber diligence is sufficient": "ASSUMED CONVENTION",
+        "Short diligence window and evidence access": "TECHNICAL LIMITATION"
+      },
+      "prohibited_reliance": "Must not obtain evidence without target authorization, overstate legal conclusions, or market the review as a guarantee against future enforcement."
+    },
+    {
+      "raw_id": "RAW-044",
+      "title": "Digital-Product Underwriting Evidence Pack",
+      "one_sentence_thesis": "A standardized, permissioned readiness pack can let cyber insurers and brokers assess whether connected-product manufacturers can detect, escalate, evidence, and authorize time-bound vulnerability reports without exposing raw exploit data.",
+      "customer": "Cyber insurers, MGAs, and specialty brokers underwriting manufacturers of digital products",
+      "loss_event": "An insurer prices or renews a manufacturer without knowing whether its product incident process can contain response costs and regulatory escalation.",
+      "payer": "Head of cyber underwriting, product manager, or delegated-authority MGA",
+      "beneficiary": "Underwriters, insured manufacturers, and brokers reducing repeated questionnaires",
+      "authority_holder": "The insurer’s underwriting authority and the manufacturer authorizing evidence disclosure",
+      "distributor": "Cyber brokers, MGAs, and insurer innovation teams",
+      "risk_bearer": "The carrier for covered loss and the manufacturer for uncovered operational or regulatory consequences",
+      "transaction_owner": "Underwriting product leader controlling portfolio tooling or assessment spend",
+      "first_paid_event": "A paid portfolio pilot assessing a small renewal cohort with a common evidence schema",
+      "acquisition_route": "One broker or MGA design partnership anchored to an upcoming renewal book",
+      "compounding_asset": "A benchmark corpus of readiness controls and observed evidence gaps by product category, stripped of identifying security details",
+      "mechanism_class": "B2B underwriting data product",
+      "evidence_id": "EV-B-DISC-009",
+      "hypotheses": [
+        "Underwriters view CRA response readiness as a material differentiator rather than a generic questionnaire item.",
+        "Manufacturers will share structured control evidence when raw vulnerability details remain private.",
+        "A portfolio buyer will fund the assessment instead of requiring each insured to purchase it."
+      ],
+      "constraint_class": {
+        "Manufacturer reporting deadlines": "LAW / BINDING RULE",
+        "Insurance market expectation that readiness predicts loss": "ASSUMED CONVENTION",
+        "Carrier budget and predictive value": "ECONOMIC LIMITATION"
+      },
+      "prohibited_reliance": "Must not disclose vulnerability details beyond consent, claim that CRA readiness guarantees insurability, or enable discriminatory pricing from irrelevant sensitive data."
+    },
+    {
+      "raw_id": "RAW-045",
+      "title": "EUDR Product Scope Diff Engine",
+      "one_sentence_thesis": "A maintained SKU-level rules engine can show importers and customs advisers what changed in EUDR product scope, route ambiguous items to human review, and preserve the basis for each classification.",
+      "customer": "EU importers and customs brokers handling wood, rubber, coffee, cocoa, palm, soy, or cattle-derived product catalogs",
+      "loss_event": "A shipment is delayed or needless compliance work is performed because a SKU is classified using a stale annex, broad commodity assumption, or missing exemption.",
+      "payer": "Trade compliance director or customs brokerage operations lead",
+      "beneficiary": "Import operations, procurement, customs advisers, and suppliers asked for evidence",
+      "authority_holder": "The first operator’s trade compliance officer who approves the classification and filing path",
+      "distributor": "Customs consultancies, ERP implementers, and trade associations",
+      "risk_bearer": "The operator placing the relevant product on the EU market or exporting it",
+      "transaction_owner": "Trade compliance leader controlling classification tools and outside-adviser spend",
+      "first_paid_event": "A paid bulk review after an annex update or before onboarding a new commodity-derived product line",
+      "acquisition_route": "Customs-adviser referrals and targeted outreach using a free change digest for one commodity vertical",
+      "compounding_asset": "An adjudicated SKU-to-scope corpus with versioned rule provenance and ambiguity patterns",
+      "mechanism_class": "Regulatory rules and data SaaS",
+      "evidence_id": "EV-B-DISC-010",
+      "hypotheses": [
+        "Importers maintain enough catalog metadata to support useful first-pass classification.",
+        "Frequent scope changes and edge cases create paid demand beyond free guidance.",
+        "Human escalation can keep false certainty acceptably low."
+      ],
+      "constraint_class": {
+        "Current covered products and exemptions": "LAW / BINDING RULE",
+        "Reliable SKU and customs metadata": "TECHNICAL LIMITATION",
+        "Customer preference for incumbent customs advisers": "SOFT INDUSTRY NORM"
+      },
+      "prohibited_reliance": "Must not label ambiguous products definitively covered or exempt without qualified review and current legal-source provenance."
+    },
+    {
+      "raw_id": "RAW-046",
+      "title": "Supplier Plot Evidence Preflight",
+      "one_sentence_thesis": "A preflight service can validate supplier geospatial and legality evidence for coffee and cocoa importers before the due-diligence workflow reaches a time-critical shipment.",
+      "customer": "Mid-market EU coffee roasters, cocoa processors, and specialty commodity importers acting as first operators",
+      "loss_event": "At shipment or filing time, malformed plots, broken provenance, inconsistent supplier identities, or absent legality evidence make a due-diligence package unusable.",
+      "payer": "Responsible sourcing director, procurement lead, or trade compliance manager",
+      "beneficiary": "Importer operations, suppliers receiving precise remediation requests, and sustainability teams",
+      "authority_holder": "The operator’s due-diligence owner who accepts supplier evidence and signs the filing decision",
+      "distributor": "Commodity trade associations, certification bodies, and sourcing consultants",
+      "risk_bearer": "The first operator and the supplier exposed to rejected or delayed commercial flows",
+      "transaction_owner": "Sourcing or compliance leader controlling supplier assurance spend",
+      "first_paid_event": "A fixed-fee preflight for one origin, supplier cohort, and purchasing season before the next contracted shipment",
+      "acquisition_route": "Association workshops followed by a paid ten-supplier evidence-cleanup cohort",
+      "compounding_asset": "A geospatial error taxonomy, supplier evidence quality history, and origin-specific remediation templates",
+      "mechanism_class": "Data-quality assurance service with repeatable software checks",
+      "evidence_id": "EV-B-DISC-010",
+      "hypotheses": [
+        "Evidence defects are discovered late enough to create shipment-level loss.",
+        "Importers will pay to fix supplier data before Information System submission.",
+        "A privacy-conscious workflow can improve quality without owning the operator’s due-diligence conclusion."
+      ],
+      "constraint_class": {
+        "Deforestation-free and production-legality demonstration": "LAW / BINDING RULE",
+        "Availability and validity of supplier geospatial evidence": "TECHNICAL LIMITATION",
+        "Supplier willingness to remediate data": "ECONOMIC LIMITATION"
+      },
+      "prohibited_reliance": "Must not fabricate coordinates, infer legality from weak proxies, or represent a passed data check as the operator’s completed due diligence."
+    },
+    {
+      "raw_id": "RAW-047",
+      "title": "EUDR API Relay",
+      "one_sentence_thesis": "A narrow managed connector can translate approved ERP and supplier records into the EUDR Information System’s evolving API format, return reference data, and keep a reviewable submission trail.",
+      "customer": "Mid-market wood, furniture, rubber, and food operators with ERP workflows but limited integration capacity",
+      "loss_event": "Manual re-entry and brittle scripts produce rejected submissions, mismatched reference numbers, or order holds when records must pass between internal systems and the EUDR platform.",
+      "payer": "CIO, trade compliance director, or operations systems lead",
+      "beneficiary": "Compliance analysts, order operations, procurement, and audit teams",
+      "authority_holder": "The operator’s authorized EUDR submitter and internal system owner",
+      "distributor": "ERP resellers, customs software integrators, and EUDR advisers that do not build connectors",
+      "risk_bearer": "The operator responsible for the submitted declaration and affected commercial flow",
+      "transaction_owner": "IT or compliance program owner controlling integration spend",
+      "first_paid_event": "A paid sandbox integration that submits customer-approved test records and reconciles returned identifiers",
+      "acquisition_route": "Implementation partnerships with one regional ERP reseller in each commodity-heavy vertical",
+      "compounding_asset": "Versioned API adapters, field mappings, validation fixtures, and platform-change regression tests",
+      "mechanism_class": "Managed compliance-system integration",
+      "evidence_id": "EV-B-DISC-010",
+      "hypotheses": [
+        "Official API specifications still leave a costly last-mile integration gap for mid-market operators.",
+        "Operators prefer a narrow connector over replacing ERP or due-diligence systems.",
+        "A small connector team can track platform changes without guaranteeing platform availability."
+      ],
+      "constraint_class": {
+        "Authorized Information System submission": "LAW / BINDING RULE",
+        "Evolving official API and later functionality": "TECHNICAL LIMITATION",
+        "Incumbent ERP integration practices": "SOFT INDUSTRY NORM"
+      },
+      "prohibited_reliance": "Must not submit without explicit customer approval, retain broad platform credentials, or conceal official interface errors from the operator."
+    },
+    {
+      "raw_id": "RAW-048",
+      "title": "Small Primary Operator Co-op Console",
+      "one_sentence_thesis": "An offline-first cooperative console can gather parcel, harvest, and operator records once, validate them, and prepare simplified declarations for authorized micro and small primary operators without forcing each member to master the central system.",
+      "customer": "Forestry cooperatives, producer associations, and service organizations supporting micro and small primary operators",
+      "loss_event": "Members cannot assemble or transmit accurate simplified declarations, so timber or other covered production is delayed, excluded by buyers, or repeatedly reworked.",
+      "payer": "Cooperative manager, association program lead, or lead buyer funding member enablement",
+      "beneficiary": "Small primary operators, cooperative administrators, and downstream buyers receiving usable reference data",
+      "authority_holder": "Each operator authorizing its declaration, with the cooperative authorized only for agreed administrative actions",
+      "distributor": "Forestry associations, rural accountants, extension services, and lead buyers",
+      "risk_bearer": "The primary operator for its declaration and the cooperative or buyer for disrupted aggregation",
+      "transaction_owner": "Cooperative or lead-buyer program manager controlling member-service spend",
+      "first_paid_event": "A paid campaign covering one cooperative’s next harvest cycle and a bounded member cohort",
+      "acquisition_route": "Pilot through one forestry association or buyer already coordinating small suppliers",
+      "compounding_asset": "Reusable parcel and operator templates, offline validation rules, and a permissioned history of recurring data defects",
+      "mechanism_class": "Cooperative workflow software with field onboarding",
+      "evidence_id": "EV-B-DISC-010",
+      "hypotheses": [
+        "A cooperative or lead buyer will aggregate payment rather than require individual micro-operator subscriptions.",
+        "Offline capture and delegated preparation solve a real access bottleneck.",
+        "Operators will still retain and exercise final authorization over their declarations."
+      ],
+      "constraint_class": {
+        "Simplified declaration rules and operator authorization": "LAW / BINDING RULE",
+        "Rural connectivity and data capture": "TECHNICAL LIMITATION",
+        "Individual operators’ limited software budgets": "ECONOMIC LIMITATION"
+      },
+      "prohibited_reliance": "Must not impersonate operators, submit without traceable authorization, or invent parcel, harvest, ownership, or legality records."
+    }
+  ],
+  "files_read": [
+    "context/baseline-gen-rsa.md"
+  ]
+}

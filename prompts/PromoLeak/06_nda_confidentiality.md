@@ -1,11 +1,11 @@
 # NDA And Confidentiality
 
 ## Objective
-Prepare confidentiality positioning and an NDA review checklist for document-access pilots. This is legal-review prep, not legal advice.
+Prepare confidentiality positioning and an NDA review checklist for document-access pilots.
 
 ## Prerequisites
 - Pilot requires real commercial documents.
-- The executor understands that legal wording should be reviewed by a qualified lawyer before use.
+- The executor understands that wording should be reviewed by a qualified lawyer before use.
 - Document handling must be conservative and practical.
 
 ## Inputs
@@ -18,7 +18,7 @@ Prepare confidentiality positioning and an NDA review checklist for document-acc
 2. Draft plain-language confidentiality positioning for outreach and calls.
 3. Create a checklist of clauses to ask a lawyer to review.
 4. Define basic document-handling rules: access, storage, naming, retention, deletion, and screenshots.
-5. Avoid giving legal advice or claiming compliance guarantees.
+5. Avoid giving advice or claiming compliance guarantees.
 
 ## Subagents
 - Use one subagent to identify missing confidentiality risks.
@@ -29,4 +29,4 @@ Return:
 - plain-language confidentiality note
 - NDA review checklist
 - document-handling rules
-- legal-review questions
+- review questions

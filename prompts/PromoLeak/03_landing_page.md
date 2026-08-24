@@ -24,7 +24,7 @@ Draft concise one-page site copy that explains PromoLeak as a document-backed re
 
 ## Subagents
 - Use one subagent to critique credibility and clarity.
-- Use one subagent to flag phrases that sound like legal/accounting advice.
+- Use one subagent to flag phrases that sound like accounting advice.
 - Use subagents wherever needed to get better results.
 
 ## Output

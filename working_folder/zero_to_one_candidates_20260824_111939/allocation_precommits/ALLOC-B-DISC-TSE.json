@@ -1,0 +1,80 @@
+{
+  "agent_id": "baseline-gen-tse",
+  "allocation_id": "ALLOC-B-DISC-TSE",
+  "arm": "matched_baseline",
+  "assigned_ids": [
+    "RAW-031",
+    "RAW-032",
+    "RAW-033",
+    "RAW-034",
+    "RAW-035",
+    "RAW-036",
+    "RAW-037",
+    "RAW-038",
+    "RAW-039"
+  ],
+  "created_at": "2026-08-24T11:21:11.413080+02:00",
+  "entity_ids": [
+    "RAW-031",
+    "RAW-032",
+    "RAW-033",
+    "RAW-034",
+    "RAW-035",
+    "RAW-036",
+    "RAW-037",
+    "RAW-038",
+    "RAW-039"
+  ],
+  "evidence_groups": [
+    {
+      "entity_ids": [
+        "RAW-031",
+        "RAW-032",
+        "RAW-033",
+        "RAW-034",
+        "RAW-035"
+      ],
+      "evidence_id": "EV-B-DISC-007"
+    },
+    {
+      "entity_ids": [
+        "RAW-036",
+        "RAW-037",
+        "RAW-038",
+        "RAW-039"
+      ],
+      "evidence_id": "EV-B-DISC-008"
+    }
+  ],
+  "metering_basis": "trace_derived_exact",
+  "model": "gpt-5.6-sol",
+  "output_ids": [
+    "RAW-031",
+    "RAW-032",
+    "RAW-033",
+    "RAW-034",
+    "RAW-035",
+    "RAW-036",
+    "RAW-037",
+    "RAW-038",
+    "RAW-039"
+  ],
+  "output_path": "agent_returns/baseline-gen-tse.json",
+  "packet_path": "context/baseline-gen-tse.md",
+  "packet_sha256": "d51c4ef33478debb2c45619018082ed4871077c387f31a019f0d9dd2fd29d1f4",
+  "planned_used_queries": 4,
+  "query_cap": 21,
+  "query_ids": [
+    "Q-B-0013",
+    "Q-B-0014",
+    "Q-B-0015",
+    "Q-B-0016"
+  ],
+  "reasoning_effort": "high",
+  "role": "taboo_space_explorer",
+  "schema": "zt1-allocation-precommit-v1",
+  "scope_id": "baseline-w01",
+  "seed": "v2-matched-20260824_111939-2a69f68acefb8c3de519b17edb17c50e",
+  "stage": "generation",
+  "trace_task_name": "zero_to_one_candidates_20260824_111939_baseline_gen_tse"
+}

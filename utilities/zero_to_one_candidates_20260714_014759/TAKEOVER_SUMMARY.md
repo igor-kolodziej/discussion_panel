@@ -19,7 +19,7 @@
 - Judge A: 69/100, Founder Wealth fail, Reachability pass.
 - Judge B: 42/100, Founder Wealth fail, Reachability fail.
 - Both rejected the 400-lot/8,000-claim wealth bridge as unsupported.
-- Judge B found the exact legal veto; the primary agent verified Polish Late Payment Act Article 10(4) expressly says the recovery-compensation claim cannot be assigned.
+- Judge B found the exact veto; the primary agent verified Polish Late Payment Act Article 10(4) expressly says the recovery-compensation claim cannot be assigned.
 - Exact candidate and entire closeout late-right purchase shape killed. No real chatbot was contacted.
 
 ## Generator Pass 2

@@ -1,0 +1,293 @@
+{
+  "agent_id": "baseline-gen-ia",
+  "role": "incumbent_attacker",
+  "assigned_ids": [
+    "RAW-040",
+    "RAW-041",
+    "RAW-042",
+    "RAW-043",
+    "RAW-044",
+    "RAW-045",
+    "RAW-046",
+    "RAW-047",
+    "RAW-048"
+  ],
+  "output_ids": [
+    "RAW-040",
+    "RAW-041",
+    "RAW-042",
+    "RAW-043",
+    "RAW-044",
+    "RAW-045",
+    "RAW-046",
+    "RAW-047",
+    "RAW-048"
+  ],
+  "queries": [
+    {
+      "search_text": "site:single-market-economy.ec.europa.eu 2025 late payments SMEs European Payment Observatory report",
+      "opened_url": "https://single-market-economy.ec.europa.eu/smes/challenges-and-resilience/late-payment/eu-payment-observatory/observatory-analysis_en?prefLang=lt",
+      "source_title": "EU Payment Observatory Analysis",
+      "source_date": "2025-12-15",
+      "evidence_id": "EV-B-DISC-009",
+      "entity_ids": [
+        "RAW-040",
+        "RAW-041",
+        "RAW-042",
+        "RAW-043",
+        "RAW-044"
+      ],
+      "proposition": "The European Commission reports that late payments remain widespread, payment periods exceed sixty days on average in both business and government transactions, larger firms are less likely to pay on time, and collection imposes administrative burden; this supports testing supplier-side products that reduce delay, uncertainty, and collection effort.",
+      "status": "SUPPORTED FOR THE PROBLEM; WILLINGNESS TO PAY UNKNOWN",
+      "contradiction": "Payment performance varies substantially by Member State, and the source does not show that Polish buyers or suppliers will pay for any proposed intervention.",
+      "cheapest_resolving_test": "Interview ten Polish SME finance owners with overdue invoices and ask each to submit one real invoice to a manual paid pilot with an explicit fee or success charge."
+    },
+    {
+      "search_text": "site:uokik.gov.pl pompy ciepła kontrola 2025 wyniki nieprawidłowości",
+      "opened_url": "https://uokik.gov.pl/public/index.php/pompy-ciepla-wspolne-dzialania-uokik-ih-i-kas",
+      "source_title": "Pompy ciepła – wspólne działania UOKiK, IH i KAS",
+      "source_date": "2025-10-24",
+      "evidence_id": "EV-B-DISC-010",
+      "entity_ids": [
+        "RAW-045",
+        "RAW-046",
+        "RAW-047",
+        "RAW-048"
+      ],
+      "proposition": "Polish authorities found documentation, labeling, and declaration problems in most inspected non-EU heat-pump models and state that missing records deprive buyers of information and evidence needed to judge compliance and safety; this supports testing independent verification and accountability services.",
+      "status": "SUPPORTED FOR A FORMAL-COMPLIANCE AND INFORMATION GAP; TECHNICAL FAILURE AND WILLINGNESS TO PAY UNKNOWN",
+      "contradiction": "The inspection was primarily formal, some defects may be remediable paperwork, and planned technical testing means the source does not establish poor real-world efficiency or safety for the inspected units.",
+      "cheapest_resolving_test": "Offer a manual document-and-registry verification on twenty live heat-pump quotes through two installers and measure whether households, installers, importers, or lenders pay for the report."
+    }
+  ],
+  "concepts": [
+    {
+      "raw_id": "RAW-040",
+      "title": "Milestone Proof Rail for Public Contractors",
+      "one_sentence_thesis": "A neutral evidence workflow packages construction milestones into submission-ready payment claims and flags buyer-side omissions before they become disputed invoices.",
+      "customer": "Small construction and renewable-installation subcontractors serving municipalities or large general contractors",
+      "loss_event": "A completed milestone is rejected, queried, or left unpaid because evidence is incomplete or scattered",
+      "payer": "Subcontractor",
+      "beneficiary": "Subcontractor finance team and project manager",
+      "authority_holder": "Contracting authority or general contractor approving the milestone",
+      "distributor": "Construction accountants, tender advisers, and trade associations",
+      "risk_bearer": "Subcontractor carrying payroll and material costs during delay",
+      "transaction_owner": "Subcontractor finance lead",
+      "first_paid_event": "A fixed-fee review and assembly of one live milestone claim",
+      "acquisition_route": "Partner referrals from accountants serving public-works suppliers",
+      "compounding_asset": "Anonymized library of rejection reasons, evidence checklists, and payer-specific acceptance patterns",
+      "mechanism_class": "Workflow assurance",
+      "evidence_id": "EV-B-DISC-009",
+      "hypotheses": [
+        "Documentation defects materially cause avoidable payment delay in the target contracts",
+        "A supplier will pay before submission rather than only after a dispute",
+        "Contract documents can be processed lawfully with scoped access and data minimization"
+      ],
+      "constraint_class": "ECONOMIC LIMITATION",
+      "prohibited_reliance": "Must not rely on fabricated completion evidence, concealed defects, or improper influence over procurement officials."
+    },
+    {
+      "raw_id": "RAW-041",
+      "title": "Clinic Receivable Exception Desk",
+      "one_sentence_thesis": "A managed exception desk reconciles rejected healthcare invoices against contracts and payer requirements, then prepares lawful corrections and escalation packs.",
+      "customer": "Independent clinics, diagnostic providers, and medical suppliers",
+      "loss_event": "A payer rejects or delays an invoice because codes, attachments, authorizations, or contract terms do not align",
+      "payer": "Clinic or medical supplier",
+      "beneficiary": "Provider finance team and clinical operation",
+      "authority_holder": "Public or private healthcare payer controlling acceptance",
+      "distributor": "Medical accounting firms and practice-management vendors",
+      "risk_bearer": "Provider financing staff and consumables while payment is unresolved",
+      "transaction_owner": "Provider finance manager",
+      "first_paid_event": "A fee for resolving one rejected invoice batch",
+      "acquisition_route": "Outbound offers to providers identified through public directories and accounting partners",
+      "compounding_asset": "Payer-specific rejection taxonomy and correction playbooks",
+      "mechanism_class": "Revenue-cycle exception handling",
+      "evidence_id": "EV-B-DISC-009",
+      "hypotheses": [
+        "A recurring share of delays is operationally correctable rather than a substantive coverage dispute",
+        "Providers can share minimum necessary records under an appropriate data-processing agreement",
+        "Recovered staff time and accelerated cash justify a service fee"
+      ],
+      "constraint_class": "LAW / BINDING RULE",
+      "prohibited_reliance": "Must not rely on upcoding, false clinical records, unauthorized access to health data, or evasion of payer rules."
+    },
+    {
+      "raw_id": "RAW-042",
+      "title": "Buyer Payment Friction Passport",
+      "one_sentence_thesis": "An evidence-backed buyer passport lets small suppliers compare actual onboarding, dispute, and payment friction before accepting concentrated exposure.",
+      "customer": "Exporting and domestic SMEs considering large unfamiliar buyers",
+      "loss_event": "A supplier accepts a commercially attractive order but later encounters long approval chains or habitual payment delay",
+      "payer": "Supplier",
+      "beneficiary": "Supplier owner and finance team",
+      "authority_holder": "Prospective buyer controlling purchase and payment terms",
+      "distributor": "Export advisers, invoice-finance brokers, and industry associations",
+      "risk_bearer": "Supplier extending unsecured trade credit",
+      "transaction_owner": "Supplier commercial director",
+      "first_paid_event": "Purchase of a diligence report on one prospective buyer",
+      "acquisition_route": "Search-led acquisition around buyer due diligence plus broker referrals",
+      "compounding_asset": "Consent-based, normalized database of payment workflows and verified supplier experiences",
+      "mechanism_class": "Counterparty intelligence",
+      "evidence_id": "EV-B-DISC-009",
+      "hypotheses": [
+        "Suppliers can contribute verifiable evidence without breaching confidentiality",
+        "Operational payment friction predicts losses beyond conventional credit scores",
+        "A pre-contract decision is valuable enough to support report fees"
+      ],
+      "constraint_class": "LAW / BINDING RULE",
+      "prohibited_reliance": "Must not rely on defamatory anonymous accusations, confidential-data leakage, blackmail, or unverifiable payment claims."
+    },
+    {
+      "raw_id": "RAW-043",
+      "title": "Accepted-Invoice Advance Cooperative",
+      "one_sentence_thesis": "A software-led broker pools small, already-accepted invoices and routes them to licensed funders so micro-suppliers can access pricing usually reserved for larger books.",
+      "customer": "Microbusinesses with accepted invoices to creditworthy enterprises or public bodies",
+      "loss_event": "The supplier cannot fund payroll or materials while waiting through the buyer's payment cycle",
+      "payer": "Supplier through a disclosed financing or brokerage fee",
+      "beneficiary": "Supplier",
+      "authority_holder": "Licensed funding partner approving an advance",
+      "distributor": "Bookkeepers, payroll bureaus, and small-business software vendors",
+      "risk_bearer": "Licensed funder, subject to the final contract structure",
+      "transaction_owner": "Supplier owner or finance lead",
+      "first_paid_event": "Closing of the first funded accepted invoice",
+      "acquisition_route": "Embedded referrals from bookkeeping practices",
+      "compounding_asset": "Performance data on payer, document quality, acceptance state, and realized payment timing",
+      "mechanism_class": "Financing marketplace",
+      "evidence_id": "EV-B-DISC-009",
+      "hypotheses": [
+        "Licensed funders will price pooled small invoices attractively",
+        "Acceptance status can be verified cheaply and reliably",
+        "Broker economics remain viable after fraud controls and customer support"
+      ],
+      "constraint_class": "LAW / BINDING RULE",
+      "prohibited_reliance": "Must not lend or intermediate regulated credit without required authorization, misstate recourse, or double-assign invoices."
+    },
+    {
+      "raw_id": "RAW-044",
+      "title": "Prompt-Pay Supplier Exchange",
+      "one_sentence_thesis": "A procurement channel gives mid-market buyers discounted access to vetted local suppliers in exchange for short, verifiable payment terms and automated acceptance rules.",
+      "customer": "Cash-constrained specialist suppliers and mid-market buyers with recurring indirect procurement",
+      "loss_event": "Suppliers embed financing risk into prices or refuse attractive orders, while buyers lose reliable capacity",
+      "payer": "Buyer through a procurement subscription or transaction fee",
+      "beneficiary": "Buyer and participating suppliers",
+      "authority_holder": "Buyer procurement and treasury leaders setting terms",
+      "distributor": "Regional business chambers and procurement consultants",
+      "risk_bearer": "Buyer for timely payment and supplier for delivery quality",
+      "transaction_owner": "Buyer procurement manager",
+      "first_paid_event": "A paid sourcing sprint governed by prompt-payment terms",
+      "acquisition_route": "Direct outreach to buyers with fragmented maintenance, installation, and specialist-service spend",
+      "compounding_asset": "Verified supplier performance and buyer payment-behavior graph",
+      "mechanism_class": "Procurement marketplace",
+      "evidence_id": "EV-B-DISC-009",
+      "hypotheses": [
+        "Buyers will trade shorter terms for better supplier pricing or availability",
+        "Payment timing can be verified without exposing sensitive bank data",
+        "A focused category has enough repeat volume for marketplace liquidity"
+      ],
+      "constraint_class": "ECONOMIC LIMITATION",
+      "prohibited_reliance": "Must not rely on sham bidding, undisclosed kickbacks, exclusionary collusion, or misleading payment certifications."
+    },
+    {
+      "raw_id": "RAW-045",
+      "title": "Heat-Pump Quote Passport",
+      "one_sentence_thesis": "An independent pre-purchase report verifies each quoted model's documents, registry trail, supplier identity, sizing inputs, and warranty handoffs before a household signs.",
+      "customer": "Polish homeowners comparing heat-pump installation quotes",
+      "loss_event": "A household commits to a costly system without reliable compliance, performance, or accountability information",
+      "payer": "Homeowner",
+      "beneficiary": "Homeowner and lender",
+      "authority_holder": "Homeowner deciding whether to sign and finance",
+      "distributor": "Independent energy auditors, mortgage advisers, and consumer associations",
+      "risk_bearer": "Homeowner bearing purchase, operating, and remediation costs",
+      "transaction_owner": "Homeowner",
+      "first_paid_event": "Purchase of a report on one live quote",
+      "acquisition_route": "Search-led acquisition around model verification and quote comparison",
+      "compounding_asset": "Versioned model-document registry, installer handoff map, and observed quote defects",
+      "mechanism_class": "Independent purchase assurance",
+      "evidence_id": "EV-B-DISC-010",
+      "hypotheses": [
+        "Households will pay for verification before signing rather than seek free advice",
+        "Public and supplier records are sufficient to detect material gaps",
+        "Installers will tolerate independent scrutiny without blocking access"
+      ],
+      "constraint_class": "REPUTATIONAL EXPECTATION",
+      "prohibited_reliance": "Must not present a document review as a statutory certification or guarantee technical performance not actually tested."
+    },
+    {
+      "raw_id": "RAW-046",
+      "title": "Importer Compliance Workbench",
+      "one_sentence_thesis": "A structured workbench assembles, validates, versions, and hands off the required heat-pump product records before customs or distributor onboarding.",
+      "customer": "Small EU heat-pump importers and private-label distributors",
+      "loss_event": "A shipment is delayed or rejected because product records, labeling, declarations, or registry entries are missing or inconsistent",
+      "payer": "Importer or distributor",
+      "beneficiary": "Importer operations team and downstream reseller",
+      "authority_holder": "Importer legally responsible for market placement, with authorities retaining enforcement power",
+      "distributor": "Customs brokers, testing laboratories, and renewable-equipment wholesalers",
+      "risk_bearer": "Importer carrying inventory and compliance exposure",
+      "transaction_owner": "Importer compliance or operations manager",
+      "first_paid_event": "A fixed-fee readiness review for one model and shipment",
+      "acquisition_route": "Referral agreements with customs brokers and laboratories",
+      "compounding_asset": "Requirement graph, defect taxonomy, reusable evidence templates, and change history by model",
+      "mechanism_class": "Compliance operations",
+      "evidence_id": "EV-B-DISC-010",
+      "hypotheses": [
+        "Importers experience recurring, costly record defects before clearance",
+        "A non-legal workflow layer can shorten remediation time",
+        "Customers will pay per model before a shipment is at risk"
+      ],
+      "constraint_class": "LAW / BINDING RULE",
+      "prohibited_reliance": "Must not forge declarations, conceal failed tests, impersonate a notified body, or promise regulatory approval."
+    },
+    {
+      "raw_id": "RAW-047",
+      "title": "Installer Warranty Continuity Vault",
+      "one_sentence_thesis": "A portable installation record preserves commissioning data, component identities, service actions, and responsibility handoffs when the original installer disappears or disputes coverage.",
+      "customer": "Regional heat-pump installers, housing cooperatives, and equipment lenders",
+      "loss_event": "A service or warranty claim stalls because installation evidence is missing, fragmented, or controlled by a defunct contractor",
+      "payer": "Installer, housing cooperative, or lender",
+      "beneficiary": "Property owner and replacement service provider",
+      "authority_holder": "Warranty provider deciding claim validity",
+      "distributor": "Equipment wholesalers, lenders, and installer networks",
+      "risk_bearer": "Property owner unless warranty or service contract accepts the claim",
+      "transaction_owner": "Installer operations lead or housing manager",
+      "first_paid_event": "Activation fee for the first installation record",
+      "acquisition_route": "Bundle through wholesalers and financing partners at installation",
+      "compounding_asset": "Longitudinal component, commissioning, fault, and service-history dataset",
+      "mechanism_class": "Asset record portability",
+      "evidence_id": "EV-B-DISC-010",
+      "hypotheses": [
+        "Missing installation records materially delay warranty and service resolution",
+        "Installers will capture evidence at commissioning if the workflow is lightweight",
+        "Manufacturers or lenders will recognize portable records in claims workflows"
+      ],
+      "constraint_class": "SOFT INDUSTRY NORM",
+      "prohibited_reliance": "Must not alter commissioning records after the fact, invent service history, or claim that record storage forces warranty acceptance."
+    },
+    {
+      "raw_id": "RAW-048",
+      "title": "Measured Heat Guarantee Underwriter",
+      "one_sentence_thesis": "A measurement service establishes a weather-adjusted post-installation baseline and sells installers or lenders the evidence layer needed to offer narrowly bounded performance remedies.",
+      "customer": "Heat-pump installers, retrofit lenders, and housing cooperatives",
+      "loss_event": "A system consumes more energy or delivers less comfort than expected, but neither side has credible evidence separating equipment, sizing, building, and operating causes",
+      "payer": "Installer, lender, or housing cooperative",
+      "beneficiary": "Property owner and accountable service provider",
+      "authority_holder": "Contracting party adjudicating the bounded remedy, with any insurance carrier controlling insured payouts",
+      "distributor": "Renewable-installation firms, energy auditors, and retrofit lenders",
+      "risk_bearer": "Initially the installer under a capped service remedy; a licensed insurer only if separately contracted",
+      "transaction_owner": "Installer owner or lender product lead",
+      "first_paid_event": "Paid baseline study for one completed installation",
+      "acquisition_route": "Pilot through a regional installation firm and its recent customer base",
+      "compounding_asset": "Weather-normalized performance curves linked to building attributes, equipment, installation choices, and faults",
+      "mechanism_class": "Measurement-backed service guarantee",
+      "evidence_id": "EV-B-DISC-010",
+      "hypotheses": [
+        "Low-cost sensors and utility data can produce decision-grade attribution",
+        "Installers gain enough sales conversion or dispute reduction to pay",
+        "A narrow service remedy can avoid unintended insurance regulation"
+      ],
+      "constraint_class": "TECHNICAL LIMITATION",
+      "prohibited_reliance": "Must not market an insurance product without authorization or overstate causal attribution from incomplete sensor data."
+    }
+  ],
+  "files_read": [
+    "context/baseline-gen-ia.md"
+  ]
+}

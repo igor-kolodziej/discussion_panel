@@ -1,0 +1,338 @@
+{
+  "agent_id": "baseline-gen-ih",
+  "role": "incentive_hacker",
+  "assigned_ids": [
+    "RAW-031",
+    "RAW-032",
+    "RAW-033",
+    "RAW-034",
+    "RAW-035",
+    "RAW-036",
+    "RAW-037",
+    "RAW-038",
+    "RAW-039"
+  ],
+  "output_ids": [
+    "RAW-031",
+    "RAW-032",
+    "RAW-033",
+    "RAW-034",
+    "RAW-035",
+    "RAW-036",
+    "RAW-037",
+    "RAW-038",
+    "RAW-039"
+  ],
+  "queries": [
+    {
+      "search_text": "site:single-market-economy.ec.europa.eu late payments report 2025 businesses European Commission",
+      "opened_url": "https://single-market-economy.ec.europa.eu/smes/challenges-and-resilience/late-payment/eu-payment-observatory/observatory-analysis_en?prefLang=lt",
+      "source_title": "EU Payment Observatory Analysis",
+      "source_date": "2025-12-15",
+      "evidence_id": "EV-B-DISC-007",
+      "entity_ids": [
+        "RAW-031",
+        "RAW-032",
+        "RAW-033",
+        "RAW-034",
+        "RAW-035"
+      ],
+      "proposition": "The European Commission reports that more than half of companies experienced late-payment difficulties in 2024, average B2B and government-to-business payment periods exceeded 60 days, and collection creates administrative burden; public-sector exposure is especially relevant to construction and healthcare.",
+      "status": "SUPPORTED_PROBLEM_ONLY",
+      "contradiction": "The source says payment performance varies widely and does not establish that any named Polish niche will buy a recovery product, that software alone changes payer behaviour, or that a particular invoice is collectible.",
+      "cheapest_resolving_test": "Interview ten Polish suppliers with invoices overdue by at least one contract cycle and request anonymized timelines, rejection reasons, and a signed contingent-fee pilot from one buyer of the service."
+    },
+    {
+      "search_text": "site:enisa.europa.eu 2025 NIS2 supply chain cybersecurity procurement report SMEs",
+      "opened_url": "https://www.enisa.europa.eu/publications/nis-investments-2025",
+      "source_title": "NIS Investments 2025",
+      "source_date": "2025-12-08",
+      "evidence_id": "EV-B-DISC-008",
+      "entity_ids": [
+        "RAW-036",
+        "RAW-037",
+        "RAW-038",
+        "RAW-039"
+      ],
+      "proposition": "ENISA reports on how EU cybersecurity policy affects organisational investment, resources, and operations using responses from 1,080 professionals in high-criticality NIS sectors, making vendor and control-evidence work a current operational issue.",
+      "status": "SUPPORTED_CONTEXT_NOT_WILLINGNESS_TO_PAY",
+      "contradiction": "The sample is 83% large enterprises and only 17% SMEs; it does not prove Polish demand, procurement authority, acceptance of standardized evidence, or budgets for any proposed intermediary.",
+      "cheapest_resolving_test": "Ask eight regulated buyers and eight small suppliers to score one mock evidence dossier against a live questionnaire, then seek one paid dossier-preparation engagement contingent on buyer acceptance."
+    }
+  ],
+  "concepts": [
+    {
+      "raw_id": "RAW-031",
+      "title": "Construction Change-Order Acceptance Desk",
+      "one_sentence_thesis": "Turn subcontractors' scattered proof of extra work into contract-mapped acceptance packets and charge only when an invoice moves from disputed to approved.",
+      "customer": "Polish electrical, HVAC, and renewable-installation subcontractors serving larger general contractors",
+      "loss_event": "A completed variation remains unpaid because instructions, site records, photos, and contractual notice requirements do not line up.",
+      "payer": "The subcontractor whose receivable is blocked",
+      "beneficiary": "The subcontractor and its employees or suppliers who depend on cash flow",
+      "authority_holder": "The general contractor's project manager or contract administrator who can accept the variation",
+      "distributor": "Construction accountants, quantity surveyors, and regional trade associations",
+      "risk_bearer": "The subcontractor, which has already funded labour and materials",
+      "transaction_owner": "The subcontractor's owner or finance lead",
+      "first_paid_event": "A fixed intake fee plus a disclosed success fee when the counterparty records the invoice as approved for payment",
+      "acquisition_route": "Offer accountants a no-cost receivables triage checklist and referral fee for eligible disputed change orders.",
+      "compounding_asset": "A clause-to-evidence library and anonymized resolution patterns by contractor, project type, and rejection reason",
+      "mechanism_class": "contingent receivables recovery workflow",
+      "evidence_id": "EV-B-DISC-007",
+      "hypotheses": [
+        "A meaningful share of delayed change-order invoices are blocked by curable evidence defects rather than genuine insolvency.",
+        "Subcontractors will share contracts and site evidence under strict confidentiality.",
+        "Counterparties will recognize a well-structured packet without requiring legal representation."
+      ],
+      "constraint_class": {
+        "contract_notice_and_acceptance_terms": "LAW / BINDING RULE",
+        "general_contractor_document_preferences": "SOFT INDUSTRY NORM",
+        "founder_time_for_manual_casework": "ECONOMIC LIMITATION",
+        "document_extraction_accuracy": "TECHNICAL LIMITATION"
+      },
+      "prohibited_reliance": "No fabricated site record, backdated notice, unauthorized legal practice, or misleading claim that payment is guaranteed."
+    },
+    {
+      "raw_id": "RAW-032",
+      "title": "Public-Healthcare Invoice Exception Resolver",
+      "one_sentence_thesis": "Diagnose administrative rejection loops for small clinical suppliers and collect a fee for each invoice that the public buyer validates for payment.",
+      "customer": "Independent laboratories, rehabilitation providers, and medical consumables suppliers billing public hospitals or public purchasers",
+      "loss_event": "A valid delivery or service is trapped in an invoice exception queue because purchase-order, delivery, coding, or acceptance data disagree.",
+      "payer": "The clinical supplier with the delayed invoice",
+      "beneficiary": "The supplier, while the hospital benefits from a cleaner payable record",
+      "authority_holder": "The hospital's procurement, clinical acceptance, and accounts-payable staff",
+      "distributor": "Medical-sector bookkeeping firms and procurement consultants",
+      "risk_bearer": "The supplier financing wages, inventory, or consumables during the delay",
+      "transaction_owner": "The supplier's billing or finance manager",
+      "first_paid_event": "A per-invoice fee when the hospital confirms that the exception is cleared and the invoice is scheduled",
+      "acquisition_route": "Run a confidential exception audit on one aged receivable supplied by a specialist medical bookkeeper.",
+      "compounding_asset": "A privacy-minimized taxonomy of rejection causes, required documents, and resolution paths by purchasing system",
+      "mechanism_class": "invoice exception clearing service",
+      "evidence_id": "EV-B-DISC-007",
+      "hypotheses": [
+        "Enough delayed healthcare invoices have resolvable administrative causes to support outcome-linked pricing.",
+        "Suppliers can lawfully provide the necessary non-patient documentation.",
+        "Hospital staff will confirm status changes through existing official channels."
+      ],
+      "constraint_class": {
+        "health_and_procurement_data_handling": "LAW / BINDING RULE",
+        "hospital_workflow_variation": "TECHNICAL LIMITATION",
+        "reluctance_to_escalate_against_a_major_buyer": "REPUTATIONAL EXPECTATION",
+        "slow_public_buyer_response": "ECONOMIC LIMITATION"
+      },
+      "prohibited_reliance": "No patient-data access, impersonation, improper influence, invoice alteration, or promise to bypass public procurement controls."
+    },
+    {
+      "raw_id": "RAW-033",
+      "title": "Freight Accessorial Proof-to-Cash",
+      "one_sentence_thesis": "Reconstruct detention, demurrage, and failed-delivery claims from telematics and documents, taking a share only of fees actually recovered.",
+      "customer": "Small road carriers and freight forwarders operating across Poland and neighboring EU markets",
+      "loss_event": "A carrier absorbs waiting time or redelivery cost because evidence is fragmented or a claim deadline is missed.",
+      "payer": "The carrier or forwarder pursuing the accessorial charge",
+      "beneficiary": "The carrier and driver whose capacity was consumed",
+      "authority_holder": "The shipper, consignee, broker, or platform claims team that approves the fee",
+      "distributor": "Fleet telematics resellers, transport accountants, and factoring brokers",
+      "risk_bearer": "The carrier, including fuel, driver time, and lost next-load revenue",
+      "transaction_owner": "The carrier's dispatcher or accounts-receivable lead",
+      "first_paid_event": "A percentage of a documented accessorial charge after cash reaches the carrier",
+      "acquisition_route": "Use a telematics-partner referral to audit one month of closed loads for unbilled waiting events.",
+      "compounding_asset": "A lane-, counterparty-, and contract-specific model of claim acceptance, evidence sufficiency, and deadline risk",
+      "mechanism_class": "success-fee leakage recovery",
+      "evidence_id": "EV-B-DISC-007",
+      "hypotheses": [
+        "Telematics and delivery records can identify economically material unclaimed events.",
+        "Carrier contracts permit the claimed fees and evidence submission.",
+        "Recovered value exceeds verification and dispute-handling cost."
+      ],
+      "constraint_class": {
+        "contractual_claim_deadlines_and_fee_terms": "LAW / BINDING RULE",
+        "shipper_evidence_formats": "SOFT INDUSTRY NORM",
+        "telematics_data_quality": "TECHNICAL LIMITATION",
+        "small_claim_collection_cost": "ECONOMIC LIMITATION"
+      },
+      "prohibited_reliance": "No invented timestamps, GPS manipulation, duplicate claims, or submission of charges absent a contractual basis."
+    },
+    {
+      "raw_id": "RAW-034",
+      "title": "Commercial Solar Milestone Certifier",
+      "one_sentence_thesis": "Package commissioning evidence against commercial rooftop acceptance clauses so installers can unlock milestone invoices before minor punch-list work obscures completed value.",
+      "customer": "Small and mid-sized photovoltaic and storage installers delivering projects to commercial property owners",
+      "loss_event": "A large installation milestone is withheld because technical completion, punch-list items, and documentary acceptance are conflated.",
+      "payer": "The installer awaiting the milestone payment",
+      "beneficiary": "The installer and its equipment or labour suppliers",
+      "authority_holder": "The property owner's engineer, project manager, or authorized acceptance representative",
+      "distributor": "Equipment wholesalers, renewable-installation associations, and project insurers",
+      "risk_bearer": "The installer carrying equipment and labour costs",
+      "transaction_owner": "The installer's project director or finance lead",
+      "first_paid_event": "A fixed per-project evidence-pack fee after the authorized representative accepts the relevant milestone",
+      "acquisition_route": "Pilot through the founder's family installation network on one completed commercial project with an aging milestone invoice.",
+      "compounding_asset": "A verified mapping among contract clauses, commissioning artifacts, defect categories, and acceptance outcomes",
+      "mechanism_class": "milestone verification service",
+      "evidence_id": "EV-B-DISC-007",
+      "hypotheses": [
+        "Document ambiguity rather than substantive non-performance blocks a repeatable subset of milestone payments.",
+        "Owners will evaluate third-party-organized evidence without treating it as unauthorized certification.",
+        "A narrow initial service can be delivered within part-time founder capacity."
+      ],
+      "constraint_class": {
+        "electrical_and_construction_acceptance_requirements": "LAW / BINDING RULE",
+        "owner_punch_list_customs": "SOFT INDUSTRY NORM",
+        "family_firm_access_as_distribution": "ASSUMED CONVENTION",
+        "founder_availability": "ECONOMIC LIMITATION"
+      },
+      "prohibited_reliance": "No claim to perform legally reserved inspection, concealment of defects, forged commissioning data, or conflicted certification."
+    },
+    {
+      "raw_id": "RAW-035",
+      "title": "Supplier Payment-Latency Cooperative",
+      "one_sentence_thesis": "Let SME suppliers contribute privacy-safe invoice outcomes and subscribe to counterparty-specific payment-friction signals before accepting long terms.",
+      "customer": "Polish B2B suppliers repeatedly extending unsecured trade credit to larger customers",
+      "loss_event": "A supplier accepts a low-margin order without knowing that the buyer routinely stretches terms or creates invoice exceptions.",
+      "payer": "The supplier deciding whether and how to quote credit terms",
+      "beneficiary": "Participating suppliers and their financing partners",
+      "authority_holder": "Each supplier's credit controller, who sets terms, and the data contributors, who authorize permitted use",
+      "distributor": "Accounting platforms, factoring brokers, and trade-credit insurers",
+      "risk_bearer": "The supplier extending unsecured credit",
+      "transaction_owner": "The supplier's owner or credit manager",
+      "first_paid_event": "A subscription purchased before the supplier approves a new credit limit or renewal",
+      "acquisition_route": "Recruit one accounting network to offer founding members a report generated from their own ledger history plus pooled aggregates.",
+      "compounding_asset": "A consented, outcome-based payment graph with sector, term, dispute, and invoice-quality context",
+      "mechanism_class": "member-contributed risk intelligence",
+      "evidence_id": "EV-B-DISC-007",
+      "hypotheses": [
+        "Suppliers will contribute suitably minimized payment outcomes in exchange for useful pooled intelligence.",
+        "Lawful aggregation can avoid disclosing protected or misleading company-level claims.",
+        "Payment behavior is sufficiently persistent to improve credit-term decisions."
+      ],
+      "constraint_class": {
+        "data_protection_confidentiality_and_competition_rules": "LAW / BINDING RULE",
+        "reciprocal_data_contribution": "ASSUMED CONVENTION",
+        "fear_of_buyer_retaliation": "REPUTATIONAL EXPECTATION",
+        "cold_start_coverage": "TECHNICAL LIMITATION"
+      },
+      "prohibited_reliance": "No covert scraping of private invoices, publication of unverified accusations, collusive exclusion, or sale of identifiable contributor data."
+    },
+    {
+      "raw_id": "RAW-036",
+      "title": "Hospital Vendor Security Evidence Passport",
+      "one_sentence_thesis": "Maintain a reusable, buyer-verifiable security dossier for small health-software and device vendors and charge when it clears a hospital procurement gate.",
+      "customer": "Small European health-software, connected-device, and clinical-service vendors selling to hospitals",
+      "loss_event": "A sale stalls while the vendor repeatedly answers overlapping security questionnaires and hunts for control evidence.",
+      "payer": "The vendor whose contract is delayed",
+      "beneficiary": "The vendor and the hospital procurement and security teams",
+      "authority_holder": "The hospital CISO, data protection, clinical engineering, and procurement approvers",
+      "distributor": "Health-tech accelerators, medical-device consultants, and hospital procurement advisers",
+      "risk_bearer": "The hospital bears third-party cyber exposure while the vendor bears delayed revenue and remediation cost",
+      "transaction_owner": "The vendor's founder, compliance lead, or enterprise-sales lead",
+      "first_paid_event": "A dossier fee due when a named hospital marks the security review complete or identifies only bounded remediation items",
+      "acquisition_route": "Convert one live hospital questionnaire for a referred vendor into a normalized evidence map and reusable renewal file.",
+      "compounding_asset": "A control-to-question mapping and acceptance-history corpus segmented by hospital type and vendor architecture",
+      "mechanism_class": "portable compliance evidence exchange",
+      "evidence_id": "EV-B-DISC-008",
+      "hypotheses": [
+        "Hospitals repeat enough questions for a maintained evidence passport to shorten review.",
+        "Hospital approvers will verify rather than reject standardized vendor evidence.",
+        "Vendors will pay against a procurement milestone instead of buying generic compliance advice."
+      ],
+      "constraint_class": {
+        "health_data_cybersecurity_and_device_obligations": "LAW / BINDING RULE",
+        "hospital_specific_questionnaires": "SOFT INDUSTRY NORM",
+        "evidence_freshness_and_verification": "TECHNICAL LIMITATION",
+        "enterprise_sales_cycle": "ECONOMIC LIMITATION"
+      },
+      "prohibited_reliance": "No false certification, concealed vulnerability, fabricated control evidence, patient-data collection, or guarantee of regulatory compliance."
+    },
+    {
+      "raw_id": "RAW-037",
+      "title": "Utility Tender Cyber-Clause Translator",
+      "one_sentence_thesis": "Convert municipal utility cyber clauses into a scoped supplier evidence plan and sell a fixed-price submission pack for each live tender.",
+      "customer": "Small OT maintenance, metering, engineering, and software suppliers bidding to municipal utilities",
+      "loss_event": "A qualified supplier loses or abandons a tender because cyber clauses are ambiguous, duplicative, or discovered too late.",
+      "payer": "The supplier bidding for the utility contract",
+      "beneficiary": "The supplier and the utility seeking comparable, reviewable assurances",
+      "authority_holder": "The utility's procurement officer and security or OT owner",
+      "distributor": "Tender writers, municipal engineering consultancies, and industrial insurance brokers",
+      "risk_bearer": "The utility bears supply-chain operational risk; the supplier bears bid cost and lost-contract risk",
+      "transaction_owner": "The supplier's bid manager or managing director",
+      "first_paid_event": "A fixed fee after delivery of a compliant evidence pack for a specific tender, with a smaller pre-bid eligibility screen",
+      "acquisition_route": "Monitor public tender notices and offer a rapid, paid clause-gap screen through established tender consultants.",
+      "compounding_asset": "A versioned library linking procurement clauses to evidence types, supplier controls, clarifications, and accepted submissions",
+      "mechanism_class": "transaction-specific compliance translation",
+      "evidence_id": "EV-B-DISC-008",
+      "hypotheses": [
+        "Cyber requirements cause measurable bid friction for otherwise capable small utility suppliers.",
+        "Public buyers permit clarification and structured evidence without favoring a bidder.",
+        "Repeated clause patterns make each subsequent pack cheaper to prepare."
+      ],
+      "constraint_class": {
+        "public_procurement_and_security_requirements": "LAW / BINDING RULE",
+        "buyer_template_variation": "SOFT INDUSTRY NORM",
+        "tender_document_parsing": "TECHNICAL LIMITATION",
+        "irregular_tender_timing": "ECONOMIC LIMITATION"
+      },
+      "prohibited_reliance": "No bid coordination, inside information, misrepresentation of controls, procurement circumvention, or unauthorized legal certification."
+    },
+    {
+      "raw_id": "RAW-038",
+      "title": "Renewable Fleet Access Attestation",
+      "one_sentence_thesis": "Continuously reconcile who can access commercial solar and storage monitoring portals, producing owner-approved attestations that O&M firms buy per managed fleet.",
+      "customer": "Regional solar and storage O&M providers managing assets for multiple commercial owners",
+      "loss_event": "Former staff, installers, vendors, or shared accounts retain portal access, leaving owners exposed while no party owns the cleanup record.",
+      "payer": "The O&M provider contractually responsible for reliable asset operations",
+      "beneficiary": "Commercial asset owners, O&M providers, and their insurers",
+      "authority_holder": "The asset owner or designated security administrator who approves access changes",
+      "distributor": "Inverter distributors, renewable insurers, and the family installation firm's commercial network",
+      "risk_bearer": "The asset owner bears production and incident loss; the O&M provider bears contractual and reputational loss",
+      "transaction_owner": "The O&M operations director",
+      "first_paid_event": "A paid baseline access review followed by a recurring fee when the owner signs the quarterly attestation",
+      "acquisition_route": "Run a permission inventory for one multi-site owner introduced by an installer or inverter distributor.",
+      "compounding_asset": "A vendor-agnostic connector library and anonymized graph of access drift, remediation time, and recurring failure modes",
+      "mechanism_class": "delegated-access control attestation",
+      "evidence_id": "EV-B-DISC-008",
+      "hypotheses": [
+        "Multi-site renewable portfolios have material unmanaged portal-access drift.",
+        "Owners can authorize read-only inventory and explicit remediation workflows.",
+        "O&M contracts can absorb a recurring attestation line item."
+      ],
+      "constraint_class": {
+        "authorization_privacy_and_incident_obligations": "LAW / BINDING RULE",
+        "shared_installer_account_habits": "SOFT INDUSTRY NORM",
+        "portal_api_and_identity_fragmentation": "TECHNICAL LIMITATION",
+        "small_fleet_contract_value": "ECONOMIC LIMITATION"
+      },
+      "prohibited_reliance": "No credential sharing, unauthorized login, silent account changes, vulnerability exploitation, or claim that an access review proves full security."
+    },
+    {
+      "raw_id": "RAW-039",
+      "title": "MSP Insurance Evidence Preflight",
+      "one_sentence_thesis": "Preflight a small managed-service provider's controls against an insurer's live renewal questions and charge when the submission is accepted as complete.",
+      "customer": "Small managed-service providers and managed-security providers seeking cyber cover or serving insured clients",
+      "loss_event": "Coverage is delayed, narrowed, or priced without credit because the MSP and broker cannot produce consistent patching, testing, backup, and supplier-control evidence.",
+      "payer": "The MSP applying for or renewing coverage",
+      "beneficiary": "The MSP, its clients, the broker, and the underwriter receiving more reviewable evidence",
+      "authority_holder": "The insurer's underwriter, who alone determines sufficiency, price, and coverage",
+      "distributor": "Cyber-insurance brokers, IT-sector accountants, and MSP associations",
+      "risk_bearer": "The insurer bears covered loss; the MSP bears exclusions, premium, incident, and client-loss exposure",
+      "transaction_owner": "The MSP owner or risk lead together with the broker",
+      "first_paid_event": "A fixed preflight fee when the underwriter accepts the application as complete, separate from any coverage decision",
+      "acquisition_route": "Give a broker a white-label completeness check for one difficult renewal and request referral rights if review time falls.",
+      "compounding_asset": "A permissioned map of insurer questions, accepted evidence forms, control gaps, and renewal changes over time",
+      "mechanism_class": "underwriting evidence readiness service",
+      "evidence_id": "EV-B-DISC-008",
+      "hypotheses": [
+        "Evidence quality and consistency create avoidable underwriting delay for small MSPs.",
+        "Brokers will distribute a neutral readiness service that does not sell or bind insurance.",
+        "Underwriters will provide a clear completeness signal that can trigger the fee."
+      ],
+      "constraint_class": {
+        "insurance_distribution_and_disclosure_rules": "LAW / BINDING RULE",
+        "underwriter_questionnaire_formats": "SOFT INDUSTRY NORM",
+        "control_evidence_validation": "TECHNICAL LIMITATION",
+        "renewal_seasonality_and_case_size": "ECONOMIC LIMITATION"
+      },
+      "prohibited_reliance": "No acting as an unlicensed broker, hiding incidents, falsifying controls, influencing underwriting improperly, or guaranteeing coverage or premium reduction."
+    }
+  ],
+  "files_read": [
+    "context/baseline-gen-ih.md"
+  ]
+}

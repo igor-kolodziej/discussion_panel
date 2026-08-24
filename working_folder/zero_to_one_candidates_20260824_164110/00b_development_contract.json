@@ -1,0 +1,124 @@
+{
+  "aggregate_opportunity": {
+    "discovery_queries": 108,
+    "fact_closure": 6,
+    "fact_closure_queries": 48,
+    "frozen": 6,
+    "level2": 12,
+    "level2_queries": 144,
+    "raw": 48,
+    "total_queries": 300
+  },
+  "candidate_budgets": {
+    "fact_closure": {
+      "elapsed_minutes": 12,
+      "output_tokens": 20000,
+      "uncached_input_tokens": 96000
+    },
+    "level2": {
+      "elapsed_minutes": 15,
+      "output_tokens": 20000,
+      "uncached_input_tokens": 112000
+    }
+  },
+  "candidate_live_stop_thresholds": {
+    "fact_closure": {
+      "elapsed_minutes": 11,
+      "output_tokens": 11000,
+      "uncached_input_tokens": 76000
+    },
+    "level2": {
+      "elapsed_minutes": 14,
+      "output_tokens": 11000,
+      "uncached_input_tokens": 92000
+    }
+  },
+  "contract_id": "matched-development-v2",
+  "dossier_measurement": {
+    "counted_sections": [
+      "## Customer Loss And Payer Evidence",
+      "## Proposed Transaction And Paid Trigger",
+      "## Acquisition Route",
+      "## Incumbent Substitute And Route-Around",
+      "## Unit Economics And Sensitivity",
+      "## Control Point Or Compounding Asset",
+      "## Execution Dependencies And Cheapest Proof",
+      "## Decision-Critical Unknowns And Contradictions"
+    ],
+    "excluded_material": [
+      "title",
+      "section_headings",
+      "evidence_and_sources",
+      "source_ledgers",
+      "telemetry",
+      "machine_metadata"
+    ]
+  },
+  "dossier_prose_word_ranges": {
+    "frozen": {
+      "maximum": 1800,
+      "minimum": 1100,
+      "minimum_per_section": 100
+    },
+    "level2": {
+      "maximum": 1500,
+      "minimum": 900,
+      "minimum_per_section": 75
+    }
+  },
+  "evidence_statuses": [
+    "verified",
+    "interpreted",
+    "counsel-required",
+    "unknown",
+    "contradicted"
+  ],
+  "fact_closure_schema": {
+    "replacement_after_closure": false,
+    "requires_decision_critical_evidence": true,
+    "requires_pre_freeze_source_chain": true
+  },
+  "frozen_sections": [
+    "## Customer Loss And Payer Evidence",
+    "## Proposed Transaction And Paid Trigger",
+    "## Acquisition Route",
+    "## Incumbent Substitute And Route-Around",
+    "## Unit Economics And Sensitivity",
+    "## Control Point Or Compounding Asset",
+    "## Execution Dependencies And Cheapest Proof",
+    "## Decision-Critical Unknowns And Contradictions",
+    "## Evidence And Sources"
+  ],
+  "level2_sections": [
+    "## Customer Loss And Payer Evidence",
+    "## Proposed Transaction And Paid Trigger",
+    "## Acquisition Route",
+    "## Incumbent Substitute And Route-Around",
+    "## Unit Economics And Sensitivity",
+    "## Control Point Or Compounding Asset",
+    "## Execution Dependencies And Cheapest Proof",
+    "## Decision-Critical Unknowns And Contradictions",
+    "## Evidence And Sources"
+  ],
+  "metering_monitor": {
+    "controller": "blocking_direct_trace_monitor",
+    "empirical_max_observed_output_token_event_jump": 8204,
+    "empirical_max_observed_uncached_token_event_jump": 16633,
+    "interrupt_channel": "controller_result_to_root_collaboration_interrupt",
+    "minimum_output_reserve_tokens": 9000,
+    "minimum_uncached_reserve_tokens": 20000,
+    "poll_interval_milliseconds": 1000,
+    "stop_action": "interrupt_candidate_agent_and_fail_stage_admission",
+    "trace_discovery": "recent_scope_scan_then_direct_path"
+  },
+  "query_source_opportunity": {
+    "query_requires_source_open": true,
+    "query_requires_tool_event": true,
+    "source_requires_bidirectional_evidence": true
+  },
+  "schema": "zt1-development-contract-v2",
+  "stage_query_caps": {
+    "fact_closure": 8,
+    "level2": 12
+  }
+}

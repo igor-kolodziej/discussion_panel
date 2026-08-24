@@ -10,7 +10,7 @@ The founder rejected all four first-wave finalists because pain was weak and/or 
 
 ## Central Lesson Carried Forward
 
-The customer must pay for something AI cannot create: capital against a controlled receivable, lawful source custody, scarce physical capacity, or exclusive executable rights. A prompt, report, detector score, generic sensor, migration service, or rented licence is insufficient.
+The customer must pay for something AI cannot create: capital against a controlled receivable, source custody, scarce physical capacity, or exclusive executable rights. A prompt, report, detector score, generic sensor, migration service, or rented licence is insufficient.
 
 ## Next Required Handoff
 
@@ -27,7 +27,7 @@ LinePool remains a reserve comparison only. Selected candidates then enter `$eva
 | Candidate | Founder Wealth preliminary screen | Reachability preliminary screen | Non-promptable control | Strongest unresolved hypothesis |
 |---|---|---|---|---|
 | ProofRail Advance | 5.40m PLN founder value around year 8 in the conservative arithmetic case | One paid underwriting fee and capped advance; maximum 40k PLN exposure | Assigned/controlled receivable, beneficiary acknowledgement, evidence custody, and capital | Counsel can create an enforceable collection route and loss-adjusted invoice economics support a 7%–9% fee |
-| SignalTrace Evidence Freeze | 5.67m PLN founder value around year 8 | 6.9k PLN prepaid freeze; 18k PLN maximum pre-proof spend | Lawful source custody, reproducible acquisition, and internal qualified team | Law firms pay for urgent preservation before the founder has court-expert status and then repeat |
+| SignalTrace Evidence Freeze | 5.67m PLN founder value around year 8 | 6.9k PLN prepaid freeze; 18k PLN maximum pre-proof spend | Source custody, reproducible acquisition, and internal qualified team | Law firms pay for urgent preservation before the founder has court-expert status and then repeat |
 | LisaGuard SLS Continuity | 5.67m PLN founder value around year 8 | 2.5k PLN paid audit; 22k PLN maximum pre-proof spend | Exclusive purchased Lisa/Lisa Pro firmware/service/parts rights and key engineers | The exact package can be optioned below 85k PLN and at least 450 active machines will pay annually |
 
 Suggested founder-selection order based on potential control strength, not a score:

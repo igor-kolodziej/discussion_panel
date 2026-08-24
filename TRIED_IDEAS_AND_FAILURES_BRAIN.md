@@ -273,7 +273,7 @@ These directions were investigated but did not become finalists because a hard g
 | Cross-border electrical-worker passport | Employer recognition was speculative; the credential did not route a paid event. |
 | AI-exception-operator staffing | Too few identifiable first buyers and too much customer-specific data at cold start. |
 | Generic enterprise AI-agent flight testing | An emerging readiness/evaluation category already had better-funded vendors and trusted deployment access. |
-| AI deployment performance warranty | Required loss data, reserves, legal structuring, and enterprise trust before paid proof. |
+| AI deployment performance warranty | Required loss data, reserves, and enterprise trust before paid proof. |
 | Generic human-escalation marketplace for AI agents | Purchasable HITL/BPO labor with service costs scaling alongside volume. |
 | PED/AAS harm-reduction membership | Clinical trust, health-data sensitivity, fragmented consumer acquisition, and a large paid-member denominator arrived together. |
 | Referee body-camera incident rail | Competition organizers and established camera vendors already controlled footage and distribution. |
@@ -316,7 +316,7 @@ Run folder: `working_folder/zero_to_one_candidates_20260715_102445/`
 
 This run researched 63 directions across four waves, completed 14 finalist specifications, developed three structural pivots, and independently panelled eight exact canonical candidates. The concise record below covers the finalists and pivots rather than every raw generator-stage direction.
 
-84. **AgentRemedy Rail** — Vendor-funded capped remedies for mistakes made by autonomous agents. **Killed after legal and advisory research:** either the startup did not control the payment/remedy event, or stronger control risked regulated insurance/payment activity; vendor adoption and wealth economics remained weak. Final advisory score: 65.
+84. **AgentRemedy Rail** — Vendor-funded capped remedies for mistakes made by autonomous agents. **Killed after advisory research:** either the startup did not control the payment/remedy event, or stronger control risked regulated insurance/payment activity; vendor adoption and wealth economics remained weak. Final advisory score: 65.
 
 85. **CatchPool AI** — Employer-funded bounties for employees who catch consequential AI-agent errors. **Killed at advisory evaluation:** the employer controlled the workflow and could reproduce it internally; anti-gaming and fragmented enterprise adoption prevented a durable data or transaction advantage. Advisory score: 67.
 
@@ -351,7 +351,7 @@ This run researched 63 directions across four waves, completed 14 finalist speci
 ### Distilled Lessons From The 10:24 Run
 
 1. A reachable paid experiment does not compensate for a non-conservative Founder Wealth path; several candidates passed Reachability but failed Wealth independently.
-2. Legal ownership of equipment, files, or data is not automatically Tier-1 economic control. The business must control a durable, valuable event or scarce resource that buyers cannot route around cheaply.
+2. Ownership of equipment, files, or data is not automatically Tier-1 economic control. The business must control a durable, valuable event or scarce resource that buyers cannot route around cheaply.
 3. Personalisation data compounds too slowly when an operating-system, platform, employer, or incumbent provider already owns distribution and the primary workflow.
 4. End-of-life inventory creates urgency but rarely supports durable wealth unless the initial wedge itself establishes the later control point.
 5. Test fixtures and benchmark products require either recognised authority, difficult-to-recreate predictive validity, or a mandatory release workflow; physical IP alone was readily copyable.

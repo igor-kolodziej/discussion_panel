@@ -21,7 +21,7 @@ Produce the audit deliverable: a leakage register with evidence, financial impac
 4. Link each finding to source evidence.
 5. Draft dispute language only where evidence is strong.
 6. Add renegotiation or stop-doing notes for preventable leakage.
-7. Avoid legal claims and accounting-certification language.
+7. Avoid claims and accounting-certification language.
 
 ## Subagents
 - Use one subagent to challenge weak findings.

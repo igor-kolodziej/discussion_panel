@@ -1,0 +1,293 @@
+{
+  "agent_id": "baseline-gen-fpe",
+  "role": "first_principles_extremist",
+  "assigned_ids": [
+    "RAW-031",
+    "RAW-032",
+    "RAW-033",
+    "RAW-034",
+    "RAW-035",
+    "RAW-036",
+    "RAW-037",
+    "RAW-038",
+    "RAW-039"
+  ],
+  "output_ids": [
+    "RAW-031",
+    "RAW-032",
+    "RAW-033",
+    "RAW-034",
+    "RAW-035",
+    "RAW-036",
+    "RAW-037",
+    "RAW-038",
+    "RAW-039"
+  ],
+  "queries": [
+    {
+      "search_text": "site:commission.europa.eu ecodesign working plan 2025 2030 digital product passport priority products official",
+      "opened_url": "https://commission.europa.eu/document/download/ae2ea9ea-d037-4920-bbf6-a4183b747e34_en?filename=COM_2025_378_1_EN_ACT_part1_v5.pdf",
+      "source_title": "Delivering on the Clean Industrial Deal I",
+      "source_date": "2025-07-02",
+      "evidence_id": "EV-B-DISC-007",
+      "entity_ids": [
+        "RAW-031",
+        "RAW-032",
+        "RAW-033",
+        "RAW-034",
+        "RAW-035"
+      ],
+      "proposition": "The Commission reports active EU mechanisms around industrial decarbonisation, including counter-guarantees for clean-energy PPAs, an industrial process-heat auction, grid and flexibility measures, priority sustainability requirements for steel and aluminium, and public monitoring of metal scrap flows.",
+      "status": "Supported as a current policy and market-structure signal; customer willingness to pay for any proposed service is unknown.",
+      "contradiction": "The same communication emphasizes simplification and reduced administrative burden, so compliance-heavy intermediaries could be designed out; several measures were still proposed or under consultation rather than final operating programs.",
+      "cheapest_resolving_test": "Show one-page paid offers to three metal firms, three industrial heat users, and three renewable developers, and ask each for a conditional letter of intent tied to a named live transaction."
+    },
+    {
+      "search_text": "site:digital-strategy.ec.europa.eu Data Act applies 12 September 2025 connected products user access data official EU",
+      "opened_url": "https://digital-strategy.ec.europa.eu/en/news/eu-data-act-gives-users-control-over-data-connected-devices",
+      "source_title": "EU Data Act gives users control over data from connected devices",
+      "source_date": "2025-09-12",
+      "evidence_id": "EV-B-DISC-008",
+      "entity_ids": [
+        "RAW-036",
+        "RAW-037",
+        "RAW-038",
+        "RAW-039"
+      ],
+      "proposition": "The EU Data Act applies and gives consumers and businesses access to and sharing rights over raw data from connected products, explicitly including cars and industrial machinery and pointing to repair, maintenance, manufacturing, and agriculture uses.",
+      "status": "Supported as a legal access mechanism; data quality, delivery friction, permitted fields, and buyer budgets remain unknown by device category.",
+      "contradiction": "A legal right to raw data does not guarantee standardized interfaces, low integration cost, complete historical data, freedom from trade-secret or privacy limits, or economically useful signal quality.",
+      "cheapest_resolving_test": "With one consenting owner in each target category, request export or third-party delivery from three equipment brands and attempt one decision-grade report before building software."
+    }
+  ],
+  "concepts": [
+    {
+      "raw_id": "RAW-031",
+      "title": "Assayed Scrap Offtake Exchange",
+      "one_sentence_thesis": "Own the transaction layer for regional metal scrap by attaching independent composition evidence to each lot and charging when a foundry accepts an otherwise discounted or rejected load.",
+      "customer": "Small foundries and metal recyclers trading inconsistent aluminium and steel scrap",
+      "loss_event": "A lot is rejected, downgraded, or hauled twice because composition and contamination are not trusted before delivery.",
+      "payer": "The seller through a closing fee, optionally shared with the buyer",
+      "beneficiary": "Scrap seller and consuming foundry",
+      "authority_holder": "The scrap owner authorizing sampling and sale",
+      "distributor": "Mobile assay operators, scrapyards, and foundry purchasing managers",
+      "risk_bearer": "Independent laboratory for assay accuracy and the seller for undisclosed contamination",
+      "transaction_owner": "A marketplace that standardizes lot evidence, bids, acceptance terms, and settlement",
+      "first_paid_event": "A foundry accepts and settles a lot introduced with the standardized assay packet.",
+      "acquisition_route": "Start with one mobile assay partner and phone-based sourcing from scrapyards within a single foundry catchment.",
+      "compounding_asset": "A proprietary dataset linking origin, assay, contamination, accepted price, and buyer outcome by scrap category",
+      "mechanism_class": "Verified commodity marketplace",
+      "evidence_id": "EV-B-DISC-007",
+      "hypotheses": [
+        "Pre-delivery evidence changes acceptance or pricing enough to fund a transaction fee.",
+        "Sellers will permit representative sampling before bids.",
+        "A narrow regional lane can supply repeat transaction density."
+      ],
+      "constraint_class": "ECONOMIC LIMITATION",
+      "prohibited_reliance": "No reliance on mislabeling waste, concealing contamination, or bypassing waste-shipment and materials rules."
+    },
+    {
+      "raw_id": "RAW-032",
+      "title": "Process-Heat Auction Bid Factory",
+      "one_sentence_thesis": "Convert wasteful industrial heat projects into submission-ready electrification or renewable-heat bids and collect a staged fee plus success fee only when financing closes.",
+      "customer": "Medium-sized factories with gas-fired process heat and no internal project-finance team",
+      "loss_event": "A viable heat conversion misses funding or stalls because metering, baseline, vendor design, and bid evidence are fragmented.",
+      "payer": "The factory or selected equipment developer",
+      "beneficiary": "Factory owner, project developer, and financing provider",
+      "authority_holder": "Factory management controlling meter access and capital approval",
+      "distributor": "Boiler service firms, energy auditors, and regional industry associations",
+      "risk_bearer": "Factory for operating assumptions, vendor for performance guarantees, and funder for award decisions",
+      "transaction_owner": "A bid-packaging desk controlling the baseline model, evidence room, vendor competition, and financing handoff",
+      "first_paid_event": "A factory pays for a metered feasibility packet, with the larger fee triggered by financing close.",
+      "acquisition_route": "Offer a fixed-scope screening through heat-equipment service partners that already see fuel bills and replacement cycles.",
+      "compounding_asset": "Reusable process-heat baselines, vendor cost curves, award objections, and measured post-conversion performance",
+      "mechanism_class": "Contingent project-finance origination",
+      "evidence_id": "EV-B-DISC-007",
+      "hypotheses": [
+        "Factories have candidate projects that fail at evidence assembly rather than technical feasibility.",
+        "A staged fee is acceptable before any uncertain public award.",
+        "Vendors will provide data under a standardized competitive template."
+      ],
+      "constraint_class": "ASSUMED CONVENTION",
+      "prohibited_reliance": "No promise of grant approval, privileged access, or manipulation of emissions baselines."
+    },
+    {
+      "raw_id": "RAW-033",
+      "title": "Subscale PPA Guarantee Origination Desk",
+      "one_sentence_thesis": "Bundle smaller industrial electricity buyers into financeable clean-power contracts and get paid at close for assembling credit evidence, generation supply, and guarantee-provider handoff.",
+      "customer": "Mid-sized factories seeking stable electricity prices and renewable developers with projects too small for bespoke origination",
+      "loss_event": "A power contract fails because buyer credit, volume shape, legal work, and guarantee eligibility are uneconomic to assemble one counterparty at a time.",
+      "payer": "Developer and industrial buyer through disclosed closing fees",
+      "beneficiary": "Electricity buyer, project developer, and financing bank",
+      "authority_holder": "Buyer CFOs and developer investment committees",
+      "distributor": "Energy brokers, renewable installers, banks, and industrial accountants",
+      "risk_bearer": "Contract counterparties and any independent guarantee provider, not the origination desk",
+      "transaction_owner": "An arranger controlling cohort formation, term-sheet standardization, diligence room, and introductions",
+      "first_paid_event": "A bundled buyer cohort signs a bankable term sheet and pays the agreed origination milestone.",
+      "acquisition_route": "Recruit factories through energy-cost reviews and match only buyers with compatible load shape and contracting horizon.",
+      "compounding_asset": "A private map of buyer credit readiness, interval-load shapes, developer terms, and deal failure reasons",
+      "mechanism_class": "Aggregated contract origination",
+      "evidence_id": "EV-B-DISC-007",
+      "hypotheses": [
+        "Guarantee channels accept aggregated mid-market structures.",
+        "Buyers will share interval and credit data before a binding quote.",
+        "Standardized terms reduce legal and origination cost enough to create a fee pool."
+      ],
+      "constraint_class": "LAW / BINDING RULE",
+      "prohibited_reliance": "No holding of client funds, unlicensed credit intermediation, or claim that an EU or EIB guarantee is assured."
+    },
+    {
+      "raw_id": "RAW-034",
+      "title": "Grid-Constraint-First Site Rights",
+      "one_sentence_thesis": "Option land only after a data-led grid and permitting screen, then sell development rights to renewable or storage developers when a site clears a defined diligence gate.",
+      "customer": "Renewable and battery developers wasting origination spend on sites that cannot connect economically",
+      "loss_event": "Months of land and permit work are lost when grid constraints make a site unfinanceable.",
+      "payer": "Developer acquiring an optioned, screened site",
+      "beneficiary": "Developer and landowner",
+      "authority_holder": "Landowner for site rights and grid operator or authorities for connection and permits",
+      "distributor": "Regional installers, land agents, and electrical engineering firms",
+      "risk_bearer": "The site-rights vehicle for option costs and the acquirer after the stated diligence gate",
+      "transaction_owner": "A special-purpose site originator holding assignable land options and the diligence record",
+      "first_paid_event": "A developer pays an option assignment fee after reviewing a pre-agreed evidence packet.",
+      "acquisition_route": "Use the family renewable-installation network to source landowners and validate one narrow distribution-grid region.",
+      "compounding_asset": "Parcel-level grid, permit, landowner, rejection, and developer-demand intelligence",
+      "mechanism_class": "Option-based infrastructure origination",
+      "evidence_id": "EV-B-DISC-007",
+      "hypotheses": [
+        "Public and partner data predict fatal connection issues before formal application.",
+        "Landowners accept low-cost conditional options.",
+        "Developers pay for reduced early-stage failure risk rather than sourcing sites themselves."
+      ],
+      "constraint_class": "TECHNICAL LIMITATION",
+      "prohibited_reliance": "No claim that a screening result constitutes a grid-connection promise or permit approval."
+    },
+    {
+      "raw_id": "RAW-035",
+      "title": "Metal Tender Evidence Utility",
+      "one_sentence_thesis": "Give small metal fabricators a supplier-backed sustainability evidence packet per tender and charge only when the packet is accepted as complete by the buyer.",
+      "customer": "Steel and aluminium fabricators selling into larger EU supply chains",
+      "loss_event": "A supplier loses or delays a tender because material origin, recycled content, emissions, or supporting documents cannot be reconciled quickly.",
+      "payer": "The bidding fabricator",
+      "beneficiary": "Fabricator and procurement buyer",
+      "authority_holder": "Fabricator management and upstream mills controlling source documents",
+      "distributor": "Tender consultants, industry associations, accountants, and metal distributors",
+      "risk_bearer": "Document issuer for source accuracy and fabricator for representations in the tender",
+      "transaction_owner": "An evidence utility controlling document requests, normalization, exception handling, and buyer-ready export",
+      "first_paid_event": "The buyer's procurement team accepts a tender evidence packet as complete.",
+      "acquisition_route": "Manually assemble one live tender packet for a Polish exporter before automating repeated supplier requests.",
+      "compounding_asset": "A permissioned graph of suppliers, document types, accepted mappings, expiry patterns, and procurement objections",
+      "mechanism_class": "Outcome-priced compliance operations",
+      "evidence_id": "EV-B-DISC-007",
+      "hypotheses": [
+        "Missing evidence is a recurring tender loss rather than a rare enterprise request.",
+        "Upstream suppliers will release verifiable documents to an authorized fabricator.",
+        "Buyer acceptance can be defined clearly enough to trigger payment."
+      ],
+      "constraint_class": "REPUTATIONAL EXPECTATION",
+      "prohibited_reliance": "No fabricated sustainability claims, inferred certifications, or presentation of estimates as supplier-verified facts."
+    },
+    {
+      "raw_id": "RAW-036",
+      "title": "Machine-Data Maintenance Tender Agent",
+      "one_sentence_thesis": "Use factory-authorized machine data to run competitive maintenance tenders and earn a share of verified savings or avoided service scope.",
+      "customer": "Factories locked into expensive original-equipment maintenance despite having connected machinery",
+      "loss_event": "The plant accepts unnecessary replacement, opaque service scope, or avoidable downtime because independent maintainers lack usable operating evidence.",
+      "payer": "Factory owner from realized maintenance savings",
+      "beneficiary": "Factory owner and qualified independent maintainer",
+      "authority_holder": "The factory as connected-product user and maintenance decision maker",
+      "distributor": "Independent maintenance firms, plant insurers, and industrial energy auditors",
+      "risk_bearer": "Maintenance provider for workmanship and factory for operating decisions unless separately insured",
+      "transaction_owner": "A neutral tender agent controlling authorized data intake, fault brief, bids, and savings reconciliation",
+      "first_paid_event": "An independently priced maintenance job closes and produces contractually defined savings against the comparable incumbent quote.",
+      "acquisition_route": "Begin with one machine family where a maintenance partner can interpret raw sensor exports manually.",
+      "compounding_asset": "Cross-brand mappings from raw signals to faults, bid scopes, repairs, downtime, and realized outcomes",
+      "mechanism_class": "Data-enabled reverse auction",
+      "evidence_id": "EV-B-DISC-008",
+      "hypotheses": [
+        "Factories can obtain timely raw data in a form an independent expert can use.",
+        "Independent bids remain valid without restricted diagnostic tooling.",
+        "Savings can be measured without encouraging deferred necessary maintenance."
+      ],
+      "constraint_class": "TECHNICAL LIMITATION",
+      "prohibited_reliance": "No unauthorized access, circumvention of device security, or use of employee-level telemetry without a lawful basis."
+    },
+    {
+      "raw_id": "RAW-037",
+      "title": "Farmer-Owned Equipment Benchmark Cooperative",
+      "one_sentence_thesis": "Pool farmer-authorized machinery data into field-level operating benchmarks, selling agronomy decisions to members and only de-identified aggregate insight to suppliers under cooperative control.",
+      "customer": "Independent farms using connected tractors, implements, or harvesters across multiple brands",
+      "loss_event": "Fuel, passes, machine settings, and input timing remain inefficient because each farm sees only vendor-specific fragments and no comparable peer baseline.",
+      "payer": "Farm members for decision support, with optional licensed aggregate reports purchased by input or equipment suppliers",
+      "beneficiary": "Participating farmers",
+      "authority_holder": "Each farmer for contributed machine data and the cooperative board for aggregate licensing",
+      "distributor": "Agronomists, machinery service shops, farm accountants, and producer groups",
+      "risk_bearer": "Farmers for operational choices and the cooperative for privacy, aggregation, and contract compliance",
+      "transaction_owner": "A farmer-controlled cooperative that sets permissions, benchmark rules, and licensing terms",
+      "first_paid_event": "A farm pays for a season-specific benchmark report built from its own export plus a qualifying peer cohort.",
+      "acquisition_route": "Recruit one crop-and-machine cohort through an agronomist and deliver spreadsheets before building connectors.",
+      "compounding_asset": "A consented longitudinal dataset joining machine settings, field conditions, interventions, and farm-reported outcomes",
+      "mechanism_class": "User-owned data cooperative",
+      "evidence_id": "EV-B-DISC-008",
+      "hypotheses": [
+        "Exports contain comparable variables across enough machinery brands.",
+        "Farmers value peer benchmarks while retaining governance rights.",
+        "A cohort can be aggregated without revealing commercially sensitive farm performance."
+      ],
+      "constraint_class": "LAW / BINDING RULE",
+      "prohibited_reliance": "No sale of identifiable farm data, coercive consent, or repurposing beyond member-approved terms."
+    },
+    {
+      "raw_id": "RAW-038",
+      "title": "Heat-Pump Performance Warranty Rail",
+      "one_sentence_thesis": "Turn owner-authorized heat-pump telemetry into an installer performance certificate and warranty trigger that lets strong installers sell guaranteed comfort and efficiency.",
+      "customer": "Heat-pump installers whose good work is hard to distinguish and building owners exposed to underperformance disputes",
+      "loss_event": "The owner pays high energy bills or lacks comfort while installer, equipment maker, and building conditions each receive blame without shared evidence.",
+      "payer": "Installer per commissioned system, potentially passed through in the installation price",
+      "beneficiary": "Building owner and reputable installer",
+      "authority_holder": "Building owner for device data and installer or warranty provider for remediation approval",
+      "distributor": "Renewable installers, building-energy auditors, lenders, and home insurers",
+      "risk_bearer": "Installer or licensed warranty or insurance partner under explicit coverage terms",
+      "transaction_owner": "A measurement rail controlling baseline, commissioning record, telemetry checks, exception evidence, and claim routing",
+      "first_paid_event": "An installer buys the first post-commissioning performance certificate for a customer system.",
+      "acquisition_route": "Pilot on installations from the family renewable firm using owner consent and manual exports from one heat-pump brand.",
+      "compounding_asset": "A labeled dataset of building conditions, commissioning settings, weather-normalized performance, faults, and remedies",
+      "mechanism_class": "Telemetry-backed warranty enablement",
+      "evidence_id": "EV-B-DISC-008",
+      "hypotheses": [
+        "Owner-accessible data is sufficient to separate installation faults from weather and building-envelope effects.",
+        "Installers pay for differentiation and fewer disputes.",
+        "A licensed partner will underwrite clearly bounded performance triggers after pilot evidence."
+      ],
+      "constraint_class": "LAW / BINDING RULE",
+      "prohibited_reliance": "No unlicensed insurance risk-taking or access to household telemetry without explicit, revocable authorization."
+    },
+    {
+      "raw_id": "RAW-039",
+      "title": "Fleet Warranty Evidence Clearinghouse",
+      "one_sentence_thesis": "Use fleet-authorized connected-vehicle data to create neutral fault timelines that route repair work and resolve warranty responsibility for a per-case fee.",
+      "customer": "Commercial fleets, leasing firms, and independent repair networks handling disputed or repeat vehicle faults",
+      "loss_event": "A vehicle remains off-road or the fleet pays twice because manufacturer, workshop, and operator disagree on when a fault emerged and who must repair it.",
+      "payer": "Fleet or leasing company per resolved case, with disclosed referral fees from repair providers",
+      "beneficiary": "Fleet operator and whichever repair or warranty party is correctly responsible",
+      "authority_holder": "Fleet or lessee controlling the connected vehicle and repair authorization",
+      "distributor": "Fleet brokers, roadside-assistance firms, leasing managers, and independent workshops",
+      "risk_bearer": "Repairer for workmanship, warrantor for covered faults, and fleet for uncovered operation",
+      "transaction_owner": "A clearinghouse controlling consent, raw-data request, fault chronology, evidence handoff, and repair routing",
+      "first_paid_event": "A fleet pays when a disputed case receives an accepted responsibility decision or competitively routed repair order.",
+      "acquisition_route": "Start with one fleet, one recurring fault class, and one independent diagnostic specialist before adding brands.",
+      "compounding_asset": "A cross-brand corpus linking raw events, fault claims, responsibility decisions, repairs, recurrence, and downtime",
+      "mechanism_class": "Evidence-based claims clearinghouse",
+      "evidence_id": "EV-B-DISC-008",
+      "hypotheses": [
+        "User-accessible raw vehicle data contains defensible event timing for selected fault classes.",
+        "Fleets will pay for faster resolution even when the decision is not in their favor.",
+        "Warrantors and workshops accept a neutral evidence format."
+      ],
+      "constraint_class": "LAW / BINDING RULE",
+      "prohibited_reliance": "No access to driver-identifiable data beyond necessity, no tampering with vehicle systems, and no claim that the report legally binds a warrantor."
+    }
+  ],
+  "files_read": [
+    "context/baseline-gen-fpe.md"
+  ]
+}

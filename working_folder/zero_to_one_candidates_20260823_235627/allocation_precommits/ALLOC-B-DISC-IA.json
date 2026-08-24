@@ -1,0 +1,83 @@
+{
+  "agent_id": "baseline-gen-ia",
+  "allocation_id": "ALLOC-B-DISC-IA",
+  "arm": "matched_baseline",
+  "assigned_ids": [
+    "RAW-011",
+    "RAW-012",
+    "RAW-013",
+    "RAW-014",
+    "RAW-015",
+    "RAW-016",
+    "RAW-017",
+    "RAW-018",
+    "RAW-019",
+    "RAW-020"
+  ],
+  "created_at": "2026-08-23T23:56:51.760811+02:00",
+  "entity_ids": [
+    "RAW-011",
+    "RAW-012",
+    "RAW-013",
+    "RAW-014",
+    "RAW-015",
+    "RAW-016",
+    "RAW-017",
+    "RAW-018",
+    "RAW-019",
+    "RAW-020"
+  ],
+  "evidence_groups": [
+    {
+      "entity_ids": [
+        "RAW-011",
+        "RAW-012",
+        "RAW-013",
+        "RAW-014",
+        "RAW-015"
+      ],
+      "evidence_id": "EV-B-DISC-003"
+    },
+    {
+      "entity_ids": [
+        "RAW-016",
+        "RAW-017",
+        "RAW-018",
+        "RAW-019",
+        "RAW-020"
+      ],
+      "evidence_id": "EV-B-DISC-004"
+    }
+  ],
+  "metering_basis": "trace_derived_exact",
+  "model": "gpt-5.6-sol",
+  "output_ids": [
+    "RAW-011",
+    "RAW-012",
+    "RAW-013",
+    "RAW-014",
+    "RAW-015",
+    "RAW-016",
+    "RAW-017",
+    "RAW-018",
+    "RAW-019",
+    "RAW-020"
+  ],
+  "output_path": "agent_returns/baseline-gen-ia.json",
+  "packet_path": "context/baseline-gen-ia.md",
+  "packet_sha256": "d2bea6df07c774468dce287c2aca7f0d5fa7026da577c2dad6b9292829f590ff",
+  "planned_used_queries": 4,
+  "query_cap": 22,
+  "query_ids": [
+    "Q-B-0005",
+    "Q-B-0006",
+    "Q-B-0007",
+    "Q-B-0008"
+  ],
+  "reasoning_effort": "high",
+  "role": "incumbent_attacker",
+  "schema": "zt1-allocation-precommit-v1",
+  "scope_id": "baseline-w01",
+  "stage": "generation",
+  "trace_task_name": "zero_to_one_candidates_20260823_235627_baseline_gen_ia"
+}

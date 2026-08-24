@@ -1,0 +1,371 @@
+{
+  "agent_id": "baseline-gen-ih",
+  "role": "incentive_hacker",
+  "assigned_ids": [
+    "RAW-021",
+    "RAW-022",
+    "RAW-023",
+    "RAW-024",
+    "RAW-025",
+    "RAW-026",
+    "RAW-027",
+    "RAW-028",
+    "RAW-029",
+    "RAW-030"
+  ],
+  "output_ids": [
+    "RAW-021",
+    "RAW-022",
+    "RAW-023",
+    "RAW-024",
+    "RAW-025",
+    "RAW-026",
+    "RAW-027",
+    "RAW-028",
+    "RAW-029",
+    "RAW-030"
+  ],
+  "queries": [
+    {
+      "search_text": "site:commission.europa.eu pay transparency directive June 2026 reporting obligations employers official",
+      "opened_url": "https://commission.europa.eu/news-and-media/news/new-eu-rules-pay-transparency-explained-2026-06-05_en",
+      "source_title": "New EU rules on pay transparency explained",
+      "source_date": "2026-06-05",
+      "evidence_id": "EV-B-DISC-005",
+      "entity_ids": [
+        "RAW-021",
+        "RAW-022",
+        "RAW-023",
+        "RAW-024",
+        "RAW-025"
+      ],
+      "proposition": "The European Commission states that new EU pay-transparency rules require salary-range disclosure, employee access to individual and sex-disaggregated peer pay information, gender-pay-gap publication by employers with at least 100 employees, and an assessment when an unjustified gap of at least 5% appears; compensation, penalties, representation, and a shifted burden of proof create concrete loss events.",
+      "status": "Official evidence supports the obligation and loss mechanism, but not Polish implementation details, buyer budgets, vendor demand, or willingness to pay.",
+      "contradiction": "The page says the rules are taking effect across the EU, yet national transposition, enforcement practice, reporting schedules, and edge-case scope may differ; the source does not establish that any proposed intermediary is required.",
+      "cheapest_resolving_test": "Interview five Polish employment-law or payroll partners using a one-page mock deliverable, then seek one paid fixed-scope data-mapping pilot from an employer with at least 100 staff while counsel verifies the applicable Polish text."
+    },
+    {
+      "search_text": "site:digital-strategy.ec.europa.eu Cyber Resilience Act reporting obligations September 2026 manufacturers official",
+      "opened_url": "https://digital-strategy.ec.europa.eu/en/policies/cra-reporting",
+      "source_title": "Cyber Resilience Act - Reporting obligations",
+      "source_date": "2026-07-31",
+      "evidence_id": "EV-B-DISC-006",
+      "entity_ids": [
+        "RAW-026",
+        "RAW-027",
+        "RAW-028",
+        "RAW-029",
+        "RAW-030"
+      ],
+      "proposition": "The European Commission states that from 11 September 2026 manufacturers of products with digital elements must report actively exploited vulnerabilities and severe incidents, with an early warning within 24 hours, fuller notification within 72 hours, later final reports, and a single submission through the ENISA reporting platform.",
+      "status": "Official evidence supports the deadline-driven reporting problem and platform mechanism, but not market size, customer procurement behavior, or willingness to pay for an intermediary.",
+      "contradiction": "The official single reporting platform may reduce demand for submission software, and the page does not resolve which downstream distributors, hospitals, insurers, or integrators will fund adjacent evidence and routing services.",
+      "cheapest_resolving_test": "Run a tabletop incident with five EU hardware or embedded-software manufacturers, timing awareness-to-draft handoffs, and ask for a paid setup only where the existing process misses ownership or deadline evidence."
+    }
+  ],
+  "concepts": [
+    {
+      "raw_id": "RAW-021",
+      "title": "Equal-Value Job Graph",
+      "one_sentence_thesis": "A private job-and-pay evidence graph lets mid-market employers reconcile inconsistent titles into defensible equal-value cohorts before employees, representatives, or regulators expose an unexplained gap.",
+      "customer": "Polish and EU employers with at least 100 employees and fragmented payroll or job-title data",
+      "loss_event": "A report or employee request reveals an unexplained pay gap, forcing costly manual reconstruction, assessment, dispute, or remediation.",
+      "payer": "Employer HR, compensation, or legal budget owner",
+      "beneficiary": "Employees receive comparable information while the employer gains a reproducible evidence trail.",
+      "authority_holder": "The employer controls classification and remediation; national authorities and courts ultimately interpret compliance.",
+      "distributor": "Payroll bureaus, employment-law firms, and HRIS implementers",
+      "risk_bearer": "Employer bears penalties, compensation, legal cost, and reputational damage.",
+      "transaction_owner": "Chief people officer or general counsel through normal vendor procurement",
+      "first_paid_event": "Fixed-fee import and mapping of one payroll export into a counsel-reviewable cohort report",
+      "acquisition_route": "Sell a white-label diagnostic through Polish payroll and employment-law partners already serving 100-plus-person employers.",
+      "compounding_asset": "A versioned ontology of job equivalence, evidence gaps, and jurisdiction-specific review rules without pooling identifiable salary records",
+      "mechanism_class": "information-holder to risk-bearer evidence reconciliation",
+      "evidence_id": "EV-B-DISC-005",
+      "hypotheses": [
+        "Employers have enough title and payroll fragmentation that manual cohort construction is materially costly.",
+        "A partner-led fixed-fee diagnostic can be sold before a full software build.",
+        "Counsel will accept an exportable audit trail while retaining legal judgment."
+      ],
+      "constraint_class": [
+        "LAW / BINDING RULE: final duties, thresholds, deadlines, and lawful processing depend on applicable national transposition and data-protection law.",
+        "TECHNICAL LIMITATION: heterogeneous payroll data and weak job descriptions constrain automated matching.",
+        "REPUTATIONAL EXPECTATION: affected workers and representatives expect transparent, contestable classifications.",
+        "ECONOMIC LIMITATION: willingness to pay is unproven."
+      ],
+      "prohibited_reliance": "Must not rely on covert employee profiling, inferred protected traits, unlawful secondary use of salary data, or presenting automated similarity as legal judgment."
+    },
+    {
+      "raw_id": "RAW-022",
+      "title": "Salary-Range Release Gate",
+      "one_sentence_thesis": "An API and approval queue can make the employer—not the recruiter or job-board operator who lacks compensation authority—resolve missing or inconsistent salary ranges before a vacancy is published.",
+      "customer": "Recruitment agencies and multi-entity employers publishing high volumes of EU vacancies",
+      "loss_event": "A vacancy is delayed, withdrawn, challenged, or republished because its range is absent, stale, or inconsistent with the approved compensation band.",
+      "payer": "Recruitment agency operations lead or employer talent-acquisition owner",
+      "beneficiary": "Applicants receive earlier pay information and recruiters avoid repeated approval work.",
+      "authority_holder": "Employer compensation leadership authorizes ranges; recruiters and job boards only distribute them.",
+      "distributor": "Applicant-tracking-system consultants, recruitment process outsourcers, and job-board integrations",
+      "risk_bearer": "Employer bears primary compliance exposure while the agency bears rework and client-retention risk.",
+      "transaction_owner": "Talent-operations or recruitment-operations manager",
+      "first_paid_event": "Paid configuration of one ATS workflow covering range provenance, approval, and publication checks",
+      "acquisition_route": "Offer the gate as a white-label module to boutique recruiters and ATS implementation partners.",
+      "compounding_asset": "A cross-ATS library of vacancy-field mappings, approval patterns, and non-identifying exception reasons",
+      "mechanism_class": "authority-holder gating at distribution boundary",
+      "evidence_id": "EV-B-DISC-005",
+      "hypotheses": [
+        "Recruiters regularly receive roles before an authorized pay range is available.",
+        "Agencies lose enough time or trust on range corrections to pay for workflow enforcement.",
+        "Existing ATS controls do not preserve adequate range provenance."
+      ],
+      "constraint_class": [
+        "LAW / BINDING RULE: vacancy disclosure and pay-history restrictions depend on applicable national law.",
+        "TECHNICAL LIMITATION: ATS and job-board schemas differ.",
+        "SOFT INDUSTRY NORM: recruiters often prioritize posting speed over complete compensation approval.",
+        "ECONOMIC LIMITATION: per-seat or per-vacancy budget is unknown."
+      ],
+      "prohibited_reliance": "Must not scrape restricted applicant data, infer an applicant's prior salary, or disguise employer-authored ranges as independently verified market pay."
+    },
+    {
+      "raw_id": "RAW-023",
+      "title": "Pay-Information Request Room",
+      "one_sentence_thesis": "A managed request room coordinates payroll, HR, counsel, and the requesting employee so the employer can answer with traceable aggregates without casually exposing coworkers' pay.",
+      "customer": "Employers receiving employee requests for individual and comparable average pay information",
+      "loss_event": "An ad hoc response is late, inconsistent, non-reproducible, or discloses personal data, triggering dispute and legal review.",
+      "payer": "Employer legal or HR operations team",
+      "beneficiary": "Requesting employees obtain usable information and employers reduce privacy and response-control failures.",
+      "authority_holder": "Employer data controller approves disclosure; employee representatives, authorities, and courts may challenge it.",
+      "distributor": "Data-protection officers, employment counsel, and outsourced payroll providers",
+      "risk_bearer": "Employer bears discrimination, privacy, and procedural exposure.",
+      "transaction_owner": "General counsel, DPO, or HR operations director",
+      "first_paid_event": "Paid handling of one live request from intake through counsel-approved response packet",
+      "acquisition_route": "Referral from employment and privacy lawyers who need an operational layer around their advice.",
+      "compounding_asset": "A privacy-preserving library of request schemas, aggregation checks, decision logs, and response templates by jurisdiction",
+      "mechanism_class": "beneficiary-request to controlled-data-holder workflow",
+      "evidence_id": "EV-B-DISC-005",
+      "hypotheses": [
+        "Requests require coordination across teams that do not share a standard workflow.",
+        "Employers will pay per case before committing to a subscription.",
+        "Privacy-preserving aggregation can produce useful answers for common cohort sizes."
+      ],
+      "constraint_class": [
+        "LAW / BINDING RULE: employee access and personal-data disclosure rules govern the response.",
+        "TECHNICAL LIMITATION: small cohorts may make anonymization unreliable.",
+        "REPUTATIONAL EXPECTATION: employees expect an intelligible explanation, not merely a compliant data dump.",
+        "ECONOMIC LIMITATION: request frequency and case value are unknown."
+      ],
+      "prohibited_reliance": "Must not reveal identifiable coworker pay, suppress lawful requests, retaliate against requesters, or use fabricated cohorts."
+    },
+    {
+      "raw_id": "RAW-024",
+      "title": "Worker-Side Cohort Challenger",
+      "one_sentence_thesis": "A secure analysis service equips unions and employee representatives—who can represent workers but often lack the employer's analytics—to test cohort definitions and formulate evidence-based challenges.",
+      "customer": "Trade unions, works councils, equality bodies, and worker-side employment-law practices",
+      "loss_event": "Representatives spend scarce expert time on weak or non-reproducible challenges and miss material classification or pay-pattern issues.",
+      "payer": "Union, worker-representation body, equality-project fund, or claimant law firm",
+      "beneficiary": "Represented employees whose claims or consultations become more evidence-based",
+      "authority_holder": "Representatives decide which challenge to advance; employers control much source data; authorities or courts decide contested rights.",
+      "distributor": "Union federations, equality NGOs, and worker-side law firms",
+      "risk_bearer": "Workers bear underpayment risk while representatives bear case-selection cost.",
+      "transaction_owner": "Union legal director or law-firm partner",
+      "first_paid_event": "Fixed-fee analysis of one redacted employer report or claimant-supplied evidence set",
+      "acquisition_route": "Start with training-plus-case clinics for union federations and convert suitable matters into paid analyses.",
+      "compounding_asset": "A redacted corpus of contested cohort logic, successful information requests, and reusable analytical tests",
+      "mechanism_class": "information-asymmetry reduction for beneficiary representative",
+      "evidence_id": "EV-B-DISC-005",
+      "hypotheses": [
+        "Worker representatives receive enough structured information to run meaningful tests.",
+        "They have budget or funded projects for external analytical support.",
+        "A standardized redaction protocol can protect individuals while preserving analytical value."
+      ],
+      "constraint_class": [
+        "LAW / BINDING RULE: representation rights, evidence access, confidentiality, and legal-advice boundaries vary by jurisdiction.",
+        "TECHNICAL LIMITATION: employer-controlled data may be incomplete or overly aggregated.",
+        "REPUTATIONAL EXPECTATION: analysis must remain independent and explain uncertainty.",
+        "ECONOMIC LIMITATION: unions and NGOs may have constrained purchasing budgets."
+      ],
+      "prohibited_reliance": "Must not obtain data through deception, encourage unlawful disclosure, identify uninvolved employees, or promise litigation outcomes."
+    },
+    {
+      "raw_id": "RAW-025",
+      "title": "Deal-Side Pay Liability Dossier",
+      "one_sentence_thesis": "A buyer-funded diligence dossier makes latent pay-transparency remediation and evidence gaps visible before a transaction transfers the risk from seller to acquirer.",
+      "customer": "Private-equity buyers and strategic acquirers of EU employers with at least 100 staff",
+      "loss_event": "After closing, the buyer discovers missing job evidence, unexplained gaps, remediation cost, or disputes that were not priced into the deal.",
+      "payer": "Acquirer, investment fund, or transaction-insurance diligence budget",
+      "beneficiary": "Buyer and portfolio employees benefit from earlier identification and funded remediation.",
+      "authority_holder": "Buyer controls diligence scope and deal terms; seller controls data access; authorities and courts interpret compliance.",
+      "distributor": "Transaction counsel, financial due-diligence firms, and warranty-and-indemnity brokers",
+      "risk_bearer": "Buyer bears inherited operational and financial exposure after close; seller may bear negotiated warranty exposure.",
+      "transaction_owner": "Deal partner, operating partner, or transaction counsel",
+      "first_paid_event": "Paid red-flag review of anonymized payroll, job architecture, and reporting readiness for one live deal",
+      "acquisition_route": "Secure referral agreements with boutique transaction counsel and HR due-diligence advisers.",
+      "compounding_asset": "A sector-tagged library of diligence questions, evidence-quality patterns, remediation scopes, and contractual allocation options",
+      "mechanism_class": "pre-transaction transfer-risk discovery",
+      "evidence_id": "EV-B-DISC-005",
+      "hypotheses": [
+        "Pay-transparency readiness is material enough to influence diligence or post-close plans.",
+        "Sellers can provide useful anonymized data within transaction timelines.",
+        "Advisers will refer a narrow specialist instead of absorbing the work internally."
+      ],
+      "constraint_class": [
+        "LAW / BINDING RULE: national pay, privacy, employment, and transaction rules constrain data and conclusions.",
+        "SOFT INDUSTRY NORM: deal teams often defer workforce-data cleanup until after signing.",
+        "TECHNICAL LIMITATION: compressed diligence and incomplete seller data limit confidence.",
+        "ECONOMIC LIMITATION: source evidence does not establish transaction-budget demand."
+      ],
+      "prohibited_reliance": "Must not use identifiable payroll beyond authorized secure diligence, issue legal opinions without qualified counsel, or exaggerate estimated liabilities to influence price."
+    },
+    {
+      "raw_id": "RAW-026",
+      "title": "CRA Vulnerability Clock Router",
+      "one_sentence_thesis": "An evidence-preserving incident router starts the regulatory clock, identifies the manufacturer decision owner, and assembles staged drafts when researchers, support desks, suppliers, and executives each hold only part of the facts.",
+      "customer": "EU manufacturers of connected devices and commercial software with lean security teams",
+      "loss_event": "An exploited vulnerability or severe incident becomes known somewhere in the organization but is not triaged and reported within the required staged deadlines.",
+      "payer": "Manufacturer chief information security officer, product-security lead, or general counsel",
+      "beneficiary": "Manufacturer, customers, and public cyber-response bodies",
+      "authority_holder": "Manufacturer authorizes the filing; designated CSIRT and ENISA receive it.",
+      "distributor": "Product-security consultancies, penetration-testing firms, and cyber law practices",
+      "risk_bearer": "Manufacturer bears reporting and product risk; customers bear security consequences.",
+      "transaction_owner": "Product-security or compliance lead",
+      "first_paid_event": "Paid tabletop setup that configures ownership, evidence capture, and draft stages for one product family",
+      "acquisition_route": "Use fixed-price tabletop drills sold through Polish and EU cyber consultancies as the entry product.",
+      "compounding_asset": "A product-aware routing graph, anonymized handoff benchmarks, and reusable reporting decision patterns",
+      "mechanism_class": "distributed-information to deadline-owner routing",
+      "evidence_id": "EV-B-DISC-006",
+      "hypotheses": [
+        "Awareness-to-owner routing, not form submission, is a frequent deadline failure point.",
+        "Manufacturers will fund a tabletop before the reporting start date.",
+        "Existing ticketing tools cannot easily preserve the required staged decision evidence."
+      ],
+      "constraint_class": [
+        "LAW / BINDING RULE: CRA scope, reportability, clocks, and filing content govern the workflow.",
+        "TECHNICAL LIMITATION: incident facts evolve and source systems are fragmented.",
+        "REPUTATIONAL EXPECTATION: security teams require strict confidentiality and defensible access controls.",
+        "ECONOMIC LIMITATION: paid demand beyond existing incident-response tools is unknown."
+      ],
+      "prohibited_reliance": "Must not access customer systems without authorization, conceal reportable facts, delay required reports, or present workflow output as legal advice."
+    },
+    {
+      "raw_id": "RAW-027",
+      "title": "Hospital Device Evidence Gate",
+      "one_sentence_thesis": "A procurement evidence gate lets hospitals that bear operational harm demand current manufacturer vulnerability contacts, support periods, and incident-routing proof before buying connected devices.",
+      "customer": "Hospitals and private clinic groups procuring connected medical and facility devices",
+      "loss_event": "A vulnerable deployed device lacks a reachable manufacturer pathway or usable response evidence, causing downtime, emergency replacement, or patient-safety escalation.",
+      "payer": "Hospital procurement, clinical engineering, or cyber-risk budget",
+      "beneficiary": "Clinical teams and patients benefit from more supportable devices.",
+      "authority_holder": "Hospital controls procurement acceptance; manufacturer controls product reporting and remediation; clinical leadership controls safe-use decisions.",
+      "distributor": "Medical procurement groups, clinical-engineering advisers, and hospital cyber consultancies",
+      "risk_bearer": "Hospital bears service disruption and patient-safety exposure while manufacturer bears product and reporting exposure.",
+      "transaction_owner": "Hospital procurement director or clinical-engineering lead",
+      "first_paid_event": "Paid evidence review of one pending connected-device tender or vendor shortlist",
+      "acquisition_route": "Partner with medical-procurement advisers and offer a bounded tender appendix plus vendor-response review.",
+      "compounding_asset": "A device-vendor evidence registry, normalized support contacts, and non-confidential response-quality history",
+      "mechanism_class": "loss-bearer procurement gate on manufacturer evidence",
+      "evidence_id": "EV-B-DISC-006",
+      "hypotheses": [
+        "Hospitals cannot readily verify whether vendors have usable CRA incident pathways.",
+        "Procurement teams can add evidence requirements without delaying essential purchases.",
+        "Operational-risk reduction can fund a pre-award review even though the hospital is not the CRA reporter."
+      ],
+      "constraint_class": [
+        "LAW / BINDING RULE: medical-device, procurement, privacy, and cybersecurity rules may overlap; CRA reporting remains the manufacturer's duty where applicable.",
+        "TECHNICAL LIMITATION: vendor claims may not be independently testable during procurement.",
+        "REPUTATIONAL EXPECTATION: safety-critical recommendations require clinical and security review.",
+        "ECONOMIC LIMITATION: hospital procurement cycles are slow and budgets are unproven."
+      ],
+      "prohibited_reliance": "Must not claim medical-device certification, conduct unauthorized security tests, expose vulnerability details, or represent procurement evidence as a safety guarantee."
+    },
+    {
+      "raw_id": "RAW-028",
+      "title": "Manufacturer-of-Record Resolver",
+      "one_sentence_thesis": "A distributor-facing resolver maps white-label hardware, firmware suppliers, importers, and legal manufacturers so the party with filing authority receives incident facts before a fast reporting clock expires.",
+      "customer": "EU distributors and importers of white-label smart-home, energy, and industrial devices",
+      "loss_event": "A channel partner learns of an incident but cannot identify or reach the legally responsible manufacturer quickly enough, leaving customers exposed and commercial relationships at risk.",
+      "payer": "Distributor compliance, quality, or category-management owner",
+      "beneficiary": "Distributor customers and responsible manufacturers receive faster, correctly routed information.",
+      "authority_holder": "Responsible manufacturer files; distributor controls supplier onboarding and escalation requirements.",
+      "distributor": "Product-testing labs, customs advisers, and importer compliance firms",
+      "risk_bearer": "Distributor bears channel and recall disruption; manufacturer bears CRA reporting exposure; end users bear security harm.",
+      "transaction_owner": "Head of quality, compliance, or supplier management",
+      "first_paid_event": "Fixed-fee mapping and escalation drill for one supplier portfolio",
+      "acquisition_route": "Sell through CE-compliance and product-testing partners already collecting manufacturer documentation.",
+      "compounding_asset": "A verified entity-product-firmware ownership graph with dated escalation attestations",
+      "mechanism_class": "authority-resolution across fragmented supply chain",
+      "evidence_id": "EV-B-DISC-006",
+      "hypotheses": [
+        "White-label supply chains contain unresolved manufacturer and contact mappings.",
+        "Distributors will pay to make escalation readiness a supplier-onboarding condition.",
+        "A verified graph stays valuable despite supplier and firmware changes."
+      ],
+      "constraint_class": [
+        "LAW / BINDING RULE: legal roles and notification duties must be verified per product and supply chain.",
+        "TECHNICAL LIMITATION: product identity, firmware lineage, and supplier ownership change over time.",
+        "SOFT INDUSTRY NORM: commercial catalogs often obscure original manufacturers.",
+        "ECONOMIC LIMITATION: distributors may push the cost to suppliers rather than pay directly."
+      ],
+      "prohibited_reliance": "Must not falsify manufacturer identity, bypass contractual confidentiality, or route vulnerability details to unverified recipients."
+    },
+    {
+      "raw_id": "RAW-029",
+      "title": "Cyber Underwriter Reporting-Evidence Feed",
+      "one_sentence_thesis": "A consented evidence feed lets cyber underwriters price product-manufacturer reporting readiness without forcing insureds to transmit sensitive incident content to the insurer.",
+      "customer": "Cyber insurers, managing general agents, and brokers underwriting connected-product manufacturers",
+      "loss_event": "An insurer prices or renews a manufacturer without knowing whether incident ownership and staged reporting controls exist, amplifying claim and response cost after an event.",
+      "payer": "Insurer underwriting or loss-control function",
+      "beneficiary": "Insurer gains better risk selection and insured manufacturers gain a reusable readiness credential.",
+      "authority_holder": "Manufacturer controls its evidence and regulatory filings; insurer controls underwriting terms.",
+      "distributor": "Cyber-insurance brokers, loss-control consultancies, and insurer technology platforms",
+      "risk_bearer": "Insurer bears covered loss while manufacturer retains operational, regulatory, and uninsured exposure.",
+      "transaction_owner": "Head of cyber underwriting or loss control",
+      "first_paid_event": "Paid portfolio pilot producing readiness attestations for a small renewal cohort",
+      "acquisition_route": "Co-design one minimal evidence schema with a specialist broker and sell a bounded renewal-cohort pilot.",
+      "compounding_asset": "A consented benchmark linking control evidence patterns to non-sensitive operational outcomes over renewals",
+      "mechanism_class": "risk-bearer signal extraction with data minimization",
+      "evidence_id": "EV-B-DISC-006",
+      "hypotheses": [
+        "Underwriters consider CRA reporting readiness predictive of response quality or claim severity.",
+        "Manufacturers will share control attestations if incident content remains private.",
+        "Insurers can act on the signal in pricing, conditions, or loss-control services."
+      ],
+      "constraint_class": [
+        "LAW / BINDING RULE: insurance, privacy, confidentiality, and CRA rules constrain evidence use.",
+        "ASSUMED CONVENTION: reporting-control maturity is presumed to correlate with insurable risk but is not established by the source.",
+        "TECHNICAL LIMITATION: sparse loss data may prevent reliable validation.",
+        "ECONOMIC LIMITATION: insurer willingness to pay for this specific signal is unknown."
+      ],
+      "prohibited_reliance": "Must not disclose regulatory reports or vulnerability details without authority, create discriminatory proxy scoring, or claim an unvalidated readiness score predicts losses."
+    },
+    {
+      "raw_id": "RAW-030",
+      "title": "Firmware Lab Reporting Desk",
+      "one_sentence_thesis": "A white-label reporting desk lets small firmware and hardware engineering firms turn incident evidence they uncover into manufacturer-approved staged submissions without becoming the unauthorized decision maker.",
+      "customer": "Embedded-software studios, electronics design houses, and testing labs serving multiple product manufacturers",
+      "loss_event": "A service provider discovers credible incident evidence but client ownership, approval, and submission steps are improvised, consuming senior time and risking missed deadlines.",
+      "payer": "Engineering firm or lab that bundles the desk into retainers, with cost passed to manufacturer clients",
+      "beneficiary": "Manufacturer clients receive disciplined reporting support and end users get faster remediation pathways.",
+      "authority_holder": "Manufacturer retains reportability and filing decisions; engineering firm controls its client workflow.",
+      "distributor": "Embedded engineering networks, notified or testing bodies where appropriate, and product-compliance advisers",
+      "risk_bearer": "Manufacturer bears regulatory exposure; service firm bears professional-liability and client-retention risk.",
+      "transaction_owner": "Engineering-firm managing director or quality lead",
+      "first_paid_event": "Paid white-label setup plus one supervised tabletop for a named manufacturer client",
+      "acquisition_route": "Target small engineering firms with many installed client products and no dedicated regulatory incident desk.",
+      "compounding_asset": "A reusable library of client-authority matrices, evidence checklists, staged draft structures, and tabletop failure modes",
+      "mechanism_class": "specialist intermediary with retained client authority",
+      "evidence_id": "EV-B-DISC-006",
+      "hypotheses": [
+        "Small engineering firms are often the first technical information holder after deployment.",
+        "They prefer a white-label service over building 24-hour regulatory operations.",
+        "Manufacturer clients will explicitly retain decisions while paying through existing engineering relationships."
+      ],
+      "constraint_class": [
+        "LAW / BINDING RULE: manufacturers retain applicable CRA duties and filings must follow official requirements.",
+        "TECHNICAL LIMITATION: the desk cannot verify facts absent logs, reproductions, or client access.",
+        "REPUTATIONAL EXPECTATION: labs must remain neutral about severity until evidence is reviewed.",
+        "ECONOMIC LIMITATION: channel margin and incident frequency are unknown."
+      ],
+      "prohibited_reliance": "Must not impersonate the manufacturer, submit without explicit authority, suppress unfavorable evidence, or perform unauthorized exploitation to confirm a report."
+    }
+  ],
+  "files_read": [
+    "context/baseline-gen-ih.md"
+  ]
+}

@@ -1,0 +1,410 @@
+{
+  "agent_id": "baseline-gen-ih",
+  "role": "incentive_hacker",
+  "assigned_ids": [
+    "RAW-031",
+    "RAW-032",
+    "RAW-033",
+    "RAW-034",
+    "RAW-035",
+    "RAW-036",
+    "RAW-037",
+    "RAW-038",
+    "RAW-039"
+  ],
+  "output_ids": [
+    "RAW-031",
+    "RAW-032",
+    "RAW-033",
+    "RAW-034",
+    "RAW-035",
+    "RAW-036",
+    "RAW-037",
+    "RAW-038",
+    "RAW-039"
+  ],
+  "queries": [
+    {
+      "search_text": "site:single-market-economy.ec.europa.eu European Payment Observatory annual report 2025 late payments businesses",
+      "opened_url": "https://single-market-economy.ec.europa.eu/smes/challenges-and-resilience/late-payment/eu-payment-observatory/observatory-analysis_en?prefLang=lt",
+      "source_title": "EU Payment Observatory Analysis",
+      "source_date": "2025-12-15",
+      "evidence_id": "EV-B-DISC-007",
+      "entity_ids": [
+        "RAW-031",
+        "RAW-032",
+        "RAW-033",
+        "RAW-034",
+        "RAW-035"
+      ],
+      "proposition": "The European Commission reports that more than half of EU companies had difficulties from late payments in 2024, supplier-reported B2B and G2B payment periods exceeded 60 days, governments paid later than businesses, and collection created administrative burden; this supports testing workflows that make acceptance, disputes, and follow-up cheaper, but not any niche's willingness to pay.",
+      "status": "Official current evidence supports a broad and worsening loss event; product-level demand and Polish niche economics remain unproven.",
+      "contradiction": "Payment performance varies widely by Member State, the source does not validate any proposed vertical, and transparency or workflow software alone may not overcome buyer power or deliberate delay.",
+      "cheapest_resolving_test": "Recruit ten Polish SMEs across the five proposed niches through accountants and trade groups, process one real overdue or pre-invoice case each manually, and ask for a paid continuation only after a documented acceptance or resolution event."
+    },
+    {
+      "search_text": "site:ure.gov.pl 2025 Poland dynamic electricity prices demand response flexibility energy storage prosumers",
+      "opened_url": "https://www.ure.gov.pl/pl/urzad/informacje-ogolne/aktualnosci/13308%2CJuz-ponad-48-tys-gospodarstw-domowych-korzysta-z-umow-z-cenami-dynamicznymi.html",
+      "source_title": "Już ponad 4,8 tys. gospodarstw domowych korzysta z umów z cenami dynamicznymi",
+      "source_date": "2026-05-29",
+      "evidence_id": "EV-B-DISC-008",
+      "entity_ids": [
+        "RAW-036",
+        "RAW-037",
+        "RAW-038",
+        "RAW-039"
+      ],
+      "proposition": "Poland's energy regulator reports that in 2025 dynamic distribution tariffs linked price zones to system imbalance, 48% of customers had required remote-read meters, household dynamic contracts rose to 4,836, and small or microbusiness contracts reached 27,000; load profile materially affected realized prices, creating a testable coordination and qualification problem.",
+      "status": "Official market evidence supports growing technical availability and heterogeneous outcomes; it does not show demand for optimization products or guaranteed savings.",
+      "contradiction": "Household penetration remained below 0.03%, 2025 household users gave up a protected price, and annual average prices varied from 476 to 769 PLN/MWh across sellers, so generic savings claims would be unsafe and tariff protection may suppress adoption.",
+      "cheapest_resolving_test": "Obtain consented interval-meter data and bills from twenty households or microbusinesses, backtest actual available tariffs without controlling equipment, then seek three paid shadow-mode pilots from sites with demonstrably shiftable load."
+    }
+  ],
+  "concepts": [
+    {
+      "raw_id": "RAW-031",
+      "title": "Milestone Acceptance Rail for Public-Works Subcontractors",
+      "one_sentence_thesis": "A lightweight workflow assembles milestone evidence, identifies the person authorized to accept it, and issues the invoice immediately after recorded acceptance, charging the subcontractor per accepted packet without financing the receivable.",
+      "customer": "Polish electrical, renewable, and construction subcontractors serving main contractors or public projects",
+      "loss_event": "Completed work sits unbilled or disputed because acceptance evidence is incomplete or trapped with an unclear approver, extending the subcontractor's cash gap.",
+      "payer": "The subcontractor",
+      "beneficiary": "The subcontractor's owner and finance team",
+      "authority_holder": "The contractually designated site inspector, main contractor, or contracting authority that can accept the milestone",
+      "distributor": "Construction accountants, cost estimators, and renewable-installation partners",
+      "risk_bearer": "The subcontractor retains payment and counterparty risk; the product gives no collection guarantee.",
+      "transaction_owner": "The platform owns the evidence-to-acceptance workflow and fee event, while the contracting parties retain the underlying works and payment transaction.",
+      "first_paid_event": "A fixed fee when the first milestone packet is submitted through the workflow and formally accepted by the named authority holder",
+      "acquisition_route": "Pilot with the founder's family renewable-installation firm, then sell through accountants serving regional subcontractors.",
+      "compounding_asset": "A permissioned library of acceptance requirements, rejection reasons, and resolution paths by buyer and contract template",
+      "mechanism_class": "Authority-mapping and acceptance-proof workflow",
+      "evidence_id": "EV-B-DISC-007",
+      "hypotheses": [
+        "A meaningful share of delay begins before invoice due dates, at milestone acceptance.",
+        "Subcontractors will pay for faster acceptance without asking the vendor to fund receivables.",
+        "Contract-specific checklists can be produced from customer-provided documents with limited legal review."
+      ],
+      "constraint_class": [
+        {
+          "constraint": "Invoice, public-procurement, and contractual acceptance requirements",
+          "class": "LAW / BINDING RULE"
+        },
+        {
+          "constraint": "Access to buyer portals and signed site records",
+          "class": "TECHNICAL LIMITATION"
+        },
+        {
+          "constraint": "Supplier fear of irritating a powerful buyer",
+          "class": "REPUTATIONAL EXPECTATION"
+        }
+      ],
+      "prohibited_reliance": "No fabricated acceptance, backdating, impersonation of an approver, or promise that a compliant packet guarantees payment."
+    },
+    {
+      "raw_id": "RAW-032",
+      "title": "Reimbursement Hold Resolver for Small Clinics",
+      "one_sentence_thesis": "A privacy-preserving exception desk turns rejected or suspended public-payer claim batches into a prioritized document queue and charges a clinic only when the payer acknowledges a corrected batch.",
+      "customer": "Independent Polish outpatient clinics and diagnostic practices billing a public payer",
+      "loss_event": "A reimbursement batch is held because codes, referrals, signatures, or supporting documents do not match, while clinicians and billing staff lack time to identify the controlling exception.",
+      "payer": "The clinic",
+      "beneficiary": "The clinic and its patients through steadier operating cash flow",
+      "authority_holder": "The public payer's claims rules and the clinic employee authorized to correct and resubmit records",
+      "distributor": "Medical billing bureaux, practice-software vendors, and medical-accounting firms",
+      "risk_bearer": "The clinic retains reimbursement risk and clinical responsibility.",
+      "transaction_owner": "The service owns the exception-resolution case and outcome fee; the clinic owns and submits the claim.",
+      "first_paid_event": "A case fee when the first corrected batch receives formal payer acknowledgment rather than merely when advice is delivered",
+      "acquisition_route": "Use the medical-student partner to map nonclinical workflow and recruit billing managers through practice-software and accounting channels.",
+      "compounding_asset": "A de-identified map from rejection codes and document states to successful correction sequences",
+      "mechanism_class": "Information-holder to authority-holder exception routing",
+      "evidence_id": "EV-B-DISC-007",
+      "hypotheses": [
+        "Small clinics experience frequent document-driven holds large enough to buy outside help.",
+        "Payer acknowledgments can be observed reliably without storing unnecessary health data.",
+        "A nonclinical workflow can resolve enough cases without practicing medicine or law."
+      ],
+      "constraint_class": [
+        {
+          "constraint": "Health-data processing, medical records, and reimbursement rules",
+          "class": "LAW / BINDING RULE"
+        },
+        {
+          "constraint": "Access to payer interfaces and structured rejection data",
+          "class": "TECHNICAL LIMITATION"
+        },
+        {
+          "constraint": "Clinic willingness to share even minimized case information",
+          "class": "REPUTATIONAL EXPECTATION"
+        }
+      ],
+      "prohibited_reliance": "No upcoding, invented documentation, medical judgment, unauthorized patient-data use, or representation that the service can override payer decisions."
+    },
+    {
+      "raw_id": "RAW-033",
+      "title": "Freight Waiting-Time Proof to Invoice",
+      "one_sentence_thesis": "A mobile-light evidence workflow converts driver timestamps and dispatch records into contract-specific waiting-time charges, with the carrier paying a success fee only after the charge is accepted.",
+      "customer": "Small road carriers and owner-operators serving larger forwarders or shippers",
+      "loss_event": "Unplanned loading or unloading waits consume driver and vehicle capacity, but weak evidence or ambiguous authorization leaves the accessorial charge unbilled or disputed.",
+      "payer": "The carrier",
+      "beneficiary": "The carrier and driver whose lost capacity becomes billable",
+      "authority_holder": "The shipper or forwarder contact authorized under the transport order to approve accessorial charges",
+      "distributor": "Transport accountants, telematics resellers, and freight associations",
+      "risk_bearer": "The carrier retains customer-relationship and payment risk.",
+      "transaction_owner": "The platform owns evidence assembly, approval routing, and its success-fee invoice; it does not own the freight contract.",
+      "first_paid_event": "A percentage or fixed fee after the first waiting-time charge receives written customer acceptance",
+      "acquisition_route": "Offer accountants a manual recovery audit on recent completed loads, then convert repeat users to the workflow.",
+      "compounding_asset": "A contract- and counterparty-specific map of admissible evidence, approval latency, and dispute outcomes",
+      "mechanism_class": "Loss-bearer evidence capture tied to buyer acceptance",
+      "evidence_id": "EV-B-DISC-007",
+      "hypotheses": [
+        "Carriers forgo collectible accessorial charges because proof is fragmented rather than because contracts categorically exclude them.",
+        "A written acceptance event is observable enough to support outcome-based billing.",
+        "Accountants and telematics vendors can distribute the service without high-touch networking."
+      ],
+      "constraint_class": [
+        {
+          "constraint": "Transport contract terms and debt-collection rules",
+          "class": "LAW / BINDING RULE"
+        },
+        {
+          "constraint": "Reliable timestamps and integration with dispatch or telematics systems",
+          "class": "TECHNICAL LIMITATION"
+        },
+        {
+          "constraint": "Fear of losing loads by asserting small charges",
+          "class": "REPUTATIONAL EXPECTATION"
+        }
+      ],
+      "prohibited_reliance": "No falsified geolocation, driver coercion, hidden surveillance, or collection activity requiring authorization the operator lacks."
+    },
+    {
+      "raw_id": "RAW-034",
+      "title": "Export Order Payment-Term Gate",
+      "one_sentence_thesis": "A pre-order policy engine uses a supplier's own payment history and contract facts to route each export order to prepayment, deposit, insurance review, or ordinary terms before production starts.",
+      "customer": "Polish SME manufacturers and wholesalers selling repeatedly to foreign business buyers",
+      "loss_event": "The supplier commits inventory and production before anyone owns the decision on buyer-specific payment terms, then carries a late or disputed cross-border receivable.",
+      "payer": "The exporting supplier",
+      "beneficiary": "The supplier's owner, finance lead, and operations team",
+      "authority_holder": "The supplier executive who approves commercial terms; insurers and buyers control their own approvals",
+      "distributor": "Export accountants, customs agents, and freight forwarders",
+      "risk_bearer": "The supplier retains buyer default and commercial risk unless it separately contracts with a licensed insurer or financier.",
+      "transaction_owner": "The platform owns the internal approval record and charges per screened order; the supplier owns the sale and payment terms.",
+      "first_paid_event": "A fee when the first live export order receives a documented payment-term decision before production release",
+      "acquisition_route": "Distribute a spreadsheet-based payment-delay audit through export accountants and forwarders, then upsell recurring order gates.",
+      "compounding_asset": "A permissioned outcome dataset connecting order attributes, chosen protections, payment timing, and dispute causes",
+      "mechanism_class": "Risk-bearer decision rights moved before commitment",
+      "evidence_id": "EV-B-DISC-007",
+      "hypotheses": [
+        "Many small exporters lack a consistently enforced payment-term authority gate.",
+        "Their own ledger and order data are predictive enough to improve decisions without creating a public credit score.",
+        "A per-order fee is cheaper than recurring late-payment administration."
+      ],
+      "constraint_class": [
+        {
+          "constraint": "Credit-information, insurance intermediation, sanctions, and cross-border contract requirements",
+          "class": "LAW / BINDING RULE"
+        },
+        {
+          "constraint": "Sparse internal histories for new buyers",
+          "class": "TECHNICAL LIMITATION"
+        },
+        {
+          "constraint": "Buyers may reject deposits or shorter terms",
+          "class": "ECONOMIC LIMITATION"
+        }
+      ],
+      "prohibited_reliance": "No unlicensed lending or insurance advice, covert personal profiling, sanctions evasion, or unsupported claim that a routing decision predicts default."
+    },
+    {
+      "raw_id": "RAW-035",
+      "title": "Invoice Approval-Graph Desk for Service Firms",
+      "one_sentence_thesis": "A managed software desk maps who requested, received, approved, and can unblock each deliverable, then charges when an overdue invoice moves into an acknowledged resolution path.",
+      "customer": "Small software agencies, consultancies, laboratories, and engineering service firms selling to larger organizations",
+      "loss_event": "A completed deliverable and invoice bounce between procurement, project owner, and accounts payable because no one owns the exception, consuming founder time and delaying cash.",
+      "payer": "The service firm",
+      "beneficiary": "The firm's founder and finance team",
+      "authority_holder": "The buyer's project owner, procurement approver, or accounts-payable exception owner identified by the contract",
+      "distributor": "Bookkeepers, fractional CFOs, and vertical project-management consultants",
+      "risk_bearer": "The service firm retains dispute, collection, and relationship risk.",
+      "transaction_owner": "The desk owns the permissioned resolution case, communications log, and its fee trigger; neither debt nor buyer funds pass through it.",
+      "first_paid_event": "A fixed fee when the first stalled invoice receives buyer acknowledgment plus a named next action and owner",
+      "acquisition_route": "Give bookkeeping firms a co-branded aging-ledger triage that flags cases suitable for a paid resolution desk.",
+      "compounding_asset": "An approval-graph corpus of role patterns, message sequences, and time-to-resolution by buyer type",
+      "mechanism_class": "Transaction-owner reconstruction for invoice exceptions",
+      "evidence_id": "EV-B-DISC-007",
+      "hypotheses": [
+        "A material subset of overdue invoices is stalled by routing failures rather than insolvency or substantive disputes.",
+        "Buyer acknowledgment and named ownership are valuable, auditable intermediate outcomes.",
+        "Bookkeepers can supply repeatable low-cost distribution."
+      ],
+      "constraint_class": [
+        {
+          "constraint": "Commercial communications, debt-collection boundaries, and data protection",
+          "class": "LAW / BINDING RULE"
+        },
+        {
+          "constraint": "Access to email, contracts, and accounts-receivable records",
+          "class": "TECHNICAL LIMITATION"
+        },
+        {
+          "constraint": "Escalation may strain a strategic account",
+          "class": "REPUTATIONAL EXPECTATION"
+        }
+      ],
+      "prohibited_reliance": "No harassment, false legal threats, impersonation, unauthorized mailbox access, or claim that acknowledgment means the debt is undisputed."
+    },
+    {
+      "raw_id": "RAW-036",
+      "title": "Cold-Store Dynamic Tariff Shadow Scheduler",
+      "one_sentence_thesis": "A read-only scheduler finds safe refrigeration and defrost windows against actual dynamic energy and network prices, charging a site for a validated shadow schedule before any automated control.",
+      "customer": "Independent cold stores, grocers, bakeries, and food processors with shiftable refrigeration loads",
+      "loss_event": "Rigid compressor and defrost schedules concentrate consumption in expensive intervals even when thermal inertia could shift load without harming product.",
+      "payer": "The site owner or operator",
+      "beneficiary": "The site owner, with secondary system-flexibility benefits",
+      "authority_holder": "The site's food-safety and operations manager sets temperature limits; the seller and DSO set applicable prices.",
+      "distributor": "Refrigeration maintenance contractors and commercial energy brokers",
+      "risk_bearer": "The site retains tariff and product-temperature risk during shadow mode and any later approved control.",
+      "transaction_owner": "The platform owns schedule calculation, validation reporting, and subscription billing; it neither sells electricity nor dispatches assets initially.",
+      "first_paid_event": "A paid thirty-day shadow report after interval-meter and temperature data pass validation and a feasible savings schedule is delivered",
+      "acquisition_route": "Equip refrigeration contractors with a pre-sales meter-data check and share revenue on converted shadow pilots.",
+      "compounding_asset": "A site-type dataset linking interval load, temperature constraints, tariff intervals, and realized flexibility",
+      "mechanism_class": "Beneficiary-controlled load shifting under explicit safety bounds",
+      "evidence_id": "EV-B-DISC-008",
+      "hypotheses": [
+        "Enough microbusiness sites have remote-read meters and accessible interval data.",
+        "Refrigeration loads contain repeatable flexibility after mandatory temperature constraints.",
+        "Verified shadow savings are sufficient to convert sites to recurring service."
+      ],
+      "constraint_class": [
+        {
+          "constraint": "Food-safety temperature limits and equipment electrical requirements",
+          "class": "LAW / BINDING RULE"
+        },
+        {
+          "constraint": "Meter, sensor, and controller data access",
+          "class": "TECHNICAL LIMITATION"
+        },
+        {
+          "constraint": "Savings depend on tariff spread and actual flexible load",
+          "class": "ECONOMIC LIMITATION"
+        }
+      ],
+      "prohibited_reliance": "No control outside approved temperature envelopes, safety bypass, fabricated baseline, or guaranteed savings claim."
+    },
+    {
+      "raw_id": "RAW-037",
+      "title": "Battery Commissioning Certificate for Solar Installers",
+      "one_sentence_thesis": "A vendor-neutral audit checks whether a home or small-business battery is configured for the customer's actual tariff, load, and warranty limits, with the installer paying per commissioning certificate.",
+      "customer": "Polish photovoltaic and battery installers that want fewer callbacks and demonstrable commissioning quality",
+      "loss_event": "A technically functional battery disappoints because default schedules ignore hourly prices, household load shape, backup needs, or warranty constraints, leaving the installer to absorb support and reputational costs.",
+      "payer": "The installer",
+      "beneficiary": "The installer and the system owner",
+      "authority_holder": "The system owner authorizes settings; the installer and equipment warranty define permissible configuration.",
+      "distributor": "Battery and inverter wholesalers, installation networks, and renewable-industry accountants",
+      "risk_bearer": "The equipment owner bears market-price risk, while the installer retains installation and warranty obligations.",
+      "transaction_owner": "The service owns the audit and certificate transaction; the installer retains commissioning and any physical changes.",
+      "first_paid_event": "An installer fee when the first system receives a signed, data-backed commissioning certificate with disclosed limits",
+      "acquisition_route": "Validate on the family installation firm's jobs, then distribute the certificate through equipment wholesalers as an installer quality tool.",
+      "compounding_asset": "A compatibility and outcome library across inverter models, tariff structures, load profiles, settings, and callback causes",
+      "mechanism_class": "Warranty-bounded configuration audit",
+      "evidence_id": "EV-B-DISC-008",
+      "hypotheses": [
+        "Installers experience enough tariff-related callbacks to pay for independent commissioning evidence.",
+        "Common inverter exports expose sufficient data without unsupported control integrations.",
+        "Homeowners value a transparent certificate enough to improve installer conversion or referrals."
+      ],
+      "constraint_class": [
+        {
+          "constraint": "Electrical safety, consumer rights, and manufacturer warranty terms",
+          "class": "LAW / BINDING RULE"
+        },
+        {
+          "constraint": "Fragmented inverter APIs and firmware behavior",
+          "class": "TECHNICAL LIMITATION"
+        },
+        {
+          "constraint": "Installers may view external auditing as criticism",
+          "class": "REPUTATIONAL EXPECTATION"
+        }
+      ],
+      "prohibited_reliance": "No warranty override, unsafe battery cycling, unauthorized remote control, concealed tariff downside, or claim that certification guarantees bill savings."
+    },
+    {
+      "raw_id": "RAW-038",
+      "title": "Route-Safe Charging Windows for Small EV Fleets",
+      "one_sentence_thesis": "A depot scheduler translates next-day routes, charger limits, and dynamic tariffs into charge-by deadlines, with fleets paying per connected vehicle after a shadow plan proves route feasibility.",
+      "customer": "Local delivery, service, and municipal-contractor fleets operating electric vans from a depot",
+      "loss_event": "Vehicles charge as soon as they plug in, raising energy cost or coincident load, while generic optimization risks a missed morning route.",
+      "payer": "The fleet operator",
+      "beneficiary": "The fleet operator and dispatch team",
+      "authority_holder": "The fleet dispatcher defines required state of charge and departure; the charger owner authorizes any control.",
+      "distributor": "Commercial charger installers, vehicle-leasing firms, and fleet telematics providers",
+      "risk_bearer": "The fleet retains route-service and tariff risk; the system defaults to meeting the declared departure constraint.",
+      "transaction_owner": "The platform owns schedule generation, charger-command logging where authorized, and per-vehicle billing; it does not buy or resell electricity.",
+      "first_paid_event": "A paid depot shadow pilot after the first week of schedules meets every declared route constraint in simulation",
+      "acquisition_route": "Let charger installers bundle the pilot into post-installation handover and earn a recurring referral share.",
+      "compounding_asset": "A depot-level dataset connecting route demand, weather, vehicle consumption, charger availability, and price-responsive flexibility",
+      "mechanism_class": "Operational constraint translated into price-responsive dispatch",
+      "evidence_id": "EV-B-DISC-008",
+      "hypotheses": [
+        "Small fleets have predictable overnight dwell but lack tariff-aware dispatch tooling.",
+        "Charger or telematics interfaces are accessible for a useful share of target fleets.",
+        "Avoided cost exceeds integration and support expense without compromising route readiness."
+      ],
+      "constraint_class": [
+        {
+          "constraint": "Charger electrical safety, employee access, and vehicle warranty terms",
+          "class": "LAW / BINDING RULE"
+        },
+        {
+          "constraint": "Charger, vehicle, and telematics interoperability",
+          "class": "TECHNICAL LIMITATION"
+        },
+        {
+          "constraint": "Tariff savings must exceed integration cost at small fleet scale",
+          "class": "ECONOMIC LIMITATION"
+        }
+      ],
+      "prohibited_reliance": "No disabling safety controls, falsifying route readiness, accessing driver data beyond explicit purpose, or promising savings independent of actual tariffs and routes."
+    },
+    {
+      "raw_id": "RAW-039",
+      "title": "Verified Dynamic-Tariff Lead Exchange",
+      "one_sentence_thesis": "A neutral calculator verifies meter eligibility and shiftable load before a consumer requests an offer, then charges an electricity seller only when a suitable customer activates a dynamic contract after required disclosures.",
+      "customer": "Alternative electricity sellers seeking suitable household and microbusiness dynamic-tariff customers",
+      "loss_event": "Sellers spend acquisition budget on customers lacking a remote-read meter, shiftable consumption, or informed risk tolerance, while unsuitable customers face bill shock and churn.",
+      "payer": "The electricity seller",
+      "beneficiary": "The seller and customers whose load profile genuinely fits the offer",
+      "authority_holder": "The customer chooses the contract, the seller verifies and contracts, and the DSO controls meter eligibility data.",
+      "distributor": "PV, battery, heat-pump, and EV-charger installers plus small-business accountants",
+      "risk_bearer": "The seller bears the paid-lead risk; the customer retains price variability after transparent consent.",
+      "transaction_owner": "The exchange owns consented qualification, attribution, and the activation-fee transaction; the licensed seller owns the energy contract.",
+      "first_paid_event": "The seller pays for the first attributed contract that remains active after applicable withdrawal or cooling-off rights",
+      "acquisition_route": "Embed the calculator in installer post-sale portals and accountant newsletters, avoiding camera-led consumer acquisition.",
+      "compounding_asset": "A consented dataset of meter eligibility, load-shift features, offer selection, activation, churn, and realized bill outcomes",
+      "mechanism_class": "Payer-beneficiary alignment through outcome-priced qualification",
+      "evidence_id": "EV-B-DISC-008",
+      "hypotheses": [
+        "Alternative sellers will pay more for verified activations than for unqualified leads.",
+        "Installers and accountants can reach customers at moments when load shape or tariffs are salient.",
+        "Eligibility and suitability can be explained without acting as an undisclosed sales agent."
+      ],
+      "constraint_class": [
+        {
+          "constraint": "Consumer consent, marketing, withdrawal rights, energy-contract disclosures, and data protection",
+          "class": "LAW / BINDING RULE"
+        },
+        {
+          "constraint": "Access to meter status and interval consumption data",
+          "class": "TECHNICAL LIMITATION"
+        },
+        {
+          "constraint": "Trust in a calculator funded by sellers",
+          "class": "REPUTATIONAL EXPECTATION"
+        }
+      ],
+      "prohibited_reliance": "No dark patterns, hidden commissions, suppression of downside or lost price protection, unauthorized meter-data access, or claim that dynamic pricing is universally cheaper."
+    }
+  ],
+  "files_read": [
+    "context/baseline-gen-ih.md"
+  ]
+}

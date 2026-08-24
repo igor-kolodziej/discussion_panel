@@ -1,0 +1,69 @@
+{
+  "aggregate_opportunity": {
+    "discovery_queries": 108,
+    "fact_closure": 6,
+    "fact_closure_queries": 48,
+    "frozen": 6,
+    "level2": 12,
+    "level2_queries": 144,
+    "raw": 48,
+    "total_queries": 300
+  },
+  "candidate_budgets": {
+    "fact_closure": {
+      "elapsed_minutes": 8,
+      "input_tokens": 10000,
+      "output_tokens": 500
+    },
+    "level2": {
+      "elapsed_minutes": 12,
+      "input_tokens": 10000,
+      "output_tokens": 500
+    }
+  },
+  "contract_id": "matched-development-v2",
+  "dossier_output_token_range": {
+    "maximum": 500,
+    "minimum": 40
+  },
+  "dossier_word_range": {
+    "maximum": 220,
+    "minimum": 60
+  },
+  "evidence_statuses": [
+    "verified",
+    "interpreted",
+    "counsel-required",
+    "unknown",
+    "contradicted"
+  ],
+  "fact_closure_schema": {
+    "replacement_after_closure": false,
+    "requires_decision_critical_evidence": true,
+    "requires_pre_freeze_source_chain": true
+  },
+  "frozen_sections": [
+    "## Problem And Payer Evidence",
+    "## Proposed Transaction",
+    "## Acquisition Route",
+    "## Decision-Critical Unknowns",
+    "## Evidence And Sources"
+  ],
+  "level2_sections": [
+    "## Problem And Payer Evidence",
+    "## Proposed Transaction",
+    "## Acquisition Route",
+    "## Decision-Critical Unknowns",
+    "## Evidence And Sources"
+  ],
+  "query_source_opportunity": {
+    "query_requires_source_open": true,
+    "query_requires_tool_event": true,
+    "source_requires_bidirectional_evidence": true
+  },
+  "schema": "zt1-development-contract-v2",
+  "stage_query_caps": {
+    "fact_closure": 8,
+    "level2": 12
+  }
+}

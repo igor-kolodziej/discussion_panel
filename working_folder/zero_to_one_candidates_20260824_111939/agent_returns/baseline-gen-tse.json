@@ -1,0 +1,338 @@
+{
+  "agent_id": "baseline-gen-tse",
+  "role": "taboo_space_explorer",
+  "assigned_ids": [
+    "RAW-031",
+    "RAW-032",
+    "RAW-033",
+    "RAW-034",
+    "RAW-035",
+    "RAW-036",
+    "RAW-037",
+    "RAW-038",
+    "RAW-039"
+  ],
+  "output_ids": [
+    "RAW-031",
+    "RAW-032",
+    "RAW-033",
+    "RAW-034",
+    "RAW-035",
+    "RAW-036",
+    "RAW-037",
+    "RAW-038",
+    "RAW-039"
+  ],
+  "queries": [
+    {
+      "search_text": "site:podatki.gov.pl KSeF obowiązkowy 2026 terminy mikroprzedsiębiorcy faktury official",
+      "opened_url": "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/zakres-obowiazkowego-ksef/",
+      "source_title": "Zakres obowiązkowego KSeF - KSeF (Krajowy System e-Faktur)",
+      "source_date": "2026-02-06",
+      "evidence_id": "EV-B-DISC-007",
+      "entity_ids": [
+        "RAW-031",
+        "RAW-032",
+        "RAW-033",
+        "RAW-034",
+        "RAW-035"
+      ],
+      "proposition": "The Polish Ministry of Finance states that KSeF authenticates users and delegated entities, mandates receipt from 1 February 2026, phases mandatory issuance, supports invoice attachments for complex billing, provides a VAT RR path, and connects B2G PEF invoices to KSeF.",
+      "status": "SUPPORTED FOR REGULATORY MECHANISM; WILLINGNESS TO PAY UNKNOWN",
+      "contradiction": "The source confirms obligations and special workflows but gives no failure-rate, buyer-budget, or vendor-demand evidence; the temporary small-seller threshold narrows immediate urgency for the smallest firms.",
+      "cheapest_resolving_test": "Show a manual exception report to five operators in each niche and ask each to pay for one live invoice batch before building an integration."
+    },
+    {
+      "search_text": "site:environment.ec.europa.eu revised Urban Wastewater Treatment Directive extended producer responsibility pharmaceuticals cosmetics 2025 official",
+      "opened_url": "https://environment.ec.europa.eu/news/new-rules-urban-wastewater-management-set-enter-force-2024-12-20_en",
+      "source_title": "New rules for more thorough and cost-effective urban wastewater management enter into force",
+      "source_date": "2024-12-20",
+      "evidence_id": "EV-B-DISC-008",
+      "entity_ids": [
+        "RAW-036",
+        "RAW-037",
+        "RAW-038",
+        "RAW-039"
+      ],
+      "proposition": "The European Commission says revised wastewater rules cover agglomerations from 1,000 inhabitants, require micropollutant and health monitoring, place at least 80% of advanced-treatment cost on pharmaceutical and cosmetics industries, require stormwater planning, and promote phosphorus recovery.",
+      "status": "SUPPORTED FOR EU-LEVEL OBLIGATION; NATIONAL IMPLEMENTATION AND PAYMENT UNKNOWN",
+      "contradiction": "The source describes EU requirements and expected benefits, not Poland's final implementation, allocation formula, procurement calendar, or customers' current readiness to buy.",
+      "cheapest_resolving_test": "Obtain one paid scoping engagement from a Polish utility, municipality, or affected producer contingent on its counsel confirming the relevant implementation duty."
+    }
+  ],
+  "concepts": [
+    {
+      "raw_id": "RAW-031",
+      "title": "KSeF Missing-Invoice Sentinel for Independent Pharmacies",
+      "one_sentence_thesis": "A read-only exception service reconciles KSeF receipts against wholesaler deliveries and pharmacy stock so an owner catches missing, duplicated, or misassigned invoices before payment and close.",
+      "customer": "Polish independent pharmacies and small pharmacy groups",
+      "loss_event": "A supplier invoice is missed or posted to the wrong entity, creating late payment, duplicate payment, or an inventory and tax mismatch.",
+      "payer": "Pharmacy owner or group finance lead",
+      "beneficiary": "Pharmacy owner, bookkeeper, and purchasing staff",
+      "authority_holder": "The pharmacy taxpayer who grants scoped KSeF access",
+      "distributor": "Pharmacy accounting bureaus and regional pharmacy software integrators",
+      "risk_bearer": "The pharmacy taxpayer",
+      "transaction_owner": "Pharmacy owner or finance lead",
+      "first_paid_event": "A fixed-fee reconciliation of one month's KSeF invoices against delivery and stock exports",
+      "acquisition_route": "Partner with two pharmacy-specialist accounting bureaus and sell through their existing client reviews.",
+      "compounding_asset": "A library of wholesaler identity, document, credit-note, and mismatch patterns",
+      "mechanism_class": "RECONCILIATION AND EXCEPTION DETECTION",
+      "evidence_id": "EV-B-DISC-007",
+      "hypotheses": [
+        "Independent pharmacies can provide lawful read-only invoice and inventory exports.",
+        "Avoided reconciliation labor or payment errors justify a recurring fee.",
+        "Accounting bureaus will distribute a product that reduces close-time exceptions."
+      ],
+      "constraint_class": {
+        "KSeF receipt and authorization rules": "LAW / BINDING RULE",
+        "Pharmacy-specific reconciliation workflow": "ASSUMED CONVENTION",
+        "Data access and integration quality": "TECHNICAL LIMITATION",
+        "Recurring willingness to pay": "ECONOMIC LIMITATION"
+      },
+      "prohibited_reliance": "Must not access patient records, infer patient purchases, or use broader KSeF permissions than reconciliation requires."
+    },
+    {
+      "raw_id": "RAW-032",
+      "title": "VAT RR Authorization Desk for Produce Buyers",
+      "one_sentence_thesis": "A managed workflow helps dairies, mills, and produce processors collect farmer authorizations, validate master data, and issue auditable KSeF VAT RR documents without chasing paper.",
+      "customer": "Polish agricultural processors and buying cooperatives purchasing from flat-rate farmers",
+      "loss_event": "A missing authorization or malformed VAT RR document delays settlement and forces finance staff to repair records manually.",
+      "payer": "Processor finance director or cooperative management board",
+      "beneficiary": "Accounts payable staff, procurement staff, and supplying farmers",
+      "authority_holder": "The farmer granting authorization and the buyer taxpayer issuing the document",
+      "distributor": "Agricultural accounting firms, ERP resellers, and producer associations",
+      "risk_bearer": "The purchasing processor or cooperative",
+      "transaction_owner": "Head of accounts payable",
+      "first_paid_event": "Paid onboarding of one supplier cohort and its first VAT RR issuance run",
+      "acquisition_route": "Recruit one agricultural ERP reseller near Wielkopolska to introduce the service during KSeF migration work.",
+      "compounding_asset": "Reusable authorization status, supplier-validation, and exception-playbook data",
+      "mechanism_class": "DELEGATED AUTHORIZATION AND DOCUMENT WORKFLOW",
+      "evidence_id": "EV-B-DISC-007",
+      "hypotheses": [
+        "Buyers face meaningful manual effort across large farmer supplier lists.",
+        "Farmers will complete a simple assisted authorization flow.",
+        "Processors will pay for fewer blocked settlements and cleaner audit evidence."
+      ],
+      "constraint_class": {
+        "VAT RR authorization and KSeF document rules": "LAW / BINDING RULE",
+        "Farmer adoption behavior": "REPUTATIONAL EXPECTATION",
+        "ERP interoperability": "TECHNICAL LIMITATION",
+        "Buyer budget": "ECONOMIC LIMITATION"
+      },
+      "prohibited_reliance": "Must not fabricate farmer consent, backdate authorization, or present software output as tax advice."
+    },
+    {
+      "raw_id": "RAW-033",
+      "title": "KSeF Permission Monitor for Bailiff Offices",
+      "one_sentence_thesis": "A minimal-access monitor inventories KSeF permissions, detects stale mandates and staff changes, and produces an evidence pack for small bailiff offices handling invoices in legally unusual roles.",
+      "customer": "Polish court bailiff offices and small enforcement-office networks",
+      "loss_event": "A departed employee, invalid mandate, or wrong entity permission blocks invoice handling or leaves excessive access in place.",
+      "payer": "Bailiff office owner",
+      "beneficiary": "Office owner, administrator, and external accountant",
+      "authority_holder": "The taxpayer or enforcement authority empowered to grant KSeF permissions",
+      "distributor": "Accounting and IT providers specializing in legal and enforcement offices",
+      "risk_bearer": "The bailiff office and relevant authority holder",
+      "transaction_owner": "Office owner",
+      "first_paid_event": "A paid permission inventory and remediation report after a staff or mandate change",
+      "acquisition_route": "Offer a white-label quarterly check through specialist accounting firms serving bailiffs.",
+      "compounding_asset": "A ruleset of role, mandate, revocation, and least-privilege failure patterns",
+      "mechanism_class": "ACCESS GOVERNANCE AND AUDIT EVIDENCE",
+      "evidence_id": "EV-B-DISC-007",
+      "hypotheses": [
+        "Small offices lack an internal access-governance process.",
+        "Staff and mandate changes create recurring permission risk.",
+        "Specialist accountants can reach enough offices without broad networking."
+      ],
+      "constraint_class": {
+        "KSeF authority and authentication": "LAW / BINDING RULE",
+        "Least-privilege review cadence": "SOFT INDUSTRY NORM",
+        "Role-state detection": "TECHNICAL LIMITATION",
+        "Office willingness to pay": "ECONOMIC LIMITATION"
+      },
+      "prohibited_reliance": "Must not impersonate an authority holder, retain signing credentials, or automate permission changes without explicit approval."
+    },
+    {
+      "raw_id": "RAW-034",
+      "title": "Complex-Usage Invoice Attachment Validator",
+      "one_sentence_thesis": "A preflight engine checks whether energy, telecom, and fuel usage rows in optional KSeF attachments reconcile to the structured invoice before a high-volume billing run is submitted.",
+      "customer": "Mid-sized municipal utilities, fuel distributors, and telecom resellers with complex usage billing",
+      "loss_event": "A mismatch between invoice totals and detailed usage causes rejection, customer disputes, or an expensive rebilling cycle.",
+      "payer": "Billing operations director",
+      "beneficiary": "Billing, finance, customer service, and downstream business customers",
+      "authority_holder": "The invoicing taxpayer",
+      "distributor": "Billing-system integrators and municipal IT vendors",
+      "risk_bearer": "The issuing utility or distributor",
+      "transaction_owner": "Billing operations director",
+      "first_paid_event": "Validation of one production-sized invoice batch before submission",
+      "acquisition_route": "Sell a fixed-scope batch preflight through integrators already implementing KSeF connectors.",
+      "compounding_asset": "An anonymized catalogue of tariff, unit, rounding, and attachment-to-header failure signatures",
+      "mechanism_class": "PRE-SUBMISSION VALIDATION",
+      "evidence_id": "EV-B-DISC-007",
+      "hypotheses": [
+        "Complex usage attachments generate errors not caught by generic schema validation.",
+        "A read-only preflight can run without replacing billing software.",
+        "Avoided rebilling cost supports per-batch or recurring payment."
+      ],
+      "constraint_class": {
+        "KSeF attachment content and enrollment rules": "LAW / BINDING RULE",
+        "Utility billing formats": "ASSUMED CONVENTION",
+        "High-volume deterministic validation": "TECHNICAL LIMITATION",
+        "Cost of integration and sales cycle": "ECONOMIC LIMITATION"
+      },
+      "prohibited_reliance": "Must not alter invoices silently, invent metering data, or treat optional attachment use as universally mandatory."
+    },
+    {
+      "raw_id": "RAW-035",
+      "title": "PEF-to-KSeF Payment Delay Diagnostician",
+      "one_sentence_thesis": "A case-based service traces public-sector invoices across PEF, KSeF, purchase-order, and acceptance references to identify the specific defect holding up a contractor's payment.",
+      "customer": "Small contractors and service vendors selling to Polish public entities",
+      "loss_event": "An accepted public-sector job remains unpaid because invoice identifiers or workflow states do not reconcile across systems.",
+      "payer": "Contractor owner or finance manager",
+      "beneficiary": "Contractor treasury and accounts-receivable staff",
+      "authority_holder": "The contractor taxpayer and public buyer controlling acceptance and payment",
+      "distributor": "Public-procurement advisers, factoring brokers, and contractor accountants",
+      "risk_bearer": "The contractor awaiting cash",
+      "transaction_owner": "Contractor finance manager",
+      "first_paid_event": "A fixed fee for diagnosing one overdue B2G invoice, with no contingent collection claim",
+      "acquisition_route": "Receive referrals from factoring brokers when an otherwise valid public receivable cannot be funded.",
+      "compounding_asset": "A decision tree linking status combinations and reference defects to resolution steps by buyer type",
+      "mechanism_class": "RECEIVABLE WORKFLOW DIAGNOSTICS",
+      "evidence_id": "EV-B-DISC-007",
+      "hypotheses": [
+        "Cross-system reference defects are a material source of public-payment delay.",
+        "Contractors can lawfully share case metadata under a narrow mandate.",
+        "Factoring brokers have an incentive to refer blocked but financeable receivables."
+      ],
+      "constraint_class": {
+        "PEF and KSeF treatment of B2G invoices": "LAW / BINDING RULE",
+        "Public buyer acceptance workflow": "ASSUMED CONVENTION",
+        "Status visibility across systems": "TECHNICAL LIMITATION",
+        "Per-case recovery economics": "ECONOMIC LIMITATION"
+      },
+      "prohibited_reliance": "Must not impersonate the supplier, pressure public officials improperly, or promise payment where the underlying claim is disputed."
+    },
+    {
+      "raw_id": "RAW-036",
+      "title": "Micropollutant EPR Cost Allocation Ledger",
+      "one_sentence_thesis": "A neutral ledger helps pharmaceutical and cosmetics producers verify product volumes, allocation inputs, exemptions, and treatment-cost charges before paying into a national wastewater EPR scheme.",
+      "customer": "Small and mid-sized pharmaceutical and cosmetics producers selling in Poland",
+      "loss_event": "A producer overpays, under-accrues, or cannot defend its allocated share of advanced wastewater-treatment costs.",
+      "payer": "Producer finance or regulatory affairs director",
+      "beneficiary": "Producer finance, compliance, auditors, and the collective scheme administrator",
+      "authority_holder": "The national implementing authority and authorized EPR scheme",
+      "distributor": "Pharma regulatory consultancies, cosmetics associations, and environmental-law firms",
+      "risk_bearer": "The obligated producer",
+      "transaction_owner": "Producer regulatory affairs director",
+      "first_paid_event": "A paid shadow calculation using one year's product and sales data",
+      "acquisition_route": "Offer a confidential readiness calculation through industry associations before the Polish allocation method is final.",
+      "compounding_asset": "A versioned product-classification, exemption, allocation, and dispute-evidence knowledge base",
+      "mechanism_class": "REGULATORY COST ALLOCATION AND AUDIT TRAIL",
+      "evidence_id": "EV-B-DISC-008",
+      "hypotheses": [
+        "Polish implementation will create producer-level data and payment duties.",
+        "Smaller producers lack systems for defensible allocation inputs.",
+        "A shadow calculation is valuable before invoices from a scheme arrive."
+      ],
+      "constraint_class": {
+        "EU industry funding floor": "LAW / BINDING RULE",
+        "Polish allocation formula and exemptions": "LAW / BINDING RULE",
+        "Industry acceptance of neutral calculations": "REPUTATIONAL EXPECTATION",
+        "Timing of a payable market": "ECONOMIC LIMITATION"
+      },
+      "prohibited_reliance": "Must not advise evasion, misclassify products deliberately, or claim the EU announcement defines Poland's final allocation formula."
+    },
+    {
+      "raw_id": "RAW-037",
+      "title": "Wastewater Sample Chain-of-Custody Exchange",
+      "one_sentence_thesis": "A scheduling and evidence layer coordinates accredited laboratories, couriers, and treatment plants so micropollutant, PFAS, and health-monitoring samples remain timely, traceable, and procurement-ready.",
+      "customer": "Municipal wastewater utilities and regional laboratory networks",
+      "loss_event": "A missed sampling window, broken custody record, or unusable result forces resampling and leaves a compliance evidence gap.",
+      "payer": "Wastewater utility laboratory or compliance manager",
+      "beneficiary": "Utility management, laboratories, regulators, and public-health teams",
+      "authority_holder": "The competent regulator and utility laboratory owner",
+      "distributor": "Accredited environmental laboratories and water-sector engineering firms",
+      "risk_bearer": "The wastewater utility",
+      "transaction_owner": "Utility compliance manager",
+      "first_paid_event": "A paid coordination run for one scheduled sampling campaign",
+      "acquisition_route": "Start as a white-label logistics layer for one accredited lab serving several smaller plants.",
+      "compounding_asset": "A network-performance dataset of analytes, holding times, routes, rejection causes, and lab capacity",
+      "mechanism_class": "CHAIN OF CUSTODY AND CAPACITY COORDINATION",
+      "evidence_id": "EV-B-DISC-008",
+      "hypotheses": [
+        "New monitoring expands coordination load beyond current utility processes.",
+        "Accredited labs will expose capacity and rejection metadata.",
+        "Utilities will pay to reduce invalid samples and emergency resampling."
+      ],
+      "constraint_class": {
+        "Monitoring obligations": "LAW / BINDING RULE",
+        "Accreditation and sampling protocols": "SOFT INDUSTRY NORM",
+        "Courier timing and laboratory capacity": "TECHNICAL LIMITATION",
+        "Utility procurement cycle": "ECONOMIC LIMITATION"
+      },
+      "prohibited_reliance": "Must not fabricate custody records, substitute unaccredited analysis where accreditation is required, or expose identifiable health data."
+    },
+    {
+      "raw_id": "RAW-038",
+      "title": "Stormwater Plan Evidence Builder for Small Municipalities",
+      "one_sentence_thesis": "A data service turns rainfall, overflow, land-cover, and intervention records into a prioritized evidence pack that smaller municipalities can hand to engineers drafting mandatory risk-triggered stormwater plans.",
+      "customer": "Polish municipalities and wastewater companies in smaller urban agglomerations",
+      "loss_event": "A municipality commissions an expensive plan with weak evidence, misses a risk hotspot, or cannot justify which interventions deserve funding.",
+      "payer": "Municipal infrastructure department or wastewater utility",
+      "beneficiary": "Municipal engineers, residents in flood-prone areas, and plan authors",
+      "authority_holder": "Municipal government and competent environmental authority",
+      "distributor": "Civil-engineering consultancies and regional municipal associations",
+      "risk_bearer": "The municipality and its wastewater operator",
+      "transaction_owner": "Municipal infrastructure director",
+      "first_paid_event": "A fixed-fee evidence sprint for one catchment before the engineering tender scope is finalized",
+      "acquisition_route": "Partner with one engineering consultancy that lacks an economical data package for small municipalities.",
+      "compounding_asset": "A reusable Polish catchment feature store linking overflow evidence, interventions, tender scopes, and observed outcomes",
+      "mechanism_class": "RISK PRIORITIZATION AND PROCUREMENT EVIDENCE",
+      "evidence_id": "EV-B-DISC-008",
+      "hypotheses": [
+        "Polish transposition will create plan work for identifiable smaller agglomerations.",
+        "Municipalities have fragmented but recoverable source data.",
+        "Engineering partners will buy or distribute a standardized evidence sprint."
+      ],
+      "constraint_class": {
+        "Plan obligation and risk trigger": "LAW / BINDING RULE",
+        "Preference for nature-based solutions": "SOFT INDUSTRY NORM",
+        "Sparse local rainfall and overflow data": "TECHNICAL LIMITATION",
+        "Municipal tender timing": "ECONOMIC LIMITATION"
+      },
+      "prohibited_reliance": "Must not certify engineering safety, manipulate risk maps to favor a vendor, or claim a municipality is obligated before legal applicability is confirmed."
+    },
+    {
+      "raw_id": "RAW-039",
+      "title": "Sewage-Sludge Phosphorus Offtake Passport",
+      "one_sentence_thesis": "A quality and contract passport matches wastewater operators recovering phosphorus with fertilizer, installation, or materials buyers while preserving batch provenance and contaminant evidence.",
+      "customer": "Wastewater operators evaluating phosphorus recovery and recovery-technology vendors",
+      "loss_event": "A recovery project stalls because financiers cannot see a credible buyer, product specification, or defensible batch-quality history.",
+      "payer": "Wastewater operator project sponsor or recovery-technology vendor",
+      "beneficiary": "Operator, technology vendor, offtaker, and project financier",
+      "authority_holder": "Wastewater operator and authorities governing recovered-material status and use",
+      "distributor": "Water engineering firms, fertilizer advisers, and renewable-installation contractors",
+      "risk_bearer": "The operator investing in recovery capacity",
+      "transaction_owner": "Operator project development lead",
+      "first_paid_event": "A paid buyer-discovery and specification-matching dossier for one planned recovery project",
+      "acquisition_route": "Use regional installation and engineering relationships to source one operator project and recruit buyers directly, without public-facing distribution.",
+      "compounding_asset": "A dataset of batch specifications, contaminant tests, buyer acceptance criteria, logistics costs, and fulfilled offtakes",
+      "mechanism_class": "QUALITY PASSPORT AND OFFTAKE COORDINATION",
+      "evidence_id": "EV-B-DISC-008",
+      "hypotheses": [
+        "The recovery requirement creates projects whose financing depends on credible offtake.",
+        "Recovered phosphorus can meet lawful product or end-of-waste conditions in target uses.",
+        "Operators or vendors will pay before construction for verified buyer evidence."
+      ],
+      "constraint_class": {
+        "Recovered-material and fertilizer use rules": "LAW / BINDING RULE",
+        "Buyer contaminant and provenance expectations": "REPUTATIONAL EXPECTATION",
+        "Recovery yield and batch consistency": "TECHNICAL LIMITATION",
+        "Plant economics and logistics radius": "ECONOMIC LIMITATION"
+      },
+      "prohibited_reliance": "Must not market sludge-derived material without required approvals, conceal contaminants, or guarantee offtake absent a signed buyer commitment."
+    }
+  ],
+  "files_read": [
+    "context/baseline-gen-tse.md"
+  ]
+}
