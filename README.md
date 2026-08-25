@@ -18,8 +18,6 @@ To continue an interrupted run, give the run ID:
 Use $business-opportunity to resume <run-id>.
 ```
 
-`prompts/NEW_IDEA_GOAL.md` is a thin compatibility prompt for the same skill.
-
 ## Operator Commands
 
 Create a run:
@@ -96,6 +94,11 @@ python3 scripts/opportunity.py publish <run-id>
 
 Published results appear under `outcomes/<run-id>/`, including honest non-confirmation and contested outcomes. Only a score-qualified dossier carries the label `score-qualified under holistic-11; not empirically market-validated`.
 
+`runs/<run-id>/` is resumable working state. Keep it while a run is active, failed,
+interrupted, or unpublished. After a terminal run passes `check` and `publish`, its
+published outcome and history entry are canonical and the raw run directory may be
+deleted.
+
 ## Sources Of Truth
 
 - Founder fit: `PERSONALITY_SITUATION.md`
@@ -107,9 +110,17 @@ Published results appear under `outcomes/<run-id>/`, including honest non-confir
 
 Do not copy their numeric values into another prompt. `prompts/PromoLeak/` is a separate execution playbook and is never loaded by this discovery workflow.
 
-## Archive Boundary
+## Historical Memory
 
-All pre-takeover ideas, runs, managers, prompts, failure receipts, debug evidence, and externally referenced protocol snapshots remain byte-preserved under `archive/`. [`archive/README.md`](archive/README.md) explains rubric generations and restoration; `archive/manifest.jsonl` records each preserved source path, destination, byte size, and SHA-256. Active code never imports from the archive, and historical binary, `/100`, unknown-framework, and current `/10` results are never converted into a shared numeric scale.
+`knowledge/history_index.jsonl` contains compact, candidate-level fingerprints and
+run summaries retained from the configured historical window. Legacy scores keep
+their original rubric, role, and scale and are never converted into current held-out
+scores. `knowledge/failure_patterns.md` is the small cross-run challenge catalog.
+
+Raw pre-cleanup evidence is outside the active workflow and can be recovered from
+Git tag `pre-cleanup-20260825T080643Z`. The only older raw dossier retained in the
+working tree is `ideas/CONFIRMED_IDEA_20260511_113716.md`, because the separate
+PromoLeak playbook uses it.
 
 ## Verification
 
@@ -117,7 +128,3 @@ All pre-takeover ideas, runs, managers, prompts, failure receipts, debug evidenc
 python3 scripts/opportunity.py check
 python3 -m unittest discover -s tests -v
 ```
-
-See `runs/README.md` for run artifacts and `outcomes/README.md` for publication
-semantics. `docs/TAKEOVER_REPORT.md` records the migration and verification;
-`docs/LIVE_SMOKE_REPORT.md` records the bounded native rehearsal.

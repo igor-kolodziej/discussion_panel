@@ -2,9 +2,11 @@
 .gstack/*
 !.gstack/
 
-# Generated opportunity runs. Keep only the operator note in version control.
-runs/*
-!runs/README.md
+# Generated opportunity runs are resumable working state, not durable publications.
+runs/
+
+# Publication lock state is mechanical; published outcome contents stay tracked.
+outcomes/.publish.lock
 
 # Local browser and Python runtime state.
 .playwright-cli/

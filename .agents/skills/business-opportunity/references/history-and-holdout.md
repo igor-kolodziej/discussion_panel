@@ -9,7 +9,9 @@ Initial discovery is fresh. Do not load historical candidates, archived scores, 
 - `knowledge/failure_patterns.md` for recurring structural failure modes; and
 - only relevant rows from `knowledge/history_index.jsonl` for provenance and overlap.
 
-Raw historical runs, dossiers, and summaries stay under `archive/legacy-history/`; retired orchestration stays under `archive/legacy-v2/`; movement provenance is in `archive/manifest.jsonl`. Historical scores retain their original rubric label and comparison semantics. Never normalize, translate, average, or present them as current calibration.
+The active history is digest-only. `legacy_run_digest_v1` rows preserve run state and omissions; `legacy_candidate_v1` rows preserve supported candidate fingerprints, original evaluation roles, raw score strings, and recovery provenance. `opportunity_outcome_v1` rows point to current published outcomes. Raw pre-cleanup evidence is available only through the checkpoint named in the index metadata and is not an active workflow input.
+
+Historical scores retain their original rubric label and comparison semantics. Never normalize, translate, average, promote, or present them as current calibration, current candidates, or held-out evaluations.
 
 Compare the six canonical fingerprint fields before semantic similarity. Reject cosmetic variants that preserve the same customer, trigger, paid event, offer, distribution, and compounding mechanism. Keep a historical variant only when it makes a material structural change and states which prior objections it resolves.
 

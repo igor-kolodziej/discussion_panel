@@ -11,9 +11,9 @@ This repository is an agent-native workflow for discovering, researching, develo
 - `config/opportunity-workflow.json` is the sole machine-readable workflow, budget, and qualification configuration.
 - `scripts/opportunity.py` is the supported interface and schema validator for run state and artifacts.
 - `.agents/skills/business-opportunity/SKILL.md` is the active model workflow.
-- `knowledge/failure_patterns.md` and `knowledge/history_index.jsonl` are the active historical learning and provenance indexes. Raw legacy material remains under `archive/`.
+- `knowledge/failure_patterns.md` and `knowledge/history_index.jsonl` are the active historical learning and provenance indexes. Legacy raw material is not part of the active tree; its recovery checkpoint is recorded in the index metadata.
 
-Do not copy numeric rubric weights, founder financial constraints, or qualification thresholds into prompts, skills, or documentation. Link to the canonical source instead. Treat `prompts/NEW_IDEA_GOAL.md` as a compatibility entry point, not another specification.
+Do not copy numeric rubric weights, founder financial constraints, or qualification thresholds into prompts, skills, or documentation. Link to the canonical source instead.
 
 ## Workflow Invariants
 
@@ -31,11 +31,14 @@ Do not copy numeric rubric weights, founder financial constraints, or qualificat
 
 `prompts/PromoLeak/` is the execution playbook for a previously confirmed opportunity. It is not an idea-discovery input, benchmark, historical candidate, or evaluation aid. Do not load, modify, score, or use it from the business-opportunity workflow. Enter it only when the user explicitly asks to execute that separate opportunity.
 
+Its preserved source dossier is `ideas/CONFIRMED_IDEA_20260511_113716.md`. Keep that dossier and the playbook byte-stable unless the user explicitly requests PromoLeak work.
+
 ## Generated And Preserved Files
 
 - `runs/<utc-run-id>/` is CLI-managed, resumable run state. Do not hand-edit `manifest.json`, `state.json`, `events.jsonl`, input snapshots, imported holdouts, or publication events.
 - `outcomes/<run-id>/` contains CLI-published outcomes. Do not create a confirmed-looking artifact by hand.
-- `archive/` and raw historical records are preservation sources. Do not rewrite their scores or conclusions.
+- Keep failed, interrupted, or unpublished runs so they can be resumed. After a terminal run passes `check` and `publish`, its raw run directory is disposable because the published outcome and compact history row are canonical.
+- Historical digest records are read-only evidence. Do not rewrite their raw score strings, evaluation roles, or conclusions, and never promote them into current candidate or holdout artifacts.
 - Do not hard-code machine-specific paths. Keep active references repository-relative.
 
 ## Definition Of Done

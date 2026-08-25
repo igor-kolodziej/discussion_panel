@@ -41,6 +41,6 @@ For each promising fresh candidate, ask:
 3. Does a conservative bottom-up denominator support the outcome after margins, capital, time, and founder dilution?
 4. What must a third party grant before the first paid proof, and can the founder obtain it within the stated limits?
 5. What compounds after ten customers that an incumbent or a capable AI user cannot reproduce?
-6. Which archived idea or failed family is nearest, and what structural difference makes this more than renamed repetition?
+6. Which indexed idea or failed family is nearest, and what structural difference makes this more than renamed repetition?
 
-Use `history_index.jsonl` to locate the exact dossier or run evidence when an answer needs detail. The full byte-preserved record lives under `archive/`.
+Use `history_index.jsonl` for compact candidate fingerprints, original score labels, terminal objections, and recovery provenance. Raw pre-cleanup evidence is not an active input; the index metadata names the Git checkpoint for exceptional archaeology.

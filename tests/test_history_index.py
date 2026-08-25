@@ -1,38 +1,32 @@
 from __future__ import annotations
 
+from collections import Counter
 import hashlib
 import json
 from pathlib import Path
+import re
 import unittest
 
 
 ROOT = Path(__file__).resolve().parents[1]
 INDEX_PATH = ROOT / "knowledge/history_index.jsonl"
-MANIFEST_PATH = ROOT / "archive/manifest.jsonl"
-FINGERPRINT_FIELDS = {
+CHECKPOINT_COMMIT = "8db46d3eef585b696c367f53f4de3aeed9d5f600"
+CHECKPOINT_TAG = "pre-cleanup-20260825T080643Z"
+FINGERPRINT_FIELDS = [
     "customer",
     "problem_trigger",
     "payer_and_paid_event",
     "offer_and_business_model",
     "distribution_mechanism",
     "compounding_advantage",
-}
-REQUIRED_PROVENANCE_FIELDS = {
-    "original_path",
-    "archive_path",
-    "source_kind",
-    "source_hash_algorithm",
-    "source_sha256",
-    "source_file_count",
-    "source_hash_manifest",
-    "source_hash_verified_against_manifest",
-    "legacy_label",
-    "legacy_state",
-    "framework_id",
-    "score_scale",
-    "fingerprint",
-    "terminal_objection",
-    "reopen_condition",
+]
+EXPECTED_CANDIDATES = {
+    "zero_to_one_candidates_20260821_002243": 11,
+    "zero_to_one_candidates_20260822_110713": 12,
+    "zero_to_one_candidates_20260823_103406": 48,
+    "zero_to_one_candidates_20260823_235627": 48,
+    "zero_to_one_candidates_20260824_111939": 48,
+    "zero_to_one_candidates_20260824_164110": 48,
 }
 OUTCOME_FIELDS = {
     "record_type",
@@ -57,175 +51,204 @@ OUTCOME_FIELDS = {
 }
 
 
-def load_jsonl(path: Path) -> list[dict]:
-    lines = path.read_text(encoding="utf-8").splitlines()
-    if any(not line.strip() for line in lines):
-        raise AssertionError(f"blank JSONL line in {path}")
-    return [json.loads(line) for line in lines]
-
-
 def sha256_file(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def tree_files(path: Path) -> list[Path]:
-    candidates = list(path.rglob("*"))
-    symlinks = [candidate for candidate in candidates if candidate.is_symlink()]
-    if symlinks:
-        raise AssertionError(f"symlinks are not valid sha256-tree-v1 members: {symlinks}")
-    files = [candidate for candidate in candidates if candidate.is_file()]
-    return sorted(files, key=lambda candidate: candidate.relative_to(path).as_posix().encode("utf-8"))
-
-
-def sha256_tree(path: Path) -> tuple[str, list[Path]]:
-    files = tree_files(path)
-    records = []
-    for candidate in files:
-        relative = candidate.relative_to(path).as_posix()
-        records.append(f"{sha256_file(candidate)}  {relative}\n")
-    return hashlib.sha256("".join(records).encode("utf-8")).hexdigest(), files
+def load_jsonl(path: Path) -> tuple[list[str], list[dict]]:
+    lines = path.read_text(encoding="utf-8").splitlines()
+    if not lines or any(not line.strip() for line in lines):
+        raise AssertionError(f"missing or blank JSONL line in {path}")
+    rows = [json.loads(line) for line in lines]
+    return lines, rows
 
 
 class HistoryIndexContractTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
-        cls.rows = load_jsonl(INDEX_PATH)
-        cls.manifest = load_jsonl(MANIFEST_PATH)
-        cls.manifest_by_new = {row["new_path"]: row for row in cls.manifest}
+        cls.lines, cls.rows = load_jsonl(INDEX_PATH)
+        cls.meta = [row for row in cls.rows if row.get("record_type") == "index_meta"]
+        cls.run_rows = [
+            row for row in cls.rows if row.get("record_type") == "legacy_run_digest_v1"
+        ]
+        cls.candidates = [
+            row for row in cls.rows if row.get("record_type") == "legacy_candidate_v1"
+        ]
+        cls.outcomes = [
+            row for row in cls.rows if row.get("record_type") == "opportunity_outcome_v1"
+        ]
 
-    def test_normalized_contract_and_preserved_counts(self) -> None:
-        meta_rows = [row for row in self.rows if row["record_type"] == "index_meta"]
-        idea_rows = [row for row in self.rows if row["record_type"] == "idea"]
-        run_rows = [row for row in self.rows if row["record_type"] == "run"]
-        outcome_rows = [row for row in self.rows if row["record_type"] == "opportunity_outcome_v1"]
-
-        self.assertEqual(len(meta_rows), 1)
-        self.assertEqual(len(idea_rows), 15)
-        self.assertEqual(len(run_rows), 37)
+    def test_digest_is_compact_canonical_and_complete(self) -> None:
+        self.assertLess(INDEX_PATH.stat().st_size, 1_000_000)
+        self.assertEqual(len(self.rows), 223)
+        self.assertEqual(len(self.meta), 1)
+        self.assertEqual(len(self.run_rows), 6)
+        self.assertEqual(len(self.candidates), 215)
+        self.assertEqual(len(self.outcomes), 1)
         self.assertEqual(
-            len(self.rows),
-            len(meta_rows) + len(idea_rows) + len(run_rows) + len(outcome_rows),
+            {row["record_type"] for row in self.rows},
+            {
+                "index_meta",
+                "legacy_run_digest_v1",
+                "legacy_candidate_v1",
+                "opportunity_outcome_v1",
+            },
         )
-        meta = meta_rows[0]
-        self.assertEqual(meta["schema_version"], 2)
-        self.assertEqual(set(meta["source_hash_contract"]), {"sha256-file-v1", "sha256-tree-v1"})
-        self.assertEqual(set(meta["fingerprint_fields"]), FINGERPRINT_FIELDS)
-        self.assertIn("do not normalize, convert", meta["score_policy"])
+        for line, row in zip(self.lines, self.rows, strict=True):
+            self.assertEqual(
+                line,
+                json.dumps(row, sort_keys=True, ensure_ascii=False, separators=(",", ":")),
+            )
 
-        identities: set[tuple[str, str]] = set()
-        for row in idea_rows + run_rows:
-            identity_key = "idea_id" if row["record_type"] == "idea" else "run_id"
-            identity = (row["record_type"], row[identity_key])
-            self.assertNotIn(identity, identities)
-            identities.add(identity)
-            self.assertFalse(REQUIRED_PROVENANCE_FIELDS - row.keys(), identity)
-            self.assertTrue(row["source_hash_verified_against_manifest"], identity)
-            self.assertEqual(row["source_hash_manifest"], "archive/manifest.jsonl")
-            self.assertRegex(row["source_sha256"], r"^[0-9a-f]{64}$")
-            self.assertIsInstance(row["source_file_count"], int)
-            self.assertGreaterEqual(row["source_file_count"], 0)
-            for key in ("original_path", "archive_path", "legacy_label", "legacy_state", "framework_id", "score_scale"):
-                self.assertIsInstance(row[key], str, (identity, key))
-                self.assertTrue(row[key], (identity, key))
+    def test_meta_binds_retention_and_recovery(self) -> None:
+        meta = self.meta[0]
+        self.assertEqual(meta["schema_version"], 3)
+        self.assertEqual(meta["history_cutoff_utc"], "2026-07-24T00:00:00Z")
+        self.assertEqual(meta["raw_retention"], "digest_only")
+        self.assertEqual(meta["checkpoint_commit"], CHECKPOINT_COMMIT)
+        self.assertEqual(meta["checkpoint_tag"], CHECKPOINT_TAG)
+        self.assertEqual(meta["fingerprint_fields"], FINGERPRINT_FIELDS)
+        self.assertIn("never convert", meta["score_policy"])
+        self.assertIn("after fresh discovery", meta["read_policy"])
+        verification = meta["verification"]
+        self.assertEqual(verification["total_rows_including_meta"], len(self.rows))
+        self.assertEqual(verification["run_digests"], len(self.run_rows))
+        self.assertEqual(verification["candidate_digests"], len(self.candidates))
+        self.assertEqual(verification["opportunity_outcomes"], len(self.outcomes))
+        self.assertEqual(verification["candidate_counts_by_run"], EXPECTED_CANDIDATES)
+        self.assertEqual(verification["checkpoint_run_trees_verified"], 6)
+        self.assertEqual(verification["checkpoint_run_tree_files_verified"], 333)
+        self.assertEqual(verification["checkpoint_candidate_source_files_verified"], 56)
 
-            fingerprint = row["fingerprint"]
-            if fingerprint is None:
-                self.assertIsInstance(row.get("fingerprint_reason"), str, identity)
-                self.assertTrue(row["fingerprint_reason"], identity)
+    def test_run_digests_are_post_cutoff_and_scale_isolated(self) -> None:
+        self.assertEqual({row["run_id"] for row in self.run_rows}, set(EXPECTED_CANDIDATES))
+        for row in self.run_rows:
+            identity = row["run_id"]
+            self.assertEqual(row["schema_version"], 3, identity)
+            self.assertEqual(row["raw_retention"], "digest_only", identity)
+            self.assertEqual(row["candidate_digest_count"], EXPECTED_CANDIDATES[identity])
+            self.assertRegex(identity, r"^zero_to_one_candidates_202608(21|22|23|24)_\d{6}$")
+            self.assertTrue(row["state_evidence"], identity)
+            self.assertTrue(row["candidate_population"], identity)
+            self.assertTrue(row["omitted_material"]["reason"], identity)
+            source = row["source"]
+            self.assertEqual(source["checkpoint_commit"], CHECKPOINT_COMMIT, identity)
+            self.assertEqual(source["checkpoint_tag"], CHECKPOINT_TAG, identity)
+            self.assertEqual(source["source_hash_algorithm"], "sha256-tree-v1", identity)
+            self.assertRegex(source["source_sha256"], r"^[0-9a-f]{64}$", identity)
+            self.assertGreater(source["source_file_count"], 0, identity)
+            self.assertTrue(
+                source["source_path_at_checkpoint"].startswith(
+                    "archive/legacy-history/working_folder/"
+                ),
+                identity,
+            )
+            for key in ("terminal_objection", "reopen_condition"):
+                if row[key] is None:
+                    self.assertTrue(row[f"{key}_reason"], (identity, key))
+
+        by_id = {row["run_id"]: row for row in self.run_rows}
+        self.assertEqual(by_id["zero_to_one_candidates_20260821_002243"]["score_scale"], "/100")
+        self.assertEqual(by_id["zero_to_one_candidates_20260822_110713"]["score_scale"], "/10")
+        for run_id in list(EXPECTED_CANDIDATES)[2:]:
+            self.assertIsNone(by_id[run_id]["framework_id"])
+            self.assertIsNone(by_id[run_id]["score_scale"])
+            self.assertTrue(by_id[run_id]["framework_reason"])
+            self.assertTrue(by_id[run_id]["score_scale_reason"])
+
+    def test_candidate_digests_are_structured_and_provenance_bound(self) -> None:
+        counts = Counter(row["run_id"] for row in self.candidates)
+        self.assertEqual(dict(counts), EXPECTED_CANDIDATES)
+        identities = [row["candidate_id"] for row in self.candidates]
+        self.assertEqual(len(identities), len(set(identities)))
+
+        for row in self.candidates:
+            identity = row["candidate_id"]
+            self.assertEqual(row["schema_version"], 3, identity)
+            self.assertEqual(row["raw_retention"], "digest_only", identity)
+            self.assertEqual(
+                identity,
+                f"legacy:{row['run_id']}:{row['source_candidate_id'].lower()}",
+            )
+            self.assertTrue(row["title"], identity)
+            self.assertEqual(set(row["fingerprint"]), set(FINGERPRINT_FIELDS), identity)
+            values = list(row["fingerprint"].values())
+            self.assertTrue(all(isinstance(value, str) and value.strip() for value in values), identity)
+            self.assertGreaterEqual(len(set(values)), 4, identity)
+            self.assertEqual(set(row["fingerprint_source_locators"]), set(FINGERPRINT_FIELDS))
+            self.assertTrue(all(row["fingerprint_source_locators"].values()), identity)
+
+            self.assertTrue(row["sources"], identity)
+            for source in row["sources"]:
+                self.assertEqual(source["checkpoint_commit"], CHECKPOINT_COMMIT, identity)
+                self.assertEqual(source["checkpoint_tag"], CHECKPOINT_TAG, identity)
+                self.assertEqual(source["source_hash_algorithm"], "sha256-file-v1", identity)
+                self.assertRegex(source["source_sha256"], r"^[0-9a-f]{64}$", identity)
+                self.assertTrue(source["source_path_at_checkpoint"].startswith("archive/"), identity)
+                self.assertTrue(source["locator"], identity)
+
+            score_evidence = row["score_evidence"]
+            self.assertIsInstance(score_evidence, list, identity)
+            for score in score_evidence:
+                self.assertIsInstance(score["raw"], str, identity)
+                self.assertTrue(score["raw"], identity)
+                self.assertTrue(score["source_locator"], identity)
+            if score_evidence:
+                self.assertEqual(row["evaluation_type"], "legacy_advisory", identity)
+                self.assertIsInstance(row["framework_id"], str, identity)
+                self.assertIsInstance(row["score_scale"], str, identity)
+                self.assertNotIn("official_score", row, identity)
             else:
-                self.assertEqual(set(fingerprint), FINGERPRINT_FIELDS, identity)
-                self.assertTrue(all(isinstance(value, str) and value for value in fingerprint.values()), identity)
+                self.assertIsNone(row["evaluation_type"], identity)
+                self.assertIsNone(row["framework_id"], identity)
+                self.assertIsNone(row["score_scale"], identity)
+                self.assertTrue(row["framework_reason"], identity)
+                self.assertTrue(row["score_scale_reason"], identity)
 
             for key in ("terminal_objection", "reopen_condition"):
-                value = row[key]
-                if value is None:
-                    reason = row.get(f"{key}_reason")
-                    self.assertIsInstance(reason, str, (identity, key))
-                    self.assertTrue(reason, (identity, key))
-                else:
-                    self.assertIsInstance(value, str, (identity, key))
-                    self.assertTrue(value, (identity, key))
+                if row[key] is None:
+                    self.assertTrue(row[f"{key}_reason"], (identity, key))
 
-            for evidence_key in (
-                "normalization_evidence_paths",
-                "terminal_objection_sources",
-                "reopen_condition_sources",
-            ):
-                for evidence_path in row.get(evidence_key, []):
-                    self.assertTrue((ROOT / evidence_path).is_file(), (identity, evidence_key, evidence_path))
+    def test_native_outcome_remains_bound_to_published_files(self) -> None:
+        row = self.outcomes[0]
+        self.assertEqual(set(row), OUTCOME_FIELDS)
+        self.assertEqual(row["score_scale"], "/10")
+        self.assertEqual(row["run_status"], "no_qualifier")
+        self.assertIsNone(row["official_score"])
+        self.assertIsNone(row["qualification_label"])
+        self.assertRegex(row["rubric_sha256"], r"^[0-9a-f]{64}$")
+        self.assertRegex(row["report_sha256"], r"^[0-9a-f]{64}$")
+        outcome = ROOT / row["outcome_path"]
+        self.assertTrue(outcome.is_dir())
+        self.assertEqual(sha256_file(outcome / "report.json"), row["report_sha256"])
+        candidate = outcome / row["source_candidate_path"]
+        self.assertTrue(candidate.is_file())
+        self.assertEqual(sha256_file(candidate), row["source_candidate_sha256"])
+        self.assertEqual(set(row["selected_fingerprint"]), set(FINGERPRINT_FIELDS))
 
-            for score in row.get("score_evidence", []):
-                self.assertIsInstance(score.get("raw"), str, identity)
-                self.assertTrue(score["raw"], identity)
-            for label in row.get("verdict_evidence", []):
-                self.assertIsInstance(label, str, identity)
-                self.assertTrue(label, identity)
-
-        for row in outcome_rows:
-            self.assertEqual(set(row), OUTCOME_FIELDS, row.get("run_id"))
-            self.assertEqual(row["score_scale"], "/10")
-            for key in (
-                "run_id",
-                "run_status",
-                "rubric_id",
-                "rubric_sha256",
-                "report_sha256",
-                "outcome_path",
-            ):
-                self.assertIsInstance(row[key], str, (row.get("run_id"), key))
-                self.assertTrue(row[key], (row.get("run_id"), key))
-            self.assertRegex(row["rubric_sha256"], r"^[0-9a-f]{64}$")
-            self.assertRegex(row["report_sha256"], r"^[0-9a-f]{64}$")
-            if row["source_candidate_sha256"] is not None:
-                self.assertRegex(row["source_candidate_sha256"], r"^[0-9a-f]{64}$")
-
-    def test_every_source_hash_matches_manifest_and_raw_archive(self) -> None:
+    def test_obsolete_archive_contract_is_absent(self) -> None:
+        text = INDEX_PATH.read_text(encoding="utf-8")
+        self.assertNotIn('\"record_type\":\"idea\"', text)
+        self.assertNotIn('\"record_type\":\"run\"', text)
+        self.assertNotIn('\"archive_path\"', text)
+        self.assertNotIn('\"source_hash_manifest\"', text)
         for row in self.rows:
-            if row["record_type"] not in {"idea", "run"}:
-                continue
-            identity = row.get("idea_id") or row["run_id"]
-            archive_root = ROOT / row["archive_path"]
+            self.assertFalse(re.search(r'/(Users|home)/', json.dumps(row)))
 
-            if row["source_kind"] == "file":
-                self.assertTrue(archive_root.is_file(), identity)
-                self.assertEqual(row["source_hash_algorithm"], "sha256-file-v1")
-                self.assertEqual(row["source_file_count"], 1)
-                digest = sha256_file(archive_root)
-                self.assertEqual(digest, row["source_sha256"], identity)
-                manifest_row = self.manifest_by_new.get(row["archive_path"])
-                self.assertIsNotNone(manifest_row, identity)
-                self.assertEqual(manifest_row["old_path"], row["original_path"], identity)
-                self.assertEqual(manifest_row["sha256"], digest, identity)
-                self.assertEqual(manifest_row["size"], archive_root.stat().st_size, identity)
-                continue
-
-            self.assertEqual(row["source_kind"], "directory", identity)
-            self.assertEqual(row["source_hash_algorithm"], "sha256-tree-v1", identity)
-            archive_prefix = row["archive_path"] + "/"
-            original_prefix = row["original_path"] + "/"
-            manifest_rows = [
-                entry for entry in self.manifest if entry.get("new_path", "").startswith(archive_prefix)
-            ]
-            manifest_rows.sort(key=lambda entry: entry["new_path"][len(archive_prefix):].encode("utf-8"))
-            if not archive_root.exists():
-                self.assertEqual(row["source_file_count"], 0, identity)
-                self.assertEqual(row["source_sha256"], hashlib.sha256(b"").hexdigest(), identity)
-                self.assertEqual(manifest_rows, [], identity)
-                continue
-            self.assertTrue(archive_root.is_dir(), identity)
-            digest, files = sha256_tree(archive_root)
-            self.assertEqual(digest, row["source_sha256"], identity)
-            self.assertEqual(len(files), row["source_file_count"], identity)
-
-            raw_relpaths = [candidate.relative_to(archive_root).as_posix() for candidate in files]
-            manifest_relpaths = [entry["new_path"][len(archive_prefix):] for entry in manifest_rows]
-            self.assertEqual(manifest_relpaths, raw_relpaths, identity)
-
-            for candidate, manifest_row, relative in zip(files, manifest_rows, raw_relpaths, strict=True):
-                file_digest = sha256_file(candidate)
-                self.assertEqual(manifest_row["old_path"], original_prefix + relative, (identity, relative))
-                self.assertEqual(manifest_row["sha256"], file_digest, (identity, relative))
-                self.assertEqual(manifest_row["size"], candidate.stat().st_size, (identity, relative))
+    def test_promoleak_dependency_is_preserved_outside_discovery_history(self) -> None:
+        dossier = ROOT / "ideas/CONFIRMED_IDEA_20260511_113716.md"
+        self.assertTrue(dossier.is_file())
+        self.assertEqual(
+            sha256_file(dossier),
+            "996d87ecec0bc11814ecd6ff72f0291a6a6e6786c04bb7712ae8184df29d3c84",
+        )
+        self.assertFalse(
+            any(
+                row.get("record_type") == "legacy_candidate_v1"
+                and row.get("title") == "PromoLeak Recovery Desk"
+                for row in self.rows
+            )
+        )
 
 
 if __name__ == "__main__":
