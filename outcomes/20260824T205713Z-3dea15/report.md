@@ -46,4 +46,4 @@ No candidate reached a completed holdout decision.
 
 ## Interpretation
 
-A score-qualified result passed this run's independent holistic-11 score gate. It is not empirical market validation, customer proof, or a guarantee of business performance.
+This run produced no score-qualified candidate under holistic-11. It is an explicit non-confirmation; preserved candidates and reopen conditions remain research leads, not market-validated opportunities.

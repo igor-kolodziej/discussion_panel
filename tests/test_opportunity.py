@@ -672,6 +672,9 @@ class RunAndStateTests(OpportunityTestCase):
         self.assertTrue(report["strongest_candidates"][0]["contrary_evidence"])
         self.assertIn("Reopen only with new evidence", report["strongest_candidates"][0]["reopen_condition"])
         self.assertIsNone(report["qualification_label"])
+        markdown = (self.run_dir / "report.md").read_text(encoding="utf-8")
+        self.assertIn("no score-qualified candidate", markdown)
+        self.assertNotIn("A score-qualified result passed", markdown)
         first = op.publish_run(self.run_dir, self.root / "outcomes", self.root / "knowledge")
         second = op.publish_run(self.run_dir, self.root / "outcomes", self.root / "knowledge")
         self.assertFalse(first["idempotent"])
@@ -1156,6 +1159,10 @@ class DedupAndHoldoutTests(OpportunityTestCase):
         self.assertEqual(code, 4)
         self.assertEqual(report["run_status"], "contested")
         self.assertIn("External binding limiter.", report["binding_limiters"])
+        self.assertIn(
+            "produced no binding qualifier",
+            (self.run_dir / "report.md").read_text(encoding="utf-8"),
+        )
 
     def test_export_and_publication_events_reconcile_after_durable_writes(self) -> None:
         self._store_lineage_with_research()
@@ -1367,6 +1374,8 @@ class DedupAndHoldoutTests(OpportunityTestCase):
         self.assertTrue(report["binding_limiters"])
         markdown = (self.run_dir / "report.md").read_text()
         self.assertIn("Binding limiter", markdown)
+        self.assertIn(op.QUALIFICATION_LABEL, markdown)
+        self.assertNotIn("produced no score-qualified candidate", markdown)
         publication = op.publish_run(self.run_dir, self.root / "outcomes", self.root / "knowledge")
         published = self.root / "outcomes" / self.run_id
         self.assertTrue((published / "candidates/beta/v4.json").is_file())

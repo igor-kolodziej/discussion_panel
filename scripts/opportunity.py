@@ -3355,15 +3355,24 @@ def render_report_markdown(report: Mapping[str, Any]) -> str:
                 f"- `{job['stage']}/{job['job_id']}` — {job['status']} after "
                 f"{job['attempts']}/{job['max_attempts']} attempts: {job['error']}"
             )
-    lines.extend(
-        [
-            "",
-            "## Interpretation",
-            "",
-            "A score-qualified result passed this run's independent holistic-11 score gate. It is not empirical market validation, customer proof, or a guarantee of business performance.",
-            "",
-        ]
-    )
+    if report["run_status"] == "qualified":
+        interpretation = (
+            f"This result is {report['qualification_label']}. The label records only that the "
+            "frozen candidate passed this run's binding score gate; it is not customer proof or "
+            "a guarantee of business performance."
+        )
+    elif report["run_status"] == "contested":
+        interpretation = (
+            "This run produced no binding qualifier because at least one binding evaluation kept "
+            "the result contested. It is not empirical market validation or permission to proceed."
+        )
+    else:
+        interpretation = (
+            "This run produced no score-qualified candidate under holistic-11. It is an explicit "
+            "non-confirmation; preserved candidates and reopen conditions remain research leads, "
+            "not market-validated opportunities."
+        )
+    lines.extend(["", "## Interpretation", "", interpretation, ""])
     return "\n".join(lines)
 
 
