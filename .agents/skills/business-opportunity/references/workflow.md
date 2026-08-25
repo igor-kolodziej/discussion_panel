@@ -1,68 +1,65 @@
 # Workflow
 
-Read this reference when starting a run, assigning subagents, advancing a stage, or deciding whether to redesign or stop.
+Read this reference when starting a cohort or campaign, assigning subagents, advancing a stage, or deciding whether evidence is fatal, a candidate may develop, or a campaign should continue.
 
-## Preflight And Ownership
+## Ownership And Role Isolation
 
-The main agent reads the canonical founder profile and configuration, creates or resumes the run with `scripts/opportunity.py`, and remains the only canonical writer. Use bounded subagents for independent evidence gathering or judgment. Each assignment states its lane, scope, evidence standard, output shape, and stopping condition.
+The main agent creates or resumes state with `scripts/opportunity.py` and remains the only canonical writer. Subagents receive bounded assignments with a lane, evidence standard, output contract, and stop condition. Keep scout and researcher contexts distinct by orchestration. The structured records mechanically preserve working-evaluator, constructor, and holdout identities.
 
-Initial scouts may receive relevant founder facts, but must not receive historical ideas, failure memory, the evaluator rubric, the score target, working scores, or another scout's ranking. This prevents imitation and score-shaped generation.
+Keep generation, research, working evaluation, and construction assignments context-distinct. The CLI enforces that a constructor identity cannot also be a working evaluator and that recorded working-evaluator and constructor identities cannot serve as holdout judges; holdout identities are distinct from one another. Scout and researcher freshness remains an explicit main-agent assignment duty because those records do not claim a mechanically verified actor identity. Do not infer freshness from a renamed output file.
 
-Follow the state sequence recorded by the CLI: `initialized` → `discovery` → `calibration` → `research` → `development` → `frozen` → `holdout` → `complete`. Do not skip or move backward; `resume` recovers interrupted work in the current stage. All configured stage, candidate, and retry maxima are hard limits.
+Initial scouts receive relevant founder facts but not historical ideas, failure memory, the evaluator, qualification rule, prior scores, rankings, verdicts, or another scout's work. Campaign continuation does not relax this boundary.
 
-## Fresh Evidence Discovery
+## Discovery, Deduplication, And Portfolio Binding
 
-Run all three lanes before historical calibration:
+Run every configured discovery lane before delayed history calibration. Scouts seek evidence of existing spend or loss, constrained operations or transitions, and founder-accessible asymmetries. Require source support for time-sensitive claims, and tag claims as evidence, inference, or unknown.
 
-- **Mandatory or repeated spend, financial leakage, and costly failure:** locate existing budgets, recurring loss, downtime, claims, disputes, or compulsory workflows with an identifiable paid event.
-- **Operational bottlenecks, fragmented assets or supply, specialist scarcity, and market transitions:** locate constrained capacity, coordination failures, stranded or installed assets, broken handoffs, and transitions that change buyer behavior or economics.
-- **Founder-accessible asymmetries:** test reachable problems in Poland or CEE and around data or AI, health, finance, and the family renewables ecosystem. Access is evidence to investigate, not a reason to force a sector.
+Each candidate contains the canonical six-field fingerprint and a `structure` object containing exactly:
 
-Require sources for time-sensitive or market-dependent claims. Every returned claim is tagged as evidence, inference, or unknown. A scout returns bounded opportunity records rather than persuasive essays.
+- `commercial_archetype`: the primary way value is sold and captured;
+- `control_point`: the scarce right, workflow position, asset, or relationship the business must control; and
+- `critical_dependency`: the external condition whose failure most directly breaks delivery or economics.
 
-## Candidate Formation And Delayed History
+Run exact fingerprint deduplication first and report only `exact_fingerprint_unique_count` as exact uniqueness. Lexical similarity remains advisory. Separately audit semantic concentration using `structure`; neither unique wording nor a different industry label proves a distinct commercial structure. Apply the configured semantic portfolio limits and run only the configured bounded gap scout when required.
 
-Create the fresh candidate pool and run its structural deduplication before leaving `discovery`. In `calibration`, read `knowledge/failure_patterns.md` and relevant `knowledge/history_index.jsonl` rows for adversarial review and historical overlap before finalist selection.
+Load `knowledge/failure_patterns.md` and relevant history rows only after the fresh pool exists. A repeated family may continue only when a material fingerprint or structure change resolves a recorded objection.
 
-Build the exact structural fingerprint from:
+Before research, write `portfolio/selection.json` through kind `portfolio-selection`. It binds the selected candidate versions and hashes, selection rationale, and any missing archetypes observed in the semantic audit. The missing list may be empty; do not invent a universal archetype catalog. The selection is immutable. A later substitution, removal, or version change requires the next ordered `portfolio/amendments/vN.json` through kind `portfolio-amendment`; the amendment hash-binds the immediate prior selection record and states the evidence-backed reason. Never replace a selected candidate silently.
 
-- `customer`
-- `problem_trigger`
-- `payer_and_paid_event`
-- `offer_and_business_model`
-- `distribution_mechanism`
-- `compounding_advantage`
+## Research And Working Evaluation
 
-Run `dedup` using the configured exact and approximate rules. A new industry label does not make the same commercial structure novel. A materially improved historical mechanism may continue only when its changed fields and resolved objections are explicit.
+Research every active shortlist entry. Test buyer behavior, current spend and workarounds, pricing and unit economics, acquisition, incumbent response, constraints, founder feasibility, and the recurring proxy errors defined by the artifact contract. Keep sourced contrary evidence separate from unknowns.
 
-The diversity trigger groups the normalized `payer_and_paid_event` and `offer_and_business_model` fields. Distribution is reviewed separately and does not split an otherwise repeated paid-event/business-model structure.
+Missing customer validation, conversion evidence, signed partners, or private operating data is uncertainty, not a fatal finding. Mark a research result fatal only when direct evidence establishes one of these conditions:
 
-If the dedup report creates the bounded `gap-scout` job, run that one repair within its configured budget and rerun `dedup`. Do not turn a diversity shortfall into open-ended regeneration waves.
+- the offer or required conduct is illegal;
+- an essential right cannot be obtained;
+- conservative unit economics are mathematically impossible; or
+- execution requires a non-delegable founder commitment incompatible with the canonical founder profile.
 
-## Research And Development Judgment
+Every researched candidate receives exactly the configured number of canonical working evaluations before the research stage may advance or terminate. Working evaluators receive the immutable candidate, its research, relevant founder constraints, and evaluator snapshot—but not the target, ranking, generator rationale, or another evaluation. The CLI recomputes all totals.
 
-Research the assumptions most likely to change the decision: paid behavior, purchasing trigger and authority, reachable buyer list, unit economics, distribution incentive and friction, competition, operating requirements, regulation, data rights, and durability.
+Create `portfolio/development-decision.json` through kind `portfolio-decision`. Rank eligible candidates by recomputed working score, then Economics, Distribution, lower initial cash, and stable candidate ID. Select no more than the configured development maximum. The CLI verifies evaluation coverage before accepting the record; each candidate decision preserves its disposition, rationale, and any direct fatal evidence.
 
-Before finalist selection, enforce these proxy checks:
+## Construction, Re-evaluation, And Freeze
 
-- recurring pain is not proof of recurring willingness to pay;
-- regulation is not proof of budget or outsourcing;
-- naming a partner category is not a distribution mechanism;
-- accumulated data is not automatically a moat;
-- avoided loss is not automatically capturable revenue;
-- an identifiable market is not proof of affordable access; and
-- adding software later does not automatically make a service scalable.
+Give each selected candidate one structural-constructor pass and record `development/<candidate-id>/constructor-result.json` through kind `development-result`. Preserve either:
 
-Working evaluators receive the immutable current candidate version, relevant founder constraints, evidence, and the canonical evaluator. They do not receive generator rationale, target, rankings, or other evaluations. Their job is to identify the main structural strength, primary limiter, strongest disconfirming evidence, highest-value structural change, and evidence needed to justify improvement.
+- a valid new version that changes at least one canonical fingerprint field and structured economics, with the resulting economic effect; or
+- `no_valid_redesign`, with the concentrated limiter, attempted structural change, and evidence explaining why no lawful improvement survived.
 
-## Structural Redesign
+Do not treat prose polishing as redesign. Preserve the prior version and lineage. Evaluate the final development version afresh even when the constructor preserves the original structure; a parent-version evaluation cannot satisfy the development gate.
 
-Use one bounded redesign pass during `development`, only for a near-winner with a concentrated, addressable limiter. Change at least one of the six canonical fingerprint fields, declare the exact changed fields in `redesign.changed_fingerprint_fields`, update at least one structured economics field, and explain the resulting economic effect in `redesign.economic_effect`. Save a new candidate version and preserve the prior one. Rewording does not count.
+Freeze the deterministic highest-ranked final versions up to the configured limit and continue them to holdout. In schema v2, `no_finalist` is available only at scored research when every shortlisted candidate has a validated direct-evidence fatal disposition, so no development candidate exists. Once development begins, the configured top final versions must continue to holdout; a low working score is not an eligibility escape hatch.
 
-Honor the configured stage and retry maxima. If evidence invalidates the pool or no candidate survives, finish or exhaust all current-stage jobs, then call `finalize <run-id> --no-qualifier-reason "<reason>"` instead of generating indefinitely. Preserve the strongest latest-stage candidates, evidence, failed jobs, and known limiters for the derived report.
+## Holdout, Publication, And Campaign Progression
 
-## Freeze, Holdout, And Publish
+For every frozen finalist, generate one packet bound to the immutable founder and evaluator snapshots, exact candidate version, and canonical lineage research. Give the identical packet independently to the configured fresh native holdout judges. Do not expose the target, working scores, rankings, selection rationale, campaign history, competing candidates, or another judge's output. Valid external evaluations are optional but binding.
 
-Validate every finalist artifact and freeze its exact version. For each frozen candidate, call `export-external` to generate one packet bound to the run's immutable `inputs/founder.md` and `inputs/evaluator.txt` snapshots and the canonical research records found along that candidate's lineage; do not create a divergent compressed profile, rubric, or evidence summary. Once every packet validates, advance from `frozen` to `holdout`. Give each identical packet independently to two fresh native judges and record their results through normal evaluation jobs. Submission to an external judge is optional despite the command name; every successfully imported valid external score is binding.
+After required holdouts and any external import, run `check`, `finalize`, inspect the structured and rendered reports, and `publish`. `no_qualifier` is valid only when at least one finalist completed required holdouts and failed the configured rule. A scoreless completed cohort is `no_finalist`, never `no_qualifier`.
 
-Do not adapt the frozen version in response to a holdout and continue calling that response independent; a changed candidate requires a new version and a new configured evaluation path. After the required native results and any optional external import are complete, run `check`, `finalize`, and inspect `final/report.json` plus `report.md`. Publish every terminal result, including non-confirmation or contested status, while reserving the qualification label for a result that actually earns it.
+The CLI uses exit code `4` for a validated terminal result without a qualifier. Treat that as an expected business outcome: inspect the emitted report, publish it, and continue or finalize the campaign as directed. Do not confuse it with an input or state-integrity failure.
+
+For an attached campaign, publish and validate the cohort before asking the CLI for the next action. The CLI alone applies the configured cohort minimum, maximum, improvement signals, plateau patience, and immediate qualification stop. A single regression consumes at most one no-progress step and cannot bypass the configured minimum or patience.
+
+When continuation is allowed, pass new scouts only the CLI-generated sanitized gap brief: deficient factor names and missing semantic archetypes. Never add candidate names, scores, score deltas, rankings, thresholds, selection rationale, or holdout feedback. Stop only on qualification, validated plateau, configured cap, or a visible unrecoverable integrity failure.

@@ -1,109 +1,131 @@
 # Artifact Contracts
 
-Read this reference before creating a run result, completing a job, importing a holdout response, recovering a run, or publishing an outcome. The CLI's validated contracts and the limits in `config/opportunity-workflow.json` are authoritative; this file explains placement and ownership without copying them.
+Read this reference before creating or completing a canonical artifact, recovering state, importing a holdout, or publishing. The CLI and run's immutable config snapshot are authoritative; never hand-edit managed JSON.
 
-## Run Tree
+## Cohort And Campaign Trees
 
-Each run lives at `runs/<utc-run-id>/`:
+Each cohort lives at `runs/<utc-run-id>/`:
 
 ```text
 manifest.json
 state.json
 events.jsonl
-inputs/
-  founder.md
-  evaluator.txt
-  config.json
-discovery/<job-id>.<ext>
+inputs/{founder.md,evaluator.txt,config.json}
+discovery/
 candidates/<candidate-id>/v<version>.json
+portfolio/
+  selection.json
+  amendments/v<N>.json
+  development-decision.json
 research/<candidate-id>/v<version>.json
 evaluations/<candidate-id>/v<version>/working-<judge-id>.json
-holdout/
-  jobs/<job-id>.<ext>
-  <candidate-id>/v<version>/
-    native-<judge-id>.json
-    external-<judge-id>.json
-    raw/external-<sha256>.txt
-    imports/external-<sha256>.json
+development/<candidate-id>/constructor-result.json
+holdout/<candidate-id>/v<version>/
 exports/<candidate-id>/
-  holdout_packet.md
-  response_schema.json
-dedup/
-  report.json
-artifacts/<stage>/<job-id>.<ext>
-final/
-  report.json
+final/report.json
 report.md
 ```
 
-- `manifest.json` identifies the run and the canonical source snapshots.
-- `state.json` is the validated resumable state; it is not a narrative log.
-- `events.jsonl` is append-only transition and failure history. Job lifecycle events project to the logical job state; `check` rejects missing or tampered lifecycle events, while the matching interrupted command can reconcile one event-first transition whose state write failed.
-- `inputs/` freezes the inputs used by this run. Later canonical edits do not silently change an existing run.
-- `discovery/` stores bounded scout returns and their provenance; `dedup/report.json` binds the discovery candidate hashes used for the structural check.
-- `candidates/` stores immutable, versioned canonical candidates. A structural change creates a new version.
-- `research/` stores sourced evidence and explicit unknowns hash-bound to candidate versions.
-- `evaluations/` stores working judgments and their role/provenance, never a confirmation shortcut.
-- `holdout/` stores native raw job returns and canonical evaluations plus any optional external raw responses, import records, and canonical evaluations.
-- `exports/` contains the canonical shared holdout packets and their response contracts.
-- `artifacts/` holds validated generic returns for stages without a stricter canonical path.
-- `final/report.json` is the terminal machine record derived from validated candidate and holdout records; `report.md` is its concise human-readable rendering.
+`manifest.json` binds the immutable inputs. `state.json` is validated resumable state, while `events.jsonl` is its append-only transition and failure history. Candidate, research, evaluation, portfolio, development, holdout, and publication records are canonical only after CLI validation.
 
-`events.jsonl` contains strict records with exactly `sequence`, `at`, `event`, `run_id`, `stage`, `job_id`, and `details`. Sequence values are contiguous in file order; `job_id` may be `null` for a run-level transition and `details` is an object. The CLI rewrites the log atomically when appending and validates the full sequence on read. Never append or repair it manually.
+Each campaign lives at `campaigns/<campaign-id>/` with immutable founder/evaluator snapshots, managed state and events, `briefs/cohort-<N>.json`, and a terminal receipt and report. Every cohort publication writes immutable `outcomes/<run-id>/campaign-metrics.json`, binding all progress metrics to the hashes of the complete published evidence set. Finalization copies the receipt, report, manifest, event log, canonical input snapshots, and continuation briefs to tracked `outcomes/campaigns/<campaign-id>/`. The receipt binds the manifest, cohort reports, and metric receipts. The CLI attaches cohort IDs, records a published cohort idempotently, computes progress, and generates continuation briefs. Do not construct a brief, metric receipt, or campaign receipt by hand.
 
 ## Candidate JSON
 
-A candidate is a strict object: the ordinary keys below are required and extra keys are rejected, with the single conditional `redesign` field described below.
+A candidate is a strict object; extra keys are rejected. Required identity, lineage, and content include:
 
-- `schema_version`: integer matching the run config.
-- `candidate_id`: lowercase path-safe slug; `version`: positive integer.
-- `parent`: `null` for the first version, otherwise `{candidate_id, version}` naming the same `candidate_id` at exactly the preceding version.
-- `stage`: `discovery`, `research`, `development`, or `frozen`.
-- `title` and `thesis`: non-empty strings.
-- `fingerprint`: object containing exactly `customer`, `problem_trigger`, `payer_and_paid_event`, `offer_and_business_model`, `distribution_mechanism`, and `compounding_advantage`; every value is a non-empty string.
-- `founder_fit` and `source_refs`: unique string lists. Source-count limits come from the run config.
-- `economics`: object containing exactly `pricing`, `gross_margin_basis`, `acquisition_route`, `payback`, `retention_or_repeat`, `capital_required_pln`, `founder_time`, and `founder_net_worth_path`. Each value is a non-empty string, finite number, or `null` while unknown. A frozen finalist must replace `capital_required_pln` with a finite nonnegative JSON number so the cash tie-break remains deterministic.
-- `claims`: list of strict `{claim_id, statement, evidence_refs, confidence}` objects. IDs and statements are non-empty, evidence references are unique strings, and confidence is either a non-empty label or a finite number accepted by the validator.
-- `contrary_evidence`, `uncertainties`, and `risks`: unique string lists. Keep disconfirming evidence separate from missing knowledge.
-- `redesign`: omitted for ordinary versions. A same-stage development revision must add the strict object `{changed_fingerprint_fields, economic_effect}`. The declared list must exactly match at least one normalized change among the six fingerprint fields, at least one structured economics field must also change, and `economic_effect` must explain the consequence. The field is rejected on every other version.
+- `schema_version`, path-safe `candidate_id`, positive `version`, and `parent` naming the immediately preceding version or `null` for the root;
+- `stage`: the candidate's current workflow stage;
+- non-empty `title` and `thesis`;
+- `fingerprint` with exactly `customer`, `problem_trigger`, `payer_and_paid_event`, `offer_and_business_model`, `distribution_mechanism`, and `compounding_advantage`;
+- `structure` with exactly `commercial_archetype`, `control_point`, and `critical_dependency`;
+- `founder_fit`, `source_refs`, evidence claims, contrary evidence, uncertainties, and risks under the strict CLI contracts; and
+- `economics` with pricing, margin basis, acquisition route, payback, retention or repeat, initial capital, founder time, and founder-net-worth path.
 
-Candidate files are immutable, and the CLI accepts one only when its `stage` matches the current run stage. Promotion to another stage or any structural redesign creates the next version and points `parent` at the prior version; it never overwrites the earlier JSON.
+Candidate files are immutable. Promotion or structural redesign creates the next version with a parent pointer; it never overwrites the earlier JSON. A redesign must declare the fingerprint changes, change structured economics, and explain the economic effect. Rewording does not count.
 
-A lineage begins with discovery at v1, advances without skipping or moving backward, and may repeat a stage only for the bounded development redesign. A frozen version must therefore descend through discovery, research, and development for the same candidate ID. Its exact development parent must have at least one canonical working evaluation before the frozen artifact is accepted or a holdout packet is exported; another candidate's evaluation never satisfies this gate.
+Lineage must advance monotonically through the configured stages. A frozen candidate descends through discovery, research, and development. Its final development version must have the configured fresh working-evaluation coverage; an ancestor or another candidate cannot satisfy the gate.
 
 ## Research JSON
 
-Canonical research lives at `research/<candidate-id>/v<version>.json`. It is a strict object with:
+Canonical research at `research/<candidate-id>/v<version>.json` binds `candidate_id`, `candidate_version`, and `candidate_sha256`. It contains strict source records, assessed claims, contrary evidence, and unknowns under the configured source limits.
 
-- `schema_version`, `candidate_id`, `candidate_version`, and `candidate_sha256`, bound to the researched candidate artifact;
-- `sources`: a list of strict `{source_id, url, title, publisher, published_at, accessed_at, source_type, stance}` objects. Every field is a non-empty string, source IDs are unique, and `stance` is `supporting`, `contradicting`, or `context`;
-- `claims`: a list of strict `{claim_id, statement, assessment, evidence_refs}` objects. Claim IDs are unique, `assessment` is `evidence`, `inference`, or `unknown`, and every evidence reference resolves to a listed source ID; and
-- unique string lists `contrary_evidence` and `unknowns`.
+Every claim is `evidence`, `inference`, or `unknown`; evidence references resolve to listed sources. Missing private proof remains unknown. A fatal portfolio disposition requires direct claim evidence and one allowed fatal reason—never a model's generic concern.
 
-The configured source limits are enforced. Record an unsupported proposition as inference or unknown, never as evidence. Completing a research job validates the identity binding and writes the canonical path; do not paste later research into an already validated record.
+Research is valid only for an active candidate reference from `portfolio/selection.json` as updated by accepted amendments. Completing work for a different candidate does not silently change the shortlist.
 
 ## Evaluation JSON
 
-An authored evaluation has these required keys:
+An authored evaluation contains:
 
-- Identity: `schema_version`, `candidate_id`, `candidate_version`, `candidate_sha256`, `rubric_id`, `rubric_sha256`, and path-safe `judge_id`.
-- Role: `evaluation_type`, set to `working`, `holdout_native`, or `holdout_external` as appropriate for the current stage.
-- Judgment: `factors`, `interaction_adjustment`, and a unique string list named `assumptions`.
-- Diagnostics: non-empty `main_structural_strength`, `primary_score_limiter`, `strongest_disconfirming_evidence`, `highest_value_structural_change`, and `evidence_needed_for_higher_score` strings. These must come from the judge's actual analysis, not a later summarizer.
-- Raw binding: run-relative `raw_response_path` and matching `raw_response_sha256`.
+- immutable candidate and rubric identity and hashes;
+- path-safe `judge_id` and `evaluation_type` (`working`, `holdout_native`, or `holdout_external`);
+- every evaluator factor with a scored or structurally excluded judgment;
+- interaction adjustment and assumptions;
+- the required structural-strength, limiter, disconfirming-evidence, highest-value-change, and higher-score-evidence diagnostics; and
+- run-relative raw-response path and hash.
 
-`factors` contains exactly one object for every factor parsed from the immutable evaluator snapshot. Each factor has `{name, status, score, rationale}`:
+The CLI parses weights from the evaluator snapshot, validates exclusions, computes Decimal arithmetic, constrains the interaction and final scale, rounds explicitly, and derives qualification. A model-provided total is never trusted.
 
-- `status: scored` requires a score on the evaluator scale and a non-empty rationale.
-- `status: excluded` requires `score: null` and a specific structural-irrelevance rationale.
+Each researched candidate version receives exactly the configured working-evaluator coverage. A redesigned or otherwise final development version receives a fresh working evaluation even when an ancestor was evaluated. Constructor IDs are disjoint from development working-judge IDs. Native holdout judge IDs are globally distinct and disjoint from every working judge ID and constructor ID; renaming a reused role is not fresh provenance.
 
-Do not ask a model to copy rubric weights or calculate totals. The CLI verifies the candidate, rubric, and raw-response hashes; takes weights from the run snapshot; renormalizes only valid exclusions; and derives `original_weight`, `effective_weight`, `base_score`, `unrounded_score`, `constrained_score`, `final_score`, and `qualified`. If authored input includes a derived value, the CLI accepts it only when it exactly matches its own arithmetic.
+## Portfolio And Development Records
 
-For a native judgment, preserve the complete return as a generic holdout artifact first, then point the evaluation JSON at that run-relative raw artifact and hash. The external importer preserves the raw response and injects the immutable candidate, rubric, and raw-response identity fields before applying the same evaluator contract.
+Write these records only with their CLI kinds. All candidate references are strict `{candidate_id, version, candidate_sha256}` objects.
 
-## Write Contract
+`portfolio/selection.json` uses kind `portfolio-selection` and contains exactly:
 
-Use the CLI for state-managed writes and transitions:
+```text
+schema_version
+selection_version
+candidate_refs
+missing_archetypes
+rationale
+```
+
+The initial `selection_version` is fixed by the validator. `missing_archetypes` is a unique list of non-empty labels observed as absent in the cohort's semantic audit and may be empty; do not fabricate a global archetype vocabulary. Once recorded, the file is immutable.
+
+Each `portfolio/amendments/v<N>.json` uses kind `portfolio-amendment` and contains exactly:
+
+```text
+schema_version
+amendment_version
+base_selection_sha256
+remove_candidate_ref
+add_candidate_ref
+reason
+```
+
+Amendments form the only accepted versioned update path. The CLI validates order, `base_selection_sha256` against the immediately preceding selection or amendment record, the removed active reference, and the added canonical reference.
+
+`portfolio/development-decision.json` uses kind `portfolio-decision` and contains `schema_version` plus `candidate_decisions`. Each decision binds a candidate reference and contains:
+
+- `disposition`: `develop`, `not_selected`, or `fatal`;
+- `fatal_reason`: null unless fatal, otherwise `illegality`, `unobtainable_essential_rights`, `impossible_conservative_economics`, or `nondelegable_founder_incompatibility`;
+- `fatal_claim_ids`: empty unless fatal and otherwise resolving to direct research evidence; and
+- a non-empty `rationale`.
+
+The CLI requires exact research and working-evaluation coverage before accepting the decision and enforces the deterministic development ranking and configured maximum.
+
+`development/<candidate-id>/constructor-result.json` uses kind `development-result` and contains exactly:
+
+```text
+schema_version
+candidate_id
+base_candidate_version
+base_candidate_sha256
+outcome
+final_candidate_version
+final_candidate_sha256
+constructor_id
+rationale
+```
+
+`outcome` is `redesigned` or `no_valid_redesign`. A redesign binds a valid structurally changed child. A no-redesign result binds the unchanged final version and explains the failed structural route. Each selected candidate has one accepted constructor result.
+
+## Writes, Holdouts, And External Imports
+
+Use the CLI for every job lifecycle and canonical write:
 
 ```text
 python3 scripts/opportunity.py job <run-id> <job-id> start --stage <stage>
@@ -112,20 +134,23 @@ python3 scripts/opportunity.py job <run-id> <job-id> fail --error <message>
 python3 scripts/opportunity.py validate <run-id> --input <file> --kind <kind>
 ```
 
-Supported kinds are reported by CLI help. Validate model-produced JSON before advancing. The main agent converts bounded subagent returns to the required input; subagents must not edit run state or canonical candidate files directly.
+Validate model output before advancing. A malformed artifact becomes a visible failed job, not guessed content. Never hand-edit the manifest, state, events, frozen inputs, imports, or publication state.
 
-Never hand-edit `manifest.json`, `state.json`, `events.jsonl`, frozen inputs, imported holdout records, or publication state. Preserve raw model and external responses when the contract requires them. A malformed or incomplete artifact becomes a visible failed job, not a guessed value.
+Call `export-external` for each frozen finalist. The packet binds the immutable founder and evaluator snapshots, exact frozen candidate, and canonical lineage research. Both native judges receive it unchanged. Preserve each complete native return, then record a distinct canonical evaluation wrapper with its raw binding.
 
-## Native And External Holdouts
+External submission is optional. If used, import the complete response unchanged. Malformed responses remain rejected and scoreless; every accepted response is binding and cannot be discarded or replaced.
 
-Each fresh native judge returns the packet's `response_schema.json` judgment body. Preserve that complete body through a distinct generic holdout job, then create the canonical evaluation wrapper with the immutable candidate, rubric, judge, role, raw path, and raw hash fields. Record each wrapper through a distinct holdout-stage job with `--kind evaluation`; role and independence provenance must remain explicit.
+## Terminal Reports And Publication
 
-Call `export-external` for every frozen candidate. It writes the one `holdout_packet.md` and `response_schema.json` used identically by both required native judges. The packet binds the candidate to the run's exact `inputs/founder.md` and `inputs/evaluator.txt` snapshots and embeds the path, hash, and full canonical research records resolved through its lineage; export fails if no candidate-bound research exists. It must not substitute a separately edited founder, rubric, or evidence summary.
+`finalize` derives `final/report.json` and `report.md` from validated canonical records. Publication copies a self-contained report, portfolio decision, evaluation coverage, selected evidence and candidates, highest working score, terminal stage, holdout results when present, and reopen conditions into `outcomes/<run-id>/`. Rendered reports must not rely on disposable raw-run links.
 
-Submitting that packet to an external judge is optional despite the command name. If external evaluation is used, save each complete response to a file and pass that file to `import-external`. Do not clean up, summarize, or merge raw judge responses before import. The CLI preserves and records a malformed response as rejected with no score; every successfully imported valid score is binding.
+Terminal meanings are enforced:
 
-## Published Outcome
+- `qualified`: required holdouts and binding imports pass the configured strict rule;
+- `no_qualifier`: at least one finalist completed required holdouts but none passed;
+- `no_finalist`: research and working-evaluation coverage completed but no finalist reached holdout, leaving official score fields null; and
+- `contested`: a binding result prevents confirmation.
 
-`finalize` writes `final/report.json` and derives `report.md`, including for non-confirmation or contested results. It derives scores, status, selection, evaluator diagnostics, binding limiters, failed or exhausted jobs, preserved candidate and evidence summaries, provenance, and any qualification label from canonical records; never parse the Markdown rendering back into state. Without a reason flag, finalization requires the holdout stage. `--no-qualifier-reason` may close any nonterminal active stage only when its current jobs have no running or retryable work.
+Publishing appends or corrects one compact history row idempotently. A published correction preserves the original outcome in Git history and explicitly states what changed; it never rewrites an old score into a current one.
 
-`publish` accepts every finalized terminal status. It writes `outcomes/<run-id>/report.json` and `report.md`; preserves the holdout-selected candidate and binding evaluations, or the strongest early-closure candidates; and includes their canonical lineage research at the original run-relative paths. If early closure preserves multiple current-stage candidates, `finalize` requires `--best-candidate <candidate-id>` so the decision record, primary limiter, contrary evidence, and reopen condition bind to an explicit best candidate. It appends a provenance, fingerprint, raw-score, terminal-objection, and reopen-condition row to `knowledge/history_index.jsonl`. Non-confirmation and contested publications remain explicitly unqualified; absence of a qualifying candidate is not a runtime failure.
+For campaigns, `campaign next` records each published cohort at most once, computes progress under the immutable campaign policy, and either returns a sanitized brief or a terminal action. `campaign finalize` accepts only a deterministic terminal state and writes the receipt and report.

@@ -2,8 +2,9 @@
 .gstack/*
 !.gstack/
 
-# Generated opportunity runs are resumable working state, not durable publications.
-runs/
+# Generated opportunity runs and campaigns are resumable working state, not durable publications.
+/runs/
+/campaigns/
 
 # Publication lock state is mechanical; published outcome contents stay tracked.
 outcomes/.publish.lock

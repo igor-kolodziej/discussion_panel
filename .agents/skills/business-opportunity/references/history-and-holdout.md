@@ -1,38 +1,43 @@
-# History And Holdout Integrity
+# History, Campaign, And Holdout Integrity
 
-Read this reference when using prior runs, checking novelty, selecting a finalist, exporting to independent judges, importing responses, or interpreting qualification.
+Read this reference when using prior runs, generating a later cohort, checking novelty, freezing a finalist, assigning judges, importing a response, or interpreting qualification.
 
-## Delayed History
+## Delayed History And Semantic Novelty
 
-Initial discovery is fresh. Do not load historical candidates, archived scores, failure summaries, or old verdicts into scouts. After a fresh pool exists, use:
+Initial discovery is fresh. Do not load historical candidates, failure summaries, scores, or verdicts into scouts. After the fresh pool exists, use `knowledge/failure_patterns.md` and only relevant `knowledge/history_index.jsonl` rows for overlap and adversarial review.
 
-- `knowledge/failure_patterns.md` for recurring structural failure modes; and
-- only relevant rows from `knowledge/history_index.jsonl` for provenance and overlap.
+The index is digest-only. Legacy rows preserve their original rubric, score string, role, and recovery provenance. Never normalize, average, promote, or present a historical result as a current candidate, working evaluation, or holdout.
 
-The active history is digest-only. `legacy_run_digest_v1` rows preserve run state and omissions; `legacy_candidate_v1` rows preserve supported candidate fingerprints, original evaluation roles, raw score strings, and recovery provenance. `opportunity_outcome_v1` rows point to current published outcomes. Raw pre-cleanup evidence is available only through the checkpoint named in the index metadata and is not an active workflow input.
+Compare exact six-field fingerprints first. Separately compare `structure.commercial_archetype`, `structure.control_point`, and `structure.critical_dependency`. New wording, geography, or industry is not semantic novelty when the commercial mechanism and dependency remain the same. Keep a historical variant only when a material structural change resolves a recorded objection.
 
-Historical scores retain their original rubric label and comparison semantics. Never normalize, translate, average, promote, or present them as current calibration, current candidates, or held-out evaluations.
+History is delayed adversarial memory, not generation training. PromoLeak and its source dossier are outside this workflow entirely.
 
-Compare the six canonical fingerprint fields before semantic similarity. Reject cosmetic variants that preserve the same customer, trigger, paid event, offer, distribution, and compounding mechanism. Keep a historical variant only when it makes a material structural change and states which prior objections it resolves.
+## Later Campaign Cohorts
 
-History is for novelty checks and adversarial memory after generation. It is not training text for producing another version of the repository's dominant idea family.
+The CLI alone decides whether a published cohort produces another cohort. Use only the `campaign next` action and its generated `briefs/cohort-<N>.json`. Do not prepare a shadow brief from reports or conversation history.
 
-## Development Versus Holdout
+A sanitized brief may identify deficient evaluator factors and copy the shortlist's observed `missing_archetypes`. It must not invent a global archetype vocabulary or reveal candidate names or descriptions, raw or rounded scores, deltas, rankings, threshold, shortlist or development rationale, judge feedback, or previous verdicts. Scouts remain mutually blind and do not receive the evaluator.
 
-Working evaluators diagnose candidates and can guide the bounded redesign stage. Their scores and conclusions cannot confirm a candidate.
+Campaign patience is mechanical. Do not stop after one regression, reset progress by editorial judgment, add cohorts past the configured cap, or keep searching after a deterministic stop.
 
-Before final evaluation:
+## Working Evaluation Versus Holdout
 
-1. Validate and freeze each exact finalist version and evidence set.
-2. For every frozen candidate, call `export-external` to generate one clean holdout packet bound to the immutable founder and evaluator snapshots and the canonical research records resolved through its lineage. Use that identical packet for both native judges; external submission is optional.
-3. Use two fresh independent native judges. Do not reuse a generator, researcher, working evaluator, redesigner, or a judge exposed to another result.
-4. Give each judge only the packet: frozen candidate, full canonical lineage research, the run's immutable founder and evaluator snapshots, and the requested response contract. Do not invent a divergent compressed profile.
-5. Withhold the desired score, configured rule, rankings, selection rationale, working scores, previous conclusions, other judges' outputs, and archived comparisons.
+Working evaluations are mandatory diagnostics for all researched candidates and again for every final development version. They can drive the configured selection and construction pass, but cannot confirm an opportunity.
 
-Do not revise the candidate against a holdout and then count the same conversation as independent confirmation. A changed candidate is a new version and must follow the configured evaluation path.
+Before holdout:
 
-## Binding Imports
+1. Validate the exact finalist version, lineage research, constructor result, and fresh development-version working evaluation.
+2. Generate one packet bound to immutable run snapshots and use that same packet for every judge.
+3. Use genuinely fresh native judges isolated from generation, research, working evaluation, construction, and one another.
+4. Ensure native judge IDs are globally distinct and disjoint from every working judge ID and constructor ID.
+5. Give a judge only the packet and response contract. Withhold the desired score, qualification rule, prior scores, rankings, selection rationale, campaign history, competing candidates, other outputs, and archived comparisons.
 
-Record the required native judgments as separate canonical evaluation jobs. External judgment is optional; if used, store every complete response unchanged and import each separately. Parser or schema failure is visible and resumable; it is never permission to infer a score. Do not discard an adverse result, cherry-pick a sentence, average in working judgments, or rerun until favorable.
+Do not revise a frozen candidate after feedback and count the same judgment as independent. A changed candidate is a new version in a new permitted evaluation path with fresh judges.
 
-Final qualification is computed only by the CLI from the canonical config, the required native holdouts, and any binding external imports. The native holdout floor controls candidate ranking; an imported external result may contest or reject but never boost that ranking or compensate for a native miss. If a candidate qualifies, use the exact label `score-qualified under holistic-11; not empirically market-validated`. This label describes evaluator performance, not customer demand, market validation, permission to spend, or guaranteed business success.
+## Binding Results
+
+Record native judgments as separate canonical jobs. External judgment is optional; if used, preserve and import each complete response independently. Parser or schema failure remains visible and scoreless. Never infer a missing score, discard an adverse result, substitute a working judgment, or rerun until favorable.
+
+The CLI computes qualification from the immutable config, required native holdouts, and all binding valid external imports. The native lower score controls candidate ranking; an external result may contest or reject but cannot raise the native floor.
+
+Only a fully held-out finalist can produce `qualified`, `no_qualifier`, or `contested`. If no candidate reaches holdout after complete working-evaluation coverage, the cohort is `no_finalist` and its official score is N/A rather than zero. The qualification label describes rubric alignment, not customer demand, empirical market validation, permission to spend, or guaranteed business success.

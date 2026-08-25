@@ -5,15 +5,81 @@
   "binding_score_floor": null,
   "candidates": [],
   "comparison": "strictly_greater_than",
+  "correction": {
+    "classification": "legacy_no_finalist_research_only",
+    "corrected_at": "2026-08-25T10:05:29Z",
+    "reason": "The official score is N/A because this run produced zero evaluations. N/A is not a score of zero, and the prior no_qualifier label was invalid because no candidate completed native holdout scoring.",
+    "recovery_ref": "pre-cleanup-20260825T080643Z",
+    "superseded_report_sha256": "cd365500a2eb1782be0a76e131d935fba6ce6d75ea64d67359cfb728b82def8b"
+  },
+  "evaluation_coverage": {
+    "development_attempts": 0,
+    "native_holdouts_completed": 0,
+    "official_scores_available": 0,
+    "researched_candidates": 8,
+    "working_evaluations_completed": 0,
+    "working_evaluations_required_under_schema_v2": 8
+  },
   "failed_jobs": [],
-  "no_qualifier_reason": "The single bounded research pass tested eight structurally varied candidates with 6-12 sources each; all eight were stopped because direct incumbents or native systems already cover the wedge and no candidate demonstrated a separately paid, founder-accessible control point with validated data or partner rights, conservative contribution economics, repeatable low-touch distribution, and a plausible bottom-up founder-net-worth path.",
+  "legacy_execution_class": "research-only",
+  "no_finalist_reason": "The single bounded research pass tested eight candidates with 6-12 sources each, but it stopped before every mandatory working evaluation, development attempt, redesign decision, finalist freeze, and native holdout. The research artifacts remain useful diagnostic evidence, but this run cannot support a qualification decision.",
   "official_score": null,
+  "portfolio_decision": [
+    {
+      "candidate_id": "spend-02",
+      "candidate_version": 2,
+      "decision": "legacy_research_stop",
+      "reason": "High-frequency non-exempt demand, contractor payment, collector margin, and differentiation from incumbents were unproven."
+    },
+    {
+      "candidate_id": "spend-03",
+      "candidate_version": 2,
+      "decision": "legacy_research_stop",
+      "reason": "A 15% dispatch margin yielded about PLN 57 per building per year, insufficient for coordination, quality assurance, and liability."
+    },
+    {
+      "candidate_id": "spend-06",
+      "candidate_version": 2,
+      "decision": "legacy_research_stop",
+      "reason": "Exact audits were already free or contingency-priced, while profitable sites required unusually high recoverable leakage."
+    },
+    {
+      "candidate_id": "spend-07",
+      "candidate_version": 2,
+      "decision": "legacy_research_stop",
+      "reason": "PSE's WOZE system and existing vendors covered claims, and incremental under-recovery was not demonstrated."
+    },
+    {
+      "candidate_id": "spend-08",
+      "candidate_version": 2,
+      "decision": "legacy_research_stop",
+      "reason": "KSeF did not reliably show payment status, while ERP dunning, collections, and factoring already covered the workflow."
+    },
+    {
+      "candidate_id": "spend-09",
+      "candidate_version": 2,
+      "decision": "legacy_research_stop",
+      "reason": "Processor-native tools and Chargeflow already automated the workflow, and typical dispute values and win rates weakened the economics."
+    },
+    {
+      "candidate_id": "spend-12",
+      "candidate_version": 2,
+      "decision": "legacy_research_stop",
+      "reason": "Employer-clinic contracts restricted open routing, while medical networks already bundled the service."
+    },
+    {
+      "candidate_id": "bottleneck-03",
+      "candidate_version": 2,
+      "decision": "legacy_research_stop",
+      "reason": "Existing operators provided the same around-the-clock service; backend rights, field operations, and part-time founder feasibility failed."
+    }
+  ],
   "qualification_label": null,
   "rubric_id": "holistic-11-v1",
   "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
   "run_id": "20260824T205713Z-3dea15",
-  "run_status": "no_qualifier",
-  "schema_version": 1,
+  "run_status": "no_finalist",
+  "schema_version": 2,
   "selected_candidate_id": "spend-02",
   "selected_candidate_version": 2,
   "strongest_candidates": [

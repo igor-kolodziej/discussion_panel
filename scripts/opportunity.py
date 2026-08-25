@@ -29,6 +29,7 @@ from typing import Any, Iterator, Mapping, Sequence
 REPO_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_CONFIG = REPO_ROOT / "config" / "opportunity-workflow.json"
 DEFAULT_RUNS_DIR = REPO_ROOT / "runs"
+DEFAULT_CAMPAIGNS_DIR = REPO_ROOT / "campaigns"
 
 STAGES = (
     "initialized",
@@ -41,11 +42,22 @@ STAGES = (
     "complete",
 )
 CANDIDATE_STAGES = ("discovery", "research", "development", "frozen")
-RUN_STATUSES = {"active", "qualified", "no_qualifier", "contested", "failed"}
+RUN_STATUSES = {"active", "qualified", "no_finalist", "no_qualifier", "contested", "failed"}
+CAMPAIGN_STATUSES = {"active", "qualified", "plateau", "max_cohorts"}
 JOB_STATUSES = {"pending", "running", "completed", "failed", "interrupted", "skipped"}
 RETRYABLE_JOB_STATUSES = {"pending", "failed", "interrupted"}
 TERMINAL_JOB_STATUSES = {"completed", "skipped"}
-CONFIG_KEYS = {
+ARTIFACT_KINDS = {
+    "candidate",
+    "research",
+    "evaluation",
+    "generic",
+    "portfolio-selection",
+    "portfolio-amendment",
+    "portfolio-decision",
+    "development-result",
+}
+CONFIG_KEYS_V1 = {
     "schema_version",
     "rubric_id",
     "threshold",
@@ -64,6 +76,18 @@ CONFIG_KEYS = {
     "sources_min",
     "sources_max",
 }
+CONFIG_V2_EXTRA_KEYS = {
+    "working_evaluators_per_candidate",
+    "semantic_shortlist_min_archetypes",
+    "semantic_shortlist_max_per_archetype",
+    "campaign_min_cohorts",
+    "campaign_max_cohorts",
+    "campaign_plateau_patience",
+    "campaign_official_improvement",
+    "campaign_working_median_improvement",
+    "campaign_novelty_score_gap",
+}
+CONFIG_KEYS_V2 = CONFIG_KEYS_V1 | CONFIG_V2_EXTRA_KEYS
 SOURCE_PATHS = (
     "PERSONALITY_SITUATION.md",
     "Personalities/ZeroToOne.txt",
@@ -93,8 +117,52 @@ CANDIDATE_KEYS = {
     "uncertainties",
     "risks",
 }
-CANDIDATE_OPTIONAL_KEYS = {"redesign"}
+CANDIDATE_OPTIONAL_KEYS = {"redesign", "structure"}
+STRUCTURE_KEYS = {"commercial_archetype", "control_point", "critical_dependency"}
 REDESIGN_KEYS = {"changed_fingerprint_fields", "economic_effect"}
+PORTFOLIO_REF_KEYS = {"candidate_id", "version", "candidate_sha256"}
+PORTFOLIO_SELECTION_KEYS = {
+    "schema_version",
+    "selection_version",
+    "candidate_refs",
+    "missing_archetypes",
+    "rationale",
+}
+PORTFOLIO_AMENDMENT_KEYS = {
+    "schema_version",
+    "amendment_version",
+    "base_selection_sha256",
+    "remove_candidate_ref",
+    "add_candidate_ref",
+    "reason",
+}
+PORTFOLIO_DECISION_KEYS = {"schema_version", "candidate_decisions"}
+PORTFOLIO_CANDIDATE_DECISION_KEYS = {
+    "candidate_id",
+    "candidate_version",
+    "candidate_sha256",
+    "disposition",
+    "fatal_reason",
+    "fatal_claim_ids",
+    "rationale",
+}
+FATAL_RESEARCH_REASONS = {
+    "illegality",
+    "unobtainable_essential_rights",
+    "impossible_conservative_economics",
+    "nondelegable_founder_incompatibility",
+}
+DEVELOPMENT_RESULT_KEYS = {
+    "schema_version",
+    "candidate_id",
+    "base_candidate_version",
+    "base_candidate_sha256",
+    "outcome",
+    "final_candidate_version",
+    "final_candidate_sha256",
+    "constructor_id",
+    "rationale",
+}
 FINGERPRINT_KEYS = {
     "customer",
     "problem_trigger",
@@ -209,7 +277,7 @@ IMPORT_RECEIPT_ACCEPTED_KEYS = IMPORT_RECEIPT_COMMON_KEYS | {
     "qualified",
 }
 IMPORT_RECEIPT_REJECTED_KEYS = IMPORT_RECEIPT_COMMON_KEYS | {"error"}
-FINAL_EVENT_DETAIL_KEYS = {
+FINAL_EVENT_DETAIL_KEYS_V1 = {
     "previous_stage",
     "run_status",
     "selected_candidate_id",
@@ -217,6 +285,9 @@ FINAL_EVENT_DETAIL_KEYS = {
     "no_qualifier_reason",
     "report_sha256",
 }
+FINAL_EVENT_DETAIL_KEYS_V2 = (
+    FINAL_EVENT_DETAIL_KEYS_V1 - {"no_qualifier_reason"}
+) | {"no_finalist_reason"}
 JOB_KEYS = {
     "status",
     "attempts",
@@ -235,12 +306,123 @@ JOB_EVENT_CORE_KEYS = {
     "error",
 }
 STATE_KEYS = {"schema_version", "run_id", "stage", "run_status", "updated_at", "jobs"}
-MANIFEST_KEYS = {"schema_version", "run_id", "created_at", "config", "source_hashes", "rubric"}
+MANIFEST_KEYS_V1 = {"schema_version", "run_id", "created_at", "config", "source_hashes", "rubric"}
+MANIFEST_KEYS_V2 = MANIFEST_KEYS_V1 | {"campaign"}
+CAMPAIGN_BINDING_KEYS = {
+    "campaign_id",
+    "cohort_number",
+    "gap_brief_path",
+    "gap_brief_sha256",
+}
+CAMPAIGN_POLICY_KEYS = {
+    "campaign_min_cohorts",
+    "campaign_max_cohorts",
+    "campaign_plateau_patience",
+    "campaign_official_improvement",
+    "campaign_working_median_improvement",
+    "campaign_novelty_score_gap",
+}
+CAMPAIGN_MANIFEST_KEYS = {
+    "schema_version",
+    "campaign_id",
+    "created_at",
+    "config",
+    "config_sha256",
+    "founder_sha256",
+    "rubric",
+}
+CAMPAIGN_STATE_KEYS = {
+    "schema_version",
+    "campaign_id",
+    "status",
+    "created_at",
+    "updated_at",
+    "active_run_id",
+    "active_cohort_number",
+    "cohorts",
+    "no_progress_streak",
+    "best_official_score",
+    "best_working_median",
+    "best_working_score",
+    "seen_archetypes",
+    "terminal_reason",
+}
+CAMPAIGN_COHORT_KEYS = {
+    "cohort_number",
+    "run_id",
+    "run_status",
+    "report_path",
+    "report_sha256",
+    "metrics_path",
+    "metrics_sha256",
+    "gap_brief_path",
+    "gap_brief_sha256",
+    "official_score",
+    "top_four_working_median",
+    "best_working_score",
+    "archetype_scores",
+    "deficient_factors",
+    "missing_archetypes",
+    "dominant_patterns",
+    "progress_signals",
+    "made_progress",
+    "no_progress_streak",
+}
+CAMPAIGN_PROGRESS_KEYS = {
+    "official_score",
+    "working_median",
+    "novel_archetype",
+}
+CAMPAIGN_METRIC_KEYS = {
+    "official_score",
+    "top_four_working_median",
+    "best_working_score",
+    "archetype_scores",
+    "deficient_factors",
+    "missing_archetypes",
+    "dominant_patterns",
+}
+CAMPAIGN_DOMINANT_KEYS = {
+    "commercial_archetype",
+    "control_point",
+    "critical_dependency",
+}
+CAMPAIGN_EVENT_KEYS = {"sequence", "at", "event", "campaign_id", "details"}
+CAMPAIGN_RECEIPT_KEYS = {
+    "schema_version",
+    "campaign_id",
+    "status",
+    "terminal_reason",
+    "cohort_count",
+    "best_official_score",
+    "best_working_median",
+    "best_working_score",
+    "quality_objective_achieved",
+    "campaign_manifest_sha256",
+    "cohorts",
+}
+CAMPAIGN_GAP_BRIEF_KEYS = {
+    "schema_version",
+    "campaign_id",
+    "cohort_number",
+    "deficient_factors",
+    "missing_archetypes",
+}
+CAMPAIGN_METRIC_RECEIPT_KEYS = {
+    "schema_version",
+    "campaign_id",
+    "cohort_number",
+    "run_id",
+    "report_sha256",
+    "metrics",
+    "evidence_artifacts",
+}
 EVENT_KEYS = {"sequence", "at", "event", "run_id", "stage", "job_id", "details"}
 SAFE_ID_RE = re.compile(r"^[a-z0-9][a-z0-9-]{0,63}$")
 SAFE_JOB_RE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]{0,127}$")
 SAFE_JUDGE_RE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]{0,63}$")
 RUN_ID_RE = re.compile(r"^\d{8}T\d{6}Z-[0-9a-f]{6}$")
+CAMPAIGN_ID_RE = re.compile(r"^campaign-\d{8}T\d{6}Z-[0-9a-f]{6}$")
 SHA256_RE = re.compile(r"^[0-9a-f]{64}$")
 DERIVED_QUANTUM = Decimal("0.000001")
 FINAL_QUANTUM = Decimal("0.1")
@@ -605,7 +787,7 @@ def project_job_lifecycle(
             digest = expect_nonempty_string(details["artifact_sha256"], "job_completed artifact_sha256")
             if not SHA256_RE.fullmatch(digest):
                 raise InputError("job_completed artifact_sha256 is invalid")
-            if details["kind"] not in {"candidate", "research", "evaluation", "generic"}:
+            if details["kind"] not in ARTIFACT_KINDS:
                 raise InputError("job_completed kind is invalid")
             projected[stage][job_id] = _projected_job_record(
                 status="completed",
@@ -832,9 +1014,12 @@ def decimal_json(value: Decimal, *, quantum: Decimal | None = None) -> int | flo
 
 
 def validate_config(value: Any) -> dict[str, Any]:
-    config = expect_object(value, "config", exact_keys=CONFIG_KEYS)
-    if expect_int(config["schema_version"], "config.schema_version", minimum=1) != 1:
-        raise InputError("config.schema_version must be 1")
+    config = expect_object(value, "config")
+    schema_version = expect_int(config.get("schema_version"), "config.schema_version", minimum=1)
+    if schema_version not in {1, 2}:
+        raise InputError("config.schema_version must be 1 or 2")
+    expected_keys = CONFIG_KEYS_V1 if schema_version == 1 else CONFIG_KEYS_V2
+    expect_object(config, "config", exact_keys=expected_keys)
     if expect_nonempty_string(config["rubric_id"], "config.rubric_id") != "holistic-11-v1":
         raise InputError("config.rubric_id must be holistic-11-v1")
     if config["comparison"] != "strictly_greater_than":
@@ -866,6 +1051,32 @@ def validate_config(value: Any) -> dict[str, Any]:
         raise InputError("config.sources_min must not exceed sources_max")
     if config["finalists_max"] > config["develop_max"] or config["develop_max"] > config["shortlist_max"]:
         raise InputError("config limits must satisfy finalists_max <= develop_max <= shortlist_max")
+    if schema_version == 2:
+        for key in (
+            "working_evaluators_per_candidate",
+            "semantic_shortlist_min_archetypes",
+            "semantic_shortlist_max_per_archetype",
+            "campaign_min_cohorts",
+            "campaign_max_cohorts",
+            "campaign_plateau_patience",
+        ):
+            expect_int(config[key], f"config.{key}", minimum=1)
+        if config["working_evaluators_per_candidate"] != 1:
+            raise InputError("config.working_evaluators_per_candidate must be 1")
+        if config["semantic_shortlist_min_archetypes"] > config["shortlist_max"]:
+            raise InputError("semantic shortlist minimum cannot exceed shortlist_max")
+        if config["semantic_shortlist_max_per_archetype"] > config["shortlist_max"]:
+            raise InputError("semantic shortlist per-archetype maximum cannot exceed shortlist_max")
+        if config["campaign_min_cohorts"] > config["campaign_max_cohorts"]:
+            raise InputError("campaign_min_cohorts must not exceed campaign_max_cohorts")
+        for key in (
+            "campaign_official_improvement",
+            "campaign_working_median_improvement",
+            "campaign_novelty_score_gap",
+        ):
+            value = as_json_number(config[key], f"config.{key}")
+            if value <= 0:
+                raise InputError(f"config.{key} must be greater than zero")
     return dict(config)
 
 
@@ -904,14 +1115,22 @@ def parse_rubric(path: Path) -> tuple[list[tuple[str, Decimal]], str]:
 
 
 def validate_manifest(value: Any) -> dict[str, Any]:
-    manifest = expect_object(value, "manifest", exact_keys=MANIFEST_KEYS)
-    if expect_int(manifest["schema_version"], "manifest.schema_version") != 1:
-        raise InputError("manifest.schema_version must be 1")
+    manifest = expect_object(value, "manifest")
+    schema_version = expect_int(manifest["schema_version"], "manifest.schema_version")
+    if schema_version not in {1, 2}:
+        raise InputError("manifest.schema_version must be 1 or 2")
+    expect_object(
+        manifest,
+        "manifest",
+        exact_keys=MANIFEST_KEYS_V1 if schema_version == 1 else MANIFEST_KEYS_V2,
+    )
     run_id = expect_nonempty_string(manifest["run_id"], "manifest.run_id")
     if not RUN_ID_RE.fullmatch(run_id):
         raise InputError("manifest.run_id is not canonical")
     expect_nonempty_string(manifest["created_at"], "manifest.created_at")
     validate_config(manifest["config"])
+    if schema_version != manifest["config"]["schema_version"]:
+        raise InputError("manifest.schema_version differs from workflow schema")
     hashes = expect_object(manifest["source_hashes"], "manifest.source_hashes")
     if set(hashes) != set(SOURCE_PATHS):
         raise InputError("manifest.source_hashes does not cover the canonical source set")
@@ -937,6 +1156,29 @@ def validate_manifest(value: Any) -> dict[str, Any]:
         total += as_json_number(item["weight"], f"manifest.rubric.factors[{index}].weight")
     if total != 100:
         raise InputError("manifest rubric weights must sum to 100")
+    if schema_version == 2 and manifest["campaign"] is not None:
+        binding = expect_object(
+            manifest["campaign"], "manifest.campaign", exact_keys=CAMPAIGN_BINDING_KEYS
+        )
+        campaign_id = expect_nonempty_string(
+            binding["campaign_id"], "manifest.campaign.campaign_id"
+        )
+        if not CAMPAIGN_ID_RE.fullmatch(campaign_id):
+            raise InputError("manifest.campaign.campaign_id is not canonical")
+        cohort_number = expect_int(
+            binding["cohort_number"], "manifest.campaign.cohort_number", minimum=1
+        )
+        gap_path = binding["gap_brief_path"]
+        gap_digest = binding["gap_brief_sha256"]
+        if cohort_number == 1:
+            if gap_path is not None or gap_digest is not None:
+                raise InputError("the first campaign cohort must not bind a gap brief")
+        else:
+            expected_path = f"briefs/cohort-{cohort_number}.json"
+            if gap_path != expected_path:
+                raise InputError("manifest campaign gap brief path is not canonical")
+            if not isinstance(gap_digest, str) or not SHA256_RE.fullmatch(gap_digest):
+                raise InputError("manifest campaign gap brief hash is invalid")
     return manifest
 
 
@@ -966,8 +1208,8 @@ def validate_job_record(value: Any, label: str) -> dict[str, Any]:
 
 def validate_state(value: Any, manifest: Mapping[str, Any]) -> dict[str, Any]:
     state = expect_object(value, "state", exact_keys=STATE_KEYS)
-    if expect_int(state["schema_version"], "state.schema_version") != 1:
-        raise InputError("state.schema_version must be 1")
+    if expect_int(state["schema_version"], "state.schema_version") != manifest["schema_version"]:
+        raise InputError("state.schema_version differs from manifest")
     if state["run_id"] != manifest["run_id"]:
         raise InputError("state identity differs from manifest")
     if state["stage"] not in STAGES:
@@ -1086,6 +1328,14 @@ def validate_candidate(
         raise InputError(f"candidate keys differ; missing={missing}, extra={extra}")
     if expect_int(candidate["schema_version"], "candidate.schema_version") != manifest["config"]["schema_version"]:
         raise InputError("candidate.schema_version differs from workflow schema")
+    if manifest["config"]["schema_version"] == 2:
+        if "structure" not in candidate:
+            raise InputError("schema-v2 candidate requires structure")
+        structure = expect_object(candidate["structure"], "candidate.structure", exact_keys=STRUCTURE_KEYS)
+        for key in STRUCTURE_KEYS:
+            expect_nonempty_string(structure[key], f"candidate.structure.{key}")
+    elif "structure" in candidate:
+        raise InputError("schema-v1 candidate does not accept structure")
     candidate_id = expect_nonempty_string(candidate["candidate_id"], "candidate.candidate_id")
     if not SAFE_ID_RE.fullmatch(candidate_id):
         raise InputError("candidate.candidate_id must be a lowercase slug")
@@ -1326,14 +1576,15 @@ def compute_evaluation(
         raise InputError("evaluation.judge_id is not path-safe")
     if evaluation["evaluation_type"] not in {"working", "holdout_native", "holdout_external"}:
         raise InputError("evaluation.evaluation_type is invalid")
-    required_candidate_stage = {
-        "working": "development",
-        "holdout_native": "frozen",
-        "holdout_external": "frozen",
+    required_candidate_stages = {
+        "working": {"development"} if manifest["config"]["schema_version"] == 1 else {"research", "development"},
+        "holdout_native": {"frozen"},
+        "holdout_external": {"frozen"},
     }[evaluation["evaluation_type"]]
-    if candidate["stage"] != required_candidate_stage:
+    if candidate["stage"] not in required_candidate_stages:
+        expected = " or ".join(sorted(required_candidate_stages))
         raise InputError(
-            f"{evaluation['evaluation_type']} evaluation must bind a {required_candidate_stage}-stage candidate"
+            f"{evaluation['evaluation_type']} evaluation must bind a {expected}-stage candidate"
         )
     if evaluation["evaluation_type"] in {"holdout_native", "holdout_external"}:
         validate_finalist_lineage(run_dir, manifest, candidate)
@@ -1477,21 +1728,1070 @@ def validate_generic_input(path: Path, kind: str) -> bytes:
     return data
 
 
-def make_run(config_path: Path, runs_dir: Path) -> dict[str, Any]:
-    config = validate_config(load_json(config_path))
-    rubric_path = REPO_ROOT / "Personalities" / "ZeroToOne.txt"
-    factors, rubric_digest = parse_rubric(rubric_path)
-    if config_path.resolve() != (REPO_ROOT / "config" / "opportunity-workflow.json").resolve():
-        config_source_digest = sha256_file(config_path)
+def campaign_storage_for_runs(runs_dir: Path) -> Path:
+    return runs_dir.parent / "campaigns"
+
+
+def resolve_campaign(campaigns_dir: Path, campaign: str) -> Path:
+    if not isinstance(campaign, str) or not CAMPAIGN_ID_RE.fullmatch(campaign):
+        raise InputError("campaign must be a canonical campaign id, not a path")
+    root = Path(os.path.abspath(campaigns_dir))
+    path = root / campaign
+    _assert_safe_write_path(root, path, "campaign path")
+    if not path.is_dir() or not (path / "manifest.json").is_file() or not (path / "state.json").is_file():
+        raise InputError(f"campaign not found: {campaign}")
+    return path
+
+
+def validate_campaign_manifest(value: Any) -> dict[str, Any]:
+    manifest = expect_object(
+        value, "campaign manifest", exact_keys=CAMPAIGN_MANIFEST_KEYS
+    )
+    if expect_int(manifest["schema_version"], "campaign manifest.schema_version") != 2:
+        raise InputError("campaign manifest.schema_version must be 2")
+    campaign_id = expect_nonempty_string(
+        manifest["campaign_id"], "campaign manifest.campaign_id"
+    )
+    if not CAMPAIGN_ID_RE.fullmatch(campaign_id):
+        raise InputError("campaign manifest.campaign_id is not canonical")
+    expect_nonempty_string(manifest["created_at"], "campaign manifest.created_at")
+    config = validate_config(manifest["config"])
+    if config["schema_version"] != 2:
+        raise InputError("campaigns require workflow schema v2")
+    digest = manifest["config_sha256"]
+    if not isinstance(digest, str) or not SHA256_RE.fullmatch(digest):
+        raise InputError("campaign manifest.config_sha256 is invalid")
+    if digest != sha256_bytes(canonical_json_bytes(config)):
+        raise InputError("campaign manifest.config_sha256 differs from its config snapshot")
+    founder_digest = manifest["founder_sha256"]
+    if not isinstance(founder_digest, str) or not SHA256_RE.fullmatch(founder_digest):
+        raise InputError("campaign manifest.founder_sha256 is invalid")
+    rubric = expect_object(
+        manifest["rubric"],
+        "campaign manifest.rubric",
+        exact_keys={"rubric_id", "sha256", "factors"},
+    )
+    if rubric["rubric_id"] != config["rubric_id"]:
+        raise InputError("campaign rubric id differs from campaign config")
+    if not isinstance(rubric["sha256"], str) or not SHA256_RE.fullmatch(rubric["sha256"]):
+        raise InputError("campaign rubric hash is invalid")
+    factors = rubric["factors"]
+    if not isinstance(factors, list) or len(factors) != 11:
+        raise InputError("campaign rubric must contain exactly 11 factors")
+    names: set[str] = set()
+    total = Decimal(0)
+    for index, raw in enumerate(factors):
+        factor = expect_object(
+            raw,
+            f"campaign manifest.rubric.factors[{index}]",
+            exact_keys={"name", "weight"},
+        )
+        name = expect_nonempty_string(
+            factor["name"], f"campaign manifest.rubric.factors[{index}].name"
+        )
+        if name in names:
+            raise InputError("campaign rubric contains a duplicate factor")
+        names.add(name)
+        total += as_json_number(
+            factor["weight"], f"campaign manifest.rubric.factors[{index}].weight"
+        )
+    if total != Decimal(100):
+        raise InputError("campaign rubric weights must sum to 100")
+    return manifest
+
+
+def _optional_campaign_score(value: Any, label: str) -> Decimal | None:
+    if value is None:
+        return None
+    score = as_json_number(value, label)
+    if score < 1 or score > 10:
+        raise InputError(f"{label} must be in [1, 10]")
+    return score
+
+
+def campaign_terminal_reason(status: str) -> str | None:
+    reasons = {
+        "qualified": "A cohort produced a binding strict qualifier.",
+        "max_cohorts": "The configured maximum number of fully scored cohorts was reached.",
+        "plateau": "The configured no-progress patience was exhausted after the minimum cohort count.",
+    }
+    return reasons.get(status)
+
+
+def _campaign_factor_names(manifest: Mapping[str, Any]) -> list[str]:
+    return [factor["name"] for factor in manifest["rubric"]["factors"]]
+
+
+def _gap_archetype_label_is_safe(item: str) -> bool:
+    forbidden = re.compile(
+        r"\b(candidate|opportunity|score|ranking|threshold|holdout|finalist|winner)\b",
+        re.IGNORECASE,
+    )
+    return (
+        0 < len(item) <= 64
+        and item == normalize_fingerprint(item)
+        and not any(character.isdigit() for character in item)
+        and forbidden.search(item) is None
+    )
+
+
+def _validate_gap_archetype_labels(value: Any, label: str) -> list[str]:
+    labels = expect_string_list(value, label, unique=True)
+    for item in labels:
+        if not _gap_archetype_label_is_safe(item):
+            raise InputError(f"{label} contains a candidate-like or score-like label")
+    return labels
+
+
+def validate_campaign_cohort(
+    value: Any, label: str, manifest: Mapping[str, Any] | None = None
+) -> dict[str, Any]:
+    cohort = expect_object(value, label, exact_keys=CAMPAIGN_COHORT_KEYS)
+    expect_int(cohort["cohort_number"], f"{label}.cohort_number", minimum=1)
+    run_id = expect_nonempty_string(cohort["run_id"], f"{label}.run_id")
+    if not RUN_ID_RE.fullmatch(run_id):
+        raise InputError(f"{label}.run_id is not canonical")
+    if cohort["run_status"] not in RUN_STATUSES - {"active", "failed"}:
+        raise InputError(f"{label}.run_status is not a published terminal status")
+    expected_report_path = f"outcomes/{run_id}/report.json"
+    if cohort["report_path"] != expected_report_path:
+        raise InputError(f"{label}.report_path is not canonical")
+    digest = cohort["report_sha256"]
+    if not isinstance(digest, str) or not SHA256_RE.fullmatch(digest):
+        raise InputError(f"{label}.report_sha256 is invalid")
+    if cohort["metrics_path"] != f"outcomes/{run_id}/campaign-metrics.json":
+        raise InputError(f"{label}.metrics_path is not canonical")
+    metrics_digest = cohort["metrics_sha256"]
+    if not isinstance(metrics_digest, str) or not SHA256_RE.fullmatch(metrics_digest):
+        raise InputError(f"{label}.metrics_sha256 is invalid")
+    gap_path = cohort["gap_brief_path"]
+    gap_digest = cohort["gap_brief_sha256"]
+    if cohort["cohort_number"] == 1:
+        if gap_path is not None or gap_digest is not None:
+            raise InputError(f"{label} first cohort cannot have a gap brief")
     else:
-        config_source_digest = sha256_file(REPO_ROOT / "config" / "opportunity-workflow.json")
+        if gap_path != f"briefs/cohort-{cohort['cohort_number']}.json":
+            raise InputError(f"{label}.gap_brief_path is not canonical")
+        if not isinstance(gap_digest, str) or not SHA256_RE.fullmatch(gap_digest):
+            raise InputError(f"{label}.gap_brief_sha256 is invalid")
+    official = _optional_campaign_score(
+        cohort["official_score"], f"{label}.official_score"
+    )
+    if manifest is not None:
+        threshold = as_decimal(manifest["config"]["threshold"], "campaign threshold")
+        if cohort["run_status"] == "qualified" and (
+            official is None or official <= threshold
+        ):
+            raise InputError(f"{label} qualified status does not strictly exceed threshold")
+        if cohort["run_status"] == "no_finalist" and official is not None:
+            raise InputError(f"{label} no_finalist status must have an N/A official score")
+        if cohort["run_status"] in {"no_qualifier", "contested"} and official is None:
+            raise InputError(f"{label} held-out terminal status requires an official score")
+    _optional_campaign_score(
+        cohort["top_four_working_median"], f"{label}.top_four_working_median"
+    )
+    _optional_campaign_score(cohort["best_working_score"], f"{label}.best_working_score")
+    archetype_scores = expect_object(
+        cohort["archetype_scores"], f"{label}.archetype_scores"
+    )
+    for archetype, raw_score in archetype_scores.items():
+        normalized = expect_nonempty_string(archetype, f"{label}.archetype_scores key")
+        if normalized != normalize_fingerprint(normalized):
+            raise InputError(f"{label}.archetype_scores keys must be normalized")
+        _optional_campaign_score(raw_score, f"{label}.archetype_scores.{archetype}")
+    deficient = expect_string_list(
+        cohort["deficient_factors"], f"{label}.deficient_factors", unique=True
+    )
+    if len(deficient) > 3:
+        raise InputError(f"{label}.deficient_factors may contain at most three factors")
+    if manifest is not None and not set(deficient).issubset(_campaign_factor_names(manifest)):
+        raise InputError(f"{label}.deficient_factors contains a non-rubric factor")
+    _validate_gap_archetype_labels(
+        cohort["missing_archetypes"], f"{label}.missing_archetypes"
+    )
+    dominant = expect_object(
+        cohort["dominant_patterns"],
+        f"{label}.dominant_patterns",
+        exact_keys=CAMPAIGN_DOMINANT_KEYS,
+    )
+    for key, raw in dominant.items():
+        if raw is not None:
+            expect_nonempty_string(raw, f"{label}.dominant_patterns.{key}")
+    signals = expect_object(
+        cohort["progress_signals"],
+        f"{label}.progress_signals",
+        exact_keys=CAMPAIGN_PROGRESS_KEYS,
+    )
+    for key, raw in signals.items():
+        if not isinstance(raw, bool):
+            raise InputError(f"{label}.progress_signals.{key} must be boolean")
+    if not isinstance(cohort["made_progress"], bool):
+        raise InputError(f"{label}.made_progress must be boolean")
+    if cohort["made_progress"] != any(signals.values()):
+        raise InputError(f"{label}.made_progress differs from progress signals")
+    expect_int(cohort["no_progress_streak"], f"{label}.no_progress_streak", minimum=0)
+    return cohort
+
+
+def validate_campaign_state(
+    value: Any, manifest: Mapping[str, Any]
+) -> dict[str, Any]:
+    state = expect_object(value, "campaign state", exact_keys=CAMPAIGN_STATE_KEYS)
+    if expect_int(state["schema_version"], "campaign state.schema_version") != 2:
+        raise InputError("campaign state.schema_version must be 2")
+    if state["campaign_id"] != manifest["campaign_id"]:
+        raise InputError("campaign state identity differs from manifest")
+    if state["status"] not in CAMPAIGN_STATUSES:
+        raise InputError("campaign state.status is invalid")
+    expect_nonempty_string(state["created_at"], "campaign state.created_at")
+    expect_nonempty_string(state["updated_at"], "campaign state.updated_at")
+    if state["created_at"] != manifest["created_at"]:
+        raise InputError("campaign state creation time differs from manifest")
+    cohorts_value = state["cohorts"]
+    if not isinstance(cohorts_value, list):
+        raise InputError("campaign state.cohorts must be a list")
+    cohorts: list[dict[str, Any]] = []
+    run_ids: set[str] = set()
+    for index, raw in enumerate(cohorts_value, start=1):
+        cohort = validate_campaign_cohort(
+            raw, f"campaign state.cohorts[{index - 1}]", manifest
+        )
+        if cohort["cohort_number"] != index:
+            raise InputError("campaign cohort numbers must be contiguous")
+        expected_cohort_streak = (
+            0
+            if index == 1 or cohort["made_progress"]
+            else cohorts[-1]["no_progress_streak"] + 1
+        )
+        if cohort["no_progress_streak"] != expected_cohort_streak:
+            raise InputError("campaign cohort no-progress streak is inconsistent")
+        config = manifest["config"]
+        prefix_is_terminal = (
+            cohort["run_status"] == "qualified"
+            or index >= config["campaign_max_cohorts"]
+            or (
+                index >= config["campaign_min_cohorts"]
+                and cohort["no_progress_streak"]
+                >= config["campaign_plateau_patience"]
+            )
+        )
+        if prefix_is_terminal and index != len(cohorts_value):
+            raise InputError("campaign contains a cohort after an earlier terminal stop")
+        if cohort["run_id"] in run_ids:
+            raise InputError("campaign state contains a duplicate run id")
+        run_ids.add(cohort["run_id"])
+        cohorts.append(cohort)
+    if len(cohorts) > manifest["config"]["campaign_max_cohorts"]:
+        raise InputError("campaign state exceeds campaign_max_cohorts")
+    projected = {
+        "cohorts": [],
+        "best_official_score": None,
+        "best_working_median": None,
+        "best_working_score": None,
+        "seen_archetypes": [],
+    }
+    for cohort in cohorts:
+        expected_signals = campaign_progress_signals(
+            projected, cohort, manifest["config"]
+        )
+        if cohort["progress_signals"] != expected_signals:
+            raise InputError("campaign cohort progress signals differ from deterministic policy")
+        projected["cohorts"].append(cohort)
+        for state_key, metric_key in (
+            ("best_official_score", "official_score"),
+            ("best_working_median", "top_four_working_median"),
+            ("best_working_score", "best_working_score"),
+        ):
+            current = _optional_campaign_score(
+                projected[state_key], f"projected campaign {state_key}"
+            )
+            observed = _optional_campaign_score(
+                cohort[metric_key], f"projected campaign {metric_key}"
+            )
+            if observed is not None and (current is None or observed > current):
+                projected[state_key] = decimal_json(
+                    observed, quantum=FINAL_QUANTUM
+                )
+        projected["seen_archetypes"] = sorted(
+            set(projected["seen_archetypes"]) | set(cohort["archetype_scores"])
+        )
+    expected_streak = cohorts[-1]["no_progress_streak"] if cohorts else 0
+    if expect_int(state["no_progress_streak"], "campaign state.no_progress_streak", minimum=0) != expected_streak:
+        raise InputError("campaign state no-progress streak differs from its latest cohort")
+    active_run = state["active_run_id"]
+    active_number = state["active_cohort_number"]
+    if (active_run is None) != (active_number is None):
+        raise InputError("campaign active run id and cohort number must both be null or set")
+    if active_run is not None:
+        if not isinstance(active_run, str) or not RUN_ID_RE.fullmatch(active_run):
+            raise InputError("campaign state.active_run_id is invalid")
+        if expect_int(active_number, "campaign state.active_cohort_number", minimum=1) != len(cohorts) + 1:
+            raise InputError("campaign active cohort number is not next in sequence")
+        if state["status"] != "active":
+            raise InputError("terminal campaign cannot have an active run")
+    for key in ("best_official_score", "best_working_median", "best_working_score"):
+        _optional_campaign_score(state[key], f"campaign state.{key}")
+    seen = expect_string_list(
+        state["seen_archetypes"], "campaign state.seen_archetypes", unique=True
+    )
+    if seen != sorted(seen) or any(item != normalize_fingerprint(item) for item in seen):
+        raise InputError("campaign state.seen_archetypes must be sorted normalized labels")
+    metric_pairs = (
+        ("best_official_score", "official_score"),
+        ("best_working_median", "top_four_working_median"),
+        ("best_working_score", "best_working_score"),
+    )
+    for state_key, cohort_key in metric_pairs:
+        observed = [
+            _optional_campaign_score(item[cohort_key], f"campaign cohort {cohort_key}")
+            for item in cohorts
+            if item[cohort_key] is not None
+        ]
+        expected = max(observed, default=None)
+        actual = _optional_campaign_score(state[state_key], f"campaign state.{state_key}")
+        if actual != expected:
+            raise InputError(f"campaign state.{state_key} differs from cohort receipts")
+    expected_seen = sorted(
+        {
+            archetype
+            for cohort in cohorts
+            for archetype in cohort["archetype_scores"]
+        }
+    )
+    if seen != expected_seen:
+        raise InputError("campaign state.seen_archetypes differs from cohort receipts")
+    config = manifest["config"]
+    if any(item["run_status"] == "qualified" for item in cohorts):
+        expected_status = "qualified"
+    elif len(cohorts) >= config["campaign_max_cohorts"]:
+        expected_status = "max_cohorts"
+    elif (
+        len(cohorts) >= config["campaign_min_cohorts"]
+        and expected_streak >= config["campaign_plateau_patience"]
+    ):
+        expected_status = "plateau"
+    else:
+        expected_status = "active"
+    if state["status"] != expected_status:
+        raise InputError("campaign state.status differs from deterministic cohort policy")
+    if state["status"] == "active":
+        if state["terminal_reason"] is not None:
+            raise InputError("active campaign must have a null terminal reason")
+    else:
+        if state["terminal_reason"] != campaign_terminal_reason(state["status"]):
+            raise InputError("campaign terminal reason differs from deterministic policy")
+        if active_run is not None:
+            raise InputError("terminal campaign cannot retain an active run")
+    return state
+
+
+def load_campaign(campaign_dir: Path) -> tuple[dict[str, Any], dict[str, Any]]:
+    manifest = validate_campaign_manifest(load_json(campaign_dir / "manifest.json"))
+    founder_path = campaign_dir / "inputs" / "founder.md"
+    evaluator_path = campaign_dir / "inputs" / "evaluator.txt"
+    if not founder_path.is_file() or not evaluator_path.is_file():
+        raise InputError("campaign is missing its immutable founder or evaluator snapshot")
+    if sha256_file(founder_path) != manifest["founder_sha256"]:
+        raise InputError("campaign founder snapshot hash differs from its manifest")
+    factors, evaluator_digest = parse_rubric(evaluator_path)
+    expected_factors = [
+        {"name": name, "weight": decimal_json(weight)}
+        for name, weight in factors
+    ]
+    if (
+        evaluator_digest != manifest["rubric"]["sha256"]
+        or expected_factors != manifest["rubric"]["factors"]
+    ):
+        raise InputError("campaign evaluator snapshot differs from its manifest")
+    state = validate_campaign_state(load_json(campaign_dir / "state.json"), manifest)
+    return manifest, state
+
+
+def _campaign_metric_evidence(outcome_dir: Path) -> list[dict[str, str]]:
+    evidence: list[dict[str, str]] = []
+    for path in sorted(outcome_dir.rglob("*")):
+        if not path.is_file() or path.name == "campaign-metrics.json":
+            continue
+        _assert_safe_write_path(outcome_dir, path, "campaign metric evidence")
+        evidence.append(
+            {
+                "path": path.relative_to(outcome_dir).as_posix(),
+                "sha256": sha256_file(path),
+            }
+        )
+    return evidence
+
+
+def build_campaign_metric_receipt(
+    outcome_dir: Path,
+    binding: Mapping[str, Any],
+    run_id: str,
+    report_sha256: str,
+    metrics: Mapping[str, Any],
+) -> dict[str, Any]:
+    canonical_metrics = expect_object(
+        dict(metrics), "campaign metrics", exact_keys=CAMPAIGN_METRIC_KEYS
+    )
+    return {
+        "schema_version": 2,
+        "campaign_id": binding["campaign_id"],
+        "cohort_number": binding["cohort_number"],
+        "run_id": run_id,
+        "report_sha256": report_sha256,
+        "metrics": canonical_metrics,
+        "evidence_artifacts": _campaign_metric_evidence(outcome_dir),
+    }
+
+
+def validate_campaign_metric_receipt(
+    outcome_dir: Path,
+    cohort: Mapping[str, Any],
+    campaign_id: str,
+) -> dict[str, Any]:
+    path = outcome_dir / "campaign-metrics.json"
+    if not path.is_file() or sha256_file(path) != cohort["metrics_sha256"]:
+        raise InputError("campaign metric receipt is missing or differs from the campaign ledger")
+    receipt = expect_object(
+        load_json(path),
+        "campaign metric receipt",
+        exact_keys=CAMPAIGN_METRIC_RECEIPT_KEYS,
+    )
+    if path.read_bytes() != canonical_json_bytes(receipt):
+        raise InputError("campaign metric receipt is not canonical JSON")
+    if (
+        receipt["schema_version"] != 2
+        or receipt["campaign_id"] != campaign_id
+        or receipt["cohort_number"] != cohort["cohort_number"]
+        or receipt["run_id"] != cohort["run_id"]
+        or receipt["report_sha256"] != cohort["report_sha256"]
+    ):
+        raise InputError("campaign metric receipt identity differs from its cohort")
+    metrics = expect_object(
+        receipt["metrics"],
+        "campaign metric receipt.metrics",
+        exact_keys=CAMPAIGN_METRIC_KEYS,
+    )
+    expected_metrics = {key: cohort[key] for key in CAMPAIGN_METRIC_KEYS}
+    if metrics != expected_metrics:
+        raise InputError("campaign ledger metrics differ from the immutable metric receipt")
+    evidence = receipt["evidence_artifacts"]
+    if not isinstance(evidence, list):
+        raise InputError("campaign metric evidence_artifacts must be a list")
+    canonical_evidence: list[dict[str, str]] = []
+    seen: set[str] = set()
+    for index, raw in enumerate(evidence):
+        item = expect_object(
+            raw,
+            f"campaign metric evidence_artifacts[{index}]",
+            exact_keys={"path", "sha256"},
+        )
+        relative, evidence_path = run_relative_path(
+            outcome_dir,
+            item["path"],
+            f"campaign metric evidence_artifacts[{index}].path",
+        )
+        if relative in seen:
+            raise InputError("campaign metric receipt contains duplicate evidence paths")
+        seen.add(relative)
+        if not isinstance(item["sha256"], str) or not SHA256_RE.fullmatch(item["sha256"]):
+            raise InputError("campaign metric receipt contains an invalid evidence hash")
+        if not evidence_path.is_file() or sha256_file(evidence_path) != item["sha256"]:
+            raise InputError("campaign metric evidence artifact is missing or has changed")
+        canonical_evidence.append({"path": relative, "sha256": item["sha256"]})
+    if canonical_evidence != _campaign_metric_evidence(outcome_dir):
+        raise InputError("campaign metric receipt does not bind the complete outcome evidence set")
+    return receipt
+
+
+def validate_campaign_publication_receipts(
+    campaign_dir: Path,
+    manifest: Mapping[str, Any],
+    state: Mapping[str, Any],
+) -> None:
+    outcomes_dir = campaign_dir.parent.parent / "outcomes"
+    threshold = as_decimal(manifest["config"]["threshold"], "campaign threshold")
+    for cohort in state["cohorts"]:
+        report_path = outcomes_dir / cohort["run_id"] / "report.json"
+        _assert_safe_write_path(outcomes_dir, report_path, "campaign cohort report")
+        if not report_path.is_file():
+            raise InputError(
+                f"campaign cohort {cohort['cohort_number']} report is missing; restore its published outcome before continuing"
+            )
+        if sha256_file(report_path) != cohort["report_sha256"]:
+            raise InputError(
+                f"campaign cohort {cohort['cohort_number']} report hash differs from its receipt"
+            )
+        report = expect_object(
+            load_json(report_path),
+            f"campaign cohort {cohort['cohort_number']} report",
+        )
+        validate_campaign_metric_receipt(
+            outcomes_dir / cohort["run_id"], cohort, manifest["campaign_id"]
+        )
+        if report_path.read_bytes() != canonical_json_bytes(report):
+            raise InputError("campaign cohort report is not canonical JSON")
+        if report.get("schema_version") != 2:
+            raise InputError("campaign cohort report must use workflow schema v2")
+        if (
+            report.get("run_id") != cohort["run_id"]
+            or report.get("run_status") != cohort["run_status"]
+        ):
+            raise InputError("campaign cohort report identity differs from its receipt")
+        binding = expect_object(
+            report.get("campaign"),
+            "campaign cohort report.campaign",
+            exact_keys=CAMPAIGN_BINDING_KEYS,
+        )
+        expected_binding = {
+            "campaign_id": manifest["campaign_id"],
+            "cohort_number": cohort["cohort_number"],
+            "gap_brief_path": cohort["gap_brief_path"],
+            "gap_brief_sha256": cohort["gap_brief_sha256"],
+        }
+        if binding != expected_binding:
+            raise InputError("campaign cohort report binding differs from its receipt")
+        if (
+            report.get("rubric_id") != manifest["rubric"]["rubric_id"]
+            or report.get("rubric_sha256") != manifest["rubric"]["sha256"]
+            or report.get("founder_sha256") != manifest["founder_sha256"]
+            or as_json_number(report.get("threshold"), "campaign report threshold")
+            != threshold
+            or report.get("comparison") != "strictly_greater_than"
+        ):
+            raise InputError("campaign cohort report canonical inputs differ from the campaign")
+        report_score = _optional_campaign_score(
+            report.get("official_score"), "campaign report official_score"
+        )
+        receipt_score = _optional_campaign_score(
+            cohort["official_score"], "campaign receipt official_score"
+        )
+        if report_score != receipt_score:
+            raise InputError("campaign cohort official score differs from its report")
+        binding_floor = _optional_campaign_score(
+            report.get("binding_score_floor"), "campaign report binding_score_floor"
+        )
+        if cohort["run_status"] == "qualified":
+            if report_score is None or binding_floor is None or not (
+                report_score > threshold and binding_floor > threshold
+            ):
+                raise InputError("qualified campaign cohort does not strictly exceed the threshold")
+        elif cohort["run_status"] == "no_finalist":
+            if report_score is not None or binding_floor is not None:
+                raise InputError("no_finalist campaign cohort must have N/A official scores")
+        elif cohort["run_status"] == "no_qualifier":
+            if report_score is None or binding_floor is None or binding_floor > threshold:
+                raise InputError("no_qualifier campaign cohort has invalid held-out score semantics")
+        elif cohort["run_status"] == "contested" and binding_floor is None:
+            raise InputError("contested campaign cohort must preserve its binding score floor")
+        if cohort["cohort_number"] > 1:
+            brief_path = campaign_dir / cohort["gap_brief_path"]
+            _assert_safe_write_path(campaign_dir, brief_path, "campaign cohort gap brief")
+            if not brief_path.is_file() or sha256_file(brief_path) != cohort["gap_brief_sha256"]:
+                raise InputError("campaign cohort gap brief is missing or differs from its receipt")
+            validate_campaign_gap_brief(
+                load_json(brief_path), manifest, cohort["cohort_number"]
+            )
+
+
+def save_campaign_state(
+    campaign_dir: Path, state: dict[str, Any], manifest: Mapping[str, Any]
+) -> None:
+    state["updated_at"] = utc_now()
+    validate_campaign_state(state, manifest)
+    atomic_write(
+        campaign_dir / "state.json", canonical_json_bytes(state), root=campaign_dir
+    )
+
+
+def load_campaign_events(path: Path, campaign_id: str) -> list[dict[str, Any]]:
+    if not path.exists():
+        return []
+    try:
+        lines = path.read_text(encoding="utf-8").splitlines()
+    except (OSError, UnicodeError) as exc:
+        raise InputError(f"cannot read campaign event log {path}: {exc}") from exc
+    events: list[dict[str, Any]] = []
+    for line_number, line in enumerate(lines, start=1):
+        if not line.strip():
+            raise InputError(f"blank line in campaign event log at {line_number}")
+        event = expect_object(
+            parse_json(line, source=f"{path}:{line_number}"),
+            f"campaign event {line_number}",
+            exact_keys=CAMPAIGN_EVENT_KEYS,
+        )
+        if event["sequence"] != line_number:
+            raise InputError("campaign event sequence is not contiguous")
+        expect_nonempty_string(event["at"], f"campaign event {line_number}.at")
+        expect_nonempty_string(event["event"], f"campaign event {line_number}.event")
+        if event["campaign_id"] != campaign_id:
+            raise InputError("campaign event belongs to a different campaign")
+        expect_object(event["details"], f"campaign event {line_number}.details")
+        events.append(event)
+    return events
+
+
+def append_campaign_event(
+    campaign_dir: Path,
+    campaign_id: str,
+    event_name: str,
+    details: Mapping[str, Any] | None = None,
+) -> dict[str, Any]:
+    path = campaign_dir / "events.jsonl"
+    events = load_campaign_events(path, campaign_id)
+    record = {
+        "sequence": len(events) + 1,
+        "at": utc_now(),
+        "event": expect_nonempty_string(event_name, "campaign event name"),
+        "campaign_id": campaign_id,
+        "details": dict(details or {}),
+    }
+    data = "".join(
+        json.dumps(item, sort_keys=True, ensure_ascii=False, allow_nan=False) + "\n"
+        for item in [*events, record]
+    ).encode("utf-8")
+    atomic_write(path, data, root=campaign_dir)
+    return record
+
+
+def _ensure_campaign_event(
+    campaign_dir: Path,
+    campaign_id: str,
+    event_name: str,
+    details: Mapping[str, Any] | None = None,
+    *,
+    identity: Mapping[str, Any] | None = None,
+) -> dict[str, Any]:
+    expected_details = dict(details or {})
+    identity_fields = dict(identity or {})
+
+    def matches_identity(event: Mapping[str, Any]) -> bool:
+        return event["event"] == event_name and all(
+            event["details"].get(key) == value
+            for key, value in identity_fields.items()
+        )
+
+    def existing_event() -> dict[str, Any] | None:
+        matches = [
+            event
+            for event in load_campaign_events(
+                campaign_dir / "events.jsonl", campaign_id
+            )
+            if matches_identity(event)
+        ]
+        if len(matches) > 1:
+            raise InputError(f"campaign contains duplicate {event_name} events")
+        if matches and matches[0]["details"] != expected_details:
+            raise InputError(f"campaign {event_name} event conflicts with canonical state")
+        return matches[0] if matches else None
+
+    current = existing_event()
+    if current is not None:
+        return current
+    try:
+        append_campaign_event(campaign_dir, campaign_id, event_name, expected_details)
+    except BaseException:
+        recovered = existing_event()
+        if recovered is None:
+            raise
+        return recovered
+    recovered = existing_event()
+    if recovered is None:
+        raise InputError(f"campaign {event_name} event was not durably recorded")
+    return recovered
+
+
+def reconcile_campaign_events(
+    campaign_dir: Path,
+    manifest: Mapping[str, Any],
+    state: Mapping[str, Any],
+) -> None:
+    campaign_id = manifest["campaign_id"]
+    _ensure_campaign_event(
+        campaign_dir, campaign_id, "campaign_created", identity={}
+    )
+    allowed_brief_numbers = set(range(2, len(state["cohorts"]) + 1))
+    if state["status"] == "active":
+        next_number = len(state["cohorts"]) + 1
+        if next_number > 1:
+            allowed_brief_numbers.add(next_number)
+    observed_brief_numbers: set[int] = set()
+    for brief_path in sorted((campaign_dir / "briefs").glob("cohort-*.json")):
+        match = re.fullmatch(r"cohort-(\d+)\.json", brief_path.name)
+        if match is None:
+            raise InputError("campaign contains a noncanonical gap brief filename")
+        cohort_number = int(match.group(1))
+        if cohort_number not in allowed_brief_numbers:
+            raise InputError("campaign contains a gap brief for an unexpected cohort")
+        observed_brief_numbers.add(cohort_number)
+        brief = validate_campaign_gap_brief(
+            load_json(brief_path), manifest, cohort_number
+        )
+        if brief_path.read_bytes() != canonical_json_bytes(brief):
+            raise InputError("campaign gap brief is not canonical JSON")
+        _ensure_campaign_event(
+            campaign_dir,
+            campaign_id,
+            "gap_brief_created",
+            {
+                "cohort_number": cohort_number,
+                "gap_brief_sha256": sha256_file(brief_path),
+            },
+            identity={"cohort_number": cohort_number},
+        )
+    required_brief_numbers = set(range(2, len(state["cohorts"]) + 1))
+    if state["active_cohort_number"] is not None and state["active_cohort_number"] > 1:
+        required_brief_numbers.add(state["active_cohort_number"])
+    if not required_brief_numbers.issubset(observed_brief_numbers):
+        raise InputError("campaign is missing a gap brief bound to a cohort")
+    for cohort in state["cohorts"]:
+        _ensure_campaign_event(
+            campaign_dir,
+            campaign_id,
+            "cohort_attached",
+            {
+                "cohort_number": cohort["cohort_number"],
+                "run_id": cohort["run_id"],
+                "gap_brief_sha256": cohort["gap_brief_sha256"],
+            },
+            identity={"cohort_number": cohort["cohort_number"]},
+        )
+        _ensure_campaign_event(
+            campaign_dir,
+            campaign_id,
+            "cohort_published",
+            {
+                "cohort_number": cohort["cohort_number"],
+                "run_id": cohort["run_id"],
+                "run_status": cohort["run_status"],
+                "report_sha256": cohort["report_sha256"],
+                "metrics_sha256": cohort["metrics_sha256"],
+                "made_progress": cohort["made_progress"],
+                "no_progress_streak": cohort["no_progress_streak"],
+                "campaign_status": (
+                    state["status"]
+                    if cohort["cohort_number"] == len(state["cohorts"])
+                    else "active"
+                ),
+            },
+            identity={"cohort_number": cohort["cohort_number"]},
+        )
+    if state["active_run_id"] is not None:
+        run_manifest_path = (
+            campaign_dir.parent.parent
+            / "runs"
+            / state["active_run_id"]
+            / "manifest.json"
+        )
+        if not run_manifest_path.is_file():
+            raise InputError("campaign active run manifest is missing; restore the run before resuming")
+        run_manifest = expect_object(load_json(run_manifest_path), "campaign active run manifest")
+        binding = expect_object(
+            run_manifest.get("campaign"),
+            "campaign active run manifest.campaign",
+            exact_keys=CAMPAIGN_BINDING_KEYS,
+        )
+        if (
+            binding["campaign_id"] != campaign_id
+            or binding["cohort_number"] != state["active_cohort_number"]
+        ):
+            raise InputError("campaign active run binding differs from campaign state")
+        _ensure_campaign_event(
+            campaign_dir,
+            campaign_id,
+            "cohort_attached",
+            {
+                "cohort_number": binding["cohort_number"],
+                "run_id": state["active_run_id"],
+                "gap_brief_sha256": binding["gap_brief_sha256"],
+            },
+            identity={"cohort_number": binding["cohort_number"]},
+        )
+    receipt_path = campaign_dir / "receipt.json"
+    if receipt_path.exists():
+        if state["status"] == "active":
+            raise InputError("active campaign contains a terminal receipt")
+        _ensure_campaign_event(
+            campaign_dir,
+            campaign_id,
+            "campaign_finalized",
+            {
+                "status": state["status"],
+                "receipt_sha256": sha256_file(receipt_path),
+            },
+            identity={},
+        )
+    events = load_campaign_events(campaign_dir / "events.jsonl", campaign_id)
+    allowed_names = {
+        "campaign_created",
+        "gap_brief_created",
+        "cohort_attached",
+        "cohort_published",
+        "campaign_finalized",
+    }
+    if any(event["event"] not in allowed_names for event in events):
+        raise InputError("campaign event log contains an unknown lifecycle event")
+    created_events = [event for event in events if event["event"] == "campaign_created"]
+    if len(created_events) != 1 or created_events[0]["sequence"] != 1:
+        raise InputError("campaign_created must be the first and only creation event")
+    published_numbers = {cohort["cohort_number"] for cohort in state["cohorts"]}
+    attached_numbers = set(published_numbers)
+    if state["active_cohort_number"] is not None:
+        attached_numbers.add(state["active_cohort_number"])
+    brief_numbers = {
+        int(re.fullmatch(r"cohort-(\d+)\.json", path.name).group(1))
+        for path in (campaign_dir / "briefs").glob("cohort-*.json")
+    }
+    expected_numbers = {
+        "gap_brief_created": brief_numbers,
+        "cohort_attached": attached_numbers,
+        "cohort_published": published_numbers,
+    }
+    sequences: dict[tuple[str, int], int] = {}
+    for event in events:
+        if event["event"] in expected_numbers:
+            number = expect_int(
+                event["details"].get("cohort_number"),
+                f"campaign {event['event']} cohort_number",
+                minimum=1,
+            )
+            if number not in expected_numbers[event["event"]]:
+                raise InputError("campaign event log contains a state-inconsistent cohort event")
+            sequences[(event["event"], number)] = event["sequence"]
+    for number in attached_numbers:
+        attached_sequence = sequences[("cohort_attached", number)]
+        if number > 1 and sequences[("gap_brief_created", number)] >= attached_sequence:
+            raise InputError("campaign gap brief event must precede cohort attachment")
+        if number in published_numbers and attached_sequence >= sequences[("cohort_published", number)]:
+            raise InputError("campaign attachment event must precede publication")
+    finalized_events = [event for event in events if event["event"] == "campaign_finalized"]
+    if bool(finalized_events) != receipt_path.exists() or len(finalized_events) > 1:
+        raise InputError("campaign finalization event differs from terminal receipt state")
+    if finalized_events and finalized_events[0]["sequence"] != len(events):
+        raise InputError("campaign_finalized must be the final lifecycle event")
+
+
+def new_campaign(config_path: Path, campaigns_dir: Path) -> dict[str, Any]:
+    config = validate_config(load_json(config_path))
+    if config["schema_version"] != 2:
+        raise InputError("campaigns require workflow schema v2")
+    founder_source = REPO_ROOT / "PERSONALITY_SITUATION.md"
+    evaluator_source = REPO_ROOT / "Personalities" / "ZeroToOne.txt"
+    founder_bytes = founder_source.read_bytes()
+    evaluator_bytes = evaluator_source.read_bytes()
+    factors, rubric_digest = parse_rubric(evaluator_source)
+    created_at = utc_now()
+    for _ in range(32):
+        timestamp = dt.datetime.now(dt.timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+        campaign_id = f"campaign-{timestamp}-{secrets.token_hex(3)}"
+        campaign_dir = campaigns_dir / campaign_id
+        try:
+            campaign_dir.mkdir(parents=True, exist_ok=False)
+            break
+        except FileExistsError:
+            continue
+    else:
+        raise ConflictError("could not allocate a unique campaign id")
+    manifest = {
+        "schema_version": 2,
+        "campaign_id": campaign_id,
+        "created_at": created_at,
+        "config": config,
+        "config_sha256": sha256_bytes(canonical_json_bytes(config)),
+        "founder_sha256": sha256_bytes(founder_bytes),
+        "rubric": {
+            "rubric_id": config["rubric_id"],
+            "sha256": rubric_digest,
+            "factors": [
+                {"name": name, "weight": decimal_json(weight)}
+                for name, weight in factors
+            ],
+        },
+    }
+    state = {
+        "schema_version": 2,
+        "campaign_id": campaign_id,
+        "status": "active",
+        "created_at": created_at,
+        "updated_at": created_at,
+        "active_run_id": None,
+        "active_cohort_number": None,
+        "cohorts": [],
+        "no_progress_streak": 0,
+        "best_official_score": None,
+        "best_working_median": None,
+        "best_working_score": None,
+        "seen_archetypes": [],
+        "terminal_reason": None,
+    }
+    validate_campaign_manifest(manifest)
+    validate_campaign_state(state, manifest)
+    write_immutable(
+        campaign_dir / "inputs" / "founder.md", founder_bytes, root=campaign_dir
+    )
+    write_immutable(
+        campaign_dir / "inputs" / "evaluator.txt", evaluator_bytes, root=campaign_dir
+    )
+    write_immutable(
+        campaign_dir / "manifest.json", canonical_json_bytes(manifest), root=campaign_dir
+    )
+    write_immutable(
+        campaign_dir / "state.json", canonical_json_bytes(state), root=campaign_dir
+    )
+    _ensure_campaign_event(campaign_dir, campaign_id, "campaign_created")
+    return {
+        "campaign_id": campaign_id,
+        "campaign_dir": str(campaign_dir),
+        "status": "active",
+        "next_action": "create_cohort",
+    }
+
+
+def campaign_status(campaign_dir: Path, full_json: bool = False) -> dict[str, Any]:
+    with file_lock(campaign_dir / ".campaign.lock", root=campaign_dir):
+        manifest, state = load_campaign(campaign_dir)
+        reconcile_campaign_events(campaign_dir, manifest, state)
+        validate_campaign_publication_receipts(campaign_dir, manifest, state)
+        result = {
+            "campaign_id": state["campaign_id"],
+            "status": state["status"],
+            "cohort_count": len(state["cohorts"]),
+            "active_run_id": state["active_run_id"],
+            "no_progress_streak": state["no_progress_streak"],
+            "best_official_score": state["best_official_score"],
+            "best_working_median": state["best_working_median"],
+            "best_working_score": state["best_working_score"],
+            "terminal_reason": state["terminal_reason"],
+        }
+        if full_json:
+            result["manifest"] = manifest
+            result["state"] = state
+        return result
+
+
+def validate_campaign_gap_brief(
+    value: Any,
+    manifest: Mapping[str, Any],
+    cohort_number: int,
+) -> dict[str, Any]:
+    brief = expect_object(
+        value, "campaign gap brief", exact_keys=CAMPAIGN_GAP_BRIEF_KEYS
+    )
+    if expect_int(brief["schema_version"], "campaign gap brief.schema_version") != 2:
+        raise InputError("campaign gap brief.schema_version must be 2")
+    if brief["campaign_id"] != manifest["campaign_id"]:
+        raise InputError("campaign gap brief identity differs from campaign")
+    if expect_int(brief["cohort_number"], "campaign gap brief.cohort_number", minimum=2) != cohort_number:
+        raise InputError("campaign gap brief cohort number is not next in sequence")
+    deficient = expect_string_list(
+        brief["deficient_factors"], "campaign gap brief.deficient_factors", unique=True
+    )
+    if len(deficient) > 3 or not set(deficient).issubset(
+        _campaign_factor_names(manifest)
+    ):
+        raise InputError("campaign gap brief deficient_factors must name up to three rubric factors")
+    _validate_gap_archetype_labels(
+        brief["missing_archetypes"], "campaign gap brief.missing_archetypes"
+    )
+    return brief
+
+
+def _prepare_campaign_binding(
+    campaign_dir: Path,
+) -> tuple[dict[str, Any], dict[str, Any], dict[str, Any]]:
+    manifest, state = load_campaign(campaign_dir)
+    reconcile_campaign_events(campaign_dir, manifest, state)
+    validate_campaign_publication_receipts(campaign_dir, manifest, state)
+    if state["status"] != "active":
+        raise ConflictError(f"campaign is terminal: {state['status']}")
+    if state["active_run_id"] is not None:
+        raise ConflictError(
+            f"campaign already has active run {state['active_run_id']}"
+        )
+    cohort_number = len(state["cohorts"]) + 1
+    if cohort_number > manifest["config"]["campaign_max_cohorts"]:
+        raise ConflictError("campaign has reached campaign_max_cohorts")
+    gap_path: str | None = None
+    gap_digest: str | None = None
+    if cohort_number > 1:
+        gap_path = f"briefs/cohort-{cohort_number}.json"
+        path = campaign_dir / gap_path
+        if not path.is_file():
+            raise ConflictError(
+                "run campaign next before attaching the next cohort"
+            )
+        brief = validate_campaign_gap_brief(
+            load_json(path), manifest, cohort_number
+        )
+        if path.read_bytes() != canonical_json_bytes(brief):
+            raise InputError("campaign gap brief is not canonical")
+        gap_digest = sha256_file(path)
+    binding = {
+        "campaign_id": state["campaign_id"],
+        "cohort_number": cohort_number,
+        "gap_brief_path": gap_path,
+        "gap_brief_sha256": gap_digest,
+    }
+    return manifest, state, binding
+
+
+def make_run(
+    config_path: Path,
+    runs_dir: Path,
+    campaign_id: str | None = None,
+    campaigns_dir: Path | None = None,
+) -> dict[str, Any]:
+    config = validate_config(load_json(config_path))
+    if config["schema_version"] != 2:
+        raise InputError(
+            "new runs require workflow schema v2; use the recorded recovery tag for schema-v1 archaeology"
+        )
+    campaign_dir: Path | None = None
+    campaign_binding: dict[str, Any] | None = None
+    if campaign_id is not None:
+        if config["schema_version"] != 2:
+            raise InputError("campaign cohort runs require workflow schema v2")
+        storage = (campaigns_dir or campaign_storage_for_runs(runs_dir)).resolve()
+        campaign_dir = resolve_campaign(storage, campaign_id)
+        with file_lock(campaign_dir / ".campaign.lock", root=campaign_dir):
+            campaign_manifest, _, campaign_binding = _prepare_campaign_binding(campaign_dir)
+            config = campaign_manifest["config"]
+    rubric_path = (
+        campaign_dir / "inputs" / "evaluator.txt"
+        if campaign_dir is not None
+        else REPO_ROOT / "Personalities" / "ZeroToOne.txt"
+    )
+    factors, rubric_digest = parse_rubric(rubric_path)
+    if campaign_dir is not None:
+        campaign_rubric = campaign_manifest["rubric"]
+        expected_factors = [
+            {"name": name, "weight": decimal_json(weight)}
+            for name, weight in factors
+        ]
+        if (
+            campaign_rubric["rubric_id"] != config["rubric_id"]
+            or campaign_rubric["sha256"] != rubric_digest
+            or campaign_rubric["factors"] != expected_factors
+        ):
+            raise InputError("run rubric differs from the immutable campaign rubric")
+    config_source_bytes = (
+        canonical_json_bytes(config)
+        if campaign_dir is not None
+        else config_path.read_bytes()
+    )
+    config_source_digest = sha256_bytes(config_source_bytes)
     source_hashes: dict[str, str] = {}
     source_bytes: dict[str, bytes] = {}
     for relative in SOURCE_PATHS:
         path = REPO_ROOT / relative
         if relative == "config/opportunity-workflow.json":
             source_hashes[relative] = config_source_digest
-            source_bytes[relative] = config_path.read_bytes()
+            source_bytes[relative] = config_source_bytes
+        elif campaign_dir is not None and relative == "PERSONALITY_SITUATION.md":
+            source_bytes[relative] = (campaign_dir / "inputs" / "founder.md").read_bytes()
+            source_hashes[relative] = sha256_bytes(source_bytes[relative])
+        elif campaign_dir is not None and relative == "Personalities/ZeroToOne.txt":
+            source_bytes[relative] = (campaign_dir / "inputs" / "evaluator.txt").read_bytes()
+            source_hashes[relative] = sha256_bytes(source_bytes[relative])
         else:
             if not path.is_file():
                 raise InputError(f"required source file is missing: {relative}")
@@ -1510,7 +2810,7 @@ def make_run(config_path: Path, runs_dir: Path) -> dict[str, Any]:
     else:
         raise ConflictError("could not allocate a unique run id")
     manifest = {
-        "schema_version": 1,
+        "schema_version": config["schema_version"],
         "run_id": run_id,
         "created_at": created_at,
         "config": config,
@@ -1521,8 +2821,10 @@ def make_run(config_path: Path, runs_dir: Path) -> dict[str, Any]:
             "factors": [{"name": name, "weight": decimal_json(weight)} for name, weight in factors],
         },
     }
+    if config["schema_version"] == 2:
+        manifest["campaign"] = campaign_binding
     state = {
-        "schema_version": 1,
+        "schema_version": config["schema_version"],
         "run_id": run_id,
         "stage": "initialized",
         "run_status": "active",
@@ -1537,16 +2839,52 @@ def make_run(config_path: Path, runs_dir: Path) -> dict[str, Any]:
         write_immutable(run_dir / "manifest.json", canonical_json_bytes(manifest), root=run_dir)
         write_immutable(run_dir / "state.json", canonical_json_bytes(state), root=run_dir)
         append_event(run_dir, state, "run_created", details={"source_hashes": source_hashes})
+        if campaign_dir is not None and campaign_binding is not None:
+            with file_lock(campaign_dir / ".campaign.lock", root=campaign_dir):
+                campaign_manifest, campaign_state, current_binding = _prepare_campaign_binding(
+                    campaign_dir
+                )
+                if current_binding != campaign_binding:
+                    raise ConflictError("campaign attachment changed while the run was created")
+                campaign_state["active_run_id"] = run_id
+                campaign_state["active_cohort_number"] = campaign_binding["cohort_number"]
+                save_campaign_state(campaign_dir, campaign_state, campaign_manifest)
+                _ensure_campaign_event(
+                    campaign_dir,
+                    campaign_state["campaign_id"],
+                    "cohort_attached",
+                    {
+                        "cohort_number": campaign_binding["cohort_number"],
+                        "run_id": run_id,
+                        "gap_brief_sha256": campaign_binding["gap_brief_sha256"],
+                    },
+                    identity={"cohort_number": campaign_binding["cohort_number"]},
+                )
     except BaseException:
         # A just-created empty run directory has no historical value.  Keep any
         # partially written files visible rather than attempting broad cleanup.
         raise
-    return {"run_id": run_id, "run_dir": str(run_dir), "stage": "initialized", "run_status": "active"}
+    result = {
+        "run_id": run_id,
+        "run_dir": str(run_dir),
+        "stage": "initialized",
+        "run_status": "active",
+    }
+    if campaign_binding is not None:
+        result["campaign"] = campaign_binding
+    return result
 
 
 def assert_active(state: Mapping[str, Any]) -> None:
     if state["stage"] == "complete" or state["run_status"] != "active":
         raise ConflictError(f"run is terminal: {state['run_status']}")
+
+
+def require_active_schema_v2(manifest: Mapping[str, Any]) -> None:
+    if manifest["config"]["schema_version"] != 2:
+        raise ConflictError(
+            "schema-v1 runs are read-only in the active workflow; use the recorded recovery tag for legacy mutation"
+        )
 
 
 def job_is_retryable(job: Mapping[str, Any]) -> bool:
@@ -1566,6 +2904,7 @@ def start_job(run_dir: Path, job_id: str, requested_stage: str | None) -> dict[s
         raise InputError("JOB_ID is not path-safe")
     with file_lock(run_dir / ".state.lock", root=run_dir):
         manifest, state = load_run(run_dir)
+        require_active_schema_v2(manifest)
         assert_active(state)
         stage = state["stage"]
         if requested_stage is not None and requested_stage != stage:
@@ -1633,6 +2972,7 @@ def fail_job(run_dir: Path, job_id: str, error: str) -> dict[str, Any]:
     message = expect_nonempty_string(error, "--error")
     with file_lock(run_dir / ".state.lock", root=run_dir):
         manifest, state = load_run(run_dir)
+        require_active_schema_v2(manifest)
         assert_active(state)
         events = load_events(run_dir / "events.jsonl", state["run_id"])
         projected_stage, projected_status, _ = project_transition_state(events)
@@ -1733,12 +3073,67 @@ def _artifact_for_input(
             ]
             if not (run_dir / relative).exists() and len(development_versions) >= 2:
                 raise ConflictError("a candidate may have at most two development-stage versions")
+        if manifest["config"]["schema_version"] == 2 and state["stage"] == "research":
+            portfolio = effective_portfolio_selection(run_dir, manifest)
+            parent = canonical["parent"]
+            if parent is None:
+                raise ConflictError("research candidate requires its selected discovery parent")
+            selected = {
+                (item["candidate_id"], item["version"], item["candidate_sha256"])
+                for item in portfolio["candidate_refs"]
+            }
+            parent_path = run_dir / candidate_relpath(parent["candidate_id"], parent["version"])
+            binding = (parent["candidate_id"], parent["version"], sha256_file(parent_path))
+            if binding not in selected:
+                raise ConflictError(
+                    "research candidate is not bound to the effective portfolio selection; record a versioned amendment before substitution"
+                )
+        if manifest["config"]["schema_version"] == 2 and state["stage"] == "development":
+            parent = canonical["parent"]
+            if parent is None:
+                raise ConflictError("development candidate requires a researched parent")
+            parent_path = run_dir / candidate_relpath(parent["candidate_id"], parent["version"])
+            parent_candidate = validate_candidate(load_json(parent_path), manifest, run_dir)
+            if parent_candidate["stage"] == "research":
+                decision = _load_portfolio_decision(run_dir, manifest)
+                selected = {
+                    (item["candidate_id"], item["candidate_version"], item["candidate_sha256"])
+                    for item in decision["candidate_decisions"]
+                    if item["disposition"] == "develop"
+                }
+                binding = (parent_candidate["candidate_id"], parent_candidate["version"], sha256_file(parent_path))
+                if binding not in selected:
+                    raise ConflictError("development candidate is not selected by the canonical portfolio decision")
+                research_path = run_dir / research_relpath(parent_candidate["candidate_id"], parent_candidate["version"])
+                if not research_path.is_file():
+                    raise ConflictError("development candidate requires canonical research for its exact parent version")
+                if len(_working_evaluations_for_candidate(run_dir, manifest, parent_path, parent_candidate)) != 1:
+                    raise ConflictError("development candidate requires exactly one working evaluation of its research parent")
         if state["stage"] == "frozen":
             validate_finalist_lineage(run_dir, manifest, canonical)
+            if manifest["config"]["schema_version"] == 2:
+                parent = canonical["parent"]
+                if parent is None:
+                    raise ConflictError("frozen candidate requires a development parent")
+                parent_path = run_dir / candidate_relpath(parent["candidate_id"], parent["version"])
+                parent_candidate = validate_candidate(load_json(parent_path), manifest, run_dir)
+                _, development_result = _development_result_for_candidate(
+                    run_dir, manifest, canonical["candidate_id"]
+                )
+                if development_result["final_candidate_version"] != parent_candidate["version"]:
+                    raise ConflictError("frozen candidate must descend from the final constructor-result version")
+                if len(_working_evaluations_for_candidate(run_dir, manifest, parent_path, parent_candidate)) != 1:
+                    raise ConflictError("frozen candidate requires exactly one fresh working evaluation of its exact development parent")
+                ranked = _ranked_stage_candidates(run_dir, manifest, "development")
+                allowed = {
+                    item[1]["candidate_id"] for item in ranked[: manifest["config"]["finalists_max"]]
+                }
+                if canonical["candidate_id"] not in allowed:
+                    raise ConflictError("frozen candidate is outside the deterministic finalist ranking")
         return relative, canonical_json_bytes(canonical), canonical
     if kind == "evaluation":
         canonical = compute_evaluation(load_json(input_path), manifest, run_dir)
-        expected_type = "working" if state["stage"] == "development" else "holdout_native" if state["stage"] == "holdout" else None
+        expected_type = "working" if state["stage"] in {"research", "development"} else "holdout_native" if state["stage"] == "holdout" else None
         if expected_type is None:
             raise ConflictError(f"evaluation artifacts are not accepted during {state['stage']}")
         if canonical["evaluation_type"] != expected_type:
@@ -1746,12 +3141,71 @@ def _artifact_for_input(
         relative = evaluation_relpath(
             canonical["candidate_id"], canonical["candidate_version"], canonical["evaluation_type"], canonical["judge_id"]
         )
+        if canonical["evaluation_type"] == "working" and manifest["config"]["schema_version"] == 2:
+            root = run_dir / "evaluations" / canonical["candidate_id"] / f"v{canonical['candidate_version']}"
+            existing = [path for path in root.glob("working-*.json") if path.relative_to(run_dir).as_posix() != relative]
+            if existing:
+                raise ConflictError(
+                    "schema-v2 permits exactly one canonical working evaluation per candidate version"
+                )
+        if canonical["evaluation_type"] == "holdout_native" and manifest["config"]["schema_version"] == 2:
+            existing_evaluations = list(iter_evaluations(run_dir, manifest))
+            working_ids = {
+                evaluation["judge_id"]
+                for _, evaluation in existing_evaluations
+                if evaluation["evaluation_type"] == "working"
+            }
+            native_ids = {
+                evaluation["judge_id"]
+                for path, evaluation in existing_evaluations
+                if evaluation["evaluation_type"] == "holdout_native"
+                and path.relative_to(run_dir).as_posix() != relative
+            }
+            constructor_ids = {
+                result["constructor_id"]
+                for result_path in sorted((run_dir / "development").glob("*/constructor-result.json"))
+                for result in [validate_development_result(load_json(result_path), manifest, run_dir)]
+            }
+            if canonical["judge_id"] in working_ids | constructor_ids:
+                raise ConflictError("native holdout judge must be fresh and independent of development roles")
+            if canonical["judge_id"] in native_ids:
+                raise ConflictError("native holdout judge identity cannot be reused")
         return relative, canonical_json_bytes(canonical), canonical
     if kind == "research":
         if state["stage"] != "research":
             raise ConflictError("research artifacts are accepted only during research stage")
         canonical = validate_research(load_json(input_path), manifest, run_dir)
         relative = research_relpath(canonical["candidate_id"], canonical["candidate_version"])
+        return relative, canonical_json_bytes(canonical), canonical
+    if kind == "portfolio-selection":
+        if state["stage"] != "calibration":
+            raise ConflictError("portfolio-selection artifacts are accepted only during calibration")
+        canonical = validate_portfolio_selection(load_json(input_path), manifest, run_dir)
+        return "portfolio/selection.json", canonical_json_bytes(canonical), canonical
+    if kind == "portfolio-amendment":
+        if state["stage"] != "research":
+            raise ConflictError("portfolio-amendment artifacts are accepted only during research")
+        if (run_dir / "portfolio" / "development-decision.json").exists():
+            raise ConflictError("portfolio amendments cannot follow the development decision")
+        effective = effective_portfolio_selection(run_dir, manifest)
+        expected_version = len(effective["amendments"]) + 1
+        canonical, _ = _validate_portfolio_amendment_record(
+            load_json(input_path), manifest, run_dir,
+            expected_version=expected_version,
+            expected_base_digest=effective["latest_binding_sha256"],
+            current_refs=effective["candidate_refs"],
+        )
+        return f"portfolio/amendments/v{expected_version}.json", canonical_json_bytes(canonical), canonical
+    if kind == "portfolio-decision":
+        if state["stage"] != "research":
+            raise ConflictError("portfolio-decision artifacts are accepted only during research")
+        canonical = validate_portfolio_decision(load_json(input_path), manifest, run_dir)
+        return "portfolio/development-decision.json", canonical_json_bytes(canonical), canonical
+    if kind == "development-result":
+        if state["stage"] != "development":
+            raise ConflictError("development-result artifacts are accepted only during development")
+        canonical = validate_development_result(load_json(input_path), manifest, run_dir)
+        relative = f"development/{canonical['candidate_id']}/constructor-result.json"
         return relative, canonical_json_bytes(canonical), canonical
     if kind != "generic":
         raise InputError(f"unsupported artifact kind: {kind}")
@@ -1771,6 +3225,7 @@ def complete_job(run_dir: Path, job_id: str, input_path: Path, kind: str) -> dic
         raise InputError("JOB_ID is not path-safe")
     with file_lock(run_dir / ".state.lock", root=run_dir):
         manifest, state = load_run(run_dir)
+        require_active_schema_v2(manifest)
         assert_active(state)
         events = load_events(run_dir / "events.jsonl", state["run_id"])
         projected_stage, projected_status, _ = project_transition_state(events)
@@ -1857,6 +3312,7 @@ def complete_job(run_dir: Path, job_id: str, input_path: Path, kind: str) -> dic
 def resume_run(run_dir: Path) -> dict[str, Any]:
     with file_lock(run_dir / ".state.lock", root=run_dir):
         manifest, state = load_run(run_dir)
+        require_active_schema_v2(manifest)
         assert_active(state)
         events = load_events(run_dir / "events.jsonl", state["run_id"])
         projected_stage, projected_status, _ = project_transition_state(events)
@@ -2034,11 +3490,10 @@ def build_dedup_report(run_dir: Path, manifest: Mapping[str, Any]) -> dict[str, 
             manifest["config"]["gap_scout_max"],
             max(1 if ratio_exceeded else 0, unique_shortfall),
         )
-    return {
-        "schema_version": 1,
+    report = {
+        "schema_version": manifest["config"]["schema_version"],
         "candidate_artifacts": candidate_input_hashes(run_dir, manifest, "discovery"),
         "candidate_count": candidate_count,
-        "unique_count": unique_count,
         "unique_candidate_refs": unique_refs,
         "duplicate_groups": duplicate_groups,
         "similarity_flags": similarity_flags,
@@ -2057,11 +3512,20 @@ def build_dedup_report(run_dir: Path, manifest: Mapping[str, Any]) -> dict[str, 
         "needs_gap_scout": needs_gap,
         "gap_scout_slots": gap_slots,
     }
+    if manifest["config"]["schema_version"] == 2:
+        report["exact_fingerprint_unique_count"] = unique_count
+        report["semantic_portfolio_audit"] = _semantic_portfolio_audit(
+            [candidate for _, candidate in rows]
+        )
+    else:
+        report["unique_count"] = unique_count
+    return report
 
 
 def dedup_run(run_dir: Path) -> dict[str, Any]:
     with file_lock(run_dir / ".state.lock", root=run_dir):
         manifest, state = load_run(run_dir)
+        require_active_schema_v2(manifest)
         assert_active(state)
         if state["stage"] not in {"discovery", "calibration"}:
             raise ConflictError("dedup is available only during discovery or calibration")
@@ -2107,7 +3571,15 @@ def dedup_run(run_dir: Path) -> dict[str, Any]:
             state,
             "dedup_completed",
             details={
-                "unique_count": report["unique_count"],
+                (
+                    "exact_fingerprint_unique_count"
+                    if manifest["config"]["schema_version"] == 2
+                    else "unique_count"
+                ): (
+                    report["exact_fingerprint_unique_count"]
+                    if manifest["config"]["schema_version"] == 2
+                    else report["unique_count"]
+                ),
                 "needs_gap_scout": report["needs_gap_scout"],
                 "gap_scout_job": report["gap_scout_job"],
             },
@@ -2128,7 +3600,12 @@ def _validate_stage_gate(run_dir: Path, manifest: Mapping[str, Any], state: Mapp
         report = expect_object(load_json(report_path), "dedup report")
         if report.get("candidate_artifacts") != candidate_input_hashes(run_dir, manifest, "discovery"):
             raise ConflictError("dedup report is stale; rerun dedup")
-        below_minimum = report.get("unique_count", 0) < manifest["config"]["unique_min"]
+        unique_metric = (
+            report.get("exact_fingerprint_unique_count", 0)
+            if manifest["config"]["schema_version"] == 2
+            else report.get("unique_count", 0)
+        )
+        below_minimum = unique_metric < manifest["config"]["unique_min"]
         dominant = expect_object(report.get("dominant_structure"), "dedup dominant_structure")
         ratio_exceeded = as_decimal(dominant.get("ratio"), "dedup dominant ratio") > as_decimal(
             manifest["config"]["dominant_structure_ratio"], "config.dominant_structure_ratio"
@@ -2141,6 +3618,8 @@ def _validate_stage_gate(run_dir: Path, manifest: Mapping[str, Any], state: Mapp
             )
             if not gap_exhausted:
                 raise ConflictError("discovery diversity target requires the one bounded gap-scout job")
+    if manifest["config"]["schema_version"] == 2 and stage == "calibration":
+        effective_portfolio_selection(run_dir, manifest)
     stage_limits = {
         "research": ("research", manifest["config"]["shortlist_max"]),
         "development": ("development", manifest["config"]["develop_max"]),
@@ -2153,7 +3632,67 @@ def _validate_stage_gate(run_dir: Path, manifest: Mapping[str, Any], state: Mapp
             raise ConflictError(f"{stage} requires at least one {candidate_stage} candidate")
         if count > maximum:
             raise ConflictError(f"{stage} has {count} candidates, exceeding limit {maximum}")
+    if manifest["config"]["schema_version"] == 2 and stage == "research":
+        portfolio = effective_portfolio_selection(run_dir, manifest)
+        expected_parents = {
+            (item["candidate_id"], item["version"], item["candidate_sha256"])
+            for item in portfolio["candidate_refs"]
+        }
+        actual_parents: set[tuple[str, int, str]] = set()
+        for _, candidate in latest_candidates_for_stage(run_dir, manifest, "research"):
+            parent = candidate["parent"]
+            if parent is None:
+                raise ConflictError("research candidate is missing its selected discovery parent")
+            path = run_dir / candidate_relpath(parent["candidate_id"], parent["version"])
+            actual_parents.add((parent["candidate_id"], parent["version"], sha256_file(path)))
+            research_path = run_dir / research_relpath(candidate["candidate_id"], candidate["version"])
+            if not research_path.is_file():
+                raise ConflictError(
+                    f"research candidate {candidate['candidate_id']} v{candidate['version']} lacks canonical research"
+                )
+        if actual_parents != expected_parents:
+            raise ConflictError(
+                "researched candidates must exactly match the immutable effective shortlist; substitutions require a versioned amendment"
+            )
+        _require_working_evaluation_coverage(run_dir, manifest, "research")
+        _load_portfolio_decision(run_dir, manifest)
+    if manifest["config"]["schema_version"] == 2 and stage == "development":
+        decision = _load_portfolio_decision(run_dir, manifest)
+        expected_ids = {
+            item["candidate_id"]
+            for item in decision["candidate_decisions"]
+            if item["disposition"] == "develop"
+        }
+        actual_ids = {
+            candidate["candidate_id"]
+            for _, candidate in latest_candidates_for_stage(run_dir, manifest, "development")
+        }
+        if actual_ids != expected_ids:
+            raise ConflictError("development candidates must exactly match the canonical portfolio decision")
+        coverage = _require_working_evaluation_coverage(run_dir, manifest, "development")
+        working_judges = {item["judge_id"] for item in coverage["records"]}
+        constructor_ids: set[str] = set()
+        for candidate_id in sorted(actual_ids):
+            _, result = _development_result_for_candidate(run_dir, manifest, candidate_id)
+            constructor_ids.add(result["constructor_id"])
+        reused = sorted(working_judges & constructor_ids)
+        if reused:
+            raise ConflictError(
+                f"development constructor and working evaluator roles must be independent: {', '.join(reused)}"
+            )
     if stage == "frozen":
+        if manifest["config"]["schema_version"] == 2:
+            frozen_ids = {
+                candidate["candidate_id"]
+                for _, candidate in latest_candidates_for_stage(run_dir, manifest, "frozen")
+            }
+            ranked_ids = [
+                candidate["candidate_id"]
+                for _, candidate, _ in _ranked_stage_candidates(run_dir, manifest, "development")
+            ]
+            expected_ids = set(ranked_ids[: len(frozen_ids)])
+            if frozen_ids != expected_ids:
+                raise ConflictError("frozen finalists must be the deterministic top-ranked development prefix")
         for _, candidate in latest_candidates_for_stage(run_dir, manifest, "frozen"):
             try:
                 _external_identity(run_dir, manifest, candidate["candidate_id"])
@@ -2166,6 +3705,7 @@ def _validate_stage_gate(run_dir: Path, manifest: Mapping[str, Any], state: Mapp
 def advance_run(run_dir: Path) -> dict[str, Any]:
     with file_lock(run_dir / ".state.lock", root=run_dir):
         manifest, state = load_run(run_dir)
+        require_active_schema_v2(manifest)
         events = load_events(run_dir / "events.jsonl", state["run_id"])
         projected_stage, projected_status, finalized = project_transition_state(events)
         require_job_event_state_match(events, state, manifest)
@@ -2351,10 +3891,12 @@ def validate_finalist_lineage(
             and evaluation["candidate_sha256"] == development_digest
         ):
             matching_working.append(path.relative_to(run_dir).as_posix())
-    if not matching_working:
+    expected_working = manifest["config"].get("working_evaluators_per_candidate", 1)
+    if len(matching_working) != expected_working:
         raise InputError(
-            f"frozen candidate {candidate['candidate_id']} v{candidate['version']} requires a working evaluation "
-            f"of its development parent v{development['version']}"
+            f"frozen candidate {candidate['candidate_id']} v{candidate['version']} requires exactly "
+            f"{expected_working} working evaluation of its development parent v{development['version']}; "
+            f"found {len(matching_working)}"
         )
     return {
         "candidate_id": candidate["candidate_id"],
@@ -2458,6 +4000,7 @@ def export_external(run_dir: Path, candidate_id: str) -> dict[str, Any]:
         raise InputError("CANDIDATE_ID must be a lowercase slug")
     with file_lock(run_dir / ".state.lock", root=run_dir):
         manifest, state = load_run(run_dir)
+        require_active_schema_v2(manifest)
         assert_active(state)
         if state["stage"] not in {"frozen", "holdout"}:
             raise ConflictError("external export requires frozen or holdout stage")
@@ -2648,6 +4191,7 @@ def import_external(run_dir: Path, candidate_id: str, raw_response: Path) -> dic
         raise InputError("external response is empty")
     with file_lock(run_dir / ".state.lock", root=run_dir):
         manifest, state = load_run(run_dir)
+        require_active_schema_v2(manifest)
         assert_active(state)
         if state["stage"] != "holdout":
             raise ConflictError("external import requires holdout stage")
@@ -2989,6 +4533,449 @@ def iter_research(run_dir: Path, manifest: Mapping[str, Any]) -> Iterator[tuple[
         yield path, research
 
 
+def _candidate_reference(
+    value: Any,
+    manifest: Mapping[str, Any],
+    run_dir: Path,
+    label: str,
+    *,
+    required_stage: str = "discovery",
+) -> tuple[dict[str, Any], Path, dict[str, Any]]:
+    reference = expect_object(value, label, exact_keys=PORTFOLIO_REF_KEYS)
+    candidate_id = expect_nonempty_string(reference["candidate_id"], f"{label}.candidate_id")
+    if not SAFE_ID_RE.fullmatch(candidate_id):
+        raise InputError(f"{label}.candidate_id must be a lowercase slug")
+    version = expect_int(reference["version"], f"{label}.version", minimum=1)
+    digest = reference["candidate_sha256"]
+    if not isinstance(digest, str) or not SHA256_RE.fullmatch(digest):
+        raise InputError(f"{label}.candidate_sha256 is invalid")
+    path = run_dir / candidate_relpath(candidate_id, version)
+    if not path.is_file():
+        raise InputError(f"{label} candidate artifact does not exist")
+    if sha256_file(path) != digest:
+        raise InputError(f"{label}.candidate_sha256 does not match the immutable candidate")
+    candidate = validate_candidate(load_json(path), manifest, run_dir)
+    if candidate["stage"] != required_stage:
+        raise InputError(f"{label} must bind a {required_stage}-stage candidate")
+    return dict(reference), path, candidate
+
+
+def _semantic_portfolio_audit(candidates: Sequence[Mapping[str, Any]]) -> dict[str, Any]:
+    dimensions: dict[str, dict[str, int]] = {key: {} for key in sorted(STRUCTURE_KEYS)}
+    for candidate in candidates:
+        structure = expect_object(candidate.get("structure"), "candidate.structure", exact_keys=STRUCTURE_KEYS)
+        for key in sorted(STRUCTURE_KEYS):
+            normalized = normalize_fingerprint(structure[key])
+            dimensions[key][normalized] = dimensions[key].get(normalized, 0) + 1
+    return {
+        "candidate_count": len(candidates),
+        "commercial_archetype_count": len(dimensions["commercial_archetype"]),
+        "commercial_archetype_counts": dict(sorted(dimensions["commercial_archetype"].items())),
+        "control_point_counts": dict(sorted(dimensions["control_point"].items())),
+        "critical_dependency_counts": dict(sorted(dimensions["critical_dependency"].items())),
+    }
+
+
+def _enforce_semantic_portfolio(
+    candidates: Sequence[Mapping[str, Any]], manifest: Mapping[str, Any], label: str
+) -> dict[str, Any]:
+    audit = _semantic_portfolio_audit(candidates)
+    required = min(manifest["config"]["semantic_shortlist_min_archetypes"], len(candidates))
+    if audit["commercial_archetype_count"] < required:
+        raise InputError(f"{label} requires at least {required} commercial archetypes")
+    maximum = manifest["config"]["semantic_shortlist_max_per_archetype"]
+    exceeded = {
+        archetype: count
+        for archetype, count in audit["commercial_archetype_counts"].items()
+        if count > maximum
+    }
+    if exceeded:
+        raise InputError(f"{label} exceeds semantic_shortlist_max_per_archetype: {exceeded}")
+    return audit
+
+
+def validate_portfolio_selection(
+    value: Any, manifest: Mapping[str, Any], run_dir: Path
+) -> dict[str, Any]:
+    if manifest["config"]["schema_version"] != 2:
+        raise InputError("portfolio selection requires workflow schema v2")
+    selection = expect_object(value, "portfolio selection", exact_keys=PORTFOLIO_SELECTION_KEYS)
+    if expect_int(selection["schema_version"], "portfolio selection.schema_version") != 2:
+        raise InputError("portfolio selection.schema_version must be 2")
+    if expect_int(selection["selection_version"], "portfolio selection.selection_version") != 1:
+        raise InputError("portfolio selection.selection_version must be 1")
+    expect_nonempty_string(selection["rationale"], "portfolio selection.rationale")
+    expect_string_list(
+        selection["missing_archetypes"], "portfolio selection.missing_archetypes", unique=True
+    )
+    values = selection["candidate_refs"]
+    if not isinstance(values, list) or not 1 <= len(values) <= manifest["config"]["shortlist_max"]:
+        raise InputError("portfolio selection candidate_refs count is outside shortlist limits")
+    references: list[dict[str, Any]] = []
+    candidates: list[dict[str, Any]] = []
+    identities: set[tuple[str, int]] = set()
+    fingerprints: set[tuple[str, ...]] = set()
+    for index, raw in enumerate(values):
+        reference, _, candidate = _candidate_reference(
+            raw, manifest, run_dir, f"portfolio selection.candidate_refs[{index}]"
+        )
+        identity = (reference["candidate_id"], reference["version"])
+        if identity in identities:
+            raise InputError("portfolio selection contains a duplicate candidate reference")
+        identities.add(identity)
+        fingerprint = tuple(
+            normalize_fingerprint(candidate["fingerprint"][key]) for key in sorted(FINGERPRINT_KEYS)
+        )
+        if fingerprint in fingerprints:
+            raise InputError("portfolio selection contains duplicate exact fingerprints")
+        fingerprints.add(fingerprint)
+        references.append(reference)
+        candidates.append(candidate)
+    _enforce_semantic_portfolio(candidates, manifest, "portfolio selection")
+    canonical = dict(selection)
+    canonical["candidate_refs"] = sorted(references, key=lambda item: (item["candidate_id"], item["version"]))
+    canonical["rationale"] = selection["rationale"].strip()
+    return canonical
+
+
+def _validate_portfolio_amendment_record(
+    value: Any,
+    manifest: Mapping[str, Any],
+    run_dir: Path,
+    *,
+    expected_version: int,
+    expected_base_digest: str,
+    current_refs: Sequence[Mapping[str, Any]],
+) -> tuple[dict[str, Any], list[dict[str, Any]]]:
+    amendment = expect_object(value, "portfolio amendment", exact_keys=PORTFOLIO_AMENDMENT_KEYS)
+    if expect_int(amendment["schema_version"], "portfolio amendment.schema_version") != 2:
+        raise InputError("portfolio amendment.schema_version must be 2")
+    version = expect_int(amendment["amendment_version"], "portfolio amendment.amendment_version", minimum=1)
+    if version != expected_version:
+        raise InputError(f"portfolio amendment version must be {expected_version}")
+    if amendment["base_selection_sha256"] != expected_base_digest:
+        raise InputError("portfolio amendment base_selection_sha256 does not match its immediate predecessor")
+    expect_nonempty_string(amendment["reason"], "portfolio amendment.reason")
+    remove_ref, _, _ = _candidate_reference(
+        amendment["remove_candidate_ref"], manifest, run_dir, "portfolio amendment.remove_candidate_ref"
+    )
+    add_ref, _, _ = _candidate_reference(
+        amendment["add_candidate_ref"], manifest, run_dir, "portfolio amendment.add_candidate_ref"
+    )
+    current = [dict(item) for item in current_refs]
+    remove_identity = (remove_ref["candidate_id"], remove_ref["version"])
+    add_identity = (add_ref["candidate_id"], add_ref["version"])
+    identities = {(item["candidate_id"], item["version"]) for item in current}
+    if remove_identity not in identities:
+        raise InputError("portfolio amendment remove_candidate_ref is not in the effective shortlist")
+    if add_identity in identities:
+        raise InputError("portfolio amendment add_candidate_ref is already in the effective shortlist")
+    updated = [item for item in current if (item["candidate_id"], item["version"]) != remove_identity]
+    updated.append(add_ref)
+    candidates = [
+        _candidate_reference(item, manifest, run_dir, "effective portfolio candidate")[2]
+        for item in updated
+    ]
+    _enforce_semantic_portfolio(candidates, manifest, "amended portfolio selection")
+    canonical = dict(amendment)
+    canonical["remove_candidate_ref"] = remove_ref
+    canonical["add_candidate_ref"] = add_ref
+    canonical["reason"] = amendment["reason"].strip()
+    return canonical, sorted(updated, key=lambda item: (item["candidate_id"], item["version"]))
+
+
+def effective_portfolio_selection(
+    run_dir: Path, manifest: Mapping[str, Any]
+) -> dict[str, Any]:
+    selection_path = run_dir / "portfolio" / "selection.json"
+    if not selection_path.is_file():
+        raise InputError("canonical portfolio selection is missing")
+    selection = validate_portfolio_selection(load_json(selection_path), manifest, run_dir)
+    if selection_path.read_bytes() != canonical_json_bytes(selection):
+        raise InputError("portfolio selection is not canonical")
+    current_refs = list(selection["candidate_refs"])
+    base_digest = sha256_file(selection_path)
+    amendments: list[dict[str, Any]] = []
+    amendment_paths = sorted(
+        (run_dir / "portfolio" / "amendments").glob("v*.json"),
+        key=lambda path: int(path.stem[1:]) if path.stem[1:].isdigit() else -1,
+    )
+    for expected_version, path in enumerate(amendment_paths, start=1):
+        if path.stem != f"v{expected_version}":
+            raise InputError("portfolio amendment versions must be contiguous")
+        amendment, current_refs = _validate_portfolio_amendment_record(
+            load_json(path), manifest, run_dir,
+            expected_version=expected_version,
+            expected_base_digest=base_digest,
+            current_refs=current_refs,
+        )
+        if path.read_bytes() != canonical_json_bytes(amendment):
+            raise InputError(f"portfolio amendment v{expected_version} is not canonical")
+        amendments.append(amendment)
+        base_digest = sha256_file(path)
+    candidates = [
+        _candidate_reference(item, manifest, run_dir, "effective portfolio candidate")[2]
+        for item in current_refs
+    ]
+    return {
+        "selection_path": "portfolio/selection.json",
+        "selection_sha256": sha256_file(selection_path),
+        "latest_binding_sha256": base_digest,
+        "amendments": amendments,
+        "candidate_refs": current_refs,
+        "semantic_audit": _semantic_portfolio_audit(candidates),
+    }
+
+
+def _working_evaluations_for_candidate(
+    run_dir: Path,
+    manifest: Mapping[str, Any],
+    candidate_path: Path,
+    candidate: Mapping[str, Any],
+) -> list[tuple[Path, dict[str, Any]]]:
+    digest = sha256_file(candidate_path)
+    return [
+        (path, evaluation)
+        for path, evaluation in iter_evaluations(run_dir, manifest)
+        if evaluation["evaluation_type"] == "working"
+        and evaluation["candidate_id"] == candidate["candidate_id"]
+        and evaluation["candidate_version"] == candidate["version"]
+        and evaluation["candidate_sha256"] == digest
+    ]
+
+
+def working_evaluation_coverage(
+    run_dir: Path, manifest: Mapping[str, Any], stage: str
+) -> dict[str, Any]:
+    rows = latest_candidates_for_stage(run_dir, manifest, stage)
+    records: list[dict[str, Any]] = []
+    missing: list[str] = []
+    duplicates: list[str] = []
+    for candidate_path, candidate in rows:
+        matching = _working_evaluations_for_candidate(run_dir, manifest, candidate_path, candidate)
+        identity = f"{candidate['candidate_id']} v{candidate['version']}"
+        if len(matching) == 0:
+            missing.append(identity)
+        elif len(matching) > manifest["config"].get("working_evaluators_per_candidate", 1):
+            duplicates.append(identity)
+        if matching:
+            evaluation_path, evaluation = matching[0]
+            records.append(
+                {
+                    "candidate_id": candidate["candidate_id"],
+                    "candidate_version": candidate["version"],
+                    "candidate_sha256": sha256_file(candidate_path),
+                    "candidate_stage": stage,
+                    "evaluation_path": evaluation_path.relative_to(run_dir).as_posix(),
+                    "evaluation_sha256": sha256_file(evaluation_path),
+                    "judge_id": evaluation["judge_id"],
+                    "final_score": evaluation["final_score"],
+                    "economics_score": None if _factor_score(evaluation, "Business model and economics") is None else decimal_json(_factor_score(evaluation, "Business model and economics")),
+                    "distribution_score": None if _factor_score(evaluation, "Distribution") is None else decimal_json(_factor_score(evaluation, "Distribution")),
+                    "primary_score_limiter": evaluation["primary_score_limiter"],
+                    "strongest_disconfirming_evidence": evaluation["strongest_disconfirming_evidence"],
+                    "evidence_needed_for_higher_score": evaluation["evidence_needed_for_higher_score"],
+                }
+            )
+    return {
+        "candidate_count": len(rows),
+        "completed_count": len(records),
+        "complete": len(rows) == len(records) and not missing and not duplicates,
+        "missing": missing,
+        "duplicates": duplicates,
+        "records": sorted(records, key=lambda item: item["candidate_id"]),
+    }
+
+
+def _require_working_evaluation_coverage(
+    run_dir: Path, manifest: Mapping[str, Any], stage: str
+) -> dict[str, Any]:
+    coverage = working_evaluation_coverage(run_dir, manifest, stage)
+    if not coverage["complete"]:
+        details = [
+            *(f"missing {item}" for item in coverage["missing"]),
+            *(f"duplicate {item}" for item in coverage["duplicates"]),
+        ]
+        raise ConflictError(
+            f"{stage} requires exactly one working evaluation for every latest candidate version: "
+            + ", ".join(details)
+        )
+    return coverage
+
+
+def _working_rank_key(
+    candidate: Mapping[str, Any], evaluation: Mapping[str, Any]
+) -> tuple[Decimal, Decimal, Decimal, Decimal, str]:
+    negative_infinity = Decimal("-Infinity")
+    positive_infinity = Decimal("Infinity")
+    economics = _factor_score(evaluation, "Business model and economics")
+    distribution = _factor_score(evaluation, "Distribution")
+    capital_value = candidate["economics"]["capital_required_pln"]
+    capital = (
+        as_decimal(capital_value, "candidate.economics.capital_required_pln")
+        if not isinstance(capital_value, bool) and isinstance(capital_value, (int, float))
+        else positive_infinity
+    )
+    if capital < 0:
+        capital = positive_infinity
+    return (
+        -as_decimal(evaluation["final_score"], "working final score"),
+        -(economics if economics is not None else negative_infinity),
+        -(distribution if distribution is not None else negative_infinity),
+        capital,
+        candidate["candidate_id"],
+    )
+
+
+def _ranked_stage_candidates(
+    run_dir: Path, manifest: Mapping[str, Any], stage: str
+) -> list[tuple[Path, dict[str, Any], dict[str, Any]]]:
+    ranked: list[tuple[Path, dict[str, Any], dict[str, Any]]] = []
+    for candidate_path, candidate in latest_candidates_for_stage(run_dir, manifest, stage):
+        matching = _working_evaluations_for_candidate(run_dir, manifest, candidate_path, candidate)
+        if len(matching) != 1:
+            continue
+        ranked.append((candidate_path, candidate, matching[0][1]))
+    return sorted(ranked, key=lambda item: _working_rank_key(item[1], item[2]))
+
+
+def validate_portfolio_decision(
+    value: Any, manifest: Mapping[str, Any], run_dir: Path
+) -> dict[str, Any]:
+    decision = expect_object(value, "portfolio decision", exact_keys=PORTFOLIO_DECISION_KEYS)
+    if expect_int(decision["schema_version"], "portfolio decision.schema_version") != 2:
+        raise InputError("portfolio decision.schema_version must be 2")
+    _require_working_evaluation_coverage(run_dir, manifest, "research")
+    research_rows = latest_candidates_for_stage(run_dir, manifest, "research")
+    expected = {(candidate["candidate_id"], candidate["version"]): (path, candidate) for path, candidate in research_rows}
+    raw_decisions = decision["candidate_decisions"]
+    if not isinstance(raw_decisions, list) or len(raw_decisions) != len(expected):
+        raise InputError("portfolio decision must cover every latest researched candidate exactly once")
+    canonical_rows: list[dict[str, Any]] = []
+    seen: set[tuple[str, int]] = set()
+    fatal_identities: set[tuple[str, int]] = set()
+    disposition_by_identity: dict[tuple[str, int], str] = {}
+    for index, raw in enumerate(raw_decisions):
+        row = expect_object(raw, f"portfolio decision.candidate_decisions[{index}]", exact_keys=PORTFOLIO_CANDIDATE_DECISION_KEYS)
+        candidate_id = expect_nonempty_string(row["candidate_id"], f"portfolio decision.candidate_decisions[{index}].candidate_id")
+        version = expect_int(row["candidate_version"], f"portfolio decision.candidate_decisions[{index}].candidate_version", minimum=1)
+        identity = (candidate_id, version)
+        if identity in seen or identity not in expected:
+            raise InputError("portfolio decision contains a duplicate or non-current candidate version")
+        seen.add(identity)
+        candidate_path, _ = expected[identity]
+        if row["candidate_sha256"] != sha256_file(candidate_path):
+            raise InputError("portfolio decision candidate_sha256 does not match the exact candidate version")
+        if row["disposition"] not in {"develop", "not_selected", "fatal"}:
+            raise InputError("portfolio decision disposition is invalid")
+        rationale = expect_nonempty_string(row["rationale"], f"portfolio decision.candidate_decisions[{index}].rationale")
+        claim_ids = expect_string_list(row["fatal_claim_ids"], f"portfolio decision.candidate_decisions[{index}].fatal_claim_ids", unique=True)
+        if row["disposition"] == "fatal":
+            if row["fatal_reason"] not in FATAL_RESEARCH_REASONS:
+                raise InputError("fatal research disposition requires a permitted direct-evidence fatal_reason")
+            if not claim_ids:
+                raise InputError("fatal research disposition requires evidence-backed fatal_claim_ids")
+            research_path = run_dir / research_relpath(candidate_id, version)
+            if not research_path.is_file():
+                raise InputError("fatal research disposition requires canonical research")
+            research = validate_research(load_json(research_path), manifest, run_dir)
+            claims = {claim["claim_id"]: claim for claim in research["claims"]}
+            for claim_id in claim_ids:
+                claim = claims.get(claim_id)
+                if claim is None or claim["assessment"] != "evidence" or not claim["evidence_refs"]:
+                    raise InputError(
+                        "unknown or inferential research cannot be labeled fatal; fatal claims require direct evidence"
+                    )
+            fatal_identities.add(identity)
+        else:
+            if row["fatal_reason"] is not None or claim_ids:
+                raise InputError("non-fatal portfolio decision must use null fatal_reason and no fatal_claim_ids")
+        disposition_by_identity[identity] = row["disposition"]
+        canonical_row = dict(row)
+        canonical_row["rationale"] = rationale.strip()
+        canonical_rows.append(canonical_row)
+    ranked_nonfatal = [
+        item for item in _ranked_stage_candidates(run_dir, manifest, "research")
+        if (item[1]["candidate_id"], item[1]["version"]) not in fatal_identities
+    ]
+    expected_develop = {
+        (candidate["candidate_id"], candidate["version"])
+        for _, candidate, _ in ranked_nonfatal[: manifest["config"]["develop_max"]]
+    }
+    actual_develop = {identity for identity, disposition in disposition_by_identity.items() if disposition == "develop"}
+    if actual_develop != expected_develop:
+        raise InputError("portfolio development selection must match deterministic working-score ranking")
+    canonical = dict(decision)
+    canonical["candidate_decisions"] = sorted(
+        canonical_rows, key=lambda item: (item["candidate_id"], item["candidate_version"])
+    )
+    return canonical
+
+
+def _load_portfolio_decision(run_dir: Path, manifest: Mapping[str, Any]) -> dict[str, Any]:
+    path = run_dir / "portfolio" / "development-decision.json"
+    if not path.is_file():
+        raise InputError("canonical portfolio development decision is missing")
+    decision = validate_portfolio_decision(load_json(path), manifest, run_dir)
+    if path.read_bytes() != canonical_json_bytes(decision):
+        raise InputError("portfolio development decision is not canonical")
+    return decision
+
+
+def validate_development_result(
+    value: Any, manifest: Mapping[str, Any], run_dir: Path
+) -> dict[str, Any]:
+    result = expect_object(value, "development result", exact_keys=DEVELOPMENT_RESULT_KEYS)
+    if expect_int(result["schema_version"], "development result.schema_version") != 2:
+        raise InputError("development result.schema_version must be 2")
+    candidate_id = expect_nonempty_string(result["candidate_id"], "development result.candidate_id")
+    if not SAFE_ID_RE.fullmatch(candidate_id):
+        raise InputError("development result.candidate_id must be a lowercase slug")
+    constructor_id = expect_nonempty_string(result["constructor_id"], "development result.constructor_id")
+    if not SAFE_JUDGE_RE.fullmatch(constructor_id):
+        raise InputError("development result.constructor_id is not path-safe")
+    expect_nonempty_string(result["rationale"], "development result.rationale")
+    versions = sorted(
+        (
+            (path, candidate)
+            for path, candidate in iter_candidates(run_dir, manifest)
+            if candidate["candidate_id"] == candidate_id and candidate["stage"] == "development"
+        ),
+        key=lambda item: item[1]["version"],
+    )
+    if not versions:
+        raise InputError("development result candidate does not exist")
+    base_path, base = versions[0]
+    final_path, final = versions[-1]
+    if result["base_candidate_version"] != base["version"] or result["base_candidate_sha256"] != sha256_file(base_path):
+        raise InputError("development result does not bind the exact base development version")
+    if result["final_candidate_version"] != final["version"] or result["final_candidate_sha256"] != sha256_file(final_path):
+        raise InputError("development result does not bind the exact final development version")
+    if result["outcome"] == "redesigned":
+        if len(versions) != 2 or final["version"] != base["version"] + 1 or "redesign" not in final:
+            raise InputError("redesigned development result requires one valid structural redesign version")
+    elif result["outcome"] == "no_valid_redesign":
+        if len(versions) != 1 or final["version"] != base["version"]:
+            raise InputError("no_valid_redesign must preserve the unmodified base development version")
+    else:
+        raise InputError("development result.outcome must be redesigned or no_valid_redesign")
+    canonical = dict(result)
+    canonical["rationale"] = result["rationale"].strip()
+    return canonical
+
+
+def _development_result_for_candidate(
+    run_dir: Path, manifest: Mapping[str, Any], candidate_id: str
+) -> tuple[Path, dict[str, Any]]:
+    path = run_dir / "development" / candidate_id / "constructor-result.json"
+    if not path.is_file():
+        raise InputError(f"development result is missing for {candidate_id}")
+    result = validate_development_result(load_json(path), manifest, run_dir)
+    if path.read_bytes() != canonical_json_bytes(result):
+        raise InputError(f"development result is not canonical for {candidate_id}")
+    return path, result
+
+
 def _factor_score(evaluation: Mapping[str, Any], factor_name: str) -> Decimal | None:
     for factor in evaluation["factors"]:
         if factor["name"] == factor_name:
@@ -3055,7 +5042,68 @@ def _failed_job_summaries(state: Mapping[str, Any]) -> list[dict[str, Any]]:
     return summaries
 
 
+def _evaluation_coverage_report(
+    run_dir: Path, manifest: Mapping[str, Any]
+) -> dict[str, Any]:
+    research = working_evaluation_coverage(run_dir, manifest, "research")
+    development = working_evaluation_coverage(run_dir, manifest, "development")
+    records = [*research["records"], *development["records"]]
+    highest = max(
+        (as_decimal(item["final_score"], "working final score") for item in records),
+        default=None,
+    )
+    return {
+        "research": research,
+        "development": development,
+        "total_candidate_versions": research["candidate_count"] + development["candidate_count"],
+        "total_completed": research["completed_count"] + development["completed_count"],
+        "complete": research["complete"] and development["complete"],
+        "highest_working_score": None if highest is None else decimal_json(highest, quantum=FINAL_QUANTUM),
+    }
+
+
+def _portfolio_report(
+    run_dir: Path, manifest: Mapping[str, Any]
+) -> dict[str, Any] | None:
+    if manifest["config"]["schema_version"] != 2:
+        return None
+    portfolio = effective_portfolio_selection(run_dir, manifest)
+    selection_path = run_dir / portfolio["selection_path"]
+    selection = validate_portfolio_selection(load_json(selection_path), manifest, run_dir)
+    amendment_artifacts = [
+        {
+            "path": f"portfolio/amendments/v{item['amendment_version']}.json",
+            "sha256": sha256_file(run_dir / f"portfolio/amendments/v{item['amendment_version']}.json"),
+        }
+        for item in portfolio["amendments"]
+    ]
+    decision_path = run_dir / "portfolio" / "development-decision.json"
+    decision_artifact = None
+    decisions: list[dict[str, Any]] = []
+    if decision_path.is_file():
+        decision = _load_portfolio_decision(run_dir, manifest)
+        decision_artifact = {
+            "path": "portfolio/development-decision.json",
+            "sha256": sha256_file(decision_path),
+        }
+        decisions = decision["candidate_decisions"]
+    return {
+        "selection_artifact": {
+            "path": portfolio["selection_path"],
+            "sha256": sha256_file(selection_path),
+        },
+        "amendment_artifacts": amendment_artifacts,
+        "development_decision_artifact": decision_artifact,
+        "missing_archetypes": selection["missing_archetypes"],
+        "semantic_audit": portfolio["semantic_audit"],
+        "candidate_decisions": decisions,
+    }
+
+
 def build_final_report(run_dir: Path, manifest: Mapping[str, Any], state: Mapping[str, Any]) -> dict[str, Any]:
+    if manifest["config"]["schema_version"] == 2:
+        _validate_stage_gate(run_dir, manifest, {**state, "stage": "development"})
+        _validate_stage_gate(run_dir, manifest, {**state, "stage": "frozen"})
     frozen = latest_candidates_for_stage(run_dir, manifest, "frozen")
     if not frozen:
         raise InputError("finalize requires at least one frozen candidate")
@@ -3063,6 +5111,17 @@ def build_final_report(run_dir: Path, manifest: Mapping[str, Any], state: Mappin
         raise InputError("frozen candidate count exceeds finalists_max")
     validate_external_imports(run_dir, manifest)
     evaluations = list(iter_evaluations(run_dir, manifest))
+    working_judge_ids = {
+        evaluation["judge_id"]
+        for _, evaluation in evaluations
+        if evaluation["evaluation_type"] == "working"
+    }
+    constructor_ids: set[str] = set()
+    if manifest["config"]["schema_version"] == 2:
+        for _, candidate in latest_candidates_for_stage(run_dir, manifest, "development"):
+            _, result = _development_result_for_candidate(run_dir, manifest, candidate["candidate_id"])
+            constructor_ids.add(result["constructor_id"])
+    native_judges_seen: set[str] = set()
     threshold = as_decimal(manifest["config"]["threshold"], "config.threshold")
     results: list[dict[str, Any]] = []
     for candidate_path, candidate in sorted(frozen, key=lambda item: item[1]["candidate_id"]):
@@ -3084,6 +5143,18 @@ def build_final_report(run_dir: Path, manifest: Mapping[str, Any], state: Mappin
             )
         if len({item["judge_id"] for _, item in native}) != len(native):
             raise InputError(f"candidate {candidate['candidate_id']} has duplicate native judge ids")
+        native_judge_ids = {item["judge_id"] for _, item in native}
+        reused_roles = sorted(native_judge_ids & (working_judge_ids | constructor_ids))
+        if reused_roles:
+            raise InputError(
+                f"native holdout judges must be fresh and role-independent: {', '.join(reused_roles)}"
+            )
+        reused_finalists = sorted(native_judge_ids & native_judges_seen)
+        if reused_finalists:
+            raise InputError(
+                f"native holdout judge identities must not be reused across finalists: {', '.join(reused_finalists)}"
+            )
+        native_judges_seen.update(native_judge_ids)
         if len({item["raw_response_path"] for _, item in native}) != len(native):
             raise InputError(f"candidate {candidate['candidate_id']} native judges must use distinct raw response paths")
         if len({item["raw_response_sha256"] for _, item in native}) != len(native):
@@ -3172,20 +5243,27 @@ def build_final_report(run_dir: Path, manifest: Mapping[str, Any], state: Mappin
     else:
         run_status = "no_qualifier"
         selected = min(results, key=_selection_key)
+    evaluation_coverage = _evaluation_coverage_report(run_dir, manifest)
     return {
-        "schema_version": 1,
+        "schema_version": manifest["config"]["schema_version"],
         "run_id": state["run_id"],
+        "campaign": manifest.get("campaign"),
+        "founder_sha256": manifest["source_hashes"]["PERSONALITY_SITUATION.md"],
         "rubric_id": manifest["rubric"]["rubric_id"],
         "rubric_sha256": manifest["rubric"]["sha256"],
         "threshold": manifest["config"]["threshold"],
         "comparison": "strictly_greater_than",
         "run_status": run_status,
+        "terminal_stage": "holdout",
         "qualification_label": QUALIFICATION_LABEL if run_status == "qualified" else None,
         "selected_candidate_id": selected["candidate_id"],
         "selected_candidate_version": selected["candidate_version"],
         "official_score": selected["official_native_score"],
         "binding_score_floor": selected["binding_score_floor"],
-        "no_qualifier_reason": None,
+        "no_finalist_reason": None,
+        "highest_working_score": evaluation_coverage["highest_working_score"],
+        "working_evaluation_coverage": evaluation_coverage,
+        "portfolio_decision": _portfolio_report(run_dir, manifest),
         "binding_limiters": selected["binding_limiters"],
         "unresolved_evidence": sorted(
             {
@@ -3218,6 +5296,10 @@ def build_early_no_qualifier_report(
     reason: str,
     best_candidate_id: str | None = None,
 ) -> dict[str, Any]:
+    if manifest["config"]["schema_version"] == 2:
+        return build_no_finalist_report(
+            run_dir, manifest, state, reason, best_candidate_id
+        )
     preserved: list[tuple[Path, dict[str, Any]]] = []
     for stage in ("frozen", "development", "research", "discovery"):
         preserved = latest_candidates_for_stage(run_dir, manifest, stage)
@@ -3294,12 +5376,118 @@ def build_early_no_qualifier_report(
     }
 
 
+def build_no_finalist_report(
+    run_dir: Path,
+    manifest: Mapping[str, Any],
+    state: Mapping[str, Any],
+    reason: str,
+    best_candidate_id: str | None = None,
+) -> dict[str, Any]:
+    if manifest["config"]["schema_version"] != 2:
+        raise InputError("no_finalist report requires workflow schema v2")
+    reason = expect_nonempty_string(reason, "no_finalist reason")
+    coverage = _evaluation_coverage_report(run_dir, manifest)
+    ranked_stage = "development" if coverage["development"]["candidate_count"] else "research"
+    ranked = _ranked_stage_candidates(run_dir, manifest, ranked_stage)
+    score_by_id = {
+        item["candidate_id"]: item
+        for item in coverage[ranked_stage]["records"]
+    }
+    preserved: list[tuple[Path, dict[str, Any]]] = []
+    for candidate_stage in ("frozen", "development", "research"):
+        preserved = latest_candidates_for_stage(run_dir, manifest, candidate_stage)
+        if preserved:
+            break
+    preserved_by_id = {candidate["candidate_id"]: (path, candidate) for path, candidate in preserved}
+    ranked_preserved_ids = [
+        candidate["candidate_id"]
+        for _, candidate, _ in ranked
+        if candidate["candidate_id"] in preserved_by_id
+    ]
+    selected_id = ranked_preserved_ids[0] if ranked_preserved_ids else None
+    if best_candidate_id is not None:
+        requested = expect_nonempty_string(best_candidate_id, "--best-candidate")
+        if requested != selected_id:
+            raise InputError("--best-candidate must match the deterministic highest working-score candidate")
+    selected_pair = preserved_by_id.get(selected_id) if selected_id is not None else None
+    selected_version = selected_pair[1]["version"] if selected_pair is not None else None
+    selected_score = score_by_id.get(selected_id) if selected_id is not None else None
+    selected_candidate = selected_pair[1] if selected_pair is not None else None
+    selected_unresolved = (
+        sorted(set([*selected_candidate["uncertainties"], *selected_candidate["contrary_evidence"]]))
+        if selected_candidate is not None
+        else []
+    )
+    reopen_condition = (
+        "Reopen only with new evidence that materially resolves: " + "; ".join(selected_unresolved)
+        if selected_unresolved
+        else f"Reopen only with new evidence that materially resolves the closure reason: {reason}"
+    )
+    ordered_ids = [*ranked_preserved_ids, *sorted(set(preserved_by_id) - set(ranked_preserved_ids))]
+    strongest_candidates: list[dict[str, Any]] = []
+    for candidate_id in ordered_ids:
+        path, candidate = preserved_by_id[candidate_id]
+        working = score_by_id.get(candidate_id)
+        strongest_candidates.append(
+            {
+                "candidate_id": candidate_id,
+                "candidate_version": candidate["version"],
+                "title": candidate["title"],
+                "stage": candidate["stage"],
+                "artifact": path.relative_to(run_dir).as_posix(),
+                "artifact_sha256": sha256_file(path),
+                "working_score": working["final_score"] if working else None,
+                "working_evaluation_artifact": working["evaluation_path"] if working else None,
+                "primary_score_limiter": working["primary_score_limiter"] if working else None,
+                "strongest_disconfirming_evidence": (
+                    working["strongest_disconfirming_evidence"] if working else None
+                ),
+                "risks": candidate["risks"],
+                "uncertainties": candidate["uncertainties"],
+                "contrary_evidence": candidate["contrary_evidence"],
+                "is_selected": candidate_id == selected_id,
+                "primary_limiter": reason if candidate_id == selected_id else None,
+                "reopen_condition": reopen_condition if candidate_id == selected_id else None,
+            }
+        )
+    binding_limiters = [reason]
+    if selected_score and selected_score["primary_score_limiter"] not in binding_limiters:
+        binding_limiters.append(selected_score["primary_score_limiter"])
+    return {
+        "schema_version": 2,
+        "run_id": state["run_id"],
+        "campaign": manifest.get("campaign"),
+        "founder_sha256": manifest["source_hashes"]["PERSONALITY_SITUATION.md"],
+        "rubric_id": manifest["rubric"]["rubric_id"],
+        "rubric_sha256": manifest["rubric"]["sha256"],
+        "threshold": manifest["config"]["threshold"],
+        "comparison": "strictly_greater_than",
+        "run_status": "no_finalist",
+        "terminal_stage": state["stage"],
+        "qualification_label": None,
+        "selected_candidate_id": selected_id,
+        "selected_candidate_version": selected_version,
+        "official_score": None,
+        "binding_score_floor": None,
+        "highest_working_score": coverage["highest_working_score"],
+        "working_evaluation_coverage": coverage,
+        "portfolio_decision": _portfolio_report(run_dir, manifest),
+        "no_finalist_reason": reason,
+        "binding_limiters": binding_limiters,
+        "strongest_candidates": strongest_candidates,
+        "unresolved_evidence": selected_unresolved,
+        "failed_jobs": _failed_job_summaries(state),
+        "candidates": [],
+    }
+
+
 def render_report_markdown(report: Mapping[str, Any]) -> str:
     lines = [
         "# Opportunity Workflow Outcome",
         "",
         f"- Run: `{report['run_id']}`",
         f"- Status: `{report['run_status']}`",
+        *( [f"- Terminal stage: `{report['terminal_stage']}`"] if report.get("terminal_stage") else [] ),
         f"- Rubric: `{report['rubric_id']}`",
         f"- Gate: final score `{report['comparison']}` `{report['threshold']}`",
     ]
@@ -3317,8 +5505,17 @@ def render_report_markdown(report: Mapping[str, Any]) -> str:
                     f"- Binding score floor: `{report['binding_score_floor']}`",
                 ]
             )
-    if report.get("no_qualifier_reason"):
-        lines.append(f"- Closure reason: {report['no_qualifier_reason']}")
+    closure_reason = report.get("no_finalist_reason", report.get("no_qualifier_reason"))
+    if closure_reason:
+        lines.append(f"- Closure reason: {closure_reason}")
+    if "highest_working_score" in report:
+        value = report.get("highest_working_score")
+        lines.append(f"- Highest working score: `{value if value is not None else 'N/A'}`")
+        coverage = report.get("working_evaluation_coverage", {})
+        lines.append(
+            f"- Working evaluation coverage: `{coverage.get('total_completed', 0)}/"
+            f"{coverage.get('total_candidate_versions', 0)}` candidate versions"
+        )
     lines.extend(["", "## Candidate decisions", ""])
     candidates = report.get("candidates", [])
     if not candidates:
@@ -3345,6 +5542,9 @@ def render_report_markdown(report: Mapping[str, Any]) -> str:
                 for contrary in item.get("contrary_evidence", []):
                     lines.append(f"  - Contrary evidence: {contrary}")
                 lines.append(f"  - Reopen condition: {item['reopen_condition']}")
+            if item.get("working_score") is not None:
+                lines.append(f"  - Working score: `{item['working_score']}`")
+                lines.append(f"  - Working score limiter: {item['primary_score_limiter']}")
     if report.get("unresolved_evidence"):
         lines.extend(["", "## Unresolved evidence", ""])
         lines.extend(f"- {item}" for item in report["unresolved_evidence"])
@@ -3366,6 +5566,11 @@ def render_report_markdown(report: Mapping[str, Any]) -> str:
             "This run produced no binding qualifier because at least one binding evaluation kept "
             "the result contested. It is not empirical market validation or permission to proceed."
         )
+    elif report["run_status"] == "no_finalist":
+        interpretation = (
+            "No candidate reached held-out evaluation. Official and binding scores are N/A, not zero. "
+            "The working scores above are development diagnostics only and cannot confirm an opportunity."
+        )
     else:
         interpretation = (
             "This run produced no score-qualified candidate under holistic-11. It is an explicit "
@@ -3381,7 +5586,7 @@ def _derive_and_validate_final_report(
     manifest: Mapping[str, Any],
     state: Mapping[str, Any],
     previous_stage: str,
-    no_qualifier_reason: str | None,
+    closure_reason: str | None,
     selected_candidate_id: str | None,
 ) -> tuple[dict[str, Any], str]:
     if previous_stage not in STAGES[:-1]:
@@ -3389,12 +5594,12 @@ def _derive_and_validate_final_report(
     prior_state = dict(state)
     prior_state["stage"] = previous_stage
     prior_state["run_status"] = "active"
-    if no_qualifier_reason is None:
+    if closure_reason is None:
         if previous_stage != "holdout":
             raise InputError("only a holdout-derived final report may omit a closure reason")
         expected = build_final_report(run_dir, manifest, prior_state)
     else:
-        reason = expect_nonempty_string(no_qualifier_reason, "run_finalized no_qualifier_reason")
+        reason = expect_nonempty_string(closure_reason, "run_finalized closure reason")
         expected = build_early_no_qualifier_report(
             run_dir,
             manifest,
@@ -3421,17 +5626,26 @@ def validate_final_report(
     state: Mapping[str, Any],
     finalized_event: Mapping[str, Any],
 ) -> dict[str, Any]:
+    reason_key = (
+        "no_finalist_reason"
+        if manifest["config"]["schema_version"] == 2
+        else "no_qualifier_reason"
+    )
     details = expect_object(
         finalized_event["details"],
         "run_finalized details",
-        exact_keys=FINAL_EVENT_DETAIL_KEYS,
+        exact_keys=(
+            FINAL_EVENT_DETAIL_KEYS_V2
+            if manifest["config"]["schema_version"] == 2
+            else FINAL_EVENT_DETAIL_KEYS_V1
+        ),
     )
     report, report_digest = _derive_and_validate_final_report(
         run_dir,
         manifest,
         state,
         details["previous_stage"],
-        details["no_qualifier_reason"],
+        details[reason_key],
         details["selected_candidate_id"],
     )
     if details["report_sha256"] != report_digest:
@@ -3451,23 +5665,29 @@ def _final_event_details(
     previous_stage: str,
     report_digest: str,
 ) -> dict[str, Any]:
+    reason_key = (
+        "no_finalist_reason"
+        if report["schema_version"] == 2
+        else "no_qualifier_reason"
+    )
     return {
         "previous_stage": previous_stage,
         "run_status": report["run_status"],
         "selected_candidate_id": report["selected_candidate_id"],
         "official_score": report["official_score"],
-        "no_qualifier_reason": report["no_qualifier_reason"],
+        reason_key: report[reason_key],
         "report_sha256": report_digest,
     }
 
 
 def finalize_run(
     run_dir: Path,
-    no_qualifier_reason: str | None = None,
+    no_finalist_reason: str | None = None,
     best_candidate_id: str | None = None,
 ) -> tuple[dict[str, Any], int]:
     with file_lock(run_dir / ".state.lock", root=run_dir):
         manifest, state = load_run(run_dir)
+        require_active_schema_v2(manifest)
         events = load_events(run_dir / "events.jsonl", state["run_id"])
         projected_stage, projected_status, finalized_event = project_transition_state(events)
         require_job_event_state_match(events, state, manifest)
@@ -3497,8 +5717,22 @@ def finalize_run(
         blockers = current_stage_blockers(state)
         if blockers:
             raise ConflictError(f"current stage has running or retryable jobs: {', '.join(blockers)}")
-        if no_qualifier_reason is not None:
-            reason = expect_nonempty_string(no_qualifier_reason, "--no-qualifier-reason")
+        if no_finalist_reason is not None:
+            reason = expect_nonempty_string(no_finalist_reason, "--no-finalist-reason")
+            if manifest["config"]["schema_version"] == 2:
+                if state["stage"] != "research":
+                    raise ConflictError(
+                        "schema-v2 no_finalist closure is allowed only after scored research proves every candidate has a direct-evidence fatal stop; development and frozen candidates must continue to holdout"
+                    )
+                _validate_stage_gate(run_dir, manifest, state)
+                decision = _load_portfolio_decision(run_dir, manifest)
+                if any(
+                    item["disposition"] != "fatal"
+                    for item in decision["candidate_decisions"]
+                ):
+                    raise ConflictError(
+                        "schema-v2 research closure requires every portfolio decision to be a direct-evidence fatal stop"
+                    )
             report = build_early_no_qualifier_report(
                 run_dir,
                 manifest,
@@ -3508,9 +5742,9 @@ def finalize_run(
             )
         else:
             if best_candidate_id is not None:
-                raise InputError("--best-candidate requires --no-qualifier-reason")
+                raise InputError("--best-candidate requires --no-finalist-reason")
             if state["stage"] != "holdout":
-                raise ConflictError("finalize without --no-qualifier-reason requires holdout stage")
+                raise ConflictError("finalize without --no-finalist-reason requires holdout stage")
             report = build_final_report(run_dir, manifest, state)
         report_bytes = canonical_json_bytes(report)
         report_digest = write_immutable(
@@ -3539,6 +5773,7 @@ def finalize_run(
 def publish_run(run_dir: Path, outcomes_dir: Path, knowledge_dir: Path) -> dict[str, Any]:
     with file_lock(run_dir / ".state.lock", root=run_dir):
         manifest, state = load_run(run_dir)
+        require_active_schema_v2(manifest)
         if state["stage"] != "complete":
             raise ConflictError("publish requires a finalized run")
         _, finalized_event = require_event_state_match(run_dir, state, manifest)
@@ -3562,6 +5797,42 @@ def publish_run(run_dir: Path, outcomes_dir: Path, knowledge_dir: Path) -> dict[
             copied: list[dict[str, str]] = []
             sources: list[tuple[Path, str]] = [(report_path, "report.json"), (markdown_path, "report.md")]
             published_candidates: list[tuple[Path, dict[str, Any]]] = []
+            if manifest["config"]["schema_version"] == 2:
+                for candidate_path, _ in iter_candidates(run_dir, manifest):
+                    sources.append((candidate_path, candidate_path.relative_to(run_dir).as_posix()))
+                for research_path, _ in iter_research(run_dir, manifest):
+                    sources.append((research_path, research_path.relative_to(run_dir).as_posix()))
+                for evaluation_path, evaluation in iter_evaluations(run_dir, manifest):
+                    if evaluation["evaluation_type"] != "working":
+                        continue
+                    sources.append((evaluation_path, evaluation_path.relative_to(run_dir).as_posix()))
+                    raw_rel, raw_path = run_relative_path(
+                        run_dir,
+                        evaluation["raw_response_path"],
+                        "published working evaluation raw response",
+                    )
+                    sources.append((raw_path, raw_rel))
+                portfolio = report.get("portfolio_decision") or {}
+                portfolio_artifacts = [
+                    portfolio.get("selection_artifact"),
+                    *portfolio.get("amendment_artifacts", []),
+                    portfolio.get("development_decision_artifact"),
+                ]
+                for artifact in portfolio_artifacts:
+                    if not artifact:
+                        continue
+                    relative, path = run_relative_path(
+                        run_dir, artifact["path"], "published portfolio artifact"
+                    )
+                    if sha256_file(path) != artifact["sha256"]:
+                        raise InputError("published portfolio artifact hash differs from final report")
+                    sources.append((path, relative))
+                for result_path in sorted((run_dir / "development").glob("*/constructor-result.json")):
+                    result = validate_development_result(load_json(result_path), manifest, run_dir)
+                    expected = run_dir / "development" / result["candidate_id"] / "constructor-result.json"
+                    if result_path.resolve() != expected.resolve():
+                        raise InputError("development result stored at noncanonical path")
+                    sources.append((result_path, result_path.relative_to(run_dir).as_posix()))
             if selected is not None:
                 candidate_relative = selected["candidate_artifact"]
                 candidate_path = run_dir / candidate_relative
@@ -3642,7 +5913,7 @@ def publish_run(run_dir: Path, outcomes_dir: Path, knowledge_dir: Path) -> dict[
             terminal_objection = (
                 report["binding_limiters"][0]
                 if report.get("binding_limiters")
-                else report.get("no_qualifier_reason")
+                else report.get("no_finalist_reason", report.get("no_qualifier_reason"))
             )
             unresolved = report.get("unresolved_evidence", [])
             selected_summary = next(
@@ -3708,7 +5979,7 @@ def publish_run(run_dir: Path, outcomes_dir: Path, knowledge_dir: Path) -> dict[
                     "run_published",
                     details={"outcome_path": history_entry["outcome_path"], "run_status": state["run_status"]},
                 )
-            return {
+            result: dict[str, Any] = {
                 "run_id": state["run_id"],
                 "run_status": state["run_status"],
                 "outcome_dir": str(destination),
@@ -3716,6 +5987,12 @@ def publish_run(run_dir: Path, outcomes_dir: Path, knowledge_dir: Path) -> dict[
                 "artifacts": copied,
                 "idempotent": bool(existing),
             }
+            campaign_receipt = record_campaign_publication(
+                run_dir, manifest, report, outcomes_dir
+            )
+            if campaign_receipt is not None:
+                result["campaign"] = campaign_receipt
+            return result
 
 
 def validate_artifact(run_dir: Path, input_path: Path, kind: str) -> dict[str, Any]:
@@ -3749,25 +6026,591 @@ def validate_artifact(run_dir: Path, input_path: Path, kind: str) -> dict[str, A
             "candidate_version": research["candidate_version"],
             "canonical_path": research_relpath(research["candidate_id"], research["candidate_version"]),
         }
+    if kind == "portfolio-selection":
+        selection = validate_portfolio_selection(load_json(input_path), manifest, run_dir)
+        return {
+            "valid": True,
+            "kind": kind,
+            "candidate_count": len(selection["candidate_refs"]),
+            "canonical_path": "portfolio/selection.json",
+        }
+    if kind == "portfolio-amendment":
+        effective = effective_portfolio_selection(run_dir, manifest)
+        expected_version = len(effective["amendments"]) + 1
+        amendment, _ = _validate_portfolio_amendment_record(
+            load_json(input_path), manifest, run_dir,
+            expected_version=expected_version,
+            expected_base_digest=effective["latest_binding_sha256"],
+            current_refs=effective["candidate_refs"],
+        )
+        return {
+            "valid": True,
+            "kind": kind,
+            "amendment_version": amendment["amendment_version"],
+            "canonical_path": f"portfolio/amendments/v{expected_version}.json",
+        }
+    if kind == "portfolio-decision":
+        decision = validate_portfolio_decision(load_json(input_path), manifest, run_dir)
+        return {
+            "valid": True,
+            "kind": kind,
+            "candidate_count": len(decision["candidate_decisions"]),
+            "canonical_path": "portfolio/development-decision.json",
+        }
+    if kind == "development-result":
+        result = validate_development_result(load_json(input_path), manifest, run_dir)
+        return {
+            "valid": True,
+            "kind": kind,
+            "candidate_id": result["candidate_id"],
+            "outcome": result["outcome"],
+            "canonical_path": f"development/{result['candidate_id']}/constructor-result.json",
+        }
     validate_generic_input(input_path, kind)
     return {"valid": True, "kind": kind, "input": str(input_path), "stage": state["stage"]}
 
 
 def status_run(run_dir: Path, full_json: bool) -> dict[str, Any]:
     manifest, state = load_run(run_dir)
-    if full_json:
-        return {"manifest": manifest, "state": state}
     counts = {status: 0 for status in sorted(JOB_STATUSES)}
     for stage_jobs in state["jobs"].values():
         for job in stage_jobs.values():
             counts[job["status"]] += 1
-    return {
+    result = {
         "run_id": state["run_id"],
         "stage": state["stage"],
         "run_status": state["run_status"],
         "current_stage_blockers": current_stage_blockers(state) if state["stage"] != "complete" else [],
         "job_counts": counts,
     }
+    if manifest["config"]["schema_version"] == 2:
+        coverage = _evaluation_coverage_report(run_dir, manifest)
+        result["highest_working_score"] = coverage["highest_working_score"]
+        result["working_evaluation_coverage"] = coverage
+        if (run_dir / "portfolio" / "selection.json").is_file():
+            result["portfolio_decision"] = _portfolio_report(run_dir, manifest)
+    if state["stage"] == "complete":
+        _, finalized_event = require_event_state_match(run_dir, state, manifest)
+        if finalized_event is None:
+            raise InputError("complete run is missing run_finalized event")
+        report = validate_final_report(run_dir, manifest, state, finalized_event)
+        result["terminal_stage"] = report.get("terminal_stage")
+        result["official_score"] = report.get("official_score")
+    if full_json:
+        result.update({"manifest": manifest, "state": state})
+    return result
+
+
+def _campaign_top_four_median(scores: Sequence[Decimal]) -> Decimal | None:
+    top = sorted(scores, reverse=True)[:4]
+    if not top:
+        return None
+    ordered = sorted(top)
+    middle = len(ordered) // 2
+    if len(ordered) % 2:
+        value = ordered[middle]
+    else:
+        value = (ordered[middle - 1] + ordered[middle]) / Decimal(2)
+    return value.quantize(FINAL_QUANTUM, rounding=ROUND_HALF_UP)
+
+
+def _dominant_semantic_value(counts: Mapping[str, Any]) -> str | None:
+    if not counts:
+        return None
+    rows: list[tuple[str, int]] = []
+    for raw_label, raw_count in counts.items():
+        label = expect_nonempty_string(raw_label, "semantic audit label")
+        count = expect_int(raw_count, f"semantic audit count for {label}", minimum=1)
+        rows.append((label, count))
+    return min(rows, key=lambda item: (-item[1], item[0]))[0]
+
+
+def _sanitized_missing_archetypes(
+    raw_labels: Any, candidates: Sequence[Mapping[str, Any]]
+) -> list[str]:
+    labels = expect_string_list(raw_labels, "portfolio missing_archetypes", unique=True)
+    protected: set[str] = set()
+    for candidate in candidates:
+        protected.add(normalize_fingerprint(candidate["candidate_id"]))
+        protected.add(normalize_fingerprint(candidate["title"]))
+        structure = expect_object(
+            candidate["structure"], "campaign candidate.structure", exact_keys=STRUCTURE_KEYS
+        )
+        protected.update(normalize_fingerprint(structure[key]) for key in STRUCTURE_KEYS)
+    result: set[str] = set()
+    for raw in labels:
+        normalized = normalize_fingerprint(raw)
+        if not _gap_archetype_label_is_safe(normalized):
+            continue
+        if any(
+            protected_label
+            and len(protected_label) >= 3
+            and (protected_label in normalized or normalized in protected_label)
+            for protected_label in protected
+        ):
+            continue
+        result.add(normalized)
+    return sorted(result)
+
+
+def derive_campaign_cohort_metrics(
+    run_dir: Path,
+    manifest: Mapping[str, Any],
+    report: Mapping[str, Any],
+) -> dict[str, Any]:
+    if manifest["config"]["schema_version"] != 2:
+        raise InputError("campaign metrics require workflow schema v2")
+    candidates = {
+        (candidate["candidate_id"], candidate["version"]): candidate
+        for _, candidate in iter_candidates(run_dir, manifest)
+    }
+    latest: dict[str, tuple[int, dict[str, Any], dict[str, Any]]] = {}
+    for _, evaluation in iter_evaluations(run_dir, manifest):
+        if evaluation["evaluation_type"] != "working":
+            continue
+        identity = (evaluation["candidate_id"], evaluation["candidate_version"])
+        candidate = candidates.get(identity)
+        if candidate is None:
+            raise InputError("working evaluation candidate is missing from campaign run")
+        current = latest.get(evaluation["candidate_id"])
+        if current is None or evaluation["candidate_version"] > current[0]:
+            latest[evaluation["candidate_id"]] = (
+                evaluation["candidate_version"],
+                candidate,
+                evaluation,
+            )
+        elif evaluation["candidate_version"] == current[0]:
+            raise InputError("campaign metric candidate has duplicate latest working evaluations")
+    score_rows: list[tuple[Decimal, dict[str, Any], dict[str, Any]]] = []
+    for _, candidate, evaluation in latest.values():
+        score_rows.append(
+            (
+                as_decimal(evaluation["final_score"], "campaign working score"),
+                candidate,
+                evaluation,
+            )
+        )
+    scores = [item[0] for item in score_rows]
+    median = _campaign_top_four_median(scores)
+    best_working = max(scores, default=None)
+    archetype_scores: dict[str, Decimal] = {}
+    factor_totals: dict[str, tuple[Decimal, int]] = {}
+    for score, candidate, evaluation in score_rows:
+        structure = expect_object(
+            candidate.get("structure"), "campaign candidate.structure", exact_keys=STRUCTURE_KEYS
+        )
+        archetype = normalize_fingerprint(structure["commercial_archetype"])
+        previous = archetype_scores.get(archetype)
+        if previous is None or score > previous:
+            archetype_scores[archetype] = score
+        for factor in evaluation["factors"]:
+            if factor["status"] != "scored":
+                continue
+            name = factor["name"]
+            factor_score = as_decimal(factor["score"], f"campaign factor {name}")
+            total, count = factor_totals.get(name, (Decimal(0), 0))
+            factor_totals[name] = (total + factor_score, count + 1)
+    factor_averages = [
+        (total / Decimal(count), name)
+        for name, (total, count) in factor_totals.items()
+        if count
+    ]
+    deficient_factors = [name for _, name in sorted(factor_averages)[:3]]
+    portfolio = _portfolio_report(run_dir, manifest)
+    if portfolio is None:
+        raise InputError("campaign run is missing its structured portfolio report")
+    audit = expect_object(portfolio["semantic_audit"], "campaign semantic audit")
+    dominant_patterns = {
+        "commercial_archetype": _dominant_semantic_value(
+            expect_object(audit.get("commercial_archetype_counts"), "commercial archetype counts")
+        ),
+        "control_point": _dominant_semantic_value(
+            expect_object(audit.get("control_point_counts"), "control point counts")
+        ),
+        "critical_dependency": _dominant_semantic_value(
+            expect_object(audit.get("critical_dependency_counts"), "critical dependency counts")
+        ),
+    }
+    official = _optional_campaign_score(report.get("official_score"), "report.official_score")
+    return {
+        "official_score": None if official is None else decimal_json(official, quantum=FINAL_QUANTUM),
+        "top_four_working_median": None if median is None else decimal_json(median, quantum=FINAL_QUANTUM),
+        "best_working_score": (
+            None
+            if best_working is None
+            else decimal_json(best_working, quantum=FINAL_QUANTUM)
+        ),
+        "archetype_scores": {
+            key: decimal_json(value, quantum=FINAL_QUANTUM)
+            for key, value in sorted(archetype_scores.items())
+        },
+        "deficient_factors": deficient_factors,
+        "missing_archetypes": _sanitized_missing_archetypes(
+            portfolio["missing_archetypes"], list(candidates.values())
+        ),
+        "dominant_patterns": dominant_patterns,
+    }
+
+
+def campaign_progress_signals(
+    state: Mapping[str, Any],
+    metrics: Mapping[str, Any],
+    config: Mapping[str, Any],
+) -> dict[str, bool]:
+    if not state["cohorts"]:
+        return {
+            "official_score": False,
+            "working_median": False,
+            "novel_archetype": False,
+        }
+    official = _optional_campaign_score(metrics["official_score"], "campaign metric official_score")
+    prior_official = _optional_campaign_score(
+        state["best_official_score"], "campaign best official score"
+    )
+    official_progress = official is not None and (
+        prior_official is None
+        or official - prior_official
+        >= as_decimal(
+            config["campaign_official_improvement"],
+            "config.campaign_official_improvement",
+        )
+    )
+    median = _optional_campaign_score(
+        metrics["top_four_working_median"], "campaign metric working median"
+    )
+    prior_median = _optional_campaign_score(
+        state["best_working_median"], "campaign best working median"
+    )
+    median_progress = median is not None and (
+        prior_median is None
+        or median - prior_median
+        >= as_decimal(
+            config["campaign_working_median_improvement"],
+            "config.campaign_working_median_improvement",
+        )
+    )
+    current_best = _optional_campaign_score(
+        metrics["best_working_score"], "campaign metric best working score"
+    )
+    prior_best = _optional_campaign_score(
+        state["best_working_score"], "campaign best working score"
+    )
+    comparison_best = max(
+        (item for item in (current_best, prior_best) if item is not None),
+        default=None,
+    )
+    seen = set(state["seen_archetypes"])
+    novelty_gap = as_decimal(
+        config["campaign_novelty_score_gap"], "config.campaign_novelty_score_gap"
+    )
+    novel_progress = False
+    if comparison_best is not None:
+        for archetype, raw_score in metrics["archetype_scores"].items():
+            score = _optional_campaign_score(raw_score, f"campaign archetype score {archetype}")
+            if archetype not in seen and score is not None and comparison_best - score <= novelty_gap:
+                novel_progress = True
+                break
+    return {
+        "official_score": official_progress,
+        "working_median": median_progress,
+        "novel_archetype": novel_progress,
+    }
+
+
+def record_campaign_publication(
+    run_dir: Path,
+    manifest: Mapping[str, Any],
+    report: Mapping[str, Any],
+    outcomes_dir: Path,
+) -> dict[str, Any] | None:
+    binding = manifest.get("campaign")
+    if binding is None:
+        return None
+    campaign_dir = resolve_campaign(
+        outcomes_dir.parent / "campaigns", binding["campaign_id"]
+    )
+    report_path = outcomes_dir / report["run_id"] / "report.json"
+    if not report_path.is_file():
+        raise InputError("campaign registration requires the published report")
+    report_digest = sha256_file(report_path)
+    metrics = derive_campaign_cohort_metrics(run_dir, manifest, report)
+    outcome_dir = outcomes_dir / report["run_id"]
+    metric_receipt = build_campaign_metric_receipt(
+        outcome_dir, binding, report["run_id"], report_digest, metrics
+    )
+    metric_path = outcome_dir / "campaign-metrics.json"
+    metric_digest = write_immutable(
+        metric_path, canonical_json_bytes(metric_receipt), root=outcome_dir
+    )
+    with file_lock(campaign_dir / ".campaign.lock", root=campaign_dir):
+        campaign_manifest, state = load_campaign(campaign_dir)
+        reconcile_campaign_events(campaign_dir, campaign_manifest, state)
+        validate_campaign_publication_receipts(
+            campaign_dir, campaign_manifest, state
+        )
+        existing = next(
+            (item for item in state["cohorts"] if item["run_id"] == report["run_id"]),
+            None,
+        )
+        if existing is not None:
+            if (
+                existing["cohort_number"] != binding["cohort_number"]
+                or existing["report_sha256"] != report_digest
+                or existing["metrics_sha256"] != metric_digest
+            ):
+                raise ConflictError("campaign contains a conflicting cohort receipt")
+            return {**existing, "idempotent": True, "campaign_status": state["status"]}
+        if state["status"] != "active":
+            raise ConflictError(f"campaign is already terminal: {state['status']}")
+        if state["active_run_id"] != report["run_id"]:
+            raise ConflictError("published run is not the campaign's active cohort")
+        if state["active_cohort_number"] != binding["cohort_number"]:
+            raise ConflictError("published run cohort number differs from campaign state")
+        signals = campaign_progress_signals(state, metrics, campaign_manifest["config"])
+        made_progress = any(signals.values())
+        if not state["cohorts"]:
+            streak = 0
+        elif made_progress:
+            streak = 0
+        else:
+            streak = state["no_progress_streak"] + 1
+        cohort = {
+            "cohort_number": binding["cohort_number"],
+            "run_id": report["run_id"],
+            "run_status": report["run_status"],
+            "report_path": f"outcomes/{report['run_id']}/report.json",
+            "report_sha256": report_digest,
+            "metrics_path": f"outcomes/{report['run_id']}/campaign-metrics.json",
+            "metrics_sha256": metric_digest,
+            "gap_brief_path": binding["gap_brief_path"],
+            "gap_brief_sha256": binding["gap_brief_sha256"],
+            **metrics,
+            "progress_signals": signals,
+            "made_progress": made_progress,
+            "no_progress_streak": streak,
+        }
+        validate_campaign_cohort(cohort, "campaign cohort receipt", campaign_manifest)
+        validate_campaign_publication_receipts(
+            campaign_dir,
+            campaign_manifest,
+            {**state, "cohorts": [*state["cohorts"], cohort]},
+        )
+        state["cohorts"].append(cohort)
+        state["active_run_id"] = None
+        state["active_cohort_number"] = None
+        state["no_progress_streak"] = streak
+        for state_key, metric_key in (
+            ("best_official_score", "official_score"),
+            ("best_working_median", "top_four_working_median"),
+            ("best_working_score", "best_working_score"),
+        ):
+            current = _optional_campaign_score(state[state_key], f"campaign state {state_key}")
+            observed = _optional_campaign_score(metrics[metric_key], f"campaign metric {metric_key}")
+            if observed is not None and (current is None or observed > current):
+                state[state_key] = decimal_json(observed, quantum=FINAL_QUANTUM)
+        state["seen_archetypes"] = sorted(
+            set(state["seen_archetypes"]) | set(metrics["archetype_scores"])
+        )
+        count = len(state["cohorts"])
+        config = campaign_manifest["config"]
+        if report["run_status"] == "qualified":
+            state["status"] = "qualified"
+        elif count >= config["campaign_max_cohorts"]:
+            state["status"] = "max_cohorts"
+        elif (
+            count >= config["campaign_min_cohorts"]
+            and streak >= config["campaign_plateau_patience"]
+        ):
+            state["status"] = "plateau"
+        state["terminal_reason"] = campaign_terminal_reason(state["status"])
+        save_campaign_state(campaign_dir, state, campaign_manifest)
+        _ensure_campaign_event(
+            campaign_dir,
+            state["campaign_id"],
+            "cohort_published",
+            {
+                "cohort_number": cohort["cohort_number"],
+                "run_id": cohort["run_id"],
+                "run_status": cohort["run_status"],
+                "report_sha256": cohort["report_sha256"],
+                "metrics_sha256": cohort["metrics_sha256"],
+                "made_progress": cohort["made_progress"],
+                "no_progress_streak": cohort["no_progress_streak"],
+                "campaign_status": state["status"],
+            },
+            identity={"cohort_number": cohort["cohort_number"]},
+        )
+        return {**cohort, "idempotent": False, "campaign_status": state["status"]}
+
+
+def campaign_next(campaign_dir: Path) -> dict[str, Any]:
+    with file_lock(campaign_dir / ".campaign.lock", root=campaign_dir):
+        manifest, state = load_campaign(campaign_dir)
+        reconcile_campaign_events(campaign_dir, manifest, state)
+        validate_campaign_publication_receipts(campaign_dir, manifest, state)
+        if state["status"] != "active":
+            return {
+                "campaign_id": state["campaign_id"],
+                "action": "stop",
+                "status": state["status"],
+                "reason": state["terminal_reason"],
+            }
+        if state["active_run_id"] is not None:
+            raise ConflictError(
+                f"campaign cohort is still active: {state['active_run_id']}"
+            )
+        cohort_number = len(state["cohorts"]) + 1
+        if cohort_number == 1:
+            return {
+                "campaign_id": state["campaign_id"],
+                "action": "create_cohort",
+                "cohort_number": 1,
+                "gap_brief_path": None,
+                "gap_brief_sha256": None,
+                "idempotent": True,
+            }
+        latest = state["cohorts"][-1]
+        brief = {
+            "schema_version": 2,
+            "campaign_id": state["campaign_id"],
+            "cohort_number": cohort_number,
+            "deficient_factors": latest["deficient_factors"],
+            "missing_archetypes": latest["missing_archetypes"],
+        }
+        validate_campaign_gap_brief(brief, manifest, cohort_number)
+        relative = f"briefs/cohort-{cohort_number}.json"
+        path = campaign_dir / relative
+        existed = path.exists()
+        digest = write_immutable(path, canonical_json_bytes(brief), root=campaign_dir)
+        if not existed:
+            _ensure_campaign_event(
+                campaign_dir,
+                state["campaign_id"],
+                "gap_brief_created",
+                {"cohort_number": cohort_number, "gap_brief_sha256": digest},
+                identity={"cohort_number": cohort_number},
+            )
+        return {
+            "campaign_id": state["campaign_id"],
+            "action": "create_cohort",
+            "cohort_number": cohort_number,
+            "gap_brief_path": relative,
+            "gap_brief_sha256": digest,
+            "idempotent": existed,
+        }
+
+
+def render_campaign_report(receipt: Mapping[str, Any]) -> str:
+    best_official = receipt["best_official_score"]
+    lines = [
+        "# Opportunity Campaign Outcome",
+        "",
+        f"- Campaign: `{receipt['campaign_id']}`",
+        f"- Status: `{receipt['status']}`",
+        f"- Cohorts: `{receipt['cohort_count']}`",
+        f"- Best official score: `{best_official if best_official is not None else 'N/A'}`",
+        f"- Best working score: `{receipt['best_working_score'] if receipt['best_working_score'] is not None else 'N/A'}`",
+        f"- Quality objective achieved: `{'yes' if receipt['quality_objective_achieved'] else 'no'}`",
+        f"- Campaign manifest SHA-256: `{receipt['campaign_manifest_sha256']}`",
+        f"- Terminal reason: {receipt['terminal_reason']}",
+        "",
+        "## Cohorts",
+        "",
+    ]
+    for cohort in receipt["cohorts"]:
+        lines.append(
+            f"- Cohort {cohort['cohort_number']} `{cohort['run_id']}` — `{cohort['run_status']}`; "
+            f"official `{cohort['official_score'] if cohort['official_score'] is not None else 'N/A'}`, "
+            f"top-four working median `{cohort['top_four_working_median'] if cohort['top_four_working_median'] is not None else 'N/A'}`, "
+            f"patience `{cohort['no_progress_streak']}`."
+        )
+    lines.extend(
+        [
+            "",
+            "## Interpretation",
+            "",
+            (
+                "The campaign found a score-qualified planning-stage opportunity. This is evaluator alignment, not empirical market validation."
+                if receipt["quality_objective_achieved"]
+                else "The configured campaign ended without a strict qualifier. The quality objective is unachieved; recorded scores remain unchanged and no threshold was lowered."
+            ),
+            "",
+        ]
+    )
+    return "\n".join(lines)
+
+
+def finalize_campaign(campaign_dir: Path) -> tuple[dict[str, Any], int]:
+    with file_lock(campaign_dir / ".campaign.lock", root=campaign_dir):
+        manifest, state = load_campaign(campaign_dir)
+        reconcile_campaign_events(campaign_dir, manifest, state)
+        validate_campaign_publication_receipts(campaign_dir, manifest, state)
+        if state["status"] == "active":
+            raise ConflictError("campaign cannot finalize before a deterministic stop condition")
+        manifest_path = campaign_dir / "manifest.json"
+        receipt = {
+            "schema_version": 2,
+            "campaign_id": state["campaign_id"],
+            "status": state["status"],
+            "terminal_reason": state["terminal_reason"],
+            "cohort_count": len(state["cohorts"]),
+            "best_official_score": state["best_official_score"],
+            "best_working_median": state["best_working_median"],
+            "best_working_score": state["best_working_score"],
+            "quality_objective_achieved": state["status"] == "qualified",
+            "campaign_manifest_sha256": sha256_file(manifest_path),
+            "cohorts": state["cohorts"],
+        }
+        expect_object(receipt, "campaign receipt", exact_keys=CAMPAIGN_RECEIPT_KEYS)
+        receipt_path = campaign_dir / "receipt.json"
+        report_path = campaign_dir / "report.md"
+        existed = receipt_path.exists() or report_path.exists()
+        write_immutable(
+            receipt_path, canonical_json_bytes(receipt), root=campaign_dir
+        )
+        write_immutable(
+            report_path, render_campaign_report(receipt).encode("utf-8"), root=campaign_dir
+        )
+        _ensure_campaign_event(
+            campaign_dir,
+            state["campaign_id"],
+            "campaign_finalized",
+            {
+                "status": state["status"],
+                "receipt_sha256": sha256_file(receipt_path),
+            },
+            identity={},
+        )
+        source_paths = [
+            (receipt_path, "receipt.json"),
+            (report_path, "report.md"),
+            (manifest_path, "manifest.json"),
+            (campaign_dir / "events.jsonl", "events.jsonl"),
+            (campaign_dir / "inputs" / "founder.md", "inputs/founder.md"),
+            (campaign_dir / "inputs" / "evaluator.txt", "inputs/evaluator.txt"),
+        ]
+        for brief_path in sorted((campaign_dir / "briefs").glob("cohort-*.json")):
+            source_paths.append(
+                (brief_path, brief_path.relative_to(campaign_dir).as_posix())
+            )
+        outcome = {
+            **receipt,
+            "idempotent": existed,
+        }
+    # Do not hold the campaign lock while taking the publication lock.  Run
+    # publication takes these locks in the opposite phase, so separating them
+    # prevents a campaign/outcome lock cycle.
+    outcomes_dir = campaign_dir.parent.parent / "outcomes"
+    destination = outcomes_dir / "campaigns" / state["campaign_id"]
+    with file_lock(outcomes_dir / ".publish.lock", root=outcomes_dir):
+        for source, relative in source_paths:
+            write_immutable(
+                destination / relative, source.read_bytes(), root=destination
+            )
+    return {
+        **outcome,
+        "outcome_dir": str(destination),
+    }, 0 if state["status"] == "qualified" else 4
 
 
 def check_run(run_dir: Path, config_path: Path | None = None) -> dict[str, Any]:
@@ -3778,6 +6621,48 @@ def check_run(run_dir: Path, config_path: Path | None = None) -> dict[str, Any]:
     ):
         raise InputError("active run contains unreconciled finalization artifacts")
     checked: list[str] = ["manifest.json", "state.json", "events.jsonl"]
+    if manifest.get("campaign") is not None:
+        binding = manifest["campaign"]
+        campaign_dir = resolve_campaign(
+            run_dir.parent.parent / "campaigns", binding["campaign_id"]
+        )
+        with file_lock(campaign_dir / ".campaign.lock", root=campaign_dir):
+            campaign_manifest, campaign_state = load_campaign(campaign_dir)
+            reconcile_campaign_events(campaign_dir, campaign_manifest, campaign_state)
+            validate_campaign_publication_receipts(
+                campaign_dir, campaign_manifest, campaign_state
+            )
+        if campaign_manifest["config"] != manifest["config"]:
+            raise InputError("run config differs from its immutable campaign config")
+        if (
+            campaign_manifest["founder_sha256"]
+            != manifest["source_hashes"]["PERSONALITY_SITUATION.md"]
+            or campaign_manifest["rubric"]["sha256"]
+            != manifest["rubric"]["sha256"]
+            or campaign_manifest["rubric"]["factors"]
+            != manifest["rubric"]["factors"]
+        ):
+            raise InputError("run founder or evaluator snapshot differs from its campaign")
+        if binding["gap_brief_path"] is not None:
+            gap_path = campaign_dir / binding["gap_brief_path"]
+            brief = validate_campaign_gap_brief(
+                load_json(gap_path), campaign_manifest, binding["cohort_number"]
+            )
+            if gap_path.read_bytes() != canonical_json_bytes(brief):
+                raise InputError("run campaign gap brief is not canonical")
+            if sha256_file(gap_path) != binding["gap_brief_sha256"]:
+                raise InputError("run campaign gap brief hash differs from its manifest")
+        recorded = any(
+            item["run_id"] == state["run_id"]
+            and item["cohort_number"] == binding["cohort_number"]
+            for item in campaign_state["cohorts"]
+        )
+        active = (
+            campaign_state["active_run_id"] == state["run_id"]
+            and campaign_state["active_cohort_number"] == binding["cohort_number"]
+        )
+        if not (recorded or active):
+            raise InputError("run is not attached to its campaign ledger")
     for source, snapshot in INPUT_SNAPSHOTS.items():
         snapshot_path = run_dir / snapshot
         if not snapshot_path.is_file():
@@ -3868,7 +6753,19 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--runs-dir", type=Path, default=DEFAULT_RUNS_DIR, help="run storage directory")
     subparsers = parser.add_subparsers(dest="command", required=True)
 
-    subparsers.add_parser("new", help="create a new immutable run manifest")
+    new = subparsers.add_parser("new", help="create a new immutable run manifest")
+    new.add_argument("--campaign", help="attach this run as the next campaign cohort")
+
+    campaign = subparsers.add_parser("campaign", help="create and advance a scored multi-cohort campaign")
+    campaign_commands = campaign.add_subparsers(dest="campaign_command", required=True)
+    campaign_commands.add_parser("new", help="create a new immutable campaign ledger")
+    campaign_status_parser = campaign_commands.add_parser("status", help="show campaign status")
+    campaign_status_parser.add_argument("campaign")
+    campaign_status_parser.add_argument("--json", action="store_true", help="include campaign manifest and state")
+    campaign_next_parser = campaign_commands.add_parser("next", help="return the deterministic next campaign action")
+    campaign_next_parser.add_argument("campaign")
+    campaign_finalize_parser = campaign_commands.add_parser("finalize", help="write a terminal campaign receipt")
+    campaign_finalize_parser.add_argument("campaign")
 
     status = subparsers.add_parser("status", help="show run status")
     status.add_argument("run")
@@ -3883,13 +6780,13 @@ def build_parser() -> argparse.ArgumentParser:
     job.add_argument("action", choices=("start", "complete", "fail"))
     job.add_argument("--stage", choices=STAGES)
     job.add_argument("--input", type=Path)
-    job.add_argument("--kind", choices=("candidate", "research", "evaluation", "generic"))
+    job.add_argument("--kind", choices=tuple(sorted(ARTIFACT_KINDS)))
     job.add_argument("--error")
 
     validate = subparsers.add_parser("validate", help="validate an artifact without storing it")
     validate.add_argument("run")
     validate.add_argument("--input", type=Path, required=True)
-    validate.add_argument("--kind", choices=("candidate", "research", "evaluation", "generic"), required=True)
+    validate.add_argument("--kind", choices=tuple(sorted(ARTIFACT_KINDS)), required=True)
 
     dedup = subparsers.add_parser("dedup", help="deduplicate discovery candidates by structural fingerprint")
     dedup.add_argument("run")
@@ -3908,7 +6805,7 @@ def build_parser() -> argparse.ArgumentParser:
 
     finalize = subparsers.add_parser("finalize", help="apply native and binding external score gates")
     finalize.add_argument("run")
-    finalize.add_argument("--no-qualifier-reason")
+    finalize.add_argument("--no-finalist-reason")
     finalize.add_argument("--best-candidate")
 
     publish = subparsers.add_parser("publish", help="publish any terminal outcome idempotently")
@@ -3928,9 +6825,26 @@ def emit(value: Mapping[str, Any], *, stream: Any | None = None) -> None:
 def dispatch(args: argparse.Namespace) -> int:
     config_path = args.config.resolve()
     runs_dir = args.runs_dir.resolve()
+    campaigns_dir = campaign_storage_for_runs(runs_dir).resolve()
     if args.command == "new":
-        emit(make_run(config_path, runs_dir))
+        emit(make_run(config_path, runs_dir, args.campaign, campaigns_dir))
         return 0
+    if args.command == "campaign":
+        if args.campaign_command == "new":
+            emit(new_campaign(config_path, campaigns_dir))
+            return 0
+        campaign_dir = resolve_campaign(campaigns_dir, args.campaign)
+        if args.campaign_command == "status":
+            emit(campaign_status(campaign_dir, args.json))
+            return 0
+        if args.campaign_command == "next":
+            emit(campaign_next(campaign_dir))
+            return 0
+        if args.campaign_command == "finalize":
+            result, code = finalize_campaign(campaign_dir)
+            emit(result)
+            return code
+        raise InputError(f"unknown campaign command: {args.campaign_command}")
     if args.command == "check" and args.run is None:
         emit(check_environment(config_path))
         return 0
@@ -3974,7 +6888,7 @@ def dispatch(args: argparse.Namespace) -> int:
         emit(import_external(run_dir, args.candidate_id, args.raw_response.resolve()))
         return 0
     if args.command == "finalize":
-        result, code = finalize_run(run_dir, args.no_qualifier_reason, args.best_candidate)
+        result, code = finalize_run(run_dir, args.no_finalist_reason, args.best_candidate)
         emit(result)
         return code
     if args.command == "publish":

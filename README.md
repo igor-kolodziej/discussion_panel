@@ -1,130 +1,116 @@
 # Business Opportunity Workflow
 
-This repository runs an evidence-led, founder-specific business-opportunity process in Codex. Native subagents do bounded discovery, research, and independent judgment. `scripts/opportunity.py` keeps the run state deterministic, validated, resumable, and auditable.
+This repository runs evidence-led, founder-specific opportunity campaigns in Codex. Native subagents perform bounded discovery, research, construction, and independent judgment. `scripts/opportunity.py` owns deterministic state, validation, scoring, campaign patience, and publication.
 
-The workflow can end honestly without a qualifying opportunity. Two fresh native holdout judges provide the required independent confirmation; working scores are development feedback. External holdouts are optional, but every successfully imported valid external score is binding.
+Every researched candidate receives a working score. Working scores guide development but never confirm an opportunity. Final qualification requires fresh native holdouts and any binding external result. A campaign may finish without a qualifier, but it cannot report an unexplained scoreless `no_qualifier`.
 
 ## Start In Codex
 
-Ask Codex:
+For the normal multi-cohort workflow, ask:
 
 ```text
-Use $business-opportunity to start a new opportunity run.
+Use $business-opportunity to start a new scored opportunity campaign.
 ```
 
-To continue an interrupted run, give the run ID:
+The skill reads the canonical founder profile, evaluator, configuration, and artifact contracts. It keeps discovery blind, uses fresh role-separated subagents, and follows CLI state rather than chat history.
+
+## Campaign Commands
+
+Create a campaign and attach its first cohort:
 
 ```text
-Use $business-opportunity to resume <run-id>.
+python3 scripts/opportunity.py campaign new
+python3 scripts/opportunity.py new --campaign <campaign-id>
 ```
 
-## Operator Commands
+Inspect campaign state, obtain the deterministic next action and sanitized brief, or finalize a terminal campaign:
 
-Create a run:
+```text
+python3 scripts/opportunity.py campaign status <campaign-id>
+python3 scripts/opportunity.py campaign next <campaign-id>
+python3 scripts/opportunity.py campaign finalize <campaign-id>
+```
+
+`campaign next` is the sole continuation decision and brief generator. A continuation brief contains factor gaps and missing semantic archetypes, never candidate identities, scores, rankings, qualification rules, or holdout feedback. The first cohort has no prior brief. The policy values live only in `config/opportunity-workflow.json`.
+
+Campaign state is generated under `campaigns/<campaign-id>/`. Its founder profile, evaluator, and policy are snapshotted for the whole campaign. Each published cohort is recorded idempotently with score coverage and an immutable `campaign-metrics.json` that hash-binds progress metrics to the complete published evidence set. Finalization publishes an auditable bundle to tracked `outcomes/campaigns/<campaign-id>/`: receipt, report, manifest, events, canonical input snapshots, and sanitized continuation briefs.
+
+## Cohort Commands
+
+Create a standalone cohort only when a campaign is not requested:
 
 ```text
 python3 scripts/opportunity.py new
 ```
 
-The command creates `runs/<utc-run-id>/` and snapshots the canonical founder profile, evaluator, and workflow config. Use the emitted run ID in later commands.
-
-Inspect or resume it:
+Inspect or recover a cohort:
 
 ```text
 python3 scripts/opportunity.py status <run-id>
 python3 scripts/opportunity.py status <run-id> --json
 python3 scripts/opportunity.py resume <run-id>
+python3 scripts/opportunity.py check <run-id>
 ```
 
-The skill normally drives the remaining state transitions. Useful recovery and validation commands are:
+The skill drives discovery, deduplication, shortlist binding, research, working evaluation, construction, re-evaluation, freeze, and holdout. Relevant deterministic commands include:
 
 ```text
-python3 scripts/opportunity.py check <run-id>
 python3 scripts/opportunity.py dedup <run-id>
 python3 scripts/opportunity.py advance <run-id>
-```
-
-If configured limits are exhausted before holdout, first finish or exhaust every current-stage job, then close honestly with a specific evidence-backed reason:
-
-```text
-python3 scripts/opportunity.py finalize <run-id> --no-qualifier-reason "<reason>"
-```
-
-If more than one candidate exists at the strongest current stage, also pass `--best-candidate <candidate-id>`. This makes the preserved best candidate, primary limiter, contrary evidence, and reopen condition explicit. Non-qualification is still a successful workflow outcome; inspect and publish its reports rather than adding another unconfigured generation loop.
-
-Run any command with `--help` before supplying non-default paths. Global options such as `--config` and `--runs-dir` must precede the subcommand.
-
-## Independent Holdout
-
-After development, the skill freezes each finalist. For every frozen candidate, it generates one evidence packet bound to the run's immutable founder and evaluator snapshots and canonical candidate-lineage research. Two fresh native judges evaluate that same packet independently through normal evaluation jobs. They do not see development scores, rankings, the qualification rule, selection rationale, or each other's output.
-
-Materialize the deterministic packet for each frozen candidate:
-
-```text
 python3 scripts/opportunity.py export-external <run-id> <candidate-id>
-```
-
-Despite the command name, packet generation is required for native holdout and does not require an external judge. The packet and response contract are written to `runs/<run-id>/exports/<candidate-id>/`.
-
-Use `status` to inspect the holdout job records. The main agent preserves each raw return and records its canonical result with the CLI job contract and `--kind evaluation`; malformed or incomplete results fail visibly rather than becoming scores.
-
-### Optional External Holdout
-
-To add an external browser judge, submit the same packet in a fresh conversation, save the complete raw response, and import it without editing:
-
-```text
-python3 scripts/opportunity.py import-external <run-id> <candidate-id> <raw-response-file>
-```
-
-External evaluation is optional. A malformed or incomplete response is preserved as a visible rejected import and contributes no score. Every successfully imported valid score is binding, including an adverse one; it cannot be replaced by a working evaluation or selectively ignored.
-
-If holdout feedback causes any candidate change, preserve the failed frozen version and create a new version in a new run with fresh judges. A revised dossier cannot reuse the current run's holdouts.
-
-Finalize after the required native holdouts and any optional external import are complete:
-
-```text
 python3 scripts/opportunity.py finalize <run-id>
-```
-
-Inspect `runs/<run-id>/final/report.json` and the concise `runs/<run-id>/report.md`, then publish the terminal result:
-
-```text
 python3 scripts/opportunity.py publish <run-id>
 ```
 
-Published results appear under `outcomes/<run-id>/`, including honest non-confirmation and contested outcomes. Only a score-qualified dossier carries the label `score-qualified under holistic-11; not empirically market-validated`.
+Use `--help` before non-default inputs. Global options precede the subcommand.
+For both cohort and campaign finalization, exit code `4` denotes a validated terminal result without a qualifier; it is not an integrity failure. Inspect and publish the emitted result. Input and state conflicts use different exit codes.
 
-`runs/<run-id>/` is resumable working state. Keep it while a run is active, failed,
-interrupted, or unpublished. After a terminal run passes `check` and `publish`, its
-published outcome and history entry are canonical and the raw run directory may be
-deleted.
+The only scoreless schema-v2 closure is an all-direct-fatal decision after fully scored research:
+
+```text
+python3 scripts/opportunity.py finalize <run-id> --no-finalist-reason "<evidence-backed reason>"
+```
+
+Once development begins, the deterministic top final versions continue through holdout.
+
+## Decision Integrity
+
+Research is bound to immutable `portfolio/selection.json`; substitutions require a chained versioned amendment. Exact fingerprint uniqueness and semantic portfolio variety are distinct measurements. Every candidate also declares its commercial archetype, control point, and critical dependency.
+
+Every researched candidate must have complete canonical working-evaluation coverage. The CLI ranks eligible development candidates by recomputed working score, Economics, Distribution, initial cash, and stable ID. Each selected candidate receives one constructor result and a fresh evaluation of its final development version.
+
+Missing customer proof or partner commitment remains uncertainty. Only direct evidence of illegality, unobtainable essential rights, impossible conservative economics, or non-delegable founder incompatibility is a fatal research stop.
+
+For each frozen finalist, the CLI exports one packet bound to the run's immutable founder and evaluator snapshots, exact candidate version, and lineage research. Fresh native judges receive the same packet independently. Optional external responses use that packet and become binding once validly imported.
+
+## Terminal Results
+
+- `qualified`: the selected frozen candidate passes the configured strict rule; publication labels it as score-qualified, not empirically market-validated.
+- `no_qualifier`: at least one finalist completed required holdouts, but none passed.
+- `no_finalist`: all required working evaluations exist, but no candidate reached holdout; official score fields are null.
+- `contested`: a binding result prevents confirmation.
+
+Published reports include the structured portfolio decision, evaluation coverage, highest working score, terminal stage, holdout evidence where present, and reopen conditions. They do not depend on links into disposable raw-run directories.
 
 ## Sources Of Truth
 
 - Founder fit: `PERSONALITY_SITUATION.md`
 - Evaluator: `Personalities/ZeroToOne.txt`
-- Workflow configuration: `config/opportunity-workflow.json`
-- Operational workflow: `.agents/skills/business-opportunity/SKILL.md`
-- Active historical learning: `knowledge/failure_patterns.md` and `knowledge/history_index.jsonl`
-- State, artifact contracts, and validation: `scripts/opportunity.py`
+- Workflow and campaign policy: `config/opportunity-workflow.json`
+- Agent workflow: `.agents/skills/business-opportunity/SKILL.md`
+- Historical memory: `knowledge/failure_patterns.md` and `knowledge/history_index.jsonl`
+- State and schema validation: `scripts/opportunity.py`
 
-Do not copy their numeric values into another prompt. `prompts/PromoLeak/` is a separate execution playbook and is never loaded by this discovery workflow.
+Do not copy numeric canonical values into prompts or documentation. `prompts/PromoLeak/` and its preserved dossier are a separate execution playbook and never enter this workflow.
 
-## Historical Memory
+## Storage And Verification
 
-`knowledge/history_index.jsonl` contains compact, candidate-level fingerprints and
-run summaries retained from the configured historical window. Legacy scores keep
-their original rubric, role, and scale and are never converted into current held-out
-scores. `knowledge/failure_patterns.md` is the small cross-run challenge catalog.
-
-Raw pre-cleanup evidence is outside the active workflow and can be recovered from
-Git tag `pre-cleanup-20260825T080643Z`. The only older raw dossier retained in the
-working tree is `ideas/CONFIRMED_IDEA_20260511_113716.md`, because the separate
-PromoLeak playbook uses it.
-
-## Verification
+Keep an active, failed, interrupted, or unpublished `runs/<run-id>/`. After a terminal cohort passes `check` and `publish`, its outcome and history row are canonical and the raw run may be deleted. Campaign state remains until its terminal receipt validates.
 
 ```text
 python3 scripts/opportunity.py check
 python3 -m unittest discover -s tests -v
 ```
+
+Raw pre-cleanup evidence remains recoverable from the Git checkpoint recorded in `knowledge/history_index.jsonl`.
+That checkpoint is also the authority for schema-v1 archaeology; the active workflow creates schema-v2 artifacts.

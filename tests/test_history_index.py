@@ -1,11 +1,14 @@
 from __future__ import annotations
 
 from collections import Counter
+from decimal import Decimal, ROUND_HALF_UP
 import hashlib
 import json
 from pathlib import Path
 import re
 import unittest
+
+from scripts import opportunity as op
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -77,14 +80,20 @@ class HistoryIndexContractTest(unittest.TestCase):
         cls.outcomes = [
             row for row in cls.rows if row.get("record_type") == "opportunity_outcome_v1"
         ]
+        cls.corrections = [
+            row
+            for row in cls.rows
+            if row.get("record_type") == "opportunity_outcome_correction_v2"
+        ]
 
     def test_digest_is_compact_canonical_and_complete(self) -> None:
         self.assertLess(INDEX_PATH.stat().st_size, 1_000_000)
-        self.assertEqual(len(self.rows), 223)
+        self.assertEqual(len(self.rows), 224)
         self.assertEqual(len(self.meta), 1)
         self.assertEqual(len(self.run_rows), 6)
         self.assertEqual(len(self.candidates), 215)
         self.assertEqual(len(self.outcomes), 1)
+        self.assertEqual(len(self.corrections), 1)
         self.assertEqual(
             {row["record_type"] for row in self.rows},
             {
@@ -92,6 +101,7 @@ class HistoryIndexContractTest(unittest.TestCase):
                 "legacy_run_digest_v1",
                 "legacy_candidate_v1",
                 "opportunity_outcome_v1",
+                "opportunity_outcome_correction_v2",
             },
         )
         for line, row in zip(self.lines, self.rows, strict=True):
@@ -115,6 +125,9 @@ class HistoryIndexContractTest(unittest.TestCase):
         self.assertEqual(verification["run_digests"], len(self.run_rows))
         self.assertEqual(verification["candidate_digests"], len(self.candidates))
         self.assertEqual(verification["opportunity_outcomes"], len(self.outcomes))
+        self.assertEqual(
+            verification["opportunity_outcome_corrections"], len(self.corrections)
+        )
         self.assertEqual(verification["candidate_counts_by_run"], EXPECTED_CANDIDATES)
         self.assertEqual(verification["checkpoint_run_trees_verified"], 6)
         self.assertEqual(verification["checkpoint_run_tree_files_verified"], 333)
@@ -209,7 +222,7 @@ class HistoryIndexContractTest(unittest.TestCase):
                 if row[key] is None:
                     self.assertTrue(row[f"{key}_reason"], (identity, key))
 
-    def test_native_outcome_remains_bound_to_published_files(self) -> None:
+    def test_native_outcome_correction_supersedes_research_only_publication(self) -> None:
         row = self.outcomes[0]
         self.assertEqual(set(row), OUTCOME_FIELDS)
         self.assertEqual(row["score_scale"], "/10")
@@ -218,9 +231,26 @@ class HistoryIndexContractTest(unittest.TestCase):
         self.assertIsNone(row["qualification_label"])
         self.assertRegex(row["rubric_sha256"], r"^[0-9a-f]{64}$")
         self.assertRegex(row["report_sha256"], r"^[0-9a-f]{64}$")
-        outcome = ROOT / row["outcome_path"]
+        correction = self.corrections[0]
+        self.assertEqual(correction["run_id"], row["run_id"])
+        self.assertEqual(correction["supersedes_record_type"], row["record_type"])
+        self.assertEqual(correction["superseded_report_sha256"], row["report_sha256"])
+        self.assertEqual(correction["corrected_run_status"], "no_finalist")
+        self.assertEqual(correction["legacy_execution_class"], "research-only")
+        self.assertIsNone(correction["official_score"])
+        self.assertEqual(correction["evaluation_coverage"]["researched_candidates"], 8)
+        self.assertEqual(correction["evaluation_coverage"]["working_evaluations_completed"], 0)
+        self.assertIn("zero evaluations", correction["reason"])
+        outcome = ROOT / correction["outcome_path"]
         self.assertTrue(outcome.is_dir())
-        self.assertEqual(sha256_file(outcome / "report.json"), row["report_sha256"])
+        self.assertEqual(
+            sha256_file(outcome / "report.json"), correction["corrected_report_sha256"]
+        )
+        report = json.loads((outcome / "report.json").read_text(encoding="utf-8"))
+        self.assertEqual(report["run_status"], "no_finalist")
+        self.assertEqual(report["legacy_execution_class"], "research-only")
+        self.assertEqual(report["correction"]["superseded_report_sha256"], row["report_sha256"])
+        self.assertIn("N/A is not a score of zero", report["correction"]["reason"])
         candidate = outcome / row["source_candidate_path"]
         self.assertTrue(candidate.is_file())
         self.assertEqual(sha256_file(candidate), row["source_candidate_sha256"])
@@ -249,6 +279,50 @@ class HistoryIndexContractTest(unittest.TestCase):
                 for row in self.rows
             )
         )
+
+    def test_legacy_research_diagnostic_scores_are_bound_and_nonqualifying(self) -> None:
+        path = ROOT / "benchmarks/legacy-20260824-working-evaluations.json"
+        benchmark = json.loads(path.read_text(encoding="utf-8"))
+        self.assertFalse(benchmark["qualification_eligible"])
+        self.assertEqual(benchmark["evaluation_type"], "diagnostic_working")
+        self.assertIn("cannot qualify", benchmark["qualification_note"])
+        self.assertEqual(
+            benchmark["rubric_sha256"],
+            sha256_file(ROOT / "Personalities/ZeroToOne.txt"),
+        )
+        self.assertEqual(
+            benchmark["founder_sha256"],
+            sha256_file(ROOT / "PERSONALITY_SITUATION.md"),
+        )
+        weights, _ = op.parse_rubric(ROOT / "Personalities/ZeroToOne.txt")
+        expected_scores = {
+            "spend-02": Decimal("4.5"),
+            "spend-03": Decimal("3.8"),
+            "spend-06": Decimal("4.1"),
+            "spend-08": Decimal("4.1"),
+        }
+        self.assertEqual(
+            {item["candidate_id"] for item in benchmark["evaluations"]},
+            set(expected_scores),
+        )
+        for evaluation in benchmark["evaluations"]:
+            candidate_id = evaluation["candidate_id"]
+            for source_key in ("source_candidate", "source_research"):
+                source = evaluation[source_key]
+                self.assertEqual(sha256_file(ROOT / source["path"]), source["sha256"])
+            factors = {item["name"]: item for item in evaluation["factors"]}
+            self.assertEqual(set(factors), {name for name, _ in weights})
+            self.assertTrue(all(item["status"] == "scored" for item in factors.values()))
+            base = sum(
+                Decimal(str(factors[name]["score"])) * weight
+                for name, weight in weights
+            ) / Decimal(100)
+            adjusted = base + Decimal(str(evaluation["interaction_adjustment"]))
+            constrained = min(Decimal(10), max(Decimal(1), adjusted))
+            final_score = constrained.quantize(Decimal("0.1"), rounding=ROUND_HALF_UP)
+            self.assertEqual(Decimal(str(evaluation["weighted_base_score"])), base)
+            self.assertEqual(Decimal(str(evaluation["final_score"])), final_score)
+            self.assertEqual(final_score, expected_scores[candidate_id])
 
 
 if __name__ == "__main__":

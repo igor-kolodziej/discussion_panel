@@ -55,9 +55,10 @@ class OpportunityTestCase(unittest.TestCase):
         capital: object = 100000,
     ) -> dict:
         seed = fingerprint_seed or candidate_id
+        schema_version = json.loads(op.DEFAULT_CONFIG.read_text(encoding="utf-8"))["schema_version"]
         sources = [] if stage == "discovery" else [f"source-{index}" for index in range(6)]
         return {
-            "schema_version": 1,
+            "schema_version": schema_version,
             "candidate_id": candidate_id,
             "version": version,
             "parent": parent,
@@ -71,6 +72,11 @@ class OpportunityTestCase(unittest.TestCase):
                 "offer_and_business_model": f"managed evidence service subscription {seed}",
                 "distribution_mechanism": f"specialist broker referral {seed}",
                 "compounding_advantage": f"accepted case memory {seed}",
+            },
+            "structure": {
+                "commercial_archetype": f"specialist workflow assurance {seed}",
+                "control_point": f"accepted incident evidence {seed}",
+                "critical_dependency": f"broker access agreement {seed}",
             },
             "founder_fit": ["AI-assisted research", "Warsaw base"],
             "source_refs": sources,
@@ -120,7 +126,7 @@ class OpportunityTestCase(unittest.TestCase):
             for index in range(6)
         ]
         return {
-            "schema_version": 1,
+            "schema_version": candidate["schema_version"],
             "candidate_id": candidate["candidate_id"],
             "candidate_version": candidate["version"],
             "candidate_sha256": op.sha256_file(path),
@@ -143,6 +149,119 @@ class OpportunityTestCase(unittest.TestCase):
         path = self.run_dir / op.research_relpath(canonical["candidate_id"], canonical["candidate_version"])
         op.write_immutable(path, op.canonical_json_bytes(canonical))
         return path
+
+    def candidate_ref(self, candidate: dict) -> dict:
+        path = self.run_dir / op.candidate_relpath(candidate["candidate_id"], candidate["version"])
+        return {
+            "candidate_id": candidate["candidate_id"],
+            "version": candidate["version"],
+            "candidate_sha256": op.sha256_file(path),
+        }
+
+    def complete_json_job(
+        self,
+        job_id: str,
+        kind: str,
+        payload: dict,
+        *,
+        stage: str | None = None,
+    ) -> dict:
+        if stage is not None:
+            self.set_stage(stage)
+        path = self.root / f"{job_id}.json"
+        path.write_text(json.dumps(payload), encoding="utf-8")
+        op.start_job(self.run_dir, job_id, stage)
+        return op.complete_job(self.run_dir, job_id, path, kind)
+
+    def store_portfolio_selection(self, candidates: list[dict]) -> dict:
+        payload = {
+            "schema_version": 2,
+            "selection_version": 1,
+            "candidate_refs": [self.candidate_ref(candidate) for candidate in candidates],
+            "missing_archetypes": [],
+            "rationale": "A bounded shortlist spanning materially different commercial structures.",
+        }
+        return self.complete_json_job(
+            "portfolio-selection",
+            "portfolio-selection",
+            payload,
+            stage="calibration",
+        )
+
+    def portfolio_decision(self, candidates: list[dict], develop_ids: set[str]) -> dict:
+        return {
+            "schema_version": 2,
+            "candidate_decisions": [
+                {
+                    "candidate_id": candidate["candidate_id"],
+                    "candidate_version": candidate["version"],
+                    "candidate_sha256": self.candidate_ref(candidate)["candidate_sha256"],
+                    "disposition": "develop" if candidate["candidate_id"] in develop_ids else "not_selected",
+                    "fatal_reason": None,
+                    "fatal_claim_ids": [],
+                    "rationale": "Selected by the deterministic working-score ranking."
+                    if candidate["candidate_id"] in develop_ids
+                    else "Outside the bounded deterministic development prefix.",
+                }
+                for candidate in candidates
+            ],
+        }
+
+    def development_result(
+        self,
+        candidate: dict,
+        *,
+        constructor_id: str,
+        outcome: str = "no_valid_redesign",
+        base_candidate: dict | None = None,
+    ) -> dict:
+        base = base_candidate or candidate
+        return {
+            "schema_version": 2,
+            "candidate_id": candidate["candidate_id"],
+            "base_candidate_version": base["version"],
+            "base_candidate_sha256": self.candidate_ref(base)["candidate_sha256"],
+            "outcome": outcome,
+            "final_candidate_version": candidate["version"],
+            "final_candidate_sha256": self.candidate_ref(candidate)["candidate_sha256"],
+            "constructor_id": constructor_id,
+            "rationale": "One bounded constructor pass found no defensible structural redesign."
+            if outcome == "no_valid_redesign"
+            else "One bounded constructor pass produced the recorded structural redesign.",
+        }
+
+    def prepare_fatal_research_closure(self, candidate_id: str = "alpha") -> dict:
+        discovery = self.candidate(candidate_id)
+        self.store_candidate(discovery)
+        self.store_portfolio_selection([discovery])
+        self.set_stage("research")
+        researched = self.candidate(
+            candidate_id,
+            version=2,
+            stage="research",
+            parent={"candidate_id": candidate_id, "version": 1},
+        )
+        self.store_candidate(researched)
+        self.store_research(self.research(researched))
+        self.store_evaluation(
+            self.evaluation_input(
+                researched,
+                f"research-judge-{candidate_id}",
+                score=6.5,
+                evaluation_type="working",
+            )
+        )
+        decision = self.portfolio_decision([researched], set())
+        decision["candidate_decisions"][0].update(
+            {
+                "disposition": "fatal",
+                "fatal_reason": "impossible_conservative_economics",
+                "fatal_claim_ids": ["research-claim-1"],
+                "rationale": "Direct sourced evidence makes the conservative unit economics impossible.",
+            }
+        )
+        self.complete_json_job("portfolio-decision", "portfolio-decision", decision)
+        return researched
 
     def evaluation_input(
         self,
@@ -172,7 +291,7 @@ class OpportunityTestCase(unittest.TestCase):
                 }
             )
         evaluation = {
-            "schema_version": 1,
+            "schema_version": candidate["schema_version"],
             "candidate_id": candidate["candidate_id"],
             "candidate_version": candidate["version"],
             "candidate_sha256": op.sha256_file(candidate_path),
@@ -233,7 +352,31 @@ class OpportunityTestCase(unittest.TestCase):
             canonical["judge_id"],
         )
         op.write_immutable(path, op.canonical_json_bytes(canonical))
+        if canonical["evaluation_type"] == "holdout_native" and manifest["config"]["schema_version"] == 2:
+            self.ensure_direct_portfolio_contracts()
         return path, canonical
+
+    def ensure_direct_portfolio_contracts(self) -> None:
+        manifest, _ = self.load()
+        selection_path = self.run_dir / "portfolio/selection.json"
+        discoveries = [candidate for _, candidate in op.latest_candidates_for_stage(self.run_dir, manifest, "discovery")]
+        if not selection_path.exists():
+            selection = {
+                "schema_version": 2,
+                "selection_version": 1,
+                "candidate_refs": [self.candidate_ref(candidate) for candidate in discoveries],
+                "missing_archetypes": [],
+                "rationale": "Canonical test shortlist covering every direct-lineage fixture candidate.",
+            }
+            canonical_selection = op.validate_portfolio_selection(selection, manifest, self.run_dir)
+            op.write_immutable(selection_path, op.canonical_json_bytes(canonical_selection))
+        decision_path = self.run_dir / "portfolio/development-decision.json"
+        if not decision_path.exists():
+            researched = [candidate for _, candidate in op.latest_candidates_for_stage(self.run_dir, manifest, "research")]
+            develop_ids = {candidate["candidate_id"] for candidate in researched}
+            decision = self.portfolio_decision(researched, develop_ids)
+            canonical_decision = op.validate_portfolio_decision(decision, manifest, self.run_dir)
+            op.write_immutable(decision_path, op.canonical_json_bytes(canonical_decision))
 
     def store_complete_lineage(
         self,
@@ -252,6 +395,14 @@ class OpportunityTestCase(unittest.TestCase):
         )
         self.store_candidate(researched)
         self.store_research(self.research(researched))
+        self.store_evaluation(
+            self.evaluation_input(
+                researched,
+                f"working-research-{candidate_id}",
+                score=7.8,
+                evaluation_type="working",
+            )
+        )
         developed = self.candidate(
             candidate_id,
             stage="development",
@@ -267,6 +418,15 @@ class OpportunityTestCase(unittest.TestCase):
                 score=8,
                 evaluation_type="working",
             )
+        )
+        result = self.development_result(
+            developed,
+            constructor_id=f"constructor-{candidate_id}",
+        )
+        canonical_result = op.validate_development_result(result, self.load()[0], self.run_dir)
+        op.write_immutable(
+            self.run_dir / f"development/{candidate_id}/constructor-result.json",
+            op.canonical_json_bytes(canonical_result),
         )
         frozen = self.candidate(
             candidate_id,
@@ -577,7 +737,7 @@ class RunAndStateTests(OpportunityTestCase):
         self.assertTrue(op.check_run(self.run_dir, op.DEFAULT_CONFIG)["valid"])
 
     def test_finalize_event_failure_leaves_visible_recoverable_artifacts(self) -> None:
-        self.set_stage("research")
+        self.prepare_fatal_research_closure()
         with mock.patch.object(op, "append_event", side_effect=OSError("simulated final event failure")):
             with self.assertRaisesRegex(OSError, "simulated final event failure"):
                 op.finalize_run(self.run_dir, "No viable researched candidate remained")
@@ -591,7 +751,7 @@ class RunAndStateTests(OpportunityTestCase):
         self.assertTrue(op.check_run(self.run_dir, op.DEFAULT_CONFIG)["valid"])
 
     def test_finalize_state_failure_after_event_is_reconciled(self) -> None:
-        self.set_stage("research")
+        self.prepare_fatal_research_closure()
         original_save_state = op.save_state
         with mock.patch.object(op, "save_state", side_effect=OSError("simulated final state failure")):
             with self.assertRaisesRegex(OSError, "simulated final state failure"):
@@ -621,21 +781,36 @@ class RunAndStateTests(OpportunityTestCase):
         self.assertFalse((outside / "v1.json").exists())
 
     def test_exhausted_failure_does_not_block_independent_completed_work(self) -> None:
-        self.set_stage("development")
         discovery = self.candidate(stage="discovery")
         self.store_candidate(discovery)
-        researched = self.candidate(
-            version=2,
-            stage="research",
-            parent={"candidate_id": "alpha", "version": 1},
-        )
+        self.store_portfolio_selection([discovery])
+        self.set_stage("research")
+        researched = self.candidate(version=2, stage="research", parent={"candidate_id": "alpha", "version": 1})
         self.store_candidate(researched)
+        self.store_research(self.research(researched))
+        self.store_evaluation(
+            self.evaluation_input(researched, "research-judge-alpha", score=8, evaluation_type="working")
+        )
+        self.complete_json_job(
+            "portfolio-decision",
+            "portfolio-decision",
+            self.portfolio_decision([researched], {"alpha"}),
+        )
+        op.advance_run(self.run_dir)
         developed = self.candidate(
             version=3,
             stage="development",
             parent={"candidate_id": "alpha", "version": 2},
         )
-        self.store_candidate(developed)
+        self.complete_json_job("develop-alpha", "candidate", developed)
+        self.store_evaluation(
+            self.evaluation_input(developed, "development-judge-alpha", score=8, evaluation_type="working")
+        )
+        self.complete_json_job(
+            "constructor-alpha",
+            "development-result",
+            self.development_result(developed, constructor_id="constructor-agent-alpha"),
+        )
         good = self.root / "good.md"
         good.write_text("independent completed evidence", encoding="utf-8")
         op.start_job(self.run_dir, "good-candidate", None)
@@ -647,33 +822,26 @@ class RunAndStateTests(OpportunityTestCase):
         advanced = op.advance_run(self.run_dir)
         self.assertEqual(advanced["stage"], "frozen")
 
-    def test_early_no_qualifier_closes_and_publishes_idempotently(self) -> None:
-        discovery = self.candidate()
-        self.store_candidate(discovery)
-        candidate = self.candidate(
-            version=2,
-            stage="research",
-            parent={"candidate_id": "alpha", "version": 1},
-        )
-        self.store_candidate(candidate)
-        self.store_research(self.research(candidate))
-        self.set_stage("research")
+    def test_no_finalist_closes_and_publishes_idempotently(self) -> None:
+        candidate = self.prepare_fatal_research_closure()
         report, code = op.finalize_run(self.run_dir, "Bounded discovery produced no viable shortlist")
         self.assertEqual(code, 4)
-        self.assertEqual(report["run_status"], "no_qualifier")
+        self.assertEqual(report["run_status"], "no_finalist")
         self.assertEqual(report["strongest_candidates"][0]["candidate_id"], "alpha")
         self.assertEqual(report["selected_candidate_id"], "alpha")
         self.assertEqual(report["selected_candidate_version"], 2)
         self.assertEqual(
-            report["binding_limiters"],
-            ["Bounded discovery produced no viable shortlist"],
+            report["binding_limiters"][0],
+            "Bounded discovery produced no viable shortlist",
         )
+        self.assertIn("Specific limiter identified by research-judge-alpha.", report["binding_limiters"])
         self.assertTrue(report["strongest_candidates"][0]["is_selected"])
         self.assertTrue(report["strongest_candidates"][0]["contrary_evidence"])
         self.assertIn("Reopen only with new evidence", report["strongest_candidates"][0]["reopen_condition"])
         self.assertIsNone(report["qualification_label"])
         markdown = (self.run_dir / "report.md").read_text(encoding="utf-8")
-        self.assertIn("no score-qualified candidate", markdown)
+        self.assertIn("No candidate reached held-out evaluation", markdown)
+        self.assertIn("N/A, not zero", markdown)
         self.assertNotIn("A score-qualified result passed", markdown)
         first = op.publish_run(self.run_dir, self.root / "outcomes", self.root / "knowledge")
         second = op.publish_run(self.run_dir, self.root / "outcomes", self.root / "knowledge")
@@ -695,17 +863,45 @@ class RunAndStateTests(OpportunityTestCase):
         self.assertEqual(entry["terminal_objection"], "Bounded discovery produced no viable shortlist")
         self.assertIn("Reopen only with new evidence", entry["reopen_condition"])
 
-    def test_early_no_qualifier_requires_explicit_best_of_multiple_candidates(self) -> None:
-        self.set_stage("discovery")
-        self.store_candidate(self.candidate("alpha"))
-        self.store_candidate(self.candidate("beta", fingerprint_seed="second structure"))
-        with self.assertRaisesRegex(op.ConflictError, "requires --best-candidate"):
-            op.finalize_run(self.run_dir, "No discovery candidate justified research")
-        report, code = op.finalize_run(
-            self.run_dir,
-            "No discovery candidate justified research",
-            "beta",
-        )
+    def test_no_finalist_best_candidate_is_deterministic_for_multiple_candidates(self) -> None:
+        discoveries = [self.candidate("alpha"), self.candidate("beta")]
+        for discovery in discoveries:
+            self.store_candidate(discovery)
+        self.store_portfolio_selection(discoveries)
+        self.set_stage("research")
+        researched = []
+        for discovery, score in zip(discoveries, (7.0, 8.0), strict=True):
+            candidate = self.candidate(
+                discovery["candidate_id"],
+                version=2,
+                stage="research",
+                parent={"candidate_id": discovery["candidate_id"], "version": 1},
+            )
+            self.store_candidate(candidate)
+            self.store_research(self.research(candidate))
+            self.store_evaluation(
+                self.evaluation_input(
+                    candidate,
+                    f"research-judge-{candidate['candidate_id']}",
+                    score=score,
+                    evaluation_type="working",
+                )
+            )
+            researched.append(candidate)
+        decision = self.portfolio_decision(researched, set())
+        for row in decision["candidate_decisions"]:
+            row.update(
+                {
+                    "disposition": "fatal",
+                    "fatal_reason": "impossible_conservative_economics",
+                    "fatal_claim_ids": ["research-claim-1"],
+                    "rationale": "Direct sourced evidence makes the conservative unit economics impossible.",
+                }
+            )
+        self.complete_json_job("portfolio-decision", "portfolio-decision", decision)
+        with self.assertRaisesRegex(op.InputError, "must match the deterministic highest"):
+            op.finalize_run(self.run_dir, "No researched candidate can work", "alpha")
+        report, code = op.finalize_run(self.run_dir, "No researched candidate can work")
         self.assertEqual(code, 4)
         self.assertEqual(report["selected_candidate_id"], "beta")
         self.assertEqual(report["strongest_candidates"][0]["candidate_id"], "beta")
@@ -892,16 +1088,25 @@ class ValidationAndScoringTests(OpportunityTestCase):
         with self.assertRaisesRegex(op.InputError, "research-stage candidate"):
             op.validate_research(wrong_research, manifest, self.run_dir)
 
-        wrong_working = self.evaluation_input(discovery, "working-wrong", evaluation_type="working")
-        with self.assertRaisesRegex(op.InputError, "development-stage candidate"):
-            op.compute_evaluation(wrong_working, manifest, self.run_dir)
-
         researched = self.candidate(
             version=2,
             stage="research",
             parent={"candidate_id": "alpha", "version": 1},
         )
         self.store_candidate(researched)
+        research_working = self.evaluation_input(
+            researched,
+            "working-research",
+            evaluation_type="working",
+        )
+        computed = op.compute_evaluation(research_working, manifest, self.run_dir)
+        self.assertEqual(computed["evaluation_type"], "working")
+        self.assertEqual(computed["candidate_version"], 2)
+
+        wrong_working = self.evaluation_input(discovery, "working-wrong", evaluation_type="working")
+        with self.assertRaisesRegex(op.InputError, "development or research-stage candidate"):
+            op.compute_evaluation(wrong_working, manifest, self.run_dir)
+
         wrong_holdout = self.evaluation_input(researched, "holdout-wrong")
         with self.assertRaisesRegex(op.InputError, "frozen-stage candidate"):
             op.compute_evaluation(wrong_holdout, manifest, self.run_dir)
@@ -984,7 +1189,7 @@ class ValidationAndScoringTests(OpportunityTestCase):
         candidate_input.write_text(json.dumps(alpha_frozen), encoding="utf-8")
         self.set_stage("frozen")
         op.start_job(self.run_dir, "freeze-alpha", "frozen")
-        with self.assertRaisesRegex(op.InputError, "requires a working evaluation.*v3"):
+        with self.assertRaisesRegex(op.InputError, "requires exactly 1 working evaluation.*v3"):
             op.complete_job(self.run_dir, "freeze-alpha", candidate_input, "candidate")
         self.store_evaluation(
             self.evaluation_input(
@@ -993,21 +1198,45 @@ class ValidationAndScoringTests(OpportunityTestCase):
                 evaluation_type="working",
             )
         )
+        development_result = self.development_result(
+            alpha_development,
+            constructor_id="constructor-alpha",
+        )
+        canonical_result = op.validate_development_result(
+            development_result,
+            self.load()[0],
+            self.run_dir,
+        )
+        op.write_immutable(
+            self.run_dir / "development/alpha/constructor-result.json",
+            op.canonical_json_bytes(canonical_result),
+        )
         completed = op.complete_job(self.run_dir, "freeze-alpha", candidate_input, "candidate")
         self.assertEqual(completed["artifact"], "candidates/alpha/v4.json")
         exported = op.export_external(self.run_dir, "alpha")
         self.assertEqual(exported["candidate_version"], 4)
 
     def test_development_allows_two_versions_not_three(self) -> None:
-        self.set_stage("development")
         discovery = self.candidate(stage="discovery")
         self.store_candidate(discovery)
+        self.store_portfolio_selection([discovery])
+        self.set_stage("research")
         v1 = self.candidate(
             version=2,
             stage="research",
             parent={"candidate_id": "alpha", "version": 1},
         )
         self.store_candidate(v1)
+        self.store_research(self.research(v1))
+        self.store_evaluation(
+            self.evaluation_input(v1, "research-judge-alpha", score=8, evaluation_type="working")
+        )
+        self.complete_json_job(
+            "portfolio-decision",
+            "portfolio-decision",
+            self.portfolio_decision([v1], {"alpha"}),
+        )
+        op.advance_run(self.run_dir)
         v2 = self.candidate(version=3, stage="development", parent={"candidate_id": "alpha", "version": 2})
         p2 = self.root / "v2.json"
         p2.write_text(json.dumps(v2), encoding="utf-8")
@@ -1074,6 +1303,746 @@ class ValidationAndScoringTests(OpportunityTestCase):
         self.assertEqual(canonical["redesign"]["changed_fingerprint_fields"], ["customer"])
 
 
+class WorkflowV2ContractTests(OpportunityTestCase):
+    def researched_pool(
+        self,
+        count: int,
+        *,
+        scores: list[float] | None = None,
+    ) -> tuple[list[dict], list[dict]]:
+        values = scores or [8.0 - index / 10 for index in range(count)]
+        discoveries = [self.candidate(f"candidate-{index + 1}") for index in range(count)]
+        for discovery in discoveries:
+            self.store_candidate(discovery)
+        self.store_portfolio_selection(discoveries)
+        self.set_stage("research")
+        researched: list[dict] = []
+        for discovery, score in zip(discoveries, values, strict=True):
+            candidate = self.candidate(
+                discovery["candidate_id"],
+                version=2,
+                stage="research",
+                parent={"candidate_id": discovery["candidate_id"], "version": 1},
+            )
+            self.store_candidate(candidate)
+            self.store_research(self.research(candidate))
+            self.store_evaluation(
+                self.evaluation_input(
+                    candidate,
+                    f"research-judge-{candidate['candidate_id']}",
+                    score=score,
+                    evaluation_type="working",
+                )
+            )
+            researched.append(candidate)
+        return discoveries, researched
+
+    def test_research_advance_and_finalize_require_exact_working_coverage(self) -> None:
+        discovery = self.candidate("alpha")
+        self.store_candidate(discovery)
+        self.store_portfolio_selection([discovery])
+        self.set_stage("research")
+        researched = self.candidate(
+            "alpha",
+            version=2,
+            stage="research",
+            parent={"candidate_id": "alpha", "version": 1},
+        )
+        self.store_candidate(researched)
+        self.store_research(self.research(researched))
+
+        with self.assertRaisesRegex(op.ConflictError, "exactly one working evaluation"):
+            op.advance_run(self.run_dir)
+        with self.assertRaisesRegex(op.ConflictError, "exactly one working evaluation"):
+            op.finalize_run(self.run_dir, "Research budget ended before development")
+
+        self.store_evaluation(
+            self.evaluation_input(
+                researched,
+                "research-judge-alpha",
+                score=7.4,
+                evaluation_type="working",
+            )
+        )
+        coverage = op.working_evaluation_coverage(self.run_dir, self.load()[0], "research")
+        self.assertTrue(coverage["complete"])
+        self.assertEqual(coverage["completed_count"], 1)
+
+        self.store_evaluation(
+            self.evaluation_input(
+                researched,
+                "research-judge-alpha-duplicate",
+                score=7.5,
+                evaluation_type="working",
+            )
+        )
+        coverage = op.working_evaluation_coverage(self.run_dir, self.load()[0], "research")
+        self.assertFalse(coverage["complete"])
+        self.assertEqual(coverage["duplicates"], ["alpha v2"])
+        with self.assertRaisesRegex(op.ConflictError, "duplicate alpha v2"):
+            op.advance_run(self.run_dir)
+
+    def test_research_candidate_substitution_requires_versioned_amendment(self) -> None:
+        alpha = self.candidate("alpha")
+        beta = self.candidate("beta")
+        self.store_candidate(alpha)
+        self.store_candidate(beta)
+        self.store_portfolio_selection([alpha])
+        self.set_stage("research")
+        researched_beta = self.candidate(
+            "beta",
+            version=2,
+            stage="research",
+            parent={"candidate_id": "beta", "version": 1},
+        )
+        path = self.root / "unamended-beta.json"
+        path.write_text(json.dumps(researched_beta), encoding="utf-8")
+        op.start_job(self.run_dir, "unamended-beta", "research")
+        with self.assertRaisesRegex(op.ConflictError, "versioned amendment before substitution"):
+            op.complete_job(self.run_dir, "unamended-beta", path, "candidate")
+        op.fail_job(self.run_dir, "unamended-beta", "shortlist binding correctly rejected substitution")
+
+        selection_path = self.run_dir / "portfolio/selection.json"
+        amendment = {
+            "schema_version": 2,
+            "amendment_version": 1,
+            "base_selection_sha256": op.sha256_file(selection_path),
+            "remove_candidate_ref": self.candidate_ref(alpha),
+            "add_candidate_ref": self.candidate_ref(beta),
+            "reason": "New evidence invalidated alpha and justified beta as the explicit replacement.",
+        }
+        completed = self.complete_json_job(
+            "portfolio-amendment-v1",
+            "portfolio-amendment",
+            amendment,
+        )
+        self.assertEqual(completed["artifact"], "portfolio/amendments/v1.json")
+        accepted = self.complete_json_job(
+            "amended-beta",
+            "candidate",
+            researched_beta,
+        )
+        self.assertEqual(accepted["artifact"], "candidates/beta/v2.json")
+
+    def test_unknown_or_inferential_claim_cannot_be_a_fatal_stop(self) -> None:
+        _, researched = self.researched_pool(1, scores=[7.8])
+        candidate = researched[0]
+        research_path = self.run_dir / op.research_relpath(candidate["candidate_id"], candidate["version"])
+        research = json.loads(research_path.read_text(encoding="utf-8"))
+        research["claims"][0]["assessment"] = "unknown"
+        research["claims"][0]["evidence_refs"] = []
+        research_path.write_bytes(op.canonical_json_bytes(research))
+        decision = self.portfolio_decision(researched, set())
+        row = decision["candidate_decisions"][0]
+        row.update(
+            {
+                "disposition": "fatal",
+                "fatal_reason": "impossible_conservative_economics",
+                "fatal_claim_ids": ["research-claim-1"],
+                "rationale": "This must be rejected because the cited claim is still unknown.",
+            }
+        )
+        with self.assertRaisesRegex(op.InputError, "unknown or inferential research cannot be labeled fatal"):
+            op.validate_portfolio_decision(decision, self.load()[0], self.run_dir)
+
+    def test_development_requires_fresh_exact_version_score_and_role_separation(self) -> None:
+        _, researched = self.researched_pool(1, scores=[8.1])
+        decision = self.portfolio_decision(researched, {researched[0]["candidate_id"]})
+        self.complete_json_job("portfolio-decision", "portfolio-decision", decision)
+        self.assertEqual(op.advance_run(self.run_dir)["stage"], "development")
+
+        research_candidate = researched[0]
+        developed = self.candidate(
+            research_candidate["candidate_id"],
+            version=3,
+            stage="development",
+            parent={"candidate_id": research_candidate["candidate_id"], "version": 2},
+        )
+        self.complete_json_job("develop-alpha", "candidate", developed)
+        self.complete_json_job(
+            "constructor-alpha",
+            "development-result",
+            self.development_result(developed, constructor_id="same-agent"),
+        )
+
+        with self.assertRaisesRegex(op.ConflictError, "missing candidate-1 v3"):
+            op.advance_run(self.run_dir)
+        self.store_evaluation(
+            self.evaluation_input(
+                developed,
+                "same-agent",
+                score=8.2,
+                evaluation_type="working",
+            )
+        )
+        with self.assertRaisesRegex(op.ConflictError, "constructor and working evaluator roles must be independent"):
+            op.advance_run(self.run_dir)
+
+    def test_native_holdout_judge_cannot_reuse_a_development_role(self) -> None:
+        frozen = self.store_complete_lineage("alpha")
+        self.set_stage("holdout")
+        op.export_external(self.run_dir, "alpha")
+        reused = self.evaluation_input(frozen, "working-alpha", score=8.8)
+        input_path = self.root / "reused-native-wrapper.json"
+        input_path.write_text(json.dumps(reused), encoding="utf-8")
+        op.start_job(self.run_dir, "reused-native-wrapper", "holdout")
+        with self.assertRaisesRegex(
+            op.ConflictError,
+            "native holdout judge must be fresh and independent",
+        ):
+            op.complete_job(
+                self.run_dir,
+                "reused-native-wrapper",
+                input_path,
+                "evaluation",
+            )
+
+    def test_complete_eight_four_two_four_scored_fixture(self) -> None:
+        scores = [8.4, 8.3, 8.2, 8.1, 7.9, 7.8, 7.7, 7.6]
+        _, researched = self.researched_pool(8, scores=scores)
+        developed_ids = {candidate["candidate_id"] for candidate in researched[:4]}
+        self.complete_json_job(
+            "portfolio-decision",
+            "portfolio-decision",
+            self.portfolio_decision(researched, developed_ids),
+        )
+        self.assertEqual(op.advance_run(self.run_dir)["stage"], "development")
+
+        developed: list[dict] = []
+        for index, research_candidate in enumerate(researched[:4]):
+            candidate_id = research_candidate["candidate_id"]
+            candidate = self.candidate(
+                candidate_id,
+                version=3,
+                stage="development",
+                parent={"candidate_id": candidate_id, "version": 2},
+            )
+            self.complete_json_job(f"develop-{candidate_id}", "candidate", candidate)
+            self.store_evaluation(
+                self.evaluation_input(
+                    candidate,
+                    f"development-judge-{candidate_id}",
+                    score=8.4 - index / 10,
+                    evaluation_type="working",
+                )
+            )
+            self.complete_json_job(
+                f"constructor-{candidate_id}",
+                "development-result",
+                self.development_result(
+                    candidate,
+                    constructor_id=f"constructor-agent-{candidate_id}",
+                ),
+            )
+            developed.append(candidate)
+
+        self.assertEqual(op.advance_run(self.run_dir)["stage"], "frozen")
+        frozen: list[dict] = []
+        for developed_candidate in developed[:2]:
+            candidate_id = developed_candidate["candidate_id"]
+            candidate = self.candidate(
+                candidate_id,
+                version=4,
+                stage="frozen",
+                parent={"candidate_id": candidate_id, "version": 3},
+            )
+            self.complete_json_job(f"freeze-{candidate_id}", "candidate", candidate)
+            op.export_external(self.run_dir, candidate_id)
+            frozen.append(candidate)
+
+        self.assertEqual(op.advance_run(self.run_dir)["stage"], "holdout")
+        holdout_scores = ((8.4, 8.3), (8.3, 8.2))
+        for candidate, pair in zip(frozen, holdout_scores, strict=True):
+            for judge_index, score in enumerate(pair, start=1):
+                judge_id = f"native-{judge_index}-{candidate['candidate_id']}"
+                self.store_evaluation(
+                    self.evaluation_input(candidate, judge_id, score=score)
+                )
+
+        report, code = op.finalize_run(self.run_dir)
+        self.assertEqual(code, 4)
+        self.assertEqual(report["run_status"], "no_qualifier")
+        self.assertEqual(report["selected_candidate_id"], "candidate-1")
+        self.assertEqual(report["official_score"], 8.3)
+        self.assertEqual(report["binding_score_floor"], 8.3)
+        self.assertEqual(len(report["candidates"]), 2)
+        self.assertEqual(
+            sum(
+                len(candidate["evaluation_artifacts"])
+                for candidate in report["candidates"]
+            ),
+            4,
+        )
+        coverage = report["working_evaluation_coverage"]
+        self.assertTrue(coverage["complete"])
+        self.assertEqual(coverage["research"]["completed_count"], 8)
+        self.assertEqual(coverage["development"]["completed_count"], 4)
+        self.assertEqual(coverage["total_candidate_versions"], 12)
+        self.assertEqual(
+            len(report["portfolio_decision"]["candidate_decisions"]),
+            8,
+        )
+        manifest, _ = self.load()
+        campaign_metrics = op.derive_campaign_cohort_metrics(
+            self.run_dir,
+            manifest,
+            report,
+        )
+        self.assertEqual(campaign_metrics["best_working_score"], 8.4)
+        self.assertEqual(campaign_metrics["top_four_working_median"], 8.3)
+        self.assertEqual(len(campaign_metrics["archetype_scores"]), 8)
+        self.assertTrue(campaign_metrics["deficient_factors"])
+        self.assertTrue(op.check_run(self.run_dir, op.DEFAULT_CONFIG)["valid"])
+        published = op.publish_run(
+            self.run_dir,
+            self.root / "outcomes",
+            self.root / "knowledge",
+        )
+        self.assertEqual(published["run_status"], "no_qualifier")
+        published_root = self.root / "outcomes" / self.run_id
+        self.assertTrue((published_root / "report.json").is_file())
+        self.assertTrue((published_root / "portfolio/selection.json").is_file())
+        self.assertTrue(
+            (published_root / "portfolio/development-decision.json").is_file()
+        )
+        self.assertEqual(
+            len(list(published_root.glob("evaluations/*/v*/working-*.json"))),
+            12,
+        )
+
+    def test_direct_evidence_research_closure_is_no_finalist_with_score_coverage(self) -> None:
+        self.prepare_fatal_research_closure()
+        report, code = op.finalize_run(
+            self.run_dir,
+            "Direct sourced evidence proves the conservative economics cannot work.",
+        )
+        self.assertEqual(code, 4)
+        self.assertEqual(report["run_status"], "no_finalist")
+        self.assertEqual(report["terminal_stage"], "research")
+        self.assertIsNone(report["official_score"])
+        self.assertIsNone(report["binding_score_floor"])
+        self.assertEqual(report["highest_working_score"], 6.5)
+        self.assertTrue(report["working_evaluation_coverage"]["complete"])
+        self.assertEqual(report["working_evaluation_coverage"]["total_candidate_versions"], 1)
+        self.assertEqual(report["working_evaluation_coverage"]["total_completed"], 1)
+        self.assertEqual(
+            report["portfolio_decision"]["development_decision_artifact"]["path"],
+            "portfolio/development-decision.json",
+        )
+
+
+class CampaignContractTests(unittest.TestCase):
+    def setUp(self) -> None:
+        self.temporary = tempfile.TemporaryDirectory()
+        self.root = Path(self.temporary.name)
+        self.campaigns_dir = self.root / "campaigns"
+        self.outcomes_dir = self.root / "outcomes"
+        created = op.new_campaign(op.DEFAULT_CONFIG, self.campaigns_dir)
+        self.campaign_id = created["campaign_id"]
+        self.campaign_dir = Path(created["campaign_dir"])
+        self.config = json.loads(op.DEFAULT_CONFIG.read_text(encoding="utf-8"))
+
+    def tearDown(self) -> None:
+        self.temporary.cleanup()
+
+    def metrics(
+        self,
+        score: float,
+        *,
+        archetype: str = "baseline archetype",
+        median: float | None = None,
+        best: float | None = None,
+    ) -> dict:
+        return {
+            "official_score": score,
+            "top_four_working_median": score if median is None else median,
+            "best_working_score": score if best is None else best,
+            "archetype_scores": {archetype: score if best is None else best},
+            "deficient_factors": ["Distribution", "Business model and economics"],
+            "missing_archetypes": ["asset aggregation"],
+            "dominant_patterns": {
+                "commercial_archetype": "managed workflow",
+                "control_point": "case evidence",
+                "critical_dependency": "referral access",
+            },
+        }
+
+    def register_cohort(
+        self,
+        cohort_number: int,
+        metrics: dict,
+        *,
+        run_status: str = "no_qualifier",
+    ) -> dict:
+        campaign_manifest, state = op.load_campaign(self.campaign_dir)
+        run_id = f"20260825T{cohort_number:06d}Z-{cohort_number:06x}"
+        gap_path = None
+        gap_digest = None
+        if cohort_number > 1:
+            gap_path = f"briefs/cohort-{cohort_number}.json"
+            brief = {
+                "schema_version": 2,
+                "campaign_id": self.campaign_id,
+                "cohort_number": cohort_number,
+                "deficient_factors": state["cohorts"][-1]["deficient_factors"],
+                "missing_archetypes": state["cohorts"][-1]["missing_archetypes"],
+            }
+            brief_file = self.campaign_dir / gap_path
+            gap_digest = op.write_immutable(
+                brief_file, op.canonical_json_bytes(brief), root=self.campaign_dir
+            )
+            op._ensure_campaign_event(
+                self.campaign_dir,
+                self.campaign_id,
+                "gap_brief_created",
+                {
+                    "cohort_number": cohort_number,
+                    "gap_brief_sha256": gap_digest,
+                },
+                identity={"cohort_number": cohort_number},
+            )
+        binding = {
+            "campaign_id": self.campaign_id,
+            "cohort_number": cohort_number,
+            "gap_brief_path": gap_path,
+            "gap_brief_sha256": gap_digest,
+        }
+        run_manifest_path = self.root / "runs" / run_id / "manifest.json"
+        run_manifest_path.parent.mkdir(parents=True, exist_ok=True)
+        run_manifest_path.write_bytes(
+            op.canonical_json_bytes({"campaign": binding})
+        )
+        state["active_run_id"] = run_id
+        state["active_cohort_number"] = cohort_number
+        op.save_campaign_state(self.campaign_dir, state, campaign_manifest)
+        report = {
+            "schema_version": 2,
+            "run_id": run_id,
+            "run_status": run_status,
+            "campaign": binding,
+            "founder_sha256": campaign_manifest["founder_sha256"],
+            "rubric_id": campaign_manifest["rubric"]["rubric_id"],
+            "rubric_sha256": campaign_manifest["rubric"]["sha256"],
+            "threshold": campaign_manifest["config"]["threshold"],
+            "comparison": "strictly_greater_than",
+            "official_score": metrics["official_score"],
+            "binding_score_floor": metrics["official_score"],
+        }
+        report_path = self.outcomes_dir / run_id / "report.json"
+        report_path.parent.mkdir(parents=True, exist_ok=True)
+        report_path.write_bytes(op.canonical_json_bytes(report))
+        run_manifest = {"campaign": binding}
+        with mock.patch.object(op, "derive_campaign_cohort_metrics", return_value=metrics):
+            return op.record_campaign_publication(
+                self.root / f"run-{cohort_number}",
+                run_manifest,
+                report,
+                self.outcomes_dir,
+            )
+
+    def test_campaign_single_regression_does_not_stop_and_plateau_requires_three(self) -> None:
+        receipts = []
+        for cohort_number, score in enumerate((7.2, 6.8, 6.7, 6.6), start=1):
+            receipts.append(self.register_cohort(cohort_number, self.metrics(score)))
+            if cohort_number < 4:
+                self.assertEqual(receipts[-1]["campaign_status"], "active")
+        self.assertEqual(receipts[0]["no_progress_streak"], 0)
+        self.assertEqual(receipts[1]["no_progress_streak"], 1)
+        self.assertEqual(receipts[2]["no_progress_streak"], 2)
+        self.assertEqual(receipts[3]["no_progress_streak"], 3)
+        self.assertEqual(receipts[3]["campaign_status"], "plateau")
+        stopped = op.campaign_next(self.campaign_dir)
+        self.assertEqual(stopped["action"], "stop")
+        self.assertEqual(stopped["status"], "plateau")
+        receipt, code = op.finalize_campaign(self.campaign_dir)
+        self.assertEqual(code, 4)
+        self.assertFalse(receipt["quality_objective_achieved"])
+        published = self.root / "outcomes" / "campaigns" / self.campaign_id
+        self.assertTrue((published / "receipt.json").is_file())
+        self.assertTrue((published / "report.md").is_file())
+
+    def test_campaign_progress_resets_on_each_configured_signal(self) -> None:
+        state = {
+            "cohorts": [{}],
+            "best_official_score": 7.2,
+            "best_working_median": 7.0,
+            "best_working_score": 7.5,
+            "seen_archetypes": ["baseline archetype"],
+        }
+        cases = (
+            (
+                self.metrics(7.3, median=7.0, best=7.5),
+                "official_score",
+            ),
+            (
+                self.metrics(7.2, median=7.2, best=7.5),
+                "working_median",
+            ),
+            (
+                self.metrics(7.2, archetype="novel archetype", median=7.0, best=7.0),
+                "novel_archetype",
+            ),
+        )
+        for metrics, expected_signal in cases:
+            with self.subTest(expected_signal=expected_signal):
+                signals = op.campaign_progress_signals(state, metrics, self.config)
+                self.assertTrue(signals[expected_signal])
+                self.assertEqual(sum(signals.values()), 1)
+
+    def test_campaign_gap_brief_is_sanitized_and_cohort_binding_is_immutable(self) -> None:
+        first = op.campaign_next(self.campaign_dir)
+        self.assertEqual(first["cohort_number"], 1)
+        runs_dir = self.root / "runs"
+        created = op.make_run(
+            op.DEFAULT_CONFIG,
+            runs_dir,
+            campaign_id=self.campaign_id,
+            campaigns_dir=self.campaigns_dir,
+        )
+        manifest = op.load_json(Path(created["run_dir"]) / "manifest.json")
+        self.assertEqual(manifest["campaign"]["cohort_number"], 1)
+        self.assertIsNone(manifest["campaign"]["gap_brief_sha256"])
+        campaign_manifest, _ = op.load_campaign(self.campaign_dir)
+        self.assertEqual(
+            (Path(created["run_dir"]) / "inputs" / "founder.md").read_bytes(),
+            (self.campaign_dir / "inputs" / "founder.md").read_bytes(),
+        )
+        self.assertEqual(
+            (Path(created["run_dir"]) / "inputs" / "evaluator.txt").read_bytes(),
+            (self.campaign_dir / "inputs" / "evaluator.txt").read_bytes(),
+        )
+        self.assertEqual(
+            manifest["source_hashes"]["PERSONALITY_SITUATION.md"],
+            campaign_manifest["founder_sha256"],
+        )
+        with self.assertRaisesRegex(op.ConflictError, "already has active run"):
+            op.make_run(
+                op.DEFAULT_CONFIG,
+                runs_dir,
+                campaign_id=self.campaign_id,
+                campaigns_dir=self.campaigns_dir,
+            )
+
+        replacement = op.new_campaign(op.DEFAULT_CONFIG, self.campaigns_dir)
+        self.campaign_id = replacement["campaign_id"]
+        self.campaign_dir = Path(replacement["campaign_dir"])
+        self.register_cohort(1, self.metrics(7.2))
+        next_action = op.campaign_next(self.campaign_dir)
+        self.assertEqual(next_action["cohort_number"], 2)
+        brief_path = self.campaign_dir / next_action["gap_brief_path"]
+        self.assertEqual(op.sha256_file(brief_path), next_action["gap_brief_sha256"])
+        brief = op.load_json(brief_path)
+        self.assertEqual(
+            set(brief),
+            {
+                "schema_version",
+                "campaign_id",
+                "cohort_number",
+                "deficient_factors",
+                "missing_archetypes",
+            },
+        )
+        serialized = json.dumps(brief).lower()
+        for forbidden in ("candidate_id", "title", "score", "ranking", "threshold", "holdout"):
+            self.assertNotIn(forbidden, serialized)
+        contaminated = {
+            **brief,
+            "missing_archetypes": ["specialist workflow candidate one"],
+        }
+        with self.assertRaisesRegex(op.InputError, "candidate-like"):
+            op.validate_campaign_gap_brief(
+                contaminated, op.load_campaign(self.campaign_dir)[0], 2
+            )
+
+    def test_campaign_report_tampering_blocks_status_next_and_finalize(self) -> None:
+        for cohort_number, score in enumerate((7.2, 6.8, 6.7, 6.6), start=1):
+            self.register_cohort(cohort_number, self.metrics(score))
+        report_path = self.outcomes_dir / "20260825T000001Z-000001" / "report.json"
+        original = report_path.read_bytes()
+        report_path.unlink()
+        with self.assertRaisesRegex(op.InputError, "report is missing"):
+            op.campaign_status(self.campaign_dir)
+        with self.assertRaisesRegex(op.InputError, "report is missing"):
+            op.campaign_next(self.campaign_dir)
+        with self.assertRaisesRegex(op.InputError, "report is missing"):
+            op.finalize_campaign(self.campaign_dir)
+        report_path.write_bytes(original)
+        forged = json.loads(original)
+        forged["official_score"] = 9.9
+        report_path.write_bytes(op.canonical_json_bytes(forged))
+        with self.assertRaisesRegex(op.InputError, "report hash differs"):
+            op.finalize_campaign(self.campaign_dir)
+
+    def test_campaign_event_recovery_repairs_state_first_publication(self) -> None:
+        original = op._ensure_campaign_event
+        failed = False
+
+        def fail_once(*args, **kwargs):
+            nonlocal failed
+            if len(args) >= 3 and args[2] == "cohort_published" and not failed:
+                failed = True
+                raise OSError("injected campaign event failure")
+            return original(*args, **kwargs)
+
+        with mock.patch.object(op, "_ensure_campaign_event", side_effect=fail_once):
+            with self.assertRaisesRegex(OSError, "injected"):
+                self.register_cohort(1, self.metrics(7.2))
+        _, state = op.load_campaign(self.campaign_dir)
+        self.assertEqual(len(state["cohorts"]), 1)
+        self.assertFalse(
+            any(
+                event["event"] == "cohort_published"
+                for event in op.load_campaign_events(
+                    self.campaign_dir / "events.jsonl", self.campaign_id
+                )
+            )
+        )
+        status = op.campaign_status(self.campaign_dir)
+        self.assertEqual(status["cohort_count"], 1)
+        published = [
+            event
+            for event in op.load_campaign_events(
+                self.campaign_dir / "events.jsonl", self.campaign_id
+            )
+            if event["event"] == "cohort_published"
+        ]
+        self.assertEqual(len(published), 1)
+
+    def test_campaign_state_recomputes_scores_and_progress_signals(self) -> None:
+        self.register_cohort(1, self.metrics(7.2))
+        manifest, state = op.load_campaign(self.campaign_dir)
+        forged = copy.deepcopy(state)
+        forged["cohorts"][0]["progress_signals"]["official_score"] = True
+        forged["cohorts"][0]["made_progress"] = True
+        with self.assertRaisesRegex(op.InputError, "progress signals"):
+            op.validate_campaign_state(forged, manifest)
+        forged = copy.deepcopy(state)
+        forged["cohorts"][0]["run_status"] = "qualified"
+        forged["status"] = "qualified"
+        forged["terminal_reason"] = "forged"
+        with self.assertRaisesRegex(op.InputError, "strictly exceed"):
+            op.validate_campaign_state(forged, manifest)
+
+        metric_forgery = copy.deepcopy(state)
+        metric_forgery["cohorts"][0]["top_four_working_median"] = 9.9
+        metric_forgery["cohorts"][0]["best_working_score"] = 9.9
+        metric_forgery["cohorts"][0]["archetype_scores"] = {
+            "baseline archetype": 9.9
+        }
+        metric_forgery["best_working_median"] = 9.9
+        metric_forgery["best_working_score"] = 9.9
+        op.atomic_write(
+            self.campaign_dir / "state.json",
+            op.canonical_json_bytes(metric_forgery),
+            root=self.campaign_dir,
+        )
+        with self.assertRaisesRegex(op.InputError, "immutable metric receipt"):
+            op.campaign_status(self.campaign_dir)
+        op.atomic_write(
+            self.campaign_dir / "state.json",
+            op.canonical_json_bytes(state),
+            root=self.campaign_dir,
+        )
+
+        self.register_cohort(2, self.metrics(6.8))
+        manifest, two_cohorts = op.load_campaign(self.campaign_dir)
+        terminal_prefix = copy.deepcopy(two_cohorts)
+        terminal_prefix["cohorts"][0]["run_status"] = "qualified"
+        terminal_prefix["cohorts"][0]["official_score"] = 8.6
+        terminal_prefix["best_official_score"] = 8.6
+        terminal_prefix["status"] = "qualified"
+        terminal_prefix["terminal_reason"] = op.campaign_terminal_reason("qualified")
+        with self.assertRaisesRegex(op.InputError, "earlier terminal stop"):
+            op.validate_campaign_state(terminal_prefix, manifest)
+
+    def test_campaign_rejects_extra_events_and_nondeterministic_reason(self) -> None:
+        future_brief = {
+            "schema_version": 2,
+            "campaign_id": self.campaign_id,
+            "cohort_number": 99,
+            "deficient_factors": ["Distribution"],
+            "missing_archetypes": [],
+        }
+        future_path = self.campaign_dir / "briefs/cohort-99.json"
+        op.write_immutable(
+            future_path, op.canonical_json_bytes(future_brief), root=self.campaign_dir
+        )
+        with self.assertRaisesRegex(op.InputError, "unexpected cohort"):
+            op.campaign_status(self.campaign_dir)
+        future_path.unlink()
+        op.append_campaign_event(
+            self.campaign_dir,
+            self.campaign_id,
+            "cohort_published",
+            {"cohort_number": 99},
+        )
+        with self.assertRaisesRegex(op.InputError, "state-inconsistent"):
+            op.campaign_status(self.campaign_dir)
+
+        clean_root = self.root / "terminal-reason"
+        clean_campaigns = clean_root / "campaigns"
+        created = op.new_campaign(op.DEFAULT_CONFIG, clean_campaigns)
+        old = (self.root, self.campaign_id, self.campaign_dir, self.outcomes_dir)
+        self.root = clean_root
+        self.campaign_id = created["campaign_id"]
+        self.campaign_dir = Path(created["campaign_dir"])
+        self.outcomes_dir = clean_root / "outcomes"
+        try:
+            for cohort_number, score in enumerate((7.2, 6.8, 6.7, 6.6), start=1):
+                self.register_cohort(cohort_number, self.metrics(score))
+            manifest, state = op.load_campaign(self.campaign_dir)
+            state["terminal_reason"] = "An editorial explanation."
+            with self.assertRaisesRegex(op.InputError, "terminal reason"):
+                op.save_campaign_state(self.campaign_dir, state, manifest)
+        finally:
+            self.root, self.campaign_id, self.campaign_dir, self.outcomes_dir = old
+
+    def test_qualifier_stops_immediately_and_maximum_is_ten(self) -> None:
+        qualified = self.register_cohort(
+            1,
+            self.metrics(8.6),
+            run_status="qualified",
+        )
+        self.assertEqual(qualified["campaign_status"], "qualified")
+        receipt, code = op.finalize_campaign(self.campaign_dir)
+        self.assertEqual(code, 0)
+        self.assertTrue(receipt["quality_objective_achieved"])
+        self.assertTrue(
+            (self.root / "outcomes" / "campaigns" / self.campaign_id / "receipt.json").is_file()
+        )
+        campaign_outcome = (
+            self.root / "outcomes" / "campaigns" / self.campaign_id
+        )
+        self.assertTrue((campaign_outcome / "manifest.json").is_file())
+        self.assertTrue((campaign_outcome / "events.jsonl").is_file())
+        self.assertTrue((campaign_outcome / "inputs" / "founder.md").is_file())
+        self.assertTrue((campaign_outcome / "inputs" / "evaluator.txt").is_file())
+        self.assertEqual(
+            receipt["campaign_manifest_sha256"],
+            op.sha256_file(campaign_outcome / "manifest.json"),
+        )
+
+        other_root = self.root / "maximum"
+        other_campaigns = other_root / "campaigns"
+        other_outcomes = other_root / "outcomes"
+        created = op.new_campaign(op.DEFAULT_CONFIG, other_campaigns)
+        old = (self.root, self.campaign_id, self.campaign_dir, self.outcomes_dir)
+        self.root = other_root
+        self.campaign_id = created["campaign_id"]
+        self.campaign_dir = Path(created["campaign_dir"])
+        self.outcomes_dir = other_outcomes
+        try:
+            final = None
+            for cohort_number in range(1, 11):
+                score = 6 + cohort_number / 10
+                final = self.register_cohort(cohort_number, self.metrics(score))
+            self.assertIsNotNone(final)
+            self.assertEqual(final["campaign_status"], "max_cohorts")
+            self.assertEqual(op.campaign_status(self.campaign_dir)["cohort_count"], 10)
+        finally:
+            self.root, self.campaign_id, self.campaign_dir, self.outcomes_dir = old
+
+
 class DedupAndHoldoutTests(OpportunityTestCase):
     def test_dedup_exact_similarity_and_one_bounded_gap_scout(self) -> None:
         self.set_stage("discovery")
@@ -1084,7 +2053,7 @@ class DedupAndHoldoutTests(OpportunityTestCase):
             self.store_candidate(candidate)
         first = op.dedup_run(self.run_dir)
         self.assertEqual(first["candidate_count"], 3)
-        self.assertEqual(first["unique_count"], 2)
+        self.assertEqual(first["exact_fingerprint_unique_count"], 2)
         self.assertEqual(len(first["duplicate_groups"]), 1)
         self.assertTrue(first["similarity_flags"])
         self.assertEqual(first["gap_scout_job"]["status"], "pending")
@@ -1165,7 +2134,7 @@ class DedupAndHoldoutTests(OpportunityTestCase):
         )
 
     def test_export_and_publication_events_reconcile_after_durable_writes(self) -> None:
-        self._store_lineage_with_research()
+        frozen = self._store_lineage_with_research()
         self.set_stage("holdout")
         with mock.patch.object(op, "append_event", side_effect=OSError("export event failure")):
             with self.assertRaisesRegex(OSError, "export event failure"):
@@ -1181,8 +2150,12 @@ class DedupAndHoldoutTests(OpportunityTestCase):
         ]
         self.assertEqual(len(export_events), 1)
 
-        _, code = op.finalize_run(self.run_dir, "Bounded smoke closed before native qualification")
+        self.store_evaluation(self.evaluation_input(frozen, "native-event-a", score=8.2))
+        self.store_evaluation(self.evaluation_input(frozen, "native-event-b", score=8.1))
+        report, code = op.finalize_run(self.run_dir)
         self.assertEqual(code, 4)
+        self.assertEqual(report["run_status"], "no_qualifier")
+        self.assertEqual(report["official_score"], 8.1)
         outcomes = self.root / "outcomes"
         knowledge = self.root / "knowledge"
         with mock.patch.object(op, "append_event", side_effect=OSError("publish event failure")):
@@ -1289,7 +2262,7 @@ class DedupAndHoldoutTests(OpportunityTestCase):
         with self.assertRaisesRegex(op.InputError, "not bound to exactly one completed holdout job"):
             op.compute_evaluation(unbound, manifest, self.run_dir)
 
-    def test_frozen_cannot_advance_without_matching_packet_but_can_close_early(self) -> None:
+    def test_frozen_cannot_advance_or_close_without_matching_packet(self) -> None:
         frozen = self._store_lineage_with_research()
         self.set_stage("frozen")
         with self.assertRaisesRegex(op.ConflictError, "canonical holdout packet is required"):
@@ -1337,9 +2310,8 @@ class DedupAndHoldoutTests(OpportunityTestCase):
             )
             other.store_candidate(frozen_without_packet)
             other.set_stage("frozen")
-            _, code = op.finalize_run(other.run_dir, "Holdout packet could not be completed")
-            self.assertEqual(code, 4)
-            self.assertTrue(op.check_run(other.run_dir, op.DEFAULT_CONFIG)["valid"])
+            with self.assertRaisesRegex(op.ConflictError, "must continue to holdout"):
+                op.finalize_run(other.run_dir, "Holdout packet could not be completed")
         finally:
             other.tearDown()
 
@@ -1382,7 +2354,7 @@ class DedupAndHoldoutTests(OpportunityTestCase):
         self.assertTrue((published / "research/beta/v2.json").is_file())
         self.assertTrue((published / "exports/beta/holdout_packet.md").is_file())
         self.assertTrue((published / "holdout/jobs/native-a-beta.json").is_file())
-        self.assertFalse((published / "candidates/alpha/v4.json").exists())
+        self.assertTrue((published / "candidates/alpha/v4.json").is_file())
         self.assertEqual(publication["run_status"], "qualified")
         history = json.loads((self.root / "knowledge/history_index.jsonl").read_text().strip())
         self.assertEqual(history["score_scale"], "/10")
@@ -1460,13 +2432,11 @@ class DedupAndHoldoutTests(OpportunityTestCase):
             op.publish_run(self.run_dir, self.root / "outcomes", self.root / "knowledge")
 
     def test_forged_early_closure_report_is_rejected(self) -> None:
-        discovery = self.candidate()
-        self.store_candidate(discovery)
-        self.set_stage("research")
+        self.prepare_fatal_research_closure()
         op.finalize_run(self.run_dir, "No candidate survived bounded research")
         report_path = self.run_dir / "final/report.json"
         forged = json.loads(report_path.read_text())
-        forged["no_qualifier_reason"] = "A substituted closure rationale"
+        forged["no_finalist_reason"] = "A substituted closure rationale"
         report_path.write_bytes(op.canonical_json_bytes(forged))
         (self.run_dir / "report.md").write_text(op.render_report_markdown(forged), encoding="utf-8")
         with self.assertRaisesRegex(op.InputError, "deterministically derived outcome"):
@@ -1604,7 +2574,86 @@ class IntegrityAndExitCodeTests(OpportunityTestCase):
             op.load_events(event_path, self.run_id)
         event_path.write_bytes(original_events)
 
-    def test_cli_exit_codes_for_input_conflict_and_no_qualifier(self) -> None:
+    def test_schema_v1_runs_are_readable_but_all_active_mutations_are_rejected(self) -> None:
+        run_id = "20260820T000000Z-abc123"
+        run_dir = self.root / "legacy-runs" / run_id
+        run_dir.mkdir(parents=True)
+        config = json.loads(op.DEFAULT_CONFIG.read_text(encoding="utf-8"))
+        config["schema_version"] = 1
+        for key in op.CONFIG_V2_EXTRA_KEYS:
+            config.pop(key)
+        config_bytes = op.canonical_json_bytes(config)
+        founder_bytes = (op.REPO_ROOT / "PERSONALITY_SITUATION.md").read_bytes()
+        evaluator_path = op.REPO_ROOT / "Personalities" / "ZeroToOne.txt"
+        evaluator_bytes = evaluator_path.read_bytes()
+        factors, rubric_digest = op.parse_rubric(evaluator_path)
+        source_hashes = {
+            "PERSONALITY_SITUATION.md": op.sha256_bytes(founder_bytes),
+            "Personalities/ZeroToOne.txt": op.sha256_bytes(evaluator_bytes),
+            "config/opportunity-workflow.json": op.sha256_bytes(config_bytes),
+        }
+        created_at = op.utc_now()
+        manifest = {
+            "schema_version": 1,
+            "run_id": run_id,
+            "created_at": created_at,
+            "config": config,
+            "source_hashes": source_hashes,
+            "rubric": {
+                "rubric_id": config["rubric_id"],
+                "sha256": rubric_digest,
+                "factors": [
+                    {"name": name, "weight": op.decimal_json(weight)}
+                    for name, weight in factors
+                ],
+            },
+        }
+        state = {
+            "schema_version": 1,
+            "run_id": run_id,
+            "stage": "initialized",
+            "run_status": "active",
+            "updated_at": created_at,
+            "jobs": {stage: {} for stage in op.STAGES},
+        }
+        for relative, data in (
+            ("inputs/founder.md", founder_bytes),
+            ("inputs/evaluator.txt", evaluator_bytes),
+            ("inputs/config.json", config_bytes),
+            ("manifest.json", op.canonical_json_bytes(manifest)),
+            ("state.json", op.canonical_json_bytes(state)),
+        ):
+            op.write_immutable(run_dir / relative, data, root=run_dir)
+        op.append_event(
+            run_dir,
+            state,
+            "run_created",
+            details={"source_hashes": source_hashes},
+        )
+        self.assertEqual(op.status_run(run_dir, False)["stage"], "initialized")
+        self.assertEqual(op.check_run(run_dir)["valid"], True)
+        raw = self.root / "legacy-import.json"
+        raw.write_text("{}", encoding="utf-8")
+        mutation_calls = (
+            lambda: op.resume_run(run_dir),
+            lambda: op.start_job(run_dir, "legacy", None),
+            lambda: op.fail_job(run_dir, "legacy", "failure"),
+            lambda: op.complete_job(run_dir, "legacy", raw, "generic"),
+            lambda: op.dedup_run(run_dir),
+            lambda: op.advance_run(run_dir),
+            lambda: op.export_external(run_dir, "alpha"),
+            lambda: op.import_external(run_dir, "alpha", raw),
+            lambda: op.finalize_run(run_dir, "legacy closure"),
+            lambda: op.publish_run(
+                run_dir, self.root / "legacy-outcomes", self.root / "legacy-knowledge"
+            ),
+        )
+        for mutation in mutation_calls:
+            with self.subTest(mutation=mutation):
+                with self.assertRaisesRegex(op.ConflictError, "schema-v1 runs are read-only"):
+                    mutation()
+
+    def test_cli_exit_codes_for_input_and_premature_finalization_conflicts(self) -> None:
         stdout = io.StringIO()
         stderr = io.StringIO()
         with contextlib.redirect_stdout(stdout), contextlib.redirect_stderr(stderr):
@@ -1626,19 +2675,19 @@ class IntegrityAndExitCodeTests(OpportunityTestCase):
         stdout = io.StringIO()
         stderr = io.StringIO()
         with contextlib.redirect_stdout(stdout), contextlib.redirect_stderr(stderr):
-            no_qualifier = op.main(
+            premature = op.main(
                 [
                     "--runs-dir",
                     str(self.runs_dir),
                     "finalize",
                     self.run_id,
-                    "--no-qualifier-reason",
+                    "--no-finalist-reason",
                     "No viable candidates remained",
                 ]
             )
-        self.assertEqual(no_qualifier, 4)
+        self.assertEqual(premature, 3)
 
-    def test_command_level_new_status_resume_finalize_publish_dry_run(self) -> None:
+    def test_command_level_new_status_resume_rejects_scoreless_finalize(self) -> None:
         isolated = self.root / "cli" / "runs"
         code, created, _ = self.run_cli(["--runs-dir", str(isolated), "new"])
         self.assertEqual(code, 0)
@@ -1663,16 +2712,16 @@ class IntegrityAndExitCodeTests(OpportunityTestCase):
                 str(isolated),
                 "finalize",
                 run_id,
-                "--no-qualifier-reason",
+                "--no-finalist-reason",
                 "Dry-run work was intentionally bounded",
             ]
         )
-        self.assertEqual(code, 4)
-        self.assertEqual(final["run_status"], "no_qualifier")
-        code, published, _ = self.run_cli(["--runs-dir", str(isolated), "publish", run_id])
-        self.assertEqual(code, 0)
-        self.assertTrue((self.root / "cli/outcomes" / run_id / "report.json").is_file())
-        self.assertEqual(published["run_status"], "no_qualifier")
+        self.assertEqual(code, 3)
+        self.assertEqual(final, {})
+        code, _, error = self.run_cli(["--runs-dir", str(isolated), "publish", run_id])
+        self.assertEqual(code, 3)
+        self.assertIn("publish requires a finalized run", error["error"])
+        self.assertFalse((self.root / "cli/outcomes" / run_id / "report.json").exists())
 
 
 if __name__ == "__main__":
