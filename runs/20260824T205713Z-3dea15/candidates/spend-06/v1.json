@@ -1,0 +1,83 @@
+{
+  "candidate_id": "spend-06",
+  "claims": [
+    {
+      "claim_id": "spend-06-claim-1",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "scout-spend:S10"
+      ],
+      "statement": "URE explains that distribution tariffs contain charges for excess reactive power and contracted-capacity exceedance, and that reactive-power compensation, contract-power changes or tariff changes can reduce specific bill items."
+    },
+    {
+      "claim_id": "spend-06-claim-2",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "scout-spend:S10"
+      ],
+      "statement": "URE specifically recommends analyzing distribution invoices and consumption profiles before cost-saving action."
+    },
+    {
+      "claim_id": "spend-06-claim-3",
+      "confidence": "inference",
+      "evidence_refs": [
+        "scout-spend:S10"
+      ],
+      "statement": "A verified-savings contract may be easier to buy than a generic energy audit because payment follows a measurable reduction."
+    },
+    {
+      "claim_id": "spend-06-claim-4",
+      "confidence": "unknown",
+      "evidence_refs": [],
+      "statement": "The distribution of recoverable annual savings among reachable Polish SMEs under current 2026 tariffs is unknown."
+    }
+  ],
+  "contrary_evidence": [
+    "Electricians, energy brokers and compensation-equipment vendors already offer audits, sometimes free to sell hardware.",
+    "The cited URE explanation establishes charge mechanics but not current tariff amounts or the size of the addressable leakage.",
+    "Some sites need capital equipment with long payback, and savings can be confounded by production changes."
+  ],
+  "economics": {
+    "acquisition_route": "Acquire customers through accountants, energy brokers, electricians, photovoltaic installers and the founder's family business; begin with a no-saving, no-fee invoice audit.",
+    "capital_required_pln": null,
+    "founder_net_worth_path": null,
+    "founder_time": "Part-time validation hypothesis; delivery burden remains untested.",
+    "gross_margin_basis": null,
+    "payback": null,
+    "pricing": null,
+    "retention_or_repeat": null
+  },
+  "fingerprint": {
+    "compounding_advantage": "A cross-DSO dataset of invoice formats, facility load signatures, interventions, equipment cost and realized savings can improve eligibility scoring and avoid uneconomic site visits.",
+    "customer": "Polish SMEs and multi-site operators on non-household electricity tariffs, particularly facilities with motors, refrigeration, LED lighting, UPS systems, photovoltaic installations or recent electrical modifications.",
+    "distribution_mechanism": "Acquire customers through accountants, energy brokers, electricians, photovoltaic installers and the founder's family business; begin with a no-saving, no-fee invoice audit.",
+    "offer_and_business_model": "Invoice and interval-data ingestion that identifies charge components, simulates tariff and capacity choices, flags reactive-power patterns, routes a scoped measurement visit and verifies savings after compensation equipment or contract changes.",
+    "payer_and_paid_event": "The facility pays the distribution bill every month. Charge a contingency share of independently verified savings for the first year, plus an optional monitoring subscription; hardware and electrician work remain separately quoted.",
+    "problem_trigger": "A monthly distribution invoice starts or continues charging for excess reactive power, excess contracted capacity or a poorly matched tariff, often after load or equipment changes that finance staff cannot interpret."
+  },
+  "founder_fit": [
+    "Excellent match for quantitative modeling and family access to electrical customers.",
+    "Success-fee validation controls customer and founder downside.",
+    "Can start as analysis software with partner-delivered hardware installation."
+  ],
+  "parent": null,
+  "risks": [
+    "Evidence of a workflow, transition, or loss does not yet establish recurring willingness to pay.",
+    "The proposed distribution and compounding mechanisms remain hypotheses pending buyer evidence."
+  ],
+  "schema_version": 1,
+  "source_refs": [
+    "scout-spend:S10"
+  ],
+  "stage": "discovery",
+  "thesis": "For Polish SMEs and multi-site operators on non-household electricity tariffs, particularly facilities with motors, refrigeration, LED lighting, UPS systems, photovoltaic installations or recent electrical modifications., when A monthly distribution invoice starts or continues charging for excess reactive power, excess contracted capacity or a poorly matched tariff, often after load or equipment changes that finance staff cannot interpret., deliver Invoice and interval-data ingestion that identifies charge components, simulates tariff and capacity choices, flags reactive-power patterns, routes a scoped measurement visit and verifies savings after compensation equipment or contract changes.. The paid event is The facility pays the distribution bill every month. Charge a contingency share of independently verified savings for the first year, plus an optional monitoring subscription; hardware and electrician work remain separately quoted.; acquisition begins through Acquire customers through accountants, energy brokers, electricians, photovoltaic installers and the founder's family business; begin with a no-saving, no-fee invoice audit., with potential compounding from A cross-DSO dataset of invoice formats, facility load signatures, interventions, equipment cost and realized savings can improve eligibility scoring and avoid uneconomic site visits..",
+  "title": "Reactive-power and contracted-capacity leakage auditor",
+  "uncertainties": [
+    "Share of audited SMEs with enough avoidable charges to support acquisition and electrician costs.",
+    "Availability and permissioning of interval meter data across DSOs.",
+    "A measurement and verification method robust to weather, occupancy and production changes.",
+    "Pricing, buyer authority, and acquisition economics remain unvalidated at discovery.",
+    "First validation test: Audit 100 recent invoices from at least 30 unrelated firms reached through accountants and installers, then meter the 10 strongest sites before any intervention. Request signed contingency agreements only where a conservative payback is under 12 months and verify savings against a pre-agreed baseline for three billing cycles."
+  ],
+  "version": 1
+}

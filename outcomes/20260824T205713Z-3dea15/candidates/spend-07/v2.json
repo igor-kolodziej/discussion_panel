@@ -1,0 +1,234 @@
+{
+  "candidate_id": "spend-07",
+  "claims": [
+    {
+      "claim_id": "CL01",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "SRC01",
+        "SRC02"
+      ],
+      "statement": "Polish law gives owners of wind or solar resources that execute qualifying non-market redispatch instructions a compensation route; the connecting operator calculates and pays, subject to the EU-referenced rules."
+    },
+    {
+      "claim_id": "CL02",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "SRC01",
+        "SRC02"
+      ],
+      "statement": "Entitlement is narrower than installed OZE capacity: current law excludes non-firm connection arrangements, selection depends on controllability and size, and PSE limits claims to owners whose installations actually executed listed PSE-related instructions."
+    },
+    {
+      "claim_id": "CL03",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "SRC01",
+        "SRC02"
+      ],
+      "statement": "The general compensation claim expires 180 days after the last day of the month in which the instruction was executed; separately, auction-support information is due within 14 days and missing it can remove that support component."
+    },
+    {
+      "claim_id": "CL04",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "SRC06"
+      ],
+      "statement": "Curtailment volume is material at sector level: in 2024 PSE ordered about 597.26 GWh of PV and 125.1 GWh of wind non-market reductions, while DSO-initiated reductions added 24.12 GWh PV and 2.8 GWh wind."
+    },
+    {
+      "claim_id": "CL05",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "SRC06"
+      ],
+      "statement": "DSO-initiated 2024 curtailment was highly concentrated: only 3 of 188 DSOs used it, and Enea accounted for 98.8% of DSO PV and 85.7% of DSO wind reductions. National MWh therefore do not establish a broad reachable owner base."
+    },
+    {
+      "claim_id": "CL06",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "SRC07",
+        "SRC02"
+      ],
+      "statement": "URE reported 4,333 producers and 8,077 small OZE installations at year-end 2025, creating a broad prospecting universe for the 50 kW-1 MW segment, but it does not identify which owners executed compensable instructions or were underpaid."
+    },
+    {
+      "claim_id": "CL07",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "SRC03"
+      ],
+      "statement": "PSE's free WOZE portal already provides installation registration, lists eligible PSE instructions, validates claim inputs, supports corrections, tracks status, delivers settlement information and accepts owner-authorized service providers."
+    },
+    {
+      "claim_id": "CL08",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "SRC02",
+        "SRC04",
+        "SRC05"
+      ],
+      "statement": "PSE publishes the accepted PV and wind counterfactual methods. They use operator/owner meter data plus irradiation, wind-power curves, area forecasts or regression paths, and PSE publishes settlement prices and offers detailed calculations on request."
+    },
+    {
+      "claim_id": "CL09",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "SRC02",
+        "SRC03",
+        "SRC09"
+      ],
+      "statement": "Asset-level workflow access is permissioned rather than openly reusable: WOZE roles require the owner's business-partner administrator and acceptance authority, while PSE's redispatch B2B API uses mTLS, business-partner registration and defines the participant as the owner, DSO or an authorized representative."
+    },
+    {
+      "claim_id": "CL10",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "SRC02"
+      ],
+      "statement": "PSE does not state an end-to-end review SLA: review time depends on incoming volume and DSO data. It commits to payment within 21 days only after it receives the accounting document and accepted settlement information."
+    },
+    {
+      "claim_id": "CL11",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "SRC10"
+      ],
+      "statement": "A direct Polish competitor already offers the same wedge: SCADA connection, 15-minute monitoring, deadline alerts, automated monthly claims and a separate law-firm route. Its posted pricing is EUR 119/month for one plant, EUR 699/month for up to five plants/20 MW and EUR 2,325/month enterprise, each plus a 5% law-firm success fee."
+    },
+    {
+      "claim_id": "CL12",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "SRC10"
+      ],
+      "statement": "The direct competitor explicitly says its examples are hypothetical and that it will publish case studies once it has clients; therefore its presence proves offer saturation and a price anchor, not paid demand or successful incremental recoveries."
+    },
+    {
+      "claim_id": "CL13",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "SRC11"
+      ],
+      "statement": "Existing asset managers can bundle the adjacent work: VSB advertises grid/feed-in management, documentation, data analysis, contract and claims management, receivables, settlements and PPA support for Polish wind and solar assets."
+    },
+    {
+      "claim_id": "CL14",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "SRC08",
+        "SRC12"
+      ],
+      "statement": "There is genuine calculation ambiguity: the European Commission says fair-payment calculation remains unclear, and the current UD284 proposal says existing rules are tailored to schedule-based sales and do not work the same way for pay-as-produced PPAs."
+    },
+    {
+      "claim_id": "CL15",
+      "confidence": "unknown",
+      "evidence_refs": [
+        "SRC02",
+        "SRC03",
+        "SRC06",
+        "SRC10"
+      ],
+      "statement": "No located authoritative or merchant evidence quantifies how often reachable owners fail to claim, how often PSE under-calculates, or the cash added by a second-look service over WOZE, O&M and legal support. Avoided loss and aggregate curtailed MWh are not capturable revenue."
+    },
+    {
+      "claim_id": "CL16",
+      "confidence": "inference",
+      "evidence_refs": [
+        "SRC03",
+        "SRC04",
+        "SRC05",
+        "SRC09"
+      ],
+      "statement": "Outcome data do not automatically create a moat: official methods and system data are published, asset-specific access is owner-scoped, and cross-client reuse of telemetry, contracts and settlement outcomes would require explicit contractual rights and privacy/security controls."
+    },
+    {
+      "claim_id": "CL17",
+      "confidence": "inference",
+      "evidence_refs": [
+        "SRC10"
+      ],
+      "statement": "At a test price of 3% of incremental cash, an assumed PLN 150,000 incremental recovery produces PLN 4,500 revenue. With assumed delivery cost of PLN 1,200 and a 15% referral share, contribution is PLN 2,625 (58%); recoveries below roughly PLN 160,000 do not reach 60% contribution margin under those assumptions."
+    },
+    {
+      "claim_id": "CL18",
+      "confidence": "inference",
+      "evidence_refs": [
+        "SRC06",
+        "SRC07",
+        "SRC10"
+      ],
+      "statement": "A founder-net-worth path based only on a 3% incremental-recovery fee requires approximately 1,235 active owners at PLN 150,000 average incremental recovery per owner-year, 25% EBITDA margin, a 4x EBITDA value and 90% founder ownership to reach about PLN 5.0 million of founder equity; the eligible denominator and repeat rate needed for that scale are unproven."
+    }
+  ],
+  "contrary_evidence": [
+    "PSE's native portal and authenticated API are expanding, eroding workflow automation as a standalone wedge. [evidence: SRC03, SRC09]",
+    "The operator publishes the methods and detailed calculations, so an alternative result still needs legal/operator acceptance rather than merely a better model. [evidence: SRC02, SRC04, SRC05]",
+    "Exact and adjacent competitors already occupy the software, law-firm and asset-management layers. [evidence: SRC10, SRC11]",
+    "Aggregate curtailment is large but DSO events are concentrated and the public owner universe does not identify underpaid claims. [evidence: SRC06, SRC07]"
+  ],
+  "economics": {
+    "acquisition_route": "Start with 20 owner-authorized assets from at least five unrelated owners and three DSOs, reached via the family renewables network plus energy-law/O&M/lender referrals. Assume a 15% referral share; a direct outbound CAC of PLN 4,000 per signed owner is an unvalidated downside assumption and is not repaid by one PLN 150,000 recovery after delivery cost.",
+    "capital_required_pln": "PLN 60,000-100,000 for validation [inference]: PLN 15,000 energy-law opinion/contracts, PLN 15,000 security and professional/cyber cover, PLN 10,000 data/SCADA adapters, PLN 20,000 independent engineering and audit labor, and up to PLN 40,000 contingency. This fits the founder's own capital but does not fund a national legal-operations team.",
+    "founder_net_worth_path": "Definition used: founder-owned business equity plus personal cash/distributions minus liabilities, excluding the primary residence, with retained earnings counted only through business value. Assume 90% founder ownership, no debt, no distributions counted, and while employed 95% of after-tax distributable cash is reinvested with optional distributions capped at 5%. Outcome-only base case [inference]: PLN 150,000 average incremental recovery per active owner-year x 3% = PLN 4,500 annual revenue per owner; 25% EBITDA margin at scale; 4x EBITDA service-business value. Milestones: month 0-3 audit 20 assets; year 1, 10 paying owners/PLN 45,000 revenue; year 2, 50/PLN 225,000; year 4, 250/PLN 1.125m, PLN 281,000 EBITDA, PLN 1.125m value and PLN 1.01m founder equity; year 6, 600/PLN 2.7m, PLN 675,000 EBITDA, PLN 2.7m value and PLN 2.43m founder equity; year 8, approximately 1,235/PLN 5.56m, PLN 1.39m EBITDA, PLN 5.56m value and approximately PLN 5.0m founder equity. The founder should not leave employment before positive contribution, repeat demand and a separate 12-month personal runway—no earlier than the year-4 milestone in this scenario. The required 1,235 simultaneously active, under-recovered owners is unsupported relative to 4,333 total small-OZE producers, concentrated eligibility, native automation and direct competition, so the path is mathematical rather than plausible.",
+    "founder_time": "Validation: 15-20 hours/week for 10-12 weeks, within the founder's maximum five hours/day. Production: owner permissions, SCADA normalization, portal/API operation, manual QA, DSO corrections and legal escalation make more than roughly 10 concurrent owner portfolios incompatible with a solo part-time role; an operations analyst and retained energy counsel would be required before scale.",
+    "gross_margin_basis": "Conservative successful-case assumption [inference]: PLN 150,000 incremental recovery x 3% = PLN 4,500 revenue; 5 analyst hours x PLN 180 = PLN 900, 1 expert-QA/coordination hour x PLN 300 = PLN 300, plus 15% channel share = PLN 675. Contribution is PLN 2,625 or 58%. At PLN 50,000 incremental recovery, contribution falls to PLN 75 or 5%. With these assumptions, approximately PLN 160,000 incremental recovery is required for 60% contribution; included legal work would raise the threshold.",
+    "payback": "A referred case with at least PLN 160,000 incremental recovery pays back delivery and referral cost only when cash is received. PSE gives no review SLA and pays within 21 days only after accepted settlement and accounting documents; the competitor claims 60-90 day operator review but provides no client evidence. Small claims or litigation can fail to repay acquisition for many months or at all.",
+    "pricing": "Competitor benchmark [evidence, SRC10]: EUR 119/month for one plant up to 3 MW, EUR 699/month for up to five plants/20 MW, or EUR 2,325/month enterprise, each plus a 5% partner-law-firm success fee. Test offer [inference]: zero subscription during validation and a 3% technical fee only on incremental cash received above a signed baseline; legal fees are separate. A subscription is not included in the wealth case until paid retention exists.",
+    "retention_or_repeat": "Nationwide events recur, but per-owner frequency and recoverable-error recurrence are unknown. Assume no subscription retention and only one successful recovery per owner-year in the base wealth arithmetic; require at least 50% of pilot owners to experience a second qualifying event within 12 months before valuing recurring revenue."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A consent-scoped taxonomy of settlement-error patterns and reusable calculation tests may reduce review time, but client telemetry, contracts and outcomes remain segregated unless explicit reuse rights exist; do not claim a data moat from outcomes alone.",
+    "customer": "Polish independent commercial or utility PV/wind owners with an executed qualifying PSE/DSO instruction, a firm connection entitlement, complete meter/contract records and a documented unclaimed, rejected or plausibly underpaid settlement; exclude residential prosumers, non-firm connections and correctly settled portfolios.",
+    "distribution_mechanism": "Source permissioned audit cases through energy-law firms, O&M providers, lenders and insurers, starting with the family renewables network only to locate owners; pay no more than a 15% referral share and treat asset managers as potential competitors, not assumed channels.",
+    "offer_and_business_model": "Provide a fixed-scope second-look audit, reconstruct the official PV/wind method, reconcile instruction, meter, SCADA, support and PPA data, quantify only a defensible incremental gap, prepare a reviewed correction/evidence pack and hand legal representation to a specialist. Do not build recurring automation until three incremental recoveries are paid.",
+    "payer_and_paid_event": "The asset owner pays a technical fee of at most 3% of incremental cash actually received above a written baseline; ordinary WOZE entitlement is not billable, and any law-firm engagement and fee are separately disclosed.",
+    "problem_trigger": "A qualifying instruction has occurred and either no claim has been filed before the 180-day expiry, the 14-day auction-support notice is at risk, or native WOZE settlement appears to omit a contract-specific recoverable component."
+  },
+  "founder_fit": [
+    "The 20-asset audit uses the founder's data-science strengths, can be executed in roughly 15-20 hours per week and benefits from family adjacency to Polish renewables.",
+    "A technical founder can reproduce and stress-test PSE calculations, but cannot replace authority, energy-law judgment or client-specific contract interpretation.",
+    "The low-social-energy fit is acceptable for an audit supplied through partners, but poor for the large owner count and relationship-heavy channel scale required by the wealth path.",
+    "The pilot can stay within the founder's PLN 100,000 capital and five-hours-per-day limit; production operations would require hires and legal partners."
+  ],
+  "parent": {
+    "candidate_id": "spend-07",
+    "version": 1
+  },
+  "risks": [
+    "{\"mitigation\": \"Sign a claim-specific baseline and exclude all amounts the owner or incumbent process had already submitted or would receive under the unchallenged WOZE calculation.\", \"risk\": \"Outcome pricing accidentally charges for ordinary statutory entitlement rather than incremental recovery.\"}",
+    "{\"mitigation\": \"Pre-screen connection, instruction, support and price data before onboarding; reject sub-threshold cases.\", \"risk\": \"Non-firm connection terms, negative-price periods or missed support notices eliminate much of the apparent claim.\"}",
+    "{\"mitigation\": \"Use a separately retained Polish energy-law firm for advice, powers of attorney, disputes and litigation.\", \"risk\": \"Technical analysis crosses into regulated legal representation or creates professional-liability exposure.\"}",
+    "{\"mitigation\": \"Use purpose-limited data-processing terms, tenant isolation, retention limits and explicit opt-in before any anonymized learning.\", \"risk\": \"Owner telemetry, PPAs and settlement data are reused without sufficient contractual authority or security.\"}",
+    "{\"mitigation\": \"Do not compete on generic monitoring; test only independently verified underpayment cases and stop if no distinct error pattern emerges.\", \"risk\": \"A direct competitor or incumbent asset manager acquires the small reachable niche before validation.\"}",
+    "{\"mitigation\": \"Keep pilot spend below PLN 100,000, make legal fees client-paid, and accept only cases with expected incremental recovery above PLN 160,000.\", \"risk\": \"Contingency cash arrives too late to finance manual review and channel fees.\"}"
+  ],
+  "schema_version": 1,
+  "source_refs": [
+    "SRC01",
+    "SRC02",
+    "SRC03",
+    "SRC04",
+    "SRC05",
+    "SRC06",
+    "SRC07",
+    "SRC08",
+    "SRC09",
+    "SRC10",
+    "SRC11",
+    "SRC12"
+  ],
+  "stage": "research",
+  "thesis": "Do not enter as a generic claim generator. The only evidence-compatible wedge is an owner-authorized second-look audit for qualifying PV/wind instructions that are still within the 180-day window and have a documented gap between native WOZE settlement and contract-specific recoverable cash. Charge only on cash incremental to the owner's existing process and route representation or litigation to an independent energy-law firm. This remains a test, not a validated business, because no under-recovery denominator is documented and an exact competitor already posts a 5% success-fee offer.",
+  "title": "Second-look OZE curtailment underpayment recovery",
+  "uncertainties": [
+    "Audited under-recovery frequency and incremental cash distribution remain unknown. [evidence: SRC02, SRC06, SRC10]",
+    "Actual owner willingness to pay at or below the incumbent's 5% anchor remains unknown. [evidence: SRC10]",
+    "PSE acceptance of contract-specific counterfactuals and the share requiring litigation remain unknown. [evidence: SRC04, SRC05, SRC08, SRC12]",
+    "Actual end-to-end payout timing, manual review cost, claim rejection rate and per-owner event repeat remain unknown. [evidence: SRC02, SRC10]",
+    "Channel conversion, revenue share, API onboarding and cross-client reuse rights remain unknown. [evidence: SRC03, SRC09, SRC11]"
+  ],
+  "version": 2
+}

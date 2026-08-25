@@ -1,0 +1,77 @@
+{
+  "candidate_id": "asymmetry-07",
+  "claims": [
+    {
+      "claim_id": "asymmetry-07-claim-1",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "scout-asymmetries:S15"
+      ],
+      "statement": "The definitive CBAM regime applies from 1 January 2026; importers above a single 50-tonne mass threshold must seek authorized-declarant status, declare embedded emissions and surrender corresponding certificates."
+    },
+    {
+      "claim_id": "asymmetry-07-claim-2",
+      "confidence": "inference",
+      "evidence_refs": [
+        "scout-asymmetries:S15"
+      ],
+      "statement": "Supplier evidence quality and repeated data collection will be painful enough for threshold-crossing mid-market importers to outsource QA."
+    },
+    {
+      "claim_id": "asymmetry-07-claim-3",
+      "confidence": "unknown",
+      "evidence_refs": [],
+      "statement": "The number of accessible Polish importers above threshold and their service budget are not established by the regulatory source."
+    }
+  ],
+  "contrary_evidence": [
+    "The 50-tonne threshold removes many small importers from the obligation.",
+    "The Commission provides official guidance, registry tools, default values and templates, and customs brokers may bundle assistance.",
+    "Incorrect classification or emissions calculations can create material compliance exposure beyond a software founder's competence."
+  ],
+  "economics": {
+    "acquisition_route": "Partner with customs brokers, freight forwarders and trade associations that can identify threshold-crossing importers at the paid event, avoiding mass consumer marketing.",
+    "capital_required_pln": null,
+    "founder_net_worth_path": null,
+    "founder_time": "Part-time validation hypothesis; delivery burden remains untested.",
+    "gross_margin_basis": null,
+    "payback": null,
+    "pricing": null,
+    "retention_or_repeat": null
+  },
+  "fingerprint": {
+    "compounding_advantage": "A permissioned library of supplier identities, plant-method mappings and recurring validation exceptions can make repeat onboarding cheaper. Cross-customer reuse may be restricted and is not assumed to create a moat.",
+    "customer": "Polish and CEE importers just above the CBAM mass threshold in iron and steel, aluminium, cement, fertilisers, electricity or hydrogen, especially firms without an internal carbon-accounting team.",
+    "distribution_mechanism": "Partner with customs brokers, freight forwarders and trade associations that can identify threshold-crossing importers at the paid event, avoiding mass consumer marketing.",
+    "offer_and_business_model": "Ingest customs lines and Commission supplier templates, identify in-scope goods, chase missing fields through structured multilingual forms, run consistency checks against methods and defaults, and maintain a versioned evidence trail. Begin as a productized managed service before building self-service software.",
+    "payer_and_paid_event": "The importer pays per supplier onboarding or per quarterly data-quality pack, then an annual fee for declaration-ready evidence. A customs broker can resell the service; regulatory liability stays contractually with the declarant and qualified advisers.",
+    "problem_trigger": "A new supplier or shipment enters scope and the importer must obtain, validate and preserve embedded-emissions evidence before authorization, declaration and certificate obligations become costly or urgent."
+  },
+  "founder_fit": [
+    "Combines quantitative data validation with finance and regulation",
+    "Supplier-document workflows can be heavily automated and asynchronous",
+    "A single paid supplier pilot is possible without significant capital",
+    "Channel partners can carry relationship-heavy acquisition"
+  ],
+  "parent": null,
+  "risks": [
+    "Evidence of a workflow, transition, or loss does not yet establish recurring willingness to pay.",
+    "The proposed distribution and compounding mechanisms remain hypotheses pending buyer evidence."
+  ],
+  "schema_version": 1,
+  "source_refs": [
+    "scout-asymmetries:S15"
+  ],
+  "stage": "discovery",
+  "thesis": "For Polish and CEE importers just above the CBAM mass threshold in iron and steel, aluminium, cement, fertilisers, electricity or hydrogen, especially firms without an internal carbon-accounting team., when A new supplier or shipment enters scope and the importer must obtain, validate and preserve embedded-emissions evidence before authorization, declaration and certificate obligations become costly or urgent., deliver Ingest customs lines and Commission supplier templates, identify in-scope goods, chase missing fields through structured multilingual forms, run consistency checks against methods and defaults, and maintain a versioned evidence trail. Begin as a productized managed service before building self-service software.. The paid event is The importer pays per supplier onboarding or per quarterly data-quality pack, then an annual fee for declaration-ready evidence. A customs broker can resell the service; regulatory liability stays contractually with the declarant and qualified advisers.; acquisition begins through Partner with customs brokers, freight forwarders and trade associations that can identify threshold-crossing importers at the paid event, avoiding mass consumer marketing., with potential compounding from A permissioned library of supplier identities, plant-method mappings and recurring validation exceptions can make repeat onboarding cheaper. Cross-customer reuse may be restricted and is not assumed to create a moat..",
+  "title": "CBAM supplier-data QA desk for mid-market importers",
+  "uncertainties": [
+    "Polish importer counts and shipment frequency by covered sector above 50 tonnes",
+    "Share of suppliers able to provide usable plant-level data",
+    "Broker partnership economics and incumbent competition",
+    "Required insurance, expert sign-off and liability limits",
+    "Pricing, buyer authority, and acquisition economics remain unvalidated at discovery.",
+    "First validation test: Interview five customs brokers and ten threshold-crossing importers in two covered sectors, then complete one fixed-fee historical supplier-data QA pack using the customer's own shipment and evidence files. Continue only if the buyer pays for the next live supplier or quarter and a qualified adviser accepts the responsibility split."
+  ],
+  "version": 1
+}

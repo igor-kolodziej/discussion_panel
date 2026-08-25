@@ -1,0 +1,240 @@
+{
+  "candidate_id": "spend-08",
+  "claims": [
+    {
+      "claim_id": "C01",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "S01"
+      ],
+      "statement": "Late-payment pain is unusually salient in Poland: the 2025 EU Payment Observatory summary reports that 52% of EU companies experienced late-payment problems in 2024, names Poland among the three worst-reported Member States, and reports average supplier-observed B2B payment periods of 60.3 days."
+    },
+    {
+      "claim_id": "C02",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "S01"
+      ],
+      "statement": "The same report estimates 9.85 staff hours per week spent chasing late payments, reports more problems among exporters than non-exporters (56% versus 49%), and says larger companies are less likely to pay on time; these are useful segmentation signals but do not identify invoice-level prospects or willingness to buy this product."
+    },
+    {
+      "claim_id": "C03",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "S01"
+      ],
+      "statement": "Construction, logistics and health cannot be treated as uniformly worst segments: the Observatory says payment variation is greater across countries than sectors, and transportation/logistics and pharma/medical/biotech improved by more than five days in 2024."
+    },
+    {
+      "claim_id": "C04",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "S02"
+      ],
+      "statement": "KSeF creates broad invoice-data coverage: it became mandatory for most remaining enterprises on 1 April 2026, with only firms at or below PLN 10,000 of monthly invoiced sales deferred until 1 January 2027."
+    },
+    {
+      "claim_id": "C05",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "S02",
+        "S03"
+      ],
+      "statement": "KSeF is an invoice source, not a dependable current paid/unpaid ledger: the Ministry states that payment-form and paid-status fields are optional, and separately states that KSeF is not a system for making payments. Reliable overdue detection therefore still requires accounting reconciliation, bank reconciliation or manual confirmation."
+    },
+    {
+      "claim_id": "C06",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "S04"
+      ],
+      "statement": "An accounting-led channel is technically feasible because a company can grant an accounting office InvoiceRead access and KSeF permits direct or delegated invoice-read permissions, including intermediary access that is auditable and revocable."
+    },
+    {
+      "claim_id": "C07",
+      "confidence": "inference",
+      "evidence_refs": [
+        "S04"
+      ],
+      "statement": "KSeF data access does not confer buying authority: for the target SME the likely economic buyer is the owner, CFO, finance director or chief accountant, while an outside accounting office is more plausibly a recommender and data-access intermediary unless the client explicitly delegates procurement."
+    },
+    {
+      "claim_id": "C08",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "S05"
+      ],
+      "statement": "Direct multi-bank aggregation is not a lightweight feature. KNF classifies account-information service provision as regulated activity requiring registration plus a three-year plan, security and incident procedures, complaint handling, continuity arrangements and liability insurance or equivalent security. A part-time launch should use a registered AISP partner or customer-supplied exports rather than seek its own registration."
+    },
+    {
+      "claim_id": "C09",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "S06"
+      ],
+      "statement": "Polish commercial-transaction law gives creditors automatic statutory late interest and fixed recovery-cost compensation of EUR 40, EUR 70 or EUR 100 depending on claim value, plus justified excess recovery costs. These rights establish an economic consequence of delay, but actual willingness to invoke them may be limited by customer-relationship concerns."
+    },
+    {
+      "claim_id": "C10",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "S07"
+      ],
+      "statement": "Customer-specific processing and cross-customer reuse are different propositions. Where invoice and payment records identify sole traders or contact persons, GDPR requires purpose limitation, data minimisation, an Article 6 legal basis and balancing of legitimate interests; Article 22 adds safeguards where solely automated profiling has legal or similarly significant effects. KSeF permission alone does not authorize pooling such personal data across customers, and contractual reuse rights for company-level data are separately unproven."
+    },
+    {
+      "claim_id": "C11",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "S08"
+      ],
+      "statement": "The official Polish company search makes CEIDG and KRS entities discoverable and can link to filed financial statements, but it exposes neither monthly invoice throughput nor current receivables ageing. A nominal prospect list is reachable; a prequalified list of 50-500-invoice firms with material overdue balances is not publicly established."
+    },
+    {
+      "claim_id": "C12",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "S09"
+      ],
+      "statement": "The workflow is already bundled into a major Polish ERP: Comarch ERP Optima CRM Plus supports automated email and SMS notices, payment demands, CRM tasks and sales blocking, and states that after a collection scheme is configured the service runs without manual operator intervention."
+    },
+    {
+      "claim_id": "C13",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "S10"
+      ],
+      "statement": "A direct Polish online substitute already sells the proposed recovery motion. Vindicat advertises accounting-software integrations, automated reminders and amicable recovery, an 8% success fee, and claims more than 20,000 business users. The user-count and 93% success claims are vendor assertions rather than independently audited outcomes, but the product and price are direct competitive evidence."
+    },
+    {
+      "claim_id": "C14",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "S11"
+      ],
+      "statement": "Factoring is a paid substitute for the liquidity outcome rather than the reminder workflow. Fandla's published schedule charges 0.12% per financing day (3.49% per month, minimum PLN 75 gross), and separately lists electronic demands, field collection at 8%, credit-information-bureau entry and settlements; this provides both a price ceiling and evidence that adjacent providers already span finance and recovery."
+    },
+    {
+      "claim_id": "C15",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "S12"
+      ],
+      "statement": "Adjacent randomized evidence shows why the product must separate DSO acceleration from ultimate recovery: an Australian business-tax field experiment found reminders increased seven-week payment probability by about 25 percentage points versus no reminder, but sending a reminder earlier made payment faster without changing the eventual payment share across reminder groups, and no discernible reminder effect was found for high-value debts above about AUD 7,500. This is not Polish B2B-invoice evidence."
+    },
+    {
+      "claim_id": "C16",
+      "confidence": "inference",
+      "evidence_refs": [
+        "S12"
+      ],
+      "statement": "A recovery percentage is only attributable if eligible invoices, treatment timing, ordinary-reminder control, disputes, credit notes, pre-existing promises to pay, partial payments and the measurement window are fixed in advance. Without a continuing holdout or agreed counterfactual, cash received after a reminder cannot be assumed incremental."
+    },
+    {
+      "claim_id": "C17",
+      "confidence": "inference",
+      "evidence_refs": [
+        "S03",
+        "S04",
+        "S07",
+        "S09",
+        "S10",
+        "S11"
+      ],
+      "statement": "The proposed standalone layer has no demonstrated durable wedge today: invoice access is standardized, live status still depends on other systems, direct dunning and factoring substitutes exist, and the proposed pooled-data advantage is constrained by permission and purpose-limitation requirements."
+    },
+    {
+      "claim_id": "C18",
+      "confidence": "unknown",
+      "evidence_refs": [],
+      "statement": "No direct evidence found establishes the number of Polish firms with 50-500 monthly invoices, material recurring overdue balances, authority to buy through an accountant, and no adequate ERP, collection or factoring workflow."
+    },
+    {
+      "claim_id": "C19",
+      "confidence": "unknown",
+      "evidence_refs": [],
+      "statement": "No direct Polish B2B controlled study found establishes incremental cash collection, DSO improvement, relationship safety or willingness to pay for this KSeF-connected layer over a disciplined ordinary-reminder baseline."
+    },
+    {
+      "claim_id": "C20",
+      "confidence": "unknown",
+      "evidence_refs": [],
+      "statement": "A low-touch part-time operating model remains unproven because disputed invoices, missing bank matches, debtor replies, promise-to-pay monitoring and legal or factoring handoffs can turn software automation into recurring casework."
+    }
+  ],
+  "contrary_evidence": [
+    "KSeF does not supply a mandatory, continuously updated payment status; accounting or bank reconciliation remains necessary.",
+    "Comarch and Vindicat already automate much of the proposed dunning and recovery workflow in Poland.",
+    "Factoring substitutes immediate cash for uncertain recovery and can bundle later collection.",
+    "Success-fee attribution is not credible from temporal sequence alone, and adjacent experimental evidence shows faster payment need not mean more ultimate recovery.",
+    "The proposed cross-customer data asset lacks established reuse rights and is vulnerable to purpose-limitation constraints."
+  ],
+  "economics": {
+    "acquisition_route": "Inference: recruit accounting offices and KSeF integrators that can receive delegated InvoiceRead access (S04); have the client owner/CFO sign; pay the partner 20% recurring revenue plus no more than PLN 300 activation bounty. A scale scenario needs 40 partners averaging 30 active clients each to reach 1,200 customers. CEIDG/KRS can seed names (S08) but cannot qualify invoice volume or arrears, so direct list-based outbound is not the base case.",
+    "capital_required_pln": "PLN 60,000-100,000 for a narrow pilot: PLN 15,000-25,000 for Polish legal, DPA, DPIA and gainshare terms; PLN 20,000-35,000 for KSeF plus two accounting connectors; PLN 10,000-20,000 for a registered AISP partner, security and insurance allocation; PLN 10,000-15,000 for onboarding, messaging and partner activation; PLN 5,000 contingency. This fits the founder's ordinary PLN 100,000 ceiling only if the company does not seek its own AISP registration (S05) or provide in-house legal collection.",
+    "founder_net_worth_path": "Stretch inference using the founder snapshot definition: founder net worth equals founder business equity plus non-retained after-tax cash/distributions minus founder liabilities, excluding the home and never adding retained earnings twice. Months 0-3: 10-15 pilot firms and at least 5,000 randomized eligible invoices. Month 12: 60 paid entities x PLN 449 ARPU = about PLN 26,940 MRR and PLN 323,280 ARR; reinvest 95% of after-tax cash while employed. Month 24: 250 entities = about PLN 1.35 million ARR. Month 36: 600 entities = about PLN 3.23 million ARR; at 20% EBITDA and 4x EBITDA, enterprise value is about PLN 2.59 million and, before net debt, an 80% founder stake about PLN 2.07 million. Month 60: 1,200 entities = about PLN 6.47 million ARR; at 25% EBITDA and 4x EBITDA, enterprise value is about PLN 6.47 million. After assumed PLN 250,000 business net debt, equity value is PLN 6.22 million and an 80% founder stake about PLN 4.97 million; adding PLN 100,000 cumulative non-retained after-tax distributions and assuming zero founder liabilities gives snapshot founder net worth of about PLN 5.07 million. Retained earnings are already reflected in business value and are not added again. The target is reached around year 5 only under the unvalidated 1,200-customer, 25%-EBITDA, 4x-multiple and 80%-ownership assumptions; current evidence does not make that path probable.",
+    "founder_time": "For 12 weeks, allocate 4-5 hours/day: 2 hours integration and data quality, 1 hour experiment/attribution, 1 hour partner and client calls, and up to 1 hour exceptions. Preserve employment until at least PLN 50,000 MRR, three repeatable partners, observed contribution margin above 50%, sub-six-month payback and 12 months of personal runway. At scale, require less than 0.5 founder hour per day and outsource human escalation; more than 0.5 service hour per client per month fails part-time feasibility.",
+    "gross_margin_basis": "Modeled inference for a 200-invoice client: assume PLN 100,000 enters an eligible overdue pool monthly, the treatment creates PLN 5,000 of incremental 30-day cash, and the 3% fee adds PLN 150 to the PLN 299 base, for PLN 449 ARPU. Direct monthly costs are modeled at PLN 30 connectors/messaging, PLN 90 partner share (20% of revenue), PLN 40 human review (0.5 hour at PLN 80/hour), and PLN 50 support/security allocation: PLN 210 cost, PLN 239 contribution, 53% contribution margin before product engineering and central overhead. At only PLN 2,000 incremental cash and one human hour, modeled contribution margin is about 35%; at zero incremental cash and 0.5 hour it is about 40%. These are sensitivity cases and stop conditions, not observed economics.",
+    "payback": "Inference: cap combined partner bounty, onboarding labor and sales allocation at PLN 700 per activated client. At PLN 239 modeled monthly contribution, simple payback is 2.9 months; allow four months for success-fee cash lag and reconciliation. Require observed payback below six months. If founder-led direct selling or custom integration pushes acquisition above PLN 1,400, modeled payback exceeds the acceptable part-time case.",
+    "pricing": "Test-only inference: PLN 299 net per legal entity per month for up to 500 issued invoices, plus 3% of portfolio-level cash proven incremental within a pre-agreed 30-day window; exclude disputed invoices, credit notes, pre-existing promises and factoring proceeds. The 3% rate is deliberately below Vindicat's advertised 8% success fee, while the base funds monitoring; neither S10 nor the Fandla price ceiling in S11 proves willingness to pay for this additional layer. If a continuing counterfactual is unacceptable, use flat subscription pricing rather than label all post-reminder cash incremental.",
+    "retention_or_repeat": "Inference, not evidence: ongoing invoice issuance makes monthly use possible, but better discipline and ERP substitution may remove the need. The wealth scenario assumes 2% monthly logo churn and 12-month partner contracts; the pilot gate is at least 8 of 10 eligible firms signing at the test price and at least 7 still paying after three months. No source establishes these retention rates."
+  },
+  "fingerprint": {
+    "compounding_advantage": "With lawful permissions, an anonymized record of payer timing, invoice features, reminder sequence and recovery outcome can improve prioritization and reveal which intervention works for each segment.",
+    "customer": "Polish B2B SMEs issuing roughly 50 to 500 invoices per month, especially exporters and construction, logistics or health suppliers whose owners or finance teams manually chase receivables.",
+    "distribution_mechanism": "Embed through accounting offices, KSeF integrators, SME banks, factoring brokers and trade-credit insurers rather than relying on founder-led outbound sales.",
+    "offer_and_business_model": "Connect KSeF or accounting exports and bank transactions, score expected payment timing, automate respectful evidence-backed reminders, track promises to pay and route only unresolved cases to a human, collection partner or factor. Separate prediction from any regulated credit decision.",
+    "payer_and_paid_event": "The supplier would pay per entity per month plus a percentage of overdue cash collected after the workflow starts; factoring or legal handoff can pay a referral fee where disclosed. Recurring late-payment pain is evidenced, but recurring willingness to buy this specific layer is not.",
+    "problem_trigger": "A due date approaches or passes, an expected payment is missing and staff must decide whom to contact, what evidence to attach, when to escalate and whether to use legal collection or factoring without harming the customer relationship."
+  },
+  "founder_fit": [
+    "Strong fit for the founder's data-science, causal-measurement and workflow-automation strengths.",
+    "A 10-15-company shadow and randomized pilot can fit the founder's 5-hour daily cap while retaining employment.",
+    "The model ceases to fit if it requires proprietary AISP registration, founder-led debt chasing, legal representation or more than 0.5 hour of monthly exception handling per client.",
+    "Accountant and factor partnerships reduce mass outbound but still require relationship-led enterprise selling, a weaker fit with low social energy.",
+    "The available PLN 100,000 is adequate only for a partner-based pilot with narrow integrations and legal review, not a regulated bank-data or full-service collection operation."
+  ],
+  "parent": {
+    "candidate_id": "spend-08",
+    "version": 1
+  },
+  "risks": [
+    "False overdue flags caused by optional KSeF payment fields, partial payments, credits or unmatched transfers can damage customer relationships.",
+    "Automated escalation can intensify disputes or threaten strategically important buyer relationships unless humans approve tone and route.",
+    "A hybrid gainshare creates recurring reconciliation disputes and delayed cash collection for the vendor.",
+    "Accounting offices, factors and insurers may see the product as competition and demand channel economics that erase contribution margin.",
+    "Comarch, Vindicat or other accounting incumbents can copy scoring into systems that already hold reconciled payment data.",
+    "AISP, GDPR and contractual-security obligations may exceed a part-time founder's operating capacity.",
+    "Manual exception handling can turn a software model into a low-margin collection service.",
+    "The stretch wealth path requires 1,200 retained customers and a 4x EBITDA value despite no demonstrated exclusive distribution or data moat."
+  ],
+  "schema_version": 1,
+  "source_refs": [
+    "S01",
+    "S02",
+    "S03",
+    "S04",
+    "S05",
+    "S06",
+    "S07",
+    "S08",
+    "S09",
+    "S10",
+    "S11",
+    "S12"
+  ],
+  "stage": "research",
+  "thesis": "Polish late-payment pain and broad KSeF invoice coverage are real, but the proposed standalone hybrid-priced layer has no proven wedge: KSeF does not provide dependable live paid status, bank reconciliation adds regulated integration, and Polish ERP, collection and factoring incumbents already sell the workflow or outcome. Stop as written unless an accountant-recruited randomized pilot proves causal DSO or cash lift, separate paid demand and low-touch delivery.",
+  "title": "KSeF-connected late-payment early warning and recovery workflow",
+  "uncertainties": [
+    "Qualified segment size and a reachable list filtered by invoice volume, overdue exposure and incumbent process.",
+    "Causal DSO and cash-collection lift versus disciplined ordinary reminders in Polish B2B invoices.",
+    "Paid conversion at PLN 299 plus 3% incremental recovery and customer acceptance of a continuing control method.",
+    "AISP and accounting-connector match rates, latency, security burden and per-client cost.",
+    "Accountant, factor and insurer channel conversion, conflict and revenue-share economics.",
+    "Dispute volume, relationship complaints, legal boundaries and manual minutes per client.",
+    "Lawful cross-customer reuse, anonymisation and controller-processor allocation.",
+    "Retention after receivables discipline improves and incumbents copy any useful prioritisation."
+  ],
+  "version": 2
+}

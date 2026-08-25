@@ -1,0 +1,85 @@
+{
+  "candidate_id": "spend-09",
+  "claims": [
+    {
+      "claim_id": "spend-09-claim-1",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "scout-spend:S13"
+      ],
+      "statement": "Stripe's Poland pricing page lists a 90 PLN dispute-received fee and a 90 PLN manually countered fee that is returned for won disputes but retained for lost ones; it also prices its own Smart Disputes at 30% of the disputed amount won."
+    },
+    {
+      "claim_id": "spend-09-claim-2",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "scout-spend:S14"
+      ],
+      "statement": "Stripe says relevant evidence can overturn an invalid chargeback and a fully favorable resolution returns the disputed amount, establishing a measurable outcome event."
+    },
+    {
+      "claim_id": "spend-09-claim-3",
+      "confidence": "inference",
+      "evidence_refs": [
+        "scout-spend:S13",
+        "scout-spend:S14"
+      ],
+      "statement": "A cross-processor, vertical-specific product may find a niche despite processor-native automation, but it needs a demonstrable win-rate or labor advantage."
+    },
+    {
+      "claim_id": "spend-09-claim-4",
+      "confidence": "unknown",
+      "evidence_refs": [],
+      "statement": "Dispute volume and achievable incremental win rate among reachable CEE merchants are unknown."
+    }
+  ],
+  "contrary_evidence": [
+    "Stripe already sells AI-prepared Smart Disputes on outcome pricing, providing direct product validation and formidable competition.",
+    "Processor and card-network rules limit what evidence matters, and merchants with poor fulfillment cannot automate their way to valid wins.",
+    "Low-volume merchants will not support integration cost, while high-volume merchants may have internal risk teams."
+  ],
+  "economics": {
+    "acquisition_route": "Distribute through e-commerce agencies, Shopify and WooCommerce implementers, fulfillment providers, accountants and processor app ecosystems; focus on cross-processor or CEE-language workflows an incumbent processor cannot see.",
+    "capital_required_pln": null,
+    "founder_net_worth_path": null,
+    "founder_time": "Part-time validation hypothesis; delivery burden remains untested.",
+    "gross_margin_basis": null,
+    "payback": null,
+    "pricing": null,
+    "retention_or_repeat": null
+  },
+  "fingerprint": {
+    "compounding_advantage": "Outcome-labelled evidence by reason code, network, issuer region, vertical and evidence type can improve pack selection and identify operational changes that prevent repeat disputes.",
+    "customer": "Polish and CEE e-commerce, subscription, travel and digital-service merchants with recurring card disputes across more than one processor or sales channel.",
+    "distribution_mechanism": "Distribute through e-commerce agencies, Shopify and WooCommerce implementers, fulfillment providers, accountants and processor app ecosystems; focus on cross-processor or CEE-language workflows an incumbent processor cannot see.",
+    "offer_and_business_model": "A cross-processor evidence collector that maps reason codes to the strongest available order, fulfillment, device and communication proof, requires merchant approval, submits a concise pack and reports root causes upstream to checkout and support teams.",
+    "payer_and_paid_event": "The merchant pays at each dispute through lost funds and processor fees. Charge a percentage of the disputed amount only when won, or a fixed reviewed-submission fee for high-volume teams.",
+    "problem_trigger": "A dispute immediately removes the transaction amount and adds fees; the merchant must collect order, delivery, login, refund-policy and customer-communication evidence before a network deadline, then learn why similar cases recur."
+  },
+  "founder_fit": [
+    "A bounded data-integration and document-intelligence product with global expansion potential.",
+    "Success pricing permits cheap merchant validation.",
+    "Agency distribution and automated onboarding avoid personal-brand selling."
+  ],
+  "parent": null,
+  "risks": [
+    "Evidence of a workflow, transition, or loss does not yet establish recurring willingness to pay.",
+    "The proposed distribution and compounding mechanisms remain hypotheses pending buyer evidence."
+  ],
+  "schema_version": 1,
+  "source_refs": [
+    "scout-spend:S13",
+    "scout-spend:S14"
+  ],
+  "stage": "discovery",
+  "thesis": "For Polish and CEE e-commerce, subscription, travel and digital-service merchants with recurring card disputes across more than one processor or sales channel., when A dispute immediately removes the transaction amount and adds fees; the merchant must collect order, delivery, login, refund-policy and customer-communication evidence before a network deadline, then learn why similar cases recur., deliver A cross-processor evidence collector that maps reason codes to the strongest available order, fulfillment, device and communication proof, requires merchant approval, submits a concise pack and reports root causes upstream to checkout and support teams.. The paid event is The merchant pays at each dispute through lost funds and processor fees. Charge a percentage of the disputed amount only when won, or a fixed reviewed-submission fee for high-volume teams.; acquisition begins through Distribute through e-commerce agencies, Shopify and WooCommerce implementers, fulfillment providers, accountants and processor app ecosystems; focus on cross-processor or CEE-language workflows an incumbent processor cannot see., with potential compounding from Outcome-labelled evidence by reason code, network, issuer region, vertical and evidence type can improve pack selection and identify operational changes that prevent repeat disputes..",
+  "title": "Cross-processor chargeback evidence autopilot for CEE merchants",
+  "uncertainties": [
+    "Which merchant vertical and processor mix has enough disputes but weak native tooling?",
+    "API access, submission rights and evidence retention rules across processors.",
+    "Whether better evidence or upstream prevention creates the larger and more defensible value.",
+    "Pricing, buyer authority, and acquisition economics remain unvalidated at discovery.",
+    "First validation test: Backtest 100 closed disputes from at least five merchants without seeing outcomes, then prospectively prepare 50 human-approved packs and compare completeness, labor minutes and win rate with each merchant's normal process. Accept contingency revenue only on cases where the product supplied material evidence absent from the baseline."
+  ],
+  "version": 1
+}

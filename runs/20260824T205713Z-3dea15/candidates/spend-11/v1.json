@@ -1,0 +1,88 @@
+{
+  "candidate_id": "spend-11",
+  "claims": [
+    {
+      "claim_id": "spend-11-claim-1",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "scout-spend:S18"
+      ],
+      "statement": "KAS reports over 3.2 million registered heavy vehicles, about 5,870 kilometres of paid roads and a legal obligation for vehicles over 3.5 tonnes and buses using covered roads to pay through e-TOLL."
+    },
+    {
+      "claim_id": "spend-11-claim-2",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "scout-spend:S19",
+        "scout-spend:S20"
+      ],
+      "statement": "KAS changed heavy-vehicle rates from 1 January 2026, and its classifier states that the rate depends on vehicle mass category, emission class and road class."
+    },
+    {
+      "claim_id": "spend-11-claim-3",
+      "confidence": "inference",
+      "evidence_refs": [
+        "scout-spend:S18",
+        "scout-spend:S19",
+        "scout-spend:S20"
+      ],
+      "statement": "Reconciling tolls to dispatch and telematics may expose errors or route savings, but total registered vehicles are not the same as an affordably reachable paying market."
+    },
+    {
+      "claim_id": "spend-11-claim-4",
+      "confidence": "unknown",
+      "evidence_refs": [],
+      "statement": "The incidence and recoverable value of overcharges or preventable exceptions in 10-to-200-vehicle fleets is unknown."
+    }
+  ],
+  "contrary_evidence": [
+    "KAS provides a free driver app and account portal, while EETS and telematics providers already combine toll services for many fleets.",
+    "A cheaper toll route can cost more in fuel, driver time or delivery performance, so optimization must model total trip economics.",
+    "The reported 3.2 million registered vehicles describe system scale, not unique active customers or accessible SMEs."
+  ],
+  "economics": {
+    "acquisition_route": "Embed with OBU and ZSL providers, fuel-card issuers, transport accountants and telematics integrators; sell first as an audit report through partners rather than another driver app.",
+    "capital_required_pln": null,
+    "founder_net_worth_path": null,
+    "founder_time": "Part-time validation hypothesis; delivery burden remains untested.",
+    "gross_margin_basis": null,
+    "payback": null,
+    "pricing": null,
+    "retention_or_repeat": null
+  },
+  "fingerprint": {
+    "compounding_advantage": "A route-section, vehicle, rate, device-state and confirmed-anomaly dataset can make reconciliation faster and reveal recurring issues by hardware or fleet workflow.",
+    "customer": "Polish road hauliers, bus operators and field-service fleets with roughly 10 to 200 heavy vehicles that already use an OBU or external location system but reconcile tolls manually.",
+    "distribution_mechanism": "Embed with OBU and ZSL providers, fuel-card issuers, transport accountants and telematics integrators; sell first as an audit report through partners rather than another driver app.",
+    "offer_and_business_model": "Reconcile dispatch and telematics tracks against e-TOLL notes, verify vehicle and emission-class masters, alert on data gaps or unusual charges, simulate route toll cost alongside time and fuel, and assemble a traceable claim pack for human submission.",
+    "payer_and_paid_event": "The fleet pays tolls as trips occur and reconciles them monthly. Charge per vehicle per month for anomaly and route-cost control, with a separate success fee only for verified refunds or avoided misclassification.",
+    "problem_trigger": "Every trip over the paid network generates a per-kilometre charge based on vehicle category and emission class; device outages, vehicle-master errors, route deviations, low prepaid balance or rate changes create exceptions, administrative risk or avoidable cost."
+  },
+  "founder_fit": [
+    "Quantitative reconciliation and anomaly detection match the founder's data-science skills.",
+    "Poland supplies a focused regulatory wedge with a large recorded vehicle base.",
+    "Telematics partners can provide scalable distribution without camera-based marketing."
+  ],
+  "parent": null,
+  "risks": [
+    "Evidence of a workflow, transition, or loss does not yet establish recurring willingness to pay.",
+    "The proposed distribution and compounding mechanisms remain hypotheses pending buyer evidence."
+  ],
+  "schema_version": 1,
+  "source_refs": [
+    "scout-spend:S18",
+    "scout-spend:S19",
+    "scout-spend:S20"
+  ],
+  "stage": "discovery",
+  "thesis": "For Polish road hauliers, bus operators and field-service fleets with roughly 10 to 200 heavy vehicles that already use an OBU or external location system but reconcile tolls manually., when Every trip over the paid network generates a per-kilometre charge based on vehicle category and emission class; device outages, vehicle-master errors, route deviations, low prepaid balance or rate changes create exceptions, administrative risk or avoidable cost., deliver Reconcile dispatch and telematics tracks against e-TOLL notes, verify vehicle and emission-class masters, alert on data gaps or unusual charges, simulate route toll cost alongside time and fuel, and assemble a traceable claim pack for human submission.. The paid event is The fleet pays tolls as trips occur and reconciles them monthly. Charge per vehicle per month for anomaly and route-cost control, with a separate success fee only for verified refunds or avoided misclassification.; acquisition begins through Embed with OBU and ZSL providers, fuel-card issuers, transport accountants and telematics integrators; sell first as an audit report through partners rather than another driver app., with potential compounding from A route-section, vehicle, rate, device-state and confirmed-anomaly dataset can make reconciliation faster and reveal recurring issues by hardware or fleet workflow..",
+  "title": "e-TOLL reconciliation and route-cost control for Polish fleets",
+  "uncertainties": [
+    "Billing-data export or API availability and partner permissioning.",
+    "Frequency of vehicle-master, route and device anomalies that lead to money recovery rather than only alerts.",
+    "Partner revenue share and support cost per vehicle.",
+    "Pricing, buyer authority, and acquisition economics remain unvalidated at discovery.",
+    "First validation test: Run a three-month read-only reconciliation over at least 20 fleets and one million vehicle-kilometres, classify every mismatch and verify each with the fleet before assigning value. Pre-sell through one OBU or accounting partner only if verified annual recovery plus admin savings exceeds three times the proposed annual subscription."
+  ],
+  "version": 1
+}

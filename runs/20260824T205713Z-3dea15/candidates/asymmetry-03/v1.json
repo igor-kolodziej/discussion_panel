@@ -1,0 +1,78 @@
+{
+  "candidate_id": "asymmetry-03",
+  "claims": [
+    {
+      "claim_id": "asymmetry-03-claim-1",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "scout-asymmetries:S7"
+      ],
+      "statement": "An energy audit has been mandatory in the reformed Czyste Powietrze programme since 31 March 2025, and the post-work energy standard must be evidenced by an energy certificate."
+    },
+    {
+      "claim_id": "asymmetry-03-claim-2",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "scout-asymmetries:S6"
+      ],
+      "statement": "As of 13 March 2026, 1,401 municipalities, about 57% of Polish municipalities, acted as programme operators, and official operator help is free to residents."
+    },
+    {
+      "claim_id": "asymmetry-03-claim-3",
+      "confidence": "unknown",
+      "evidence_refs": [],
+      "statement": "Auditors and contractors will pay for pre-submission QA even though beneficiaries can obtain free official operator assistance."
+    }
+  ],
+  "contrary_evidence": [
+    "S6 says official operators provide free help, which may eliminate consumer willingness to pay and reduce contractor demand.",
+    "Only municipalities and WFOŚiGW are official operators; a private product must not imply that status.",
+    "Programme rules and eligible measures can change, creating legal and maintenance risk."
+  ],
+  "economics": {
+    "acquisition_route": "Use de-identified historical packs from the family business and one collaborating auditor to build the checklist, then sell through regional auditor and contractor networks in Wielkopolska.",
+    "capital_required_pln": null,
+    "founder_net_worth_path": null,
+    "founder_time": "Part-time validation hypothesis; delivery burden remains untested.",
+    "gross_margin_basis": null,
+    "payback": null,
+    "pricing": null,
+    "retention_or_repeat": null
+  },
+  "fingerprint": {
+    "compounding_advantage": "A versioned rule library and a consented taxonomy of real dossier defects could improve checking speed. Frequent programme changes are both the reason for the service and a maintenance cost; no moat is assumed from storing documents.",
+    "customer": "Independent energy auditors and legitimate insulation, HVAC and heat-pump contractors preparing technical and commercial inputs for Czyste Powietrze applications; the product does not present itself as an official programme operator.",
+    "distribution_mechanism": "Use de-identified historical packs from the family business and one collaborating auditor to build the checklist, then sell through regional auditor and contractor networks in Wielkopolska.",
+    "offer_and_business_model": "A document-ingestion QA tool reconciles audit recommendations, required energy standard, quantities, unit limits, equipment eligibility and quote fields, then returns traceable exceptions for a human professional to resolve. It is compliance support, not official operator service or an eligibility guarantee.",
+    "payer_and_paid_event": "The auditor or contractor pays per checked dossier or a monthly team subscription when a report identifies exceptions and produces a versioned evidence checklist before submission.",
+    "problem_trigger": "An audit, scope, quote and equipment list have been assembled and need a rules, arithmetic and evidence check before the beneficiary works with the municipality or WFOŚiGW operator."
+  },
+  "founder_fit": [
+    "Family company can expose real workflow friction and supply a bounded pilot",
+    "Document extraction and deterministic checks fit AI-assisted data work",
+    "Per-dossier work can begin part-time with low capital",
+    "The founder can avoid acting as the public-facing salesperson or official adviser"
+  ],
+  "parent": null,
+  "risks": [
+    "Evidence of a workflow, transition, or loss does not yet establish recurring willingness to pay.",
+    "The proposed distribution and compounding mechanisms remain hypotheses pending buyer evidence."
+  ],
+  "schema_version": 1,
+  "source_refs": [
+    "scout-asymmetries:S7",
+    "scout-asymmetries:S6"
+  ],
+  "stage": "discovery",
+  "thesis": "For Independent energy auditors and legitimate insulation, HVAC and heat-pump contractors preparing technical and commercial inputs for Czyste Powietrze applications; the product does not present itself as an official programme operator., when An audit, scope, quote and equipment list have been assembled and need a rules, arithmetic and evidence check before the beneficiary works with the municipality or WFOŚiGW operator., deliver A document-ingestion QA tool reconciles audit recommendations, required energy standard, quantities, unit limits, equipment eligibility and quote fields, then returns traceable exceptions for a human professional to resolve. It is compliance support, not official operator service or an eligibility guarantee.. The paid event is The auditor or contractor pays per checked dossier or a monthly team subscription when a report identifies exceptions and produces a versioned evidence checklist before submission.; acquisition begins through Use de-identified historical packs from the family business and one collaborating auditor to build the checklist, then sell through regional auditor and contractor networks in Wielkopolska., with potential compounding from A versioned rule library and a consented taxonomy of real dossier defects could improve checking speed. Frequent programme changes are both the reason for the service and a maintenance cost; no moat is assumed from storing documents..",
+  "title": "Czyste Powietrze dossier QA for auditors and renovation contractors",
+  "uncertainties": [
+    "Observed defect, correction and rejection rates in real dossiers",
+    "Which source documents are consistently available in machine-readable form",
+    "Whether auditors or contractors own the budget and perceive enough saved rework",
+    "Professional liability boundaries and required human review",
+    "Pricing, buyer authority, and acquisition economics remain unvalidated at discovery.",
+    "First validation test: With permission, blind-check 20 de-identified completed dossiers against the rule version that applied at submission, compare findings with actual correction requests, and then offer five paid prospective checks at a fixed fee. Stop if the tool cannot find material issues reliably or buyers prefer the free operator workflow."
+  ],
+  "version": 1
+}

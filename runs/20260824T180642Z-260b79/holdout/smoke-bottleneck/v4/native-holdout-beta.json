@@ -1,0 +1,118 @@
+{
+  "assumptions": [
+    "The initial product remains read-only, human-reviewed, and limited to one or two inverter families, with dispatch and remote control excluded.",
+    "The family-company pilot provides workflow access but is not treated as evidence of independent demand, pricing, retention, or scalable distribution.",
+    "No exclusive rights to telemetry, labelled outcomes, installer portfolios, or reseller distribution exist unless explicitly evidenced in the packet."
+  ],
+  "base_score": 3.7,
+  "candidate_id": "smoke-bottleneck",
+  "candidate_sha256": "54020b78283b48d3a5234de0764c7c8d91e3bf5703820fd473c4fff8561b311d",
+  "candidate_version": 4,
+  "constrained_score": 3.7,
+  "evaluation_type": "holdout_native",
+  "evidence_needed_for_higher_score": "At least three non-family installers should pay for the 90-day pilot and renew after measured, net reductions in support labour, unreimbursed travel, and warranty cost exceed fees; the evidence should also establish connected-site retention, founder-hour and cash CAC, sales-cycle duration, alert precision and incremental resolution value versus OEM portals, and fully loaded per-site costs across the target vendor mix at 100, 1,000, and 10,000 sites.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "The narrowed insight is credible: support-burdened installers may value a cross-document exception desk more than another monitoring dashboard. The packet identifies concrete triggers and correctly distinguishes installer cost from homeowner loss, but it does not yet show that evidence reconciliation is the binding operational bottleneck.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Prosumer complaints and paid consumer care plans demonstrate real recurring problems and some willingness to pay for bundled service outcomes. They do not establish installer demand for standalone triage, and installers that can bill visits may have incentives opposed to visit avoidance.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "A fixed-fee concierge pilot is capital-efficient and testable, but recurring price, retention, CAC, payback, API consumption, support load, and fully loaded margin are all unvalidated. The proposed low per-site price implies a very large installed base, while adding field service would materially weaken margin and operating leverage.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Poland has a large installed PV base, and installers or O&M firms with several hundred sites and contractual support obligations form a reasonably specific beachhead. However, the packet does not quantify how many such firms or accessible sites exist, nor the incidence and cost of cases the product could actually resolve.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "The proposed evidence-pack workflow is narrower than incumbent monitoring, but SolarEdge, SOLARMAN, and Otovo already occupy adjacent workflows and possess installed-base access. With no exclusive channel, proprietary outcome corpus, or demonstrated workflow lock-in, a dominant position is unlikely at present.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A successful exception desk could extend across inverter brands, warranties, billing and DSO cases, other distributed-energy assets, or consumer care plans. Each expansion adds integrations, compliance, support complexity, or lower-margin operations, so adjacency is plausible but not yet economically advantaged.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Raw telemetry, aggregation, and generic anomaly detection are accessible or already offered by incumbents. Exclusive labelled resolution data and embedded workflows could eventually compound, but rights to reuse those outcomes, sufficient data volume, exclusivity, and customer switching costs are wholly unproven.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "A ranked inbox with human-reviewed customer, warranty, or DSO evidence packs may improve convenience and resolution speed. The packet supplies no measured accuracy, time saving, avoided cost, or better resolution rate relative to staff using existing portals and templates, so the behavior-changing advantage remains hypothetical.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "The large installed fleet, recurring post-installation issues, and EU Data Act support a timely service layer. Countervailing forces include mature free OEM monitoring, established O&M products, new paid API economics, and increasing privacy and cybersecurity obligations.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "The family business offers unusually good pilot access, and the installer register can seed prospecting. Neither is a repeatable channel: independent decision-maker access, paid conversion, sales effort, CAC, and portfolio migration cost are unknown, while the cited portfolio transaction shows access may be expensive.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "A manual, read-only, one-portfolio pilot fits the founder's technical skills, capital, and weekly time. Secure multi-vendor integrations, consent and GDPR handling, alert liability, sales, rapid support, and integration maintenance become substantially harder at scale and likely require hired operational capacity.",
+      "score": 5,
+      "status": "scored"
+    }
+  ],
+  "final_score": 3.7,
+  "highest_value_structural_change": "Secure a contractually embedded portfolio channel and price the service against verified reductions in warranty and support cost, with reusable labelled outcomes, rather than depending on a low generic per-site monitoring fee; this would improve distribution, value capture, and the possibility of compounding workflow advantage together.",
+  "interaction_adjustment": 0,
+  "judge_id": "holdout-beta",
+  "main_structural_strength": "The opportunity has a sharply bounded, low-capital concierge test that fits the founder's skills and benefits from direct family-company workflow access without requiring remote control or field operations.",
+  "primary_score_limiter": "There is no evidence that independent installers will pay and renew at economics capable of supporting attractive owner earnings, while the low proposed price requires scale for which no affordable acquisition channel is evidenced.",
+  "qualified": false,
+  "raw_response_path": "holdout/jobs/holdout-beta-raw.json",
+  "raw_response_sha256": "7b811646f47e0044e53babcba82e23ffa94e5c98fc3992dc8421f4257d7095f4",
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 1,
+  "strongest_disconfirming_evidence": "Free OEM monitoring and an existing multi-vendor AI O&M product already cover much of the feature surface, while the closest scaled service operator relies on paid portfolio access and reports weak field-service margins; this undermines both differentiation and an easy path to profitable scale.",
+  "unrounded_score": 3.7
+}

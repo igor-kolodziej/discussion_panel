@@ -1,0 +1,308 @@
+{
+  "candidate_id": "spend-06",
+  "candidate_sha256": "ef6044db25fb3dd68d1ee949d2b4c1d6804ac9b81d80fe537bafd3771e60af5c",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "R06-C01",
+      "evidence_refs": [
+        "R06-S01"
+      ],
+      "statement": "The 2026 TAURON distribution tariff makes the leakage mechanically real: it charges contracted-power exceedance using the fixed network-rate component multiplied by the sum of the ten largest excesses (or ten times the maximum where metering cannot support that method), and it monitors contracted power routinely for A, B2x and C2x customers."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "R06-C02",
+      "evidence_refs": [
+        "R06-S01"
+      ],
+      "statement": "The same tariff applies reactive-power settlement to medium- and high-voltage customers and may apply it below 1 kV; absent a different contractual value, inductive excess begins above tg phi 0.4, while capacitive reactive energy is chargeable from zero. The low-voltage multiplier is 3.0 versus 1.0 at medium voltage and 0.5 at 110 kV."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "R06-C03",
+      "evidence_refs": [
+        "R06-S12"
+      ],
+      "statement": "URE explicitly identifies LED, UPS and other technology changes as possible causes of higher reactive-power or fixed distribution charges and advises matching contracted power to actual demand; this establishes a technically plausible trigger but not a purchase budget."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "R06-C04",
+      "evidence_refs": [
+        "R06-S04"
+      ],
+      "statement": "A 2025 technical paper reports one retail facility with 8,261.49 PLN of annual reactive-power charges and a 20,645 PLN purchase-and-installation cost for a compensator, implying about a 30-month simple payback. This is a real low-to-mid-value case, not a prevalence estimate."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "R06-C05",
+      "evidence_refs": [
+        "R06-S04"
+      ],
+      "statement": "The same paper states that the monitored fuel-station and large-format retail objects had meaningful capacitive reactive power, but it does not disclose a random sampling frame or the distribution of recoverable PLN across Polish SMEs; it cannot support a market-wide hit rate."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "R06-C06",
+      "evidence_refs": [
+        "R06-S02"
+      ],
+      "statement": "URE reports that 27,000 dynamic-price contracts represented 1.1% of small and micro business recipients in C and non-household G groups at year-end 2025, which implies a broad denominator near 2.45 million recipients. Most of that denominator is not demonstrated to have C2x/B2x metering, relevant equipment, or recoverable leakage."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "R06-C07",
+      "evidence_refs": [
+        "R06-S03"
+      ],
+      "statement": "CEIDG is a daily-updated, high-value public dataset with API access for sole-trader businesses, so geography and business-activity lists can be assembled. It does not expose tariff group, point-of-delivery data, contracted power, invoice charges, equipment profile or demonstrated buyer interest, so it is not a qualified buyer list."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "R06-C08",
+      "evidence_refs": [
+        "R06-S05"
+      ],
+      "statement": "PSE says Moje IRE can provide contract, technical and consumption data at granularity down to 15 minutes, free of charge, and lets the customer grant a selected entity access by point, data scope and time period."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "R06-C09",
+      "evidence_refs": [
+        "R06-S05"
+      ],
+      "statement": "Interval-data access is still transitional on the access date: PSE says data appear only after the relevant operator joins CSIRE and operator onboarding continues through 19 October 2026. Direct API connectivity also requires certification and security testing, so an early pilot should accept customer-downloaded files rather than assume a uniform API."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "R06-C10",
+      "evidence_refs": [
+        "R06-S06"
+      ],
+      "statement": "UODO states that metering data capable of reconstructing an individual recipient's consumption profile may be personal data and emphasizes purpose limitation and data minimization. Customer authorization to perform one audit therefore does not automatically confer a right to pool raw interval data into a reusable cross-customer asset."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "R06-C11",
+      "evidence_refs": [
+        "R06-S07"
+      ],
+      "statement": "A current named price list sets the initial invoice screen at 0 PLN, a 5–7 day one-point measurement and report at 2,400 PLN net, a parallel additional point at 1,200 PLN, and post-install verification at 900 PLN. These are concrete operating-cost anchors, not national averages."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "R06-C12",
+      "evidence_refs": [
+        "R06-S08"
+      ],
+      "statement": "NextGen Energy advertises the exact invoice-layer wedge—tariff, contracted power and reactive-power analysis from uploaded bills—as a free automated report delivered in minutes, without a meeting or salesperson. A paid invoice audit by itself is already commoditized."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "R06-C13",
+      "evidence_refs": [
+        "R06-S09"
+      ],
+      "statement": "TAURON itself markets a complete partner-delivered reactive-power compensation system and says installations typically repay in 9–24 months, recommending consideration above about 600 PLN per month of reactive-power charges. The incumbent brand and its established partners compete directly for remediation margin."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "R06-C14",
+      "evidence_refs": [
+        "R06-S10"
+      ],
+      "statement": "A Warsaw-area competitor offers a free invoice review, tariff and contracted-power help, up-to-seven-day measurements, installation, and full payment only after the target savings are obtained. Outcome-linked positioning and partner-delivered remediation are not differentiated features."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "R06-C15",
+      "evidence_refs": [
+        "R06-S01",
+        "R06-S11"
+      ],
+      "statement": "IPMVP requires savings to be based on measurements before and after a project with suitable adjustments for changed conditions. Reactive-charge elimination can be checked on a distinct invoice line, but an outcome fee that also claims tariff or contracted-capacity savings needs a pre-agreed baseline, tariff normalization and rules for production, occupancy and equipment changes."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "R06-C16",
+      "evidence_refs": [
+        "R06-S04",
+        "R06-S07"
+      ],
+      "statement": "At a proposed 20% first-year success fee, the documented 8,261.49 PLN annual-savings case would yield only about 1,652 PLN, less than the named 2,400 PLN measurement plus 900 PLN verification cost. Provider-funded pure contingency is therefore negative before acquisition and analysis labor on modest sites; customer-paid pass-through costs or a much higher savings threshold are necessary."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "R06-C17",
+      "evidence_refs": [],
+      "statement": "The person who notices or uploads a bill is not proven to control the distribution contract, approve a 15,000–30,000 PLN electrical project, or agree to a success-fee baseline. Buyer authority and sales-cycle length among target SMEs remain unknown."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "R06-C18",
+      "evidence_refs": [],
+      "statement": "No located authoritative or independently sampled source gives the share of partner-reachable Polish SMEs with at least 24,000 PLN per year of recoverable reactive-power, contracted-capacity and tariff leakage. The prevalence and value distribution needed for customer-acquisition economics remain unknown."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "R06-C19",
+      "evidence_refs": [],
+      "statement": "No located evidence establishes conversion rates, referral economics or exclusivity for accountants, electricians, photovoltaic installers or energy brokers. Naming those channels does not establish affordable distribution, particularly when free-audit and incumbent offers already recruit the same customers."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "R06-C20",
+      "evidence_refs": [],
+      "statement": "After a successful hardware or contract correction, the primary charge should fall, so repeat revenue depends on monitoring, new sites or later equipment changes. Willingness to pay a separate monitoring subscription and the annual recurrence rate are unknown."
+    }
+  ],
+  "contrary_evidence": [
+    "NextGen Energy already offers a free, automated, minutes-to-report audit covering tariff, contracted power and reactive power from invoices—the proposed software-led entry wedge almost exactly.",
+    "biernaenergia.pl already combines free invoice review, measurement, tariff and contracted-power advice, remediation and full payment after target savings, so outcome pricing is not novel.",
+    "TAURON sells a complete reactive-power compensation offer through established partners, adding incumbent trust and direct access to the energy customer relationship.",
+    "A named operating price list makes the screen free and charges 2,400 PLN for a 5–7 day measurement plus 900 PLN for verification; the documented 8,261.49 PLN annual-savings case cannot support provider-funded contingency at a 20% share.",
+    "The 2025 technical case required 20,645 PLN of installed equipment for only 8,261.49 PLN annual avoided charges, a roughly 30-month payback that falls outside a conservative sub-12-month customer gate.",
+    "PSE allows consented data access, but CSIRE onboarding remains incomplete until 19 October 2026 and direct API access has certification and security requirements.",
+    "UODO's position means that some granular meter profiles can be personal data; audit access does not automatically create lawful rights to retain and repurpose raw cross-customer data.",
+    "The broad customer and business registries contain no signal for tariff, equipment, bill charge or buyer intent, so their size cannot be converted into an affordable qualified pipeline.",
+    "The fix is frequently one-off. Subscription and repeat economics remain unproven after the charge is eliminated."
+  ],
+  "schema_version": 1,
+  "sources": [
+    {
+      "accessed_at": "2026-08-24",
+      "published_at": "2025-12-17",
+      "publisher": "TAURON Dystrybucja S.A.; approved by the President of URE",
+      "source_id": "R06-S01",
+      "source_type": "regulator_approved_tariff",
+      "stance": "supporting",
+      "title": "Taryfa TAURON Dystrybucja S.A. na rok 2026",
+      "url": "https://bip.ure.gov.pl/download/3/20344/TauronDystrybucja.pdf"
+    },
+    {
+      "accessed_at": "2026-08-24",
+      "published_at": "2026-05-29",
+      "publisher": "Urząd Regulacji Energetyki",
+      "source_id": "R06-S02",
+      "source_type": "regulator_market_report",
+      "stance": "context",
+      "title": "Już ponad 4,8 tys. gospodarstw domowych korzysta z umów z cenami dynamicznymi",
+      "url": "https://www.ure.gov.pl/pl/urzad/informacje-ogolne/aktualnosci/13308,Juz-ponad-48-tys-gospodarstw-domowych-korzysta-z-umow-z-cenami-dynamicznymi.html"
+    },
+    {
+      "accessed_at": "2026-08-24",
+      "published_at": "2016-08-10; dataset updated daily and shown updated 2026-03-29",
+      "publisher": "Ministerstwo Rozwoju i Technologii via dane.gov.pl",
+      "source_id": "R06-S03",
+      "source_type": "government_open_data",
+      "stance": "context",
+      "title": "Centralna Ewidencja i Informacja o Działalności Gospodarczej",
+      "url": "https://dane.gov.pl/pl/dataset/646"
+    },
+    {
+      "accessed_at": "2026-08-24",
+      "published_at": "2025-09",
+      "publisher": "Przegląd Elektrotechniczny, R. 101 NR 9/2025",
+      "source_id": "R06-S04",
+      "source_type": "technical_research",
+      "stance": "supporting",
+      "title": "Wykorzystanie Systemu Monitoringu Zużycia Energii do zwiększenia efektywności energetycznej stacji paliw i obiektów handlu detalicznego",
+      "url": "https://pe.org.pl/wp-content/uploads/2025/10/Wykorzystanie-Systemu-Monitoringu-Zuzycia-Energii-do-zwiekszenia-efektywnosci-energetycznej-stacji-paliw-i-obiektow-handlu-detalicznego.pdf"
+    },
+    {
+      "accessed_at": "2026-08-24",
+      "published_at": "n.d.",
+      "publisher": "Polskie Sieci Elektroenergetyczne S.A. / Operator Informacji Rynku Energii",
+      "source_id": "R06-S05",
+      "source_type": "system_operator_guidance",
+      "stance": "supporting",
+      "title": "Q&A Portale CSIRE",
+      "url": "https://www.pse.pl/oire/portale-csire/q-a-portale-csire?safeargs=696e686572697452656469726563743d74727565"
+    },
+    {
+      "accessed_at": "2026-08-24",
+      "published_at": "2024",
+      "publisher": "Urząd Ochrony Danych Osobowych",
+      "source_id": "R06-S06",
+      "source_type": "data_protection_authority_report",
+      "stance": "contradicting",
+      "title": "Sprawozdanie z działalności Prezesa Urzędu Ochrony Danych Osobowych w roku 2023",
+      "url": "https://uodo.gov.pl/pl/file/5192"
+    },
+    {
+      "accessed_at": "2026-08-24",
+      "published_at": "n.d.",
+      "publisher": "ZNS Śląsk",
+      "source_id": "R06-S07",
+      "source_type": "named_competitor_price_list",
+      "stance": "contradicting",
+      "title": "Cennik usług elektrycznych i pomiarów",
+      "url": "https://znso.eu/cennik/"
+    },
+    {
+      "accessed_at": "2026-08-24",
+      "published_at": "n.d.",
+      "publisher": "NextGen Energy",
+      "source_id": "R06-S08",
+      "source_type": "named_competitor_offer",
+      "stance": "contradicting",
+      "title": "Audyt kosztów dystrybucji — raport w kilkanaście minut",
+      "url": "https://www.nextgenenergy.pl/audyt-dystrybucji"
+    },
+    {
+      "accessed_at": "2026-08-24",
+      "published_at": "n.d.",
+      "publisher": "TAURON",
+      "source_id": "R06-S09",
+      "source_type": "incumbent_commercial_offer",
+      "stance": "contradicting",
+      "title": "Kompensacja mocy biernej",
+      "url": "https://www.tauron.pl/dla-firm/urzadzenia/kompensacja-mocy-biernej"
+    },
+    {
+      "accessed_at": "2026-08-24",
+      "published_at": "n.d.",
+      "publisher": "biernaenergia.pl",
+      "source_id": "R06-S10",
+      "source_type": "named_competitor_offer",
+      "stance": "contradicting",
+      "title": "Opłaty za energię bierną, analiza faktury – Piaseczno i Warszawa",
+      "url": "https://biernaenergia.pl/"
+    },
+    {
+      "accessed_at": "2026-08-24",
+      "published_at": "2022-03",
+      "publisher": "Efficiency Valuation Organization",
+      "source_id": "R06-S11",
+      "source_type": "technical_standard_guidance",
+      "stance": "context",
+      "title": "International Performance Measurement and Verification Protocol (IPMVP) Core Concepts 2022",
+      "url": "https://evo-world.org/en/products-services-mainmenu-en/protocols/ipmvp"
+    },
+    {
+      "accessed_at": "2026-08-24",
+      "published_at": "2021-10-25",
+      "publisher": "Urząd Regulacji Energetyki",
+      "source_id": "R06-S12",
+      "source_type": "regulator_guidance",
+      "stance": "supporting",
+      "title": "Jak optymalizować koszty energii elektrycznej w sektorze publicznym?",
+      "url": "https://www.ure.gov.pl/pl/urzad/informacje-ogolne/aktualnosci/9851,Jak-optymalizowac-koszty-energii-elektrycznej-w-sektorze-publicznym.html"
+    }
+  ],
+  "unknowns": [
+    "Random-cohort prevalence and full distribution of recoverable annual PLN across invoices from unrelated, partner-reachable SMEs, including the share above 24,000 PLN per year.",
+    "The fraction of invoice-positive sites that still require 5–7 day electrical measurement, and the fraction that can be fixed by a low-friction tariff or contracted-power change without hardware.",
+    "Who owns budget and contract authority in micro, small, multi-site and medium firms; typical procurement cycle; and whether a CFO, owner or facilities lead will sign an attribution schedule and contingency agreement.",
+    "Conversion from a free screen to a signed paid/outcome agreement when free automated and hardware-vendor audits are already available.",
+    "Partner-sourced lead volume, exclusivity, referral share, payment timing and conflict where the partner also earns hardware margin.",
+    "Actual access success rate for invoices and interval data across each major DSO during the CSIRE transition, including authorization friction for legal entities and multi-PPE accounts.",
+    "Dispute rate and collection lag under a baseline that must normalize tariff changes, production, occupancy, weather, equipment changes and outages.",
+    "Professional-liability, cybersecurity, electrical-expert review and insurance costs for a vendor-neutral recommendation service.",
+    "Contractual ability to retain anonymized invoice features, intervention outcomes and meter-derived features after the client engagement, and whether anonymization is robust for sparse multi-site profiles.",
+    "Paid retention for ongoing monitoring after the initial leakage has been removed.",
+    "Whether the founder's family business can supply at least 100 unrelated invoices without selection bias and without compromising customer trust."
+  ]
+}

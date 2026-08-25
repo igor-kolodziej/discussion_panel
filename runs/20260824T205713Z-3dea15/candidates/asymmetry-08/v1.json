@@ -1,0 +1,79 @@
+{
+  "candidate_id": "asymmetry-08",
+  "claims": [
+    {
+      "claim_id": "asymmetry-08-claim-1",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "scout-asymmetries:S16"
+      ],
+      "statement": "DORA became applicable on 17 January 2025, and financial entities in scope must maintain a comprehensive register of contractual arrangements with ICT third-party providers at entity, sub-consolidated and consolidated levels."
+    },
+    {
+      "claim_id": "asymmetry-08-claim-2",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "scout-asymmetries:S16"
+      ],
+      "statement": "The EBA supplies official data models, templates, validation rules and reporting packages, making deterministic compilation and validation technically bounded."
+    },
+    {
+      "claim_id": "asymmetry-08-claim-3",
+      "confidence": "inference",
+      "evidence_refs": [
+        "scout-asymmetries:S16"
+      ],
+      "statement": "Contract extraction will materially reduce compliance cost for smaller in-scope entities that do not already own a DORA platform."
+    }
+  ],
+  "contrary_evidence": [
+    "Large regtech, governance and consulting vendors already serve DORA compliance.",
+    "Proportionality and scope details may make the smallest or simplest prospects unattractive.",
+    "Sensitive contracts and security review can lengthen sales and prevent a cloud deployment."
+  ],
+  "economics": {
+    "acquisition_route": "Co-sell through Polish compliance consultancies, internal-audit boutiques and regulatory-reporting integrators that already advise in-scope entities.",
+    "capital_required_pln": null,
+    "founder_net_worth_path": null,
+    "founder_time": "Part-time validation hypothesis; delivery burden remains untested.",
+    "gross_margin_basis": null,
+    "payback": null,
+    "pricing": null,
+    "retention_or_repeat": null
+  },
+  "fingerprint": {
+    "compounding_advantage": "A robust contract-to-template ontology and validated parsing tests can lower future implementation effort. Contracts remain customer-confidential, so advantage must come from tooling and workflow quality rather than pooling client data.",
+    "customer": "Small but non-micro Polish payment institutions, insurers, asset managers, lenders and other DORA-scope financial entities whose ICT contracts and service dependencies are still tracked across documents and spreadsheets.",
+    "distribution_mechanism": "Co-sell through Polish compliance consultancies, internal-audit boutiques and regulatory-reporting integrators that already advise in-scope entities.",
+    "offer_and_business_model": "Run locally or in a controlled environment, extract contract parties and service facts, map functions and subcontractor chains to official templates, expose every uncertain field for human approval, execute official validation rules, and produce change logs. Do not provide legal conclusions automatically.",
+    "payer_and_paid_event": "The regulated entity pays for a secure one-time register build and validation, then a recurring fee when contracts or service dependencies change and for each reporting-ready export.",
+    "problem_trigger": "A supervisory reporting cycle, vendor onboarding, contract change or internal audit requires an up-to-date register of all ICT third-party arrangements at the required entity and group levels."
+  },
+  "founder_fit": [
+    "Document extraction, entity resolution and validation suit the founder's data skills",
+    "Finance interest helps with the buyer's context",
+    "A secure project-based wedge can be tested before SaaS investment",
+    "Consultancy channels reduce founder-led networking load"
+  ],
+  "parent": null,
+  "risks": [
+    "Evidence of a workflow, transition, or loss does not yet establish recurring willingness to pay.",
+    "The proposed distribution and compounding mechanisms remain hypotheses pending buyer evidence."
+  ],
+  "schema_version": 1,
+  "source_refs": [
+    "scout-asymmetries:S16"
+  ],
+  "stage": "discovery",
+  "thesis": "For Small but non-micro Polish payment institutions, insurers, asset managers, lenders and other DORA-scope financial entities whose ICT contracts and service dependencies are still tracked across documents and spreadsheets., when A supervisory reporting cycle, vendor onboarding, contract change or internal audit requires an up-to-date register of all ICT third-party arrangements at the required entity and group levels., deliver Run locally or in a controlled environment, extract contract parties and service facts, map functions and subcontractor chains to official templates, expose every uncertain field for human approval, execute official validation rules, and produce change logs. Do not provide legal conclusions automatically.. The paid event is The regulated entity pays for a secure one-time register build and validation, then a recurring fee when contracts or service dependencies change and for each reporting-ready export.; acquisition begins through Co-sell through Polish compliance consultancies, internal-audit boutiques and regulatory-reporting integrators that already advise in-scope entities., with potential compounding from A robust contract-to-template ontology and validated parsing tests can lower future implementation effort. Contracts remain customer-confidential, so advantage must come from tooling and workflow quality rather than pooling client data..",
+  "title": "DORA contract-to-register compiler for non-micro financial entities",
+  "uncertainties": [
+    "Count of Polish in-scope entities underserved by incumbents",
+    "Typical register size, error rate and annual maintenance effort",
+    "Procurement cycle and preference for on-premise processing",
+    "Accuracy achievable on Polish-language and amended contracts",
+    "Pricing, buyer authority, and acquisition economics remain unvalidated at discovery.",
+    "First validation test: Compile the official template from synthetic contracts first, then seek eight interviews through two compliance partners and one paid, local-processing pilot on a redacted contract set. Pass only if official validation succeeds, human reviewers confirm field-level traceability, and the entity buys an update cycle."
+  ],
+  "version": 1
+}

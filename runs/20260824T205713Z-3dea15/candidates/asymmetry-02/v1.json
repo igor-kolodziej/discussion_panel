@@ -1,0 +1,81 @@
+{
+  "candidate_id": "asymmetry-02",
+  "claims": [
+    {
+      "claim_id": "asymmetry-02-claim-1",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "scout-asymmetries:S4"
+      ],
+      "statement": "The URE 2025 report records 2,881 refusals for renewable generation totaling about 29.46 GW across the five named large distribution operators, evidence that connection screening is a material problem rather than a hypothetical one."
+    },
+    {
+      "claim_id": "asymmetry-02-claim-2",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "scout-asymmetries:S5"
+      ],
+      "statement": "TAURON states that Polish Energy Law requires publication of aggregate available connection capacity and planned changes for the next five years, broken down by relevant stations or station groups."
+    },
+    {
+      "claim_id": "asymmetry-02-claim-3",
+      "confidence": "inference",
+      "evidence_refs": [
+        "scout-asymmetries:S4",
+        "scout-asymmetries:S5"
+      ],
+      "statement": "A normalized pre-screen will reduce wasted site-development expenditure enough to command a meaningful per-site fee."
+    }
+  ],
+  "contrary_evidence": [
+    "Published capacity is not a reservation and can change before an application is decided.",
+    "A refusal can depend on project-specific technical and economic conditions that a public-data heuristic cannot observe.",
+    "Some developers already employ grid specialists or maintain proprietary operator relationships."
+  ],
+  "economics": {
+    "acquisition_route": "Pilot on opportunities encountered by the family installer, then reach engineering offices and regional land or energy developers with sample evidence packs for named substations.",
+    "capital_required_pln": null,
+    "founder_net_worth_path": null,
+    "founder_time": "Part-time validation hypothesis; delivery burden remains untested.",
+    "gross_margin_basis": null,
+    "payback": null,
+    "pricing": null,
+    "retention_or_repeat": null
+  },
+  "fingerprint": {
+    "compounding_advantage": "A versioned cross-DSO schema, station-name resolution and a history of published changes can reduce future research time and support back-testing. The public data itself is not a moat, and predictive value must be demonstrated against later decisions.",
+    "customer": "Polish renewable developers, engineering offices, land brokers and installers screening 50 kW to 1 MW generation, storage or high-load projects before committing engineering and application expense.",
+    "distribution_mechanism": "Pilot on opportunities encountered by the family installer, then reach engineering offices and regional land or energy developers with sample evidence packs for named substations.",
+    "offer_and_business_model": "Normalize public DSO capacity tables, planned changes, issued conditions and refusal evidence into a geocoded evidence pack. Provide a transparent risk heuristic and checklist, never a promise of connection. Sell fixed-fee reports first and a data subscription only after repeated demand.",
+    "payer_and_paid_event": "The developer or engineering office pays per site-screening report before a land option or connection application, then can subscribe for portfolio monitoring and change alerts.",
+    "problem_trigger": "A customer is considering a site or preparing a grid-connection application but has fragmented operator data and a high risk of spending on a location with little practical connection capacity."
+  },
+  "founder_fit": [
+    "Data normalization and geospatial scoring suit the founder's technical background",
+    "Family ecosystem can provide real application questions without forcing a large build",
+    "Reports can be produced asynchronously with limited meetings",
+    "A data product can expand nationally if the initial report wedge works"
+  ],
+  "parent": null,
+  "risks": [
+    "Evidence of a workflow, transition, or loss does not yet establish recurring willingness to pay.",
+    "The proposed distribution and compounding mechanisms remain hypotheses pending buyer evidence."
+  ],
+  "schema_version": 1,
+  "source_refs": [
+    "scout-asymmetries:S4",
+    "scout-asymmetries:S5"
+  ],
+  "stage": "discovery",
+  "thesis": "For Polish renewable developers, engineering offices, land brokers and installers screening 50 kW to 1 MW generation, storage or high-load projects before committing engineering and application expense., when A customer is considering a site or preparing a grid-connection application but has fragmented operator data and a high risk of spending on a location with little practical connection capacity., deliver Normalize public DSO capacity tables, planned changes, issued conditions and refusal evidence into a geocoded evidence pack. Provide a transparent risk heuristic and checklist, never a promise of connection. Sell fixed-fee reports first and a data subscription only after repeated demand.. The paid event is The developer or engineering office pays per site-screening report before a land option or connection application, then can subscribe for portfolio monitoring and change alerts.; acquisition begins through Pilot on opportunities encountered by the family installer, then reach engineering offices and regional land or energy developers with sample evidence packs for named substations., with potential compounding from A versioned cross-DSO schema, station-name resolution and a history of published changes can reduce future research time and support back-testing. The public data itself is not a moat, and predictive value must be demonstrated against later decisions..",
+  "title": "Cross-DSO grid-connection pre-screen for PV, storage and electrification sites",
+  "uncertainties": [
+    "Consistency, update frequency and reuse terms across all Polish DSOs",
+    "Ability to geocode station groups accurately enough for site decisions",
+    "Average avoidable pre-application cost and willingness to pay",
+    "Whether historical decisions can be linked to prior published capacity for back-testing",
+    "Pricing, buyer authority, and acquisition economics remain unvalidated at discovery.",
+    "First validation test: Build one manually verified atlas for two DSO territories and back-test 30 historical applications supplied by consenting engineering partners. Sell three fixed-fee site reports before automating national coverage; require buyers to rate whether the report changed a go, no-go or data-request decision."
+  ],
+  "version": 1
+}

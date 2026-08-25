@@ -1,0 +1,243 @@
+{
+  "candidate_id": "smoke-bottleneck",
+  "claims": [
+    {
+      "claim_id": "claim-1",
+      "confidence": "high",
+      "evidence_refs": [
+        "src-ure-stock-2026"
+      ],
+      "statement": "Evidence: URE reported 1,636,673 Polish renewable micro-installations at the end of 2025, 99.9% PV, including 1,612,450 prosumer installations."
+    },
+    {
+      "claim_id": "claim-2",
+      "confidence": "high",
+      "evidence_refs": [
+        "src-ure-ombudsman-2026"
+      ],
+      "statement": "Evidence with sampling limitation: the URE negotiation coordinator said almost one-third of its 2025 electricity applications came from prosumers and described voltage shutdowns, net-billing disputes, meter concerns, and misconfigured inverters or heat pumps; the 318-case dispute pool is self-selected and cannot establish fleet-wide incidence."
+    },
+    {
+      "claim_id": "claim-3",
+      "confidence": "high",
+      "evidence_refs": [
+        "src-pionier-service-prices-2025"
+      ],
+      "statement": "Evidence: Pionier Energia's March 2025 price list offered consumer remote-support plans at 29 and 119 PLN gross per month, a business plan up to 50 kW at 399 PLN net per month, and an on-site fault diagnosis at 1,199 PLN gross."
+    },
+    {
+      "claim_id": "claim-4",
+      "confidence": "medium",
+      "evidence_refs": [
+        "src-otovo-care-pl-2026"
+      ],
+      "statement": "Evidence from a first-party sales page: Otovo Poland currently offers monitoring-and-service memberships at 39, 109, and 199 PLN per month, says about 80% of members choose the 109 PLN Prime tier, and says eight of ten faults are resolved remotely; total Polish member count and churn are not disclosed."
+    },
+    {
+      "claim_id": "claim-5",
+      "confidence": "high",
+      "evidence_refs": [
+        "src-otovo-q2-2026"
+      ],
+      "statement": "Evidence: Otovo's Q2 2026 filing reported NOK 5.576 million recurring-services revenue with NOK 5.241 million segment gross profit and NOK 31.093 million field-services revenue with NOK 5.652 million segment gross profit; unallocated payroll and operating expense mean the recurring segment ratio is not a fully loaded SaaS margin."
+    },
+    {
+      "claim_id": "claim-6",
+      "confidence": "high",
+      "evidence_refs": [
+        "src-otovo-q2-2026"
+      ],
+      "statement": "Evidence: Otovo acquired exclusive access to market memberships to one installer's portfolio and responsibility for warranties on 417 commercial systems in exchange for shares valued at USD 425,000 plus a variable annual fee, showing that portfolio access can be a purchased asset rather than a free partnership."
+    },
+    {
+      "claim_id": "claim-7",
+      "confidence": "high",
+      "evidence_refs": [
+        "src-solaredge-api-2026"
+      ],
+      "statement": "Evidence: SolarEdge's current developer offer lists monthly API tiers of USD 100, 400, and 1,000 for 20,000, 100,000, and 400,000 credits and says billing begins 1 November 2026; its legacy Monitoring API is scheduled for deprecation on that date."
+    },
+    {
+      "claim_id": "claim-8",
+      "confidence": "high",
+      "evidence_refs": [
+        "src-solaredge-free-monitoring-2026"
+      ],
+      "statement": "Evidence: SolarEdge markets lifetime-free monitoring with automatic problem alerts to system owners, so basic monitoring and alerting cannot support a standalone paid differentiation for SolarEdge fleets."
+    },
+    {
+      "claim_id": "claim-9",
+      "confidence": "high",
+      "evidence_refs": [
+        "src-fronius-query-api-2026"
+      ],
+      "statement": "Evidence: Fronius offers a production Query API for O&M, but live access requires registration, contract, and monthly pay-per-use data packages; detailed five-minute history multiplies billable data points by channel and timestamp."
+    },
+    {
+      "claim_id": "claim-10",
+      "confidence": "high",
+      "evidence_refs": [
+        "src-solarman-business-2026"
+      ],
+      "statement": "Evidence from the vendor: SOLARMAN Business already advertises fleet visibility, third-party inverter support, alerts with causes and maintenance suggestions, smart O&M, and AI analysis, directly overlapping generic multi-vendor monitoring and diagnosis."
+    },
+    {
+      "claim_id": "claim-11",
+      "confidence": "high",
+      "evidence_refs": [
+        "src-eu-data-act-2025"
+      ],
+      "statement": "Evidence: the EU Data Act has applied since 12 September 2025 and supports user-authorised sharing of readily available raw and pre-processed connected-product data, but inferred or derived data are outside scope and access can still involve contracts, reasonable compensation, trade-secret safeguards, and security restrictions."
+    },
+    {
+      "claim_id": "claim-12",
+      "confidence": "high",
+      "evidence_refs": [
+        "src-eu-smart-meter-data-2026"
+      ],
+      "statement": "Evidence: the European Commission treats energy consumption data as privacy-sensitive and highlights both data-protection and energy-sector cybersecurity obligations; read-only, least-data access is therefore materially safer than remote control but not compliance-free."
+    },
+    {
+      "claim_id": "claim-13",
+      "confidence": "high",
+      "evidence_refs": [
+        "src-udt-installers-2026"
+      ],
+      "statement": "Evidence with channel limitation: UDT says its free registry contains more than 9,500 certified installers across Poland, but it lists individuals and certificate information, not firms' supported-site portfolios, purchasing authority, contactability, or software demand."
+    },
+    {
+      "claim_id": "claim-14",
+      "confidence": "high",
+      "evidence_refs": [
+        "src-ure-ombudsman-2026",
+        "src-pionier-service-prices-2025",
+        "src-otovo-care-pl-2026",
+        "src-otovo-q2-2026"
+      ],
+      "statement": "Inference, pain is not willingness to pay: regulator complaints establish user problems, while current paid plans and recurring revenue establish some consumer demand for bundled care; neither establishes that Polish installers will buy standalone triage software at the proposed price."
+    },
+    {
+      "claim_id": "claim-15",
+      "confidence": "high",
+      "evidence_refs": [
+        "src-udt-installers-2026",
+        "src-otovo-q2-2026"
+      ],
+      "statement": "Inference, partner category is not channel and buyer list is not affordable access: a registry, OEM, distributor, or trade contact becomes distribution evidence only after measurable introductions, paid conversions, and CAC; Otovo's paid portfolio-access transaction is contrary evidence to assuming free access."
+    },
+    {
+      "claim_id": "claim-16",
+      "confidence": "high",
+      "evidence_refs": [
+        "src-eu-data-act-2025",
+        "src-solaredge-api-2026",
+        "src-solaredge-free-monitoring-2026",
+        "src-fronius-query-api-2026",
+        "src-solarman-business-2026"
+      ],
+      "statement": "Inference, data is not a moat: EU access rights, priced OEM APIs, lifetime-free OEM monitoring, and an incumbent multi-vendor O&M platform make raw telemetry and generic anomaly flags replicable; only exclusive labelled resolutions plus embedded workflow could compound."
+    },
+    {
+      "claim_id": "claim-17",
+      "confidence": "high",
+      "evidence_refs": [
+        "src-pionier-service-prices-2025",
+        "src-ure-ombudsman-2026"
+      ],
+      "statement": "Inference, avoided loss is not capturable revenue: a remote diagnosis may avoid a 1,199 PLN customer-priced visit or lost generation, but an installer that bills the visit may lose revenue rather than save cost, and grid-voltage or billing losses accrue chiefly to the prosumer. Only measured internal warranty and support cost belongs in installer ROI."
+    },
+    {
+      "claim_id": "claim-18",
+      "confidence": "medium",
+      "evidence_refs": [
+        "src-ure-stock-2026",
+        "src-otovo-q2-2026",
+        "src-udt-installers-2026"
+      ],
+      "statement": "Inference: at 5 PLN per site per month, 15% EBITDA, a 3x EBITDA value, and 70% founder ownership, approximately 265,000 paying sites would be required for 5 million PLN of founder equity, about 16% of the 2025 prosumer fleet; no evidenced acquisition route supports that reach."
+    }
+  ],
+  "contrary_evidence": [
+    "SolarEdge supplies lifetime-free owner monitoring and alerts, eliminating basic monitoring as a paid wedge on those fleets.",
+    "SOLARMAN Business already offers third-party-device visibility, causes, maintenance suggestions, and AI-assisted O&M, so the broad feature thesis is not novel.",
+    "Otovo combines monitoring, remote diagnosis, warranty handling, dispatch, and repair discounts at Polish consumer price points and is scaling through acquisitions and portfolio-access contracts.",
+    "Otovo's reported field-service segment gross profit was only about 18% of revenue before unallocated corporate expense in Q2 2026, contradicting software-like margins for managed dispatch and repair work.",
+    "The URE dispute sample proves recurring problem types but not prevalence, installer cost, or willingness to pay across the 1.6 million-site fleet.",
+    "Published Polish service prices bundle human support, inspections, discounts, and field capacity; they do not validate a wholesale software price paid by installers.",
+    "The Data Act improves authorised access to some raw data, which helps feasibility but weakens an exclusivity-based data moat and does not guarantee free access to derived diagnostics."
+  ],
+  "economics": {
+    "acquisition_route": "The only evidenced low-cost first route is the family-company pilot. Next, contact 20-30 firms selected for active support obligations and compatible fleets, tracking founder hours, meeting rate, paid-pilot conversion, and cash CAC. A public registry of more than 9,500 certified installers is a buyer list, not proof of decision-maker access, portfolio ownership, or affordable conversion. Otovo's Q2 filing shows that exclusive portfolio access can require equity consideration plus variable fees, so distributor or installer partnerships are not assumed free channels.",
+    "capital_required_pln": "Inference: cap manual proof-of-demand at 15,000-30,000 PLN. A secure production product spanning two vendors, consent flows, audit logs, legal review, insurance, and support is more plausibly 100,000-180,000 PLN excluding founder labour; broader multi-vendor coverage should be customer-funded and may exceed the founder's available capital.",
+    "founder_net_worth_path": "No evidence-backed path is established. Illustratively, at 5 PLN per site per month, 15% EBITDA, a 3x EBITDA value, 70% founder ownership, and no double-counted distributions, roughly 265,000 paying sites would be needed for 5 million PLN of founder equity value, about 16% of the 2025 prosumer stock. That reach is not plausible from the evidenced channel. Higher service ARPU could reduce site count but would add field labour, lower margin, and intensify competition; a credible path therefore requires materially higher validated ARPU, a repeatable low-CAC portfolio channel, or a different structure.",
+    "founder_time": "15-20 hours per week for one concierge pilot, one or two integrations, and fewer than 30 active sales conversations. Multi-vendor maintenance, 24/7 alerts, dispatch, or national partner management would exceed the founder's five-hour daily limit and requires hired operations or a cofounder.",
+    "gross_margin_basis": "Otovo reported Q2 2026 recurring-services revenue of NOK 5.576 million and segment gross profit of NOK 5.241 million, about 94%, but that measure excludes unallocated payroll and operating expense; its field-services revenue of NOK 31.093 million produced NOK 5.652 million segment gross profit, about 18%. For this candidate, target only 60-75% fully loaded gross margin after API fees, hosting, onboarding, and human review at meaningful scale; keep field work partner-billed and outside SaaS margin.",
+    "payback": "Unknown until a pilot measures internal support cost. A 500 PLN monthly fee breaks even only if it removes more than 500 PLN of net monthly labour, warranty, or unreimbursed travel cost. A published 1,199 PLN field-diagnosis price is customer billable revenue, not automatically an avoided installer loss; require measured contribution payback within three months before rollout.",
+    "pricing": "Inference to test, not validated WTP: a 1,500-3,000 PLN fixed-fee 90-day concierge pilot, followed only on verified ROI by 3-6 PLN per connected site per month with a 500 PLN monthly minimum. This sits far below Polish retail care bundles because the installer still supplies customer support and field work. No repair commission or avoided-production share is included in the base case.",
+    "retention_or_repeat": "Monitoring and support obligations can recur, and Polish offers range from cancellable monthly membership to multi-year care packages. However, no source establishes Polish installer software churn, renewal, or portfolio persistence. Retention should be treated as unproven until at least three independent paid pilots renew after the initial term and connected-site retention is measured."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Raw telemetry is not a moat. A possible advantage would require permissioned, exclusive labelled records linking symptoms, configuration, human diagnosis, field findings, remedy, cost, and outcome, plus workflow integration that customers rely on. EU data-access rights and incumbent OEM platforms make basic data aggregation progressively more substitutable.",
+    "customer": "Polish regional PV installers or O&M firms with at least several hundred active residential or small-commercial sites and a contractual warranty or care obligation that makes unresolved alerts, complaints, and unnecessary visits an internal cost; installers that simply bill every visit are not assumed buyers.",
+    "distribution_mechanism": "Use the founder's family renewable-energy company for one instrumented paid pilot, then conduct direct, tracked outreach to a small set of support-burdened firms. The UDT registry is only a prospecting input, and distributors, OEMs, associations, or fairs are not treated as channels until they produce a signed referral, reseller, or portfolio-access agreement with measured acquisition cost.",
+    "offer_and_business_model": "Initially a read-only exception inbox and evidence-pack service for one or two supported inverter families: permissioned data ingestion, anomaly prioritisation, human-reviewed triage, templated customer and warranty communication, and measured case outcomes. No device control, dispatch marketplace, or broad AI-autodiagnosis promise is included in the MVP.",
+    "payer_and_paid_event": "The installer or O&M firm pays a fixed 90-day portfolio pilot and, only after demonstrated net savings, a recurring per-connected-site fee. Repair revenue, avoided generation loss, and consumer subscription revenue are not counted unless a signed commercial arrangement makes them capturable by this business.",
+    "problem_trigger": "A production alert, inverter error, high-bill complaint, voltage shutdown, warranty request, or disputed meter reading forces support staff to reconcile an OEM portal, customer documents, service history, and grid or billing evidence before choosing remote guidance, a warranty claim, a DSO case, or a field visit."
+  },
+  "founder_fit": [
+    "The founder's data-science and AI-automation skills fit anomaly ranking, evidence reconciliation, and a human-in-the-loop prototype.",
+    "The parents' seven-person renewable-energy company provides unusually direct workflow observation and a pilot portfolio, although results must be replicated outside the family business before generalisation.",
+    "A manual-first, read-only pilot capped at one portfolio and one or two vendors can fit roughly 15-20 founder hours per week; broad integrations, support coverage, and field operations cannot.",
+    "A proof-of-demand phase can be capped below 30,000 PLN, but a secure production multi-vendor product is unlikely to fit the founder's available capital without paid pilots funding later integrations.",
+    "The route avoids personal-brand video, but repeatable B2B acquisition still requires interviews, demos, and partner negotiation; this must be systematised or delegated if it proves high-touch."
+  ],
+  "parent": {
+    "candidate_id": "smoke-bottleneck",
+    "version": 1
+  },
+  "risks": [
+    "No installer-paid willingness to pay despite documented prosumer pain and consumer care-plan demand.",
+    "OEM and service incumbents can bundle the narrow workflow into existing portals or care plans.",
+    "API pricing, deprecation, permission changes, and vendor-specific contracts can destroy small-fleet unit economics.",
+    "Household telemetry, billing documents, credentials, and service histories create GDPR, cybersecurity, breach-response, and contractual duties.",
+    "Automated or human triage errors can cause electrical-safety, warranty, financial-loss, or professional-liability claims.",
+    "Family-company data may overfit brands, geography, technician skill, and informal processes.",
+    "Installers may earn from service visits, making fewer dispatches commercially unattractive even when efficient for the homeowner.",
+    "Sales may remain founder-led and relationship-heavy, conflicting with the founder's time and social-energy constraints.",
+    "A secure multi-vendor product may require more than the founder's available capital before repeatable demand is proven.",
+    "The conservative per-site price implies an implausibly large installed base unless ARPU or another high-margin paid event is independently validated."
+  ],
+  "schema_version": 1,
+  "source_refs": [
+    "src-ure-stock-2026",
+    "src-ure-ombudsman-2026",
+    "src-pionier-service-prices-2025",
+    "src-otovo-care-pl-2026",
+    "src-otovo-q2-2026",
+    "src-solaredge-api-2026",
+    "src-solaredge-free-monitoring-2026",
+    "src-fronius-query-api-2026",
+    "src-solarman-business-2026",
+    "src-eu-data-act-2025",
+    "src-eu-smart-meter-data-2026",
+    "src-udt-installers-2026"
+  ],
+  "stage": "research",
+  "thesis": "Evidence confirms a large Polish prosumer fleet and recurring complaints involving voltage shutdowns, billing, meters, and configuration, but those complaints do not establish installer willingness to pay. Current Polish providers sell consumer or site-level care bundles, while OEM and specialist platforms already provide free monitoring, multi-device visibility, alerts, and diagnosis. The research-stage wedge is therefore narrower: a read-only, one- or two-vendor exception desk for installers that contractually bear post-sale support cost, producing a ranked incident queue and customer, warranty, or DSO evidence pack. It should begin as a paid concierge pilot in the founder's family company and advance only after independent installers pay and measured net support savings exceed the fee; remote control, technician dispatch, transaction fees, and a cross-vendor data-moat claim are excluded from the initial case.",
+  "title": "PV Exception Desk: read-only triage for support-burdened Polish installers",
+  "uncertainties": [
+    "How many sites the family company and independent target firms remain contractually obliged to support, by inverter brand and portal-access status.",
+    "Monthly inbound ticket volume, staff minutes per case, unreimbursed travel, warranty handling cost, and actual avoidable truck-roll rate.",
+    "Whether three independent installers will pay a fixed-fee pilot rather than demand a free trial or pass the charge to homeowners.",
+    "Exact per-brand API eligibility, consent flow, commercial terms, data latency, alert coverage, and production cost at 100, 1,000, and 10,000 sites.",
+    "Whether evidence packs change resolution time or merely reformat data already available in OEM portals.",
+    "False-positive and false-negative rates by problem class, and who bears loss or liability when triage is wrong.",
+    "Renewal and connected-site churn after the pilot, especially when free OEM tools are sufficient for most sites.",
+    "Cash CAC and founder hours required to reach installer decision-makers from a public registry or partner introduction.",
+    "Whether customer-authorised meter, bill, and inverter data can be combined under a simple controller-processor structure without a DPIA or heavier security obligations.",
+    "Whether the founder can sustain integration maintenance, sales, and support inside 20 hours per week without delaying incident response.",
+    "A credible route from a regional pilot to materially higher ARPU or portfolio scale without adding low-margin field operations.",
+    "Whether OEMs or Otovo can add the evidence-pack workflow faster than a small entrant can build exclusive labelled outcomes."
+  ],
+  "version": 2
+}

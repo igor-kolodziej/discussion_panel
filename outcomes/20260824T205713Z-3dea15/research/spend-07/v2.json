@@ -1,0 +1,311 @@
+{
+  "candidate_id": "spend-07",
+  "candidate_sha256": "78a3429f51a516eedf72b7fee4afa39277df041a74be4bc41369bc15345a9360",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "CL01",
+      "evidence_refs": [
+        "SRC01",
+        "SRC02"
+      ],
+      "statement": "Polish law gives owners of wind or solar resources that execute qualifying non-market redispatch instructions a compensation route; the connecting operator calculates and pays, subject to the EU-referenced rules."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "CL02",
+      "evidence_refs": [
+        "SRC01",
+        "SRC02"
+      ],
+      "statement": "Entitlement is narrower than installed OZE capacity: current law excludes non-firm connection arrangements, selection depends on controllability and size, and PSE limits claims to owners whose installations actually executed listed PSE-related instructions."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "CL03",
+      "evidence_refs": [
+        "SRC01",
+        "SRC02"
+      ],
+      "statement": "The general compensation claim expires 180 days after the last day of the month in which the instruction was executed; separately, auction-support information is due within 14 days and missing it can remove that support component."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "CL04",
+      "evidence_refs": [
+        "SRC06"
+      ],
+      "statement": "Curtailment volume is material at sector level: in 2024 PSE ordered about 597.26 GWh of PV and 125.1 GWh of wind non-market reductions, while DSO-initiated reductions added 24.12 GWh PV and 2.8 GWh wind."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "CL05",
+      "evidence_refs": [
+        "SRC06"
+      ],
+      "statement": "DSO-initiated 2024 curtailment was highly concentrated: only 3 of 188 DSOs used it, and Enea accounted for 98.8% of DSO PV and 85.7% of DSO wind reductions. National MWh therefore do not establish a broad reachable owner base."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "CL06",
+      "evidence_refs": [
+        "SRC07",
+        "SRC02"
+      ],
+      "statement": "URE reported 4,333 producers and 8,077 small OZE installations at year-end 2025, creating a broad prospecting universe for the 50 kW-1 MW segment, but it does not identify which owners executed compensable instructions or were underpaid."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "CL07",
+      "evidence_refs": [
+        "SRC03"
+      ],
+      "statement": "PSE's free WOZE portal already provides installation registration, lists eligible PSE instructions, validates claim inputs, supports corrections, tracks status, delivers settlement information and accepts owner-authorized service providers."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "CL08",
+      "evidence_refs": [
+        "SRC02",
+        "SRC04",
+        "SRC05"
+      ],
+      "statement": "PSE publishes the accepted PV and wind counterfactual methods. They use operator/owner meter data plus irradiation, wind-power curves, area forecasts or regression paths, and PSE publishes settlement prices and offers detailed calculations on request."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "CL09",
+      "evidence_refs": [
+        "SRC02",
+        "SRC03",
+        "SRC09"
+      ],
+      "statement": "Asset-level workflow access is permissioned rather than openly reusable: WOZE roles require the owner's business-partner administrator and acceptance authority, while PSE's redispatch B2B API uses mTLS, business-partner registration and defines the participant as the owner, DSO or an authorized representative."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "CL10",
+      "evidence_refs": [
+        "SRC02"
+      ],
+      "statement": "PSE does not state an end-to-end review SLA: review time depends on incoming volume and DSO data. It commits to payment within 21 days only after it receives the accounting document and accepted settlement information."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "CL11",
+      "evidence_refs": [
+        "SRC10"
+      ],
+      "statement": "A direct Polish competitor already offers the same wedge: SCADA connection, 15-minute monitoring, deadline alerts, automated monthly claims and a separate law-firm route. Its posted pricing is EUR 119/month for one plant, EUR 699/month for up to five plants/20 MW and EUR 2,325/month enterprise, each plus a 5% law-firm success fee."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "CL12",
+      "evidence_refs": [
+        "SRC10"
+      ],
+      "statement": "The direct competitor explicitly says its examples are hypothetical and that it will publish case studies once it has clients; therefore its presence proves offer saturation and a price anchor, not paid demand or successful incremental recoveries."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "CL13",
+      "evidence_refs": [
+        "SRC11"
+      ],
+      "statement": "Existing asset managers can bundle the adjacent work: VSB advertises grid/feed-in management, documentation, data analysis, contract and claims management, receivables, settlements and PPA support for Polish wind and solar assets."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "CL14",
+      "evidence_refs": [
+        "SRC08",
+        "SRC12"
+      ],
+      "statement": "There is genuine calculation ambiguity: the European Commission says fair-payment calculation remains unclear, and the current UD284 proposal says existing rules are tailored to schedule-based sales and do not work the same way for pay-as-produced PPAs."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "CL15",
+      "evidence_refs": [
+        "SRC02",
+        "SRC03",
+        "SRC06",
+        "SRC10"
+      ],
+      "statement": "No located authoritative or merchant evidence quantifies how often reachable owners fail to claim, how often PSE under-calculates, or the cash added by a second-look service over WOZE, O&M and legal support. Avoided loss and aggregate curtailed MWh are not capturable revenue."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "CL16",
+      "evidence_refs": [
+        "SRC03",
+        "SRC04",
+        "SRC05",
+        "SRC09"
+      ],
+      "statement": "Outcome data do not automatically create a moat: official methods and system data are published, asset-specific access is owner-scoped, and cross-client reuse of telemetry, contracts and settlement outcomes would require explicit contractual rights and privacy/security controls."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "CL17",
+      "evidence_refs": [
+        "SRC10"
+      ],
+      "statement": "At a test price of 3% of incremental cash, an assumed PLN 150,000 incremental recovery produces PLN 4,500 revenue. With assumed delivery cost of PLN 1,200 and a 15% referral share, contribution is PLN 2,625 (58%); recoveries below roughly PLN 160,000 do not reach 60% contribution margin under those assumptions."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "CL18",
+      "evidence_refs": [
+        "SRC06",
+        "SRC07",
+        "SRC10"
+      ],
+      "statement": "A founder-net-worth path based only on a 3% incremental-recovery fee requires approximately 1,235 active owners at PLN 150,000 average incremental recovery per owner-year, 25% EBITDA margin, a 4x EBITDA value and 90% founder ownership to reach about PLN 5.0 million of founder equity; the eligible denominator and repeat rate needed for that scale are unproven."
+    }
+  ],
+  "contrary_evidence": [
+    "The operator itself supplies a no-fee, increasingly automated claim portal with eligible-event lists, validation, corrections and status tracking. [evidence: SRC03]",
+    "PSE defines and publishes the counterfactual calculation paths and provides detailed calculations on request, limiting the proprietary value of merely reproducing the official formula. [evidence: SRC02, SRC04, SRC05]",
+    "An exact technology-plus-law-firm competitor is already live with public subscriptions and a 5% success-fee anchor. [evidence: SRC10]",
+    "Professional asset managers already sell grid, data, contract, receivables and claims management to the same owners, so a proposed channel can internalize the service or compete with it. [evidence: SRC11]",
+    "Non-firm connection terms remove entitlement, actual execution is required, and DSO curtailment is geographically/operator concentrated; installed capacity materially overstates eligible buyers. [evidence: SRC01, SRC02, SRC06]",
+    "The only exact competitor found discloses no client case studies, so there is still no observed paid behavior or proof that incremental recovery exceeds native settlement. [evidence: SRC10]"
+  ],
+  "schema_version": 1,
+  "sources": [
+    {
+      "accessed_at": "2026-08-24",
+      "published_at": "2026-01-15",
+      "publisher": "Dziennik Ustaw Rzeczypospolitej Polskiej",
+      "source_id": "SRC01",
+      "source_type": "official_statute",
+      "stance": "supporting",
+      "title": "Consolidated text of the Energy Law (Dz.U. 2026 poz. 43)",
+      "url": "https://www.dziennikustaw.gov.pl/DU/2026/43/D2026000004301.pdf"
+    },
+    {
+      "accessed_at": "2026-08-24",
+      "published_at": "n.d.",
+      "publisher": "Polskie Sieci Elektroenergetyczne S.A.",
+      "source_id": "SRC02",
+      "source_type": "system_operator_guidance",
+      "stance": "context",
+      "title": "Redysponowanie Nierynkowe",
+      "url": "https://www.pse.pl/redysponowanie-nierynkowe"
+    },
+    {
+      "accessed_at": "2026-08-24",
+      "published_at": "n.d.",
+      "publisher": "Polskie Sieci Elektroenergetyczne S.A.",
+      "source_id": "SRC03",
+      "source_type": "system_operator_product_documentation",
+      "stance": "contradicting",
+      "title": "Portal do składania wniosków o rekompensaty (WOZE)",
+      "url": "https://www.pse.pl/WOZE"
+    },
+    {
+      "accessed_at": "2026-08-24",
+      "published_at": "2025-05",
+      "publisher": "Polskie Sieci Elektroenergetyczne S.A.",
+      "source_id": "SRC04",
+      "source_type": "official_calculation_method",
+      "stance": "contradicting",
+      "title": "Redysponowanie nierynkowe instalacji PV: zasady wyliczania wartości rekompensaty",
+      "url": "https://www.pse.pl/documents/20182/4168830618/Zasady_wyliczania_rekompensaty_finansowej.pdf"
+    },
+    {
+      "accessed_at": "2026-08-24",
+      "published_at": "n.d.",
+      "publisher": "Polskie Sieci Elektroenergetyczne S.A.",
+      "source_id": "SRC05",
+      "source_type": "official_calculation_method",
+      "stance": "contradicting",
+      "title": "Redysponowanie nierynkowe instalacji FW: zasady wyliczania rekompensaty finansowej",
+      "url": "https://www.pse.pl/documents/20182/51490/Zasady_rozliczen.pdf/f5a1f596-2ad8-46fb-90d4-791fff5278a0?safeargs=76657273696f6e3d312e30"
+    },
+    {
+      "accessed_at": "2026-08-24",
+      "published_at": "2025-10-27",
+      "publisher": "Urząd Regulacji Energetyki",
+      "source_id": "SRC06",
+      "source_type": "regulator_report",
+      "stance": "supporting",
+      "title": "Rynek energii elektrycznej: sprawozdanie Prezesa URE dotyczące mechanizmów redysponowania w 2024 r.",
+      "url": "https://www.ure.gov.pl/pl/urzad/informacje-ogolne/aktualnosci/12923,Rynek-energii-elektrycznej-sprawozdanie-Prezesa-URE-dotyczace-mechanizmow-redysp.html"
+    },
+    {
+      "accessed_at": "2026-08-24",
+      "published_at": "2026-05-07",
+      "publisher": "Urząd Regulacji Energetyki",
+      "source_id": "SRC07",
+      "source_type": "regulator_market_report",
+      "stance": "context",
+      "title": "Raport URE: w 2025 r. w małych instalacjach OZE wytworzono blisko 5,5 TWh energii",
+      "url": "https://www.ure.gov.pl/pl/urzad/informacje-ogolne/aktualnosci/13289,Raport-URE-w-2025-r-w-malych-instalacjach-OZE-wytworzono-blisko-55-TWh-energii.html"
+    },
+    {
+      "accessed_at": "2026-08-24",
+      "published_at": "2026-06-03",
+      "publisher": "European Commission",
+      "source_id": "SRC08",
+      "source_type": "official_policy_report",
+      "stance": "supporting",
+      "title": "2026 Country Report - Poland (SWD(2026) 221 final)",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:52026SC0221"
+    },
+    {
+      "accessed_at": "2026-08-24",
+      "published_at": "n.d.",
+      "publisher": "Polskie Sieci Elektroenergetyczne S.A.",
+      "source_id": "SRC09",
+      "source_type": "official_technical_documentation",
+      "stance": "contradicting",
+      "title": "Nierynkowe redysponowanie — B2B API",
+      "url": "https://github.com/Polskie-Sieci-Elektroenergetyczne/redispatching-api"
+    },
+    {
+      "accessed_at": "2026-08-24",
+      "published_at": "n.d.",
+      "publisher": "OdzyskOZE.pl / HAL Group",
+      "source_id": "SRC10",
+      "source_type": "competitor_product_and_pricing_page",
+      "stance": "contradicting",
+      "title": "OdzyskOZE.pl — automated curtailment compensation claims for renewable operators",
+      "url": "https://odzyskoze.pl/en/"
+    },
+    {
+      "accessed_at": "2026-08-24",
+      "published_at": "n.d.",
+      "publisher": "VSB Energie Odnawialne Polska",
+      "source_id": "SRC11",
+      "source_type": "competitor_service_page",
+      "stance": "contradicting",
+      "title": "Operational Management and PPA contracts",
+      "url": "https://www.vsb.energy/pl/en/services/operational-management-and-ppa-contracts/"
+    },
+    {
+      "accessed_at": "2026-08-24",
+      "published_at": "2026-07-01",
+      "publisher": "Kancelaria Prezesa Rady Ministrów / Ministerstwo Energii",
+      "source_id": "SRC12",
+      "source_type": "official_legislative_proposal",
+      "stance": "context",
+      "title": "Projekt ustawy o zmianie ustawy - Prawo energetyczne (UD284, version 5.0)",
+      "url": "https://www.gov.pl/web/premier/projekt-ustawy-o-zmianie-ustawy--prawo-energetyczne2"
+    }
+  ],
+  "unknowns": [
+    "{\"evidence_refs\": [\"SRC02\", \"SRC06\"], \"question\": \"Among independently reachable owners that executed qualifying instructions in 2024-2026, what percentage filed no claim, filed late, or received less than a legally and contractually defensible amount?\", \"unknown_id\": \"U01\", \"why_decisive\": \"This is the revenue denominator; curtailed MWh alone is not a recovery opportunity.\"}",
+    "{\"evidence_refs\": [\"SRC01\", \"SRC04\", \"SRC05\", \"SRC10\"], \"question\": \"What is the distribution of incremental recoverable cash per owner and per event after excluding ordinary WOZE entitlement, non-firm connections, negative-price intervals and correctly settled support?\", \"unknown_id\": \"U02\", \"why_decisive\": \"The 3-5% fee cannot cover review and acquisition on small gaps.\"}",
+    "{\"evidence_refs\": [\"SRC02\", \"SRC07\", \"SRC09\"], \"question\": \"Can a lawful list map public MIOZE/concession records to actual plant-level PSE/DSO instructions and current owner contact details without first receiving owner permission?\", \"unknown_id\": \"U03\", \"why_decisive\": \"The public registry is broad, while eligible events and asset-level workflow data are permissioned.\"}",
+    "{\"evidence_refs\": [\"SRC02\", \"SRC03\", \"SRC09\"], \"question\": \"Will owners, lenders or asset managers grant the power of attorney, WOZE role, B2B credentials, SCADA, meter, PPA and settlement access required for an outside technical service?\", \"unknown_id\": \"U04\", \"why_decisive\": \"Without authority and complete contract data, neither submission nor an incremental counterfactual can be proven.\"}",
+    "{\"evidence_refs\": [\"SRC04\", \"SRC05\", \"SRC08\", \"SRC12\"], \"question\": \"What alternative PPA/support counterfactuals will PSE accept beyond its published methods, and what share requires litigation rather than an administrative correction?\", \"unknown_id\": \"U05\", \"why_decisive\": \"A theoretical economic loss is not necessarily operator-payable incremental cash.\"}",
+    "{\"evidence_refs\": [\"SRC02\", \"SRC10\"], \"question\": \"What are actual median review, correction, acceptance and cash dates, and what is the rejection rate by DSO and claim type?\", \"unknown_id\": \"U06\", \"why_decisive\": \"PSE gives no review SLA; contingency revenue may be delayed, and disputed cash can take much longer.\"}",
+    "{\"evidence_refs\": [\"SRC10\"], \"question\": \"What fixed fee, success-fee share and minimum case value will a Polish energy-law partner accept?\", \"unknown_id\": \"U07\", \"why_decisive\": \"The competitor's 5% total success-fee anchor leaves little room for both technical delivery and legal representation.\"}",
+    "{\"evidence_refs\": [\"SRC11\"], \"question\": \"Will O&M firms, lenders and insurers refer claims, at what revenue share and conversion, or will they treat the workflow as part of their own mandate?\", \"unknown_id\": \"U08\", \"why_decisive\": \"The proposed low-energy distribution channel is also an incumbent competitor set.\"}",
+    "{\"evidence_refs\": [\"SRC03\", \"SRC09\"], \"question\": \"Do owners consent to cross-client reuse of anonymized telemetry, contract features and outcomes, and can contractual confidentiality and security obligations be met for under PLN 100,000 of startup capital?\", \"unknown_id\": \"U09\", \"why_decisive\": \"Without reuse rights, outcomes are customer work product rather than a compounding data asset.\"}",
+    "{\"evidence_refs\": [\"SRC10\"], \"question\": \"Does OdzyskOZE.pl have paying customers, filed claims or recovered incremental cash, and can a newcomer differentiate below its published price?\", \"unknown_id\": \"U10\", \"why_decisive\": \"Its product proves saturation but not demand; either outcome changes entry economics.\"}"
+  ]
+}

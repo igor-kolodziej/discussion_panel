@@ -1,0 +1,81 @@
+{
+  "candidate_id": "asymmetry-04",
+  "claims": [
+    {
+      "claim_id": "asymmetry-04-claim-1",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "scout-asymmetries:S8"
+      ],
+      "statement": "Poland's e-Zamowienia platform exposes national BZP notices and statistics through an API without requiring an integration procedure."
+    },
+    {
+      "claim_id": "asymmetry-04-claim-2",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "scout-asymmetries:S9"
+      ],
+      "statement": "The EU TED Search API allows unauthenticated search and bulk XML retrieval of published procurement notices and explicitly supports commercial value-added reuse."
+    },
+    {
+      "claim_id": "asymmetry-04-claim-3",
+      "confidence": "inference",
+      "evidence_refs": [
+        "scout-asymmetries:S8",
+        "scout-asymmetries:S9"
+      ],
+      "statement": "A vertical filter trained on contractor-specific constraints will be materially more useful than existing generic tender portals."
+    }
+  ],
+  "contrary_evidence": [
+    "The same open APIs support incumbent and new tender-alert competitors.",
+    "Relevant notices may still require references, bonds, site visits and procurement expertise that a radar cannot supply.",
+    "The family company may not bid often enough to prove recurring willingness to pay."
+  ],
+  "economics": {
+    "acquisition_route": "Have the family company label relevant and irrelevant notices to tune the first filter, then recruit similar contractors via supplier directories and regional trade associations using sample alerts rather than a personal media brand.",
+    "capital_required_pln": null,
+    "founder_net_worth_path": null,
+    "founder_time": "Part-time validation hypothesis; delivery burden remains untested.",
+    "gross_margin_basis": null,
+    "payback": null,
+    "pricing": null,
+    "retention_or_repeat": null
+  },
+  "fingerprint": {
+    "compounding_advantage": "Customer-specific relevance labels and recorded bid outcomes can improve ranking for that customer and adjacent niches. This advantage depends on enough feedback and does not make the underlying public notices proprietary.",
+    "customer": "Polish small and midsize PV, HVAC, electrical, insulation and energy-efficiency contractors that lack a dedicated bid desk.",
+    "distribution_mechanism": "Have the family company label relevant and irrelevant notices to tune the first filter, then recruit similar contractors via supplier directories and regional trade associations using sample alerts rather than a personal media brand.",
+    "offer_and_business_model": "Ingest BZP and TED notices, classify by work type, geography, reference requirements and deadline, detect amendments, and produce a concise fit explanation plus missing-evidence checklist. Start as a productized analyst service and automate only stable steps.",
+    "payer_and_paid_event": "The contractor pays a monthly subscription for a human-auditable shortlist and evidence checklist; an optional fixed fee applies when the customer requests a structured bid/no-bid dossier, not a guaranteed win.",
+    "problem_trigger": "A relevant municipality, school, housing or commercial-energy tender is published, amended or approaching deadline, but generic alerts either miss it or create too much review work."
+  },
+  "founder_fit": [
+    "Immediate access to a realistic contractor design partner",
+    "Strong fit for classification, retrieval and workflow automation",
+    "Asynchronous subscription service limits constant interaction",
+    "Can validate demand before building a full tender platform"
+  ],
+  "parent": null,
+  "risks": [
+    "Evidence of a workflow, transition, or loss does not yet establish recurring willingness to pay.",
+    "The proposed distribution and compounding mechanisms remain hypotheses pending buyer evidence."
+  ],
+  "schema_version": 1,
+  "source_refs": [
+    "scout-asymmetries:S8",
+    "scout-asymmetries:S9"
+  ],
+  "stage": "discovery",
+  "thesis": "For Polish small and midsize PV, HVAC, electrical, insulation and energy-efficiency contractors that lack a dedicated bid desk., when A relevant municipality, school, housing or commercial-energy tender is published, amended or approaching deadline, but generic alerts either miss it or create too much review work., deliver Ingest BZP and TED notices, classify by work type, geography, reference requirements and deadline, detect amendments, and produce a concise fit explanation plus missing-evidence checklist. Start as a productized analyst service and automate only stable steps.. The paid event is The contractor pays a monthly subscription for a human-auditable shortlist and evidence checklist; an optional fixed fee applies when the customer requests a structured bid/no-bid dossier, not a guaranteed win.; acquisition begins through Have the family company label relevant and irrelevant notices to tune the first filter, then recruit similar contractors via supplier directories and regional trade associations using sample alerts rather than a personal media brand., with potential compounding from Customer-specific relevance labels and recorded bid outcomes can improve ranking for that customer and adjacent niches. This advantage depends on enough feedback and does not make the underlying public notices proprietary..",
+  "title": "Low-noise public-tender radar for small energy contractors",
+  "uncertainties": [
+    "Number of genuinely addressable tenders per contractor per month",
+    "Incumbent pricing and switching friction",
+    "Whether better filtering changes bid volume or win rate",
+    "Completeness and stability of attachments and amendment links",
+    "Pricing, buyer authority, and acquisition economics remain unvalidated at discovery.",
+    "First validation test: Have the family company label 100 recent notices, run a six-week live alert for it and nine comparable contractors, and request payment after week two for continued delivery. Require at least three paying users plus evidence that the shortlist prompted a qualified bid or saved documented review time."
+  ],
+  "version": 1
+}

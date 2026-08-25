@@ -1,0 +1,78 @@
+{
+  "candidate_id": "bottleneck-03",
+  "claims": [
+    {
+      "claim_id": "bottleneck-03-claim-1",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "scout-bottlenecks:S4"
+      ],
+      "statement": "Poland had about 11,762 publicly accessible charging points at the end of 2025, up 36% year over year, including about 4,400 DC points."
+    },
+    {
+      "claim_id": "bottleneck-03-claim-2",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "scout-bottlenecks:S5"
+      ],
+      "statement": "AFIR requires public chargers to support specified ad-hoc payment practices and requires free static and dynamic data including operational status, availability, and price through APIs."
+    },
+    {
+      "claim_id": "bottleneck-03-claim-3",
+      "confidence": "inference",
+      "evidence_refs": [
+        "scout-bottlenecks:S5"
+      ],
+      "statement": "Those public data create an unusually concrete outage-led prospecting trigger, but data quality, owner identification, and willingness to outsource operations remain unproven."
+    }
+  ],
+  "contrary_evidence": [
+    "Large CPOs already operate network operations centers and may view an external layer as added failure risk.",
+    "Hardware warranties, closed backends, and payment-provider dependencies can prevent remote resolution.",
+    "Regulatory data obligations do not themselves establish a standardized commercial uptime SLA or prove loss per outage."
+  ],
+  "economics": {
+    "acquisition_route": "Continuously analyze the mandatory public operational-status feeds to identify fleets with recurring visible outages, send the responsible owner a quantified diagnostic sample, and convert to a paid monitored pilot. Separately, let charger installers embed the desk in every handover so they can sell an SLA without building a round-the-clock operations team.",
+    "capital_required_pln": null,
+    "founder_net_worth_path": null,
+    "founder_time": "Part-time validation hypothesis; delivery burden remains untested.",
+    "gross_margin_basis": null,
+    "payback": null,
+    "pricing": null,
+    "retention_or_repeat": null
+  },
+  "fingerprint": {
+    "compounding_advantage": "Vendor-specific remote-remedy playbooks, reliable backend integrations, regional dispatch coverage, parts staging, and measured first-response and first-time-fix performance compound together. Route and technician density improve margins beyond what monitoring software alone can deliver.",
+    "customer": "Regional charge-point operators and retail, hotel, parking, fleet, or municipal site owners operating 20-500 mixed-brand public chargers in Poland and nearby CEE markets.",
+    "distribution_mechanism": "Continuously analyze the mandatory public operational-status feeds to identify fleets with recurring visible outages, send the responsible owner a quantified diagnostic sample, and convert to a paid monitored pilot. Separately, let charger installers embed the desk in every handover so they can sell an SLA without building a round-the-clock operations team.",
+    "offer_and_business_model": "Connect to OCPP/backend feeds and required public status data, attempt safe remote remedies, classify faults, maintain payment and API evidence, and dispatch the correct qualified technician with parts context. Start as a managed network-operations service and automate the common faults; do not pretend that adding software later automatically removes field-service constraints.",
+    "payer_and_paid_event": "The fleet owner pays a recurring fee per connector for monitoring, remote triage, data-quality compliance, and ticket management, plus a pre-agreed coordination fee for each field repair; payment recurs monthly against a transparent service report.",
+    "problem_trigger": "A charger reports out-of-order, repeated payment or session failures breach a site SLA, AFIR data are stale, or a property owner cannot determine whether the fault belongs to connectivity, backend, payment, power, or hardware."
+  },
+  "founder_fit": [
+    "Matches data engineering, anomaly detection, automation, and the founder's renewable-installation adjacency.",
+    "A small pilot is capital-light if field work is contracted and spare-parts inventory is avoided initially.",
+    "Operational escalation can become time-intensive, so a narrow fleet size and business-hours SLA are important while the founder remains employed."
+  ],
+  "parent": null,
+  "risks": [
+    "Evidence of a workflow, transition, or loss does not yet establish recurring willingness to pay.",
+    "The proposed distribution and compounding mechanisms remain hypotheses pending buyer evidence."
+  ],
+  "schema_version": 1,
+  "source_refs": [
+    "scout-bottlenecks:S4",
+    "scout-bottlenecks:S5"
+  ],
+  "stage": "discovery",
+  "thesis": "For Regional charge-point operators and retail, hotel, parking, fleet, or municipal site owners operating 20-500 mixed-brand public chargers in Poland and nearby CEE markets., when A charger reports out-of-order, repeated payment or session failures breach a site SLA, AFIR data are stale, or a property owner cannot determine whether the fault belongs to connectivity, backend, payment, power, or hardware., deliver Connect to OCPP/backend feeds and required public status data, attempt safe remote remedies, classify faults, maintain payment and API evidence, and dispatch the correct qualified technician with parts context. Start as a managed network-operations service and automate the common faults; do not pretend that adding software later automatically removes field-service constraints.. The paid event is The fleet owner pays a recurring fee per connector for monitoring, remote triage, data-quality compliance, and ticket management, plus a pre-agreed coordination fee for each field repair; payment recurs monthly against a transparent service report.; acquisition begins through Continuously analyze the mandatory public operational-status feeds to identify fleets with recurring visible outages, send the responsible owner a quantified diagnostic sample, and convert to a paid monitored pilot. Separately, let charger installers embed the desk in every handover so they can sell an SLA without building a round-the-clock operations team., with potential compounding from Vendor-specific remote-remedy playbooks, reliable backend integrations, regional dispatch coverage, parts staging, and measured first-response and first-time-fix performance compound together. Route and technician density improve margins beyond what monitoring software alone can deliver..",
+  "title": "Vendor-Neutral EV Charger Reliability Operations",
+  "uncertainties": [
+    "Share of Polish endpoints exposing accurate status and the legal entity behind each fleet.",
+    "OCPP/backend access rates across charger brands and safe remote actions allowed by owners.",
+    "Technician travel cost, parts delay, and gross margin at different fleet densities.",
+    "Pricing, buyer authority, and acquisition economics remain unvalidated at discovery.",
+    "First validation test: Monitor 300 public connectors across at least five operators for 30 days, manually verify a sample of reported outages, and send ten evidence-based fleet reports. Require one paid 50-connector pilot with backend access and predefined response metrics; continue only if at least 60% of tickets can be closed remotely or in one field visit at positive contribution margin."
+  ],
+  "version": 1
+}

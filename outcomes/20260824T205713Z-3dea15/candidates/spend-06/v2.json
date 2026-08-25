@@ -1,0 +1,236 @@
+{
+  "candidate_id": "spend-06",
+  "claims": [
+    {
+      "claim_id": "R06-C01",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "R06-S01"
+      ],
+      "statement": "The 2026 TAURON distribution tariff makes the leakage mechanically real: it charges contracted-power exceedance using the fixed network-rate component multiplied by the sum of the ten largest excesses (or ten times the maximum where metering cannot support that method), and it monitors contracted power routinely for A, B2x and C2x customers."
+    },
+    {
+      "claim_id": "R06-C02",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "R06-S01"
+      ],
+      "statement": "The same tariff applies reactive-power settlement to medium- and high-voltage customers and may apply it below 1 kV; absent a different contractual value, inductive excess begins above tg phi 0.4, while capacitive reactive energy is chargeable from zero. The low-voltage multiplier is 3.0 versus 1.0 at medium voltage and 0.5 at 110 kV."
+    },
+    {
+      "claim_id": "R06-C03",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "R06-S12"
+      ],
+      "statement": "URE explicitly identifies LED, UPS and other technology changes as possible causes of higher reactive-power or fixed distribution charges and advises matching contracted power to actual demand; this establishes a technically plausible trigger but not a purchase budget."
+    },
+    {
+      "claim_id": "R06-C04",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "R06-S04"
+      ],
+      "statement": "A 2025 technical paper reports one retail facility with 8,261.49 PLN of annual reactive-power charges and a 20,645 PLN purchase-and-installation cost for a compensator, implying about a 30-month simple payback. This is a real low-to-mid-value case, not a prevalence estimate."
+    },
+    {
+      "claim_id": "R06-C05",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "R06-S04"
+      ],
+      "statement": "The same paper states that the monitored fuel-station and large-format retail objects had meaningful capacitive reactive power, but it does not disclose a random sampling frame or the distribution of recoverable PLN across Polish SMEs; it cannot support a market-wide hit rate."
+    },
+    {
+      "claim_id": "R06-C06",
+      "confidence": "inference",
+      "evidence_refs": [
+        "R06-S02"
+      ],
+      "statement": "URE reports that 27,000 dynamic-price contracts represented 1.1% of small and micro business recipients in C and non-household G groups at year-end 2025, which implies a broad denominator near 2.45 million recipients. Most of that denominator is not demonstrated to have C2x/B2x metering, relevant equipment, or recoverable leakage."
+    },
+    {
+      "claim_id": "R06-C07",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "R06-S03"
+      ],
+      "statement": "CEIDG is a daily-updated, high-value public dataset with API access for sole-trader businesses, so geography and business-activity lists can be assembled. It does not expose tariff group, point-of-delivery data, contracted power, invoice charges, equipment profile or demonstrated buyer interest, so it is not a qualified buyer list."
+    },
+    {
+      "claim_id": "R06-C08",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "R06-S05"
+      ],
+      "statement": "PSE says Moje IRE can provide contract, technical and consumption data at granularity down to 15 minutes, free of charge, and lets the customer grant a selected entity access by point, data scope and time period."
+    },
+    {
+      "claim_id": "R06-C09",
+      "confidence": "inference",
+      "evidence_refs": [
+        "R06-S05"
+      ],
+      "statement": "Interval-data access is still transitional on the access date: PSE says data appear only after the relevant operator joins CSIRE and operator onboarding continues through 19 October 2026. Direct API connectivity also requires certification and security testing, so an early pilot should accept customer-downloaded files rather than assume a uniform API."
+    },
+    {
+      "claim_id": "R06-C10",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "R06-S06"
+      ],
+      "statement": "UODO states that metering data capable of reconstructing an individual recipient's consumption profile may be personal data and emphasizes purpose limitation and data minimization. Customer authorization to perform one audit therefore does not automatically confer a right to pool raw interval data into a reusable cross-customer asset."
+    },
+    {
+      "claim_id": "R06-C11",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "R06-S07"
+      ],
+      "statement": "A current named price list sets the initial invoice screen at 0 PLN, a 5–7 day one-point measurement and report at 2,400 PLN net, a parallel additional point at 1,200 PLN, and post-install verification at 900 PLN. These are concrete operating-cost anchors, not national averages."
+    },
+    {
+      "claim_id": "R06-C12",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "R06-S08"
+      ],
+      "statement": "NextGen Energy advertises the exact invoice-layer wedge—tariff, contracted power and reactive-power analysis from uploaded bills—as a free automated report delivered in minutes, without a meeting or salesperson. A paid invoice audit by itself is already commoditized."
+    },
+    {
+      "claim_id": "R06-C13",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "R06-S09"
+      ],
+      "statement": "TAURON itself markets a complete partner-delivered reactive-power compensation system and says installations typically repay in 9–24 months, recommending consideration above about 600 PLN per month of reactive-power charges. The incumbent brand and its established partners compete directly for remediation margin."
+    },
+    {
+      "claim_id": "R06-C14",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "R06-S10"
+      ],
+      "statement": "A Warsaw-area competitor offers a free invoice review, tariff and contracted-power help, up-to-seven-day measurements, installation, and full payment only after the target savings are obtained. Outcome-linked positioning and partner-delivered remediation are not differentiated features."
+    },
+    {
+      "claim_id": "R06-C15",
+      "confidence": "inference",
+      "evidence_refs": [
+        "R06-S01",
+        "R06-S11"
+      ],
+      "statement": "IPMVP requires savings to be based on measurements before and after a project with suitable adjustments for changed conditions. Reactive-charge elimination can be checked on a distinct invoice line, but an outcome fee that also claims tariff or contracted-capacity savings needs a pre-agreed baseline, tariff normalization and rules for production, occupancy and equipment changes."
+    },
+    {
+      "claim_id": "R06-C16",
+      "confidence": "inference",
+      "evidence_refs": [
+        "R06-S04",
+        "R06-S07"
+      ],
+      "statement": "At a proposed 20% first-year success fee, the documented 8,261.49 PLN annual-savings case would yield only about 1,652 PLN, less than the named 2,400 PLN measurement plus 900 PLN verification cost. Provider-funded pure contingency is therefore negative before acquisition and analysis labor on modest sites; customer-paid pass-through costs or a much higher savings threshold are necessary."
+    },
+    {
+      "claim_id": "R06-C17",
+      "confidence": "unknown",
+      "evidence_refs": [],
+      "statement": "The person who notices or uploads a bill is not proven to control the distribution contract, approve a 15,000–30,000 PLN electrical project, or agree to a success-fee baseline. Buyer authority and sales-cycle length among target SMEs remain unknown."
+    },
+    {
+      "claim_id": "R06-C18",
+      "confidence": "unknown",
+      "evidence_refs": [],
+      "statement": "No located authoritative or independently sampled source gives the share of partner-reachable Polish SMEs with at least 24,000 PLN per year of recoverable reactive-power, contracted-capacity and tariff leakage. The prevalence and value distribution needed for customer-acquisition economics remain unknown."
+    },
+    {
+      "claim_id": "R06-C19",
+      "confidence": "unknown",
+      "evidence_refs": [],
+      "statement": "No located evidence establishes conversion rates, referral economics or exclusivity for accountants, electricians, photovoltaic installers or energy brokers. Naming those channels does not establish affordable distribution, particularly when free-audit and incumbent offers already recruit the same customers."
+    },
+    {
+      "claim_id": "R06-C20",
+      "confidence": "unknown",
+      "evidence_refs": [],
+      "statement": "After a successful hardware or contract correction, the primary charge should fall, so repeat revenue depends on monitoring, new sites or later equipment changes. Willingness to pay a separate monitoring subscription and the annual recurrence rate are unknown."
+    }
+  ],
+  "contrary_evidence": [
+    "The exact audit output is already free and automated at a named competitor.",
+    "Outcome-linked payment, seven-day measurement and full remediation are already offered locally.",
+    "TAURON's branded partner network competes at the trusted full-stack layer.",
+    "The documented 8,261.49 PLN annual leakage case cannot fund the proposed success fee and named measurement costs.",
+    "No unbiased prevalence distribution supports the minimum-value qualification gate.",
+    "Customer permission does not automatically make raw interval profiles reusable across customers.",
+    "One-time corrections undermine recurring revenue, and monitoring willingness is unknown."
+  ],
+  "economics": {
+    "acquisition_route": "Permissioned invoice cohorts from the family installation company plus three unrelated accountants/electricians, with a 20% share of collected success fees as the planning assumption. CEIDG can identify firms but lacks energy qualification signals, so cold-list economics are excluded until measured. The gate requires source, invoices screened, qualified rate, signer meeting, signed agreement, completed intervention and cash collection to be tracked per partner.",
+    "capital_required_pln": "Estimated 25,000–45,000 PLN for a lean pilot: secure document handling and parser tooling, legal/M&V contract review, professional/cyber liability setup, partner onboarding and a contingency reserve. This is an inference and excludes customer-funded analyzers, hardware and installation. Provider-funded measurements for even ten sites would add about 33,000 PLN at the named rates, and hardware financing would move risk outside the founder's preferred bootstrap profile.",
+    "founder_net_worth_path": "Founder-net-worth definition applied exactly as founder-owned business equity plus accumulated personal cash and distributions minus liabilities, excluding the primary residence; retained cash is not counted again outside equity. Conditional bottom-up path, not an evidenced forecast: assume 100% founder ownership, 30,000 PLN average verified savings, 6,000 PLN fee per completed site, 55% unit contribution, no monitoring revenue, no debt, and valuation at 3.5x normalized EBITDA excluding excess cash. Year 1: 15 sites, 90,000 PLN revenue, about 20,000 PLN EBITDA after 30,000 PLN fixed cost; while employed, reinvest 95% of after-tax cash and distribute no more than 5%. Year 2: 50 sites, 300,000 PLN revenue, about 85,000 PLN EBITDA. Year 3: 120 sites, 720,000 PLN revenue, about 216,000 PLN EBITDA; leaving employment is considered only after repeatable demand, positive contribution, and twelve months of personal runway. Year 5: 250 sites, 1.5 million PLN revenue, about 525,000 PLN EBITDA, implying about 1.84 million PLN equity at 3.5x, plus only separately distributed after-tax personal cash. A nominal 5 million PLN path appears around Year 8 only if throughput reaches 500 paid sites per year: 3.0 million PLN revenue and about 1.1 million PLN EBITDA imply about 3.85 million PLN equity, plus roughly 1.2 million PLN cumulative after-tax distributions after leaving employment, for about 5.05 million PLN with no liabilities. That requires about 10,000 screened invoices per year at an assumed 20:1 screen-to-paid conversion and 500 sites with at least 30,000 PLN savings—none is evidenced. Under the documented 8,261.49 PLN savings case or weak channel conversion, the path does not reach 5 million PLN.",
+    "founder_time": "Pilot plan: about 15–20 hours per week, compatible with the five-hour-per-day maximum, assuming automated screens, no more than two active measured sites at once and partner-owned site work. Stress-test workload is five hours to screen twenty invoices plus about three hours of deep analysis, contracting and verification per paid site; sales calls, exceptions and disputes are not yet measured. Scaling beyond roughly 10–15 completions per month requires an analyst/operations hire and standardized electrical partners.",
+    "gross_margin_basis": "Conservative stress test at 30,000 PLN verified annual savings: 6,000 PLN success-fee revenue. Assume 20% of collected fee to the referring partner (1,200 PLN), eight hours of screening/deep analysis/M&V administration valued at 150 PLN/hour (1,200 PLN), and 300 PLN for software, contracting, payment and liability allocation, leaving about 3,300 PLN contribution or 55% before fixed overhead. The 20:1 screens-to-paid-site, eight-hour labor and referral share are explicit unvalidated assumptions. Customer-funded measurement, verification and remediation are excluded from revenue and margin. If the provider funds the documented 3,300 PLN measurement/verification cost, contribution falls to zero in this case and is negative on the documented 8,261.49 PLN case.",
+    "payback": "For a no-capex tariff or contracted-power correction with 30,000 PLN annual verified savings, a 6,000 PLN success fee plus up to 3,300 PLN pass-through measurement/verification leaves about 20,700 PLN first-year customer benefit. For hardware, require the separately quoted equipment and installation to repay within twelve months before the success fee; this is stricter than TAURON's stated typical 9–24 months and excludes the technical paper's roughly 30-month case. Actual yield under this gate is unknown.",
+    "pricing": "Unvalidated test price, explicitly an inference rather than observed willingness: 0 PLN automated invoice screen; customer pays the named-market 2,400 PLN net 5–7 day measurement and 900 PLN post-install verification as pass-through when required; auditor receives 20% of the first twelve months of normalized verified savings after invoices evidence the result; no hardware markup. Reject sites below 24,000–30,000 PLN expected annual savings unless the fix is a no-capex contract change.",
+    "retention_or_repeat": "Do not count retention in the base case. Test an optional 150 PLN per PPE per month monitoring service only after three post-change invoices, covering recurrence alerts, tariff/capacity drift and new-equipment changes; price and willingness are unsupported. Repeat is otherwise new PPEs or new customer sites, because a successful correction removes the original charge."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Parser coverage, tariff-rule tests, anonymized and contract-permitted feature aggregates, intervention feasibility labels and realized charge outcomes may improve qualification; raw customer invoices or interval profiles are not treated as reusable moat data without explicit rights and privacy controls.",
+    "customer": "Polish multi-site retail, HoReCa, fuel-station, refrigeration and light-industrial SMEs on C2x/B2x or another tariff that explicitly bills reactive power or monitors contracted power, screened in only when twelve months of invoices indicate at least 24,000–30,000 PLN of plausibly recoverable annual value.",
+    "distribution_mechanism": "Begin only with invoice-permissioned introductions from the founder's family installer and three independent accountants or electricians; pay a share of collected success fees, not hardware margin, and discontinue any partner that cannot supply a blinded cohort with tracked invoice-to-contract conversion.",
+    "offer_and_business_model": "Vendor-neutral invoice and interval-data triage, a written tariff/capacity/reactive-power diagnosis, an IPMVP-aligned baseline and change-control schedule, independent partner measurement, DSO-change support and post-change bill verification; no hardware resale and no provider-funded metering before cohort economics are proven.",
+    "payer_and_paid_event": "The legal account holder, represented by an owner, CFO or authorized facilities lead, prepays third-party measurement and verification at cost and pays the auditor 20% of first-year normalized savings only after the agreed charge reduction appears on post-change invoices; hardware and electrical work are separately contracted.",
+    "problem_trigger": "A finance owner sees a recurring reactive-power line, contracted-power exceedance or persistently over-sized fixed network charge across one or more PPEs, and a twelve-month screen clears a minimum-value and technical-feasibility gate before any site work."
+  },
+  "founder_fit": [
+    "The founder's data-science background fits invoice parsing, tariff-rule engines, screening and baseline analysis.",
+    "The family renewable installer can test permissioned access and partner delivery without requiring a public personal brand.",
+    "A remote-first screen plus subcontracted measurement can fit a maximum five-hour-per-day side-business constraint if qualification is strict.",
+    "Electrical recommendations, buyer selling, M&V disputes and partner quality are outside the founder's demonstrated expertise and create material coordination and liability work.",
+    "Initial capital can remain below the founder's 100,000 PLN if customers fund hardware and measurement; pure provider-funded contingency would violate the low-downside preference."
+  ],
+  "parent": {
+    "candidate_id": "spend-06",
+    "version": 1
+  },
+  "risks": [
+    "Free competitors make customer acquisition more expensive than the success fee can support.",
+    "Hardware vendors may bias diagnosis toward equipment sales, while an independent auditor bears attribution and trust costs without hardware margin.",
+    "Production or facility changes and tariff updates can create outcome-fee disputes.",
+    "Incorrect contracted-power reduction can create exceedance charges and professional-liability exposure.",
+    "Poorly selected compensation equipment can underperform or create technical issues, requiring qualified electrical review.",
+    "Granular data handling creates cybersecurity, confidentiality and possible GDPR obligations.",
+    "The founder may become the operational bottleneck across partner coordination, buyer calls and exceptions.",
+    "A one-off service may never develop enough recurring revenue or defensible equity value to support the founder wealth target."
+  ],
+  "schema_version": 1,
+  "source_refs": [
+    "R06-S01",
+    "R06-S02",
+    "R06-S03",
+    "R06-S04",
+    "R06-S05",
+    "R06-S06",
+    "R06-S07",
+    "R06-S08",
+    "R06-S09",
+    "R06-S10",
+    "R06-S11",
+    "R06-S12"
+  ],
+  "stage": "research",
+  "thesis": "A defensible version would not sell a generic invoice audit. It would accept only multi-site C2x/B2x or otherwise explicitly charged facilities whose twelve-month invoices show at least 24,000–30,000 PLN of plausibly recoverable annual value; obtain customer-paid partner measurement where needed; pre-agree an IPMVP-aligned charge baseline; and earn 20% of verified first-year savings after the result appears on bills. Hardware remains directly contracted between the customer and an independent electrician. Evidence confirms charge mechanics and occasional high savings, but exact free competitors, uncertain high-value prevalence and weak repeat economics make this an evidence-constrained redesign, not a validated business.",
+  "title": "Independent high-value distribution-charge verifier for multi-site Polish SMEs",
+  "uncertainties": [
+    "Qualified prevalence at 24,000–30,000 PLN annual recoverable value.",
+    "Invoice-to-authorized-signer and signer-to-paid conversion by channel.",
+    "Share of qualified savings achievable without hardware and site measurement.",
+    "Dispute and collection rates for normalized outcome attribution.",
+    "Partner referral share, exclusivity, geographic coverage and service quality.",
+    "CSIRE authorization success and file/API coverage by DSO after 19 October 2026.",
+    "Lawful retention and reuse terms for anonymized feature and outcome data.",
+    "Monitoring subscription conversion and churn."
+  ],
+  "version": 2
+}

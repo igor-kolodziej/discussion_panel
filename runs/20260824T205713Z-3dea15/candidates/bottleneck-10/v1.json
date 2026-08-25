@@ -1,0 +1,79 @@
+{
+  "candidate_id": "bottleneck-10",
+  "claims": [
+    {
+      "claim_id": "bottleneck-10-claim-1",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "scout-bottlenecks:S18"
+      ],
+      "statement": "From 18 February 2027, each LMT battery, EV battery, and industrial battery over 2 kWh placed on the market or put into service must have an electronic battery passport with model and individual-battery information."
+    },
+    {
+      "claim_id": "bottleneck-10-claim-2",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "scout-bottlenecks:S17",
+        "scout-bottlenecks:S18"
+      ],
+      "statement": "The regulation includes access for legitimate repair, remanufacturing, second-life, and recycling purposes, and the Commission describes the passport as a QR-linked life-cycle information mechanism."
+    },
+    {
+      "claim_id": "bottleneck-10-claim-3",
+      "confidence": "inference",
+      "evidence_refs": [
+        "scout-bottlenecks:S18"
+      ],
+      "statement": "Small importers and remanufacturers may buy an outsourced QA and update rail rather than build one, but the number of such firms and their budgets are unknown."
+    }
+  ],
+  "contrary_evidence": [
+    "Large OEMs and pack makers are likely to build passport capabilities internally or buy established standards platforms.",
+    "Implementing specifications and interpretations can still evolve before operational rollout.",
+    "Proprietary battery-management protocols, safety testing, secure data access, and product liability make universal grading difficult."
+  ],
+  "economics": {
+    "acquisition_route": "Integrate at the pack importer's or assembler's final QA station: a serial cannot move to finished-goods status until its QR record and required fields pass validation. Offer the same station to remanufacturers so every status change and diagnostic grade is captured at the transaction where it matters.",
+    "capital_required_pln": null,
+    "founder_net_worth_path": null,
+    "founder_time": "Part-time validation hypothesis; delivery burden remains untested.",
+    "gross_margin_basis": null,
+    "payback": null,
+    "pricing": null,
+    "retention_or_repeat": null
+  },
+  "fingerprint": {
+    "compounding_advantage": "Validated supplier templates, QA-station integration, device adapters, repeatable health tests, secure role-based updates, and a trusted remanufacturer/test network create an execution rail. Protocol coverage and embedded workflow, rather than unrestricted reuse of passport data, are the compounding asset.",
+    "customer": "CEE e-bike and scooter battery importers, small industrial battery and stationary-storage integrators, remanufacturers, and second-life operators lacking an in-house serialized compliance and state-of-health system.",
+    "distribution_mechanism": "Integrate at the pack importer's or assembler's final QA station: a serial cannot move to finished-goods status until its QR record and required fields pass validation. Offer the same station to remanufacturers so every status change and diagnostic grade is captured at the transaction where it matters.",
+    "offer_and_business_model": "Collect model compliance data from suppliers, create compliant identifiers and QR-linked records, manage role-based updates, connect off-the-shelf state-of-health test stations, and preserve the original-to-reused/repurposed chain. Begin with one battery class and one test protocol; do not claim a generic passport database is enough without verified operational inputs.",
+    "payer_and_paid_event": "The economic operator pays a model-onboarding fee, a fee per serialized passport or status update, and a recurring hosting/API fee; second-life buyers pay per independently executed diagnostic grade, with test-lab costs separated.",
+    "problem_trigger": "A new model must be placed on the EU market from the passport date, a warranty return changes status, or a used pack is evaluated for repurposing and its history, health, composition, and safe dismantling evidence are fragmented."
+  },
+  "founder_fit": [
+    "Strong match for data systems, sensors, quantitative health-state modelling, and renewable-storage adjacency.",
+    "A single-class pilot can fit a bounded capital budget using existing test equipment rather than developing hardware.",
+    "Standards, cybersecurity, product safety, and liability require expert partners and make this higher-risk than pure document automation."
+  ],
+  "parent": null,
+  "risks": [
+    "Evidence of a workflow, transition, or loss does not yet establish recurring willingness to pay.",
+    "The proposed distribution and compounding mechanisms remain hypotheses pending buyer evidence."
+  ],
+  "schema_version": 1,
+  "source_refs": [
+    "scout-bottlenecks:S18",
+    "scout-bottlenecks:S17"
+  ],
+  "stage": "discovery",
+  "thesis": "For CEE e-bike and scooter battery importers, small industrial battery and stationary-storage integrators, remanufacturers, and second-life operators lacking an in-house serialized compliance and state-of-health system., when A new model must be placed on the EU market from the passport date, a warranty return changes status, or a used pack is evaluated for repurposing and its history, health, composition, and safe dismantling evidence are fragmented., deliver Collect model compliance data from suppliers, create compliant identifiers and QR-linked records, manage role-based updates, connect off-the-shelf state-of-health test stations, and preserve the original-to-reused/repurposed chain. Begin with one battery class and one test protocol; do not claim a generic passport database is enough without verified operational inputs.. The paid event is The economic operator pays a model-onboarding fee, a fee per serialized passport or status update, and a recurring hosting/API fee; second-life buyers pay per independently executed diagnostic grade, with test-lab costs separated.; acquisition begins through Integrate at the pack importer's or assembler's final QA station: a serial cannot move to finished-goods status until its QR record and required fields pass validation. Offer the same station to remanufacturers so every status change and diagnostic grade is captured at the transaction where it matters., with potential compounding from Validated supplier templates, QA-station integration, device adapters, repeatable health tests, secure role-based updates, and a trusted remanufacturer/test network create an execution rail. Protocol coverage and embedded workflow, rather than unrestricted reuse of passport data, are the compounding asset..",
+  "title": "Battery Passport and Second-Life Grading Rail",
+  "uncertainties": [
+    "Count of CEE operators in scope that do not receive a complete passport solution from their upstream manufacturer.",
+    "Interoperability and data-access requirements of target battery-management systems.",
+    "Cost, repeatability, and liability of a commercially accepted state-of-health grade.",
+    "Pricing, buyer authority, and acquisition economics remain unvalidated at discovery.",
+    "First validation test: Select one LMT battery importer and one remanufacturer, map one model's required fields, and run 100 serials through a prototype QA/passport workflow plus 20 repeat health tests. Require a paid pilot and written acceptance of the output by a downstream buyer; stop if supplier data or BMS access prevents a complete, repeatable record."
+  ],
+  "version": 1
+}

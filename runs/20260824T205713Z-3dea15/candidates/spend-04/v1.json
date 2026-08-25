@@ -1,0 +1,75 @@
+{
+  "candidate_id": "spend-04",
+  "claims": [
+    {
+      "claim_id": "spend-04-claim-1",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "scout-spend:S7"
+      ],
+      "statement": "EU Regulation 2024/573 requires covered equipment leak checks by certified persons at frequencies that can be every 12, six or three months depending on refrigerant quantity, with longer intervals where qualifying detection systems are installed."
+    },
+    {
+      "claim_id": "spend-04-claim-2",
+      "confidence": "inference",
+      "evidence_refs": [
+        "scout-spend:S7"
+      ],
+      "statement": "A service-company system that converts equipment records into due work orders could turn a mandatory interval into repeat revenue for the contractor."
+    },
+    {
+      "claim_id": "spend-04-claim-3",
+      "confidence": "unknown",
+      "evidence_refs": [],
+      "statement": "The number of reachable Polish or CEE multi-site assets above the thresholds and not already managed by enterprise HVAC software is unknown."
+    }
+  ],
+  "contrary_evidence": [
+    "HVAC service contractors often include logs and reminders in existing maintenance contracts.",
+    "Equipment using lower-impact or natural refrigerants may sit outside the same recurring F-gas check burden.",
+    "National registers and local implementation details can overlap with or constrain the workflow."
+  ],
+  "economics": {
+    "acquisition_route": "HVAC installers, refrigeration wholesalers, refrigerant suppliers and insurers already touch the equipment owner; the family renewable network can provide a local heat-pump-adjacent pilot channel.",
+    "capital_required_pln": null,
+    "founder_net_worth_path": null,
+    "founder_time": "Part-time validation hypothesis; delivery burden remains untested.",
+    "gross_margin_basis": null,
+    "payback": null,
+    "pricing": null,
+    "retention_or_repeat": null
+  },
+  "fingerprint": {
+    "compounding_advantage": "An equipment and refrigerant graph linked to leak incidence, service action, technician, parts and time-to-repair can improve preventive scheduling and contractor pricing.",
+    "customer": "Polish and CEE supermarkets, hotels, clinics, warehouses and other multi-site operators of covered refrigeration, air-conditioning or heat-pump equipment, sold through HVAC service companies.",
+    "distribution_mechanism": "HVAC installers, refrigeration wholesalers, refrigerant suppliers and insurers already touch the equipment owner; the family renewable network can provide a local heat-pump-adjacent pilot channel.",
+    "offer_and_business_model": "OCR equipment nameplates and service documents into an asset register, calculate thresholds and deadlines, alert on sensor or consumption anomalies, dispatch certified technicians and produce regulator-ready records. Sell white-label per asset per month to regional HVAC contractors.",
+    "payer_and_paid_event": "The equipment operator pays for certified service visits where it lacks qualified in-house staff. The service contractor would pay per managed asset or bundle the software into a maintenance contract; the regulation proves the workflow, not the level of outsourced-service spend.",
+    "problem_trigger": "A covered asset reaches its three-, six- or twelve-month leak-check window, changes refrigerant charge, is repaired after leakage or lacks a complete record; the check must be performed by a certified person."
+  },
+  "founder_fit": [
+    "Strong renewable-installation adjacency and an accessible local service-business pilot.",
+    "Uses OCR, anomaly detection and operations automation rather than hardware manufacturing.",
+    "A white-label contractor channel limits constant end-customer selling."
+  ],
+  "parent": null,
+  "risks": [
+    "Evidence of a workflow, transition, or loss does not yet establish recurring willingness to pay.",
+    "The proposed distribution and compounding mechanisms remain hypotheses pending buyer evidence."
+  ],
+  "schema_version": 1,
+  "source_refs": [
+    "scout-spend:S7"
+  ],
+  "stage": "discovery",
+  "thesis": "For Polish and CEE supermarkets, hotels, clinics, warehouses and other multi-site operators of covered refrigeration, air-conditioning or heat-pump equipment, sold through HVAC service companies., when A covered asset reaches its three-, six- or twelve-month leak-check window, changes refrigerant charge, is repaired after leakage or lacks a complete record; the check must be performed by a certified person., deliver OCR equipment nameplates and service documents into an asset register, calculate thresholds and deadlines, alert on sensor or consumption anomalies, dispatch certified technicians and produce regulator-ready records. Sell white-label per asset per month to regional HVAC contractors.. The paid event is The equipment operator pays for certified service visits where it lacks qualified in-house staff. The service contractor would pay per managed asset or bundle the software into a maintenance contract; the regulation proves the workflow, not the level of outsourced-service spend.; acquisition begins through HVAC installers, refrigeration wholesalers, refrigerant suppliers and insurers already touch the equipment owner; the family renewable network can provide a local heat-pump-adjacent pilot channel., with potential compounding from An equipment and refrigerant graph linked to leak incidence, service action, technician, parts and time-to-repair can improve preventive scheduling and contractor pricing..",
+  "title": "F-gas service-compliance scheduler for multi-site equipment fleets",
+  "uncertainties": [
+    "Asset counts and service revenue per applicable refrigerant and charge band.",
+    "Whether technicians will reliably capture structured data on site.",
+    "Cross-border differences in certification, record submission and data retention.",
+    "Pricing, buyer authority, and acquisition economics remain unvalidated at discovery.",
+    "First validation test: Partner with two regional HVAC service firms, digitize 200 asset records and compare calculated deadlines with their current schedules. Run a paid three-month white-label pilot only for assets where the tool finds missing, late or duplicate service work and measure recovered visits, technician time and customer churn."
+  ],
+  "version": 1
+}

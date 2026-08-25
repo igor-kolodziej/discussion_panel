@@ -1,0 +1,83 @@
+{
+  "candidate_id": "spend-07",
+  "claims": [
+    {
+      "claim_id": "spend-07-claim-1",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "scout-spend:S11"
+      ],
+      "statement": "PSE states that renewable installations that execute non-market redispatch instructions have a right to financial compensation for energy that would otherwise have been produced."
+    },
+    {
+      "claim_id": "spend-07-claim-2",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "scout-spend:S11"
+      ],
+      "statement": "PSE states that, for relevant post-7 September 2023 events, a producer has 14 days from the instruction to provide specified support-scheme information, and failure can exclude that component from the compensation calculation."
+    },
+    {
+      "claim_id": "spend-07-claim-3",
+      "confidence": "inference",
+      "evidence_refs": [
+        "scout-spend:S11"
+      ],
+      "statement": "A success-fee recovery service is viable only if owners leave material valid compensation unclaimed or under-calculated; the existence of curtailment alone does not prove that leakage."
+    },
+    {
+      "claim_id": "spend-07-claim-4",
+      "confidence": "unknown",
+      "evidence_refs": [],
+      "statement": "The frequency, average claim size and current under-recovery rate for reachable independent assets are unknown."
+    }
+  ],
+  "contrary_evidence": [
+    "PSE provides a defined portal and process, and professional asset managers may already claim correctly.",
+    "Only installations that actually receive and execute qualifying instructions are relevant; broad photovoltaic counts overstate the market.",
+    "Counterfactual generation and support-scheme treatment can create technical and legal disputes that software cannot settle alone."
+  ],
+  "economics": {
+    "acquisition_route": "Partner with photovoltaic O&M firms, lenders, insurers, asset-management software and larger installers; use the family renewables network to locate initial commercial assets but not assume they are eligible.",
+    "capital_required_pln": null,
+    "founder_net_worth_path": null,
+    "founder_time": "Part-time validation hypothesis; delivery burden remains untested.",
+    "gross_margin_basis": null,
+    "payback": null,
+    "pricing": null,
+    "retention_or_repeat": null
+  },
+  "fingerprint": {
+    "compounding_advantage": "Plant-level weather, telemetry, dispatch, support-scheme and settlement outcomes can improve counterfactual estimates and reveal which claim paths actually recover money.",
+    "customer": "Polish commercial and utility-scale photovoltaic or wind owners, asset managers and O&M firms whose installations actually receive non-market redispatch instructions; residential prosumers are not the target.",
+    "distribution_mechanism": "Partner with photovoltaic O&M firms, lenders, insurers, asset-management software and larger installers; use the family renewables network to locate initial commercial assets but not assume they are eligible.",
+    "offer_and_business_model": "Detect curtailment events, reconstruct a transparent counterfactual production baseline, reconcile operator and plant data, create the evidence and deadline pack, and hand legal disputes to a specialist partner. Price primarily as a percentage of incremental cash actually collected.",
+    "payer_and_paid_event": "The asset owner pays a success fee only after incremental compensation is recovered, or a per-MW monitoring fee for event detection and deadline handling. Avoided loss is not automatically capturable revenue; only documented, incremental recovery is billable.",
+    "problem_trigger": "PSE or the relevant operator orders generation reduction, creating lost production, telemetry and support-scheme calculations, a 14-day information deadline in some cases and a compensation workflow that can be under-documented or missed."
+  },
+  "founder_fit": [
+    "Strong data-science problem with direct renewable-energy family adjacency.",
+    "Contingency pricing permits low-risk pilots without large capital.",
+    "The founder can own analytics while regulated dispute work is partnered."
+  ],
+  "parent": null,
+  "risks": [
+    "Evidence of a workflow, transition, or loss does not yet establish recurring willingness to pay.",
+    "The proposed distribution and compounding mechanisms remain hypotheses pending buyer evidence."
+  ],
+  "schema_version": 1,
+  "source_refs": [
+    "scout-spend:S11"
+  ],
+  "stage": "discovery",
+  "thesis": "For Polish commercial and utility-scale photovoltaic or wind owners, asset managers and O&M firms whose installations actually receive non-market redispatch instructions; residential prosumers are not the target., when PSE or the relevant operator orders generation reduction, creating lost production, telemetry and support-scheme calculations, a 14-day information deadline in some cases and a compensation workflow that can be under-documented or missed., deliver Detect curtailment events, reconstruct a transparent counterfactual production baseline, reconcile operator and plant data, create the evidence and deadline pack, and hand legal disputes to a specialist partner. Price primarily as a percentage of incremental cash actually collected.. The paid event is The asset owner pays a success fee only after incremental compensation is recovered, or a per-MW monitoring fee for event detection and deadline handling. Avoided loss is not automatically capturable revenue; only documented, incremental recovery is billable.; acquisition begins through Partner with photovoltaic O&M firms, lenders, insurers, asset-management software and larger installers; use the family renewables network to locate initial commercial assets but not assume they are eligible., with potential compounding from Plant-level weather, telemetry, dispatch, support-scheme and settlement outcomes can improve counterfactual estimates and reveal which claim paths actually recover money..",
+  "title": "OZE curtailment compensation and deadline recovery service",
+  "uncertainties": [
+    "Number of independently owned eligible plants and concentration among large professional operators.",
+    "Access to interval telemetry, dispatch messages and past settlement records.",
+    "Whether compensation calculation errors are frequent enough to exceed expert and customer-acquisition cost.",
+    "Pricing, buyer authority, and acquisition economics remain unvalidated at discovery.",
+    "First validation test: With owner permission, backtest at least 20 curtailed assets across multiple events, reproduce the official calculation and compare entitlement, submission timing and cash received. Offer contingency contracts only on documented gaps and require three successful incremental recoveries before building a subscription product."
+  ],
+  "version": 1
+}

@@ -1,0 +1,78 @@
+{
+  "candidate_id": "asymmetry-12",
+  "claims": [
+    {
+      "claim_id": "asymmetry-12-claim-1",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "scout-asymmetries:S22"
+      ],
+      "statement": "EEG-BIDS standardizes EEG data and metadata for interoperability, and its authors note that even a simple EEG processing pipeline contains eight steps and remains non-trivial to automate reproducibly."
+    },
+    {
+      "claim_id": "asymmetry-12-claim-2",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "scout-asymmetries:S23"
+      ],
+      "statement": "A free guided tool, ezBIDS, already lowers BIDS-conversion barriers and offers validation, providing direct contrary evidence to a conversion-only product."
+    },
+    {
+      "claim_id": "asymmetry-12-claim-3",
+      "confidence": "unknown",
+      "evidence_refs": [],
+      "statement": "Customers will pay for domain-specific EEG QC, privacy-preserving deployment and accepted handoff packs beyond what free conversion tools provide."
+    }
+  ],
+  "contrary_evidence": [
+    "S23 documents a free guided standardization tool, while MNE-BIDS, EEGLAB and validators are open source.",
+    "Academic budgets and procurement can be small and slow, and the global EEG-lab market may remain niche.",
+    "Quality metrics vary by paradigm and hardware, limiting one-click generalization."
+  ],
+  "economics": {
+    "acquisition_route": "Publish technical sample reports from open datasets, conduct direct written outreach to Polish and CEE labs and neurotech firms, and seek referrals from equipment distributors or research-methods consultants.",
+    "capital_required_pln": null,
+    "founder_net_worth_path": null,
+    "founder_time": "Part-time validation hypothesis; delivery burden remains untested.",
+    "gross_margin_basis": null,
+    "payback": null,
+    "pricing": null,
+    "retention_or_repeat": null
+  },
+  "fingerprint": {
+    "compounding_advantage": "A tested adapter library for acquisition systems, study paradigms and artifact metrics plus consented aggregate QC benchmarks can shorten future jobs. The open standard and tools remain available to everyone, so this is not presumed defensibility.",
+    "customer": "University EEG labs, small neurotechnology or BCI companies and research CROs that collect EEG but lack dedicated data-engineering support for reusable, auditable datasets.",
+    "distribution_mechanism": "Publish technical sample reports from open datasets, conduct direct written outreach to Polish and CEE labs and neurotech firms, and seek referrals from equipment distributors or research-methods consultants.",
+    "offer_and_business_model": "A privacy-preserving productized service inventories raw formats, converts to EEG-BIDS, runs validator and deterministic signal-quality metrics, produces an exception report, and delivers containerized preprocessing recipes. Begin with non-clinical research data and avoid diagnostic claims.",
+    "payer_and_paid_event": "The lab or company pays per dataset for conversion, metadata repair and a reproducible QC report; repeat teams can license a self-hosted pipeline plus support. Payment is for an accepted data pack, not scientific findings.",
+    "problem_trigger": "A study is preparing for analysis, collaboration, publication, model training or handoff and discovers inconsistent formats, missing metadata, artifact uncertainty and non-reproducible preprocessing."
+  },
+  "founder_fit": [
+    "Direct leverage of neuroscience, EEG and data-science education",
+    "Open datasets allow a rigorous portfolio before accessing client data",
+    "Dataset projects are asynchronous and part-time compatible",
+    "Can evolve from service cash flow into a pipeline product"
+  ],
+  "parent": null,
+  "risks": [
+    "Evidence of a workflow, transition, or loss does not yet establish recurring willingness to pay.",
+    "The proposed distribution and compounding mechanisms remain hypotheses pending buyer evidence."
+  ],
+  "schema_version": 1,
+  "source_refs": [
+    "scout-asymmetries:S22",
+    "scout-asymmetries:S23"
+  ],
+  "stage": "discovery",
+  "thesis": "For University EEG labs, small neurotechnology or BCI companies and research CROs that collect EEG but lack dedicated data-engineering support for reusable, auditable datasets., when A study is preparing for analysis, collaboration, publication, model training or handoff and discovers inconsistent formats, missing metadata, artifact uncertainty and non-reproducible preprocessing., deliver A privacy-preserving productized service inventories raw formats, converts to EEG-BIDS, runs validator and deterministic signal-quality metrics, produces an exception report, and delivers containerized preprocessing recipes. Begin with non-clinical research data and avoid diagnostic claims.. The paid event is The lab or company pays per dataset for conversion, metadata repair and a reproducible QC report; repeat teams can license a self-hosted pipeline plus support. Payment is for an accepted data pack, not scientific findings.; acquisition begins through Publish technical sample reports from open datasets, conduct direct written outreach to Polish and CEE labs and neurotech firms, and seek referrals from equipment distributors or research-methods consultants., with potential compounding from A tested adapter library for acquisition systems, study paradigms and artifact metrics plus consented aggregate QC benchmarks can shorten future jobs. The open standard and tools remain available to everyone, so this is not presumed defensibility..",
+  "title": "EEG-BIDS conversion plus reproducible QC packs for labs and neurotech",
+  "uncertainties": [
+    "Frequency and value of outsourced EEG data-cleaning projects",
+    "Which hardware formats and paradigms have the highest unmet pain",
+    "Data-transfer, ethics and privacy requirements for human-subject recordings",
+    "Whether neurotech firms prefer hiring internally or buying a self-hosted tool",
+    "Pricing, buyer authority, and acquisition economics remain unvalidated at discovery.",
+    "First validation test: Create end-to-end packs for five open EEG datasets spanning at least three raw formats and two paradigms, publish methods and before-after QC evidence, and approach ten labs or neurotech teams. Require two paid dataset pilots with acceptance criteria before adding a UI or clinical features."
+  ],
+  "version": 1
+}

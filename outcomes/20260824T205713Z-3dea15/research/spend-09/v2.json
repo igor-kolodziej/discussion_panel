@@ -1,0 +1,298 @@
+{
+  "candidate_id": "spend-09",
+  "candidate_sha256": "5891465110125bcf9e89a68e833b041edb124a3b0b03622e7bb874c3b4b37a88",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "C01",
+      "evidence_refs": [
+        "SRC01"
+      ],
+      "statement": "Stripe's current Polish standard pricing lists a 90 PLN dispute-received fee, a separate 90 PLN manually countered fee that is returned on a win, and Smart Disputes at 30% of recovered disputed value."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "C02",
+      "evidence_refs": [
+        "SRC01"
+      ],
+      "statement": "Stripe already supplies processor-native AI-prepared dispute evidence and outcome pricing, so a Stripe-only evidence pack is not a differentiated wedge."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "C03",
+      "evidence_refs": [
+        "SRC02"
+      ],
+      "statement": "Stripe says merchants usually have 7-21 days to respond, issuer review usually takes 60-75 days, and the full lifecycle normally takes 2-3 months; recovered funds therefore cannot support immediate vendor cash collection."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "C04",
+      "evidence_refs": [
+        "SRC03"
+      ],
+      "statement": "Stripe Apps require explicit object-level permissions, and the signed-in user also needs access; merchant data and submission rights cannot be assumed merely because an app is installed."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "C05",
+      "evidence_refs": [
+        "SRC04"
+      ],
+      "statement": "Adyen exposes retrieval of applicable defense reasons, evidence-document upload or deletion, and accept-or-defend actions, but requires an API key with the dispute-management role, webhooks, and an online-payments integration; not every dispute is defendable."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "C06",
+      "evidence_refs": [
+        "SRC05"
+      ],
+      "statement": "Processor and network timing is heterogeneous: Adyen documents chargeback-response windows of 18 days for Visa outside the shortened US/Canada case and 40 days for Mastercard, with typical final-decision windows of 45-70 days after defense; PSP deadlines can be shorter than network maxima."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "C07",
+      "evidence_refs": [
+        "SRC06"
+      ],
+      "statement": "Shopify already collects evidence, sends it on the due date, and adds AI-generated insights for product-not-received disputes, further shrinking the wedge for ordinary Shopify Payments merchants."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "C08",
+      "evidence_refs": [
+        "SRC07"
+      ],
+      "statement": "Chargeflow currently advertises end-to-end evidence collection and submission across more than 100 integrations for 25% of recovered chargeback value, with no charge on losses; its integration-count and performance claims are vendor claims, not independent validation."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "C09",
+      "evidence_refs": [
+        "SRC08"
+      ],
+      "statement": "Mastercard's sponsored 2025 report gives average chargeback values of $120 for travel and hospitality, $84 for retail, $77 for digital goods, and $69 for subscriptions, while 16% of merchant chargebacks in its sample were low-dollar write-offs; modest values constrain success-fee revenue per reviewed case."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "C10",
+      "evidence_refs": [
+        "SRC08"
+      ],
+      "statement": "The Mastercard report is based on 840 midsize and large merchants in the US, UK, Brazil, and Australia and explicitly says the data are third-party research rather than Mastercard transactions, so it does not establish a CEE value or volume distribution."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "C11",
+      "evidence_refs": [
+        "SRC09"
+      ],
+      "statement": "In the MRC/Cybersource survey, European respondents reported a 15.1% trimmed-average annual win rate for fraud-coded chargebacks and disputes, and only 43% of European respondents reported monitoring at the refund/dispute stage; this suggests a process gap but not incremental vendor lift."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "C12",
+      "evidence_refs": [
+        "SRC10"
+      ],
+      "statement": "Visa's VAMP formula counts reported fraud and disputes and explicitly excludes specified pre-dispute resolutions and qualifying Compelling Evidence 3.0 fraud; ordinary successful representment is not listed as an exclusion, so recovery work generally does not solve the merchant's monitoring-ratio problem."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "C13",
+      "evidence_refs": [
+        "SRC11"
+      ],
+      "statement": "GDPR purpose limitation, data minimization, storage limitation, security, and processor-contract duties mean cross-merchant reuse of order, device, support, and outcome data needs a defined legal role and basis; pseudonymization alone does not automatically make the corpus reusable as anonymous data."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "C14",
+      "evidence_refs": [
+        "SRC12"
+      ],
+      "statement": "Shopify's official directory currently exposes 37 partners in Poland, creating a finite, reachable channel-test list, but it does not reveal which partners serve merchants with meaningful dispute volume."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "C15",
+      "evidence_refs": [
+        "SRC07",
+        "SRC08",
+        "SRC09"
+      ],
+      "statement": "At a 20% recovery fee, 500 PLN average disputed value, and 35% win rate, expected revenue is 35 PLN per reviewed incoming dispute; a 12-minute review at 60 PLN per hour plus 7 PLN of systems and support yields about 46% pilot gross margin, while the MRC Europe win benchmark and a lower value make the model loss-making."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "C16",
+      "evidence_refs": [],
+      "statement": "No accessed authoritative source establishes how many reachable Polish or CEE merchants simultaneously use multiple PSPs, receive at least 50 defendable disputes per month, and have at least 500 PLN average disputed value."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "C17",
+      "evidence_refs": [],
+      "statement": "No independent evidence establishes incremental win-rate lift or labor reduction from this proposed reviewed cross-processor layer versus the same merchant's native Stripe, Adyen, Shopify, or incumbent-vendor workflow."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "C18",
+      "evidence_refs": [
+        "SRC01",
+        "SRC06",
+        "SRC07",
+        "SRC11"
+      ],
+      "statement": "Outcome labels do not by themselves form a moat: major processors and incumbents already observe larger outcome corpora, while GDPR and merchant contracts can prevent reuse of raw cross-merchant evidence."
+    }
+  ],
+  "contrary_evidence": [
+    "SRC01: Stripe already offers AI-prepared evidence on a 30% win-only fee and charges Polish merchants for both receiving and manually countering disputes.",
+    "SRC06: Shopify automatically collects and submits evidence and already adds AI insights for one common reason category.",
+    "SRC07: Chargeflow advertises the same cross-processor, end-to-end outcome-priced proposition at 25% across more than 100 integrations.",
+    "SRC08/SRC09: Reported average dispute values are modest outside travel, and Europe's self-reported fraud-coded win rate is low; those facts make reviewed outcome-only economics fragile.",
+    "SRC10: Winning a representment generally recovers principal but does not remove ordinary dispute-count monitoring harm; prevention and pre-dispute resolution can be more valuable than evidence recovery.",
+    "SRC03/SRC04/SRC11: Submission and evidence access require processor-specific authorization and roles plus privacy-compliant processing; there is no universal cross-processor data or submission right.",
+    "SRC08/SRC09: The available merchant studies are global or four-country samples with no CEE merchant-volume or dispute-value distribution, so global losses do not prove willingness to pay this layer in CEE."
+  ],
+  "schema_version": 1,
+  "sources": [
+    {
+      "accessed_at": "2026-08-24",
+      "published_at": "n.d.",
+      "publisher": "Stripe",
+      "source_id": "SRC01",
+      "source_type": "processor_pricing",
+      "stance": "contradicting",
+      "title": "Pricing & Fees",
+      "url": "https://stripe.com/en-pl/pricing"
+    },
+    {
+      "accessed_at": "2026-08-24",
+      "published_at": "n.d.",
+      "publisher": "Stripe",
+      "source_id": "SRC02",
+      "source_type": "processor_documentation",
+      "stance": "context",
+      "title": "How disputes work",
+      "url": "https://docs.stripe.com/disputes/how-disputes-work?locale=en-GB"
+    },
+    {
+      "accessed_at": "2026-08-24",
+      "published_at": "n.d.",
+      "publisher": "Stripe",
+      "source_id": "SRC03",
+      "source_type": "processor_documentation",
+      "stance": "context",
+      "title": "How Stripe Apps work",
+      "url": "https://docs.stripe.com/stripe-apps/how-stripe-apps-work"
+    },
+    {
+      "accessed_at": "2026-08-24",
+      "published_at": "n.d.",
+      "publisher": "Adyen",
+      "source_id": "SRC04",
+      "source_type": "processor_documentation",
+      "stance": "supporting",
+      "title": "Disputes API reference",
+      "url": "https://docs.adyen.com/risk-management/disputes-api/disputes-api-reference/"
+    },
+    {
+      "accessed_at": "2026-08-24",
+      "published_at": "n.d.",
+      "publisher": "Adyen",
+      "source_id": "SRC05",
+      "source_type": "processor_documentation",
+      "stance": "context",
+      "title": "Dispute timeframes",
+      "url": "https://docs.adyen.com/risk-management/understanding-disputes/dispute-timeframes"
+    },
+    {
+      "accessed_at": "2026-08-24",
+      "published_at": "n.d.",
+      "publisher": "Shopify",
+      "source_id": "SRC06",
+      "source_type": "commerce_platform_documentation",
+      "stance": "contradicting",
+      "title": "Managing chargebacks in the Shopify admin",
+      "url": "https://help.shopify.com/en/manual/payments/chargebacks/chargebacks-in-admin"
+    },
+    {
+      "accessed_at": "2026-08-24",
+      "published_at": "n.d.",
+      "publisher": "Chargeflow",
+      "source_id": "SRC07",
+      "source_type": "competitor_pricing",
+      "stance": "contradicting",
+      "title": "Chargeflow Pricing with 4x ROI Guarantee",
+      "url": "https://www.chargeflow.io/pricing"
+    },
+    {
+      "accessed_at": "2026-08-24",
+      "published_at": "2025-03",
+      "publisher": "Mastercard",
+      "source_id": "SRC08",
+      "source_type": "sponsored_industry_research",
+      "stance": "context",
+      "title": "The chargeback window of opportunity: A global view of 2025 chargeback trends and how to turn them into opportunities",
+      "url": "https://www.mastercard.com/content/dam/mccom/shared/news-and-trends/insights/2025/2025-global-chargebacks-outlook/pdf/2025-state-of-chargebacks-report.pdf"
+    },
+    {
+      "accessed_at": "2026-08-24",
+      "published_at": "2025",
+      "publisher": "Merchant Risk Council and Cybersource",
+      "source_id": "SRC09",
+      "source_type": "merchant_survey",
+      "stance": "context",
+      "title": "2025 Global eCommerce Payments & Fraud Report",
+      "url": "https://www.cybersource.com/content/dam/documents/campaign/fraud-report/global-fraud-report-2025.pdf"
+    },
+    {
+      "accessed_at": "2026-08-24",
+      "published_at": "2025",
+      "publisher": "Visa",
+      "source_id": "SRC10",
+      "source_type": "card_network_rules",
+      "stance": "contradicting",
+      "title": "Visa Acquirer Monitoring Program Overview",
+      "url": "https://corporate.visa.com/content/dam/VCOM/corporate/visa-perspectives/security-and-trust/documents/visa-acquirer-monitoring-program-fact-sheet-2025.pdf"
+    },
+    {
+      "accessed_at": "2026-08-24",
+      "published_at": "2016-04-27",
+      "publisher": "Official Journal of the European Union",
+      "source_id": "SRC11",
+      "source_type": "regulation",
+      "stance": "context",
+      "title": "Regulation (EU) 2016/679 (General Data Protection Regulation)",
+      "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng"
+    },
+    {
+      "accessed_at": "2026-08-24",
+      "published_at": "n.d.",
+      "publisher": "Shopify",
+      "source_id": "SRC12",
+      "source_type": "partner_directory",
+      "stance": "supporting",
+      "title": "Hire Shopify Partners in Poland",
+      "url": "https://www.shopify.com/partners/directory/locations/poland"
+    }
+  ],
+  "unknowns": [
+    "Number and identities of reachable CEE merchants meeting the minimum volume, value, multi-PSP, and evidence-gap gates.",
+    "CEE dispute-value distribution by vertical, PSP, reason code, issuer country, and defendability.",
+    "Merchant baseline submission coverage, reviewed-case win rate, staff minutes per case, and net dollar recovery after all processor fees.",
+    "Blind incremental lift over native automation, including whether any lift comes from better evidence rather than selecting easier cases.",
+    "Whether each target PSP permits a third party to retrieve, stage, approve, submit, and reconcile evidence under merchant-granted credentials and acceptable platform terms.",
+    "Controller/processor roles, lawful basis, retention periods, subprocessor terms, data-residency requirements, and whether any cross-merchant learning corpus can be rendered genuinely anonymous.",
+    "Manual-review time and loaded cost at the quality level required to avoid one-shot submission errors and deadline misses.",
+    "Partner referral acceptance, merchant conversion, onboarding burden, channel conflict with native and incumbent tools, and realized CAC.",
+    "Fee-collection failure and working-capital needs during the 2-3 month outcome lag.",
+    "Twelve-month retention once a backlog is cleared or prevention lowers future dispute volume.",
+    "Professional liability, cyber insurance, and contractual exposure for an incorrect, late, or unauthorized submission.",
+    "Whether a CEE-only market can support the scale assumed in the conditional founder net-worth path."
+  ]
+}

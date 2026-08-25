@@ -1,0 +1,85 @@
+{
+  "candidate_id": "spend-12",
+  "claims": [
+    {
+      "claim_id": "spend-12-claim-1",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "scout-spend:S21"
+      ],
+      "statement": "The Polish Labour Inspectorate states that employers fully bear the costs of pre-employment, periodic and control examinations, including the examination, paid work time, specified repeat examinations and travel."
+    },
+    {
+      "claim_id": "spend-12-claim-2",
+      "confidence": "evidence",
+      "evidence_refs": [
+        "scout-spend:S22"
+      ],
+      "statement": "The Ministry states that an employer cannot admit a worker without a current medical certificate for the specified role and conditions and must issue the referral with hazard and working-condition information."
+    },
+    {
+      "claim_id": "spend-12-claim-3",
+      "confidence": "inference",
+      "evidence_refs": [
+        "scout-spend:S21",
+        "scout-spend:S22"
+      ],
+      "statement": "Faster booking and cleaner referrals may reduce paid downtime and failed visits, but the employer's mandatory spend does not automatically create willingness to pay an intermediary."
+    },
+    {
+      "claim_id": "spend-12-claim-4",
+      "confidence": "unknown",
+      "evidence_refs": [],
+      "statement": "Current appointment lead times, no-show rates, referral-error rates and clinic margin available to an intermediary are unknown."
+    }
+  ],
+  "contrary_evidence": [
+    "Large occupational-medicine providers already sell employer subscriptions and online booking.",
+    "Many SMEs have direct local clinic relationships and may see no need for another system.",
+    "Medical and employment data create high privacy, security and role-boundary requirements."
+  ],
+  "economics": {
+    "acquisition_route": "Distribute through payroll bureaus, staffing agencies, HR software, insurers and regional clinic groups; use medical-domain understanding for workflow design but leave every medical judgment to licensed clinicians.",
+    "capital_required_pln": null,
+    "founder_net_worth_path": null,
+    "founder_time": "Part-time validation hypothesis; delivery burden remains untested.",
+    "gross_margin_basis": null,
+    "payback": null,
+    "pricing": null,
+    "retention_or_repeat": null
+  },
+  "fingerprint": {
+    "compounding_advantage": "Privacy-minimized data on appointment lead time, no-shows, referral defects, job-hazard pathways and clinic reliability can improve routing and employer capacity planning without building a diagnosis database.",
+    "customer": "Polish employers with 20 to 500 workers, staffing agencies and multi-site service or industrial firms that repeatedly arrange pre-employment, periodic and return-to-work medical examinations.",
+    "distribution_mechanism": "Distribute through payroll bureaus, staffing agencies, HR software, insurers and regional clinic groups; use medical-domain understanding for workflow design but leave every medical judgment to licensed clinicians.",
+    "offer_and_business_model": "A non-diagnostic rules and booking layer that creates referral drafts from role and hazard templates, checks completeness, alerts on expiry, offers clinic slots, tracks attendance and stores access-controlled proof of eligibility without retaining unnecessary clinical findings.",
+    "payer_and_paid_event": "The employer is legally responsible for the full examination cost and associated paid work time and travel. Charge per completed examination or per active employee per month, sharing booking revenue with participating occupational-medicine clinics.",
+    "problem_trigger": "A hire, job change, certificate expiry or return after qualifying absence requires the employer to create a correct hazard-specific referral, find an appointment, preserve the certificate and avoid scheduling a worker who is not medically cleared."
+  },
+  "founder_fit": [
+    "Combines health interest, a nearby medical perspective and automation skills.",
+    "Per-exam transactions allow a low-capital marketplace test before software build-out.",
+    "Payroll and clinic distribution reduce the need for constant direct selling."
+  ],
+  "parent": null,
+  "risks": [
+    "Evidence of a workflow, transition, or loss does not yet establish recurring willingness to pay.",
+    "The proposed distribution and compounding mechanisms remain hypotheses pending buyer evidence."
+  ],
+  "schema_version": 1,
+  "source_refs": [
+    "scout-spend:S21",
+    "scout-spend:S22"
+  ],
+  "stage": "discovery",
+  "thesis": "For Polish employers with 20 to 500 workers, staffing agencies and multi-site service or industrial firms that repeatedly arrange pre-employment, periodic and return-to-work medical examinations., when A hire, job change, certificate expiry or return after qualifying absence requires the employer to create a correct hazard-specific referral, find an appointment, preserve the certificate and avoid scheduling a worker who is not medically cleared., deliver A non-diagnostic rules and booking layer that creates referral drafts from role and hazard templates, checks completeness, alerts on expiry, offers clinic slots, tracks attendance and stores access-controlled proof of eligibility without retaining unnecessary clinical findings.. The paid event is The employer is legally responsible for the full examination cost and associated paid work time and travel. Charge per completed examination or per active employee per month, sharing booking revenue with participating occupational-medicine clinics.; acquisition begins through Distribute through payroll bureaus, staffing agencies, HR software, insurers and regional clinic groups; use medical-domain understanding for workflow design but leave every medical judgment to licensed clinicians., with potential compounding from Privacy-minimized data on appointment lead time, no-shows, referral defects, job-hazard pathways and clinic reliability can improve routing and employer capacity planning without building a diagnosis database..",
+  "title": "Occupational-medicine booking and eligibility orchestration for SMEs",
+  "uncertainties": [
+    "Which employer segment suffers enough lead-time or referral friction to switch or add a booking layer?",
+    "Clinic API readiness, appointment inventory and per-exam contribution margin.",
+    "The minimum data architecture that supports eligibility while avoiding unnecessary health information.",
+    "Pricing, buyer authority, and acquisition economics remain unvalidated at discovery.",
+    "First validation test: Coordinate 200 examinations for one staffing agency and three independent clinics using a manual concierge plus a simple employer portal; compare appointment lead time, no-shows, referral corrections and employer admin minutes with the prior process. Charge per completed appointment and proceed only if employers reorder and clinics retain positive contribution margin."
+  ],
+  "version": 1
+}

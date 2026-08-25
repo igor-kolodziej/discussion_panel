@@ -1,0 +1,313 @@
+{
+  "candidate_id": "spend-08",
+  "candidate_sha256": "6e1ba78e3132f29c9b7ae1d7f8d8b8d179f7b8e1e9906a86a73aa8c11de0b780",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "C01",
+      "evidence_refs": [
+        "S01"
+      ],
+      "statement": "Late-payment pain is unusually salient in Poland: the 2025 EU Payment Observatory summary reports that 52% of EU companies experienced late-payment problems in 2024, names Poland among the three worst-reported Member States, and reports average supplier-observed B2B payment periods of 60.3 days."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "C02",
+      "evidence_refs": [
+        "S01"
+      ],
+      "statement": "The same report estimates 9.85 staff hours per week spent chasing late payments, reports more problems among exporters than non-exporters (56% versus 49%), and says larger companies are less likely to pay on time; these are useful segmentation signals but do not identify invoice-level prospects or willingness to buy this product."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "C03",
+      "evidence_refs": [
+        "S01"
+      ],
+      "statement": "Construction, logistics and health cannot be treated as uniformly worst segments: the Observatory says payment variation is greater across countries than sectors, and transportation/logistics and pharma/medical/biotech improved by more than five days in 2024."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "C04",
+      "evidence_refs": [
+        "S02"
+      ],
+      "statement": "KSeF creates broad invoice-data coverage: it became mandatory for most remaining enterprises on 1 April 2026, with only firms at or below PLN 10,000 of monthly invoiced sales deferred until 1 January 2027."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "C05",
+      "evidence_refs": [
+        "S02",
+        "S03"
+      ],
+      "statement": "KSeF is an invoice source, not a dependable current paid/unpaid ledger: the Ministry states that payment-form and paid-status fields are optional, and separately states that KSeF is not a system for making payments. Reliable overdue detection therefore still requires accounting reconciliation, bank reconciliation or manual confirmation."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "C06",
+      "evidence_refs": [
+        "S04"
+      ],
+      "statement": "An accounting-led channel is technically feasible because a company can grant an accounting office InvoiceRead access and KSeF permits direct or delegated invoice-read permissions, including intermediary access that is auditable and revocable."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "C07",
+      "evidence_refs": [
+        "S04"
+      ],
+      "statement": "KSeF data access does not confer buying authority: for the target SME the likely economic buyer is the owner, CFO, finance director or chief accountant, while an outside accounting office is more plausibly a recommender and data-access intermediary unless the client explicitly delegates procurement."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "C08",
+      "evidence_refs": [
+        "S05"
+      ],
+      "statement": "Direct multi-bank aggregation is not a lightweight feature. KNF classifies account-information service provision as regulated activity requiring registration plus a three-year plan, security and incident procedures, complaint handling, continuity arrangements and liability insurance or equivalent security. A part-time launch should use a registered AISP partner or customer-supplied exports rather than seek its own registration."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "C09",
+      "evidence_refs": [
+        "S06"
+      ],
+      "statement": "Polish commercial-transaction law gives creditors automatic statutory late interest and fixed recovery-cost compensation of EUR 40, EUR 70 or EUR 100 depending on claim value, plus justified excess recovery costs. These rights establish an economic consequence of delay, but actual willingness to invoke them may be limited by customer-relationship concerns."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "C10",
+      "evidence_refs": [
+        "S07"
+      ],
+      "statement": "Customer-specific processing and cross-customer reuse are different propositions. Where invoice and payment records identify sole traders or contact persons, GDPR requires purpose limitation, data minimisation, an Article 6 legal basis and balancing of legitimate interests; Article 22 adds safeguards where solely automated profiling has legal or similarly significant effects. KSeF permission alone does not authorize pooling such personal data across customers, and contractual reuse rights for company-level data are separately unproven."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "C11",
+      "evidence_refs": [
+        "S08"
+      ],
+      "statement": "The official Polish company search makes CEIDG and KRS entities discoverable and can link to filed financial statements, but it exposes neither monthly invoice throughput nor current receivables ageing. A nominal prospect list is reachable; a prequalified list of 50-500-invoice firms with material overdue balances is not publicly established."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "C12",
+      "evidence_refs": [
+        "S09"
+      ],
+      "statement": "The workflow is already bundled into a major Polish ERP: Comarch ERP Optima CRM Plus supports automated email and SMS notices, payment demands, CRM tasks and sales blocking, and states that after a collection scheme is configured the service runs without manual operator intervention."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "C13",
+      "evidence_refs": [
+        "S10"
+      ],
+      "statement": "A direct Polish online substitute already sells the proposed recovery motion. Vindicat advertises accounting-software integrations, automated reminders and amicable recovery, an 8% success fee, and claims more than 20,000 business users. The user-count and 93% success claims are vendor assertions rather than independently audited outcomes, but the product and price are direct competitive evidence."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "C14",
+      "evidence_refs": [
+        "S11"
+      ],
+      "statement": "Factoring is a paid substitute for the liquidity outcome rather than the reminder workflow. Fandla's published schedule charges 0.12% per financing day (3.49% per month, minimum PLN 75 gross), and separately lists electronic demands, field collection at 8%, credit-information-bureau entry and settlements; this provides both a price ceiling and evidence that adjacent providers already span finance and recovery."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "C15",
+      "evidence_refs": [
+        "S12"
+      ],
+      "statement": "Adjacent randomized evidence shows why the product must separate DSO acceleration from ultimate recovery: an Australian business-tax field experiment found reminders increased seven-week payment probability by about 25 percentage points versus no reminder, but sending a reminder earlier made payment faster without changing the eventual payment share across reminder groups, and no discernible reminder effect was found for high-value debts above about AUD 7,500. This is not Polish B2B-invoice evidence."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "C16",
+      "evidence_refs": [
+        "S12"
+      ],
+      "statement": "A recovery percentage is only attributable if eligible invoices, treatment timing, ordinary-reminder control, disputes, credit notes, pre-existing promises to pay, partial payments and the measurement window are fixed in advance. Without a continuing holdout or agreed counterfactual, cash received after a reminder cannot be assumed incremental."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "C17",
+      "evidence_refs": [
+        "S03",
+        "S04",
+        "S07",
+        "S09",
+        "S10",
+        "S11"
+      ],
+      "statement": "The proposed standalone layer has no demonstrated durable wedge today: invoice access is standardized, live status still depends on other systems, direct dunning and factoring substitutes exist, and the proposed pooled-data advantage is constrained by permission and purpose-limitation requirements."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "C18",
+      "evidence_refs": [],
+      "statement": "No direct evidence found establishes the number of Polish firms with 50-500 monthly invoices, material recurring overdue balances, authority to buy through an accountant, and no adequate ERP, collection or factoring workflow."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "C19",
+      "evidence_refs": [],
+      "statement": "No direct Polish B2B controlled study found establishes incremental cash collection, DSO improvement, relationship safety or willingness to pay for this KSeF-connected layer over a disciplined ordinary-reminder baseline."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "C20",
+      "evidence_refs": [],
+      "statement": "A low-touch part-time operating model remains unproven because disputed invoices, missing bank matches, debtor replies, promise-to-pay monitoring and legal or factoring handoffs can turn software automation into recurring casework."
+    }
+  ],
+  "contrary_evidence": [
+    "KSeF payment status is optional and KSeF is not a payment system, so the proposed KSeF connection does not itself establish that an invoice is overdue.",
+    "Comarch ERP Optima already embeds automated reminders, payment demands, tasks and sales blocking in a widely used Polish accounting and ERP workflow.",
+    "Vindicat already offers Polish online invoice recovery with accounting integrations and an advertised 8% success fee, and claims more than 20,000 business users.",
+    "Fandla combines invoice financing with reminder and collection services, substituting immediate liquidity for waiting on a recovery workflow.",
+    "Account-information aggregation is regulated AISP activity with registration, security, continuity and insurance obligations; avoiding that burden requires a partner or less convenient exports.",
+    "Adjacent randomized evidence distinguishes faster payment from more ultimate recovery and did not find a discernible reminder effect for high-value debts in the studied setting.",
+    "The official CEIDG and KRS search can produce company names but not a list filtered by invoice volume, overdue balance or current collection process.",
+    "For sole traders and identifiable contacts, GDPR purpose limitation and data minimisation prevent treating client permission to chase a receivable as automatic permission to build a cross-customer personal-data graph; contractual reuse of company-level payment data is also unproven."
+  ],
+  "schema_version": 1,
+  "sources": [
+    {
+      "accessed_at": "2026-08-24",
+      "published_at": "2025-12-15",
+      "publisher": "European Commission, Directorate-General for Internal Market, Industry, Entrepreneurship and SMEs",
+      "source_id": "S01",
+      "source_type": "official_report",
+      "stance": "supporting",
+      "title": "EU Payment Observatory Annual Report 2025: Summary of findings",
+      "url": "https://single-market-economy.ec.europa.eu/document/download/8aabc383-52ce-49a9-a197-b4c49dc79a64_en?filename=Summary+2025.pdf"
+    },
+    {
+      "accessed_at": "2026-08-24",
+      "published_at": "2025-09-17",
+      "publisher": "Polish Ministry of Finance",
+      "source_id": "S02",
+      "source_type": "official_guidance",
+      "stance": "supporting",
+      "title": "Pytania i odpowiedzi KSeF 2.0",
+      "url": "https://ksef.podatki.gov.pl/pytania-i-odpowiedzi-ksef-20/"
+    },
+    {
+      "accessed_at": "2026-08-24",
+      "published_at": "2026-04-27",
+      "publisher": "Polish Ministry of Finance",
+      "source_id": "S03",
+      "source_type": "official_guidance",
+      "stance": "contradicting",
+      "title": "Rozwiazanie informatyczne, integracje i struktura KSeF",
+      "url": "https://ksef.podatki.gov.pl/ksef-news/rozwiazanie-informatyczne-integracje-i-struktura-ksef/"
+    },
+    {
+      "accessed_at": "2026-08-24",
+      "published_at": "2025-07-10",
+      "publisher": "Polish Ministry of Finance, Centre for Informatics of the Finance Ministry",
+      "source_id": "S04",
+      "source_type": "official_technical_documentation",
+      "stance": "supporting",
+      "title": "KSeF API 2.0: Uprawnienia",
+      "url": "https://github.com/CIRFMF/ksef-api/blob/main/uprawnienia.md"
+    },
+    {
+      "accessed_at": "2026-08-24",
+      "published_at": "2023-11-07",
+      "publisher": "Polish Financial Supervision Authority",
+      "source_id": "S05",
+      "source_type": "official_regulatory_guidance",
+      "stance": "contradicting",
+      "title": "Rejestracja AISP",
+      "url": "https://www.knf.gov.pl/dla_rynku/procesy_licencyjne/platniczy/AISP/Rejestracja_AISP"
+    },
+    {
+      "accessed_at": "2026-08-24",
+      "published_at": "2023-07-14",
+      "publisher": "Polish Electronic Legal Information System",
+      "source_id": "S06",
+      "source_type": "legislation",
+      "stance": "context",
+      "title": "Consolidated Act on Counteracting Excessive Delays in Commercial Transactions",
+      "url": "https://eli.gov.pl/api/acts/DU/2023/1790/text.html"
+    },
+    {
+      "accessed_at": "2026-08-24",
+      "published_at": "2016-04-27",
+      "publisher": "European Union",
+      "source_id": "S07",
+      "source_type": "legislation",
+      "stance": "contradicting",
+      "title": "Regulation (EU) 2016/679 (General Data Protection Regulation)",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679"
+    },
+    {
+      "accessed_at": "2026-08-24",
+      "published_at": "n.d.",
+      "publisher": "Biznes.gov.pl, Polish Ministry of Economic Development and Technology",
+      "source_id": "S08",
+      "source_type": "official_registry_search",
+      "stance": "context",
+      "title": "Wyszukiwarka firm",
+      "url": "https://biznes.gov.pl/pl/wyszukiwarka-firm"
+    },
+    {
+      "accessed_at": "2026-08-24",
+      "published_at": "2025-02-10",
+      "publisher": "Comarch",
+      "source_id": "S09",
+      "source_type": "vendor_product_documentation",
+      "stance": "contradicting",
+      "title": "Windykacja naleznosci - Comarch ERP Optima",
+      "url": "https://pomoc.comarch.pl/optima/pl/2026/dokumentacja/windykacja-naleznosci-2/"
+    },
+    {
+      "accessed_at": "2026-08-24",
+      "published_at": "n.d.",
+      "publisher": "Vindicat",
+      "source_id": "S10",
+      "source_type": "vendor_pricing_and_product_page",
+      "stance": "contradicting",
+      "title": "Vindicat: online recovery of unpaid invoices",
+      "url": "https://vindicat.pl/"
+    },
+    {
+      "accessed_at": "2026-08-24",
+      "published_at": "n.d.",
+      "publisher": "Fandla Faktoring",
+      "source_id": "S11",
+      "source_type": "vendor_fee_schedule",
+      "stance": "contradicting",
+      "title": "Fee and commission table for online factoring and disclosed factoring",
+      "url": "https://www.fandla.com/wp-content/uploads/pdf/toip.pdf"
+    },
+    {
+      "accessed_at": "2026-08-24",
+      "published_at": "2020-01-01",
+      "publisher": "Journal of Economic Behavior & Organization",
+      "source_id": "S12",
+      "source_type": "peer_reviewed_randomized_field_experiment",
+      "stance": "context",
+      "title": "Nudging businesses to pay their taxes: Does timing matter?",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0167268119303634"
+    }
+  ],
+  "unknowns": [
+    "How many Polish B2B SMEs issue 50-500 invoices per month, carry a recurring overdue pool large enough to support the price, and lack adequate ERP dunning, collection or factoring workflows?",
+    "Will an owner, CFO or chief accountant pay for this layer separately from accounting software, an accounting office and existing collection services?",
+    "What causal lift does the workflow produce in cash collected by day 14 and day 30, DSO and ultimate 60-day recovery versus the customer's existing disciplined reminders?",
+    "Can a customer accept a continuing randomized holdout or another auditable counterfactual needed to calculate an incremental-recovery fee?",
+    "What rules allocate partial payments, payments already promised, credit notes, disputed invoices, factoring proceeds and payments arriving outside the measurement window?",
+    "What share of KSeF invoices have usable due-date and payment fields, and what are the latency, match rate and cost of each accounting and AISP connection?",
+    "What are the dispute, complaint, debtor opt-out, false-overdue and customer-relationship-loss rates for increasingly firm reminders?",
+    "Will accounting offices, KSeF integrators, factors or insurers distribute a potentially competitive product, at what revenue share and with what activated-customer acquisition cost?",
+    "How many human minutes per client per month are required for unmatched payments, debtor replies, promises to pay, disputes and escalation decisions?",
+    "What controller-processor roles, legitimate-interest assessments, contractual permissions, retention limits and anonymisation tests permit any cross-customer learning?",
+    "Does retention persist after clients adopt disciplined payment processes, or does success reduce the recurring need and expose the product to ERP substitution?"
+  ]
+}

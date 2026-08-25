@@ -1,0 +1,120 @@
+{
+  "assumptions": [
+    "The initial paying customer is an installer or O&M firm that contractually bears material post-sale support cost, not a firm that profitably bills each site visit.",
+    "The initial service remains read-only, covers no more than two inverter families, and excludes remote control, dispatch, and field-work revenue.",
+    "The proposed 90-day pilot fee and subsequent 3-6 PLN per-site monthly price are hypotheses rather than validated willingness to pay.",
+    "Results from the founder's family company do not count as independent demand, distribution, or retention evidence.",
+    "Scaling requires lawful, commercially durable API access and permission to reuse de-identified labelled resolution outcomes for product improvement."
+  ],
+  "base_score": 3.66,
+  "candidate_id": "smoke-bottleneck",
+  "candidate_sha256": "4f83d24dc55c8af659d012afe705f2abed1e552c5c5b058fbc30eab509f16ec3",
+  "candidate_version": 3,
+  "constrained_score": 3.46,
+  "evaluation_type": "working",
+  "evidence_needed_for_higher_score": "Obtain at least three independent paid 90-day pilots showing baseline tickets and fully loaded support cost, statistically credible reductions in staff minutes or unreimbursed visits, net savings above fees, acceptable false-positive and false-negative rates, renewal and connected-site retention, measured cash and founder-hour CAC, and brand-weighted API cost and availability at 100, 1,000, and 10,000 sites.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "The redesigned concept correctly separates commodity monitoring from the harder post-alert workflow of reconciling portal data, customer records, warranty evidence, and DSO or billing issues. The family-company access makes that insight unusually testable, but there is not yet evidence that this reconciliation bottleneck is both costly and inadequately served for the proposed installer segment.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Regulator complaints establish recurring prosumer problems, and Polish care memberships establish some willingness to pay for bundled service outcomes. They do not establish installer willingness to pay for a standalone exception desk: the complaint sample is self-selected, the proposed payer may recover revenue from site visits, and no independent installer has paid or renewed.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "The fixed-fee pilot is capital-disciplined, but the recurring case is structurally thin. A 3-6 PLN per-site fee must absorb paid and changing OEM APIs, hosting, onboarding, human review, support, and CAC; retention and payback are unknown. The candidate's own conservative illustration requires roughly 265,000 sites for the founder wealth objective, while field-service expansion would trade software-like margins for operational intensity.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Poland's more than 1.6 million prosumer installations provide a large installed base, and restricting the beachhead to support-burdened firms with several hundred compatible sites is operationally coherent. However, the evidence does not quantify how many firms actually retain costly support obligations, their compatible portfolio size, incident density, or whether this narrow payer segment is economically meaningful.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "SolarEdge already bundles monitoring and alerts, SOLARMAN advertises multi-vendor diagnosis and maintenance guidance, and Otovo bundles remote resolution, warranty handling, and dispatch. An installer-specific evidence pack is narrower than those offers, but the candidate has no exclusive access, embedded switching cost, proven workflow ownership, or privileged channel from which a dominant segment position could follow.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A successful exception desk could extend to more inverter families, O&M providers, warranty workflows, and nearby EU markets. Yet each extension adds vendor contracts, data mapping, validation, language, compliance, and liability work, while established OEM and service platforms can add the same evidence-pack layer. Winning the first portfolio therefore does not yet make adjacent expansion materially easier.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Raw telemetry and generic anomaly detection are not durable advantages because OEM APIs, user-authorised Data Act access, free monitoring, and an existing multi-vendor platform make them replicable. Exclusive labelled symptom-to-resolution records and deeply embedded workflows could compound, but contractual reuse, exclusivity, data volume, and customer switching costs are all unproven.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "A ranked exception inbox with human-reviewed customer, warranty, or DSO evidence packs could reduce staff search time and avoid some unnecessary visits. There is no measured accuracy, resolution-time improvement, net cost saving, or decision advantage over existing OEM portals and staff templates, so the offer is not yet shown to be strong enough to change buyer behaviour.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "A large installed PV base, visible post-sale disputes, paid care offers, and the EU Data Act create a reasonable moment to test workflow software around existing assets. Timing is mixed rather than exceptional: OEMs already provide core monitoring, a multi-vendor incumbent already markets AI-assisted O&M, and API monetisation and deprecation are increasing dependency cost.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "The family business offers unusually cheap access to one pilot, but it is a biased design partner rather than evidence of repeatable acquisition. The UDT register identifies certified individuals rather than portfolio-owning buyers, no independent conversion or CAC is known, and Otovo's portfolio transaction demonstrates that scaled access may require material consideration. Direct selling also conflicts with the founder's limited time and social-energy preference if it remains high-touch.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "A read-only, one-portfolio concierge pilot fits the founder's data skills, family access, part-time ceiling, and capped validation budget. A secure production business is substantially harder: multi-vendor API maintenance, consent, GDPR, cybersecurity, diagnostic liability, response expectations, and sales operations may require 100,000-180,000 PLN before founder labour and exceed the founder's available time and ordinary capital.",
+      "score": 4,
+      "status": "scored"
+    }
+  ],
+  "final_score": 3.5,
+  "highest_value_structural_change": "Replace commodity per-site software with a minimum-value outcome contract for firms that demonstrably bear warranty and support losses, and secure a signed distributor, warranty-administrator, or OEM portfolio channel that supplies compatible sites and reusable labelled outcomes before funding broader integrations.",
+  "interaction_adjustment": -0.2,
+  "judge_id": "working-smoke-judge",
+  "main_structural_strength": "The founder has an unusually credible, low-cost route to observe the workflow and run a narrow human-in-the-loop pilot, while the candidate has disciplined scope to the unresolved exception workflow rather than undifferentiated monitoring.",
+  "primary_score_limiter": "The proposed payer, price, and acquisition route are not joined by credible economics: installer willingness to pay is unproven, low per-site revenue is exposed to API and review costs, and no repeatable low-CAC portfolio channel supports the scale required for meaningful owner earnings.",
+  "qualified": false,
+  "raw_response_path": "artifacts/development/working-evaluator-raw.json",
+  "raw_response_sha256": "9a7b761333d88e70d31722d853bb31e63293b0a90bedfdde235477cdc4fab69c",
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 1,
+  "strongest_disconfirming_evidence": "SolarEdge provides lifetime-free monitoring and alerts, SOLARMAN already markets multi-vendor AI-assisted O&M, and Otovo bundles remote resolution and warranty workflows while sometimes paying materially for portfolio access; together these facts contradict both easy differentiation and a free scalable channel.",
+  "unrounded_score": 3.46
+}

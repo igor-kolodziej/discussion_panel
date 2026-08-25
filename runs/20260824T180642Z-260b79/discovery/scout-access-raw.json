@@ -1,0 +1,156 @@
+{
+  "candidate": {
+    "schema_version": 1,
+    "candidate_id": "smoke-access",
+    "version": 1,
+    "parent": null,
+    "stage": "discovery",
+    "title": "RetrofitCase QA — grant-file preflight for Polish retrofit installers",
+    "thesis": "Inference: build a compliance preflight workspace for small Polish retrofit installers that cross-checks each Czyste Powietrze case across the licensed audit/DPAE, quote, contract, eligible equipment, invoices, payment evidence, installation protocols, photographs, serial numbers, and the rule version applicable on the submission date. It would flag inconsistencies and produce an operator-ready evidence pack without submitting applications or replacing licensed auditors. The founder's unusually cheap validation route is a controlled pilot through the family renewable-installation company near Ostrów Wielkopolski; relevance must first be verified by confirming that this company or its partners process enough Czyste Powietrze cases.",
+    "fingerprint": {
+      "customer": "Polish heat-pump, insulation, window, and broader retrofit contractors handling at least five Czyste Powietrze-funded projects per month, initially in Wielkopolska.",
+      "problem_trigger": "Before requesting prefinancing, signing off work, or filing a payment claim, when mismatches among the audit, scope, contract, invoices, equipment evidence, and photographs can trigger repeated correction requests, delayed cash, reduced reimbursement, or beneficiary clawback risk.",
+      "payer_and_paid_event": "The installer pays a monthly subscription or per-case fee when a complete project file receives a version-stamped preflight report and exportable evidence checklist; the product does not promise fund approval.",
+      "offer_and_business_model": "A Polish-language B2B SaaS plus initial concierge onboarding: document ingestion and OCR, deterministic rule checks, cross-document consistency checks, missing-evidence alerts, rule-version tracking, and an auditable case export. Charge approximately 999–2,499 PLN per month by case volume or 199–399 PLN per checked case during validation.",
+      "distribution_mechanism": "Begin with a measured pilot at the founder's parents' installer, then use documented reductions in preparation time and correction rounds to win referrals from collaborating energy auditors, regional installers, equipment wholesalers, and manufacturers; sales can be demo-led and asynchronous rather than dependent on a public personal brand.",
+      "compounding_advantage": "A permissioned, de-identified corpus linking document defects, applicable rule versions, requested corrections, and eventual outcomes could improve checks and benchmarks over time; auditor and distributor channels could compound distribution. This advantage remains an inference until customers permit outcome capture and the dataset proves predictive."
+    },
+    "founder_fit": [
+      "Direct warm access to a seven-person renewable-energy installer near Ostrów Wielkopolski creates a low-cost route to observe real workflows and request de-identified pilot files; the first gate is verifying actual Czyste Powietrze case volume.",
+      "The founder's data-science, AI, automation, and quantitative background fits OCR, document comparison, rule engines, evaluation, and measurable workflow experiments.",
+      "Polish language and local regulatory context reduce the discovery and support distance versus a foreign horizontal software vendor.",
+      "A narrow preflight tool can be built and sold part-time within the founder's five-hours-per-day ceiling, with limited meetings and no camera-based personal brand.",
+      "The initial product can be validated with substantially less than the founder's available capital before committing to integrations or a larger team."
+    ],
+    "source_refs": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+    ],
+    "economics": {
+      "pricing": "Inference to test: 199–399 PLN per completed preflight or 999–2,499 PLN monthly for volume tiers; interview and paid-pilot evidence is currently absent.",
+      "gross_margin_basis": "Inference: approximately 50–65% during a human-assisted pilot and 80–90% after stable deterministic checks, with OCR/model usage, encrypted storage, support, and periodic rule maintenance as principal variable costs.",
+      "acquisition_route": "Inference: one warm design-partner pilot, then auditor and supplier referrals plus rule-change checklists and direct outreach to contractors already handling multiple cases; no paid acquisition should precede demonstrated savings.",
+      "payback": "Inference: if contribution margin reaches roughly 900–1,800 PLN per customer-month and partner-led acquisition costs 2,000–5,000 PLN, payback could be two to six months; all inputs require validation.",
+      "retention_or_repeat": "Inference: monthly repeat use should track each installer's subsidized-project volume, but retention may collapse if the program shrinks, firms move away from grant work, or free official tooling becomes sufficient.",
+      "capital_required_pln": "Inference: 25,000–60,000 PLN for a secure pilot, document processing, rule authoring, professional privacy/legal review, and limited customer onboarding; postpone government-system integrations.",
+      "founder_time": "Inference: 15–25 hours per week for a 10–12 week pilot, compatible with the stated ceiling if the founder limits the first cohort to one installer and one cooperating auditor.",
+      "founder_net_worth_path": "Inference, not forecast: 250 customers at an average 1,500 PLN MRR would equal about 4.5 million PLN ARR. Sustaining 20–30% operating profit, high founder ownership, and a defensible data/workflow asset could plausibly support more than 5 million PLN of founder equity plus retained cash in roughly five to seven years. The reachable customer count, retention, and valuation basis are unverified."
+    },
+    "claims": [
+      {
+        "claim_id": "C1",
+        "statement": "[Evidence] By 31 July 2026, the reformed program had received 72,476 applications, signed 56,969 agreements worth about 3.56 billion PLN, and processed 32,772 applications through operators, establishing a material recurring case flow.",
+        "evidence_refs": [
+          "S1"
+        ],
+        "confidence": "high"
+      },
+      {
+        "claim_id": "C2",
+        "statement": "[Evidence] NFOŚiGW says beneficiaries typically receive one or two document-supplement requests, while some cases require three to six or more interventions because corrected documents still contain errors; it explicitly says these explanations extend assessment and payment.",
+        "evidence_refs": [
+          "S2"
+        ],
+        "confidence": "high"
+      },
+      {
+        "claim_id": "C3",
+        "statement": "[Evidence] NFOŚiGW maintains a dedicated 'Audit Without Errors' guide covering warnings, examples, frequent questions, DPAE consistency, and common mistakes, and states that it will be updated as interpretations evolve; DPAE preparation remains restricted to authorized professionals.",
+        "evidence_refs": [
+          "S3"
+        ],
+        "confidence": "high"
+      },
+      {
+        "claim_id": "C4",
+        "statement": "[Evidence] Rules and evidence requirements remain dynamic: documents updated for changes effective 20 July 2026 added or clarified checks involving heat sources, photographs, equipment nameplates and serial numbers, ownership, and five-year document retention.",
+        "evidence_refs": [
+          "S4"
+        ],
+        "confidence": "high"
+      },
+      {
+        "claim_id": "C5",
+        "statement": "[Inference] Cross-document preflight could prevent at least some correction rounds and improve installer cash timing, but none of the cited sources demonstrates that software can achieve this or that installers will pay.",
+        "evidence_refs": [
+          "S2",
+          "S3",
+          "S4"
+        ],
+        "confidence": "low"
+      }
+    ],
+    "contrary_evidence": [
+      "[Evidence, S3] NFOŚiGW already publishes extensive free instructions aimed specifically at avoiding audit and DPAE errors, so information access alone is not a product.",
+      "[Evidence, S1] Only 72,476 applications were filed in the reformed program over roughly sixteen months; the initial niche may be too small for the projected customer count without expansion.",
+      "[Evidence, S4] Operators use official checklists and protocols, while some applicants receive public operator support; this can reduce willingness to pay and makes an operator-facing workflow a potential free substitute.",
+      "[Inference] Many correction requests may arise from fraud, poor physical work, eligibility disputes, or facts that document software cannot resolve."
+    ],
+    "uncertainties": [
+      "Does the family company itself handle at least five eligible cases monthly, and can it lawfully provide de-identified historical files and correction outcomes?",
+      "Which party feels and controls the cost of corrections—the installer, licensed auditor, beneficiary, operator, or grant consultant—and which will pay?",
+      "What proportion of correction requests is detectable before submission using available documents?",
+      "Can current official forms and GWD exports be ingested reliably without a formal API or prohibited automation?",
+      "Will professional liability, privacy requirements, and sensitive household financial data make onboarding or insurance uneconomic?",
+      "Are incumbent grant-management, CRM, or energy-audit tools already offering equivalent cross-document checks?",
+      "Can the business expand into adjacent Polish or CEE retrofit schemes without rebuilding every jurisdiction's rules?"
+    ],
+    "risks": [
+      "Regulatory concentration: a program closure, simplification, funding slowdown, or official free checker could erase the wedge.",
+      "False reassurance: missed defects could cause delayed payments or clawbacks; outputs require explicit non-certification language, deterministic traceability, and human review.",
+      "Professional-boundary risk: the product must not prepare or sign regulated audits unless an authorized professional owns that work.",
+      "GDPR and security risk from income, ownership, address, invoice, and building documentation.",
+      "AI extraction errors could silently contaminate checks; every extracted field needs source-page traceability and confirmation for material decisions.",
+      "Founder access may be illusory if the parents' company does not participate materially in this program or cannot share records.",
+      "Employer intellectual-property, conflict-of-interest, and outside-work rules must be checked before using work time or related technology."
+    ]
+  },
+  "evidence_sources": [
+    {
+      "source_id": "S1",
+      "URL": "https://czystepowietrze.gov.pl/efekty-programu/czyste-powietrze-w-liczbach",
+      "title": "Czyste Powietrze w liczbach – statystyki programu",
+      "publisher": "Narodowy Fundusz Ochrony Środowiska i Gospodarki Wodnej",
+      "published_at": "2026-08-10",
+      "accessed_at": "2026-08-24",
+      "source_type": "official_statistics",
+      "stance": "supporting",
+      "one-sentence relevance": "Quantifies current application, agreement, operator, subsidy, and payment volumes for the reformed program."
+    },
+    {
+      "source_id": "S2",
+      "URL": "https://czystepowietrze.gov.pl/wazne-komunikaty/czyste-powietrze-lepsza-ochrona-beneficjentow-bezpieczne-finansowanie2",
+      "title": "Czyste Powietrze – lepsza ochrona beneficjentów, bezpieczne finansowanie",
+      "publisher": "Narodowy Fundusz Ochrony Środowiska i Gospodarki Wodnej",
+      "published_at": "2025-12-15",
+      "accessed_at": "2026-08-24",
+      "source_type": "official_program_notice",
+      "stance": "supporting",
+      "one-sentence relevance": "Directly documents repeated correction requests, persistent document errors, and resulting assessment and payment delays."
+    },
+    {
+      "source_id": "S3",
+      "URL": "https://czystepowietrze.gov.pl/do-pobrania/poradniki-dla-beneficjenta/poradnik-audyt-bez-bledow",
+      "title": "Poradnik Audyt Bez Błędów",
+      "publisher": "Narodowy Fundusz Ochrony Środowiska i Gospodarki Wodnej",
+      "published_at": "2026-07-06",
+      "accessed_at": "2026-08-24",
+      "source_type": "official_program_guidance",
+      "stance": "mixed",
+      "one-sentence relevance": "Shows the breadth and evolving nature of audit/DPAE error guidance while also evidencing a capable free substitute and the licensed-professional boundary."
+    },
+    {
+      "source_id": "S4",
+      "URL": "https://czystepowietrze.gov.pl/dla-gmin/do-pobrania/materialy-dla-gmin-2026-r",
+      "title": "Aktualizacja dokumentów dla operatorów programu Czyste Powietrze (od 20 lipca 2026 r.)",
+      "publisher": "Narodowy Fundusz Ochrony Środowiska i Gospodarki Wodnej",
+      "published_at": "2026-08-06",
+      "accessed_at": "2026-08-24",
+      "source_type": "official_change_notice",
+      "stance": "mixed",
+      "one-sentence relevance": "Demonstrates continuing rule-version changes and granular evidence requirements, while showing that official operator checklists already exist."
+    }
+  ]
+}
