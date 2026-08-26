@@ -1,0 +1,81 @@
+{
+  "candidate_id": "control10-07",
+  "claims": [
+    {
+      "claim_id": "control10-07-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://single-market-economy.ec.europa.eu/sectors/mechanical-engineering/machinery_en"
+      ],
+      "statement": "The Machinery Regulation applies mandatorily from 20 January 2027 and expressly addresses AI-powered safety functions and cyber-safety of relevant controls."
+    },
+    {
+      "claim_id": "control10-07-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1230/en"
+      ],
+      "statement": "Before market placement or service, manufacturers must compile technical documentation, perform the relevant conformity procedure, issue the declaration and retain records for at least ten years."
+    },
+    {
+      "claim_id": "control10-07-c3",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1230/en"
+      ],
+      "statement": "Demand hypothesis: integrators will pay to make the exact commissioned configuration, rather than a generic template, the release control point."
+    }
+  ],
+  "contrary_evidence": [
+    "Established machinery-safety consultants already sell technical-file services.",
+    "Low-volume integrators may manage documentation in ordinary project folders."
+  ],
+  "economics": {
+    "acquisition_route": "Hypothesis: safety assessors, PLC vendors and automation associations refer integrators at commissioning",
+    "capital_required_pln": 55000,
+    "founder_net_worth_path": "Hypothesis: 250 integrators averaging 30000 PLN recurring annual revenue plus handovers could exceed 9m PLN annual revenue and support founder equity above 5m PLN in 5-7 years",
+    "founder_time": "14-20 hours weekly with a machinery-safety contractor",
+    "gross_margin_basis": "Economics hypothesis: 68-82% blended margin because specialist review remains human",
+    "payback": "Hypothesis: 8-13 months with ten integrators and two managed handovers monthly",
+    "pricing": "Economics hypothesis: 1000-2500 PLN per engineer monthly plus 4000-15000 PLN per managed handover",
+    "retention_or_repeat": "Every new machine, retrofit, safety update and later owner modification"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Integrator-specific component libraries, accepted evidence patterns and machine lineage shorten every later retrofit",
+    "customer": "Polish automation integrators and SME machine builders delivering customised production equipment",
+    "distribution_mechanism": "Embedded in automation integrator commissioning checklists and safety-assessor referrals",
+    "offer_and_business_model": "Versioned change-control and technical-file release SaaS with optional specialist review",
+    "payer_and_paid_event": "Integrator pays per engineer seat and per machine handover file; complex projects add managed review",
+    "problem_trigger": "Controls, safety logic or AI features change before handover and the accountable conformity file must match the commissioned machine"
+  },
+  "founder_fit": [
+    "Quantitative risk and software provenance fit technical strengths",
+    "Regional industrial base is accessible from Warsaw and Wielkopolska",
+    "Channel and project workflow reduces high-energy prospecting"
+  ],
+  "parent": null,
+  "risks": [
+    "Ambiguous substantial-modification responsibility",
+    "Safety liability if users over-rely on automated suggestions",
+    "Highly varied machinery makes template reuse difficult"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://single-market-economy.ec.europa.eu/sectors/mechanical-engineering/machinery_en",
+    "https://eur-lex.europa.eu/eli/reg/2023/1230/en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Commissioning assurance workflow",
+    "control_point": "The final integrator-to-owner handover packet before production use",
+    "critical_dependency": "Integrator adoption and access to qualified safety experts or notified bodies for gated categories"
+  },
+  "thesis": "An automation-integrator-embedded handover system could capture the risk analysis, safety-control changes, software logic provenance, tests and declaration inputs for each materially modified or newly built machine before commissioning. It would coordinate competent parties and notified bodies where required, not certify machinery. Demand and economics are hypotheses.",
+  "title": "Machinery Retrofit Change-Control File",
+  "uncertainties": [
+    "Most repeatable first machine category",
+    "Integrator software-integration appetite",
+    "Frequency and cost of current handover failures"
+  ],
+  "version": 1
+}

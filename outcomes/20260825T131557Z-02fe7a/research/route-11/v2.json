@@ -1,0 +1,198 @@
+{
+  "candidate_id": "route-11",
+  "candidate_sha256": "593ba0e03570919f74d9fd912afafadc524366c984c7ade30bd4f60a243d6ed9",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "r11-r1",
+      "evidence_refs": [
+        "r11-s1"
+      ],
+      "statement": "Inventory, expiry, consumption and reorder tracking are recognized operational controls for testing sites."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r11-r2",
+      "evidence_refs": [
+        "r11-s2"
+      ],
+      "statement": "A clinic-to-clinic medicinal-product exchange is not a lawful default; returns described by EMA are to the original supplying wholesaler."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r11-r3",
+      "evidence_refs": [
+        "r11-s3",
+        "r11-s4"
+      ],
+      "statement": "IVD distributors have traceability and storage or transport obligations, making disposition a licensed-partner workflow rather than a startup-controlled action."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r11-r4",
+      "evidence_refs": [
+        "r11-s5"
+      ],
+      "statement": "The Polish venue base is numerically large enough for a multi-thousand-site outcome, but the qualified subset is not established."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r11-r5",
+      "evidence_refs": [
+        "r11-s6",
+        "r11-s7",
+        "r11-s8"
+      ],
+      "statement": "Low-stock alerts, date alerts, lot tracking and reorder reports are already sold by general and clinic-specific incumbents."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r11-r6",
+      "evidence_refs": [
+        "r11-s6",
+        "r11-s7"
+      ],
+      "statement": "Published price anchors make 180-280 PLN per site plausible as a test range, not as demonstrated willingness to pay in Poland."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r11-r7",
+      "evidence_refs": [
+        "r11-s8",
+        "r11-s9"
+      ],
+      "statement": "Instrumented hospital inventory programs can reduce expiry, waste and owned inventory, but transfer to small clinics is uncertain."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r11-r8",
+      "evidence_refs": [],
+      "statement": "No public evidence reviewed establishes access to a Polish wholesaler's portal, order history, lot or expiry feed for this startup."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r11-r9",
+      "evidence_refs": [],
+      "statement": "No public evidence reviewed establishes a Polish independent-clinic expiry-loss baseline, reliable on-hand counts or a verified shared-savings counterfactual."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r11-r10",
+      "evidence_refs": [
+        "r11-s2",
+        "r11-s3"
+      ],
+      "statement": "The narrowed alert and wholesaler-controlled return-eligibility product avoids the directly evidenced medicine-exchange prohibition, subject to product-specific legal review."
+    }
+  ],
+  "contrary_evidence": [
+    "EMA directly contradicts the original broad exchange concept for medicinal products; the researched version removes clinic-to-clinic exchange and only signals wholesaler-controlled return eligibility.",
+    "Sortly and Bodega already sell overlapping clinic inventory controls at transparent prices, and Cardinal Health has a much deeper enterprise platform.",
+    "Hospital savings results are not a conservative proxy for independent clinics with fewer SKUs and weaker counting discipline.",
+    "The UDI framework improves traceability but is not evidence of usable lot, expiry, consumption or interface rights."
+  ],
+  "schema_version": 2,
+  "sources": [
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "World Health Organization",
+      "source_id": "r11-s1",
+      "source_type": "primary_guidance",
+      "stance": "supporting",
+      "title": "Pillar 3 - Procurement, supply chain and inventory management",
+      "url": "https://www.who.int/tools/quality-management-system-for-non-laboratory-settings/pillar-3--procurement-supply-chain-and-inventory-management"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "European Medicines Agency",
+      "source_id": "r11-s2",
+      "source_type": "primary_regulatory_guidance",
+      "stance": "contradicting",
+      "title": "Guidance on good manufacturing practice and good distribution practice: Questions and answers",
+      "url": "https://www.ema.europa.eu/en/human-regulatory-overview/research-development/compliance-research-development/good-manufacturing-practice/guidance-good-manufacturing-practice-good-distribution-practice-questions-answers"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2017-05-05",
+      "publisher": "EUR-Lex",
+      "source_id": "r11-s3",
+      "source_type": "primary_law",
+      "stance": "context",
+      "title": "Regulation (EU) 2017/746 on in vitro diagnostic medical devices",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1685433681978&uri=CELEX%3A32017R0746"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "European Commission Directorate-General for Health and Food Safety",
+      "source_id": "r11-s4",
+      "source_type": "primary_regulatory_guidance",
+      "stance": "context",
+      "title": "Unique Device Identifier - UDI",
+      "url": "https://health.ec.europa.eu/medical-devices-topics-interest/unique-device-identifier-udi_en"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2026",
+      "publisher": "Statistics Poland",
+      "source_id": "r11-s5",
+      "source_type": "official_statistics",
+      "stance": "supporting",
+      "title": "Poland in figures 2026",
+      "url": "https://plwliczbach.stat.gov.pl/EN/assets/pdf/poland-in-figures-2026.pdf"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "Sortly",
+      "source_id": "r11-s6",
+      "source_type": "vendor_pricing",
+      "stance": "contradicting",
+      "title": "Pricing Plans",
+      "url": "https://www.sortly.com/pricing/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "Bodega",
+      "source_id": "r11-s7",
+      "source_type": "vendor_product_and_pricing",
+      "stance": "contradicting",
+      "title": "Bodega - The supply room that pays for itself",
+      "url": "https://bodegamed.com/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2025-07-07",
+      "publisher": "Cardinal Health",
+      "source_id": "r11-s8",
+      "source_type": "vendor_case_evidence",
+      "stance": "contradicting",
+      "title": "Connecting clinical and supply chain teams to advance delivery of care",
+      "url": "https://newsroom.cardinalhealth.com/2025-07-07-Connecting-clinical-and-supply-chain-teams-to-advance-delivery-of-care"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2024-06",
+      "publisher": "Perioperative Care and Operating Room Management",
+      "source_id": "r11-s9",
+      "source_type": "peer_reviewed_case_study",
+      "stance": "supporting",
+      "title": "Practical implementation and optimization of a clinical supply chain technology: A case report of an improvement project using a data-driven strategy",
+      "url": "https://www.sciencedirect.com/science/article/pii/S240560302400044X"
+    }
+  ],
+  "unknowns": [
+    "Wholesaler partner commitment and commercial terms",
+    "Portal and ERP interface rights",
+    "Lot, expiry, on-hand and consumption data completeness",
+    "Product-family-specific return, storage and transport rules",
+    "Polish clinic expiry and stockout baseline",
+    "Incremental performance versus simple min/par rules",
+    "Clinic willingness to pay and wholesaler incentive alignment",
+    "Support load and retention after the pilot"
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "assumptions": [
+    "The initial product provides deterministic document and lender-policy support with meaningful licensed-intermediary review and does not score creditworthiness, promise approval, or advise consumers.",
+    "A pilot uses synthetic or properly deidentified files until controller, processor, retention, aggregation, fairness, and security responsibilities are resolved.",
+    "A participating broker network supplies current policy knowledge and owns applicant communication and submission decisions; access to that knowledge is not assumed beyond a pilot.",
+    "The founder limits the first version to the stated 75,000 PLN and 15 to 20 hours per week and does not undertake speculative bank integrations or a high-risk scoring compliance program."
+  ],
+  "base_score": 3.95,
+  "candidate_id": "niche-09",
+  "candidate_sha256": "065c91baaaeebae3eeb0ad05217096e6e827d680dbd8fe5b79950b5c7f4e07db",
+  "candidate_version": 2,
+  "constrained_score": 3.65,
+  "evaluation_type": "working",
+  "evidence_needed_for_higher_score": "A paid side-by-side network pilot must measure eligible cases per advisor, baseline minutes and rework, incumbent miss rate, blind checklist accuracy, avoidable resubmissions, realized time savings, seat activation, willingness to pay, renewal intent, policy-update access, security feasibility, and a specialist legal opinion fixing the boundary between workflow support and regulated scoring or advice.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "Business-income mortgage files genuinely branch by tax form, history, documents, and lender policy, making a provenance-preserving exception workflow more specific than a generic affordability calculator. The control point is legally compatible with preparatory intermediation, but banks retain the actual assessment and frequently changing bank rules constrain what the tool can know or promise.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Official and bank sources support real document complexity, and avoidable chasing, policy lookup, or resubmission would have operational value to brokers. The frequency and cost of incumbent failure on these cases, current workaround quality, buyer budget, and willingness to pay for a JDG-only overlay remain unknown rather than disproven.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "A recurring team or seat license can have attractive software gross margins if rules and integrations remain bounded. The proposed 450 PLN seat economics, payback, retention, and 1,200-seat scale are unsupported; the latter requires roughly 17% of registered agents despite entrenched platforms, while policy operations, security, support, and enterprise acquisition reduce operating leverage.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Polish broker networks handling JDG and other irregular-income borrowers are a legible beachhead inside a regulated channel of 6,884 agents and substantial intermediation revenue. Only a subset of those agents may face the problem often enough, reachable independent seats are not established, and the scale required by the wealth scenario is demanding.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "FinPack claims use by 70% of Polish mortgage experts and broad bank calculation, form, data, and integration coverage, while Lendi claims 3,000 experts and multi-bank workflow. Without evidence that both systematically fail on valuable JDG exceptions, a new overlay lacks a credible path to dominate the broker workflow and can be copied by vendors with installed distribution.",
+      "score": 2,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A validated JDG engine could extend to B2B transitions, seasonal, foreign-currency, dividend, and multi-source income and potentially adjacent lending workflows. Each expansion increases policy-maintenance, fairness, privacy, and regulatory complexity and moves closer to the incumbent platforms' strongest territory.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "A versioned policy map, manual-override record, and lawfully aggregated outcomes could improve with use. Banks and networks control the crucial policy and outcome inputs, outcomes are selected and quickly stale, and incumbents have more users and integrations from which to build the same layer, so compounding advantage depends on privileged contractual access that is not evidenced.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "Reviewable extraction, missing-evidence gates, deterministic rules, and provenance could improve trust and handling of exceptions. No side-by-side result shows lower preparation time, fewer resubmissions, better coverage, or a safer audit trail than FinPack, Lendi, or network-specific processes, so the behavior-changing advantage is speculative.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "Modern document extraction makes a transparent rules-and-review workflow cheaper to build, and regulatory scrutiny can favor deterministic provenance over opaque prediction. Timing is balanced by mature incumbent adoption and an AI Act and GDPR boundary that sharply penalizes drift into consequential applicant scoring.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "Selling one enterprise pilot through a broker network is more efficient than individual advisor acquisition and fits the founder's style. No network or accounting-platform commitment exists, buyers already use deeply distributed suites, and the product needs those same buyers to supply policy inputs and outcome feedback, weakening negotiating leverage and repeatability.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "The founder fits the Polish, finance, quantitative, document-automation, and low-public-profile aspects, and a narrow synthetic-data prototype is affordable part-time. Production adds high-impact financial-data security, policy freshness, enterprise support, fair-use governance, procurement, and a difficult legal boundary around lender fit, making a channel partner essential.",
+      "score": 4,
+      "status": "scored"
+    }
+  ],
+  "final_score": 3.7,
+  "highest_value_structural_change": "Recast the product as an OEM exception-handling and audit module embedded in one committed broker network's or incumbent platform's existing workflow, priced against measured rework savings and using contractually supplied versioned policy data, instead of trying to displace installed suites with a greenfield seat product.",
+  "interaction_adjustment": -0.3,
+  "judge_id": "c2-working-niche-09",
+  "main_structural_strength": "The product targets a concrete, recurring pre-submission control point where deterministic document and policy provenance can assist a licensed human without replacing the bank's statutory credit decision.",
+  "primary_score_limiter": "The proposed niche has no demonstrated costly failure that incumbent broker platforms do not already solve, leaving both the independent distribution path and the claimed data moat structurally weak.",
+  "qualified": false,
+  "raw_response_path": "artifacts/research/raw-c2-working-niche-09.json",
+  "raw_response_sha256": "5e4545f636d9ffa7ed635fddd55a6cbae940036710f35f999aa0e0b660494756",
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 2,
+  "strongest_disconfirming_evidence": "FinPack claims adoption by 70% of Polish mortgage experts with 20-bank calculations, common forms, bank integration, and credit-history access, while Lendi claims 3,000 experts and multi-bank application and document workflows that overlap the proposed wedge.",
+  "unrounded_score": 3.65
+}

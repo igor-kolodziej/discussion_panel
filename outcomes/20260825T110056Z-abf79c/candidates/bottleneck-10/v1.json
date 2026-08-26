@@ -1,0 +1,85 @@
+{
+  "candidate_id": "bottleneck-10",
+  "claims": [
+    {
+      "claim_id": "bottleneck-10-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/topics/waste-and-recycling/packaging-waste_en"
+      ],
+      "statement": "The Packaging and Packaging Waste Regulation entered into force on 11 February 2025, generally applies from 12 August 2026, covers all packaging, and sets manufacturing, composition, reuse or recovery, and waste-management requirements."
+    },
+    {
+      "claim_id": "bottleneck-10-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32025R0040",
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A32025R0040"
+      ],
+      "statement": "Manufacturers must perform conformity assessment, prepare technical documentation, and draw up an EU declaration of conformity before placing covered packaging on the market."
+    },
+    {
+      "claim_id": "bottleneck-10-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32025R0040"
+      ],
+      "statement": "Suppliers must provide information needed to demonstrate packaging conformity, and technical dossiers and declarations are retained for five years for single-use packaging and ten years for reusable packaging."
+    }
+  ],
+  "contrary_evidence": [
+    "Several detailed PPWR requirements, including harmonized labels, apply on later or delegated-act-dependent dates rather than all at once in August 2026.",
+    "The Commission's 2026 guidance notes that some reusable-packaging requirements resemble prior rules, reducing novelty for mature manufacturers.",
+    "Quality-management, PLM, and packaging-specification platforms can store the same documents for larger firms."
+  ],
+  "economics": {
+    "acquisition_route": "Free responsibility and dossier-gap diagnostic, technical search content, direct converter outreach, and laboratory or designer referrals",
+    "capital_required_pln": 80000,
+    "founder_net_worth_path": "Modeled path: 350 customers at 1,500 PLN average monthly recurring revenue equals 6.3m PLN ARR; a 35% owner-cash margin is 2.21m PLN/year and could produce more than 10m PLN in five mature years",
+    "founder_time": "Up to 4.5 hours/day for one packaging segment, with materials and legal review performed by contracted specialists",
+    "gross_margin_basis": "Modeled 78-90% after extraction compute, document storage, regulatory mapping, support, and limited specialist review",
+    "payback": "Target below 6 months because migration and onboarding are paid; unvalidated",
+    "pricing": "Modeled 800-4,000 PLN/month by active packaging-SKU count plus 5,000-30,000 PLN onboarding and legacy-dossier migration",
+    "retention_or_repeat": "Supplier, composition, design, label, test, and manufacturing changes create recurring change control, while evidence retention lasts years"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A material-and-packaging evidence graph linking supplier documents, test methods, design changes, requirement interpretations, and authority or customer corrections",
+    "customer": "Polish packaging converters and mid-sized private-label brands managing tens to thousands of single-use or reusable packaging types",
+    "distribution_mechanism": "Free packaging-responsibility diagnostic, PPWR dossier templates, targeted converter outreach, and referrals from test labs and packaging designers",
+    "offer_and_business_model": "Supplier evidence intake, packaging BOM, requirement matrix, risk and test trace, change control, declaration generation, and retention vault sold as SaaS plus onboarding",
+    "payer_and_paid_event": "The packaging manufacturer or responsible brand pays per annual workspace and active packaging-SKU tier when releasing or revising a dossier",
+    "problem_trigger": "A new packaging type or material, supplier, composition, print, reuse, or manufacturing change needs a defensible conformity decision before market placement"
+  },
+  "founder_fit": [
+    "The core is document extraction, product data lineage, validation rules, and change detection rather than physical manufacturing.",
+    "Polish packaging and private-label firms offer a domestic beachhead for an EU-wide regulation and multilingual expansion.",
+    "A dossier-first MVP can stay within the 100,000 PLN base budget and use asynchronous supplier portals rather than meeting-heavy consulting."
+  ],
+  "parent": null,
+  "risks": [
+    "Misassigning the responsible economic operator or an effective date could invalidate the workflow.",
+    "Incomplete supplier evidence may block releases and turn product support into bespoke consulting.",
+    "Further guidance or delegated acts could force substantial schema and rules-engine changes."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://environment.ec.europa.eu/topics/waste-and-recycling/packaging-waste_en",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32025R0040",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A32025R0040",
+    "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A52026XC03084"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Product-compliance lifecycle SaaS priced by packaging type and organization",
+    "control_point": "The versioned packaging-SKU release dossier from supplier evidence and risk assessment through technical documentation and signed EU declaration",
+    "critical_dependency": "Material suppliers and laboratories must provide adequate, current evidence, while phased PPWR requirements must be mapped to the right effective dates"
+  },
+  "thesis": "Build a packaging-type dossier system for Polish converters, contract packagers, and brands that turns material supplier declarations, design specifications, tests, risk assessments, and manufacturing changes into versioned PPWR technical documentation and EU declarations of conformity. The payer buys a controlled release packet per packaging SKU because required evidence is split between material suppliers, designers, converters, labs, procurement, and the brand that places packaging on the market.",
+  "title": "PPWR Packaging-SKU Technical Dossier Builder",
+  "uncertainties": [
+    "The number of mid-sized Polish firms that own the manufacturer obligation and lack suitable dossier tooling is unknown.",
+    "The practical dossier depth, laboratory dependence, and customer interpretation for each packaging category remain to be tested.",
+    "Modeled pricing, migration labor, specialist review cost, churn, and margin require paid validation."
+  ],
+  "version": 1
+}

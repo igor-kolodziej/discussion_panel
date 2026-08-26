@@ -1,0 +1,71 @@
+{
+  "candidate_id": "rights6-07",
+  "claims": [
+    {
+      "claim_id": "rights6-07-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32020L2184"
+      ],
+      "statement": "The Drinking Water Directive requires Member States to assess leakage levels and improvement potential, evidencing policy attention to measured leakage reduction."
+    },
+    {
+      "claim_id": "rights6-07-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/2854"
+      ],
+      "statement": "The Data Act creates user access and third-party sharing rights for readily available connected-product data, subject to its scope and safeguards."
+    }
+  ],
+  "contrary_evidence": [
+    "The directive's leakage assessment concerns water-supply infrastructure, not proof that apartment-building customers or insurers will buy indoor leak monitoring."
+  ],
+  "economics": {
+    "acquisition_route": "Bulk enrollment through property administrators, plumbing firms, and insurer-sponsored pilots rather than resident-by-resident sales",
+    "capital_required_pln": 160000,
+    "founder_net_worth_path": "Cover 10000 apartments by year 3 (unvalidated), 100000 apartments by year 7 (unvalidated), and support founder equity above PLN 5 million by year 8 (unvalidated)",
+    "founder_time": "10-15 hours per week during validation (unvalidated), with plumbers installing devices",
+    "gross_margin_basis": "Reusable commodity sensors, automated triage, and plumber referral fees support 45-62% gross margin (unvalidated)",
+    "payback": "Hardware and channel cost recovered in 12-20 months (unvalidated)",
+    "pricing": "PLN 6-12 per apartment per month (unvalidated) plus 10-20% of documented avoided cost (unvalidated)",
+    "retention_or_repeat": "Three-year building subscriptions (unvalidated) and repeated incident-response referrals"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Verified leak outcomes improve alert precision, property risk segmentation, and insurer evidence",
+    "customer": "Housing cooperatives, administrators, insurers, and plumbing networks",
+    "distribution_mechanism": "Administrator portfolio contracts and plumber-installed kits",
+    "offer_and_business_model": "Sensor rental, alert triage, verified incident record, and shared-savings reporting",
+    "payer_and_paid_event": "Administrator pays when a building activates monitoring; insurer may pay for a prevention cohort after approved results",
+    "problem_trigger": "A leak claim, aging risers, insurer loss review, or repeated hidden-water damage"
+  },
+  "founder_fit": [
+    "Quantified prevention aligns with founder interests.",
+    "Plumber and administrator channels minimize consumer selling.",
+    "Risk modeling and alert automation use data-science strengths."
+  ],
+  "parent": null,
+  "risks": [
+    "False alarms and missed leaks create reputational exposure.",
+    "Shared-savings baselines may be disputed.",
+    "The stated PLN 160000 startup capital requirement is unvalidated."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32020L2184",
+    "https://eur-lex.europa.eu/eli/reg/2023/2854"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Loss-prevention subscription and shared-savings risk pool",
+    "control_point": "Permissioned cross-building dataset linking sensor patterns, confirmed leaks, repair actions, and avoided-loss evidence",
+    "critical_dependency": "Administrators must permit installation and insurers or owners must recognize measurable savings from alerts"
+  },
+  "thesis": "Deploy contract-authorized leak sensors through plumbers and housing administrators, combine alerts with verified incident and repair outcomes, and sell buildings a shared-savings monitoring service. With separate permission, pool anonymized building-level loss evidence for insurer prevention programs; the moat is the incident-linked dataset and administrator channel, not the commodity sensor.",
+  "title": "LeakPool Housing Risk Network",
+  "uncertainties": [
+    "Which sensor locations maximize verified loss prevention?",
+    "Can insurer funding materially lower administrator acquisition cost?"
+  ],
+  "version": 1
+}

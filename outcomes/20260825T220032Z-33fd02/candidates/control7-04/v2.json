@@ -1,0 +1,138 @@
+{
+  "candidate_id": "control7-04",
+  "claims": [
+    {
+      "claim_id": "control7-04-r1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/finanse/legalny-hazard"
+      ],
+      "statement": "The Ministry's current list shows 17 legal online betting operators and a state monopoly for online casino and number games."
+    },
+    {
+      "claim_id": "control7-04-r2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20250000595"
+      ],
+      "statement": "Polish law requires each online gambling operator to implement a regulator-approved responsible-gambling policy with age verification, registration, activity-control mechanisms, and loss-of-funds controls."
+    },
+    {
+      "claim_id": "control7-04-r3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://pomoc.sts.pl/samowykluczenie/"
+      ],
+      "statement": "STS currently offers a three-month self-exclusion applied to its own account, evidencing an operator-level workaround rather than national portability."
+    },
+    {
+      "claim_id": "control7-04-r4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014H0478"
+      ],
+      "statement": "The European Commission recommendation encourages national self-exclusion registries and operator consultation of them."
+    },
+    {
+      "claim_id": "control7-04-r5",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://info.gamstop.co.uk/hc/en-gb/articles/4404984040082-How-does-Gamstop-Online-work",
+        "https://www.spelinspektionen.se/lagar-regler/spelansvar-och-konsumentskydd/spelpaus.se",
+        "https://www.gamblingcommission.gov.uk/licensees-and-businesses/lccp/condition/3-5-3-remote-sr-code"
+      ],
+      "statement": "GAMSTOP and Sweden's Spelpaus demonstrate multi-operator exclusion checks at registration or login, but both obtain coverage through licensing or statutory requirements."
+    },
+    {
+      "claim_id": "control7-04-r6",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.edpb.europa.eu/sites/default/files/files/file1/edpb_guidelines_202005_consent_en.pdf",
+        "https://www.edpb.europa.eu/documents/guideline/automated-decision-making-and-profiling_en"
+      ],
+      "statement": "GDPR consent must be freely given, specific, informed, and withdrawable; profiling or solely automated decisions can add safeguards, so consent-only governance requires specialist analysis."
+    },
+    {
+      "claim_id": "control7-04-r7",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014H0478",
+        "https://info.gamstop.co.uk/hc/en-gb/articles/4404984040082-How-does-Gamstop-Online-work",
+        "https://www.spelinspektionen.se/lagar-regler/spelansvar-och-konsumentskydd/spelpaus.se"
+      ],
+      "statement": "The foreign comparators imply that regulator-backed coverage, not an optional private consortium, is the critical structural requirement."
+    }
+  ],
+  "contrary_evidence": [
+    "The reviewed Polish statute specifies operator-level responsible-gambling controls but does not establish the proposed shared registry.",
+    "STS already supplies a single-operator self-exclusion, so buyers can claim baseline compliance without a new network.",
+    "GAMSTOP and Spelpaus are mandated schemes; they do not validate voluntary Polish operator adoption.",
+    "Consent validity, withdrawal, identity matching, joint-controller roles, and automated access denial create unresolved GDPR design questions.",
+    "Only 17 licensed betting operators are listed, concentrating revenue and buyer power."
+  ],
+  "economics": {
+    "acquisition_route": "Secure regulator or association sponsorship before selling operator integrations; successful foreign comparators rely on compulsory licensed-operator participation",
+    "capital_required_pln": 90000,
+    "founder_net_worth_path": "The earlier 10-15 operator scenario is arithmetically possible within the current list of 17 betting operators, but price, mandate, cost, ownership, and adoption are unvalidated; no evidence-backed timing to 5m PLN can be stated",
+    "founder_time": "About 3 hours/day for product oversight only if gambling counsel, privacy governance, and public-affairs leadership are delegated; coalition formation may not fit that limit",
+    "gross_margin_basis": "Target 65-80% after high-availability infrastructure, identity matching, legal governance, audits, security, and operator support; unvalidated",
+    "payback": "Unknown; three paid pilots would not prove a national network unless participation authority and rollout funding are committed",
+    "pricing": "Unvalidated: 60000-200000 PLN annual operator membership plus implementation and per-check usage; no source disclosed scheme procurement prices or Polish willingness to pay",
+    "retention_or_repeat": "A mandated login and registration check would be highly recurrent, but Poland currently provides no reviewed mandate for this shared rail"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Mandated operator coverage, accepted governance, identity-matching quality, audited availability, and the default compliance API position",
+    "customer": "Polish gambling regulator or industry association and licensed online betting operators",
+    "distribution_mechanism": "Regulatory and gambling-counsel engagement followed by an association or ministry-sponsored pilot with anchor operators",
+    "offer_and_business_model": "Governed self-exclusion registry, minimal yes/no API, audit log, operator onboarding, and compliance reporting; no wagering operation, raw betting-history exchange, or automated addiction score",
+    "payer_and_paid_event": "Operators or the sponsoring body pay implementation and annual membership fees plus usage for required status checks",
+    "problem_trigger": "A player requests broad self-exclusion or attempts to register or log in with a participating licensed operator during an active exclusion"
+  },
+  "founder_fit": [
+    "Uses data engineering and privacy-preserving system design without operating gambling",
+    "A small number of institutional counterparties limits mass-market selling",
+    "Measurable compliance and player-protection outcomes suit an analytical founder",
+    "Regulatory coalition-building is socially and legally intensive and requires a delegated gambling-policy lead"
+  ],
+  "parent": {
+    "candidate_id": "control7-04",
+    "version": 1
+  },
+  "risks": [
+    "A private optional network may never achieve useful coverage",
+    "Sensitive status leakage could materially harm participants",
+    "A false match could wrongly block access and a missed match could defeat exclusion",
+    "Operators may resist a control that reduces near-term revenue",
+    "Regulator-dependent coalition formation may exceed the founder's preferred social and part-time operating model",
+    "A consortium could raise competition and joint-controller concerns if governance is weak"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20250000595",
+    "https://www.gov.pl/web/finanse/legalny-hazard",
+    "https://pomoc.sts.pl/samowykluczenie/",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014H0478",
+    "https://www.edpb.europa.eu/sites/default/files/files/file1/edpb_guidelines_202005_consent_en.pdf",
+    "https://www.edpb.europa.eu/documents/guideline/automated-decision-making-and-profiling_en",
+    "https://info.gamstop.co.uk/hc/en-gb/articles/4404984040082-How-does-Gamstop-Online-work",
+    "https://www.spelinspektionen.se/lagar-regler/spelansvar-och-konsumentskydd/spelpaus.se",
+    "https://www.gamblingcommission.gov.uk/licensees-and-businesses/lccp/condition/3-5-3-remote-sr-code"
+  ],
+  "stage": "research",
+  "structure": {
+    "commercial_archetype": "Regulated shared utility funded by licensed members",
+    "control_point": "A regulator-recognized self-exclusion status checked at account registration and login across licensed operators",
+    "critical_dependency": "A Polish regulator, ministry, or credible operator association must establish a lawful basis, governance mandate, and participation rule; voluntary bilateral consent does not assure coverage"
+  },
+  "thesis": "Provide the technical and governance infrastructure for a player-requested self-exclusion status that participating Polish betting operators check at registration and login. Evidence from Britain and Sweden shows that multi-operator schemes are feasible, but their coverage comes from licensing rules and regulator sponsorship, not optional consent alone. The viable route is therefore a regulator, ministry, or industry-association mandate with an independent data controller, strict minimization, and no exchange of betting history or automated risk score.",
+  "title": "Regulator-Sponsored Multi-Operator Self-Exclusion Rail",
+  "uncertainties": [
+    "Whether the Polish Ministry, regulator, or an operator association supports a national or sector-wide scheme",
+    "Lawful basis and controller allocation for an irrevocable self-exclusion term",
+    "Whether self-exclusion status would be treated as health-related special-category data in the proposed context",
+    "Operator willingness to fund a system that can reduce play",
+    "Identity-match performance for people without stable Polish identifiers",
+    "Procurement pricing, integration cost, insurance, audit burden, and founder-net-worth timing"
+  ],
+  "version": 2
+}

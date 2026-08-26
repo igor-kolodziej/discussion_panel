@@ -1,0 +1,135 @@
+{
+  "candidate_id": "embed-05",
+  "claims": [
+    {
+      "claim_id": "embed-05-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2011/1169/oj/eng"
+      ],
+      "statement": "EU food-information law requires listed allergens to be declared and requires upstream businesses supplying non-final food to pass enough information onward for downstream compliance."
+    },
+    {
+      "claim_id": "embed-05-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2002/178/oj/eng"
+      ],
+      "statement": "EU food businesses must maintain traceability procedures and withdraw unsafe food, creating a durable need for controlled change records."
+    },
+    {
+      "claim_id": "embed-05-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=oj%3AJOC_2022_355_R_0001"
+      ],
+      "statement": "The Commission's food-safety-management notice treats allergen control as a food-safety-management requirement, but qualified operators remain responsible for HACCP and release decisions."
+    },
+    {
+      "claim_id": "embed-05-c4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ec.europa.eu/eurostat/documents/15216629/20555393/KS-01-24-000-EN-N.pdf"
+      ],
+      "statement": "The reachable sector is large but fragmented: Eurostat reports 4.7 million EU food-and-beverage-processing workers and EUR266 billion of value added in 2022."
+    },
+    {
+      "claim_id": "embed-05-c5",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://tracegains.com/product-development/specification-management/",
+        "https://www.specright.com/industry/food-beverage/",
+        "https://www.foodchainid.com/products/recipes-specifications/",
+        "https://www.foodsconnected.com/solutions/food-specifications-npd/"
+      ],
+      "statement": "Incumbents already advertise supplier portals, version control, BOM linkage, allergen propagation and recipe-to-label impact analysis, so a generic specification repository is not differentiated."
+    },
+    {
+      "claim_id": "embed-05-c6",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://www.fooddrinkeurope.eu/policy-area/smes/",
+        "https://tracegains.com/product-development/specification-management/",
+        "https://www.foodchainid.com/products/recipes-specifications/"
+      ],
+      "statement": "A viable wedge is therefore an integration-first SME exception-clearing service distributed by ingredient distributors or auditors, not a replacement PLM; channel willingness and paid demand remain unverified."
+    }
+  ],
+  "contrary_evidence": [
+    "TraceGains, Specright, FoodChain ID and Foods Connected publicly offer most core graph, change-control and allergen-impact functions.",
+    "The public RASFF interface omits commercial identities, limiting its value for supplier-level incident linkage.",
+    "No public evidence establishes distributor feed rights, channel economics or SME willingness to pay per cleared change."
+  ],
+  "economics": {
+    "acquisition_route": "Seek one regional ingredient distributor as the sole initial anchor customer and permissioned data source through a bounded pilot covering a limited manufacturer cohort; do not assume a distributor commitment, feed right, or separate manufacturer acquisition.",
+    "capital_required_pln": 70000,
+    "founder_net_worth_path": "The former 300-site subscription projection is removed. No defensible path to more than 5 million PLN can yet be quantified from current evidence. The conservative sequence is a paid permissioned anchor pilot, measured positive contribution after review and connector costs, distributor renewal and portfolio expansion, and then replication across additional distributors while retaining founder ownership; timing and value remain unknown until those milestones produce observed contract and margin data.",
+    "founder_time": "Limit founder work to about 3 hours daily for parsing, connector logic, exception operations and one anchor relationship; qualified customer personnel or a contracted food-safety professional must retain exception review and release authority.",
+    "gross_margin_basis": "Unknown until a scoped distributor pilot measures documents and changes per account, exception rate, human-review time, connector maintenance, support, security and insurance; the prior unsupported 65-75% planning range is not carried forward.",
+    "payback": "Do not expand beyond the anchor unless measured first-year gross profit after human review, connector, support, security and insurance costs exceeds acquisition and onboarding cost; payback is currently unknown.",
+    "pricing": "Replace separate onboarding, site-month and per-report manufacturer prices with a distributor-paid managed-service contract whose fee would be set only after a scoped pilot measures covered accounts, change volume, service level and review burden; no price or commitment is asserted.",
+    "retention_or_repeat": "Renewal and portfolio expansion would depend on the distributor adopting the permissioned change intake and audit trail across supplier and customer accounts; recurrence is plausible from specification changes, but adoption and renewal are unverified."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A contractually permissioned distributor-level corpus of normalized supplier changes, human exception decisions and remediation outcomes improves prioritisation within that distributor's covered portfolio without repurposing confidential formulas",
+    "customer": "Regional EU ingredient distributors serving small and mid-sized food manufacturers",
+    "distribution_mechanism": "A direct anchor sale to an ingredient distributor, followed by deployment inside its supplier and manufacturer account workflow rather than separate SME acquisition",
+    "offer_and_business_model": "Distributor-funded managed supplier-change intake, dependency impact triage and human-governed exception service bundled into the distributor's customer service",
+    "payer_and_paid_event": "The ingredient distributor pays for contracted portfolio coverage and renews or expands coverage after measured service use; manufacturers do not pay separately",
+    "problem_trigger": "An ingredient supplier changes composition, process, allergen declaration, origin or specification version"
+  },
+  "founder_fit": [
+    "Document parsing, dependency modelling, connector logic and exception scoring fit the founder's data-science and AI leverage.",
+    "One anchor relationship and no separate SME subscription sales reduce ongoing acquisition load and can fit the founder's part-time limit, although winning and serving a distributor remains an unvalidated enterprise-sales burden.",
+    "The founder must not take food-safety release authority; qualified customer personnel or a contracted professional must govern exceptions and releases, adding cost and coordination that the pilot must measure."
+  ],
+  "parent": {
+    "candidate_id": "embed-05",
+    "version": 3
+  },
+  "redesign": {
+    "changed_fingerprint_fields": [
+      "customer",
+      "payer_and_paid_event",
+      "offer_and_business_model",
+      "distribution_mechanism",
+      "compounding_advantage"
+    ],
+    "economic_effect": "Replaces a 300-site manufacturer subscription model and unpriced channel share with one distributor as payer, permissioned feed source and deployment channel. The conservative path now advances only from a paid scoped anchor pilot to renewal, portfolio expansion and multi-distributor replication when observed contract revenue exceeds measured human-review, connector, support, security, insurance, acquisition and onboarding costs; no price, margin, commitment or wealth timing is assumed."
+  },
+  "risks": [
+    "A missed allergen dependency could harm consumers; the service must never auto-release labels and requires immutable audit trails, access controls and qualified human review.",
+    "Dependence on one anchor creates concentration, bargaining and termination risk, while incumbent PLM vendors can bundle the workflow or block integrations.",
+    "Supplier specifications and formulas are commercially sensitive; a distributor contract must grant narrowly scoped processing, feed and derived-data rights, and no such rights are currently established.",
+    "The distributor may not accept liability, fund the service or persuade manufacturers to use it, and human review, security and insurance may prevent positive contribution."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2011/1169/oj/eng",
+    "https://eur-lex.europa.eu/eli/reg/2002/178/oj/eng",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=oj%3AJOC_2022_355_R_0001",
+    "https://food.ec.europa.eu/food-safety/rasff_en",
+    "https://ec.europa.eu/eurostat/documents/15216629/20555393/KS-01-24-000-EN-N.pdf",
+    "https://www.fooddrinkeurope.eu/policy-area/smes/",
+    "https://tracegains.com/product-development/specification-management/",
+    "https://www.specright.com/industry/food-beverage/",
+    "https://www.foodchainid.com/products/recipes-specifications/",
+    "https://www.foodsconnected.com/solutions/food-specifications-npd/"
+  ],
+  "stage": "development",
+  "structure": {
+    "commercial_archetype": "Distributor-funded managed compliance infrastructure",
+    "control_point": "The distributor's permissioned supplier-change intake and human-approved exception trail across covered manufacturer accounts",
+    "critical_dependency": "A distributor anchor willing to pay and grant timely, narrowly scoped feed and processing rights, plus qualified human exception and release ownership"
+  },
+  "thesis": "Sell a permissioned supplier-change intake and human-governed exception service to a regional ingredient distributor as the anchor payer and data source, bundling it into covered manufacturer accounts instead of charging SMEs separately, while qualified personnel retain every label and release decision.",
+  "title": "Distributor Supplier-Change Desk",
+  "uncertainties": [
+    "Whether an ingredient distributor will pay, provide timely feeds and grant narrowly scoped processing and derived-data rights without an assumed commitment.",
+    "Whether covered account count, change volume and contract value can support positive contribution after human review, connector, support, security and insurance costs.",
+    "Whether manufacturer users will adopt the distributor-bundled workflow and qualified personnel will accept its audit trail rather than existing PLM, portals or spreadsheets.",
+    "Achievable extraction and exception accuracy, onboarding effort and review burden across languages and inconsistent supplier formats.",
+    "Renewal, portfolio expansion and replication across distributors are unvalidated, leaving the founder-wealth path and timing unquantified."
+  ],
+  "version": 4
+}

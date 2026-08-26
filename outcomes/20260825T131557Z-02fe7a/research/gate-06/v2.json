@@ -1,0 +1,152 @@
+{
+  "candidate_id": "gate-06",
+  "candidate_sha256": "7c72a6a2e514cbb70010f126cdbed79e469b3980078167389de150b1ea98445d",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "g06-r1",
+      "evidence_refs": [
+        "g06-s1",
+        "g06-s2",
+        "g06-s3"
+      ],
+      "statement": "There is a recurring legal filing event and a lawful role for an IT service provider, provided sender, declarant, authority, and technical access are correctly configured."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "g06-r2",
+      "evidence_refs": [
+        "g06-s2",
+        "g06-s4",
+        "g06-s5"
+      ],
+      "statement": "STP and NCTS Phase 6 create official alternatives, so the venture must prove incremental value from preflight, TMS integration, or observability rather than mere submission."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "g06-r3",
+      "evidence_refs": [
+        "g06-s6"
+      ],
+      "statement": "Poland's road-freight activity is large enough to justify customer discovery, but the target extra-EU ENS transaction pool cannot be inferred from tonne-kilometres."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "g06-r4",
+      "evidence_refs": [
+        "g06-s7",
+        "g06-s8"
+      ],
+      "statement": "Incumbents already cover portal, connectivity, API, filing, and rule-update functions, making a reseller-accessible correction graph a necessary differentiation hypothesis."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "g06-r5",
+      "evidence_refs": [
+        "g06-s2",
+        "g06-s3",
+        "g06-s6",
+        "g06-s7",
+        "g06-s8"
+      ],
+      "statement": "No reviewed source establishes target-customer count, preventable rejection rate, incumbent price, willingness to pay, reseller conversion, support cost, or conservative unit economics."
+    }
+  ],
+  "contrary_evidence": [
+    "Official self-service and combined-transit filing routes exist.",
+    "Direct access carries more security and conformance work than the initial 'gateway' description suggests.",
+    "Established vendors already sell overlapping capabilities and withhold public pricing.",
+    "High national freight volume is not evidence of the narrow addressable segment."
+  ],
+  "schema_version": 2,
+  "sources": [
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2013-10-10",
+      "publisher": "Official Journal of the European Union / EUR-Lex",
+      "source_id": "g06-s1",
+      "source_type": "primary_law",
+      "stance": "supporting",
+      "title": "Regulation (EU) No 952/2013 laying down the Union Customs Code",
+      "url": "https://eur-lex.europa.eu/eli/reg/2013/952/oj"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "European Commission, Directorate-General for Taxation and Customs Union",
+      "source_id": "g06-s2",
+      "source_type": "regulator_guidance",
+      "stance": "context",
+      "title": "Import Control System 2 (ICS2)",
+      "url": "https://taxation-customs.ec.europa.eu/customs/customs-security/import-control-system-2_en"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "European Commission, Directorate-General for Taxation and Customs Union",
+      "source_id": "g06-s3",
+      "source_type": "regulator_guidance",
+      "stance": "supporting",
+      "title": "ICS2 Frequently Asked Questions",
+      "url": "https://taxation-customs.ec.europa.eu/customs/customs-security/import-control-system-2/faq_en"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2025-08-29",
+      "publisher": "European Commission, Directorate-General for Taxation and Customs Union",
+      "source_id": "g06-s4",
+      "source_type": "regulator_guidance",
+      "stance": "context",
+      "title": "ICS2 and NCTS Phase 6 derogation guidance for road and rail",
+      "url": "https://taxation-customs.ec.europa.eu/document/download/f6265dc2-c550-48df-a26b-11cfa809b1f5_en?filename=ICS2-NTCS6+derogation+-+Guidance+for+road+and+rail_20250829.pdf"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "European Commission, Directorate-General for Taxation and Customs Union",
+      "source_id": "g06-s5",
+      "source_type": "regulator_guidance",
+      "stance": "contradicting",
+      "title": "New Computerised Transit System (NCTS)",
+      "url": "https://taxation-customs.ec.europa.eu/online-services/online-services-and-databases-customs/new-computerised-transit-system-ncts_en"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2026-07-31",
+      "publisher": "Eurostat",
+      "source_id": "g06-s6",
+      "source_type": "official_statistics",
+      "stance": "supporting",
+      "title": "EU road freight transport up by 0.9% in 2025",
+      "url": "https://ec.europa.eu/eurostat/fr/web/products-eurostat-news/w/ddn-20260731-2"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2022-05-12",
+      "publisher": "Descartes Systems Group",
+      "source_id": "g06-s7",
+      "source_type": "vendor_product",
+      "stance": "contradicting",
+      "title": "Import Control System 2 (ICS2)",
+      "url": "https://www.descartes.com/sites/default/files/media/documents/2022-05/5.12.22%20DES_0286_ICS2_Infographic_V2.pdf"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "AEB SE",
+      "source_id": "g06-s8",
+      "source_type": "vendor_product",
+      "stance": "contradicting",
+      "title": "Customs software: one solution for export, import, and customs agent management",
+      "url": "https://www.aeb.com/en/customs-software-platform/index.php"
+    }
+  ],
+  "unknowns": [
+    "Count, ENS frequency, and current tool stack of small Polish and CEE extra-EU road forwarders.",
+    "Measured avoidable rejection and delay value by lane and filing route.",
+    "TMS interface rights, reseller commercial terms, and partner willingness.",
+    "Conformance, certificate, liability-insurance, uptime, and on-call operating cost.",
+    "Achievable price, gross margin, CAC, payback, retention, and founder-net-worth timing."
+  ]
+}

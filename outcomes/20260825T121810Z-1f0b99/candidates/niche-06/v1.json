@@ -1,0 +1,82 @@
+{
+  "candidate_id": "niche-06",
+  "claims": [
+    {
+      "claim_id": "niche-06-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC6559819/"
+      ],
+      "statement": "ACMG recommends separate laboratory policies for variant reevaluation and case reanalysis, an up-to-date classified-variant database, and prioritized communication of clinically significant reclassifications; it also notes that billable professional services may be necessary for sustainability."
+    },
+    {
+      "claim_id": "niche-06-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC6336881/"
+      ],
+      "statement": "European Society of Human Genetics recommendations describe recontacting as desirable where clinically useful but operationally challenging and requiring sustainable, shared responsibility across laboratories, providers, and patients."
+    },
+    {
+      "claim_id": "niche-06-c03",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.ncbi.nlm.nih.gov/clinvar/intro/",
+        "https://www.ncbi.nlm.nih.gov/clinvar/docs/clinsig/"
+      ],
+      "statement": "ClinVar versions submissions and accepts updated classifications, making it a useful change signal, but its records are variant-level rather than patient-specific; every case decision therefore still requires laboratory governance."
+    }
+  ],
+  "contrary_evidence": [
+    "Professional guidance does not create a universal duty or reimbursement model for routine reanalysis, and responsibility remains contested.",
+    "Established LIMS and variant-interpretation vendors can add change alerts and recontact workflows."
+  ],
+  "economics": {
+    "acquisition_route": "Integrate one narrow hereditary-cancer panel workflow through a LIMS partner, then expand to other panels and laboratories",
+    "capital_required_pln": 90000,
+    "founder_net_worth_path": "Hypothesis: 20 laboratories averaging 200k PLN ARR produce 4M PLN ARR and about 2.2M PLN EBITDA by years 6 to 7. At 4x EBITDA and 65% founder ownership, equity is about 5.7M PLN in years 7 to 9; the path depends on recurring laboratory budgets rather than patient subscriptions.",
+    "founder_time": "15 to 20 hours weekly for security, integration, and evidence-pipeline work; clinical signoff is external",
+    "gross_margin_basis": "Expected 70% to 85% software gross margin after secure hosting; clinical review remains the laboratory's paid professional act",
+    "payback": "The buyer case is reduced manual surveillance, reproducible accreditation evidence, and billable reevaluation; each component needs pilot measurement",
+    "pricing": "20,000 to 60,000 PLN onboarding plus 2 to 6 PLN per active case monthly with a 3,000 PLN monthly minimum",
+    "retention_or_repeat": "Historical reports remain monitored for years, new reports continuously enter, and every evidence revision creates workflow activity"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A governed mapping of evidence changes to laboratory review decisions, report actions, consent states, and recontact outcomes",
+    "customer": "Private CEE clinical genetics laboratories and hereditary-cancer or rare-disease clinics with historical patient reports",
+    "distribution_mechanism": "Genetics LIMS integrators, accreditation consultants, genetic-counselor networks, and hereditary-cancer clinic groups",
+    "offer_and_business_model": "Consent-aware evidence-change queue, clinician signoff, report addenda, and audit trail sold as B2B software",
+    "payer_and_paid_event": "The laboratory pays at historical-record onboarding and annually per monitored case or variant set",
+    "problem_trigger": "A public evidence source or guideline changes and prior laboratory classifications may require professional reevaluation or recontact"
+  },
+  "founder_fit": [
+    "Strong fit with genetics and proactive-health interests plus data-pipeline expertise, and it avoids consumer-influencer distribution. The founder can build signal ingestion and audit workflows part-time, but must recruit qualified clinical genetics oversight and budget for security and regulatory classification."
+  ],
+  "parent": null,
+  "risks": [
+    "Missed or over-triggered alerts can cause clinical harm, anxiety, and liability.",
+    "Genomic data has exceptional privacy and security sensitivity under GDPR.",
+    "The product may qualify as medical-device software depending on claims and functionality."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC6336881/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC6559819/",
+    "https://www.ncbi.nlm.nih.gov/clinvar/docs/clinsig/",
+    "https://www.ncbi.nlm.nih.gov/clinvar/intro/"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Clinical lifecycle workflow software",
+    "control_point": "The clinician-signed queue linking an evidence change to a prior report and any recontact action",
+    "critical_dependency": "Laboratories must retain structured consent and classification data and accept shared but clearly bounded recontact responsibility"
+  },
+  "thesis": "Build a consent-aware recontact operating layer for private genetic laboratories in Central and Eastern Europe. It would ingest the laboratory's prior variant classifications, monitor versioned public evidence and guideline changes, rank records for professional reevaluation, document the reviewing clinician's decision, and issue traceable report addenda and recontact tasks. The narrow promise is a safer work queue and audit trail, not autonomous variant classification or patient advice.",
+  "title": "Clinician-Signed Variant Recontact Queue for CEE Genetic Labs",
+  "uncertainties": [
+    "How many CEE laboratories retain enough structured variant and consent data for practical onboarding.",
+    "Which reclassification types laboratories will pay to monitor and at what interval.",
+    "Whether Polish payers or patients reimburse reevaluation professional time."
+  ],
+  "version": 1
+}

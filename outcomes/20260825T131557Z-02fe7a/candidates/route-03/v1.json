@@ -1,0 +1,73 @@
+{
+  "candidate_id": "route-03",
+  "claims": [
+    {
+      "claim_id": "route-03-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://energy.ec.europa.eu/topics/energy-efficiency/financing/financing-building-renovations_en"
+      ],
+      "statement": "The European Commission says more than 80% of the investment needed for building renovation must be mobilized from private capital, including lenders, specialist companies, and building owners."
+    },
+    {
+      "claim_id": "route-03-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reco/2024/2476/oj/eng"
+      ],
+      "statement": "EU guidance defines energy-performance contracting around improvement that is verified and monitored over the contract term and explicitly references measurement-and-verification methodologies and quality assurance."
+    }
+  ],
+  "contrary_evidence": [
+    "Banks may treat small retrofit loans as too low-value to justify richer evidence workflows.",
+    "EPCs and utility data remain fragmented nationally, limiting standardization."
+  ],
+  "economics": {
+    "acquisition_route": "Use installer-generated packets to demonstrate the workflow, then pilot through a green-loan broker or leasing intermediary before a direct bank contract.",
+    "capital_required_pln": 85000,
+    "founder_net_worth_path": "Hypothesis: 20000 projects yearly at 450 PLN blended net revenue produce 9m PLN annual revenue; at 28% EBITDA, 4x EBITDA, and 60% founder ownership, equity is about 6.0m PLN in year 6-9. Retained earnings are not counted separately.",
+    "founder_time": "Hypothesis: 12-18 hours weekly until a funded pilot; specialist security and energy-audit work is contracted only after revenue.",
+    "gross_margin_basis": "Hypothesis: 70-82% after document processing, telemetry, support, and periodic manual exception review.",
+    "payback": "Hypothesis: 80000-150000 PLN account acquisition and compliance cost recovered after roughly 250-400 funded projects; the initial bootstrap stops before any unfunded bank-scale build.",
+    "pricing": "Hypothesis: 400-900 PLN per activated loan plus 10-25 PLN monthly for monitored projects, with volume discounts.",
+    "retention_or_repeat": "Multi-year monitoring and portfolio reporting create repeat revenue; each new funded project adds another paid event."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A normalized corpus of project documents, missing-evidence patterns, and post-install anomalies reduces verification effort",
+    "customer": "Banks and leasing firms financing residential or SME energy retrofits",
+    "distribution_mechanism": "Lenders and their installer or broker networks make the evidence workflow part of loan fulfillment",
+    "offer_and_business_model": "Evidence ingestion, audit trail, exception flags, and portfolio reporting API without underwriting or savings certification",
+    "payer_and_paid_event": "Lender pays an activation fee per funded project and optionally a monthly monitoring fee",
+    "problem_trigger": "A retrofit loan is originated or reaches a milestone that requires proof of eligibility, installation, or performance"
+  },
+  "founder_fit": [
+    "Combines finance-oriented thinking with data pipelines and renewable-energy domain access.",
+    "The family business can create realistic project packets before any lender integration.",
+    "API economics and concentrated institutional distribution avoid constant consumer selling."
+  ],
+  "parent": null,
+  "risks": [
+    "Bank security and procurement reviews can exceed a bootstrapper's runway.",
+    "Poor meter or document data may make measured outcomes misleading.",
+    "Product claims could create certification or professional-liability exposure."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://energy.ec.europa.eu/topics/energy-efficiency/financing/financing-building-renovations_en",
+    "https://eur-lex.europa.eu/eli/reco/2024/2476/oj/eng"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "lender-distributed outcome-verification data rail",
+    "control_point": "Immutable pre/post retrofit evidence record used in loan fulfillment and portfolio reporting",
+    "critical_dependency": "A financing partner that recognizes a lower verification cost or reporting benefit"
+  },
+  "thesis": "Sell lenders and leasing firms a narrow evidence rail for energy-retrofit finance: collect installer documents, bills, EPC fields, and device telemetry; produce a traceable pre/post project file; and flag missing or contradictory evidence. It does not certify savings or make credit decisions. The lender distributes it with each loan and benefits from lower verification cost, clearer green-product reporting, and earlier detection of failed installations.",
+  "title": "Retrofit Loan Evidence Rail",
+  "uncertainties": [
+    "Which Polish green-loan or leasing product has the most expensive manual evidence process?",
+    "Whether lenders will pay per funded project or require the installer to pay.",
+    "What minimum data set predicts post-installation problems without making regulated credit decisions?"
+  ],
+  "version": 1
+}

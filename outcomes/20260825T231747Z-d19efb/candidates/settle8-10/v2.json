@@ -1,0 +1,156 @@
+{
+  "candidate_id": "settle8-10",
+  "claims": [
+    {
+      "claim_id": "settle8-10-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ref.gs1.org/standards/eancom/",
+        "https://www.gs1.org/standards/edi/solutions",
+        "https://edi-ecom-xml.gs1.org/functional-user-guide/3_6/CN.pdf"
+      ],
+      "statement": "Verified fact: GS1 EANCOM and GS1 XML cover order-to-cash, invoice and remittance flows, commercial disputes, and claims codes including promotion discounts, incorrect references, and incorrect charges."
+    },
+    {
+      "claim_id": "settle8-10-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/d0cb30f0658a42e5aeb9d1419f39cd71/aa22f6e6c86a468199301bdddeb58296.html",
+        "https://help.sap.com/docs/SAP_S4HANA_CLOUD/918bca53037f408f91a2295d04ac16bc/7101d553088f4308e10000000a174cb4.html"
+      ],
+      "statement": "Verified fact: SAP Revenue Growth Management Claims validates retailer deduction requests against condition contracts and supporting invoices or disputes, while SAP Dispute Management manages receivables discrepancies and investigation workflows."
+    },
+    {
+      "claim_id": "settle8-10-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.highradius.com/product/deductions-management-automation-software/",
+        "https://www.vistex.com/solutions/cloud-solutions/trade-promotion-management/",
+        "https://www.inmar.com/blog/insights/martech/understand-and-optimize-your-deductions"
+      ],
+      "statement": "Verified fact: HighRadius, Vistex, and Inmar document products that overlap the core offer through retailer-portal or EDI ingestion, promotion matching, claim validation, evidence assembly, dispute workflow, settlement, and ERP integration."
+    },
+    {
+      "claim_id": "settle8-10-c4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.vistex.com/case-studies/Ateeco-optimizes-trade-spend-programs.pdf"
+      ],
+      "statement": "Verified vendor-reported evidence: a 200-plus-employee food producer adopted Vistex paybacks and chargebacks software and reported reduced aged receivables, deduction-clearing time, and claims administration, showing both a mid-sized problem and a mature substitute outside the target geography."
+    },
+    {
+      "claim_id": "settle8-10-c5",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://uokik.gov.pl/public/index.php/en/contractual-advantage"
+      ],
+      "statement": "Verified fact: Polish rules for agricultural and food supply prohibit unjustified reductions after accepted delivery, while some marketing, advertising, storage, or display charges are permitted only if clearly agreed in advance; software evidence can support review but cannot itself establish legal entitlement."
+    },
+    {
+      "claim_id": "settle8-10-c6",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/zakres-obowiazkowego-ksef/"
+      ],
+      "statement": "Verified fact and inference: KSeF structured invoice receipt became mandatory in Poland from 1 February 2026 and issuance is phased in during 2026, reducing differentiation from generic invoice extraction but not supplying promotion agreements, remittance detail, portal evidence, or case outcomes."
+    },
+    {
+      "claim_id": "settle8-10-c7",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://www.highradius.com/product/deductions-management-automation-software/",
+        "https://www.vistex.com/case-studies/Ateeco-optimizes-trade-spend-programs.pdf",
+        "https://www.inmar.com/blog/insights/martech/understand-and-optimize-your-deductions"
+      ],
+      "statement": "Evidence-supported inference: the only plausible initial wedge is a supplier-authorized historical audit and retailer-specific evidence layer for a mid-market account whose existing stack leaves measurable recovery or labor gaps; generic matching is not differentiated."
+    },
+    {
+      "claim_id": "settle8-10-c8",
+      "confidence": "low",
+      "evidence_refs": [],
+      "statement": "Unknown: Polish and CEE mid-market recoverable deduction rates, buyer willingness, data rights, price, gross margin, and success-fee attribution have not been verified."
+    }
+  ],
+  "contrary_evidence": [
+    "SAP's current Revenue Growth Management Claims product already validates deduction claims against condition contracts and source disputes or invoices: https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/d0cb30f0658a42e5aeb9d1419f39cd71/aa22f6e6c86a468199301bdddeb58296.html",
+    "HighRadius documents automated portal and email capture, item-level trade-promotion matching, evidence collection, dispute submission, and ERP updates, closely matching the proposed layer: https://www.highradius.com/product/deductions-management-automation-software/",
+    "Vistex already automates claims validation, reconciliation, payments, credits, and deductions inside trade-promotion management: https://www.vistex.com/solutions/cloud-solutions/trade-promotion-management/",
+    "A vendor case study for a 200-plus-employee food producer reports that an incumbent reduced undetermined-deduction clearing time by 50%, showing an established mid-market substitute: https://www.vistex.com/case-studies/Ateeco-optimizes-trade-spend-programs.pdf",
+    "GS1 already standardizes commercial-dispute and claims messages and detailed adjustment reason codes: https://edi-ecom-xml.gs1.org/functional-user-guide/3_6/CN.pdf",
+    "Poland's 2026 KSeF mandate makes structured invoice data broadly available through the national system, weakening invoice parsing as a wedge: https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/zakres-obowiazkowego-ksef/"
+  ],
+  "economics": {
+    "acquisition_route": "Offer one contract-authorized, read-only historical deduction audit to an independent mid-sized supplier, with no employer data or contacts, then test conversion to recurring workflow software through an ERP or EDI adviser. Partner willingness is unknown.",
+    "capital_required_pln": 45000,
+    "founder_net_worth_path": "Unknown. No evidence-backed founder-wealth timing can be stated before incremental recovery, price, churn, service intensity, conflict clearance, and obtainable customer count are measured. Recompute only from contracted revenue and contribution margin without double-counting retained earnings.",
+    "founder_time": "Planning constraint: 3-4 hours/day for one retailer format and one independent supplier, with an FMCG finance adviser. Cross-functional case review, portal upkeep, and enterprise security may exceed this without contracted help.",
+    "gross_margin_basis": "Unknown. No reviewed evidence supports the prior 65-82% estimate. Model portal maintenance, EDI and ERP mapping, security, cross-functional review, retailer-specific dispute submission, and attribution disputes before claiming software margins.",
+    "payback": "Unknown. Establish a written counterfactual baseline and count only cash actually recovered or documented labor avoided, net of credits that would have occurred without the product. No reviewed evidence validates a three-times subscription return for the target segment.",
+    "pricing": "Unknown. No reviewed incumbent source publishes comparable Polish or CEE list pricing, and no target buyer has validated the prior PLN 4,000-18,000 monthly or 3-10% recovery-fee hypothesis. Begin only with a quoted fixed-fee historical audit whose scope and baseline are agreed in writing.",
+    "retention_or_repeat": "Short payments, promotion claims, and supporting-document work recur in documented enterprise workflows, but target-segment retention is unproven and incumbents can bundle the workflow into ERP, trade-promotion, or receivables suites."
+  },
+  "fingerprint": {
+    "compounding_advantage": "permissioned retailer-specific reason-code mappings and outcome-labeled case patterns may improve automation, while agreement and claim history can become the supplier's operational memory",
+    "customer": "mid-sized CPG brands and distributors selling through Polish and Central European grocery, drugstore, and convenience chains whose supplier-authorized deduction data remains split across EDI, email, ERP, promotion systems, and retailer portals",
+    "distribution_mechanism": "FMCG ERP and EDI consultancies, fractional finance leaders, distributors, and a paid historical-deduction audit; no partner commitment or conversion evidence exists",
+    "offer_and_business_model": "supplier-authorized EDI, email, ERP, and portal ingestion; promotion-term extraction; line-level claim matching; evidence assembly; human approval; credit-note workflow; and recovery analytics",
+    "payer_and_paid_event": "supplier accounts-receivable, finance, or revenue-growth team pays after a fixed-scope audit proves incremental recoveries or materially lower handling cost; exact budget owner and paid event remain unverified",
+    "problem_trigger": "a retailer remittance arrives short or a debit note cites a promotion discount that finance cannot trace to an agreed term, item, location, execution record, or settlement"
+  },
+  "founder_fit": [
+    "The founder understands FMCG data and business analysis, subject to strict separation from all employer-confidential data, processes, and contacts.",
+    "Document matching, anomaly detection, and exception classification fit the founder's AI and quantitative skills.",
+    "A read-only historical audit can test value before a broad product build.",
+    "Partner-led B2B distribution avoids public-facing creator work but has not been validated.",
+    "The workflow requires finance, sales, and sometimes legal judgment, so domain review cannot be delegated entirely to automation."
+  ],
+  "parent": {
+    "candidate_id": "settle8-10",
+    "version": 1
+  },
+  "risks": [
+    "SAP Revenue Growth Management Claims and Dispute Management already validate deductions against agreements and manage dispute workflows.",
+    "HighRadius, Vistex, and Inmar already offer portal and EDI ingestion, promotion matching, evidence assembly, dispute workflow, ERP updates, and claims settlement.",
+    "GS1 EANCOM and GS1 XML already standardize order-to-cash, commercial-dispute, remittance, and claims reason-code messages.",
+    "Mandatory KSeF structured invoicing in Poland reduces differentiation in invoice capture, although it does not resolve promotion terms or retailer evidence.",
+    "Retailer portal credentials, promotion contracts, sell-out data, and proof-of-performance documents may be unavailable or contractually restricted.",
+    "Retailer dispute windows and format changes create ongoing operational maintenance and missed-deadline liability.",
+    "Success-fee attribution can be contested because recoveries may result from existing staff, later credits, offsets, or unrelated negotiation.",
+    "For agri-food suppliers, Polish unfair-contractual-advantage law makes some reductions unlawful and some marketing charges lawful only when agreed in advance; software cannot safely classify legal entitlement without reviewed facts.",
+    "Employer conflict-of-interest, confidentiality, and reputational boundaries require independent clearance before any adjacent commercial activity.",
+    "Human review and bespoke retailer workflows can turn the product into a labor-intensive service."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://ref.gs1.org/standards/eancom/",
+    "https://www.gs1.org/standards/edi/solutions",
+    "https://edi-ecom-xml.gs1.org/functional-user-guide/3_6/CN.pdf",
+    "https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/d0cb30f0658a42e5aeb9d1419f39cd71/aa22f6e6c86a468199301bdddeb58296.html",
+    "https://help.sap.com/docs/SAP_S4HANA_CLOUD/918bca53037f408f91a2295d04ac16bc/7101d553088f4308e10000000a174cb4.html",
+    "https://www.highradius.com/product/deductions-management-automation-software/",
+    "https://www.vistex.com/solutions/cloud-solutions/trade-promotion-management/",
+    "https://www.vistex.com/case-studies/Ateeco-optimizes-trade-spend-programs.pdf",
+    "https://www.inmar.com/blog/insights/martech/understand-and-optimize-your-deductions",
+    "https://uokik.gov.pl/public/index.php/en/contractual-advantage",
+    "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/zakres-obowiazkowego-ksef/"
+  ],
+  "stage": "research",
+  "structure": {
+    "commercial_archetype": "commercial deduction claims-resolution exchange",
+    "control_point": "promotion-agreement-to-remittance case file that determines whether a retailer deduction is accepted, disputed, credited, or recovered",
+    "critical_dependency": "authorized access to retailer remittance and deduction detail, promotion terms, point-of-sale or proof-of-performance evidence, and stable product and location identifiers"
+  },
+  "thesis": "Build a supplier-side claims exchange for mid-sized FMCG brands and distributors that joins authorized promotion agreements, item and location masters, sell-in or sell-out evidence, invoices, remittance advice, retailer deductions, credit notes, and resolution outcomes. The system assembles and routes a human-reviewable commercial-dispute case file; it does not make legal determinations, impersonate customers, or use unauthorised retailer access. Research narrows the wedge to suppliers whose current ERP, EDI, or trade-promotion stack does not already automate retailer-specific evidence collection and item-level matching.",
+  "title": "FMCG Trade-Promotion Deduction Resolution Exchange",
+  "uncertainties": [
+    "The incidence, value, age, and recoverability of trade-promotion deductions among mid-sized Polish and CEE suppliers are not established.",
+    "It is unknown whether accounts receivable, finance, key-account sales, revenue-growth management, or the owner controls budget in the target segment.",
+    "No target supplier has authorized a representative historical audit or confirmed data completeness.",
+    "No Polish or CEE buyer has validated subscription pricing, a recovery fee, procurement cycle, or acceptable data-processing terms.",
+    "The incremental recovery attributable to this layer versus existing ERP, EDI, adviser, or staff work is unknown.",
+    "The feasibility of maintaining retailer portal connectors without customer impersonation or prohibited credential use is unknown.",
+    "The PLN 45,000 capital figure is a planning cap, not an evidence-based build cost.",
+    "No evidence supports a founder-net-worth timeline."
+  ],
+  "version": 2
+}

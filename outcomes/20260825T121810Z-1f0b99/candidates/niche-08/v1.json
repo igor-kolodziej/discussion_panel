@@ -1,0 +1,80 @@
+{
+  "candidate_id": "niche-08",
+  "claims": [
+    {
+      "claim_id": "niche-08-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+      ],
+      "statement": "The EU AI Act framework requires high-risk systems to address dataset quality, logging, detailed documentation, human oversight, robustness, cybersecurity, and accuracy."
+    },
+    {
+      "claim_id": "niche-08-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://health.ec.europa.eu/document/download/b78a17d7-e3cd-4943-851d-e02a2f22bbb4_en"
+      ],
+      "statement": "Joint AI Board and Medical Device Coordination Group guidance states that medical-device AI is high risk under the AI Act when it is a safety component or device and is subject to third-party conformity assessment under MDR or IVDR."
+    },
+    {
+      "claim_id": "niche-08-c03",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://health.ec.europa.eu/document/download/b45335c5-1679-4c71-a91c-fc7a4d37f12b_en?filename=mdcg_2019_11_en.pdf"
+      ],
+      "statement": "The Commission's revised software guidance distinguishes medical-device software qualification and classification, so intended purpose and versioned technical evidence are upstream commercial control points, not late-stage paperwork only."
+    }
+  ],
+  "contrary_evidence": [
+    "Mature QMS, MLOps, requirements, and medical-device lifecycle platforms already cover adjacent traceability functions.",
+    "Many early biosignal startups will postpone compliance tooling until fundraising or a notified-body engagement."
+  ],
+  "economics": {
+    "acquisition_route": "Start with one EEG or ECG startup and one regulatory consultancy that can repeat the template across its client portfolio",
+    "capital_required_pln": 95000,
+    "founder_net_worth_path": "Hypothesis: 35 customers at 140k PLN blended ARR yield 4.9M PLN ARR and about 2M PLN EBITDA by year 7. At 4x EBITDA and 65% founder ownership, equity is about 5.2M PLN in years 7 to 9; channel reuse is essential because direct enterprise selling would be too slow.",
+    "founder_time": "18 to 22 hours weekly for the first integration, then 12 to 18 hours with regulatory implementation partners",
+    "gross_margin_basis": "Target 70% software gross margin and 40% to 55% blended contribution after specialist mapping support",
+    "payback": "The buyer case is fewer evidence-chasing weeks, fewer audit findings, and faster controlled releases; quantify those outcomes before annual pricing",
+    "pricing": "40,000 to 100,000 PLN onboarding plus 60,000 to 180,000 PLN per regulated model annually",
+    "retention_or_repeat": "Every model, dataset, claim, control, and release version must remain traceable through surveillance and recertification"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A proprietary map from auditor findings and biosignal failure modes to the exact experiments, controls, and evidence that resolved them",
+    "customer": "Small EU medical-device teams building AI from EEG, ECG, sleep, gait, or wearable sensor data",
+    "distribution_mechanism": "Notified-body preparation consultants, biosignal hardware vendors, CROs, and medtech accelerators",
+    "offer_and_business_model": "Evidence-graph software with regulated-product onboarding and expert-reviewed mapping templates",
+    "payer_and_paid_event": "The device manufacturer pays at model onboarding and annually per regulated product or technical file",
+    "problem_trigger": "A model version, intended-purpose claim, risk control, or conformity-assessment packet changes"
+  },
+  "founder_fit": [
+    "Very strong intersection of data science, neuroscience, biosignals, and systems thinking, with an EU location advantage. The founder can build integrations and evidence logic without being a public-facing clinician, but needs a paid MDR/IVDR quality expert and strict separation from employer IP."
+  ],
+  "parent": null,
+  "risks": [
+    "Customers may treat the graph as certification or legal advice.",
+    "Integrations touch proprietary models, clinical datasets, and cybersecurity-sensitive development systems.",
+    "Long enterprise sales and validation work can exceed the founder's part-time capacity."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+    "https://health.ec.europa.eu/document/download/b45335c5-1679-4c71-a91c-fc7a4d37f12b_en?filename=mdcg_2019_11_en.pdf",
+    "https://health.ec.europa.eu/document/download/b78a17d7-e3cd-4943-851d-e02a2f22bbb4_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Regulated R&D evidence infrastructure",
+    "control_point": "The versioned link between each intended claim or risk control and its exact supporting experiment",
+    "critical_dependency": "Regulatory consultants and auditors must value the evidence graph enough to make it part of their repeatable client workflow"
+  },
+  "thesis": "Build a traceability layer specifically for EU teams developing EEG, ECG, sleep, gait, or wearable medical-device AI. It would connect dataset versions, intended-purpose claims, risk controls, model runs, subgroup tests, human-oversight tests, and released software into an auditor-readable evidence graph. The wedge is automatic proof that each current claim and control points to the exact experiment and data version, complementing rather than replacing a QMS or notified-body assessment.",
+  "title": "Experiment-to-Technical-File Evidence Graph for Biosignal AI",
+  "uncertainties": [
+    "Whether a biosignal specialization produces enough willingness-to-pay beyond generic QMS integrations.",
+    "Which evidence mappings notified bodies will consistently recognize as useful.",
+    "Exact application timing and interaction of AI Act, MDR, and IVDR duties for each customer."
+  ],
+  "version": 1
+}

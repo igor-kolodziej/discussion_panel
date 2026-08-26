@@ -1,0 +1,82 @@
+{
+  "candidate_id": "settle9-05",
+  "claims": [
+    {
+      "claim_id": "settle9-05-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://bdo.mos.gov.pl/wp-content/uploads/2023/03/BDO_IS-Nawigacja-po-systemie-wersja-1.2.pdf"
+      ],
+      "statement": "The official BDO user documentation says its waste-records module supports waste records and creation of waste transfer cards (KPO)."
+    },
+    {
+      "claim_id": "settle9-05-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://bdo.mos.gov.pl/wp-content/uploads/2019/11/009414018.pdf"
+      ],
+      "statement": "Official BDO material describes the electronic KPO as a condition for lawful transfer where the record-keeping obligation applies."
+    },
+    {
+      "claim_id": "settle9-05-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://bdo.mos.gov.pl/wp-content/uploads/2019/11/Informacje-dot.-wpisu-do-Rejestru-BDO.pdf"
+      ],
+      "statement": "Official BDO guidance states that entities carrying out services as waste producers can be required to register and keep records in BDO."
+    }
+  ],
+  "contrary_evidence": [
+    "BDO is already the official system of record, so customers may tolerate manual invoice checks rather than buy another layer.",
+    "Large waste operators may already reconcile scales and billing inside proprietary systems."
+  ],
+  "economics": {
+    "acquisition_route": "Sell a 60-day one-stream leakage audit via BDO consultants and weighbridge vendors, then expand to all sites and counterparties",
+    "capital_required_pln": 60000,
+    "founder_net_worth_path": "Hypothesis: 180 sites at 3,000 PLN monthly yields 6.48m PLN ARR by years 5-6. A 20-30% operating margin, retained earnings and a 4-5x vertical-software valuation could create over 5m PLN of founder-owned value in years 6-8.",
+    "founder_time": "14-20 hours weekly during the first three connectors, then partner-led onboarding with exception-only founder review",
+    "gross_margin_basis": "Hypothesis: 75-89% after connector reuse; first-stream mapping and ambiguous waste-code review remain service-heavy",
+    "payback": "Hypothesis: 2-6 months when audit recovery funds the first-year subscription",
+    "pricing": "Hypothesis: 1,500-6,000 PLN per site monthly or 1-4 PLN per matched transfer, plus 10-20% of verified historical recoveries",
+    "retention_or_repeat": "Every pickup generates a document, weight and invoice; historical counterparty behavior improves checks and increases switching cost"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Waste-code, route, counterparty and scale discrepancy graph plus benchmark contamination/rate adjustments, producing better expected-value checks over time",
+    "customer": "Polish multi-site waste generators, collectors and industrial facilities with recurring documented waste transfers",
+    "distribution_mechanism": "White-label through BDO consultants, waste brokers, weighbridge vendors and facilities-management providers with installed client bases",
+    "offer_and_business_model": "Site-and-volume SaaS plus a one-off historical recovery audit; connectors for BDO exports, scales, telematics and ledgers",
+    "payer_and_paid_event": "A generator or collector pays when a waste stream is continuously matched and its invoice exceptions are resolved before approval",
+    "problem_trigger": "A KPO, measured weight, agreed tariff, pickup event and supplier/customer invoice disagree or a required document is incomplete"
+  },
+  "founder_fit": [
+    "Multi-source anomaly detection is directly aligned with the founder's technical skills.",
+    "A historical file audit is a low-capital, part-time validation wedge.",
+    "Consultant and vendor channels reduce ongoing social load."
+  ],
+  "parent": null,
+  "risks": [
+    "Incorrect matching must never silently alter official waste records.",
+    "Waste-code interpretation can require domain expertise and varies by process.",
+    "Counterparties may resist sharing rate and adjustment data."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://bdo.mos.gov.pl/wp-content/uploads/2023/03/BDO_IS-Nawigacja-po-systemie-wersja-1.2.pdf",
+    "https://bdo.mos.gov.pl/wp-content/uploads/2019/11/009414018.pdf",
+    "https://bdo.mos.gov.pl/wp-content/uploads/2019/11/Informacje-dot.-wpisu-do-Rejestru-BDO.pdf"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Vertical proof-to-invoice reconciliation SaaS",
+    "control_point": "Approval of a waste pickup invoice and closure of the corresponding BDO transfer record",
+    "critical_dependency": "Consistent export/API access from BDO and operational systems, plus customers willing to share commercially sensitive weights and rates"
+  },
+  "thesis": "Create a reconciliation twin for Polish waste generators, collectors and multi-site industrial firms that matches each BDO waste-transfer card to scales, vehicle arrival, contract rate, contamination adjustment, invoice and payment. The initial service audits one waste stream and recovers weight/rate/document exceptions before automating approval. Distribution through waste consultants, weighbridge software and facility-management firms offers a route around direct cold sales. The product does not replace the official BDO record or certify legal compliance.",
+  "title": "Waste Transfer Invoice Twin",
+  "uncertainties": [
+    "Average recoverable discrepancy per 100 transfers",
+    "Practical BDO data-access method for multi-site clients",
+    "Best initial stream: construction, packaging, hazardous or production waste"
+  ],
+  "version": 1
+}

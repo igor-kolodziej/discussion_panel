@@ -1,0 +1,230 @@
+{
+  "candidate_id": "control7-05",
+  "candidate_sha256": "c0edf0d53d4bf78d5ef68f2ee8e0e06b2d5b4a2248e7ea262a346861f947b88a",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "c705-q1",
+      "evidence_refs": [
+        "c705-s1"
+      ],
+      "statement": "Genomic classifications change, laboratories need documented reevaluation workflows, and professional reanalysis services may justifiably be billable."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "c705-q2",
+      "evidence_refs": [
+        "c705-s2"
+      ],
+      "statement": "Laboratory burden is real: a study covering all nine Dutch diagnostic laboratories found reactive practice common and routine periodic reinterpretation viewed as infeasible."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "c705-q3",
+      "evidence_refs": [
+        "c705-s1",
+        "c705-s3"
+      ],
+      "statement": "Recontact is professionally desirable in selected cases but responsibility and a universal duty remain unsettled."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "c705-q4",
+      "evidence_refs": [
+        "c705-s4"
+      ],
+      "statement": "An autonomous NGS interpretation or diagnostic-decision product would enter IVD medical-device scope under current EU guidance."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "c705-q5",
+      "evidence_refs": [
+        "c705-s5"
+      ],
+      "statement": "The registry would process genetic special-category data and therefore needs a complete GDPR basis, safeguards, minimization, and security design."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "c705-q6",
+      "evidence_refs": [
+        "c705-s6"
+      ],
+      "statement": "EHDS genomic and second-wave lab-result milestones are mainly 2031 and do not prove near-term buying urgency."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "c705-q7",
+      "evidence_refs": [
+        "c705-s7"
+      ],
+      "statement": "SeqOne already markets automatic monthly historical-case reevaluation, creating direct incumbent pressure on the original automation layer."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "c705-q8",
+      "evidence_refs": [
+        "c705-s8",
+        "c705-s9",
+        "c705-s10"
+      ],
+      "statement": "Polish providers currently charge for reanalysis, proving a paid clinical event but not an annual software subscription."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "c705-q9",
+      "evidence_refs": [
+        "c705-s11"
+      ],
+      "statement": "ClinVar offers a free, weekly-updated classification comparison source, while patient identity, consent, clinical review, and recontact remain outside that public database."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "c705-q10",
+      "evidence_refs": [
+        "c705-s1",
+        "c705-s2",
+        "c705-s4",
+        "c705-s7",
+        "c705-s8",
+        "c705-s9",
+        "c705-s10",
+        "c705-s11"
+      ],
+      "statement": "A vendor-neutral lab-owned administrative workflow is a more plausible wedge than duplicating clinical interpretation, provided intended-purpose counsel agrees."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "c705-q11",
+      "evidence_refs": [],
+      "statement": "No reviewed source establishes laboratory commitment, eligible imported-record volume, annual per-record willingness to pay, or a non-IVD classification for the exact product."
+    }
+  ],
+  "contrary_evidence": [
+    "c705-s7 is a direct automated-reevaluation incumbent.",
+    "c705-s8 through c705-s10 show laboratories already own paid reanalysis services.",
+    "c705-s2 documents operational resistance to routine periodic reinterpretation.",
+    "c705-s4 creates a material regulatory boundary around any clinical interpretation feature.",
+    "c705-s6 does not create near-term demand, and c705-s11 commoditizes the public update feed."
+  ],
+  "schema_version": 2,
+  "sources": [
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2019-04-24",
+      "publisher": "American College of Medical Genetics and Genomics / Genetics in Medicine",
+      "source_id": "c705-s1",
+      "source_type": "peer_reviewed_consensus",
+      "stance": "supporting",
+      "title": "Points to Consider in the Reevaluation and Reanalysis of Genomic Test Results",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6559819/"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2019-11-29",
+      "publisher": "European Journal of Human Genetics / PubMed",
+      "source_id": "c705-s2",
+      "source_type": "peer_reviewed_study",
+      "stance": "contradicting",
+      "title": "Reinterpretation, reclassification, and its downstream effects",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31779608/"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2018-03",
+      "publisher": "European Society of Human Genetics",
+      "source_id": "c705-s3",
+      "source_type": "professional_guidance_draft",
+      "stance": "context",
+      "title": "Recontacting patients in clinical genetics services — draft recommendations",
+      "url": "https://www.eshg.org/fileadmin/eshg/consultations/Recontacting_Draft_ESHG__Recommendations_March_2018_for_membership.pdf"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2025-06",
+      "publisher": "European Commission Medical Device Coordination Group",
+      "source_id": "c705-s4",
+      "source_type": "regulator_guidance",
+      "stance": "contradicting",
+      "title": "MDCG 2019-11 rev.1: Qualification and Classification of Software under MDR and IVDR",
+      "url": "https://health.ec.europa.eu/document/download/b45335c5-1679-4c71-a91c-fc7a4d37f12b_en?filename=mdcg_2019_11_en.pdf"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2016-05-04",
+      "publisher": "European Union",
+      "source_id": "c705-s5",
+      "source_type": "regulation",
+      "stance": "context",
+      "title": "General Data Protection Regulation — Article 9 and genetic data",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1526560528451&uri=CELEX:32016R0679"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2025-03-05",
+      "publisher": "European Commission",
+      "source_id": "c705-s6",
+      "source_type": "official_guidance",
+      "stance": "contradicting",
+      "title": "European Health Data Space Regulation — implementation timeline",
+      "url": "https://health.ec.europa.eu/ehealth-digital-health-and-care/european-health-data-space-regulation-ehds_en"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2024-04-19",
+      "publisher": "SeqOne / Congenica",
+      "source_id": "c705-s7",
+      "source_type": "incumbent_product_page",
+      "stance": "contradicting",
+      "title": "SeqOne GenomeAlert! A variant reevaluation automation agent",
+      "url": "https://www.congenica.com/news-insights/genomealert-automating-genetic-variant-reassessment"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated live price page",
+      "publisher": "Warsaw Genomics",
+      "source_id": "c705-s8",
+      "source_type": "incumbent_service_page",
+      "stance": "context",
+      "title": "Badanie całoeksomowe WES — reanaliza danych",
+      "url": "https://warsawgenomics.pl/panel/badanie-caloeksomowe-jednej-osoby-wes-reanaliza-danych"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated live price page",
+      "publisher": "NZOZ Genomed",
+      "source_id": "c705-s9",
+      "source_type": "incumbent_service_page",
+      "stance": "context",
+      "title": "EXOME-2 — reanaliza danych eksomowych",
+      "url": "https://diagnostyka.genomed.pl/pl/shop/product/EXOME-2/"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2026-01-01 (effective)",
+      "publisher": "Central Clinical Hospital, Medical University of Lodz",
+      "source_id": "c705-s10",
+      "source_type": "official_hospital_price_list",
+      "stance": "context",
+      "title": "Badania laboratoryjne — Genetyka — cennik 2026",
+      "url": "https://csk.umed.pl/cenniki/zaklad-i-poradnia-gen-kli/"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2026 current documentation",
+      "publisher": "US National Center for Biotechnology Information",
+      "source_id": "c705-s11",
+      "source_type": "official_database_documentation",
+      "stance": "context",
+      "title": "ClinVar Submission Overview",
+      "url": "https://www.ncbi.nlm.nih.gov/clinvar/docs/submit/"
+    }
+  ],
+  "unknowns": [
+    "Paid laboratory commitment and annual subscription willingness",
+    "Exact intended-purpose classification and quality-system burden",
+    "Historical-data portability, record eligibility, consent coverage, and contact accuracy",
+    "Allocation of recontact responsibility among laboratory, clinician, and patient",
+    "Integration cost, security and insurance cost, renewal, margin, and founder-net-worth timing"
+  ]
+}

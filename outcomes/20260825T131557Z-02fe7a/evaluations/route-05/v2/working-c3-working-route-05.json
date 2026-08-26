@@ -1,0 +1,120 @@
+{
+  "assumptions": [
+    "The insurer selects one peril and one eligible intervention and retains all underwriting, pricing, policy-language, and customer-advice decisions.",
+    "Development begins only after a paid pilot and an agreement granting access to the required policy, intervention, and claims linkage.",
+    "The first deployment uses a small insurer-approved contractor cohort and presents mitigation records as evidence, not safety certificates or savings guarantees.",
+    "Actuarial, privacy, and insurance-distribution expertise can be contracted within the stated bootstrap and part-time limits.",
+    "Pricing, completion, avoided-loss effects, margins, renewal, and policy scale remain planning assumptions."
+  ],
+  "base_score": 5.11,
+  "candidate_id": "route-05",
+  "candidate_sha256": "638139b141c422cc5cc72eb30d2c19e8a792867baed5f2a0e86ac751fece6810",
+  "candidate_version": 2,
+  "constrained_score": 4.91,
+  "evaluation_type": "working",
+  "evidence_needed_for_higher_score": "Secure a paid insurer pilot for a named high-frequency peril with retrospective linked claims showing a plausible effect, plus an approved evidence protocol, policyholder completion estimate, verification cost, procurement timeline, and written path to portfolio rollout if predefined outcomes are met.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "Putting the insurer in control of the intervention hypothesis and using the product as an evidence ledger is a sound response to the lack of standardized mitigation evidence. It avoids trying to invent a broad risk model, but the insight creates value only if one intervention produces measurable claims improvement.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Insurers have a real interest in reducing preventable losses and improving climate resilience. Yet EIOPA found scarce evidence, difficult standardization, and few explicit discounts, and there is no direct indication that a Polish insurer prioritizes or will fund this workflow.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "A paid pilot followed by recurring per-policy and accepted-record fees can align revenue with insurer volume, and embedded annual renewal workflows could retain well. Long procurement, integration, verification labor, fraud controls, and claims-maturation periods leave CAC payback and gross margin unresolved, while the wealth case requires large policy volume at unvalidated pricing.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "One insurer, peril, and intervention is a disciplined initial segment and can generate decision-grade learning. It may be too narrow or low-frequency to produce timely causal evidence, and no specific Polish intervention with sufficient claims volume and affordable verification has been identified.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "The intervention-evidence workflow is narrower than incumbent catastrophe and property intelligence and could own a useful operational niche. ICEYE and ZestyAI can extend mitigation functionality, while a large insurer such as PZU can build the ledger internally and controls the underlying data and customer channel.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "Proof for one intervention can support additional perils, home and small-commercial portfolios, contractors, insurers, and geographies. A reusable evidence standard and outcome-analysis layer would lower the cost of each adjacent program.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Linked intervention and aggregate claims history could become proprietary and operationally sticky once embedded in renewal workflows. The insurer owns much of the source data, cross-carrier pooling may be restricted, and the payer can insource or replace the vendor before a broad moat develops.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "An auditable accepted-intervention record can be more actionable than generic hazard intelligence and may make prevention programs measurable. There is not yet evidence that it improves losses enough to outweigh policyholder friction, intervention cost, verification expense, or existing insurer processes.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "Climate-related protection gaps and regulatory attention to prevention give insurers a current reason to test mitigation incentives. The same policy evidence shows retail implementation is early, which provides opportunity but also signals that enabling economics and standardization are not mature.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "One insurer can distribute the workflow across many policyholders through quote and renewal communications, creating strong leverage after a contract is won. The gateway is concentrated enterprise procurement with no demonstrated warm access, and customer completion still depends on insurer incentives and contractor execution.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "The evidence capture and analysis are technically compatible with the founder's skills and a contract-gated pilot can fit the budget. Actuarial validity, privacy, distribution-law boundaries, contractor fraud, integration, and multi-year claims feedback make execution specialist-heavy and slow.",
+      "score": 5,
+      "status": "scored"
+    }
+  ],
+  "final_score": 4.9,
+  "highest_value_structural_change": "Make the first product a retrospective, insurer-funded measurement service for an intervention the insurer already deploys, using existing claims and contractor records before adding policyholder workflow; this can establish effect size and budget ownership without waiting years for a greenfield cohort.",
+  "interaction_adjustment": -0.2,
+  "judge_id": "c3-working-route-05",
+  "main_structural_strength": "A single insurer contract can couple distribution, an intervention definition, evidence capture, and later claims outcomes, creating a potentially sticky data loop without consumer acquisition.",
+  "primary_score_limiter": "The insurer controls the data and channel, while the product cannot demonstrate economic value until a sufficiently frequent intervention produces credible claims results after a long feedback cycle.",
+  "qualified": false,
+  "raw_response_path": "artifacts/research/raw-c3-working-route-05.json",
+  "raw_response_sha256": "eadebd762eefd6ec1f7c5dece9468bd17aa838cee2cf5719999d014a9615f808",
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 2,
+  "strongest_disconfirming_evidence": "EIOPA's insurer pilot found scarce open evidence, difficult standardization of risk effects, and few explicit premium discounts, directly weakening the premise that retail mitigation programs are ready to scale.",
+  "unrounded_score": 4.91
+}

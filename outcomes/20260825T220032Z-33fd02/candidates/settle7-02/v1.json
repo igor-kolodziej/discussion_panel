@@ -1,0 +1,75 @@
+{
+  "candidate_id": "settle7-02",
+  "claims": [
+    {
+      "claim_id": "settle7-02-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://aeg-solar.com/service/warranty-claim/"
+      ],
+      "statement": "AEG Solar directs private customers to their installer and asks installer-channel claimants for model, serial number, purchase reference, defect description, and pictures."
+    },
+    {
+      "claim_id": "settle7-02-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.fronius.com/en/help-center/warranty/solar-inverter-warranty"
+      ],
+      "statement": "Fronius states that free inverter warranty cover depends on portal registration within a defined period, illustrating that preventive registration timing can affect later recovery."
+    }
+  ],
+  "contrary_evidence": [
+    "Manufacturer and distributor portals already perform the formal claim intake, so the value must come from cross-OEM recovery and labour saved rather than merely digitising a form.",
+    "Some warranty terms exclude travel, labour, consequential loss, or claims by intermediaries, limiting recoverable value."
+  ],
+  "economics": {
+    "acquisition_route": "Prove recovered value on a bounded family-business backlog, then sell through wholesalers and installer service communities",
+    "capital_required_pln": 50000,
+    "founder_net_worth_path": "A plausible 5-7 year route would require several thousand installer accounts across multiple countries, an average of roughly 2,000-3,000 PLN annual gross profit per account, and expansion into preventive registration or warranty analytics while the founder retains substantial equity",
+    "founder_time": "Approximately 10-14 hours per week after a part-time warranty specialist handles manufacturer follow-up",
+    "gross_margin_basis": "Automation and pooled specialist handling of repetitive claims, net of technician review, shipping coordination, and disputed-value appraisal",
+    "payback": "One recovered inverter, heat-pump component, or labour allowance may cover several months of fees; actual recovery frequency and value require sample audits",
+    "pricing": "299-999 PLN per installer per month plus 8-15% of cash, credit, labour allowance, or replacement value actually recovered",
+    "retention_or_repeat": "Recurring installed-base failures, new equipment registrations, and multiple OEM programmes create ongoing use"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A serial-level map of required evidence, failure modes, response times, exclusions, and realised recovery by OEM could improve claim routing and preventive registration",
+    "customer": "Independent Polish and Central European solar, storage, and heat-pump installers and O&M firms",
+    "distribution_mechanism": "Start with the family company's installed base, then partner with component wholesalers, O&M associations, insurer brokers, and installer ERP vendors",
+    "offer_and_business_model": "Cross-OEM warranty rules, evidence intake, AI-assisted dossier preparation, status chasing, and a settlement receipt; charge subscription plus 8-15% of measurable recovered value",
+    "payer_and_paid_event": "The installer pays a modest monthly platform fee and a percentage when an OEM or distributor authorises a replacement, service credit, or cash reimbursement",
+    "problem_trigger": "Installed equipment fails or underperforms and recovery depends on a vendor-specific chain of registration, proof, diagnosis, shipping, and reimbursement conditions"
+  },
+  "founder_fit": [
+    "The founder can obtain de-identified workflow observations from a family renewable installer before building broadly",
+    "Document extraction, classification, and exception analytics fit AI and data-science strengths",
+    "The service can be delivered asynchronously with limited public visibility"
+  ],
+  "parent": null,
+  "risks": [
+    "OEM terms may prohibit assignment or third-party representation",
+    "Recovered replacement value may be hard to price consistently for a success fee",
+    "Manufacturers could deny claims for installation errors and damage installer relationships",
+    "Manual follow-up could turn the business into a low-margin agency"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://aeg-solar.com/service/warranty-claim/",
+    "https://www.fronius.com/en/help-center/warranty/solar-inverter-warranty"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Subscription plus success-fee warranty claims administrator",
+    "control_point": "A limited claims mandate and the canonical equipment dossier linking serial number, owner, installer, commissioning, purchase, diagnosis, and recovery outcome",
+    "critical_dependency": "OEMs and distributors must accept authorised third-party submissions and expose a clearly measurable recovery outcome"
+  },
+  "thesis": "Small photovoltaic, battery, and heat-pump installers could outsource fragmented manufacturer and distributor warranty administration to a software-assisted claims desk. The service would assemble serial, invoice, commissioning, error-code, and photo evidence, pursue the authorised channel, and charge for successful replacement, credit, or cash recovery rather than asking installers to master each OEM process.",
+  "title": "Renewable Warranty Recovery Desk",
+  "uncertainties": [
+    "Claim frequency and unrecovered value per typical installer installed base",
+    "Whether distributors will share portal access or accept structured dossiers",
+    "How often labour and travel costs, rather than equipment value, are the true loss",
+    "Whether a common equipment passport can span enough OEMs without excessive maintenance"
+  ],
+  "version": 1
+}

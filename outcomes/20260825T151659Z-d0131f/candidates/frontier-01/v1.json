@@ -1,0 +1,68 @@
+{
+  "candidate_id": "frontier-01",
+  "claims": [
+    {
+      "claim_id": "frontier-01-claim-01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1542/oj?locale=en"
+      ],
+      "statement": "Regulation (EU) 2023/1542 requires, from 18 February 2027, a battery passport for each LMT battery, EV battery, and industrial battery above 2 kWh, with model- and unit-specific access tiers."
+    },
+    {
+      "claim_id": "frontier-01-claim-02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1542/oj?locale=en"
+      ],
+      "statement": "The regulation permits authorized processors to store passport data on behalf of the responsible operator but restricts selling, reusing, or processing it beyond the service purpose."
+    }
+  ],
+  "contrary_evidence": [
+    "Large battery OEMs can bundle passports, and the regulation's reuse restriction sharply limits any cross-customer data moat."
+  ],
+  "economics": {
+    "acquisition_route": "UNVALIDATED COMMERCIAL HYPOTHESIS: win 3 Polish storage distributors through installer referrals, then use OEM-format connectors to expand across Central Europe.",
+    "capital_required_pln": 115000,
+    "founder_net_worth_path": "UNVALIDATED COMMERCIAL HYPOTHESIS: 3000 passports in year 1, 30000 annual passports by year 3, and 7 million PLN recurring revenue by year 6 could support founder equity plus retained cash above 5 million PLN without double counting.",
+    "founder_time": "UNVALIDATED COMMERCIAL HYPOTHESIS: 3 hours per day until support and standards monitoring can be delegated in year 2.",
+    "gross_margin_basis": "UNVALIDATED COMMERCIAL HYPOTHESIS: 78-88% software gross margin after identifier, storage, support, and security-review costs.",
+    "payback": "UNVALIDATED COMMERCIAL HYPOTHESIS: acquisition payback within 4 months once an importer issues 25 passports per month.",
+    "pricing": "UNVALIDATED COMMERCIAL HYPOTHESIS: 12000 PLN importer onboarding, 180 PLN per passport, and 2400 PLN annual record-custody minimum.",
+    "retention_or_repeat": "UNVALIDATED COMMERCIAL HYPOTHESIS: 7-year average record relationship plus repeat revenue on every newly commissioned unit."
+  },
+  "fingerprint": {
+    "compounding_advantage": "a permissioned library of OEM field mappings, validation failures, and lifecycle workflows lowers onboarding cost while each customer retains its data rights",
+    "customer": "small EU stationary-storage importers and installers lacking an internal product-data infrastructure",
+    "distribution_mechanism": "storage distributors, conformity consultants, and renewable installers embed issuance in their commissioning workflow",
+    "offer_and_business_model": "delegated passport issuance, role-based access, lifecycle updates, and audit export sold per asset plus custody subscription",
+    "payer_and_paid_event": "the responsible importer or brand owner pays when each passport is issued and annually while the record is maintained",
+    "problem_trigger": "an industrial battery above 2 kWh is about to be placed on the EU market or put into service under the passport rule"
+  },
+  "founder_fit": [
+    "Strong data-engineering and renewable-channel fit; can begin with the family installation network and avoid public-facing marketing. Use only customer-authorized data."
+  ],
+  "parent": null,
+  "risks": [
+    "Incorrect passport data could create contractual or regulatory liability.",
+    "A common free industry platform could compress pricing."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2023/1542/oj?locale=en",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:02023R1542-20250731"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "regulated asset-identity issuing utility",
+    "control_point": "creation and custody of the compliant QR-linked battery record at EU market placement or commissioning",
+    "critical_dependency": "economic-operator authorization plus stable technical standards and OEM access to required model- and unit-level data"
+  },
+  "thesis": "Operate the delegated QR identity, access-control, and lifecycle-record layer for EU importers and installers of stationary batteries above the regulated capacity threshold. The narrow wedge is the passport issued when a battery is placed on the market or put into service; customer-authorized lifecycle records then create switching costs without claiming ownership of protected OEM data. All commercial numbers, including capital_required_pln, are unvalidated hypotheses.",
+  "title": "Battery Passport Issuance Rail for Independent Storage Importers",
+  "uncertainties": [
+    "The number of independent operators willing to delegate issuance is unvalidated.",
+    "Final technical standards may change connector scope."
+  ],
+  "version": 1
+}

@@ -1,0 +1,83 @@
+{
+  "assumptions": [
+    "The opportunity is scored at the stated planning stage; no customer, partner, pricing, rollout, or retention evidence exists beyond the packet.",
+    "A customer-granted authorization can make KSeF and ERP integration technically possible, but no particular provider's legal rights, client permissions, or payment-release authority are assumed.",
+    "The stated 45000 PLN is treated as a narrow prototype-and-pilot budget, not evidence that production security, contractual liability, integration, and support can all be covered at that amount.",
+    "No exclusive data access, ERP partnership, insurer recognition, proprietary fraud labels, or distribution commitment is assumed."
+  ],
+  "evidence_needed_for_higher_score": "A paid pilot with an outsourced finance provider that has delegated payment-release authority and documented client permissions, showing agreed portfolio pricing, active-client rollout, account-change volume, false-positive and escalation rates, confirmation cost, integration and support burden, liability allocation, gross margin, payment-cycle impact, and a credible renewal or mandated expansion decision.",
+  "factors": [
+    {
+      "name": "Core insight",
+      "rationale": "The candidate correctly separates commoditized account matching from the higher-value job of governing supplier changes, obtaining independent confirmation, and preserving approval evidence. Using one provider as both workflow surface and portfolio aggregator is coherent, but the crucial premise that such a provider will own and enforce this control is still untested.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "name": "Customer pain and willingness to pay",
+      "rationale": "Supplier-account substitution can cause severe losses, and the cited incident supports the reality of the problem and the need for independent confirmation. The packet does not establish incident frequency in the beachhead, who bears the loss, current manual-control cost, or willingness to pay for an incremental provider-level gate beyond ERP and bank checks.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "name": "Business model and economics",
+      "rationale": "A portfolio license could amortize an integration across many managed clients and create recurring revenue. However, price, active-client conversion, sales-cycle cost, gross margin, confirmation labor, support load, liability cost, churn, and payback are all unknown, so attractive owner economics and the founder-net-worth path are not yet demonstrated.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "name": "Market and beachhead",
+      "rationale": "Polish outsourced finance and payment-operations providers are a specific and operationally coherent beachhead. The evidence does not quantify providers with genuine payment control, their managed-client volumes, loss exposure, budget, or reachable spend, so the segment's ability to support a large outcome remains uncertain.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "name": "Competitive position and domination potential",
+      "rationale": "Specialization in supplier-change governance may create a focused niche, especially if embedded in a provider's mandatory SOP. Yet free public verification, incumbent ERP workflow ownership, future bank payee verification, and providers' ability to build a manual or internal process leave no clear path to a dominant position.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "name": "Expansion potential",
+      "rationale": "Winning a provider could support expansion across its managed clients and into adjacent payment-control, exception, audit, or supplier-governance workflows. Reuse across other providers or countries would still require new integrations, permissions, legal treatment, and distribution, and no beachhead has yet been won.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "name": "Defensibility and durability",
+      "rationale": "Approved-change histories, embedded policies, connectors, and audit routines could create switching costs after meaningful deployment. Those assets are provider-specific and client-isolated, the underlying registry data are public, and the workflow is replicable by ERPs, banks, or the provider, so durable compounding is limited without exclusive distribution or uniquely valuable outcome data.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "name": "Strength of advantage",
+      "rationale": "A combined history, confirmation, human-approval, and audit workflow is more complete than a simple whitelist or payee-name match and could reduce control fragmentation. Its improvement over a provider's existing SOP is not measured, while optional invoice account fields, unreliable contact routes, and false positives may reduce coverage and convenience.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "name": "Timing and momentum",
+      "rationale": "Mandatory KSeF receipt creates fresh structured invoice volume and an immediate integration transition in Poland, while documented fraud makes payment controls timely. The opportunity window is constrained because mandatory PSP payee verification by July 2027 will commoditize another important component and incumbents already offer adjacent checks.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "name": "Distribution",
+      "rationale": "Selling once to a provider and reaching its client portfolio is a plausible leveraged route that avoids direct acquisition of many SMEs. It also creates a concentrated enterprise-style sale requiring trust, integration, security review, liability negotiation, and workflow authority, with no partner access, commitment, or repeatable acquisition evidence.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "name": "Execution and risks",
+      "rationale": "Official APIs, a narrow pilot, and the founder's data and automation skills make a prototype plausible. Production success depends on permissions across client systems, strong security and data isolation, trustworthy independent contact routes, tolerable false positives, ERP integration, incident support, contractual liability, and a provider that can enforce the gate; these requirements may exceed the stated part-time and capital envelope.",
+      "score": 4,
+      "status": "scored"
+    }
+  ],
+  "highest_value_structural_change": "Narrow the beachhead to outsourced providers with explicit delegated payment-release authority and make the product the contractually mandatory release gate and signed audit record for every supplier-detail change, rather than serving providers that only prepare records or offering another advisory account check.",
+  "interaction_adjustment": -0.2,
+  "judge_id": "c7-holdout-control7-02-j2",
+  "main_structural_strength": "One provider-level integration could place a differentiated supplier-change governance control at a recurring workflow event and distribute it across many managed clients.",
+  "primary_score_limiter": "The same unvalidated provider must be willing to pay, possess client data rights, control payment release, accept liability allocation, and mandate rollout; without that combination the product loses its control point, distribution leverage, retention mechanism, and economics together.",
+  "strongest_disconfirming_evidence": "The underlying account check is already available free from government infrastructure, bundled by major ERP vendors, and scheduled to gain a bank-provided substitute by July 2027, leaving the proposed governance layer—not the observable check—as the sole differentiated value, with no paid-demand evidence for that layer."
+}

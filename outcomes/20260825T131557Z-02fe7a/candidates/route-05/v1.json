@@ -1,0 +1,73 @@
+{
+  "candidate_id": "route-05",
+  "claims": [
+    {
+      "claim_id": "route-05-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.eiopa.europa.eu/browse/sustainable-finance/addressing-protection-gaps_en"
+      ],
+      "statement": "EIOPA states that risk-prevention measures can reduce policyholders' physical catastrophe exposure and that insurers can integrate prevention incentives into product design, underwriting, and pricing."
+    },
+    {
+      "claim_id": "route-05-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.eiopa.europa.eu/tools-and-data/dashboard-insurance-protection-gap-natural-catastrophes_en"
+      ],
+      "statement": "EIOPA's catastrophe protection-gap dashboard combines economic losses, insured losses, risk estimates, and coverage data across 30 European countries for evidence-based resilience decisions."
+    }
+  ],
+  "contrary_evidence": [
+    "Insurers may not have enough claims evidence to price discounts for each mitigation action.",
+    "Policyholders may ignore prevention tasks unless the financial reward is immediate and material."
+  ],
+  "economics": {
+    "acquisition_route": "Pilot one narrow peril with a regional broker, insurer innovation unit, and approved contractor cohort before requesting underwriting integration.",
+    "capital_required_pln": 90000,
+    "founder_net_worth_path": "Hypothesis: 500000 assessed policies at 16 PLN blended net annual revenue produce 8m PLN ARR; at 30% EBITDA, 4x EBITDA, and 60% founder ownership, equity is about 5.8m PLN in year 7-10. No retained cash is double-counted.",
+    "founder_time": "Hypothesis: 12-18 hours weekly, using contract actuarial and insurance counsel only for a funded pilot.",
+    "gross_margin_basis": "Hypothesis: 70-82% because contractors and sensor vendors are partners paid outside the software fee; audit sampling and support are included.",
+    "payback": "Hypothesis: 80000-160000 PLN to win and configure an account, recovered after 10000-15000 assessed policies; do not build beyond the 90000 PLN bootstrap cap without a paid pilot.",
+    "pricing": "Hypothesis: 8-20 PLN per assessed policy yearly plus 40-100 PLN per verified intervention, contracted at insurer level.",
+    "retention_or_repeat": "Annual renewal is the recurring event, while new hazards, properties, and mitigation tasks expand usage."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Mitigation evidence linked to later claims outcomes can reveal which interventions reduce frequency or severity",
+    "customer": "Home and small-commercial property policyholders reached by insurers or brokers",
+    "distribution_mechanism": "Insurers and brokers insert the workflow into quote, renewal, and claims-prevention communications",
+    "offer_and_business_model": "White-label risk explanation, mitigation workflow, and evidence ledger sold as prevention infrastructure",
+    "payer_and_paid_event": "Insurer pays per assessed policy and per completed, verified mitigation record",
+    "problem_trigger": "A quote or renewal identifies preventable property vulnerability to flood, storm, water, electrical, or solar-related loss"
+  },
+  "founder_fit": [
+    "Risk modelling and evidence pipelines use the founder's quantitative background.",
+    "Renewable and building-contractor access offers a practical mitigation pilot route.",
+    "One insurer or broker can distribute to many policyholders without founder-led consumer marketing."
+  ],
+  "parent": null,
+  "risks": [
+    "A prevention badge could be misunderstood as a guarantee against loss.",
+    "Insurer procurement and actuarial validation may be lengthy.",
+    "Hazard models can be inaccurate at individual-property resolution."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.eiopa.europa.eu/browse/sustainable-finance/addressing-protection-gaps_en",
+    "https://www.eiopa.europa.eu/tools-and-data/dashboard-insurance-protection-gap-natural-catastrophes_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "insurer-distributed risk-prevention proof network",
+    "control_point": "Verified property-level mitigation record connected to policy renewal and later outcomes",
+    "critical_dependency": "An insurer willing to test whether verified prevention changes loss economics"
+  },
+  "thesis": "Provide property insurers a white-label prevention program that turns public hazard data, a guided building questionnaire, timestamped contractor evidence, and optional partner sensors into verified mitigation actions. Insurers distribute it at quote and renewal, can reward approved measures under their own underwriting policy, and receive an auditable prevention record; the startup supplies neither insurance nor hardware inventory.",
+  "title": "Insurer-Distributed Property Resilience Proof",
+  "uncertainties": [
+    "Which peril and mitigation pair has measurable loss reduction and low verification cost in Poland?",
+    "Whether an insurer will expose renewal, claims, or policy data to a small vendor.",
+    "Can approved contractors perform evidence capture without adding friction?"
+  ],
+  "version": 1
+}

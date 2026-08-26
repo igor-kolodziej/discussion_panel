@@ -1,0 +1,75 @@
+{
+  "candidate_id": "settle6-12",
+  "claims": [
+    {
+      "claim_id": "settle6-12-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/2854"
+      ],
+      "statement": "The EU Data Act requires connected-product and related-service data, including relevant metadata, to be accessible to users in a structured machine-readable form under its conditions."
+    },
+    {
+      "claim_id": "settle6-12-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://digital-strategy.ec.europa.eu/en/factpages/data-act-explained"
+      ],
+      "statement": "European Commission guidance explicitly identifies industrial and agricultural machinery as connected products whose users can access and share generated data for new services."
+    }
+  ],
+  "contrary_evidence": [
+    "Data access does not create a warranty remedy, and many useful derived diagnostics or trade-secret data may remain outside scope."
+  ],
+  "economics": {
+    "acquisition_route": "UNVALIDATED: embed through equipment lessors, maintenance distributors, industrial insurers and sector-specific finance brokers.",
+    "capital_required_pln": 160000,
+    "founder_net_worth_path": "UNVALIDATED: cover 2,000 machines by year 3 and 15,000 by year 6, supporting founder equity plus retained cash above PLN 5m in years 6-8.",
+    "founder_time": "UNVALIDATED: 3.5 hours per day for one machine class and lessor, then connector and exception oversight.",
+    "gross_margin_basis": "UNVALIDATED: edge connector and contract engine, with specialist review only for disputed causation.",
+    "payback": "UNVALIDATED: one lessor integration repays CAC after 40 machines or 10 months.",
+    "pricing": "UNVALIDATED: per-machine platform fee plus a share of accepted credits or performance adjustments; all commercial figures in this economics object, including capital_required_pln, are unvalidated.",
+    "retention_or_repeat": "UNVALIDATED: long-lived fleets generate recurring monthly performance closes, maintenance events and renewal leverage."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Verified claims and denials build machine-model, failure-mode and contract-enforceability curves",
+    "customer": "SME industrial-equipment users, lessors and maintenance-contract administrators",
+    "distribution_mechanism": "Equipment-finance, lessor and maintenance-distributor channels",
+    "offer_and_business_model": "Independent operating evidence, claim packet and credit reconciliation",
+    "payer_and_paid_event": "The user, lessor or service administrator pays when the OEM or maintainer posts a warranty credit, rent adjustment or accepted performance settlement",
+    "problem_trigger": "A connected machine misses a contracted uptime, output or repair-time commitment"
+  },
+  "founder_fit": [
+    "Data engineering and causal analysis fit",
+    "Narrow machine-class pilot is part-time feasible",
+    "Lessor channel avoids fragmented direct sales",
+    "Outcome curves can become a durable data asset"
+  ],
+  "parent": null,
+  "risks": [
+    "Trade-secret disputes",
+    "OEM API obstruction",
+    "Fault attribution liability",
+    "Machine heterogeneity",
+    "Industrial cybersecurity"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2023/2854",
+    "https://digital-strategy.ec.europa.eu/en/factpages/data-act-explained"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Equipment-performance contract settlement infrastructure",
+    "control_point": "The user-controlled, tamper-evident operating record linked to warranty and invoice outcomes",
+    "critical_dependency": "Access to raw connected-product data and contracts that define measurable remedies"
+  },
+  "thesis": "Give industrial-equipment users and lessors a neutral edge record of run state, fault codes, maintenance response and contract exclusions. When uptime, output or repair-time commitments fail, generate the warranty or lease-adjustment packet and reconcile the credit, rent reduction or service bonus. Equipment-finance firms and maintenance distributors provide one-to-many distribution; verified resolutions build model-specific failure and enforceability curves.",
+  "title": "Connected-Equipment Uptime Warranty Settlement",
+  "uncertainties": [
+    "Which equipment class has the best credit pool",
+    "Lessor willingness to standardize contracts",
+    "Edge connector cost"
+  ],
+  "version": 1
+}

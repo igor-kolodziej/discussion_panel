@@ -1,0 +1,137 @@
+{
+  "candidate_id": "route-07",
+  "claims": [
+    {
+      "claim_id": "route-07-v2-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.who.int/publications-detail-redirect/9789241548274",
+        "https://www.who.int/publications/m/item/overview-of-external-quality-assessment-eqa"
+      ],
+      "statement": "Laboratory quality systems require internal quality control and external assessment, and peer comparison is an established form of external quality assessment."
+    },
+    {
+      "claim_id": "route-07-v2-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://pubmed.ncbi.nlm.nih.gov/21097677/",
+        "https://www.sciencedirect.com/science/article/abs/pii/S0031302519303745",
+        "https://clsi.org/shop/standards/ep26/"
+      ],
+      "statement": "Reagent-lot shifts are a real quality problem, and QC material alone can fail to reflect patient-sample changes; the product must support investigation rather than assert that pooled QC conclusively validates a lot."
+    },
+    {
+      "claim_id": "route-07-v2-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.bio-rad.com/webroot/web/pdf/cdg/literature/Q1181_QCDataManagement.pdf",
+        "https://www.randox.com/core-disciplines/quality-control/qc-data-management",
+        "https://www.technopathclinicaldiagnostics.com/products/informatics-solutions/iamqc-software-solutions/iamqc-peer/"
+      ],
+      "statement": "Bio-Rad, Randox, and Technopath already offer interlaboratory peer comparison, alerts, automated connectivity, and reagent-lot reporting, sharply weakening a generic peer-QC product."
+    },
+    {
+      "claim_id": "route-07-v2-c4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://clsi.org/shop/standards/auto16/"
+      ],
+      "statement": "A standard exists for exchanging patient and QC test orders and results between IVD instruments and managing systems, but it does not cover calibration data, nomenclature, or privacy and does not prove access to any installed analyzer."
+    },
+    {
+      "claim_id": "route-07-v2-c5",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2017/746/oj/eng",
+        "https://health.ec.europa.eu/document/download/b45335c5-1679-4c71-a91c-fc7a4d37f12b_en?filename=mdcg_2019_11_en.pdf"
+      ],
+      "statement": "IVDR status turns on intended purpose and functionality: basic plotting or comparison with user-set limits may be outside IVD medical-device software, while analysis or interpretation of IVD outputs for medical purposes can fall inside; a qualified regulatory opinion is required before product claims are fixed."
+    },
+    {
+      "claim_id": "route-07-v2-c6",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://commission.europa.eu/law/law-topic/data-protection/information-business-and-organisations/application-gdpr_en"
+      ],
+      "statement": "Irreversibly anonymized data is outside GDPR, but pseudonymized or re-identifiable exports remain personal data; an initial product should ingest only control measurements and strip patient and operator identifiers before transfer."
+    },
+    {
+      "claim_id": "route-07-v2-c7",
+      "confidence": "low",
+      "evidence_refs": [],
+      "statement": "No gathered evidence establishes permission from laboratories or analyzer vendors, distributor willingness to pay, a low-cost connector path, or the proposed pricing and retention."
+    }
+  ],
+  "contrary_evidence": [
+    "Three established QC vendors already market peer comparison, alerts, cloud delivery, automated submission, and reagent-lot views.",
+    "QC material may be noncommutable with patient samples, so a pooled QC anomaly cannot by itself establish clinical lot failure.",
+    "Intended-purpose choices can move the software into IVDR scope, adding time, expertise, quality-system, and conformity costs.",
+    "Interface standards do not guarantee enabled exports, vendor permission, consistent identifiers, or inexpensive integration."
+  ],
+  "economics": {
+    "acquisition_route": "Secure one paid distributor pilot across 3-5 consenting labs using QC-only CSV or an existing authorised export; focus on human-reviewed cross-site incident packets, not routine QC replacement or patient-result release.",
+    "capital_required_pln": 85000,
+    "founder_net_worth_path": "Planning hypothesis, not forecast: 5000 analyzers at 125 PLN monthly net revenue would yield 7.5M PLN ARR. At 30% EBITDA, 4x EBITDA, and 60% founder ownership, founder equity would be about 5.4M PLN in year 7-10, requiring multi-distributor scale and validated regulatory and access paths. Retained cash is not added again.",
+    "founder_time": "15-20 hours weekly for a QC-only pilot, with a laboratory quality specialist, security review, and IVDR counsel contracted before any decision-support claims.",
+    "gross_margin_basis": "Planning range of 50-65% during manual mapping and review, potentially 70-80% only for reused authorised connectors and standardized investigation packets; neither is validated.",
+    "payback": "Unknown until connector effort, support load, validation burden, procurement, and distributor portfolio size are observed; require a paid pilot before custom integration.",
+    "pricing": "Test a 30000-80000 PLN six-month distributor pilot, then hypotheses of 80-200 PLN per connected analyzer monthly with a portfolio minimum; incumbent public pages did not disclose comparable prices.",
+    "retention_or_repeat": "QC runs and reagent lots recur, but existing QC platforms, distributor contract cycles, and lab switching costs make net retention unknown."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Permissioned cross-lab incident history linking reagent lot, analyzer family, QC behavior, investigation steps, and human-confirmed disposition",
+    "customer": "Regional IVD distributors supporting small and mid-sized laboratories across a shared analyzer or reagent portfolio",
+    "distribution_mechanism": "Distributor-led opt-in to a QC-only CSV or authorised interface pilot across existing laboratory relationships",
+    "offer_and_business_model": "Human-reviewed cross-site anomaly triage and investigation packets that complement rather than replace routine QC software",
+    "payer_and_paid_event": "Distributor pays for a scoped pilot and later a portfolio minimum plus connected-analyzer fee",
+    "problem_trigger": "Several labs show a contemporaneous QC change and support must distinguish local process, instrument, control, calibrator, or reagent-lot causes"
+  },
+  "founder_fit": [
+    "Statistical process control, anomaly detection, and evidence separation strongly match the founder's data-science background.",
+    "Selling through distributors can concentrate outreach, though early laboratory-quality interviews and enterprise sales remain necessary.",
+    "A QC-only file pilot can fit the founder's capital and part-time limits if custom interfaces are contract-gated.",
+    "The founder must delegate laboratory clinical judgment, regulatory interpretation, and quality-system ownership to qualified specialists."
+  ],
+  "parent": {
+    "candidate_id": "route-07",
+    "version": 2
+  },
+  "risks": [
+    "False or missed alerts could influence laboratory operations; all outputs must be investigational and human-reviewed until regulatory status and performance are established.",
+    "The intended purpose may make the product IVD medical-device software or an accessory under IVDR.",
+    "Existing QC vendors can extend their installed peer networks into distributor incident workflows.",
+    "Analyzer, middleware, LIS, laboratory, or reagent contracts may restrict exports and pooled use.",
+    "Even QC-only files can accidentally contain patient, operator, or site identifiers and require strict minimisation and security."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.who.int/publications-detail-redirect/9789241548274",
+    "https://www.who.int/publications/m/item/overview-of-external-quality-assessment-eqa",
+    "https://eur-lex.europa.eu/eli/reg/2017/746/oj/eng",
+    "https://health.ec.europa.eu/document/download/b45335c5-1679-4c71-a91c-fc7a4d37f12b_en?filename=mdcg_2019_11_en.pdf",
+    "https://clsi.org/shop/standards/ep26/",
+    "https://pubmed.ncbi.nlm.nih.gov/21097677/",
+    "https://www.sciencedirect.com/science/article/abs/pii/S0031302519303745",
+    "https://www.bio-rad.com/webroot/web/pdf/cdg/literature/Q1181_QCDataManagement.pdf",
+    "https://www.randox.com/core-disciplines/quality-control/qc-data-management",
+    "https://www.technopathclinicaldiagnostics.com/products/informatics-solutions/iamqc-software-solutions/iamqc-peer/",
+    "https://commission.europa.eu/law/law-topic/data-protection/information-business-and-organisations/application-gdpr_en",
+    "https://clsi.org/shop/standards/auto16/"
+  ],
+  "stage": "development",
+  "structure": {
+    "commercial_archetype": "distributor-bundled cross-site QC incident coordination",
+    "control_point": "Permissioned, human-confirmed cross-lab incident history for a distributor's installed reagent and analyzer portfolio",
+    "critical_dependency": "Authorised QC-only access across enough comparable labs plus a regulatory position compatible with the intended claims"
+  },
+  "thesis": "Let a regional IVD distributor coordinate human-reviewed QC incident investigation across consenting labs. The product ingests control measurements only, detects contemporaneous peer anomalies, and assembles a provenance-rich investigation packet; it never releases patient results, declares a lot safe or unsafe, or replaces laboratory QC. The first pilot uses authorised exports and a single analyzer or reagent family.",
+  "title": "Distributor QC Incident Sentinel",
+  "uncertainties": [
+    "Whether the narrow intended purpose stays outside IVDR medical-device software or accessory scope.",
+    "Which analyzer, middleware, or LIS export is both authorised and cheap enough for a first cohort.",
+    "Whether distributors and labs can share QC measurements, lot identifiers, site metadata, and confirmed dispositions.",
+    "Whether the incident-triage layer is sufficiently distinct from Bio-Rad, Randox, and Technopath.",
+    "Paid pilot demand, integration cost, price, support load, renewal, and scale across distributors."
+  ],
+  "version": 3
+}

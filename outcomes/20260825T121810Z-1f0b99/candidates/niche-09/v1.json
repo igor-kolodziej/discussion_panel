@@ -1,0 +1,81 @@
+{
+  "candidate_id": "niche-09",
+  "claims": [
+    {
+      "claim_id": "niche-09-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.knf.gov.pl/knf/pl/komponenty/img/Rekomendacja_S_nowelizacja_czerwiec_2023_82872.pdf",
+        "https://www.knf.gov.pl/komunikacja/blog?articleId=98936&p_id=18"
+      ],
+      "statement": "KNF's Recommendation S requires a comprehensive quantitative and qualitative affordability review and individualized treatment of irregular or unstable income rather than automatic exclusion."
+    },
+    {
+      "claim_id": "niche-09-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://nuk.knf.gov.pl/dla_rynku/posrednictwo_finansowe/rynek_posrednikow_kredytu_hipotecznego/posrednicy"
+      ],
+      "statement": "Polish mortgage intermediaries are expressly defined as performing preparatory and administrative document work, so the proposed user and workflow are legally recognizable."
+    },
+    {
+      "claim_id": "niche-09-c03",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://www.knf.gov.pl/komunikacja/blog?articleId=98936&p_id=18"
+      ],
+      "statement": "Hypothesis: pooled, consented outcome data can make lender routing for complex income materially better than broker spreadsheets, creating a defensible feedback loop if networks will contribute outcomes."
+    }
+  ],
+  "contrary_evidence": [
+    "Large broker networks and banks already maintain internal policy matrices, calculators, and document portals.",
+    "Banks can change underwriting policy without public notice, making historical routing signals stale or misleading."
+  ],
+  "economics": {
+    "acquisition_route": "Pilot inside one broker network and one accounting channel, proving faster complete submission rather than promising higher approval",
+    "capital_required_pln": 65000,
+    "founder_net_worth_path": "Hypothesis: 600 advisors at 12k PLN blended annual revenue produce 7.2M PLN revenue and about 2.5M PLN EBITDA by year 5. At 3.5x EBITDA and 65% ownership, equity is about 5.7M PLN in years 6 to 8, conditional on one network not controlling the data asset.",
+    "founder_time": "12 to 18 hours weekly for product and model monitoring; a network partner owns consumer conversations",
+    "gross_margin_basis": "Expected 80% to 90% software gross margin after document processing; compliance, support, and policy verification are recurring costs",
+    "payback": "Saving two to four advisor hours or preventing one avoidable rework cycle per month can cover a seat; validate with time logs",
+    "pricing": "799 PLN per advisor monthly plus 100 to 250 PLN per complex case, or 60,000 to 150,000 PLN annual network license",
+    "retention_or_repeat": "Advisors use it per complex application, and policy updates plus outcome benchmarks support annual contracts"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A versioned lender-policy and anonymized submission-outcome graph for irregular-income archetypes",
+    "customer": "Licensed Polish mortgage-broker networks serving applicants with JDG and other irregular multi-source income",
+    "distribution_mechanism": "Broker franchises, accounting platforms serving JDG clients, realtor networks, and mortgage training providers",
+    "offer_and_business_model": "Document parser, transparent scenario engine, missing-evidence gate, and outcome-informed lender routing",
+    "payer_and_paid_event": "The broker network pays per advisor seat and per complex case prepared",
+    "problem_trigger": "A broker receives a complex applicant file and must choose documentation, affordability scenarios, and a lender submission path"
+  },
+  "founder_fit": [
+    "Combines the founder's finance interest, data-science ability, Polish context, and preference for measurable decision systems. Distribution can be concentrated through a few broker or accounting platforms, but compliance review and fairness testing are mandatory before processing real applications."
+  ],
+  "parent": null,
+  "risks": [
+    "A routing score may be interpreted as guaranteed approval or consumer financial advice.",
+    "Tax returns, statements, and household obligations are highly sensitive personal data.",
+    "Biased historical approvals can encode discriminatory lender behavior."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://nuk.knf.gov.pl/dla_rynku/posrednictwo_finansowe/rynek_posrednikow_kredytu_hipotecznego/posrednicy",
+    "https://www.knf.gov.pl/knf/pl/komponenty/img/Rekomendacja_S_nowelizacja_czerwiec_2023_82872.pdf",
+    "https://www.knf.gov.pl/komunikacja/blog?articleId=98936&p_id=18"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Specialist lending decision-support SaaS",
+    "control_point": "The broker's lender-routing and file-completeness decision before submitting a complex mortgage case",
+    "critical_dependency": "Broker networks must contribute lawful, timely outcome data while keeping the product outside automated credit decision-making"
+  },
+  "thesis": "Create a broker-side document and lender-fit engine for Polish mortgage applicants with sole-proprietor, dividend, foreign-currency, seasonal, or otherwise irregular income. It would parse tax returns, ZUS records, bank statements, and obligations; calculate transparent stability scenarios; flag missing evidence; and rank which lender policy deserves a human submission based on versioned broker-contributed outcomes. It does not approve credit or recommend debt to consumers; it helps licensed intermediaries prepare complex files.",
+  "title": "JDG Mortgage Exception Engine for Polish Broker Networks",
+  "uncertainties": [
+    "Number of complex-income applications per advisor and measurable time lost to avoidable lender submissions.",
+    "Whether broker networks may lawfully pool sufficiently detailed outcome features.",
+    "Whether a software vendor can remain outside regulated recommendation and credit-decision activity."
+  ],
+  "version": 1
+}

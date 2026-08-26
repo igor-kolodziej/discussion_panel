@@ -1,0 +1,84 @@
+{
+  "candidate_id": "control9-07",
+  "claims": [
+    {
+      "claim_id": "control9-07-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/customs/customs-security/import-control-system-2_en"
+      ],
+      "statement": "Economic operators bringing goods into or through the EU must submit safety and security data through a complete Entry Summary Declaration before arrival, and from 1 June 2026 all inbound consignments need a valid ENS through ICS2 or eligible NCTS Phase 6 filing."
+    },
+    {
+      "claim_id": "control9-07-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/customs/customs-security/import-control-system-2_en"
+      ],
+      "statement": "ICS2 supports single or multiple filings depending on which supply-chain actor holds the data, making upstream multi-party data coordination an explicit part of the process."
+    },
+    {
+      "claim_id": "control9-07-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/customs/customs-security/import-control-system-2_en",
+        "https://taxation-customs.ec.europa.eu/news/eu-import-control-system-2-ics2-extends-rail-and-road-transportation-april-2025-2025-02-03_en"
+      ],
+      "statement": "The Commission warns that incomplete or inaccurate ENS declarations may be rejected or generate referrals and border delays; operators may use an IT service provider rather than connect directly."
+    }
+  ],
+  "contrary_evidence": [
+    "Operators can file through the Shared Trader Portal or existing IT service providers, so direct filing is not an underserved control point by itself.",
+    "NCTS Phase 6 can combine transit and ENS data in opt-in countries, potentially reducing appetite for a separate tool."
+  ],
+  "economics": {
+    "acquisition_route": "Pilot one high-frequency Poland-Ukraine or Poland-UK corridor through a customs broker, measure rejected/missing-field reduction, then integrate with one TMS vendor",
+    "capital_required_pln": 65000,
+    "founder_net_worth_path": "Hypothesis: 1.2m annual shipments at 12 PLN plus 20 API accounts at 60000 PLN gives 15.6m PLN revenue; at 18% EBITDA, 3.5x EBITDA, and 65% founder ownership, equity could exceed 6.3m PLN in years 5-8. Validate volume concentration and do not add retained profits twice.",
+    "founder_time": "3-5 hours per day for a single-corridor pilot; use a customs-domain contractor for rule validation and do not operate the filing desk manually",
+    "gross_margin_basis": "Hypothesis: 83-92% after corridor templates and entity resolution mature; translation and exception support are the main variable costs",
+    "payback": "Hypothesis: 8-14 months at 18000 monthly shipments and 12 PLN blended revenue, depending on broker rev-share and support",
+    "pricing": "Hypothesis: 8-25 PLN per shipment with monthly minimums of 800-3000 PLN per carrier or broker; enterprise API from 60000 PLN annually",
+    "retention_or_repeat": "The same shippers, buyers, goods, and routes recur; verified profiles cut driver waits and broker rework, while historical error outcomes improve future preflight"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A corridor-specific graph of shipper identities, recurring goods descriptions, consignees, routing, validation failures, and customs referrals improves preflight precision and creates bilateral network effects",
+    "customer": "Polish road carriers, customs agencies, and forwarders bringing recurring commercial consignments into or through the EU",
+    "distribution_mechanism": "Embed in customs brokers and TMS vendors; each consignment invites non-EU shippers, whose verified profiles can be reused with other connected carriers",
+    "offer_and_business_model": "Multilingual shipper portal, identity and goods-data normalization, ENS completeness rules, exception routing, and filing-provider handoff API",
+    "payer_and_paid_event": "The carrier or broker pays per preflighted consignment or monthly volume bundle before the truck reaches the EU border",
+    "problem_trigger": "A truck is scheduled to depart but complete ENS data is fragmented across the non-EU exporter, buyer, carrier, house filer, and customs broker"
+  },
+  "founder_fit": [
+    "Highly quantitative data-quality and entity-resolution problem",
+    "A single corridor can be tested part-time with measurable rejection and rework metrics",
+    "TMS and broker distribution reduces direct sales intensity",
+    "Initial capital remains within 100000 PLN"
+  ],
+  "parent": null,
+  "risks": [
+    "Bad validation could create rather than prevent border delays.",
+    "Per-shipment pricing requires substantial volume and reliable TMS distribution.",
+    "Customs and TMS incumbents could replicate the upstream portal."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://taxation-customs.ec.europa.eu/customs/customs-security/import-control-system-2_en",
+    "https://taxation-customs.ec.europa.eu/document/download/ff194949-7b89-45be-ae6d-d8bd57b168fe_en",
+    "https://taxation-customs.ec.europa.eu/news/eu-import-control-system-2-ics2-extends-rail-and-road-transportation-april-2025-2025-02-03_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "pre-border data gateway",
+    "control_point": "the complete and valid ENS data packet required before an inbound consignment arrives at the EU border",
+    "critical_dependency": "fast multilingual participation by non-EU shippers and accurate handoff into carriers' existing ICS2 or NCTS filing providers"
+  },
+  "thesis": "Build a pre-border data gateway for Polish road carriers and customs brokers entering the EU from Ukraine, the UK, Turkey, and the Western Balkans. Instead of becoming another customs filing system, the wedge collects missing safety-and-security data from exporters, buyers, freight forwarders, and house filers before dispatch, resolves parties and goods descriptions, validates the complete Entry Summary Declaration payload, and hands it to the carrier's chosen ICS2 or NCTS provider. Customs brokers and TMS vendors distribute it because bad upstream data creates their support burden; every invitation creates a reusable shipper profile. A network of normalized trader identities, recurring goods, border routes, and risk-referral/error outcomes can dominate the data-quality layer without competing for the authoritative filing rail.",
+  "title": "ICS2 Shipper-to-Carrier Data Handshake",
+  "uncertainties": [
+    "Polish corridor shipment volumes controlled by reachable small and mid-sized brokers",
+    "Which missing fields cause the most delay and whether the payer attributes sufficient value to prevention",
+    "Technical and contractual access to incumbent filing providers"
+  ],
+  "version": 1
+}

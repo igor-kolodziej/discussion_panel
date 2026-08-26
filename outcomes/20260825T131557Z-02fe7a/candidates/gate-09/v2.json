@@ -1,0 +1,122 @@
+{
+  "candidate_id": "gate-09",
+  "claims": [
+    {
+      "claim_id": "gate-09-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.nfz.gov.pl/dla-swiadczeniodawcy/sprawozdawczosc-elektroniczna/walidacje-i-weryfikacje/sprawdzenia-z-zakresu-centralnych-warunkow-walidacji-i-centralnych-regul-weryfikacji,6473.html"
+      ],
+      "statement": "NFZ publishes central validation and verification checks specific to rehabilitation, including procedure counts, staff schedules, required data, and prerequisite-care conditions that can prevent settlement."
+    },
+    {
+      "claim_id": "gate-09-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.nfz.gov.pl/dla-swiadczeniodawcy/sprawozdawczosc-elektroniczna/lista-typow-komunikatow-xml/komunikat-swiad/",
+        "https://www.nfz.gov.pl/dla-swiadczeniodawcy/sprawozdawczosc-elektroniczna/lista-typow-komunikatow-xml/komunikat-refrumx/"
+      ],
+      "statement": "NFZ publicly maintains detailed XML specifications for reporting and settlement, and those specifications continue to receive dated amendments."
+    },
+    {
+      "claim_id": "gate-09-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.nfz.gov.pl/gfx/nfz/userfiles/_public/bip/dzialalnosc_nfz/sprawozdania_z_dzialalnosci_nfz/zal._do_uchwaly_nr_17-sig.pdf"
+      ],
+      "statement": "NFZ reported 2,768 rehabilitation providers in 2023, which supports a non-trivial provider population but does not identify the independent-provider subset, rejection value, or software willingness to switch."
+    },
+    {
+      "claim_id": "gate-09-c4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://mmedica.asseco.pl/moduly-dodatkowe/rehabilitacja-ambulatoryjna/",
+        "https://mmedica.asseco.pl/?jet_download=99d4ecfe5c33476abb0035a1c2af16e9f936c233",
+        "https://kamsoft.pl/KS-SOMED/"
+      ],
+      "statement": "mMedica and KS-SOMED already market rehabilitation-cycle planning and NFZ settlement automation, including staff-time and home-visit workflow support, so a generic preflight engine would overlap incumbent HIS functionality."
+    },
+    {
+      "claim_id": "gate-09-c5",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?from=EN&qid=1574323499975&uri=CELEX%3A32016R0679",
+        "https://www.uodo.gov.pl/pl/598/3617"
+      ],
+      "statement": "Patient health data are specially protected under GDPR, and Polish UODO guidance requires an early risk assessment and a DPIA where processing is likely to create high risk; local or pseudonymized deployment does not itself remove those duties."
+    },
+    {
+      "claim_id": "gate-09-c6",
+      "confidence": "low",
+      "evidence_refs": [],
+      "statement": "Preventable denial value, connector permission and effort, buying authority, willingness to pay, and the proposed commercial economics remain unknown."
+    }
+  ],
+  "contrary_evidence": [
+    "Two established Polish clinic systems already support NFZ rehabilitation workflows and settlement automation.",
+    "Public rule and XML documentation lowers the data-rule barrier for both the candidate and incumbents.",
+    "A local-first architecture reduces data movement but does not eliminate GDPR security, processor, risk-assessment, or possible DPIA obligations.",
+    "The provider count does not show how many clinics suffer material preventable losses or can authorize a third-party connector."
+  ],
+  "economics": {
+    "acquisition_route": "Research-stage hypothesis: sell through one billing outsourcer or HIS partner only after a retrospective, de-identified denial audit demonstrates recovered value; no partner commitment exists.",
+    "capital_required_pln": 85000,
+    "founder_net_worth_path": "Not underwritten. A scenario of 250 retained providers at 1200 PLN per month would equal 3.6 million PLN ARR and could support the founder target through retained profit and equity in roughly years 7-10, but penetration, price, margin, valuation, and timing have no market validation.",
+    "founder_time": "At most 20 hours weekly for one specialty, with privacy/security and NFZ billing interpretation delegated to retained specialists; integration support may still exceed the part-time limit.",
+    "gross_margin_basis": "Conservative planning range of 55-70% after rule maintenance, secure deployment, connector support, and expert review; no observed delivery costs validate it.",
+    "payback": "Unknown until a retrospective audit and paid connector pilot measure sales effort, integration hours, and recovered reimbursement; do not assume ten provider-months.",
+    "pricing": "Test hypothesis only: 500-1200 PLN monthly for a narrow local preflight plus separately priced integration, anchored to demonstrated recovered value; reviewed incumbent pages do not publish comparable pricing.",
+    "retention_or_repeat": "Monthly settlement and changing specifications create repeat workflow, but renewal depends on incremental errors caught beyond the clinic's existing HIS."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A de-identified rule-to-correction taxonomy and specialty-specific dependency graph built from incremental errors that existing HIS checks miss",
+    "customer": "Independent Polish rehabilitation providers or billing outsourcers with measurable preventable NFZ settlement loss",
+    "distribution_mechanism": "Billing outsourcers and HIS partners after a bounded retrospective denial audit",
+    "offer_and_business_model": "Local-first incremental NFZ preflight, explanation, and rule-version audit layer with a paid connector",
+    "payer_and_paid_event": "The provider or billing outsourcer pays when a monthly batch receives an auditable preflight that catches incremental, economically material errors",
+    "problem_trigger": "A rehabilitation claim batch is being prepared and must be checked against the current NFZ rule and message version before submission"
+  },
+  "founder_fit": [
+    "Healthcare literacy, data science, and rule-graph engineering align with the founder's background.",
+    "Local processing and a bounded single-specialty pilot can be built alongside employment within the cash envelope.",
+    "Outsourcer or HIS distribution can reduce public-facing selling, although enterprise integration still requires meetings.",
+    "Privacy, security, and NFZ interpretation are specialist functions that can be retained, but their cost and oversight burden must be tested."
+  ],
+  "parent": {
+    "candidate_id": "gate-09",
+    "version": 1
+  },
+  "risks": [
+    "Existing HIS vendors may already catch most actionable errors, leaving insufficient incremental recovered value.",
+    "Rule lag or incorrect interpretation could create false confidence and lost reimbursement.",
+    "Health-data processing and integrations create material GDPR, security, contracting, and incident-response obligations.",
+    "Fragmented connectors, long healthcare sales cycles, and support demands may exceed a part-time founder's capacity."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.nfz.gov.pl/dla-swiadczeniodawcy/sprawozdawczosc-elektroniczna/walidacje-i-weryfikacje/sprawdzenia-z-zakresu-centralnych-warunkow-walidacji-i-centralnych-regul-weryfikacji,6473.html",
+    "https://www.nfz.gov.pl/dla-swiadczeniodawcy/sprawozdawczosc-elektroniczna/lista-typow-komunikatow-xml/komunikat-swiad/",
+    "https://www.nfz.gov.pl/dla-swiadczeniodawcy/sprawozdawczosc-elektroniczna/lista-typow-komunikatow-xml/komunikat-refrumx/",
+    "https://www.nfz.gov.pl/gfx/nfz/userfiles/_public/bip/dzialalnosc_nfz/sprawozdania_z_dzialalnosci_nfz/zal._do_uchwaly_nr_17-sig.pdf",
+    "https://mmedica.asseco.pl/moduly-dodatkowe/rehabilitacja-ambulatoryjna/",
+    "https://mmedica.asseco.pl/?jet_download=99d4ecfe5c33476abb0035a1c2af16e9f936c233",
+    "https://kamsoft.pl/KS-SOMED/",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?from=EN&qid=1574323499975&uri=CELEX%3A32016R0679",
+    "https://www.uodo.gov.pl/pl/598/3617"
+  ],
+  "stage": "research",
+  "structure": {
+    "commercial_archetype": "Incremental reimbursement pre-adjudication layer",
+    "control_point": "Versioned claim-batch pass documenting incremental errors before NFZ submission",
+    "critical_dependency": "Measurable errors missed by incumbent HIS, permitted local connectors, current rule interpretation, and secure processing"
+  },
+  "thesis": "A local-first, specialty-specific audit layer for rehabilitation providers could compile published NFZ validation logic, ingest an authorized export, and explain only the economically material errors that the provider's existing HIS misses. The wedge must be proven by retrospective recovered value and should complement rather than replace the incumbent clinic system.",
+  "title": "Incremental NFZ Claim Preflight for Rehabilitation Providers",
+  "uncertainties": [
+    "No evidence yet quantifies avoidable denials or errors not already caught by mMedica, KS-SOMED, or other incumbent systems.",
+    "Local export formats, connector licenses, write-back permissions, and partner terms differ by HIS and remain unverified.",
+    "Buying authority, security-review duration, and willingness to pay based on recovered value are unknown.",
+    "The 85000 PLN capital figure and all price, margin, payback, penetration, and founder-net-worth figures remain hypotheses."
+  ],
+  "version": 2
+}

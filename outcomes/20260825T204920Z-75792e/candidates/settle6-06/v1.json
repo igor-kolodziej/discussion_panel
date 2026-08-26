@@ -1,0 +1,74 @@
+{
+  "candidate_id": "settle6-06",
+  "claims": [
+    {
+      "claim_id": "settle6-06-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ure.gov.pl/pl/oze/gwarancje-pochodzenia/6816,Gwarancja-pochodzenia-dokument-pochodzenia-energii-wytworzonej-ze-zrodel-odnawia.html"
+      ],
+      "statement": "Polish Guarantees of Origin are electronic, individually identified, transferred through a registry and confirmed on cancellation by the registry operator."
+    },
+    {
+      "claim_id": "settle6-06-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/dir/2018/2001/2023-11-20/eng"
+      ],
+      "statement": "EU renewable-energy rules use Guarantees of Origin for supplier disclosure and require controlled issuance, transfer and cancellation."
+    }
+  ],
+  "contrary_evidence": [
+    "Registry participants and energy brokers already perform cancellation, so the wedge depends on multi-site matching and exception cost being painful enough."
+  ],
+  "economics": {
+    "acquisition_route": "UNVALIDATED: white-label through energy brokers, PPA advisers, renewable installers and corporate-energy procurement firms.",
+    "capital_required_pln": 70000,
+    "founder_net_worth_path": "UNVALIDATED: administer 500 GWh of confirmed retirements by year 3 and 4 TWh by year 6, producing founder equity plus retained cash above PLN 5m in years 6-8.",
+    "founder_time": "UNVALIDATED: 2.5 hours per day after registry workflow and broker partnership are established.",
+    "gross_margin_basis": "UNVALIDATED: software-led matching with registry, broker and exception-review costs passed through.",
+    "payback": "UNVALIDATED: channel integration recovered after 15 customer retirement batches or 10 months.",
+    "pricing": "UNVALIDATED: onboarding fee plus per confirmed cancellation batch, without taking speculative certificate inventory; all commercial figures in this economics object, including capital_required_pln, are unvalidated.",
+    "retention_or_repeat": "UNVALIDATED: recurring reporting periods and expiring certificates create repeat transactions and operational switching costs."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Confirmed transfers and cancellations build registry, issuer and matching-exception knowledge",
+    "customer": "Energy suppliers, PPA advisers and multi-site companies making renewable-energy claims",
+    "distribution_mechanism": "Energy brokers, PPA advisers and renewable installer channels",
+    "offer_and_business_model": "Registry orchestration and auditable proof packet charged per completed retirement",
+    "payer_and_paid_event": "The supplier, adviser or buyer pays when cancellation is confirmed and bound to the required consumption lot",
+    "problem_trigger": "A reporting period closes or a certificate approaches expiry and consumption must be matched and retired"
+  },
+  "founder_fit": [
+    "Renewable and finance adjacency",
+    "Transaction evidence is highly structured",
+    "Broker distribution limits social load",
+    "Avoiding inventory keeps capital exposure controlled"
+  ],
+  "parent": null,
+  "risks": [
+    "Accidental double claiming",
+    "Registry authorization limits",
+    "Commodity-trading regulation",
+    "Liability for misleading environmental claims"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://ure.gov.pl/pl/oze/gwarancje-pochodzenia/6816,Gwarancja-pochodzenia-dokument-pochodzenia-energii-wytworzonej-ze-zrodel-odnawia.html",
+    "https://eur-lex.europa.eu/eli/dir/2018/2001/2023-11-20/eng"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Registry-transaction orchestration and proof-of-retirement service",
+    "control_point": "The consumption-to-certificate allocation ledger and registry cancellation confirmation",
+    "critical_dependency": "Authorized registry participation or partnership, plus accurate consumption and certificate-title data"
+  },
+  "thesis": "For renewable-energy retailers, PPA advisers and multi-site buyers, bind metered consumption, certificate inventory and disclosure requirements, then instruct an authorized registry participant to transfer and cancel the correct Guarantees of Origin. The paid event is the regulator or registry-confirmed cancellation matched to a customer site and reporting period, not a sustainability report. Energy brokers and installers distribute the service, while confirmed retirements compound into an auditable matching and exception corpus.",
+  "title": "Guarantee-of-Origin Retirement Desk",
+  "uncertainties": [
+    "API availability",
+    "Batch frequency among mid-market buyers",
+    "Broker willingness to white-label"
+  ],
+  "version": 1
+}

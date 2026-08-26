@@ -1,0 +1,117 @@
+{
+  "candidate_id": "rights8-07",
+  "claims": [
+    {
+      "claim_id": "rights8-07-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1804/oj/eng",
+        "https://transport.ec.europa.eu/transport-themes/clean-transport/alternative-fuels-sustainable-mobility-europe/alternative-fuels-infrastructure/questions-and-answers-regulation-deployment-alternative-fuels-infrastructure-eu-20231804_en"
+      ],
+      "statement": "AFIR and the Commission's implementation Q&A treat charging on private property as publicly accessible when the property is open to a general customer group; a non-public point requires a limited and determinate group authorised to access the property for a purpose other than parking or charging, and opening hours or pre-booking do not change that classification."
+    },
+    {
+      "claim_id": "rights8-07-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eli.gov.pl/api/acts/DU/2024/1289/text.html"
+      ],
+      "statement": "Poland's consolidated electromobility act assigns public-station operators technical, metering, energy-contract and information duties, while the charging-service provider handles authorization, session records, payments, sales documents, support and complaints; the roles therefore require explicit contractual allocation."
+    },
+    {
+      "claim_id": "rights8-07-c3",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://transport.ec.europa.eu/document/download/1498648c-63fc-4715-975d-ccbc64703da5_en?filename=Communication+-+Decarbonising+corporate+fleets.pdf",
+        "https://www.acea.auto/cv-registrations/new-commercial-vehicle-registrations-vans-8-8-trucks-6-2-buses-7-5-in-2025/"
+      ],
+      "statement": "Category-level demand is plausible but not local validation: the Commission identifies dedicated and public charging availability as operational constraints for corporate fleets, and ACEA reports that electrically chargeable vans reached 11.2% of new EU van registrations in 2025."
+    },
+    {
+      "claim_id": "rights8-07-c4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://developer.monta.com/docs/price-groups",
+        "https://support.virta.global/hc/en-gb/articles/18351352579357-Optimise-Your-Fleet-Operations-How-to-Make-Fleet-Reservations-at-Charging-Stations"
+      ],
+      "statement": "Direct incumbent documentation shows that existing charging platforms already support public and member pricing, roaming and margin tracking, while fleet software can reserve compatible chargers; physical bay availability remains an on-site operational dependency."
+    },
+    {
+      "claim_id": "rights8-07-c5",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://transport.ec.europa.eu/document/download/1498648c-63fc-4715-975d-ccbc64703da5_en?filename=Communication+-+Decarbonising+corporate+fleets.pdf"
+      ],
+      "statement": "Hypothesis: a dense local cluster of hosts and small fleets will accept recurring reserved-capacity contracts at contribution-positive prices; no source establishes host spare capacity, local buyer willingness, conversion, utilization or renewal."
+    }
+  ],
+  "contrary_evidence": [
+    "The Commission's AFIR Q&A says an access list, pre-booking or identification at the gate does not create a private point when anyone can become a charging or parking customer; this defeats a simple membership workaround.",
+    "Monta already supports public and member price groups, roaming and margin tracking, and Virta already supports fleet reservations on compatible chargers, so much of the software layer is an incumbent feature rather than a moat.",
+    "Virta states that a digital reservation does not guarantee physical availability and that reservations require charger support for OCPP reservation commands.",
+    "ACEA reports growing electric-van share but also says inadequate infrastructure, energy cost and unfavorable total cost of ownership still constrain uptake, so a local capacity market may mature slowly."
+  ],
+  "economics": {
+    "acquisition_route": "Secure written pilot interest from one fleet cluster and site-control terms from at least five compatible chargers within route distance; run manual scheduling and an existing compliant charging-management platform before custom hardware or software.",
+    "capital_required_pln": 80000,
+    "founder_net_worth_path": "Unvalidated scenario, not a forecast: 2,500 subscribed slots at PLN 250 monthly platform revenue after energy pass-through would equal PLN 7.5m annual revenue; at 25% operating profit and a 4x value, a 70% founder stake would be about PLN 5.25m. A 7-9 year route requires multi-city density, durable site rights and low fleet churn; no source validates the slot count, margin, multiple or timing.",
+    "founder_time": "12-18 hours per week for a single pilot cluster covering site contracting, compliance coordination, scheduling and exception response; daily operations require a local operator or outsourced support before scale.",
+    "gross_margin_basis": "Unvalidated planning range: 35-55% after host payments, payment processing, charging-management software, support and light access-control retrofits; electricity is a pass-through and grid upgrades are excluded. Incumbent platform and roaming fees could compress this range.",
+    "payback": "Unvalidated target: 15-24 months only after 150-250 reserved vehicle slots, positive host-level contribution and evidence that compliance, support and access exceptions do not consume the margin.",
+    "pricing": "Unvalidated planning hypothesis: PLN 300-800 per reserved vehicle slot monthly plus a PLN 0.20-0.50/kWh service margin or PLN 12-25 session fee, with transparent host revenue share. No public source establishes buyer willingness at these prices.",
+    "retention_or_repeat": "Fleets may renew while physical access and charger availability are dependable and cheaper than depot capex; hosts may renew while utilization revenue exceeds access, support and insurance burdens. Neither side's renewal behavior is validated."
+  },
+  "fingerprint": {
+    "compounding_advantage": "dense clusters of contractually firm time windows, utilization history and reliable host operations improve route usefulness and raise switching costs for fleets",
+    "customer": "small commercial fleets that need dependable overnight charging without building a depot, with existing charger owners as capacity suppliers",
+    "distribution_mechanism": "fleet-leasing firms and local business associations recruit demand while electrical and renewable installers identify technically suitable host sites",
+    "offer_and_business_model": "contracted off-hours charging and parking access, booking, remote unlock or RFID control, usage reconciliation and support sold as recurring reserved capacity",
+    "payer_and_paid_event": "fleets pay a monthly reserved-slot fee plus metered charging or service charges; hosts receive agreed energy reimbursement and revenue share after a completed session",
+    "problem_trigger": "fleet electrification, a depot lease without enough power, charger downtime, or a host seeking revenue from idle equipment"
+  },
+  "founder_fit": [
+    "Renewable-installation relationships can identify charger hosts and technical partners without requiring a public persona.",
+    "Scheduling, pricing and utilization analysis fit the founder's data-science background.",
+    "A manual single-cluster pilot is compatible with the founder's capital ceiling and can limit irreversible hardware spend.",
+    "Host contracting and operational exceptions are socially and operationally heavier than a pure software product and must be bounded to one cluster while the founder remains employed."
+  ],
+  "parent": {
+    "candidate_id": "rights8-07",
+    "version": 2
+  },
+  "risks": [
+    "A fleet membership created only to use parking or charging is unlikely to make a generally available site non-public under the Commission's AFIR interpretation, bringing ad-hoc payment, pricing, data and operating obligations.",
+    "The platform, host and charging-software provider may allocate CPO and mobility-service-provider duties incorrectly, creating compliance or liability gaps.",
+    "Landlord, parking, fire, insurance, electricity-contract or site-security terms may prevent third-party fleet access even when the charger is technically suitable.",
+    "Existing charging platforms already provide access groups, tariffs, revenue features and reservations, weakening software differentiation and adding platform fees.",
+    "Digital reservations do not guarantee that the bay is physically clear; late arrivals, blocked bays and charger faults can destroy the fleet reliability promise.",
+    "Low Polish electric-fleet density or slow fleet conversion in a chosen micro-market can leave contracted host capacity underused."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2023/1804/oj/eng",
+    "https://transport.ec.europa.eu/transport-themes/clean-transport/alternative-fuels-sustainable-mobility-europe/alternative-fuels-infrastructure/questions-and-answers-regulation-deployment-alternative-fuels-infrastructure-eu-20231804_en",
+    "https://eli.gov.pl/api/acts/DU/2024/1289/text.html",
+    "https://transport.ec.europa.eu/document/download/1498648c-63fc-4715-975d-ccbc64703da5_en?filename=Communication+-+Decarbonising+corporate+fleets.pdf",
+    "https://www.acea.auto/cv-registrations/new-commercial-vehicle-registrations-vans-8-8-trucks-6-2-buses-7-5-in-2025/",
+    "https://developer.monta.com/docs/price-groups",
+    "https://support.virta.global/hc/en-gb/articles/18351352579357-Optimise-Your-Fleet-Operations-How-to-Make-Fleet-Reservations-at-Charging-Stations"
+  ],
+  "stage": "development",
+  "structure": {
+    "commercial_archetype": "time-window infrastructure marketplace",
+    "control_point": "contracted charging, parking and entry windows at existing sites during otherwise idle hours, concentrated into fleet-usable geographic clusters",
+    "critical_dependency": "host property and electricity arrangements must permit third-party fleet use, the correct CPO and MSP duties must be allocated, chargers must support reliable access and metering, and one local fleet cluster must sustain utilization"
+  },
+  "thesis": "Acquire defined nighttime and weekend charging-and-parking windows from owners of underused workplace, hotel and commercial EV chargers, then sell dependable reserved capacity to local delivery, service and taxi fleets. Treat a site as publicly accessible, and use a compliant charge-point operating stack, unless counsel confirms that every fleet user belongs to a genuinely limited and determinate group already authorised to enter the property for a purpose other than parking or charging. The host keeps the asset and receives energy reimbursement plus revenue share; contracts must allocate charge-point operator, mobility-service-provider, access, insurance and support duties. Validate one dense Warsaw or Wielkopolska cluster with named hosts and fleets before hardware rollout.",
+  "title": "Off-Hours Private Charger Capacity Network",
+  "uncertainties": [
+    "How many fleets in one Warsaw or Wielkopolska micro-market have a recurring overnight capacity gap and authority to buy reserved external charging?",
+    "Which candidate sites are genuinely private under AFIR, and which should be operated as publicly accessible from day one?",
+    "Do host electricity, lease, parking, insurance and security terms allow paid third-party fleet use and revenue sharing?",
+    "Which installed charger models support OCPP reservation, reliable metering and access control without retrofit or replacement?",
+    "What minimum guaranteed host payment secures a firm bay and uptime commitment rather than best-effort access?",
+    "Can one cluster deliver positive contribution after compliance, CPMS, support, no-show and physical-access costs?"
+  ],
+  "version": 3
+}

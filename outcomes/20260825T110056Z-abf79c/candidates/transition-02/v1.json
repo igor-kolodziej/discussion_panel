@@ -1,0 +1,84 @@
+{
+  "candidate_id": "transition-02",
+  "claims": [
+    {
+      "claim_id": "transition-02-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en"
+      ],
+      "statement": "The European Commission states that the CBAM definitive regime applies from 1 January 2026 and covers cement, iron and steel, aluminium, fertilisers, electricity, and hydrogen."
+    },
+    {
+      "claim_id": "transition-02-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en"
+      ],
+      "statement": "The Commission states that EU importers above a single 50-tonne mass threshold must apply for authorised CBAM declarant status, buy certificates, declare embedded emissions, and may deduct a proven carbon price paid abroad."
+    },
+    {
+      "claim_id": "transition-02-c3",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en"
+      ],
+      "statement": "Inference: the combination of threshold status, supplier evidence, and a variable certificate price creates a recurring finance-data problem for importers that is separable from customs filing itself."
+    }
+  ],
+  "contrary_evidence": [
+    "Importers at or below the 50-tonne threshold are outside the authorisation requirement, sharply narrowing the small-business pool.",
+    "Large importers, customs brokers, and ERP vendors may already have reporting and forecasting capability.",
+    "Default values can reduce the immediate need to collect granular supplier data, depending on the applicable rules and cost tradeoff."
+  ],
+  "economics": {
+    "acquisition_route": "Revenue share with customs brokers plus content-led calculators targeted to specific commodity and volume bands",
+    "capital_required_pln": 80000,
+    "founder_net_worth_path": "Scenario, not evidence: 1,000 EU importers at PLN 30,000 annual recurring revenue yields PLN 30m revenue; a 35% operating margin and several years of distributions could create PLN 20m-30m founder net worth without external capital or an exit",
+    "founder_time": "Four hours per day during a five-customer pilot, capped by accepting only one commodity family until exception rates are measurable",
+    "gross_margin_basis": "Automated customs-line mapping and recurring forecasts can approach 75% gross margin; supplier chasing and expert review are the main variable costs",
+    "payback": "Target immediate to three months because the paid historical-data cleanup should fund onboarding labour and broker commission",
+    "pricing": "Assumption: PLN 7,500-20,000 onboarding and PLN 1,500-4,000 per month, with a separately priced annual declaration review",
+    "retention_or_repeat": "Every covered shipment refreshes exposure and every compliance year creates a declaration cycle; retention depends on remaining more useful than a broker spreadsheet"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A growing cross-supplier graph of CN codes, production routes, usable emissions fields, default-value fallbacks, and recurring correction patterns that shortens each new importer setup",
+    "customer": "Polish and neighbouring-EU importers of roughly 50 to 2,000 tonnes per year of iron, steel, aluminium, cement, fertilisers, or hydrogen, with a lean finance and customs function",
+    "distribution_mechanism": "White-label referrals from customs brokers, freight forwarders, and metal or fertiliser trade advisers, supported by a self-serve landed-cost calculator",
+    "offer_and_business_model": "Managed data service plus SaaS that maps customs lines to covered goods, requests and quality-scores supplier emissions files, estimates certificate exposure, and preserves an audit trail; entity subscription with volume tiers",
+    "payer_and_paid_event": "The importer's finance or customs lead pays at onboarding when the first twelve months of customs lines are reconciled, then pays monthly for shipment forecasts and annually for a declaration evidence pack",
+    "problem_trigger": "The CBAM definitive regime applies from 1 January 2026 and importers above the single 50-tonne mass threshold must become authorised declarants, declare embedded emissions, and surrender certificates"
+  },
+  "founder_fit": [
+    "Carbon-cost forecasting and messy supplier-data reconciliation use analytical and finance strengths",
+    "A customs-broker channel can replace meeting-heavy direct enterprise sales",
+    "The product can start with file uploads and one commodity before any expensive integration",
+    "Poland is a practical beachhead while the same EU regime supports multilingual expansion"
+  ],
+  "parent": null,
+  "risks": [
+    "Incorrect goods or emissions mapping could cause certificate under-purchase or reporting errors.",
+    "Human supplier follow-up could overwhelm a five-hour daily schedule.",
+    "Regulatory simplification may further shrink covered volume or data granularity.",
+    "Sensitive procurement and cost data require strong isolation, access control, and audit logging."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Managed regulatory data pipeline with recurring landed-cost analytics",
+    "control_point": "The pre-order and pre-customs decision where embedded-carbon evidence changes supplier choice and cash needs",
+    "critical_dependency": "Reliable supplier emissions evidence, current default values and certificate prices, and correct goods-scope mapping"
+  },
+  "thesis": "A managed data pipeline for EU importers just above the 50-tonne CBAM threshold can reconcile customs lines, supplier emissions evidence, default values, certificate-price exposure, and annual declaration support. The buyer is not the largest industrial group with an internal carbon team but a finance or import manager whose first irreversible decision is whether a shipment remains profitable after embedded-carbon cost.",
+  "title": "CBAM Landed-Cost and Supplier-Data Desk for Mid-Market Importers",
+  "uncertainties": [
+    "A bottom-up count of target importers by commodity, annual tonnage, and current solution has not been established.",
+    "No willingness-to-pay evidence supports the proposed pricing or the 1,000-customer wealth scenario.",
+    "The labour required to obtain acceptable foreign-supplier data is unknown.",
+    "The boundary between software output and regulated customs or verification advice needs legal review."
+  ],
+  "version": 1
+}

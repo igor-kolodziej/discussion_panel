@@ -1,0 +1,81 @@
+{
+  "candidate_id": "niche-11",
+  "claims": [
+    {
+      "claim_id": "niche-11-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://green-forum.ec.europa.eu/nature-and-biodiversity/deforestation-regulation-implementation/roles-and-responsibilities_en",
+        "https://www.consilium.europa.eu/en/press/press-releases/2025/12/18/deforestation-council-signs-off-targeted-revision-to-simplify-and-postpone-the-regulation/"
+      ],
+      "statement": "The revised EUDR applies from 30 December 2026 for large and medium operators and for micro or small operators already covered by the prior timber regime; most other micro and small operators receive until 30 June 2027."
+    },
+    {
+      "claim_id": "niche-11-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://green-forum.ec.europa.eu/nature-and-biodiversity/deforestation-regulation-implementation/roles-and-responsibilities_en"
+      ],
+      "statement": "Even after the 2025 simplification, operators must retain supply-chain records, while competent authorities can check due-diligence systems and records and conduct audits and apply penalties."
+    },
+    {
+      "claim_id": "niche-11-c03",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://green-forum.ec.europa.eu/nature-and-biodiversity/deforestation-regulation-implementation/roles-and-responsibilities_en"
+      ],
+      "statement": "Hypothesis: a corridor-specific supplier portal can outperform broad enterprise tools for Polish importers because it can localize evidence requests, normalize recurring supplier defects, and distribute through customs brokers."
+    }
+  ],
+  "contrary_evidence": [
+    "The regulation has already been postponed and simplified, reducing urgency and the data burden for some SME roles.",
+    "Large traceability vendors, certification schemes, and ERP providers are already targeting EUDR compliance."
+  ],
+  "economics": {
+    "acquisition_route": "Win one customs broker or ERP implementer serving a narrow timber corridor and share compliant supplier onboarding materials",
+    "capital_required_pln": 85000,
+    "founder_net_worth_path": "Hypothesis: 120 importers at 60k PLN blended ARR yield 7.2M PLN ARR and about 2.2M PLN EBITDA by year 6. At 3.5x EBITDA and 65% ownership, equity is about 5M PLN in years 6 to 8; concentration in one regulatory deadline is the largest fragility.",
+    "founder_time": "15 to 20 hours weekly for the first corridor, then 10 to 15 hours with supplier-support contractors",
+    "gross_margin_basis": "Target 70% to 82% after supplier support and expert exception review; automated retention and exports are high margin",
+    "payback": "A buyer can justify annual fees if the rail protects shipment continuity and removes repeated supplier chasing; quantify current labor and delay first",
+    "pricing": "25,000 to 60,000 PLN onboarding plus 2,000 to 6,000 PLN monthly and 50 to 200 PLN per shipment",
+    "retention_or_repeat": "Every shipment, supplier, harvest plot, risk update, and five-year evidence-retention obligation creates repeat use"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A corridor-specific supplier evidence and exception graph showing recurring missing fields, risk signals, and accepted remediation",
+    "customer": "Mid-sized Polish furniture and wood-component manufacturers acting as EUDR operators for non-EU timber inputs",
+    "distribution_mechanism": "Customs brokers, timber-certification auditors, sector ERP implementers, and furniture-export associations",
+    "offer_and_business_model": "Localized supplier portal, lot-to-plot evidence graph, exception review, and DDS-ready export",
+    "payer_and_paid_event": "The importer pays at corridor onboarding, per shipment, and annually for supplier and evidence retention",
+    "problem_trigger": "A purchase order or shipment needs plot, legality, risk, and due-diligence evidence before customs or EU market placement"
+  },
+  "founder_fit": [
+    "The founder's data engineering and Polish/EU context fit a rules-and-provenance product, while broker and ERP channels reduce direct social selling. It is part-time feasible after narrowing to one corridor, though independent forestry and legal expertise is essential."
+  ],
+  "parent": null,
+  "risks": [
+    "Supplier evidence can be false, incomplete, or impossible to verify remotely.",
+    "Sanctions, conflict, privacy, and geolocation sensitivity vary by sourcing corridor.",
+    "Further legislative delays or a low-risk country classification can reduce near-term demand."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2023/1115/oj",
+    "https://green-forum.ec.europa.eu/nature-and-biodiversity/deforestation-regulation-implementation/roles-and-responsibilities_en",
+    "https://www.consilium.europa.eu/en/press/press-releases/2025/12/18/deforestation-council-signs-off-targeted-revision-to-simplify-and-postpone-the-regulation/"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Supply-chain traceability network",
+    "control_point": "The immutable lot-to-plot evidence packet attached before shipment market placement",
+    "critical_dependency": "Upstream suppliers must provide verifiable geolocation and legality evidence early enough to keep shipments moving"
+  },
+  "thesis": "Build a supplier-facing evidence rail for mid-sized Polish furniture and wood-component manufacturers that first place non-EU timber products on the EU market. It would collect plot geolocation and legality evidence, bind supplier declarations to lots and shipments, run risk and completeness checks, preserve five-year provenance, and export a due-diligence-statement-ready packet plus downstream references. Start with one narrow origin-and-product corridor and a customs-broker channel, not an all-commodity ESG platform.",
+  "title": "EUDR Plot-to-Shipment Rail for Polish Furniture Importers",
+  "uncertainties": [
+    "Exact product codes, operator role, and deadline for each target furniture or component importer.",
+    "Supplier willingness and ability to provide reliable plot polygons and legal-harvest evidence.",
+    "Whether a single corridor has enough annual shipments and paying importers for a beachhead."
+  ],
+  "version": 1
+}

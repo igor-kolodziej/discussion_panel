@@ -1,0 +1,80 @@
+{
+  "candidate_id": "control-05",
+  "claims": [
+    {
+      "claim_id": "control-05-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1542/oj?locale=en"
+      ],
+      "statement": "From 18 February 2027, the EU Batteries Regulation requires an electronic battery passport for each LMT battery, EV battery, and industrial battery above 2 kWh placed on the market or put into service."
+    },
+    {
+      "claim_id": "control-05-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1542/oj?locale=en",
+        "https://eur-lex.europa.eu/eli/reg/2024/1781/eng"
+      ],
+      "statement": "The regulation requires differentiated access, model- and battery-specific information, interoperability, and records including composition, parts, dismantling, and test evidence, implying a multi-party data-governance problem."
+    },
+    {
+      "claim_id": "control-05-c03",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1542/oj?locale=en"
+      ],
+      "statement": "Hypothesis: small assemblers and importers will prefer a shared supplier-onboarding rail over collecting the same evidence independently for every model, provided permissions and confidentiality are credible."
+    }
+  ],
+  "contrary_evidence": [
+    "Passport data must use interoperable open structures without vendor lock-in, limiting defensibility based purely on hosting or format.",
+    "Large manufacturers, ERP vendors, and industry consortia may implement supplier exchange internally before SMEs buy a standalone network."
+  ],
+  "economics": {
+    "acquisition_route": "Referral agreements with test labs and compliance consultants, supplier-facing free portals, and targeted technical guidance",
+    "capital_required_pln": 70000,
+    "founder_net_worth_path": "Hypothesis: 120 operators averaging 45,000 PLN ARR plus onboarding can exceed 5m PLN revenue; majority ownership of a profitable compliance network could yield over 5m PLN founder equity in four to seven years",
+    "founder_time": "15-20 hours weekly through the first three design partners, falling toward 10 hours with delegated compliance support",
+    "gross_margin_basis": "Target 70-85% software gross margin after onboarding templates; legal, testing, and assurance work is partner-delivered or separately billed",
+    "payback": "Customer payback comes from fewer supplier chases, avoided launch delay, and reusable evidence across multiple SKUs; target vendor CAC payback under 12 months",
+    "pricing": "Hypothesis: 10,000-35,000 PLN onboarding per operator, 1,500-6,000 PLN monthly, and low per-passport usage charges",
+    "retention_or_repeat": "Passports and supplier evidence need updates across long product lives, while every new model adds usage"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A permissioned evidence graph reusing verified supplier and component records across many models and customers",
+    "customer": "Central European battery pack assemblers, importers, and second-life operators lacking enterprise compliance infrastructure",
+    "distribution_mechanism": "Battery test labs, component distributors, conformity consultants, ERP integrators, and storage installers refer obligated operators",
+    "offer_and_business_model": "Permissioned supplier evidence exchange, validation workflow, passport publishing, and audit trail sold as SaaS plus onboarding",
+    "payer_and_paid_event": "Responsible economic operator pays at supplier onboarding, product-model setup, passport issuance, and recurring evidence maintenance",
+    "problem_trigger": "A covered battery model or batch must be launched, updated, audited, repaired, transferred, or repurposed"
+  },
+  "founder_fit": [
+    "Strong fit with data lineage, AI document processing, renewable context, and EU regulation. A narrow importer or stationary-storage wedge is compatible with part-time work; legal interpretation, conformity assessment, and security review must be bought from specialists."
+  ],
+  "parent": null,
+  "risks": [
+    "A passport omission or stale record may create compliance and product-liability exposure.",
+    "Long enterprise sales cycles could conflict with part-time execution.",
+    "Trade-secret handling and access control demand mature security before sensitive onboarding."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2023/1542/oj?locale=en",
+    "https://eur-lex.europa.eu/eli/reg/2024/1781/eng"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Regulated supplier-data network and compliance SaaS",
+    "control_point": "The reusable, permissioned evidence record feeding the legally responsible battery passport",
+    "critical_dependency": "Supplier participation and legally adequate data provenance under evolving implementation standards"
+  },
+  "thesis": "Create a permissioned supplier-evidence network for Central European battery assemblers and importers: request component data once, validate provenance, map it into each required passport field, and preserve audit-ready changes. The control point is the reusable evidence graph across supplier, component, model, batch, and responsible economic operator, not a commodity QR-page generator.",
+  "title": "Battery Passport Supplier Evidence Network",
+  "uncertainties": [
+    "The exact first niche with urgent budget: stationary packs, light mobility, EV imports, or second-life batteries.",
+    "Final standards, delegated acts, and customer interpretation of implementation responsibility.",
+    "Supplier willingness to share composition and test data with a young intermediary."
+  ],
+  "version": 1
+}

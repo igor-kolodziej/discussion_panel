@@ -1,0 +1,71 @@
+{
+  "candidate_id": "channel-09",
+  "claims": [
+    {
+      "claim_id": "channel-09-claim-01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://digital-strategy.ec.europa.eu/en/faqs/transparency-obligations-under-article-50-ai-act",
+        "https://digital-strategy.ec.europa.eu/en/policies/guidelines-ai-transparency-obligations"
+      ],
+      "statement": "Article 50 transparency obligations apply from 2 August 2026 to specified providers and deployers, with official guidance covering marking, detection and disclosure questions."
+    },
+    {
+      "claim_id": "channel-09-claim-02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2024/1689/2026-07-27/eng"
+      ],
+      "statement": "The legal scope is risk- and use-case-specific, so a publish-gate product must classify context rather than label every asset indiscriminately."
+    }
+  ],
+  "contrary_evidence": [
+    "Model providers and major content platforms can add native provenance, open standards may commoditise marking, and not all AI-assisted content is in scope."
+  ],
+  "economics": {
+    "acquisition_route": "UNVALIDATED HYPOTHESIS: 6 CMS, agency-tool or DAM marketplace listings each produce 40 paying workspaces.",
+    "capital_required_pln": 65000,
+    "founder_net_worth_path": "UNVALIDATED HYPOTHESIS: year-7 ARR of PLN 7.5 million, EBITDA of PLN 2.8 million and 80% founder ownership at 4 times EBITDA imply PLN 9 million founder equity before liabilities.",
+    "founder_time": "UNVALIDATED HYPOTHESIS: 13 founder hours weekly in SDK build and 7 after automated compatibility testing.",
+    "gross_margin_basis": "UNVALIDATED HYPOTHESIS: 90% mature gross margin after detection compute and metadata signing.",
+    "payback": "UNVALIDATED HYPOTHESIS: 6-month CAC payback using developer-led installation rather than enterprise sales.",
+    "pricing": "UNVALIDATED HYPOTHESIS — every commercial figure here, including capital_required_pln=65000, is a hypothesis: PLN 700 monthly per workspace plus PLN 0.015 per processed asset.",
+    "retention_or_repeat": "UNVALIDATED HYPOTHESIS: 87% annual workspace retention and repeated per-asset processing."
+  },
+  "fingerprint": {
+    "compounding_advantage": "labelled mark-survival and detection-failure corpus across editing and distribution transformations",
+    "customer": "CMS, DAM and agency-workflow vendors publishing synthetic media for EU audiences",
+    "distribution_mechanism": "CMS and DAM app marketplaces plus agency production-tool integrations",
+    "offer_and_business_model": "SDK, policy engine, durable marking and audit receipt sold by workspace and usage",
+    "payer_and_paid_event": "workspace owner pays for each enabled workspace and asset checked at publication",
+    "problem_trigger": "AI-generated or manipulated content reaches a publish/export boundary without reliable provenance handling"
+  },
+  "founder_fit": [
+    "Excellent AI, experimentation and automated-testing fit with product-led, no-camera distribution. UNVALIDATED HYPOTHESIS: PLN 65000 funds a narrow image-and-video SDK validation."
+  ],
+  "parent": null,
+  "risks": [
+    "False scope classification can cause over-disclosure or noncompliance.",
+    "Robust marks can be stripped or degrade content."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://digital-strategy.ec.europa.eu/en/policies/guidelines-ai-transparency-obligations",
+    "https://digital-strategy.ec.europa.eu/en/faqs/transparency-obligations-under-article-50-ai-act",
+    "https://eur-lex.europa.eu/eli/reg/2024/1689/2026-07-27/eng"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "content-provenance enforcement SDK",
+    "control_point": "CMS or asset-library publish and export action",
+    "critical_dependency": "generator provenance signals plus legally sufficient marking and disclosure policy"
+  },
+  "thesis": "Provide a CMS and digital-asset-management SDK that detects in-scope synthetic or manipulated content, applies required disclosure/marking policy and blocks publication when provenance is missing. Its defensibility is a transformation-survival corpus showing which marks remain detectable after resizing, transcoding, screenshotting and platform ingestion.",
+  "title": "AI-Content Provenance Publish Gate",
+  "uncertainties": [
+    "Customer interpretation of final guidance",
+    "Cross-platform mark survival",
+    "Whether CMS marketplaces permit a hard publish block"
+  ],
+  "version": 1
+}

@@ -1,0 +1,128 @@
+{
+  "candidate_id": "control8-04",
+  "claims": [
+    {
+      "claim_id": "control8-04-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32024R2956",
+        "https://www.eba.europa.eu/activities/direct-supervision-and-oversight/digital-operational-resilience-act/preparation-dora-application"
+      ],
+      "statement": "Commission Implementing Regulation (EU) 2024/2956 sets the standard templates for DORA registers of contractual arrangements, and the EBA publishes the associated data model, reporting package, validation materials and example template."
+    },
+    {
+      "claim_id": "control8-04-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.eba.europa.eu/publications-and-media/press-releases/esas-dry-run-exercise-shows-goal-reporting-registers-information-under-digital-operational"
+      ],
+      "statement": "In the 2024 ESA dry run, only 6.5% of analysed registers passed all data-quality checks, while half of the remaining registers failed fewer than five of 116 checks."
+    },
+    {
+      "claim_id": "control8-04-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.knf.gov.pl/dla_rynku/dora/aktualnosci/II_etap_przekazania_rejestrow_informacji_dot_umow_z_zewnetrznymi_dostawcami_uslug_ict?articleId=93727&p_id=18"
+      ],
+      "statement": "KNF opened a second 2025 submission window for Polish entities that had not filed SPR-PF-18 or whose registers had been rejected during EBA validation, and warned that an outdated or externally sourced form would fail validation."
+    },
+    {
+      "claim_id": "control8-04-c4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.knf.gov.pl/dla_rynku/edukacja_cedur/seminaria?articleId=97084&p_id=18"
+      ],
+      "statement": "KNF still ran dedicated free training in March 2026 on preparing and submitting SPR-PF-18, explicitly aiming to improve data accuracy and reduce reporting errors."
+    },
+    {
+      "claim_id": "control8-04-c5",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.servicenow.com/docs/r/governance-risk-compliance/digi-resi-third-party-registers.html",
+        "https://www.dora-guard.com/"
+      ],
+      "statement": "Direct competitors already span enterprise and smaller-entity segments: ServiceNow documents a DORA register application with GUI and Excel import/export, while DoraGuard publicly lists annual plans from EUR 1,500 to EUR 12,500 with validation and xBRL-CSV export."
+    },
+    {
+      "claim_id": "control8-04-c6",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.eba.europa.eu/activities/direct-supervision-and-oversight/digital-operational-resilience-act/preparation-dora-application",
+        "https://www.eba.europa.eu/risk-and-data-analysis/reporting/reporting-frameworks"
+      ],
+      "statement": "The official reporting stack is available without a commercial vendor and continues to be versioned through the EBA reporting framework, so maintenance against the current taxonomy and national submission workflow is a recurring product obligation rather than a one-time build."
+    }
+  ],
+  "contrary_evidence": [
+    "The EBA supplies the official template, data model, sample files, reporting package and validation materials, so a financial entity can operate without buying another product.",
+    "ServiceNow already supports DORA register records and bulk Excel workflows, and a DORA-native entrant publicly offers EUR 1,500-EUR 12,500 annual plans; the original high subscription range is not defensible for a small standalone entity without substantial implementation or private-deployment value.",
+    "The 2025 Polish resubmission episode proves validation failure occurred but does not establish how many entities failed, how often failures recur, or that affected entities will pay a new vendor.",
+    "Free KNF training and updated official forms are direct non-commercial substitutes for paid remediation.",
+    "Contract, provider and critical-function data are security-sensitive, and no evidence establishes that a small new vendor can pass financial-sector procurement or obtain hosted access."
+  ],
+  "economics": {
+    "acquisition_route": "Recruit one boutique DORA advisor and 2-3 smaller regulated design partners, demonstrate deterministic validation and clause-to-field lineage on redacted contracts, then test an advisor-led Polish SPR-PF-18 remediation channel; no advisor commitment or buyer willingness has been verified",
+    "capital_required_pln": 55000,
+    "founder_net_worth_path": "Unvalidated 6-8 year scenario: 120 entities averaging 45,000 PLN annual revenue yields 5.4m PLN; 35% EBITDA at 4x and 75% ownership implies about 5.67m PLN founder equity value. It requires a partner-led multi-country channel and does not count retained earnings twice.",
+    "founder_time": "16-22 hours per week for a pilot, with financial-regulation interpretation contracted and customer data processed in isolated or customer-controlled environments",
+    "gross_margin_basis": "Taxonomy validation, entity resolution and exports are reusable software; initial contract mapping, remediation and private deployment are service-heavy and must become repeatable or move to accredited partners",
+    "payback": "Customer payback remains an unvalidated hypothesis: the product must measure avoided remediation cycles and expert hours against the free official stack and low-priced specialist products before claiming savings",
+    "pricing": "Revised unvalidated hypothesis: 15,000-45,000 PLN implementation and 12,000-55,000 PLN annual subscription, with private deployment and contract-extraction services separately scoped. Public competitor pricing supports price pressure, not customer willingness to pay this range.",
+    "retention_or_repeat": "Registers must remain current as contracts, providers, subcontractors, functions and entities change; source lineage and approvals can support retention, but official tools and exportability limit lock-in"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A reusable, non-confidential map from contract language and vendor hierarchies to register fields, Polish/EBA validation failures and remediation patterns, without pooling customer contract text",
+    "customer": "Smaller Polish/EU insurers, payment institutions, investment firms, credit unions and regulated groups with many ICT suppliers but limited GRC engineering",
+    "distribution_mechanism": "Implementation partnerships with boutique DORA advisors, audit firms, managed security providers and banking-software consultancies",
+    "offer_and_business_model": "Contract ingestion, clause-to-field lineage, vendor/entity resolution, deterministic validation, change approvals and current EBA/KNF export; unvalidated 15,000-45,000 PLN implementation plus 12,000-55,000 PLN annually, with private deployment separately scoped",
+    "payer_and_paid_event": "CISO, operational-risk or compliance leader pays after a redacted-data preflight demonstrates remediable validation gaps, then licenses per entity or consolidated perimeter",
+    "problem_trigger": "New or amended ICT contract, acquisition or entity change, an NCA request or reporting cycle, or a rejected SPR-PF-18/taxonomy validation"
+  },
+  "founder_fit": [
+    "Excellent fit for structured data validation, entity resolution, document AI and deterministic exports",
+    "High contract value could allow a small customer count and low-publicity partner-led distribution",
+    "Can be piloted part-time with redacted or synthetic contracts, although production security reviews may not fit part-time operation",
+    "Requires strict separation from the founder's employer systems, information, vendors and work time"
+  ],
+  "parent": {
+    "candidate_id": "control8-04",
+    "version": 2
+  },
+  "risks": [
+    "Financial entities may treat contract and operational-resilience data as too sensitive for a small vendor",
+    "Established GRC platforms and low-cost DORA-native products already cover register maintenance, validation and export",
+    "AI extraction errors must never silently populate a regulatory register; every inferred field needs provenance and human approval",
+    "Long procurement and security reviews may conflict with part-time availability",
+    "National forms, EBA taxonomy versions and validation behavior can diverge or change, creating continuous maintenance and liability",
+    "Free regulator tools, training and consultant remediation may cap both conversion and price"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32024R2956",
+    "https://www.eba.europa.eu/activities/direct-supervision-and-oversight/digital-operational-resilience-act/preparation-dora-application",
+    "https://www.eba.europa.eu/publications-and-media/press-releases/esas-dry-run-exercise-shows-goal-reporting-registers-information-under-digital-operational",
+    "https://www.knf.gov.pl/dla_rynku/dora/aktualnosci/II_etap_przekazania_rejestrow_informacji_dot_umow_z_zewnetrznymi_dostawcami_uslug_ict?articleId=93727&p_id=18",
+    "https://www.knf.gov.pl/dla_rynku/dora/sprawozdawczosc/obowiazki_sprawozdawcze_w_zwiazku_z_rozporzadzeniem_dora?articleId=91834&p_id=18",
+    "https://www.knf.gov.pl/dla_rynku/edukacja_cedur/seminaria?articleId=97084&p_id=18",
+    "https://www.servicenow.com/docs/r/governance-risk-compliance/digi-resi-third-party-registers.html",
+    "https://www.dora-guard.com/",
+    "https://www.eba.europa.eu/risk-and-data-analysis/reporting/reporting-frameworks"
+  ],
+  "stage": "development",
+  "structure": {
+    "commercial_archetype": "Regulatory data compiler licensed per financial entity and reporting perimeter",
+    "control_point": "The validated, source-linked DORA Register of Information dataset used for ICT third-party governance and NCA reporting",
+    "critical_dependency": "Complete access to vendor contracts, service and entity hierarchies, plus exact implementation of the current EBA data model, validation rules and each target NCA submission workflow"
+  },
+  "thesis": "Research-stage hypothesis: build a contract-to-register compiler for smaller EU financial entities, beginning with Polish SPR-PF-18 remediation. It continuously converts approved ICT contracts, service inventories, subcontractor chains and legal-entity relationships into the current DORA Register of Information model, preserving source-clause lineage, ownership and human approval for every populated field. Actual Polish EBA rejections in 2025 and continued KNF training in 2026 show operational friction, but free official tooling and active products make simple form generation a commodity. The viable wedge is therefore deterministic error remediation, customer-controlled deployment and partner-led contract lineage rather than generic DORA compliance software.",
+  "title": "DORA Third-Party Register Compiler",
+  "uncertainties": [
+    "How many target entities still have repeated validation or source-lineage problems after the first two reporting cycles",
+    "Whether buyers will accept hosted processing, require private deployment or refuse a young vendor entirely",
+    "Whether a redacted preflight can predict production errors without exposing confidential contract data",
+    "Whether advisors will channel customers or regard the product as displacing billable work",
+    "What measurable remediation cost remains after free KNF training, updated templates and low-cost DORA-native tools",
+    "How much ongoing engineering is required for EBA and national form changes"
+  ],
+  "version": 3
+}

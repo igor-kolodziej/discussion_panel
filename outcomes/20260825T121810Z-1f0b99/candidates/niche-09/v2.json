@@ -1,0 +1,142 @@
+{
+  "candidate_id": "niche-09",
+  "claims": [
+    {
+      "claim_id": "niche-09-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.knf.gov.pl/knf/pl/komponenty/img/Rekomendacja_S_nowelizacja_czerwiec_2023_82872.pdf"
+      ],
+      "statement": "KNF Recommendation S requires banks to perform comprehensive quantitative and qualitative creditworthiness assessment using verified information and says irregular or unstable income does not preclude lending when an individualized assessment supports regular repayment."
+    },
+    {
+      "claim_id": "niche-09-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://nuk.knf.gov.pl/dla_rynku/posrednictwo_finansowe/rynek_posrednikow_kredytu_hipotecznego/posrednicy",
+        "https://eli.gov.pl/api/acts/DU/2017/819/text.html"
+      ],
+      "statement": "Polish law expressly includes preparatory document handling within mortgage intermediation and requires intermediaries and agents to transmit the information needed for the creditor's assessment; the creditor, not the proposed tool, remains responsible for the formal creditworthiness decision."
+    },
+    {
+      "claim_id": "niche-09-c03",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.ing.pl/indywidualni/kredyty-i-pozyczki/kredyt-hipoteczny/proces-i-dokumenty",
+        "https://www.pkobp.pl/firmy/poradnik-dla-firm/kredyt-hipoteczny-a-dzialalnosc-gospodarcza-przedsiebiorcy"
+      ],
+      "statement": "Bank documentation and income-history requirements for business owners are materially more complex than standard employment and can vary by tax form, timing, and bank policy; ING lists multiple business-specific document branches, while PKO notes bank-specific models and commonly varying activity-history requirements."
+    },
+    {
+      "claim_id": "niche-09-c04",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.finpack.pl/",
+        "https://www.lendi.pl/"
+      ],
+      "statement": "Direct incumbents already automate broad mortgage comparison and preparation: FinPack claims use by 70% of Polish mortgage experts, calculations across 20 banks, common-form generation, and bank integration, while Lendi reports 3,000 experts and one application workflow for multiple banks."
+    },
+    {
+      "claim_id": "niche-09-c05",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.knf.gov.pl/knf/pl/komponenty/img/Sprawozdanie_UKNF_KNF_2024_94423.pdf",
+        "https://dziennikurzedowy.knf.gov.pl/api/eli/acts/DU_KNF/2024/20/text.pdf"
+      ],
+      "statement": "KNF reported 797 mortgage intermediaries and 6,884 registered agents at year-end 2024, and an official notice reported 967.5M PLN of total mortgage-intermediation revenue in 2023; this demonstrates a real channel but not its software budget or willingness to switch."
+    },
+    {
+      "claim_id": "niche-09-c06",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32024R1689",
+        "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A62021CJ0634",
+        "https://eur-lex.europa.eu/eli/reg/2016/679/2016-05-04/eng"
+      ],
+      "statement": "An AI system intended to evaluate a natural person's creditworthiness is listed as high-risk under the EU AI Act, and the CJEU has held that an automated repayment-probability value can fall within GDPR automated-decision rules when a third party relies strongly on it; therefore applicant scoring is a materially different and more regulated product than document and policy support."
+    },
+    {
+      "claim_id": "niche-09-c07",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://www.finpack.pl/",
+        "https://www.lendi.pl/"
+      ],
+      "statement": "No public tariff for the incumbent broker systems was located in the reviewed pages, so a 300 to 600 PLN monthly seat price and network implementation fee are validation hypotheses rather than evidenced market prices."
+    }
+  ],
+  "contrary_evidence": [
+    "FinPack already claims very broad expert penetration and offers bank comparison, affordability calculations, common-form generation, bank integrations, and BIK or BIG access, directly overlapping the proposed core workflow.",
+    "Lendi combines thousands of experts, document lists, multi-bank applications, and consumer distribution, making a greenfield broker-network entry structurally difficult.",
+    "Banks retain their own documented assessment procedures and can change internal policies; historical broker outcomes may become stale and may encode discrimination rather than stable causal lender rules.",
+    "If the product evaluates applicant creditworthiness rather than only documents and policy eligibility, AI Act high-risk obligations and GDPR automated-decision exposure materially increase cost and liability.",
+    "The official channel size and revenue do not establish per-seat software willingness to pay, and no public incumbent price was found."
+  ],
+  "economics": {
+    "acquisition_route": "Recruit one mid-sized licensed broker network for a paid JDG-file-completeness pilot using synthetic or properly deidentified historical files, measure rework and preparation time, then expand by advisor teams; no network or accounting partner commitment is evidenced.",
+    "capital_required_pln": 75000,
+    "founder_net_worth_path": "Scenario, not forecast: 1,200 active seats at 450 PLN monthly produce 6.48M PLN ARR. At 35% EBITDA, 3.5x EBITDA, and 65% founder ownership, founder equity is about 5.16M PLN in years 7 to 10, before liabilities and without double-counting retained earnings. The target equals roughly 17% of the 6,884 agents reported for 2024 and is therefore demanding given entrenched incumbents; failure to validate a differentiated network channel invalidates the path.",
+    "founder_time": "15 to 20 hours weekly for a narrow rules-and-document product, outcome monitoring, and one enterprise pilot; the broker owns applicants and licensed activities.",
+    "gross_margin_basis": "Target 70% to 85% after document-processing costs, policy operations, security, compliance review, customer support, and network-specific configuration; bank integrations would reduce early margins.",
+    "payback": "Unknown until time logs show the frequency and cost of JDG exceptions. A buyer case requires measured reduction in document chase, policy lookup, or avoidable resubmission, not a claimed increase in approvals.",
+    "pricing": "Validation hypothesis, not observed competitor pricing: 300 to 600 PLN per active advisor monthly, or 50,000 to 120,000 PLN annual network license plus scoped implementation; avoid per-approval pricing that encourages misleading success claims.",
+    "retention_or_repeat": "Use recurs per complex file and policy changes create ongoing value, but incumbent suites, policy freshness, and low case frequency can weaken retention."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A versioned, provenance-tagged map of lender policy, document requirements, manual overrides, and lawfully aggregated outcomes for defined irregular-income archetypes",
+    "customer": "Polish mortgage-broker networks and specialist teams serving applicants with JDG, B2B transitions, seasonal income, multiple income sources, or nonstandard tax forms",
+    "distribution_mechanism": "One mid-sized broker-network pilot, then network and accounting-platform partnerships that already aggregate JDG applicants",
+    "offer_and_business_model": "Reviewable document extraction, versioned deterministic policy rules, missing-evidence gate, scenario provenance, and aggregate policy-performance reporting sold as B2B SaaS",
+    "payer_and_paid_event": "A broker network pays a recurring advisor-seat or team license plus a bounded implementation fee",
+    "problem_trigger": "A broker receives an irregular-income mortgage file and must determine the missing documents, applicable lender-policy rules, and defensible human submission order"
+  },
+  "founder_fit": [
+    "Strong fit with the founder's Polish context, finance interest, quantitative modeling, document extraction, and preference for systemized B2B distribution rather than a public persona.",
+    "A deterministic, synthetic-data prototype and one network pilot can fit 15 to 20 founder hours weekly; licensed intermediaries must own consumer conversations and a specialist must review financial-services, AI Act, GDPR, and fairness boundaries.",
+    "The 75,000 PLN initial budget permits a narrow non-production pilot and security work, but not speculative bank integrations or a high-risk credit-scoring compliance program."
+  ],
+  "parent": {
+    "candidate_id": "niche-09",
+    "version": 1
+  },
+  "risks": [
+    "A model or interface may be interpreted as a guaranteed approval prediction, consumer recommendation, or creditworthiness score despite disclaimers.",
+    "Tax returns, bank statements, household expenses, liabilities, and application outcomes are high-impact personal financial data requiring strong security and governance.",
+    "Historical outcomes can reproduce discriminatory patterns or lender-specific selection effects and become stale after policy changes.",
+    "FinPack, Lendi, or a broker network can add a specialist JDG rule layer using their installed base and bank relationships.",
+    "Obtaining reliable, versioned policy inputs may require bank or network cooperation that is not publicly evidenced.",
+    "A part-time founder may be unable to support frequent policy operations, enterprise procurement, and sensitive-data incident response without a committed channel partner."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.knf.gov.pl/knf/pl/komponenty/img/Rekomendacja_S_nowelizacja_czerwiec_2023_82872.pdf",
+    "https://nuk.knf.gov.pl/dla_rynku/posrednictwo_finansowe/rynek_posrednikow_kredytu_hipotecznego/posrednicy",
+    "https://eli.gov.pl/api/acts/DU/2017/819/text.html",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32024R1689",
+    "https://eur-lex.europa.eu/eli/reg/2016/679/2016-05-04/eng",
+    "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A62021CJ0634",
+    "https://www.finpack.pl/",
+    "https://www.lendi.pl/",
+    "https://www.knf.gov.pl/knf/pl/komponenty/img/Sprawozdanie_UKNF_KNF_2024_94423.pdf",
+    "https://dziennikurzedowy.knf.gov.pl/api/eli/acts/DU_KNF/2024/20/text.pdf",
+    "https://www.ing.pl/indywidualni/kredyty-i-pozyczki/kredyt-hipoteczny/proces-i-dokumenty",
+    "https://www.pkobp.pl/firmy/poradnik-dla-firm/kredyt-hipoteczny-a-dzialalnosc-gospodarcza-przedsiebiorcy"
+  ],
+  "stage": "research",
+  "structure": {
+    "commercial_archetype": "Specialist lending workflow SaaS",
+    "control_point": "The licensed broker's documented file-completeness and lender-policy review immediately before a human chooses a submission route",
+    "critical_dependency": "A broker network must supply timely policy knowledge and lawfully governed outcome feedback while the product remains outside bank credit decisions, automated applicant scoring, and consumer advice"
+  },
+  "thesis": "Create broker-side document and policy support for Polish mortgage files involving sole-proprietor and other irregular income. The product would parse submitted documents into a reviewable checklist, apply versioned deterministic lender-policy rules, show missing evidence and calculation provenance, and let a licensed intermediary choose what to present and where to submit. Outcome data should initially be retained only as lawfully governed, coarse policy-performance aggregates. The product must not approve credit, produce a consumer credit score, guarantee acceptance, or replace the bank's statutory creditworthiness assessment.",
+  "title": "JDG Mortgage Exception Engine for Polish Broker Networks",
+  "uncertainties": [
+    "Complex irregular-income cases per advisor per month, baseline rework time, and which edge cases FinPack or Lendi still handle poorly.",
+    "Whether any broker network will permit a paid side-by-side pilot or provide policy updates and deidentified outcome labels.",
+    "Lawful controller or processor roles, purpose limitation, retention, and aggregation standard for pooled application outcomes.",
+    "Whether lender-fit ranking would be treated in practice as creditworthiness evaluation, regulated advice, or ordinary intermediary preparation.",
+    "Incumbent contract pricing, network switching cost, bank-integration access, and feasible gross retention for a new vendor.",
+    "Measured willingness to pay for a JDG-only overlay when broad incumbent platforms are already deeply distributed."
+  ],
+  "version": 2
+}

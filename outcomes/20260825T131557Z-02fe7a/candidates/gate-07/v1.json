@@ -1,0 +1,73 @@
+{
+  "candidate_id": "gate-07",
+  "claims": [
+    {
+      "claim_id": "gate-07-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://single-market-economy.ec.europa.eu/sectors/cosmetics_en"
+      ],
+      "statement": "The European Commission says every cosmetic product marketed in the EU must be registered in CPNP before being placed on the market and must undergo an expert scientific safety assessment before sale."
+    },
+    {
+      "claim_id": "gate-07-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://single-market-economy.ec.europa.eu/sectors/cosmetics/cosmetic-product-notification-portal_en"
+      ],
+      "statement": "The Commission describes CPNP as a free notification system and says Article 13 requires responsible persons, and sometimes distributors, to submit product information through it."
+    }
+  ],
+  "contrary_evidence": [
+    "CPNP itself is free, so filing alone cannot justify meaningful pricing.",
+    "Responsible-person firms and regulatory consultants already assemble launch dossiers."
+  ],
+  "economics": {
+    "acquisition_route": "Hypothesis: a contract manufacturer embeds the release checklist for dozens of client brands.",
+    "capital_required_pln": 50000,
+    "founder_net_worth_path": "Hypothesis: 900 brands at 399 PLN monthly plus onboarding would exceed 4.3 million PLN recurring revenue; expansion through manufacturers could support founder net worth above 5 million PLN in years 6 to 9.",
+    "founder_time": "Hypothesis: 15 hours weekly for one product category, using external cosmetic safety expertise.",
+    "gross_margin_basis": "Hypothesis: 80% SaaS gross margin, excluding assessor fees contracted directly or passed through.",
+    "payback": "Hypothesis: partner enablement pays back within six months if it yields ten retained 399 PLN accounts.",
+    "pricing": "Hypothesis: 790 PLN onboarding per SKU family plus 399 PLN per brand-month.",
+    "retention_or_repeat": "Hypothesis: formulation, supplier, artwork, market, and regulatory changes repeatedly reopen release."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A formula-to-rule-to-artwork version graph and accumulated mismatch taxonomy",
+    "customer": "EU cosmetic microbrands, private-label manufacturers, responsible-person firms, and safety assessors",
+    "distribution_mechanism": "Contract manufacturers, testing laboratories, safety assessors, responsible-person firms, and packaging studios",
+    "offer_and_business_model": "Regulatory product-lifecycle SaaS with partner-delivered expert services",
+    "payer_and_paid_event": "The brand or manufacturer pays per released SKU family and for ongoing change monitoring",
+    "problem_trigger": "A formula, label, or market changes and the SKU needs lawful release before production or sale"
+  },
+  "founder_fit": [
+    "The founder's health interests and scientific literacy help with structured evidence without implying medical authority.",
+    "AI can compare formula, label, and dossier versions while deterministic release rules remain auditable.",
+    "Contract manufacturers and assessors create partner-led distribution."
+  ],
+  "parent": null,
+  "risks": [
+    "Users may mistake software checks for a qualified safety assessment.",
+    "Ingredient restrictions and translations require disciplined rule maintenance.",
+    "Low SKU volumes may produce weak retention for tiny brands."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://single-market-economy.ec.europa.eu/sectors/cosmetics_en",
+    "https://single-market-economy.ec.europa.eu/sectors/cosmetics/cosmetic-product-notification-portal_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Regulatory product-lifecycle workspace",
+    "control_point": "Signed SKU version release before manufacturing purchase order or EU market launch",
+    "critical_dependency": "Trusted assessor and responsible-person partnerships plus accurate rule maintenance"
+  },
+  "thesis": "A product-lifecycle workspace for EU cosmetic microbrands and contract manufacturers could bind formula version, ingredient names, safety assessment, responsible person, label, claims, CPNP proof, and batch artwork into one signed SKU-release record. Qualified assessors and responsible persons remain accountable; the software owns change control and prevents a mismatched version from reaching production.",
+  "title": "Cosmetic SKU Release Ledger for EU Microbrands",
+  "uncertainties": [
+    "Microbrand willingness to adopt structured change control before a first incident is unknown.",
+    "The best initial payer may be the contract manufacturer rather than the brand.",
+    "The 50000 PLN capital figure and all prices or scale figures below are hypotheses."
+  ],
+  "version": 1
+}

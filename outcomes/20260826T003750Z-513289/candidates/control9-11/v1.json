@@ -1,0 +1,86 @@
+{
+  "candidate_id": "control9-11",
+  "claims": [
+    {
+      "claim_id": "control9-11-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://single-market-economy.ec.europa.eu/single-market/digital-product-passport/batteries_en",
+        "https://eur-lex.europa.eu/eli/reg/2023/1542/oj?locale=en"
+      ],
+      "statement": "From 18 February 2027, each EV battery, light-means-of-transport battery, and industrial battery above 2 kWh placed on the market or put into service must have a battery passport."
+    },
+    {
+      "claim_id": "control9-11-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://single-market-economy.ec.europa.eu/single-market/digital-product-passport/batteries_en"
+      ],
+      "statement": "The battery passport uses a decentralised model in which the responsible economic operator maintains detailed data, including information relevant to performance, repair, reuse, and recycling."
+    },
+    {
+      "claim_id": "control9-11-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://single-market-economy.ec.europa.eu/news/digital-product-passport-registry-now-live-2026-07-20_en",
+        "https://single-market-economy.ec.europa.eu/news/guidance-support-preparations-digital-batteries-passport-2026-08-21_en"
+      ],
+      "statement": "The Commission's DPP Registry became operational on 20 July 2026, and August 2026 battery guidance maps 71 data points across covered battery categories."
+    }
+  ],
+  "contrary_evidence": [
+    "Battery and DPP software vendors are already entering the market, and the Commission registry plus standards lower the barrier to basic passport issuance.",
+    "The responsible economic operator, not the component supplier, owns the core obligation, limiting the initial buyer set."
+  ],
+  "economics": {
+    "acquisition_route": "Pilot 100-500 stationary packs with one Polish assembler or importer and the family installer, then bundle via inverter distributors and second-life workshops",
+    "capital_required_pln": 90000,
+    "founder_net_worth_path": "Hypothesis: 350000 active passports at 18 PLN annual blended revenue plus 60 operator accounts at 60000 PLN gives 9.9m PLN recurring revenue; at 28% EBITDA, 4x EBITDA, and 60% founder ownership, equity could exceed 6.6m PLN in years 6-9. Validate issuance volume, churn, and dilution needs; do not double-count retained cash.",
+    "founder_time": "3-5 hours per day for one stationary-storage segment; use standards/security contractors and avoid hardware manufacturing",
+    "gross_margin_basis": "Hypothesis: 86-94% for hosting and standard events; BMS integrations and manual legacy-data work priced as setup projects",
+    "payback": "Hypothesis: 12-24 months because integrations precede volume; target two anchor operators paying at least 40000 PLN setup plus annual minimums",
+    "pricing": "Hypothesis: 18-60 PLN issuance plus 8-24 PLN per battery per year, with portfolio minimums of 18000 PLN and premium health/residual-value APIs",
+    "retention_or_repeat": "The passport and service history must persist for the battery's life; changing custodian risks broken links, lost permissions, and incomplete residual-value evidence"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A longitudinal battery identity graph combining model, use, repair, health, transfer, repurposing, and recycling events improves residual-value models and makes the custodian harder to replace",
+    "customer": "EU industrial and home-storage battery assemblers, importers, repurposers, second-life operators, fleet owners, and their downstream service partners",
+    "distribution_mechanism": "Embed with storage assemblers, inverter and battery distributors, solar installers, diagnostic workshops, insurers, leasing providers, and recyclers; every asset creates downstream participant invitations",
+    "offer_and_business_model": "DPP registry handoff, access-controlled passport hosting, data-collection workflows, service and health events, responsibility transfer, and residual-value evidence API",
+    "payer_and_paid_event": "The responsible economic operator pays per passport at placement and an annual custody fee; later owners, financiers, or fleets pay for portfolio verification and health history",
+    "problem_trigger": "A covered battery is placed on the market, put into service, repaired, transferred, evaluated for second life, repurposed, or sent for recycling and its passport must remain coherent"
+  },
+  "founder_fit": [
+    "Direct renewable-energy design access through the parents' company",
+    "Strong match to quantified asset health, data science, and longevity-style monitoring",
+    "Software-only scope avoids capital-heavy battery inventory",
+    "Can begin part-time with one assembler, although security and standards expertise must be contracted"
+  ],
+  "parent": null,
+  "risks": [
+    "Long-lived regulated data hosting imposes security, uptime, interoperability, and continuity obligations.",
+    "Battery-management-system integrations may be proprietary and expensive.",
+    "A large assembler may select a global DPP platform before a Poland-first product matures."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://single-market-economy.ec.europa.eu/single-market/digital-product-passport/batteries_en",
+    "https://eur-lex.europa.eu/eli/reg/2023/1542/oj?locale=en",
+    "https://single-market-economy.ec.europa.eu/news/digital-product-passport-registry-now-live-2026-07-20_en",
+    "https://single-market-economy.ec.europa.eu/news/guidance-support-preparations-digital-batteries-passport-2026-08-21_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "regulated asset-identity infrastructure",
+    "control_point": "the unique registered battery passport required at market placement and maintained through the asset's circular lifecycle",
+    "critical_dependency": "trusted long-term hosting, correct access rights, and data feeds from battery-management systems and responsible economic operators"
+  },
+  "thesis": "Create battery-passport infrastructure specifically for European stationary storage assemblers, importers, repurposers, and second-life operators using industrial packs above 2 kWh. The product registers the unique identifier, hosts permissioned passport data, collects model and individual-use fields, and preserves the chain of responsibility when a pack is repaired, remanufactured, repurposed, financed, insured, or transferred. Start with Polish solar-storage installers and battery diagnostic/repurposing workshops, using the founder's family renewable business for workflow access, then distribute through inverter distributors, insurers, leasing firms, and recyclers. The moat is not QR generation but a longitudinal asset identity, health, service, ownership, and residual-value graph that becomes useful to every later participant.",
+  "title": "Second-Life Battery Passport Custodian",
+  "uncertainties": [
+    "Stationary-storage passport volumes reachable through Polish and regional channels",
+    "Legal procedure and liability for changing custodians or transferring responsibility after repurposing",
+    "Whether residual-value analytics can be offered using legitimately accessible passport and BMS data"
+  ],
+  "version": 1
+}

@@ -1,0 +1,145 @@
+{
+  "candidate_id": "spend-12",
+  "claims": [
+    {
+      "claim_id": "spend-12-r2-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.nature.com/articles/s41597-019-0104-8"
+      ],
+      "statement": "EEG-BIDS addresses genuine interoperability and reproducibility friction across heterogeneous EEG data, metadata and events."
+    },
+    {
+      "claim_id": "spend-12-r2-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://mne.tools/mne-bids/stable/index.html",
+        "https://bids-standard.github.io/bids-validator/",
+        "https://eeglab.org/plugins/EEG-BIDS/"
+      ],
+      "statement": "The conversion and validation layer is already mature and free: MNE-BIDS supports BIDS formats and additional manufacturer formats, the browser validator does not upload files, and EEGLAB imports and exports EEG-BIDS."
+    },
+    {
+      "claim_id": "spend-12-r2-c03",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://mne.tools/mne-bids/stable/auto_examples/convert_eeg_to_bids.html"
+      ],
+      "statement": "Conversion still requires study knowledge and human decisions: MNE-BIDS documents required event mappings, manual metadata corrections and format-specific conversion choices rather than a fully automatic universal handoff."
+    },
+    {
+      "claim_id": "spend-12-r2-c04",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.brainproducts.com/support-resources/bv2bids/"
+      ],
+      "statement": "Equipment vendors can bundle the wedge: Brain Products provides a free, source-available BV2BIDS command-line tool for its recording format."
+    },
+    {
+      "claim_id": "spend-12-r2-c05",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC10853279/"
+      ],
+      "statement": "Guided open-source BIDS tools already combine heuristic mapping, human revision, QA and validation, demonstrating that the generic workflow is reproducible even though some tools focus on imaging rather than EEG."
+    },
+    {
+      "claim_id": "spend-12-r2-c06",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ncn.gov.pl/sites/default/files/pliki/uchwaly-rady/2026/uchwala18_2026-zal1_ang.pdf"
+      ],
+      "statement": "Polish NCN project rules permit crucial software and third-party research services, so a grant-backed budget route exists, but eligibility does not establish willingness to pay."
+    },
+    {
+      "claim_id": "spend-12-r2-c07",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://database.ich.org/sites/default/files/ICH_E6%28R3%29_Step4_FinalGuideline_2025_0106.pdf"
+      ],
+      "statement": "For clinical-trial work, ICH E6(R3) requires interpretable audit trails, attributable changes, logged workflow actions and documented data transfers, creating a narrower paid control point than BIDS conversion alone."
+    },
+    {
+      "claim_id": "spend-12-r2-c08",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://www.edpb.europa.eu/sites/edpb/files/files/file1/edpb_guidelines_202003_healthdatascientificresearchcovid19_en.pdf"
+      ],
+      "statement": "EEG datasets can reveal mental or physical health information, and scientific research processing still requires GDPR legal bases and safeguards, supporting local execution but not making it automatically compliant."
+    }
+  ],
+  "contrary_evidence": [
+    "MNE-BIDS, the BIDS Validator and EEG-BIDS already provide substantial free conversion and validation capability.",
+    "Brain Products supplies a free vendor-specific BV2BIDS tool, showing that device vendors can absorb format conversion.",
+    "Guided open-source tools demonstrate that heuristic mapping, human review, QA and validation are reproducible rather than scarce.",
+    "Grant rules allow software and outsourcing but do not prove lab procurement, renewal or the original 300-lab market assumption.",
+    "Audit-trail requirements create a paid wedge mainly in regulated or formally governed workflows, not all academic EEG research."
+  ],
+  "economics": {
+    "acquisition_route": "Deliver three paid archival conversions using customer-authorised or public data and a written definition of done, document two supported acquisition families, and then ask core facilities or distributors for paid referrals. Open-source compatibility and reproducible examples are acquisition assets, not a proprietary moat.",
+    "capital_required_pln": 50000,
+    "founder_net_worth_path": "Not established by current market evidence. A scenario hurdle is 200 organisations at 18000 PLN recurring revenue plus 40 assisted datasets at 15000 PLN, or 4.2m PLN annual revenue. At an assumed 25% after-tax owner-cash margin after reinvestment, about 1.05m PLN per mature year would require roughly five mature years to accumulate 5m PLN, excluding business equity and before ramp. The customer count, renewal rate and margin are unvalidated and no valuation is double-counted.",
+    "founder_time": "Three to four hours per day is plausible for two supported format families, local deployment and fixed review windows. Open-ended metadata rescue, signal-method consulting or validated clinical-trial operations would exceed the employment-compatible scope without trained support.",
+    "gross_margin_basis": "The local software layer can exceed 80% gross margin after support once mappings stabilise, but early assisted curation is expert labour. Plan a 50-65% blended gross margin during validation and promote a format only after repeat work becomes automated.",
+    "payback": "Buyer payback is unknown. Against the Polish NCN benchmark of up to 100000 PLN annual remuneration for a specialist supporting role, an 8000-18000 PLN licence consumes roughly 8-18% of that annual denominator and must save about one to two person-months or prevent equivalent rework; a 20000 PLN dataset package needs still stronger evidence.",
+    "pricing": "Test 8000-18000 PLN annually for a two-format local workspace and support, plus 5000-20000 PLN for an assisted dataset with explicit subject, format and exception limits. A separate 40000-100000 PLN validated or regulated-workflow tier is only a hypothesis and should not be sold until the audit and validation requirements are met.",
+    "retention_or_repeat": "Core facilities, CROs and neurotech teams can have recurring studies and stable handoff requirements, while ordinary labs can use free tools episodically. Renewal depends on reusable templates, audit history and support, not on BIDS compliance alone."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A tested mapping and exception library for selected device families, versioned acceptance templates and de-identified QC reference distributions can reduce repeat work, but open-source code makes the generic conversion layer readily reproducible.",
+    "customer": "EEG core facilities, small neuroscience CROs and research-only neurotech teams with recurrent multi-subject datasets, repeated handoffs and either multiple device formats or audit requirements; ordinary one-off academic labs are not assumed to pay.",
+    "distribution_mechanism": "Start with three paid archival conversions under fixed acceptance criteria and published compatibility examples, then seek referrals from EEG core facilities and equipment distributors; no partner channel is counted until it produces a paid referral.",
+    "offer_and_business_model": "A local desktop or container workspace that orchestrates existing BIDS-compatible libraries, maps supported vendor files, validates required metadata, runs configurable signal-quality checks, creates human review queues and signs a raw-to-curated transformation manifest; fixed-price assisted datasets plus annual support and workspace licences.",
+    "payer_and_paid_event": "A core-facility manager, CRO project lead, PI with an eligible grant budget or neurotech R&D head pays for a dataset accepted against written criteria and may renew a team licence when the same workflow recurs.",
+    "problem_trigger": "A recording batch must be archived, transferred to analysts or collaborators, prepared for publication, or finalised for a regulated research workflow, but events, channels, metadata, exclusions and human artifact decisions are inconsistent or not traceable."
+  },
+  "founder_fit": [
+    "EEG, neuroscience, signal quality and reproducible data pipelines directly match the founder's background.",
+    "Local execution uses the founder's data-engineering strengths while reducing, but not eliminating, sensitive-data governance burden.",
+    "A two-format, fixed-acceptance pilot can fit three to four hours per day and less than 100000 PLN.",
+    "The founder should not promise clinical interpretation, validated medical-device functionality or open-ended format support while employed."
+  ],
+  "parent": {
+    "candidate_id": "spend-12",
+    "version": 2
+  },
+  "risks": [
+    "Open-source or vendor tools may remove enough friction that only bespoke service work remains.",
+    "Format and metadata edge cases can turn fixed-price projects into low-margin consulting.",
+    "A generic quality score can be mistaken for clinical interpretation unless the product and contract are explicitly research-only.",
+    "Local deployment reduces transfer risk but still processes potentially sensitive or re-identifiable human data.",
+    "Claiming trial-grade auditability without validated systems, procedures and regional regulatory review would create material compliance risk.",
+    "The founder's part-time capacity is incompatible with open-ended dataset rescue or continuous CRO support."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.nature.com/articles/s41597-019-0104-8",
+    "https://mne.tools/mne-bids/stable/index.html",
+    "https://mne.tools/mne-bids/stable/auto_examples/convert_eeg_to_bids.html",
+    "https://bids-standard.github.io/bids-validator/",
+    "https://eeglab.org/plugins/EEG-BIDS/",
+    "https://www.brainproducts.com/support-resources/bv2bids/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC10853279/",
+    "https://ncn.gov.pl/sites/default/files/pliki/uchwaly-rady/2026/uchwala18_2026-zal1_ang.pdf",
+    "https://database.ich.org/sites/default/files/ICH_E6%28R3%29_Step4_FinalGuideline_2025_0106.pdf",
+    "https://www.edpb.europa.eu/sites/edpb/files/files/file1/edpb_guidelines_202003_healthdatascientificresearchcovid19_en.pdf"
+  ],
+  "stage": "development",
+  "structure": {
+    "commercial_archetype": "Local research-workflow software with bounded, fixed-scope dataset curation",
+    "control_point": "The signed raw-to-BIDS manifest and human decision log accepted before analysis, regulated handoff, collaboration or archive release",
+    "critical_dependency": "Buyers must value acceptance, traceability and support beyond free converters, while a narrow supported-format matrix prevents bespoke curation from consuming the founder's time"
+  },
+  "thesis": "Build a local-first workspace for EEG core facilities, neuroscience CROs and research-only neurotech teams that turns authorised raw recordings into a reviewable EEG-BIDS handoff, records metadata and artifact decisions, and emits a signed raw-to-curated manifest. Free standards, validators and converters already solve much of file conversion, so the paid wedge must be repeatable acceptance, traceability, local deployment and accountable support for teams with recurrent multi-study or regulated workflows rather than another converter.",
+  "title": "Local-First EEG Dataset Curation and Quality-Control Workspace",
+  "uncertainties": [
+    "The count of European EEG organisations with recurrent, budgeted curation demand is unknown.",
+    "No evidence establishes willingness to pay 8000-18000 PLN annually or per-dataset fees versus assigning students or staff.",
+    "The person-hours saved by a fixed supported-format workflow and the incidence of expensive handoff rework are unknown.",
+    "CRO demand for an EEG-specific audit manifest and the validation package needed for regulated adoption are unknown.",
+    "Device-format and metadata edge-case support costs are unknown beyond the evidence that many formats and manual decisions exist.",
+    "Core-facility and equipment-distributor referral incentives are unknown and no partner commitment is evidenced.",
+    "The 200-organisation wealth scenario and renewal assumptions are unsupported by market-count evidence."
+  ],
+  "version": 3
+}

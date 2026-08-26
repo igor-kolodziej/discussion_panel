@@ -1,0 +1,70 @@
+{
+  "candidate_id": "asset-05",
+  "claims": [
+    {
+      "claim_id": "asset-05-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02012L0019-20240408"
+      ],
+      "statement": "The consolidated WEEE Directive includes photovoltaic panels and assigns producers financing responsibilities for collection and treatment."
+    },
+    {
+      "claim_id": "asset-05-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://bdo.mos.gov.pl/wp-content/uploads/2023/07/BDO_SPR_IS-Sprawozdanie-o-produktach-opakowaniach-i-o-gospodarowaniu-odpadami-wersja-1.1-1.pdf"
+      ],
+      "statement": "Polish BDO reporting includes treatment-facility contracts recorded for equipment producers or authorized representatives."
+    }
+  ],
+  "contrary_evidence": [
+    "Established producer-responsibility organizations already have recycler networks and regulatory experience.",
+    "Long PV lifetimes delay the data advantage from actual returns."
+  ],
+  "economics": {
+    "acquisition_route": "Unvalidated hypothesis: recruit importers through customs agents, accountants, and PV wholesalers.",
+    "capital_required_pln": 65000,
+    "founder_net_worth_path": "Unvalidated hypothesis: 1,000 members and controlled recycling contracts could support a 5 million PLN founder net-worth path in nine to twelve years.",
+    "founder_time": "Unvalidated hypothesis: recycler logistics are outsourced while founder work stays below 20 hours weekly.",
+    "gross_margin_basis": "Unvalidated hypothesis: reporting could reach 50% gross margin before recycling costs, and every commercial number including capital_required_pln is hypothetical.",
+    "payback": "Unvalidated hypothesis: customer acquisition pays back within nine months at ten tonnes of reported equipment.",
+    "pricing": "Unvalidated hypothesis: charge 3,000 PLN annual membership plus 0.12 PLN per kilogram placed on market.",
+    "retention_or_repeat": "Unvalidated hypothesis: statutory reporting and financed end-of-life obligations recur annually."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A serial-to-material-flow ledger improves reserve estimates and recycler bargaining power",
+    "customer": "Small PV-panel and inverter importers entering Poland",
+    "distribution_mechanism": "Customs, accounting, and wholesale channel referrals",
+    "offer_and_business_model": "Membership clearinghouse for reporting, financial guarantee coordination, collection, and treatment",
+    "payer_and_paid_event": "The producer pays at annual enrollment and per unit of equipment introduced",
+    "problem_trigger": "An importer must finance, report, and evidence end-of-life treatment"
+  },
+  "founder_fit": [
+    "Renewable-sector access and data automation are unusually relevant.",
+    "Physical logistics must remain delegated for compatibility with part-time work."
+  ],
+  "parent": null,
+  "risks": [
+    "Authorization, guarantees, and waste liabilities may exceed available capital.",
+    "Commodity recycling prices can reverse expected unit economics."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02012L0019-20240408",
+    "https://bdo.mos.gov.pl/wp-content/uploads/2023/07/BDO_SPR_IS-Sprawozdanie-o-produktach-opakowaniach-i-o-gospodarowaniu-odpadami-wersja-1.1-1.pdf"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Extended-producer-responsibility collective and transaction clearinghouse",
+    "control_point": "Producer enrollment, placed-on-market reporting, and funded take-back transaction",
+    "critical_dependency": "Polish authorization plus durable contracts with compliant treatment facilities"
+  },
+  "thesis": "Aggregate small photovoltaic importers into a compliant reporting and recycler-contract clearinghouse with serial-level end-of-life records.",
+  "title": "PV Producer-Responsibility Clearinghouse",
+  "uncertainties": [
+    "The lawful minimum structure and member switching appetite require specialist verification.",
+    "All commercial numbers including capital_required_pln are unvalidated hypotheses."
+  ],
+  "version": 1
+}

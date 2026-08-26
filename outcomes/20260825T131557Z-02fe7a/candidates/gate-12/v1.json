@@ -1,0 +1,73 @@
+{
+  "candidate_id": "gate-12",
+  "claims": [
+    {
+      "claim_id": "gate-12-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://health.ec.europa.eu/medical-devices-eudamed/overview_en"
+      ],
+      "statement": "The European Commission says the EUDAMED Actor, UDI/Device, Notified Bodies and Certificates, and Market Surveillance modules became mandatory on 28 May 2026."
+    },
+    {
+      "claim_id": "gate-12-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://health.ec.europa.eu/medical-devices-eudamed/udidevice-registration_en"
+      ],
+      "statement": "Commission guidance says manufacturers must submit UDI and device information in EUDAMED for devices they place on the EU market and confirms mandatory UDI/Device-module use from 28 May 2026."
+    }
+  ],
+  "contrary_evidence": [
+    "The Commission provides extensive guidance and a UDI helpdesk.",
+    "Regulatory-information-management vendors and consultants already serve established device companies."
+  ],
+  "economics": {
+    "acquisition_route": "Hypothesis: one authorized representative or consultant can bring ten small manufacturers onto a shared workspace.",
+    "capital_required_pln": 75000,
+    "founder_net_worth_path": "Hypothesis: 250 manufacturers averaging 1800 PLN monthly including device fees would produce 5.4 million PLN ARR; trusted recurring infrastructure could support founder net worth above 5 million PLN in years 6 to 9.",
+    "founder_time": "Hypothesis: 20 hours weekly for one low-risk device segment, with regulatory and software-validation experts contracted.",
+    "gross_margin_basis": "Hypothesis: 75% gross margin after validation support, with regulatory consulting billed separately.",
+    "payback": "Hypothesis: a 20000 PLN validated connector and channel setup repays within twelve retained manufacturer-months plus onboarding fees.",
+    "pricing": "Hypothesis: 2500 PLN onboarding per device family plus 900 PLN per manufacturer-month.",
+    "retention_or_repeat": "Hypothesis: device, label, certificate, actor, and regulatory changes repeatedly reopen master-data release."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A device-version-certificate-registration lineage graph and growing taxonomy of master-data inconsistencies",
+    "customer": "Small EU medical-device and IVD manufacturers, authorized representatives, and regulatory consultancies",
+    "distribution_mechanism": "Authorized representatives, notified-body preparation consultants, testing labs, quality-system implementers, and niche accelerators",
+    "offer_and_business_model": "Validated master-data orchestration SaaS with consultant workspaces and change-control receipts",
+    "payer_and_paid_event": "The manufacturer pays per device family onboarding and monthly for version and registration control",
+    "problem_trigger": "A new or changed device version needs consistent master data and registration evidence before market release"
+  },
+  "founder_fit": [
+    "Neuroscience, health, and data-science training support communication with device teams.",
+    "Master-data reconciliation and change detection are strong AI-assisted workflow problems.",
+    "Authorized representatives and regulatory consultants provide channel distribution."
+  ],
+  "parent": null,
+  "risks": [
+    "Incorrect master data can delay or compromise lawful device placement.",
+    "Users may confuse registration workflow with conformity assessment.",
+    "Security, auditability, and validation expectations may lengthen product development."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://health.ec.europa.eu/medical-devices-eudamed/overview_en",
+    "https://health.ec.europa.eu/medical-devices-eudamed/udidevice-registration_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Regulated master-data orchestration platform",
+    "control_point": "Versioned UDI and EUDAMED registration receipt before internal SKU market release",
+    "critical_dependency": "Accurate device data, permitted system integration, and trusted regulatory partners"
+  },
+  "thesis": "A release orchestrator for small EU medical-device and IVD manufacturers could reconcile Basic UDI-DI, UDI-DI, nomenclature, label, actor, certificate, device version, and EUDAMED receipt before a SKU is made available. It would not certify devices; it would own the master-data change gate and preserve submission lineage across manufacturers, authorized representatives, and regulatory consultants.",
+  "title": "EUDAMED Device Master-Data Release Orchestrator",
+  "uncertainties": [
+    "The number of small manufacturers with enough device change volume but no suitable incumbent is unknown.",
+    "EUDAMED integration routes and transition deadlines differ by device status and require verification.",
+    "The 75000 PLN capital figure and all commercial figures below are hypotheses."
+  ],
+  "version": 1
+}

@@ -1,0 +1,85 @@
+{
+  "candidate_id": "bottleneck-12",
+  "claims": [
+    {
+      "claim_id": "bottleneck-12-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.tauron-dystrybucja.pl/przylaczenie-do-sieci/przylaczenie/mikroinstalacja"
+      ],
+      "statement": "TAURON's current microinstallation workflow requires customer, site, and equipment data, installer and customer declarations, and in relevant routes an electrical schematic, inverter technical evidence and certificate, authorization, and storage attachment; notification is required at least 30 days before planned start-up."
+    },
+    {
+      "claim_id": "bottleneck-12-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gkpge.pl/dla-domu/strefa-klienta/przylacz-sie-do-sieci/chce-przylaczyc-mikroinstalacje",
+        "https://www.operator.enea.pl/uslugi-dystrybucyjne/dla-domu/pliki-do-pobrania"
+      ],
+      "statement": "PGE and ENEA publish their own microinstallation forms and attachments, including an electrical connection schematic and operator-specific supporting documents."
+    },
+    {
+      "claim_id": "bottleneck-12-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ure.gov.pl/pl/urzad/informacje-ogolne/aktualnosci/13173%2CRaport-URE-w-Polsce-mamy-juz-ponad-16-mln-mikroinstalacji-OZE.html"
+      ],
+      "statement": "Poland had 1,636,673 grid-connected microinstallations at the end of 2025 with nearly 13.9 GW of capacity, showing a large installed base for additions, updates, and service as well as new jobs."
+    }
+  ],
+  "contrary_evidence": [
+    "TAURON and other DSOs already provide online or downloadable guided forms, reducing value for straightforward installations.",
+    "A large installed base does not prove continued new-installation volume or willingness to pay among installers.",
+    "Certified-equipment lists and wholesaler or ERP tools may already supply reusable technical documentation."
+  ],
+  "economics": {
+    "acquisition_route": "Family-company pilot, free DSO attachment checker, model-specific search pages, and wholesaler or inverter-distributor referrals",
+    "capital_required_pln": 40000,
+    "founder_net_worth_path": "Modeled path: 900 installer firms at 450 PLN average monthly recurring revenue plus 60,000 annual packs at 20 PLN yields about 6.06m PLN annual revenue; a 35% owner-cash margin is 2.12m PLN/year and could exceed 10m PLN in five mature years",
+    "founder_time": "Up to 4 hours/day for the first two DSOs, adding operators only after templates and equipment updates are routinized",
+    "gross_margin_basis": "Modeled 82-93% after document generation, equipment-library maintenance, storage, and support",
+    "payback": "Target below 3 months because one avoided office rework cycle may justify a small monthly plan; value remains unmeasured",
+    "pricing": "Modeled 149-599 PLN/month per installer plus 15-35 PLN per completed or updated DSO pack",
+    "retention_or_repeat": "Every new installation, storage addition, power change, inverter replacement, or DSO correction creates another paid workflow"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A maintained equipment-to-certificate-to-OSD-requirement graph enriched by missing-document requests, form revisions, and successful job corrections",
+    "customer": "Polish photovoltaic and battery-storage installers with 3-30 employees completing or updating residential and small-commercial microinstallations",
+    "distribution_mechanism": "Pilot in the founder's parents' renewable installer, free inverter-certificate checker, and referrals from wholesalers, inverter distributors, and installer accountants",
+    "offer_and_business_model": "OSD-specific guided workflow, equipment and certificate library, field-to-office validation, form population, attachment manifest, submission status, and handover vault",
+    "payer_and_paid_event": "The installer pays monthly plus per completed pack when handing a job from field crew to office and onward to the DSO",
+    "problem_trigger": "A completed new or modified microinstallation must be notified to its DSO but job data, declarations, schematic, equipment evidence, or storage attachment is incomplete"
+  },
+  "founder_fit": [
+    "The parents' seven-person renewable company provides unusually direct workflow access and a safe first pilot near Ostrów Wielkopolski.",
+    "Document validation, equipment master data, and exception learning match the founder's technical skills and can be built asynchronously.",
+    "The narrow Polish wedge has low capital needs, fast job-level validation, and a later path into storage, updates, service, and adjacent EU operator workflows."
+  ],
+  "parent": null,
+  "risks": [
+    "An outdated form, certificate, or operator rule could delay the very connection the product promises to accelerate.",
+    "Seasonal installation volumes could create churn and volatile revenue.",
+    "DSO-specific maintenance may become manual and unscalable if forms and exceptions diverge too quickly."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.tauron-dystrybucja.pl/przylaczenie-do-sieci/przylaczenie/mikroinstalacja",
+    "https://www.gkpge.pl/dla-domu/strefa-klienta/przylacz-sie-do-sieci/chce-przylaczyc-mikroinstalacje",
+    "https://www.operator.enea.pl/uslugi-dystrybucyjne/dla-domu/pliki-do-pobrania",
+    "https://ure.gov.pl/pl/urzad/informacje-ogolne/aktualnosci/13173%2CRaport-URE-w-Polsce-mamy-juz-ponad-16-mln-mikroinstalacji-OZE.html"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Per-job vertical operations SaaS for distributed energy installers",
+    "control_point": "The versioned submission manifest proving that installed equipment, technical evidence, customer declarations, schematic, forms, and DSO status all refer to the same job configuration",
+    "critical_dependency": "Installers need continuing job volume and DSOs must accept generated forms and attachments without requiring unautomatable case-by-case intervention"
+  },
+  "thesis": "Build a job-close tool for Polish photovoltaic and storage installers that selects the relevant distribution-system-operator workflow, validates customer and PPE data, maps modules and inverter or storage models to certificates and technical sheets, fills statements, and produces a versioned submission and handover manifest. Installers pay per job because missing attachments, inconsistent installed power, outdated certificates, and operator-specific forms delay final connection and force repeat office work after crews leave.",
+  "title": "DSO-Ready Microinstallation Submission Pack",
+  "uncertainties": [
+    "The real frequency, delay, and labor cost of DSO requests for corrected or missing documents has not been measured.",
+    "The reachable number of Polish installer firms with enough monthly jobs to subscribe is unknown.",
+    "Modeled pricing, per-job volume, distributor conversion, support load, and owner-cash margin require paid pilots."
+  ],
+  "version": 1
+}

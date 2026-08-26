@@ -1,0 +1,81 @@
+{
+  "candidate_id": "control-08",
+  "claims": [
+    {
+      "claim_id": "control-08-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32025R0327"
+      ],
+      "statement": "The European Health Data Space treats laboratory results and related reports as priority electronic-health-data categories and establishes interoperability, security, and logging requirements for EHR systems."
+    },
+    {
+      "claim_id": "control-08-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/EN/legal-content/summary/european-health-data-space-ehds.html"
+      ],
+      "statement": "EHDS application is phased, with cross-border exchange of laboratory results scheduled later than initial patient summaries and prescriptions, so near-term demand cannot be assumed solely from the regulation."
+    },
+    {
+      "claim_id": "control-08-c03",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32025R0327",
+        "https://eur-lex.europa.eu/eli/reco/2019/243/oj"
+      ],
+      "statement": "Hypothesis: clinics combining results from several laboratories will pay for audited normalization and longitudinal display if it reduces staff handling time and preserves clinician trust; paid workflow tests are required."
+    }
+  ],
+  "contrary_evidence": [
+    "EHDS laboratory-result exchange is phased toward 2031, so regulation is not immediate proof of a 2026 buying budget.",
+    "Laboratory and EHR vendors can add longitudinal charts or standard exports within existing systems."
+  ],
+  "economics": {
+    "acquisition_route": "EHR and clinic-operations partners, one-clinic retrospective import pilots, and technical interoperability content",
+    "capital_required_pln": 80000,
+    "founder_net_worth_path": "Hypothesis: 100 clinics averaging 50,000 PLN ARR plus usage creates 5m PLN recurring revenue; a compliant, profitable majority-owned health-data gateway could support over 5m PLN founder equity in five to eight years",
+    "founder_time": "15-20 hours weekly during a de-identified or synthetic pilot; production requires delegated security and clinical QA on call",
+    "gross_margin_basis": "Automated processing can exceed 85% gross margin, but human exception review, security, and clinical quality may yield 65-80% blended margin",
+    "payback": "Target payback within three months through reduced staff rekeying and fewer data-clarification cycles; vendor CAC payback under 12 months",
+    "pricing": "Hypothesis: 1,500-6,000 PLN monthly platform fee plus 3-10 PLN per processed report or 8-20 PLN per active patient",
+    "retention_or_repeat": "Longitudinal patient histories and EHR integration create high switching cost, with volume recurring on every test cycle"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A human-verified mapping and exception corpus across Polish lab layouts, codes, units, methods, and reference intervals",
+    "customer": "Polish preventive-medicine, longevity, occupational-health, and specialist clinics receiving results from multiple laboratories",
+    "distribution_mechanism": "EHR integrators, private-lab partnerships, clinic groups, and a low-risk batch-import pilot",
+    "offer_and_business_model": "Audited import, unit and analyte normalization, provenance, exception review, and longitudinal visualisation via API and white-label portal",
+    "payer_and_paid_event": "Clinic pays a platform fee and per successfully normalised report or active monitored patient",
+    "problem_trigger": "A patient arrives with heterogeneous historical lab files or a clinic wants recurring multi-lab monitoring without manual transcription"
+  },
+  "founder_fit": [
+    "Very strong health, data-science, and medical-adjacent fit; the founder's doctor-student partner may provide general workflow feedback but not substitute for clinical governance. The work is technical and asynchronous, but production handling of health data requires security and clinical quality expertise."
+  ],
+  "parent": null,
+  "risks": [
+    "A unit, decimal, patient, or analyte mapping error can cause clinical harm.",
+    "Special-category personal data requires strong GDPR governance, security, logging, and incident response.",
+    "Integration procurement and clinic trust may make sales cycles slow."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32025R0327",
+    "https://eur-lex.europa.eu/EN/legal-content/summary/european-health-data-space-ehds.html",
+    "https://eur-lex.europa.eu/eli/reco/2019/243/oj"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Healthcare interoperability API and data-quality infrastructure",
+    "control_point": "The provenance-preserving normalisation layer between raw laboratory output and the clinician's longitudinal record",
+    "critical_dependency": "Near-zero mapping error under GDPR-grade security and a clearly non-diagnostic regulatory boundary"
+  },
+  "thesis": "Offer private preventive clinics a provenance-preserving API that imports laboratory PDFs and structured feeds, maps analytes and units, retains each laboratory's reference interval, detects extraction conflicts, and renders longitudinal clinician-facing trends. Stay on the data-infrastructure side: no autonomous diagnosis or treatment. Defensibility compounds through a quality-controlled Polish-lab mapping dictionary and correction feedback.",
+  "title": "Lab Result Normalization Gateway for Preventive Clinics",
+  "uncertainties": [
+    "How many target clinics currently rekey or manually reconcile multi-lab results.",
+    "Whether labs permit automated portal export or provide reliable structured feeds.",
+    "Whether the product remains outside medical-device functionality when limited to faithful normalization and display."
+  ],
+  "version": 1
+}

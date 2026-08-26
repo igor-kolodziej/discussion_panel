@@ -1,0 +1,120 @@
+{
+  "assumptions": [
+    "The pilot ingests only QC measurements through authorized CSV or existing exports and excludes patient and operator identifiers.",
+    "Outputs remain human-reviewed investigation packets and never release patient results, replace laboratory QC, or declare a reagent lot safe or unsafe.",
+    "One regional distributor funds a pilot across three to five consenting labs using one analyzer or reagent family.",
+    "A laboratory quality specialist, security reviewer, and IVDR counsel are contracted before claims or integrations expand.",
+    "Connector cost, price, support load, retention, regulatory status, and analyzer scale are unresolved assumptions."
+  ],
+  "base_score": 5.55,
+  "candidate_id": "route-07",
+  "candidate_sha256": "3e06c9c3d8b842661d7e7471ed7a4d7152e6fcfd36309b71ae1152b8161142d2",
+  "candidate_version": 2,
+  "constrained_score": 5.35,
+  "evaluation_type": "working",
+  "evidence_needed_for_higher_score": "Obtain a paid distributor pilot with written export and pooling rights, demonstrate materially faster or more accurate resolution of real cross-lab incidents than the incumbent workflow, quantify connector and specialist-support cost, and secure a qualified IVDR position for the exact intended purpose.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "The distributor is a credible coordination point for contemporaneous issues across otherwise separate laboratories, and confirmed incident histories could answer a narrower question than generic peer QC. The insight is meaningful, though much of the basic comparison surface already exists.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Reagent-lot shifts and cross-site troubleshooting are established quality problems with operational and reputational consequences. A distributor plausibly benefits from faster triage, but no paid demand is shown and incumbent QC systems may already satisfy enough of the need.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Distributor portfolio minimums and per-analyzer recurring fees could yield concentrated acquisition and predictable revenue, with higher margins after connectors are reused. Custom mapping, validation, security, specialist review, regulatory burden, support, and incumbent pricing pressure make CAC payback and the 5000-analyzer wealth path unproven.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "One distributor, analyzer or reagent family, and a handful of comparable labs is a coherent and testable beachhead. It is not yet established that a regional portfolio produces enough shared incidents or supports enough revenue before expansion.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "Distributor-centered incident coordination and human-confirmed dispositions provide some differentiation. Bio-Rad, Randox, and Technopath already supply peer comparison, alerts, connectivity, and reagent-lot reporting with installed networks, giving them a strong path to absorb the niche.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A validated workflow can extend to more analyzers, reagent families, distributor portfolios, laboratories, and countries, and later support richer incident knowledge and support analytics. Reused mappings and confirmed dispositions can make expansion progressively cheaper.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Permissioned cross-lab incident history, confirmed dispositions, integration mappings, and embedding in distributor support could compound and raise switching costs. Data access is contractual rather than owned, while incumbent peer networks are larger and could reproduce the workflow.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "Cross-site temporal correlation and provenance-rich investigation packets could shorten root-cause triage compared with isolated lab review. The advantage is neither benchmarked nor clearly distinct from incumbent functions, and QC-material noncommutability limits how decisively the product can interpret anomalies.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "Established interface standards and ongoing laboratory digitization make a QC-only pilot technically plausible. IVDR scrutiny and entrenched QC platforms are simultaneous headwinds, so current conditions enable testing without creating an obvious temporary window.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "A distributor can enroll multiple labs through existing service relationships and bundle the product into support, materially concentrating customer acquisition. The entire route depends on securing a partner with contractual export and pooling rights, and incumbents may already influence those same labs.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "A QC-only CSV pilot fits the founder's analytics strengths, capital, and part-time availability. Laboratory-quality judgment, IVDR classification, interface permissions, data minimization, false alerts, and ongoing mapping and support require specialist capacity and strict claim boundaries.",
+      "score": 5,
+      "status": "scored"
+    }
+  ],
+  "final_score": 5.4,
+  "highest_value_structural_change": "Target a mid-sized reagent or analyzer distributor that lacks a proprietary peer platform and sell a white-label support-operations product tied to reduced incident-resolution cost, using distributor-authorized service exports and human disposition ownership rather than competing as standalone laboratory QC software.",
+  "interaction_adjustment": -0.2,
+  "judge_id": "c3-working-route-07",
+  "main_structural_strength": "A distributor can aggregate comparable QC signals and human-confirmed dispositions across an installed portfolio, concentrating both distribution and the creation of a compounding incident dataset.",
+  "primary_score_limiter": "The proposed value overlaps heavily with incumbent peer-QC platforms, while authorized data access and a sufficiently narrow non-device intended purpose remain unresolved gates.",
+  "qualified": false,
+  "raw_response_path": "artifacts/research/raw-c3-working-route-07.json",
+  "raw_response_sha256": "827b543c55dcb5e6a5dece65d3456ae7d74b71a075775799c681b868a501f640",
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 2,
+  "strongest_disconfirming_evidence": "Bio-Rad, Randox, and Technopath already offer interlaboratory peer comparison, automated connectivity, alerts, and reagent-lot reporting, so the claimed incident layer may be an incremental feature rather than an independent business.",
+  "unrounded_score": 5.35
+}

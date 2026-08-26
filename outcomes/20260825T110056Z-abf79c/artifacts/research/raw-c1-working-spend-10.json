@@ -1,0 +1,85 @@
+{
+  "judge_id": "c1-working-spend-10",
+  "factors": [
+    {
+      "name": "Core insight",
+      "status": "scored",
+      "score": 5,
+      "rationale": "The monthly need to reconcile carrier payments, clawbacks, renewals, and producer splits is concrete and recurring, and an independent evidence ledger could expose exceptions missed by a system of record. However, the distinctive insight depends on incumbent reconciliation being materially incomplete, while SuperBroker and Berg System already advertise paid-versus-internal verification and discrepancy workflows and no Polish post-incumbent leakage evidence was located."
+    },
+    {
+      "name": "Customer pain and willingness to pay",
+      "status": "scored",
+      "score": 4,
+      "rationale": "Incorrect commission affects agency revenue and producer payouts, so verified recovery or substantial administrator-time savings would support payment. The unresolved issue is incremental pain: there is no sourced Polish mismatch frequency, recovery value, or residual workload after current systems, while competing bundles charge only tens to 199 PLN monthly, making willingness to pay 199-499 PLN for a separate overlay uncertain rather than established."
+    },
+    {
+      "name": "Business model and economics",
+      "status": "scored",
+      "score": 4,
+      "rationale": "A bounded paid audit followed by recurring file-based control has potentially favorable cash conversion and software-like operating leverage, and the research provisionally estimates 60-75% gross margin if exception handling stays low-touch. Against that, observed incumbent pricing compresses ARPU, parser maintenance and manual adjudication could make delivery service-heavy, retention requires repeatedly finding value incumbents miss, and the evidence-informed 500-account scenario produces only 1.5m PLN ARR and 375,000 PLN annual owner cash at a 25% margin, leaving the founder-wealth path slow without unproven higher ARPU or expansion."
+    },
+    {
+      "name": "Market and beachhead",
+      "status": "scored",
+      "score": 5,
+      "rationale": "Polish multi-agencies and small-to-mid-sized brokerages with several carrier files form a coherent beachhead with a clear monthly trigger. KNF's 28,365 agent and 1,418 broker counts show a broad upper bound, but the export-capable multi-carrier subset with material unresolved reconciliation complexity is unknown, so the beachhead's economically reachable size is not yet supported."
+    },
+    {
+      "name": "Competitive position and domination potential",
+      "status": "scored",
+      "score": 3,
+      "rationale": "Independence from the incumbent ledger could be a useful positioning angle when a customer suspects missed exceptions, but SuperAgent, SuperBroker, Berg System, and KA System already occupy the workflow, and Applied Systems demonstrates that a system-of-record vendor can bundle statement ingestion and matching. Without proven superior recovery accuracy or a privileged channel, the overlay lacks a credible route to controlling the Polish segment."
+    },
+    {
+      "name": "Expansion potential",
+      "status": "scored",
+      "score": 5,
+      "rationale": "Commission-based insurance distribution is prevalent across much of the EU, so validated carrier mappings and exception logic could support geographic expansion or adjacent revenue-assurance workflows. Expansion is only moderately attractive because each geography, carrier, contract, identifier scheme, and incumbent stack adds localization and assurance work, and the core feature is already present in multiple products."
+    },
+    {
+      "name": "Defensibility and durability",
+      "status": "scored",
+      "score": 3,
+      "rationale": "A permissioned corpus of carrier mappings and adjudicated exceptions could improve onboarding and false-positive performance over time, while embedding the audit ledger before payouts could create workflow switching costs. Neither asset nor workflow control currently exists; generic parsing is reproducible, customers and incumbents control the source data, and incumbents can copy or bundle the visible capability."
+    },
+    {
+      "name": "Strength of advantage",
+      "status": "scored",
+      "score": 3,
+      "rationale": "The proposed overlay could offer an independent check, explainable exception ranking, and source-level evidence, but there is no comparative accuracy, recovery, speed, or administrator-time evidence showing a behavior-changing improvement. Existing Polish systems already claim original-file import, reconciliation, reports, and discrepancy handling at lower bundled prices, so the stated advantage is presently a hypothesis rather than a demonstrated order-of-magnitude gain."
+    },
+    {
+      "name": "Timing and momentum",
+      "status": "scored",
+      "score": 5,
+      "rationale": "Modern AI-assisted parsing and record linkage lower the cost of testing heterogeneous carrier files, and commission-led distribution remains widespread in Europe. The same timing also helps incumbents add the feature, as shown by Applied Systems' 2026 launch, so technology momentum enables entry without creating a durable timing window."
+    },
+    {
+      "name": "Distribution",
+      "status": "scored",
+      "score": 3,
+      "rationale": "A fixed-scope historical audit gives direct outreach a concrete initial offer and can test value before asking for a subscription. No accountant referral or software-reseller commitment exists, identified software vendors have competing incentives, direct acquisition economics are unknown, and a low-ARPU niche sale that requires sensitive-data trust and founder-led discovery may not become affordable or compatible with the founder's preference for low-social-energy execution."
+    },
+    {
+      "name": "Execution and risks",
+      "status": "scored",
+      "score": 6,
+      "rationale": "Record linkage, parsing, exception ranking, and audit-trail construction fit the founder's skills, a two-format batch pilot appears possible within 45,000 PLN and 2.5-4 hours daily, and GDPR-compliant processor arrangements make lawful SaaS operation possible. Execution still requires customer-specific data rights, reliable rate schedules and identifiers, strong security, human approval, and tight control of mapping and exception-support load; errors could provoke invalid disputes or payouts, but no essential right or capability is shown to be unobtainable."
+    }
+  ],
+  "interaction_adjustment": 0,
+  "assumptions": [
+    "Target customers can lawfully export the necessary carrier, policy, commission-rule, and producer data and appoint the product as a processor under appropriate contracts.",
+    "The bounded pilot can begin with two stable carrier formats and keep every dispute and payout decision under customer human approval.",
+    "A 199-499 PLN monthly overlay price and a 1,000-3,000 PLN historical audit are test ranges, not demonstrated willingness to pay.",
+    "The provisional 60-75% gross-margin range is achievable only if onboarding, parser maintenance, and exception review become standardized and low-touch.",
+    "The 500-account scenario is an illustrative economics case rather than evidence that 500 suitable Polish accounts are reachable.",
+    "No reseller, accountant-referral, or incumbent-integration channel is available until an explicit commitment and measurable acquisition economics exist."
+  ],
+  "main_structural_strength": "The business can test a high-stakes, recurring revenue-control workflow through a bounded file-upload audit that fits the founder's data-science skills, part-time limit, and capital envelope without taking authority over insurance advice, disputes, or payouts.",
+  "primary_score_limiter": "The standalone overlay has not established incremental recovered value beyond low-priced incumbent reconciliation, leaving willingness to pay, retention, and an attractive founder-wealth path simultaneously uncertain.",
+  "strongest_disconfirming_evidence": "SuperBroker and Berg System already advertise commission-note import, paid-versus-internal verification, reports, and discrepancy handling, while SuperBroker lists only 99-199 PLN monthly and Applied Systems demonstrates that a system-of-record incumbent can bundle the same workflow.",
+  "highest_value_structural_change": "Make a carrier-specific historical recovery audit the primary product and build recurring software only around an exception class that repeatedly produces customer-verified cash recovery; this converts the offer from a generic duplicate dashboard into a measured outcome and avoids scaling unsupported formats before a valuable control point is proven.",
+  "evidence_needed_for_higher_score": "Across 10-20 export-capable intermediaries, obtain paid-audit conversion, customer-verified incremental recovery after incumbent reconciliation, administrator time saved, false-positive rate, exception minutes per customer-month, achievable monthly price, renewal intent, lawful data-access confirmation, and direct or referral CAC; the strongest evidence would show at least four times annual-fee value with under-six-month customer payback and low-touch repeatability across multiple carrier formats."
+}

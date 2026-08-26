@@ -1,0 +1,194 @@
+{
+  "candidate_id": "settle9-02",
+  "candidate_sha256": "e98744971196a686bfc556f90def1b24fb128954db54251e2d1f8395bbeafe8c",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "settle9-02-r1",
+      "evidence_refs": [
+        "s2-s1"
+      ],
+      "statement": "The Polish VAT list supplies official, historical taxpayer and registered settlement-account evidence without requiring a proprietary data source."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "settle9-02-r2",
+      "evidence_refs": [
+        "s2-s2",
+        "s2-s3"
+      ],
+      "statement": "VoP is a mandatory payer-PSP service for euro credit transfers, free to payment-service users, and non-euro Member States including Poland enter the compliance timetable in 2027."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "settle9-02-r3",
+      "evidence_refs": [
+        "s2-s4",
+        "s2-s5"
+      ],
+      "statement": "The EPC VoP API specification and FAQ are expressly limited to inter-PSP communication and do not grant a generic corporate AP application direct query access."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "settle9-02-r4",
+      "evidence_refs": [
+        "s2-s9"
+      ],
+      "statement": "At least one major bank exposes VoP inside its corporate payment flow while providing no separate preflight name/account JSON validation endpoint."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "settle9-02-r5",
+      "evidence_refs": [
+        "s2-s6"
+      ],
+      "statement": "Supplier impersonation and fraudulent account-change requests are recognised BEC scenarios affecting Polish firms and high-value transfers."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "settle9-02-r6",
+      "evidence_refs": [
+        "s2-s7",
+        "s2-s8"
+      ],
+      "statement": "Businesses pay for account-verification and master-data workflows: SurePay publishes paid portal tiers, and Trustpair sells overlapping supplier-onboarding, monitoring and ERP-integrated controls."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "settle9-02-r7",
+      "evidence_refs": [
+        "s2-s1",
+        "s2-s2",
+        "s2-s7",
+        "s2-s8"
+      ],
+      "statement": "The defensible paid product must wrap free official checks with supplier remediation, approval evidence, anomaly detection and embedded workflow rather than resell a name match."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "settle9-02-r8",
+      "evidence_refs": [],
+      "statement": "A Polish AP, factoring or accounting partner will provide distribution and lawful VoP-result access on commercially viable terms."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "settle9-02-r9",
+      "evidence_refs": [
+        "s2-s1",
+        "s2-s4",
+        "s2-s7",
+        "s2-s8"
+      ],
+      "statement": "A registry-first prototype fits the founder's part-time and capital constraints, but enterprise security and partner integration must be staged after paid demand proof."
+    }
+  ],
+  "contrary_evidence": [
+    "The legally mandated VoP check is free to the payment-service user.",
+    "Published EPC APIs cover inter-PSP traffic only, and direct corporate access is bank-specific.",
+    "SurePay and Trustpair already occupy supplier-account validation and approval workflow with established integrations.",
+    "Free Polish registry data makes a simple account lookup a commodity."
+  ],
+  "schema_version": 2,
+  "sources": [
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "Polish Ministry of Finance",
+      "source_id": "s2-s1",
+      "source_type": "official_registry",
+      "stance": "supporting",
+      "title": "Wykaz podatników VAT — wyszukiwarka",
+      "url": "https://www.podatki.gov.pl/wykaz-podatnikow-vat-wyszukiwarka/?mnuid=173"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2024-03-19",
+      "publisher": "Official Journal of the European Union",
+      "source_id": "s2-s2",
+      "source_type": "regulation",
+      "stance": "context",
+      "title": "Regulation (EU) 2024/886 as regards instant credit transfers in euro",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/886/oj/eng"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "European Commission Directorate-General for Financial Stability, Financial Services and Capital Markets Union",
+      "source_id": "s2-s3",
+      "source_type": "official_timeline",
+      "stance": "supporting",
+      "title": "Payment services",
+      "url": "https://finance.ec.europa.eu/consumer-finance-and-payments/payment-services/payment-services_en"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2026-05-04",
+      "publisher": "European Payments Council",
+      "source_id": "s2-s4",
+      "source_type": "scheme_specification",
+      "stance": "contradicting",
+      "title": "Verification Of Payee Scheme Inter-PSP API Specifications",
+      "url": "https://www.europeanpaymentscouncil.eu/document-library/implementation-guidelines/verification-payee-scheme-inter-psp-api-specifications"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2025-07-17",
+      "publisher": "European Payments Council",
+      "source_id": "s2-s5",
+      "source_type": "scheme_guidance",
+      "stance": "contradicting",
+      "title": "Verification of Payee API specifications FAQ",
+      "url": "https://www.europeanpaymentscouncil.eu/faq/verification-payee-scheme/api-specifications?page=1"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2024-01-26",
+      "publisher": "Polish Financial Supervision Authority",
+      "source_id": "s2-s6",
+      "source_type": "regulator_warning",
+      "stance": "supporting",
+      "title": "Business e-mail compromise",
+      "url": "https://www.knf.gov.pl/dla_konsumenta/kampanie_informacyjne/cyberoszustwa_inwestycyjne/schematy_oszustw/business_e-mail_compromise"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "SurePay",
+      "source_id": "s2-s7",
+      "source_type": "competitor_pricing",
+      "stance": "contradicting",
+      "title": "SurePay UK pricing",
+      "url": "https://www.surepay.eu/pricing-uk/"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "Trustpair",
+      "source_id": "s2-s8",
+      "source_type": "competitor_product",
+      "stance": "contradicting",
+      "title": "Vendor fraud prevention and account validation platform",
+      "url": "https://trustpair.com/gb/"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "Nordea Open Banking",
+      "source_id": "s2-s9",
+      "source_type": "bank_api_documentation",
+      "stance": "contradicting",
+      "title": "Verification of Payee in Corporate Payout API: FAQ",
+      "url": "https://support.nordeaopenbanking.com/hc/en-us/articles/25160311028636-Verification-of-Payee-VoP-in-Corporate-Payout-API-FAQ"
+    }
+  ],
+  "unknowns": [
+    "Polish bank and ERP access to reusable VoP results",
+    "Rights to store and export VoP evidence",
+    "Paid conversion and price sensitivity among Polish SMEs and accounting firms",
+    "Supplier completion and abandonment rates for remediation links",
+    "Manual exception load and API cost per verification",
+    "Security review, certification and liability-insurance cost",
+    "Channel partner commitment and revenue-share economics"
+  ]
+}

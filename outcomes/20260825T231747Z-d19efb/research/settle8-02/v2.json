@@ -1,0 +1,192 @@
+{
+  "candidate_id": "settle8-02",
+  "candidate_sha256": "fd97ad4df0e6d575ec2837778903c3fc49de48a5bc049f5bc28b8b021441168a",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "s02-r1",
+      "evidence_refs": [
+        "s02-s1"
+      ],
+      "statement": "Polish law permits multiple deposit-system operators, requires operators to agree conditions for inter-operator settlement and packaging exchange, and assigns operators recordkeeping, reporting, retailer-settlement and collection-cost responsibilities."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "s02-r2",
+      "evidence_refs": [
+        "s02-s2"
+      ],
+      "statement": "The Ministry's operator page listed eight entities with issued decisions as of 29 April 2026, confirming a multi-operator environment rather than one universal settlement stack."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "s02-r3",
+      "evidence_refs": [
+        "s02-s4"
+      ],
+      "statement": "The Ministry reported 2.3 billion returned containers and 64,000 collection locations by 17 July 2026; this proves substantial live transaction volume but does not prove settlement leakage or willingness to buy an auditor."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "s02-r4",
+      "evidence_refs": [
+        "s02-s3"
+      ],
+      "statement": "Ministry guidance says each operator establishes detailed operating rules and that retailer agreements specify deposit settlement and packaging-transfer conditions, making the relevant rights and fields contract-specific."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "s02-r5",
+      "evidence_refs": [
+        "s02-s5"
+      ],
+      "statement": "PolKa's February 2026 rules require granular EAN, voucher and bag reporting, provide correction processes, allow settlement to be delayed or suspended for defective data, and grant the operator audit access to participant systems and records."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "s02-r6",
+      "evidence_refs": [
+        "s02-s6",
+        "s02-s7"
+      ],
+      "statement": "Kaucja.pl publishes an OpenAPI onboarding document for shops and RVM manufacturers, while Zwrotka markets settlement, reporting and anti-fraud modules; core connectivity and reporting are therefore incumbent operator capabilities, not an empty market."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "s02-r7",
+      "evidence_refs": [
+        "s02-s8"
+      ],
+      "statement": "Five operators announced a cooperation agreement before system launch, reinforcing the likelihood that formal inter-operator processes will absorb some discrepancies that an independent auditor might otherwise target."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "s02-r8",
+      "evidence_refs": [
+        "s02-s3",
+        "s02-s5",
+        "s02-s6",
+        "s02-s7"
+      ],
+      "statement": "The lawful lowest-dependency wedge is a fixed-scope reconciliation of files the customer already controls, with direct operator feeds added only where participant contracts expressly allow access and third-party processing."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "s02-r9",
+      "evidence_refs": [
+        "s02-s1",
+        "s02-s3",
+        "s02-s5"
+      ],
+      "statement": "The reviewed law, guidance and operator rules allocate data duties and audit rights to operators and participants; they do not establish a general right for an independent software vendor to obtain operator data."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "s02-r10",
+      "evidence_refs": [],
+      "statement": "No public evidence found quantifies recurring recoverable settlement variance, participant willingness to pay, accepted recovery rates, joinability across two operators, achievable gross margin, security-review cost or the proposed customer-growth path."
+    }
+  ],
+  "contrary_evidence": [
+    "Kaucja.pl and Zwrotka already provide integration, reporting and settlement tooling, while PolKa supplies corrections and its own audit process.",
+    "PolKa's rules give the operator broad audit access; the reviewed public materials do not grant an outside auditor equivalent access rights.",
+    "Operator-specific contracts and schemas create an apparent reconciliation surface but can also make each deployment bespoke and permission-dependent.",
+    "Formal cooperation among operators and mandated inter-operator settlement may resolve a material share of discrepancies without a separate assurance vendor.",
+    "The system was already processing billions of containers, so a new entrant arrives after operators and large participants have deployed core infrastructure.",
+    "Public sources document complexity and volume but do not quantify recoverable leakage or show that an independent variance certificate changes an accepted payment."
+  ],
+  "schema_version": 2,
+  "sources": [
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2026-05-11",
+      "publisher": "Dziennik Ustaw / Polish Legal Information System",
+      "source_id": "s02-s1",
+      "source_type": "law",
+      "stance": "context",
+      "title": "Ustawa o gospodarce opakowaniami i odpadami opakowaniowymi — tekst jednolity",
+      "url": "https://eli.gov.pl/api/acts/DU/2026/619/text/T/D20260619L.pdf"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "Polish Ministry of Climate and Environment",
+      "source_id": "s02-s2",
+      "source_type": "official_registry",
+      "stance": "supporting",
+      "title": "System kaucyjny — operatorzy",
+      "url": "https://www.gov.pl/web/klimat/system-kaucyjny-operatorzy"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "Polish Ministry of Climate and Environment",
+      "source_id": "s02-s3",
+      "source_type": "regulator_guidance",
+      "stance": "context",
+      "title": "System kaucyjny — pytania i odpowiedzi",
+      "url": "https://www.gov.pl/web/klimat/system-kaucyjny-pytania-i-odpowiedzi"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2026-07-17",
+      "publisher": "Polish Ministry of Climate and Environment",
+      "source_id": "s02-s4",
+      "source_type": "official_data",
+      "stance": "supporting",
+      "title": "System kaucyjny przyspiesza — już 2,3 miliarda zwróconych opakowań",
+      "url": "https://www.gov.pl/web/klimat/system-kaucyjny-przyspiesza-juz-23-miliarda-zwroconych-opakowan"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2026-02-03",
+      "publisher": "PolKa — Polska Kaucja",
+      "source_id": "s02-s5",
+      "source_type": "incumbent_documentation",
+      "stance": "context",
+      "title": "Regulamin funkcjonowania systemu kaucyjnego PolKa",
+      "url": "https://polskakaucja.pl/wp-content/uploads/2026/02/Regulamin-03-02-2026.pdf"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2025-07-25",
+      "publisher": "Kaucja.pl — Krajowy System Kaucyjny",
+      "source_id": "s02-s6",
+      "source_type": "incumbent_documentation",
+      "stance": "contradicting",
+      "title": "Nowy dokument: Szybki start z OpenAPI Kaucja.pl dla sklepów i producentów RVM",
+      "url": "https://www.kaucja.pl/czytaj-wiecej/aktualnosci/nowy-dokument-szybki-start-z-openapi-kaucja-pl-dla-sklepow-i-producentow-rvm"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "Zwrotka",
+      "source_id": "s02-s7",
+      "source_type": "incumbent_documentation",
+      "stance": "contradicting",
+      "title": "Oferta dla handlu",
+      "url": "https://zwrotka.com/oferta-dla-handlu"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2024-12-19",
+      "publisher": "Zwrotka",
+      "source_id": "s02-s8",
+      "source_type": "incumbent_documentation",
+      "stance": "context",
+      "title": "5-ciu operatorów systemu kaucyjnego podpisało umowę o współpracy",
+      "url": "https://zwrotka.com/aktualnosc/5-ciu-operatorow-systemu-kaucyjnego-podpisalo-umowe-o-wspolpracy"
+    }
+  ],
+  "unknowns": [
+    "Recurring variance rate, cash exposure and finance-review time at a named producer or regional retailer.",
+    "Budget owner and paid willingness for an independent historical-statement audit.",
+    "Participant ownership, export rights and third-party processing rights for operator, POS, RVM, voucher and logistics records.",
+    "Joinability of EAN, voucher, bag, RVM, counting-centre, logistics, handling-fee and payment identifiers across two operators.",
+    "Share of discrepancies resolved through existing operator corrections and inter-operator settlement.",
+    "Whether a second operator mapping can be standardized without bespoke effort exceeding subscription revenue.",
+    "Security review, professional-liability cover, sales-cycle length, support burden and gross contribution.",
+    "Whether accepted recoveries or reduced review time can reliably exceed two monthly fees within six months."
+  ]
+}

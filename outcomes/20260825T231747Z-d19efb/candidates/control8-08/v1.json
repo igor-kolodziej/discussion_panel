@@ -1,0 +1,86 @@
+{
+  "candidate_id": "control8-08",
+  "claims": [
+    {
+      "claim_id": "control8-08-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://health.ec.europa.eu/medical-devices-eudamed/udidevice-registration_en"
+      ],
+      "statement": "The European Commission states that the EUDAMED UDI/Devices module became mandatory to use on 28 May 2026."
+    },
+    {
+      "claim_id": "control8-08-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://health.ec.europa.eu/medical-devices-eudamed/udidevice-registration_en"
+      ],
+      "statement": "The Commission says manufacturers must submit UDI/device information for devices they place on the EU market, and EMDN is the nomenclature used for EUDAMED device registration."
+    },
+    {
+      "claim_id": "control8-08-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://health.ec.europa.eu/document/download/9aea934d-85b0-4118-92e0-ec6b7c8fdc95_en?filename=md_eudamed_tp-cert-devices_en.pdf"
+      ],
+      "statement": "Commission transition material gives 28 November 2026 as the deadline to register relevant devices in the UDI/Devices module during the transition."
+    }
+  ],
+  "contrary_evidence": [
+    "EUDAMED is the official database and provides documentation and a helpdesk, so low-volume manufacturers can register directly.",
+    "Mandatory use has already begun, so some manufacturers will have completed migration before a new vendor reaches market.",
+    "Different device classes and legacy-device transition rules increase specialization and reduce the benefit of a broad generic product."
+  ],
+  "economics": {
+    "acquisition_route": "Contract a senior regulatory advisor, recruit two low-risk device makers through medtech incubators, and distribute the proven migration workflow through advisors",
+    "capital_required_pln": 85000,
+    "founder_net_worth_path": "Unvalidated 5-8 year scenario: 80 manufacturers averaging 75,000 PLN annual revenue yields 6.0m PLN; at 30% EBITDA, 4x, and 75% ownership, equity value is about 5.4m PLN.",
+    "founder_time": "18-24 hours per week for a tightly bounded device segment; regulatory review and validation remain with named specialists",
+    "gross_margin_basis": "Schema validation, reconciliation, and exports are software-like; regulatory mapping and dirty legacy cleanup are expert services that must be scoped",
+    "payback": "Customer payback hypothesis: reducing portfolio migration errors and repeated data reconciliation can justify 40,000-120,000 PLN annually for nontrivial portfolios; compare with regulatory-operations labor",
+    "pricing": "Unvalidated hypothesis: 20,000-70,000 PLN migration and 30,000-100,000 PLN annual subscription based on active device and change volume",
+    "retention_or_repeat": "New devices, identifiers, certificates, labels, countries, and changes depend on the same master graph; QMS and EUDAMED reconciliation creates high switching cost"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A clean longitudinal graph of devices, identifiers, certificates, labels, and changes lowers each future submission cost and makes errors easier to detect",
+    "customer": "Small EU medical-device and IVD manufacturers or authorised representatives with dozens to hundreds of devices and limited regulatory operations staff",
+    "distribution_mechanism": "EU MDR/IVDR consultants, authorised representatives, QMS implementers, incubators, and UDI issuing-agency service partners",
+    "offer_and_business_model": "Data intake, field validation, EMDN/identifier workflow, label/EUDAMED reconciliation, approvals, and change evidence; hypothesis 20,000-70,000 PLN migration plus 30,000-100,000 PLN annually",
+    "payer_and_paid_event": "Regulatory affairs or quality leader pays portfolio migration/onboarding and an annual master-data license, with metered change submissions",
+    "problem_trigger": "Mandatory EUDAMED rollout, first market placement, new Basic UDI-DI/device, label change, certificate change, or portfolio migration"
+  },
+  "founder_fit": [
+    "Founder has health, biosignal, and data-science context relevant to medtech data structures",
+    "Girlfriend's medical training may help surface workflow questions but does not substitute for regulatory or clinical expertise",
+    "High-value, low-volume B2B product suits analytical work and limited public exposure",
+    "Can be validated with synthetic portfolios before any sensitive customer data is processed"
+  ],
+  "parent": null,
+  "risks": [
+    "Medical-device errors can have patient-safety and market-access consequences",
+    "Regulatory consultants and enterprise product-information systems are strong incumbents",
+    "Small manufacturers may have too few devices to justify recurring software",
+    "Security, auditability, and vendor qualification can make sales cycles long"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://health.ec.europa.eu/medical-devices-eudamed/udidevice-registration_en",
+    "https://health.ec.europa.eu/document/download/bbb5323b-285b-4db6-91fc-a09f1b734eff_en?filename=md_eudamed_factsheet-mandatory-use_en.pdf",
+    "https://health.ec.europa.eu/document/download/9aea934d-85b0-4118-92e0-ec6b7c8fdc95_en?filename=md_eudamed_tp-cert-devices_en.pdf"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Regulated product-master-data hub sold per manufacturer and active device family",
+    "control_point": "The approved UDI/device master record synchronized across QMS, label, issuing-agency identifier, and mandatory EUDAMED registration",
+    "critical_dependency": "Correct regulatory classification and identifier ownership, validated manufacturer data, and authorized EUDAMED actor/module access"
+  },
+  "thesis": "Planning-stage hypothesis: create a controlled device-master-data workflow for small medical-device and IVD manufacturers or authorised representatives that maps QMS/product data into UDI identifiers, EMDN classifications, EUDAMED fields, labels, and change-controlled submissions. The service would not make clinical or conformity judgments; regulatory specialists approve those. The product's control point is the reconciled master record used before a device is placed on the market and whenever device data changes. Starting with a narrow segment such as medical-device software or low-risk Polish manufacturers can keep the schema and liability bounded while the mandatory EUDAMED rollout creates a timely migration event.",
+  "title": "EUDAMED UDI Master-Data Operations",
+  "uncertainties": [
+    "Best low-liability device niche and number of underserved manufacturers",
+    "Permitted technical mechanisms for submission or bulk upload under client authority",
+    "Extent of legacy-data cleanup required before software can add value",
+    "Whether authorised representatives will resell or build the workflow themselves"
+  ],
+  "version": 1
+}

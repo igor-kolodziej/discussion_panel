@@ -1,0 +1,119 @@
+{
+  "assumptions": [
+    "The installer can lawfully authorize access to sufficiently granular historical data for the supported inverter family under commercially usable API terms.",
+    "Qualified installers retain responsibility for customer communication, equipment changes, safety, and warranty compliance; the product remains read-only.",
+    "A substantial share of report preparation can eventually be automated, while analyst review and support remain included in early contribution costs.",
+    "The 300-700 PLN price is paid only for completed reports attached to real service or retrofit decisions, not for exploratory analyses without a paid event."
+  ],
+  "base_score": 4.42,
+  "candidate_id": "spend-07",
+  "candidate_sha256": "3b43e975d7dbde2f31954d79ff6d8128285198bbdefb4d34e2ad17c7b0efaf96",
+  "candidate_version": 5,
+  "constrained_score": 4.42,
+  "evaluation_type": "holdout_native",
+  "evidence_needed_for_higher_score": "Pre-specified trials showing that unrelated installers repeatedly pay 300-700 PLN, that the reports measurably avoid diagnostic visits or raise attributable retrofit gross profit versus existing OEM tools, and that delivery retains strong contribution margin after API, normalization, review, and support costs; this should be paired with durable commercial data-access rights and a credible estimate of paid-event volume in the single-OEM beachhead.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "Moving from generic homeowner optimization to a paid artifact for a live installer decision is a coherent insight: the value can be tied to an avoided visit or a qualified retrofit rather than to a small household energy-savings pool. The insight is useful but not yet shown to reveal information unavailable in existing OEM dashboards.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Service-call triage and retrofit qualification can carry enough economic value to support the proposed report price. However, installer willingness to pay, reorder behavior, avoided visits, and incremental retrofit conversions are all unknown, while OEM tools may already resolve many routine cases.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Event pricing sensibly avoids an unsupported subscription and makes payback testable per order, with modest initial capital. The low ticket, potentially infrequent events, API charges, normalization work, analyst review, and support create a substantial risk of service-like margins, and neither scalable paid volume nor a founder-wealth path is established.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "One inverter family, high-flexibility homes, and live service or retrofit events form a clear and testable beachhead within a sizable Polish prosumer base. The relevant intersection is much smaller than the headline installed base, and its annual paid-event count is not quantified.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "The narrow installer decision artifact offers some positioning distinct from consumer optimization, but SolarEdge already bundles sophisticated optimization and control and OEMs own the primary data and dashboard relationship. Without exclusive access or workflow lock-in, a dominant position appears unlikely.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "Successful decision reports could extend to additional intervention types, installer fleets, inverter families, and eventually recurring monitoring. Each major adjacency adds integration, permission, support, or validation burdens, so expansion is plausible but not yet advantaged by the initial wedge.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "A permissioned longitudinal case corpus and installer trust could compound, but only after meaningful repeated usage and outcome capture. The protocol, analysis, and report templates are reproducible, while the indispensable data interfaces remain controlled by OEMs that can change terms or bundle the function.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "A pre-specified baseline and auditable decision report may improve rigor and reduce ambiguity relative to ad hoc dashboard review. No evidence yet shows a sufficiently large improvement in accuracy, speed, conversion, or cost over OEM tooling and installer judgment to reliably change purchasing behavior.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "Polish net-billing, growth in storage and flexible loads, and EU user-directed data access support demand for better operational decisions. These tailwinds are partly offset by rapid OEM improvement and by the Data Act not guaranteeing remote control, unrestricted reuse, or frictionless access.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "The family installation company provides unusually credible access to 30-50 authorized pilot sites and a low-cost way to learn the workflow. It does not prove acquisition beyond that captive channel; only three unrelated trials are proposed, and no repeatable wholesaler, OEM, buying-group, or installer-referral channel is committed.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "A single-OEM, read-only report is technically bounded, affordable, aligned with the founder's data skills, and feasible part-time when installers handle field work. Material risks remain in API rights and pricing, data quality, counterfactual validity, liability, warranty boundaries, and support creep.",
+      "score": 6,
+      "status": "scored"
+    }
+  ],
+  "final_score": 4.4,
+  "highest_value_structural_change": "Secure a durable partner-controlled workflow and data right, such as an installer buying-group integration in which the report is embedded in retrofit quoting and paid from attributable installer gross profit, rather than remaining a standalone analysis that OEM dashboards can copy or bypass.",
+  "interaction_adjustment": 0,
+  "judge_id": "c1-holdout-spend07-b",
+  "main_structural_strength": "The concept is tightly scoped around a real, monetizable installer event, uses a fixed price with explicit per-event payback, and exploits the founder's family-company access for a low-risk, read-only pilot.",
+  "primary_score_limiter": "There is no evidence that the report produces enough incremental decision value over existing OEM tools to generate repeat paid orders with attractive contribution margin and sufficient event volume for meaningful scale.",
+  "qualified": false,
+  "raw_response_path": "holdout/jobs/raw-c1-holdout-spend07-b.json",
+  "raw_response_sha256": "35a2b32d29703d75872e0f2748f5117852a55d9d9ac44c6e1c68166d3953a6b6",
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 2,
+  "strongest_disconfirming_evidence": "SolarEdge already bundles tariff-, weather-, load-, battery-, and device-aware optimization and control, demonstrating that the core analytical functionality is reproducible by the OEM that controls the data and customer interface.",
+  "unrounded_score": 4.42
+}

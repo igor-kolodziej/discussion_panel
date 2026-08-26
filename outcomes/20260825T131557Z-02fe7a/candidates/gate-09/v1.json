@@ -1,0 +1,73 @@
+{
+  "candidate_id": "gate-09",
+  "claims": [
+    {
+      "claim_id": "gate-09-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.nfz.gov.pl/dla-swiadczeniodawcy/sprawozdawczosc-elektroniczna/walidacje-i-weryfikacje/sprawdzenia-z-zakresu-centralnych-warunkow-walidacji-i-centralnych-regul-weryfikacji%2C6480.html"
+      ],
+      "statement": "NFZ publishes central validation and verification rules that can expressly make a reported service ineligible for settlement when authorization or required conditions are missing."
+    },
+    {
+      "claim_id": "gate-09-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.nfz.gov.pl/dla-swiadczeniodawcy/sprawozdawczosc-elektroniczna/walidacje-i-weryfikacje/sprawdzenia-z-zakresu-centralnych-warunkow-walidacji-i-centralnych-regul-weryfikacji%2C6470.html"
+      ],
+      "statement": "Published NFZ checks include cases where a service cannot be settled because a prerequisite hospitalization, service, interval, or frequency condition was not reported or met."
+    }
+  ],
+  "contrary_evidence": [
+    "Hospital and clinic information-system vendors may already encode many NFZ checks.",
+    "Published rules do not reveal the actual preventable rejection volume or willingness to switch tools."
+  ],
+  "economics": {
+    "acquisition_route": "Hypothesis: one billing outsourcer can introduce ten providers using the same specialty workflow.",
+    "capital_required_pln": 85000,
+    "founder_net_worth_path": "Hypothesis: 350 providers at 1500 PLN monthly would produce 6.3 million PLN ARR; secure, low-churn infrastructure could support founder net worth above 5 million PLN in years 6 to 10.",
+    "founder_time": "Hypothesis: 20 hours weekly for one specialty, with privacy, security, and NFZ billing experts retained.",
+    "gross_margin_basis": "Hypothesis: 70% gross margin after secure support and rule maintenance.",
+    "payback": "Hypothesis: a 15000 PLN connector and channel build repays within ten provider-months at 70% contribution margin.",
+    "pricing": "Hypothesis: 1500 PLN per provider-month for one specialty contract, with connector setup billed separately.",
+    "retention_or_repeat": "Hypothesis: monthly settlement and rule changes create durable repeat use if accuracy is demonstrable."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A de-identified rule-to-correction taxonomy and specialty-specific dependency graph without pooling patient records",
+    "customer": "Independent Polish rehabilitation or home-care providers and outsourced NFZ billing teams",
+    "distribution_mechanism": "Medical billing outsourcers, specialty associations, clinic-accounting firms, and HIS resellers",
+    "offer_and_business_model": "Local-first reimbursement rules engine with paid connector and rule-update subscriptions",
+    "payer_and_paid_event": "The provider pays monthly for each contract whose claim batch receives a versioned preflight report",
+    "problem_trigger": "A monthly service batch is ready for NFZ submission and payment eligibility must be checked"
+  },
+  "founder_fit": [
+    "The founder combines healthcare literacy, data science, and access to a medical-student perspective.",
+    "A rules and anomaly engine is technically aligned and can run locally.",
+    "Billing outsourcers and clinic-software partners provide non-personal-brand distribution."
+  ],
+  "parent": null,
+  "risks": [
+    "Health-data processing creates high security and GDPR obligations.",
+    "Rule lag could create false confidence or missed reimbursement.",
+    "Sales into healthcare may require more meetings and support than the founder prefers."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.nfz.gov.pl/dla-swiadczeniodawcy/sprawozdawczosc-elektroniczna/walidacje-i-weryfikacje/sprawdzenia-z-zakresu-centralnych-warunkow-walidacji-i-centralnych-regul-weryfikacji%2C6480.html",
+    "https://www.nfz.gov.pl/dla-swiadczeniodawcy/sprawozdawczosc-elektroniczna/walidacje-i-weryfikacje/sprawdzenia-z-zakresu-centralnych-warunkow-walidacji-i-centralnych-regul-weryfikacji%2C6470.html"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Reimbursement pre-adjudication engine",
+    "control_point": "Versioned claim-batch pass before NFZ submission",
+    "critical_dependency": "Current rule interpretation, secure local integration, and measurable preventable denials"
+  },
+  "thesis": "A local-first preflight engine for independent rehabilitation and home-care providers could compile published NFZ validation logic into a human-readable claim graph, test a batch before submission, and preserve the rule version and correction decision behind each pass. The first product would process pseudonymized or on-premise exports and never need patient data in a shared training corpus.",
+  "title": "NFZ Claim Preflight for Rehabilitation Providers",
+  "uncertainties": [
+    "A narrow specialty with enough rejected value and weak incumbent tooling must be identified.",
+    "The permitted export and integration patterns differ across clinic systems.",
+    "The 85000 PLN capital figure and all pricing or scale figures below are hypotheses."
+  ],
+  "version": 1
+}

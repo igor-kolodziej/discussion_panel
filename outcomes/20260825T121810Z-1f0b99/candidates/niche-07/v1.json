@@ -1,0 +1,80 @@
+{
+  "candidate_id": "niche-07",
+  "claims": [
+    {
+      "claim_id": "niche-07-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://food.ec.europa.eu/food-safety/labelling-and-nutrition/nutrition-and-health-claims/eu-register-health-claims_en"
+      ],
+      "statement": "The EU health-claims register contains authorized and non-authorized claims, conditions of use, restrictions, and downloadable data, creating a deterministic evidence source for label and ad checks."
+    },
+    {
+      "claim_id": "niche-07-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.efsa.europa.eu/en/topics/topic/food-supplements"
+      ],
+      "statement": "EFSA states that supplements are regulated as foods, presentations may not claim to prevent, treat, or cure disease, and ingredient safety, upper intake, contamination, and mandatory warnings must be considered."
+    },
+    {
+      "claim_id": "niche-07-c03",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://food.ec.europa.eu/food-safety/rasff_en"
+      ],
+      "statement": "RASFF provides a public alert mechanism for food-chain risks, making ongoing ingredient and supplier watch a possible retention wedge beyond a one-time public-register lookup."
+    }
+  ],
+  "contrary_evidence": [
+    "The central health-claims dataset is public, so a claim-lookup tool alone is easy to copy.",
+    "Contract manufacturers, regulatory consultants, and testing laboratories already offer label or compliance review."
+  ],
+  "economics": {
+    "acquisition_route": "Win a contract-manufacturer channel by reducing its client revision cycles, then embed the gate in packaging handoff",
+    "capital_required_pln": 40000,
+    "founder_net_worth_path": "Hypothesis: 180 brands at 30k PLN blended annual revenue produce 5.4M PLN revenue and roughly 1.9M PLN EBITDA by year 5. At 4x EBITDA and 70% founder ownership, equity is about 5.3M PLN in years 6 to 8, provided the product owns workflow data rather than only repackaging public rules.",
+    "founder_time": "10 to 15 hours weekly after the rules and expert-escalation boundary are established",
+    "gross_margin_basis": "Target 75% to 88% after automated parsing and rules; expert escalation is separately scoped",
+    "payback": "One avoided packaging reprint, ad takedown, or delayed launch can repay multiple gates; pilot customers must disclose actual revision costs",
+    "pricing": "1,500 to 4,000 PLN per SKU gate plus 500 to 1,500 PLN monthly monitoring",
+    "retention_or_repeat": "Brands repeat with each SKU, supplier batch, claim change, and RASFF or regulatory update"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A supplier-and-ingredient exception corpus linking COA patterns, label corrections, alert history, and accepted claim wording",
+    "customer": "Polish supplement microbrands and ecommerce operators managing 5 to 50 active SKUs",
+    "distribution_mechanism": "Contract manufacturers, accredited food laboratories, packaging designers, and ecommerce agencies",
+    "offer_and_business_model": "Evidence-linked COA, formulation, warning, label, and ad exception report plus recurring watch",
+    "payer_and_paid_event": "The brand pays per SKU launch gate and monthly for supplier, ingredient, and claim-change monitoring",
+    "problem_trigger": "A formulation, supplier batch, label, or ad creative is about to be approved for launch"
+  },
+  "founder_fit": [
+    "Matches the founder's FMCG environment, health interest, quantitative mindset, and AI document-processing leverage, while remaining asynchronous B2B work. The founder must avoid using employer-confidential knowledge and should channel through independent contract manufacturers and laboratories."
+  ],
+  "parent": null,
+  "risks": [
+    "A missed contaminant, prohibited ingredient, or misleading claim can create product-liability exposure.",
+    "Brands may misuse a pass result as a government approval.",
+    "Supplier COAs can be inaccurate or fraudulent and must never replace independent testing."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://food.ec.europa.eu/food-safety/labelling-and-nutrition/nutrition-and-health-claims/eu-register-health-claims_en",
+    "https://food.ec.europa.eu/food-safety/rasff_en",
+    "https://www.efsa.europa.eu/en/topics/topic/food-supplements"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Productized regulatory quality gate",
+    "control_point": "The evidence-linked release decision immediately before label and campaign approval",
+    "critical_dependency": "Brands or contract manufacturers must share formulations and supplier evidence early enough for the gate to prevent rework"
+  },
+  "thesis": "Create a pre-launch exception gate for Polish supplement brands with roughly 5 to 50 SKUs. It would parse supplier certificates of analysis, compare dose and ingredient evidence with safety constraints, match every proposed package and ad claim to the EU register, check required warnings, and monitor RASFF signals tied to ingredients or suppliers. The deliverable is an evidence-linked correction list and versioned launch dossier, not a legal certification or laboratory test.",
+  "title": "COA-to-Claim Launch Gate for Polish Supplement Microbrands",
+  "uncertainties": [
+    "How often microbrands launch SKUs and what they currently pay for regulatory review.",
+    "Whether certificates are standardized enough for reliable automated parsing.",
+    "Which national Polish requirements and borderline botanical claims require human legal review."
+  ],
+  "version": 1
+}

@@ -1,0 +1,120 @@
+{
+  "assumptions": [
+    "The selected OEM will permit lawful commercial read access to sufficiently granular authorised-site data on terms compatible with a 300-700 PLN report price.",
+    "The family installation company can provide 30-50 consented sites and workflow feedback while installers retain responsibility for all configuration and hardware actions.",
+    "The diagnostic can be delivered with enough automation that API, analyst-review, and installer-support costs leave positive contribution margin per completed report.",
+    "Independent installers encounter enough qualifying service or retrofit events to create repeat orders rather than isolated curiosity purchases.",
+    "A pre-specified measurement boundary and baseline can produce a decision-useful report without presenting uncertain counterfactual savings as guaranteed outcomes."
+  ],
+  "base_score": 4.94,
+  "candidate_id": "spend-07",
+  "candidate_sha256": "b584aa3fdc11c00d17cdeea63c1e808c6e51ac9311442bd5e55b465c45394427",
+  "candidate_version": 4,
+  "constrained_score": 4.94,
+  "evaluation_type": "working",
+  "evidence_needed_for_higher_score": "Results from the stated family-company pilot and three unrelated installers showing repeated paid orders at the proposed price, positive contribution margin after all API and human-support costs, documented avoided visits or incremental retrofit gross profit, stable commercial data rights, and baseline accuracy accepted by installers would justify materially higher scores.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "The redesign correctly reframes a weak broad homeowner-optimisation proposition as a bounded installer decision product sold only when a service or retrofit event creates a measurable economic stake. Tying the report to an avoided visit or qualified retrofit is a sound insight, although the diagnostic-artifact concept is not inherently scarce or difficult to discover.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Installers do face consequential uncertainty when deciding whether a visit, configuration change, or retrofit is justified, and one avoided truck roll or profitable retrofit could plausibly cover a 300-700 PLN report. However, neither the frequency and severity of these events nor paid demand from unrelated installers is established, so willingness to pay remains a plausible but material uncertainty.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Per-event pricing avoids the low household-savings denominator and the continuous support burden of recurring monitoring, while the 70,000 PLN initial-capital estimate is within the founder's means. The model still lacks measured delivery cost, contribution margin, CAC, repeat order rate, annual event volume, cash conversion, and a credible path from one-off reports to 5 million PLN of founder net worth; analyst review and API charges may materially compress margin.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Poland's large prosumer base and smaller but meaningful storage segment support a real market context, while one inverter family, flexible-load homes, and live installer events form a suitably narrow beachhead. The reachable number of supported sites with sufficiently valuable events is unknown, and the one-OEM subset may be much smaller than the headline installed base.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "An independent, pre-specified decision and verification report can occupy a useful gap between raw OEM monitoring and an installer action, especially if it becomes trusted in service workflows. Yet OEMs already own the device relationship, data interfaces, and much of the optimisation capability, and no exclusive channel, right, or workflow position currently supports a dominant segment position.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "Successful single-OEM service diagnostics could extend to additional events, inverter families, high-flexibility devices, recurring fleet oversight, and nearby geographies. Each adjacency reintroduces API, protocol, support, liability, and distribution complexity, so expansion is plausible but is not yet made easier by a proven asset or repeatable wedge.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "A permissioned corpus of baseline-to-intervention cases and accumulated installer trust could improve estimates and templates over time. At present that corpus does not exist, the methods and reports are reproducible, data access remains controlled by OEMs, and an OEM or established installer platform could bundle comparable diagnostics, leaving durability weak and conditional.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "The offer is more accountable than a generic dashboard because it uses a defined baseline and produces an event-specific recommendation and verification artifact. There is no measured evidence that it reduces visits, increases retrofit profit, improves decisions over OEM tooling, or saves enough installer time to change behaviour, so the claimed advantage is relevant but not yet compelling.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "A large installed PV base, growing storage adoption, net-billing and hourly-price complexity, and improving user-directed data access create a favorable diagnostic trigger. The same timing also strengthens OEM optimisation products, and the Data Act does not remove commercial API, GDPR, security, warranty, or control constraints.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "The family installation company provides unusually credible access to 30-50 authorised pilot sites with low initial acquisition and social cost, making first-customer learning realistic. Distribution beyond that captive channel is only a plan to solicit three unrelated installers; no commitment, reorder behaviour, channel economics, or scalable acquisition route has been demonstrated.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "A single read-only adapter, bounded report workflow, installer-controlled physical changes, and family-company support fit the founder's data-science skills, capital, and part-time limit. Execution still depends on lawful granular API access, defensible baselines, careful claims and liability boundaries, and strict resistance to multi-OEM and homeowner-support sprawl.",
+      "score": 6,
+      "status": "scored"
+    }
+  ],
+  "final_score": 4.9,
+  "highest_value_structural_change": "Narrow the paid event further to high-cost battery or inverter service and warranty triage, embed the report in an installer's ticket workflow, and price it against a documented resolved ticket or avoided truck roll so repeat usage, attribution, and workflow switching costs can accumulate together.",
+  "interaction_adjustment": 0,
+  "judge_id": "c1-dev-working-spend-07",
+  "main_structural_strength": "The combination of a live installer event, fixed per-report pricing, one-OEM scope, and privileged family-company pilot access creates a concrete, low-capital validation wedge that is compatible with part-time execution.",
+  "primary_score_limiter": "The business has no evidence yet that unrelated installers will repeatedly pay 300-700 PLN at event volumes and delivery margins sufficient to support attractive owner earnings, much less the founder's wealth objective.",
+  "qualified": false,
+  "raw_response_path": "artifacts/development/raw-c1-dev-working-spend-07.json",
+  "raw_response_sha256": "d8023087dd520a81b887ac729ff21653c0d316ddf3397cddb5d8132c38cb80e2",
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 2,
+  "strongest_disconfirming_evidence": "SolarEdge already bundles tariff-, weather-, load-, battery-, and device-aware optimisation while OEMs retain contractual and economic control over key data interfaces, showing that much of the technical layer is substitutable and the essential input can be gated.",
+  "unrounded_score": 4.94
+}

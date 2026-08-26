@@ -1,0 +1,84 @@
+{
+  "candidate_id": "control9-09",
+  "claims": [
+    {
+      "claim_id": "control9-09-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en"
+      ],
+      "statement": "The definitive CBAM regime applies from 1 January 2026 and covers selected imports in cement, iron and steel, aluminium, fertilisers, electricity, and hydrogen."
+    },
+    {
+      "claim_id": "control9-09-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en"
+      ],
+      "statement": "EU importers or indirect customs representatives importing more than the single 50-tonne threshold of CBAM goods must seek authorised CBAM declarant status, and authorised declarants buy CBAM certificates."
+    },
+    {
+      "claim_id": "control9-09-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-registry_en",
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-verification_en"
+      ],
+      "statement": "The definitive CBAM Registry supports authorisation, reporting, and emissions-data submission, and the published verification timeline places the first 2026 declaration and verification work in 2027."
+    }
+  ],
+  "contrary_evidence": [
+    "The 50-tonne threshold removes many small importers from the core obligation, narrowing the Poland-first customer pool.",
+    "The Commission provides a registry and extensive operational guidance, and multiple carbon-accounting or trade-compliance vendors may compete for the same accounts."
+  ],
+  "economics": {
+    "acquisition_route": "Pilot one narrow product code with 3 importers sharing at least one non-EU supplier through a customs representative, prove collection reuse, then expand via verifier referrals",
+    "capital_required_pln": 80000,
+    "founder_net_worth_path": "Hypothesis: 320 importers at 42000 PLN ARR plus 150 installation profiles at 8000 PLN yields 14.64m PLN ARR; at 22% EBITDA, 4x EBITDA, and 60% founder ownership, equity could exceed 7.7m PLN in years 6-8. Validate channel concentration and do not double-count retained earnings.",
+    "founder_time": "4-5 hours per day for a narrow sector pilot; contract a CBAM verifier or engineer for methodology review rather than making regulated judgements alone",
+    "gross_margin_basis": "Hypothesis: 72-85% after supplier data is reused; verifier fees and bespoke emissions studies remain pass-through or separate",
+    "payback": "Hypothesis: 10-16 months if 12 importers average 30000 PLN first-year revenue; validate security review and supplier onboarding effort",
+    "pricing": "Hypothesis: 18000-75000 PLN per importer per year based on suppliers and tonnage, plus 5000-20000 PLN for a reusable installation profile",
+    "retention_or_repeat": "Imports, supplier data, carbon prices, verification, and declarations recur annually; historical installation factors and resolved verifier questions are valuable across years"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A permissioned graph of installations, products, methodologies, verification findings, and buyer allocations reduces repeated supplier collection and creates cross-buyer network effects",
+    "customer": "Polish importers above the CBAM threshold in iron and steel, aluminium, cement, fertilisers, hydrogen, or electricity, plus their non-EU producing installations",
+    "distribution_mechanism": "Distribute through indirect customs representatives, accredited verifiers, industrial buying groups, and trade-finance partners; suppliers reuse profiles across multiple EU buyers",
+    "offer_and_business_model": "Supplier evidence portal, installation identity and methodology checks, lot allocation, verifier workspace, registry-ready data, and certificate exposure forecasting",
+    "payer_and_paid_event": "The importer pays annually by covered tonnage and supplier count; non-EU installations can pay for a reusable verified evidence profile",
+    "problem_trigger": "A purchase order for covered goods creates a future need for attributable embedded-emissions evidence, authorised-declarant reporting, verification, and certificate planning"
+  },
+  "founder_fit": [
+    "Strong finance, data science, forecasting, and provenance fit",
+    "Can validate with a single product category and a shared supplier",
+    "B2B partner distribution avoids public-facing marketing",
+    "Capital fits the founder profile, but domain verification must be delegated"
+  ],
+  "parent": null,
+  "risks": [
+    "Non-EU suppliers may refuse or be unable to provide credible plant data.",
+    "Methodology or allocation errors could affect costly certificate obligations.",
+    "A verifier or customs channel could disintermediate the product."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en",
+    "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-registry_en",
+    "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-verification_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "two-sided supplier evidence network",
+    "control_point": "the verified embedded-emissions dataset needed for the annual CBAM declaration and certificate obligation",
+    "critical_dependency": "non-EU installations must supply credible primary data and verifiers must accept the lineage and allocation model"
+  },
+  "thesis": "Build a two-sided evidence exchange for Polish mid-market importers of steel, aluminium, cement, fertiliser, hydrogen, and electricity and their non-EU installations. Instead of another CBAM calculator, the system requests plant- and product-specific source data at purchase order, preserves calculation lineage, allocates verified emissions to imported lots, routes verifier questions to the original supplier, and prepares authoritative registry records and annual declaration support. Customs representatives, accredited verifiers, trade-finance providers, and industrial buying groups can distribute it because each already sees multiple importers. Reusable permissioned installation profiles and verifier-resolved data create a cross-border evidence network that becomes harder to replace as more importers buy from the same plants.",
+  "title": "CBAM Supplier Emissions Evidence Exchange",
+  "uncertainties": [
+    "How many Polish importers exceed the threshold and lack group-level systems",
+    "Actual supplier overlap needed for evidence-network economics",
+    "Commercial and technical access rules for registry and verifier collaboration"
+  ],
+  "version": 1
+}

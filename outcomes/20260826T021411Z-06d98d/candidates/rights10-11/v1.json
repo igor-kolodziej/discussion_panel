@@ -1,0 +1,85 @@
+{
+  "candidate_id": "rights10-11",
+  "claims": [
+    {
+      "claim_id": "rights10-11-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/news/revised-waste-framework-directive-enters-force-2025-10-16_en"
+      ],
+      "statement": "The revised Waste Framework Directive requires Member States to establish textile and footwear EPR schemes under common EU rules."
+    },
+    {
+      "claim_id": "rights10-11-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://single-market-economy.ec.europa.eu/single-market/digital-product-passport/textile-apparel_en"
+      ],
+      "statement": "Textile apparel is a priority ESPR product group, with a planned delegated act and product-specific DPP requirements, but the final requirements are not yet fixed."
+    },
+    {
+      "claim_id": "rights10-11-c3",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://www.gov.pl/web/klimat/tekstylia"
+      ],
+      "statement": "Demand hypothesis: fibre recyclers will reserve homogeneous factory scrap when composition and forward yield are reliable."
+    }
+  ],
+  "contrary_evidence": [
+    "Textile DPP obligations depend on a future delegated act and timeline changes are possible.",
+    "Mixed-fibre scrap and cheap virgin fibre can undermine recycling economics."
+  ],
+  "economics": {
+    "acquisition_route": "Demand hypothesis: one recycler's accepted-spec list can be used to recruit a concentrated set of factories",
+    "capital_required_pln": 50000,
+    "founder_net_worth_path": "Hypothesis: 40m PLN annual GMV at 4% plus 200 facilities at 1500 PLN monthly yields 5.2m PLN revenue; 25% EBITDA at a 4x value could exceed 5m PLN in 4-6 years",
+    "founder_time": "12-18 hours weekly for one fibre category and one regional cluster",
+    "gross_margin_basis": "Economics hypothesis: 70-82% excluding testing and freight passed through to participants",
+    "payback": "Economics hypothesis: 30 facilities at 1500 PLN monthly recover setup capital in 12-15 months before transaction revenue",
+    "pricing": "Economics hypothesis: 1000-3000 PLN monthly per facility plus 3-5% of material GMV",
+    "retention_or_repeat": "Production generates weekly lots; EPR reporting, composition changes, and forward recycler reservations recur"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Factory-specific composition and yield history, recycler acceptance data, and aggregated forward supply by fibre",
+    "customer": "Textile and footwear manufacturers, brands, producer-responsibility organizations, sorters, and fibre recyclers",
+    "distribution_mechanism": "Polish garment clusters, ERP partners, textile labs, producer-responsibility organizations, and recycler partnerships",
+    "offer_and_business_model": "Owner authorization, composition evidence, status and condition record, forward yield forecast, recycler specification matching, and EPR/DPP export",
+    "payer_and_paid_event": "Producer pays per facility or brand monthly; seller and buyer pay a transaction fee on reserved volume",
+    "problem_trigger": "A producer faces textile EPR and future DPP work while recyclers lack predictable, composition-known feedstock"
+  },
+  "founder_fit": [
+    "Supply-chain data problem suited to AI",
+    "Capital-light",
+    "EU scalability",
+    "Cluster-based B2B selling limits networking burden"
+  ],
+  "parent": null,
+  "risks": [
+    "DPP timing",
+    "Misdeclared composition",
+    "Low material prices",
+    "Waste shipment restrictions"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://environment.ec.europa.eu/news/revised-waste-framework-directive-enters-force-2025-10-16_en",
+    "https://single-market-economy.ec.europa.eu/single-market/digital-product-passport/textile-apparel_en",
+    "https://www.gov.pl/web/klimat/tekstylia"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Provenance SaaS plus recoverable-material capacity pool",
+    "control_point": "Authorized recurring factory output and its trusted composition history",
+    "critical_dependency": "Enough homogeneous material must clear logistics and processing economics; DPP details remain subject to future rules"
+  },
+  "thesis": "Cut-and-sew factories and brands authorize recurring scrap or deadstock lots with composition, origin, condition, and waste status; recyclers reserve future homogeneous volumes and producers reuse the evidence for EPR and DPP readiness. Demand hypothesis: mill-specific yield history is a stronger moat than a generic textile marketplace.",
+  "title": "Textile Scrap Provenance and Forward-Volume Pool",
+  "uncertainties": [
+    "Factory data quality",
+    "Recycler reservation premium",
+    "Polish EPR design",
+    "Minimum economic lot size"
+  ],
+  "version": 1
+}

@@ -1,0 +1,149 @@
+{
+  "candidate_id": "route-12",
+  "claims": [
+    {
+      "claim_id": "route-12-v2-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www-pub.iaea.org/MTCD/Publications/PDF/Pub1425_web.pdf",
+        "https://eur-lex.europa.eu/legal-content/en/TXT/?uri=CELEX%3A32013L0059"
+      ],
+      "statement": "IAEA dental-practice audit material explicitly includes repeat analysis, and EU radiation-protection law requires quality-assurance programs, performance testing and clinical audits for medical radiological practices including dental exposure."
+    },
+    {
+      "claim_id": "route-12-v2-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://health.ec.europa.eu/document/download/b45335c5-1679-4c71-a91c-fc7a4d37f12b_en?filename=mdcg_2019_11_en.pdf"
+      ],
+      "statement": "Current MDCG guidance makes software qualification and classification depend on intended purpose and function, so calling the module non-diagnostic does not by itself settle whether it is medical-device software or an accessory."
+    },
+    {
+      "claim_id": "route-12-v2-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://commission.europa.eu/law/law-topic/data-protection/information-business-and-organisations/application-gdpr_en",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC11500890/"
+      ],
+      "statement": "Pseudonymized or de-identified data remains personal data when re-identification is possible, and published research specifically identifies re-identification risk in de-identified dental panoramic radiographs; retrospective image access therefore needs a lawful data role and safeguards."
+    },
+    {
+      "claim_id": "route-12-v2-c4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://dicom.nema.org/medical/dicom/current/output/html/part01.html"
+      ],
+      "statement": "DICOM supports dental imaging exchange in multi-vendor environments but explicitly does not guarantee interoperability, so each device and PACS integration must be verified rather than assumed."
+    },
+    {
+      "claim_id": "route-12-v2-c5",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.overjet.com/iris",
+        "https://www.duerrdental.com/en/AE/products/imaging/software/vistasoft-ai-inklusive/"
+      ],
+      "statement": "Overjet IRIS and Duerr Dental VistaSoft publicly describe dental image-quality checking, acquisition-time problem detection or image-quality deterioration monitoring, creating direct incumbent overlap with the original offer."
+    },
+    {
+      "claim_id": "route-12-v2-c6",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://opendental.com/site/order.html"
+      ],
+      "statement": "Open Dental currently publishes a USD 199 monthly per-location support price that includes acquisition and imaging-module access, creating a ceiling comparison for a narrow QA add-on rather than proof that clinics will pay separately."
+    },
+    {
+      "claim_id": "route-12-v2-c7",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://pubmed.ncbi.nlm.nih.gov/26321841/",
+        "https://pubmed.ncbi.nlm.nih.gov/8777590/"
+      ],
+      "statement": "Published dental repeat rates vary materially by setting: one dental-school study reported 7.1% intraoral and 5.86% extraoral repeats, while an experienced department audit reported a 0.93% repeat rate, so high avoidable-repeat economics cannot be assumed for ordinary clinics."
+    },
+    {
+      "claim_id": "route-12-v2-c8",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://stat.gov.pl/files/gfx/portalinformacyjny/en/defaultaktualnosci/3325/20/3/1/human_resources_in_selected_medical_professions__based_on_administrative_sources_in_2024_2.pdf"
+      ],
+      "statement": "Statistics Poland reports 36,965 practising dentists in 2024, showing a substantial professional base but not the number of compatible imaging units, decision makers or reseller-controlled service contracts."
+    }
+  ],
+  "contrary_evidence": [
+    "Overjet IRIS and Duerr Dental VistaSoft already publicize close substitutes for image-quality checking and acquisition QA, weakening novelty and reseller appetite.",
+    "An experienced dental radiology department reported only a 0.93% repeat rate, so avoided retakes alone may not fund a recurring subscription.",
+    "DICOM conformity facilitates but does not guarantee interoperability, and proprietary PACS or sensor behavior can make integrations device-specific.",
+    "Dental radiographs cannot be presumed anonymous after removal of obvious identifiers because dentition itself can support re-identification.",
+    "Non-diagnostic wording does not determine MDR status; intended purpose and functional impact require a documented classification assessment."
+  ],
+  "economics": {
+    "acquisition_route": "Hypothesis: obtain one reseller's written participation and begin with a retrospective, pseudonymized, single-modality reject-analysis pilot in 5-10 consenting clinics. Use an executed data-processing or controller arrangement, verify DICOM or export behavior per device, and buy a formal EU regulatory classification opinion before any live acquisition-time output. The initial product is an audit and technician-training report, not an accept-or-repeat instruction.",
+    "capital_required_pln": 95000,
+    "founder_net_worth_path": "Hypothesis, not forecast: 3,000 clinic locations across multiple EU markets at 300 PLN monthly net revenue would produce 10.8m PLN ARR. At 25% EBITDA, a 4x EBITDA value and 55% founder ownership, founder equity would be about 5.9m PLN in year 9-13. This requires regional reseller channels, defensible cross-vendor data and regulated product execution; retained earnings are not added again.",
+    "founder_time": "Hypothesis: 12-18 hours weekly for model and pipeline work, with a dental radiologist, medical physicist, privacy counsel and regulatory specialist engaged for bounded reviews. It ceases to fit if the founder must personally support every clinic or perform clinical QA decisions.",
+    "gross_margin_basis": "Hypothesis: 55-70% after a 25-35% reseller share, secure image processing or storage, monitoring, support and validation. Margin is lower than the discovery estimate because device-specific integration and regulated maintenance are not negligible.",
+    "payback": "Hypothesis: 30,000-60,000 PLN for one reseller integration, privacy setup and bounded classification work could be recovered in 14-24 months only after roughly 25-40 paying clinics; regulatory conformity work beyond an initial opinion is not included and could exceed the bootstrap budget.",
+    "pricing": "Test 180-350 PLN per clinic location monthly for retrospective reject analytics, benchmark reports and training workflow. Do not price on avoided retakes until the clinic's baseline and causal improvement are measured.",
+    "retention_or_repeat": "Potential renewal follows annual equipment service, periodic QA review and technician turnover, but a low mature-clinic repeat rate or vendor-bundled QA may eliminate the standalone budget."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Consented, device-specific images linked to explicit accept, repeat, error-cause and training outcomes could improve cross-vendor QA benchmarks",
+    "customer": "Dental clinics using digital intraoral or panoramic radiography supported by an equipment or PACS reseller",
+    "distribution_mechanism": "A participating reseller bundles retrospective QA analytics and training reports into installation or annual service, with live flags deferred",
+    "offer_and_business_model": "Vendor-neutral repeat analytics, acquisition-quality trend reports and technician training workflow licensed per clinic location",
+    "payer_and_paid_event": "Clinic or reseller pays a recurring location fee after a retrospective pilot demonstrates usable exports, reliable labels and an actionable QA gap",
+    "problem_trigger": "A clinic's reject or repeat pattern worsens, a technician needs targeted training, or an annual QA or service review is due"
+  },
+  "founder_fit": [
+    "Image-quality modelling and monitoring fit the founder's neuroscience, biosignal and data-science background.",
+    "A retrospective single-modality pilot can be run part-time before committing the full capital budget.",
+    "Resellers can concentrate distribution and first-line support, while licensed dental, medical-physics, privacy and regulatory experts retain non-delegable judgments."
+  ],
+  "parent": {
+    "candidate_id": "route-12",
+    "version": 1
+  },
+  "risks": [
+    "The module may qualify as medical-device software or an accessory and require conformity work beyond the founder's bootstrap budget.",
+    "A false assurance or missed defect could influence whether a poor image enters clinical use; v2 therefore defers live accept-or-repeat outputs.",
+    "Resellers or clinics may lack lawful rights to provide images and repeat labels for model development and monitoring.",
+    "Dental images can remain identifiable after obvious metadata is removed, increasing privacy and security obligations.",
+    "DICOM support does not guarantee compatibility, creating costly per-vendor integration and support.",
+    "Overjet, Duerr Dental and other imaging vendors may bundle enough QA to eliminate willingness to pay for an independent module.",
+    "Experienced clinics may have too few avoidable repeats for direct financial payback."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www-pub.iaea.org/MTCD/Publications/PDF/Pub1425_web.pdf",
+    "https://eur-lex.europa.eu/legal-content/en/TXT/?uri=CELEX%3A32013L0059",
+    "https://health.ec.europa.eu/document/download/b45335c5-1679-4c71-a91c-fc7a4d37f12b_en?filename=mdcg_2019_11_en.pdf",
+    "https://commission.europa.eu/law/law-topic/data-protection/information-business-and-organisations/application-gdpr_en",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC11500890/",
+    "https://dicom.nema.org/medical/dicom/current/output/html/part01.html",
+    "https://www.overjet.com/iris",
+    "https://www.duerrdental.com/en/AE/products/imaging/software/vistasoft-ai-inklusive/",
+    "https://opendental.com/site/order.html",
+    "https://pubmed.ncbi.nlm.nih.gov/26321841/",
+    "https://pubmed.ncbi.nlm.nih.gov/8777590/",
+    "https://stat.gov.pl/files/gfx/portalinformacyjny/en/defaultaktualnosci/3325/20/3/1/human_resources_in_selected_medical_professions__based_on_administrative_sources_in_2024_2.pdf"
+  ],
+  "stage": "research",
+  "structure": {
+    "commercial_archetype": "reseller-bundled vendor-neutral dental imaging QA analytics",
+    "control_point": "Consented device-specific images joined to explicit repeat, defect-cause, technician and service outcomes",
+    "critical_dependency": "A reseller must provide lawful image and interface access, reliable outcome labels and a bootstrap-compatible regulatory path"
+  },
+  "thesis": "Provide dental equipment and PACS resellers a vendor-neutral retrospective quality-assurance module for digital intraoral or panoramic radiography. The first product measures reject and repeat patterns, groups likely technical acquisition defects for expert review and produces technician training and annual service reports. It does not diagnose disease, judge clinical acceptability or instruct a retake. Live acquisition-time flags are a later option only after product-specific regulatory classification, clinical validation and risk controls. A reseller bundles the per-location license with service and supplies first-line support; the startup processes images only under documented clinic and reseller rights.",
+  "title": "Vendor-Neutral Dental X-Ray QA Analytics Through Resellers",
+  "uncertainties": [
+    "Will an EU classification opinion keep the retrospective workflow within a bootstrap-compatible regulatory path?",
+    "Can a reseller lawfully provide enough images, device metadata and explicit accept-repeat or error labels?",
+    "Which single modality and defect taxonomy can be validated without interpreting pathology or clinical acceptability?",
+    "How many Polish clinics have repeat rates high enough for actionable improvement after excluding dental-school settings?",
+    "Can DICOM, TWAIN or export-based integration work reliably across the reseller's installed base?",
+    "Will a reseller bundle an independent module when Duerr Dental, Overjet and other vendors already offer adjacent QA?",
+    "Is 180-350 PLN monthly supported by compliance, training or service value when avoided-retake savings are small?"
+  ],
+  "version": 2
+}

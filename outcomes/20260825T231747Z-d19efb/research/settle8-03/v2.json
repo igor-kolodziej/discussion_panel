@@ -1,0 +1,248 @@
+{
+  "candidate_id": "settle8-03",
+  "candidate_sha256": "557cf44a48df68c9b0b76881ba16efea8126c557c99a7b8b6aa9fb77e9493f41",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "settle8-03-r1",
+      "evidence_refs": [
+        "s03-01",
+        "s03-03"
+      ],
+      "statement": "AFIR assigns the recharging service to the charge-point operator, including contract-based delivery on behalf of a mobility service provider, and imposes price-transparency duties on operators and mobility service providers."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "settle8-03-r2",
+      "evidence_refs": [
+        "s03-01",
+        "s03-02",
+        "s03-03"
+      ],
+      "statement": "AFIR and its 2025 implementing regulation create API and national-access-point obligations for specified public infrastructure data, but they do not create a right to private CDRs, bilateral roaming agreements, or invoice records."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "settle8-03-r3",
+      "evidence_refs": [
+        "s03-03"
+      ],
+      "statement": "The Commission's AFIR guidance says mandatory participation in e-roaming was considered and rejected as an unnecessary or disproportionate interference with operators' contractual freedom."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "settle8-03-r4",
+      "evidence_refs": [
+        "s03-04",
+        "s03-05"
+      ],
+      "statement": "OCPI 2.3 already supports bilateral and hub roaming, billing, tariffs, CDRs, calibration-law data, and a CDR object containing relevant tariffs, charging periods, total costs, energy, optional signed data, and an invoice reference."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "settle8-03-r5",
+      "evidence_refs": [
+        "s03-06"
+      ],
+      "statement": "OICP 2.3 carries session identifiers, authorization identity, start/end times, consumed energy, an optional tariff product identifier, and optional signed-metering values; some evidence fields remain optional, leaving possible but unquantified data-quality gaps."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "settle8-03-r6",
+      "evidence_refs": [
+        "s03-09",
+        "s03-10"
+      ],
+      "statement": "Gireve directly offers CDR quality checking, charging-price calculation against roaming agreements, B2B invoice generation, payment tracking, and dispute management; its agreement template also defines CDR dispute windows, tariff-history obligations, and invoice responsibility."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "settle8-03-r7",
+      "evidence_refs": [
+        "s03-07"
+      ],
+      "statement": "Hubject Financial Services processes OCPI and OICP CDRs, covers the EU27 plus Switzerland, Norway, Iceland, and Liechtenstein, charges CPOs a percentage of payout volume, and supplies CPO-issued B2B invoices with CDR attachments."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "settle8-03-r8",
+      "evidence_refs": [
+        "s03-07",
+        "s03-08"
+      ],
+      "statement": "Using Hubject Financial Services requires an active agreement, Intercharge CPO onboarding, configured invoicing entities, payout accounts, EVSE assignment, VAT configuration, and authenticated CDR submission; private-feed access is therefore contractual and operational rather than public."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "settle8-03-r9",
+      "evidence_refs": [
+        "s03-11"
+      ],
+      "statement": "Hubject documents manual reconciliation for full, partial, off-platform, and unpaid invoice edge cases, demonstrating that residual exceptions persist even inside an incumbent clearing workflow."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "settle8-03-r10",
+      "evidence_refs": [
+        "s03-04",
+        "s03-05",
+        "s03-06",
+        "s03-07",
+        "s03-09",
+        "s03-11"
+      ],
+      "statement": "A credible entrant wedge is more likely to be independent reconciliation across direct and multiple-platform feeds, plus durable evidence lineage, than generic OCPI normalization, invoice generation, or single-hub clearing."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "settle8-03-r11",
+      "evidence_refs": [],
+      "statement": "The frequency, monetary value, and handling cost of uncovered CDR disputes among small and mid-sized Polish or CEE operators are not established by the reviewed public sources."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "settle8-03-r12",
+      "evidence_refs": [],
+      "statement": "No reviewed evidence establishes that target operators will authorize an independent entrant to ingest private CDRs and agreements or accept its record as dispositive evidence."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "settle8-03-r13",
+      "evidence_refs": [],
+      "statement": "No reviewed evidence supports the candidate's earlier PLN price range, gross-margin range, payback period, customer-count path, or founder-wealth timing."
+    }
+  ],
+  "contrary_evidence": [
+    "[s03-09] Gireve already markets nearly the full proposed workflow: CDR validation, tariff-agreement cross-checking, B2B invoicing, payment tracking, and dispute handling.",
+    "[s03-07] Hubject already provides EU-wide CDR invoicing and clearing for a transaction percentage, including OCPI uploads, VAT configuration, and CPO-issued invoice artifacts.",
+    "[s03-04, s03-05, s03-06] OCPI and OICP standardize much of the proposed evidence record, reducing differentiation from protocol normalization alone.",
+    "[s03-03] AFIR does not mandate e-roaming participation, so a private-feed network cannot be built from regulatory access rights.",
+    "[s03-09] Gireve advertises no connection fee for already-connected CPOs, and [s03-07] Hubject uses a transaction-percentage model; these incumbent economics may constrain a new monthly platform fee.",
+    "[s03-11] Manual edge cases remain, but the incumbent itself exposes controls for them, weakening the assumption that residual exceptions automatically create a standalone supplier."
+  ],
+  "schema_version": 2,
+  "sources": [
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2023-09-22",
+      "publisher": "European Union / EUR-Lex",
+      "source_id": "s03-01",
+      "source_type": "law",
+      "stance": "context",
+      "title": "Regulation (EU) 2023/1804 on the deployment of alternative fuels infrastructure",
+      "url": "https://eur-lex.europa.eu/eli/reg/2023/1804/oj/eng"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2025-04-02",
+      "publisher": "European Union / EUR-Lex",
+      "source_id": "s03-02",
+      "source_type": "implementing_regulation",
+      "stance": "context",
+      "title": "Commission Implementing Regulation (EU) 2025/655 on availability and accessibility of alternative-fuels-infrastructure data",
+      "url": "https://eur-lex.europa.eu/eli/reg_impl/2025/655/oj/eng"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "European Commission, Directorate-General for Mobility and Transport",
+      "source_id": "s03-03",
+      "source_type": "official_guidance",
+      "stance": "context",
+      "title": "Questions and answers on Regulation (EU) 2023/1804",
+      "url": "https://transport.ec.europa.eu/transport-themes/clean-transport/alternative-fuels-sustainable-mobility-europe/alternative-fuels-infrastructure/questions-and-answers-regulation-deployment-alternative-fuels-infrastructure-eu-20231804_en"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "EVRoaming Foundation",
+      "source_id": "s03-04",
+      "source_type": "standard_maintainer_documentation",
+      "stance": "contradicting",
+      "title": "Open Charge Point Interface (OCPI) overview and current functionality",
+      "url": "https://evroaming.org/ocpi/"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2025-03",
+      "publisher": "EVRoaming Foundation / OCPI GitHub repository",
+      "source_id": "s03-05",
+      "source_type": "technical_standard",
+      "stance": "contradicting",
+      "title": "OCPI 2.3.0 CDRs module",
+      "url": "https://github.com/ocpi/ocpi/blob/2.3.0/release/core/mod_cdrs.asciidoc"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "Hubject",
+      "source_id": "s03-06",
+      "source_type": "protocol_documentation",
+      "stance": "contradicting",
+      "title": "OICP 2.3 EMP services and operations",
+      "url": "https://github.com/hubject/oicp/blob/master/OICP-2.3/OICP%202.3%20EMP/02_EMP_Services_and_Operations.asciidoc"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2025-05-02",
+      "publisher": "Hubject",
+      "source_id": "s03-07",
+      "source_type": "incumbent_documentation",
+      "stance": "contradicting",
+      "title": "Hubject Financial Services FAQ for CPOs",
+      "url": "https://support.hubject.com/hc/en-us/articles/26990001350813-FAQ-CPO"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2026-03-26",
+      "publisher": "Hubject",
+      "source_id": "s03-08",
+      "source_type": "incumbent_technical_documentation",
+      "stance": "context",
+      "title": "Guide on sending OCPI CDRs to Hubject Financial Services",
+      "url": "https://support.hubject.com/hc/en-us/articles/21771079863837-Guide-on-how-to-Send-OCPI-CDRs-to-Hubject-Financial-Services"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "Gireve",
+      "source_id": "s03-09",
+      "source_type": "incumbent_product_documentation",
+      "stance": "contradicting",
+      "title": "Clearing Services: billing, invoicing and payment",
+      "url": "https://www.gireve.com/clearing-services/"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2020-08",
+      "publisher": "Gireve",
+      "source_id": "s03-10",
+      "source_type": "incumbent_contract_template",
+      "stance": "context",
+      "title": "Gireve Roaming Agreement Template V2.9",
+      "url": "https://www.gireve.com/wp-content/uploads/2022/09/Roaming-Agreement-Template-V2.9.pdf"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2026-03-27",
+      "publisher": "Hubject",
+      "source_id": "s03-11",
+      "source_type": "incumbent_operations_documentation",
+      "stance": "context",
+      "title": "Invoice Manual Reconciliation",
+      "url": "https://support.hubject.com/hc/en-us/articles/30230734894877-Invoice-Manual-Reconciliation"
+    }
+  ],
+  "unknowns": [
+    "Independent distribution of dispute rates, values, causes, and labor cost by operator size and country.",
+    "Which Polish or CEE CPO/eMSP relationships span multiple hubs or direct feeds and lack incumbent clearing coverage.",
+    "Whether two counterparties will grant simultaneous, durable, contractually permitted access to private CDR, tariff, agreement, and invoice data.",
+    "Whether the evidence packet is accepted by counterparties, auditors, and tax advisers, and which party bears error liability.",
+    "Security, GDPR, retention, data-localization, insurance, and procurement requirements for a small entrant.",
+    "Integration and support hours per protocol/back-office combination and the resulting contribution margin.",
+    "Exact buyer, budget, price elasticity, sales cycle, onboarding conversion, retention, and channel willingness.",
+    "Where accounting-only netting or invoice support would cross into regulated payment, tax-advice, or funds-custody activity.",
+    "Any evidence-backed route or timing to the founder's net-worth objective."
+  ]
+}

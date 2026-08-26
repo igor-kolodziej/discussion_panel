@@ -1,0 +1,144 @@
+{
+  "candidate_id": "network-05",
+  "claims": [
+    {
+      "claim_id": "network-05-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.eiopa.europa.eu/publications/traditional-ai-generative-ai-implications-insurance-sector_en"
+      ],
+      "statement": "EIOPA reported that 50% of non-life insurers and 24% of life insurers in its 2024 digitalisation work already used AI across use cases including claims management."
+    },
+    {
+      "claim_id": "network-05-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.eiopa.europa.eu/publications/opinion-artificial-intelligence-governance-and-risk-management_en"
+      ],
+      "statement": "EIOPA's August 2025 opinion applies risk-based and proportionate governance expectations to insurance AI, including systems outside the AI Act's prohibited and high-risk categories."
+    },
+    {
+      "claim_id": "network-05-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2024/1689/oj?locale=en"
+      ],
+      "statement": "The AI Act expressly classifies natural-person risk assessment and pricing for life and health insurance as high-risk, but it does not make every claims communication or claims copilot high-risk; a private benchmark seal cannot substitute for any applicable conformity assessment."
+    },
+    {
+      "claim_id": "network-05-c4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://plwliczbach.stat.gov.pl/EN/pages/finances.html"
+      ],
+      "statement": "Statistics Poland lists 47 insurance companies at the end of 2025, so an 80-customer scenario cannot be achieved from Polish insurers alone and requires vendors, administrators, or regional expansion."
+    },
+    {
+      "claim_id": "network-05-c5",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.uk/ai-assurance-techniques/credo-ai-governance-platform-reinsurance-provider-algorithmic-bias-assessment-and-reporting",
+        "https://www.giskard.ai/pricing",
+        "https://www.iso.org/standard/42001"
+      ],
+      "statement": "The assurance category already contains an insurance deployment by Credo AI, a free/open-source and quote-priced enterprise evaluation alternative from Giskard, and the certifiable ISO/IEC 42001 AI-management standard."
+    },
+    {
+      "claim_id": "network-05-c6",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://arxiv.org/abs/2511.07794"
+      ],
+      "statement": "A 2025 preprint describes a 14,430-question insurance LLM benchmark across 11 models, showing that insurance-domain benchmarking is not globally novel, although it does not address Polish claims communications."
+    },
+    {
+      "claim_id": "network-05-c7",
+      "confidence": "low",
+      "evidence_refs": [],
+      "statement": "Representative Polish claims-output access, procurement recognition of a new seal, insurer willingness to pay, and the proposed unit economics remain unknown."
+    }
+  ],
+  "contrary_evidence": [
+    "Only 47 insurance companies were listed in Poland at end-2025, so direct domestic insurer acquisition has a hard ceiling.",
+    "Credo AI, Giskard, ISO/IEC 42001 certification, internal insurer testing, and an existing insurance LLM benchmark create multiple incumbent and substitute paths.",
+    "Claims copilots are not automatically high-risk under the AI Act, so the offer cannot rely on a universal mandatory-compliance claim.",
+    "DORA can increase due-diligence, contractual, audit, security, and exit requirements if the service qualifies as ongoing ICT support for a critical or important function.",
+    "No reviewed source establishes that a Polish or Central European AI vendor will fund this service or that its insurer clients will accept the resulting packet."
+  ],
+  "economics": {
+    "acquisition_route": "Replace insurer-by-insurer selling with a paid, bounded integration sought from one claims-AI vendor or implementation partner that already serves multiple insurer deployments. The first test is one vendor-funded, client-private release packet with explicit acceptance criteria; no partner commitment or procurement acceptance is assumed.",
+    "capital_required_pln": 55000,
+    "founder_net_worth_path": "Not underwritten. Unlike the prior 30-direct-customer scenario, the proposed account unit is a vendor or implementation partner whose separate insurer deployments can each create paid release events. Any founder-net-worth path depends on unvalidated partner count, deployments per partner, fee contribution, repeat releases, localization cost, concentration risk, and valuation, so no timing estimate is asserted.",
+    "founder_time": "Plan for 15-20 hours weekly for the bounded initial packet, with insurance and legal adjudication paid per release. Fewer primary accounts could reduce relationship load versus direct insurer acquisition, but vendor integration, client-specific security review, and partner support may still break the part-time constraint.",
+    "gross_margin_basis": "No margin is underwritten. A reusable harness, taxonomy, adapter, and packet template can spread fixed build and sales effort across a partner's deployments, while each insurer's raw cases remain private and expert adjudication, secure execution, localization, and client review remain variable costs.",
+    "payback": "Unknown. The redesign tests whether one vendor acquisition can yield contribution from multiple client release packets and amortize diligence across deployments; integration work and partner concentration could offset that benefit. Payback should not be asserted until acquisition effort and contribution from actual paid releases are measured.",
+    "pricing": "No numeric price is underwritten. Test a vendor-funded structure with a fixed onboarding or language-pack fee plus a fee for each client-private model or prompt release packet, replacing the prior per-insurer assessment plus monthly monitoring hypothesis.",
+    "retention_or_repeat": "Repeat is tied to additional insurer deployments and model or prompt releases within a vendor's portfolio, not an assumed monthly subscription. No evidence yet establishes packet acceptance, release volume, renewal, or the right to reuse anything beyond the harness and non-client-specific taxonomy."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A reusable Central European claims test harness, expert failure taxonomy, delivery adapters, and client-private longitudinal release records; no advantage assumes pooled retention of customer raw cases",
+    "customer": "Claims-AI vendors and implementation partners serving multiple Polish and later Central European insurers; insurer teams are users and governance-acceptance stakeholders rather than the primary direct buyer",
+    "distribution_mechanism": "Win one paid vendor integration through a bounded client-private release packet, then reach additional insurer deployments through that partner's existing delivery relationships rather than acquiring every insurer directly",
+    "offer_and_business_model": "Vendor-embedded, client-private claims release assurance: a reusable test harness and packet template combined with permissioned customer cases and expert adjudication, sold as onboarding plus per-deployment or per-release work without a public compliance seal",
+    "payer_and_paid_event": "The AI vendor or implementation partner pays for onboarding and for a version-bound assurance packet when it launches or changes a model or prompt for an insurer client; repeat depends on further client deployments or releases",
+    "problem_trigger": "A vendor's insurer tender, client implementation, production release, model or prompt change, governance review, or customer-communication incident"
+  },
+  "founder_fit": [
+    "AI evaluation, adversarial testing, quantitative scoring, and automation strongly match the founder's skills.",
+    "A vendor-embedded technical evidence service avoids camera-led distribution and concentrates selling into fewer primary relationships than direct insurer-by-insurer acquisition.",
+    "The unchanged 55000 PLN planning envelope limits the first build to a reusable harness and one bounded private packet; it does not assume accreditation, a large secure platform, or multi-country rollout.",
+    "Insurance and legal adjudication remain delegable per packet, although vendor integration, enterprise credibility, and governance acceptance remain founder responsibilities until they can be systematized."
+  ],
+  "parent": {
+    "candidate_id": "network-05",
+    "version": 3
+  },
+  "redesign": {
+    "changed_fingerprint_fields": [
+      "customer",
+      "problem_trigger",
+      "payer_and_paid_event",
+      "offer_and_business_model",
+      "distribution_mechanism",
+      "compounding_advantage"
+    ],
+    "economic_effect": "The unit of acquisition changes from an individual insurer or mixed direct account to a vendor or implementation partner, and the unit of revenue changes from a one-off assessment plus assumed monthly monitoring to onboarding plus separate client-deployment or release packets. If accepted, one primary account can expose the service to multiple insurer release events and spread harness, template, sales, and diligence costs without requiring pooled raw-case rights. This could reduce direct-account count and sales load, but partner integration, client-specific reviews, expert costs, and concentration risk remain; price, margin, CAC, payback, repeat, and partner acceptance are explicitly unvalidated."
+  },
+  "risks": [
+    "A release packet could create false assurance or be mistaken for regulatory conformity unless its scope, evidence limits, and version boundary are explicit.",
+    "Representative outputs may contain personal, confidential, or proprietary information and require explicit contractual access, client-private handling, and secure deletion or retention rules.",
+    "A vendor may prefer internal evaluation or a broader platform such as Credo AI or Giskard, and formal ISO/IEC 42001 processes remain a recognized substitute.",
+    "The redesign replaces domestic account-count risk with partner concentration: loss of one multi-client vendor could remove several prospective release events at once.",
+    "Vendor integration, insurer-by-insurer acceptance, DORA-aligned contracting, expert credibility, and long security reviews may still overwhelm a part-time founder.",
+    "The reusable harness and taxonomy may compound less than expected if contracts prohibit learning across client engagements or every deployment requires bespoke work."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.eiopa.europa.eu/publications/traditional-ai-generative-ai-implications-insurance-sector_en",
+    "https://www.eiopa.europa.eu/publications/opinion-artificial-intelligence-governance-and-risk-management_en",
+    "https://eur-lex.europa.eu/eli/reg/2024/1689/oj?locale=en",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1756728421099&uri=CELEX%3A32022R2554",
+    "https://plwliczbach.stat.gov.pl/EN/pages/finances.html",
+    "https://www.gov.uk/ai-assurance-techniques/credo-ai-governance-platform-reinsurance-provider-algorithmic-bias-assessment-and-reporting",
+    "https://www.giskard.ai/pricing",
+    "https://www.iso.org/standard/42001",
+    "https://arxiv.org/abs/2511.07794",
+    "https://www.gov.uk/guidance/portfolio-of-ai-assurance-techniques"
+  ],
+  "stage": "development",
+  "structure": {
+    "commercial_archetype": "Vendor-embedded, client-private domain assurance program sold through onboarding and release packets",
+    "control_point": "Integration into a claims-AI vendor's release workflow and an insurer-client-accepted evidence packet template, without claiming certification or pooled raw-data ownership",
+    "critical_dependency": "A paid vendor relationship, explicit permission for client-private cases, credible expert adjudication, secure execution, and insurer acceptance of the packet as useful governance evidence"
+  },
+  "thesis": "A claims-AI vendor or implementation partner serving multiple insurers could buy a client-private assurance layer for Polish and later Central European releases. The service would combine a reusable claims test harness and evidence-packet template with each insurer's permissioned cases and paid expert adjudication, charging for vendor onboarding and each deployment or release rather than selling every insurer a benchmark subscription. It would retain no pooled raw cases without explicit rights, issue no public compliance seal, and must prove both vendor willingness to fund the work and insurer acceptance of the packet.",
+  "title": "Vendor-Embedded CEE Claims Release Assurance",
+  "uncertainties": [
+    "No evidence establishes a vendor willing to pay, the role that owns budget, the number of insurer deployments per partner, or insurer acceptance of a vendor-delivered external packet.",
+    "Representative case access, permitted processing, deletion or retention rules, and any right to reuse non-client-specific learnings must be negotiated rather than assumed.",
+    "The boundary between a bounded advisory packet and ongoing ICT support subject to heavier DORA diligence depends on the actual contract and delivery model.",
+    "Expert availability, professional credibility, liability coverage, integration effort, localization cost, price, contribution margin, CAC, payback, repeat release volume, and founder-net-worth timing remain unknown.",
+    "It is unknown whether concentrating acquisition in vendors reduces total sales effort or merely adds a partner layer before insurer-by-insurer security and governance review."
+  ],
+  "version": 4
+}

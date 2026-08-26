@@ -1,0 +1,138 @@
+{
+  "candidate_id": "niche-06",
+  "claims": [
+    {
+      "claim_id": "niche-06-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC6559819/",
+        "https://www.nature.com/articles/s41431-018-0285-1"
+      ],
+      "statement": "ACMG guidance calls for laboratory policies for variant reevaluation and case reanalysis, while ESHG describes clinically useful recontact as desirable when feasible, consent-aware, sustainable, and shared among laboratories, clinicians, patients, and other stakeholders."
+    },
+    {
+      "claim_id": "niche-06-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.ncbi.nlm.nih.gov/clinvar/intro/"
+      ],
+      "statement": "ClinVar versions submissions and makes its archive freely available, but it does not independently curate submitted classifications and represents variant or variant-condition assertions rather than a laboratory's patient-specific recontact decision."
+    },
+    {
+      "claim_id": "niche-06-c03",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://api.sejm.gov.pl/eli/acts/DU/2025/961/text.pdf"
+      ],
+      "statement": "Poland's 2025 laboratory quality standards require reconstructable genetic-test documentation, a laboratory interpretation in the report, retention of the result and supporting documentation, and identification and signature of the qualified person authorizing the result; this supports an audit-workflow wedge but keeps clinical authorization inside the laboratory."
+    },
+    {
+      "claim_id": "niche-06-c04",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2016/679/2016-05-04/eng",
+        "https://eur-lex.europa.eu/eli/reg/2017/746/oj/eng",
+        "https://health.ec.europa.eu/document/download/b45335c5-1679-4c71-a91c-fc7a4d37f12b_en?filename=mdcg_2019_11_en.pdf"
+      ],
+      "statement": "Genetic and health data are special-category personal data under GDPR, and whether software falls under IVDR depends on its stated intended purpose; qualification and classification therefore require specialist review before production use."
+    },
+    {
+      "claim_id": "niche-06-c05",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://corporate.qiagen.com/English/newsroom/press-releases/press-release-details/2024/QIAGENs-software-QCI-Interpret-accelerates-clinical-reporting-turnaround-time-for-high-throughput-NGS-testing-labs/default.aspx",
+        "https://fabricgenomics.com/enterprise/"
+      ],
+      "statement": "Incumbents already offer variant interpretation, case workflow, reporting, reanalysis, and LIMS or EMR integration; QIAGEN also reports IVDR Class C certification for QCI Interpret, so the proposed product cannot rely on generic evidence monitoring or interpretation as differentiation."
+    },
+    {
+      "claim_id": "niche-06-c06",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://onlinelibrary.wiley.com/doi/10.1002/jgc4.1968",
+        "https://www.nature.com/articles/s41431-018-0285-1"
+      ],
+      "statement": "A 2024 US laboratory survey found reanalysis widely available but usually provider-initiated, with most respondents estimating requests for under 11% of eligible exomes or genomes and highly variable billing; ESHG states that economic evidence for recontact strategies remains lacking."
+    },
+    {
+      "claim_id": "niche-06-c07",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://www.nik.gov.pl/najnowsze-informacje-o-wynikach-kontroli/nik-o-bezpieczenstwie-badan-genetycznych.html"
+      ],
+      "statement": "Poland's 2018 public audit found conflicting estimates of 214 versus about 500 genetic laboratories and no dedicated central registry at that time; those figures are historical and cannot establish the current serviceable market without a fresh account-level census."
+    }
+  ],
+  "contrary_evidence": [
+    "QIAGEN QCI Interpret and Fabric Enterprise already cover substantial portions of interpretation, workflow, reporting, reanalysis, and integration, giving laboratories a credible buy-from-incumbent option.",
+    "ESHG reports no established economic evidence for recontact strategies, and a US survey found low provider-initiated reanalysis uptake and inconsistent billing despite broad availability.",
+    "ClinVar changes are useful signals but cannot determine which historical patients should be recontacted; consent, phenotype, laboratory evidence, and professional judgment remain case-specific.",
+    "The 2025 Polish standards reserve result authorization to an identified qualified professional, preventing the founder from replacing the laboratory's clinical responsibility."
+  ],
+  "economics": {
+    "acquisition_route": "Win one paid Polish hereditary-cancer or rare-disease laboratory pilot with a narrowly imported historical panel, document alert precision and review-time savings, then sell through a LIMS or quality-consulting channel; no partner commitment is evidenced.",
+    "capital_required_pln": 100000,
+    "founder_net_worth_path": "Scenario, not market evidence: 42 laboratories at 120,000 PLN ARR produce 5.04M PLN ARR. At a mature 40% EBITDA margin, 4x EBITDA, and 65% founder ownership, founder equity is about 5.24M PLN in years 8 to 11, before liabilities and without double-counting retained earnings. The path fails if the current serviceable lab count, price, or channel conversion cannot support 42 retained accounts.",
+    "founder_time": "18 to 22 hours weekly for product, evidence provenance, security, and one integration; qualified clinical and regulatory work is contracted or owned by the laboratory.",
+    "gross_margin_basis": "Target 65% to 80% software gross margin after secure EU hosting, evidence-source maintenance, integration support, and quality-system overhead; all clinical review and authorization remain the laboratory's cost.",
+    "payback": "Unknown until a pilot measures baseline surveillance hours, actionable-alert yield, report-amendment frequency, and avoided manual searches; do not count clinical benefit or billable reanalysis as vendor ROI without buyer data.",
+    "pricing": "Pilot hypothesis, not an observed market tariff: 25,000 to 50,000 PLN onboarding plus 4,000 to 10,000 PLN monthly per laboratory, with limits based on monitored historical records; quote only after measuring review hours and incumbent overlap.",
+    "retention_or_repeat": "Historical reports remain in scope for years and evidence sources update repeatedly, but retention depends on low alert noise, reliable identifiers, and integration with the laboratory's signed quality procedures."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A governed, provenance-preserving mapping from evidence changes to laboratory review decisions, consent states, signed report actions, and measured false-positive outcomes",
+    "customer": "Polish and later CEE clinical genetics laboratories with hereditary-cancer, cardiogenetics, or rare-disease reports retained over multiple years",
+    "distribution_mechanism": "One reference-laboratory pilot followed by genetics LIMS integrators, ISO 15189 or IVDR advisers, and clinical-genetics professional networks",
+    "offer_and_business_model": "Consent-aware evidence-change matching, bounded review queue, evidence snapshot, laboratory authorization, report-amendment workflow, and audit trail sold as B2B software",
+    "payer_and_paid_event": "The laboratory pays for historical-record onboarding and a recurring monitored-review workspace with named professional authorization",
+    "problem_trigger": "A versioned evidence or guideline change may affect a variant previously reported by the laboratory and requires a documented human review decision"
+  },
+  "founder_fit": [
+    "Strong domain-interest and technical fit with the founder's genetics, data-pipeline, and AI background, while avoiding public-camera distribution.",
+    "A bounded evidence-ingestion and audit-queue prototype is compatible with 18 to 22 founder hours weekly, but clinical authorization, regulatory classification, data-protection review, and laboratory quality governance must be supplied by qualified external professionals.",
+    "The initial 100,000 PLN can fund a non-production pilot and security foundations; production certification or deep integrations must be customer-financed or staged after paid evidence."
+  ],
+  "parent": {
+    "candidate_id": "niche-06",
+    "version": 1
+  },
+  "risks": [
+    "False-negative matching or noisy alerts could delay clinically important review or overwhelm laboratory staff.",
+    "Processing linked genetic and health records creates high GDPR, security, breach-impact, retention, and cross-border-hosting exposure.",
+    "Diagnostic or classification claims may bring the product under IVDR and materially raise validation, quality-management, surveillance, and capital requirements.",
+    "Incumbent interpretation platforms or LIMS vendors can add the narrow queue and compress differentiation.",
+    "Historical records may lack normalized HGVS identifiers, consent states, current clinician contacts, or patient linkage, causing expensive onboarding.",
+    "A long clinical procurement and information-security cycle may not fit part-time founder execution without a channel or implementation partner."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC6559819/",
+    "https://www.nature.com/articles/s41431-018-0285-1",
+    "https://www.ncbi.nlm.nih.gov/clinvar/intro/",
+    "https://eur-lex.europa.eu/eli/reg/2016/679/2016-05-04/eng",
+    "https://eur-lex.europa.eu/eli/reg/2017/746/oj/eng",
+    "https://health.ec.europa.eu/document/download/b45335c5-1679-4c71-a91c-fc7a4d37f12b_en?filename=mdcg_2019_11_en.pdf",
+    "https://corporate.qiagen.com/English/newsroom/press-releases/press-release-details/2024/QIAGENs-software-QCI-Interpret-accelerates-clinical-reporting-turnaround-time-for-high-throughput-NGS-testing-labs/default.aspx",
+    "https://fabricgenomics.com/enterprise/",
+    "https://onlinelibrary.wiley.com/doi/10.1002/jgc4.1968",
+    "https://api.sejm.gov.pl/eli/acts/DU/2025/961/text.pdf",
+    "https://www.nik.gov.pl/najnowsze-informacje-o-wynikach-kontroli/nik-o-bezpieczenstwie-badan-genetycznych.html"
+  ],
+  "stage": "research",
+  "structure": {
+    "commercial_archetype": "Clinical lifecycle workflow software",
+    "control_point": "The qualified-professional review and authorization queue linking an immutable evidence change to a prior report and any report or recontact action",
+    "critical_dependency": "Laboratories must retain linkable historical variant and consent data, accept a bounded shared-responsibility workflow, and procure the product despite incumbent interpretation platforms"
+  },
+  "thesis": "Build a laboratory-controlled recontact and report-amendment queue for Polish and later CEE clinical genetics laboratories. The system would map versioned public evidence changes to the laboratory's own historical classifications and recorded consent state, surface bounded review tasks, preserve the evidence snapshot and decision trail, and let an appropriately qualified laboratory professional authorize any interpretation, report amendment, or clinician notification. The sellable promise is traceable surveillance and workflow capacity, not autonomous classification, diagnosis, or direct-to-patient advice.",
+  "title": "Clinician-Signed Variant Recontact Queue for CEE Genetic Labs",
+  "uncertainties": [
+    "Current count of target Polish and CEE private laboratories with enough structured historical variant, patient-linkage, and consent data for onboarding.",
+    "Whether target laboratories already receive adequate reclassification alerts inside their current interpretation or LIMS contracts.",
+    "Measured hours and cost per actionable historical review, frequency of clinically meaningful triggers, and the budget owner for surveillance.",
+    "Whether the intended workflow remains non-device software or requires IVDR conformity assessment after final claims and functionality are fixed.",
+    "No public incumbent SaaS tariff was found, so willingness to pay and competitive price bands remain unvalidated.",
+    "Availability and commercial terms of an appropriately qualified clinical-genetics partner for product governance and pilot signoff."
+  ],
+  "version": 2
+}

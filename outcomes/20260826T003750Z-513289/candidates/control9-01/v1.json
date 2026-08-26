@@ -1,0 +1,83 @@
+{
+  "candidate_id": "control9-01",
+  "claims": [
+    {
+      "claim_id": "control9-01-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/news/new-waste-shipment-regulation-and-diwass-platform-go-live-2026-05-21_en"
+      ],
+      "statement": "The revised EU Waste Shipment Regulation and DIWASS entered into application on 21 May 2026, and prior-informed-consent procedures for notified waste are processed digitally."
+    },
+    {
+      "claim_id": "control9-01-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/gios/punkt-informacyjny-diwass"
+      ],
+      "statement": "Poland's GIOS provides DIWASS registration, test-system material, instructions, and API documentation, making a legitimate software integration route visible."
+    },
+    {
+      "claim_id": "control9-01-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/gios/procedura-uprzedniego-pisemnego-zgloszenia-i-zgody2"
+      ],
+      "statement": "For covered Polish procedures, a notification is created through DIWASS, receives a unique identifier, and becomes visible to the authorities of dispatch, destination, and transit."
+    }
+  ],
+  "contrary_evidence": [
+    "DIWASS itself is a public platform and GIOS publishes free instructions and API documentation, so form filling alone is not a durable product.",
+    "Poland has deferred some Annex VII digital handling to 1 January 2027, which may postpone a portion of near-term transaction volume."
+  ],
+  "economics": {
+    "acquisition_route": "Founder-led pilots with 3-5 Polish notifiers via environmental consultants, then referral/invite loops to carriers and destination facilities; no paid outreach assumed before a narrow proof",
+    "capital_required_pln": 60000,
+    "founder_net_worth_path": "Hypothesis: 150 European sites at 48000 PLN average ARR yields 7.2m PLN ARR; at 25% EBITDA, 4x EBITDA, and 80% founder ownership, business equity alone could exceed 5m PLN in years 5-7. Do not count retained earnings again; validate reachable site count and ACV.",
+    "founder_time": "3-4 hours per day for a six-month validation build; cap manual review and hire a part-time waste-law specialist only after paid volume",
+    "gross_margin_basis": "Hypothesis: 78-88% at scale because software handles recurring checks, with human review reserved for novel classifications and exceptions",
+    "payback": "Hypothesis: 6-10 months on direct gross profit if one consultant channel yields 8-12 sites; validate sales-cycle length and API support cost",
+    "pricing": "Hypothesis: 2400-6000 PLN per operating site per month plus 30-90 PLN per executed shipment; validate against delay cost and current consultant spend",
+    "retention_or_repeat": "Shipment parties and facility details repeat, notification histories must remain auditable, and switching loses validated counterparties and route-specific error memory"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A permissioned graph of verified operators, accepted routes, waste classifications, reusable guarantees, and authority error outcomes reduces setup time and false submissions for every subsequent movement",
+    "customer": "Polish waste brokers, recyclers, recovery facilities, and carriers running notified cross-border waste movements",
+    "distribution_mechanism": "Land through Polish environmental consultants and high-frequency waste carriers; each notifier invites foreign facilities and subcontractors, creating product-led counterparty spread",
+    "offer_and_business_model": "Multi-party evidence workspace, DIWASS preflight, API handoff, and movement-status monitoring sold as a site subscription plus per-shipment fee",
+    "payer_and_paid_event": "The notifier or waste broker pays when opening an active notification and for each shipment executed under it",
+    "problem_trigger": "A planned cross-border movement cannot proceed safely until all parties, documents, consents, and shipment identifiers agree in DIWASS"
+  },
+  "founder_fit": [
+    "Strong match to data validation, workflow automation, and AI-assisted document extraction",
+    "Can be piloted part-time with synthetic and customer-provided packets before building a broad platform",
+    "B2B channel-led distribution limits constant networking and requires no public persona",
+    "Initial capital fits the founder's 100000 PLN limit"
+  ],
+  "parent": null,
+  "risks": [
+    "Incorrect classification or a failed filing could delay high-value cargo and create professional-liability exposure.",
+    "Authorities or incumbent waste software vendors could provide sufficient native integrations.",
+    "Multi-party onboarding may stall if foreign receivers refuse another workspace."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://environment.ec.europa.eu/news/new-waste-shipment-regulation-and-diwass-platform-go-live-2026-05-21_en",
+    "https://www.gov.pl/web/gios/punkt-informacyjny-diwass",
+    "https://www.gov.pl/web/gios/procedura-uprzedniego-pisemnego-zgloszenia-i-zgody2"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "transaction orchestration network",
+    "control_point": "the validated DIWASS notification and multi-party handoff required before a notified waste shipment moves",
+    "critical_dependency": "reliable DIWASS/API interoperability and willingness of multiple shipment parties to exchange evidence through one workspace"
+  },
+  "thesis": "Build a Poland-first transaction layer for cross-border waste brokers, recyclers, carriers, and receiving facilities that preflights a notified shipment, gathers each party's evidence, creates the DIWASS-ready packet, and monitors the movement through consent and receipt. The narrow wedge is not regulatory advice but preventing a truck from moving until the notification ID, route, parties, consent, guarantee, and facility acceptance reconcile. Distribution can be embedded through environmental consultants, hazardous-waste carriers, and recycling operators that repeatedly invite counterparties; every shipment adds reusable party, route, waste-code, and authority-response data. If the participant graph becomes the easiest way for counterparties to exchange verified details, the business can expand from Poland into a European waste-shipment trust network.",
+  "title": "DIWASS Shipment Handshake Network",
+  "uncertainties": [
+    "Number of Polish notifiers with enough recurring cross-border volume and poor enough current tooling to pay",
+    "Exact DIWASS API permissions, certification burden, and rate limits for a third-party service",
+    "Whether an invite loop can overcome counterparties' preference for email and existing ERP workflows"
+  ],
+  "version": 1
+}

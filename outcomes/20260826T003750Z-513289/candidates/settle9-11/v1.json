@@ -1,0 +1,83 @@
+{
+  "candidate_id": "settle9-11",
+  "claims": [
+    {
+      "claim_id": "settle9-11-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ekomentarzpzp.uzp.gov.pl/prawo-zamowien-publicznych/art-437"
+      ],
+      "statement": "Polish public-procurement guidance says later instalments on public construction contracts are conditional on evidence that due subcontractor and further-subcontractor remuneration has been paid."
+    },
+    {
+      "claim_id": "settle9-11-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ekomentarzpzp.uzp.gov.pl/prawo-zamowien-publicznych/art-465"
+      ],
+      "statement": "Article 465 guidance states that a contracting authority directly pays an eligible subcontractor when the contractor avoids its payment duty, subject to the specified accepted or submitted subcontract."
+    },
+    {
+      "claim_id": "settle9-11-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/gddkia/udokumentowana-praca-na-kontraktach-gddkia-zawsze-z-wynagrodzeniem"
+      ],
+      "statement": "GDDKiA explains that documented payment to subcontractors is required before the main contractor may seek payment and that missing proof holds the contractor's payment."
+    }
+  ],
+  "contrary_evidence": [
+    "Existing document-management and construction ERP systems can store the same artifacts, and legal entitlements remain fact-specific.",
+    "Public authorities may impose their own portals and templates, fragmenting integrations."
+  ],
+  "economics": {
+    "acquisition_route": "Pilot on renewable/electrical subcontracting, then distribute through procurement advisers and contract administrators at project kickoff",
+    "capital_required_pln": 40000,
+    "founder_net_worth_path": "Hypothesis: 90 concurrent projects at 5,000 PLN monthly yields 5.4m PLN ARR by years 5-7. With repeatable onboarding, 18-25% margin and majority ownership, retained earnings plus a 3-5x value could exceed 5m PLN founder net worth in years 6-8.",
+    "founder_time": "12-18 hours weekly for a one-project pilot, with a construction-contract specialist reviewing templates",
+    "gross_margin_basis": "Hypothesis: 68-84% because initial contract configuration is service-heavy but repeated evidence checks automate",
+    "payback": "Hypothesis: 2-5 months per project after setup; sales cycles can be long if bought by public authorities rather than contractors",
+    "pricing": "Hypothesis: 1,500-7,000 PLN per active project monthly plus 5,000-20,000 PLN setup, or 0.03-0.10% of tracked contract value capped by tier",
+    "retention_or_repeat": "Monthly draws repeat throughout multi-year projects; subcontractor invitation creates project-level network effects and future-project referrals"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Contract-to-deliverable-to-payment graph plus anonymized rejection and cure patterns by contracting authority improve completeness checks and timelines",
+    "customer": "Polish SME main contractors, subcontractors and contract administrators on public construction projects, initially electrical and renewable installations",
+    "distribution_mechanism": "Public-procurement consultants, quantity surveyors, contract administrators and renewable-sector wholesalers bundle the workspace into project mobilization",
+    "offer_and_business_model": "Project SaaS with paid setup, subcontractor evidence portal and optional monthly document-control service",
+    "payer_and_paid_event": "Main contractor or administrator pays per active project when each draw receives a completeness graph and auditable proof packet",
+    "problem_trigger": "A contractor payment certificate or subcontractor claim is due but accepted-contract, work, invoice or downstream-payment proof is missing or inconsistent"
+  },
+  "founder_fit": [
+    "Family renewable-installation access can enable rapid, grounded workflow discovery.",
+    "Evidence graphs and anomaly rules fit data-science strengths.",
+    "Project-based pilots are compatible with controlled capital and part-time execution."
+  ],
+  "parent": null,
+  "risks": [
+    "An incomplete packet labeled ready could delay or prejudice a payment claim.",
+    "Participants may withhold sensitive subcontract prices and bank confirmations.",
+    "Founder-family pilot data must be permissioned and kept separate from unrelated business records."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://ekomentarzpzp.uzp.gov.pl/prawo-zamowien-publicznych/art-437",
+    "https://ekomentarzpzp.uzp.gov.pl/prawo-zamowien-publicznych/art-465",
+    "https://www.gov.pl/web/gddkia/udokumentowana-praca-na-kontraktach-gddkia-zawsze-z-wynagrodzeniem",
+    "https://www.gov.pl/web/gddkia/informacja-dla-podwykonawcow-bioracych-udzial-w-realizacji-inwestycji-gddkia"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Project payment-gate workflow",
+    "control_point": "Submission and approval of a contractor draw or subcontractor direct-payment evidence packet",
+    "critical_dependency": "Project participants must upload authoritative contracts, acceptance records and payment proof; legal interpretation remains with qualified advisers"
+  },
+  "thesis": "Create a shared payment-evidence graph for Polish public-works contractors and subcontractors, initially renewable and electrical works. It binds approved subcontract terms, work acceptance, invoices, waivers, bank confirmations and downstream payments to each draw, warning when missing proof will hold the main contractor's payment or when a subcontractor direct-payment packet may be incomplete. Public-procurement advisers and contract administrators distribute it; a renewable installer can provide a lawful, permissioned design environment. The software prepares and tracks evidence but does not decide entitlement or represent parties legally.",
+  "title": "Public-Works Payment Proof Graph",
+  "uncertainties": [
+    "Frequency and value of payment holds caused primarily by evidence gaps",
+    "Whether the paying customer is main contractor, subcontractor or contract administrator",
+    "Template variation across contracting authorities"
+  ],
+  "version": 1
+}

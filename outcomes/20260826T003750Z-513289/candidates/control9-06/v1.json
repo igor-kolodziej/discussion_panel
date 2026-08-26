@@ -1,0 +1,83 @@
+{
+  "candidate_id": "control9-06",
+  "claims": [
+    {
+      "claim_id": "control9-06-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://green-forum.ec.europa.eu/implementation-drinking-water-directive_en"
+      ],
+      "statement": "Article 11 of the recast Drinking Water Directive creates a harmonised 'one standard, one test, one market' framework for materials and products in contact with drinking water."
+    },
+    {
+      "claim_id": "control9-06-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://green-forum.ec.europa.eu/implementation-drinking-water-directive_en",
+        "https://environment.ec.europa.eu/topics/water/drinking-water_en"
+      ],
+      "statement": "The EU hygiene requirements apply from 31 December 2026 to products used in new installations or repairs, including pipes, valves, pumps, water meters, fittings, and taps, with a transition available in defined cases until 2032."
+    },
+    {
+      "claim_id": "control9-06-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://green-forum.ec.europa.eu/implementation-drinking-water-directive_en"
+      ],
+      "statement": "A completely new covered product launched in 2027 without a valid national certificate at the transition date must be assessed, receive an EU certificate, and carry the declaration and EU marking before market placement."
+    }
+  ],
+  "contrary_evidence": [
+    "Products with qualifying national certificates can remain in a transitional regime until 31 December 2032, weakening immediate migration pressure.",
+    "The Commission implementation page says Poland's national implementation body was still to be confirmed, which may slow channel formation and create uncertainty."
+  ],
+  "economics": {
+    "acquisition_route": "Secure one Polish lab or conformity consultant as a design partner, pilot three product families, then let the partner prescribe the intake workspace to manufacturers",
+    "capital_required_pln": 80000,
+    "founder_net_worth_path": "Hypothesis: 300 manufacturers at 36000 PLN recurring and blended annual revenue yields 10.8m PLN; at 23% EBITDA, 4x EBITDA, and 65% founder ownership, equity could exceed 6.4m PLN in years 6-9. Validate sales cycles and treat the 2032 transition as a demand-timing risk.",
+    "founder_time": "3-4 hours per day for data modelling and workflow; retain a materials-regulation specialist per dossier rather than hiring before revenue",
+    "gross_margin_basis": "Hypothesis: 62-78% during dossier preparation, rising above 82% for recurring monitoring after material models are built",
+    "payback": "Hypothesis: 12-18 months if eight first-year dossiers average 22000 PLN plus maintenance; validate expert and laboratory integration costs",
+    "pricing": "Hypothesis: 12000-40000 PLN per product-family dossier plus 9000-30000 PLN annual catalogue maintenance; laboratory workspace priced separately",
+    "retention_or_repeat": "Certificates, constituent lists, suppliers, formulations, and product variants change; the consequence graph and audit trail are expensive to recreate"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A proprietary relationship graph among substances, compositions, components, product families, tests, and outcomes reveals lawful test reuse and propagates change impacts faster than document folders",
+    "customer": "Polish and Central European manufacturers of drinking-water-contact pipes, valves, pumps, meters, fittings, and taps",
+    "distribution_mechanism": "Co-sell through accredited test labs, conformity-assessment bodies, technical consultants, and plumbing wholesalers that need comparable supplier evidence",
+    "offer_and_business_model": "Positive-list mapping, supplier evidence collection, lab-ready dossier, certificate/declaration vault, and product-change impact analysis",
+    "payer_and_paid_event": "The manufacturer pays per product family when preparing conformity assessment and annually to maintain the verified catalogue and change-control evidence",
+    "problem_trigger": "A new product launches, a formulation or supplier changes, or a catalogue must migrate from national certificates to the EU hygiene regime"
+  },
+  "founder_fit": [
+    "Excellent match to structured scientific evidence, data lineage, and rule-based change analysis",
+    "Partner-led laboratory distribution reduces founder social load",
+    "Can begin with one material class and three product families rather than a broad compliance suite",
+    "Initial spend fits available capital, though expert review must be budgeted"
+  ],
+  "parent": null,
+  "risks": [
+    "Materials toxicology and conformity decisions require expertise beyond software automation.",
+    "Laboratories or large certification groups may build their own intake portals.",
+    "Manufacturers may postpone action under transitional provisions."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://green-forum.ec.europa.eu/implementation-drinking-water-directive_en",
+    "https://environment.ec.europa.eu/topics/water/drinking-water_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "certification dossier exchange",
+    "control_point": "the notified-body conformity packet and EU certificate required for a newly covered product to enter the market",
+    "critical_dependency": "authoritative interpretation of positive-list coverage and acceptance of structured dossiers by labs and notified bodies"
+  },
+  "thesis": "Build a dossier and test-reuse platform for Polish and Central European makers of valves, pumps, meters, pipes, fittings, and taps that must navigate the new harmonised EU hygiene regime for products contacting drinking water. The gate is product-family approval: a manufacturer maps every material and constituent to the European Positive List, assembles test and supplier evidence, routes the packet to a conformity body, and preserves the certificate, declaration, marking, and change history. Accredited laboratories and conformity bodies can distribute the workspace because a clean dossier reduces their intake work; plumbing wholesalers can require a verified catalogue from suppliers. The compounding asset is a material-to-product-to-test graph that identifies legitimately reusable evidence and flags formulation changes across many product families.",
+  "title": "HydroHygiene Product-Certification Graph",
+  "uncertainties": [
+    "Number and export orientation of addressable Polish manufacturers",
+    "Which Polish bodies will be notified and whether they accept third-party structured dossiers",
+    "Extent to which testing evidence can be reused across variants without creating unsafe shortcuts"
+  ],
+  "version": 1
+}

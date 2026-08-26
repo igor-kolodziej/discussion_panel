@@ -1,0 +1,86 @@
+{
+  "candidate_id": "settle8-04",
+  "claims": [
+    {
+      "claim_id": "settle8-04-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/nfosigw/moj-prad-60-jak-zlozyc-wniosek-i-uniknac-bledow"
+      ],
+      "statement": "Verified fact: NFOŚiGW reported more than 40% of reviewed Mój Prąd 6 applications required correction or supplementation."
+    },
+    {
+      "claim_id": "settle8-04-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/nfosigw/moj-prad-60-jak-zlozyc-wniosek-i-uniknac-bledow",
+        "https://mojprad.gov.pl/o-programie/"
+      ],
+      "statement": "Verified fact: that program required specific evidence such as an acceptance protocol for storage and an OSD certificate confirming grid connection; substitutes could lead to rejection."
+    },
+    {
+      "claim_id": "settle8-04-c3",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://www.gov.pl/web/nfosigw/moj-prad-60-jak-zlozyc-wniosek-i-uniknac-bledow"
+      ],
+      "statement": "Hypothesis (unvalidated): installers will pay per completed evidence packet because fewer corrections and faster collection have measurable cash value beyond a generic CRM checklist."
+    }
+  ],
+  "contrary_evidence": [
+    "The cited Mój Prąd 6 call has ended, so its correction volume is evidence of workflow friction, not proof of a durable current market: https://mojprad.gov.pl/",
+    "The program supplies official templates and instructions, so a disciplined installer may solve the problem without new software: https://mojprad.gov.pl/o-programie/"
+  ],
+  "economics": {
+    "acquisition_route": "Use the family company as a no-claim design environment, quantify days-to-cash on historical projects, then distribute through equipment wholesalers.",
+    "capital_required_pln": 30000,
+    "founder_net_worth_path": "Unvalidated scenario: 30 installers at PLN 1,500 MRR plus usage by year 2, 120 at PLN 2,500 MRR plus usage by year 4, and 250 at about PLN 3,000 blended MRR by year 6 imply roughly PLN 9m ARR. At 20% owner earnings or a 2.5-3.5x vertical-SaaS value and 70% ownership, PLN 5m founder net worth is plausible in years 4-6; no second paid installer within 12 months ends the scale thesis.",
+    "founder_time": "2-4 hours/day for one installer workflow; stay employed and expand only after a paid second-company pilot.",
+    "gross_margin_basis": "Hypothesis: 75-88% after template setup; manual document chasing must remain outside the base subscription.",
+    "payback": "Unvalidated customer hypothesis: one fewer correction or several days faster final collection per month repays the fee; compare pilot jobs with a pre-pilot baseline.",
+    "pricing": "Unvalidated estimate: PLN 700-2,500 per installer per month plus PLN 39-129 for each verified job packet.",
+    "retention_or_repeat": "Every completed installation generates a packet, and the serial/evidence graph becomes the base for recurring O&M and claims."
+  },
+  "fingerprint": {
+    "compounding_advantage": "a versioned rule library and labeled rejection reasons improve first-pass completeness; installed-asset records support later service and warranty workflows",
+    "customer": "Polish PV, battery, and heat-pump installers completing 10-300 residential or SME projects per month",
+    "distribution_mechanism": "pilot inside the founder's parents' renewable-installation company, then sell through wholesalers, equipment distributors, and installer associations",
+    "offer_and_business_model": "mobile evidence capture, device-serial graph, program-specific rules, DSO and warranty task routing, e-signable acceptance, and exportable close packet; per-job SaaS",
+    "payer_and_paid_event": "installer pays per job when a packet reaches a verified collectible state, plus a monthly workspace fee",
+    "problem_trigger": "a technically finished installation cannot be collected, financed, warrantied, or submitted because one acceptance or third-party document is missing or inconsistent"
+  },
+  "founder_fit": [
+    "The parents' seven-person renewables business offers unusually cheap workflow access and realistic pilot data.",
+    "Document extraction, rules, and serial matching use AI and data skills.",
+    "A local B2B product can start part-time and below the founder's available capital.",
+    "Distributor-led sales can limit ongoing cold networking."
+  ],
+  "parent": null,
+  "risks": [
+    "Family-company validation may not generalize to other installers.",
+    "Grant and DSO forms change, creating continuous rule-maintenance cost.",
+    "Customers may misinterpret completeness checks as legal eligibility guarantees.",
+    "Installer CRMs could add the same checklist and evidence features."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.gov.pl/web/nfosigw/moj-prad-60-jak-zlozyc-wniosek-i-uniknac-bledow",
+    "https://mojprad.gov.pl/o-programie/",
+    "https://mojprad.gov.pl/nabor-vi/"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "milestone evidence-to-cash orchestration rail",
+    "control_point": "installer's verified acceptance packet that unlocks final invoicing, financing draw, warranty registration, or grant submission",
+    "critical_dependency": "current document rules and authorized evidence from customers, DSOs, equipment vendors, and funding programs"
+  },
+  "thesis": "Give Polish PV and storage installers a single job packet that binds device serials, customer acceptance, commissioning protocol, proof of payment, DSO connection evidence, warranty registration, and whichever subsidy or financing checklist applies. The control point is the installer-defined 'cash collectible' milestone: the system verifies the evidence packet and routes exceptions before final customer, lender, or grant paperwork. Begin as workflow software, not as a subsidy agent or payment custodian.",
+  "title": "Solar Commissioning-to-Cash Evidence Rail",
+  "uncertainties": [
+    "The active post-Mój Prąd 6 funding landscape and next high-volume trigger are uncertain.",
+    "It is unknown whether installers or their customers will own submission responsibility in the best wedge.",
+    "Willingness to pay per packet has not been tested.",
+    "DSO evidence may remain manual and non-standard across regions."
+  ],
+  "version": 1
+}

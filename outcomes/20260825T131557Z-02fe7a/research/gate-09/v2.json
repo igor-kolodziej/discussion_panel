@@ -1,0 +1,161 @@
+{
+  "candidate_id": "gate-09",
+  "candidate_sha256": "57e3bf31f0e687bd5165fe8c39badbb3df95391ea56381ba05d0dc4eb9028af9",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "g09-r1",
+      "evidence_refs": [
+        "g09-s1",
+        "g09-s2",
+        "g09-s3"
+      ],
+      "statement": "Published rehabilitation checks and message specifications make a deterministic local preflight technically plausible and show recurring rule-version work."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "g09-r2",
+      "evidence_refs": [
+        "g09-s4"
+      ],
+      "statement": "The 2,768-provider 2023 population is large enough for discovery but does not validate a 250-350 customer outcome or a narrow independent-provider segment."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "g09-r3",
+      "evidence_refs": [
+        "g09-s5",
+        "g09-s6",
+        "g09-s7"
+      ],
+      "statement": "Incumbent Polish HIS products already automate rehabilitation cycles and NFZ settlement, so the product must demonstrate incremental detection rather than duplicate core workflow."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "g09-r4",
+      "evidence_refs": [
+        "g09-s8",
+        "g09-s9"
+      ],
+      "statement": "On-premise or pseudonymized processing can reduce exposure but does not by itself remove GDPR risk assessment, security, contracting, and possible DPIA duties."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "g09-r5",
+      "evidence_refs": [
+        "g09-s1",
+        "g09-s4",
+        "g09-s5",
+        "g09-s7"
+      ],
+      "statement": "The reviewed evidence does not quantify preventable rejection value, incremental errors beyond incumbents, connector rights, willingness to pay, sales cost, support burden, or renewal."
+    }
+  ],
+  "contrary_evidence": [
+    "mMedica and KS-SOMED already provide directly overlapping rehabilitation and NFZ settlement functions.",
+    "Public specifications reduce proprietary rule advantage.",
+    "Privacy and security obligations remain even with local-first deployment.",
+    "Provider population is not evidence of rejection pain or purchasing intent."
+  ],
+  "schema_version": 2,
+  "sources": [
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2025-01-10",
+      "publisher": "Narodowy Fundusz Zdrowia",
+      "source_id": "g09-s1",
+      "source_type": "payer_rules",
+      "stance": "supporting",
+      "title": "Central Validation Conditions and Central Verification Rules checks",
+      "url": "https://www.nfz.gov.pl/dla-swiadczeniodawcy/sprawozdawczosc-elektroniczna/walidacje-i-weryfikacje/sprawdzenia-z-zakresu-centralnych-warunkow-walidacji-i-centralnych-regul-weryfikacji,6473.html"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "Narodowy Fundusz Zdrowia",
+      "source_id": "g09-s2",
+      "source_type": "technical_specification",
+      "stance": "supporting",
+      "title": "Komunikat SWIAD",
+      "url": "https://www.nfz.gov.pl/dla-swiadczeniodawcy/sprawozdawczosc-elektroniczna/lista-typow-komunikatow-xml/komunikat-swiad/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2026-01-08",
+      "publisher": "Narodowy Fundusz Zdrowia",
+      "source_id": "g09-s3",
+      "source_type": "technical_specification",
+      "stance": "context",
+      "title": "Komunikat REF/R_UMX",
+      "url": "https://www.nfz.gov.pl/dla-swiadczeniodawcy/sprawozdawczosc-elektroniczna/lista-typow-komunikatow-xml/komunikat-refrumx/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2024",
+      "publisher": "Narodowy Fundusz Zdrowia",
+      "source_id": "g09-s4",
+      "source_type": "official_statistics",
+      "stance": "supporting",
+      "title": "NFZ activity report: therapeutic rehabilitation",
+      "url": "https://www.nfz.gov.pl/gfx/nfz/userfiles/_public/bip/dzialalnosc_nfz/sprawozdania_z_dzialalnosci_nfz/zal._do_uchwaly_nr_17-sig.pdf"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "Asseco Poland, mMedica",
+      "source_id": "g09-s5",
+      "source_type": "vendor_product",
+      "stance": "contradicting",
+      "title": "Rehabilitacja Ambulatoryjna / Rehabilitacja Ambulatoryjna+",
+      "url": "https://mmedica.asseco.pl/moduly-dodatkowe/rehabilitacja-ambulatoryjna/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "Asseco Poland, mMedica",
+      "source_id": "g09-s6",
+      "source_type": "vendor_documentation",
+      "stance": "contradicting",
+      "title": "mMedica rehabilitation manual: automatic settlement of a rehabilitation-cycle day",
+      "url": "https://mmedica.asseco.pl/?jet_download=99d4ecfe5c33476abb0035a1c2af16e9f936c233"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "KAMSOFT S.A.",
+      "source_id": "g09-s7",
+      "source_type": "vendor_product",
+      "stance": "contradicting",
+      "title": "KS-SOMED",
+      "url": "https://kamsoft.pl/KS-SOMED/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2016-05-04",
+      "publisher": "Official Journal of the European Union / EUR-Lex",
+      "source_id": "g09-s8",
+      "source_type": "primary_law",
+      "stance": "context",
+      "title": "Regulation (EU) 2016/679 (General Data Protection Regulation)",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?from=EN&qid=1574323499975&uri=CELEX%3A32016R0679"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2025-03-31",
+      "publisher": "Urząd Ochrony Danych Osobowych",
+      "source_id": "g09-s9",
+      "source_type": "regulator_guidance",
+      "stance": "context",
+      "title": "When is a data protection impact assessment required?",
+      "url": "https://www.uodo.gov.pl/pl/598/3617"
+    }
+  ],
+  "unknowns": [
+    "Specialty-level avoidable-denial frequency, value, and root-cause distribution.",
+    "Errors missed by each incumbent HIS and whether a third-party preflight can access the necessary local data.",
+    "Connector licensing, export rights, write-back permissions, and partner economics.",
+    "Security-review, DPIA, processor-contract, incident-response, and support burden.",
+    "Achievable price, gross margin, CAC, payback, retention, and founder-net-worth timing."
+  ]
+}

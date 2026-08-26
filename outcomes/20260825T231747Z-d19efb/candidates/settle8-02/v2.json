@@ -1,0 +1,127 @@
+{
+  "candidate_id": "settle8-02",
+  "claims": [
+    {
+      "claim_id": "settle8-02-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eli.gov.pl/api/acts/DU/2026/619/text/T/D20260619L.pdf"
+      ],
+      "statement": "Polish law permits multiple deposit-system operators, requires operators to agree inter-operator settlement and packaging-exchange conditions, and assigns operators responsibility for records, reporting, retailer settlement and collection-cost funding."
+    },
+    {
+      "claim_id": "settle8-02-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/klimat/system-kaucyjny-operatorzy",
+        "https://www.gov.pl/web/klimat/system-kaucyjny-przyspiesza-juz-23-miliarda-zwroconych-opakowan"
+      ],
+      "statement": "The Ministry's operator page lists eight entities with issued operator decisions by 29 April 2026, and the Ministry reported 2.3 billion returned containers and 64,000 collection locations by 17 July 2026."
+    },
+    {
+      "claim_id": "settle8-02-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/klimat/system-kaucyjny-pytania-i-odpowiedzi"
+      ],
+      "statement": "Current Ministry guidance says each operator designs detailed operating and settlement rules and retailer contracts must specify deposit settlement and packaging-transfer rules."
+    },
+    {
+      "claim_id": "settle8-02-c4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://polskakaucja.pl/wp-content/uploads/2026/02/Regulamin-03-02-2026.pdf"
+      ],
+      "statement": "PolKa's February 2026 rules require granular EAN, voucher and bag reporting, allow corrections, may defer or suspend settlement for bad data and provide the operator broad audit access, demonstrating a real reconciliation surface but also strong incumbent control."
+    },
+    {
+      "claim_id": "settle8-02-c5",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.kaucja.pl/czytaj-wiecej/aktualnosci/nowy-dokument-szybki-start-z-openapi-kaucja-pl-dla-sklepow-i-producentow-rvm",
+        "https://zwrotka.com/oferta-dla-handlu"
+      ],
+      "statement": "Kaucja.pl publishes an OpenAPI for shops and RVM manufacturers and Zwrotka markets its own settlement, reporting and anti-fraud modules, so core integration and reporting are already operator offerings."
+    },
+    {
+      "claim_id": "settle8-02-c6",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://polskakaucja.pl/wp-content/uploads/2026/02/Regulamin-03-02-2026.pdf"
+      ],
+      "statement": "Hypothesis: customer-controlled exports contain recurring, actionable discrepancies large enough to support independent paid assurance; no public evidence establishes leakage magnitude, paid demand, recovery rate, margins or audit-data rights."
+    }
+  ],
+  "contrary_evidence": [
+    "Kaucja.pl and Zwrotka already provide integration, reporting and settlement tooling, and PolKa operates its own correction and audit processes.",
+    "PolKa's rules grant the operator—not an outside auditor—broad access to participant systems and records, while no statutory third-party access right was identified.",
+    "Operator-specific rules create a mapping opportunity but also make every deployment potentially bespoke and contract-dependent.",
+    "The system is already processing billions of containers, so entry occurs after operators and large participants have deployed core infrastructure.",
+    "Public sources describe process complexity but do not quantify settlement leakage or demonstrate that an independent certificate changes accepted payments."
+  ],
+  "economics": {
+    "acquisition_route": "Sell one fixed-scope historical settlement audit to a producer or 20-100-store regional chain using customer-exported files; do not build direct integrations until a paid audit proves recurring variances and the contract permits access.",
+    "capital_required_pln": 65000,
+    "founder_net_worth_path": "Unvalidated scenario, not a forecast: 5 customers at PLN 8,000 MRR in year 2, 20 at PLN 12,000 MRR in year 4, and 35 at PLN 14,000 MRR in year 6 would equal PLN 5.88m ARR before usage fees. At 20-30% owner earnings or a 3x ARR value and 65% ownership, the PLN 5m founder-net-worth mark could occur in years 5-7. Customer count, price, margin, multiple, data access and timing are not evidenced; inability to standardize a second operator export is a kill condition.",
+    "founder_time": "Up to 4-5 hours per day for one design partner; cap concurrent integrations, automate evidence lineage and contract a retail-data engineer only after a paid repeatable audit.",
+    "gross_margin_basis": "Unvalidated planning range: 68-82% after mappings stabilize; early operator-specific schemas, customer data cleanup, dispute evidence and support will be service-heavy, and incumbent portals may eliminate part of the work.",
+    "payback": "Unvalidated customer hypothesis: accepted recoveries or reduced finance-review effort worth at least two monthly fees within six months. Prove with a historical statement and time study before requesting a subscription.",
+    "pricing": "Unvalidated planning estimate: PLN 8,000-25,000 implementation, then PLN 3,000-15,000 per month plus PLN 0.002-0.01 per processed unit; recovery fees only on contractually accepted adjustments. No public source establishes paid willingness or leakage large enough to support these prices.",
+    "retention_or_repeat": "Deposit, handling-fee and voucher settlement is recurrent and data-heavy, but retention depends on finding recurring actionable exceptions beyond the reports and corrections already supplied by operators."
+  },
+  "fingerprint": {
+    "compounding_advantage": "cross-operator exception taxonomies and customer-specific rule maps improve anomaly detection while reproducible audit trails become embedded in finance close",
+    "customer": "Polish beverage producers and regional grocers or convenience chains participating across one or more deposit-system operators",
+    "distribution_mechanism": "packaging-compliance advisers, retail ERP and POS partners, RVM integrators and targeted historical-statement audits",
+    "offer_and_business_model": "read-only data ingestion and reconciliation SaaS plus independent exception review, priced by entities, locations, statements and processed units",
+    "payer_and_paid_event": "producer or retailer pays when a periodic settlement is independently checked and an exception file is delivered; any recovery fee applies only to an accepted adjustment",
+    "problem_trigger": "a recurring operator statement, handling-fee calculation or disputed invoice whose unit counts, vouchers, deposit cash and logistics records do not reconcile"
+  },
+  "founder_fit": [
+    "The work is quantitative, anomaly-driven and suited to the founder's data-science and automation strengths.",
+    "A fixed-scope historical export audit can test value inside the capital ceiling without building scheme infrastructure.",
+    "Warsaw provides geographic access to national retailers, producers and operator partners without requiring a public persona.",
+    "Enterprise contracting, evidence disputes and operator-specific integrations may consume the founder's full five-hour daily limit and must be kept to one design partner initially."
+  ],
+  "parent": {
+    "candidate_id": "settle8-02",
+    "version": 1
+  },
+  "risks": [
+    "Operator and retailer contracts may not grant export, sharing or independent-audit rights at the granularity needed for reconciliation.",
+    "Operators already provide portals, APIs, automated reports, settlement modules and their own audit rights, making an external assurance layer redundant for many participants.",
+    "A variance may reflect timing, unredeemed vouchers, counting-centre verification or contractual rules rather than recoverable leakage.",
+    "Short correction windows and operator-specific schemas can turn the product into urgent bespoke services rather than scalable SaaS.",
+    "Unit mismatches can imply fraud or control failure and require tamper-evident evidence, careful language and professional-liability controls.",
+    "Large retailers and producers may already reconcile internally, while smaller participants may lack both clean exports and budget."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eli.gov.pl/api/acts/DU/2026/619/text/T/D20260619L.pdf",
+    "https://www.gov.pl/web/klimat/system-kaucyjny-operatorzy",
+    "https://www.gov.pl/web/klimat/system-kaucyjny-pytania-i-odpowiedzi",
+    "https://www.gov.pl/web/klimat/system-kaucyjny-przyspiesza-juz-23-miliarda-zwroconych-opakowan",
+    "https://polskakaucja.pl/wp-content/uploads/2026/02/Regulamin-03-02-2026.pdf",
+    "https://www.kaucja.pl/czytaj-wiecej/aktualnosci/nowy-dokument-szybki-start-z-openapi-kaucja-pl-dla-sklepow-i-producentow-rvm",
+    "https://zwrotka.com/oferta-dla-handlu",
+    "https://zwrotka.com/aktualnosc/5-ciu-operatorow-systemu-kaucyjnego-podpisalo-umowe-o-wspolpracy"
+  ],
+  "stage": "research",
+  "structure": {
+    "commercial_archetype": "multi-operator scheme settlement assurance",
+    "control_point": "an independent, reproducible variance certificate joining customer-controlled sales, return, voucher, logistics and operator-statement evidence",
+    "critical_dependency": "customers must possess and be contractually permitted to export and share sufficiently granular operator, POS, RVM, voucher and logistics data"
+  },
+  "thesis": "Create a read-only, independent assurance layer for Polish beverage producers and regional retail chains that reconciles their own POS, RVM or manual-return, voucher, logistics and operator-statement exports before a settlement is accepted or disputed. It does not operate the deposit system or replace an operator portal; it produces a reproducible variance file and evidence trail across operator-specific rules. Start with customer-controlled historical exports rather than assuming direct operator API rights, and add feeds only where participant contracts expressly permit access and sharing.",
+  "title": "Independent Deposit-Return Settlement Auditor",
+  "uncertainties": [
+    "What recurring settlement variance, cash exposure and finance-review time do producers and retailers actually experience?",
+    "Which participant owns the pain and budget: producer, retailer, operator, shared-service centre or external accountant?",
+    "Which operator and participant contracts allow export, third-party processing, benchmarking and dispute support?",
+    "Are EAN, voucher, bag, RVM, counting-centre, logistics, handling-fee and payment identifiers joinable across two operators?",
+    "How often do operator correction workflows resolve discrepancies without independent software?",
+    "Can a second operator mapping be standardized without bespoke work exceeding subscription revenue?",
+    "What paid price, sales cycle, security review, liability cover and gross contribution are achievable?"
+  ],
+  "version": 2
+}

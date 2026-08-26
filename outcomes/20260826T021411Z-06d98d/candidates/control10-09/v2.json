@@ -1,0 +1,134 @@
+{
+  "candidate_id": "control10-09",
+  "claims": [
+    {
+      "claim_id": "control10-09-r2-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/topics/waste-and-recycling/packaging-waste_en",
+        "https://eur-lex.europa.eu/eli/reg/2025/40/ojS"
+      ],
+      "statement": "PPWR generally applies from 12 August 2026 and imposes packaging sustainability, conformity-assessment, technical-documentation, and declaration duties."
+    },
+    {
+      "claim_id": "control10-09-r2-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2025/40/ojS"
+      ],
+      "statement": "The brand or entity placing packaging or a packaged product under its own name is often the manufacturer, while packaging suppliers must provide the information needed for that manufacturer's evidence file."
+    },
+    {
+      "claim_id": "control10-09-r2-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://green-forum.ec.europa.eu/packaging-and-packaging-waste-regulation-implementation_en"
+      ],
+      "statement": "Important implementing methods and design-for-recycling acts phase through 2026-2028 and later, supporting update demand while also making early automated determinations risky."
+    },
+    {
+      "claim_id": "control10-09-r2-c4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ppwrconnect.com/ppwr-software",
+        "https://ppwrconnect.com/pricing"
+      ],
+      "statement": "PPWR Connect already markets declarations, technical files, component graphs, converter support, ERP/API access, and plans from EUR 29 to EUR 299 per month, directly contradicting the discovery pricing for a generic rail."
+    },
+    {
+      "claim_id": "control10-09-r2-c5",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.recyda.com/solutions/packaging-and-packaging-waste-regulation-ppwr",
+        "https://www.specright.com/press-releases/specright-ppwr-declaration-of-conformity-capability/",
+        "https://www.precongroup.com/vinq/"
+      ],
+      "statement": "Enterprise incumbents already collect supplier data, link component evidence, import through APIs, maintain audit trails, generate technical documentation and declarations, and add expert validation."
+    },
+    {
+      "claim_id": "control10-09-r2-c6",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2025/40/ojS",
+        "https://www.recyda.com/solutions/packaging-and-packaging-waste-regulation-ppwr"
+      ],
+      "statement": "A converter-led many-to-many evidence release network may reduce duplicate brand requests, but the gathered evidence does not establish an uncovered product gap or payer preference."
+    }
+  ],
+  "contrary_evidence": [
+    "PPWR Connect publicly sells a broad PPWR workspace from EUR 29 to EUR 299 per month and includes converter positioning and an enterprise API.",
+    "Recyda already provides APIs, supplier and component mapping, audit logs, portfolio dashboards, technical-documentation summaries, and declarations.",
+    "Specright already embeds PPWR declarations into specification data and has a dedicated supplier portal.",
+    "VINQ combines supplier requests, packaging dossiers, generated declarations, and human compliance validation.",
+    "Several material methodologies and delegated acts arrive later, so current urgency is not uniform across every PPWR requirement.",
+    "The legal manufacturer, frequently the brand owner, retains responsibility; a converter cannot make the brand's conformity decision for it."
+  ],
+  "economics": {
+    "acquisition_route": "Hypothesis: win one converter with many brand customers by integrating into specification approval, then expand through invited counterparties; gathered sources prove the workflow category but no converter commitment or viral adoption.",
+    "capital_required_pln": 50000,
+    "founder_net_worth_path": "The low-priced generic PPWR-tool segment is unlikely to support the founder objective. A path would require about 100-150 EU converter or brand accounts at 40000-70000 PLN annual recurring revenue, plus retained ownership and expansion into EPR and recyclability workflows, potentially over 6-9 years; direct enterprise incumbents make this scale and timing highly uncertain.",
+    "founder_time": "15-20 hours weekly for one packaging format and one converter pilot, with external PPWR counsel and strict separation from employer-confidential information",
+    "gross_margin_basis": "Evidence-refined hypothesis: 65-80% after integrations and expert support stabilise; initial onboarding and supplier-data remediation will be service-heavy",
+    "payback": "Hypothesis: 15-24 months with five to eight paid converter or brand pilots; self-serve pricing cannot recover a bespoke build quickly",
+    "pricing": "Evidence-refined hypothesis: 6000-18000 PLN annual base per converter plus usage or 10000-30000 PLN integration fees; premium enterprise pricing requires evidence-exchange value that low-cost PPWR Connect plans at EUR 29-299 per month do not provide.",
+    "retention_or_repeat": "Material substitutions, supplier changes, new packaging families, EPR reporting, and phased implementing acts can recur, but declarations may cover packaging types/families rather than every SKU and incumbents already automate the same lifecycle."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A permissioned component-to-packaging evidence graph and change lineage could reduce duplicate supplier requests across customers, but Recyda, Specright, VINQ, and PPWR Connect already advertise component data, supplier collection, APIs, and auditability.",
+    "customer": "EU packaging converters and mid-market brand manufacturers managing repeated specifications across customers and suppliers",
+    "distribution_mechanism": "A converter invites brand customers into the evidence-release workflow during quotation and specification approval",
+    "offer_and_business_model": "Multi-tenant evidence exchange and change-notification API with optional onboarding, while each legal manufacturer issues its own declaration",
+    "payer_and_paid_event": "The converter pays for customer-facing evidence release and integrations; a brand may pay for portfolio mapping and declaration export when approving or changing a packaging family",
+    "problem_trigger": "A packaging component, material, supplier, artwork, or applicable method changes and the responsible manufacturer must keep its technical file and declaration support current"
+  },
+  "founder_fit": [
+    "FMCG workflow familiarity, data modelling, and change detection fit the founder's skills.",
+    "A single-format converter pilot can be attempted without public-camera distribution.",
+    "The founder must exclude all employer-confidential specifications, contacts, systems, and know-how and assess employment conflicts before operating in an adjacent FMCG market.",
+    "Cross-border packaging sales, converter onboarding, and compliance partnerships may require more social and implementation energy than preferred.",
+    "External legal and packaging-science expertise is required for scope and evidence interpretation."
+  ],
+  "parent": {
+    "candidate_id": "control10-09",
+    "version": 1
+  },
+  "risks": [
+    "Crowded direct competition from low-cost native tools, enterprise packaging platforms, and consultancies",
+    "Liability if evidence completeness is presented as a legal conformity determination",
+    "Implementing-act changes may invalidate calculations or schemas",
+    "Supplier and brand confidentiality may prevent reusable multi-tenant evidence",
+    "Brands may require evidence inside existing PLM or specification systems rather than a converter-selected platform",
+    "Potential conflict with the founder's current FMCG employment",
+    "International enterprise distribution and integrations may exceed part-time capacity"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://environment.ec.europa.eu/topics/waste-and-recycling/packaging-waste_en",
+    "https://eur-lex.europa.eu/eli/reg/2025/40/ojS",
+    "https://green-forum.ec.europa.eu/packaging-and-packaging-waste-regulation-implementation_en",
+    "https://environment.ec.europa.eu/publications/faq-packaging-and-packaging-waste-regulation-ppwr_en",
+    "https://ppwrconnect.com/ppwr-software",
+    "https://ppwrconnect.com/pricing",
+    "https://www.recyda.com/solutions/packaging-and-packaging-waste-regulation-ppwr",
+    "https://www.specright.com/press-releases/specright-ppwr-declaration-of-conformity-capability/",
+    "https://www.precongroup.com/vinq/"
+  ],
+  "stage": "research",
+  "structure": {
+    "commercial_archetype": "Supply-chain conformity evidence exchange with converter-led distribution",
+    "control_point": "The packaging-specification approval and source-evidence release before a brand places the packaging or packaged product on the EU market",
+    "critical_dependency": "Converter participation, brand acceptance of supplier-origin evidence, stable implementing methods, and a differentiated workflow beyond incumbent PPWR and specification platforms"
+  },
+  "thesis": "A converter-embedded evidence exchange could let packaging suppliers publish controlled material, composition, test, and change evidence once, map it to packaging families, and notify brand customers when source evidence changes. The brand or other legal manufacturer would remain responsible for its own conformity assessment, technical file, and signed declaration. This is narrower than a generic PPWR declaration generator, but direct competitors already provide supplier portals, APIs, component graphs, audit trails, and declaration workflows at prices from EUR 29 per month through enterprise contracts. The only credible wedge is demonstrably lower-friction many-to-many evidence reuse inside a converter's existing specification approval process, which remains unvalidated.",
+  "title": "Converter-to-Brand PPWR Evidence Exchange",
+  "uncertainties": [
+    "Exact brand-versus-converter budget ownership by packaging format and contract",
+    "Number of repeated supplier evidence requests that a converter can eliminate",
+    "Whether packaging families materially reduce declaration volume and usage revenue",
+    "Integration and security requirements imposed by converters and brand PLM teams",
+    "An uncovered workflow that Recyda, Specright, VINQ, and PPWR Connect cannot already serve",
+    "Willingness to pay above low-cost self-serve plans",
+    "Conflict-of-interest constraints arising from the founder's employment"
+  ],
+  "version": 2
+}

@@ -1,0 +1,83 @@
+{
+  "candidate_id": "control7-05",
+  "claims": [
+    {
+      "claim_id": "control7-05-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://pubmed.ncbi.nlm.nih.gov/31015575/"
+      ],
+      "statement": "An ACMG consensus statement specifically addresses reevaluation and reanalysis of genomic test results as variant knowledge changes."
+    },
+    {
+      "claim_id": "control7-05-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://health.ec.europa.eu/ehealth-digital-health-and-care/european-health-data-space-regulation-ehds_en"
+      ],
+      "statement": "EHDS is scheduled to make lab-result exchange operational across Member States in 2031 and brings genomic data into later secondary-use rules."
+    },
+    {
+      "claim_id": "control7-05-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1642501668200&uri=CELEX%3A32017R0746"
+      ],
+      "statement": "EU IVDR states that software specifically intended for an in-vitro diagnostic medical purpose can itself qualify as an IVD, while general-purpose software does not automatically qualify."
+    }
+  ],
+  "contrary_evidence": [
+    "The relevant EHDS lab and genomic milestones are years away, so they do not prove near-term demand.",
+    "IVDR can turn an automated interpretation claim into a regulated-device obligation, limiting a rapid software launch."
+  ],
+  "economics": {
+    "acquisition_route": "White-label partnerships with laboratories and genetics clinics rather than consumer advertising",
+    "capital_required_pln": 95000,
+    "founder_net_worth_path": "Illustrative, unvalidated path: 100000 active records at 60 PLN annual net revenue could create 6m PLN recurring revenue; at 20% operating margin and 75% ownership, retained cash and a profit-based valuation could plausibly exceed 5m PLN around year 7",
+    "founder_time": "3 hours/day on data and product; clinical interpretation, counselling, and regulatory roles must be delegated",
+    "gross_margin_basis": "Target 60-75% after clinical review, secure hosting, consent operations, and regulatory quality work",
+    "payback": "Unvalidated: five lab pilots covering 5000 active records could reach operating breakeven in roughly 24 months",
+    "pricing": "Unvalidated: 60-180 PLN per active record yearly plus 400-1500 PLN for a clinician-reviewed reanalysis",
+    "retention_or_repeat": "Records remain active for years; reanalysis is episodic and laboratory contracts can renew annually"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Consented longitudinal variant records, laboratory integrations, reviewed outcomes, and recontact trust",
+    "customer": "EU clinical genetics laboratories, private clinics, and patients with prior sequencing results",
+    "distribution_mechanism": "One Polish clinical-lab pilot, genetics clinics, and white-label inclusion with new sequencing tests",
+    "offer_and_business_model": "Consent registry, literature/database change detection, lab review queue, audit trail, and patient recontact",
+    "payer_and_paid_event": "Laboratory or clinic pays per active record and workflow; patient or insurer may pay for a clinician-approved reanalysis",
+    "problem_trigger": "Variant knowledge changes or a patient remains undiagnosed after an earlier genomic test"
+  },
+  "founder_fit": [
+    "Connects neuroscience, genetics, health, and data science",
+    "AI can support evidence triage while clinicians retain decisions",
+    "B2B laboratory distribution avoids camera-based marketing",
+    "Can begin with workflow software before expanding the data network"
+  ],
+  "parent": null,
+  "risks": [
+    "Incorrect or premature reinterpretation can cause clinical harm",
+    "Health and genomic data create exceptional privacy and security exposure",
+    "The software may be regulated as an IVD depending on intended purpose"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://pubmed.ncbi.nlm.nih.gov/31015575/",
+    "https://health.ec.europa.eu/ehealth-digital-health-and-care/european-health-data-space-regulation-ehds_en",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1642501668200&uri=CELEX%3A32017R0746"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Longitudinal record subscription with paid laboratory reanalysis workflow",
+    "control_point": "Patient consent and the persistent laboratory-to-patient recontact channel for an existing genetic result",
+    "critical_dependency": "Clinical laboratories must import historical variants and retain responsibility for medically reviewed reinterpretation under IVDR"
+  },
+  "thesis": "Maintain a patient-consented registry of prior clinical genetic findings and give the originating laboratory a governed workflow to re-evaluate, clinically review, and recontact when classifications materially change. Start as lab workflow and consent infrastructure, not direct-to-consumer diagnosis. The durable asset would be the consented longitudinal result graph and recontact relationship.",
+  "title": "Genomic Result Recontact Registry",
+  "uncertainties": [
+    "Laboratory willingness to accept ongoing recontact duties",
+    "Who pays for periodic reanalysis in Poland",
+    "Whether sufficient structured historical data can be imported"
+  ],
+  "version": 1
+}

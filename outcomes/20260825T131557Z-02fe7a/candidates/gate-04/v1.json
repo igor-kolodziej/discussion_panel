@@ -1,0 +1,73 @@
+{
+  "candidate_id": "gate-04",
+  "claims": [
+    {
+      "claim_id": "gate-04-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02023R1115-20251226"
+      ],
+      "statement": "The consolidated EU regulation prohibits relevant products from being placed on the market or exported unless they meet the substantive conditions and are covered by the required statement or declaration submitted before release."
+    },
+    {
+      "claim_id": "gate-04-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eudr.webcloud.ec.europa.eu/tracesnt/help/eudr-documentation/operator/faq.html"
+      ],
+      "statement": "The Commission publishes an operator API reference for the EUDR Information System, so a specialized upstream evidence product can hand off to official submission rather than becoming the official system of record."
+    }
+  ],
+  "contrary_evidence": [
+    "The Commission supplies the official submission system and API, commoditizing statement transmission.",
+    "Established traceability and certification vendors may already serve larger wood groups."
+  ],
+  "economics": {
+    "acquisition_route": "Hypothesis: land one customs or certification partner serving at least ten operators, then expand supplier-to-buyer invites.",
+    "capital_required_pln": 75000,
+    "founder_net_worth_path": "Hypothesis: 200 operators averaging 2500 PLN monthly would yield 6 million PLN ARR before lot fees; recurring profitable software at that scale could support over 5 million PLN founder net worth in years 5 to 8.",
+    "founder_time": "Hypothesis: 20 hours weekly for one product family, with regulatory opinions and remote sensing review contracted.",
+    "gross_margin_basis": "Hypothesis: 75% gross margin once supplier onboarding is templated; specialist reviews remain separately billed.",
+    "payback": "Hypothesis: partner acquisition pays back in under six months if five clients retain at 2500 PLN monthly.",
+    "pricing": "Hypothesis: 2500 PLN monthly per operator plus 75 PLN for each newly released lot.",
+    "retention_or_repeat": "Hypothesis: repeated lots reuse supplier evidence but still require current release, risk, and reference lineage."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Reusable supplier and plot lineage plus a cross-lot exception graph that reduces evidence reacquisition",
+    "customer": "Polish SME importers, manufacturers, and exporters of in-scope wood and paper products",
+    "distribution_mechanism": "Timber wholesalers, customs brokers, certification consultants, trade associations, and accounting firms",
+    "offer_and_business_model": "Supply-chain evidence SaaS with supplier portal, geospatial checks, and statement lineage",
+    "payer_and_paid_event": "The operator pays per supplier-month and per lot that receives an internal release decision and official reference linkage",
+    "problem_trigger": "A purchase lot is ready for customs, production, sale, or export but lacks a complete EUDR evidence chain"
+  },
+  "founder_fit": [
+    "The evidence graph and risk scoring match the founder's data-science background.",
+    "The product can begin with one commodity family and desk-based partner channels.",
+    "A recurring data asset can compound without a personal media brand."
+  ],
+  "parent": null,
+  "risks": [
+    "A geospatial model can create false confidence if provenance data are fabricated upstream.",
+    "Regulatory simplification may shrink the addressable segment.",
+    "Supplier onboarding may become service-heavy and erode margins."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02023R1115-20251226",
+    "https://eudr.webcloud.ec.europa.eu/tracesnt/help/eudr-documentation/operator/faq.html"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Supply-chain traceability network",
+    "control_point": "Lot-level internal release decision bound to supplier evidence and official statement reference",
+    "critical_dependency": "Authentic upstream geolocation and stable official statement interfaces"
+  },
+  "thesis": "A narrow EUDR evidence network for Polish wood, paper, and furniture supply chains could bind supplier identity, plot geolocation, commodity lineage, risk decisions, and official statement references to each commercial lot. The product would block an internal goods-release event until the evidence chain reaches the required risk conclusion, then preserve downstream reference lineage.",
+  "title": "EUDR Lot-Release Ledger for Wood and Paper SMEs",
+  "uncertainties": [
+    "The final applicable timetable and simplified obligations by company type must be verified for each target segment.",
+    "SME willingness to share supplier geolocation with a new vendor is unknown.",
+    "The 75000 PLN capital figure and every price or scale number below are hypotheses."
+  ],
+  "version": 1
+}

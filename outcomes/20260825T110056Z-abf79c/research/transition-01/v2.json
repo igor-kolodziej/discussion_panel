@@ -1,0 +1,218 @@
+{
+  "candidate_id": "transition-01",
+  "candidate_sha256": "ff8219f4ab581cd09d1a4f7a1d0e68c268f1c5c46e28d4ac8792bc0889464114",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "transition-r01",
+      "evidence_refs": [
+        "transition-s01"
+      ],
+      "statement": "Most Polish taxpayers had to issue through KSeF from 1 April 2026, while firms at or below PLN 10,000 in monthly invoiced gross sales have only a temporary exception through 2026."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "transition-r02",
+      "evidence_refs": [
+        "transition-s02"
+      ],
+      "statement": "KSeF was already processing at scale by March 2026: the Ministry reported more than 345,000 issuers and 87 million invoices in the first two months."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "transition-r03",
+      "evidence_refs": [
+        "transition-s02"
+      ],
+      "statement": "No sanctions for KSeF usage errors are imposed for 2026, weakening an immediate penalty-avoidance purchase trigger."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "transition-r04",
+      "evidence_refs": [
+        "transition-s03"
+      ],
+      "statement": "Free Ministry applications cover issuance, receipt, viewing, status, UPO and permission management, so basic compliance has a free workaround."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "transition-r05",
+      "evidence_refs": [
+        "transition-s04"
+      ],
+      "statement": "Acceptance protocols, contracts and unstructured evidence cannot be sent as KSeF invoice attachments, establishing a separate upstream evidence-management job."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "transition-r06",
+      "evidence_refs": [
+        "transition-s05"
+      ],
+      "statement": "KSeF exposes a documented production API, test environments, OpenAPI contract and reference libraries, so implementation is accessible to incumbents and entrants."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "transition-r07",
+      "evidence_refs": [
+        "transition-s05",
+        "transition-s06"
+      ],
+      "statement": "Production authentication depends on taxpayer-granted rights, and organisations remain responsible for certificate distribution, use and revocation."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "transition-r08",
+      "evidence_refs": [
+        "transition-s07"
+      ],
+      "statement": "Serwis Pro offers the same broad field-to-invoice journey for target trades, including photos, signed protocols offline, invoices, FA(3) transmission and UPO."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "transition-r09",
+      "evidence_refs": [
+        "transition-s08"
+      ],
+      "statement": "Majsta offers signatures, progress evidence, acceptance protocols and KSeF at PLN 39-89 monthly, materially contradicting the original assumed price and scarcity."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "transition-r10",
+      "evidence_refs": [
+        "transition-s04",
+        "transition-s07",
+        "transition-s08"
+      ],
+      "statement": "A defensible wedge must be contract-specific invoice-release logic and measured dispute or delay reduction, not generic artifact capture or KSeF submission."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "transition-r11",
+      "evidence_refs": [
+        "transition-s09"
+      ],
+      "statement": "The official construction-enterprise share is only a broad denominator and does not validate a 4,700-customer reachable market in relevant trades."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "transition-r12",
+      "evidence_refs": [],
+      "statement": "Paid willingness to buy contract-specific gating, representative exception frequency and measurable invoice-cycle improvement are unknown."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "transition-r13",
+      "evidence_refs": [],
+      "statement": "Bookkeeping-office, wholesaler and field-software distribution commitments, CAC and churn are unknown."
+    }
+  ],
+  "contrary_evidence": [
+    "Free government applications cover the core tax-document workflow.",
+    "The Ministry suspended error sanctions for 2026.",
+    "Two current Polish products cover the upstream signature/protocol-to-KSeF path.",
+    "One direct competitor publicly prices the workflow at PLN 39-89 per month.",
+    "The KSeF API and integration libraries are public."
+  ],
+  "schema_version": 2,
+  "sources": [
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2025-06-30",
+      "publisher": "Polish Ministry of Finance",
+      "source_id": "transition-s01",
+      "source_type": "official_guidance",
+      "stance": "supporting",
+      "title": "Zakres obowiązkowego KSeF",
+      "url": "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/zakres-obowiazkowego-ksef/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2026-03-30",
+      "publisher": "Polish Ministry of Finance",
+      "source_id": "transition-s02",
+      "source_type": "official_update",
+      "stance": "context",
+      "title": "1 kwietnia rusza II etap wdrożenia Krajowego Systemu e-Faktur",
+      "url": "https://ksef.podatki.gov.pl/wyjasnienia/1-kwietnia-rusza-ii-etap-wdrozenia-krajowego-systemu-e-faktur/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2023-08-25",
+      "publisher": "Polish Ministry of Finance",
+      "source_id": "transition-s03",
+      "source_type": "official_product_documentation",
+      "stance": "contradicting",
+      "title": "Aplikacja Podatnika KSeF, Aplikacja mobilna KSeF i inne narzędzia",
+      "url": "https://ksef.podatki.gov.pl/aplikacja-podatnika-ksef-i-inne-narzedzia/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2026-01-01",
+      "publisher": "Polish Ministry of Finance",
+      "source_id": "transition-s04",
+      "source_type": "official_guidance",
+      "stance": "supporting",
+      "title": "Ministerstwo Finansów udostępniło w e-US moduł zgłoszeń faktur z załącznikiem dla KSeF 2.0",
+      "url": "https://ksef.podatki.gov.pl/wyjasnienia/ministerstwo-finansow-udostepnilo-w-e-us-modul-zgloszen-faktur-z-zalacznikiem-dla-ksef-20/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2025-06-30",
+      "publisher": "Polish Ministry of Finance",
+      "source_id": "transition-s05",
+      "source_type": "official_api_documentation",
+      "stance": "context",
+      "title": "Wsparcie dla integratorów",
+      "url": "https://ksef.podatki.gov.pl/ksef-na-okres-obligatoryjny/wsparcie-dla-integratorow/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2025-06-30",
+      "publisher": "Polish Ministry of Finance",
+      "source_id": "transition-s06",
+      "source_type": "official_security_guidance",
+      "stance": "context",
+      "title": "Certyfikaty KSeF",
+      "url": "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/certyfikaty-ksef/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "Serwis Pro",
+      "source_id": "transition-s07",
+      "source_type": "competitor_product_page",
+      "stance": "contradicting",
+      "title": "Program do zarządzania zleceniami serwisowymi",
+      "url": "https://serwis-pro.app/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "Majsta",
+      "source_id": "transition-s08",
+      "source_type": "competitor_product_and_pricing_page",
+      "stance": "contradicting",
+      "title": "Majsta — oferta, podpis, faktura do KSeF dla wykonawcy",
+      "url": "https://majsta.pl/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2025-03-06",
+      "publisher": "Statistics Poland",
+      "source_id": "transition-s09",
+      "source_type": "official_statistics",
+      "stance": "context",
+      "title": "Active enterprises in the fourth quarter of 2024",
+      "url": "https://stat.gov.pl/files/gfx/portalinformacyjny/en/defaultaktualnosci/3317/29/1/1/active_enterprises_in_the_fourth_quarter_of_2024.pdf"
+    }
+  ],
+  "unknowns": [
+    "Paid value of contract-specific signed-evidence release rules",
+    "Representative milestone, correction, retention and offline exception frequencies",
+    "Measured reduction in days-to-invoice and disputes",
+    "Pilot willingness to pay independent of the family relationship",
+    "Channel commitment, CAC, onboarding support and churn",
+    "Relevant installation-trade customer denominator"
+  ]
+}

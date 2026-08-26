@@ -1,0 +1,67 @@
+{
+  "candidate_id": "moat-03",
+  "claims": [
+    {
+      "claim_id": "moat03-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://iea-pvps.org/key-topics/t13-pv-project-decisions-2026/"
+      ],
+      "statement": "IEA PVPS identifies technical due diligence, testing, monitoring, and analytics as important to PV project value and reliability."
+    },
+    {
+      "claim_id": "moat03-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://energy.ec.europa.eu/news/quarterly-reports-show-surge-solar-energy-and-e-vehicles-with-record-highs-2025-2026-07-06_en"
+      ],
+      "statement": "The European Commission reported 56 GW of EU solar additions in 2025."
+    }
+  ],
+  "contrary_evidence": [
+    "Sophisticated buyers already commission established technical advisers."
+  ],
+  "economics": {
+    "acquisition_route": "Unvalidated hypothesis: accountants, O&M firms, lenders, and brokers.",
+    "capital_required_pln": 55000,
+    "founder_net_worth_path": "Unvalidated hypothesis: 1000 assets plus 400 annual transactions yield 5-8 million PLN revenue and founder equity above 5 million PLN within six years.",
+    "founder_time": "Unvalidated hypothesis: 12-18 hours weekly with engineers paid per review.",
+    "gross_margin_basis": "Unvalidated hypothesis: 65% after technical review.",
+    "payback": "Unvalidated hypothesis: one completed packet repays acquisition.",
+    "pricing": "Unvalidated hypothesis: 3000-12000 PLN per transaction plus 100-300 PLN monthly custody.",
+    "retention_or_repeat": "Unvalidated hypothesis: custody persists through ownership and portfolios transact repeatedly."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Transaction outcomes reveal which evidence predicts later performance",
+    "customer": "Owners, buyers, and lenders of small commercial PV assets",
+    "distribution_mechanism": "Lending, accounting, and asset-broker referrals",
+    "offer_and_business_model": "Tamper-evident evidence packets and normalized performance history",
+    "payer_and_paid_event": "A transaction party pays at diligence and for custody",
+    "problem_trigger": "An asset is refinanced, insured, or sold without trustworthy history"
+  },
+  "founder_fit": [
+    "Financial analysis, telemetry modeling, and family-industry access align without public-brand dependence."
+  ],
+  "parent": null,
+  "risks": [
+    "Incomplete seller data could make a packet misleading.",
+    "Transactions may be too episodic."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://iea-pvps.org/key-topics/t13-pv-project-decisions-2026/",
+    "https://energy.ec.europa.eu/news/quarterly-reports-show-surge-solar-energy-and-e-vehicles-with-record-highs-2025-2026-07-06_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Transaction verification platform",
+    "control_point": "Chain-of-custody telemetry and documents linked to transaction and realized-performance outcomes",
+    "critical_dependency": "Seller-authorized data access and lender acceptance"
+  },
+  "thesis": "An independent operating-history escrow lets buyers and lenders verify small commercial solar assets before financing or transfer.",
+  "title": "SunLedger Exchange",
+  "uncertainties": [
+    "Polish small-asset transfer volume and lender acceptance are unknown."
+  ],
+  "version": 1
+}

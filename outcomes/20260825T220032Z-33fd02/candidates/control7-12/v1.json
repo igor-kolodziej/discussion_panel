@@ -1,0 +1,83 @@
+{
+  "candidate_id": "control7-12",
+  "claims": [
+    {
+      "claim_id": "control7-12-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://digital-strategy.ec.europa.eu/en/policies/nis2-directive"
+      ],
+      "statement": "NIS2 creates risk-management and reporting duties across 18 critical sectors and explicitly covers supply-chain security, vulnerability handling, and incident response."
+    },
+    {
+      "claim_id": "control7-12-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.enisa.europa.eu/sites/default/files/publications/WP2017%20O-3-3-2%201%20Recommendations%20on%20Cyber%20Insurance.pdf"
+      ],
+      "statement": "ENISA has recommended common risk-assessment language and lightweight underwriting processes for SME cyber insurance."
+    },
+    {
+      "claim_id": "control7-12-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.enisa.europa.eu/sites/default/files/publications/ENISA%20Report%20-%20Cybersecurity%20for%20SMES%20Challenges%20and%20Recommendations.pdf"
+      ],
+      "statement": "ENISA reports that SMEs can be targeted directly and used as routes into larger organizations' supply chains."
+    }
+  ],
+  "contrary_evidence": [
+    "NIS2 generally focuses on medium and large entities in covered sectors, so many small customers are not directly compelled.",
+    "The Commission proposed 2026 simplifications that may reduce compliance burden, and ENISA's insurance-process recommendations do not prove insurer adoption of this product."
+  ],
+  "economics": {
+    "acquisition_route": "Broker and MSP bundles rather than direct one-by-one SME sales",
+    "capital_required_pln": 50000,
+    "founder_net_worth_path": "Illustrative, unvalidated path: 1000 SMEs averaging 600 PLN monthly could reach 7.2m PLN recurring revenue; at 25% operating margin and 75% ownership, a profit-based valuation could plausibly exceed 5m PLN around year 6",
+    "founder_time": "3 hours/day for integrations and analytics, with cyber audit and insurance expertise contracted",
+    "gross_margin_basis": "Target 70-85% after integrations, scanning, support, security assurance, and broker revenue share",
+    "payback": "Unvalidated: 80 SMEs averaging 500 PLN monthly could repay the pilot in 12-18 months",
+    "pricing": "Unvalidated: 300-1000 PLN per SME monthly plus channel setup or per-passport fees",
+    "retention_or_repeat": "Continuous evidence updates and annual policy or supplier reviews create recurring use"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Accepted evidence schema, control-change history, claims or incident feedback, and embedded renewal distribution",
+    "customer": "European SMEs, cyber insurers, brokers, MSPs, and large buyers assessing suppliers",
+    "distribution_mechanism": "One insurance broker or MSP channel, then buyer supplier-assurance programmes",
+    "offer_and_business_model": "Read-only integrations, control evidence, remediation queue, signed passport, and renewal export",
+    "payer_and_paid_event": "SME pays monthly; broker, insurer, or buyer may pay per completed evidence pack or channel seat",
+    "problem_trigger": "An SME seeks a policy quote or renewal, enters a supply chain, or must show current cyber controls"
+  },
+  "founder_fit": [
+    "Uses data integration, anomaly detection, and automation",
+    "Channel-led acquisition reduces constant networking",
+    "Low-capital software pilot is compatible with employment",
+    "Can build evidence gradually without acting as an insurer"
+  ],
+  "parent": null,
+  "risks": [
+    "A passport can create false assurance and liability after an incident",
+    "Read-only integrations still expose sensitive security metadata",
+    "Insurers may keep proprietary questionnaires and decline a shared format"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://digital-strategy.ec.europa.eu/en/policies/nis2-directive",
+    "https://www.enisa.europa.eu/sites/default/files/publications/WP2017%20O-3-3-2%201%20Recommendations%20on%20Cyber%20Insurance.pdf",
+    "https://www.enisa.europa.eu/sites/default/files/publications/ENISA%20Report%20-%20Cybersecurity%20for%20SMES%20Challenges%20and%20Recommendations.pdf"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Insurer-distributed continuous-assurance SaaS",
+    "control_point": "The evidence format and live control feed accepted at policy renewal or supplier approval",
+    "critical_dependency": "A broker, insurer, or major buyer must accept the passport and return outcome data sufficient to calibrate it"
+  },
+  "thesis": "Continuously collect lightweight, machine-verifiable cyber controls from an SME's existing tools and issue a time-stamped evidence passport for insurance quotation, renewal, and larger-customer procurement. Distribution begins through a broker or managed-service provider; the defensible position is the accepted renewal gate and outcome-calibrated evidence schema, not another security checklist.",
+  "title": "Insurer-Accepted SME Cyber Evidence Passport",
+  "uncertainties": [
+    "Which insurer or broker will accept the evidence as a decision input",
+    "Access to loss or incident outcomes for calibration",
+    "Whether SMEs will pay separately when MSP tools already generate reports"
+  ],
+  "version": 1
+}

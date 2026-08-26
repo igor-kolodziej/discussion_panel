@@ -1,0 +1,83 @@
+{
+  "candidate_id": "channel-09",
+  "claims": [
+    {
+      "claim_id": "channel-09-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/topics/waste-and-recycling/packaging-waste_en",
+        "https://environment.ec.europa.eu/topics/waste-and-recycling/packaging-waste/packaging-packaging-waste-regulation_en"
+      ],
+      "statement": "The EU Packaging and Packaging Waste Regulation generally applies from 12 August 2026, covers all packaging, and introduces manufacturing, composition, recyclability, reuse, labelling, and waste-management requirements."
+    },
+    {
+      "claim_id": "channel-09-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://bdo.mos.gov.pl/wp-content/uploads/2025/01/BDO_SPR_IS-Sprawozdanie-o-produktach-opakowaniach-i-o-gospodarowaniu-odpadami-wersja-1.2.pdf"
+      ],
+      "statement": "Poland's BDO system includes structured reporting for products, packaging, and waste, creating an existing downstream reporting event that packaging master data can feed."
+    },
+    {
+      "claim_id": "channel-09-c03",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/topics/waste-and-recycling/packaging-waste/packaging-packaging-waste-regulation_en",
+        "https://environment.ec.europa.eu/publications/faq-packaging-and-packaging-waste-regulation-ppwr_en"
+      ],
+      "statement": "Hypothesis: distributors and co-packers have a structural reason to embed the rules at specification and quote time because they control the material data and can convert compliance into higher-retention product sales."
+    }
+  ],
+  "contrary_evidence": [
+    "Micro-enterprises face lighter rules, which may reduce urgency in the easiest-to-reach segment.",
+    "The Commission continues to issue exemptions and clarifications, so deterministic advice can age quickly."
+  ],
+  "economics": {
+    "acquisition_route": "Enter through one packaging material category and one distributor, then expose an API to its brand customers and 3PL partners",
+    "capital_required_pln": 55000,
+    "founder_net_worth_path": "Hypothesis: 20 distributor or 3PL licences plus 50000 paid SKUs could reach 5 million PLN ARR in years 5-7; at 30% EBITDA, 6x EBITDA, and 75% ownership, founder equity could be roughly 8.1 million PLN",
+    "founder_time": "15-22 hours weekly initially; target 8-10 hours weekly after partner-led data capture and contracted regulatory updates",
+    "gross_margin_basis": "A versioned rules and data API can support 82-92% gross margin; expert rule maintenance is the major fixed cost",
+    "payback": "Target under 9 months for the channel partner via reduced specification rework and differentiated packaging sales",
+    "pricing": "Hypothesis: 30-120 PLN per active SKU annually, 2-8 PLN per validation event, and 40000-160000 PLN annual distributor licence",
+    "retention_or_repeat": "SKUs persist for years, market expansion and rule changes trigger revalidation, and quantity exports recur each reporting period"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Supplier declarations, material taxonomies, jurisdiction mappings, and accepted SKU histories improve rule coverage and switching costs",
+    "customer": "Packaging distributors, co-packers, 3PLs, e-commerce brands, and FMCG manufacturers",
+    "distribution_mechanism": "Built into distributor quoting, co-packer onboarding, 3PL merchant setup, and packaging procurement tools",
+    "offer_and_business_model": "Embedded packaging rules, evidence, and EPR master-data API with per-SKU and partner pricing",
+    "payer_and_paid_event": "Channel partner pays per validated SKU or annual licence when a compliance-ready quote or master-data record is issued",
+    "problem_trigger": "A packaging SKU is specified, quoted, ordered, or introduced into a new national market"
+  },
+  "founder_fit": [
+    "Strong FMCG adjacency, EU/Polish data workflow fit, and reseller economics. The founder's current employer creates conflict-of-interest and confidentiality boundaries: validation must use public rules, synthetic examples, and independent partners, never employer data or time outside policy."
+  ],
+  "parent": null,
+  "risks": [
+    "Incorrect rules can lead to unusable packaging inventory or reporting errors.",
+    "Enterprise packaging software vendors may add similar modules.",
+    "Maintaining many national rule variants could overwhelm a small team unless rollout is narrow."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://bdo.mos.gov.pl/wp-content/uploads/2025/01/BDO_SPR_IS-Sprawozdanie-o-produktach-opakowaniach-i-o-gospodarowaniu-odpadami-wersja-1.2.pdf",
+    "https://environment.ec.europa.eu/publications/faq-packaging-and-packaging-waste-regulation-ppwr_en",
+    "https://environment.ec.europa.eu/topics/waste-and-recycling/packaging-waste/packaging-packaging-waste-regulation_en",
+    "https://environment.ec.europa.eu/topics/waste-and-recycling/packaging-waste_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Embedded product-rules and master-data infrastructure",
+    "control_point": "The packaging specification approval inside a distributor quote or co-packer onboarding flow",
+    "critical_dependency": "Continuously maintained jurisdiction rules and trustworthy supplier composition declarations"
+  },
+  "thesis": "Create a packaging-SKU rules and evidence engine embedded in packaging distributors, co-packers, and fulfilment providers. At quote or onboarding it would capture composition and weights, flag market-specific design and labelling issues, preserve supplier declarations, and produce EPR-ready quantity exports; the channel partner monetises compliance-ready packaging rather than sending each brand to a separate consultant.",
+  "title": "PackRule Embed",
+  "uncertainties": [
+    "National EPR data and fee rules remain fragmented even with harmonised packaging design rules.",
+    "Packaging distributors may regard compliance logic as free sales support rather than paid software.",
+    "Reliable composition and recycled-content declarations from upstream suppliers may be missing."
+  ],
+  "version": 1
+}

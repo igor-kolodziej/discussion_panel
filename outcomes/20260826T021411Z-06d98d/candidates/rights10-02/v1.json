@@ -1,0 +1,85 @@
+{
+  "candidate_id": "rights10-02",
+  "claims": [
+    {
+      "claim_id": "rights10-02-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02023R1542-20250731"
+      ],
+      "statement": "From 18 February 2027, covered LMT, industrial batteries above 2 kWh, and EV batteries must have a battery passport with item-specific information."
+    },
+    {
+      "claim_id": "rights10-02-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02023R1542-20250731"
+      ],
+      "statement": "The Batteries Regulation provides lawful purchasers and their agents read-only access to state-of-health and lifetime parameters for residual-value, further-use, and aggregation purposes."
+    },
+    {
+      "claim_id": "rights10-02-c3",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1542/oj?locale=en"
+      ],
+      "statement": "Demand hypothesis: binding test and history packets will cause qualified buyers to bid earlier and with a narrower risk discount."
+    }
+  ],
+  "contrary_evidence": [
+    "Passport access is tiered and does not make every field public.",
+    "Low-value or damaged batteries may remain economical only as regulated waste."
+  ],
+  "economics": {
+    "acquisition_route": "Demand hypothesis: one fleet or storage maintainer with a predictable replacement schedule seeds both supply and buyer outreach",
+    "capital_required_pln": 70000,
+    "founder_net_worth_path": "Hypothesis: 5000 packs yearly at 700 PLN blended revenue produces 3.5m PLN revenue; at 25% EBITDA and a 6x niche-data marketplace value, founder equity could exceed 5m PLN in 5-7 years",
+    "founder_time": "15-20 hours weekly to build the data workflow and manage partners; no inventory ownership",
+    "gross_margin_basis": "Economics hypothesis: 65-80% platform margin excluding third-party testing passed through at cost",
+    "payback": "Economics hypothesis: 150 packs at 600 PLN plus 20 transactions averaging 2500 PLN fee recover setup capital in 12-18 months",
+    "pricing": "Economics hypothesis: 300-900 PLN per verified pack plus 1.5-3% of transaction value and optional buyer subscriptions",
+    "retention_or_repeat": "Fleet replacement cycles, updated health readings, and repeat buyer specifications create recurring transactions"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Serial-level state-of-health histories, realized resale values, tester performance, and recurring buyer specifications",
+    "customer": "EV fleets, stationary-storage owners, lessors, refurbishers, second-life integrators, and recyclers",
+    "distribution_mechanism": "Battery service firms, fleet-management providers, storage installers, leasing firms, and qualified reuse operators",
+    "offer_and_business_model": "Owner authorization, passport ingestion, independent test coordination, title documents, forward auction, and compliant waste fallback",
+    "payer_and_paid_event": "Sellers pay per verified listing and buyers or sellers pay a transaction fee at contracted transfer",
+    "problem_trigger": "A battery approaches removal but buyers cannot price residual life or distinguish a reusable unit from waste with confidence"
+  },
+  "founder_fit": [
+    "Data-science advantage in residual-life scoring",
+    "No inventory required",
+    "AI can structure passports and documents",
+    "Part-time pilot possible with one battery class"
+  ],
+  "parent": null,
+  "risks": [
+    "Fire and dangerous-goods liability",
+    "Waste-versus-product misclassification",
+    "Inconsistent state-of-health methods",
+    "Thin early supply"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02023R1542-20250731",
+    "https://eur-lex.europa.eu/eli/reg/2023/1542/oj?locale=en",
+    "https://eli.gov.pl/api/acts/DU/2022/1113/text.html"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Owner-authorized forward marketplace with evidence escrow",
+    "control_point": "Verified title or disposal mandate bound to the serial-level battery evidence packet",
+    "critical_dependency": "Credible testing partners and lawful classification, transport, repurposing, or waste routing for every unit"
+  },
+  "thesis": "Fleet, storage, and equipment owners authorize future battery listings; the exchange binds title, state-of-health tests, passport history, removal date, and qualified second-life buyers before decommissioning. Demand hypothesis: reliable evidence and forward visibility can reduce the adverse-selection discount in used batteries.",
+  "title": "Battery Second-Life Rights and Evidence Exchange",
+  "uncertainties": [
+    "Polish decommissioning volume",
+    "Buyer price uplift from evidence",
+    "Testing cost",
+    "Access to OEM battery-management data"
+  ],
+  "version": 1
+}

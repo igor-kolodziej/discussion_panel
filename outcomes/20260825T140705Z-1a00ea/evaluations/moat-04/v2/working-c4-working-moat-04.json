@@ -1,0 +1,119 @@
+{
+  "assumptions": [
+    "The initial wedge excludes generic used modules and focuses on obsolete off-warranty inverters, optimizers, and other scarce components where replacement avoids costly redesign.",
+    "Qualified partners perform electrical testing, warehousing, waste-status assessment, and installation rather than the founder internalizing those operations.",
+    "No exclusive recycler inventory, OEM relationship, installer network, or proprietary fitment dataset exists beyond the family installer's potential seed cases.",
+    "SecondSol is accessible to Polish buyers and sellers unless a paid pilot demonstrates a material local service gap."
+  ],
+  "base_score": 4.49,
+  "candidate_id": "moat-04",
+  "candidate_sha256": "b75b762dd6ce65bad2cbf153b0ac895d29a678184e9f2c6cbff6aabe3df9e256",
+  "candidate_version": 2,
+  "constrained_score": 4.29,
+  "evaluation_type": "working",
+  "evidence_needed_for_higher_score": "A cohort of Polish installer failures showing the annual share unresolved by OEMs and SecondSol, quantified avoided redesign cost, paid fitment-guaranteed orders, repeat purchase, qualified supply and test-pass rates, and positive contribution after testing, returns, warranty, insurance, and support.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "Obsolete off-warranty components can create a high-value fitment problem when a compatible reclaimed part avoids redesign, and successful-repair evidence can improve future matching. The insight is materially sharper than generic PV reuse, although the surrounding marketplace and service stack already exist.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "An unresolved component failure can create downtime and expensive repowering, giving repairers a credible reason to pay for tested fitment. The annual Polish failure count, avoided redesign cost, share not served by OEMs or SecondSol, and actual premium for a guarantee are all unknown.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "An inventory-light take rate plus test fee could retain software-like margin, but approximately 70 million PLN annual GMV is posited for the wealth path and rare-part demand fragments across many specifications. Testing, returns, fraud, warranty, support, insurance, and guarantee costs are unquoted, so 150 PLN contribution and 500-order payback remain conjectural.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Poland's 1.6 million-plus microinstallations and 10-15-year inverter life support a growing replacement base, and obsolete off-warranty electronics define a testable beachhead. Its economic size is uncertain because failures split by make, model, voltage, firmware, grid code, and vintage, while module reuse itself has weak present economics.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "SecondSol already has more than 60000 users, over 250000 spare parts, and nearly the complete proposed service stack. A local fitment guarantee and Polish repair graph could win a narrow niche, but no evidence shows that niche is unsolved or large enough to dominate.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A trusted compatibility graph could expand across component classes, installer procurement, repair logistics, additional geographies, and adjacent energy equipment. Expansion is coherent if the initial data flywheel works, though the European incumbent can pursue the same adjacencies.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Serial-level tests, installation context, and verified successful repairs could compound into better matching and switching costs. Supply and demand begin fragmented, installers have not committed to contribute outcomes, and SecondSol or OEM channels can accumulate similar evidence from larger transaction bases.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "A documented fitment guarantee could be meaningfully better than an unverified classified listing for scarce parts. The packet does not establish superiority over SecondSol's testing and repair services or over OEM replacement where a current device can ship within 48 hours.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "Aging Polish inverter cohorts, a large installed base, and increasing attention to reuse support testing the wedge now. Momentum is uneven because modules last roughly 30 years, refurbishment standards remain incomplete, and new or OEM replacement can be cheaper and safer.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "The family installer can supply real failure cases, while exact part-number search, installer procurement accounts, and recycler feeds are credible acquisition routes. National liquidity must still be assembled across sparse part-number markets, and no CAC, repeat-order, or channel-conversion evidence is available.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "The founder's data skills and family-industry access fit the matching layer, and qualified partners could keep capital and time bounded. Item-level non-waste proof, electrical testing, product liability, safe transport, returns, warehousing, and fitment guarantees create substantial operational and legal complexity that AI cannot remove.",
+      "score": 4,
+      "status": "scored"
+    }
+  ],
+  "final_score": 4.3,
+  "highest_value_structural_change": "Become an installer-facing obsolete-component procurement and fitment-guarantee layer that sources from OEMs, SecondSol, and recyclers rather than first building a standalone marketplace, narrowing initially to inverter and optimizer cases where documented compatibility demonstrably avoids repowering.",
+  "interaction_adjustment": -0.2,
+  "judge_id": "c4-working-moat-04",
+  "main_structural_strength": "A verified graph linking obsolete component identity, electrical compatibility, test evidence, installation context, and successful repair can turn a fragmented spare-part transaction into a compounding procurement asset.",
+  "primary_score_limiter": "The addressable unmet failure volume and marketplace liquidity are unproven, while a scaled European incumbent already offers the near-exact marketplace, testing, repair, auction, logistics, and recycling stack.",
+  "qualified": false,
+  "raw_response_path": "artifacts/research/raw-c4-working-moat-04.json",
+  "raw_response_sha256": "cffa79d7e60ebadb1d946d347cb08ad161c4b616a82f4fcc160a5974d62128d2",
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 2,
+  "strongest_disconfirming_evidence": "SecondSol already serves more than 60000 users with over 250000 spare parts and the proposed service stack, while SMA can provide comparable current-portfolio replacements within 48 hours for technically replaceable units.",
+  "unrounded_score": 4.29
+}

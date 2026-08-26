@@ -1,0 +1,214 @@
+{
+  "candidate_id": "spend-12",
+  "candidate_sha256": "8298b76d1c49723305db7cd28d346412036cd38cc762bc1643992658b01a5e89",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "spend-12-research-c01",
+      "evidence_refs": [
+        "spend-12-s01"
+      ],
+      "statement": "Heterogeneous EEG formats and metadata create a real interoperability and reproducibility problem that EEG-BIDS was designed to address."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "spend-12-research-c02",
+      "evidence_refs": [
+        "spend-12-s02",
+        "spend-12-s04",
+        "spend-12-s05"
+      ],
+      "statement": "Free MNE-BIDS, EEG-BIDS and the local browser validator already cover substantial conversion and validation functionality."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "spend-12-research-c03",
+      "evidence_refs": [
+        "spend-12-s03"
+      ],
+      "statement": "Manual study knowledge remains necessary for events, metadata, anonymisation and format decisions, leaving room for a bounded review and acceptance workflow."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "spend-12-research-c04",
+      "evidence_refs": [
+        "spend-12-s06"
+      ],
+      "statement": "A vendor can give away BIDS conversion for its own device format, so a device-mapping library alone is not a defensible paid control point."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "spend-12-research-c05",
+      "evidence_refs": [
+        "spend-12-s02",
+        "spend-12-s05",
+        "spend-12-s07"
+      ],
+      "statement": "Guided BIDS mapping, human revision, QA and validation are reproducible in open source; differentiation must come from accepted audit evidence, support and repeated edge-case resolution."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "spend-12-research-c06",
+      "evidence_refs": [
+        "spend-12-s08"
+      ],
+      "statement": "Polish research grants can fund crucial software, development and outsourced research services, providing a possible budget route without proving demand."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "spend-12-research-c07",
+      "evidence_refs": [
+        "spend-12-s08"
+      ],
+      "statement": "An 8000-18000 PLN annual licence must save roughly one to two person-months against the NCN specialist-support remuneration benchmark to be conservatively compelling."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "spend-12-research-c08",
+      "evidence_refs": [
+        "spend-12-s09"
+      ],
+      "statement": "Clinical-trial audit trails and traceable transfers create a paid control point, but only for the regulated subset and only if the system and procedures meet the applicable validation expectations."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "spend-12-research-c09",
+      "evidence_refs": [
+        "spend-12-s10"
+      ],
+      "statement": "Local execution reduces transfers of sensitive data but does not remove GDPR legal-basis, safeguarding and governance obligations."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "spend-12-research-c10",
+      "evidence_refs": [],
+      "statement": "Commercial willingness to pay, renewal behaviour and the European count of recurrent EEG curation buyers are not established."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "spend-12-research-c11",
+      "evidence_refs": [],
+      "statement": "The cost of supporting each additional device format and the share of projects that become bespoke are not established."
+    }
+  ],
+  "contrary_evidence": [
+    "A mature free ecosystem already converts, validates and imports or exports EEG-BIDS.",
+    "A major equipment vendor provides its own free BIDS converter.",
+    "Guided mapping and QA are reproducible in open-source tooling.",
+    "Academic budget eligibility is not evidence of procurement or renewal.",
+    "The strongest audit-trail control point applies to a narrower regulated subset than the whole proposed customer base."
+  ],
+  "schema_version": 2,
+  "sources": [
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2019-06-18",
+      "publisher": "Scientific Data",
+      "source_id": "spend-12-s01",
+      "source_type": "peer_reviewed_paper",
+      "stance": "supporting",
+      "title": "EEG-BIDS, an extension to the brain imaging data structure for electroencephalography",
+      "url": "https://www.nature.com/articles/s41597-019-0104-8"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "MNE-BIDS",
+      "source_id": "spend-12-s02",
+      "source_type": "open_source_documentation",
+      "stance": "contradicting",
+      "title": "MNE-BIDS documentation",
+      "url": "https://mne.tools/mne-bids/stable/index.html"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "MNE-BIDS",
+      "source_id": "spend-12-s03",
+      "source_type": "open_source_documentation",
+      "stance": "context",
+      "title": "Convert EEG data to BIDS format",
+      "url": "https://mne.tools/mne-bids/stable/auto_examples/convert_eeg_to_bids.html"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "BIDS Standard",
+      "source_id": "spend-12-s04",
+      "source_type": "open_source_tool",
+      "stance": "contradicting",
+      "title": "BIDS Validator",
+      "url": "https://bids-standard.github.io/bids-validator/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "EEGLAB",
+      "source_id": "spend-12-s05",
+      "source_type": "open_source_documentation",
+      "stance": "contradicting",
+      "title": "EEG-BIDS",
+      "url": "https://eeglab.org/plugins/EEG-BIDS/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2023-06-21",
+      "publisher": "Brain Products",
+      "source_id": "spend-12-s06",
+      "source_type": "vendor_tool_documentation",
+      "stance": "contradicting",
+      "title": "BV2BIDS: the Brain Products solution for organizing EEG data according to BIDS",
+      "url": "https://www.brainproducts.com/support-resources/bv2bids/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2024-01-01",
+      "publisher": "Human Brain Mapping",
+      "source_id": "spend-12-s07",
+      "source_type": "peer_reviewed_paper",
+      "stance": "context",
+      "title": "ezBIDS: Guided standardization of neuroimaging data interoperable with major data archives and platforms",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10853279/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2026-02-12",
+      "publisher": "National Science Centre Poland",
+      "source_id": "spend-12-s08",
+      "source_type": "funder_rules",
+      "stance": "context",
+      "title": "Costs in research projects funded by the National Science Centre",
+      "url": "https://ncn.gov.pl/sites/default/files/pliki/uchwaly-rady/2026/uchwala18_2026-zal1_ang.pdf"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2025-01-06",
+      "publisher": "International Council for Harmonisation",
+      "source_id": "spend-12-s09",
+      "source_type": "regulatory_guideline",
+      "stance": "supporting",
+      "title": "ICH E6(R3) Guideline for Good Clinical Practice",
+      "url": "https://database.ich.org/sites/default/files/ICH_E6%28R3%29_Step4_FinalGuideline_2025_0106.pdf"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2020-04-21",
+      "publisher": "European Data Protection Board",
+      "source_id": "spend-12-s10",
+      "source_type": "regulatory_guidance",
+      "stance": "context",
+      "title": "Guidelines 03/2020 on processing health data for scientific research",
+      "url": "https://www.edpb.europa.eu/sites/edpb/files/files/file1/edpb_guidelines_202003_healthdatascientificresearchcovid19_en.pdf"
+    }
+  ],
+  "unknowns": [
+    "Count of recurrent paying EEG core facilities, CROs and neurotech teams in Europe",
+    "Willingness to pay versus student or staff workarounds",
+    "Measured person-hours and rework avoided per dataset",
+    "Format-specific support cost and gross margin",
+    "Requirements and procurement cycle for a regulated CRO tier",
+    "Core-facility or distributor referral commitments",
+    "Renewal rate and conservative path to 200 organisations"
+  ]
+}

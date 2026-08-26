@@ -1,0 +1,71 @@
+{
+  "candidate_id": "channel-06",
+  "claims": [
+    {
+      "claim_id": "channel-06-claim-01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/zakres-obowiazkowego-ksef/"
+      ],
+      "statement": "Mandatory KSeF issuance was staged across large and other taxpayers in 2026, with receiving through KSeF mandatory from 1 February 2026."
+    },
+    {
+      "claim_id": "channel-06-claim-02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ksef.podatki.gov.pl/etapy-wdrozenia-ksef/",
+        "https://ksef.podatki.gov.pl/ksef-news/wystawianie-i-otrzymywanie-faktur/"
+      ],
+      "statement": "The Ministry publishes KSeF 2.0 API documentation for integrators and recognises commercial tools integrated with that API."
+    }
+  ],
+  "contrary_evidence": [
+    "The Ministry offers free applications, incumbent accounting suites already integrate the API, and failure frequency should decline as the mandate matures."
+  ],
+  "economics": {
+    "acquisition_route": "UNVALIDATED HYPOTHESIS: 5 accounting software or bureau-group partners each distribute to 80 offices.",
+    "capital_required_pln": 55000,
+    "founder_net_worth_path": "UNVALIDATED HYPOTHESIS: by year 7, PLN 8.5 million ARR and PLN 3 million EBITDA; 78% founder ownership at 4 times EBITDA implies PLN 9.4 million founder equity before liabilities.",
+    "founder_time": "UNVALIDATED HYPOTHESIS: 12 founder hours weekly through rule coverage, then 7 after partner support certification.",
+    "gross_margin_basis": "UNVALIDATED HYPOTHESIS: 88% mature gross margin after rules execution, encrypted logs and low-touch support.",
+    "payback": "UNVALIDATED HYPOTHESIS: 4-month CAC payback after a product-led sandbox trial.",
+    "pricing": "UNVALIDATED HYPOTHESIS — all commercial figures here, including capital_required_pln=55000, are hypotheses: PLN 450 per accounting office monthly plus PLN 0.09 per protected invoice.",
+    "retention_or_repeat": "UNVALIDATED HYPOTHESIS: 88% annual office retention with daily invoice repetition."
+  },
+  "fingerprint": {
+    "compounding_advantage": "labelled response-code-to-fix corpus segmented by invoice pattern, permissions and vertical",
+    "customer": "Polish accounting bureaus and vertical SaaS vendors serving invoice-heavy SMEs",
+    "distribution_mechanism": "accounting software marketplaces and bureau associations",
+    "offer_and_business_model": "preflight API, safe retry queue and accountant resolution console billed per office and invoice",
+    "payer_and_paid_event": "bureau or software vendor pays for each protected invoice transmission",
+    "problem_trigger": "an invoice is about to be submitted through mandatory KSeF and may fail or be mishandled"
+  },
+  "founder_fit": [
+    "Excellent Polish, data-quality and API-automation fit with distribution through accounting channels. UNVALIDATED HYPOTHESIS: PLN 55000 is the pre-validation capital ceiling."
+  ],
+  "parent": null,
+  "risks": [
+    "Tax-document handling requires strong security and precise non-advice positioning.",
+    "A faulty retry can duplicate or delay an invoice."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/zakres-obowiazkowego-ksef/",
+    "https://ksef.podatki.gov.pl/etapy-wdrozenia-ksef/",
+    "https://ksef.podatki.gov.pl/ksef-news/wystawianie-i-otrzymywanie-faktur/"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "usage-based tax-document reliability layer",
+    "control_point": "pre-submission validation and retry decision before KSeF transmission",
+    "critical_dependency": "stable KSeF API semantics plus anonymised acceptance and resolution telemetry"
+  },
+  "thesis": "Embed a preflight and safe-retry layer in Polish accounting bureaus' invoice tools, learning from consented KSeF response codes and accountant resolutions. The initial product prevents schema, permission and business-rule failures; the moat is a labelled failure-to-fix corpus by vertical and accounting system.",
+  "title": "KSeF Invoice-Acceptance Reliability Pool",
+  "uncertainties": [
+    "Post-launch rejection volumes",
+    "Whether response data may be pooled sufficiently",
+    "Incumbent willingness to embed rather than copy"
+  ],
+  "version": 1
+}

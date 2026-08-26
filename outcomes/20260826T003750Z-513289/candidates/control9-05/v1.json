@@ -1,0 +1,84 @@
+{
+  "candidate_id": "control9-05",
+  "claims": [
+    {
+      "claim_id": "control9-05-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://digital-strategy.ec.europa.eu/en/policies/cra-reporting"
+      ],
+      "statement": "From 11 September 2026, CRA manufacturers must report actively exploited vulnerabilities and severe security incidents affecting products with digital elements."
+    },
+    {
+      "claim_id": "control9-05-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://digital-strategy.ec.europa.eu/en/policies/cra-reporting"
+      ],
+      "statement": "The CRA reporting sequence includes an early warning within 24 hours, a full notification within 72 hours, and later final reports with event-dependent deadlines."
+    },
+    {
+      "claim_id": "control9-05-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://digital-strategy.ec.europa.eu/en/policies/cra-reporting",
+        "https://digital-strategy.ec.europa.eu/en/library/commission-publishes-new-guidance-support-timely-cyber-resilience-act-implementation"
+      ],
+      "statement": "The CRA Single Reporting Platform is scheduled to be operational for the reporting start date, while the CRA's main product obligations apply from 11 December 2027."
+    }
+  ],
+  "contrary_evidence": [
+    "The EU Single Reporting Platform is the free authoritative submission channel, so a relay cannot rely on exclusive access.",
+    "Micro and small enterprises have some penalty relief for failures to meet the 24-hour deadline, which may reduce urgency in the initial target segment."
+  ],
+  "economics": {
+    "acquisition_route": "Run tabletop drills for five OEMs sourced by one conformity lab or embedded-software partner, convert to retainers, then distribute a co-branded readiness package",
+    "capital_required_pln": 60000,
+    "founder_net_worth_path": "Hypothesis: 500 manufacturers at 24000 PLN recurring revenue yields 12m PLN ARR; at 20% EBITDA, 4x EBITDA, and 70% founder ownership, equity could exceed 6.7m PLN in years 6-8. Incident fees are upside, not required in the base path, and retained cash is not double-counted.",
+    "founder_time": "3 hours per day for product and partner work; a contracted security incident responder must cover on-call cases before launch",
+    "gross_margin_basis": "Hypothesis: 65-80% because automation handles intake and timelines but security judgement and on-call coverage remain human-intensive",
+    "payback": "Hypothesis: 10-16 months at 12 retainers averaging 22000 PLN, subject to substantial validation of on-call cost and insurance",
+    "pricing": "Hypothesis: 12000-36000 PLN annual retainer per manufacturer including drills and product inventory, plus 4000-15000 PLN per activated incident",
+    "retention_or_repeat": "Readiness must persist, products and components change, disclosure intake must stay live, and historical drills/incidents create switching cost even when incidents are rare"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A permissioned software-component-to-product map plus precedent timelines and correction outcomes makes triage faster and enables defensible portfolio-wide notification",
+    "customer": "EU small and mid-sized manufacturers of IoT devices, industrial controllers, connected wellness devices, and packaged software with no 24/7 product security team",
+    "distribution_mechanism": "White-label through conformity labs, firmware engineering firms, insurers, and penetration-test providers; supplier component matches generate portfolio-wide alerts",
+    "offer_and_business_model": "Vulnerability intake, component/product resolution, timed approval workflow, evidence vault, and Single Reporting Platform submission support",
+    "payer_and_paid_event": "The manufacturer pays an annual readiness retainer and a capped incident activation fee when a reportable case is opened",
+    "problem_trigger": "The manufacturer learns of an actively exploited vulnerability or severe incident and the CRA reporting clock starts"
+  },
+  "founder_fit": [
+    "Strong data and automation fit, especially component matching and timed workflow design",
+    "No personal brand or camera presence is required",
+    "Can validate with tabletop drills while keeping the corporate job",
+    "Requires delegated security expertise, which keeps the founder away from non-delegable on-call overload"
+  ],
+  "parent": null,
+  "risks": [
+    "A missed deadline or incorrect non-report decision has severe liability and reputational consequences.",
+    "True 24/7 response may be incompatible with a solo founder until coverage is contracted.",
+    "Cybersecurity consultancies and product-security platforms can enter the niche."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://digital-strategy.ec.europa.eu/en/policies/cra-reporting",
+    "https://digital-strategy.ec.europa.eu/en/library/commission-publishes-new-guidance-support-timely-cyber-resilience-act-implementation",
+    "https://digital-strategy.ec.europa.eu/en/policies/cra-summary"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "compliance incident-response retainer",
+    "control_point": "the statutory 24-hour and 72-hour reporting clock after awareness of a covered vulnerability or incident",
+    "critical_dependency": "trusted 24/7 intake and correct determination of product scope, severity, exploitation, and reporting responsibility"
+  },
+  "thesis": "Create an always-on but highly automated reporting relay for small European manufacturers of connected products that lack a full product-security incident response team. It receives vulnerability reports at the manufacturer's disclosure address, resolves the affected product and component, starts the statutory clock, gathers a minimum evidence packet, routes accountable approvals, and submits a coherent 24-hour warning, 72-hour notification, and final report through the Cyber Resilience Act Single Reporting Platform. Enter through CE/conformity labs, embedded-software firms, product-liability insurers, and security testers that already touch many OEMs. The durable moat is a cross-product component dependency graph and incident-timeline corpus that improves triage, while pricing as a retainer plus incident fee aligns revenue with readiness rather than fear-based consulting.",
+  "title": "CRA 24/72 Incident Evidence Relay",
+  "uncertainties": [
+    "Reportable-event frequency and therefore perceived value of a retainer",
+    "Whether insurers and conformity labs will distribute rather than build or refer to established security firms",
+    "Minimum security certifications, staffing, and liability cover buyers will demand"
+  ],
+  "version": 1
+}

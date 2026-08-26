@@ -1,0 +1,86 @@
+{
+  "candidate_id": "spend-05",
+  "claims": [
+    {
+      "claim_id": "spend-05-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.nfz.gov.pl/gfx/nfz/userfiles/_public/aktualnosci/aktualnosci_centrali/dgl/instrukcja_dla_apteki_-_kroki_i_schemat_rozliczenia_di.pdf"
+      ],
+      "statement": "NFZ documentation says medical-service validation and verification use checks developed by NFZ headquarters and that challenged reports requiring correction should be corrected promptly."
+    },
+    {
+      "claim_id": "spend-05-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.nfz.gov.pl/gfx/nfz/userfiles/_public/aktualnosci/aktualnosci_centrali/komunikaty_dgl/2024/rozliczanie_swiadczen_farmaceutycznych_portal_swiadczeniodawcy.pdf"
+      ],
+      "statement": "The official provider portal documentation exposes verification status and CSV export, indicating that structured post-check data exists for reconciliation workflows."
+    },
+    {
+      "claim_id": "spend-05-c03",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://www.nfz.gov.pl/download/gfx/nfz/pl/defaultaktualnosci/249/6385/1/komunikat_21042017.pdf"
+      ],
+      "statement": "Published NFZ central validation material includes explicit error codes and checks such as limits on billed services and duplicate waiting-list/reporting conditions."
+    }
+  ],
+  "contrary_evidence": [
+    "NFZ publishes its checks and provides a provider portal, so an external product must improve preflight and prioritisation rather than merely restate errors.",
+    "Practice-management vendors may already implement many deterministic validations.",
+    "Some errors require contract or clinical judgement and cannot be safely automated."
+  ],
+  "economics": {
+    "acquisition_route": "Obtain de-identified prior submission and correction exports from three providers, quantify preventable failures, then partner with one billing consultant or software vendor for a paid shadow-mode pilot.",
+    "capital_required_pln": 80000,
+    "founder_net_worth_path": "Five hundred provider accounts averaging 2000 PLN monthly would produce 12m PLN annual recurring revenue. At a mature 35% owner-cash margin, about 4.2m PLN per year could create more than 12m PLN of cumulative distributions in four mature years after reinvestment and taxes, without a sale assumption.",
+    "founder_time": "Constrain the first product to one benefit category and shadow mode at 3-4.5 hours/day; no automated submission or clinical coding changes, and employment continues until objective traction and runway criteria are met.",
+    "gross_margin_basis": "Once an export connector and rule set are stable, checks are automated; target 68-82% gross margin after update monitoring and high-touch exception support.",
+    "payback": "Target under 4 months from reduced correction labour and faster accepted claims, but monetary delay and denial baselines must be measured at each provider.",
+    "pricing": "Assumption to test: 2500-8000 PLN implementation and 900-3500 PLN per provider per month by contract and line volume; settlement specialists receive a portfolio tier.",
+    "retention_or_repeat": "NFZ reporting and corrections recur monthly, and accumulated rule/customer configuration raises switching cost; providers may churn if their contract ends."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A labelled mapping from NFZ codes and validation messages to successful correction sequences, segmented by contract type and software export, improves explanations and triage over time.",
+    "customer": "Independent Polish clinics, rehabilitation centres and diagnostic providers with NFZ contracts but without a large dedicated settlement team.",
+    "distribution_mechanism": "Integrate with one smaller medical-software vendor, then distribute through healthcare accounting offices and settlement specialists who can manage many provider accounts.",
+    "offer_and_business_model": "Local connector or private-cloud service that ingests vendor exports, applies versioned public validations plus customer-specific consistency tests, explains errors, prioritises monetary exposure and records corrections; recurring subscription with assisted onboarding.",
+    "payer_and_paid_event": "The provider finance or billing lead pays by NFZ contract and claim-line volume when a submission file is preflighted; existing spend is billing labour and the loss is delayed or challenged reimbursement.",
+    "problem_trigger": "Before a monthly statistical report or corrected invoice is submitted, thousands of service lines must be checked against central validations, contract limits and patient/reporting consistency rules."
+  },
+  "founder_fit": [
+    "Rules engines, anomaly detection and error prioritisation fit the founder's analytical and data-science background.",
+    "A medical-student partner can help decode terminology and observe workflows without acting as a reimbursement authority.",
+    "A local-first architecture creates a Polish technical moat while reducing sensitive-data exposure.",
+    "Software and accounting channels can deliver recurring accounts with limited founder networking."
+  ],
+  "parent": null,
+  "risks": [
+    "Outdated or incomplete rules could suppress valid claims or miss payable errors.",
+    "Health and reimbursement data demand strict access, retention and GDPR controls.",
+    "The product could drift into unauthorised coding advice if explanations are not bounded.",
+    "A dominant medical-software vendor could close export access or copy the feature."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.nfz.gov.pl/gfx/nfz/userfiles/_public/aktualnosci/aktualnosci_centrali/dgl/instrukcja_dla_apteki_-_kroki_i_schemat_rozliczenia_di.pdf",
+    "https://www.nfz.gov.pl/gfx/nfz/userfiles/_public/aktualnosci/aktualnosci_centrali/komunikaty_dgl/2024/rozliczanie_swiadczen_farmaceutycznych_portal_swiadczeniodawcy.pdf",
+    "https://www.nfz.gov.pl/download/gfx/nfz/pl/defaultaktualnosci/249/6385/1/komunikat_21042017.pdf"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Local-first reimbursement data-quality SaaS",
+    "control_point": "The last machine validation and monetary-priority queue before an NFZ report or correction is submitted",
+    "critical_dependency": "Timely, accurate implementation of NFZ validations and compatible exports from practice-management systems"
+  },
+  "thesis": "Provide smaller Polish NFZ-contracted outpatient and rehabilitation providers a local-first pre-submission layer that applies current validation rules to exported claim lines, explains likely failures and assembles a correction queue. The buyer already pays billing staff and waits for accepted settlements; value comes from fewer avoidable corrections and faster cash, without replacing the official portal or making reimbursement guarantees.",
+  "title": "NFZ Claim Preflight and Correction Queue",
+  "uncertainties": [
+    "The prevalence and monetary value of preventable NFZ rejections among small providers are unknown.",
+    "Availability and stability of supported export formats must be verified vendor by vendor.",
+    "The best initial benefit category and whether providers will permit a local connector are untested.",
+    "Pricing, margins, channel economics and wealth projections are assumptions."
+  ],
+  "version": 1
+}

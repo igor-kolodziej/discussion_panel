@@ -1,0 +1,217 @@
+{
+  "candidate_id": "rights8-09",
+  "candidate_sha256": "dc7e6544724a15b5b0c09ce929d87c705513ac8f728eea7fd2c97cca4222379a",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "r09-r1",
+      "evidence_refs": [
+        "r09-s1"
+      ],
+      "statement": "Providing account-information services as an AISP in Poland is regulated activity requiring entry in KNF's register, even though the entry is not a full authorization decision."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r09-r2",
+      "evidence_refs": [
+        "r09-s2"
+      ],
+      "statement": "A registered AISP has ongoing obligations including clear user consent, secure communication, access only to designated accounts and associated transactions, reporting to KNF, liability insurance or equivalent security and contributions to supervision costs."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r09-r3",
+      "evidence_refs": [
+        "r09-s3"
+      ],
+      "statement": "PSD2 Article 67 requires explicit consent and prohibits an AISP from using, accessing or storing data for a purpose other than the account-information service explicitly requested by the user."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r09-r4",
+      "evidence_refs": [
+        "r09-s4"
+      ],
+      "statement": "The EDPB says financial transaction analysis has a considerable chance of processing special-category personal data through direct revelation or inference, most probably requires a DPIA, and may require explicit consent under Article 9 GDPR."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r09-r5",
+      "evidence_refs": [
+        "r09-s2",
+        "r09-s3",
+        "r09-s4"
+      ],
+      "statement": "The exact product data flow, purpose statement, controller and processor allocation, Article 9 condition, retention schedule and consent-withdrawal behavior must be fixed before live-data testing; merely contracting a partner AISP is not evidence that the downstream gambling analysis is permitted."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r09-r6",
+      "evidence_refs": [
+        "r09-s5"
+      ],
+      "statement": "KCPU's 2024 survey found 31.7% of respondents aged 15+ had gambled for money in the prior 12 months; under the original CPGI threshold, 2.6% of all respondents were low risk, 1.3% moderate risk and 0.6% high risk, while the corresponding shares among gamblers were 8.2%, 4.2% and 1.6%."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r09-r7",
+      "evidence_refs": [
+        "r09-s6"
+      ],
+      "statement": "The Ministry of Finance reports PLN 117.35bn of Polish gambling-sector revenue in 2025, including PLN 68.02bn for online casino games and PLN 18.75bn for mutual betting; these turnover-style figures indicate transaction volume but do not measure consumer losses, harm or buyer demand for the API."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r09-r8",
+      "evidence_refs": [
+        "r09-s7"
+      ],
+      "statement": "Revolut already offers its Polish customers an instant gambling-transaction block with a 48-hour delay before deactivation, demonstrating a direct free substitute for a basic alert or blocking feature."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r09-r9",
+      "evidence_refs": [
+        "r09-s8"
+      ],
+      "statement": "Kontomatik already assigns a gambling label to account transactions in Poland, so transaction categorization itself is available from an established open-banking vendor and is unlikely to be a defensible control point."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r09-r10",
+      "evidence_refs": [
+        "r09-s9"
+      ],
+      "statement": "Monzo reported that more than 400,000 customers had activated its gambling block by January 2022 and fewer than 10% had permanently switched it off; this is self-reported UK evidence of consumer use, not evidence of Polish institutional willingness to pay or intervention effectiveness."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r09-r11",
+      "evidence_refs": [
+        "r09-s7",
+        "r09-s8",
+        "r09-s9"
+      ],
+      "statement": "A differentiated product would need to prove incremental value in voluntary longitudinal guardrails, user corrections and user-controlled support export beyond native blocks and commodity labels."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r09-r12",
+      "evidence_refs": [],
+      "statement": "No public evidence found establishes a Polish buyer's budget, a paid pilot, classification accuracy across transfers and cash, user conversion or retention, reduced gambling harm, AISP and security cost, gross margin, or the proposed path to 150,000 paid active users."
+    }
+  ],
+  "contrary_evidence": [
+    "Native bank and fintech gambling blocks are already distributed free to users, including by Revolut in Poland.",
+    "Kontomatik already supplies a gambling transaction label in Poland, so a new vendor cannot treat merchant classification as scarce technology without measured superiority.",
+    "EDPB guidance makes clear that payment histories can contain or infer special-category data and that a DPIA will most probably be required.",
+    "KNF's AISP obligations include insurance, reporting, security and supervision costs, making an own-license route materially heavier than a normal analytics API.",
+    "KCPU documents a harm population, but most gamblers in the survey were classified as safe and the report contains no evidence that transaction alerts are effective or purchased by institutions.",
+    "Monzo's adoption is UK, self-reported and attached to a native bank feature; it cannot be converted into Polish B2B pricing or market-size evidence."
+  ],
+  "schema_version": 2,
+  "sources": [
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2026-05-25",
+      "publisher": "Polish Financial Supervision Authority (KNF)",
+      "source_id": "r09-s1",
+      "source_type": "regulator_guidance",
+      "stance": "context",
+      "title": "Rejestracja AISP",
+      "url": "https://www.knf.gov.pl/dla_rynku/procesy_licencyjne/platniczy/AISP/Rejestracja_AISP"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2023-11-07",
+      "publisher": "Polish Financial Supervision Authority (KNF)",
+      "source_id": "r09-s2",
+      "source_type": "regulator_guidance",
+      "stance": "contradicting",
+      "title": "Podstawowe obowiązki AISP",
+      "url": "https://www.knf.gov.pl/dla_rynku/procesy_licencyjne/platniczy/AISP/Podstawowe_obowiazki_AISP"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2025-01-17",
+      "publisher": "EUR-Lex",
+      "source_id": "r09-s3",
+      "source_type": "law",
+      "stance": "contradicting",
+      "title": "Consolidated Directive (EU) 2015/2366, Article 67",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1786486126044&uri=CELEX%3A02015L2366-20250117"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2020-12-15",
+      "publisher": "European Data Protection Board",
+      "source_id": "r09-s4",
+      "source_type": "regulator_guidance",
+      "stance": "contradicting",
+      "title": "Guidelines 06/2020 on the interplay of PSD2 and the GDPR",
+      "url": "https://www.edpb.europa.eu/documents/guideline/guidelines-062020-on-the-interplay-of-the-second-payment-services-directive-and_en"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2025-08-26",
+      "publisher": "Krajowe Centrum Przeciwdziałania Uzależnieniom (KCPU)",
+      "source_id": "r09-s5",
+      "source_type": "official_research",
+      "stance": "supporting",
+      "title": "Oszacowanie rozpowszechnienia oraz identyfikacja czynników ryzyka i czynników chroniących hazardu i innych uzależnień behawioralnych – edycja 2023/2024",
+      "url": "https://kcpu.gov.pl/wp-content/uploads/2025/08/Hazard_2024_raport_FIN_1.pdf"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2026-06-12",
+      "publisher": "Polish Ministry of Finance",
+      "source_id": "r09-s6",
+      "source_type": "official_data",
+      "stance": "supporting",
+      "title": "Komunikaty w zakresie gier hazardowych: dane rynku 2024-2025",
+      "url": "https://www.podatki.gov.pl/pozostale/podatek-od-gier/komunikaty-w-zakresie-gier-hazardowych"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "Revolut Poland",
+      "source_id": "r09-s7",
+      "source_type": "incumbent_documentation",
+      "stance": "contradicting",
+      "title": "Life Challenges & Wellbeing: Gambling Block",
+      "url": "https://www.revolut.com/en-PL/customer-vulnerability/"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "Kontomatik",
+      "source_id": "r09-s8",
+      "source_type": "incumbent_documentation",
+      "stance": "contradicting",
+      "title": "Kontomatik coverage and transaction labels",
+      "url": "https://developer.kontomatik.com/coverage"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2022-01-12",
+      "publisher": "Monzo",
+      "source_id": "r09-s9",
+      "source_type": "incumbent_documentation",
+      "stance": "context",
+      "title": "We're extending our Open Banking gambling block",
+      "url": "https://monzo.com/blog/extending-our-open-banking-gambling-block"
+    }
+  ],
+  "unknowns": [
+    "Named Polish institutional buyer, budget owner, procurement path and paid willingness for a non-adverse-use safety feature.",
+    "Exact AISP, controller, joint-controller and processor roles for each proposed distribution model.",
+    "Whether the intended patterns constitute inferred health data and the accepted Article 9 condition, consent wording and DPIA safeguards.",
+    "Partner AISP and enrichment contractual rights for monitoring frequency, purpose, feedback, derived data, retention and deletion.",
+    "Precision and recall by payment rail and merchant type, including transfers, e-wallets, cash withdrawals and illegal operators.",
+    "User comprehension, opt-in conversion, consent persistence, alert fatigue, false-positive harm and incremental outcome versus a native block.",
+    "Paid pricing, integration effort, API and enrichment fees, insurance, audit, penetration-test, hosting, support and incident-response costs.",
+    "A clinically and ethically acceptable outcome measure that does not imply diagnosis or treatment.",
+    "Enterprise sales-cycle length and whether a part-time founder can pass security and compliance reviews before hiring."
+  ]
+}

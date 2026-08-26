@@ -1,0 +1,83 @@
+{
+  "candidate_id": "bottleneck-04",
+  "claims": [
+    {
+      "claim_id": "bottleneck-04-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1542/oj?eliuri=eli%3Areg%3A2023%3A1542%3Aoj&locale=en"
+      ],
+      "statement": "From 18 February 2027, light-means-of-transport batteries, industrial batteries above 2 kWh, and EV batteries placed on the EU market or put into service must have a battery passport accessible through a QR code and unique identifier."
+    },
+    {
+      "claim_id": "bottleneck-04-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1542/oj?eliuri=eli%3Areg%3A2023%3A1542%3Aoj&locale=en"
+      ],
+      "statement": "The responsible economic operator must keep passport information accurate, complete, and current; the data must use open standards, be interoperable and machine-readable, and enforce differentiated access rights."
+    },
+    {
+      "claim_id": "bottleneck-04-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://single-market-economy.ec.europa.eu/single-market/digital-product-passport/economic-operators_en"
+      ],
+      "statement": "EU digital-product-passport obligations apply to economic operators placing covered products on the Union market, including importers, and battery passports are a standalone product-passport regime under the Batteries Regulation."
+    }
+  ],
+  "contrary_evidence": [
+    "The regulation requires open, interoperable formats and no vendor lock-in, limiting contractual lock-in as a defensibility mechanism.",
+    "Large battery manufacturers and automotive supply chains are likely to build internally or buy from established product-lifecycle platforms.",
+    "The most technically demanding individual-battery telemetry fields may already reside in battery-management systems controlled by other vendors."
+  ],
+  "economics": {
+    "acquisition_route": "Publish a free passport field-gap checker and reference schema, target small pack integrators, then build test-lab and engineering-consultancy referrals",
+    "capital_required_pln": 100000,
+    "founder_net_worth_path": "Modeled path: 120 customers at 50,000 PLN average annual recurring revenue equals 6m PLN ARR before passport overages; a 40% owner-cash margin could generate 2.4m PLN/year and more than 10m PLN over five mature years",
+    "founder_time": "Up to 5 hours/day for one battery category and two design partners; security and onboarding work must be tightly templated",
+    "gross_margin_basis": "Modeled 75-90% after secure hosting, identifiers, support, and data-retention costs; excludes bespoke engineering and testing",
+    "payback": "Target under 9 months because onboarding is paid; enterprise procurement timing remains unknown",
+    "pricing": "Modeled 20,000-80,000 PLN annual platform fee plus 2-10 PLN per issued or materially updated passport, with 15,000-60,000 PLN onboarding",
+    "retention_or_repeat": "New models, unit issuance, lifecycle updates, repurposing, and long availability requirements make data persistent and recurring"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A validated field-level mapping corpus across cell suppliers, pack configurations, test artifacts, lifecycle events, and recurring passport rejection or incompleteness patterns",
+    "customer": "EU assemblers and importers placing light-means-of-transport batteries or industrial batteries above 2 kWh on the market under their responsibility",
+    "distribution_mechanism": "Open-source readiness schema, technical webinars without founder-persona dependence, and referrals from battery test labs and pack-engineering consultancies",
+    "offer_and_business_model": "Hosted battery data model, supplier intake, validation, QR and unique-identifier issuance, role-based access, and lifecycle update APIs",
+    "payer_and_paid_event": "The responsible economic operator pays an implementation fee and annual plus per-passport charge when placing or updating covered batteries",
+    "problem_trigger": "A new battery model or individual pack must be released or updated without a complete, access-controlled passport dataset"
+  },
+  "founder_fit": [
+    "The hard problem is structured data engineering, validation, access control, and time-series lifecycle handling, all aligned with the founder's technical leverage.",
+    "Energy-storage links create a credible pilot route through the family's renewable-installation ecosystem without making that firm the only market.",
+    "A standards-first SaaS can start with one pack category and remain below the available 100,000 PLN base capital budget."
+  ],
+  "parent": null,
+  "risks": [
+    "Security or availability failure could make customers' regulated product records inaccessible.",
+    "Incomplete supplier data could make the platform appear at fault for a customer's non-compliance.",
+    "Standards consortia, PLM vendors, or battery-management vendors could commoditize the core data layer."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2023/1542/oj?eliuri=eli%3Areg%3A2023%3A1542%3Aoj&locale=en",
+    "https://single-market-economy.ec.europa.eu/single-market/digital-product-passport/economic-operators_en",
+    "https://environment.ec.europa.eu/news/new-law-more-sustainable-circular-and-safe-batteries-enters-force-2023-08-17_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Regulated product-data infrastructure sold per manufacturer and passport volume",
+    "control_point": "The canonical model-and-unit record behind each persistent QR-linked battery passport and its role-based update history",
+    "critical_dependency": "Customers and their suppliers must provide accurate composition, testing, performance, and lifecycle data in time for product release"
+  },
+  "thesis": "Build a battery-model and unit-level data pipeline for European light-mobility and industrial-storage pack assemblers that turns supplier specifications, test reports, bill of materials, state-of-health fields, and lifecycle events into access-controlled, interoperable QR-linked passports. Smaller pack integrators pay because the legal responsibility sits with the operator placing the battery on the market while upstream cell and component data is fragmented and commercially sensitive.",
+  "title": "Battery Passport Data Pipeline for Small Pack Integrators",
+  "uncertainties": [
+    "The count and software budget of independent European LMT and industrial-pack operators below enterprise scale is unknown.",
+    "Final implementation details, accepted standards, and customer interpretations may still change before February 2027.",
+    "Per-passport volume, onboarding cost, procurement duration, support load, and modeled margins require paid validation."
+  ],
+  "version": 1
+}

@@ -1,0 +1,85 @@
+{
+  "candidate_id": "rights10-05",
+  "claims": [
+    {
+      "claim_id": "rights10-05-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/topics/waste-and-recycling/construction-and-demolition-waste_en"
+      ],
+      "statement": "EU guidance promotes selective demolition and pre-demolition audits to enable reuse and high-quality recycling of construction materials."
+    },
+    {
+      "claim_id": "rights10-05-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2024/3110/oj"
+      ],
+      "statement": "The new Construction Products Regulation recognizes reuse and establishes interoperable digital product information including performance and conformity data."
+    },
+    {
+      "claim_id": "rights10-05-c3",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://eli.gov.pl/api/acts/DU/2024/1834/text.html"
+      ],
+      "statement": "Demand hypothesis: contractors will pay for reservations that reduce disposal cost without delaying demolition."
+    }
+  ],
+  "contrary_evidence": [
+    "EU pre-demolition audit guidance is non-binding.",
+    "Used construction products may lack sufficient declarations or require fresh assessment before reuse."
+  ],
+  "economics": {
+    "acquisition_route": "Demand hypothesis: three demolition contractors can supply the first 20 scheduled projects without consumer marketing",
+    "capital_required_pln": 65000,
+    "founder_net_worth_path": "Hypothesis: 250 projects yearly at 18000 PLN blended audit and fee revenue yields 4.5m PLN; 25% EBITDA at a 5x value could exceed 5m PLN in 5-7 years",
+    "founder_time": "15-20 hours weekly with field surveys performed by contractors",
+    "gross_margin_basis": "Economics hypothesis: 55-70% after survey partners; remote reuse of drawings and computer vision should lower repeat audit cost",
+    "payback": "Economics hypothesis: 10 projects at 9000 PLN average audit revenue recover setup capital in 12-18 months",
+    "pricing": "Economics hypothesis: 6000-15000 PLN per site inventory plus 5-8% of recovered-asset GMV",
+    "retention_or_repeat": "Owners and contractors repeat across portfolios; buyers set standing specifications and reserve future lots"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Exclusive early inventories, component price history, removal productivity, and buyer acceptance criteria",
+    "customer": "Property owners, demolition contractors, architects, reuse dealers, and contractors buying reclaimed components",
+    "distribution_mechanism": "Demolition firms, property managers, architectural practices, insurers, and municipal regeneration projects",
+    "offer_and_business_model": "Owner mandate, pre-demolition inventory, document recovery, buyer qualification, reservation deposits, and removal scheduling",
+    "payer_and_paid_event": "Owner or demolition firm pays for the digital audit; seller and buyer pay a success fee when a reservation closes",
+    "problem_trigger": "A renovation or demolition date is fixed but reusable materials lack early buyer commitments, documentation, and removal coordination"
+  },
+  "founder_fit": [
+    "Computer vision and structured data can accelerate inventories",
+    "B2B portfolio sales limit social burden",
+    "Capital-light without owning salvage",
+    "Polish launch with EU regulatory portability"
+  ],
+  "parent": null,
+  "risks": [
+    "Schedule delays",
+    "Structural-performance liability",
+    "Hazardous materials",
+    "Low lot value relative to removal cost"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://environment.ec.europa.eu/topics/waste-and-recycling/construction-and-demolition-waste_en",
+    "https://eur-lex.europa.eu/eli/reg/2024/3110/oj",
+    "https://eli.gov.pl/api/acts/DU/2024/1834/text.html"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Forward asset-rights marketplace with evidence services",
+    "control_point": "Owner-authorized pre-demolition inventory and reservation window before materials become mixed waste",
+    "critical_dependency": "Safe removal, credible performance evidence, and a lawful waste route for every unclaimed lot"
+  },
+  "thesis": "Building owners grant time-bounded rights to survey and reserve recoverable components before demolition; buyers receive material identity, removal conditions, performance documents, and a waste fallback. Demand hypothesis: early control of the schedule and evidence packet is more valuable than another post-demolition classifieds site.",
+  "title": "Pre-Demolition Salvage Rights Exchange",
+  "uncertainties": [
+    "Owner willingness to grant early access",
+    "Buyer density",
+    "Recoverable value per project",
+    "Insurance requirements"
+  ],
+  "version": 1
+}

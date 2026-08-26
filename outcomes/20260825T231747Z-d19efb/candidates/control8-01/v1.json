@@ -1,0 +1,85 @@
+{
+  "candidate_id": "control8-01",
+  "claims": [
+    {
+      "claim_id": "control8-01-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en"
+      ],
+      "statement": "The European Commission states that the definitive CBAM regime applies from 1 January 2026."
+    },
+    {
+      "claim_id": "control8-01-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en"
+      ],
+      "statement": "The Commission states that EU importers or indirect customs representatives importing more than the single 50-tonne mass threshold of CBAM goods must apply for authorised CBAM declarant status."
+    },
+    {
+      "claim_id": "control8-01-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en"
+      ],
+      "statement": "Authorised declarants buy certificates, declare embedded emissions, and surrender the corresponding certificates annually; a proven carbon price paid abroad can reduce the amount due."
+    }
+  ],
+  "contrary_evidence": [
+    "The Commission's current single 50-tonne threshold removes smaller importers from the main authorisation requirement, narrowing the addressable market.",
+    "The official Registry is itself the legal submission system, so the product must add data preparation, evidence quality, and workflow value rather than pretend to replace it.",
+    "Large importers may already use customs, ERP, audit, or carbon-accounting suites with CBAM modules."
+  ],
+  "economics": {
+    "acquisition_route": "Founder-led interviews and paid pilots via Polish customs brokers and import accountants, then broker revenue share and commodity-specific inbound content",
+    "capital_required_pln": 70000,
+    "founder_net_worth_path": "Unvalidated 5-7 year scenario: 100 customers averaging 60,000 PLN annual revenue yields 6.0m PLN revenue; at 35% EBITDA and a 3x EBITDA value, an 80% founder stake is about 5.0m PLN. This is an equity-value scenario, not promised cash, and does not double-count retained earnings.",
+    "founder_time": "18-24 hours per week for a six-month pilot while employed, with regulatory review contracted and implementation support standardized",
+    "gross_margin_basis": "Software validation and reusable data mappings could be high margin; supplier chasing and expert review are the main variable-cost risks and should be capped or partner-delivered",
+    "payback": "Customer payback hypothesis: avoiding one delayed authorisation, evidence remediation project, or repeated spreadsheet close could recover a 30,000-70,000 PLN annual fee; must be validated with importers",
+    "pricing": "Unvalidated hypothesis: 8,000-20,000 PLN implementation, 2,500-7,500 PLN monthly subscription, and 8,000-25,000 PLN annual close depending on shipment and supplier count",
+    "retention_or_repeat": "Annual declarations, changing suppliers, recurring imports, and certificate-price exposure create repeat use if the ledger becomes the audit record"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A permissioned corpus of supplier response quality, evidence exceptions, default-versus-actual emissions choices, and resolution playbooks by commodity and origin",
+    "customer": "Polish and nearby EU mid-market importers or indirect customs representatives above the CBAM mass threshold, initially in steel and aluminium",
+    "distribution_mechanism": "Referral partnerships with customs brokers, trade accountants, accredited verifiers, and metal-industry associations, supported by narrow CN-code readiness tools",
+    "offer_and_business_model": "Secure import ledger, supplier evidence portal, validation rules, exposure forecast, and submission-ready exports; hypothesis pricing of 8,000-20,000 PLN onboarding plus 2,500-7,500 PLN per month",
+    "payer_and_paid_event": "Head of finance, customs, or sustainability pays an onboarding fee and recurring subscription, with a separately priced annual evidence close",
+    "problem_trigger": "Crossing the in-scope import threshold, applying for authorised declarant status, onboarding a new non-EU supplier, or preparing the annual CBAM declaration"
+  },
+  "founder_fit": [
+    "Uses data engineering, exception detection, quantitative exposure modeling, and Polish/EU context",
+    "Can begin with a small number of high-value B2B pilots without a public-facing personal brand",
+    "Workflow automation can reduce meetings after onboarding and remain part-time until repeatability is proven",
+    "Founder should avoid using confidential employer data, customer lists, or work product and check employment-conflict rules"
+  ],
+  "parent": null,
+  "risks": [
+    "Incorrect scope, emissions, or filing outputs could create material customer liability; product boundaries and insured expert review are necessary",
+    "Customs brokers, audit firms, and established carbon platforms may bundle this workflow",
+    "Supplier evidence may remain unavailable, making the service labor-heavy rather than software-like",
+    "Handling certificate purchases or client money could add regulatory and operational risk and is excluded from the initial wedge"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en",
+    "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-verification_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Managed regulatory treasury ledger sold as recurring SaaS plus annual evidence review",
+    "control_point": "The importer-side authorisation, embedded-emissions record, and certificate-surrender readiness gate for each CBAM reporting year",
+    "critical_dependency": "Reliable CN-code and supplier emissions inputs, access to qualified verification where required, and stable interfaces or export paths to the official CBAM Registry"
+  },
+  "thesis": "Planning-stage hypothesis: build a Polish-first managed software service for mid-market importers of steel, aluminium, fertilisers, cement, hydrogen, and other in-scope goods that turns customs lines, supplier emissions files, verifier evidence, and certificate exposure into an auditable CBAM work record. The initial wedge is not certificate custody or legal representation; it is an exception-driven data room, authorisation checklist, supplier chase workflow, and declaration-ready evidence pack owned and approved by the importer. If users make it the place where every shipment is cleared for CBAM treatment, normalized supplier-response and emissions-evidence patterns could improve onboarding, benchmarking, and renewal economics.",
+  "title": "CBAM Authorisation and Emissions-Evidence Rail",
+  "uncertainties": [
+    "Number of Polish importers above the current 50-tonne threshold with enough complexity and willingness to pay",
+    "Availability and terms of machine interfaces for the definitive CBAM Registry",
+    "How often actual verified emissions beat default values enough to create measurable economic value",
+    "Whether brokers will refer customers or build equivalent tooling internally"
+  ],
+  "version": 1
+}

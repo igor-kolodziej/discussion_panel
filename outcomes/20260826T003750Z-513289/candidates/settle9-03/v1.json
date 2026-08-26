@@ -1,0 +1,82 @@
+{
+  "candidate_id": "settle9-03",
+  "claims": [
+    {
+      "claim_id": "settle9-03-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en"
+      ],
+      "statement": "The European Commission states that the definitive CBAM regime applies from 1 January 2026 and that importers above the stated 50-tonne threshold must seek authorized CBAM declarant status."
+    },
+    {
+      "claim_id": "settle9-03-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en"
+      ],
+      "statement": "Authorized declarants buy CBAM certificates, whose price is linked to EU ETS auction prices, making import records and emissions values inputs to a recurring monetary exposure."
+    },
+    {
+      "claim_id": "settle9-03-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-registry_en"
+      ],
+      "statement": "The Commission says declarants can retrieve information supplied by non-EU installation operators through the CBAM Registry, supporting an evidence-exchange workflow tied to named installations."
+    }
+  ],
+  "contrary_evidence": [
+    "Large customs and ESG software suites already cover CBAM reporting, and recent simplifications reduce the number of affected small importers.",
+    "Registry improvements may absorb basic evidence exchange, leaving value only in cross-system reconciliation and supplier operations."
+  ],
+  "economics": {
+    "acquisition_route": "Recruit two Polish customs agencies in one material vertical, offer a retrospective 2026 evidence-gap audit, then expand within their importer portfolios",
+    "capital_required_pln": 85000,
+    "founder_net_worth_path": "Hypothesis: 90 importers at 75,000 PLN blended ARR yields roughly 6.75m PLN ARR by years 4-6. At 18-28% operating margin and majority ownership, retained earnings plus a 4-6x vertical-software valuation could exceed 5m PLN founder net worth in years 5-7.",
+    "founder_time": "18-22 hours weekly during the first vertical build; use a contract customs specialist for bounded interpretation",
+    "gross_margin_basis": "Hypothesis: 72-86%; software matching is high-margin, while technical verification is referred or separately contracted rather than absorbed",
+    "payback": "Hypothesis: 4-8 months on channel-led mid-market accounts after integration; 9-15 months for direct enterprise accounts",
+    "pricing": "Hypothesis: 3,000-12,000 PLN monthly per importer plus 4,000-20,000 PLN supplier-onboarding projects or a volume tier tied to covered tonnes",
+    "retention_or_repeat": "Every covered import changes certificate exposure, while supplier evidence and annual declarations recur; accumulated lineage makes replacement costly"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Permissioned graph of installations, products, evidence lineage and discrepancy outcomes; reusable verified supplier packets lower marginal onboarding cost and improve anomaly benchmarks",
+    "customer": "Polish and EU mid-market CBAM importers and the customs representatives that serve them, initially in a single material category",
+    "distribution_mechanism": "White-label through customs agencies and indirect representatives that already touch every covered entry, supplemented by supplier-facing upload links",
+    "offer_and_business_model": "Vertical compliance-reconciliation SaaS plus paid evidence-onboarding, priced by importer, supplier and annual covered tonnes",
+    "payer_and_paid_event": "Importer pays when its declarations and certificate accruals are continuously reconciled; customs agency can resell a portfolio workspace",
+    "problem_trigger": "A customs entry creates a certificate exposure but supplier emissions evidence, installation identity or carbon-price data is absent or disagrees with the import record"
+  },
+  "founder_fit": [
+    "Quantitative carbon-liability reconciliation is a strong data-science and finance fit.",
+    "A single-material, file-first pilot is feasible inside the capital and time limits.",
+    "Channel-led customs distribution avoids building a public personal brand."
+  ],
+  "parent": null,
+  "risks": [
+    "Bad emissions mappings can create financial and compliance exposure.",
+    "One-material specialization can constrain near-term market size.",
+    "Regulatory amendments may change thresholds, fields or certificate timing."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en",
+    "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-registry_en",
+    "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-registry-and-reporting_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Regulatory evidence network with reconciliation SaaS",
+    "control_point": "Month-end CBAM liability accrual and annual declaration/certificate-surrender readiness",
+    "critical_dependency": "Stable access to customs data, CBAM Registry workflows and credible technical verification partners for emissions evidence"
+  },
+  "thesis": "Offer EU importers and indirect customs representatives a transaction-level ledger that binds customs entries, supplier installation evidence, verified embedded-emissions values, carbon price paid abroad, purchase invoices and CBAM certificate accruals. It flags missing or inconsistent evidence before month-end and produces a review packet for the authorized declarant. Start with Polish importers of one material class and distribute through customs agencies; later, reuse supplier evidence across consenting importers and turn evidence quality into a defensible network. The service supports, but does not act as, the declarant or provide legal advice.",
+  "title": "CBAM Evidence-to-Certificate Reconciler",
+  "uncertainties": [
+    "Count of Poland-based mid-market importers above the current threshold by material",
+    "How much customs agencies will pay versus bundle into representation fees",
+    "Permission model for reusing supplier evidence across importers"
+  ],
+  "version": 1
+}

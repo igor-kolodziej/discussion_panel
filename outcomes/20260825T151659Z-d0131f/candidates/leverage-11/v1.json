@@ -1,0 +1,73 @@
+{
+  "candidate_id": "leverage-11",
+  "claims": [
+    {
+      "claim_id": "leverage-11-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://api-docs.solaredge.com/"
+      ],
+      "statement": "SolarEdge's official developer platform exposes production, consumption, storage, alerts, historical telemetry, and inverter-level diagnostics with permissioned fleet access."
+    },
+    {
+      "claim_id": "leverage-11-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://solaredge.com/en/products/software-tools/monitoring-platform",
+        "https://api.solarweb.com/swqapi/index.html"
+      ],
+      "statement": "SolarEdge's own monitoring product already offers module-level alerts and remote diagnostics, while Fronius exposes system and device historical and aggregated data through its official API."
+    }
+  ],
+  "contrary_evidence": [
+    "OEM monitoring platforms already diagnose their own fleets and can restrict or price API access.",
+    "No gathered primary evidence yet proves installers will pay for cross-OEM triage."
+  ],
+  "economics": {
+    "acquisition_route": "UNVALIDATED HYPOTHESIS — pilot on 500 family-network assets, then 8 wholesalers/O&M networks each add 5000 assets within 4 years.",
+    "capital_required_pln": 95000,
+    "founder_net_worth_path": "UNVALIDATED HYPOTHESIS — 90000 connected assets and case fees generate 7 million PLN annual revenue by year 5; at 3.5x revenue and 80% ownership, equity is 19.6 million PLN, distributions excluded.",
+    "founder_time": "UNVALIDATED HYPOTHESIS — 17 hours weekly through the first two OEM integrations and 8 after partner operations mature.",
+    "gross_margin_basis": "UNVALIDATED HYPOTHESIS — 77% margin after OEM API charges, weather data, and human escalation.",
+    "payback": "UNVALIDATED HYPOTHESIS — under 3 months if a 1000-asset fleet avoids 3 unnecessary truck rolls monthly.",
+    "pricing": "UNVALIDATED HYPOTHESIS — all commercial numbers here, including capital_required_pln, are hypotheses: 6 PLN per connected asset monthly plus 180 PLN per completed warranty evidence bundle.",
+    "retention_or_repeat": "UNVALIDATED HYPOTHESIS — 94% connected-asset retention where alert history improves triage and warranty continuity."
+  },
+  "fingerprint": {
+    "compounding_advantage": "a multi-OEM labelled fault-to-fix dataset unavailable inside any single manufacturer's fleet",
+    "customer": "PV installers, O&M firms, equipment wholesalers, and warranty administrators with mixed residential fleets",
+    "distribution_mechanism": "renewable wholesalers, installer groups, insurer/warranty programmes, and the founder's family company",
+    "offer_and_business_model": "vendor-neutral telemetry normalisation, anomaly prioritisation, guided tests, and evidence-pack generation",
+    "payer_and_paid_event": "the service network pays per connected asset and completed evidence bundle",
+    "problem_trigger": "telemetry shows underproduction, an alert, communications loss, or a repeat customer complaint"
+  },
+  "founder_fit": [
+    "Best direct leverage of the family renewable company, data-science background, and automation preference; a real fleet pilot is possible without capital equipment or public branding."
+  ],
+  "parent": null,
+  "risks": [
+    "Bad recommendations can waste truck rolls or delay safety-critical intervention.",
+    "API deprecation and permission loss can break coverage.",
+    "Warranty acceptance criteria differ by OEM and must not be overstated."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://api-docs.solaredge.com/",
+    "https://solaredge.com/en/products/software-tools/monitoring-platform",
+    "https://api.solarweb.com/swqapi/index.html"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "telemetry-driven warranty triage utility",
+    "control_point": "the remote triage decision that determines truck roll, parts preparation, and warranty-evidence completeness",
+    "critical_dependency": "permissioned multi-OEM telemetry and a labelled outcome set linking alerts to confirmed repairs and warranty decisions"
+  },
+  "thesis": "A permissioned utility for residential and small-commercial PV service fleets can normalise multi-vendor telemetry, rank likely fault causes, request the right field tests, and assemble a reproducible pre-visit or warranty evidence bundle. Wholesalers, O&M networks, and insurers distribute it one-to-many; daily anomalies and each service case are paid operational triggers.",
+  "title": "Vendor-Neutral Solar Fault Triage and Warranty Evidence Utility",
+  "uncertainties": [
+    "Access to module-level data across enough OEMs.",
+    "Repair-outcome labelling rate.",
+    "Actual avoidable truck-roll cost and willingness to share it."
+  ],
+  "version": 1
+}

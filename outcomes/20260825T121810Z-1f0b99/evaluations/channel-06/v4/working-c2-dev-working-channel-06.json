@@ -1,0 +1,120 @@
+{
+  "assumptions": [
+    "The supplied v2 research remains applicable to the v4 regulatory, competitive, privacy, and buyer-behavior claims unless v4 explicitly changes the underlying proposition.",
+    "The MSP, not the module vendor, owns the substantive supplier-risk decision and human approval; contracts and product controls would need to preserve that allocation.",
+    "Production hardening and most of the stated capital spend occur only after a paid, non-cancellable capacity reservation, as the candidate proposes.",
+    "The first deployment can be constrained to one review workflow and one standard import or export connector, but repeatability beyond that deployment is unproven.",
+    "No partner commitment, contract price, review volume, utilization, renewal, or founder-net-worth outcome is assumed merely because the contract-first structure is coherent."
+  ],
+  "base_score": 4.48,
+  "candidate_id": "channel-06",
+  "candidate_sha256": "1b62d8ef0223a222900312110302d6843b0d1bb4d4dea92da713dcd592f7f844",
+  "candidate_version": 4,
+  "constrained_score": 4.28,
+  "evaluation_type": "working",
+  "evidence_needed_for_higher_score": "A paid non-cancellable reservation from a target MSP with disclosed fee, capacity, and data-access terms, followed by pilot measurements of baseline versus achieved review labor, cycle time, supplier completion, connector hours, exception cost, contribution margin, utilization, and renewal intent; comparable win-loss evidence against incumbent or internal alternatives is also needed.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "NIS2 creates a recurring need to review direct-supplier security, and an MSP-embedded provenance, expiry, exception, and approval layer targets a concrete operational bottleneck. Reframing the offer away from a universal passport is sensible, but the evidence-lifecycle insight is already reflected in established third-party-risk products and is not inherently proprietary.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Official requirements and ENISA's reported staffing and budget gaps support real compliance work and a plausible desire to reduce review labor. However, the packet contains no evidence that a Polish or CEE MSP will white-label this module, reserve capacity, provide workflow access, or prefer it over existing tools and internal processes.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "A non-cancellable capacity block, completed-review overage, bounded connector, and spend gate can improve cash conversion and contain downside. Yet price, reserved volume, utilization, gross margin, support and exception cost, CAC, payback, retention, renewal, and realistic owner earnings are all unquantified, and the 5 million PLN founder-net-worth path cannot presently be modeled.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "The beachhead is unusually specific: regional Polish or CEE MSP groups repeatedly reviewing suppliers for mid-market NIS2-scope clients. That is narrow enough for a focused pilot and sits behind a broad regulatory need, but the packet establishes neither the number and spending capacity of suitable MSP groups nor enough review volume to show an economically meaningful initial segment.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "Embedding partner-specific mappings and approval history in an MSP's standard procedure could produce a strong position inside one account. ProcessUnity, Whistic, OneTrust, Vanta, and Drata already cover overlapping exchange, questionnaire, evidence, inventory, monitoring, and reassessment functions, while no exclusive channel, essential right, or partner commitment prevents them or an MSP platform from bundling the wedge.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A proven module could expand across clients within an MSP group, then to other MSP groups, review triggers, sectors, and CEE geographies. The expansion path is plausible but not yet structurally easy: each MSP may require a separate enterprise sale, data terms, mappings, security review, and connector work, which could turn replication into bespoke implementation.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Accumulated provenance, expiry, exception, reviewer history, and workflow integration can create account-level switching costs. Those assets are partner-specific rather than a demonstrated cross-customer data advantage or network effect, and incumbents with existing integrations and trust can reproduce or absorb the narrow feature set.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "A white-label, bounded workflow with managed review capacity may fit an MSP better than buying a broad horizontal GRC suite. The packet provides no measured advantage in labor saved, review cycle time, accuracy, supplier completion, implementation effort, price, or risk reduction, so there is not yet a compelling basis for changed purchasing behavior.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "NIS2's explicit supply-chain obligations, detailed guidance for some covered entities, recurring evidence requirements, and reported scarcity of dedicated roles create a credible adoption window. Momentum is moderated by sector- and implementation-specific variation and by incumbents that are already serving the category.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "Using one MSP group as an aggregator of many client workflows could be efficient, and requiring a paid contract before hardening is disciplined. The initial route still depends on a relationship-heavy enterprise sale without evidenced access or appetite, concentrates the business in one partner, and offers no proof that acquisition can become repeatable or economical across additional MSP groups.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "The founder's data, automation, and AI skills fit a bounded prototype, and 85000 PLN is within stated available capital. Production delivery nevertheless requires security architecture, penetration testing, GDPR allocation, insurance, liability controls, reliable integration, and paid specialist help; the estimated 18-25 weekly hours also presses against the founder's part-time limit and exceptions could make operations service-heavy.",
+      "score": 5,
+      "status": "scored"
+    }
+  ],
+  "final_score": 4.3,
+  "highest_value_structural_change": "Make the first agreement a minimum-volume, multi-client embedded distribution contract in which the MSP owns first-line review operations and resale, the vendor delivers one standardized connector and narrowly defined review class, and expansion rights and overages are explicit; this would turn one enterprise dependency into an aggregated channel while bounding bespoke delivery.",
+  "interaction_adjustment": -0.2,
+  "judge_id": "c2-dev-working-channel-06",
+  "main_structural_strength": "The contract-first capacity reservation converts an otherwise speculative compliance-software build into a bounded, paid workflow wedge and can aggregate many downstream supplier reviews through one MSP relationship.",
+  "primary_score_limiter": "The same uncommitted MSP relationship is simultaneously the demand proof, distribution channel, workflow and data-access gate, pricing basis, and initial revenue concentration, while no unit economics or repeatable second-partner route has been established.",
+  "qualified": false,
+  "raw_response_path": "artifacts/development/raw-c2-dev-working-channel-06.json",
+  "raw_response_sha256": "12a55f1aff3f90478a90298aa4d216ac0e5eaa832ddaf9763862eee2fe33ea92",
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 2,
+  "strongest_disconfirming_evidence": "ProcessUnity already offers one-assessment/share-many reuse, and Whistic, OneTrust, Vanta, and Drata already provide overlapping evidence exchange, questionnaires, inventories, monitoring, and reassessment, supporting a credible incumbent-bundling threat and weakening claims of a distinctive product advantage.",
+  "unrounded_score": 4.28
+}

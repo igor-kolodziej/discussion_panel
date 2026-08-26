@@ -1,0 +1,70 @@
+{
+  "candidate_id": "channel-08",
+  "claims": [
+    {
+      "claim_id": "channel-08-claim-01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://digital-strategy.ec.europa.eu/en/policies/cra-reporting"
+      ],
+      "statement": "CRA reporting obligations apply from 11 September 2026 and include an early warning within 24 hours and a fuller notification within 72 hours for specified events."
+    },
+    {
+      "claim_id": "channel-08-claim-02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/frequently-asked-questions"
+      ],
+      "statement": "ENISA operates a Single Reporting Platform, so the differentiated product must be readiness, triage and evidence rather than a substitute filing destination."
+    }
+  ],
+  "contrary_evidence": [
+    "ENISA's official reporting portal is the free filing endpoint, while established product-security and SBOM vendors already cover portions of readiness."
+  ],
+  "economics": {
+    "acquisition_route": "UNVALIDATED HYPOTHESIS: 4 device test labs, cyber insurers or embedded-software distributors each refer 15 manufacturers.",
+    "capital_required_pln": 125000,
+    "founder_net_worth_path": "UNVALIDATED HYPOTHESIS: by year 8, PLN 10 million ARR and PLN 2.7 million EBITDA; 68% founder ownership valued at 4 times EBITDA implies PLN 7.3 million founder equity before liabilities.",
+    "founder_time": "UNVALIDATED HYPOTHESIS: 18 founder hours weekly before a contracted incident-response rotation, then 9 outside incidents.",
+    "gross_margin_basis": "UNVALIDATED HYPOTHESIS: 70% mature gross margin after secure infrastructure, analyst review and incident surge coverage.",
+    "payback": "UNVALIDATED HYPOTHESIS: 11-month CAC payback including security onboarding.",
+    "pricing": "UNVALIDATED HYPOTHESIS — all commercial figures here, including capital_required_pln=125000, are hypotheses: PLN 18000 annually per product family plus PLN 3500 per managed severe incident.",
+    "retention_or_repeat": "UNVALIDATED HYPOTHESIS: 91% annual product-family retention across the declared support period."
+  },
+  "fingerprint": {
+    "compounding_advantage": "permissioned component-to-exploit-to-remediation graph and incident preparation benchmarks",
+    "customer": "EU SME manufacturers of software and connected products with limited product-security staff",
+    "distribution_mechanism": "conformity test labs, embedded-software distributors and cyber insurers",
+    "offer_and_business_model": "security evidence escrow, support-period ledger and notification runbook subscription",
+    "payer_and_paid_event": "manufacturer pays annually per maintained product family and for managed incident preparation",
+    "problem_trigger": "a product release needs evidence readiness or an actively exploited vulnerability starts a short reporting clock"
+  },
+  "founder_fit": [
+    "AI/data automation fits, and lab/insurer channels minimise high-energy selling, but security expertise must be contracted. UNVALIDATED HYPOTHESIS: PLN 125000 funds hardened infrastructure and one narrow connected-device cohort."
+  ],
+  "parent": null,
+  "risks": [
+    "Security evidence is highly sensitive and an incident service creates around-the-clock expectations.",
+    "Misclassification can miss a deadline."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://digital-strategy.ec.europa.eu/en/policies/cra-reporting",
+    "https://www.enisa.europa.eu/topics/product-security/single-reporting-platform-srp/frequently-asked-questions",
+    "https://digital-strategy.ec.europa.eu/en/policies/cra-summary"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "continuous product-security evidence escrow",
+    "control_point": "product release-readiness file and statutory incident-notification clock",
+    "critical_dependency": "secure SBOM, build provenance and vulnerability-feed access from each manufacturer"
+  },
+  "thesis": "Maintain a secure, continuously updated product-security escrow for small manufacturers of connected devices and software: product/component inventory, support-period evidence, incident clock and pre-filled reporting packet. The official portal handles filing; this service controls readiness and learns which components, exploits and remediations recur across opted-in product families.",
+  "title": "CRA Vulnerability-Support Escrow",
+  "uncertainties": [
+    "SME budget before full product requirements apply",
+    "Permitted automation into the official portal",
+    "Partner willingness to share incident outcomes"
+  ],
+  "version": 1
+}

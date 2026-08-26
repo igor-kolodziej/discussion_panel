@@ -1,0 +1,213 @@
+{
+  "candidate_id": "rights10-08",
+  "candidate_sha256": "c61cd5d58f2eba5aaab64fe6ca2b98ad0dbc3db39e12e73da7641f8f147363a4",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "go-q1",
+      "evidence_refs": [
+        "go-r1"
+      ],
+      "statement": "A Polish guarantee of origin is the legally designated proof to the final customer of renewable origin and does not itself confer property rights or physical electricity delivery."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "go-q2",
+      "evidence_refs": [
+        "go-r1",
+        "go-r2"
+      ],
+      "statement": "Guarantees are electronic, unique, time-limited instruments whose transfer and cancellation are supervised through designated registry systems."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "go-q3",
+      "evidence_refs": [
+        "go-r3"
+      ],
+      "statement": "TGE issues final-customer confirmation on request of the seller-owner and now provides bulk transaction handling and a marketplace within the registry."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "go-q4",
+      "evidence_refs": [
+        "go-r4",
+        "go-r5"
+      ],
+      "statement": "Axpo says it serves nearly 40000 Polish SMEs with renewable-origin coverage and introduced that coverage without additional or hidden charges."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "go-q5",
+      "evidence_refs": [
+        "go-r6"
+      ],
+      "statement": "Energa's current terms already pool GO purchase and cancellation across participating customers."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "go-q6",
+      "evidence_refs": [
+        "go-r3",
+        "go-r4",
+        "go-r5",
+        "go-r6"
+      ],
+      "statement": "These incumbent and registry features make 800-2000 PLN per month for ordinary SME procurement evidence implausible without a distinct supply-chain audit requirement."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "go-q7",
+      "evidence_refs": [
+        "go-r7"
+      ],
+      "statement": "Poland had a national GO system but was not connected to the AIB Hub in the reviewed report, and AIB gave no membership timeline."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "go-q8",
+      "evidence_refs": [
+        "go-r9"
+      ],
+      "statement": "EU consumer law requires environmental claims to be specific and supportable and prohibits overstatement from one attribute to an entire product or business."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "go-q9",
+      "evidence_refs": [],
+      "statement": "A non-custodial reconciliation layer may be lawful, but the reviewed evidence does not resolve Polish licensing, registry-account, mandate, or API access for the exact operating model."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "go-q10",
+      "evidence_refs": [
+        "go-r3",
+        "go-r4",
+        "go-r6"
+      ],
+      "statement": "The founder can build the data layer part-time and within available capital, but partner access and willingness to pay are not validated."
+    }
+  ],
+  "contrary_evidence": [
+    "Large suppliers already bundle or collectively cancel GOs for SMEs.",
+    "Axpo explicitly describes renewable-origin coverage without extra charges.",
+    "TGE now has bulk transaction processing and a marketplace.",
+    "GOs are evidentiary attributes, not physical-delivery or ownership rights.",
+    "Poland's lack of AIB Hub connection limits assumed European interoperability.",
+    "Specific green claims remain subject to accuracy and anti-overstatement rules."
+  ],
+  "schema_version": 2,
+  "sources": [
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "Polish Energy Regulatory Office",
+      "source_id": "go-r1",
+      "source_type": "regulator guidance",
+      "stance": "context",
+      "title": "Guarantee of origin: document proving renewable energy origin",
+      "url": "https://www.ure.gov.pl/pl/oze/gwarancje-pochodzenia/6816,Gwarancja-pochodzenia-instrument-w-systemie-wsparcia-odnawialnych-zrodel-energii.html"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2018-12-21",
+      "publisher": "Official Journal of the European Union",
+      "source_id": "go-r2",
+      "source_type": "legislation",
+      "stance": "context",
+      "title": "Directive (EU) 2018/2001 on the promotion of renewable energy",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?from=lt&uri=CELEX%3A32018L2001"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2026-04-29",
+      "publisher": "Polish Power Exchange",
+      "source_id": "go-r3",
+      "source_type": "official registry and direct substitute product page",
+      "stance": "contradicting",
+      "title": "Guarantees of Origin Register",
+      "url": "https://rgp.tge.pl/"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "Axpo Polska",
+      "source_id": "go-r4",
+      "source_type": "direct incumbent product and pricing page",
+      "stance": "contradicting",
+      "title": "Green solutions",
+      "url": "https://www.axpo.com/pl/pl/about-us/how-do-we-operate/sustainable-solutions.html"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "Axpo Polska",
+      "source_id": "go-r5",
+      "source_type": "direct incumbent scale page",
+      "stance": "contradicting",
+      "title": "What Axpo does in Poland",
+      "url": "https://www.axpo.com/pl/pl/about-us/who-we-are/what-do-we-do-in-poland.html"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2026-02-02",
+      "publisher": "ENERGA-OBROT",
+      "source_id": "go-r6",
+      "source_type": "direct incumbent contract terms",
+      "stance": "contradicting",
+      "title": "Terms of the Basic Offer with Green Energy effective 2 February 2026",
+      "url": "https://www.energa.pl/dam/jcr%3A8293f528-5c54-4c61-be56-d3f96a117bd4/Regulamin%20naszej%20oferty%20Podstawowa%20z%20zielon%C4%85%20energi%C4%85%20obowi%C4%85zuj%C4%85cy%20od%202%20lutego%202026%20roku.pdf"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2026-06-30",
+      "publisher": "Association of Issuing Bodies",
+      "source_id": "go-r7",
+      "source_type": "issuing-body association report",
+      "stance": "contradicting",
+      "title": "AIB Annual Report 2025",
+      "url": "https://www.aib-net.org/sites/default/files/assets/aib/AIB%20Annual%20Report%20full%20version%202025%20Final_June%202026.pdf"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "Association of Issuing Bodies",
+      "source_id": "go-r8",
+      "source_type": "market rules guidance",
+      "stance": "context",
+      "title": "Guarantees of Origin Market FAQ",
+      "url": "https://www.aib-net.org/faq/market"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2024-03-06",
+      "publisher": "Official Journal of the European Union",
+      "source_id": "go-r9",
+      "source_type": "legislation",
+      "stance": "context",
+      "title": "Directive (EU) 2024/825 on empowering consumers for the green transition",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024L0825"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "Association of Issuing Bodies",
+      "source_id": "go-r10",
+      "source_type": "market information directory",
+      "stance": "context",
+      "title": "Sources of price and market information",
+      "url": "https://www.aib-net.org/facts/market-information/sources-price-and-market-information"
+    }
+  ],
+  "unknowns": [
+    "One registry-capable partner's signed interest and commercial terms",
+    "Current TGE participant eligibility, fee schedule, API availability, and delegation model",
+    "Legal opinion on energy trading, brokerage, custody, and cancellation authority",
+    "Ten SME examples where existing supplier evidence fails a customer requirement",
+    "A validated willingness to pay above bundled supplier alternatives",
+    "Partner-level gross margin after manual exception handling",
+    "Poland's AIB connection schedule and effect on imports and exports",
+    "Permissible wording for each intended evidence export and downstream claim"
+  ]
+}

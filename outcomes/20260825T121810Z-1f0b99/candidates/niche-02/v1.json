@@ -1,0 +1,79 @@
+{
+  "candidate_id": "niche-02",
+  "claims": [
+    {
+      "claim_id": "niche-02-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1542/oj"
+      ],
+      "statement": "EU Regulation 2023/1542 requires an electronic battery passport from 18 February 2027 for each industrial battery above 2 kWh placed on the market or put into service, as well as LMT and EV batteries."
+    },
+    {
+      "claim_id": "niche-02-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://single-market-economy.ec.europa.eu/news/guidance-support-preparations-digital-batteries-passport-2026-08-21_en"
+      ],
+      "statement": "Commission guidance published on 21 August 2026 organizes 71 passport data points and explicitly tells manufacturers, importers, and other responsible organizations to identify information they must collect and align their systems."
+    },
+    {
+      "claim_id": "niche-02-c03",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://single-market-economy.ec.europa.eu/news/guidance-support-preparations-digital-batteries-passport-2026-08-21_en"
+      ],
+      "statement": "Hypothesis: regional distributors will pay for a white-label handover rail because their fragmented installer networks cannot reliably collect model-level and individual-asset data before the February 2027 trigger."
+    }
+  ],
+  "contrary_evidence": [
+    "Battery manufacturers or pan-European passport platforms may bundle the required record and leave installers with no software budget.",
+    "The economic operator legally responsible for a passport is not always the installer, so the initial payer could be misidentified."
+  ],
+  "economics": {
+    "acquisition_route": "One family-business pilot followed by distributor bundling into installer certification and C&I storage quotes",
+    "capital_required_pln": 80000,
+    "founder_net_worth_path": "Hypothesis: 10 distributor accounts in year 2 and 75 accounts at a 60k PLN blended ARR by year 6 yield 4.5M PLN ARR and about 2.25M PLN EBITDA. At 4x EBITDA and 65% founder ownership, equity is roughly 5.85M PLN in years 6 to 8, conditional on avoiding manufacturer disintermediation.",
+    "founder_time": "15 to 20 hours weekly until the first compliant workflow is live, then 10 to 15 hours with contractor support",
+    "gross_margin_basis": "Expected 75% to 88% once document mappings and QR issuance are automated; security, support, and regulatory review are the main variable costs",
+    "payback": "A distributor can break even if the rail prevents a small number of delayed handovers or replaces duplicate evidence work across its installer base; this must be measured in the pilot",
+    "pricing": "30,000 to 80,000 PLN annual distributor license plus 300 to 1,500 PLN per onboarded model or asset batch",
+    "retention_or_repeat": "Passports persist for the asset life and every new model, serial batch, ownership event, and service update creates repeat use"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A versioned supplier-to-serial data graph plus observed exception patterns across models, installers, handovers, and later service events",
+    "customer": "Polish and CEE battery importers, distributors, and C&I storage installers handling industrial systems above 2 kWh",
+    "distribution_mechanism": "Embed through one storage distributor, its installer certification program, and renewable wholesalers",
+    "offer_and_business_model": "White-label passport-readiness workspace, per-asset issuance fee, and annual distributor license",
+    "payer_and_paid_event": "The responsible importer or distributor pays at model onboarding, asset issuance, and annual evidence hosting",
+    "problem_trigger": "A battery model is onboarded or an individual system approaches sale, commissioning, and customer handover"
+  },
+  "founder_fit": [
+    "Excellent adjacency to the family renewable installer and founder's data-engineering background. The deadline allows a narrow, asynchronous B2B product to be tested with one distributor while the founder remains employed; regulatory counsel must be purchased rather than improvised."
+  ],
+  "parent": null,
+  "risks": [
+    "Incorrect role mapping could create false compliance assurances.",
+    "Asset telemetry and supply-chain documents require security, access separation, and long retention.",
+    "A common EU infrastructure layer could commoditize passport hosting."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2023/1542/oj",
+    "https://single-market-economy.ec.europa.eu/news/guidance-support-preparations-digital-batteries-passport-2026-08-21_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Regulatory asset-data infrastructure",
+    "control_point": "The serial-level evidence record issued at battery handover",
+    "critical_dependency": "A distributor or importer must own the compliance problem and grant durable access to manufacturer data"
+  },
+  "thesis": "Create a serial-number-level evidence vault for Polish and CEE installers or importers of commercial battery systems above 2 kWh. Supplier documents, carbon-footprint fields, durability values, QR identifiers, commissioning evidence, and permitted telemetry would be checked before handover and kept available through the asset life. Start with one battery distributor and its installer network, then become the data handoff rail between manufacturer, importer, installer, owner, and recycler rather than another generic asset monitor.",
+  "title": "Battery-Passport Handover Rail for C&I Storage Installers",
+  "uncertainties": [
+    "Which C&I storage brands will expose passport and telemetry fields through stable interfaces.",
+    "Whether distributors need an independent system or will accept each manufacturer's portal.",
+    "The final implementation details and enforcement intensity in Poland after February 2027."
+  ],
+  "version": 1
+}

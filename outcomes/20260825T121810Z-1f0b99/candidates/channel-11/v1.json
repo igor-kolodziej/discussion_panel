@@ -1,0 +1,83 @@
+{
+  "candidate_id": "channel-11",
+  "claims": [
+    {
+      "claim_id": "channel-11-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://health.ec.europa.eu/document/download/a9ad86b7-1b8e-4bae-beb4-48b2b3ed2f05_en?filename=mdcg_2025-10_en.pdf",
+        "https://health.ec.europa.eu/latest-updates/mdcg-2025-10-guidance-post-market-surveillance-medical-devices-and-vitro-diagnostic-medical-devices-2025-12-19_en"
+      ],
+      "statement": "EU guidance states that medical-device and IVD manufacturers must maintain a post-market surveillance system in their quality management system and systematically collect, evaluate, and act on post-market information throughout device life."
+    },
+    {
+      "claim_id": "channel-11-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://health.ec.europa.eu/medical-devices-sector/new-regulations/guidance-mdcg-endorsed-documents-and-other-guidance_en"
+      ],
+      "statement": "The Commission publishes specific PMS, vigilance, and periodic safety-update guidance and forms, supporting a structured workflow with explicit human review rather than unconstrained generative advice."
+    },
+    {
+      "claim_id": "channel-11-c03",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://health.ec.europa.eu/medical-devices-sector/new-regulations/guidance-mdcg-endorsed-documents-and-other-guidance_en",
+        "https://health.ec.europa.eu/medical-devices-eudamed/overview_en"
+      ],
+      "statement": "Hypothesis: authorised representatives and regulatory consultancies will resell a multi-tenant signal desk because they already oversee recurring compliance work for portfolios of smaller non-EU and EU manufacturers."
+    }
+  ],
+  "contrary_evidence": [
+    "Established electronic quality-management systems already include complaint and CAPA modules, so the wedge must be quantitative signal workflow and consultant distribution.",
+    "EUDAMED's vigilance and PMS modules are still developing, creating integration uncertainty rather than a settled interface."
+  ],
+  "economics": {
+    "acquisition_route": "Integrate with one authorised representative or boutique consultancy that manages dozens of manufacturers",
+    "capital_required_pln": 90000,
+    "founder_net_worth_path": "Hypothesis: 40 regulatory partners or manufacturers averaging 150000 PLN ARR could reach 6 million PLN ARR in years 6-8; at 25% EBITDA, 6x EBITDA, and 70% founder ownership, founder equity could be about 6.3 million PLN",
+    "founder_time": "18-24 hours weekly for secure workflow MVP; target 10-12 hours weekly only if qualified partners own 24/7 intake and final review",
+    "gross_margin_basis": "Workflow and analytics software can support 75-88% gross margin if qualified partners retain case review and regulatory decisions",
+    "payback": "Target under 12 months per partner; standardised intake and report preparation must replace enough expert hours to fund the licence",
+    "pricing": "Hypothesis: 12000-50000 PLN per manufacturer annually or 2000-8000 PLN per device family, with 50000-180000 PLN consultancy platform licences",
+    "retention_or_repeat": "PMS is continuous through device life, cases accumulate, and annual or periodic reports reuse the historical evidence graph"
+  },
+  "fingerprint": {
+    "compounding_advantage": "De-identified coding ontology, device-risk mappings, adjudicated classifications, and longitudinal signal baselines improve consistency",
+    "customer": "EU medical-device and IVD manufacturers, authorised representatives, and regulatory consultancies",
+    "distribution_mechanism": "White-labelled in authorised-representative and regulatory-consultancy managed compliance services",
+    "offer_and_business_model": "Human-reviewed complaint normalisation, signal dashboard, evidence lineage, and report-drafting SaaS sold through regulatory partners",
+    "payer_and_paid_event": "Consultancy or manufacturer pays per device family annually and per active case volume tier",
+    "problem_trigger": "A complaint or post-market observation arrives and must be coded, trended, linked to risk documentation, and considered for reporting"
+  },
+  "founder_fit": [
+    "Strong health, statistics, and evidence-workflow fit, with regulatory consultants providing distribution and human judgment. The founder's medical-student household connection is not a substitute for regulatory expertise. Restrict the product to workflow support and quantitative surfacing, never autonomous reportability decisions."
+  ],
+  "parent": null,
+  "risks": [
+    "Missed or delayed serious-incident escalation could affect patient safety and trigger severe liability.",
+    "Medical and complaint data require high-grade security, audit logs, and processing agreements.",
+    "A part-time founder cannot provide around-the-clock vigilance operations; the product and contract must leave that duty with qualified customers."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://health.ec.europa.eu/document/download/a9ad86b7-1b8e-4bae-beb4-48b2b3ed2f05_en?filename=mdcg_2025-10_en.pdf",
+    "https://health.ec.europa.eu/latest-updates/mdcg-2025-10-guidance-post-market-surveillance-medical-devices-and-vitro-diagnostic-medical-devices-2025-12-19_en",
+    "https://health.ec.europa.eu/medical-devices-eudamed/overview_en",
+    "https://health.ec.europa.eu/medical-devices-sector/new-regulations/guidance-mdcg-endorsed-documents-and-other-guidance_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Regulated operations copilot with delegated expert judgment",
+    "control_point": "The auditable complaint-to-signal record reviewed before regulatory and risk-file decisions",
+    "critical_dependency": "Qualified partner ownership of vigilance decisions and validated, secure handling of real complaint data"
+  },
+  "thesis": "Build a human-in-the-loop complaint intake, coding, trend, and post-market evidence workspace for smaller EU medical-device and IVD manufacturers, sold through authorised representatives and regulatory consultancies. It would normalise inbound cases, link them to device and risk files, flag possible trends, and draft quantitative report sections; qualified personnel retain every vigilance and safety decision.",
+  "title": "PMS Signal Desk",
+  "uncertainties": [
+    "Consultancies' willingness to standardise client workflows and share revenue is unproven.",
+    "The smallest manufacturers may have too few events for statistical signal detection.",
+    "Validation expectations for AI-assisted coding and draft generation require specialist interpretation."
+  ],
+  "version": 1
+}

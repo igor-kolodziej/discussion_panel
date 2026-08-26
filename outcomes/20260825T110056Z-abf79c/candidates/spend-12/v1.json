@@ -1,0 +1,86 @@
+{
+  "candidate_id": "spend-12",
+  "claims": [
+    {
+      "claim_id": "spend-12-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.nature.com/articles/s41597-019-0104-8"
+      ],
+      "statement": "The EEG-BIDS paper identifies diverse EEG formats as an impediment to reuse and large-scale databases and states that structured BIDS data enable automated, reproducible analysis workflows."
+    },
+    {
+      "claim_id": "spend-12-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.nature.com/articles/s41597-019-0104-8"
+      ],
+      "statement": "The EEG-BIDS ecosystem already includes a free validator and converters in MNE-Python, EEGLAB and FieldTrip, proving interoperability while also creating strong open-source competition."
+    },
+    {
+      "claim_id": "spend-12-c03",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://www.nature.com/articles/s41597-026-07287-z"
+      ],
+      "statement": "Recent published EEG datasets continue to use custom conversion scripts to move native acquisition formats into BIDS-compatible EDF and metadata structures, indicating continuing practical integration work."
+    }
+  ],
+  "contrary_evidence": [
+    "BIDS Validator, MNE-BIDS, EEGLAB, FieldTrip and ezBIDS already provide substantial free conversion and validation capability.",
+    "Academic labs often have low budgets and may assign curation to students rather than buy software.",
+    "The available evidence establishes workflow friction but not commercial willingness to pay."
+  ],
+  "economics": {
+    "acquisition_route": "Complete three paid archival-data conversions with fixed acceptance criteria, recruit one EEG distributor or core facility, then package the repeated mappings and QC report as a licence.",
+    "capital_required_pln": 50000,
+    "founder_net_worth_path": "Three hundred lab licences averaging 15000 PLN annually plus one hundred assisted projects averaging 25000 PLN would produce 7m PLN annual revenue. At a mature blended 38% owner-cash margin, about 2.66m PLN per year could yield more than 10m PLN cumulative distributions over five mature years without sale proceeds.",
+    "founder_time": "Use public or customer-authorised datasets and support only two device families at 3-4 hours/day, clearly limiting the product to research data management; remain employed until annual renewals and contribution margin meet the stated gates.",
+    "gross_margin_basis": "Local software licences can exceed 85% gross margin; assisted curation is expert labour, yielding a blended target of 60-75% until mapping and QC are automated.",
+    "payback": "Target buyer payback within one dataset by replacing several days of senior analyst curation and reducing handoff rework; the current labour baseline must be measured lab by lab.",
+    "pricing": "Assumption to test: 12000-30000 PLN annual lab licence, 8000-40000 PLN per assisted dataset depending on subjects and formats, and a higher private-deployment tier for CROs.",
+    "retention_or_repeat": "Labs acquire new subjects and studies continuously, and stable manifests become part of their analysis pipeline; grant cycles and open-source alternatives can create episodic demand."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A growing device-format and metadata-mapping library plus anonymised QC distributions and adjudicated artifact patterns reduces setup time across labs while raw human data remain local.",
+    "customer": "University EEG core facilities, small neuroscience CROs and preclinical or research-only neurotech teams handling repeated multi-subject datasets across device formats.",
+    "distribution_mechanism": "EEG equipment distributors, university core facilities, research-software consultants and grant-data-management partners refer projects; documentation and reproducible example datasets support self-serve global adoption.",
+    "offer_and_business_model": "Desktop/container workflow that maps vendor files to EEG-BIDS, validates required metadata, runs configurable signal-quality checks, creates review queues and signs a reproducible manifest of raw-to-curated transformations; annual licence plus assisted dataset packages.",
+    "payer_and_paid_event": "A lab manager, PI, CRO project lead or neurotech R&D head pays per dataset and for an annual team workspace; existing spend is analyst or research-assistant curation time and licensed acquisition/analysis software.",
+    "problem_trigger": "A recording batch must be handed from acquisition staff to analysts, shared across sites, archived for a grant or prepared for publication, but naming, events, channel metadata and artifact decisions are inconsistent."
+  },
+  "founder_fit": [
+    "EEG and neuroscience are direct founder interests, while signal QC and reproducible pipelines use existing data-science strengths.",
+    "A local-first product reduces regulated-data hosting burden and can be sold globally from Warsaw.",
+    "Self-serve technical content and equipment/core-facility channels fit a low-public-persona preference.",
+    "Service-assisted curation can validate paid demand before a large software build, within the first 100000 PLN."
+  ],
+  "parent": null,
+  "risks": [
+    "Research users may mistakenly treat QC output as clinical interpretation unless scope is explicit.",
+    "Human-subject files can contain sensitive or re-identifiable data even when processed locally.",
+    "Format and metadata edge cases can turn a software product into bespoke consulting.",
+    "Open-source improvements could eliminate the conversion wedge before a paid distribution channel forms."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.nature.com/articles/s41597-019-0104-8",
+    "https://www.nature.com/articles/s41597-024-02959-0",
+    "https://www.nature.com/articles/s41597-026-07287-z"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Research-workflow software with per-dataset assisted curation",
+    "control_point": "The signed raw-to-BIDS manifest accepted before analysis, collaboration or publication",
+    "critical_dependency": "Labs must value support and auditability beyond open-source converters, and local execution must accommodate their device formats and ethics constraints"
+  },
+  "thesis": "Build a local-first workspace for EU EEG research labs, CROs and neurotech teams that converts heterogeneous recordings to EEG-BIDS, checks metadata and signal quality, records human artifact decisions and emits a reproducible dataset manifest. Buyers already spend researcher, technician and bioinformatician time preparing datasets for analysis, collaboration and publication; the commercial wedge is a validated, service-assisted handoff rather than another analysis algorithm.",
+  "title": "Local-First EEG Dataset Curation and Quality-Control Workspace",
+  "uncertainties": [
+    "The number of European labs with repeated paid curation demand and budgets outside grants is unknown.",
+    "It is unclear whether signal QC should remain generic or require study-specific methods too costly to productise.",
+    "CRO procurement, device-distributor incentives and acceptable local deployment models need interviews and paid trials.",
+    "All pricing, margins, customer volumes and wealth projections are assumptions."
+  ],
+  "version": 1
+}

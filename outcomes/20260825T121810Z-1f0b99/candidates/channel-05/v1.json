@@ -1,0 +1,80 @@
+{
+  "candidate_id": "channel-05",
+  "claims": [
+    {
+      "claim_id": "channel-05-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/document/download/5dc7aa19-e58f-42a3-bbbe-f0eb2e5a1d3a_en?filename=C_2025_2485_F1_ANNEX_EN_V3_P1_4056628.PDF"
+      ],
+      "statement": "EUDR requires operators to collect product and supplier information, analyse risk, mitigate non-negligible risk, and maintain a due-diligence system before relevant products are placed on or exported from the EU market."
+    },
+    {
+      "claim_id": "channel-05-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/news/eu-deforestation-regulation-information-system-launches-2024-12-06_en"
+      ],
+      "statement": "The Commission operates an EUDR Information System for submission and management of due-diligence statements, confirming that structured digital evidence is part of the mandated workflow."
+    },
+    {
+      "claim_id": "channel-05-c03",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/document/download/5dc7aa19-e58f-42a3-bbbe-f0eb2e5a1d3a_en?filename=C_2025_2485_F1_ANNEX_EN_V3_P1_4056628.PDF",
+        "https://environment.ec.europa.eu/news/eu-deforestation-regulation-information-system-launches-2024-12-06_en"
+      ],
+      "statement": "Hypothesis: a reusable supplier-and-plot passport distributed through certifiers and commodity intermediaries will outperform one-off importer questionnaires because the same upstream evidence can serve repeated shipments and multiple buyers with permission."
+    }
+  ],
+  "contrary_evidence": [
+    "The Commission's own Information System handles due-diligence statements, so a duplicate submission portal is not a viable wedge.",
+    "Applicability dates and treatment of legacy timber have been amended or clarified, showing material timing and scope volatility."
+  ],
+  "economics": {
+    "acquisition_route": "Enter one commodity through a certifier or importer-services partner with a repeat supplier base, then expand through its buyer network",
+    "capital_required_pln": 85000,
+    "founder_net_worth_path": "Hypothesis: 30000 active supplier/plot records at 15 PLN monthly blended net revenue plus channel fees could exceed 6 million PLN ARR in years 6-8; at 25% EBITDA, 6x EBITDA, and 70% ownership, founder equity could exceed 6 million PLN",
+    "founder_time": "20-25 hours weekly for one-commodity MVP; target under 12 hours weekly after channel-led supplier onboarding and outsourced regulatory review",
+    "gross_margin_basis": "Automated geometry and document checks can support 75-90% software margin, but assisted supplier remediation may materially reduce it",
+    "payback": "Target partner CAC payback under 12 months; supplier passport reuse must reduce repeated onboarding enough to justify the fee",
+    "pricing": "Hypothesis: 20-80 PLN per active plot or supplier monthly, 100-400 PLN per shipment packet, and 40000-150000 PLN annual channel licences",
+    "retention_or_repeat": "Persistent plots and suppliers are reused across shipments, while periodic risk and document updates create recurring revenue"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Permissioned reuse of verified plot histories, supplier identities, document provenance, and observed exception patterns creates network density",
+    "customer": "Smaller EU operators and traders in EUDR commodities, plus their certifiers, brokers, and ERP providers",
+    "distribution_mechanism": "Embedded in certification workflows, commodity broker portals, and vertical procurement ERPs",
+    "offer_and_business_model": "Permissioned supplier-and-plot passport network with validation API and partner white labelling",
+    "payer_and_paid_event": "Operator, certifier, or broker pays per active supplier/plot and per released evidence packet",
+    "problem_trigger": "A purchase order or shipment cannot be released until plot, legality, chain-of-custody, and risk evidence is complete"
+  },
+  "founder_fit": [
+    "Good data-pipeline, geospatial-validation, and EU compliance fit with global upside and no need for a public persona. Founder time stays bounded only if certifiers or brokers own supplier relationships and any field verification."
+  ],
+  "parent": null,
+  "risks": [
+    "False geolocation or legality evidence could expose customers to enforcement and supply interruption.",
+    "Supplier adoption across languages and low-connectivity regions may demand expensive assisted onboarding.",
+    "Rules may simplify further for smaller operators, reducing urgency."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://environment.ec.europa.eu/document/download/5dc7aa19-e58f-42a3-bbbe-f0eb2e5a1d3a_en?filename=C_2025_2485_F1_ANNEX_EN_V3_P1_4056628.PDF",
+    "https://environment.ec.europa.eu/news/eu-deforestation-regulation-information-system-launches-2024-12-06_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Permissioned traceability passport network",
+    "control_point": "The evidence-complete release gate for a regulated commodity purchase order or shipment",
+    "critical_dependency": "Trusted upstream plot and legality data that partners are legally and commercially allowed to reuse"
+  },
+  "thesis": "Build a lightweight EUDR plot and chain-of-custody evidence passport for smaller EU coffee, cocoa, wood, rubber, cattle, palm-oil, and soy operators. Certification bodies, commodity brokers, and vertical ERP resellers would issue and reuse supplier passports at purchase-order release, while the regulated operator retains the final due-diligence decision.",
+  "title": "PlotProof Relay",
+  "uncertainties": [
+    "Information System API availability and delegation permissions need confirmation.",
+    "Smallholders may lack reliable polygon, legality, or chain-of-custody data.",
+    "Existing traceability and certification platforms may already control the best distribution partners."
+  ],
+  "version": 1
+}

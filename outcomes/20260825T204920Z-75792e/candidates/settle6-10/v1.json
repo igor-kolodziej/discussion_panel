@@ -1,0 +1,76 @@
+{
+  "candidate_id": "settle6-10",
+  "claims": [
+    {
+      "claim_id": "settle6-10-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://aws.amazon.com/legal/service-level-agreements/",
+        "https://aws.amazon.com/compute/sla/"
+      ],
+      "statement": "AWS publishes SLAs for paid generally available services, and its compute SLA provides service credits for qualifying unavailability."
+    },
+    {
+      "claim_id": "settle6-10-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://aws.amazon.com/compute/sla/"
+      ],
+      "statement": "The AWS compute-credit process requires a timely claim containing incident times, affected resources and request logs, and confirmed credits are applied later."
+    }
+  ],
+  "contrary_evidence": [
+    "Provider-defined availability calculations and exclusions can override customer-side observations, and credits may be economically small."
+  ],
+  "economics": {
+    "acquisition_route": "UNVALIDATED: distribute through MSPs, FinOps consultancies, cloud resellers and SaaS infrastructure platforms.",
+    "capital_required_pln": 75000,
+    "founder_net_worth_path": "UNVALIDATED: monitor PLN 100m annual cloud spend by year 3 and PLN 1bn by year 6, supporting founder equity plus retained cash above PLN 5m in years 6-8.",
+    "founder_time": "UNVALIDATED: 2.5 hours per day for one provider and service family, then exception review.",
+    "gross_margin_basis": "UNVALIDATED: automated log filtering, term evaluation and invoice matching, with expert review for provider exclusions.",
+    "payback": "UNVALIDATED: one MSP integration recovers CAC after 15 accepted claims or 8 months.",
+    "pricing": "UNVALIDATED: percentage of confirmed future-bill credits shared with the MSP or FinOps channel; all commercial figures in this economics object, including capital_required_pln, are unvalidated.",
+    "retention_or_repeat": "UNVALIDATED: continuous monitoring across many services and accounts creates repeated claim windows and a growing contract corpus."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Verified provider decisions build service-, topology-, exclusion- and evidence-specific claim intelligence",
+    "customer": "MSPs and FinOps firms managing many mid-market cloud accounts",
+    "distribution_mechanism": "MSP, reseller and FinOps embedding",
+    "offer_and_business_model": "Evidence collection, claim filing and bill reconciliation for a contingency share",
+    "payer_and_paid_event": "The cloud customer pays after the provider confirms and posts a service credit",
+    "problem_trigger": "Measured service unavailability crosses a contractual SLA boundary and the claim clock starts"
+  },
+  "founder_fit": [
+    "Technical and asynchronous",
+    "Low capital requirement",
+    "One-to-many MSP channel",
+    "Verified claim outcomes create a proprietary contract map"
+  ],
+  "parent": null,
+  "risks": [
+    "Cloud credential exposure",
+    "Low event frequency",
+    "Provider term changes",
+    "MSPs build the feature",
+    "Logs may contain secrets"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://aws.amazon.com/compute/sla/",
+    "https://aws.amazon.com/legal/service-level-agreements/"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Contingency cloud-contract credit recovery",
+    "control_point": "The evidence-preserving outage record and later invoice match proving a service credit was issued",
+    "critical_dependency": "Read-only telemetry, support-case authority and billing access without exposing customer secrets"
+  },
+  "thesis": "For MSPs and FinOps firms, correlate customer-side probes, request logs, resource IDs, provider status and bills against cloud-service SLA terms. File deadline-compliant claims through the customer's authorized support account and reconcile accepted credits to later invoices. The company earns only on confirmed credits; MSP and FinOps channels reach many accounts, while accepted and rejected claims build a service-specific incident-to-credit map.",
+  "title": "Cloud SLA Credit Collector",
+  "uncertainties": [
+    "Recoverable credits as a fraction of spend",
+    "MSP willingness to grant support authority",
+    "Cross-provider standardization cost"
+  ],
+  "version": 1
+}

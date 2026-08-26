@@ -1,0 +1,141 @@
+{
+  "candidate_id": "spend-06",
+  "claims": [
+    {
+      "claim_id": "spend-06-v2-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.cbsa-asfc.gc.ca/agency-agence/reports-rapports/ae-ve/cp-ma/menu-eng.html"
+      ],
+      "statement": "A 2024 Canadian border-agency audit found two duplicate pairs among ten sampled potential pairs even though the accounting system had built-in controls for matching vendor, invoice number and amount."
+    },
+    {
+      "claim_id": "spend-06-v2-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.crowncommercial.gov.uk/news/how-barts-nhs-trust-used-sars-to-reclaim-100000"
+      ],
+      "statement": "A UK public-sector case processed 645,000 historical transactions, used a senior recovery auditor to verify and recover 82 exceptions, and recovered a six-figure sum, showing buyer demand and material human work but not a Polish SME base rate."
+    },
+    {
+      "claim_id": "spend-06-v2-c03",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://assets.applytosupply.digitalmarketplace.service.gov.uk/g-cloud-14/documents/92302/845673780445211-pricing-document-2024-05-04-1159.pdf"
+      ],
+      "statement": "A published UK duplicate-payment recovery price lists a 25% standard fee and 12.5% minimum fee on recoveries, supporting contingent pricing but not the proposed Polish monitoring price."
+    },
+    {
+      "claim_id": "spend-06-v2-c04",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://help.sap.com/docs/FINANCIAL_COMPLIANCE_CF/eb2cb166f76248bdba43bf04fccd143e/duplicate-supplier-invoices",
+        "https://learn.microsoft.com/en-us/dynamics365/finance/accounts-payable/accounts-payable-invoice-matching"
+      ],
+      "statement": "SAP documents a similarity-based duplicate control and Dynamics documents configurable invoice matching; fuzzy detection and exception workflows are incumbent features, not scarce technology."
+    },
+    {
+      "claim_id": "spend-06-v2-c05",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.contractsfinder.service.gov.uk/Notice/d2d538f5-2a00-4ca5-b706-5296e9f92e0f"
+      ],
+      "statement": "A 2025 UK award for duplicate-payment software serving about 250,000 invoices annually across four partners and two council-owned customers was worth GBP 141,600 over four years; it evidences a high-volume software budget but not a Polish SME price."
+    },
+    {
+      "claim_id": "spend-06-v2-c06",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.uk/government/publications/best-practice-statement-forensic-auditing/best-practice-statement-forensic-auditing"
+      ],
+      "statement": "Recovery consultants act on behalf of the buyer, and official guidance calls for robust scrutiny, written agreement and fair handling of counterclaims; an anomaly vendor does not itself hold recovery authority."
+    },
+    {
+      "claim_id": "spend-06-v2-c07",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://stat.gov.pl/files/gfx/portalinformacyjny/en/defaultaktualnosci/3317/29/1/1/active_enterprises_in_the_fourth_quarter_of_2024.pdf"
+      ],
+      "statement": "Statistics Poland counted 17,601 active enterprises with 50-249 employees in Q4 2024, but this broad denominator does not reveal invoice volumes, ERP fragmentation, recovery propensity or willingness to buy."
+    },
+    {
+      "claim_id": "spend-06-v2-c08",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679",
+        "https://eli.gov.pl/api/acts/DU/2025/1071/text/U/D20251071Lj.pdf"
+      ],
+      "statement": "Where invoice exports contain personal data, GDPR Article 28 requires a processor contract and safeguards; Polish unjust-enrichment law provides a recovery basis but also enumerates cases where repayment cannot be demanded."
+    }
+  ],
+  "contrary_evidence": [
+    "SAP already markets similarity-based duplicate controls, so entity resolution alone is reproducible and bundleable.",
+    "The strongest recovery case involved 645,000 transactions and a senior auditor; it does not demonstrate economical recovery for a firm with only several thousand invoices.",
+    "Contingency compensation can encourage invalid or overaggressive claims, requiring buyer oversight and written supplier agreement.",
+    "The public software award is for a shared high-volume council setting and cannot validate per-SME pricing."
+  ],
+  "economics": {
+    "acquisition_route": "Begin with five no-upfront-fee closed-period audits through warm construction and field-service contacts, then test accountants, fractional CFOs and ERP implementers with a written referral offer. No partner commitment, conversion rate or channel CAC is evidenced.",
+    "capital_required_pln": 60000,
+    "founder_net_worth_path": "A requirement, not a forecast: 150 customers at 36,000 PLN recurring annual revenue produce 5.4m PLN ARR. At a 30% normalized owner-earnings margin, 80% founder ownership and a 3x earnings value, founder equity is about 3.89m PLN, still below 5m before liabilities; more than 1.11m PLN of non-double-counted after-tax distributions or stronger economics would be needed. Reaching 150 customers equals about 0.85% of Poland's 17,601 medium active enterprises before invoice-volume and sector filters, so a 7-9 year path depends on unproven channel access, retention and margins.",
+    "founder_time": "Limit the initial service to two concurrent clients and at most 4 hours per day, automate ingestion and evidence assembly, and require customer finance staff to approve and pursue every claim. Contract data-security and legal review; do not promise urgent or unbounded recovery support.",
+    "gross_margin_basis": "The service is not software-only: an official case used a senior recovery auditor plus statement review, verification and recovery work. Model 45-60% gross margin for early audits and 70-80% only for mature monitoring after confirmation workflows are delegated; both require measurement.",
+    "payback": "Customer payback is aligned when fees are payable only from recovered cash. Founder CAC payback is unknown; require each channel cohort to recover sales and onboarding cost within six months before scaling.",
+    "pricing": "Evidence supports a fee tied to actual recoveries: a published UK price lists a 25% standard and 12.5% minimum recovery fee. Test 20-25% in Poland and charge nothing on unconfirmed flags. The proposed 1,500-4,000 PLN monthly monitoring fee remains an assumption and should follow a paid audit.",
+    "retention_or_repeat": "Historical recovery is one-off and repeat audits should yield less after controls improve. Retention depends on proving that pre-payment monitoring prevents enough new loss to justify a fixed fee; no Polish retention evidence exists."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A permissioned, privacy-preserving library of adjudicated vendor aliases, invoice-number transformations, credit-note patterns and false-positive explanations could improve precision; client-specific data rights and incumbent fuzzy controls mean this compounds only if transferable features and measured lift survive privacy and contract restrictions.",
+    "customer": "Polish firms with 50-500 employees, multiple entities or branches and at least several thousand supplier invoices per year, beginning with construction and field-service groups.",
+    "distribution_mechanism": "Accounting firms, ERP implementers and fractional CFOs are proposed resellers; construction and renewable-installation contacts provide an initial low-trust-distance test segment, but no channel commitment or CAC evidence exists.",
+    "offer_and_business_model": "Air-gapped or tightly isolated analysis of AP, payment, supplier-master and credit-note exports, with explainable candidate pairs, bank-change alerts and recovery evidence packets; a one-off contingent audit may convert to recurring pre-payment monitoring, while the customer retains supplier contact, settlement and payment authority.",
+    "payer_and_paid_event": "The CFO pays a percentage of cash actually recovered after customer confirmation and, only after value is demonstrated, a fixed fee for an exception queue reviewed by the customer's finance team before payment release.",
+    "problem_trigger": "A year-end audit, ERP migration, supplier dispute or pre-payment run creates a need to identify duplicate or erroneous disbursements that configured ERP controls missed."
+  },
+  "founder_fit": [
+    "Entity resolution, fuzzy matching and anomaly ranking directly fit the founder's data-science background.",
+    "A read-only pilot can be built within available capital without taking custody of funds.",
+    "The founder can cap work at two concurrent audits and keep supplier communications with customer finance while employed.",
+    "The weak point is commercial and recovery operations: proposed accountant and ERP channels are uncommitted, and human validation must be productized or delegated."
+  ],
+  "parent": {
+    "candidate_id": "spend-06",
+    "version": 1
+  },
+  "risks": [
+    "False or poorly documented claims can damage supplier relationships and create counterclaims.",
+    "Sensitive bank, supplier and invoice data create security, confidentiality and GDPR obligations.",
+    "Recovery can become a manual service business if statements, contracts and customer confirmation are not standardized.",
+    "Incumbent ERP and AP platforms can bundle similar detection and approval features.",
+    "The broad company-count denominator may conceal a much smaller viable segment."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.cbsa-asfc.gc.ca/agency-agence/reports-rapports/ae-ve/cp-ma/menu-eng.html",
+    "https://www.crowncommercial.gov.uk/news/how-barts-nhs-trust-used-sars-to-reclaim-100000",
+    "https://assets.applytosupply.digitalmarketplace.service.gov.uk/g-cloud-14/documents/92302/845673780445211-pricing-document-2024-05-04-1159.pdf",
+    "https://help.sap.com/docs/FINANCIAL_COMPLIANCE_CF/eb2cb166f76248bdba43bf04fccd143e/duplicate-supplier-invoices",
+    "https://learn.microsoft.com/en-us/dynamics365/finance/accounts-payable/accounts-payable-invoice-matching",
+    "https://www.gov.uk/government/publications/best-practice-statement-forensic-auditing/best-practice-statement-forensic-auditing",
+    "https://www.contractsfinder.service.gov.uk/Notice/d2d538f5-2a00-4ca5-b706-5296e9f92e0f",
+    "https://stat.gov.pl/files/gfx/portalinformacyjny/en/defaultaktualnosci/3317/29/1/1/active_enterprises_in_the_fourth_quarter_of_2024.pdf",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679",
+    "https://eli.gov.pl/api/acts/DU/2025/1071/text/U/D20251071Lj.pdf"
+  ],
+  "stage": "research",
+  "structure": {
+    "commercial_archetype": "Contingency-fee recovery audit converting to financial-control SaaS",
+    "control_point": "The explainable exception queue reviewed before payment release and the evidence packet used by the customer's finance team to reclaim agreed past overpayments",
+    "critical_dependency": "Complete, joinable AP/payment/supplier exports, a controller-processor contract where personal data is present, and customer finance authority to validate, contact suppliers and recover agreed amounts"
+  },
+  "thesis": "Run a privacy-conscious, read-only recovery audit for Polish mid-market firms that finds fuzzy duplicate invoices, unapplied credits, bank-detail anomalies and contract mismatches, then offers pre-payment monitoring. Official audits and procurements establish that leakage can survive internal controls and that buyers pay both contingent recovery fees and monitoring-software budgets, but the evidence does not establish a Polish mid-market recovery rate, channel CAC or subscription conversion. The paid event is confirmed cash recovery or a customer-approved pre-payment exception process, not anomaly flags.",
+  "title": "Read-Only Accounts-Payable Recovery Audit for Mid-Market SMEs",
+  "uncertainties": [
+    "The recoverable-error rate, recovery time and supplier cooperation rate in Polish 50-500 employee firms remain unknown.",
+    "The minimum annual invoice count and spend for contribution-positive human-reviewed audits remain unknown.",
+    "No accountant, ERP implementer or fractional-CFO channel has committed, so CAC, lead flow and revenue share are unknown.",
+    "Audit-to-monitoring conversion, monitoring price and retention are unknown.",
+    "Whether cross-client alias and adjudication features can be retained and transferred under customer contracts is unknown."
+  ],
+  "version": 2
+}

@@ -1,0 +1,80 @@
+{
+  "candidate_id": "network-04",
+  "claims": [
+    {
+      "claim_id": "network-04-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1542/2025-07-31/eng/pdf"
+      ],
+      "statement": "From 18 February 2027, the EU Batteries Regulation requires each light-means-of-transport battery placed on the market or put into service to have an electronic battery passport."
+    },
+    {
+      "claim_id": "network-04-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://single-market-economy.ec.europa.eu/single-market/digital-product-passport/batteries_en?prefLang=pt"
+      ],
+      "statement": "The European Commission describes the battery passport as covering e-bike and e-scooter batteries and supporting access to performance, repair, reuse, and recycling information across the value chain."
+    },
+    {
+      "claim_id": "network-04-c3",
+      "confidence": "low",
+      "evidence_refs": [],
+      "statement": "Hypothesis: a trusted used-battery condition credential can raise dealer conversion or reduce returns enough to support per-test fees; this must be measured in a controlled dealer pilot."
+    }
+  ],
+  "contrary_evidence": [
+    "The mandatory passport applies to batteries newly placed on the market and may not provide complete histories for older used stock.",
+    "Manufacturer battery-management data and simple capacity testers may already be enough for some dealers."
+  ],
+  "economics": {
+    "acquisition_route": "Hypothesis: equip five high-volume refurbishers, measure return-rate and days-to-sale changes, then recruit marketplaces that require or highlight the credential.",
+    "capital_required_pln": 75000,
+    "founder_net_worth_path": "Hypothesis: 50 shops and 12000 tests in year 2, 400 shops and 150000 tests in year 5, then EU marketplace APIs producing 12-20M PLN annual revenue. At 15% operating margin, a 3-4x revenue value, and 50-65% founder ownership, equity could exceed 5M PLN; marketplace acceptance is the decisive milestone.",
+    "founder_time": "Hypothesis: 15-20 hours/week with battery safety testing delegated to qualified shop technicians.",
+    "gross_margin_basis": "Hypothesis: 60-72% during technician-led testing, rising above 80% for software/API revenue; hardware remains shop-owned or leased.",
+    "payback": "Hypothesis: 5-9 months on 4000-7000 PLN acquisition and onboarding cost for a shop producing 60 paid tests monthly.",
+    "pricing": "Hypothesis: 79-149 PLN per test, 299 PLN/month shop software, and API fees for marketplace verification.",
+    "retention_or_repeat": "Hypothesis: repeat follows every used-bike intake and battery replacement; marketplace acceptance should improve issuer retention and test volume."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Model-, age-, usage-, repair-, and return-linked degradation dataset plus a growing installed network of credential issuers and acceptors",
+    "customer": "Independent Polish e-bike dealers, repair shops, refurbishers, and used-bike marketplaces",
+    "distribution_mechanism": "Repair-shop certification, marketplace listing integrations, and insurer/refurbisher acceptance of the passport",
+    "offer_and_business_model": "Standardized battery test, signed condition record, residual-value band, and passport API sold per transaction",
+    "payer_and_paid_event": "Dealer or refurbisher pays per completed diagnostic passport and optionally a shop subscription",
+    "problem_trigger": "A used e-bike is acquired, listed, financed, insured, returned, or its battery is replaced"
+  },
+  "founder_fit": [
+    "Data science supports degradation curves and residual-value modeling.",
+    "A shop-led protocol avoids a camera-facing consumer brand.",
+    "Can start in Warsaw with rented or partner test equipment below the founder's capital ceiling.",
+    "Combines quantified-condition data with a repeat transaction credential."
+  ],
+  "parent": null,
+  "risks": [
+    "Battery fire or injury if a test is performed incorrectly; certified procedures and liability cover are essential.",
+    "The credential must not be marketed as an official EU conformity decision.",
+    "OEM lock-in or inaccessible battery-management data."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2023/1542/2025-07-31/eng/pdf",
+    "https://single-market-economy.ec.europa.eu/single-market/digital-product-passport/batteries_en?prefLang=pt"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "transaction passport network",
+    "control_point": "signed used-battery condition record accepted in resale workflows",
+    "critical_dependency": "validated cross-model testing protocol and acceptance by resale intermediaries"
+  },
+  "thesis": "A diagnostic and provenance network for used e-bike batteries. Independent repair shops run a standardized state-of-health and safety protocol, issue a signed resale credential linked to the EU battery passport where available, and feed anonymized degradation and return outcomes into model-specific residual-value benchmarks.",
+  "title": "SecondRide Battery Health Passport",
+  "uncertainties": [
+    "A safe, repeatable protocol across proprietary battery-management systems requires technical validation.",
+    "Marketplace, insurer, and dealer acceptance of a third-party condition credential is unknown.",
+    "The 75000 PLN capital estimate and all pricing, adoption, payback, and valuation figures below are planning hypotheses."
+  ],
+  "version": 1
+}

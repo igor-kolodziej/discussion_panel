@@ -1,0 +1,83 @@
+{
+  "candidate_id": "bottleneck-06",
+  "claims": [
+    {
+      "claim_id": "bottleneck-06-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eli.gov.pl/api/acts/DU/2023/1587/text.html"
+      ],
+      "statement": "Polish waste law requires the transferring holder to prepare the waste transfer card before transport starts, requires the driver to carry BDO-generated confirmation, and requires the transporter to confirm transport promptly after completion."
+    },
+    {
+      "claim_id": "bottleneck-06-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://bdo.mos.gov.pl/wp-content/uploads/2023/11/BDO_EWI_IS-Karta-przekazania-odpadow-wersja-1.2.pdf"
+      ],
+      "statement": "The official BDO workflow separates sender, transporter, and receiver roles and maintains multiple card states through planned, approved, receipt, and transport confirmation steps."
+    },
+    {
+      "claim_id": "bottleneck-06-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://bdo.mos.gov.pl/wp-content/uploads/2023/11/BDO_EWI_IS-Karta-ewidencji-odpadow-wer.1.2.pdf"
+      ],
+      "statement": "BDO waste ledgers distinguish records by waste type and allow transferred-waste entries to be linked to KPO or other legally recognized transfer bases."
+    }
+  ],
+  "contrary_evidence": [
+    "A KPO may be unnecessary when one holder is outside the waste-record obligation, so the product must handle exemptions rather than force every event into a card.",
+    "BDO itself is the authoritative free system, and environmental-accounting firms already perform outsourced entry.",
+    "Low-frequency waste generators may tolerate manual entry and reject a subscription."
+  ],
+  "economics": {
+    "acquisition_route": "Installer pilot, free BDO handoff preflight, long-tail waste-code search content, and collector or adviser referrals",
+    "capital_required_pln": 45000,
+    "founder_net_worth_path": "Modeled path: 2,500 firms at 220 PLN average monthly recurring revenue equals 6.6m PLN ARR; a 30% owner-cash margin is 1.98m PLN/year and could accumulate over 10m PLN in roughly six mature years",
+    "founder_time": "Up to 4 hours/day for two initial trades; classification edge cases must be routed to a specialist rather than consuming founder time",
+    "gross_margin_basis": "Modeled 82-93% after mobile hosting, document retention, notifications, and limited classification support",
+    "payback": "Target below 4 months if onboarding is templated by trade and acquisition cost remains below 800 PLN; unvalidated",
+    "pricing": "Modeled 99-499 PLN/month by team and transport count, with 10-30 PLN for exceptional assisted corrections",
+    "retention_or_repeat": "Every covered waste transport repeats the workflow, and the historical counterparty and code ledger lowers future effort"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A job-context-to-waste-code and counterparty graph enriched by real rejection, correction, weight-difference, and exemption patterns",
+    "customer": "Polish field-service and small construction firms generating multiple waste codes across customer sites and depots",
+    "distribution_mechanism": "Pilot with renewable and field-service contractors, searchable waste-code workflows, and referrals from waste collectors and environmental-accounting advisers",
+    "offer_and_business_model": "Mobile preflight, role-aware KPO preparation, driver evidence link, receiver weight reconciliation, and annual exception ledger sold as SaaS",
+    "payer_and_paid_event": "The waste-generating contractor pays monthly when each transport needs a validated handoff record before departure and reconciliation after receipt",
+    "problem_trigger": "Waste is ready for pickup or transport but the required code, mass estimate, transmitting party, transporter, receiver, location, or BDO card state is incomplete"
+  },
+  "founder_fit": [
+    "The family installation company offers a bounded route to observe waste handoffs and test a mobile workflow.",
+    "Classification support, reconciliation, and exception detection are technically aligned with the founder's data background.",
+    "A low-capital Polish vertical SaaS can be validated job by job while the founder remains employed."
+  ],
+  "parent": null,
+  "risks": [
+    "Waste-code suggestions could be treated as professional advice and create liability when wrong.",
+    "A workflow that duplicates BDO entry will fail to save enough technician or office time.",
+    "Government interface changes could break automation or invalidate stored procedural assumptions."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://bdo.mos.gov.pl/wp-content/uploads/2023/11/BDO_EWI_IS-Karta-przekazania-odpadow-wersja-1.2.pdf",
+    "https://eli.gov.pl/api/acts/DU/2023/1587/text.html",
+    "https://bdo.mos.gov.pl/wp-content/uploads/2023/11/BDO_EWI_IS-Karta-ewidencji-odpadow-wer.1.2.pdf"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Transaction-adjacent compliance workflow SaaS priced by team and transport volume",
+    "control_point": "The validated pre-transport custody packet linking waste code, source location, sender, transporter, receiver, planned mass, and final accepted mass",
+    "critical_dependency": "Correct waste classification plus lawful, dependable authorization for any direct BDO-system interaction"
+  },
+  "thesis": "Build a phone-based preflight and custody workflow for Polish solar, HVAC, electrical, renovation, and small construction firms that classifies the planned waste handoff, checks party and transport fields, prepares the correct BDO KPO sequence, and reconciles actual weight after acceptance. The payer buys prevention at the moment a vehicle is about to depart, when a missing card, wrong code, or role mismatch can stop work and force office staff to reconstruct a multi-party event.",
+  "title": "BDO Pre-Transport Waste Handoff Guard",
+  "uncertainties": [
+    "The legal and technical feasibility of direct submission versus export or assisted entry has not been established.",
+    "The frequency and economic impact of rejected, late, or misclassified cards within the target trades is unknown.",
+    "The modeled customer count, price, support burden, churn, and margin need paid pilot evidence."
+  ],
+  "version": 1
+}

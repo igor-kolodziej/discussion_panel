@@ -1,0 +1,72 @@
+{
+  "candidate_id": "leverage-12",
+  "claims": [
+    {
+      "claim_id": "leverage-12-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://energy.ec.europa.eu/topics/energy-efficiency/financing/innovative-products-and-schemes_en"
+      ],
+      "statement": "The Commission describes energy performance contracting as a model in which a contractor guarantees expected savings and investment is repaid from those savings."
+    },
+    {
+      "claim_id": "leverage-12-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://energy.ec.europa.eu/system/files/2019-09/c_2019_6621_-_annex_com_recom_energy_savings_0.pdf"
+      ],
+      "statement": "EU energy-efficiency guidance calls for transparent savings determination and documented measurement, control, and verification independent of participating parties for covered policy measures."
+    }
+  ],
+  "contrary_evidence": [
+    "Major ESCOs already use established engineering and M&V tools.",
+    "The cited independent-verification guidance concerns policy measures and does not itself force every private EPC to use this service."
+  ],
+  "economics": {
+    "acquisition_route": "UNVALIDATED HYPOTHESIS — 15 ESCO, auditor, or lender partners each bring 15 active sites in 4 years.",
+    "capital_required_pln": 110000,
+    "founder_net_worth_path": "UNVALIDATED HYPOTHESIS — 320 sites at 22000 PLN annual average produces 7.04 million PLN revenue by year 6; a 3x value and 72% ownership implies 15.21 million PLN equity, excluding distributions.",
+    "founder_time": "UNVALIDATED HYPOTHESIS — 19 hours weekly initially and 8 after engineering-review partners are certified.",
+    "gross_margin_basis": "UNVALIDATED HYPOTHESIS — 73% blended margin after meter integration and independent engineering review.",
+    "payback": "UNVALIDATED HYPOTHESIS — under 8 months if a site reduces one settlement dispute or saves 50 annual analyst hours.",
+    "pricing": "UNVALIDATED HYPOTHESIS — all commercial numbers here, including capital_required_pln, are hypotheses: 12000 PLN site setup, 1600 PLN monthly monitoring, and optional 0.5% of verified annual settlement value.",
+    "retention_or_repeat": "UNVALIDATED HYPOTHESIS — 96% site retention during multi-year performance contracts, with monthly calculations."
+  },
+  "fingerprint": {
+    "compounding_advantage": "a benchmark library of adjustment models, data-quality failures, and dispute outcomes across building types",
+    "customer": "small ESCOs, energy auditors, lenders, and building owners using performance-based retrofit contracts",
+    "distribution_mechanism": "energy auditors, retrofit lenders, ESCO associations, metering vendors, and municipal renovation programmes",
+    "offer_and_business_model": "neutral data escrow, baseline versioning, weather and occupancy adjustments, uncertainty analysis, and signed calculation packs",
+    "payer_and_paid_event": "the contract parties or financing partner pay per monitored site and settlement period",
+    "problem_trigger": "a monthly settlement closes, a baseline adjustment occurs, or guaranteed savings are disputed"
+  },
+  "founder_fit": [
+    "Combines data science, finance, and renewable-energy access; recurring computation is highly automatable and expert review can be channelled through auditors rather than founder-heavy sales."
+  ],
+  "parent": null,
+  "risks": [
+    "Baseline model disputes can create liability.",
+    "Poor meter or occupancy data undermines results.",
+    "Independence must be contractually and operationally credible."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://energy.ec.europa.eu/topics/energy-efficiency/financing/innovative-products-and-schemes_en",
+    "https://energy.ec.europa.eu/topics/energy-efficiency/energy-efficiency-targets-directive-and-rules/energy-efficiency-directive_en",
+    "https://energy.ec.europa.eu/system/files/2019-09/c_2019_6621_-_annex_com_recom_energy_savings_0.pdf"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "independent savings-settlement oracle",
+    "control_point": "the mutually accepted, versioned savings calculation that determines a guaranteed-savings payment",
+    "critical_dependency": "continuous meter and context data plus contractual agreement on baselines, adjustments, independence, and dispute rules"
+  },
+  "thesis": "A neutral measurement-and-verification service can ingest meter, weather, occupancy, intervention, and tariff data, freeze agreed baselines, quantify savings with uncertainty, and produce auditable monthly settlement evidence for energy-performance contracts. Energy auditors, lenders, and ESCO associations distribute it one-to-many; each meter period and contract settlement is recurring.",
+  "title": "Independent Savings-Settlement Oracle for Small ESCO Portfolios",
+  "uncertainties": [
+    "Depth of the Polish small-ESCO market.",
+    "Whether parties accept software-assisted neutral settlement.",
+    "Cost of acquiring and normalising building-meter data."
+  ],
+  "version": 1
+}

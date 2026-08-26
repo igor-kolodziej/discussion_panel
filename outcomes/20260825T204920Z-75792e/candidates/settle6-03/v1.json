@@ -1,0 +1,75 @@
+{
+  "candidate_id": "settle6-03",
+  "claims": [
+    {
+      "claim_id": "settle6-03-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:32024R1747"
+      ],
+      "statement": "EU electricity-market rules expressly contemplate dedicated measurement-device data for observability and settlement of flexibility services such as demand response and storage."
+    },
+    {
+      "claim_id": "settle6-03-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/dir/2019/944/oj/eng"
+      ],
+      "statement": "EU smart-meter rules provide for customer access and settlement at the national imbalance-settlement resolution."
+    }
+  ],
+  "contrary_evidence": [
+    "The legal framework enables measurement but does not guarantee near-term Polish aggregator demand or uniform payout interfaces."
+  ],
+  "economics": {
+    "acquisition_route": "UNVALIDATED: integrate once with aggregators, heat-pump distributors, battery installers and charging OEMs that each control many assets.",
+    "capital_required_pln": 180000,
+    "founder_net_worth_path": "UNVALIDATED: settle 5,000 devices by year 2 and 80,000 devices across several partners by year 5, supporting founder equity and retained cash above PLN 5m in years 6-7.",
+    "founder_time": "UNVALIDATED: 4 hours per day for the first aggregator integration, then 2 hours per day of settlement exceptions.",
+    "gross_margin_basis": "UNVALIDATED: automated event processing, with cloud, metering gateway and payment costs scaling with devices.",
+    "payback": "UNVALIDATED: one channel integration recoups acquisition cost after 2,000 device-events or 8 months.",
+    "pricing": "UNVALIDATED: platform fee to aggregators plus a small deduction from asset-owner payouts per settled event; all commercial figures in this economics object, including capital_required_pln, are unvalidated.",
+    "retention_or_repeat": "UNVALIDATED: repeated market events and monthly payouts create high operational switching costs."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Verified activation and payment outcomes build device, weather and baseline performance histories",
+    "customer": "Independent aggregators and distributed-energy OEM or installer fleets",
+    "distribution_mechanism": "Embedded integrations with aggregators and device channels",
+    "offer_and_business_model": "Neutral measurement-to-payout sub-ledger charged per settled event",
+    "payer_and_paid_event": "The aggregator pays when an accepted event is reconciled to each participating asset and its owner payout",
+    "problem_trigger": "A grid or market flexibility event is activated and later accepted for settlement"
+  },
+  "founder_fit": [
+    "Deep data-science leverage",
+    "Renewable installer adjacency",
+    "Transaction automation instead of manual consulting",
+    "Verified device outcomes can become a defensible asset"
+  ],
+  "parent": null,
+  "risks": [
+    "Market-rule changes",
+    "Baseline disputes",
+    "Cybersecurity and device-consent failures",
+    "Aggregator concentration",
+    "Working-capital risk if the company advances payouts"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:32024R1747",
+    "https://eur-lex.europa.eu/eli/dir/2019/944/oj/eng"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Per-event energy-flexibility settlement infrastructure",
+    "control_point": "The consented measurement ledger mapping each activated device to the aggregator's accepted market settlement",
+    "critical_dependency": "Access to sufficiently granular metering and aggregator settlement statements under Polish market rules"
+  },
+  "thesis": "Act as the neutral sub-ledger between flexibility aggregators and fleets of batteries, heat pumps, EV chargers or commercial loads. For each called event, bind consent, device measurements, baseline, activation and market statement; calculate the asset-owner share; and release or reconcile payment only when the aggregator's event is settled. Installer and OEM integrations provide one-to-many distribution, while verified event outcomes improve device-specific baseline and availability models.",
+  "title": "Distributed Flex Event Settlement",
+  "uncertainties": [
+    "Polish event volumes",
+    "Aggregator API maturity",
+    "Whether asset owners value an independent ledger"
+  ],
+  "version": 1
+}

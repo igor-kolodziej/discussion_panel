@@ -1,0 +1,89 @@
+{
+  "candidate_id": "settle8-12",
+  "claims": [
+    {
+      "claim_id": "settle8-12-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://joint-research-centre.ec.europa.eu/photovoltaic-geographical-information-system-pvgis_en",
+        "https://joint-research-centre.ec.europa.eu/photovoltaic-geographical-information-system-pvgis/using-pvgis-5/api-non-interactive-service_en"
+      ],
+      "statement": "Verified fact: the European Commission's PVGIS provides free solar-radiation and photovoltaic-performance data with APIs for automated access."
+    },
+    {
+      "claim_id": "settle8-12-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.eiopa.europa.eu/document/download/6ca9e171-42b9-44d7-a2e6-beaf0134ecb8_en?filename=Report+on+the+digitalisation+of+the+European+insurance+sector.pdf",
+        "https://www.eiopa.europa.eu/document/download/d8c87070-f602-4bf7-b8d8-726ec0b5c173_en"
+      ],
+      "statement": "Verified fact: EIOPA describes parametric insurance as paying on an objective predefined event or index rather than indemnifying the measured pure loss, which creates possible basis risk."
+    },
+    {
+      "claim_id": "settle8-12-c3",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://joint-research-centre.ec.europa.eu/photovoltaic-geographical-information-system-pvgis_en",
+        "https://www.eiopa.europa.eu/document/download/6ca9e171-42b9-44d7-a2e6-beaf0134ecb8_en?filename=Report+on+the+digitalisation+of+the+European+insurance+sector.pdf"
+      ],
+      "statement": "Hypothesis (unvalidated): a licensed carrier will pay a specialist administrator for small-commercial PV yield cover rather than build the telemetry, index, and claim rail internally."
+    }
+  ],
+  "contrary_evidence": [
+    "PVGIS data and APIs are free and broadly accessible, so weather/yield modeling alone is readily copyable: https://joint-research-centre.ec.europa.eu/photovoltaic-geographical-information-system-pvgis_en",
+    "EIOPA's definition highlights that index payouts can diverge from actual loss; basis risk may make the product unattractive or harmful without careful calibration: https://www.eiopa.europa.eu/document/download/d8c87070-f602-4bf7-b8d8-726ec0b5c173_en"
+  ],
+  "economics": {
+    "acquisition_route": "First sell a non-insurance yield-assurance dashboard to an O&M portfolio, then seek a licensed carrier to design a compliant cover using observed data.",
+    "capital_required_pln": 90000,
+    "founder_net_worth_path": "Unvalidated scenario: 1,000 assets at PLN 400/year in year 2, 6,000 at PLN 500/year in year 4, and 15,000 at PLN 550/year in year 7 imply PLN 8.25m recurring revenue before claim fees. At 20% owner earnings or a 3-4x insurance-infrastructure value and 55% ownership, PLN 5m net worth is plausible in years 6-8; no licensed carrier interest after a validated 500-asset O&M dataset ends the risk-transfer thesis.",
+    "founder_time": "4-5 hours/day for one inverter family and O&M portfolio; regulated product design, distribution, and underwriting remain with licensed partners.",
+    "gross_margin_basis": "Hypothesis: 70-85% at sufficient portfolio density; telemetry normalization, data gaps, and claim review are variable costs.",
+    "payback": "Unvalidated payer hypothesis: automated monitoring and objective claim packets lower administration and enable a sellable cover; must be established with an insurer, not inferred from PV data availability.",
+    "pricing": "Unvalidated estimate: PLN 250-900 per monitored asset per year plus PLN 150-600 per calculated claim and paid portfolio integration; insurer sets premium and bears risk.",
+    "retention_or_repeat": "Assets are monitored for multi-year contracts, and calibrated configuration/telemetry histories improve each renewal."
+  },
+  "fingerprint": {
+    "compounding_advantage": "permissioned asset-level expected-versus-actual histories improve calibration, pricing support, and equipment/O&M segmentation while carrier integrations create switching costs",
+    "customer": "licensed EU insurers or MGAs partnering with commercial rooftop installers and O&M portfolios of small-to-mid-sized PV assets",
+    "distribution_mechanism": "one licensed insurer/MGA design partner reached through solar O&M, installer, or insurance-broker channels; family company can supply non-policy workflow observations only",
+    "offer_and_business_model": "policy-configuration snapshot, telemetry and PVGIS ingestion, exclusion/event ledger, transparent index calculation, payout packet, and portfolio performance API",
+    "payer_and_paid_event": "licensed carrier, MGA, or O&M program pays per asset-year monitored and per claim packet calculated; no founder risk capital is placed behind claims",
+    "problem_trigger": "a monitored period closes below the contractual weather-adjusted yield trigger and a payout determination is due"
+  },
+  "founder_fit": [
+    "Time-series modeling and uncertainty quantification fit the founder's data-science strengths.",
+    "The parents' renewables context aids product understanding and potential non-insurance telemetry pilots.",
+    "The structure avoids using the founder's limited capital to underwrite claims.",
+    "Partner and portfolio distribution avoids personal-brand media and can compound into a data asset."
+  ],
+  "parent": null,
+  "risks": [
+    "Selling or administering insurance without appropriate permissions would be unlawful; roles must be defined by counsel and licensed partners.",
+    "Basis risk can produce payouts that diverge from actual customer loss.",
+    "Inverter telemetry can be missing, altered, or vendor-restricted.",
+    "A carrier may copy the index or use an established catastrophe-modeling vendor."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://joint-research-centre.ec.europa.eu/photovoltaic-geographical-information-system-pvgis_en",
+    "https://joint-research-centre.ec.europa.eu/photovoltaic-geographical-information-system-pvgis/using-pvgis-5/api-non-interactive-service_en",
+    "https://www.eiopa.europa.eu/document/download/6ca9e171-42b9-44d7-a2e6-beaf0134ecb8_en?filename=Report+on+the+digitalisation+of+the+European+insurance+sector.pdf",
+    "https://www.eiopa.europa.eu/document/download/d8c87070-f602-4bf7-b8d8-726ec0b5c173_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "parametric risk-transfer data and claims administrator",
+    "control_point": "pre-agreed loss-index calculation that determines whether a covered solar-yield event triggers a contractual payout",
+    "critical_dependency": "licensed risk carrier plus reliable inverter telemetry, frozen system configuration, independent irradiance data, and an index with acceptable basis risk"
+  },
+  "thesis": "Provide licensed insurers, MGAs, O&M firms, and commercial rooftop installers the data and administration layer for a narrowly defined solar-yield cover. At policy inception it freezes system configuration and an objective weather/yield index; during the term it ingests inverter telemetry and independent irradiance data; at trigger it calculates the contractual payout and produces a traceable claim packet. The company does not underwrite, distribute, or promise insurance without a licensed partner. The insurer pays per monitored asset-year and completed claim.",
+  "title": "Parametric Solar-Yield Cover Administration Rail",
+  "uncertainties": [
+    "No carrier demand, premium economics, or policyholder willingness has been validated.",
+    "The right trigger, exclusions, and minimum portfolio size are unknown.",
+    "PVGIS is suitable as an independent analytical input but not proven as a contractual oracle.",
+    "Data rights across installer, owner, O&M provider, inverter vendor, and insurer need validation."
+  ],
+  "version": 1
+}

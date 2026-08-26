@@ -1,0 +1,140 @@
+{
+  "candidate_id": "control6-12",
+  "claims": [
+    {
+      "claim_id": "control6-12-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/customs/customs-tariff/tariff-classification-goods/eu-binding-tariff-information-bti_en"
+      ],
+      "statement": "Binding Tariff Information is a legal classification decision issued by EU customs authorities, generally valid across the EU for three years and binding on authorities and the holder."
+    },
+    {
+      "claim_id": "control6-12-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/customs/common-customs-tariff-cct/tariff-classification-goods_en"
+      ],
+      "statement": "Tariff classification determines customs duty and can also determine non-tariff measures such as licences, restrictions and origin-related requirements."
+    },
+    {
+      "claim_id": "control6-12-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://puesc.gov.pl/uslugi/uzyskaj-wiazaca-informacje-taryfowa-wit"
+      ],
+      "statement": "In Poland, a WIT application and decision are electronic and free; paid value must therefore come from complex fact development, expert review and workflow support rather than access to the official filing itself."
+    },
+    {
+      "claim_id": "control6-12-c4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/system/files/2019-03/04_taxud_ucc_binding_tariff_information_quick_info_en.pdf"
+      ],
+      "statement": "After a complete BTI application is accepted, the authority normally has 120 days to decide, with exceptional extensions possible; a decision based on inaccurate or incomplete applicant information is annulled."
+    },
+    {
+      "claim_id": "control6-12-c5",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.avalara.com/au/en-au/products/tariff-code-classification.html",
+        "https://eclear.com/product/customsai/",
+        "https://www.tariffpilot.com/en/"
+      ],
+      "statement": "Commercial incumbents already offer AI-assisted or automated tariff classification, bulk processing, APIs, reasoning and human-expert review."
+    },
+    {
+      "claim_id": "control6-12-c6",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.maersk.com/local-information/europe/customs-services/services"
+      ],
+      "statement": "Maersk already offers European HS-classification consulting and customs-clearance support, so a freight forwarder can be both a channel and a direct substitute."
+    },
+    {
+      "claim_id": "control6-12-c7",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/online-services/online-services-and-databases-customs/european-binding-tariff-information-ebti_en",
+        "https://www.avalara.com/au/en-au/products/tariff-code-classification.html",
+        "https://eclear.com/product/customsai/",
+        "https://www.tariffpilot.com/en/"
+      ],
+      "statement": "The defensible wedge is more likely a confidential, expert-reviewed evidence and exception workflow for difficult products than a generic code recommender, because official rulings are public and code automation is already crowded."
+    }
+  ],
+  "contrary_evidence": [
+    "Valid and invalid BTI decisions are already public in the EBTI database, so defensibility must come from confidential fact patterns, workflow distribution and outcome data rather than public rulings.",
+    "The official Polish WIT application and decision are free, so the proposed case fee cannot be justified by filing access alone.",
+    "Avalara, eClear and TariffPilot already automate classification research and workflow, including APIs, bulk processing and human expertise.",
+    "Maersk already sells HS-classification consulting alongside customs clearance, creating channel conflict with a forwarder-embedded product."
+  ],
+  "economics": {
+    "acquisition_route": "Research update: white-label into smaller freight forwarders and customs agencies at new-SKU intake remains unvalidated. Large forwarders can already provide classification consulting, while software incumbents sell direct, so the initial target should be a forwarder lacking an internal classification stack and willing to pilot non-exclusive expert-reviewed cases.",
+    "capital_required_pln": 75000,
+    "founder_net_worth_path": "Unvalidated scenario, not a forecast: resolve 100 cases in year 1, reach 3 million PLN ARR by year 4, build 3.5 million PLN founder equity and retained cash by year 6, and 5 million PLN founder net worth in years 7-10. No public evidence validates case volume, ARR, retention or valuation assumptions.",
+    "founder_time": "Unvalidated operating estimate: 2-3 hours per day only if qualified customs specialists own opinions, escalations and representation while the founder owns data and workflow automation.",
+    "gross_margin_basis": "Unvalidated: 55%-80% after customs-expert review, translation, product-fact development, client follow-up and appeal support; incumbent automation may pressure simple-case prices.",
+    "payback": "Unvalidated: 8-16 months depends on repeat forwarder case flow and expert cost. The official decision can take 120 days after acceptance, limiting rapid outcome feedback.",
+    "pricing": "Unvalidated: 2,000-12,000 PLN per complex case plus 1,000-5,000 PLN monthly forwarder workspace. Because the official Polish WIT application and decision are free, the fee must buy expert-reviewed fact development, audit trail, exception handling or appeal support.",
+    "retention_or_repeat": "Unvalidated: repeat follows new SKUs, rule changes and product modifications, but forwarder case frequency, workspace retention and data-reuse permission are not evidenced."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Consented private mappings between product facts, questions, rulings, appeals and landed-cost outcomes improve retrieval and expert efficiency",
+    "customer": "EU importers and freight forwarders handling novel or ambiguous products",
+    "distribution_mechanism": "White-label insertion into forwarder and customs-agent onboarding of new products",
+    "offer_and_business_model": "Structured product evidence, expert review and BTI application support, without pretending to issue a binding ruling",
+    "payer_and_paid_event": "The importer or forwarder pays for a reviewed case pack and ongoing workflow access",
+    "problem_trigger": "A new SKU lacks a defensible tariff classification or faces a classification dispute"
+  },
+  "founder_fit": [
+    "Strong match for structured evidence retrieval and AI-assisted analysis.",
+    "Forwarder distribution reduces direct prospecting.",
+    "Expert review can be contracted while the founder builds the data system.",
+    "The 75,000 PLN initial-capital estimate fits within stated free capital, but part-time feasibility still depends on contracted customs specialists owning opinions and escalations."
+  ],
+  "parent": {
+    "candidate_id": "control6-12",
+    "version": 2
+  },
+  "risks": [
+    "Incorrect product facts lead to an invalid or harmful classification.",
+    "Confidential-data reuse violates client terms.",
+    "Public AI tools commoditise simple classification research.",
+    "Forwarders may prefer their own consulting and customs-control-tower products rather than embed a third party.",
+    "A slow official BTI cycle delays outcome labels and weakens the proposed data flywheel.",
+    "Acting as a customs representative without proper empowerment or applicable national conditions creates liability."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://taxation-customs.ec.europa.eu/customs/customs-tariff/tariff-classification-goods/eu-binding-tariff-information-bti_en",
+    "https://taxation-customs.ec.europa.eu/customs/common-customs-tariff-cct/tariff-classification-goods_en",
+    "https://puesc.gov.pl/uslugi/uzyskaj-wiazaca-informacje-taryfowa-wit",
+    "https://taxation-customs.ec.europa.eu/system/files/2019-03/04_taxud_ucc_binding_tariff_information_quick_info_en.pdf",
+    "https://taxation-customs.ec.europa.eu/online-services/online-services-and-databases-customs/eu-customs-tariff-taric_en",
+    "https://taxation-customs.ec.europa.eu/online-services/online-services-and-databases-customs/classification-information-system-class_en",
+    "https://eur-lex.europa.eu/eli/reg/2013/952/oj",
+    "https://www.avalara.com/au/en-au/products/tariff-code-classification.html",
+    "https://eclear.com/product/customsai/",
+    "https://www.tariffpilot.com/en/",
+    "https://www.maersk.com/local-information/europe/customs-services/services",
+    "https://taxation-customs.ec.europa.eu/online-services/online-services-and-databases-customs/european-binding-tariff-information-ebti_en"
+  ],
+  "stage": "development",
+  "structure": {
+    "commercial_archetype": "Expert decision network with case-outcome data cooperative",
+    "control_point": "Forwarder channel agreements and contractual rights to reuse de-identified product-description, decision and exception outcomes",
+    "critical_dependency": "Qualified customs expertise, confidentiality-safe data rights, accurate product facts and client acceptance of the BTI process"
+  },
+  "thesis": "Embed with freight forwarders and customs representatives to structure difficult product-classification cases and, with client permission, retain anonymised product-feature, ruling, appeal and realised-cost outcomes. The control point is a private case-outcome network and forwarder distribution, while qualified customs professionals remain responsible for advice and representation.",
+  "title": "Customs Classification Outcome Cooperative",
+  "uncertainties": [
+    "Forwarder case volume and exclusivity",
+    "Scope of activities requiring customs-representative credentials",
+    "Value of private outcomes beyond public EBTI records",
+    "Willingness to pay 2,000-12,000 PLN when the official Polish WIT process is free",
+    "Qualified expert cost and liability allocation per case",
+    "Contractual permission to reuse de-identified private fact patterns and realised landed-cost outcomes"
+  ],
+  "version": 3
+}

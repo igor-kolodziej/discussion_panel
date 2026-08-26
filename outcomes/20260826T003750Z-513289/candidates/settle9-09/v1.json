@@ -1,0 +1,81 @@
+{
+  "candidate_id": "settle9-09",
+  "claims": [
+    {
+      "claim_id": "settle9-09-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/topics/forests/deforestation/regulation-deforestation-free-products_en"
+      ],
+      "statement": "The Commission's current EUDR page gives application dates of 30 December 2026 for large and medium operators and 30 June 2027 for most micro and small operators."
+    },
+    {
+      "claim_id": "settle9-09-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/topics/forests/deforestation/regulation-deforestation-free-products_en"
+      ],
+      "statement": "The Commission states that operators or traders placing covered commodities on the EU market or exporting them must be able to prove the products are not linked to recent deforestation or forest degradation, subject to the revised role rules."
+    },
+    {
+      "claim_id": "settle9-09-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/document/download/a3c5c3a0-232e-43c4-b0b8-1eecb1df45c7_en?filename=Report+from+the+Commission+to+the+Council+and+Parliament+on+the+EUDR.pdf"
+      ],
+      "statement": "The Commission reports that the revised regime concentrates due-diligence-statement responsibility on the first operator, narrowing the best initial customer segment."
+    }
+  ],
+  "contrary_evidence": [
+    "The EU postponed and simplified EUDR again in 2025, reducing near-term urgency and removing statement duties from downstream operators.",
+    "Commodity traceability vendors and certification schemes already compete for large operators."
+  ],
+  "economics": {
+    "acquisition_route": "Choose one commodity, recruit a customs broker, offer a fixed-price supplier evidence readiness sprint before the application date",
+    "capital_required_pln": 70000,
+    "founder_net_worth_path": "Hypothesis: 160 operators at 36,000 PLN blended ARR creates 5.8m PLN ARR by years 5-7. With majority ownership, retained profits and a 4-5x vertical-software value, founder net worth could exceed 5m PLN in years 6-8.",
+    "founder_time": "16-22 hours weekly; domain interpretation is contracted and limited to one commodity",
+    "gross_margin_basis": "Hypothesis: 74-88%; geospatial and document checks automate, while true risk judgment remains with customer or specialist",
+    "payback": "Hypothesis: 4-9 months through broker portfolios; regulatory postponement can extend payback materially",
+    "pricing": "Hypothesis: 2,000-9,000 PLN monthly per operator plus 3-20 PLN per consignment and paid supplier onboarding",
+    "retention_or_repeat": "Each shipment and supplier change repeats the evidence check; verified plot/supplier history reduces work and increases switching cost"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Permissioned supplier-plot-product evidence graph and discrepancy-resolution history allow evidence reuse, change detection and commodity-specific risk baselines",
+    "customer": "Polish and EU first operators importing or exporting one EUDR-covered commodity, plus customs brokers and trade-finance providers serving them",
+    "distribution_mechanism": "Embed checks in customs-broker intake and trade-finance document collection; supplier remediation links spread the workflow upstream",
+    "offer_and_business_model": "Commodity-specific evidence SaaS plus supplier-onboarding service, priced by consignment and active supplier",
+    "payer_and_paid_event": "The first operator pays per supplier/consignment when evidence is checked and the internal release packet is produced",
+    "problem_trigger": "A shipment approaches customs, payment or resale without a complete, internally consistent due-diligence evidence chain"
+  },
+  "founder_fit": [
+    "Geospatial anomaly detection and document AI suit the founder's data background.",
+    "Broker distribution and supplier links reduce public-facing sales demands.",
+    "A narrow readiness service can validate before major software spending."
+  ],
+  "parent": null,
+  "risks": [
+    "Further legal change can shrink the reachable segment or delay revenue.",
+    "Geolocation evidence can be inaccurate without costly ground truth.",
+    "Customers may wrongly treat workflow completion as a substantive compliance guarantee."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://environment.ec.europa.eu/topics/forests/deforestation/regulation-deforestation-free-products_en",
+    "https://environment.ec.europa.eu/document/download/a3c5c3a0-232e-43c4-b0b8-1eecb1df45c7_en?filename=Report+from+the+Commission+to+the+Council+and+Parliament+on+the+EUDR.pdf"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Regulated supply-chain release gate",
+    "control_point": "Internal release of a covered consignment for import, payment or downstream sale",
+    "critical_dependency": "Current EUDR scope and dates, official-system interoperability and first operators' willingness to insert an external evidence gate"
+  },
+  "thesis": "Build a consignment-level exception desk for EU first operators importing one EUDR commodity, initially furniture/timber or coffee. It binds purchase orders and customs lines to plot/geolocation evidence, supplier declarations, risk checks and the official due-diligence statement reference; unresolved evidence holds the internal goods-release or invoice-approval step and routes a supplier-specific remediation packet. Customs brokers and trade-finance providers distribute it at transaction inception. The service neither certifies deforestation-free status nor replaces the operator's judgment, and the initial commodity should be chosen only after paid discovery.",
+  "title": "EUDR Consignment Release Desk",
+  "uncertainties": [
+    "Which commodity offers enough Polish first operators and weak incumbent tooling",
+    "Share of supplier packets reusable across consignments",
+    "Broker willingness to make evidence completeness a release condition"
+  ],
+  "version": 1
+}

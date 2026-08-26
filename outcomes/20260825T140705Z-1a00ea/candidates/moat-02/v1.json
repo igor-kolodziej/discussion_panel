@@ -1,0 +1,67 @@
+{
+  "candidate_id": "moat-02",
+  "claims": [
+    {
+      "claim_id": "moat02-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://energy.ec.europa.eu/topics/energy-efficiency/heat-pumps_en"
+      ],
+      "statement": "The Commission reports 2.11 million European heat-pump installations in 2024 and identifies installer shortages as a barrier."
+    },
+    {
+      "claim_id": "moat02-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/en/TXT/?uri=CELEX%3A32019H1019"
+      ],
+      "statement": "EU guidance recognizes continuous electronic monitoring as a possible alternative to some building-system inspections."
+    }
+  ],
+  "contrary_evidence": [
+    "Manufacturers increasingly bundle proprietary remote diagnostics."
+  ],
+  "economics": {
+    "acquisition_route": "Unvalidated hypothesis: wholesalers and the family installer network.",
+    "capital_required_pln": 85000,
+    "founder_net_worth_path": "Unvalidated hypothesis: 30000 units at 25 PLN monthly yield 9 million PLN ARR and founder equity above 5 million PLN in five to seven years.",
+    "founder_time": "Unvalidated hypothesis: 15 hours weekly with contracted HVAC review.",
+    "gross_margin_basis": "Unvalidated hypothesis: 75% after telemetry and exception review.",
+    "payback": "Unvalidated hypothesis: six months for a 200-unit fleet.",
+    "pricing": "Unvalidated hypothesis: 15-40 PLN per unit monthly plus 300-800 PLN per commissioning report.",
+    "retention_or_repeat": "Unvalidated hypothesis: monitoring, seasonal faults, and warranty evidence retain units for years."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Every confirmed repair expands device-specific fault coverage",
+    "customer": "Heat-pump installers and maintenance firms",
+    "distribution_mechanism": "Wholesaler bundles and installer partnerships",
+    "offer_and_business_model": "Fleet diagnostics sold per unit and report",
+    "payer_and_paid_event": "The installer pays on unit activation or report request",
+    "problem_trigger": "A commissioned or operating unit underperforms without an obvious cause"
+  },
+  "founder_fit": [
+    "Sensor analytics and direct installer access fit a narrow part-time launch."
+  ],
+  "parent": null,
+  "risks": [
+    "Unsafe recommendations could damage equipment or people.",
+    "API fragmentation could erase margins."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://energy.ec.europa.eu/topics/energy-efficiency/heat-pumps_en",
+    "https://eur-lex.europa.eu/legal-content/en/TXT/?uri=CELEX%3A32019H1019"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Per-device monitoring SaaS",
+    "control_point": "Cross-brand telemetry signatures linked to confirmed faults and repair outcomes",
+    "critical_dependency": "Stable controller integrations and lawful customer telemetry access"
+  },
+  "thesis": "Hardware-agnostic heat-pump commissioning and fault diagnostics for installer fleets accumulate cross-brand labeled fault signatures and verified fixes.",
+  "title": "HeatTrace Fleet",
+  "uncertainties": [
+    "Cross-brand access and attainable alert precision are unvalidated."
+  ],
+  "version": 1
+}

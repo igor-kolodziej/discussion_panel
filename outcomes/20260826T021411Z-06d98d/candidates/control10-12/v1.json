@@ -1,0 +1,80 @@
+{
+  "candidate_id": "control10-12",
+  "claims": [
+    {
+      "claim_id": "control10-12-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://transport.ec.europa.eu/transport-themes/logistics-and-multimodal-transport/efti-regulation_en"
+      ],
+      "statement": "From 9 July 2027, Member State authorities must accept freight information shared electronically through certified eFTI platforms."
+    },
+    {
+      "claim_id": "control10-12-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://transport.ec.europa.eu/transport-themes/logistics-and-multimodal-transport/efti-regulation_en"
+      ],
+      "statement": "Official architecture expects secure certified platforms integrated with existing business systems, with inspection access through unique machine-readable links such as QR codes."
+    },
+    {
+      "claim_id": "control10-12-c3",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://transport.ec.europa.eu/transport-themes/logistics-and-multimodal-transport/efti-regulation_en"
+      ],
+      "statement": "Demand hypothesis: smaller TMS vendors will buy a shared adapter because becoming and maintaining a certified platform is outside their core product scope."
+    }
+  ],
+  "contrary_evidence": [
+    "Businesses are not necessarily compelled to use electronic freight information even when authorities must accept it.",
+    "Certified platforms may provide their own low-cost connectors directly to TMS vendors."
+  ],
+  "economics": {
+    "acquisition_route": "Hypothesis: integrate with 10-20 regional TMS vendors instead of selling directly to thousands of carriers",
+    "capital_required_pln": 90000,
+    "founder_net_worth_path": "Hypothesis: 60 TMS vendors averaging 90000 PLN annual recurring revenue plus usage could exceed 7m PLN ARR; multi-platform compatibility and embedded volume could support founder equity above 5m PLN in 5-7 years",
+    "founder_time": "18-25 hours weekly through one TMS and one certified-platform pilot",
+    "gross_margin_basis": "Economics hypothesis: 75-88% net of certified-platform wholesale fees",
+    "payback": "Hypothesis: 14-20 months with ten TMS customers and 100000 monthly consignments",
+    "pricing": "Economics hypothesis: 3000-12000 PLN monthly per TMS vendor plus 0.50-3 PLN per consignment",
+    "retention_or_repeat": "Every regulated consignment and continuing schema, authority and platform updates"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Reusable mappings across Polish TMS schemas, freight data sets and certified-platform endpoints improve with each integration",
+    "customer": "Polish TMS vendors and road-freight networks serving SMEs with cross-border or regulated freight",
+    "distribution_mechanism": "One integration distributes through each TMS vendor's installed carrier base",
+    "offer_and_business_model": "Multi-platform schema adapter, validation engine and audit-log API sold wholesale to TMS vendors",
+    "payer_and_paid_event": "TMS vendor or carrier network pays connector subscription and per compliant consignment",
+    "problem_trigger": "A transport record must be presented electronically through a certified platform when authorities begin mandatory acceptance"
+  },
+  "founder_fit": [
+    "API mapping, validation and audit logs fit technical strengths",
+    "B2B infrastructure can be sold through a small number of software channels",
+    "A connector MVP stays within available capital if certification is delegated"
+  ],
+  "parent": null,
+  "risks": [
+    "Final specifications or certification economics may change.",
+    "Dependence on a small number of certified platform partners",
+    "Long enterprise and public-transport adoption cycles"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://transport.ec.europa.eu/transport-themes/logistics-and-multimodal-transport/efti-regulation_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Certified-network integration middleware",
+    "control_point": "The validated consignment payload and authority access link generated before dispatch",
+    "critical_dependency": "Commercial access to certified eFTI platforms and stable final technical specifications"
+  },
+  "thesis": "Rather than funding a full certified platform, a narrow adapter could let Polish transport-management vendors map, validate and transmit customer freight records through one or more certified eFTI platforms, returning the authority access link and audit trail. The adapter depends on certified partners and makes no certification claim. Demand and economics are hypotheses.",
+  "title": "eFTI Certified-Platform Adapter for Polish TMS Vendors",
+  "uncertainties": [
+    "Carrier adoption rate after July 2027",
+    "Wholesale platform fees",
+    "Fragmentation of Polish TMS schemas and reachable consignment volume"
+  ],
+  "version": 1
+}

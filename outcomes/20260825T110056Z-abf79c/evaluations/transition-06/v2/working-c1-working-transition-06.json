@@ -1,0 +1,120 @@
+{
+  "assumptions": [
+    "The first customer is a non-exempt EU OEM that already retrieves the relevant telemetry and controls or can authorize its cloud stream and user-identity system.",
+    "The initial statement of work excludes firmware changes, creation of new telemetry, legal opinions, and independent disclosure-right decisions.",
+    "Qualified EU legal and security reviewers are available within the stated capital budget, and liability and support obligations can be contractually bounded for a pilot.",
+    "Recurring pricing applies to an operated entitlement, evidence, logging, and support layer rather than commodity message transport.",
+    "No value is assigned to unproven integrator distribution or to the 30-OEM scale scenario beyond recognizing it as a possible hurdle case."
+  ],
+  "base_score": 5,
+  "candidate_id": "transition-06",
+  "candidate_sha256": "3de59a283af2dc9eefba0d6f6b8e570e0fefb9993a82e2af4578a1728f0f015a",
+  "candidate_version": 2,
+  "constrained_score": 5,
+  "evaluation_type": "working",
+  "evidence_needed_for_higher_score": "One prepaid pilot from a confirmed non-exempt OEM; its internal-build or incumbent-integrator quote and decision rationale; measured integration hours and gross margin followed by reuse on a second product line; written security and legal acceptance of the responsibility boundary; a signed integrator referral or resale commitment; and credible counts, sales-cycle, renewal, CAC, and payback evidence for the beachhead.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "The opportunity is anchored in a specific regulatory and workflow discontinuity: non-exempt connected-product OEMs placing products on the market after 12 September 2026 need a usable data-access surface around telemetry they already retrieve. Binding entitlement, field metadata, export, third-party sharing, logs, and release evidence into one component is a coherent control point. The insight is moderated by the fact that incumbent IoT stacks already provide many underlying primitives and the Act does not require creation of new telemetry.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "For an affected OEM with an imminent product release and a genuine access-surface gap, delay, rework, and mishandled personal or trade-secret data can create important pain, giving a realistic basis for a prepaid implementation fee. However, qualifying micro and small manufacturers are exempt, affected-buyer counts are unknown, and no paid buyer, internal-build quote, or procurement evidence establishes willingness to pay 40000-100000 PLN plus the proposed annual minimum. These are material planning-stage uncertainties rather than proof of absent demand.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Prepaid implementation plus an annual minimum and usage fee can produce good cash conversion and, after adapter reuse, 70-85% recurring gross margin because raw IoT transport is inexpensive. The first pilots are expected to deliver only 35-55% gross margin, while CAC, enterprise sales-cycle length, implementation variance, retention, support burden, liability cost, and payback remain unmeasured. The 5.4m PLN ARR and founder-wealth path depends on reaching 30 sizable OEM accounts, a scale not supported by buyer-count or acquisition evidence.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "A single non-exempt heat-pump or building-control product line with an existing cloud stream is a testable, sufficiently narrow beachhead, and it fits the founder's access to the energy-equipment ecosystem. Its economic depth is not established: the small-enterprise exemption removes many likely regional buyers, and there is no count of medium-sized or larger OEMs that both control the relevant stack and lack an adequate platform-provided access surface.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "Owning the tested entitlement and data-egress component in release evidence could create a credible specialist position in one equipment vertical. Yet Azure, Cumulocity, their integrators, and OEM internal teams can extend existing identity, API, and fleet functions to cover much of the offer. With no exclusive channel, proprietary standard, or demonstrated cost and speed lead, strong niche dominance is possible but currently less likely than a contested services-and-software position.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A successful heat-pump or building-control implementation could extend to additional product lines, industrial and agricultural equipment, other EU geographies, and adjacent release-assurance or security workflows. Reusable entitlement patterns, tests, and adapters provide some leverage. Expansion is constrained by product-specific semantics, identity ownership, firmware boundaries, data rights, and security review, which may keep each new category materially bespoke.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Validated adapters, field-classification templates, release tests, operational history, and embedding in a live OEM workflow can accumulate know-how and switching costs. Those assets are useful but not intrinsically scarce: W3C Thing Descriptions standardize much of the generic representation layer, AI can accelerate checklist and API replication, and platform vendors can bundle the capability. Durable defense requires a meaningful installed base and channel ownership that are not yet present.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "A scoped, prebuilt, evidence-bearing implementation could be faster and less risky than assembling entitlement, export, metadata, and audit logging from scratch, especially for an OEM without an internal compliance engineering team. No comparison against an OEM or integrator quote, delivery-time benchmark, or accepted release test shows a decisive price, speed, or risk advantage. Commodity cloud economics also mean the advantage must come from implementation quality and assurance, not infrastructure cost.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "The Data Act is already applicable and the access-by-design date of 12 September 2026 creates a concrete product-release trigger, while Cyber Resilience Act milestones make secure implementation more salient. This is genuine regulatory momentum rather than a speculative trend. The near deadline also favors incumbent vendors and already-approved integrators for immediate releases, and the opportunity continues only where OEMs have in-scope retrievable data and are not exempt.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "The family renewable-energy adjacency offers a plausible route to interviews and perhaps one direct product-line pilot, and a prepaid narrow statement of work is a sensible first sale. Beyond that, acquisition depends on trust-heavy OEM procurement, security review, and specialist B2B selling. No integrator referral or resale commitment, repeatable lead source, CAC estimate, or sales-cycle evidence supports scalable distribution, and the founder's preference to minimize sustained social selling adds friction.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "The founder's data-engineering background, AI leverage, available capital, and domain adjacency make one cloud-only pilot with existing telemetry feasible alongside employment. Production identity, GDPR and trade-secret controls, cybersecurity, liability allocation, customer-cloud deployment, and support require qualified external reviewers and strict scope. Firmware changes, concurrent bespoke integrations, enterprise sales, or 24/7 incident duties would exceed a solo founder's five-hour daily capacity before hiring or partner capacity is justified.",
+      "score": 5,
+      "status": "scored"
+    }
+  ],
+  "final_score": 5,
+  "highest_value_structural_change": "Make the offer a vertical, customer-cloud release-assurance module sold with one embedded IoT integrator: charge an annual product-line minimum for versioned field mappings, automated release tests, access logs, and bounded support, while dropping any positioning that depends on raw per-device transport and using authorized partners for legal and security judgments.",
+  "interaction_adjustment": 0,
+  "judge_id": "c1-working-transition-06",
+  "main_structural_strength": "A dated regulatory product-release trigger supports a well-bounded control point: the tested and logged entitlement, metadata, export, and third-party-sharing layer for telemetry an OEM already retrieves.",
+  "primary_score_limiter": "There is no evidence yet that enough non-exempt OEMs have this exact gap, will outsource a release-path component at the proposed price, or can be acquired with reusable integrations and attractive sales economics.",
+  "qualified": false,
+  "raw_response_path": "artifacts/research/raw-c1-working-transition-06.json",
+  "raw_response_sha256": "4a92f5f798f08ecb81b1479570d5b4c0e5fe460e7f8f22c1f05baf930f7c294a",
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 2,
+  "strongest_disconfirming_evidence": "Major IoT platforms such as Azure IoT Hub and Cumulocity already expose identity, API, data, and fleet-management primitives, making platform or integrator bundling a credible substitute for a standalone gateway.",
+  "unrounded_score": 5
+}

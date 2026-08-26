@@ -1,0 +1,83 @@
+{
+  "candidate_id": "control-09",
+  "claims": [
+    {
+      "claim_id": "control-09-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://physionet.org/content/wrist/1.0.0/",
+        "https://physionet.org/content/pulse-transit-time-ppg/1.0.0/"
+      ],
+      "statement": "Public wearable datasets document that PPG measurements are noisy and include simultaneous motion and ECG references specifically to evaluate interference removal and signal quality."
+    },
+    {
+      "claim_id": "control-09-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://physionet.org/content/?topic=signal+quality",
+        "https://physionet.org/content/scientisst-move-biosignals/1.0.1/"
+      ],
+      "statement": "PhysioNet hosts annotated ECG and PPG signal-quality resources and multimodal naturalistic wearable datasets, showing both benchmark feasibility and freely available substitutes."
+    },
+    {
+      "claim_id": "control-09-c03",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://physionet.org/content/?topic=signal+quality"
+      ],
+      "statement": "Hypothesis: commercial teams will pay for a stable cross-device benchmark, private-data evaluation, and CI regression reports even though public datasets are free; willingness-to-pay must be tested with fixed-scope paid audits."
+    }
+  ],
+  "contrary_evidence": [
+    "High-quality public datasets and open evaluation code lower the barrier for customers to benchmark internally.",
+    "Public datasets often have small or nonrepresentative cohorts, but building a better consented corpus is expensive and ethically demanding."
+  ],
+  "economics": {
+    "acquisition_route": "Credible open benchmark, conference and repository discovery, research-tool integrations, and referrals from device or regulatory consultants",
+    "capital_required_pln": 90000,
+    "founder_net_worth_path": "Hypothesis: 40 subscription customers averaging 60,000 PLN ARR plus 25 annual studies averaging 35,000 PLN produces about 3.3m PLN revenue; benchmark IP and recurring revenue could support over 5m PLN founder equity in five to eight years",
+    "founder_time": "15-20 hours weekly during corpus and protocol creation; cap new data collections and contract operations to stay within part-time limits",
+    "gross_margin_basis": "Software and existing-corpus tests can reach 75-90% gross margin; new data collection may reduce blended study margin to 40-65%",
+    "payback": "One caught algorithm regression or avoided failed validation cycle can repay a study; target subscription CAC payback within one initial audit",
+    "pricing": "Hypothesis: 15,000-50,000 PLN per private study and 2,000-10,000 PLN monthly for continuous regression testing",
+    "retention_or_repeat": "Every algorithm, firmware, or sensor change creates repeat testing; integration into CI makes subscription sticky"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A rights-cleared, versioned multi-device artefact corpus, ground-truth labels, customer edge cases, and benchmark reputation",
+    "customer": "Wearable-device startups, biosignal algorithm vendors, contract research teams, and applied university labs",
+    "distribution_mechanism": "Open reference benchmark, technical papers and repositories, device-design consultancies, and testing-lab referrals",
+    "offer_and_business_model": "Fixed-scope signal QA audits, licensed benchmark suites, private evaluation, and continuous-test subscriptions",
+    "payer_and_paid_event": "Team pays per confidential benchmark study and for recurring regression-test API access",
+    "problem_trigger": "A new sensor or algorithm version needs robustness evidence across motion, device, skin-contact, and real-world conditions"
+  },
+  "founder_fit": [
+    "Exceptional neuroscience, EEG, biosignal, and data-science fit. A reproducible engineering benchmark is compatible with focused part-time work and low social exposure. Ethics, licensing, participant recruitment, and clinical claims need specialist controls."
+  ],
+  "parent": null,
+  "risks": [
+    "Dataset licence terms may prevent commercial redistribution or derived benchmark packaging.",
+    "A benchmark can be gamed or become stale as devices and algorithms change.",
+    "Any clinical-performance claim could trigger higher regulatory and liability requirements."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://physionet.org/content/?topic=signal+quality",
+    "https://physionet.org/content/wrist/1.0.0/",
+    "https://physionet.org/content/pulse-transit-time-ppg/1.0.0/",
+    "https://physionet.org/content/scientisst-move-biosignals/1.0.1/"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Benchmark-as-a-service and licensed technical data asset",
+    "control_point": "The trusted evaluation protocol and held-out ground-truth corpus used before deployment or release",
+    "critical_dependency": "Rights-cleared representative data and buyer recognition that neutral benchmarking is worth paying for"
+  },
+  "thesis": "Create a neutral robustness benchmark and continuous-testing API for wearable ECG, PPG, EDA, and motion algorithms. Combine licensed public data, synthetic artefacts, and consented multi-device recordings under reproducible protocols; sell comparison reports and regression testing to small wearable teams and research groups. The scarce asset is a versioned, rights-cleared ground-truth corpus plus benchmark adoption.",
+  "title": "Wearable Signal QA Benchmark",
+  "uncertainties": [
+    "Which first buyer has the shortest cycle: academic labs, wellness wearables, device startups, or algorithm vendors.",
+    "Whether customers need regulatory-grade validation or only engineering regression testing.",
+    "Cost and consent requirements for acquiring sufficiently diverse proprietary recordings."
+  ],
+  "version": 1
+}

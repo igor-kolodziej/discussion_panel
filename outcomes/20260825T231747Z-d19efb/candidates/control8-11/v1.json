@@ -1,0 +1,86 @@
+{
+  "candidate_id": "control8-11",
+  "claims": [
+    {
+      "claim_id": "control8-11-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.tauron-dystrybucja.pl/przylaczenie-do-sieci/przylaczenie/mikroinstalacja"
+      ],
+      "statement": "TAURON's current microinstallation workflow calls for an online notification with attachments including an installation diagram and, in applicable cases, technical characteristics and an NC RfG equipment certificate or equivalent evidence."
+    },
+    {
+      "claim_id": "control8-11-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://energa-operator.pl/przylaczenie-do-sieci/przylaczanie-wytworcy-energii/mikroinstalacja"
+      ],
+      "statement": "ENERGA-OPERATOR states that since 1 May 2022 conformity in the connection process requires a certificate from an accredited body and that it respects the shared verified inverter-certificate list."
+    },
+    {
+      "claim_id": "control8-11-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.tauron-dystrybucja.pl/przylaczenie-do-sieci/przylaczenie/mikroinstalacja"
+      ],
+      "statement": "TAURON's current process includes a separate storage-data attachment when a microinstallation design includes an electricity storage unit."
+    }
+  ],
+  "contrary_evidence": [
+    "TAURON and other DSOs already provide online forms, instructions, and device-list shortcuts at no separate charge.",
+    "Some inverter models on the shared certified list need fewer attachments, reducing dossier complexity.",
+    "Polish microinstallation growth had already slowed materially by 2024 according to URE market reporting, so volume cannot be assumed to rise indefinitely."
+  ],
+  "economics": {
+    "acquisition_route": "Instrument the family business's authorized workflow, measure correction and preparation time, then pilot with 5 outside installers via wholesalers",
+    "capital_required_pln": 30000,
+    "founder_net_worth_path": "Unvalidated 5-9 year scenario: 450 installer accounts averaging 12,000 PLN annual revenue gives 5.4m PLN; at 32% EBITDA, 4x, and 75% ownership, equity value is about 5.18m PLN. Achieving low-touch wholesale distribution is the key assumption.",
+    "founder_time": "12-20 hours per week because the first workflow and domain feedback are accessible through the family business",
+    "gross_margin_basis": "Form assembly and validation are automatable; rule maintenance and unusual grid cases create expert support cost",
+    "payback": "Customer payback hypothesis: saving 30-90 minutes and one correction cycle per project can justify 20-70 PLN per dossier; establish through before/after timing",
+    "pricing": "Unvalidated hypothesis: 1,000-5,000 PLN setup, 300-1,000 PLN monthly, and 20-70 PLN per completed installation dossier",
+    "retention_or_repeat": "Every completed installation needs a dossier, device lists and forms change, and the project record can extend into warranty/service handover"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A maintained mapping of DSO form rules, device evidence, rejection reasons, and successful correction paths lowers error rates with every project",
+    "customer": "Polish PV and energy-storage installers handling repeated microinstallation notifications across one or more DSOs",
+    "distribution_mechanism": "Prove internally with the family installer, then distribute through PV wholesalers, inverter/storage distributors, installer groups, and white-label quoting platforms",
+    "offer_and_business_model": "DSO-aware data intake, device/certificate checks, diagram/form assembly, attachment validation, approval trail, and customer handover pack; hypothesis 300-1,000 PLN monthly plus 20-70 PLN per dossier",
+    "payer_and_paid_event": "Installer owner or operations manager pays a monthly seat/base fee plus a fee for each validated dossier",
+    "problem_trigger": "Quote conversion to installation, inverter/storage selection, commissioning, DSO submission, missing-document request, or device certificate change"
+  },
+  "founder_fit": [
+    "Strongest direct access advantage through the parents' seven-person renewable-energy company",
+    "Can validate on real authorized internal projects without speculative capital or outside commitments",
+    "Fits document automation, rule engines, and operational analytics",
+    "Founder can avoid public-facing sales by using wholesaler and software channels"
+  ],
+  "parent": null,
+  "risks": [
+    "DSOs already provide free forms and online submission, limiting value to error reduction and workflow integration",
+    "Installer margins and Polish PV growth can fluctuate, creating churn and price sensitivity",
+    "Incorrect certificate or technical checks could delay or endanger a connection",
+    "Maintaining several DSO variants may become a manual rules business"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.tauron-dystrybucja.pl/przylaczenie-do-sieci/przylaczenie/mikroinstalacja",
+    "https://energa-operator.pl/przylaczenie-do-sieci/przylaczanie-wytworcy-energii/mikroinstalacja",
+    "https://www.tauron-dystrybucja.pl/-/media/offer-documents/dystrybucja/przylaczenie/druki-przylaczeniowe/zalacznik-zm-u.ashx"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Per-installation submission preflight embedded in installer quoting and commissioning workflow",
+    "control_point": "The installer-approved technical dossier required before a microinstallation or storage-equipped system is accepted for grid connection/use",
+    "critical_dependency": "Current DSO-specific forms and rules, authoritative inverter/certificate status, and accurate as-built site and installer data"
+  },
+  "thesis": "Planning-stage hypothesis: provide an installer-side dossier compiler and preflight engine for Polish microgeneration and storage connections across distribution-system operators. It would bind site/client facts, one-line diagrams, inverter and storage models, current NC RfG certificate status, technical sheets, installer declarations, measurements, and DSO-specific forms into a versioned project record. The gate is a complete connection notification or installation document that can be accepted without avoidable correction. A pilot inside the parents' renewable installer can measure rework and support the first product without assuming outside demand; the broader moat comes from continuously maintained DSO/device rules and error-resolution data.",
+  "title": "Polish PV and Storage Grid-Dossier Preflight",
+  "uncertainties": [
+    "Actual dossier preparation and correction cost in the family company and outside installers",
+    "Whether DSOs permit or expose interfaces beyond user-driven forms",
+    "Degree of commonality among PV-only, hybrid inverter, and battery-storage dossiers",
+    "Installer willingness to pay separately rather than expect the feature in quoting software"
+  ],
+  "version": 1
+}

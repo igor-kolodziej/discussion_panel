@@ -1,0 +1,71 @@
+{
+  "candidate_id": "rights6-01",
+  "claims": [
+    {
+      "claim_id": "rights6-01-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ure.gov.pl/pl/urzad/informacje-ogolne/aktualnosci/13173%2CRaport-URE-w-Polsce-mamy-juz-ponad-16-mln-mikroinstalacji-OZE.html"
+      ],
+      "statement": "URE reports more than 1.6 million renewable microinstallations in Poland at the end of 2025, establishing a large fragmented installed-asset base."
+    },
+    {
+      "claim_id": "rights6-01-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/2854"
+      ],
+      "statement": "The EU Data Act provides connected-product users access to readily available product data and a mechanism to direct sharing to a third party, subject to safeguards."
+    }
+  ],
+  "contrary_evidence": [
+    "The Data Act permits restrictions where sharing would seriously undermine safety or security and protects trade secrets; it does not guarantee that every legacy inverter exposes useful data."
+  ],
+  "economics": {
+    "acquisition_route": "Begin through the founder's family renewable-installation channel, then white-label onboarding through regional installers using email, portal, and maintenance visits rather than founder-led events",
+    "capital_required_pln": 90000,
+    "founder_net_worth_path": "Reach 500 sites by year 2 (unvalidated), 5000 sites and PLN 9 million annual recurring revenue by year 5 (unvalidated), and a founder-owned equity value above PLN 5 million by year 6 (unvalidated)",
+    "founder_time": "12-18 hours per week during validation (unvalidated), with field capture delegated to installers",
+    "gross_margin_basis": "Software-led monitoring after field capture and installer revenue share; 65-78% gross margin (unvalidated)",
+    "payback": "Customer-acquisition and onboarding payback in 5-9 months (unvalidated)",
+    "pricing": "PLN 450-900 per monitored site per month (unvalidated), plus PLN 15000-50000 per governed benchmark engagement (unvalidated)",
+    "retention_or_repeat": "Thirty-six-month monitoring agreements (unvalidated) and repeated annual evidence reports (unvalidated)"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Every monitored operating month and resolved fault improves cross-brand failure baselines that a new entrant cannot recreate quickly",
+    "customer": "Polish commercial PV owners, regional installers, renewable-asset insurers, and lenders",
+    "distribution_mechanism": "Installer-embedded onboarding during maintenance and commissioning",
+    "offer_and_business_model": "Independent fleet monitoring plus controlled-access reliability benchmarks under data-contribution contracts",
+    "payer_and_paid_event": "Asset owner pays on monitoring activation; institutional buyer pays when receiving an approved aggregated reliability study",
+    "problem_trigger": "A performance dispute, warranty claim, refinancing review, or unexplained yield loss"
+  },
+  "founder_fit": [
+    "Uses data science and anomaly detection.",
+    "Leverages the family renewable-energy installation channel.",
+    "Allows asynchronous installer-led acquisition and part-time operation."
+  ],
+  "parent": null,
+  "risks": [
+    "OEM APIs may be incomplete or unstable.",
+    "Benchmark licensing demand and willingness to pay are unvalidated.",
+    "The stated PLN 90000 startup capital requirement is unvalidated."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://ure.gov.pl/pl/urzad/informacje-ogolne/aktualnosci/13173%2CRaport-URE-w-Polsce-mamy-juz-ponad-16-mln-mikroinstalacji-OZE.html",
+    "https://eur-lex.europa.eu/eli/reg/2023/2854"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Permissioned asset-data cooperative with monitoring subscriptions and governed benchmark licensing",
+    "control_point": "Multi-year owner agreements granting telemetry access and an exclusive license to commercialize anonymized derived reliability features",
+    "critical_dependency": "Installers and asset owners must authorize technically usable data feeds without breaching OEM trade-secret, security, warranty, or personal-data restrictions"
+  },
+  "thesis": "Contract with Polish photovoltaic owners and installers for permissioned access to inverter telemetry, maintenance outcomes, and scheduled thermal imagery; sell owners independent performance monitoring while licensing only aggregated, contract-authorized reliability benchmarks to insurers, financiers, and equipment suppliers. The defensible asset is a cross-brand longitudinal evidence corpus, not a dashboard wrapper.",
+  "title": "Solar Fleet Evidence Cooperative",
+  "uncertainties": [
+    "What share of target inverters exports sufficiently granular telemetry?",
+    "Will owners accept a durable derived-data license in exchange for monitoring value?"
+  ],
+  "version": 1
+}

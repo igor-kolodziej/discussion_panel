@@ -1,0 +1,70 @@
+{
+  "candidate_id": "asset-03",
+  "claims": [
+    {
+      "claim_id": "asset-03-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1542/oj"
+      ],
+      "statement": "EU battery rules require up-to-date state-of-health parameters in relevant battery-management systems and provide access for residual-value evaluation."
+    },
+    {
+      "claim_id": "asset-03-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://single-market-economy.ec.europa.eu/single-market/digital-product-passport/batteries_en"
+      ],
+      "statement": "The Commission states that battery passports can include performance, durability, reuse, and recycling information."
+    }
+  ],
+  "contrary_evidence": [
+    "Legal data access does not guarantee practical access across proprietary vehicle interfaces.",
+    "OEM-certified used-car programs already reduce uncertainty for some buyers."
+  ],
+  "economics": {
+    "acquisition_route": "Unvalidated hypothesis: recruit fleet lessors, used-EV dealers, and second-life integrators through diagnostic partners.",
+    "capital_required_pln": 85000,
+    "founder_net_worth_path": "Unvalidated hypothesis: 12,000 annual certificates plus transaction fees could support a 5 million PLN founder net-worth path in seven to ten years.",
+    "founder_time": "Unvalidated hypothesis: partner technicians perform tests while the founder manages models below 20 hours weekly.",
+    "gross_margin_basis": "Unvalidated hypothesis: standardized tests could reach 55% gross margin, and every commercial number including capital_required_pln is hypothetical.",
+    "payback": "Unvalidated hypothesis: diagnostic equipment pays back after 140 completed certificates.",
+    "pricing": "Unvalidated hypothesis: charge 700 PLN per certificate and a 2% successful-auction fee.",
+    "retention_or_repeat": "Unvalidated hypothesis: dealer inventory turnover and fleet disposals generate repeated tests."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A model-specific degradation and realized-resale dataset improves valuation accuracy",
+    "customer": "Used-EV dealers, fleet lessors, and battery repurposers",
+    "distribution_mechanism": "Diagnostic-shop partners and fleet remarketing agreements",
+    "offer_and_business_model": "Independent health test, transferable certificate, and curated B2B exchange",
+    "payer_and_paid_event": "The seller pays at certification and the matched buyer pays through the completed auction",
+    "problem_trigger": "A high-value used vehicle or pack changes hands with uncertain remaining life"
+  },
+  "founder_fit": [
+    "Battery analytics aligns with data science and renewable-energy interests.",
+    "Technician partnerships keep physical work and social load bounded."
+  ],
+  "parent": null,
+  "risks": [
+    "A wrong certificate could create safety and valuation liability.",
+    "Pack handling requires trained partners and strict procedures."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2023/1542/oj",
+    "https://single-market-economy.ec.europa.eu/single-market/digital-product-passport/batteries_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Independent inspection certificate plus B2B marketplace",
+    "control_point": "Battery health certificate attached to the resale or repurposing transaction",
+    "critical_dependency": "Safe non-discriminatory BMS data access and insurer-accepted test methodology"
+  },
+  "thesis": "Create a trusted state-of-health certificate and dealer auction layer for used EV packs and vehicles.",
+  "title": "Used-EV Battery Health Certificate Exchange",
+  "uncertainties": [
+    "Dealer willingness to accept an unfamiliar independent certificate is untested.",
+    "All commercial numbers including capital_required_pln are unvalidated hypotheses."
+  ],
+  "version": 1
+}

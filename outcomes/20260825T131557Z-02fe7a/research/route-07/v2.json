@@ -1,0 +1,203 @@
+{
+  "candidate_id": "route-07",
+  "candidate_sha256": "3e06c9c3d8b842661d7e7471ed7a4d7152e6fcfd36309b71ae1152b8161142d2",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "route-07-r1",
+      "evidence_refs": [
+        "q1",
+        "q2"
+      ],
+      "statement": "Internal QC and external or peer assessment are established laboratory quality practices, so the underlying operational problem is real."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "route-07-r2",
+      "evidence_refs": [
+        "q5",
+        "q6",
+        "q7"
+      ],
+      "statement": "Lot-change verification is necessary, but QC material can be noncommutable with patient samples and pooled QC should not be marketed as conclusive clinical validation."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "route-07-r3",
+      "evidence_refs": [
+        "q8",
+        "q9",
+        "q10"
+      ],
+      "statement": "The generic interlaboratory peer-QC layer is already served by incumbents with automated submission, alerts, peer statistics, and reagent-lot reporting."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "route-07-r4",
+      "evidence_refs": [
+        "q12"
+      ],
+      "statement": "Standards make QC-result exchange technically conceivable, but omit several semantics and do not establish enabled access, contractual rights, privacy handling, or connector cost."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "route-07-r5",
+      "evidence_refs": [
+        "q3",
+        "q4"
+      ],
+      "statement": "A human-reviewed QC incident packet with no patient-result release or lot disposition may have lower regulatory exposure than diagnostic interpretation, but the final intended purpose still needs qualified IVDR analysis."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "route-07-r6",
+      "evidence_refs": [
+        "q11"
+      ],
+      "statement": "A QC-only pipeline can reduce privacy exposure, but pseudonymized or re-identifiable data remains within GDPR and accidental patient identifiers must be prevented."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "route-07-r7",
+      "evidence_refs": [],
+      "statement": "No gathered evidence proves distributor demand, data permission, low-cost integration, price, retention, or a path to enough analyzers for the wealth case."
+    }
+  ],
+  "contrary_evidence": [
+    "Bio-Rad, Randox, and Technopath already provide much of the proposed peer comparison and connectivity surface.",
+    "QC material can diverge from patient-sample behavior across reagent lots, constraining the meaning of alerts.",
+    "The IVDR and MDCG guidance make intended purpose and output interpretation material regulatory gates.",
+    "The connectivity standard does not cover calibration, nomenclature, or privacy and grants no interface permission."
+  ],
+  "schema_version": 2,
+  "sources": [
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2011-01-01",
+      "publisher": "World Health Organization",
+      "source_id": "q1",
+      "source_type": "official_guidance",
+      "stance": "supporting",
+      "title": "Laboratory quality management system: handbook",
+      "url": "https://www.who.int/publications-detail-redirect/9789241548274"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2009-11-02",
+      "publisher": "World Health Organization",
+      "source_id": "q2",
+      "source_type": "official_guidance",
+      "stance": "supporting",
+      "title": "Overview of External Quality Assessment",
+      "url": "https://www.who.int/publications/m/item/overview-of-external-quality-assessment-eqa"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2017-05-05",
+      "publisher": "European Union",
+      "source_id": "q3",
+      "source_type": "law",
+      "stance": "context",
+      "title": "Regulation (EU) 2017/746 on in vitro diagnostic medical devices",
+      "url": "https://eur-lex.europa.eu/eli/reg/2017/746/oj/eng"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2025-06-17",
+      "publisher": "Medical Device Coordination Group",
+      "source_id": "q4",
+      "source_type": "regulatory_guidance",
+      "stance": "contradicting",
+      "title": "MDCG 2019-11 rev.1: Qualification and Classification of Software",
+      "url": "https://health.ec.europa.eu/document/download/b45335c5-1679-4c71-a91c-fc7a4d37f12b_en?filename=mdcg_2019_11_en.pdf"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2022-04-27",
+      "publisher": "Clinical and Laboratory Standards Institute",
+      "source_id": "q5",
+      "source_type": "standard",
+      "stance": "supporting",
+      "title": "EP26: User Evaluation of Acceptability of a Reagent Lot Change",
+      "url": "https://clsi.org/shop/standards/ep26/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2011-01-01",
+      "publisher": "Clinical Chemistry",
+      "source_id": "q6",
+      "source_type": "peer_reviewed_research",
+      "stance": "contradicting",
+      "title": "Commutability limitations influence quality control results with different reagent lots",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21097677/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2019-11-01",
+      "publisher": "Pathology",
+      "source_id": "q7",
+      "source_type": "peer_reviewed_research",
+      "stance": "supporting",
+      "title": "Detecting reagent lot shifts using proficiency testing data",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0031302519303745"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "Bio-Rad",
+      "source_id": "q8",
+      "source_type": "incumbent_product",
+      "stance": "contradicting",
+      "title": "QC Data Management Solutions",
+      "url": "https://www.bio-rad.com/webroot/web/pdf/cdg/literature/Q1181_QCDataManagement.pdf"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "Randox",
+      "source_id": "q9",
+      "source_type": "incumbent_product",
+      "stance": "contradicting",
+      "title": "Acusera 24-7",
+      "url": "https://www.randox.com/core-disciplines/quality-control/qc-data-management"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "Technopath Clinical Diagnostics",
+      "source_id": "q10",
+      "source_type": "incumbent_product",
+      "stance": "contradicting",
+      "title": "IAMQC Peer Software",
+      "url": "https://www.technopathclinicaldiagnostics.com/products/informatics-solutions/iamqc-software-solutions/iamqc-peer/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "European Commission",
+      "source_id": "q11",
+      "source_type": "official_guidance",
+      "stance": "context",
+      "title": "Application of the GDPR",
+      "url": "https://commission.europa.eu/law/law-topic/data-protection/information-business-and-organisations/application-gdpr_en"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "Clinical and Laboratory Standards Institute",
+      "source_id": "q12",
+      "source_type": "standard",
+      "stance": "context",
+      "title": "AUTO16: Next-Generation In Vitro Diagnostic Instrument Interface",
+      "url": "https://clsi.org/shop/standards/auto16/"
+    }
+  ],
+  "unknowns": [
+    "Final IVDR classification and conformity obligations for the exact claims and workflow.",
+    "Analyzer, LIS, middleware, laboratory, and distributor contractual rights to export and pool QC data.",
+    "A first analyzer or reagent family with enough comparable labs and low-cost authorized exports.",
+    "Incremental value over incumbent QC platforms and whether a distributor will pay for it.",
+    "Pilot price, connector cost, security burden, support load, renewal, and scalable gross margin."
+  ]
+}

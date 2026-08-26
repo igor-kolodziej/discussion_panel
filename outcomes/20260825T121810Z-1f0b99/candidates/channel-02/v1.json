@@ -1,0 +1,81 @@
+{
+  "candidate_id": "channel-02",
+  "claims": [
+    {
+      "claim_id": "channel-02-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/kowr/wykaz-spoldzielni-energetycznych"
+      ],
+      "statement": "Poland maintains an official register of energy cooperatives and publishes operating guidance, providing a visible and growing target list rather than an undefined market."
+    },
+    {
+      "claim_id": "channel-02-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eli.gov.pl/api/acts/DU/2022/703/text.html"
+      ],
+      "statement": "Polish regulation specifies registration, balancing, access to metering data, and settlement calculations for energy cooperatives, making auditable allocation logic a recurring operational requirement."
+    },
+    {
+      "claim_id": "channel-02-c03",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://www.gov.pl/web/kowr/wykaz-spoldzielni-energetycznych",
+        "https://www.gov.pl/attachment/0b9c4f00-4963-4885-b621-ffe4cb6d4f59"
+      ],
+      "statement": "Hypothesis: formation advisers and ESCOs will resell a standard ledger because they currently bear post-launch support costs and need every newly formed cooperative to remain administratively functional."
+    }
+  ],
+  "contrary_evidence": [
+    "The official register still represents a small domestic customer count, so Poland alone may not support a large outcome.",
+    "Electricity sellers and distribution operators already perform parts of statutory settlement, limiting the product to reconciliation, transparency, and administration rather than replacing regulated billing."
+  ],
+  "economics": {
+    "acquisition_route": "Win advisers that launch multiple cooperatives and bundle the ledger into their administration contract",
+    "capital_required_pln": 60000,
+    "founder_net_worth_path": "Hypothesis: Poland plus two adjacent EU regimes could produce 4 million PLN ARR from roughly 120 cooperatives or platform partners by years 6-8; at 25% EBITDA, a 6-8x EBITDA valuation and 75% founder ownership implies 4.5-6 million PLN of founder equity, making geographic expansion essential",
+    "founder_time": "18-24 hours weekly through the first two live settlements, falling toward 10 hours weekly after automated imports and partner-led onboarding",
+    "gross_margin_basis": "Automated ingestion and ledger calculation could support 75-85% gross margin, with implementation and reconciliation support as the main costs",
+    "payback": "Target under 9 months because each adviser contract can bring several cooperatives; onboarding effort must be templated",
+    "pricing": "Hypothesis: 8-20 PLN per meter per month with a 12000-30000 PLN annual minimum per cooperative and 30000-80000 PLN adviser licence",
+    "retention_or_repeat": "Monthly settlement, annual reporting, and member history make the system recurring and difficult to replace mid-operation"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A growing library of operator-specific exceptions, tariff logic, and historical meter reconciliations raises accuracy and switching costs",
+    "customer": "Administrators and members of Polish energy cooperatives, plus advisers and ESCOs managing them",
+    "distribution_mechanism": "Resold by cooperative formation advisers, municipal-energy consultants, ESCOs, and electricity sellers",
+    "offer_and_business_model": "Multi-tenant settlement and administration SaaS priced per meter, with setup and adviser white-label licences",
+    "payer_and_paid_event": "The cooperative or its managing adviser pays monthly per metering point when member statements and reconciliation close",
+    "problem_trigger": "New meter data and supplier statements must be allocated, reconciled, explained, and preserved for each billing period"
+  },
+  "founder_fit": [
+    "Strong energy-domain adjacency and quantitative fit, with a credible first network through the family renewable business. Recurring calculations and exception handling suit the founder better than repeated consumer sales, but energy-law review must be delegated."
+  ],
+  "parent": null,
+  "risks": [
+    "A narrow Polish market could cap revenue before the founder target is reachable.",
+    "Settlement errors can affect many members and require professional liability controls.",
+    "Slow municipal procurement could delay adoption despite channel interest."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eli.gov.pl/api/acts/DU/2022/703/text.html",
+    "https://www.gov.pl/attachment/0b9c4f00-4963-4885-b621-ffe4cb6d4f59",
+    "https://www.gov.pl/web/kowr/wykaz-spoldzielni-energetycznych"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Recurring multi-party settlement ledger",
+    "control_point": "The canonical allocation and reconciliation record used to close each cooperative billing cycle",
+    "critical_dependency": "Reliable, authorised access to meter and supplier data plus defensible interpretation of settlement rules"
+  },
+  "thesis": "Create a meter-allocation, invoice-reconciliation, and member-statement ledger for Polish energy cooperatives, distributed through cooperative formation advisers, municipalities, ESCOs, and obligated electricity sellers. The recurring settlement is the product's anchor; scenario planning and member portals are secondary modules.",
+  "title": "Co-op Settlement OS",
+  "uncertainties": [
+    "The number of cooperatives that outsource administration and their annual software budget are unknown.",
+    "Data formats and cooperation quality differ across sellers and distribution operators.",
+    "Expansion to adjacent collective-self-consumption regimes may require country-specific legal logic."
+  ],
+  "version": 1
+}

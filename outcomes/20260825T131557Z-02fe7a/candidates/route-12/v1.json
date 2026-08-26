@@ -1,0 +1,73 @@
+{
+  "candidate_id": "route-12",
+  "claims": [
+    {
+      "claim_id": "route-12-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www-pub.iaea.org/MTCD/Publications/PDF/Pub1425_web.pdf"
+      ],
+      "statement": "IAEA clinical-audit guidance includes a dental-practice quality-assurance program and repeat analysis among the items to review."
+    },
+    {
+      "claim_id": "route-12-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://health.ec.europa.eu/document/download/b45335c5-1679-4c71-a91c-fc7a4d37f12b_en?filename=mdcg_2019_11_en.pdf"
+      ],
+      "statement": "EU guidance says software qualification and classification under MDR or IVDR depends on intended purpose regardless of whether the software runs on a phone, in the cloud, or elsewhere."
+    }
+  ],
+  "contrary_evidence": [
+    "Imaging hardware and PACS vendors may already include exposure and quality-control features.",
+    "A clinic's repeat rate may be too low for the subscription to show rapid financial payback."
+  ],
+  "economics": {
+    "acquisition_route": "Start with retrospective, de-identified images and repeat logs from one reseller's consenting clinics; obtain a formal regulatory classification opinion before live use.",
+    "capital_required_pln": 95000,
+    "founder_net_worth_path": "Hypothesis: 1800 units at 400 PLN monthly net revenue yield 8.64m PLN ARR; at 30% EBITDA, 4x EBITDA, and 60% founder ownership, equity is about 6.2m PLN in year 7-10. Retained earnings are not counted again.",
+    "founder_time": "Hypothesis: 12-18 hours weekly, with a dental radiologist, medical physicist, and regulatory specialist engaged only for a funded validation stage.",
+    "gross_margin_basis": "Hypothesis: 72-82% after channel share, inference, secure storage, support, and validation monitoring.",
+    "payback": "Hypothesis: 20000-50000 PLN per reseller integration recovered within 8-14 months at 20-35 live units.",
+    "pricing": "Hypothesis: 250-600 PLN per imaging unit monthly, with 20-30% retained by the equipment or PACS reseller.",
+    "retention_or_repeat": "Licenses renew with annual equipment service; every acquisition provides a usage and QA event."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Device-specific images linked to accept-repeat labels, technician feedback, and service outcomes improve QA models",
+    "customer": "Dental practices operating digital radiography equipment supplied or serviced by a reseller",
+    "distribution_mechanism": "Dental equipment and PACS resellers bundle the module at installation and service renewal",
+    "offer_and_business_model": "Non-diagnostic acquisition-quality flags, repeat analytics, and training reports licensed per device",
+    "payer_and_paid_event": "Clinic or reseller pays a recurring per-device license bundled into the equipment service contract",
+    "problem_trigger": "An image is acquired with a technical quality defect or a clinic's repeat rate drifts upward"
+  },
+  "founder_fit": [
+    "Image-quality modelling is adjacent to the founder's neuroscience, biosignal, and data background.",
+    "Equipment resellers provide concentrated distribution and can perform clinic support.",
+    "A retrospective, non-live pilot can test feasibility before spending on regulatory work."
+  ],
+  "parent": null,
+  "risks": [
+    "Regulatory classification and conformity assessment could exceed bootstrap capital.",
+    "False reassurance could allow a poor-quality image to enter clinical use.",
+    "PACS and equipment integration may be vendor-specific and security-sensitive."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www-pub.iaea.org/MTCD/Publications/PDF/Pub1425_web.pdf",
+    "https://health.ec.europa.eu/document/download/b45335c5-1679-4c71-a91c-fc7a4d37f12b_en?filename=mdcg_2019_11_en.pdf"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "reseller-bundled per-device quality-assurance license",
+    "control_point": "Technical image-quality and repeat-outcome history tied to each installed device",
+    "critical_dependency": "Sufficient labeled image data and a regulatory path compatible with bootstrap staging"
+  },
+  "thesis": "Provide dental X-ray equipment and PACS resellers a per-device quality-assurance module that flags likely positioning, blur, clipping, and exposure-quality problems immediately, tracks repeat rates, and creates technician training reports. It does not detect disease or recommend care. The reseller bundles it with service contracts, gains a differentiated renewal product, and supplies repeated clinic access; confirmed repeats and service outcomes create a device-specific QA dataset.",
+  "title": "Dental Imaging Acquisition QA Through Equipment Resellers",
+  "uncertainties": [
+    "Which acquisition defects can be identified reliably without interpreting pathology?",
+    "Can a reseller supply enough labeled accept-repeat outcomes for validation?",
+    "Will regulators view operational QA as medical-device software or an accessory?"
+  ],
+  "version": 1
+}

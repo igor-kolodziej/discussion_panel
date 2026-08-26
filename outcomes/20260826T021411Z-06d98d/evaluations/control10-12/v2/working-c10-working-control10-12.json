@@ -1,0 +1,120 @@
+{
+  "assumptions": [
+    "The opportunity is evaluated at the planning stage with no signed partner, paid pilot, or demonstrated production adoption; those absences are treated as uncertainty rather than proof of weak demand.",
+    "The initial product is a subcontracted software component operated inside a certified platform or service provider's responsibility, not an independently marketed eFTI service; a contrary conformity opinion would materially worsen execution and economics.",
+    "The founder keeps the corporate job, limits the initial build to the stated 100000 PLN budget and 18-25 weekly hours, and assigns production hosting, regulated-service responsibility, and round-the-clock support to the certified partner.",
+    "Proposed pricing, gross margin, partner fees, sales-cycle length, carrier adoption, and the reachable number of Polish TMS vendors remain unvalidated planning hypotheses.",
+    "The initial payer is either a Polish TMS vendor or a certified eFTI partner, and the business does not rely on direct carrier-by-carrier sales."
+  ],
+  "base_score": 4.115,
+  "candidate_id": "control10-12",
+  "candidate_sha256": "1cdf0aa7b2be8bfbcc370424eef07d632f4a634286cd36b73df3b24ef9c43dbc",
+  "candidate_version": 2,
+  "constrained_score": 3.915,
+  "evaluation_type": "working",
+  "evidence_needed_for_higher_score": "A written conformity opinion allocating the component inside a certified partner's perimeter; a signed partner agreement stating API fees, revenue share, service levels, indemnities, support ownership, and durable channel access; and at least one paid Polish TMS pilot documenting mapping effort, implementation time, electronic-consignment volume, buyer price, gross margin, sales cycle, and expansion intent.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "There is a credible integration gap between legacy Polish TMS records and certified eFTI workflows, and reusable mapping, validation, fixtures, and audit observability are technically plausible. The insight is narrower than a generic compliance API, but it is weakened because operator use remains voluntary and established platforms already expose integrations, leaving the alleged Polish legacy-schema white space unproven.",
+      "score": 5.5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "A TMS vendor whose customers choose electronic presentation will face real schema, validation, authentication, and audit work, so the problem can be operationally meaningful. However, the 2027 duty compels authorities rather than operators, paper remains available, and there is no evidence of a Polish buyer budget or purchase commitment; willingness to pay is therefore uncertain rather than disproven, but the structural urgency is only moderate.",
+      "score": 4.5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Implementation fees plus a recurring component licence could fund onboarding and produce software-like margin as mappings are reused. The proposed prices, 60-80% gross-margin range, upstream fees, partner revenue share, support burden, sales cycle, retention, CAC, and payback are all unresolved, while bespoke mapping and security work may keep delivery service-heavy. The stated founder-wealth path requires 60 vendors at unvalidated revenue and margin, so attractive owner earnings are possible but not yet economically underwritten.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Independent Polish TMS vendors form a coherent, narrow beachhead whose installed carrier bases could provide leverage. Its economic sufficiency is unknown because neither the reachable vendor count nor likely electronic-consignment volume is established, and continued paper use may slow the effective market well beyond the authority-readiness date.",
+      "score": 4.5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "Polish legacy-schema specialization could support a useful niche, especially if embedded by a certified partner. Yet TransFollow and Ybil already report dozens of integrations, Shippeo also offers API-connected workflows, and any upstream certified platform can build or bundle its own connector. Without exclusivity, proprietary access, or a demonstrated underserved vendor cluster, a dominant beachhead position is unlikely.",
+      "score": 3.5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A proven connector architecture and regression corpus could extend to additional Polish TMS products, authority subsets, certified platforms, or adjacent CEE markets. Expansion is constrained because common EU data sets and maturing direct platform connectors may reduce the value of normalization, while each geography and legacy system can add new sales, conformity, and support work rather than effortless software replication.",
+      "score": 4.5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Accumulated mappings, validation failures, national subsets, and regression tests can create learning effects and some workflow switching cost. Those assets are reproducible by platforms and experienced integrators, the standards are designed for interoperability, and the business lacks exclusive data, rights, network effects, or control of the certified endpoint. Durability therefore depends mainly on execution and relationships rather than a strong compounding moat.",
+      "score": 3.5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "Local schema knowledge and prebuilt test infrastructure could make implementation faster and less risky for a Polish TMS vendor. No evidence establishes a material price, speed, reliability, coverage, or compliance advantage over direct incumbent APIs or ordinary integration work, so the offer has not yet shown a behavior-changing improvement.",
+      "score": 3.5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "The July 2027 authority-acceptance milestone creates a useful preparation window, public developer materials reduce protocol-discovery risk, and vendors may want readiness before customer demand arrives. Momentum is tempered by voluntary operator adoption and by remaining specifications scheduled only for December 2026, which creates both specification-change risk and a short stable-build window.",
+      "score": 5.5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "Selling through one certified-platform relationship and a limited set of TMS vendors is concentrated, compatible with the founder's low-social-energy profile, and potentially more efficient than direct carrier acquisition. The first certified partner is nevertheless an uncommitted gatekeeper, enterprise integration cycles can be long, incumbent platforms already have installed channels, and no repeatable acquisition path or CAC evidence exists.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "The prototype's data mapping, API validation, observability, and test automation fit the founder's technical skills and could fit the stated capital envelope with AI leverage. Production security, authentication, auditability, availability, indemnities, enterprise diligence, specification changes, and especially service-provider classification require partner, legal, and operational capabilities that are not safely assumed part-time.",
+      "score": 4.5,
+      "status": "scored"
+    }
+  ],
+  "final_score": 3.9,
+  "highest_value_structural_change": "Make a certified eFTI platform the compliance principal and contracted payer under a multi-year minimum-commitment or exclusive Polish legacy-TMS connector agreement, while productizing a reusable connector-and-test corpus; this would replace speculative vendor-by-vendor demand with contracted channel economics and reduce certification, distribution, and disintermediation risk.",
+  "interaction_adjustment": -0.2,
+  "judge_id": "c10-working-control10-12",
+  "main_structural_strength": "A narrow, reusable Polish legacy-TMS mapping and validation layer fits the founder's technical strengths and could reach many carrier workflows through a small number of embedded software relationships.",
+  "primary_score_limiter": "The business does not control its regulatory perimeter or route to market: it needs a certified partner that can dictate access, margins, support obligations, or replacement, while buyer adoption is voluntary and incumbent platforms already offer integrations.",
+  "qualified": false,
+  "raw_response_path": "artifacts/research/c10-raw-working-control10-12.json",
+  "raw_response_sha256": "c33c7632be25d6fbb4184b420f63443c71273b70a6a32e6a76a0be8c87340ef3",
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 2,
+  "strongest_disconfirming_evidence": "The 9 July 2027 obligation applies to authorities accepting compliant electronic data, while operators may continue using paper, so the apparent compliance deadline does not compel TMS vendors or carriers to buy the component.",
+  "unrounded_score": 3.915
+}

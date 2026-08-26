@@ -1,0 +1,169 @@
+{
+  "candidate_id": "niche-04",
+  "claims": [
+    {
+      "claim_id": "niche-04-r01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.nrel.gov/docs/fy22osti/80881.pdf"
+      ],
+      "statement": "NREL documents fragmented monitoring, delayed repairs, and weak standalone O&M economics for smaller PV systems, and specifically recommends bundling small systems for more efficient contracted management."
+    },
+    {
+      "claim_id": "niche-04-r02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://joint-research-centre.ec.europa.eu/photovoltaic-geographical-information-system-pvgis_en"
+      ],
+      "statement": "PVGIS offers free performance and irradiance data and an API suitable for weather normalisation, but model limitations mean it can flag deviation rather than prove a warranty breach by itself."
+    },
+    {
+      "claim_id": "niche-04-r03",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://iea-pvps.org/wp-content/uploads/2025/02/IEA-PVPS-T13-30-2025-REPORT-Degradation-and-Failure.pdf"
+      ],
+      "statement": "IEA PVPS documents multiple technology-specific module degradation modes, so diagnosis must distinguish component mechanisms and cannot infer a recoverable defect from low generation alone."
+    },
+    {
+      "claim_id": "niche-04-r04",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://stat.gov.pl/files/gfx/portalinformacyjny/pl/defaultaktualnosci/5485/3/19/1/energia_ze_zrodel_odnawialnych_2024.pdf"
+      ],
+      "statement": "Poland's PV capacity reached 21,225 MW in 2024, confirming a large and rapidly growing installed asset base, although the reviewed national statistic does not isolate the target 50 kW to 1 MW commercial rooftop segment."
+    },
+    {
+      "claim_id": "niche-04-r05",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://jinkosolar.eu/wp-content/uploads/2024/11/LIMITED-WARRANTY-REV.EN20240726-LINEAR-MONOFACIAL-MODULE-FOR-EU.pdf"
+      ],
+      "statement": "Jinko's EU module warranty places the burden of establishing breach on the customer, requires purchase, serial, location, photo or test evidence and prompt notice, and may require independent testing, directly supporting demand for disciplined evidence reconstruction."
+    },
+    {
+      "claim_id": "niche-04-r06",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://isap.sejm.gov.pl/isap.Nsf/download.xsp/WDU20230001610/U/D20231610Lj.pdf"
+      ],
+      "statement": "Polish Civil Code Article 558 allows parties to extend, limit, or exclude statutory warranty liability, subject to consumer protections and concealment exceptions, so a commercial owner's recoverable rights must be screened from the actual contracts rather than assumed."
+    },
+    {
+      "claim_id": "niche-04-r07",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://manuals.sma.de/SHPxxx21/en-US/10312892427.html",
+        "https://rescare.pl/"
+      ],
+      "statement": "Monitoring and warranty administration are already inexpensive: SMA offers free product monitoring through Sunny Portal, and Polish ResCare advertises business monitoring plus manufacturer-warranty handling from 49 PLN net per month."
+    },
+    {
+      "claim_id": "niche-04-r08",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://podwojnaenergia.pl/serwis"
+      ],
+      "statement": "Another Polish provider advertises monitoring-led packages from 59 to 279 PLN net per month for systems up to 50 kWp and a 2,299 PLN net one-off inspection, which constrains standalone monitoring and diagnostic pricing even though systems above 50 kWp are quoted individually."
+    },
+    {
+      "claim_id": "niche-04-r09",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.ure.gov.pl/pl/urzad/informacje-ogolne/aktualnosci/12923,Rynek-energii-elektrycznej-sprawozdanie-Prezesa-URE-dotyczace-mechanizmow-redysp.html"
+      ],
+      "statement": "Poland's regulator reports that transmission-operator PV curtailment reached 597.26 GWh in 2024 and distribution operators curtailed a further 24.12 GWh, so dispatch records must be excluded before attributing low output to equipment or workmanship."
+    },
+    {
+      "claim_id": "niche-04-r10",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://www.solaredge.com/sites/default/files/api_license_terms_and_conditions_aug2013.pdf"
+      ],
+      "statement": "SolarEdge's API terms disclaim completeness and accuracy and permit changes or termination, showing that durable multi-vendor monitoring depends on customer-authorised access and resilient connectors rather than an assumed perpetual data feed."
+    },
+    {
+      "claim_id": "niche-04-r11",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://jinkosolar.eu/wp-content/uploads/2024/11/LIMITED-WARRANTY-REV.EN20240726-LINEAR-MONOFACIAL-MODULE-FOR-EU.pdf",
+        "https://rescare.pl/"
+      ],
+      "statement": "A paid evidence diagnostic plus a tightly defined recovery fee may command more than monitoring because it addresses an accepted claim or repair outcome, but Polish success rates, median recoveries, and owner conversion remain unvalidated."
+    }
+  ],
+  "contrary_evidence": [
+    "SMA provides free connected-product monitoring, while Polish providers bundle monitoring and manufacturer-warranty handling from 49 PLN net per month; monitoring alone is not a defensible premium offer.",
+    "Published Polish service prices for smaller systems range from 59 to 279 PLN net monthly and 2,299 PLN net for a one-off inspection, below or overlapping the discovery pricing hypothesis.",
+    "Commercial warranty and statutory-liability rights can be limited by contract, and manufacturer warranties impose strict evidence, notice, and testing conditions; not every technical fault is recoverable.",
+    "Weather, curtailment, soiling, shading, configuration, and ordinary degradation can all cause apparent underperformance without a valid manufacturer, installer, or insurer claim.",
+    "Vendor APIs can change, terminate, or provide incomplete data, raising onboarding and maintenance cost for a multi-vendor desk."
+  ],
+  "economics": {
+    "acquisition_route": "Use three to five permissioned family-network records only to test the screen, without assuming that they are claims or customers. Then sell a white-label batch intake to independent O&M firms and lessors that already aggregate sites. Require prepaid batches, do not assume any partner commitment, and do not build continuous vendor connectors for the wedge.",
+    "capital_required_pln": 55000,
+    "founder_net_worth_path": "This redesign removes the monitoring-ARR assumption and makes the prior 7-10 year forecast non-transferable. A path to 5m PLN would require paid proof of batch conversion and fully loaded dossier margin, repeat submissions from unrelated partners, national throughput of standardized cases, and only then expansion to adjacent manufacturer protocols. The reviewed evidence does not support a new revenue, EBITDA, valuation, or timing estimate, so the wealth path remains unproven pending those milestones.",
+    "founder_time": "Keep founder work within the existing 12-18 hour weekly envelope by reviewing cases in scheduled batches, automating document and telemetry checks, and refusing open-ended negotiation. Accredited testing, electrical work, and legal review remain pre-priced partner scopes.",
+    "gross_margin_basis": "Use the prior 55-70% desk-diagnostic range only as an unvalidated planning hypothesis. Prepaid batches, protocol gating, and separately pre-priced tests are intended to remove connector maintenance and failed-field-work variance, but no improved margin is claimed without paid cases and fully loaded time records.",
+    "payback": "The batch buyer pays for a defensible eligibility decision that should prevent spending on clearly ineligible cases and advance passed cases with a complete dossier. Recovery, avoided testing cost, and cycle-time benefit are not demonstrated; batch pricing must be tested against measured owner benefit.",
+    "pricing": "Retain 2,000-6,000 PLN per advanced dossier as the prior unvalidated test range. Require an upfront batch deposit credited against fixed dossier fees and quote the prior 3,000-12,000 PLN field-evidence range separately before work. Do not rely on monitoring revenue; defer any 8-12% recovery fee until legality, attribution, and paid-case outcomes are established.",
+    "retention_or_repeat": "Repeat comes from periodic batches submitted by an O&M firm or lessor, not a monitoring subscription. Retention depends on measurable screen accuracy, accepted dossiers, turnaround time, and partner economics, all currently unknown."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A permissioned, protocol-specific corpus of module performance-warranty screens linking document completeness, normalised telemetry, test decisions, manufacturer responses, and verified outcomes",
+    "customer": "Independent Polish O&M firms and PV equipment lessors holding batches of commercial rooftop sites with suspected module linear-performance-warranty cases and retrievable core records",
+    "distribution_mechanism": "Permissioned workflow tests through family-network records, followed by direct partner sales to independent O&M firms and lessors that submit portfolio batches; no referral commitment is assumed",
+    "offer_and_business_model": "White-label batch contract-and-record screening for one module performance-warranty archetype, followed only for passed cases by a fixed-fee evidence dossier and coordinated pre-priced accredited testing; no continuous monitoring or broad claims administration",
+    "payer_and_paid_event": "The O&M firm, lessor, or asset owner prepays for a batch eligibility screen and pays a fixed fee when a screened case advances to a manufacturer-ready dossier; testing is separately pre-authorised and pre-priced",
+    "problem_trigger": "An O&M or lessor portfolio review identifies weather- and curtailment-adjusted module underperformance while a written module performance warranty and the required purchase, serial, site, and maintenance records appear available"
+  },
+  "founder_fit": [
+    "The narrow document and telemetry screen uses the founder analytical skills and renewable-energy family context without requiring public-facing promotion.",
+    "Batch review, automated checks, and hard go/no-go gates fit the 12-18 hour weekly envelope better than open-ended multi-party claims administration.",
+    "Accredited testing, electrical work, and legal interpretation remain delegated and pre-priced; the founder does not assume non-delegable field or legal duties."
+  ],
+  "parent": {
+    "candidate_id": "niche-04",
+    "version": 4
+  },
+  "risks": [
+    "Portfolio batches may contain too few record-complete and contract-eligible cases to support prepaid pricing.",
+    "Module underperformance can still reflect curtailment, soiling, shading, configuration, or ordinary degradation rather than a warranty breach.",
+    "Independent testing can be costly and may disconfirm the claim, leaving no recovery.",
+    "Manufacturer procedures and actual commercial contracts can differ, limiting standardisation across brands and owners.",
+    "O&M firms or lessors may internalise the screen once the workflow is visible or demand most of the fee.",
+    "Even a narrow dossier can create professional-liability exposure if the output is represented as legal or engineering assurance."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.nrel.gov/docs/fy22osti/80881.pdf",
+    "https://joint-research-centre.ec.europa.eu/photovoltaic-geographical-information-system-pvgis_en",
+    "https://iea-pvps.org/wp-content/uploads/2025/02/IEA-PVPS-T13-30-2025-REPORT-Degradation-and-Failure.pdf",
+    "https://stat.gov.pl/files/gfx/portalinformacyjny/pl/defaultaktualnosci/5485/3/19/1/energia_ze_zrodel_odnawialnych_2024.pdf",
+    "https://jinkosolar.eu/wp-content/uploads/2024/11/LIMITED-WARRANTY-REV.EN20240726-LINEAR-MONOFACIAL-MODULE-FOR-EU.pdf",
+    "https://isap.sejm.gov.pl/isap.Nsf/download.xsp/WDU20230001610/U/D20231610Lj.pdf",
+    "https://manuals.sma.de/SHPxxx21/en-US/10312892427.html",
+    "https://rescare.pl/",
+    "https://podwojnaenergia.pl/serwis",
+    "https://www.ure.gov.pl/pl/urzad/informacje-ogolne/aktualnosci/12923,Rynek-energii-elektrycznej-sprawozdanie-Prezesa-URE-dotyczace-mechanizmow-redysp.html",
+    "https://www.solaredge.com/sites/default/files/api_license_terms_and_conditions_aug2013.pdf"
+  ],
+  "stage": "frozen",
+  "structure": {
+    "commercial_archetype": "Prepaid B2B portfolio-batch eligibility screening plus fixed-fee evidence dossiers for one module performance-warranty claim archetype",
+    "control_point": "The protocol-specific go/no-go screen and manufacturer-ready dossier completed before accredited testing or recovery work is authorised",
+    "critical_dependency": "Partner batches must contain enough record-complete, contract-eligible cases whose expected recovery justifies separately pre-priced testing and dossier work"
+  },
+  "thesis": "Start as a white-label, document-first batch triage desk for independent Polish O&M firms and lessors whose commercial rooftop portfolios contain suspected module linear-performance-warranty cases. Accept only cases where the owner can show the contract chain, purchase and serial records, site history, and an active written manufacturer warranty; screen curtailment and ordinary operating causes from exported data, then advance passed cases to a fixed-fee evidence dossier and a pre-priced accredited test. Do not build continuous monitoring or administer broad inverter, workmanship, insurance, and legal disputes in this wedge. A precisely defined recovery fee may be tested only after legal review and direct evidence of accepted recoveries.",
+  "title": "Batch PV Module-Warranty Triage for O&M Portfolios",
+  "uncertainties": [
+    "How many O&M and lessor portfolios contain record-complete module linear-performance-warranty cases.",
+    "Paid willingness to submit prepaid batches and the minimum efficient batch size.",
+    "Screen pass rate, accredited-test confirmation rate, manufacturer acceptance rate, and days to resolution for this single archetype.",
+    "Whether actual owner contracts preserve assignable and enforceable module performance-warranty rights.",
+    "Fully loaded founder, testing, legal, insurance, and partner-referral cost per screened and advanced case.",
+    "Whether fixed dossier fees produce better cash conversion and margin than broad contingent recovery work.",
+    "Whether unrelated partners repeat after the first batch and permit outcome data to be retained."
+  ],
+  "version": 5
+}

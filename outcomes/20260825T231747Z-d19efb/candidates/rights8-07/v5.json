@@ -1,0 +1,131 @@
+{
+  "candidate_id": "rights8-07",
+  "claims": [
+    {
+      "claim_id": "rights8-07-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1804/oj/eng",
+        "https://transport.ec.europa.eu/transport-themes/clean-transport/alternative-fuels-sustainable-mobility-europe/alternative-fuels-infrastructure/questions-and-answers-regulation-deployment-alternative-fuels-infrastructure-eu-20231804_en"
+      ],
+      "statement": "AFIR and the Commission's implementation Q&A treat charging on private property as publicly accessible when the property is open to a general customer group; a non-public point requires a limited and determinate group authorised to access the property for a purpose other than parking or charging, and opening hours or pre-booking do not change that classification."
+    },
+    {
+      "claim_id": "rights8-07-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eli.gov.pl/api/acts/DU/2024/1289/text.html"
+      ],
+      "statement": "Poland's consolidated electromobility act assigns public-station operators technical, metering, energy-contract and information duties, while the charging-service provider handles authorization, session records, payments, sales documents, support and complaints; the roles therefore require explicit contractual allocation."
+    },
+    {
+      "claim_id": "rights8-07-c3",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://transport.ec.europa.eu/document/download/1498648c-63fc-4715-975d-ccbc64703da5_en?filename=Communication+-+Decarbonising+corporate+fleets.pdf",
+        "https://www.acea.auto/cv-registrations/new-commercial-vehicle-registrations-vans-8-8-trucks-6-2-buses-7-5-in-2025/"
+      ],
+      "statement": "Category-level demand is plausible but not local validation: the Commission identifies dedicated and public charging availability as operational constraints for corporate fleets, and ACEA reports that electrically chargeable vans reached 11.2% of new EU van registrations in 2025."
+    },
+    {
+      "claim_id": "rights8-07-c4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://developer.monta.com/docs/price-groups",
+        "https://support.virta.global/hc/en-gb/articles/18351352579357-Optimise-Your-Fleet-Operations-How-to-Make-Fleet-Reservations-at-Charging-Stations"
+      ],
+      "statement": "Direct incumbent documentation shows that existing charging platforms already support public and member pricing, roaming and margin tracking, while fleet software can reserve compatible chargers; physical bay availability remains an on-site operational dependency."
+    },
+    {
+      "claim_id": "rights8-07-c5",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://transport.ec.europa.eu/document/download/1498648c-63fc-4715-975d-ccbc64703da5_en?filename=Communication+-+Decarbonising+corporate+fleets.pdf"
+      ],
+      "statement": "Hypothesis: a dense local cluster of hosts and small fleets will accept recurring reserved-capacity contracts at contribution-positive prices; no source establishes host spare capacity, local buyer willingness, conversion, utilization or renewal."
+    },
+    {
+      "claim_id": "rights8-07-c6",
+      "confidence": "low",
+      "evidence_refs": [],
+      "statement": "Hypothesis: one route-specific anchor fleet will accept a take-or-pay capacity minimum before activation, and compatible hosts will grant enforceable exclusive bay-and-entry windows plus fallback rights at costs that leave positive contribution after monitoring, support and service credits; no evidence establishes either side of this mechanic."
+    }
+  ],
+  "contrary_evidence": [
+    "The Commission's AFIR Q&A says an access list, pre-booking or identification at the gate does not create a private point when anyone can become a charging or parking customer; this defeats a simple membership workaround.",
+    "Monta already supports public and member price groups, roaming and margin tracking, and Virta already supports fleet reservations on compatible chargers, so much of the software layer is an incumbent feature rather than a moat.",
+    "Virta states that a digital reservation does not guarantee physical availability and that reservations require charger support for OCPP reservation commands.",
+    "ACEA reports growing electric-van share but also says inadequate infrastructure, energy cost and unfavorable total cost of ownership still constrain uptake, so a local capacity market may mature slowly.",
+    "No evidence establishes that a fleet will accept a take-or-pay anchor contract, that hosts will grant exclusive physical-bay and fallback rights, or that the resulting host guarantees, redundancy and service credits leave positive contribution."
+  ],
+  "economics": {
+    "acquisition_route": "Unvalidated demand-first gate: test a paid, route-specific take-or-pay pilot with one anchor fleet before activating host capacity; only after that commitment, negotiate legally reviewed option terms and then firm exclusive charging, parking and entry windows with compatible hosts inside the route. Use an incumbent compliant charging-management and payment stack, and do not build custom booking software or fund grid upgrades in the pilot.",
+    "capital_required_pln": 45000,
+    "founder_net_worth_path": "Unvalidated scenario, not a forecast: 30 repeatable clusters averaging PLN 30000 monthly contracted availability and service revenue would produce PLN 10.8m annual revenue before energy pass-through. At a hypothetical 25% operating margin and 4x operating-profit value, a 70% founder stake would be about PLN 7.56m. A 7-9 year path requires anchor renewals, profitable host rights, delegated operations and repeatable multi-city deployment; no evidence validates the cluster count, revenue, margin, multiple or timing.",
+    "founder_time": "Unvalidated operating plan: 12-18 hours per week during one demand-anchored pilot for the anchor sale, host rights, compliance coordination and performance review. An outsourced local operator must own bay checks, fault response and fleet exceptions before the SLA becomes continuous or a second cluster is sold.",
+    "gross_margin_basis": "Unvalidated planning range: 25-45% after firm host-window payments, fallback-capacity cost, incumbent CPMS and payment fees, monitoring, local operations, service credits and insurance, with electricity passed through and no grid upgrade. This is lower than the marketplace hypothesis because reliability costs are explicit; take-or-pay revenue is hypothesized to reduce utilization downside, but no source validates the range.",
+    "payback": "Unvalidated target: 12-18 months on activated pilot capital only if the anchor's contracted monthly minimum covers firm host rights, fallback capacity, incumbent-platform fees, local support and expected service credits at positive contribution. No host activation occurs under the proposed gate if this modeled coverage is absent, and no evidence shows a buyer will accept the gate.",
+    "pricing": "Unvalidated hypothesis: the anchor fleet pays a take-or-pay monthly minimum based on PLN 400-900 per committed vehicle-equivalent slot, plus metered energy pass-through and any agreed compliant charging-service charge; documented SLA misses create service credits. Hosts receive contracted window-availability payments plus energy reimbursement and a completed-session component. No source establishes willingness to pay, host terms or the service-credit level.",
+    "retention_or_repeat": "The anchor may renew if measured delivered availability and fallback performance beat its depot or ordinary public-charging alternative; hosts may renew if guaranteed and session income exceed access, insurance and operating burdens. The model concentrates renewal and default risk in one anchor per cluster, and neither side's behavior is validated."
+  },
+  "fingerprint": {
+    "compounding_advantage": "enforceable exclusive bay-window rights, measured delivered-availability data, trained local operators and contracted fallback capacity compound into a cluster reliability record that a generic charging app does not control",
+    "customer": "one route-specific anchor commercial fleet per initial cluster with recurring, predictable dwell windows and a costly charging-capacity gap; compatible charger-site owners supply controlled capacity",
+    "distribution_mechanism": "demand-first sale to one anchor through fleet-leasing, installer or local-business referrals; its hypothetical take-or-pay commitment gates host activation, after which renewable and electrical installer relationships source compatible sites inside the fixed route",
+    "offer_and_business_model": "managed, SLA-backed off-hours charging capacity with exclusive parking and entry windows, physical bay enforcement, monitored uptime, exception response and contracted fallback, delivered on an incumbent compliant charging and payment stack rather than a proprietary booking marketplace",
+    "payer_and_paid_event": "the anchor fleet pays a take-or-pay monthly availability minimum plus energy pass-through and agreed usage charges, subject to service credits for missed availability; activated hosts receive a window-availability payment, energy reimbursement and a completed-session component",
+    "problem_trigger": "a named fleet's measured route and dwell schedule reveals a recurring charging-capacity shortfall that is too urgent or uncertain to solve with depot construction and too reliability-sensitive for ordinary public charging"
+  },
+  "founder_fit": [
+    "Renewable-installation relationships can source technically suitable hosts and local operating partners after anchor demand is gated, without requiring a public persona.",
+    "Route matching, availability measurement, pricing, service-credit analysis and capacity planning fit the founder's data-science background.",
+    "Demand-first activation and use of an incumbent compliant stack are hypotheses intended to keep pilot capital within the founder's ceiling and avoid speculative custom software or broad host inventory.",
+    "One anchor account reduces simultaneous fleet selling, but negotiating take-or-pay terms and exclusive site rights remains relationship-heavy and unvalidated.",
+    "Continuous bay enforcement and fault response do not fit a part-time founder; an outsourced local operator is a required operating hypothesis before offering an SLA or expanding."
+  ],
+  "parent": {
+    "candidate_id": "rights8-07",
+    "version": 4
+  },
+  "risks": [
+    "A fleet membership created only to use parking or charging is unlikely to make a generally available site non-public under the Commission's AFIR interpretation, bringing ad-hoc payment, pricing, data and operating obligations.",
+    "The operator, host and incumbent charging-software provider may allocate CPO and mobility-service-provider duties incorrectly, creating compliance or liability gaps.",
+    "Landlord, parking, fire, insurance, electricity-contract or site-security terms may prevent enforceable third-party fleet access or exclusive bay windows even when a charger is technically suitable.",
+    "Existing charging platforms already provide access groups, tariffs, revenue features and reservations; the redesign is defensible only if it controls physical rights and delivered reliability rather than repackaging those features.",
+    "Digital reservations do not guarantee that a bay is physically clear; late arrivals, blocked bays, charger faults and unavailable fallback can trigger service credits and destroy the SLA promise.",
+    "Low Polish electric-fleet density or slow fleet conversion can prevent an anchor contract or make the cluster too small for redundancy and attractive contribution.",
+    "One anchor fleet creates material concentration, renegotiation and default risk; a lost contract can strand host rights and operating commitments.",
+    "Firm host payments, redundant fallback capacity, bay controls, insurance, monitoring and local exception response may cost more than the take-or-pay minimum covers.",
+    "A fleet may reject take-or-pay pricing before reliability is proven, while hosts may reject exclusive rights before fleet demand is irrevocable, leaving the proposed sequencing unable to close."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2023/1804/oj/eng",
+    "https://transport.ec.europa.eu/transport-themes/clean-transport/alternative-fuels-sustainable-mobility-europe/alternative-fuels-infrastructure/questions-and-answers-regulation-deployment-alternative-fuels-infrastructure-eu-20231804_en",
+    "https://eli.gov.pl/api/acts/DU/2024/1289/text.html",
+    "https://transport.ec.europa.eu/document/download/1498648c-63fc-4715-975d-ccbc64703da5_en?filename=Communication+-+Decarbonising+corporate+fleets.pdf",
+    "https://www.acea.auto/cv-registrations/new-commercial-vehicle-registrations-vans-8-8-trucks-6-2-buses-7-5-in-2025/",
+    "https://developer.monta.com/docs/price-groups",
+    "https://support.virta.global/hc/en-gb/articles/18351352579357-Optimise-Your-Fleet-Operations-How-to-Make-Fleet-Reservations-at-Charging-Stations"
+  ],
+  "stage": "frozen",
+  "structure": {
+    "commercial_archetype": "demand-anchored managed infrastructure service",
+    "control_point": "take-or-pay fleet demand gates enforceable exclusive charging, parking and entry windows, physical bay control, monitored uptime and fallback capacity in one route-specific cluster",
+    "critical_dependency": "a route-specific anchor must accept contribution-positive take-or-pay terms before activation; compatible hosts must then grant legally usable exclusive windows and fallback rights, the correct CPO and MSP duties must be allocated, and a delegated local operator must deliver the SLA"
+  },
+  "thesis": "Hypothesis: first sell one route-specific commercial fleet an SLA-backed charging-capacity contract with a take-or-pay minimum, and activate no host inventory until that minimum can cover modeled firm-capacity and operating costs. Then secure legally reviewed, exclusive time-bounded charging, parking and entry rights from a small set of compatible sites inside the fleet's measured route, including physically enforced bays, monitored uptime, local exception response and contracted fallback capacity. Treat sites as publicly accessible and use an incumbent compliant CPO, MSP, payment and reservation stack unless site-specific counsel establishes otherwise. The product is delivered availability rather than booking software; service credits apply when availability is missed. Validate willingness to sign, lawful site rights, charger compatibility, blocked-bay and fault rates, operator workload and contribution in one Warsaw or Wielkopolska cluster before adding customers, custom software or another geography.",
+  "title": "Demand-Anchored Fleet Charging SLA Operator",
+  "uncertainties": [
+    "Will one fleet with a measured Warsaw or Wielkopolska route shortfall accept a paid take-or-pay minimum before the network has demonstrated reliability?",
+    "Can an anchor contract and conditional host options be sequenced without exposing the founder to open-ended capacity commitments?",
+    "Which candidate sites are genuinely private under AFIR, and which must be operated as publicly accessible from day one?",
+    "Do host electricity, lease, parking, insurance and security terms permit paid third-party fleet use, exclusive bay windows, physical enforcement and fallback obligations?",
+    "Which installed charger models support the incumbent stack, reliable metering, remote monitoring and access control without retrofit or replacement?",
+    "What host minimum, fallback redundancy and service-credit schedule jointly secure reliability while preserving positive contribution?",
+    "What are the observed successful-session, blocked-bay, charger-fault, fallback-use and support-minute rates in a paid pilot?",
+    "Can an outsourced local operator deliver the proposed SLA within modeled cost while the founder remains employed?",
+    "Will anchor fleets and hosts renew, and can a second anchor or cluster be added without weakening exclusive rights or stranding capacity?"
+  ],
+  "version": 5
+}

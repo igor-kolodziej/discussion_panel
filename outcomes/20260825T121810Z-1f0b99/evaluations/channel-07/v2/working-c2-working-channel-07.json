@@ -1,0 +1,119 @@
+{
+  "assumptions": [
+    "The product remains decision support: it neither optimises gambling engagement nor makes final player-account decisions, and every automated result has meaningful human review and contestability.",
+    "An initial operator supplies lawfully authorised, representative event and intervention-outcome data; cross-operator pooling is not assumed.",
+    "Independent safer-gambling, privacy, security, and licensing specialists have real authority over the deployment boundaries.",
+    "The offline benchmark is feasible within 100000 PLN and 25 hours per week, but any live deployment must be partner-funded and staffed beyond the founder alone."
+  ],
+  "base_score": 5.06,
+  "candidate_id": "channel-07",
+  "candidate_sha256": "7f66a4f9b49d008e6214423fea5adef966d46411539f190d01988d2fb3809f7c",
+  "candidate_version": 2,
+  "constrained_score": 4.76,
+  "evaluation_type": "working",
+  "evidence_needed_for_higher_score": "A paid operator-controlled offline study should deliver an out-of-time benchmark against the incumbent process, subgroup false-positive and false-negative results, measured reviewer hours and intervention outcomes, a written licensing-perimeter opinion and DPIA, and a platform or operator commitment with acceptable annual price, support scope, and payback.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "British rules require operators not only to detect harm indicators but also to manually review automated processes, record interventions, permit challenges, and evaluate later outcomes. A versioned evidence and drift ledger fits that end-to-end obligation well, although predictive safer-gambling analytics itself is established rather than new.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "The pain is mandatory, continuous, and high consequence: poor detection or review can harm players and create regulatory exposure. Operators plausibly fund compliance and manual-review efficiency, but no reviewed source establishes willingness to buy independent validation from a small vendor or delegate this sensitive workflow.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Paid offline validation followed by annual monitored licences offers high contract value and repeat work, with a plausible 65-80% mature gross-margin range. Prices, CAC, procurement duration, implementation cost, insurance, expert support, and 12-18 month payback are unknown; reaching 30 contracts while retaining 20% EBITDA is a demanding, service-sensitive scenario.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Licensed Great Britain remote operators and their player-account platforms are a clear, economically serious beachhead with common regulatory obligations. It is also a concentrated buyer population, and the packet supplies no count or spend evidence showing that the accessible independent-tool segment supports the proposed scale.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "A vendor-neutral audit, drift, and outcome-evaluation layer could occupy a narrower position than a risk-scoring engine. Playtech's BetBuddy already markets early identification and intervention support through a major platform, while operators and platforms control the data and can build or bundle the missing evidence features.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "The workflow could extend to more operators, products, platforms, and regulated jurisdictions, and continuous model assurance is reusable as a capability. Model drift, differing interventions, local regulation, and restricted data sharing limit transferability and make each expansion partly bespoke.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Versioned threshold performance, subgroup audits, and intervention outcomes can deepen within each authorised deployment. Cross-operator pooling cannot be assumed, the operator owns the most valuable data, and a platform incumbent can accumulate similar history with stronger distribution.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "Interpretability, human-review evidence, out-of-time validation, and outcome measurement could improve auditability over opaque scoring alone. No benchmark demonstrates better precision-recall, subgroup safety, reviewer productivity, or regulatory acceptance than an operator's current process or BetBuddy.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "Explicit customer-interaction requirements and scrutiny of significant automated decisions make monitoring, human oversight, and evidence of effectiveness timely. Licensing classification remains fact-specific, however, so regulation creates demand but not a reliable licence moat.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "A paid operator benchmark followed by one platform integration is focused and could leverage a partner's installed base. Representative data access, platform willingness, security approval, procurement time, exclusivity, and repeatable acquisition are all unresolved, and the founder lacks a pre-existing operator channel.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "The founder is technically well matched to modelling, monitoring, and causal evaluation, and an offline prototype is feasible. Live use carries severe privacy, fairness, false-negative, false-positive, security, licensing, and conflict-of-incentive risks and is explicitly incompatible with solo part-time operation.",
+      "score": 4,
+      "status": "scored"
+    }
+  ],
+  "final_score": 4.8,
+  "highest_value_structural_change": "Make the enduring product an operator-hosted, vendor-neutral assurance layer that audits any existing harm model, including incumbent models, for drift, subgroup performance, human review, and intervention outcomes; avoid raw-data pooling and defer proprietary real-time scoring until the assurance wedge controls distribution.",
+  "interaction_adjustment": -0.3,
+  "judge_id": "c2-working-channel-07",
+  "main_structural_strength": "The regulatory workflow explicitly joins indicator detection, human review, intervention records, and outcome evaluation, creating a recurring evidence problem well matched to an interpretable analytics product.",
+  "primary_score_limiter": "Validation and deployment require privileged operator data and platform cooperation in a high-stakes environment where a major incumbent already sells the central capability and the founder cannot support live operations alone.",
+  "qualified": false,
+  "raw_response_path": "artifacts/research/raw-c2-working-channel-07.json",
+  "raw_response_sha256": "0d8dc83b17a08f49887dbfe8c6bc9a5b1487ee24a0c04c1a16e746995a2d83af",
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 2,
+  "strongest_disconfirming_evidence": "Playtech's BetBuddy already provides predictive safer-gambling analytics and intervention support, while published studies show material indicator drift and threshold sensitivity rather than a stable universal classifier.",
+  "unrounded_score": 4.76
+}

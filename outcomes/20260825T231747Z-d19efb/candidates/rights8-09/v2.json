@@ -1,0 +1,132 @@
+{
+  "candidate_id": "rights8-09",
+  "claims": [
+    {
+      "claim_id": "rights8-09-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.knf.gov.pl/dla_rynku/procesy_licencyjne/platniczy/AISP/Rejestracja_AISP",
+        "https://www.knf.gov.pl/dla_rynku/procesy_licencyjne/platniczy/AISP/Podstawowe_obowiazki_AISP"
+      ],
+      "statement": "KNF states that account-information service in Poland is regulated activity requiring registration even though it does not require a full authorization decision; a registered AISP also has insurance or equivalent security, reporting and supervision-cost obligations."
+    },
+    {
+      "claim_id": "rights8-09-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1786486126044&uri=CELEX%3A02015L2366-20250117",
+        "https://www.knf.gov.pl/dla_rynku/procesy_licencyjne/platniczy/AISP/Podstawowe_obowiazki_AISP"
+      ],
+      "statement": "PSD2 limits an AISP to explicit user consent, designated payment accounts and associated transactions, and forbids access, use or storage for purposes beyond the account-information service explicitly requested by the user."
+    },
+    {
+      "claim_id": "rights8-09-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.edpb.europa.eu/documents/guideline/guidelines-062020-on-the-interplay-of-the-second-payment-services-directive-and_en"
+      ],
+      "statement": "EDPB guidance says financial-transaction analysis can reveal or infer special-category personal data, that a DPIA will most probably be required, and that explicit consent may be the applicable Article 9 derogation when substantial-public-interest law does not apply."
+    },
+    {
+      "claim_id": "rights8-09-c4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://kcpu.gov.pl/wp-content/uploads/2025/08/Hazard_2024_raport_FIN_1.pdf"
+      ],
+      "statement": "The 2024 KCPU study found that 31.7% of respondents aged 15+ had gambled for money in the prior year; among gamblers, 8.2% were low risk, 4.2% moderate risk and 1.6% high risk under the report's original CPGI threshold, demonstrating a real harm population but not B2B willingness to pay."
+    },
+    {
+      "claim_id": "rights8-09-c5",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.revolut.com/en-PL/customer-vulnerability/",
+        "https://developer.kontomatik.com/coverage",
+        "https://monzo.com/blog/extending-our-open-banking-gambling-block"
+      ],
+      "statement": "Direct incumbent documentation shows that Revolut already offers Polish users an instant gambling block with a 48-hour removal delay, Kontomatik already assigns a gambling transaction label in Poland, and Monzo reported more than 400,000 users had activated its gambling block by January 2022."
+    },
+    {
+      "claim_id": "rights8-09-c6",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://www.revolut.com/en-PL/customer-vulnerability/",
+        "https://developer.kontomatik.com/coverage",
+        "https://monzo.com/blog/extending-our-open-banking-gambling-block"
+      ],
+      "statement": "Hypothesis: an institutional distributor will pay for consented longitudinal guardrails and user-controlled support export beyond native blocking and generic categorization; no paid pilot, buyer commitment, conversion, retention or outcome evidence was found."
+    }
+  ],
+  "contrary_evidence": [
+    "Revolut already gives Polish customers a no-extra-charge gambling block, so a bank can treat basic self-exclusion as a native account feature rather than a paid third-party product.",
+    "Kontomatik already exposes a gambling label for Polish transaction data, making merchant categorization available from an established local open-banking supplier.",
+    "Monzo's large activation count supports user interest in blocks but also shows that banks can build and distribute the feature themselves.",
+    "EDPB guidance indicates that transaction profiling has a considerable chance of processing special-category data, materially increasing consent, DPIA and security burdens.",
+    "The KCPU study shows that most gamblers are classified as safe and does not establish that institutions will pay for monitoring or that transaction alerts improve outcomes."
+  ],
+  "economics": {
+    "acquisition_route": "Build only with synthetic or volunteered test data, complete a counsel-reviewed data map and DPIA plan, then seek one paid design partnership with a financial-wellbeing or support provider. Use an existing registered AISP and enrichment vendor before considering own registration.",
+    "capital_required_pln": 70000,
+    "founder_net_worth_path": "Unvalidated scenario, not a forecast: 150,000 opted-in monthly active users at PLN 4 monthly B2B revenue would equal PLN 7.2m annual recurring revenue; at 30% operating profit and a 4x value, a 70% founder stake would be about PLN 6m. A 5-8 year route requires trusted distribution, demonstrated benefit, low incident rates and durable contracts; user count, price, margin, valuation and timing are not evidenced.",
+    "founder_time": "12-18 hours per week for synthetic-data product work, compliance design and one enterprise integration; qualified partners must own clinical care, crisis response and regulated AISP operations unless the business later staffs them.",
+    "gross_margin_basis": "Unvalidated planning range: 65-80% after AISP or enrichment fees, cloud and security controls, support, insurance and ongoing compliance. Enterprise integration, DPIA work, penetration testing and incident readiness may make early deployments materially more service-heavy.",
+    "payback": "Unvalidated target: 12-24 months after one enterprise minimum or roughly 15,000-30,000 paid active users; recalculate after a written AISP quote, security scope, paid pilot price and measured support burden.",
+    "pricing": "Unvalidated planning hypothesis: PLN 15,000-50,000 monthly platform minimum per large distributor or PLN 2-6 per opted-in monthly active user, with no user charge where possible. No public source establishes Polish institutional willingness to pay at these levels.",
+    "retention_or_repeat": "Institutional contracts may recur annually and opted-in users may monitor continuously, but easy consent withdrawal, remission and deletion are product requirements. No renewal or active-use evidence exists."
+  },
+  "fingerprint": {
+    "compounding_advantage": "embedded distribution, auditable consent UX, user-corrected labels and ethically measured intervention outcomes improve the workflow while raw account data remains purpose-limited and non-transferable",
+    "customer": "financial-wellbeing apps, banks, employee-assistance programs and debt-support organizations serving adults who voluntarily seek gambling-spend visibility",
+    "distribution_mechanism": "embed through regulated fintech, bank and support organizations rather than acquire vulnerable consumers with paid social ads; begin with synthetic data and a compliance-reviewed prototype",
+    "offer_and_business_model": "consent and data-minimization interface, account-feed connection through a regulated provider, gambling-pattern classification, user-set alerts, guardrail tracking and user-controlled support export sold as B2B software",
+    "payer_and_paid_event": "the institutional distributor pays a platform minimum and per-consenting-active-user fee; no fee is earned from gambling operators or adverse decisions about the user",
+    "problem_trigger": "a user notices loss of control, a support journey begins, or a financial-wellbeing provider needs a private opt-in monitoring feature"
+  },
+  "founder_fit": [
+    "The work combines data science, finance and first-hand understanding of betting behavior without requiring public disclosure or an influencer persona.",
+    "A synthetic-data prototype and narrow B2B design partnership fit the founder's preference for measurable, low-capital validation.",
+    "Privacy engineering, enterprise procurement and regulated-partner management add specialist work beyond model development and require counsel and security support.",
+    "The founder must keep the product in voluntary self-control and support workflows rather than clinical diagnosis or adverse decisioning."
+  ],
+  "parent": {
+    "candidate_id": "rights8-09",
+    "version": 1
+  },
+  "risks": [
+    "Financial transactions can reveal or allow inference of special-category personal data; an invalid consent basis, excessive purpose or security incident could cause serious user harm and regulatory exposure.",
+    "AISP access is regulated, purpose-limited and accompanied by insurance, reporting and security duties; a partner contract does not remove the need to map each party's GDPR role and permitted purpose.",
+    "Merchant labels can miss transfers, cash withdrawals, payment intermediaries or newly named merchants, while false positives can stigmatize or distress users.",
+    "Revolut already offers a gambling block to Polish customers, Monzo and Starling offer similar controls, and Kontomatik already labels gambling transactions in Poland, so categorization and simple alerts are weak differentiation.",
+    "Banks may prefer to build a free native control, buy enrichment from an established vendor or avoid the reputational and support burden altogether.",
+    "Enterprise security reviews, procurement and compliance cycles may exceed the founder's part-time availability before revenue."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.knf.gov.pl/dla_rynku/procesy_licencyjne/platniczy/AISP/Rejestracja_AISP",
+    "https://www.knf.gov.pl/dla_rynku/procesy_licencyjne/platniczy/AISP/Podstawowe_obowiazki_AISP",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1786486126044&uri=CELEX%3A02015L2366-20250117",
+    "https://www.edpb.europa.eu/documents/guideline/guidelines-062020-on-the-interplay-of-the-second-payment-services-directive-and_en",
+    "https://kcpu.gov.pl/wp-content/uploads/2025/08/Hazard_2024_raport_FIN_1.pdf",
+    "https://www.podatki.gov.pl/pozostale/podatek-od-gier/komunikaty-w-zakresie-gier-hazardowych",
+    "https://www.revolut.com/en-PL/customer-vulnerability/",
+    "https://developer.kontomatik.com/coverage",
+    "https://monzo.com/blog/extending-our-open-banking-gambling-block"
+  ],
+  "stage": "research",
+  "structure": {
+    "commercial_archetype": "embedded consumer-safety analytics API",
+    "control_point": "long-term white-label distribution integrations plus a purpose-limited, user-authorized consent, feedback and outcome workflow",
+    "critical_dependency": "a compliant AISP route, valid GDPR and any Article 9 explicit consent, sufficiently accurate classification, secure processing and evidence that users benefit and institutional buyers will pay for a non-adverse-use feature"
+  },
+  "thesis": "Offer banks, fintech wellbeing tools, employee-assistance providers and debt-support services a white-label feature through which an adult explicitly opts in to classify gambling-related account transactions, set personal guardrails, receive private alerts and export a self-chosen support summary. Use a registered AISP route, map the exact purpose and controller roles, obtain GDPR and any Article 9 explicit consent required for inferred health-related patterns, minimize retention and prohibit underwriting, employment, insurance, gambling marketing or other adverse use. Because Polish open-banking vendors and banks already expose gambling labels or blocks, the controllable asset must be embedded distribution, auditable consent and evidence that the voluntary intervention helps users—not raw transaction categorization.",
+  "title": "Opt-In Betting-Spend Safety API",
+  "uncertainties": [
+    "Which Polish bank, fintech, employee-assistance or debt-support buyer owns budget for a voluntary feature that cannot support underwriting or other adverse decisions?",
+    "Does the precise workflow process inferred health data under Article 9 GDPR, and what explicit-consent and DPIA design will regulators and partners accept?",
+    "Can a partner AISP and enrichment contract permit continuous monitoring, feedback, alerting, deletion and the exact retention schedule?",
+    "What recall, precision and error distribution are achievable across card payments, bank transfers, cash and intermediated deposits in Poland?",
+    "Which user outcome can be measured ethically without claiming diagnosis or treatment, and does the feature produce incremental benefit beyond native gambling blocks?",
+    "What are real AISP, enrichment, insurance, penetration-test, hosting, integration and customer-support costs?",
+    "Will users maintain consent and active monitoring long enough to create value without feeling surveilled?"
+  ],
+  "version": 2
+}

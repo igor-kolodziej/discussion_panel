@@ -1,0 +1,143 @@
+{
+  "candidate_id": "control10-07",
+  "claims": [
+    {
+      "claim_id": "control10-07-r2-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://single-market-economy.ec.europa.eu/sectors/mechanical-engineering/machinery_en",
+        "https://eur-lex.europa.eu/eli/reg/2023/1230/2026-07-27/eng"
+      ],
+      "statement": "The Machinery Regulation becomes mandatory on 20 January 2027, addresses AI-powered safety and cyber-safety, and makes a person performing a substantial modification the manufacturer for the affected machinery."
+    },
+    {
+      "claim_id": "control10-07-r2-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1230/2026-07-27/eng"
+      ],
+      "statement": "Manufacturers must create and retain technical documentation and declarations, and safety-related source code or programming logic may be required by authorities when necessary for compliance checks."
+    },
+    {
+      "claim_id": "control10-07-r2-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.ibf-solutions.com/en/ce-marking-software-safexpert",
+        "https://www.cem4.eu/en/products"
+      ],
+      "statement": "Established software already supports risk assessment, technical files, declarations, templates, standards updates, teamwork, and change tracking, directly overlapping the broad discovery proposition."
+    },
+    {
+      "claim_id": "control10-07-r2-c4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://safexpert.luc.pl/download/Safexpert-cennik-pl-eur-2026.pdf",
+        "https://www.cem4.eu/en/products",
+        "https://cedoc.com/en/licenses/"
+      ],
+      "statement": "Public incumbent pricing places capable CE software in the hundreds to low-thousands of euros per licence or package, with annual maintenance and expert add-ons, setting a concrete budget and substitute benchmark."
+    },
+    {
+      "claim_id": "control10-07-r2-c5",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.pilz.com/en-US/services/international-compliance/ce-marking"
+      ],
+      "statement": "Pilz already offers end-to-end conformity assessment support, tests, technical-file compilation, and optional authorised-representative services, so expert-assisted handover is not an empty market."
+    },
+    {
+      "claim_id": "control10-07-r2-c6",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://www.ibf-solutions.com/en/ce-marking-software-safexpert",
+        "https://www.cem4.eu/en/products"
+      ],
+      "statement": "A PLC/configuration-provenance connector may remain differentiated, but the gathered incumbent pages do not establish that this integration gap exists or is budgeted."
+    }
+  ],
+  "contrary_evidence": [
+    "Safexpert already advertises change tracking, traceable project histories, teamwork, standards monitoring, templates, and technical-documentation workflows.",
+    "CEM4 already covers risk assessment, technical files, standards updates, and report generation at relatively low public prices.",
+    "CEDOC combines software, onboarding, and paid machine-safety expert support.",
+    "Pilz can deliver the complete CE process and assume an authorised-representative role where appropriate.",
+    "Not every retrofit is a substantial modification, and responsibility must be assessed case by case."
+  ],
+  "economics": {
+    "acquisition_route": "Unvalidated hypothesis: recruit one qualified machinery-safety assessor or high-volume integrator as a design and distribution partner, then sell a white-label module through that partner's existing engagements. No partner commitment, channel terms, or repeatable acquisition cost is evidenced.",
+    "capital_required_pln": 35000,
+    "founder_net_worth_path": "An illustrative, unvalidated route is 30 channel partners averaging 100000 PLN in recurring annual licence and activation revenue, producing 3m PLN annual recurring revenue. At 70-80% software gross margin and a hypothetical 2.5-3.5x revenue value, founder ownership above 70% could imply equity above 5m PLN in 7-10 years, excluding distributions. Partner count, revenue, margins, valuation, ownership, and timing are not evidenced.",
+    "founder_time": "Hypothesis: 10-15 hours weekly for a single-stack pilot if the channel partner owns customer onboarding and all machinery-safety judgments; a paid qualified adviser would still be needed to constrain product language and liability boundaries",
+    "gross_margin_basis": "Unvalidated hypothesis: 60-75% during the connector pilot because mapping and support remain manual, improving toward 75-85% only if one stack and its exports become reusable; technical safety review is outside the base product",
+    "payback": "Unvalidated hypothesis: 12-18 months if two channel licences near 24000 PLN and ten project activations near 2500 PLN are sold with at least 60% gross margin; no conversion or implementation evidence supports this case",
+    "pricing": "Unvalidated channel pricing: 18000-36000 PLN annual white-label licence per assessor or integrator plus 1500-4000 PLN per activated machine release. Qualified safety review is optional and separately contracted by the channel partner, not bundled into the base product.",
+    "retention_or_repeat": "Repeat use would come from the same channel partner applying one connector and evidence schema across successive machines on the selected PLC or robot-cell stack. Retention and switching costs remain unknown, and incumbent systems may already satisfy the workflow."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Reusable, vendor-specific mappings from one PLC or robot-cell stack's exported artefacts into partner-approved evidence fields could lower activation effort across successive projects; this advantage is hypothetical until incumbent coverage, reuse, and customer access are demonstrated.",
+    "customer": "Qualified machinery-safety assessors and high-volume automation integrators handling repeated deliveries on one selected PLC or robot-cell stack",
+    "distribution_mechanism": "White-label deployment through one qualified assessor or integrator that installs the connector inside existing client engagements and commissioning workflows, rather than a separate direct software sale",
+    "offer_and_business_model": "Vendor-neutral, single-stack evidence-ingestion connector licensed white-label to a qualified assessor or integrator, with a per-machine activation fee; safety judgment and any expert review remain outside the base product",
+    "payer_and_paid_event": "The assessor or integrator pays an annual white-label licence and a usage fee when the connector creates a version-bound release record for a machine on the selected stack",
+    "problem_trigger": "At the existing partner-led handover, engineers must manually reconcile exported PLC or safety-program versions with the release evidence for a machine on the selected stack"
+  },
+  "founder_fit": [
+    "The connector's data lineage, version matching, and evidence-schema work fit the founder's data-science and automation strengths.",
+    "A white-label channel avoids dependence on a public-facing personal brand and may reduce direct enterprise selling, although no channel commitment is evidenced.",
+    "A one-stack connector pilot with partner-owned onboarding is more compatible with the founder's 5-hour daily limit than a broad managed-compliance service.",
+    "The founder has no stated machinery-safety credential and must not make technical safety determinations; qualified partners or advisers must own those judgments.",
+    "Secure engineering-system access and bespoke mapping may still exceed the preferred part-time capacity if the selected stack is not sufficiently repeatable."
+  ],
+  "parent": {
+    "candidate_id": "control10-07",
+    "version": 3
+  },
+  "redesign": {
+    "changed_fingerprint_fields": [
+      "customer",
+      "problem_trigger",
+      "payer_and_paid_event",
+      "offer_and_business_model",
+      "distribution_mechanism",
+      "compounding_advantage"
+    ],
+    "economic_effect": "Replacing a standalone workspace plus managed review with a white-label, single-stack connector shifts acquisition and onboarding to an existing qualified channel, removes recurring safety-review labour from the base offer, reduces estimated initial capital from 45000 PLN to 35000 PLN, and makes revenue depend on channel licences plus repeat machine activations. The redesign could improve founder-time fit and mature gross margin, but those effects are hypotheses: partner demand, incumbent capability gaps, reusable mappings, pricing, activation volume, and implementation effort remain unvalidated."
+  },
+  "risks": [
+    "Safety liability or misleading reliance on automated completeness checks",
+    "Failure to distinguish a substantial modification from ordinary maintenance or a non-substantial retrofit",
+    "Deep overlap with mature CE software, engineering systems, and machinery-safety consultancies",
+    "Dependence on a small number of channel partners that may prefer their existing tools or build the connector themselves",
+    "Machine and vendor-stack variation may defeat reusable mappings and software-margin economics",
+    "PLC and safety-program artefacts are sensitive customer intellectual property",
+    "Long partner recruitment, security review, and integration cycles may be incompatible with a part-time founder"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://single-market-economy.ec.europa.eu/sectors/mechanical-engineering/machinery_en",
+    "https://eur-lex.europa.eu/eli/reg/2023/1230/2026-07-27/eng",
+    "https://www.ibf-solutions.com/en/ce-marking-software-safexpert",
+    "https://safexpert.luc.pl/download/Safexpert-cennik-pl-eur-2026.pdf",
+    "https://www.cem4.eu/en/products",
+    "https://www.pilz.com/en-US/services/international-compliance/ce-marking",
+    "https://cedoc.com/en/licenses/",
+    "https://cegatesafety.com/pricing"
+  ],
+  "stage": "development",
+  "structure": {
+    "commercial_archetype": "White-label vertical connector with channel licence and per-release usage revenue",
+    "control_point": "The version-bound ingestion record connecting one supported engineering stack's exported artefacts to the qualified partner's existing release workflow",
+    "critical_dependency": "A qualified channel partner, permission to access the engineering artefacts, and proof that one chosen stack has a repeatable provenance gap not already covered by incumbent CE or engineering systems"
+  },
+  "thesis": "Instead of selling another CE workspace or a managed compliance service, build one vendor-neutral connector for a single high-volume PLC or robot-cell stack and license it white-label to a qualified machinery-safety assessor or automation integrator. The connector would ingest exported version identifiers and related artefacts into the partner's existing handover process and create a version-bound release record; it would not assess substantial modification, calculate safety, certify conformity, or replace the partner's existing CE tooling. The Machinery Regulation and incumbent compliance spend support the importance of documentation, while established software and consultancies make a broad standalone offer unattractive. The central commercial premise—that incumbent tools leave a material, budgeted provenance-integration gap and that a partner will distribute this module—remains unknown and must be tested before material build effort.",
+  "title": "White-Label Single-Stack Machine Release Connector",
+  "uncertainties": [
+    "Most repeatable Polish machine or robot-cell category and the exact PLC or robotics stack to support first",
+    "Frequency and economic cost of manual as-built evidence reconciliation at handover",
+    "Whether Safexpert, CEM4, CEDOC, integrator PLM tools, or engineering suites already ingest the needed version identifiers",
+    "Assessor or integrator willingness to distribute a white-label module and grant secure access to repositories or exported artefacts",
+    "Channel licence terms, per-machine activation price, sales-cycle length, and annual activation volume",
+    "Whether mappings and onboarding become reusable enough to achieve the stated founder-time and margin hypotheses",
+    "Acceptable liability allocation and product-language boundary between evidence ingestion and qualified safety judgment"
+  ],
+  "version": 4
+}

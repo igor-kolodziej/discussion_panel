@@ -1,0 +1,61 @@
+{
+  "candidate_id": "frontier-11",
+  "claims": [
+    {
+      "claim_id": "frontier-11-claim-01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.pse.pl/oire/portale-csire/q-a-portale-csire"
+      ],
+      "statement": "PSE states that MojeIRE gives customers, prosumers, and generators access to their data, including interval data where available, and lets them grant selected firms or organizations access for tailored offers."
+    }
+  ],
+  "contrary_evidence": [
+    "MojeIRE access is free and consumers can analyze or export their own data; migration timing varies by DSO, so a broker must add decision value beyond access."
+  ],
+  "economics": {
+    "acquisition_route": "UNVALIDATED COMMERCIAL HYPOTHESIS: validate 100 packets through the family renewable company, then distribute via installers and green-loan brokers.",
+    "capital_required_pln": 105000,
+    "founder_net_worth_path": "UNVALIDATED COMMERCIAL HYPOTHESIS: 50000 packets annually by year 6 at 14 million PLN revenue could support founder net worth above 5 million PLN.",
+    "founder_time": "UNVALIDATED COMMERCIAL HYPOTHESIS: 2.5 hours per day after consent support is documented.",
+    "gross_margin_basis": "UNVALIDATED COMMERCIAL HYPOTHESIS: 84-92% software gross margin after consent support and data processing.",
+    "payback": "UNVALIDATED COMMERCIAL HYPOTHESIS: channel acquisition payback after 6 packets.",
+    "pricing": "UNVALIDATED COMMERCIAL HYPOTHESIS: 290 PLN per authorized household packet or 1450 PLN per SME site, paid by the installer or financier.",
+    "retention_or_repeat": "UNVALIDATED COMMERCIAL HYPOTHESIS: one initial paid packet plus annual optimization and new-device refresh for 5 years."
+  },
+  "fingerprint": {
+    "compounding_advantage": "customer-permitted pre/post retrofit outcomes improve technology and tariff models without owning the raw CSIRE data",
+    "customer": "Polish renewable installers, ESCOs, lenders, and their consenting household or SME prospects",
+    "distribution_mechanism": "renewable installers embed a consent link between lead qualification and site visit",
+    "offer_and_business_model": "consent workflow, interval-data normalization, counterfactual scenarios, uncertainty bands, and quote-ready export",
+    "payer_and_paid_event": "the installer or financier pays when the customer-authorized underwriting packet is generated",
+    "problem_trigger": "a customer requests a retrofit or tariff offer but lacks a trustworthy interval-data baseline"
+  },
+  "founder_fit": [
+    "Exceptional data-science and family-business fit; a small authorized pilot can measure conversion while respecting revocable customer control."
+  ],
+  "parent": null,
+  "risks": [
+    "Consent or derived-data misuse would destroy trust.",
+    "Savings estimates could be treated as guarantees."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.pse.pl/oire/portale-csire/q-a-portale-csire",
+    "https://www.pse.pl/-/start-centralnego-systemu-informacji-rynku-energii",
+    "https://www.pse.pl/oire/informacje-ogolne"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "consented interval-data underwriting broker",
+    "control_point": "the customer's revocable CSIRE data grant and normalized savings case before installer quoting and finance approval",
+    "critical_dependency": "OIRE access agreements, customer consent flows, DSO migration into CSIRE, and permission to deliver derived analytics"
+  },
+  "thesis": "Use customer-granted access to Polish CSIRE interval and contract data to produce equipment-neutral solar, storage, heat-pump, tariff, and flexibility scenarios before a retrofit quote. The customer controls consent; installers pay only for a decision-ready, authorized opportunity packet. All commercial numbers, including capital_required_pln, are unvalidated hypotheses.",
+  "title": "CSIRE-Consented Retrofit Underwriting Broker",
+  "uncertainties": [
+    "Professional-user eligibility and integration effort need confirmation with OIRE.",
+    "Installer conversion lift and paid willingness are unvalidated."
+  ],
+  "version": 1
+}

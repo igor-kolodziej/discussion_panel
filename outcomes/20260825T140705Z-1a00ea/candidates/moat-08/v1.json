@@ -1,0 +1,67 @@
+{
+  "candidate_id": "moat-08",
+  "claims": [
+    {
+      "claim_id": "moat08-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.ncbi.nlm.nih.gov/clinvar/intro/"
+      ],
+      "statement": "ClinVar versions submissions, exposes conflicts, supports programmatic access, and enables reevaluation."
+    },
+    {
+      "claim_id": "moat08-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://pubmed.ncbi.nlm.nih.gov/31015575/"
+      ],
+      "statement": "ACMG published professional points to consider for genomic-result reevaluation and reanalysis."
+    }
+  ],
+  "contrary_evidence": [
+    "ClinVar is free and laboratories may already monitor their own cases."
+  ],
+  "economics": {
+    "acquisition_route": "Unvalidated hypothesis: counselors, LIMS vendors, and inherited-disease clinics.",
+    "capital_required_pln": 95000,
+    "founder_net_worth_path": "Unvalidated hypothesis: 250 clinics at 40000 PLN annually yield 10 million PLN ARR and founder equity above 5 million PLN in six to eight years.",
+    "founder_time": "Unvalidated hypothesis: 12-16 hours weekly with clinical and privacy advisers.",
+    "gross_margin_basis": "Unvalidated hypothesis: 70% after security and support.",
+    "payback": "Unvalidated hypothesis: annual contracts within nine months.",
+    "pricing": "Unvalidated hypothesis: 3000-12000 PLN monthly plus 20-80 PLN per monitored case.",
+    "retention_or_repeat": "Unvalidated hypothesis: growing historical cohorts create switching costs."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Adjudicated alerts deepen workflow rules and switching costs",
+    "customer": "Genetic laboratories and clinics",
+    "distribution_mechanism": "LIMS integrations and counseling channels",
+    "offer_and_business_model": "Change-detection queue and consent-aware audit registry",
+    "payer_and_paid_event": "The clinic pays to monitor cases and document reviewed recontact",
+    "problem_trigger": "A public assertion changes or conflicts with an earlier interpretation"
+  },
+  "founder_fit": [
+    "Genetics interest and data skills align while clinical authority stays with professionals."
+  ],
+  "parent": null,
+  "risks": [
+    "Missed or noisy alerts can harm patients.",
+    "Intended use may trigger IVD obligations."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.ncbi.nlm.nih.gov/clinvar/intro/",
+    "https://pubmed.ncbi.nlm.nih.gov/31015575/"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Clinical workflow SaaS",
+    "control_point": "A longitudinal graph of cases, variant versions, adjudications, consent, and recontact outcomes",
+    "critical_dependency": "Secure laboratory integration and a validated non-diagnostic boundary"
+  },
+  "thesis": "A clinician-controlled registry maps historical genetics cases to evolving variant assertions and routes changes for review without autonomous medical decisions.",
+  "title": "Variant Recall Registry",
+  "uncertainties": [
+    "Recontact duties, budgets, and false-alert tolerance are unresolved."
+  ],
+  "version": 1
+}

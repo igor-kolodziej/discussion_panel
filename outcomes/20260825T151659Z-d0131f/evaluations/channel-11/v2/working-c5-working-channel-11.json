@@ -1,0 +1,119 @@
+{
+  "assumptions": [
+    "The product is an evidence and workflow system, not a legal certification service or the responsible economic operator.",
+    "The absence of signed agencies, paid pilots, API measurements, and willingness-to-pay evidence is treated as uncertainty rather than proof of failure.",
+    "The initial scope is one product category and two commerce channels for high-SKU operators, with qualified product-safety review delegated.",
+    "Every suspected Safety Gate match receives human confirmation before a listing or incident action."
+  ],
+  "base_score": 4.8,
+  "candidate_id": "channel-11",
+  "candidate_sha256": "d17cb53466e8e948aef846fa531a46657432db4d0bcc0f3e4e083a8cf4ee142c",
+  "candidate_version": 2,
+  "constrained_score": 4.7,
+  "evaluation_type": "working",
+  "evidence_needed_for_higher_score": "A paid agency or responsible-person pilot; complete API-field mapping for the initial channels; measured document-review cost and alert-match precision and recall; proof of reduced listing downtime or incident labor; and cohort evidence for pricing, retention, and agency payback.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "The strongest insight is that high-SKU operators need provenance, cross-channel correction, and incident handling rather than another field store. That reframing addresses a genuine gap, although the underlying listing fields, feed transport, and alert data are already commoditized.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Listings can become invisible or unpurchasable when required information is missing, creating a direct revenue and compliance trigger. High-SKU, multi-channel operators plausibly feel substantial pain, but willingness to pay a premium over inexpensive native and feed tools remains untested.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Tenant, active-SKU, and incident fees align revenue with catalog scale and ongoing work. Public tools priced far below the proposed effective high-SKU charge create direct price pressure, while verification, translation, human match review, insurance, support, retention, and agency CAC are all unmeasured.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Responsible persons, importers, and listing agencies handling thousands of SKUs across several EU channels form a focused and potentially meaningful beachhead. The packet does not quantify this segment, and low-SKU sellers have credible manual or market-exit alternatives.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "Major marketplaces already provide native fields and bulk paths, while feed managers and GPSR apps compete at low prices. A verified category-specific operations layer could win a niche, but horizontal domination is unlikely because platforms and channel partners can extend into the same workflow.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A successful evidence record can extend to additional channels, product categories, languages, safety incidents, and adjacent product-compliance workflows. Expansion requires new connectors and domain expertise, but the underlying catalog and provenance assets provide a sensible adjacency path.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Verified document provenance, channel rejection fixes, and confirmed product matches could accumulate into useful workflow data and switching costs. The alert corpus is public, identifiers can be incomplete, cross-merchant reuse rights are unknown, and incumbent platforms can learn from their own larger datasets.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "One maintained record with verified provenance, multi-channel output, and reviewed incident action offers more trust and convenience than raw fields alone. No measured evidence yet shows sufficiently better accuracy, labor savings, listing continuity, or risk reduction to justify the likely premium.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "GPSR is already applicable and marketplace enforcement can directly interrupt EU sales, creating a current compliance and remediation window. The opportunity is timely even though native tools and specialist apps have already responded.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "Responsible-person firms and listing agencies can aggregate many high-SKU merchants and are a plausible low-social-energy channel for the founder. No commitment, conversion rate, channel economics, or evidence that those partners will not build or bundle the same service exists.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "The founder fits entity resolution, pipelines, and audit automation, and the proposed first scope is part-time compatible in principle. API gaps, forged or stale documents, incomplete alert identifiers, category-specific safety expertise, false matches, and incident liability create a meaningful human-operations burden.",
+      "score": 5,
+      "status": "scored"
+    }
+  ],
+  "final_score": 4.7,
+  "highest_value_structural_change": "Narrow into an agency-embedded operating system for one high-risk product category, combining specialist document review and confirmed incident response under an exclusive or preferred distribution agreement, rather than selling a horizontal GPSR field-and-alert tool.",
+  "interaction_adjustment": -0.1,
+  "judge_id": "c5-working-channel-11",
+  "main_structural_strength": "Missing or inconsistent GPSR evidence can directly suppress marketplace revenue, and a high-SKU operator has a recurring cross-channel coordination problem that native single-channel fields do not fully solve.",
+  "primary_score_limiter": "The proposed premium workflow sits above cheap feed products and native marketplace functionality, yet its differentiating verification and incident work is labor-intensive and has no demonstrated willingness to pay or accuracy advantage.",
+  "qualified": false,
+  "raw_response_path": "artifacts/research/raw-c5-working-channel-11.json",
+  "raw_response_sha256": "2a16defb6db79bc73e219f2f29339c17f03164bd854f98142f393007fe60d66c",
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 2,
+  "strongest_disconfirming_evidence": "eBay, Shopify, and Etsy already support GPSR data workflows, while Channable and a GPSR Shopify app publicly serve large catalogs at prices far below the proposed per-SKU economics.",
+  "unrounded_score": 4.7
+}

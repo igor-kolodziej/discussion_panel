@@ -1,0 +1,69 @@
+{
+  "candidate_id": "frontier-06",
+  "claims": [
+    {
+      "claim_id": "frontier-06-claim-01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/news/commission-updates-product-scope-and-tools-support-eudr-2026-07-13_en"
+      ],
+      "statement": "The revised EUDR applies from 30 December 2026 for large and medium operators and certain timber operators, and from 30 June 2027 for most qualifying micro and small operators."
+    },
+    {
+      "claim_id": "frontier-06-claim-02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eudr.webcloud.ec.europa.eu/tracesnt/help/eudr-documentation/operator/index.html"
+      ],
+      "statement": "The Commission's official operator API documents submission services for due-diligence statements by operators and authorized representatives before market placement or export."
+    }
+  ],
+  "contrary_evidence": [
+    "The 2025 revision narrowed downstream obligations and introduced simplified declarations, reducing the original software market; API contracts also changed materially."
+  ],
+  "economics": {
+    "acquisition_route": "UNVALIDATED COMMERCIAL HYPOTHESIS: win 10 importers through customs brokers specializing in one commodity before expanding.",
+    "capital_required_pln": 145000,
+    "founder_net_worth_path": "UNVALIDATED COMMERCIAL HYPOTHESIS: 25000 declarations annually by year 6 at 12 million PLN revenue could support founder net worth above 5 million PLN.",
+    "founder_time": "UNVALIDATED COMMERCIAL HYPOTHESIS: 4 hours per day until manual risk review is delegated.",
+    "gross_margin_basis": "UNVALIDATED COMMERCIAL HYPOTHESIS: 65-80% gross margin for low-risk repeat suppliers after geospatial validation is automated.",
+    "payback": "UNVALIDATED COMMERCIAL HYPOTHESIS: acquisition payback after 8 declarations.",
+    "pricing": "UNVALIDATED COMMERCIAL HYPOTHESIS: 7500 PLN onboarding and 480 PLN per declaration, with 1200 PLN for escalated risk review.",
+    "retention_or_repeat": "UNVALIDATED COMMERCIAL HYPOTHESIS: repeat on every covered batch with 36-month importer retention."
+  },
+  "fingerprint": {
+    "compounding_advantage": "a permissioned supplier-plot reuse graph and discrepancy history reduce repeat-batch cost while preserving source rights",
+    "customer": "first EU operators importing a narrow covered commodity without internal geospatial compliance teams",
+    "distribution_mechanism": "customs brokers and commodity-specific freight forwarders embed the service before release",
+    "offer_and_business_model": "supplier portal, plot validation, risk workflow, declaration API submission, and evidence escrow per batch",
+    "payer_and_paid_event": "the first operator pays when a validated declaration is submitted and its reference is bound to the consignment",
+    "problem_trigger": "a covered batch is ready for customs release and first EU market placement"
+  },
+  "founder_fit": [
+    "Good geospatial-data and automation fit with remote delivery; focus on one commodity keeps part-time scope bounded."
+  ],
+  "parent": null,
+  "risks": [
+    "False supplier coordinates could expose the operator and service provider.",
+    "Another legislative delay could defer demand."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://environment.ec.europa.eu/news/commission-updates-product-scope-and-tools-support-eudr-2026-07-13_en",
+    "https://eudr.webcloud.ec.europa.eu/tracesnt/help/eudr-documentation/operator/index.html",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:C_202603896"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "batch-clearance evidence escrow",
+    "control_point": "the due-diligence statement reference and immutable supplier evidence bundle before a covered consignment is placed on the EU market or exported",
+    "critical_dependency": "truthful upstream geolocation, operator authorization, evolving EUDR scope, and reliable Commission Information System APIs"
+  },
+  "thesis": "Act as authorized representative and evidence escrow for first operators importing narrow EUDR categories such as specialty rubber components or coffee ingredients: validate supplier geolocation, bind it to the consignment, and submit the required declaration before market placement. All commercial numbers, including capital_required_pln, are unvalidated hypotheses.",
+  "title": "EUDR Batch Evidence Escrow for Niche Importers",
+  "uncertainties": [
+    "Batch volumes by niche commodity are unvalidated.",
+    "Authorized-representative liability and insurance cost need counsel."
+  ],
+  "version": 1
+}

@@ -1,0 +1,84 @@
+{
+  "candidate_id": "channel-08",
+  "claims": [
+    {
+      "claim_id": "channel-08-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC6592877/",
+        "https://bids-specification.readthedocs.io/en/stable/modality-specific-files/electroencephalography.html"
+      ],
+      "statement": "EEG-BIDS defines interoperable raw-data and metadata conventions for EEG, including structured JSON and tabular metadata, creating a public schema against which data packages can be validated."
+    },
+    {
+      "claim_id": "channel-08-c02",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://mne.tools/stable/auto_tutorials/preprocessing/20_rejecting_bad_data.html",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC6592877/"
+      ],
+      "statement": "Open EEG tooling already performs many preprocessing and bad-data operations, suggesting an MVP can orchestrate established methods while differentiating on cross-site acceptance rules, provenance, and workflow integration."
+    },
+    {
+      "claim_id": "channel-08-c03",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://bids-specification.readthedocs.io/en/stable/modality-specific-files/electroencephalography.html",
+        "https://physionet.org/about/database/"
+      ],
+      "statement": "Hypothesis: hardware distributors and CROs will bundle a neutral QA report because unusable recordings discovered after participant visits or database lock create costs that neither sponsor nor site wants to absorb."
+    }
+  ],
+  "contrary_evidence": [
+    "BIDS validators and open-source EEG libraries already cover format and some data-quality checks, so a standalone upload checker is insufficient.",
+    "Many research labs tolerate custom pipelines and may have low budgets outside sponsored or regulated studies."
+  ],
+  "economics": {
+    "acquisition_route": "Publish a reproducible benchmark on public datasets, then secure one distributor or CRO integration rather than selling lab by lab",
+    "capital_required_pln": 65000,
+    "founder_net_worth_path": "Hypothesis: 15 CRO/OEM contracts averaging 250000 PLN plus study usage could reach 4.5-5.5 million PLN ARR in years 6-8; at 25% EBITDA, 6x EBITDA, and 75% ownership, founder equity could exceed 5 million PLN",
+    "founder_time": "15-22 hours weekly for a research-grade MVP, then 8-12 hours weekly if partners handle study operations; regulated clinical work is deferred",
+    "gross_margin_basis": "Automated batch signal processing can support 75-88% gross margin; compute, validation, and study-specific configuration are the main costs",
+    "payback": "Target under 12 months for a CRO partner; preventing a small number of unusable participant sessions can fund the licence",
+    "pricing": "Hypothesis: 25-80 PLN per research recording, 15000-60000 PLN per study, or 80000-250000 PLN annual OEM/CRO licence",
+    "retention_or_repeat": "Every recording is checked, protocol templates recur across sites, and historical QA adjudications remain valuable"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Consented labelled artifact patterns, protocol-specific thresholds, device translators, and adjudicated QA outcomes improve each new study",
+    "customer": "Neuroscience CROs, EEG device distributors, multi-site research teams, sponsors, and research platforms",
+    "distribution_mechanism": "Bundled by EEG hardware distributors, CRO study platforms, and research data-capture vendors",
+    "offer_and_business_model": "Device-agnostic EEG ingestion, QA, BIDS conversion, and provenance SaaS/API sold per study and through OEM licences",
+    "payer_and_paid_event": "CRO, sponsor, or device platform pays per recording/study and when an acceptance report is issued",
+    "problem_trigger": "A recording or site batch must pass objective data and metadata acceptance before analysis or sponsor handoff"
+  },
+  "founder_fit": [
+    "Exceptional neuroscience and data-science fit, with a productised QA workflow rather than clinical interpretation. Distribution through CROs and device channels limits social load. Begin in non-diagnostic research with public or synthetic data and no patient-care claims."
+  ],
+  "parent": null,
+  "risks": [
+    "A false pass can make a study believe unusable data are reliable; the tool must expose metrics and human approval.",
+    "Health and research data require rigorous contracts, security, and regional hosting.",
+    "Hardware vendors may resist a neutral layer that makes device quality comparable."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://bids-specification.readthedocs.io/en/stable/modality-specific-files/electroencephalography.html",
+    "https://mne.tools/stable/auto_tutorials/preprocessing/20_rejecting_bad_data.html",
+    "https://physionet.org/about/database/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC6592877/"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Scientific data acceptance and provenance rail",
+    "control_point": "The pass, review, or fail report required before an EEG dataset is accepted downstream",
+    "critical_dependency": "Demonstrated predictive validity of QA metrics across devices and protocols plus lawful access to adjudicated outcomes"
+  },
+  "thesis": "Build a device-agnostic automated acceptance and provenance layer for EEG studies: format conversion, metadata completeness, channel and montage checks, artifact summaries, protocol deviations, and a signed handoff report. EEG hardware distributors, neuroscience CROs, and research-platform vendors would embed it before data are accepted for analysis or sponsor delivery.",
+  "title": "EEG Data QA Rail",
+  "uncertainties": [
+    "The highest-value buyer may be a CRO, device vendor, sponsor, or core lab; their acceptance criteria differ.",
+    "Automated signal-quality metrics may not generalise across paradigms, ages, caps, and hardware.",
+    "Clinical-trial use could require validation and quality-system work beyond a part-time founder's initial capacity."
+  ],
+  "version": 1
+}

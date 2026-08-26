@@ -1,0 +1,138 @@
+{
+  "candidate_id": "channel-06",
+  "claims": [
+    {
+      "claim_id": "channel-06-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32022L2555"
+      ],
+      "statement": "NIS2 Article 21 requires covered entities to address supply-chain security, including security-related aspects of relationships with direct suppliers and service providers, and to consider supplier-specific vulnerabilities and cybersecurity practices."
+    },
+    {
+      "claim_id": "channel-06-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg_impl/2024/2690"
+      ],
+      "statement": "Commission Implementing Regulation (EU) 2024/2690 requires the digital-sector entities within its scope to maintain a direct-supplier directory and adopt supplier selection, contracting, review, and exit requirements; it is not a universal detailed template for every NIS2 sector."
+    },
+    {
+      "claim_id": "channel-06-c03",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.enisa.europa.eu/sites/default/files/publications/Good%20Practices%20for%20Supply%20Chain%20Cybersecurity.pdf"
+      ],
+      "statement": "ENISA's 2022 survey found broad supply-chain policy adoption but thinner staffing and budget coverage, consistent with a labour-saving managed workflow need rather than evidence of willingness to buy this particular product."
+    },
+    {
+      "claim_id": "channel-06-c04",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://processunity.zendesk.com/hc/en-us/articles/33974053261595-Third-Party-Legal-FAQ",
+        "https://www.whistic.com/trust-catalog",
+        "https://www.onetrust.com/products/third-party-risk-management/",
+        "https://drata.com/products/third-party-risk-management"
+      ],
+      "statement": "Established products already offer reusable assessments, security-information exchanges, vendor inventories, questionnaires, monitoring, and recurring reviews, so evidence reuse alone is not differentiated."
+    },
+    {
+      "claim_id": "channel-06-c05",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://www.edpb.europa.eu/sme/learn-the-basics/data-controller-or-data-processor_en"
+      ],
+      "statement": "A passport operator that processes identifiable contacts or other personal data for MSP clients needs explicit controller-processor allocation, contractual instructions, security measures, and audit support under GDPR."
+    },
+    {
+      "claim_id": "channel-06-c06",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://www.enisa.europa.eu/publications/nis2-technical-implementation-guidance",
+        "https://help.vanta.com/en/articles/11345557-third-party-risk-management-product-overview"
+      ],
+      "statement": "Hypothesis: a constrained evidence-and-expiry layer can earn adoption if it maps official guidance into an MSP's existing process and imports or exports to incumbent GRC systems; no source establishes MSP willingness to white-label it or the proposed price."
+    }
+  ],
+  "contrary_evidence": [
+    "ProcessUnity already describes a one-assessment, share-many-times exchange, which directly overlaps the reusable-passport premise.",
+    "Whistic, OneTrust, Vanta, and Drata already cover security-document exchange, vendor inventories, questionnaires, evidence collection, monitoring, and recurring assessments.",
+    "The detailed requirements in Regulation 2024/2690 apply to specified digital and ICT-service entities, while obligations and enforcement details elsewhere depend on sector and national implementation; a universal NIS2 questionnaire is not established.",
+    "None of the reviewed incumbent pages publishes a directly comparable per-supplier price, and no public evidence validates MSP revenue share, white-label appetite, supplier response rates, or customer acceptance of a third-party passport."
+  ],
+  "economics": {
+    "acquisition_route": "Approach one Polish or CEE regional MSP group with a repeated supplier-review process and require a paid, non-cancellable annual capacity reservation before production hardening. Limit the initial deployment to one bounded workflow and one standard import or export connector; no partner commitment is assumed.",
+    "capital_required_pln": 85000,
+    "founder_net_worth_path": "The prior years 7-10 scenario based on 30000 active supplier records is retired because the billing and delivery unit is now contracted review capacity. A credible path to 5 million PLN cannot be quantified from the available evidence until one paid capacity reservation establishes fee, utilised review volume, contribution margin, and renewal, followed by repeat contracts across multiple MSP groups; absent those milestones, the path remains unproven.",
+    "founder_time": "18-25 hours weekly through the first bounded partner workflow and security hardening; reduce below 15 hours only if the MSP owns review operations and the standard connector avoids founder-led implementation work.",
+    "gross_margin_basis": "Not yet quantified. A fixed capacity block, one standard connector, and partner-owned review decisions are intended to make contribution cost more predictable than bespoke per-record SaaS, but security reviews, insurance, support, and exception handling remain unmeasured costs and must be tracked per completed review.",
+    "payback": "Unknown. The MSP should reserve capacity only if a measured baseline shows that the annual fee can be recovered from documented review labour released or managed-compliance revenue within 12 months; production integration spend is gated on the paid reservation.",
+    "pricing": "Contract-first hypothesis with no asserted price: a non-cancellable annual capacity reservation for a specified number of supplier-review events and one standard connector, plus an overage for completed reviews above the block. This replaces the annual-minimum-plus-active-supplier-month hypothesis; fee and block size remain unknown until labour and throughput are measured.",
+    "retention_or_repeat": "Annual renewal depends on utilised review capacity, recurring evidence expiry, and continued operation of the standard connector. The model assumes neither a horizontal passport network effect nor automatic retention; unused capacity, bespoke work, or weak labour savings should prevent expansion."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Partner-specific mapping, expiry, exception, and reviewer-approval history embedded in the MSP group's standard operating procedure and connector",
+    "customer": "A Polish or CEE regional MSP group with repeated direct-supplier security reviews for mid-market NIS2-scope clients",
+    "distribution_mechanism": "One contract-first sale to an MSP group, followed only after measured contribution economics by replication through the same bounded workflow and standard connector",
+    "offer_and_business_model": "White-label provenance, expiry, mapping, and human-approval workflow module sold as reserved managed-compliance review capacity rather than a horizontal supplier passport",
+    "payer_and_paid_event": "The MSP group reserves annual supplier-review capacity under contract and pays an overage only when completed reviews exceed the reserved block",
+    "problem_trigger": "A supplier is onboarded, renewed, materially changed, or implicated in an incident and current control evidence must be reviewed"
+  },
+  "founder_fit": [
+    "Strong fit with structured evidence, data modelling, automation, and low-camera B2B work.",
+    "A contract-first, single-workflow prototype limits speculative build scope within the founder's available capital and part-time schedule.",
+    "Secure architecture, penetration testing, contractual review, and any production connector still require paid specialists rather than founder improvisation.",
+    "The first MSP-group contract remains a relationship-heavy enterprise sale, and no partner appetite or commitment is evidenced."
+  ],
+  "parent": {
+    "candidate_id": "channel-06",
+    "version": 3
+  },
+  "redesign": {
+    "changed_fingerprint_fields": [
+      "customer",
+      "payer_and_paid_event",
+      "offer_and_business_model",
+      "distribution_mechanism",
+      "compounding_advantage"
+    ],
+    "economic_effect": "Replaces uncommitted per-active-supplier SaaS economics with a contract-first annual capacity reservation plus completed-review overage, gates production integration spending on a paid reservation, and bounds delivery cost to one workflow and one standard connector. Exact demand, contract price, reserved volume, utilisation, margin, and renewal remain unknown."
+  },
+  "risks": [
+    "A stale or over-broad assertion could be relied upon in a supplier approval and create contractual, regulatory, and reputational exposure.",
+    "Centralised security evidence and contact chains create a high-value attack target and raise the module's own NIS2 and GDPR diligence burden.",
+    "A single MSP-group contract concentrates revenue and data access, while a failed renewal can eliminate the initial distribution channel.",
+    "Large GRC vendors or MSP platforms can bundle the narrow provenance-and-expiry workflow once demand is demonstrated.",
+    "Capacity pricing can hide unprofitable exception handling or bespoke connector work unless scope and overages are contractually bounded.",
+    "Questionnaire mappings can obscure customer-specific risk unless every mapping preserves source, scope, owner, expiry, and human approval."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32022L2555",
+    "https://www.enisa.europa.eu/sites/default/files/publications/Good%20Practices%20for%20Supply%20Chain%20Cybersecurity.pdf",
+    "https://www.enisa.europa.eu/publications/nis2-technical-implementation-guidance",
+    "https://eur-lex.europa.eu/eli/reg_impl/2024/2690",
+    "https://processunity.zendesk.com/hc/en-us/articles/33974053261595-Third-Party-Legal-FAQ",
+    "https://www.whistic.com/trust-catalog",
+    "https://www.onetrust.com/products/third-party-risk-management/",
+    "https://help.vanta.com/en/articles/11345557-third-party-risk-management-product-overview",
+    "https://drata.com/products/third-party-risk-management",
+    "https://www.edpb.europa.eu/sme/learn-the-basics/data-controller-or-data-processor_en"
+  ],
+  "stage": "development",
+  "structure": {
+    "commercial_archetype": "Capacity-reserved embedded B2B workflow module",
+    "control_point": "The provenance, expiry, exception, and human-approval record embedded in the MSP group's standard supplier-review procedure and connector",
+    "critical_dependency": "An MSP group must sign a paid capacity reservation and provide lawful scoped workflow and data access; no such commitment is evidenced"
+  },
+  "thesis": "Sell one Polish or CEE MSP group a white-label provenance, expiry, mapping, and human-approval module embedded in its existing supplier-review process under an annual capacity reservation. The product sells measurable managed-compliance review capacity through one bounded workflow and standard connector; reusable supplier evidence is secondary and is never represented as certification. This preserves the defensible provenance-and-expiry identity while dropping the unsupported horizontal passport and network-effect premise.",
+  "title": "MSP Supplier-Review Capacity Module",
+  "uncertainties": [
+    "Whether any Polish or CEE MSP group will sign a paid, non-cancellable annual capacity reservation and permit a white-label embed.",
+    "The contract fee, reserved review volume, utilisation, overage basis, support cost, contribution margin, and renewal rate.",
+    "Whether one standard import or export connector is sufficient or incumbent systems force bespoke integration.",
+    "Whether clients and suppliers permit evidence reuse inside the MSP workflow and what mappings avoid misleading equivalence.",
+    "What security architecture, insurance, controller-processor terms, liability caps, and audit rights a production contract requires."
+  ],
+  "version": 4
+}

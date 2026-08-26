@@ -1,0 +1,66 @@
+{
+  "candidate_id": "embed-08",
+  "claims": [
+    {
+      "claim_id": "embed-08-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gamblingcommission.gov.uk/consultation-response/remote-customer-interaction-consultation-response/the-lccp-provision"
+      ],
+      "statement": "The UK Gambling Commission's remote customer-interaction framework requires systems that embed identify, act, and evaluate as an ongoing process."
+    },
+    {
+      "claim_id": "embed-08-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reco/2014/478/oj/eng"
+      ],
+      "statement": "Commission Recommendation 2014/478/EU promotes high consumer protection and minimizing health and economic harm from excessive online gambling."
+    }
+  ],
+  "contrary_evidence": [
+    "Large operators already maintain proprietary harm models and may refuse cross-operator benchmarking even when anonymized."
+  ],
+  "economics": {
+    "acquisition_route": "One-to-many distribution through player-account-management and gambling-CRM vendors serving licensed operators.",
+    "capital_required_pln": 60000,
+    "founder_net_worth_path": "Hypothesis: 15 operators at 45000 PLN blended monthly revenue yields 8.1 million PLN ARR by year five and can support founder equity above 5 million PLN without double-counting retained earnings.",
+    "founder_time": "Hypothesis: 4 founder hours daily for analytics and governance while a responsible-gambling specialist handles policy review.",
+    "gross_margin_basis": "Hypothesis: 65-75% gross margin after security, model monitoring, clinical-adviser review, and platform revenue share.",
+    "payback": "Hypothesis: a 40000 PLN platform integration pays back in 12 months after onboarding three mid-sized operators.",
+    "pricing": "Hypothesis, including the capital figure: 3000 PLN monthly platform minimum plus 400 PLN per controlled intervention readout.",
+    "retention_or_repeat": "Each triggered customer interaction and subsequent effectiveness evaluation is a repeat paid event."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Strictly purpose-limited, permissioned response labels improve intervention selection across contexts",
+    "customer": "Licensed remote gambling operators and their compliance teams",
+    "distribution_mechanism": "Embedded integration through player-account and CRM platform vendors",
+    "offer_and_business_model": "Protective-intervention orchestration and evaluation API sold per event and platform minimum",
+    "payer_and_paid_event": "The operator pays when an intervention outcome is evaluated and recorded",
+    "problem_trigger": "A player crosses a harm-risk threshold and an interaction must be chosen and evaluated"
+  },
+  "founder_fit": [
+    "The founder understands betting behavior and experimentation, but the concept remains non-promotional, analytical, and channel-led."
+  ],
+  "parent": null,
+  "risks": [
+    "Behavioral data must never be repurposed for gambling promotion, and weak interventions could harm users or create regulatory liability."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.gamblingcommission.gov.uk/consultation-response/remote-customer-interaction-consultation-response/the-lccp-provision",
+    "https://eur-lex.europa.eu/eli/reco/2014/478/oj/eng"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Regulated intervention decision API",
+    "control_point": "The closed feedback loop linking detected risk, protective action, and evaluated outcome",
+    "critical_dependency": "Operator deployment, regulator-aligned methods, and lawful processing of sensitive behavioral data"
+  },
+  "thesis": "Embed responsible-gambling intervention experiments in player-account and CRM platforms, charging per evaluated interaction while creating a permissioned cross-operator dataset of which protective actions reduced harm signals.",
+  "title": "SaferPlay Intervention Outcomes API",
+  "uncertainties": [
+    "No evidence yet establishes platform access, regulator acceptance, or causal lift from pooled outcome data."
+  ],
+  "version": 1
+}

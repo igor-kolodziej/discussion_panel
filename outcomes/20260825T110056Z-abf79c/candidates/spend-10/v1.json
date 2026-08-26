@@ -1,0 +1,86 @@
+{
+  "candidate_id": "spend-10",
+  "claims": [
+    {
+      "claim_id": "spend-10-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.eiopa.europa.eu/structure-eu-insurance-distribution-market_en"
+      ],
+      "statement": "EIOPA's March 2026 market report says commission remuneration was prevalent in 24 Member States in 2024 and that agents and brokers dominate distribution in most Member States."
+    },
+    {
+      "claim_id": "spend-10-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.knf.gov.pl/knf/pl/komponenty/img/Sprawozdanie_UKNF_KNF_2024_94423.pdf"
+      ],
+      "statement": "KNF reported 28365 registered insurance agents and 174512 natural persons performing agency activities at the end of 2024, establishing a broad Polish intermediary base but not the multi-carrier target subset."
+    },
+    {
+      "claim_id": "spend-10-c03",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.knf.gov.pl/dla_rynku/posrednictwo_finansowe/rynek_ubezpieczen/dzialalnosc_agencyjna"
+      ],
+      "statement": "KNF defines agents as insurance distributors operating for remuneration and specifically recognises multi-agents acting for more than one insurer in the same insurance division."
+    }
+  ],
+  "contrary_evidence": [
+    "Broker-management systems and carrier portals may already reconcile common statements.",
+    "The headline KNF count includes many agents too small or too single-carrier to need the product.",
+    "EIOPA reports continued consolidation and a 7.5% decline in registered EU intermediaries from 2020 to 2024."
+  ],
+  "economics": {
+    "acquisition_route": "Reconcile one carrier month free of integration and charge for the full historical period, then recruit one broker-software or accounting partner with a portfolio of at least 50 agencies.",
+    "capital_required_pln": 45000,
+    "founder_net_worth_path": "One thousand agencies averaging 700 PLN monthly would create 8.4m PLN annual recurring revenue. At a mature 42% owner-cash margin, roughly 3.53m PLN per year could produce cumulative distributions above 10m PLN in four mature years without relying on a company sale.",
+    "founder_time": "Start with two carrier formats and ten agencies at 2.5-4 hours/day, with clients authorising every dispute and payout; remain employed through sustained channel conversions and the stated runway conditions.",
+    "gross_margin_basis": "After parsers are maintained, reconciliation is automated; target 72-86% gross margin after exception support and secure storage.",
+    "payback": "Target under 3 months from administrator time, recovered discrepancies or improved renewal capture; actual mismatch rates must be measured before promising ROI.",
+    "pricing": "Assumption to test: 400-2500 PLN monthly by carrier and producer count, 1500-5000 PLN onboarding, and an optional fixed-fee historical recovery review rather than open-ended commission sharing.",
+    "retention_or_repeat": "Carrier statements, clawbacks, producer payouts and renewals recur monthly, while accumulated dispute history strengthens the ledger; single-carrier agents have weak need."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A maintained parser and semantic map for carrier statement variants, policy identifiers, clawback logic and adjudicated mismatch reasons lowers onboarding cost across the fragmented market.",
+    "customer": "Polish multi-agencies and small-to-mid-sized insurance brokers working with several carriers and managing recurring policy renewals and clawbacks.",
+    "distribution_mechanism": "Broker-management software vendors and insurance-focused accounting offices resell the tool, supported by a one-month paid reconciliation diagnostic rather than relationship-heavy enterprise sales.",
+    "offer_and_business_model": "Secure importer that normalises carrier statements, builds an expected-versus-paid policy ledger, explains variances, tracks disputes and produces producer payouts and renewal queues; subscription by carrier and policy volume.",
+    "payer_and_paid_event": "The agency or broker owner pays per carrier statement and active producer when commissions are reconciled; the existing spend is finance/admin labour and the recurring loss is missing or misallocated commission and missed renewal revenue.",
+    "problem_trigger": "A monthly insurer statement arrives in a different PDF or spreadsheet format and must be reconciled to bound policies, expected commission, bank receipts, cancellations and producer splits."
+  },
+  "founder_fit": [
+    "Parsing, record linkage and variance prioritisation are well matched to AI and analytical skills.",
+    "Insurance-focused accounting and software partners can aggregate distribution and onboarding.",
+    "The product can prove value from historical files with no consumer outreach, camera work or insurance selling.",
+    "Poland offers a sizable local intermediary base before EU format expansion."
+  ],
+  "parent": null,
+  "risks": [
+    "A wrong expected-commission calculation can trigger invalid carrier disputes or producer payouts.",
+    "Policy and remuneration data are commercially sensitive and may include personal data.",
+    "Carrier format churn can create a maintenance treadmill.",
+    "Incumbent broker software vendors may copy the highest-value reconciliation features."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.eiopa.europa.eu/structure-eu-insurance-distribution-market_en",
+    "https://www.knf.gov.pl/knf/pl/komponenty/img/Sprawozdanie_UKNF_KNF_2024_94423.pdf",
+    "https://www.knf.gov.pl/dla_rynku/posrednictwo_finansowe/rynek_ubezpieczen/dzialalnosc_agencyjna"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Revenue-assurance and reconciliation SaaS",
+    "control_point": "The canonical expected-versus-paid commission ledger used before producer payout and renewal action",
+    "critical_dependency": "Access to insurer statements and reliable policy/producer data, plus enough cross-carrier format complexity to defeat incumbent reports"
+  },
+  "thesis": "Sell Polish multi-agencies and brokers a reconciliation engine that parses insurer statements, joins policy and bank data, and surfaces missing commission, unexplained clawbacks and renewal leakage. Intermediaries are predominantly paid through commissions and already spend administrator time reconciling multiple insurer formats; the product controls their own revenue ledger without selling insurance or advising consumers.",
+  "title": "Expected-versus-Paid Commission Ledger for Insurance Intermediaries",
+  "uncertainties": [
+    "No public evidence quantifies commission discrepancies or reconciliation labour among Polish multi-agencies.",
+    "Carrier statement formats, contractual permission to process them and policy-ID match quality need sampling.",
+    "The economic target count after excluding inactive and single-carrier agents is unknown.",
+    "Pricing, margins, acquisition conversion and wealth calculations are assumptions."
+  ],
+  "version": 1
+}

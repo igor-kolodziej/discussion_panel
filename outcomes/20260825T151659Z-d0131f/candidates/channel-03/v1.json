@@ -1,0 +1,69 @@
+{
+  "candidate_id": "channel-03",
+  "claims": [
+    {
+      "claim_id": "channel-03-claim-01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/news/new-waste-shipment-regulation-and-diwass-platform-go-live-2026-05-21_en"
+      ],
+      "statement": "Most revised Waste Shipment Regulation provisions and DIWASS went live on 21 May 2026, replacing paper with electronic exchange for relevant cross-border procedures."
+    },
+    {
+      "claim_id": "channel-03-claim-02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/topics/waste-and-recycling/waste-shipments/implementation-waste-shipment-regulation_en"
+      ],
+      "statement": "The Commission describes DIWASS as the system for electronic submission and exchange of waste-shipment information and documents."
+    }
+  ],
+  "contrary_evidence": [
+    "DIWASS and national systems may permit direct use or native ERP integration, and large waste operators can build connectors internally."
+  ],
+  "economics": {
+    "acquisition_route": "UNVALIDATED HYPOTHESIS: 2 weighbridge or waste-ERP integrations each generate 25 recycler and broker sites.",
+    "capital_required_pln": 80000,
+    "founder_net_worth_path": "UNVALIDATED HYPOTHESIS: by year 7, PLN 8 million ARR and PLN 2.4 million EBITDA; 75% founder ownership at 4 times EBITDA implies PLN 7.2 million founder equity before liabilities.",
+    "founder_time": "UNVALIDATED HYPOTHESIS: 14 founder hours weekly during two-country integration, then 8 with documented adapters.",
+    "gross_margin_basis": "UNVALIDATED HYPOTHESIS: 79% mature gross margin after message exchange, document retention and support.",
+    "payback": "UNVALIDATED HYPOTHESIS: 7-month channel-adjusted CAC payback.",
+    "pricing": "UNVALIDATED HYPOTHESIS — every commercial figure here, including capital_required_pln=80000, is a hypothesis: PLN 2200 per site monthly plus PLN 28 per cross-border shipment.",
+    "retention_or_repeat": "UNVALIDATED HYPOTHESIS: 94% annual site retention because the connector is used on every in-scope dispatch."
+  },
+  "fingerprint": {
+    "compounding_advantage": "country-pair route rules and anonymised authority rejection-resolution patterns",
+    "customer": "cross-border waste brokers, recovery facilities and specialist carriers",
+    "distribution_mechanism": "weighbridge, transport-management and waste-ERP resellers",
+    "offer_and_business_model": "ERP adapter, dispatch block and exception console sold as site subscription plus shipment usage",
+    "payer_and_paid_event": "facility or broker pays per connected site and successfully issued movement packet",
+    "problem_trigger": "a notified or green-listed waste load is ready to move but its digital records are incomplete or inconsistent"
+  },
+  "founder_fit": [
+    "Rules/data integration is compatible with part-time analytical work and low-touch reseller sales. UNVALIDATED HYPOTHESIS: PLN 80000 funds one route and one ERP pilot before expansion."
+  ],
+  "parent": null,
+  "risks": [
+    "A dispatch block or incorrect status could cause costly delays.",
+    "Interoperability changes across authorities may create heavy support."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://environment.ec.europa.eu/news/new-waste-shipment-regulation-and-diwass-platform-go-live-2026-05-21_en",
+    "https://environment.ec.europa.eu/topics/waste-and-recycling/waste-shipments/implementation-waste-shipment-regulation_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "regulated cross-border logistics transaction rail",
+    "control_point": "digital movement-document issuance before waste truck dispatch",
+    "critical_dependency": "DIWASS endpoint credentials and national-authority status responses"
+  },
+  "thesis": "Build an interoperability connector between weighbridge/waste ERP records and DIWASS, preventing a cross-border truck dispatch until notification, consent, carrier and load records agree. A route-and-error corpus compounds into faster exception resolution for brokers operating across several national systems.",
+  "title": "DIWASS Dispatch Connector for Waste Brokers",
+  "uncertainties": [
+    "Production API access for a small integrator",
+    "Concentration of shipment volume",
+    "ERP reseller commercial terms"
+  ],
+  "version": 1
+}

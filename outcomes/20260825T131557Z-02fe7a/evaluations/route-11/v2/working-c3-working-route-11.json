@@ -1,0 +1,119 @@
+{
+  "assumptions": [
+    "The first product remains limited to ambient-storage IVD or medical consumables and never enables clinic-to-clinic medicinal-product trading or makes regulated disposition decisions.",
+    "A participating wholesaler can legally provide order and lot data, while participating clinics can supply periodic on-hand counts with enough accuracy for a bounded pilot; both remain unvalidated.",
+    "The stated pricing, channel share, gross margin, adoption, retention, and founder-equity path are planning hypotheses rather than observed economics.",
+    "The founder keeps the corporate job during validation and can limit the export-based pilot to the stated part-time hours and available capital by leaving regulated and quality decisions with licensed partners."
+  ],
+  "base_score": 4.88,
+  "candidate_id": "route-11",
+  "candidate_sha256": "593ba0e03570919f74d9fd912afafadc524366c984c7ade30bd4f60a243d6ed9",
+  "candidate_version": 2,
+  "constrained_score": 4.68,
+  "evaluation_type": "working",
+  "evidence_needed_for_higher_score": "A signed wholesaler pilot and durable data/portal rights, followed by 10-20 clinics showing accurate low-effort counts, a material pre-pilot expiry or stockout baseline, measurable improvement versus simple reorder rules, willingness to pay at the proposed price, and acceptable onboarding and support cost.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "Joining wholesaler order history to clinic-level counts and embedding exceptions in the ordering portal could place the product at a useful workflow control point. The insight is nevertheless an applied refinement of established inventory, expiry-alert, and replenishment systems rather than a fundamentally new mechanism.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Expiry, stockout, consumption, and reorder tracking are recognized operational needs, and instrumented hospital workflows show that waste can be reduced. The absolute loss and staff burden in independent Polish clinics, as well as willingness to pay 180-280 PLN monthly for incremental improvement, remain unknown rather than disproven.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "A recurring subscription without owned inventory has reasonable cash conversion and an affordable pilot, but the expected 50-65% gross margin is only moderate for SaaS after channel, onboarding, normalization, and support costs. Low site revenue requires several thousand retained sites and multiple partners, while even one integration needs roughly 25-50 paying sites and 12-24 months for hypothesized payback.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "One wholesaler, one ambient-storage consumable family, and 10-20 clinics form a focused beachhead with a clear test boundary. Poland has a large outpatient venue base, but the subset with material expiry loss, compatible data, and sufficient budget is not established, and the wealth path eventually requires substantial regional penetration.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "Sortly, Bodega, and enterprise supply-chain vendors already provide much of the visible feature set. A deeply embedded wholesaler workflow could support a strong niche, but no exclusive data, portal, or distribution right is secured, and the wholesaler or an incumbent could reproduce the narrow alert layer.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A successful product-family pilot could extend across more SKUs, clinic types, wholesalers, and adjacent EU markets, with richer forecasting or validated savings models added later. Each new wholesaler, product class, and jurisdiction introduces data normalization, incentive, and compliance friction, so expansion is plausible but not frictionless.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Longitudinal order, count, expiry, and outcome data could improve rules and create workflow switching costs if the startup retains durable rights. Those rights and the data quality are currently assumptions, the basic algorithms are replicable, and the channel partner already occupies the customer relationship and could appropriate much of the value.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "Portal embedding and wholesaler-controlled return eligibility could make the service more convenient and compliant than standalone inventory software. There is no evidence yet that its forecasts outperform simple min/max rules or existing tools enough to change clinic behavior, cover counting work, and support a channel-inclusive subscription.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "Digital ordering, traceability obligations, and UDI infrastructure make the workflow technically conceivable, while AI lowers normalization and forecasting costs. The cited requirements are not a new time-limited catalyst, and incumbents already address the category, so timing is enabling rather than unusually favorable.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "A wholesaler portal could concentrate acquisition, reduce founder-led sales, and provide repeatable access to many clinics. No wholesaler commitment or commercial terms exist, one partner can block both access and reach, and lower customer inventories may conflict with the channel's near-term incentives.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "The export-first pilot fits the founder's data skills, time envelope, and available capital, and the narrowed design keeps licensed partners responsible for regulated actions. Reliable counts, interface rights, product-specific return rules, partner alignment, and avoidance of bespoke support remain substantial execution risks that must be resolved before automation or scale.",
+      "score": 5,
+      "status": "scored"
+    }
+  ],
+  "final_score": 4.7,
+  "highest_value_structural_change": "Make one wholesaler the contracting payer and data owner for a single demonstrably high-loss consumable family, bundle scan-or-receiving capture into its portal, and sell a measured supply-chain exception service across the wholesaler's installed base instead of relying on each clinic to buy and manually maintain a standalone subscription.",
+  "interaction_adjustment": -0.2,
+  "judge_id": "c3-working-route-11",
+  "main_structural_strength": "A licensed wholesaler can combine a high-leverage distribution channel with the order-data and regulated-workflow access needed to make inventory exceptions useful, while the startup avoids owning inventory.",
+  "primary_score_limiter": "The wholesaler-controlled access point is not secured, and the product has not shown enough incremental clinic savings or labor reduction over inexpensive existing inventory controls to support attractive recurring economics.",
+  "qualified": false,
+  "raw_response_path": "artifacts/research/raw-c3-working-route-11.json",
+  "raw_response_sha256": "baf7f7792dab07d90caaa2b1562c4186b49b927afae6e61a8104f4f2c7584e51",
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 2,
+  "strongest_disconfirming_evidence": "Existing products already sell lot, expiry, low-stock, and reorder functionality, while the strongest documented savings come from instrumented hospitals rather than small clinics; this directly weakens both differentiation and the assumed value pool.",
+  "unrounded_score": 4.68
+}

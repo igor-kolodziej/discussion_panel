@@ -1,0 +1,82 @@
+{
+  "candidate_id": "niche-04",
+  "claims": [
+    {
+      "claim_id": "niche-04-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.nrel.gov/docs/fy22osti/80881.pdf"
+      ],
+      "statement": "NREL documents that portfolio owners face disconnected monitoring, delayed repairs, and difficulty justifying traditional O&M for smaller systems, while performance can return after faults are repaired."
+    },
+    {
+      "claim_id": "niche-04-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.nrel.gov/docs/fy19osti/73822.pdf",
+        "https://iea-pvps.org/key-topics/degradation-failure-modes-new-cell-module-technologies/"
+      ],
+      "statement": "PV modules carry distinct product and long-duration performance warranties, and enforcement depends on identifying failure modes and documenting performance rather than merely observing low output."
+    },
+    {
+      "claim_id": "niche-04-c03",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://www.nrel.gov/docs/fy22osti/80881.pdf"
+      ],
+      "statement": "Hypothesis: a contingent recovery fee can unlock an underserved segment whose individual sites are too small for full O&M contracts but valuable enough in a portfolio to justify evidence reconstruction."
+    }
+  ],
+  "contrary_evidence": [
+    "Inverter portals and established O&M firms already provide alerts and diagnostics, so monitoring alone is not differentiated.",
+    "A low-output system may be explained by weather, shading, soiling, curtailment, or design rather than a recoverable warranty event."
+  ],
+  "economics": {
+    "acquisition_route": "Recover three family-network cases, then offer portfolio scans through lessors, wholesalers, and independent electricians",
+    "capital_required_pln": 60000,
+    "founder_net_worth_path": "Hypothesis: 400 monitored sites at 6k PLN annual recurring revenue plus 1.5M PLN yearly recovery fees yield about 3.9M PLN revenue and 1.8M PLN EBITDA by year 5. At 4x EBITDA and 65% ownership, equity is 4.7M PLN; retained cash can take founder net worth beyond 5M PLN in years 6 to 8.",
+    "founder_time": "12 to 20 hours weekly initially, with inspection and legal work delegated per case",
+    "gross_margin_basis": "Software monitoring can exceed 80% gross margin; blended target is 55% to 70% after contracted inspections and claim specialists",
+    "payback": "The owner pays from recovered equipment, repair, or avoided lost generation; no-win contingent work is capped by a paid diagnostic",
+    "pricing": "1,500 to 5,000 PLN diagnostic, 10% to 15% of verified recovery, and 250 to 500 PLN per site monthly monitoring",
+    "retention_or_repeat": "A resolved claim converts into ongoing monitoring, and portfolio owners repeat across components and sites"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A component-, weather-, installer-, and evidence-specific failure and claim-resolution corpus",
+    "customer": "Owners, leasing firms, and independent O&M providers with portfolios of 50 kW to 1 MW Polish rooftop PV systems",
+    "distribution_mechanism": "Independent electricians, solar wholesalers, equipment lessors, insurers, and orphaned portfolios from exited installers",
+    "offer_and_business_model": "Fixed evidence diagnostic, 10% to 15% recovery fee, and optional per-site monitoring subscription",
+    "payer_and_paid_event": "The asset owner pays for diagnosis and upon verified warranty, insurance, or contractor recovery",
+    "problem_trigger": "A site underperforms, an inverter or module fails, or an insurer or manufacturer requests proof"
+  },
+  "founder_fit": [
+    "The founder can combine time-series anomaly detection with family-business installer access and outsource accredited field tests. The desk is evidence-led and low-camera, but must remain vendor-neutral and avoid consuming all founder time in bespoke claim negotiation."
+  ],
+  "parent": null,
+  "risks": [
+    "Contingent fees create disputes over attribution and recovered value.",
+    "Physical inspection partners may introduce safety and professional-liability exposure.",
+    "Manufacturers or installers may be insolvent before long warranties mature."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://iea-pvps.org/key-topics/degradation-failure-modes-new-cell-module-technologies/",
+    "https://joint-research-centre.ec.europa.eu/photovoltaic-geographical-information-system-pvgis_en",
+    "https://www.nrel.gov/docs/fy19osti/73822.pdf",
+    "https://www.nrel.gov/docs/fy22osti/80881.pdf"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Contingency-fee claims recovery with recurring monitoring",
+    "control_point": "The normalized evidence dossier used to attribute underperformance and pursue a claim",
+    "critical_dependency": "A meaningful share of detected losses must be provable, contractually recoverable, and large enough to support inspection costs"
+  },
+  "thesis": "Build a vendor-neutral recovery service for owners and O&M firms managing portfolios of 50 kW to 1 MW rooftop PV systems. The service would normalize inverter telemetry against weather, reconstruct commissioning and maintenance evidence, identify likely component or workmanship failures, and submit a manufacturer-, installer-, or insurer-ready dossier. Begin with a fixed diagnostic fee plus a share of verified recovery; convert portfolios into monitoring subscriptions and a proprietary component-failure and claim-outcome dataset.",
+  "title": "PV Warranty-Recovery Desk for Small Commercial Roof Portfolios",
+  "uncertainties": [
+    "Median recoverable value and success rate for Polish commercial rooftop claims.",
+    "Whether owners have retained commissioning records and assignable warranty rights.",
+    "Whether manufacturers and insurers accept remotely assembled evidence without local accredited tests."
+  ],
+  "version": 1
+}

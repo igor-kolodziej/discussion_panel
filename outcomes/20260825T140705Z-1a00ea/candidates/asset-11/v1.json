@@ -1,0 +1,70 @@
+{
+  "candidate_id": "asset-11",
+  "claims": [
+    {
+      "claim_id": "asset-11-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/dir/2019/944/oj/eng"
+      ],
+      "statement": "EU electricity rules require participation of demand response through aggregation and non-discriminatory treatment alongside producers."
+    },
+    {
+      "claim_id": "asset-11-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.pse.pl/web/pse-eng/areas-of-activity/capacity-market/general-information"
+      ],
+      "statement": "PSE states that Poland's capacity market includes demand-side-response services and verified capacity obligations."
+    }
+  ],
+  "contrary_evidence": [
+    "Established aggregators already possess market access and operational portfolios.",
+    "Small sites may not generate enough flexibility value after hardware and settlement costs."
+  ],
+  "economics": {
+    "acquisition_route": "Unvalidated hypothesis: recruit sites through energy auditors, cold-chain vendors, and renewable installers.",
+    "capital_required_pln": 100000,
+    "founder_net_worth_path": "Unvalidated hypothesis: 150 MW of reliable distributed flexibility could support a 5 million PLN founder net-worth path in seven to eleven years.",
+    "founder_time": "Unvalidated hypothesis: a market-access partner handles operations while founder work stays below 20 hours weekly before scale.",
+    "gross_margin_basis": "Unvalidated hypothesis: software settlement could reach 45% gross margin after market-access fees, and every commercial number including capital_required_pln is hypothetical.",
+    "payback": "Unvalidated hypothesis: site acquisition pays back within twelve months of verified dispatch revenue.",
+    "pricing": "Unvalidated hypothesis: retain 25% of verified flexibility revenue plus 300 PLN per site monthly.",
+    "retention_or_repeat": "Unvalidated hypothesis: recurring capacity obligations and energy savings keep sites enrolled."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A site-level dispatch-performance history improves forecasting, certification, and portfolio reliability",
+    "customer": "Polish cold stores, retail chains, workshops, and EV depots with controllable load",
+    "distribution_mechanism": "Energy-auditor and equipment-installer channel partnerships",
+    "offer_and_business_model": "Device onboarding, forecasting, aggregated bidding, dispatch, and auditable payout settlement",
+    "payer_and_paid_event": "The market-access counterparty pays for verified availability or dispatch and the operator shares proceeds with sites",
+    "problem_trigger": "A site has flexible electrical assets but cannot independently monetize them"
+  },
+  "founder_fit": [
+    "Forecasting, optimization, and renewable channels align strongly with founder assets.",
+    "The operational risk requires a partner-led pilot before any job transition."
+  ],
+  "parent": null,
+  "risks": [
+    "Dispatch failure can trigger penalties and damage customer operations.",
+    "Balancing, collateral, and certification requirements may exceed available capital."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/dir/2019/944/oj/eng",
+    "https://www.pse.pl/web/pse-eng/areas-of-activity/capacity-market/general-information"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Demand-response aggregator and settlement operator",
+    "control_point": "Baseline, dispatch instruction, meter evidence, and participant payout ledger",
+    "critical_dependency": "Certified market access, balancing responsibility, and reliable device telemetry"
+  },
+  "thesis": "Aggregate controllable cold stores, batteries, heat pumps, and EV depots into a metered flexibility portfolio with transparent settlement.",
+  "title": "SME Flexibility Meter and Settlement Operator",
+  "uncertainties": [
+    "No market-access partner or site has committed to the proposed revenue share.",
+    "All commercial numbers including capital_required_pln are unvalidated hypotheses."
+  ],
+  "version": 1
+}

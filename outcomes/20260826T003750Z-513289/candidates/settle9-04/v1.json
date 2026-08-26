@@ -1,0 +1,82 @@
+{
+  "candidate_id": "settle9-04",
+  "claims": [
+    {
+      "claim_id": "settle9-04-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/klimat/system-kaucyjny-zasady"
+      ],
+      "statement": "Poland's deposit-return system has operated since 1 October 2025 and adds a refundable deposit to covered beverage packaging."
+    },
+    {
+      "claim_id": "settle9-04-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/klimat/system-kaucyjny-zasady"
+      ],
+      "statement": "Official guidance says the deposit follows the package through the sales chain and beverage producers placing covered packages on the market finance the system."
+    },
+    {
+      "claim_id": "settle9-04-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/klimat/system-kaucyjny--to-prostsze-niz-myslisz"
+      ],
+      "statement": "Polish climate-ministry guidance states that stores above 200 square metres must accept marked containers, creating recurring multi-location return records."
+    }
+  ],
+  "contrary_evidence": [
+    "Deposit-system operators and reverse-vending vendors are incentivized to provide their own reconciliation portals.",
+    "The system's early transition noise may decline, reducing recoverable discrepancies after operational maturation."
+  ],
+  "economics": {
+    "acquisition_route": "Pilot a 20-50-store regional group, quantify leakage, then distribute through one POS vendor or beverage wholesaler on revenue share",
+    "capital_required_pln": 75000,
+    "founder_net_worth_path": "Hypothesis: 1,200 stores at 400 PLN monthly creates 5.76m PLN ARR by years 4-6. With partner-led support, 20%+ operating margin and majority ownership, retained cash plus a 4-5x valuation could cross 5m PLN founder net worth in years 5-7.",
+    "founder_time": "15-20 hours weekly; field visits can be delegated after one direct observation cycle",
+    "gross_margin_basis": "Hypothesis: 78-90% once mappings are reusable; initial operator/POS mappings and manual evidence cleanup lower first-year margin",
+    "payback": "Hypothesis: 3-6 months through a channel-led chain rollout; single-store acquisition is uneconomic",
+    "pricing": "Hypothesis: 250-750 PLN per store monthly, 3,000-15,000 PLN chain onboarding, and optionally 8-15% of documented recoveries",
+    "retention_or_repeat": "Deposits and returns settle continuously; historical store/operator baselines improve anomaly detection and make monthly close habitual"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Cross-operator discrepancy taxonomy, store-level expected-return models and evidence templates improve recovery rates and reveal systematic leakage",
+    "customer": "Polish convenience chains, franchise groups, forecourt retailers and beverage wholesalers handling marked deposit containers",
+    "distribution_mechanism": "Integrate through regional POS vendors, RVM service firms and beverage wholesalers that can roll the tool across hundreds of merchant locations",
+    "offer_and_business_model": "Per-store SaaS plus optional success fee on recovered discrepancies, with white-label portfolio views for POS vendors and wholesalers",
+    "payer_and_paid_event": "Retail group pays per active store when the monthly deposit close and discrepancy claims are produced; onboarding is paid per POS/operator connection",
+    "problem_trigger": "Container sales, returns, pickups and an operator's settlement statement do not balance by store, SKU, day or operator"
+  },
+  "founder_fit": [
+    "Anomaly detection and multi-source matching fit the founder's analytical strengths.",
+    "A regional pilot can start within 100,000 PLN and alongside employment.",
+    "Partner distribution avoids store-by-store sales."
+  ],
+  "parent": null,
+  "risks": [
+    "A low per-store price cannot support bespoke integrations or field service.",
+    "Operator statement formats and commercial contracts may restrict data portability.",
+    "Success fees must be structured as accounting recovery, not unauthorized legal representation."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.gov.pl/web/klimat/system-kaucyjny-zasady",
+    "https://www.gov.pl/web/klimat/system-kaucyjny--to-prostsze-niz-myslisz",
+    "https://www.gov.pl/web/klimat/system-kaucyjny--pierwszy-miesiac-po-uruchomieniu"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Multi-sided clearing reconciliation middleware",
+    "control_point": "Retailer's approval of deposit-system operator statements and settlement invoices",
+    "critical_dependency": "Machine-readable store, return-machine, pickup and operator statement data plus willingness of channel partners to support a neutral layer"
+  },
+  "thesis": "Build a neutral reconciliation layer for Polish convenience chains, franchise groups and beverage wholesalers that operate across deposit-system operators. It matches POS deposits charged, manual or reverse-vending returns, pickup counts, operator statements, invoices and bank settlements, then routes discrepancies to the responsible operator with a compact evidence packet. Start as a monthly recovery audit for one retail group and become embedded middleware through POS and beverage-wholesaler channels. The business never holds consumer deposits; it reconciles the retailer's records.",
+  "title": "Deposit-Return Settlement Switchboard",
+  "uncertainties": [
+    "Observed discrepancy value per store per month",
+    "Number of operators a typical regional chain must reconcile",
+    "POS and RVM export quality outside large chains"
+  ],
+  "version": 1
+}

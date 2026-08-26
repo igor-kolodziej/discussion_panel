@@ -1,0 +1,132 @@
+{
+  "candidate_id": "gate-06",
+  "claims": [
+    {
+      "claim_id": "gate-06-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2013/952/oj"
+      ],
+      "statement": "Union Customs Code Article 127 requires an Entry Summary Declaration before goods enter the Union; the carrier normally lodges it, but an importer, consignee, represented party, or another person able to present the goods may lodge instead."
+    },
+    {
+      "claim_id": "gate-06-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/customs/customs-security/import-control-system-2_en",
+        "https://taxation-customs.ec.europa.eu/customs/customs-security/import-control-system-2/faq_en"
+      ],
+      "statement": "The Commission expressly permits an economic operator to use an IT service provider; direct system-to-system access requires EORI/UUM&DS setup, certificates, an AS4 access point, registration, and self-conformance testing, with the IT provider acting as sender and the economic operator remaining declarant."
+    },
+    {
+      "claim_id": "gate-06-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/customs/customs-security/import-control-system-2_en",
+        "https://taxation-customs.ec.europa.eu/online-services/online-services-and-databases-customs/new-computerised-transit-system-ncts_en"
+      ],
+      "statement": "A forwarder can use the Commission's Shared Trader Portal, and road or rail ENS data can also be included in an NCTS Phase 6 transit declaration in opt-in countries, so a new gateway is not the only compliance route."
+    },
+    {
+      "claim_id": "gate-06-c4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ec.europa.eu/eurostat/fr/web/products-eurostat-news/w/ddn-20260731-2"
+      ],
+      "statement": "Eurostat reports that Polish-registered vehicles performed 381 billion tonne-kilometres in 2025, 20.2% of the EU total, establishing a large Polish road-freight context but not the number of small forwarders with extra-EU ENS filings."
+    },
+    {
+      "claim_id": "gate-06-c5",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.descartes.com/sites/default/files/media/documents/2022-05/5.12.22%20DES_0286_ICS2_Infographic_V2.pdf",
+        "https://www.aeb.com/en/customs-software-platform/index.php"
+      ],
+      "statement": "Established customs-software vendors already market portals, system-to-system connectivity, APIs, direct customs filing, and automated legal updates; no comparable public price was found in this pass."
+    },
+    {
+      "claim_id": "gate-06-v4-c6",
+      "confidence": "low",
+      "evidence_refs": [],
+      "statement": "The reseller-paid pilot, incremental defect rate, outcome-pricing basis, channel share, contribution margin, renewal, and founder-net-worth path remain unvalidated design hypotheses."
+    }
+  ],
+  "contrary_evidence": [
+    "The free Shared Trader Portal and NCTS Phase 6 combined-transit route remove any need for this module to submit an ENS.",
+    "Descartes and AEB already market overlapping portal, connectivity, API, filing, and rule-update capabilities.",
+    "No evidence quantifies incremental defects that an embedded release gate catches beyond existing TMS, official, or incumbent validation.",
+    "No reseller commitment, authorized interface, commercial term, outcome price, renewal, or support-cost evidence exists."
+  ],
+  "economics": {
+    "acquisition_route": "Seek one paid reseller-mediated pilot using an authorized TMS feed and multiple consenting forwarder workflows. Do not sell separate forwarder accounts and do not build direct ICS2 connectivity. No reseller commitment, interface right, or conversion evidence is assumed.",
+    "capital_required_pln": 90000,
+    "founder_net_worth_path": "The prior scenario of 100 forwarder accounts at 3000 PLN per month is removed because this is a reseller-paid outcome model. No quantified founder-net-worth path is defensible until one pilot measures eligible event volume, realized outcome price, reseller share, support cost, renewal, and the number of attainable TMS channels.",
+    "founder_time": "Keep work within 20 hours weekly by limiting scope to one feed, one release decision, and measurement; contract customs interpretation. The venture does not assume direct-filing conformance, certificates, production filing liability, or a filing on-call function.",
+    "gross_margin_basis": "Remove the unsupported 65-75% range. Measure integration, rule maintenance, reseller share, specialist review, monitoring, and support in the paid pilot before asserting any contribution margin.",
+    "payback": "Unknown. Require the paid pilot to cover its budgeted connector and specialist work, and stop if audited incremental catches do not support a repeatable outcome fee; no payback period is assumed.",
+    "pricing": "Withdraw the unvalidated 750-1500 PLN monthly forwarder minimum and all separately priced direct filing. Negotiate a paid measurement pilot, then price only per agreed eligible release check or audited incremental defect after value and channel share are observed; no rate is asserted.",
+    "retention_or_repeat": "Repeat depends on the reseller keeping the release gate embedded across recurring shipments and renewing after measured outcomes. No forwarder subscription, filing revenue, reseller renewal, or usage level is assumed."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A reseller-scoped lane-, shipper-, schema-, and defect-specific correction graph linked to audited pre-dispatch release outcomes",
+    "customer": "A Polish or Central European TMS reseller serving small road or rail forwarders with recurring extra-EU entries; forwarders are pilot users rather than separately acquired accounts",
+    "distribution_mechanism": "One authorized TMS-reseller integration and paid multi-forwarder pilot, with no direct fragmented forwarder sales until reseller channel economics are measured",
+    "offer_and_business_model": "Filing-neutral embedded TMS release-gate module that returns versioned release or hold states and observability, with no ENS submission, customs representation, or direct-filing roadmap",
+    "payer_and_paid_event": "The TMS reseller pays for a bounded outcome-measurement pilot and later only for agreed eligible release checks or audited incremental defects caught; there is no filing fee",
+    "problem_trigger": "The TMS is about to release an extra-EU shipment for dispatch and must decide whether the available ENS data is ready for the customer's existing lawful filing route"
+  },
+  "founder_fit": [
+    "A single filing-neutral validation module matches the founder's schema, anomaly, and telemetry skills.",
+    "One reseller-mediated pilot reduces fragmented selling and removes direct-filing conformance and representation from the founder's scope.",
+    "The paid-pilot gate and unchanged 90000 PLN ceiling allow staged testing alongside employment without claiming the ceiling is sufficient for production scale.",
+    "Customs interpretation remains contracted, while 24/7 filing responsibility is structurally excluded rather than merely deferred."
+  ],
+  "parent": {
+    "candidate_id": "gate-06",
+    "version": 3
+  },
+  "redesign": {
+    "changed_fingerprint_fields": [
+      "customer",
+      "problem_trigger",
+      "payer_and_paid_event",
+      "offer_and_business_model",
+      "distribution_mechanism",
+      "compounding_advantage"
+    ],
+    "economic_effect": "This removes direct filing, certificates, AS4 conformance, declarant ambiguity, filing fees, and fragmented per-forwarder subscriptions from the business model. One reseller integration can expose multiple workflows and outcome-linked pricing ties revenue to measured incremental prevention, materially changing acquisition and operating cost structure. The benefit is conditional: reseller share, connector cost, defect frequency, outcome attribution, price, margin, and renewal remain unknown."
+  },
+  "risks": [
+    "Existing TMS or customs tools may already catch the relevant defects, leaving no incremental outcome to monetize.",
+    "A reseller may deny interface access, demand an uneconomic share, or prefer an incumbent bundle.",
+    "Outcome attribution may be disputed because a prevented rejection is counterfactual and routing or filing behavior can change.",
+    "Even without filing, a false release or hold could create liability, support, and insurance costs incompatible with the part-time model."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2013/952/oj",
+    "https://taxation-customs.ec.europa.eu/customs/customs-security/import-control-system-2_en",
+    "https://taxation-customs.ec.europa.eu/customs/customs-security/import-control-system-2/faq_en",
+    "https://taxation-customs.ec.europa.eu/document/download/f6265dc2-c550-48df-a26b-11cfa809b1f5_en?filename=ICS2-NTCS6+derogation+-+Guidance+for+road+and+rail_20250829.pdf",
+    "https://taxation-customs.ec.europa.eu/online-services/online-services-and-databases-customs/new-computerised-transit-system-ncts_en",
+    "https://ec.europa.eu/eurostat/fr/web/products-eurostat-news/w/ddn-20260731-2",
+    "https://www.descartes.com/sites/default/files/media/documents/2022-05/5.12.22%20DES_0286_ICS2_Infographic_V2.pdf",
+    "https://www.aeb.com/en/customs-software-platform/index.php"
+  ],
+  "stage": "development",
+  "structure": {
+    "commercial_archetype": "Outcome-measured embedded compliance release control sold through one TMS channel",
+    "control_point": "The versioned release-or-hold decision inside the TMS before dispatch, while all filing remains with existing lawful routes",
+    "critical_dependency": "An authorized reseller feed and paid pilot must show incremental preventable defects and viable channel economics; none is currently evidenced"
+  },
+  "thesis": "Sell one paid, reseller-mediated pilot of an embedded TMS release gate that checks an authorized structured feed and returns a versioned release or hold state before dispatch. The module never submits an ENS, acts as a declarant, or offers a later filing option; submission remains with STP, NCTS Phase 6, or an incumbent. Production pricing is contingent on audited incremental defects caught and measured channel economics, without claiming a reseller commitment, API right, defect rate, or willingness to pay.",
+  "title": "Filing-Neutral ICS2 Release Gate Embedded in a TMS",
+  "uncertainties": [
+    "Whether any TMS reseller will authorize and pay for a multi-forwarder measurement pilot.",
+    "Baseline and incremental defect rates, avoided rework value, auditable attribution, and outcome-pricing mechanics.",
+    "Connector effort, reseller share, specialist and support cost, contribution margin, payback, and renewal.",
+    "Whether the correction graph is transferable across resellers, lanes, schemas, and filing routes.",
+    "No reseller commitment, validation, interface right, defect outcome, or improved economics is claimed."
+  ],
+  "version": 4
+}

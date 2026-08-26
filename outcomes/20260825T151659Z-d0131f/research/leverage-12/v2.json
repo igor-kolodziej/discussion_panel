@@ -1,0 +1,256 @@
+{
+  "candidate_id": "leverage-12",
+  "candidate_sha256": "84d694344a74e61bf2f6e8c4011f4337e467b1a60736e87a005532125dc426d0",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "l12-r1",
+      "evidence_refs": [
+        "l12-s1"
+      ],
+      "statement": "EU law requires clear and transparent provisions for measuring and verifying guaranteed savings, quality checks, and guarantees in energy performance contracts."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "l12-r2",
+      "evidence_refs": [
+        "l12-s1"
+      ],
+      "statement": "The Energy Efficiency Directive requires public bodies to assess EPC feasibility for renovations of large non-residential buildings above 750 square metres and promotes independent market intermediaries, but does not mandate a specific software vendor."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "l12-r3",
+      "evidence_refs": [
+        "l12-s2"
+      ],
+      "statement": "Polish guidance describes EPC as a multi-year arrangement in which an ESCO guarantees savings and bears material financial risk."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "l12-r4",
+      "evidence_refs": [
+        "l12-s3"
+      ],
+      "statement": "The Polish model contract places annual savings reporting and correction of justified objections with the ESCO and depends on owner-supplied invoices, meter data, and information about changing use."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "l12-r5",
+      "evidence_refs": [
+        "l12-s4"
+      ],
+      "statement": "KAPE estimates that more than 125000 Polish public buildings need energy modernization, supporting a large need pool but not proving EPC adoption or paid M&V demand."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "l12-r6",
+      "evidence_refs": [
+        "l12-s5"
+      ],
+      "statement": "KAPE and a law firm already offer an EPC facilitator service spanning preparation, ESCO selection, technical and legal oversight, monitoring, and settlement control."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "l12-r7",
+      "evidence_refs": [
+        "l12-s6"
+      ],
+      "statement": "EVO states that advanced M&V cannot be fully automated and generally needs a human in the loop to handle unstable operations and contextualize outputs."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "l12-r8",
+      "evidence_refs": [
+        "l12-s7",
+        "l12-s8"
+      ],
+      "statement": "EVO describes independent verifiers as typically experienced engineering consultants, so software auditability alone does not establish professional independence."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "l12-r9",
+      "evidence_refs": [
+        "l12-s9"
+      ],
+      "statement": "Natural Resources Canada posts RETScreen Professional at CAD 869 per year and offers Viewer mode without charge, creating a low-cost calculation and portfolio alternative."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "l12-r10",
+      "evidence_refs": [
+        "l12-s10",
+        "l12-s11"
+      ],
+      "statement": "EnergyCAP offers established whole-facility IPMVP cost-avoidance calculations and states that complex ESCO or multivariable cases need more advanced methods and more data than monthly bills may provide."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "l12-r11",
+      "evidence_refs": [
+        "l12-s3",
+        "l12-s6",
+        "l12-s8",
+        "l12-s10"
+      ],
+      "statement": "The differentiated wedge is therefore governed data lineage, dual-party visibility, adjustment approvals, and expert sign-off rather than an autonomous savings oracle."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "l12-r12",
+      "evidence_refs": [
+        "l12-s3"
+      ],
+      "statement": "A reusable benchmark moat is conditional because meter data, contract terms, and adjustment rationales may be confidential and require explicit rights for de-identification and reuse."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "l12-r13",
+      "evidence_refs": [],
+      "statement": "Paid site count, software budget ownership, dispute frequency, reviewer cost, data connectivity, procurement cycle, and partner willingness remain unknown."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "l12-r14",
+      "evidence_refs": [
+        "l12-s1",
+        "l12-s2",
+        "l12-s7",
+        "l12-s8"
+      ],
+      "statement": "No direct evidence reviewed proves illegality, unobtainable essential rights, impossible conservative economics, or a non-delegable founder incompatibility; feasibility remains conditional on contracts, authorized data access, and a qualified independent reviewer."
+    }
+  ],
+  "contrary_evidence": [
+    "Neither EU law nor the Polish model contract mandates a separate independent software service; the Polish template places reporting with the ESCO.",
+    "Advanced M&V cannot be fully automated and depends on experienced engineering judgment for non-routine events.",
+    "RETScreen is free in Viewer mode and CAD 869 yearly in Professional mode, while EnergyCAP already supplies mature M&V calculations.",
+    "KAPE's facilitator service already bundles monitoring, legal and technical oversight, and settlement control in Poland.",
+    "More than 125000 buildings needing modernization is not evidence of EPC contract count, software budget, or conversion.",
+    "Neutrality is questionable if one contract party alone pays and controls the service without dual-party governance and independent review."
+  ],
+  "schema_version": 2,
+  "sources": [
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2023-09-20",
+      "publisher": "European Parliament and Council / EUR-Lex",
+      "source_id": "l12-s1",
+      "source_type": "primary law",
+      "stance": "supporting",
+      "title": "Directive (EU) 2023/1791 on energy efficiency",
+      "url": "https://eur-lex.europa.eu/eli/dir/2023/1791/oj/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2023",
+      "publisher": "Polish Ministry of Climate and Environment",
+      "source_id": "l12-s2",
+      "source_type": "official guidance",
+      "stance": "context",
+      "title": "Wytyczne do umow o poprawe efektywnosci energetycznej",
+      "url": "https://www.gov.pl/web/klimat/wytyczne-do-umow-o-poprawe-efektywnosci-energetycznej-epc"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2023",
+      "publisher": "Polish Ministry of Climate and Environment",
+      "source_id": "l12-s3",
+      "source_type": "official model contract",
+      "stance": "contradicting",
+      "title": "Model EPC agreement for energy management",
+      "url": "https://bip.mos.gov.pl/fileadmin/user_upload/bip/Energetyka/Wytyczne_EPC_dla_sektora_publicznego/Umowa__EPC_Zarzadzanie_Energia_.pdf"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2025-09",
+      "publisher": "Krajowa Agencja Poszanowania Energii S.A.",
+      "source_id": "l12-s4",
+      "source_type": "current market report",
+      "stance": "supporting",
+      "title": "Rynek EPC-ESCO w sektorze budynkow publicznych w Polsce",
+      "url": "https://kape.gov.pl/web/content/77605?download=true&unique=d61166ad3e57e05e9c2fda75e1842a96b1387b56"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "n.d.; current service page",
+      "publisher": "Krajowa Agencja Poszanowania Energii S.A.",
+      "source_id": "l12-s5",
+      "source_type": "incumbent service page",
+      "stance": "contradicting",
+      "title": "Facylitator EPC",
+      "url": "https://kape.gov.pl/facylitator-epc"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2019",
+      "publisher": "Efficiency Valuation Organization",
+      "source_id": "l12-s6",
+      "source_type": "industry standards body white paper",
+      "stance": "contradicting",
+      "title": "Advanced Measurement and Verification white paper",
+      "url": "https://evo-world.org/images/corporate_documents/NRE-NRA_White_Paper_Final_2701.pdf"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2025-01-20",
+      "publisher": "Efficiency Valuation Organization",
+      "source_id": "l12-s7",
+      "source_type": "standards-body guidance announcement",
+      "stance": "context",
+      "title": "New IPMVP Application Guide: M&V and Energy Performance Contracting for Facility Owners",
+      "url": "https://www.evo-world.org/en/news-media/evo-news/1406-new-ipmvp-applicatin-guide-m-v-and-energy-performance-contracting-for-facility-owners"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2020",
+      "publisher": "Efficiency Valuation Organization",
+      "source_id": "l12-s8",
+      "source_type": "standards-body working document",
+      "stance": "context",
+      "title": "IPMVP working document on M&V issues and independent verification",
+      "url": "https://evo-world.org/br/general/1898-x-ipmvp-m-v-issues-statutory-review-copy-1/file"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2025-10-22",
+      "publisher": "Natural Resources Canada",
+      "source_id": "l12-s9",
+      "source_type": "official incumbent product pricing",
+      "stance": "contradicting",
+      "title": "RETScreen Subscription Order and Professional pricing",
+      "url": "https://natural-resources.canada.ca/maps-tools-and-publications/tools/modelling-tools/retscreen/retscreen-subscription-order/23599"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "n.d.; current product page",
+      "publisher": "EnergyCAP",
+      "source_id": "l12-s10",
+      "source_type": "incumbent product page",
+      "stance": "contradicting",
+      "title": "EnergyCAP Cost Avoidance",
+      "url": "https://www.energycap.com/products/energycap-enterprise-features/cost-avoidance"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2026-02-12",
+      "publisher": "EnergyCAP",
+      "source_id": "l12-s11",
+      "source_type": "incumbent technical documentation",
+      "stance": "context",
+      "title": "EnergyCAP Cost Avoidance limitations",
+      "url": "https://helpcenter.energycap.com/um/cost_avoidance/information/cost_avoidance_limitations"
+    }
+  ],
+  "unknowns": [
+    "Current paid EPC site count and growth in Poland and Central Europe by public/private and ESCO size.",
+    "Frequency, monetary value, and causes of settlement-report revisions and disputes.",
+    "Which participant owns the software budget and willingness to pay for governance beyond established tools.",
+    "Meter, invoice, occupancy, tariff, weather, and intervention-data availability, quality, and authorization terms.",
+    "Qualified-review hours, price, professional-liability insurance, and reviewer willingness to white-label.",
+    "Public procurement cycle and security requirements for a new vendor.",
+    "Contractual permission to de-identify and reuse data or adjustment rationales.",
+    "Part-time founder capacity during non-routine events and multi-party acceptance disputes."
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "candidate_id": "rights7-11",
+  "claims": [
+    {
+      "claim_id": "rights7-11-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://energy.ec.europa.eu/topics/energy-efficiency/energy-performance-buildings/energy-performance-buildings-directive/sustainable-mobility-and-buildings_en"
+      ],
+      "statement": "The revised EU buildings framework is expected to increase workplace and building charging points and explicitly supports smart charging."
+    },
+    {
+      "claim_id": "rights7-11-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://transport.ec.europa.eu/transport-themes/clean-transport/alternative-fuels-sustainable-mobility-europe/alternative-fuels-infrastructure_en"
+      ],
+      "statement": "The EU alternative-fuels framework sets infrastructure targets and includes interoperability, payment, transparency, and smart-charging provisions for publicly available charging."
+    }
+  ],
+  "contrary_evidence": [
+    "Rules that add charging points do not prove those points will have unused, transferable overnight capacity.",
+    "AFIR provisions for publicly available infrastructure may not govern a private reserved-access model in the same way."
+  ],
+  "economics": {
+    "acquisition_route": "Property managers, charging installers, fleet lessors, courier contractors, and geo-targeted direct sales",
+    "capital_required_pln": 75000,
+    "founder_net_worth_path": "A possible path is several thousand contracted ports across Polish cities, generating recurring access margin and a valuable two-sided network",
+    "founder_time": "Initially 12-20 hours per week, with physical support supplied by charging partners",
+    "gross_margin_basis": "Expected 30-50% after host share, access hardware, support, payment, and downtime credits",
+    "payback": "Unvalidated; approximately 100-200 occupied port-months may cover a lean pilot depending on integration cost",
+    "pricing": "Unvalidated: 500-1200 PLN per reserved port-month plus transparent energy and overage charges",
+    "retention_or_repeat": "Fleet routes and overnight needs recur monthly; host contracts should run two to five years"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Dense contracted time slots, route-demand data, host integrations, and backup coverage improve reliability and local liquidity",
+    "customer": "Urban delivery, taxi, field-service, and light-commercial fleets without sufficient depot charging",
+    "distribution_mechanism": "Acquire hosts through property managers and installers; acquire fleets through leasing firms, dispatch software, and local route-density analysis",
+    "offer_and_business_model": "Guaranteed recurring windows, access control, smart scheduling, uptime monitoring, settlement, and backup-site routing",
+    "payer_and_paid_event": "The fleet pays a monthly per-port reservation and energy or utilization charge; hosts receive a contracted share",
+    "problem_trigger": "A fleet electrifies vehicles but lacks guaranteed overnight charging near operating routes"
+  },
+  "founder_fit": [
+    "Uses optimization, forecasting, and energy-sector access",
+    "Can start with existing hardware rather than funding charging stations",
+    "Recurring scheduling is automatable",
+    "Warsaw provides a dense initial geography"
+  ],
+  "parent": null,
+  "risks": [
+    "Electricity resale, parking, tax, and public-access rules may apply",
+    "Charger downtime can disrupt fleet operations and create claims",
+    "Hosts may withdraw access after fleets depend on it",
+    "Night operations could create safety and site-security issues"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://energy.ec.europa.eu/topics/energy-efficiency/energy-performance-buildings/energy-performance-buildings-directive/sustainable-mobility-and-buildings_en",
+    "https://transport.ec.europa.eu/transport-themes/clean-transport/alternative-fuels-sustainable-mobility-europe/alternative-fuels-infrastructure_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Time-sliced infrastructure access marketplace",
+    "control_point": "Reserved recurring charging and parking windows at host-controlled sites",
+    "critical_dependency": "Host grid capacity, charger uptime, parking rights, and fleet-route demand must overlap reliably"
+  },
+  "thesis": "Contract exclusive overnight scheduling rights at underused private workplace, hotel, retail, and industrial chargers, then sell delivery and service fleets guaranteed recurring charging and parking windows near their routes.",
+  "title": "Guaranteed Overnight Fleet-Charging Slot Network",
+  "uncertainties": [
+    "Unknown quantity of genuinely unused private overnight capacity",
+    "Unknown fleet willingness to rely on third-party sites",
+    "No host or fleet reservation price has been validated",
+    "Polish energy-resale and property-access structure needs legal review"
+  ],
+  "version": 1
+}

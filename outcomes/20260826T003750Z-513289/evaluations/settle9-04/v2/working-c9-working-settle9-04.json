@@ -1,0 +1,121 @@
+{
+  "assumptions": [
+    "Retail groups can lawfully provide the auditor with machine-readable POS, RVM, and operator exports, but the relevant contractual rights have not yet been confirmed.",
+    "Some unresolved settlement exceptions remain after incumbent reconciliation, although neither their frequency nor their recoverable value is known.",
+    "The initial offer is a read-only, chain-level file audit with no deposit custody, hardware service, or live operator integration.",
+    "A chain fee or recovery-based fee is charged only for independently documented value beyond the customer's existing tools.",
+    "AI can accelerate data mapping and anomaly detection, but it cannot substitute for data rights, operator cooperation, enterprise trust, or manual claim follow-up.",
+    "The founder keeps the initial pilot within the stated part-time and capital limits and delegates field work if the service expands."
+  ],
+  "base_score": 3.95,
+  "candidate_id": "settle9-04",
+  "candidate_sha256": "0fe443f79c6bc5c398ea6fe38bc63e3adb9c3d1317331cc2a9dc206279622114",
+  "candidate_version": 2,
+  "constrained_score": 3.95,
+  "evaluation_type": "working",
+  "evidence_needed_for_higher_score": "A contract-permitted 20-50-store pilot covering several monthly cycles should show the baseline outputs of existing tools, gross discrepancies found only by the independent audit, cash actually recovered, recovery time, manual hours and operator acceptance rate, then document a repeat purchase or signed willingness to pay that yields attractive contribution margin and CAC payback.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "A mandatory, high-volume workflow spanning eight operators creates a plausible reconciliation surface, and an independent audit can address exceptions that system participants have weak incentives to expose. The insight is materially narrowed, however, because multi-operator reconciliation itself is already supplied; the unproven insight is that a valuable residual exception layer remains.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Unrecovered deposits would be concrete financial pain and outcome-based pricing could make payment rational. No evidence quantifies unresolved losses, persistence, recoverability, or chain willingness to buy independent assurance, while existing integrated tools below 80 PLN per store constrain the price customers will tolerate absent demonstrable incremental recovery.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "An export-only audit can have low capital needs, attractive software-like gross margin, aligned success fees, and recurring monthly use. Those advantages remain hypothetical: the incumbent price anchor is low, CAC and payback are unknown, evidence cleanup and claim follow-up can consume margin, and the supplied 60 PLN-per-store illustration does not establish a path to the founder's wealth objective without far greater scale or proven recovery fees.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "A 20-50-store convenience, forecourt, or franchise group is a coherent first customer with enough records for a measurable pilot, and Poland's system has substantial transaction volume. The economically addressable beachhead is not all return points but only chains with material exceptions left unresolved by incumbent controls, whose number and spend are unknown.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "Neutrality and focus on independent recovery could support a specialist assurance niche, but the company would enter downstream of Kaucyjni, TOMRA, POS providers, and operators that already control integrations, data, workflow presence, and customer relationships. Without privileged access or uniquely effective recovery evidence, incumbents can bundle the function and prevent a dominant position.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A proven exception engine and retailer relationship could extend to more Polish chains, additional operators, other deposit-return markets, or adjacent retail settlement audits. Expansion is plausible rather than automatic because contracts and schemas are market-specific, and the initial residual-loss niche may be too small to create a strong platform base.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "A cross-operator exception taxonomy, labelled outcomes, and recovery history could improve detection over time. The proposed system does not own primary data or a protected workflow, and the same learning can be copied by better-distributed incumbents; maturation of operator processes could also shrink the very errors on which retention depends.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "Independent review and payment tied to incremental recovery would be meaningfully different from an operator or integration vendor's own dashboard, particularly where records conflict. There is no measured proof that it finds or recovers more than incumbent tools, so the advantage is currently a credible positioning hypothesis rather than a demonstrated step change in customer economics.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "The recently operating system, rapid transaction ramp, mandatory retailer obligations, and multiple operators make the present a sensible time to look for implementation errors and immature interfaces. The window may be short: incumbent products already exist and operational stabilization can reduce discrepancy rates before a new entrant builds distribution.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "One chain-level pilot can cover many stores and documented recoveries could make a strong case study. Initial access still requires trust-heavy direct selling and permission to inspect sensitive settlement data; POS and wholesaler channels are only hypotheses, while Kaucyjni and RVM/operator providers already possess embedded distribution and can offer cheaper bundled substitutes.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "A bounded file-based pilot fits the founder's data-science strengths, capital, and part-time capacity and can test the key premise without hardware or custody risk. Scaling depends on contractual export rights, heterogeneous mappings, operator cooperation, lawful claim handling, and controlling manual investigation; live integrations or store-level service would likely exceed the founder's current operating envelope.",
+      "score": 5,
+      "status": "scored"
+    }
+  ],
+  "final_score": 4,
+  "highest_value_structural_change": "Make the business an outcome-priced recovery service distributed through a POS vendor, wholesaler, or accounting partner that grants standardized export rights and chain access, rather than standalone per-store software; retain a fee only on verified incremental recoveries and convert recurring exception outcomes into a proprietary audit dataset.",
+  "interaction_adjustment": 0,
+  "judge_id": "c9-working-settle9-04",
+  "main_structural_strength": "A read-only, chain-level audit can be tested cheaply on a mandatory, high-volume workflow and can align its fee directly with independently documented recoveries, fitting the founder's analytical skills and downside constraints.",
+  "primary_score_limiter": "The business has not established that material, recoverable discrepancies persist after Kaucyjni, TOMRA, and operator tools, so willingness to pay, attractive unit economics, and a durable reason for the layer to exist all depend on the same unresolved premise.",
+  "qualified": false,
+  "raw_response_path": "artifacts/research/c9-raw-working-settle9-04.json",
+  "raw_response_sha256": "85c82df122e146bfb9373d09e1580895f88b6aad497979f1ccd48606fd7643c9",
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 2,
+  "strongest_disconfirming_evidence": "Kaucyjni already supplies multi-operator POS/RVM integration, reports, and settlement visibility for 39.90-79.90 PLN net per store per month, while TOMRA and operators provide their own APIs and reconciliation data; this directly contradicts a premium generic-reconciliation thesis.",
+  "unrounded_score": 3.95
+}

@@ -1,0 +1,81 @@
+{
+  "candidate_id": "control-01",
+  "claims": [
+    {
+      "claim_id": "control-01-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ure.gov.pl/en/communication/news/436%2Cdok.html"
+      ],
+      "statement": "URE reported 6,259 refusals of grid-connection conditions for renewable projects in 2024, representing applications totaling just under 42.4 GW; repeated applications mean this capacity is not unique project capacity."
+    },
+    {
+      "claim_id": "control-01-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.ure.gov.pl/en/communication/news/425%2CActivities-of-the-President-of-the-URE-for-the-development-and-modernisation-of-.html",
+        "https://www.ure.gov.pl/en/communication/news/494%2CThe-President-of-the-URE-summarises-the-first-year-of-cable-pooling-in-Poland.html"
+      ],
+      "statement": "The Polish regulator has identified digitisation, commercial connections, and cable pooling as ways to improve connection transparency or use constrained capacity, and reported early cable-pooling applications and agreements."
+    },
+    {
+      "claim_id": "control-01-c03",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://ure.gov.pl/en/communication/news/436%2Cdok.html"
+      ],
+      "statement": "Hypothesis: installers and small developers will pay for a pre-application viability screen when its price is materially below engineering rework, delay, or another failed filing; this requires paid-pilot validation."
+    }
+  ],
+  "contrary_evidence": [
+    "URE cautions that refused-capacity totals include repeat applications, so headline gigawatts overstate unique unmet projects.",
+    "Connection decisions remain operator-specific engineering and legal judgments; historical patterns may not predict a particular feeder or future reinforcement."
+  ],
+  "economics": {
+    "acquisition_route": "Family-company pilots, electrical designers, installer referrals, trade webinars without founder-on-camera dependence, and free local grid-friction reports",
+    "capital_required_pln": 45000,
+    "founder_net_worth_path": "Hypothesis: reach 150 teams at roughly 24,000 PLN annual recurring revenue plus project fees, producing 3.6-5.0m PLN revenue; a profitable data/SaaS business with majority founder ownership could plausibly support over 5m PLN founder equity in four to seven years",
+    "founder_time": "About 15-20 hours weekly for an eight-week pilot, then 8-12 hours weekly with contracted electrical review and support",
+    "gross_margin_basis": "Software and analyst-assisted reports should reach 70-85% gross margin after templates and extraction mature; external engineering review is passed through or separately priced",
+    "payback": "Target customer payback from one avoided unsuitable-site workup or one shorter rework cycle; vendor CAC payback target under six months",
+    "pricing": "Hypothesis: 900-2,000 PLN per screening, 3,000-8,000 PLN per assisted dossier, or 1,500-4,000 PLN monthly per team",
+    "retention_or_repeat": "Project-based repeat for active developers; subscriptions retain if outcome data and templates improve across a multi-site pipeline"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A proprietary graph linking sites, feeder evidence, application choices, operator responses, timelines, and outcomes",
+    "customer": "Polish renewable installers and small solar, storage, or hybrid-project developers",
+    "distribution_mechanism": "Pilot through the family installer, then engineering-partner referrals, installer associations, and searchable feeder-level briefings",
+    "offer_and_business_model": "Connection-feasibility intelligence plus dossier SaaS, priced per project and by subscription",
+    "payer_and_paid_event": "Installer or developer pays per screened site, per submitted dossier, or for a recurring team workspace",
+    "problem_trigger": "A new site needs a grid-connection strategy or an application has been delayed, returned, or refused"
+  },
+  "founder_fit": [
+    "Strong fit with data science, AI document extraction, Poland, and a low-social-energy B2B workflow. The family renewable installer can provide a lawful pilot channel and domain feedback without using employer data. The founder should keep engineering sign-off with qualified partners."
+  ],
+  "parent": null,
+  "risks": [
+    "A wrong viability estimate could cause costly reliance, requiring careful disclaimers and human engineering review.",
+    "DSO process changes could invalidate learned features and templates.",
+    "Consultancies or incumbents could bundle equivalent software with connection engineering."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://ure.gov.pl/en/communication/news/436%2Cdok.html",
+    "https://www.ure.gov.pl/en/communication/news/425%2CActivities-of-the-President-of-the-URE-for-the-development-and-modernisation-of-.html",
+    "https://www.ure.gov.pl/en/communication/news/494%2CThe-President-of-the-URE-summarises-the-first-year-of-cable-pooling-in-Poland.html"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Vertical decision-intelligence and workflow SaaS",
+    "control_point": "The pre-application site decision and the evidence-complete connection dossier",
+    "critical_dependency": "Lawful, sufficiently granular DSO and customer-contributed outcome data"
+  },
+  "thesis": "Build a decision-and-dossier platform for Polish solar, storage, and hybrid-project installers that predicts connection friction, assembles evidence-complete applications, and proposes cable-pooling or commercial-connection alternatives. The defensible asset is a parcel-to-feeder-to-application-outcome graph built from public material and consented customer outcomes, not merely document automation.",
+  "title": "GridSlot Intelligence for Polish Renewable Connections",
+  "uncertainties": [
+    "Whether DSOs expose enough stable machine-readable data for useful prediction without privileged access.",
+    "Whether customers will contribute complete decision letters and outcome data under usable rights.",
+    "Which wedge converts best: screening report, dossier workflow, or cable-pooling partner search."
+  ],
+  "version": 1
+}

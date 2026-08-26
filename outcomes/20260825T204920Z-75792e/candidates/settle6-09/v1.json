@@ -1,0 +1,75 @@
+{
+  "candidate_id": "settle6-09",
+  "claims": [
+    {
+      "claim_id": "settle6-09-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://corporate.visa.com/en/solutions/acceptance/chargebacks.html"
+      ],
+      "statement": "Visa's merchant guidance describes a formal dispute response in which merchants submit supporting transaction, shipping and communication evidence through the acquirer."
+    },
+    {
+      "claim_id": "settle6-09-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://usa.visa.com/support/merchant/library.html"
+      ],
+      "statement": "Visa publishes merchant guidance for Compelling Evidence and scheme-specific dispute management."
+    }
+  ],
+  "contrary_evidence": [
+    "Visa and existing payment providers already offer dispute tools, so a new entrant needs a vertical evidence source they do not control."
+  ],
+  "economics": {
+    "acquisition_route": "UNVALIDATED: embed with acquirers, PSPs, vertical SaaS platforms and marketplaces that each serve many merchants.",
+    "capital_required_pln": 130000,
+    "founder_net_worth_path": "UNVALIDATED: serve 500 merchants by year 3 and 5,000 by year 6, supporting founder equity plus retained cash above PLN 5m in years 5-7.",
+    "founder_time": "UNVALIDATED: 3 hours per day for one vertical and one PSP, then model and exception oversight.",
+    "gross_margin_basis": "UNVALIDATED: automated evidence retrieval and document assembly, with analyst review only for high-value exceptions.",
+    "payback": "UNVALIDATED: partner integration paid back after 80 recovered disputes or 6 months.",
+    "pricing": "UNVALIDATED: share of recovered dispute value plus channel revenue share; all commercial figures in this economics object, including capital_required_pln, are unvalidated.",
+    "retention_or_repeat": "UNVALIDATED: ongoing transaction flow and scheme deadlines create recurring events; decision outcomes improve future evidence selection."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Privacy-preserving verified decisions reveal which evidence combinations work by reason code and merchant type",
+    "customer": "Digital-goods, subscription and ecommerce merchants reached through PSPs or vertical platforms",
+    "distribution_mechanism": "PSP, acquirer, marketplace and vertical-SaaS embedding",
+    "offer_and_business_model": "Evidence retrieval, representment packet and outcome reconciliation for a success fee",
+    "payer_and_paid_event": "The merchant or payment partner pays when the disputed funds are restored or a pre-dispute is resolved",
+    "problem_trigger": "An issuer opens a card dispute and the merchant has a finite response window"
+  },
+  "founder_fit": [
+    "Strong machine-learning and evidence-engineering fit",
+    "Embedded distribution",
+    "Outcome metric is unambiguous",
+    "No public persona required"
+  ],
+  "parent": null,
+  "risks": [
+    "PCI and personal-data exposure",
+    "Scheme-rule changes",
+    "Provider gatekeeping",
+    "Selection bias in shared outcomes",
+    "Merchant fraud misuse"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://usa.visa.com/support/merchant/library.html",
+    "https://corporate.visa.com/en/solutions/acceptance/chargebacks.html"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Outcome-priced payment-dispute evidence network",
+    "control_point": "The normalized evidence graph linked to the final dispute decision and recovered transaction",
+    "critical_dependency": "Payment-provider integration, strict data minimization and scheme-compliant use of cross-merchant outcome signals"
+  },
+  "thesis": "Embed with vertical SaaS platforms, marketplaces or acquirers to collect consented order, delivery, device, login and usage evidence before a dispute window closes. Generate scheme-specific evidence, submit through the merchant's payment provider, and charge only when an issuer or acquirer confirms recovered funds. Privacy-preserving outcome learning across participating merchants creates a stronger evidence-selection asset without exposing raw customer data.",
+  "title": "Chargeback Evidence Cooperative",
+  "uncertainties": [
+    "Access to final decision labels",
+    "Incremental win-rate lift",
+    "Legal basis for privacy-preserving cooperative learning"
+  ],
+  "version": 1
+}

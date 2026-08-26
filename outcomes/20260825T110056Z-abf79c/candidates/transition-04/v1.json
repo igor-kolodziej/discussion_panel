@@ -1,0 +1,86 @@
+{
+  "candidate_id": "transition-04",
+  "claims": [
+    {
+      "claim_id": "transition-04-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1542/2025-07-31/eng/pdf"
+      ],
+      "statement": "Article 77 of the EU Batteries Regulation requires an electronic battery passport from 18 February 2027 for every LMT battery, industrial battery above 2 kWh, and EV battery placed on the market or put into service."
+    },
+    {
+      "claim_id": "transition-04-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1542/2025-07-31/eng/pdf"
+      ],
+      "statement": "The regulation requires interoperability, free access according to access rights, restricted update rights, data integrity, security, and continued availability even if the responsible economic operator ceases activity."
+    },
+    {
+      "claim_id": "transition-04-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.europarl.europa.eu/doceo/document/E-10-2026-000888_EN.html"
+      ],
+      "statement": "A March 2026 European Parliament question identifies outstanding standards, registry, service-provider, and access-rule work and explicitly questions whether the February 2027 implementation date remains feasible."
+    }
+  ],
+  "contrary_evidence": [
+    "Key enabling rules and standards were still outstanding in 2026, so the product contract could move or change materially.",
+    "Battery and digital-product-passport platforms with larger standards teams may already target major manufacturers.",
+    "The separate battery due-diligence deadline was postponed, showing that implementation dates can change even when the passport date remains in the current legal text."
+  ],
+  "economics": {
+    "acquisition_route": "Referrals from BMS integrators and test labs, beginning with one stationary-storage assembler and one downstream installer",
+    "capital_required_pln": 100000,
+    "founder_net_worth_path": "Scenario, not evidence: 80 manufacturers averaging PLN 200,000 annual platform and usage revenue yields PLN 16m revenue; at a 35% operating margin, cumulative distributions over six to eight scaled years could build PLN 20m-plus founder net worth",
+    "founder_time": "Four hours per day with a strict maximum of two simultaneous integrations until connector reuse is proven",
+    "gross_margin_basis": "Core hosting, identifier, and schema operations should be high margin, while bespoke BMS connectors and long-term support lower the target blended gross margin to roughly 70%",
+    "payback": "Target three to six months because integration work must be paid and no custom connector starts without a deposit",
+    "pricing": "Assumption: PLN 20,000-60,000 per product-line integration plus PLN 15-60 per active battery passport per year with volume discounts",
+    "retention_or_repeat": "Passports persist across long product lives and new units add usage, producing strong retention if the runtime remains interoperable and durable"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Reusable mappings from battery chemistry, BMS telemetry, component records, and lifecycle status events into permissioned passport fields across recurring pack designs",
+    "customer": "Polish and Central European assemblers or importers placing industrial batteries above 2 kWh, light-means-of-transport batteries, or specialty EV batteries on the EU market under their own responsibility",
+    "distribution_mechanism": "Battery-management-system integrators, testing laboratories, and storage-equipment distributors refer assemblers; a family-installer pilot validates which downstream fields are actually used",
+    "offer_and_business_model": "Multi-tenant passport API with QR identifiers, schema versioning, model templates, unit-level BMS and status updates, role-based access, and durable export; integration fee plus per-passport annual usage",
+    "payer_and_paid_event": "The manufacturer or importer pays an integration fee when the first product line is mapped and pays per active passport when a unique battery identifier is issued or maintained",
+    "problem_trigger": "From 18 February 2027, covered LMT, industrial batteries above 2 kWh, and EV batteries placed on the market or put into service require an electronic battery passport with model and battery-specific information"
+  },
+  "founder_fit": [
+    "Time-series device data, schemas, identity, and anomaly checks use data-engineering strengths",
+    "The family renewable installer provides a downstream discovery channel for stationary storage",
+    "A single-pack-family integration is a bounded paid pilot compatible with continued employment",
+    "Usage revenue can scale across the EU without founder-led content or a camera presence"
+  ],
+  "parent": null,
+  "risks": [
+    "A standards or deadline change could strand early engineering work.",
+    "Long-lived passport availability creates security, continuity, and data-migration obligations.",
+    "Incorrect lifecycle or state-of-health data could affect safety and residual-value decisions.",
+    "Custom integrations could exceed both the capital cap and the founder's daily time limit."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2023/1542/2025-07-31/eng/pdf",
+    "https://www.europarl.europa.eu/doceo/document/E-10-2026-000888_EN.html",
+    "https://environment.ec.europa.eu/news/new-law-more-sustainable-circular-and-safe-batteries-enters-force-2023-08-17_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Regulated digital-product-passport infrastructure as a service",
+    "control_point": "The persistent unique battery identity and access-controlled record from market placement through repurposing or recycling",
+    "critical_dependency": "Final EU registry, access-right, and service-provider rules plus accurate upstream model and unit data"
+  },
+  "thesis": "A hosted battery-passport runtime can give small and mid-sized industrial-pack and light-mobility assemblers a persistent QR identity, model and serial-level data ingestion, access controls, and lifecycle updates without building passport infrastructure internally. The initial niche is stationary storage packs above 2 kWh, where the founder can observe downstream installer needs through the family renewable business while selling the compliance infrastructure to the upstream economic operator.",
+  "title": "Battery Passport Runtime for Independent Pack Assemblers",
+  "uncertainties": [
+    "The final interfaces and certification expectations for third-party passport service providers are unresolved.",
+    "The number of independent regional pack assemblers and their unit volumes have not been validated.",
+    "Customers may prefer a BMS vendor's bundled passport rather than an independent runtime.",
+    "The 80-manufacturer wealth scenario assumes cross-border sales and unproven per-unit pricing."
+  ],
+  "version": 1
+}

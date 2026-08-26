@@ -1,0 +1,87 @@
+{
+  "candidate_id": "settle8-07",
+  "claims": [
+    {
+      "claim_id": "settle8-07-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/news/commission-updates-product-scope-and-tools-support-eudr-2026-07-13_en"
+      ],
+      "statement": "Verified fact: in July 2026 the Commission said EUDR would begin to apply at the end of December 2026 and adopted updated product-scope and Information System measures."
+    },
+    {
+      "claim_id": "settle8-07-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/news/eu-deforestation-regulation-information-system-launches-2024-12-06_en",
+        "https://environment.ec.europa.eu/document/download/a3c5c3a0-232e-43c4-b0b8-1eecb1df45c7_en?filename=Report+from+the+Commission+to+the+Council+and+Parliament+on+the+EUDR.pdf"
+      ],
+      "statement": "Verified fact: the EUDR Information System supports due-diligence statements, geolocation-file checks, and API-supported features including simplified declarations and grouping."
+    },
+    {
+      "claim_id": "settle8-07-c3",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/news/commission-updates-product-scope-and-tools-support-eudr-2026-07-13_en"
+      ],
+      "statement": "Hypothesis (unvalidated): midmarket importers will pay for a commercial consignment relay around the free official submission system because upstream exception resolution remains outside it."
+    }
+  ],
+  "contrary_evidence": [
+    "The Commission's 2026 simplification package updated scope and added official API/grouping features, which may reduce paid workflow pain: https://environment.ec.europa.eu/news/commission-updates-product-scope-and-tools-support-eudr-2026-07-13_en",
+    "The official system already validates geolocation-file compatibility and manages legally meaningful statements, so the product cannot rely on form submission as differentiation: https://environment.ec.europa.eu/news/eu-deforestation-regulation-information-system-launches-2024-12-06_en"
+  ],
+  "economics": {
+    "acquisition_route": "Run a fixed-fee evidence-readiness audit through customs or certification partners, then convert one commodity lane to recurring use.",
+    "capital_required_pln": 60000,
+    "founder_net_worth_path": "Unvalidated scenario: 10 importers at PLN 5,000 MRR in year 2, 40 at PLN 7,000 MRR in year 4, and 70 at PLN 8,000 MRR in year 6 imply PLN 6.72m ARR before consignment fees. At a 3-4x ARR value and 60% founder ownership, PLN 5m net worth is plausible in years 5-7; major further scope simplification or failure to obtain upstream data from two lanes invalidates the path.",
+    "founder_time": "4-5 hours/day through the first commodity lane; obtain external legal review and avoid acting as the importer of record.",
+    "gross_margin_basis": "Hypothesis: 72-86%; supplier support and geospatial review are variable costs and cannot be hidden inside unlimited plans.",
+    "payback": "Unvalidated customer hypothesis: avoiding one held consignment or repeated supplier chase can repay several months; validate with shadow processing before application begins.",
+    "pricing": "Unvalidated estimate: PLN 2,000-9,000 monthly per importer plus PLN 75-350 per released consignment and paid supplier onboarding.",
+    "retention_or_repeat": "Each inbound consignment repeats the due-diligence linkage; supplier correction histories and ERP mappings are durable."
+  },
+  "fingerprint": {
+    "compounding_advantage": "supplier-specific correction history and commodity-lane evidence patterns accelerate later consignment clearance while integrations lock in the relay",
+    "customer": "EU midmarket importers and manufacturers handling EUDR-covered commodities with dozens to hundreds of suppliers rather than global compliance teams",
+    "distribution_mechanism": "customs brokers, commodity testing labs, certification advisers, ERP import modules, and a readiness audit before late-2026 application",
+    "offer_and_business_model": "supplier portal, geofile validation, PO/batch linkage, reference-number relay, exception queue, versioned risk decision, and audit export; subscription plus consignment volume",
+    "payer_and_paid_event": "importer pays per active supplier and per released consignment when the evidence token and official reference are complete",
+    "problem_trigger": "a purchase order or inbound consignment approaches customs or market release without complete geolocation, upstream reference, or risk evidence"
+  },
+  "founder_fit": [
+    "Geospatial validation, entity linking, and exception automation use data-science leverage.",
+    "A Polish/EU regulatory wedge can be developed without consumer branding or video.",
+    "Partner-led audits permit part-time validation before building a network.",
+    "Consignment-volume revenue can compound into a data and workflow asset."
+  ],
+  "parent": null,
+  "risks": [
+    "EUDR rules and product scope have changed repeatedly and may change again.",
+    "Supplier geolocation can be inaccurate, fraudulent, or commercially sensitive.",
+    "The product could be mistaken for legal assurance even though responsibility stays with the operator.",
+    "Large ERP, traceability, and certification platforms are likely competitors."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://environment.ec.europa.eu/news/commission-updates-product-scope-and-tools-support-eudr-2026-07-13_en",
+    "https://environment.ec.europa.eu/publications/faq-eudr-implementation_en",
+    "https://environment.ec.europa.eu/news/eu-deforestation-regulation-information-system-launches-2024-12-06_en",
+    "https://environment.ec.europa.eu/document/download/a3c5c3a0-232e-43c4-b0b8-1eecb1df45c7_en?filename=Report+from+the+Commission+to+the+Council+and+Parliament+on+the+EUDR.pdf"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "supply-chain admissibility token network",
+    "control_point": "consignment release token linking commercial batch data to due-diligence evidence and official submission reference",
+    "critical_dependency": "timely, accurate plot geolocation and chain-of-custody data from upstream suppliers plus stable EUDR Information System interfaces"
+  },
+  "thesis": "Create a consignment-level relay for EU importers of coffee, cocoa, wood, rubber, and derived goods: bind supplier geolocation files, product/HS data, upstream due-diligence references, risk decisions, purchase orders, and the EU Information System receipt into one release token before a shipment is placed on the market. The importer remains legally responsible; the tool sells workflow evidence and supplier exception routing, not a blanket compliance guarantee.",
+  "title": "EUDR Consignment Admissibility Relay for Midmarket Importers",
+  "uncertainties": [
+    "The final late-2026 implementation details and customer urgency are not yet proven.",
+    "Importer willingness to force supplier portal adoption is unknown.",
+    "The best first commodity lane and minimum evidence depth require interviews.",
+    "Official API rate, authorization, and grouping behavior need technical validation."
+  ],
+  "version": 1
+}

@@ -1,0 +1,87 @@
+{
+  "candidate_id": "spend-11",
+  "claims": [
+    {
+      "claim_id": "spend-11-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1702640595598&uri=CELEX%3A32022R2554"
+      ],
+      "statement": "DORA requires financial entities to maintain a register of information covering contractual arrangements for ICT services supplied by third parties and permits supervisors to request the full register or parts of it."
+    },
+    {
+      "claim_id": "spend-11-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?qid=1785353451055&uri=OJ%3AL_202402956"
+      ],
+      "statement": "The implementing regulation defines standard templates and relational keys including contract reference, entity/provider identifiers, function identifier and ICT service type."
+    },
+    {
+      "claim_id": "spend-11-c03",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.esma.europa.eu/press-news/esma-news/esas-dry-run-exercise-shows-goal-reporting-registers-information-under-digital"
+      ],
+      "statement": "In the ESA dry run involving almost 1000 financial entities, only 6.5% of registers passed every data-quality check and half of the remainder failed fewer than five of 116 checks, showing both real errors and a tractable validation surface."
+    }
+  ],
+  "contrary_evidence": [
+    "Half of dry-run registers that did not fully pass still failed fewer than five checks, so many entities may need only a spreadsheet cleanup rather than ongoing software.",
+    "EBA publishes templates, FAQs and validation resources for free.",
+    "GRC suites, consulting firms and legal advisers already serve DORA programmes."
+  ],
+  "economics": {
+    "acquisition_route": "Sell a fixed 6000-12000 PLN health check to five entities through one compliance boutique, measure errors and update labour, then convert the adviser to a portfolio licence.",
+    "capital_required_pln": 100000,
+    "founder_net_worth_path": "Four hundred entity licences averaging 20000 PLN annually would produce 8m PLN recurring revenue. At a mature 45% owner-cash margin, 3.6m PLN per year could generate over 10m PLN cumulative distributions across four mature years without an exit.",
+    "founder_time": "Build only extraction, reconciliation and official-check coverage at 3-5 hours/day, with licensed advisers owning legal interpretation; leave employment only after repeat adviser-led renewals, contribution economics and runway meet the stated gates.",
+    "gross_margin_basis": "Rule execution and export are software-heavy, but contract setup and regulatory updates require expert operations; target 65-80% gross margin after partner support.",
+    "payback": "Target customer payback within one reporting or material contract-update cycle versus adviser and staff time; enforcement risk alone should not be used as the ROI claim.",
+    "pricing": "Assumption to test: 8000-30000 PLN annual licence per regulated entity by contract volume plus 5000-20000 PLN onboarding; adviser portfolio pricing preserves at least 60% of list revenue.",
+    "retention_or_repeat": "Registers must be maintained as contracts and providers change and can be requested by supervisors; annual reporting and version history support renewal, though workload may be episodic."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A contract-clause ontology, vendor identity graph and labelled validation-resolution corpus improve extraction and catch cross-template inconsistencies while preserving tenant confidentiality.",
+    "customer": "Small Polish and EU payment institutions, insurers, investment firms and other DORA-covered entities, plus compliance boutiques maintaining registers for multiple clients.",
+    "distribution_mechanism": "Compliance boutiques, DORA legal advisers and GRC resellers deliver the workspace to their client portfolios; a fixed-price register health check is the initial product.",
+    "offer_and_business_model": "Private-cloud or local workspace that extracts contract clauses and identifiers into the official relational templates, resolves LEI/EUID/vendor links, records human approvals, runs current technical/business checks and exports a submission package; annual licence plus onboarding.",
+    "payer_and_paid_event": "The compliance or ICT-risk owner pays per legal entity and vendor-contract count when the register is refreshed and validated; existing spend is staff, legal review, GRC tooling and reporting consultancy.",
+    "problem_trigger": "An ICT contract is signed, renewed, subcontracted or reclassified as supporting a critical function, or a regulator requests the current register in prescribed templates."
+  },
+  "founder_fit": [
+    "Relational data validation, extraction and entity resolution strongly fit a data scientist.",
+    "One adviser can bring many regulated clients, reducing meeting-heavy direct sales.",
+    "The scope is a narrow deterministic register rather than open-ended security consulting.",
+    "A read-only health-check service can validate demand within the available capital and alongside employment."
+  ],
+  "parent": null,
+  "risks": [
+    "Missing a subcontractor, critical function or identifier could produce a materially incomplete register.",
+    "ICT contracts expose security architecture, vendors and sensitive commercial terms.",
+    "Regulatory interpretation can drift beyond a software founder's competence and must remain adviser-owned.",
+    "Large GRC vendors can bundle the register at low incremental price."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1702640595598&uri=CELEX%3A32022R2554",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?qid=1785353451055&uri=OJ%3AL_202402956",
+    "https://www.esma.europa.eu/press-news/esma-news/esas-dry-run-exercise-shows-goal-reporting-registers-information-under-digital",
+    "https://www.eba.europa.eu/activities/direct-supervision-and-oversight/digital-operational-resilience-act/preparation-dora-application"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Regulatory data-quality workspace sold annually per legal entity",
+    "control_point": "The approved source-of-truth that links each ICT contract, service, provider, function and reporting identifier",
+    "critical_dependency": "Exact maintenance of ESA templates and checks plus secure access to confidential ICT contracts and corporate hierarchy data"
+  },
+  "thesis": "Offer smaller EU-regulated financial firms and their compliance advisers a contract-to-register workspace that extracts ICT service facts, reconciles entity/vendor/function keys and runs official DORA register data-quality checks before reporting. Financial entities already pay compliance staff and consultants to maintain the mandatory register; the narrow wedge is a version-controlled source of truth and preflight, not broad cybersecurity consulting.",
+  "title": "DORA ICT-Contract Register Data-Quality Validator",
+  "uncertainties": [
+    "The number of small Polish covered entities without an adequate GRC solution is unknown.",
+    "Official 2026 reporting cadence and national supervisory submission practices need confirmation per entity type.",
+    "Contract extraction accuracy and adviser liability allocation require controlled tests.",
+    "Pricing, margins, account count and wealth projections are unsourced assumptions."
+  ],
+  "version": 1
+}

@@ -1,0 +1,195 @@
+{
+  "candidate_id": "niche-06",
+  "candidate_sha256": "e450d305651290578655c3d7ee3866ae06b64cc1e3b1e48b976a9407e3a921c6",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "niche-06-research-c01",
+      "evidence_refs": [
+        "niche-06-s01",
+        "niche-06-s02"
+      ],
+      "statement": "Professional guidance supports explicit reevaluation and recontact policies and suitable informatics, but frames recontact as consent-aware, resource-constrained shared responsibility rather than an automatic universal duty."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "niche-06-research-c02",
+      "evidence_refs": [
+        "niche-06-s03"
+      ],
+      "statement": "ClinVar is a usable versioned public change source, but its uncurated submissions and variant-level model require laboratory-controlled patient matching and professional review."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "niche-06-research-c03",
+      "evidence_refs": [
+        "niche-06-s10"
+      ],
+      "statement": "Current Polish standards create a concrete audit-trail and authorization workflow: genetic reports must contain laboratory interpretation and the identity and signature of an appropriately qualified authorizer, and supporting records must permit reconstruction."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "niche-06-research-c04",
+      "evidence_refs": [
+        "niche-06-s04",
+        "niche-06-s05",
+        "niche-06-s06"
+      ],
+      "statement": "A production system handling identifiable genomic records needs a documented GDPR legal basis and safeguards; diagnostic intended-purpose language may also make the software an IVDR device."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "niche-06-research-c05",
+      "evidence_refs": [
+        "niche-06-s07",
+        "niche-06-s08"
+      ],
+      "statement": "QIAGEN and Fabric already provide adjacent or overlapping interpretation, workflow, reporting, reanalysis, and integration capabilities, so a standalone alert feed lacks defensibility."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "niche-06-research-c06",
+      "evidence_refs": [
+        "niche-06-s02",
+        "niche-06-s09"
+      ],
+      "statement": "Observed reanalysis availability does not establish recurring software demand: the US survey found low estimated provider-request uptake and heterogeneous billing, while European guidance says economic evidence is absent."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "niche-06-research-c07",
+      "evidence_refs": [
+        "niche-06-s11"
+      ],
+      "statement": "The proposed 42-account wealth path and 4,000 to 10,000 PLN monthly price are planning assumptions, not validated market facts; the only located Polish lab-count evidence is conflicting and historical."
+    }
+  ],
+  "contrary_evidence": [
+    "QIAGEN reports a mature, IVDR-certified interpretation platform with case and workflow management, while Fabric advertises reanalysis, reporting, and LIMS or EMR integration.",
+    "Most surveyed US laboratories already offered reanalysis, yet estimated provider-request uptake was usually low and billing approaches varied materially.",
+    "ESHG explicitly states that there was no economic evidence supporting or opposing systematic recontact strategies and emphasizes fixed healthcare budgets.",
+    "Polish law requires qualified professional authorization, so automation cannot remove the scarce clinical labor completely."
+  ],
+  "schema_version": 2,
+  "sources": [
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2019-04-24",
+      "publisher": "American College of Medical Genetics and Genomics / Genetics in Medicine",
+      "source_id": "niche-06-s01",
+      "source_type": "professional_guidance",
+      "stance": "supporting",
+      "title": "Points to Consider in the Reevaluation and Reanalysis of Genomic Test Results",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6559819/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2018-10-11",
+      "publisher": "European Society of Human Genetics / European Journal of Human Genetics",
+      "source_id": "niche-06-s02",
+      "source_type": "professional_guidance",
+      "stance": "supporting",
+      "title": "Recontacting patients in clinical genetics services: recommendations of the European Society of Human Genetics",
+      "url": "https://www.nature.com/articles/s41431-018-0285-1"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "National Center for Biotechnology Information",
+      "source_id": "niche-06-s03",
+      "source_type": "official_data_documentation",
+      "stance": "context",
+      "title": "What is ClinVar?",
+      "url": "https://www.ncbi.nlm.nih.gov/clinvar/intro/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2016-04-27",
+      "publisher": "European Union",
+      "source_id": "niche-06-s04",
+      "source_type": "law",
+      "stance": "context",
+      "title": "Regulation (EU) 2016/679 (General Data Protection Regulation)",
+      "url": "https://eur-lex.europa.eu/eli/reg/2016/679/2016-05-04/eng"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2017-04-05",
+      "publisher": "European Union",
+      "source_id": "niche-06-s05",
+      "source_type": "law",
+      "stance": "context",
+      "title": "Regulation (EU) 2017/746 on in vitro diagnostic medical devices",
+      "url": "https://eur-lex.europa.eu/eli/reg/2017/746/oj/eng"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2025-06",
+      "publisher": "Medical Device Coordination Group",
+      "source_id": "niche-06-s06",
+      "source_type": "official_guidance",
+      "stance": "context",
+      "title": "MDCG 2019-11 Rev.1: Guidance on Qualification and Classification of Software",
+      "url": "https://health.ec.europa.eu/document/download/b45335c5-1679-4c71-a91c-fc7a4d37f12b_en?filename=mdcg_2019_11_en.pdf"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2024-06-13",
+      "publisher": "QIAGEN",
+      "source_id": "niche-06-s07",
+      "source_type": "incumbent_product_release",
+      "stance": "contradicting",
+      "title": "QIAGEN's software QCI Interpret accelerates clinical reporting turnaround time for high throughput NGS testing labs",
+      "url": "https://corporate.qiagen.com/English/newsroom/press-releases/press-release-details/2024/QIAGENs-software-QCI-Interpret-accelerates-clinical-reporting-turnaround-time-for-high-throughput-NGS-testing-labs/default.aspx"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "Fabric Genomics",
+      "source_id": "niche-06-s08",
+      "source_type": "incumbent_product_page",
+      "stance": "contradicting",
+      "title": "Fabric Enterprise",
+      "url": "https://fabricgenomics.com/enterprise/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2024-09-16",
+      "publisher": "Journal of Genetic Counseling",
+      "source_id": "niche-06-s09",
+      "source_type": "peer_reviewed_market_practice_study",
+      "stance": "contradicting",
+      "title": "The current landscape of clinical exome and genome reanalysis in the U.S.",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/jgc4.1968"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2025-06-30",
+      "publisher": "Republic of Poland",
+      "source_id": "niche-06-s10",
+      "source_type": "law",
+      "stance": "supporting",
+      "title": "Regulation of the Minister of Health of 30 June 2025 on quality standards for laboratories",
+      "url": "https://api.sejm.gov.pl/eli/acts/DU/2025/961/text.pdf"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2018-05-09",
+      "publisher": "Supreme Audit Office of Poland",
+      "source_id": "niche-06-s11",
+      "source_type": "official_audit",
+      "stance": "context",
+      "title": "NIK findings on the safety of genetic testing",
+      "url": "https://www.nik.gov.pl/najnowsze-informacje-o-wynikach-kontroli/nik-o-bezpieczenstwie-badan-genetycznych.html"
+    }
+  ],
+  "unknowns": [
+    "Current target-lab census and number of laboratories whose incumbent systems lack a usable recontact queue.",
+    "Structured-data readiness for historical HGVS identifiers, patient links, clinician links, and consent status.",
+    "Actionable alert rate, false-positive burden, clinician minutes per reviewed alert, and observed report-amendment rate.",
+    "Named buyer, procurement cycle, public or private reimbursement pathway, and paid pilot willingness.",
+    "Final IVDR classification, conformity path, insurance requirement, and total production compliance cost.",
+    "Competitor contract pricing and whether LIMS or interpretation vendors permit the required integrations."
+  ]
+}

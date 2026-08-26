@@ -1,0 +1,73 @@
+{
+  "candidate_id": "settle10-03",
+  "claims": [
+    {
+      "claim_id": "settle10-03-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1542/oj?locale=en",
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=consolidation%3A2023R1542%2F20240718_0010010"
+      ],
+      "statement": "EU rules require a battery passport from 18 February 2027 for LMT, EV, and industrial batteries above 2 kWh, including individual performance and use information."
+    },
+    {
+      "claim_id": "settle10-03-c2",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1542/oj?locale=en",
+        "https://environment.ec.europa.eu/news/new-law-more-sustainable-circular-and-safe-batteries-enters-force-2023-08-17_en"
+      ],
+      "statement": "Demand hypothesis: distributors and financiers will pay for one operational bridge because passport data can support warranty, reuse, and risk decisions beyond basic compliance."
+    }
+  ],
+  "contrary_evidence": [
+    "Passport operators may provide claim features directly.",
+    "The mandatory passport date is future-facing and implementation details may evolve."
+  ],
+  "economics": {
+    "acquisition_route": "Integrate with two storage distributors before offering an insurer-facing portfolio feed.",
+    "capital_required_pln": 60000,
+    "founder_net_worth_path": "Hypothesis: 100000 tracked batteries at 40 PLN yearly plus claims revenue can support founder equity above 5 million PLN in five to seven years.",
+    "founder_time": "Four hours daily during standards and integration work.",
+    "gross_margin_basis": "Hypothesis: 85% margin for API normalization and dossier generation.",
+    "payback": "Hypothesis: 3000 paid battery records cover the initial build in eighteen months.",
+    "pricing": "Hypothesis: 20-60 PLN per commissioned battery yearly plus 1-3% of recovered claim value.",
+    "retention_or_repeat": "Each battery remains tracked through service, warranty, ownership, and end-of-life events."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A longitudinal state-of-health and claim-outcome dataset improves anomaly and residual-value models.",
+    "customer": "Battery distributors, storage installers, lessors, and specialty insurers.",
+    "distribution_mechanism": "Battery distributors and financing providers embed it at commissioning and ownership transfer.",
+    "offer_and_business_model": "An API normalizes passport, BMS, service, and ownership data into claim and transfer dossiers.",
+    "payer_and_paid_event": "A distributor or lessor pays per passported battery and per resolved exception.",
+    "problem_trigger": "A capacity drop, thermal event, recall, or resale requires trustworthy identity and usage history."
+  },
+  "founder_fit": [
+    "The founder has renewable-channel access and strong data skills.",
+    "A standards-driven API can be built part-time before scaling integrations."
+  ],
+  "parent": null,
+  "risks": [
+    "OEM data permissions could block full lifecycle visibility.",
+    "Battery incidents create product-liability and cybersecurity exposure."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2023/1542/oj?locale=en",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=consolidation%3A2023R1542%2F20240718_0010010",
+    "https://environment.ec.europa.eu/news/new-law-more-sustainable-circular-and-safe-batteries-enters-force-2023-08-17_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Asset-passport and claims infrastructure.",
+    "control_point": "The battery identity and signed lifecycle event record.",
+    "critical_dependency": "Permissioned access to passport, BMS, and service data."
+  },
+  "thesis": "A battery passport bridge can convert lifecycle events into warranty, recall, residual-value, and insurance evidence for stationary-storage channels.",
+  "title": "Battery Passport Claims Bridge",
+  "uncertainties": [
+    "Per-asset willingness to pay is untested.",
+    "The reachable distributor fleet size is unknown."
+  ],
+  "version": 1
+}

@@ -1,0 +1,73 @@
+{
+  "candidate_id": "gate-08",
+  "claims": [
+    {
+      "claim_id": "gate-08-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/gis/elektroniczny-system-powiadomien-powiadomienie-o-wprowadzeniu-po-raz-pierwszy-do-obrotu-suplementy-diety-zywnosc-wzbogacana-zywnosc-dla-okreslonych-grup"
+      ],
+      "statement": "GIS states that covered foods must be notified electronically before first placement on the Polish market and lists required data including product identity, Polish labeling, and quantitative and qualitative composition."
+    },
+    {
+      "claim_id": "gate-08-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/gis/pytania-i-odpowiedzi2."
+      ],
+      "statement": "GIS clarifies that it does not approve supplements and sale may begin on the notification date, while the entrepreneur must ensure and document legal compliance."
+    }
+  ],
+  "contrary_evidence": [
+    "GIS notification is not an approval or acceptance decision.",
+    "Regulatory consultants and contract manufacturers may already provide launch-document services."
+  ],
+  "economics": {
+    "acquisition_route": "Hypothesis: embed the release pack at one contract manufacturer and let each client brand become a monitored account.",
+    "capital_required_pln": 45000,
+    "founder_net_worth_path": "Hypothesis: 600 monitored brands plus 1200 annual launches could produce over 4 million PLN yearly revenue; manufacturer-channel expansion could support founder net worth above 5 million PLN in years 6 to 9.",
+    "founder_time": "Hypothesis: 15 hours weekly with food-law and toxicology expertise contracted per case.",
+    "gross_margin_basis": "Hypothesis: 70% blended gross margin with qualified review sold separately.",
+    "payback": "Hypothesis: a manufacturer integration repays within six months if it yields eight launches and five monitored brands.",
+    "pricing": "Hypothesis: 1500 PLN per SKU launch plus 350 PLN monthly per brand for monitoring.",
+    "retention_or_repeat": "Hypothesis: new SKUs, formula substitutions, claims, packaging, and rule changes create repeat events."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A structured ingredient-claim-label-rule graph and private history of version defects and remediation",
+    "customer": "Polish supplement contract manufacturers, regulatory firms, and multi-SKU brands",
+    "distribution_mechanism": "Contract manufacturers, analytical labs, regulatory lawyers, packaging studios, and ecommerce agencies",
+    "offer_and_business_model": "Per-SKU regulatory evidence software with recurring change monitoring",
+    "payer_and_paid_event": "The manufacturer or brand pays when a versioned launch pack receives an internal release decision",
+    "problem_trigger": "A new or changed supplement is ready for production or listing and its notification and evidence must align"
+  },
+  "founder_fit": [
+    "Supplements and proactive health align with the founder's domain interest.",
+    "Structured formula and claim analysis use data-science skills.",
+    "Contract-manufacturer distribution avoids an influencer-led go-to-market."
+  ],
+  "parent": null,
+  "risks": [
+    "A false pass could expose consumers and create food-law liability.",
+    "AI-generated claim review must never replace qualified legal or safety review.",
+    "Contract manufacturers could build the feature internally."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.gov.pl/web/gis/elektroniczny-system-powiadomien-powiadomienie-o-wprowadzeniu-po-raz-pierwszy-do-obrotu-suplementy-diety-zywnosc-wzbogacana-zywnosc-dla-okreslonych-grup",
+    "https://www.gov.pl/web/gis/pytania-i-odpowiedzi2."
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Regulatory launch evidence engine",
+    "control_point": "Manufacturer or brand release record before production batch or ecommerce listing",
+    "critical_dependency": "Accurate ingredient and claim rules plus trusted handling of proprietary formulas"
+  },
+  "thesis": "A Polish supplement release engine could reconcile quantitative formula, ingredient status, Polish label, claims, testing evidence, notifier identity, and GIS receipt before a contract manufacturer releases a production batch or an ecommerce listing. It would explicitly record that notification is not approval and make the brand's own compliance decision auditable.",
+  "title": "Supplement Launch Proof for Polish Contract Manufacturers",
+  "uncertainties": [
+    "The rate of label, claim, and formula defects caught after launch is unknown.",
+    "Brands may resist sharing commercially sensitive quantitative formulas.",
+    "The 45000 PLN capital figure and all commercial numbers below are hypotheses."
+  ],
+  "version": 1
+}

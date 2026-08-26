@@ -1,0 +1,75 @@
+{
+  "candidate_id": "settle7-01",
+  "claims": [
+    {
+      "claim_id": "settle7-01-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://uokik.gov.pl/czysta-energia-i-brudne-praktyki-prezes-uokik-nalozyl-ponad-7-mln-zl-kar-na-firmy-z-branzy-oze"
+      ],
+      "statement": "In March 2026 UOKiK described household OZE installations as investments costing tens of thousands of PLN and reported enforcement against hidden or unfair contract terms in the sector."
+    },
+    {
+      "claim_id": "settle7-01-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://czystepowietrze.gov.pl/wez-dofinansowanie/instrukcja-krok-po-kroku/krok-1-poznaj-zasady-programu"
+      ],
+      "statement": "The Clean Air payment process uses completion documents including an installer acceptance protocol, showing that a document-defined completion event already exists in an important Polish renovation flow."
+    }
+  ],
+  "contrary_evidence": [
+    "Many established installers already use deposits, staged invoices, bank finance, and ordinary acceptance protocols without a separate platform.",
+    "UOKiK enforcement demonstrates contract risk but does not establish that customers or installers will adopt third-party release control."
+  ],
+  "economics": {
+    "acquisition_route": "A low-cost local pilot, case studies with compliant installers, and channel sales through wholesalers and renovation-credit intermediaries",
+    "capital_required_pln": 80000,
+    "founder_net_worth_path": "A plausible 5-7 year path would require roughly 6,000 annual projects at about 850 PLN net platform revenue each, adjacent lender or insurer revenue, positive contribution margins, and retained founder ownership; reaching those volumes is unproven",
+    "founder_time": "Approximately 12-16 hours per week for the initial Polish pilot, with contract review and inspections performed by paid specialists",
+    "gross_margin_basis": "Software and evidence-processing revenue less payment-partner, identity, signature, and verifier costs; customer money remains with a regulated partner",
+    "payback": "An installer may recover the fee if improved trust converts one additional project or if the record prevents one material payment dispute; this must be measured in a controlled pilot",
+    "pricing": "Target 0.8-1.2% of protected contract value, minimum 600 PLN per project, plus optional 99-199 PLN independent review fees",
+    "retention_or_repeat": "Installers repeat on every eligible contract; lenders and insurers could standardise the receipt across portfolios"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A growing dataset of milestone definitions, evidence failure modes, installer completion reliability, and verifier performance could improve exception routing and make the trust receipt more useful to lenders and insurers",
+    "customer": "Reputable Polish residential OZE and thermomodernisation installers, with homeowners and renovation lenders as protected counterparties",
+    "distribution_mechanism": "Pilot through the founder's family renewable-installation company, then distribute through equipment wholesalers, installer software vendors, credit brokers, and insurer partnerships",
+    "offer_and_business_model": "Contract templates, evidence capture, independent exception review, and payment-release instructions; charge about 0.8-1.2% of protected contract value with a minimum project fee",
+    "payer_and_paid_event": "The installer or finance partner pays a platform fee when a protected project is opened and a smaller event fee whenever the licensed partner releases a verified milestone payment",
+    "problem_trigger": "A high-value home project requires deposits or staged payments while the customer cannot independently verify completion and both sides fear delay, scope, or acceptance disputes"
+  },
+  "founder_fit": [
+    "The family installation company offers a lawful, low-cost setting for testing milestone definitions without cold-start mass outreach",
+    "Evidence classification, anomaly detection, and workflow automation fit the founder's data-science and AI skills",
+    "A software-first pilot can run alongside employment and avoids a public-facing creator model"
+  ],
+  "parent": null,
+  "risks": [
+    "Poorly drafted milestones could move rather than reduce disputes",
+    "Any appearance of unlicensed custody or payment initiation would create regulatory exposure",
+    "Installers with weak practices may seek the badge while resisting genuine verification",
+    "Independent review costs could erase margin on small jobs"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://uokik.gov.pl/czysta-energia-i-brudne-praktyki-prezes-uokik-nalozyl-ponad-7-mln-zl-kar-na-firmy-z-branzy-oze",
+    "https://czystepowietrze.gov.pl/wez-dofinansowanie/instrukcja-krok-po-kroku/krok-1-poznaj-zasady-programu"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Transaction-fee milestone payment orchestration platform sold through installers and renovation finance partners",
+    "control_point": "The release instruction that binds a specific contract payment to a signed audit, evidence packet, acceptance protocol, or commissioning event",
+    "critical_dependency": "A licensed payment or escrow partner plus milestone language that is enforceable and verifiable without the platform itself taking custody"
+  },
+  "thesis": "A white-label payment-assurance layer for Polish residential photovoltaic, heat-pump, and thermal-renovation contracts could let a licensed payment partner safeguard customer funds and release them only after contract-specific events such as the pre-installation audit, equipment delivery, signed acceptance protocol, and commissioning. Reputable installers could pay for a trust and conversion tool while homeowners receive a legible record of what unlocked each payment.",
+  "title": "OZE Milestone Vault",
+  "uncertainties": [
+    "Whether high-quality installers will pay rather than rely on staged invoices and reputation",
+    "Which Polish regulated partners will support conditional release at viable unit economics",
+    "Whether homeowners value safeguarded milestones enough to improve installer conversion",
+    "How frequently objective evidence can resolve acceptance without a physical expert visit"
+  ],
+  "version": 1
+}

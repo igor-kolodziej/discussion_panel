@@ -1,0 +1,84 @@
+{
+  "judge_id": "c6-working-settle6-09",
+  "assumptions": [
+    "The opportunity is judged as a pre-validation business and missing merchant, partner, and lift evidence is treated as uncertainty rather than proof of impossibility.",
+    "The initial product is limited to one EU vertical and one PSP, with merchants authorizing access to their own dispute, transaction, and operational evidence.",
+    "A lawful merchant-specific processing design and an appropriately scoped security architecture can be built, although their cost and effect on PCI DSS scope remain unknown.",
+    "State-of-the-art AI can reduce evidence assembly, rule-monitoring, and exception-triage labor, but cannot replace PSP permissions, security review, regulatory expertise, or enterprise partner sales.",
+    "Pricing would be outcome-based near the cited category benchmarks, while channel share, dispute fees, review costs, and the entrant's retained take rate remain unproven."
+  ],
+  "factors": [
+    {
+      "name": "Core insight",
+      "status": "scored",
+      "score": 5,
+      "rationale": "The concept correctly centers the finite dispute-response window, fragmented merchant evidence, and expected net recovery rather than raw win rate. The potentially distinctive insight is that a vertical system may hold fulfillment or usage evidence unavailable to a PSP, but the packet does not identify such a vertical or evidence source, while CE3.0's same-merchant rule materially weakens the original cooperative premise."
+    },
+    {
+      "name": "Customer pain and willingness to pay",
+      "status": "scored",
+      "score": 6,
+      "rationale": "Disputed revenue, response deadlines, and VAMP mitigation create recurring, measurable merchant pain, and multiple vendors charging 25-30% of recovered value support category-level willingness to pay. Willingness to pay this entrant remains conditional on incremental net recovery over tools merchants can already obtain from their PSP or established specialists."
+    },
+    {
+      "name": "Business model and economics",
+      "status": "scored",
+      "score": 4,
+      "rationale": "A success fee aligns payment with realized value, recurring dispute flow can support repeat revenue, and automated evidence assembly could produce operating leverage. However, dispute volume, incremental lift, retained fee after channel sharing, analyst exception load, security and compliance cost, CAC, payback, gross margin, and retention are all unknown; the stated merchant milestones and founder-wealth path therefore lack an evidenced economic bridge."
+    },
+    {
+      "name": "Market and beachhead",
+      "status": "scored",
+      "score": 4,
+      "rationale": "A one-vertical, one-PSP entry could be narrow enough to test and disputes are a recurring workflow. Yet digital goods, subscriptions, and ecommerce are still broad category labels: no initial vertical, merchant profile, dispute volume, reason-code mix, or accessible revenue pool is specified, so the first economically meaningful beachhead is not yet demonstrated."
+    },
+    {
+      "name": "Competitive position and domination potential",
+      "status": "scored",
+      "score": 3,
+      "rationale": "Visa controls important pre-dispute infrastructure, Stripe and Adyen control submission rails, and Stripe, Chargeflow, and Justt already provide automated or end-to-end dispute products. The proposed control point is merchant-specific evidence plus outcome labels, but access is partner-granted and no exclusive data source, partner position, or segment in which incumbents are structurally weak has been established."
+    },
+    {
+      "name": "Expansion potential",
+      "status": "scored",
+      "score": 5,
+      "rationale": "If one vertical integration proves superior net recovery, the evidence engine could extend to additional reason codes, PSPs, platforms, verticals, and pre-dispute prevention. Expansion would nevertheless require repeated integrations, jurisdiction and scheme-rule normalization, partner permissions, and vertical-specific evidence mappings, so the first win would not automatically unlock low-friction adjacency."
+    },
+    {
+      "name": "Defensibility and durability",
+      "status": "scored",
+      "score": 3,
+      "rationale": "Merchant-specific labeled outcomes could improve evidence selection and workflow embedding could create some switching cost. The stronger network-effect claim is constrained because CE3.0 evidence must come from the same merchant, cross-merchant learning faces GDPR purpose and minimization duties, and incumbents already possess larger transaction, integration, and outcome datasets from which to copy effective tactics."
+    },
+    {
+      "name": "Strength of advantage",
+      "status": "scored",
+      "score": 3,
+      "rationale": "Reason-code packets, fight-or-accept decisions, reconciliation, and success pricing are useful but already represented in competing offers. No measured lift, faster workflow, lower net fee, uniquely accessible evidence, or materially better merchant outcome is shown; the claimed advantage depends on a proprietary vertical evidence source that remains unidentified."
+    },
+    {
+      "name": "Timing and momentum",
+      "status": "scored",
+      "score": 6,
+      "rationale": "Current VAMP incentives, programmatic dispute APIs, and capable AI-based document and decision workflows make merchant attention and technical implementation timely. The same signals have already attracted well-integrated products from networks, PSPs, and specialists, so timing validates the category more strongly than it creates an open window for this entrant."
+    },
+    {
+      "name": "Distribution",
+      "status": "scored",
+      "score": 3,
+      "rationale": "Embedding in a PSP, acquirer, marketplace, or vertical SaaS could aggregate many merchants and avoid founder-led public marketing. Those channels also control permissions and outcomes, often sell their own dispute tooling, and face integration and security-review costs; there is no partner commitment, proven merchant pull, sales-cycle evidence, or fallback acquisition route."
+    },
+    {
+      "name": "Execution and risks",
+      "status": "scored",
+      "score": 4,
+      "rationale": "The founder's data-science skills fit evidence modeling, and a single-vertical pilot is technically testable without a public persona. Execution still combines PSP authorization, changing scheme rules, GDPR roles and purposes, possible PCI DSS scope, adversarial merchant misuse controls, security review, partner sales, and exception operations; the asserted PLN 130,000 budget and three-hour daily workload are unsupported and may not fit a part-time launch."
+    }
+  ],
+  "interaction_adjustment": -0.2,
+  "main_structural_strength": "An outcome-priced, closed-loop workflow can tie merchant-specific operational evidence and final dispute labels to an explicit expected-net-recovery decision, creating measurable value and a plausible data-improvement loop if embedded where distinctive vertical evidence is generated.",
+  "primary_score_limiter": "The candidate has not identified or secured the proprietary vertical evidence and partner access needed to outperform incumbents that already control submission rails, merchant transaction data, broad integrations, and success-priced automation.",
+  "strongest_disconfirming_evidence": "Visa already controls major pre-dispute and evidence-routing infrastructure; Stripe and Adyen control programmatic dispute rails; Stripe, Chargeflow, and Justt already sell closely overlapping automation on outcome-based terms; and Visa's same-merchant CE3.0 requirement prevents other cooperative members' transactions from supplying the proposed direct evidence advantage.",
+  "evidence_needed_for_higher_score": "A named vertical with demonstrably unique fulfillment or usage evidence; a matched-cohort pilot showing incremental net recovery after all dispute, countering, channel, analyst, and success fees versus native PSP and specialist tools; written partner authorization for submission and final-outcome access; merchant demand and dispute-volume data; and a costed GDPR, PCI DSS, security, CAC, payback, gross-margin, and founder-time model.",
+  "highest_value_structural_change": "Replace the generic cross-merchant cooperative with an OEM module embedded in one vertical SaaS or marketplace that already controls distinctive first-party usage or fulfillment evidence and merchant distribution, granting that partner scoped exclusivity or shared economics in exchange for authorized PSP submission and outcome labels. This would join proprietary evidence, distribution, and data rights in one channel rather than depending on PSPs to distribute a product that competes with their own."
+}

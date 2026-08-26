@@ -1,0 +1,68 @@
+{
+  "candidate_id": "rights9-01",
+  "claims": [
+    {
+      "claim_id": "rights9-01-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://energy.ec.europa.eu/topics/markets-and-consumers/energy-consumers-and-prosumers/energy-communities_en"
+      ],
+      "statement": "The Commission says energy communities can act as a single entity and access suitable energy markets."
+    },
+    {
+      "claim_id": "rights9-01-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://energy.ec.europa.eu/topics/markets-and-consumers/energy-consumers-and-prosumers/energy-communities_en"
+      ],
+      "statement": "The Commission reported more than 8000 energy communities across the EU in 2025."
+    }
+  ],
+  "contrary_evidence": [],
+  "economics": {
+    "acquisition_route": "Installer referrals and targeted outreach to municipalities and high-load SMEs",
+    "capital_required_pln": 30000,
+    "founder_net_worth_path": "Unvalidated: 50 projects could support about 1.2m PLN annual revenue; 250 projects and EU replication could support 6m PLN, making over 5m PLN founder equity plausible in years 5-7 at 70% ownership",
+    "founder_time": "2-4 hours/day initially, with legal work contracted",
+    "gross_margin_basis": "Unvalidated: 65-80% after meter-data review and contract support",
+    "payback": "Unvalidated: 6-12 months after 10 successful commitments",
+    "pricing": "Unvalidated: 1500 PLN project listing plus 1% of first-year contracted electricity value",
+    "retention_or_repeat": "Developers reuse the book for each project; SMEs renew or add sites annually"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A proprietary map of local load, conversion rates and fulfilled commitments improves matching and becomes the default origination channel",
+    "customer": "Polish energy-community developers, municipalities and renewable installers",
+    "distribution_mechanism": "Begin with the founder family's installer network, then municipal and installer partnerships",
+    "offer_and_business_model": "Narrow exchange for metered-load profiles, conditional offtake reservations and reusable counterparty data rooms",
+    "payer_and_paid_event": "Developer pays a listing fee and success fee when a verified SME load commitment is signed",
+    "problem_trigger": "A local generation project needs credible committed demand before financing or construction"
+  },
+  "founder_fit": [
+    "Uses family renewable-installation access",
+    "Data-heavy matching suits the founder",
+    "Can start part-time without inventory"
+  ],
+  "parent": null,
+  "risks": [
+    "Long municipal sales cycles",
+    "Commitments may not be bankable",
+    "Energy-law advice is required"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://energy.ec.europa.eu/topics/markets-and-consumers/energy-consumers-and-prosumers/energy-communities_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "capacity-commitment exchange",
+    "control_point": "verified local anchor-load reservation book",
+    "critical_dependency": "Polish contracting and settlement rules must permit a low-friction conditional commitment"
+  },
+  "thesis": "Aggregate conditional electricity-purchase commitments from Polish SMEs so energy-community developers can prove anchor demand before investing, then charge on a signed commitment.",
+  "title": "Energy-Community Anchor-Load Reservation Book",
+  "uncertainties": [
+    "Polish demand, pricing and unit economics are unvalidated",
+    "The minimum useful local load density is unknown"
+  ],
+  "version": 1
+}

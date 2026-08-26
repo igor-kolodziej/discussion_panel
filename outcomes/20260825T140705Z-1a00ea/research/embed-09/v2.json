@@ -1,0 +1,201 @@
+{
+  "candidate_id": "embed-09",
+  "candidate_sha256": "dea6d75191b8d476fd06668547ddd6208b006f7bf19806d32558a278ca557934",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "embed-r1",
+      "evidence_refs": [
+        "embed-s1"
+      ],
+      "statement": "EEG-BIDS supplies a reusable EEG data and metadata structure."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "embed-r2",
+      "evidence_refs": [
+        "embed-s2"
+      ],
+      "statement": "Lightweight artifact detectors are technically feasible on a narrow standardized clinical corpus."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "embed-r3",
+      "evidence_refs": [
+        "embed-s3"
+      ],
+      "statement": "TUH states its corpus supports commercial use, so initial dataset rights are obtainable."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "embed-r4",
+      "evidence_refs": [
+        "embed-s4"
+      ],
+      "statement": "Free BIDS validation weakens any moat based only on schema compliance."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "embed-r5",
+      "evidence_refs": [
+        "embed-s5",
+        "embed-s6",
+        "embed-s7",
+        "embed-s8"
+      ],
+      "statement": "Open tools and incumbent vendors already cover artifact handling."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "embed-r6",
+      "evidence_refs": [
+        "embed-s7"
+      ],
+      "statement": "Persyst's claimed integrations across major EEG manufacturers create a material OEM entry barrier."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "embed-r7",
+      "evidence_refs": [
+        "embed-s9"
+      ],
+      "statement": "EU qualification depends on intended purpose, and medical-purpose analysis may be regulated software."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "embed-r8",
+      "evidence_refs": [
+        "embed-s10"
+      ],
+      "statement": "Identifiable patient EEG requires a GDPR lawful basis and special-category safeguards."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "embed-r9",
+      "evidence_refs": [
+        "embed-s2"
+      ],
+      "statement": "Cross-device performance remains unknown because the cited model study used one standardized corpus and montage."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "embed-r10",
+      "evidence_refs": [],
+      "statement": "Willingness to pay, integration duration, and conservative unit economics are unvalidated."
+    }
+  ],
+  "contrary_evidence": [
+    "Free BIDS, EEGLAB, and MNE tools cover structural validation or artifact workflows.",
+    "BrainVision Analyzer and Persyst already sell integrated artifact capabilities.",
+    "The cited 2026 model does not prove cross-hardware generalization."
+  ],
+  "schema_version": 2,
+  "sources": [
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2019-06-25",
+      "publisher": "Scientific Data / PubMed",
+      "source_id": "embed-s1",
+      "source_type": "peer_reviewed_standard",
+      "stance": "supporting",
+      "title": "EEG-BIDS, an extension to the brain imaging data structure for electroencephalography",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31239435/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2026-03-24",
+      "publisher": "Clinical Neurophysiology Practice / PubMed",
+      "source_id": "embed-s2",
+      "source_type": "peer_reviewed_study",
+      "stance": "supporting",
+      "title": "A lightweight deep convolutional neural network for detecting artifacts in continuous EEG signals",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41953081/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "Temple University Neural Engineering Data Consortium",
+      "source_id": "embed-s3",
+      "source_type": "official_dataset",
+      "stance": "supporting",
+      "title": "Temple University EEG Corpus",
+      "url": "https://isip.piconepress.com/projects/tuh_eeg/index.shtml"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "BIDS Standard",
+      "source_id": "embed-s4",
+      "source_type": "official_open_source",
+      "stance": "contradicting",
+      "title": "The BIDS Validator",
+      "url": "https://github.com/bids-standard/bids-validator"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "EEGLAB",
+      "source_id": "embed-s5",
+      "source_type": "open_source_documentation",
+      "stance": "contradicting",
+      "title": "Quick rejection tutorial",
+      "url": "https://eeglab.org/tutorials/misc/Quick_Tutorial_on_Rejection.html"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "MNE-Python",
+      "source_id": "embed-s6",
+      "source_type": "open_source_documentation",
+      "stance": "contradicting",
+      "title": "Repairing artifacts with ICA",
+      "url": "https://mne.tools/stable/auto_tutorials/preprocessing/40_artifact_correction_ica.html"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2020-05-18",
+      "publisher": "Persyst",
+      "source_id": "embed-s7",
+      "source_type": "vendor_documentation",
+      "stance": "contradicting",
+      "title": "Persyst Artifact Reduction",
+      "url": "https://www.persyst.com/technology/artifact-reduction/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2021-11-30",
+      "publisher": "Brain Products",
+      "source_id": "embed-s8",
+      "source_type": "vendor_documentation",
+      "stance": "contradicting",
+      "title": "Getting to know EEG artifacts and how to handle them in BrainVision Analyzer",
+      "url": "https://pressrelease.brainproducts.com/eeg-artifacts-handling-in-analyzer/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2025-06-17",
+      "publisher": "Medical Device Coordination Group",
+      "source_id": "embed-s9",
+      "source_type": "regulatory_guidance",
+      "stance": "context",
+      "title": "MDCG 2019-11 Rev.1: Qualification and Classification of Software",
+      "url": "https://health.ec.europa.eu/document/download/b45335c5-1679-4c71-a91c-fc7a4d37f12b_en?filename=mdcg_2019_11_en.pdf"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2016-04-27",
+      "publisher": "Official Journal of the European Union",
+      "source_id": "embed-s10",
+      "source_type": "law",
+      "stance": "context",
+      "title": "Regulation (EU) 2016/679",
+      "url": "https://eur-lex.europa.eu/eli/reg/2016/679/2016-05-04/eng"
+    }
+  ],
+  "unknowns": [
+    "External validation by hardware, montage, protocol, and population.",
+    "Buyer budget, integration time, recording volume, and labor savings.",
+    "Customer correction-label reuse rights and regulatory classification by intended use."
+  ]
+}

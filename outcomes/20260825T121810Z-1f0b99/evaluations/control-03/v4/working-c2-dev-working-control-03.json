@@ -1,0 +1,120 @@
+{
+  "assumptions": [
+    "The initial product remains a free owner-controlled equipment record, and providers are charged only for verified completed service or parts transactions.",
+    "The stated 1600 PLN average transaction, 6-10% outcome fee, 20% EBITDA margin, 5x valuation multiple, and 70% founder ownership are scenario assumptions rather than validated operating facts.",
+    "The family installer supplies bounded pilot access but is not treated as evidence of independent owner demand, provider adoption, or scalable distribution.",
+    "Safety-sensitive diagnosis and compatibility decisions remain technician-approved, and the business does not rely on unlicensed bulk extraction of manufacturer data.",
+    "Missing activation, conversion, repeat-use, acquisition-cost, and per-case operating-cost evidence is treated as uncertainty, not as proof that the model fails."
+  ],
+  "base_score": 4.7,
+  "candidate_id": "control-03",
+  "candidate_sha256": "231f1a92bf246aa7fc0d4f0d57763e7c97c99213ffa189030ee23548b7f8a32c",
+  "candidate_version": 4,
+  "constrained_score": 4.7,
+  "evaluation_type": "working",
+  "evidence_needed_for_higher_score": "A time-bounded pilot should report the full funnel for real battery or inverter faults: owner record activation and consent, qualified-case rate, provider acceptance, paid completion, time to resolution, average basket and realised fee, technician-review cost, support and dispute cost, refunds or insurance cost, contribution margin, repeat provider use, and equivalent results from at least one provider channel independent of the family company.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "Using a portable owner-authorised asset identity to bridge fragmented manufacturer and installer records, then monetising resolution rather than the low-priced record, is coherent and better aligned with the observed installed-base opportunity. The insight is still only moderately differentiated because handover records, QR documentation, customer portals, and manufacturer-bound asset identities already exist.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Faults, warranty handoffs, ownership changes, and orphaned equipment can create urgent and costly service friction, giving a realistic basis for payment on successful resolution. However, service frequency, owner activation, provider acceptance, lead quality, completed-job conversion, and willingness to surrender 6-10% of transaction value are all unknown.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Outcome-only charging aligns payment with provider value and avoids competing on commoditised passport creation, but it produces only about 128 PLN revenue on the stated 1600 PLN transaction at an 8% midpoint. The disclosed path requires roughly 55,804 annual transactions for 5 million PLN of founder equity while technician review, support, insurance, refunds, verification, and disputes create material variable costs; CAC, contribution margin, retention, payback, and the assumed 20% EBITDA margin remain unvalidated.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Poland's more than 1.6 million RES micro-installations provide a substantial installed-base context, and an aftermarket wedge is more resilient than relying only on contracting residential new-install flow. The actual serviceable battery or inverter population, incident frequency, paid basket, and reachable transaction pool are unknown, and the first category has not yet been selected tightly enough to establish an economically meaningful beachhead.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "A neutral owner-controlled record could occupy a useful gap between manufacturer silos, installers, and independent technicians. Yet installer suites already bundle handover and portal workflows, manufacturer portals control important installed records, and a public EU repair platform may absorb generic discovery, leaving no demonstrated route to a dominant position.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "If one equipment category reaches reliable case liquidity, the same identity, consent, and service-history layer could extend across batteries, inverters, heat pumps, EV chargers, ownership transfer, parts, warranty support, and nearby EU markets. Expansion is plausible but depends on repeating provider coverage and lawful data access category by category.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Accumulated consented configuration, failure, service, and verified-completion history could become a useful proprietary data asset with workflow switching costs. Before scale, the free record and routing workflow are readily copyable, providers can multi-home, incumbents already control relevant records, and database-right constraints limit rapid construction of a compatibility moat.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "Free portability, technician-reviewed intake, and payment only after a completed outcome are meaningfully more customer-aligned than charging for a static compliance record. The evidence does not yet show that this combination resolves faults faster, more reliably, or at lower total cost than direct installer, manufacturer, or broader field-service workflows.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "A large aging solar fleet, the 2027 battery-passport milestone, fragmented digital records, and repair-policy momentum make portable service context timely. The same regulation assigns statutory responsibilities elsewhere, most renewable equipment is not yet covered by operative product rules, and weaker residential installation flow limits the benefit of new-install distribution.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "The family company offers unusually cheap access to authentic first cases, and free records reduce initial adoption friction. Repeatable acquisition beyond that pilot is unresolved: installers and manufacturers may keep customers inside their own systems, owner demand is episodic, and wholesaler or service-network recruitment has neither commitment nor measured case flow.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "A closed pilot fits the founder's data, automation, sector access, capital, and part-time constraints, while human technician approval appropriately limits unsafe automation. Scaling introduces nontrivial electrical-safety liability, privacy and physical-security exposure, insurance, provider verification, support, refunds, disputes, and operational delegation that cannot be replaced by AI and may conflict with a part-time founder model until economics are proven.",
+      "score": 5,
+      "status": "scored"
+    }
+  ],
+  "final_score": 4.7,
+  "highest_value_structural_change": "Replace the open two-sided-marketplace launch with a single-category, embedded white-label post-warranty service layer distributed by a wholesaler, importer, insurer, or service network that contractually supplies case flow and lawful technical data; keep the portable record as supporting infrastructure and expand only after that channel produces positive per-case contribution.",
+  "interaction_adjustment": 0,
+  "judge_id": "c2-dev-working-control-03",
+  "main_structural_strength": "The redesign turns a commoditisable record into a free, owner-authorised context layer and aligns revenue with verified service outcomes, while the founder has unusually direct access to run a low-cost, safety-bounded pilot.",
+  "primary_score_limiter": "The business needs high recurring transaction volume to overcome low revenue per job and human-intensive orchestration, yet neither external case supply nor contribution economics has been demonstrated and the stated wealth path requires about 55,804 completed transactions per year.",
+  "qualified": false,
+  "raw_response_path": "artifacts/development/raw-c2-dev-working-control-03.json",
+  "raw_response_sha256": "aaab677b54eccd93f5b4af9bd72d27f88156c1f817874b141e29bd0588a8feee",
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 2,
+  "strongest_disconfirming_evidence": "SolarPlus, InsTool, and Payaca already bundle handover records and customer portals, while SolarEdge binds sites and serials to installer accounts; this demonstrates that the core record function is already available inside entrenched workflows and weakens the premise that portability alone will generate switching or service-case flow.",
+  "unrounded_score": 4.7
+}

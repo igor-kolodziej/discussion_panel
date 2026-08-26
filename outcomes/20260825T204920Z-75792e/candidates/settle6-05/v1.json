@@ -1,0 +1,76 @@
+{
+  "candidate_id": "settle6-05",
+  "claims": [
+    {
+      "claim_id": "settle6-05-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/klimat/system-kaucyjny-startuje-juz-od-pazdziernika--jak-sie-przygotowac"
+      ],
+      "statement": "Polish stores selling covered beverages must contract with an operator and agree settlement timing and reporting for acquired and sold covered containers."
+    },
+    {
+      "claim_id": "settle6-05-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2025/40/oj/eng",
+        "https://www.gov.pl/web/klimat/system-kaucyjny-operatorzy"
+      ],
+      "statement": "EU deposit-return rules require control procedures, collection reporting and transparent fees, while Poland has licensed multiple operators."
+    }
+  ],
+  "contrary_evidence": [
+    "Operators or POS vendors may provide adequate reconciliation themselves, leaving only low-value edge cases."
+  ],
+  "economics": {
+    "acquisition_route": "UNVALIDATED: embed through POS providers, franchise headquarters, retail accounting bureaus and beverage wholesalers.",
+    "capital_required_pln": 95000,
+    "founder_net_worth_path": "UNVALIDATED: reach 1,000 stores by year 2 and 8,000 stores by year 5, supporting founder equity plus retained cash above PLN 5m in years 5-6.",
+    "founder_time": "UNVALIDATED: 3 hours per day around integrations and exception taxonomy, with bookkeeping operations delegated.",
+    "gross_margin_basis": "UNVALIDATED: rules-based reconciliation with human review only for unmatched scans, damaged containers and operator disputes.",
+    "payback": "UNVALIDATED: one franchise integration repays channel cost within 5 monthly batch cycles.",
+    "pricing": "UNVALIDATED: fee per store per closed batch plus a share of recovered discrepancies; all commercial figures in this economics object, including capital_required_pln, are unvalidated.",
+    "retention_or_repeat": "UNVALIDATED: every store and operator statement creates another mandatory close and more verified exception data."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Accepted corrections build operator-specific and store-specific exception resolution data",
+    "customer": "Polish franchise chains, independent retailers and their bookkeepers",
+    "distribution_mechanism": "POS, franchise, bookkeeping and beverage-wholesale channels",
+    "offer_and_business_model": "Multi-source deposit reconciliation with per-close and recovery fees",
+    "payer_and_paid_event": "The retailer or operator pays when the batch is closed or a documented discrepancy is repaid",
+    "problem_trigger": "A deposit-system operator issues a settlement statement for sold and returned packaging"
+  },
+  "founder_fit": [
+    "Polish regulatory wedge",
+    "High-volume deterministic data",
+    "Partner-led distribution",
+    "Can start with a narrow POS connector"
+  ],
+  "parent": null,
+  "risks": [
+    "Operator interface fragmentation",
+    "Cash-control fraud exposure",
+    "Thin per-container economics",
+    "Retail support burden"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.gov.pl/web/klimat/system-kaucyjny-startuje-juz-od-pazdziernika--jak-sie-przygotowac",
+    "https://www.gov.pl/web/klimat/system-kaucyjny-operatorzy",
+    "https://eur-lex.europa.eu/eli/reg/2025/40/oj/eng"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Regulated transaction reconciliation and exception-settlement utility",
+    "control_point": "The store-to-operator deposit sub-ledger and signed batch close",
+    "critical_dependency": "Reliable POS, return-machine and operator statement access across multiple licensed operators"
+  },
+  "thesis": "Reconcile beverage sales, returned-container scans, manual returns, cash redeemed, logistics handoffs and operator statements for Polish retailers. The product closes each operator settlement batch, produces evidence for discrepancies and earns a fee when a batch is accepted or a discrepancy is repaid. POS vendors, franchise groups and retail bookkeepers supply one-to-many distribution; verified outcomes build a SKU, machine, store and operator exception graph.",
+  "title": "Polish Deposit Ledger Reconciliation",
+  "uncertainties": [
+    "Actual discrepancy rates",
+    "Data export rights",
+    "Which party has the strongest willingness to pay"
+  ],
+  "version": 1
+}

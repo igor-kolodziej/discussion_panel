@@ -1,0 +1,118 @@
+{
+  "assumptions": [
+    "Outsourced DORA compliance or audit operators have enough control over repeatable multi-entity workflows to procure and embed a third-party repair gate; this is unverified.",
+    "Minimizing source-document custody can keep security, insurance, specialist review, and liability obligations within the proposed staged validation budget; this is unverified.",
+    "The illustrative pricing, gross margin, portfolio size, retention, and founder-equity path are treated as hypotheses, with no unreported commercial or operating performance credited."
+  ],
+  "base_score": 4.86,
+  "candidate_id": "control9-03",
+  "candidate_sha256": "4a3a3e03d086008ffcc79037d42ec5aabd3117365e469e1032c274bedeb00477",
+  "candidate_version": 5,
+  "constrained_score": 4.86,
+  "evaluation_type": "holdout_native",
+  "evidence_needed_for_higher_score": "A signed and prepaid 12-month multi-entity partner minimum, paired with a representative multilingual benchmark showing materially better validation pass rates or repair time than the partner's current process, bounded human-review minutes, acceptable security and liability terms, and partner-level CAC payback with a credible renewal trigger.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "The concept correctly separates a documented cross-template repair problem from the crowded register system-of-record category and targets the portfolio operator at the point where errors must be resolved. The insight is credible, but whether repair is a durable standalone control point rather than a feature is unresolved.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "The dry-run failure rate and Polish resubmission stage establish real preparation and repair pain. They do not establish that outsourced operators will pay the proposed minimum, that the burden remains high after initial reporting cycles, or that a separate layer beats internal effort and bundled incumbents.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "An annual portfolio minimum plus per-entity usage can create attractive recurring revenue and reduces exposure before validation. However, pricing, partner share, sales cost, onboarding, review time, retention, and gross margin are all unmeasured, while the wealth path requires 600 covered entities and favorable margin and ownership assumptions.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Outsourced operators with multiple small and mid-sized regulated clients form a coherent and efficiently addressable beachhead. Its economic depth is uncertain because the reachable partner count, portfolio sizes, budgets, and proportion not already served by internal or incumbent tooling are unknown.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "The partner-embedded repair focus avoids some direct entity acquisition and system-of-record competition, but DAPR is an exact local incumbent and Vendorica and ReportAct already cover overlapping automation and export workflows. Existing vendors or capable partners can plausibly add the narrow repair queue before the entrant controls a segment.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A proven partner workflow could extend across additional clients, EU markets, ongoing register changes, and adjacent evidence-linked compliance checks. Those paths are plausible but not yet supported by demonstrated partner access, reusable data rights, or proof that the initial repair wedge earns enough trust to expand.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Versioned regression tests, correction outcomes, audit trails, and workflow integration could compound into switching costs. No corpus, performance lead, exclusive channel, or cross-tenant reuse right exists, and tenant-local learning plus incumbent feature replication would leave limited durable protection.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "Evidence-linked exception handling, reduced document custody, and a measured preflight can be more focused than spreadsheet repair. The claimed pass-rate, speed, cost, and security advantages have not been benchmarked, while existing products advertise closely overlapping extraction, reconciliation, validation, and export capabilities.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "Recent binding templates, poor dry-run quality, and observed rejected submissions create a timely entry window. Momentum is tempered by free regulator materials, organizational learning after early cycles, and incumbents that are already productized and priced.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "One portfolio partner can expose the product to many entities, making the paid benchmark and minimum-volume gate a rational low-capital acquisition design. No partner has committed, operators may regard repair as their own capability, and trust-heavy procurement, security review, and incumbent relationships may make the concentrated route slow and difficult.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "The founder can build a deterministic validation harness part-time and can stop before a large production investment. Reliable regulatory interpretation, multilingual accuracy, partner integrations, security, insurance, specialist sign-off, and error liability remain substantial requirements that may exceed the capital and daily-time envelope if exception work is not tightly bounded.",
+      "score": 5,
+      "status": "scored"
+    }
+  ],
+  "final_score": 4.9,
+  "highest_value_structural_change": "Make the repair gate the partner's continuous acceptance record for every material register or contract change, not only an annual or rejected-submission tool, and bind that workflow through a prepaid anchor agreement that grants narrowly permissioned reuse of correction patterns. This would improve usage frequency, switching cost, and defensibility without becoming another full system of record.",
+  "interaction_adjustment": 0,
+  "judge_id": "c9-holdout-control9-03-j2",
+  "main_structural_strength": "A benchmark-gated sale to one portfolio operator can validate both performance and distribution across multiple regulated entities before substantial capital is committed.",
+  "primary_score_limiter": "There is no evidence that a partner will pay for the proposed layer or that it materially outperforms spreadsheets and incumbent products, so the business's distribution, economics, and differentiation remain jointly unproven.",
+  "qualified": false,
+  "raw_response_path": "holdout/jobs/c9-raw-holdout-control9-03-j2.json",
+  "raw_response_sha256": "085fb0c8f879d17bd29ae11f95810a40436925b4db2fec418ef522b0e9769157",
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 2,
+  "strongest_disconfirming_evidence": "A Warsaw-based exact incumbent already sells automated DORA register preparation and validation for EUR 2,000-8,000 annually, while Vendorica and ReportAct provide overlapping recurring products and official regulator tooling remains free.",
+  "unrounded_score": 4.86
+}

@@ -1,0 +1,74 @@
+{
+  "candidate_id": "settle10-07",
+  "claims": [
+    {
+      "claim_id": "settle10-07-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.fmc.gov/articles/fmc-publishes-final-rule-on-detention-and-demurrage-billing-practices/",
+        "https://www.fmc.gov/ftdo/testimony-of-chairman-dibella-before-congress-future-of-united-states-maritime-review-of-fiscal-year-2027-maritime-administration-and-federal-maritime-commission-budget-requests/"
+      ],
+      "statement": "FMC rules specify eligible billed parties, invoice timing, required information, and minimum dispute windows, with most provisions still in effect in 2026."
+    },
+    {
+      "claim_id": "settle10-07-c2",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://dcsa.org/standards/track-and-trace",
+        "https://www.fmc.gov/detention-and-demurrage/"
+      ],
+      "statement": "Demand hypothesis: standardized DCSA events make automated charge reconstruction feasible enough for TMS-embedded recovery economics."
+    }
+  ],
+  "contrary_evidence": [
+    "FMC data show billed and collected charges fell from peak levels.",
+    "Forwarders and audit firms already dispute these invoices manually."
+  ],
+  "economics": {
+    "acquisition_route": "One TMS or forwarder integration supplies recurring importer volume.",
+    "capital_required_pln": 45000,
+    "founder_net_worth_path": "Hypothesis: 4000 monthly audits plus recovery fees can exceed 5 million PLN annual revenue and support founder wealth above 5 million PLN in five years.",
+    "founder_time": "Four hours daily until exception review can be delegated.",
+    "gross_margin_basis": "Hypothesis: 70-85% margin after analyst review of high-value disputes.",
+    "payback": "Hypothesis: 250 audits monthly at 150 PLN average repay the build within eighteen months.",
+    "pricing": "Hypothesis: 80-250 PLN per audited invoice plus 8-15% of waived charges.",
+    "retention_or_repeat": "Every delayed container can create a new charge and dispute deadline."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Carrier, port, and lane-specific event and dispute outcomes become proprietary benchmarks.",
+    "customer": "EU importers, freight forwarders, and NVOCCs exposed to US container charges.",
+    "distribution_mechanism": "TMS vendors and freight forwarders embed it into invoice-audit workflows.",
+    "offer_and_business_model": "Software reconciles carrier events, contracts, and invoice fields into a dispute-ready evidence pack.",
+    "payer_and_paid_event": "The importer or forwarder pays per container audit and a share of waived charges.",
+    "problem_trigger": "A carrier or terminal invoice arrives with disputed dates, party, free time, or causation."
+  },
+  "founder_fit": [
+    "The rules and event matching fit analytical automation.",
+    "Embedded TMS distribution avoids constant relationship selling."
+  ],
+  "parent": null,
+  "risks": [
+    "The product must avoid unauthorized legal representation.",
+    "Incomplete terminal events could produce false positives."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.fmc.gov/articles/fmc-publishes-final-rule-on-detention-and-demurrage-billing-practices/",
+    "https://www.fmc.gov/ftdo/testimony-of-chairman-dibella-before-congress-future-of-united-states-maritime-review-of-fiscal-year-2027-maritime-administration-and-federal-maritime-commission-budget-requests/",
+    "https://dcsa.org/standards/track-and-trace",
+    "https://www.fmc.gov/detention-and-demurrage/"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Event-driven fee-audit and recovery service.",
+    "control_point": "The container timeline linked to each charge and resolution.",
+    "critical_dependency": "Timely carrier, terminal, and DCSA event data."
+  },
+  "thesis": "An event-to-invoice auditor can identify noncompliant detention and demurrage charges and assemble a timely waiver or refund request.",
+  "title": "Demurrage Invoice Dispute Auditor",
+  "uncertainties": [
+    "EU importer exposure to recoverable US-lane charges is unknown.",
+    "TMS access and revenue share are unverified."
+  ],
+  "version": 1
+}

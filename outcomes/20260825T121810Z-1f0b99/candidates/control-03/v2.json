@@ -1,0 +1,148 @@
+{
+  "candidate_id": "control-03",
+  "claims": [
+    {
+      "claim_id": "control-03-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2024/1781/eng"
+      ],
+      "statement": "The ESPR creates an interoperable digital-product-passport framework with persistent identifiers, data carriers, access rights, portability, and customer-personal-data restrictions, but product-group delegated acts determine which products, data, actors, and dates apply."
+    },
+    {
+      "claim_id": "control-03-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1542/oj?eliuri=eli%3Areg%3A2023%3A1542%3Aoj&locale=en"
+      ],
+      "statement": "From 18 February 2027, each industrial battery above 2 kWh placed on the EU market or put into service must have a battery passport, creating a near-term standards-adjacent wedge for residential storage without making the installer the statutory economic operator."
+    },
+    {
+      "claim_id": "control-03-c03",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.ure.gov.pl/en/communication/news/518%2CURE-report-The-number-of-RES-micro-installations-in-Poland-has-already-exceeded-.html"
+      ],
+      "statement": "Poland had 1,636,673 grid-connected RES micro-installations at the end of 2025 and 99.9% were photovoltaic, providing a large installed service base rather than proof of passport demand."
+    },
+    {
+      "claim_id": "control-03-c04",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.solarpowereurope.org/press-releases/new-report-eu-hits-2025-solar-target-but-market-contraction-puts-2030-goal-at-risk"
+      ],
+      "statement": "The EU solar fleet reached 406 GW in 2025 while the residential share of new installations fell from 28% in 2023 to 14% in 2025, supporting an aftermarket focus but warning against relying only on new-install flow."
+    },
+    {
+      "claim_id": "control-03-c05",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.solarplus.co/key-features/",
+        "https://instool.co.uk/",
+        "https://payaca.com/pricing/uk"
+      ],
+      "statement": "Installer platforms already generate handover packs, commissioning records, customer portals, service workflows, and QR-linked documentation, so a passport can be bundled as a feature and must win on portability and aftermarket outcomes."
+    },
+    {
+      "claim_id": "control-03-c06",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.collectadpp.com/pricing"
+      ],
+      "statement": "A direct battery-DPP vendor publishes plans from EUR149 per month including 1,000 annual passports and extra-passport pricing from EUR0.20, imposing price pressure on a compliance-only passport."
+    },
+    {
+      "claim_id": "control-03-c07",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/LSU/?uri=celex%3A31996L0009"
+      ],
+      "statement": "EU database law can prohibit unauthorised extraction or reuse of substantial database contents, so manufacturer compatibility data must be licensed, supplied by users, or built from lawful individual observations rather than scraped wholesale."
+    },
+    {
+      "claim_id": "control-03-c08",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://commission.europa.eu/law/law-topic/consumer-protection-law/directive-repair-goods_en",
+        "https://knowledge-center.solaredge.com/sites/kc/files/monitoring_portal_registering_and_managing_an_account.pdf"
+      ],
+      "statement": "Hypothesis: a portable installer-created service record can bridge manufacturer portals and make repair easier, but the reviewed law and manufacturer workflow do not establish owner or third-party rights to copy manuals, diagnostics, or compatibility tables into a commercial registry."
+    }
+  ],
+  "contrary_evidence": [
+    "ESPR is a framework whose delegated acts define product-specific obligations; it does not make every current solar inverter or heat pump require a statutory DPP today.",
+    "The right-to-repair directive applies to goods listed through product-specific reparability rules and creates a public European repair platform, so it does not grant an immediate exclusive directory opportunity.",
+    "SolarPlus, InsTool, and Payaca already generate handover packs and customer documentation, and manufacturer portals such as SolarEdge already bind sites and serials to installer accounts.",
+    "Collecta DPP publishes low per-passport pricing, making 20-60 PLN per simple compliance record difficult to defend without service or transaction value.",
+    "EU database rights and copyright in technical materials constrain bulk reuse; no reviewed source establishes licences to republish manufacturer manuals, diagnostic codes, or part-compatibility data.",
+    "The EU residential new-install share fell sharply by 2025, so a growth model based only on new QR labels is fragile."
+  ],
+  "economics": {
+    "acquisition_route": "Instrument handover and service calls inside the family company, obtain owner consent, test 50-100 battery or inverter records, then recruit installers through wholesalers and service networks only after measured time saved or booked service revenue.",
+    "capital_required_pln": 70000,
+    "founder_net_worth_path": "Unvalidated years 8-12 scenario: 1200 installers averaging 250 PLN monthly contributes 3.6 million PLN annual recurring revenue; 25000 verified annual transactions at 1600 PLN average value and 8% take contributes 3.2 million PLN; authorised data/API services contribute 0.8 million PLN, for 7.6 million PLN revenue. At 20% EBITDA, 5x EBITDA, and 70% founder ownership, founder equity is about 5.32 million PLN, excluding retained cash and contingent on lawful data and delegated marketplace operations.",
+    "founder_time": "12-18 hours weekly through MVP and family-company validation; marketplace support must be postponed or delegated before launch.",
+    "gross_margin_basis": "Registry and document-linking software can target 80-90% gross margin, but technician verification, owner support, insurance, and marketplace disputes can reduce blended margin to 60-75%.",
+    "payback": "Unknown. Gate sales on evidence that one avoided callback, retained maintenance visit, or completed service transaction covers an installer's annual software spend within 12 months.",
+    "pricing": "Conservative validation hypothesis: 99-399 PLN monthly per installer plus 8-25 PLN for a newly created service record; later 6-10% only on verified service or parts transactions. Collecta's EUR149 monthly and EUR0.20 incremental DPP benchmark rules out treating a basic passport alone as a high-priced product.",
+    "retention_or_repeat": "Installers add new records, warranties and evidence expire, service events append history, and ownership transfers create repeat interactions; owner portability reduces lock-in and must be offset by workflow value."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Lawfully collected installed configuration, service, failure, and verified transaction history tied to persistent asset identities",
+    "customer": "Polish residential solar and battery installers first, followed by owners, authorised service firms, wholesalers, and manufacturers",
+    "distribution_mechanism": "Family-company pilot, then installer referrals and wholesaler or service-network bundles focused on batteries and inverters",
+    "offer_and_business_model": "Portable owner-controlled QR service book, installer retention workflow, and later authorised service-and-parts routing",
+    "payer_and_paid_event": "Installer pays a small subscription and per-asset creation fee; later service and parts providers pay only on verified transactions",
+    "problem_trigger": "Equipment is commissioned, transferred, faults, reaches warranty or service review, or needs a safely matched replacement"
+  },
+  "founder_fit": [
+    "Excellent founder-distribution fit because the family renewable installer can supply a lawful internal pilot and reveal real handover and service pain without cold outreach.",
+    "Strong technical fit for document extraction, asset identity, configuration graphs, and service analytics, while all safety-sensitive compatibility decisions remain technician-approved.",
+    "A narrow passport MVP fits a 12-18 hour weekly schedule and available capital; a two-sided marketplace should wait until fulfilment can be delegated.",
+    "The business is low-camera and system-oriented, but wholesaler and installer partnerships still require bounded B2B selling."
+  ],
+  "parent": {
+    "candidate_id": "control-03",
+    "version": 1
+  },
+  "risks": [
+    "Incorrect compatibility or diagnostic advice can damage equipment, void warranties, or create electrical and fire hazards.",
+    "A central record containing address, ownership, serials, photos, and system topology creates privacy and physical-security exposure.",
+    "Manufacturers or incumbent installer platforms can close data access or bundle portable handover records.",
+    "Marketplace operations can become support-heavy and require verification, dispute handling, and insurance before sufficient liquidity.",
+    "Installers may deliberately withhold portable records to protect service lock-in.",
+    "A privately issued service book can be confused with the statutory EU product or battery passport unless naming and responsibility are explicit."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2024/1781/eng",
+    "https://eur-lex.europa.eu/eli/reg/2023/1542/oj?eliuri=eli%3Areg%3A2023%3A1542%3Aoj&locale=en",
+    "https://commission.europa.eu/law/law-topic/consumer-protection-law/directive-repair-goods_en",
+    "https://www.ure.gov.pl/en/communication/news/518%2CURE-report-The-number-of-RES-micro-installations-in-Poland-has-already-exceeded-.html",
+    "https://www.solarpowereurope.org/press-releases/new-report-eu-hits-2025-solar-target-but-market-contraction-puts-2030-goal-at-risk",
+    "https://knowledge-center.solaredge.com/sites/kc/files/monitoring_portal_registering_and_managing_an_account.pdf",
+    "https://www.solarplus.co/key-features/",
+    "https://instool.co.uk/",
+    "https://www.collectadpp.com/pricing",
+    "https://payaca.com/pricing/uk",
+    "https://eur-lex.europa.eu/legal-content/EN/LSU/?uri=celex%3A31996L0009"
+  ],
+  "stage": "research",
+  "structure": {
+    "commercial_archetype": "Asset registry expanding into a two-sided aftermarket",
+    "control_point": "The portable owner-authorised equipment identity and lifecycle record created at installer handover",
+    "critical_dependency": "Installer adoption plus lawful, accurate configuration and compatibility data sufficient to route service without making unsafe automated recommendations"
+  },
+  "thesis": "Start with a portable QR service book for Polish residential solar and batteries created during installer handover: verified serials, configuration, warranty links, owner-controlled documents, service events, and explicit transfer. Avoid claiming to be the statutory EU product passport or copying manufacturer databases. The long-term business is installer retention and authorised service-and-parts routing, while a marketplace and compatibility graph remain gated on demonstrated transaction volume and licensed data.",
+  "title": "Renewable Equipment Passport and Aftermarket",
+  "uncertainties": [
+    "Which initial category produces enough service pain: residential batteries, inverters, or heat pumps.",
+    "Whether Polish installers will create and maintain portable records that make switching service provider easier.",
+    "Whether owners will consent to personal data, retain the QR label, and transfer access when property ownership changes.",
+    "Which manufacturer documents, identifiers, diagnostics, and compatibility attributes can be stored, linked, or licensed.",
+    "Observed maintenance frequency, parts basket size, service conversion, and marketplace liquidity.",
+    "Whether statutory battery passports expose interoperable data that an owner-authorised service book may reference.",
+    "Installer willingness to pay versus treating the feature as part of a broader CRM or manufacturer portal."
+  ],
+  "version": 2
+}

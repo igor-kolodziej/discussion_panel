@@ -1,0 +1,84 @@
+{
+  "candidate_id": "rights8-01",
+  "claims": [
+    {
+      "claim_id": "rights8-01-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://digital-strategy.ec.europa.eu/en/news/eu-data-act-gives-users-control-over-data-connected-devices"
+      ],
+      "statement": "The EU Data Act started applying on 12 September 2025 and gives users of connected devices, including industrial machinery, the ability to access, use and share generated data."
+    },
+    {
+      "claim_id": "rights8-01-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/2854"
+      ],
+      "statement": "Where data is not directly accessible, the Data Act requires readily available data and relevant metadata to be made accessible in a structured, commonly used and machine-readable format, with continuous real-time access where relevant and technically feasible."
+    },
+    {
+      "claim_id": "rights8-01-c3",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/2854"
+      ],
+      "statement": "Hypothesis: standardized customer mandates and connectors can turn those rights into a defensible SME monitoring product; willingness to grant mandates, data quality and realized savings are unvalidated."
+    }
+  ],
+  "contrary_evidence": [
+    "The Data Act limits access to readily available data, allows trade-secret safeguards, and forbids using obtained data to develop a competing connected product.",
+    "A statutory access right is not evidence that a given manufacturer's export is timely, complete or useful enough for paid optimization."
+  ],
+  "economics": {
+    "acquisition_route": "Begin with 20-30 equipment users reachable through energy auditors and the family renewable-services network; validate one equipment category, one data holder and one paid action loop before broadening.",
+    "capital_required_pln": 55000,
+    "founder_net_worth_path": "Unvalidated path: reach 150 sites at roughly PLN 36,000 recurring revenue per site by years 6-8 (about PLN 5.4m annual recurring revenue); at 25% operating profit and a 5x operating-profit value, a 75% founder stake would be about PLN 5.1m, excluding and not double-counting retained company cash. This requires repeatable connectors and retention evidence, not merely legal access rights.",
+    "founder_time": "Initially 12-18 hours per week for data-rights workflows, connector prototypes and analyst review; cap concurrent pilots at five while employed and outsource routine integration after repeatability.",
+    "gross_margin_basis": "Unvalidated estimate: 70-85% software-and-analysis gross margin after data-engineering support, falling during early bespoke connector work; installation or control-hardware work stays with partners.",
+    "payback": "Unvalidated target: 6-12 months after five to eight paying sites, assuming onboarding fees cover connector work and no major hardware is financed.",
+    "pricing": "Unvalidated hypothesis: PLN 4,000-12,000 onboarding per site, PLN 1,500-4,000 monthly monitoring, plus 8-15% of independently verified first-year savings where appropriate.",
+    "retention_or_repeat": "Telemetry and baselines become more valuable over time; annual renewals should be tied to documented actions, uptime and savings rather than generic dashboards."
+  },
+  "fingerprint": {
+    "compounding_advantage": "each lawful mandate expands the connector catalogue and de-identified equipment benchmarks, reducing onboarding cost and improving anomaly priors without taking ownership away from users",
+    "customer": "Polish SMEs operating connected HVAC, refrigeration, compressed-air or production equipment across one or more sites",
+    "distribution_mechanism": "energy auditors, facility-maintenance firms and renewable/HVAC installers embed the service in audits and service renewals; the founder can begin through the family installation-company network",
+    "offer_and_business_model": "managed Data Act request and authorization workflow, normalized telemetry, anomaly alerts and human-reviewed action queues sold as subscription software plus a bounded performance fee",
+    "payer_and_paid_event": "the equipment user pays an onboarding fee, a monthly monitoring fee, and optionally a success fee only after independently measured savings or avoided-maintenance value",
+    "problem_trigger": "a sudden energy-cost increase, recurring failure, expiring service contract, or frustration with a manufacturer portal that does not support cross-vendor analysis"
+  },
+  "founder_fit": [
+    "Direct use of data science, AI-assisted anomaly detection and quantitative measurement.",
+    "Can be piloted part-time with a few sites and without purchasing industrial assets.",
+    "Family renewable-installation relationships can supply a bounded first customer and channel hypothesis.",
+    "Sales can become partner-led and evidence-led rather than founder-brand or camera dependent."
+  ],
+  "parent": null,
+  "risks": [
+    "Machine exports may be sparse, delayed, poorly documented or expensive to operationalize despite a legal access route.",
+    "Manufacturers can protect trade secrets and the Data Act does not permit using obtained data to build a competing connected product.",
+    "Long SME sales cycles and site-specific integrations could turn a product into low-margin consulting.",
+    "Cybersecurity, processor contracts and mixed personal/non-personal data require disciplined governance."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://digital-strategy.ec.europa.eu/en/news/eu-data-act-gives-users-control-over-data-connected-devices",
+    "https://eur-lex.europa.eu/eli/reg/2023/2854"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "authorized industrial-data fiduciary and analytics subscription",
+    "control_point": "revocable customer mandates to request and process equipment data, reinforced by a proprietary connector library and normalized operating baselines",
+    "critical_dependency": "data holders must deliver sufficiently granular, interpretable data and each customer must have authority to share it for the proposed processing"
+  },
+  "thesis": "Build a manufacturer-independent service through which Polish factories, warehouses and commercial-building operators grant a revocable mandate to retrieve data from connected HVAC, refrigeration and production equipment, normalize it, and turn it into energy and maintenance actions. The scarce asset would not be public data: it would be a growing portfolio of lawful customer permissions, machine-specific connectors and cross-site baselines. Start with a narrow equipment class and five paid pilots; do not assume that a Data Act request produces useful telemetry until tested.",
+  "title": "Mandated Machine-Data Operator for Polish SMEs",
+  "uncertainties": [
+    "Which equipment categories expose real-time data with enough resolution to support a measurable action?",
+    "Will Polish SMEs pay for independent monitoring instead of relying on incumbent service vendors?",
+    "What fraction of data holders will comply through an automated interface versus a disputed manual process?",
+    "Can savings attribution be made credible enough for performance pricing?"
+  ],
+  "version": 1
+}

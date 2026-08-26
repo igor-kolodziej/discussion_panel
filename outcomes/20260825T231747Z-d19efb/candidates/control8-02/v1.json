@@ -1,0 +1,87 @@
+{
+  "candidate_id": "control8-02",
+  "claims": [
+    {
+      "claim_id": "control8-02-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://green-forum.ec.europa.eu/nature-and-biodiversity/deforestation-regulation-implementation/traceability-and-geolocation-commodities-subject-eudr_fi"
+      ],
+      "statement": "The Commission's current implementation page gives 30 December 2026 for large and medium operators and 30 June 2027 for most micro and small operators."
+    },
+    {
+      "claim_id": "control8-02-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://green-forum.ec.europa.eu/nature-and-biodiversity/deforestation-regulation-implementation/understand-due-diligence_en"
+      ],
+      "statement": "Official guidance says due diligence and a DDS or simplified declaration must be completed before a relevant product is placed on the EU market or exported, and related documents must be kept for five years."
+    },
+    {
+      "claim_id": "control8-02-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://green-forum.ec.europa.eu/deforestation-regulation-implementation/deforestation-due-diligence-registry_en?etransnolive=1&prefLang=sk"
+      ],
+      "statement": "The official Information System supports electronic statements and offers a machine-to-machine API for large operators managing many products and suppliers."
+    }
+  ],
+  "contrary_evidence": [
+    "The revised EUDR delayed application and shifted DDS responsibility toward first placers; downstream operators and traders generally no longer submit their own DDS, materially reducing the buyer pool.",
+    "The official Information System already offers entry and bulk/API paths, so an intermediary wins only through evidence acquisition and quality control.",
+    "Low-risk sourcing or a small, stable supplier base may make spreadsheets and the official system adequate."
+  ],
+  "economics": {
+    "acquisition_route": "Start with 3-5 design partners in one Polish commodity chain, then distribute through customs and sourcing advisors plus reusable supplier onboarding links",
+    "capital_required_pln": 65000,
+    "founder_net_worth_path": "Unvalidated 5-8 year scenario: 140 customers averaging 42,000 PLN annual revenue gives 5.88m PLN revenue; 30% EBITDA at 4x and 80% founder ownership implies roughly 5.64m PLN equity value, without counting retained cash twice.",
+    "founder_time": "18-23 hours per week during vertical validation and prototype build; licensed legal or forestry expertise is bought per review rather than hired full-time",
+    "gross_margin_basis": "Automated polygon, identifier, and completeness checks are scalable; human legality review and supplier remediation are variable costs that require strict service tiers",
+    "payback": "Customer payback hypothesis: faster supplier clearance and fewer blocked shipments can justify a 40,000-120,000 PLN annual cost for complex operators; shipment-delay value must be measured in pilots",
+    "pricing": "Unvalidated hypothesis: 15,000-40,000 PLN setup, 3,000-10,000 PLN per month, and metered charges above an included supplier or statement volume",
+    "retention_or_repeat": "Each new lot, supplier, plot, product transformation, and risk change refreshes the evidence chain; five-year record preservation raises switching costs"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A permissioned map of supplier evidence reliability, recurring plot anomalies, document-resolution paths, and commodity-specific onboarding schemas",
+    "customer": "Large and medium EU first operators or exporters with fragmented non-EU sourcing, initially Polish timber/furniture or rubber-product businesses",
+    "distribution_mechanism": "Commodity-specific trade associations, customs firms, FSC/PEFC-adjacent consultants without claiming certification equivalence, and free plot-file preflight tools",
+    "offer_and_business_model": "Supplier portal, polygon and shipment validation, risk-decision record, five-year evidence vault, and official-system bulk-export/API workflow; hypothesis 15,000-40,000 PLN setup plus 3,000-10,000 PLN monthly",
+    "payer_and_paid_event": "Compliance or procurement leader pays implementation, recurring supplier monitoring, and usage fees per cleared shipment or statement batch",
+    "problem_trigger": "EUDR applicability date, new supplier or origin, a shipment lacking plot-level provenance, or a buyer request for reference-number evidence"
+  },
+  "founder_fit": [
+    "Strong match for data pipelines, geospatial validation, anomaly detection, and EU compliance research",
+    "Can be prototyped part-time using customer-supplied synthetic or permissioned data",
+    "Does not require camera-led distribution and can grow through embedded supplier invitations",
+    "Polish manufacturing and import context provides a focused starting geography"
+  ],
+  "parent": null,
+  "risks": [
+    "Recent simplification shifted much of the duty to first placers, reducing the number of paying downstream actors",
+    "A software provider cannot establish factual legality or deforestation-free status when supplier evidence is false",
+    "Large commodity platforms and certification ecosystems already address traceability",
+    "Sensitive supplier and precise location data require strong security and access controls"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://green-forum.ec.europa.eu/nature-and-biodiversity/deforestation-regulation-implementation/traceability-and-geolocation-commodities-subject-eudr_fi",
+    "https://green-forum.ec.europa.eu/nature-and-biodiversity/deforestation-regulation-implementation/understand-due-diligence_en",
+    "https://green-forum.ec.europa.eu/deforestation-regulation-implementation/deforestation-due-diligence-registry_en?etransnolive=1&prefLang=sk",
+    "https://environment.ec.europa.eu/document/download/a3c5c3a0-232e-43c4-b0b8-1eecb1df45c7_en?filename=Report+from+the+Commission+to+the+Council+and+Parliament+on+the+EUDR.pdf"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Geospatial supply-chain clearance network charged per supplier, shipment, and managed statement volume",
+    "control_point": "The traceability and negligible-risk decision that must produce a DDS reference or declaration identifier before market placement or export",
+    "critical_dependency": "Authentic supplier plot geolocation and legality evidence linked without breaks to the exact products and lots being cleared"
+  },
+  "thesis": "Planning-stage hypothesis: create a geospatial evidence and due-diligence operating layer for EU first placers and exporters of wood, rubber, coffee, cocoa, cattle, soy, palm oil, and derived products. It would collect supplier plot polygons and legality documents, preserve transformations from shipment to source plot, flag missing or implausible data, and prepare bulk Due Diligence Statements for client approval and official submission. The strongest control point is issuance and preservation of the statement reference before a relevant product is placed on the market or exported. A narrowly chosen Polish vertical, such as furniture/timber importers or rubber-component importers, is needed to avoid becoming a generic compliance consultancy.",
+  "title": "EUDR Plot-to-Statement Clearance Rail",
+  "uncertainties": [
+    "Which Polish commodity vertical has enough first operators, transaction frequency, and acute data pain",
+    "Whether suppliers will enter plot data into another portal or insist on existing platforms",
+    "Final operational behavior of the revised Information System and its API at scale",
+    "Acceptable division of responsibility among operator, software vendor, and external expert"
+  ],
+  "version": 1
+}

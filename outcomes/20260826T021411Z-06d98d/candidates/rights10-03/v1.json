@@ -1,0 +1,85 @@
+{
+  "candidate_id": "rights10-03",
+  "claims": [
+    {
+      "claim_id": "rights10-03-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2024/573/oj?locale=en"
+      ],
+      "statement": "EU F-gas rules require certified undertakings for specified installation and service work and detailed records for equipment subject to leak checks."
+    },
+    {
+      "claim_id": "rights10-03-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/kpk-oze/zgloszenie-do-centralnej-ewidencji-emisyjnosci-budynkow-ceeb"
+      ],
+      "statement": "Polish owners or managers must report heat pumps as heat sources to CEEB, generally within 14 days of first operation."
+    },
+    {
+      "claim_id": "rights10-03-c3",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://www.udt.gov.pl/rozwiazania-dla-sektorow/energetyka-odnawialna-oze/pompy-ciepla"
+      ],
+      "statement": "Demand hypothesis: installers will pay for a transferable service record if it measurably increases recurring bookings and reduces claim administration."
+    }
+  ],
+  "contrary_evidence": [
+    "Many small heat pumps fall below F-gas leak-check thresholds or use refrigerants outside the relevant record burden.",
+    "OEM portals may already cover parts of warranty and service history."
+  ],
+  "economics": {
+    "acquisition_route": "Demand hypothesis: prove renewal and booking lift on the family company's installed base, then sell via equipment distributors",
+    "capital_required_pln": 35000,
+    "founder_net_worth_path": "Hypothesis: 20000 assets at 10 PLN monthly plus 1.5m PLN booking revenue yields about 3.9m PLN annual revenue; 30% EBITDA at a 5x value could exceed 5m PLN in 4-6 years",
+    "founder_time": "12-18 hours weekly; family-business operations provide a bounded test environment",
+    "gross_margin_basis": "Economics hypothesis: 80% SaaS margin and 65-75% blended margin after payment and support costs",
+    "payback": "Economics hypothesis: 2500 assets at 10 PLN monthly recover initial capital within 12-15 months before booking margin",
+    "pricing": "Economics hypothesis: 8-15 PLN per asset monthly plus 6-10% of booked service labor",
+    "retention_or_repeat": "Annual maintenance, leak checks where applicable, repairs, property transfer, and warranty evidence recur over asset life"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Installed-base service history, verified technician performance, and local demand-versus-capacity data",
+    "customer": "Heat-pump installers, service firms, housing managers, commercial landlords, and equipment owners",
+    "distribution_mechanism": "Pilot through the founder's family renewable installer, then OEM distributors, wholesalers, and installer associations",
+    "offer_and_business_model": "White-label asset passport, owner permission controls, service reminders, technician credential checks, and forward-capacity booking",
+    "payer_and_paid_event": "Installer pays per active asset monthly and a booking fee when an owner reserves a service slot",
+    "problem_trigger": "Service is due, a property changes hands, or an installer has idle certified capacity but records and entitlement are fragmented"
+  },
+  "founder_fit": [
+    "Unique family installer test channel",
+    "Renewable-energy domain adjacency",
+    "Low capital",
+    "Operationally measurable and automatable"
+  ],
+  "parent": null,
+  "risks": [
+    "Low installer software adoption",
+    "Owner privacy",
+    "Non-transferable warranty terms",
+    "Seasonal capacity imbalance"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2024/573/oj?locale=en",
+    "https://www.gov.pl/web/kpk-oze/zgloszenie-do-centralnej-ewidencji-emisyjnosci-budynkow-ceeb",
+    "https://www.udt.gov.pl/rozwiazania-dla-sektorow/energetyka-odnawialna-oze/pompy-ciepla"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Vertical SaaS plus certified-capacity marketplace",
+    "control_point": "Owner-authorized longitudinal asset record linked to the booking and warranty-claim route",
+    "critical_dependency": "Installers must adopt the workflow and owners must consent; warranty transfer remains subject to each contract"
+  },
+  "thesis": "Installers maintain an owner-permissioned asset record containing commissioning, F-gas work, warranty evidence, and CEEB reminders, then publish forward service slots to property managers. Demand hypothesis: a portable record plus verified capacity will improve maintenance conversion and make installer portfolios more defensible.",
+  "title": "Heat-Pump Service Passport and Certified-Slot Exchange",
+  "uncertainties": [
+    "Installed-base willingness to opt in",
+    "Service booking uplift",
+    "Distributor channel economics",
+    "Asset-level churn"
+  ],
+  "version": 1
+}

@@ -1,0 +1,82 @@
+{
+  "candidate_id": "settle9-02",
+  "claims": [
+    {
+      "claim_id": "settle9-02-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.podatki.gov.pl/wykaz-podatnikow-vat-wyszukiwarka/?mnuid=173"
+      ],
+      "statement": "Poland's official VAT taxpayer list includes business settlement-account numbers and supports checking a taxpayer for a selected historical date."
+    },
+    {
+      "claim_id": "settle9-02-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2024/886/oj/eng"
+      ],
+      "statement": "EU Regulation 2024/886 requires a payer's payment service provider to offer Verification of Payee before the payer authorizes a credit transfer."
+    },
+    {
+      "claim_id": "settle9-02-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2024/886/oj/eng"
+      ],
+      "statement": "The same regulation sets 9 July 2027 as the Verification of Payee compliance date for payment service providers in non-euro Member States, making Poland a timed integration market rather than an already-mature one."
+    }
+  ],
+  "contrary_evidence": [
+    "Verification of Payee must be provided by payment service providers free of charge, so a standalone name-check product has little pricing power.",
+    "Bank and ERP vendors may own the native workflow and restrict third-party access to result data."
+  ],
+  "economics": {
+    "acquisition_route": "AP/accounting integrations, factoring partners and cyber-insurance brokers; begin with a free supplier-master risk scan",
+    "capital_required_pln": 65000,
+    "founder_net_worth_path": "Hypothesis: 250 paying entities at 24,000 PLN blended ARR yields 6m PLN ARR by years 5-6. At 20%+ operating margin and majority ownership, retained earnings plus a 4-6x valuation could put founder net worth above 5m PLN in years 6-8; regulated-liability expansion is optional, not assumed.",
+    "founder_time": "12-18 hours weekly for prototype and two integrations, rising temporarily during security reviews",
+    "gross_margin_basis": "Hypothesis: 82-92% after automated registry checks; human escalation is limited to paid mismatch-resolution cases",
+    "payback": "Hypothesis: 3-7 months through embedded referrals; direct enterprise sales may take 9-15 months",
+    "pricing": "Hypothesis: 900-4,000 PLN per month per legal entity plus 2-8 PLN for a resolved supplier change; discounted portfolio pricing for accounting firms",
+    "retention_or_repeat": "Every supplier onboarding, master-data refresh and material payment repeats the control; accumulated approvals and audit history create switching costs"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Permissioned supplier identity-to-account graph, historical name-variant resolutions and change-risk patterns that reduce false mismatches and highlight anomalous changes",
+    "customer": "Polish and Central European SMEs with many suppliers, plus accounting firms, factors and AP software serving them",
+    "distribution_mechanism": "Embed a verification widget in accounting/AP products and factoring onboarding, with secure supplier links creating bottom-up exposure across vendor networks",
+    "offer_and_business_model": "Subscription SaaS with per-resolution overage, secure supplier self-remediation and exportable evidence packets; no fund custody and no regulated guarantee at launch",
+    "payer_and_paid_event": "The buying company pays per supplier book or AP entity when the verification and approval rail is activated; partners receive a share after referred activation",
+    "problem_trigger": "A new supplier or changed bank account is about to receive a transfer and registry, beneficiary-name or internal-master data do not agree"
+  },
+  "founder_fit": [
+    "Strong fit with anomaly detection, entity resolution and finance interests.",
+    "Can validate with synthetic and volunteered supplier records without holding money.",
+    "Embedded distribution reduces dependence on high-energy founder-led selling."
+  ],
+  "parent": null,
+  "risks": [
+    "Security failure or a misleading assurance label could create disproportionate liability.",
+    "Personal and bank data processing needs strict minimization, retention and access controls.",
+    "False confidence could weaken existing call-back controls unless the UI explicitly preserves layered approval."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.podatki.gov.pl/wykaz-podatnikow-vat-wyszukiwarka/?mnuid=173",
+    "https://www.podatki.gov.pl/narzedzia/white-list",
+    "https://eur-lex.europa.eu/eli/reg/2024/886/oj/eng"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Embedded transaction-assurance workflow",
+    "control_point": "Approval of supplier-master creation or bank-detail change immediately before payment authorization",
+    "critical_dependency": "Partner/API access to official registry and bank-provided Verification of Payee results without representing the service as a bank-grade guarantee"
+  },
+  "thesis": "Create an AP workflow for Polish and Central European mid-market firms that freezes a supplier record when bank details change, checks the Polish VAT white list where relevant, captures the bank's Verification of Payee response, routes mismatches to a secure supplier remediation link, and preserves an approval evidence bundle. The product complements the free bank check rather than charging for it and initially makes no payment guarantee or insurance promise. The long-term asset is a permissioned entity-account-resolution graph distributed through accounting software, factoring and cyber-risk partners.",
+  "title": "Supplier Bank-Change Evidence Rail",
+  "uncertainties": [
+    "Availability of standardized VoP result access to third-party AP applications",
+    "Willingness of suppliers to remediate through a new link",
+    "Actual conversion through factors and accounting software partners"
+  ],
+  "version": 1
+}

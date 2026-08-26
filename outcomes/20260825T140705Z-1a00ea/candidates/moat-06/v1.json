@@ -1,0 +1,67 @@
+{
+  "candidate_id": "moat-06",
+  "claims": [
+    {
+      "claim_id": "moat06-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en"
+      ],
+      "statement": "The CBAM definitive regime began on 1 January 2026 and generally covers importers above a 50-tonne threshold."
+    },
+    {
+      "claim_id": "moat06-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-registry_en"
+      ],
+      "statement": "The Commission registry lets non-EU operators upload emissions data once and share it confidentially with declarants."
+    }
+  ],
+  "contrary_evidence": [
+    "The official registry already enables reusable sharing and the threshold excludes many small importers."
+  ],
+  "economics": {
+    "acquisition_route": "Unvalidated hypothesis: Polish customs brokers above the threshold.",
+    "capital_required_pln": 70000,
+    "founder_net_worth_path": "Unvalidated hypothesis: 1200 importers at 9000 PLN annually exceed 10 million PLN ARR and support founder equity above 5 million PLN in six years.",
+    "founder_time": "Unvalidated hypothesis: 15-20 hours weekly with outsourced onboarding.",
+    "gross_margin_basis": "Unvalidated hypothesis: 72% after multilingual support.",
+    "payback": "Unvalidated hypothesis: one broker portfolio within six months.",
+    "pricing": "Unvalidated hypothesis: 1000-5000 PLN monthly plus 200-800 PLN per supplier mapping.",
+    "retention_or_repeat": "Unvalidated hypothesis: annual declarations and supplier changes recur."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Consented supplier mappings serve multiple buyers and exceptions enrich rules",
+    "customer": "Customs brokers and covered-goods importers",
+    "distribution_mechanism": "White-label customs-broker portfolios",
+    "offer_and_business_model": "Secure evidence relay sold by subscription and mapping fee",
+    "payer_and_paid_event": "The broker pays on supplier onboarding and declaration preparation",
+    "problem_trigger": "An importer needs verified embedded-emissions evidence"
+  },
+  "founder_fit": [
+    "Rules automation fits the founder, although cross-border onboarding adds social load."
+  ],
+  "parent": null,
+  "risks": [
+    "The product may be a dispensable interface.",
+    "Supplier errors create financial exposure."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en",
+    "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-registry_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Multi-party regulatory data exchange",
+    "control_point": "A permissioned graph of installations, goods, verification evidence, importers, and resolved exceptions",
+    "critical_dependency": "Supplier and verifier participation without duplicating the official registry"
+  },
+  "thesis": "A supplier-side CBAM evidence relay securely reuses verified installation data across customs brokers and importers while learning recurring exception resolutions.",
+  "title": "Carbon Relay",
+  "uncertainties": [
+    "Official-registry gaps and broker demand are unvalidated."
+  ],
+  "version": 1
+}

@@ -1,0 +1,73 @@
+{
+  "candidate_id": "route-02",
+  "claims": [
+    {
+      "claim_id": "route-02-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://energy.ec.europa.eu/topics/energy-efficiency/heat-pumps_en"
+      ],
+      "statement": "The European Commission identifies a complex customer journey, installer shortages, waiting periods, financing limits, and installation cost as barriers to heat-pump deployment, and estimates that 750000 additional installers are needed for 2030 goals."
+    },
+    {
+      "claim_id": "route-02-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://energy-efficient-products.ec.europa.eu/eprel_en"
+      ],
+      "statement": "EPREL is an EU-operated product database covering energy and environmental performance of labelled consumer and B2B products, including heating equipment, and exposes product information for purchasing decisions."
+    }
+  ],
+  "contrary_evidence": [
+    "Large wholesalers and manufacturers may already provide proprietary sizing or quoting tools.",
+    "Installers may prefer familiar spreadsheets because liability remains with them."
+  ],
+  "economics": {
+    "acquisition_route": "Prove quote-time and error reduction in the family business, then approach one regional wholesaler with an embedded pilot tied to cart conversion.",
+    "capital_required_pln": 70000,
+    "founder_net_worth_path": "Hypothesis: 25 EU wholesalers at 300000 PLN annual recurring revenue each produce 7.5m PLN ARR; at 30% EBITDA, 4x EBITDA, and 65% founder ownership, equity is about 5.9m PLN in year 6-8, excluding retained cash as a second count.",
+    "founder_time": "Hypothesis: 15-20 hours weekly during the first integration, falling after reusable connectors and validation rules exist.",
+    "gross_margin_basis": "Hypothesis: 78-88% after model inference and support; catalog onboarding is charged separately to avoid services drag.",
+    "payback": "Hypothesis: 30000-60000 PLN enterprise acquisition and integration cost recovered within 6-12 months per live wholesaler.",
+    "pricing": "Hypothesis: 50000-120000 PLN implementation plus 8-20 PLN per completed configuration, or a 12000-30000 PLN monthly minimum per wholesaler.",
+    "retention_or_repeat": "Catalog and commerce integration create annual contracts; every installer order is a repeat usage event."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Observed substitutions, incompatibilities, returned items, and winning configurations improve rules and recommendations by local market",
+    "customer": "Small renewable and HVAC installers buying equipment through wholesalers",
+    "distribution_mechanism": "Renewable and electrical wholesalers expose the copilot inside portals repeatedly used by their installer accounts",
+    "offer_and_business_model": "Embedded configuration, BOM, quote, and documentation API sold as transaction-enablement SaaS",
+    "payer_and_paid_event": "Wholesaler pays a platform fee plus usage for each completed configuration or converted cart",
+    "problem_trigger": "An installer must turn incomplete building information into a compatible, available, compliant equipment basket and quote"
+  },
+  "founder_fit": [
+    "The family installation business can test outputs against real quotes without cold consumer acquisition.",
+    "Constraint solving, document extraction, and AI-assisted quoting fit the founder's technical profile.",
+    "Wholesaler distribution concentrates sales into a small number of accounts and supports part-time operation."
+  ],
+  "parent": null,
+  "risks": [
+    "Incorrect sizing or compatibility advice can cause costly rework.",
+    "Wholesaler integrations may have long procurement cycles.",
+    "Manufacturer rules and subsidy documentation change across countries."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://energy.ec.europa.eu/topics/energy-efficiency/heat-pumps_en",
+    "https://energy-efficient-products.ec.europa.eu/eprel_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "wholesaler-embedded transaction enablement SaaS",
+    "control_point": "Compatible product graph joined to live catalog, availability, and quote workflow",
+    "critical_dependency": "A wholesaler willing to expose catalog and order-conversion data"
+  },
+  "thesis": "Embed a Polish-first configuration copilot inside renewable and electrical wholesalers' ordering portals. It converts property inputs and installer preferences into a compatible bill of materials, editable assumptions, customer quote, product-data sheets, and a cart. The wholesaler has repeated access to installers and benefits from larger baskets, fewer compatibility returns, and installer loyalty; the product earns platform and usage fees rather than competing for end-customer leads.",
+  "title": "Wholesaler-Embedded Heat-Pump and PV Configuration Copilot",
+  "uncertainties": [
+    "Which product category creates enough configuration pain to win a first wholesaler?",
+    "Can catalog, availability, and price data be accessed in near real time?",
+    "Will the wholesaler accept vendor-neutral recommendations when it has inventory incentives?"
+  ],
+  "version": 1
+}

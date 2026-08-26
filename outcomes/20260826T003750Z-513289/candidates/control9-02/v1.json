@@ -1,0 +1,85 @@
+{
+  "candidate_id": "control9-02",
+  "claims": [
+    {
+      "claim_id": "control9-02-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://climate.ec.europa.eu/news-other-reads/news/f-gases-new-rules-labelling-reporting-certification-and-f-gas-portal-2024-09-20_en",
+        "https://www.gov.pl/web/klimat/rozporzadzenie-ws-certyfikacji-f-gazowej"
+      ],
+      "statement": "EU implementing rules under Regulation 2024/573 extend certification requirements for stationary air-conditioning and heat-pump equipment to covered alternative refrigerants as well as F-gases."
+    },
+    {
+      "claim_id": "control9-02-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.udt.gov.pl/uslugi-udt/szwo-i-f-gazy/certyfikat-dla-przedsiebiorcow"
+      ],
+      "statement": "Polish enterprises performing third-party installation, service, repair, or decommissioning of stationary refrigeration, air-conditioning, and heat-pump equipment containing F-gases need an enterprise certificate for the covered activities."
+    },
+    {
+      "claim_id": "control9-02-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/klimat/centralny-rejestr-operatorow-cro"
+      ],
+      "statement": "Poland operates a Central Register of Operators with equipment cards for covered equipment, creating a persistent asset-record workflow rather than a one-off certificate task."
+    }
+  ],
+  "contrary_evidence": [
+    "CRO and UDT already provide the authoritative registers and certification services, so the product cannot charge merely for access.",
+    "The UDT enterprise-certificate page still references an older implementing regulation in parts, signalling a changing national implementation layer that increases maintenance burden."
+  ],
+  "economics": {
+    "acquisition_route": "Use the family installer as a design partner, recruit 10 paid firms through one wholesaler or training partner, then scale via distributor bundles and technician-to-operator invites",
+    "capital_required_pln": 45000,
+    "founder_net_worth_path": "Hypothesis: 1800 firms at 4200 PLN ARR plus 40 operator accounts at 30000 PLN ARR gives 8.76m PLN ARR; at 22% EBITDA, 4x EBITDA, and 75% founder ownership, equity could exceed 5m PLN in years 6-8. Validate European portability and do not double-count retained cash.",
+    "founder_time": "2.5-4 hours per day initially; productise onboarding before serving more than 20 firms and outsource regulatory review",
+    "gross_margin_basis": "Hypothesis: 82-90% software gross margin after onboarding templates; occasional audit support priced separately",
+    "payback": "Hypothesis: 8-12 months if 60 firms average 350 PLN monthly and channel commissions stay below 25%; validate churn and support load",
+    "pricing": "Hypothesis: 199-499 PLN per company per month plus 12-30 PLN per active regulated asset; operator portfolio tier from 1200 PLN per month",
+    "retention_or_repeat": "Assets require service over years, certificate scope changes, records persist for audits and warranties, and technicians repeatedly work across the same installed base"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Longitudinal service and refrigerant history tied to technician credentials and asset identity makes audits, warranty work, resale, and future service easier, increasing lock-in and enabling anomaly benchmarks",
+    "customer": "Polish micro and small HVAC, heat-pump, and refrigeration installation and service companies plus multi-site equipment operators",
+    "distribution_mechanism": "Bundle or refer through refrigerant wholesalers, heat-pump distributors, certification trainers, and the family renewable installer network; technicians pull operator customers into the asset portal",
+    "offer_and_business_model": "Certificate-aware field-service app, refrigerant ledger, customer evidence pack, CRO preparation, and audit binder sold as recurring vertical SaaS",
+    "payer_and_paid_event": "The service company pays per technician and active asset when it records regulated work; larger operators pay for portfolio oversight",
+    "problem_trigger": "A certified technician completes installation, repair, leak checking, recovery, or decommissioning and must leave a consistent evidence trail and update the relevant equipment record"
+  },
+  "founder_fit": [
+    "Direct design-partner access through the parents' renewable-energy installation company",
+    "Combines regulated data, automation, and a measurable field workflow",
+    "Can start within 5 hours per day and below 100000 PLN",
+    "Channel and product-led expansion reduce reliance on high-energy founder sales"
+  ],
+  "parent": null,
+  "risks": [
+    "Technicians may resist data entry unless the app also saves time on customer documentation and invoicing.",
+    "Incorrect credential logic or equipment thresholds could cause compliance harm.",
+    "Field-service incumbents could add CRO templates once demand becomes visible."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://climate.ec.europa.eu/news-other-reads/news/f-gases-new-rules-labelling-reporting-certification-and-f-gas-portal-2024-09-20_en",
+    "https://www.gov.pl/web/klimat/rozporzadzenie-ws-certyfikacji-f-gazowej",
+    "https://www.udt.gov.pl/uslugi-udt/szwo-i-f-gazy/certyfikat-dla-przedsiebiorcow",
+    "https://www.gov.pl/web/klimat/centralny-rejestr-operatorow-cro"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "field-service compliance SaaS",
+    "control_point": "the credential-checked work record and equipment-card update created at completion of regulated service",
+    "critical_dependency": "accurate translation of Polish CRO and changing EU certification rules into low-friction technician workflows"
+  },
+  "thesis": "Create a mobile-first evidence and compliance operating system for small Polish heat-pump, air-conditioning, and refrigeration service companies. A technician scans the asset, the system verifies the personnel and company certificate scope, records refrigerant and work performed, produces the customer's service proof, and prepares the operator's equipment-card update in the Polish CRO. Refrigerant wholesalers, equipment distributors, and certification-training providers are natural repeat distributors because they already serve thousands of small installers; the founder's family renewable-energy company offers a bounded design-partner environment. The moat is an installed-equipment service graph linking certified people, companies, assets, refrigerant movements, and audit-ready procedures, not a static checklist.",
+  "title": "CRO ServiceProof for Heat-Pump and Refrigeration Firms",
+  "uncertainties": [
+    "Whether CRO exposes an integration route or requires assisted/manual transfer",
+    "Actual willingness of wholesalers and training providers to distribute independent software",
+    "Paid demand among very small installers versus reliance on spreadsheets and the public portal"
+  ],
+  "version": 1
+}

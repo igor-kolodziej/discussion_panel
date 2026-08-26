@@ -1,0 +1,114 @@
+{
+  "candidate_id": "asset-03",
+  "claims": [
+    {
+      "claim_id": "asset-03-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1542/oj"
+      ],
+      "statement": "EU battery law requires qualifying EV batteries to expose current state-of-health data in the BMS to lawful purchasers or their agents for residual-value and reuse assessment."
+    },
+    {
+      "claim_id": "asset-03-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://single-market-economy.ec.europa.eu/news/guidance-support-preparations-digital-batteries-passport-2026-08-21_en",
+        "https://eur-lex.europa.eu/eli/reg/2023/1542/oj"
+      ],
+      "statement": "Battery passports become mandatory from 18 February 2027 for relevant newly placed EV batteries and include performance, durability, reuse, and recycling information, so they do not solve near-term coverage of the legacy fleet."
+    },
+    {
+      "claim_id": "asset-03-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.aviloocertificate.com/",
+        "https://www.dekra.com/en/battery-test-for-electric-cars/",
+        "https://www.bca.com/Templates/Global/Pages/LayoutPage.aspx?epslanguage=en&id=99780"
+      ],
+      "statement": "Independent certificate supply is already mature: AVILOO and DEKRA offer rapid model-specific tests, and BCA embeds AVILOO reports in European BEV auctions for EUR 40 per tested vehicle."
+    },
+    {
+      "claim_id": "asset-03-c4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://transport.ec.europa.eu/document/download/89b3143e-09b6-4ae6-a826-932b90ed0816_en"
+      ],
+      "statement": "The Commission still describes automotive data access as fragmented and potentially needing complementary measures beyond the Data Act, so legal entitlement is not equivalent to a uniform technical interface."
+    },
+    {
+      "claim_id": "asset-03-c5",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://www.bca.com/Templates/Global/Pages/LayoutPage.aspx?epslanguage=en&id=99780",
+        "https://www.acea.auto/publication/report-vehicles-on-european-roads-2026/"
+      ],
+      "statement": "A Poland-first entrant could pilot through licensed diagnostics and dealer partners, but a defensible exchange requires local resale outcomes and transaction integration rather than another standalone certificate."
+    }
+  ],
+  "contrary_evidence": [
+    "BCA already combines an independent battery report with a large European auction and charges only EUR 40 per report.",
+    "AVILOO advertises a EUR 99 retail certificate, below the original 700 PLN certificate hypothesis.",
+    "DEKRA and AVILOO have model-specific algorithms and accumulated test databases that a new entrant would initially lack.",
+    "Battery-passport and BMS-access rights do not create a uniform interface for the existing used-EV fleet."
+  ],
+  "economics": {
+    "acquisition_route": "Pilot with two to five Warsaw and Wielkopolska EV dealers or diagnostic shops using a licensed test, then seek fleet-lessor batches; the marketplace follows only after repeated certificate-linked sales.",
+    "capital_required_pln": 85000,
+    "founder_net_worth_path": "An unvalidated path requires roughly 15000 annual certificates at about 120 PLN contribution plus exchange fees, or equivalent high-value fleet GMV, before a founder-owned business could plausibly support 5 million PLN of equity in seven to ten years.",
+    "founder_time": "About 15-20 hours weekly if partner technicians perform tests and the founder limits work to integrations, analytics, and account management.",
+    "gross_margin_basis": "BCA's EUR 40 report benchmark and AVILOO's EUR 99 retail benchmark imply limited room at 250-500 PLN retail after technician, license, support, and liability costs; margin is unvalidated.",
+    "payback": "At an unvalidated 100 PLN contribution per certificate, 850 completed certificates recover 85000 PLN of launch capital before founder salary.",
+    "pricing": "Test 250-500 PLN per vehicle; add a 1-2% transaction fee only where the platform actually sources the buyer.",
+    "retention_or_repeat": "Fleet disposal and dealer inventory can repeat, but the certificate is purchased once per vehicle and incumbents can be substituted."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Model-specific degradation, certificate, bid, and realized-resale outcomes for the Polish used-EV market",
+    "customer": "Polish used-EV dealers, fleet lessors, and later battery repurposers",
+    "distribution_mechanism": "Diagnostic-shop integrations, fleet remarketing contracts, and certificate-linked dealer listings",
+    "offer_and_business_model": "Independent licensed battery-health certificate followed by a curated B2B remarketing exchange",
+    "payer_and_paid_event": "Seller pays when a vehicle is certified; transaction fee applies only when a matched sale closes",
+    "problem_trigger": "A used EV or pack is remarketed without trusted evidence of remaining capacity and anomalies"
+  },
+  "founder_fit": [
+    "Battery analytics fits the founder's data-science and renewable-energy background.",
+    "Dealer and diagnostic partners can keep testing physical work bounded and compatible with a full-time job.",
+    "Winning fleet accounts and insurer acceptance still requires focused B2B selling, though not a public personal brand."
+  ],
+  "parent": {
+    "candidate_id": "asset-03",
+    "version": 2
+  },
+  "risks": [
+    "Incorrect or overstated certificates can create valuation, warranty, and safety liability.",
+    "AVILOO, DEKRA, BCA, OEM programs, or another auction can compress price and capture the transaction data.",
+    "Unsupported models, inconclusive tests, and proprietary interfaces can interrupt service coverage.",
+    "A certificate may improve trust without producing enough incremental sale value to support acquisition cost."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2023/1542/oj",
+    "https://single-market-economy.ec.europa.eu/news/guidance-support-preparations-digital-batteries-passport-2026-08-21_en",
+    "https://transport.ec.europa.eu/document/download/89b3143e-09b6-4ae6-a826-932b90ed0816_en",
+    "https://www.acea.auto/publication/report-vehicles-on-european-roads-2026/",
+    "https://www.aviloocertificate.com/",
+    "https://shop.aviloo.com/en/includes-en",
+    "https://www.dekra.com/en/battery-test-for-electric-cars/",
+    "https://www.bca.com/Templates/Global/Pages/LayoutPage.aspx?epslanguage=en&id=99780"
+  ],
+  "stage": "development",
+  "structure": {
+    "commercial_archetype": "Independent inspection certificate plus B2B marketplace",
+    "control_point": "Battery-health evidence displayed inside the remarketing transaction",
+    "critical_dependency": "Repeatable model coverage, lawful data access, and dealer adoption at a price competitive with embedded incumbents"
+  },
+  "thesis": "Create a Poland-first independent used-EV battery-health certificate integrated into dealer remarketing, and add a B2B exchange only after certificate-linked sales produce a proprietary local residual-value dataset.",
+  "title": "Used-EV Battery Health Certificate Exchange",
+  "uncertainties": [
+    "Polish dealers' willingness to pay above embedded European auction pricing is untested.",
+    "No evidence yet shows insurers, lenders, or buyers will accept a new certificate methodology.",
+    "Supported-model coverage, license cost, test failure rate, and professional-indemnity cost are unknown.",
+    "The incremental sale-price or conversion lift in Poland has not been independently measured."
+  ],
+  "version": 3
+}

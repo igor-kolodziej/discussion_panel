@@ -1,0 +1,71 @@
+{
+  "candidate_id": "leverage-04",
+  "claims": [
+    {
+      "claim_id": "leverage-04-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/topics/waste-and-recycling/packaging-waste_en"
+      ],
+      "statement": "The PPWR entered into force in February 2025 and generally applies from 12 August 2026 across packaging regardless of material or origin."
+    },
+    {
+      "claim_id": "leverage-04-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32025R0040"
+      ],
+      "statement": "The PPWR establishes recyclability grades and provides for producer-responsibility financial contributions to be modulated by those grades after the relevant delegated and implementing acts."
+    }
+  ],
+  "contrary_evidence": [
+    "Key EU design-for-recycling criteria and fee-modulation details are still scheduled for later acts.",
+    "Producer-responsibility organisations and packaging PLM vendors may supply adjacent tools."
+  ],
+  "economics": {
+    "acquisition_route": "UNVALIDATED HYPOTHESIS — 10 packaging converters each introduce 15 brand accounts within 3 years.",
+    "capital_required_pln": 65000,
+    "founder_net_worth_path": "UNVALIDATED HYPOTHESIS — 260 entities at 24000 PLN annual average creates 6.24 million PLN ARR in year 5; at 3.5x ARR and 75% ownership, equity is 16.38 million PLN, distributions excluded.",
+    "founder_time": "UNVALIDATED HYPOTHESIS — 17 hours weekly initially and 7 after country-rule maintenance is contracted.",
+    "gross_margin_basis": "UNVALIDATED HYPOTHESIS — 84% software gross margin after rule maintenance and document extraction.",
+    "payback": "UNVALIDATED HYPOTHESIS — under 9 months if one redesign or corrected declaration saves 15000 PLN.",
+    "pricing": "UNVALIDATED HYPOTHESIS — all commercial numbers here, including capital_required_pln, are hypotheses: 7000 PLN implementation, 1600 PLN monthly per legal entity, and 25 PLN per governed SKU change.",
+    "retention_or_repeat": "UNVALIDATED HYPOTHESIS — 90% annual retention from recurring SKU changes, volume reporting, and expanding cross-border registrations."
+  },
+  "fingerprint": {
+    "compounding_advantage": "a versioned cross-country rule graph linked to observed packaging-component classifications",
+    "customer": "multi-SKU EU consumer brands and importers without enterprise packaging-data teams",
+    "distribution_mechanism": "packaging converters, design agencies, producer-responsibility advisers, and product-information systems",
+    "offer_and_business_model": "packaging BOM ledger, evidence collection, country reporting exports, and what-if fee/recyclability simulator",
+    "payer_and_paid_event": "the producer pays per entity subscription and governed SKU change",
+    "problem_trigger": "a packaging component, supplier, market, or sales volume changes and alters declarations, recyclability evidence, or EPR exposure"
+  },
+  "founder_fit": [
+    "Uses FMCG familiarity, quantitative modelling, and automated document extraction; channel sales and a Polish-brand pilot minimise social load."
+  ],
+  "parent": null,
+  "risks": [
+    "A fee simulator can mislead if presented as an authoritative bill.",
+    "Country-specific reporting rules may outgrow a part-time founder.",
+    "Supplier specifications can be incomplete."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://environment.ec.europa.eu/topics/waste-and-recycling/packaging-waste_en",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32025R0040"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "SKU lifecycle fee-optimisation intelligence",
+    "control_point": "the approved packaging specification and producer-report dataset used before procurement and EPR filing",
+    "critical_dependency": "complete packaging BOMs plus authoritative, current national EPR fee and reporting rules"
+  },
+  "thesis": "A SKU-level packaging ledger can join supplier specifications, national producer registrations, recyclability rules, and declared volumes, then show the compliance and fee effect before a packaging change is approved. Packaging suppliers and fractional sustainability teams provide one-to-many distribution; each SKU revision and reporting period renews demand.",
+  "title": "Packaging Change-Control and EPR Fee Simulator for EU Brands",
+  "uncertainties": [
+    "Near-term willingness to pay before later recyclability deadlines.",
+    "Access to current national fee schedules.",
+    "Whether converters will distribute a tool that can recommend material substitution."
+  ],
+  "version": 1
+}

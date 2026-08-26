@@ -1,0 +1,86 @@
+{
+  "candidate_id": "bottleneck-01",
+  "claims": [
+    {
+      "claim_id": "bottleneck-01-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/zakres-obowiazkowego-ksef/"
+      ],
+      "statement": "Mandatory KSeF issuing began on 1 February 2026 for taxpayers above the stated 2024 sales threshold and on 1 April 2026 for most remaining taxpayers, while receiving through KSeF became mandatory on 1 February 2026."
+    },
+    {
+      "claim_id": "bottleneck-01-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/numer-ksef-i-zbiorczy-identyfikator/",
+        "https://ksef.podatki.gov.pl/media/qzlha3vx/podrecznik-ksef-20-cz-ii-wystawianie-i-otrzymywanie-faktur-w-ksef-20260209.pdf"
+      ],
+      "statement": "KSeF assigns its unique number after accepting an invoice, returns that number in the UPO, and commercial accounting systems can connect through the KSeF API."
+    },
+    {
+      "claim_id": "bottleneck-01-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ksef.podatki.gov.pl/media/qzlha3vx/podrecznik-ksef-20-cz-ii-wystawianie-i-otrzymywanie-faktur-w-ksef-20260209.pdf",
+        "https://ksef.podatki.gov.pl/ksef-news/najczestsze-pytania/"
+      ],
+      "statement": "From February 2026, JPK VAT records require KSeF numbers or designated markings when a KSeF number is absent, creating a downstream reconciliation obligation."
+    }
+  ],
+  "contrary_evidence": [
+    "The Ministry provides a taxpayer application, and established ERP vendors already cover ordinary sending, receiving, status display, and UPO download.",
+    "Taxpayers whose monthly invoiced sales stay at or below 10,000 PLN may issue outside KSeF through the end of 2026, narrowing the immediate smallest-business segment.",
+    "Official materials state there is no general duty to download and archive UPOs, so the offer must sell operational control rather than unnecessary document storage."
+  ],
+  "economics": {
+    "acquisition_route": "Founder-built exception guides and diagnostic checker, direct email to a bounded list of accounting offices, then ERP-implementer referrals",
+    "capital_required_pln": 55000,
+    "founder_net_worth_path": "Modeled path: 600 offices at 650 PLN average monthly recurring revenue equals 4.68m PLN ARR; a 35% owner-cash margin would be about 1.64m PLN/year, allowing cumulative founder cash above 10m PLN in roughly seven mature years without a sale",
+    "founder_time": "Up to 4.5 hours/day during MVP and pilots, falling toward 2 hours/day once onboarding and support are standardized",
+    "gross_margin_basis": "Modeled 85-92% software gross margin after API, storage, and support costs, excluding founder compensation",
+    "payback": "Target under 3 months if blended acquisition and onboarding labor stays below three months of first-year gross profit; unvalidated",
+    "pricing": "Modeled 299-1,499 PLN/month by managed-NIP tier plus 2,500-10,000 PLN for multi-ERP onboarding",
+    "retention_or_repeat": "Daily invoice flows and monthly tax close make the exception ledger recurrent; churn risk rises if native ERP controls become sufficient"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A growing rules-and-resolution corpus linking KSeF statuses, offline modes, ERP payload patterns, and successful remediation steps",
+    "customer": "Polish accounting offices managing 20-300 taxpayer NIPs across heterogeneous invoicing and ERP tools",
+    "distribution_mechanism": "Searchable Polish KSeF exception playbooks, targeted trials for accounting offices, and referrals from small ERP implementers",
+    "offer_and_business_model": "API-connected reconciliation and exception SaaS with paid onboarding for ERP mappings and optional white-labelled client alerts",
+    "payer_and_paid_event": "The accounting office pays a monthly fee per managed-NIP tier when it needs a shared exception queue and evidence of resolution",
+    "problem_trigger": "A submitted, received, corrected, or offline-mode invoice lacks a confirmed KSeF/JPK state before bookkeeping or tax-close deadlines"
+  },
+  "founder_fit": [
+    "The core work is data reconciliation, anomaly detection, and workflow automation that fits an employed data scientist's strengths.",
+    "A narrow Polish-first product can be piloted asynchronously with a few accounting offices before any full-time commitment.",
+    "Recurring software revenue and content-led acquisition avoid a business built around the founder's public persona or daily meetings."
+  ],
+  "parent": null,
+  "risks": [
+    "Major Polish accounting platforms could add equivalent portfolio-level exception control quickly.",
+    "A mistaken status or JPK recommendation could create tax exposure and professional-liability claims.",
+    "KSeF API changes or outages could produce noisy alerts and intensive support precisely at filing peaks."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/zakres-obowiazkowego-ksef/",
+    "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/numer-ksef-i-zbiorczy-identyfikator/",
+    "https://ksef.podatki.gov.pl/media/qzlha3vx/podrecznik-ksef-20-cz-ii-wystawianie-i-otrzymywanie-faktur-w-ksef-20260209.pdf",
+    "https://ksef.podatki.gov.pl/ksef-news/najczestsze-pytania/"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Vertical compliance-operations SaaS priced by managed taxpayer portfolio",
+    "control_point": "The reconciliation ledger binding local invoice ID, KSeF number, UPO, JPK treatment, exception owner, and resolution timestamp",
+    "critical_dependency": "Reliable client-authorized KSeF API access and correct interpretation of evolving KSeF and JPK states"
+  },
+  "thesis": "Build a Polish compliance-operations layer that watches invoice submissions and receipts across many taxpayer accounts, reconciles local invoice IDs to KSeF numbers and UPOs, and routes rejected, delayed, offline-mode, duplicate, and JPK-marking exceptions to a named owner. Accounting offices pay because the painful event is not ordinary invoice creation but proving that every client invoice reached the legally relevant state and was reflected correctly downstream.",
+  "title": "KSeF Exception Ledger for Multi-Client Accounting Offices",
+  "uncertainties": [
+    "The incidence and monetary cost of unresolved cross-system exceptions across accounting-office portfolios has not been measured.",
+    "Accounting offices' willingness to grant API permissions to an independent vendor is unknown.",
+    "The modeled price, conversion rate, support burden, churn, and owner-cash margin are assumptions requiring paid pilots."
+  ],
+  "version": 1
+}

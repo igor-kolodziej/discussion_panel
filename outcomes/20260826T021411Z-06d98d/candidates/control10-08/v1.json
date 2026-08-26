@@ -1,0 +1,81 @@
+{
+  "candidate_id": "control10-08",
+  "claims": [
+    {
+      "claim_id": "control10-08-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://health.ec.europa.eu/latest-updates/eudamed-four-first-modules-will-be-mandatory-use-28-may-2026-2025-11-27_en"
+      ],
+      "statement": "Actor, UDI/device, notified-body/certificate and market-surveillance EUDAMED modules became mandatory on 28 May 2026."
+    },
+    {
+      "claim_id": "control10-08-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://health.ec.europa.eu/medical-devices-eudamed/udidevice-registration_en"
+      ],
+      "statement": "Manufacturers must submit UDI/device information for devices placed on the EU market."
+    },
+    {
+      "claim_id": "control10-08-c3",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://health.ec.europa.eu/medical-devices-eudamed/udidevice-registration_en"
+      ],
+      "statement": "Demand hypothesis: micro-manufacturers will pay for data preflight because label, certificate and registry inconsistencies can delay a release."
+    }
+  ],
+  "contrary_evidence": [
+    "Regulatory consultancies and specialist UDI software already address this workflow.",
+    "Manufacturers with small catalogues may use Commission training and enter records manually."
+  ],
+  "economics": {
+    "acquisition_route": "Hypothesis: contract manufacturers and label vendors introduce the service when a device is prepared for production",
+    "capital_required_pln": 50000,
+    "founder_net_worth_path": "Hypothesis: 300 manufacturers averaging 24000 PLN annual recurring revenue plus onboarding could exceed 7m PLN ARR and support founder equity above 5m PLN in 5-7 years",
+    "founder_time": "12-18 hours weekly with a contracted MDR/IVDR specialist",
+    "gross_margin_basis": "Economics hypothesis: 70-85% as field validation automates while regulatory exceptions remain reviewed",
+    "payback": "Hypothesis: 8-14 months with twenty active device families",
+    "pricing": "Economics hypothesis: 8000-30000 PLN onboarding plus 500-2000 PLN per device family monthly",
+    "retention_or_repeat": "New devices, packaging levels, UDI changes, certificates and post-market corrections"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A permissioned validation corpus of field dependencies, authority feedback and version lineage reduces repeat errors",
+    "customer": "Small EU medical-device and IVD manufacturers with modest regulatory teams",
+    "distribution_mechanism": "Bundled through contract manufacturers, UDI-label vendors and boutique regulatory consultancies",
+    "offer_and_business_model": "Structured data preflight and release workspace sold per device family with managed exception review",
+    "payer_and_paid_event": "Manufacturer pays per device-family onboarding, validated release and recurring catalogue maintenance",
+    "problem_trigger": "A device or label version is released after mandatory EUDAMED modules require consistent UDI and actor data"
+  },
+  "founder_fit": [
+    "Health and biosignal background improves domain comprehension",
+    "Data validation and entity resolution are core strengths",
+    "Partner-led workflow avoids camera or influencer dependence"
+  ],
+  "parent": null,
+  "risks": [
+    "Medical-device errors carry material regulatory and patient-safety consequences.",
+    "Scope creep into regulated consulting must be controlled.",
+    "Sensitive device and certificate information requires strong security."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://health.ec.europa.eu/latest-updates/eudamed-four-first-modules-will-be-mandatory-use-28-may-2026-2025-11-27_en",
+    "https://health.ec.europa.eu/medical-devices-eudamed/udidevice-registration_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Market-registration data gate",
+    "control_point": "UDI master-record approval before label printing and EUDAMED submission",
+    "critical_dependency": "Manufacturer-authorised access, accurate regulatory inputs and partner consultants who retain legal judgment"
+  },
+  "thesis": "A UDI data-validation and submission-preparation desk embedded with medical-device contract manufacturers and regulatory consultants could block label release until EUDAMED actor, device, certificate and nomenclature fields reconcile. Manufacturers retain responsibility and submit through authorised accounts. Demand and economics are hypotheses.",
+  "title": "EUDAMED UDI Release Desk for Micro-Manufacturers",
+  "uncertainties": [
+    "Submission correction frequency after mandatory adoption",
+    "Partner margin expectations",
+    "Best device class for a narrow pilot"
+  ],
+  "version": 1
+}

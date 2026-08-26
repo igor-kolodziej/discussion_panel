@@ -1,0 +1,119 @@
+{
+  "assumptions": [
+    "The initial product remains strictly research-use-only and does not make clinical claims or influence diagnosis or treatment.",
+    "A first neuroscience CRO or research platform can provide a bounded pilot dataset and access to qualified EEG reviewers without requiring an OEM partnership.",
+    "The founder uses contractors for expert labeling, security, privacy, and regulatory review while retaining product and modeling ownership.",
+    "The proposed prices, recording volumes, integration costs, and gross margins are planning estimates rather than validated buyer economics."
+  ],
+  "base_score": 4.07,
+  "candidate_id": "embed-09",
+  "candidate_sha256": "dea6d75191b8d476fd06668547ddd6208b006f7bf19806d32558a278ca557934",
+  "candidate_version": 2,
+  "constrained_score": 3.87,
+  "evaluation_type": "working",
+  "evidence_needed_for_higher_score": "An independently evaluated multi-device pilot showing protocol-level sensitivity and specificity, materially lower reviewer time or failure cost, a signed right to reuse corrections, and a buyer willing to pay the proposed minimum on acceptable implementation and payback terms.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "Reframing the product from generic artifact removal to a protocol-bound, auditable acceptance gate addresses a recurring research workflow and avoids competing solely on cleaning. The insight is coherent, but there is no evidence that cross-device benchmarking and provenance are important enough to become a paid control point.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Recordings must be quality-controlled before analysis or delivery, so the operational need is credible and recurring. However, no buyer interviews, labor measurements, budgets, recording volumes, or paid pilots support willingness to pay, while free and incumbent artifact workflows may already be adequate for many laboratories.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Integration fees, minimum subscriptions, and usage revenue could produce recurring high-margin software economics, and the proposed capital requirement is within founder capacity. Pricing, support load, expert-adjudication cost, CAC, sales-cycle length, retention, payback, and conservative owner earnings are all unvalidated; the founder-wealth path requires 70 sizable accounts despite a specialized market and strong substitutes.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Neuroscience CROs and high-throughput research platforms form a reasonably precise first segment with repeated QC events. The evidence does not establish the number of reachable accounts, annual recording volume, current QC expenditure, or whether this niche can support the proposed account count and meaningful founder equity.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "The audit-and-provenance focus offers a possible niche distinct from generic cleaning. Yet BIDS validation and major artifact workflows are free or already embedded in established products, and Persyst claims integration with major EEG manufacturers; no exclusive channel, validated performance edge, or buyer lock-in establishes a path to segment domination.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A validated CRO or platform wedge could expand across protocols, research laboratories, datasets, and eventually device SDKs. Each adjacency requires additional hardware and population validation, and OEM expansion encounters entrenched vendor integrations, so the path is plausible but not yet privileged.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Contractually reusable expert corrections, protocol benchmarks, override history, and integration continuity could create data and switching-cost compounding. Those rights are not secured, the cross-device performance needed to generate valuable benchmarks is unknown, and incumbents can potentially add comparable provenance features to larger installed workflows.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "A standardized API with protocol-specific scoring and auditable overrides could be more convenient and governable than assembling open-source tools. There is no measured gain in sensitivity, specificity, reviewer time, sponsor acceptance, integration effort, or total cost, so an advantage strong enough to change purchasing behavior has not been shown.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "EEG-BIDS, commercially usable corpus access, and recent evidence that narrow artifact models can work make technical entry more feasible now. The same open standards and accessible tools lower barriers for competitors, and regulatory and privacy requirements constrain the pace of commercialization.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "A single CRO or research-platform integration is a focused entry route compatible with technical selling. There is no evidence of founder access, a committed design partner, affordable CAC, repeatable sales, or short integration cycles, while later OEM distribution is explicitly blocked by incumbent relationships and the need for external validation.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "The founder's EEG, neuroscience, data-science, and AI background is unusually relevant, and a bounded RUO pilot can fit the stated time and capital limits. Reliable cross-device validation, expert ground truth, privacy and reuse rights, security, integration support, and maintenance of a defensible RUO boundary remain substantial execution dependencies that AI cannot remove.",
+      "score": 5,
+      "status": "scored"
+    }
+  ],
+  "final_score": 3.9,
+  "highest_value_structural_change": "Secure an exclusive or deeply embedded CRO acceptance workflow in which sponsor-facing audit evidence is contractually required, customer corrections can be reused, and payment is tied to a validated reduction in QC labor or rejected recordings.",
+  "interaction_adjustment": -0.2,
+  "judge_id": "c4-working-embed-09",
+  "main_structural_strength": "A recurring, auditable recording-acceptance gate closely matches the founder's EEG and data-science capabilities and can begin as a bounded research-only integration.",
+  "primary_score_limiter": "The paid advantage over free and entrenched artifact workflows depends on cross-device performance and buyer economics that have not been demonstrated.",
+  "qualified": false,
+  "raw_response_path": "artifacts/research/raw-c4-working-embed-09.json",
+  "raw_response_sha256": "f5fe52e9f9a079bdb8ac5cf67d5f1558677615a6e592e30f3d9378f12d285d75",
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 2,
+  "strongest_disconfirming_evidence": "Free BIDS, EEGLAB, and MNE workflows already cover substantial validation and artifact handling, while Persyst reports integration with every major EEG manufacturer.",
+  "unrounded_score": 3.87
+}

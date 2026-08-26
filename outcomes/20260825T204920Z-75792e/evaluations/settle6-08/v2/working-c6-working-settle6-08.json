@@ -1,0 +1,120 @@
+{
+  "assumptions": [
+    "The initial commercial scope is UPS Poland accounts using explicitly guaranteed services; DHL contributes no revenue, and FedEx is limited to its currently listed eligible services.",
+    "An account owner can grant sufficient access for tracking, invoice review, and a human-supervised UPS Billing Centre dispute, but no programmatic guarantee-claim submission right is assumed.",
+    "Published incumbent contingency pricing demonstrates category-level willingness to share recovered credits, not Poland-specific demand or acceptance of this entrant.",
+    "The stated PLN 60,000 and part-time founder capacity are sufficient for a bounded pilot, but only substantial automation would make the proposed scaled workload feasible.",
+    "No exclusive WMS, shipping-platform, carrier, or 3PL distribution agreement is assumed."
+  ],
+  "base_score": 4.23,
+  "candidate_id": "settle6-08",
+  "candidate_sha256": "7e166591a460d44679b8f5322bb6e440ccbc3436253816e968dae655f4b38e7e",
+  "candidate_version": 2,
+  "constrained_score": 4.03,
+  "evaluation_type": "working",
+  "evidence_needed_for_higher_score": "A live UPS Poland cohort should quantify guaranteed-service share, exclusion-adjusted late incidence, mean net credit, submission success and denial rates, labor minutes per attempt and credit, time to cash, and realized take rate across enough parcels to calculate contribution margin. A signed WMS or 3PL pilot, documented account-owner authorization, a repeatable acquisition cost, and evidence that customers prefer the localized workflow over incumbents would materially raise confidence.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "Missed, deadline-bound carrier credits create a measurable recovery opportunity, and combining eligibility rules with invoice-credit reconciliation addresses a real operational gap. The mechanism is already well understood and commercialized by mature parcel-audit vendors, so the Poland-specific application is useful but not a deep proprietary insight.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Recovering otherwise lost cash has direct ROI, and success-only incumbent pricing provides credible category evidence that some shippers will pay. The packet does not establish how much money target Polish accounts actually lose, whether internal review already captures it, or whether buyers will switch from broader incumbents.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Charging only after a verified credit aligns incentives, lowers sales friction, and could support attractive software-like margins if detection, filing, and reconciliation are automated. However, guaranteed-service share, late incidence, average eligible credit, take rate, denial labor, CAC, partner share, retention, and submission automation are all unknown; a small recovery pool plus portal work could make contribution economics and the founder-net-worth path untenable.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "A one-carrier UPS Poland cohort is narrow, operationally coherent, and testable, while Poland's overall parcel flow is large and growing. Total parcel volume is a weak proxy for the addressable market because only certain services and destinations qualify, and the packet supplies no estimate of the economically recoverable beachhead.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "Local carrier rules and an embedded Polish channel could support a focused foothold, but no such channel control is established. Existing vendors already offer automated filing, credit verification, broader carrier and invoice-error coverage, and transparent contingency pricing, leaving little basis for a dominant position in the proposed form.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "The rules engine and reconciliation workflow could extend to additional invoice errors, services, carriers, and EU markets. Expansion is not readily repeatable, however: each carrier has distinct rights, exclusions, workflows, and guarantee policies; FedEx eligibility is narrow, and DHL's current terms directly block third-party notification.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Accepted and denied outcomes could improve a localized rules corpus, and deep WMS integration could create workflow switching costs. Those advantages are prospective, non-exclusive, and likely weaker than incumbents' existing data breadth; carriers control the guarantees, access, and claim process and can narrow, suspend, or automate credits.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "The bounded Poland workflow may offer localization and attentive implementation, but the packet shows no material improvement in recovery rate, fee, speed, convenience, coverage, or distribution over incumbent audit products. Human-supervised filing may initially make the offer operationally worse rather than better.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "Growing Polish parcel volume, available account data, and FedEx's recent limited guarantee restoration provide some momentum. Countervailing carrier restrictions, uncertain claim APIs, and the risk of guarantee suspension or automatic credits mean there is no clearly evidenced time-limited opening.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "WMS, shipping-platform, and 3PL integrations could aggregate many merchants and make acquisition repeatable. No partner willingness, integration agreement, CAC, sales cycle, revenue share, or reason for a channel to choose this entrant over established broader vendors is evidenced.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "A human-supervised UPS pilot is technically bounded, capital-light, measurable, and well matched to an analytical founder using automation. Scaling depends on lawful account access, fast exception handling, reliable credit matching, changing carrier terms, and a level of automation not yet confirmed; manual denials and deadlines could exceed the founder's part-time capacity.",
+      "score": 5,
+      "status": "scored"
+    }
+  ],
+  "final_score": 4,
+  "highest_value_structural_change": "Recast the product as a white-label, merchant-operated Polish/EU carrier-invoice recovery layer embedded under contract in a WMS or 3PL: the account owner remains the claimant, the partner supplies aggregated distribution, and the engine covers multiple locally specific invoice errors rather than late guarantees alone. A contracted channel and proprietary adjudication corpus would address permission, market-size, distribution, and defensibility weaknesses together.",
+  "interaction_adjustment": -0.2,
+  "judge_id": "c6-working-settle6-08",
+  "main_structural_strength": "The offer ties payment to a confirmed invoice credit in a narrow, auditable workflow, creating obvious customer ROI, low adoption risk, and a cheap pilot that can measure the business's decisive variables before major spending.",
+  "primary_score_limiter": "The recoverable revenue pool and operating leverage are both unproven: the product needs enough guaranteed parcels, eligible late events, credit value, and automated claim throughput while facing established broader competitors and carrier-controlled permissions.",
+  "qualified": false,
+  "raw_response_path": "artifacts/research/raw-c6-working-settle6-08.json",
+  "raw_response_sha256": "ad8bd39e269571d08aa4596a9b4567c00dadaa00dfcdca2bb3951bca7e00f1f2",
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 2,
+  "strongest_disconfirming_evidence": "LateShipment.com and Refund Retriever already commercialize automated eligibility, claim filing, and verified-credit recovery at published contingency rates, with broader carrier or invoice-error coverage; generic late-parcel detection plus success pricing therefore supplies neither differentiation nor a credible domination path.",
+  "unrounded_score": 4.03
+}

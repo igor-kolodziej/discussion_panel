@@ -1,0 +1,87 @@
+{
+  "candidate_id": "rights10-04",
+  "claims": [
+    {
+      "claim_id": "rights10-04-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32008L0098"
+      ],
+      "statement": "EU law distinguishes by-products from waste only when further use is certain, direct under normal practice, integral to production, lawful, and environmentally safe."
+    },
+    {
+      "claim_id": "rights10-04-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/klimat/rejestr-bdo",
+        "https://eli.gov.pl/api/acts/DU/2023/1587/text.html"
+      ],
+      "statement": "Poland's BDO lets businesses check the declared scope and legality of prospective waste counterparties and records waste transfers electronically."
+    },
+    {
+      "claim_id": "rights10-04-c3",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/topics/waste-and-recycling/waste-framework-directive_en"
+      ],
+      "statement": "Demand hypothesis: manufacturers will share savings when a documented repeat offtake replaces a disposal route."
+    }
+  ],
+  "contrary_evidence": [
+    "By-product and end-of-waste status is fact-specific; a generic marketplace screen cannot establish it.",
+    "Transport and testing can erase the value of low-density material."
+  ],
+  "economics": {
+    "acquisition_route": "Demand hypothesis: one industrial park and one waste adviser can surface 20 recurring streams for triage",
+    "capital_required_pln": 45000,
+    "founder_net_worth_path": "Hypothesis: 300 active streams averaging 1500 PLN monthly platform revenue yields 5.4m PLN ARR; 25% EBITDA at a 4x value could exceed 5m PLN in 5-7 years",
+    "founder_time": "15-20 hours weekly, with classification and laboratory judgments delegated to qualified partners",
+    "gross_margin_basis": "Economics hypothesis: 60-75% after subcontracted legal and lab work, improving as stream templates repeat",
+    "payback": "Economics hypothesis: 10 packets at 8000 PLN average cover setup capital within 9-15 months before transaction fees",
+    "pricing": "Economics hypothesis: 5000-15000 PLN per stream packet plus 5-10% of documented disposal savings or transaction margin",
+    "retention_or_repeat": "Monthly lots, updated tests, receiver verification, and renewal of forward offtakes create repeat revenue"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Accepted material specifications, regulator-tested reasoning patterns, receiver permits, and performance history by stream",
+    "customer": "Food, wood, metal, mineral, and chemical SMEs producing consistent side streams and plants buying secondary inputs",
+    "distribution_mechanism": "Waste advisers, labs, industrial parks, chambers of commerce, and direct cluster-by-cluster acquisition",
+    "offer_and_business_model": "Evidence workspace, material specification, BDO counterparty checks, test coordination, forward lots, and compliant transfer workflow",
+    "payer_and_paid_event": "Generator pays for the clearance packet and a success fee when a qualified receiver contracts an offtake",
+    "problem_trigger": "A recurring residue has a plausible user but neither party can confidently classify, specify, document, or reserve it"
+  },
+  "founder_fit": [
+    "Data normalization and matching suit the founder",
+    "AI can accelerate evidence assembly",
+    "Low fixed assets",
+    "Can start locally with bounded expert partners"
+  ],
+  "parent": null,
+  "risks": [
+    "Environmental liability",
+    "Misclassification",
+    "Quality drift",
+    "Counterparty permit expiry"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32008L0098",
+    "https://environment.ec.europa.eu/topics/waste-and-recycling/waste-framework-directive_en",
+    "https://www.gov.pl/web/klimat/rejestr-bdo",
+    "https://eli.gov.pl/api/acts/DU/2023/1587/text.html"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Compliance-enabled industrial symbiosis marketplace",
+    "control_point": "The versioned material-status and buyer-eligibility packet attached to repeat forward supply",
+    "critical_dependency": "Qualified advisers must validate classification; the platform cannot self-declare a material lawful or safe"
+  },
+  "thesis": "Recurring manufacturers publish owner-authorized side streams only after a structured by-product, end-of-waste, or waste-routing packet is assembled with qualified legal and testing partners. Demand hypothesis: certainty of lawful use plus repeat volume can convert disposal cost into contracted input supply.",
+  "title": "Industrial By-Product Clearance and Offtake Exchange",
+  "uncertainties": [
+    "Number of repeatable profitable streams",
+    "Authority acceptance time",
+    "Share-of-savings collectability",
+    "Logistics radius"
+  ],
+  "version": 1
+}

@@ -1,0 +1,124 @@
+{
+  "candidate_id": "settle7-06",
+  "claims": [
+    {
+      "claim_id": "settle7-06-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eli.gov.pl/api/acts/DU/2026/619/text/T/D20260619L.pdf"
+      ],
+      "statement": "Current Polish law requires stores above 200 square metres to contract with every system operator that approaches them, requires deposit settlement at intervals no longer than a month, and requires detailed retailer records of products, returns, and deposit amounts."
+    },
+    {
+      "claim_id": "settle7-06-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/klimat/system-kaucyjny-operatorzy"
+      ],
+      "statement": "The Ministry's current operator page lists eight authorized deposit-system operators, establishing a genuinely multi-operator market structure."
+    },
+    {
+      "claim_id": "settle7-06-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/klimat/zebralismy-32-mld-opakowan-kaucyjnych"
+      ],
+      "statement": "The Ministry reported 3.2 billion returned containers, more than 60,000 return points, and 17,500 RVM-equipped points by 21 August 2026, with RVMs handling 88 percent of returns."
+    },
+    {
+      "claim_id": "settle7-06-c4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://polskakaucja.pl/wp-content/uploads/2026/04/REGULAMIN-KORZYSTANIA-Z-SYSTEMU-IT-POLKA.pdf"
+      ],
+      "statement": "PolKa's own rules describe real-time POS/RVM integration, weekly manual reporting, access to invoices and accounting notes, and built-in verification of quantities and values used to settle collection points."
+    },
+    {
+      "claim_id": "settle7-06-c5",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://kaucyjni.pl/dla-sklepu/",
+        "https://kaucyjni.pl/dla-operatorow/"
+      ],
+      "statement": "COMP markets a multi-operator retailer panel with settlement visibility, existing fiscal/POS integration, and monthly packages from 19.90 to 79.90 PLN net, directly covering much of the original product scope."
+    },
+    {
+      "claim_id": "settle7-06-c6",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.insoft.com.pl/system-kaucyjny"
+      ],
+      "statement": "Insoft already integrates PC-Market and PC-POS with COMP DRS and Zwrotka and includes cashier and return-settlement reports."
+    }
+  ],
+  "contrary_evidence": [
+    "COMP already sells multi-operator handling, reports, settlement visibility, and third-party integrations at 19.90-79.90 PLN net per store monthly.",
+    "PolKa's operator system already integrates transaction feeds, provides accounting documents, and verifies data forming the basis of retailer settlement.",
+    "Insoft embeds DRS collection and settlement reports directly in established retail software.",
+    "The system's rapid live scale indicates that core infrastructure and major channel relationships are already deployed."
+  ],
+  "economics": {
+    "acquisition_route": "Reconcile one closed month for one multi-store retailer, quantify recovered cash and avoided finance labour, then pursue accounting and POS partners",
+    "capital_required_pln": 70000,
+    "founder_net_worth_path": "The prior 250 PLN-per-store assumption is contradicted by low-priced incumbent operational software. At the observed competitive price band, a 5 million PLN founder-net-worth path is not evidenced and would require validated chain-level audit fees, high retention, efficient partner distribution, and likely expansion beyond a small Polish niche.",
+    "founder_time": "Approximately 12-16 hours weekly for one bounded pilot, with connector and onboarding work delegated only after repeatability is demonstrated",
+    "gross_margin_basis": "Software and analyst-assisted exception review less connector maintenance, secure data handling, and support; per-event processing revenue is not assumed",
+    "payback": "Payback exists only if recovered settlement leakage plus avoided close effort exceeds the audit fee; no public evidence quantifies the variance pool",
+    "pricing": "Unvalidated pilot hypothesis: 5,000-15,000 PLN for a chain-level historical audit, then 20-80 PLN per location monthly for exception monitoring; this must beat or complement COMP operational tiers advertised at 19.90-79.90 PLN net per store monthly",
+    "retention_or_repeat": "The law caps financial settlement periods at one month and retail records recur, but paid retention beyond incumbent reports is unvalidated"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A permissioned mapping of retailer formats, operator documents, exception causes, and resolution outcomes can reduce audit effort, subject to contractual data-reuse rights",
+    "customer": "Polish grocery, franchise, and wholesale groups with multiple stores above 200 square metres and heterogeneous POS, RVM, or operator paths",
+    "distribution_mechanism": "Sell a one-month audit through retail accounting advisers and integrate through willing POS, RVM, accounting, or DRS technology partners",
+    "offer_and_business_model": "Read-only cross-system exception audit, variance classification, cash expectation, and operator-ready evidence packets sold as a chain setup plus low per-location subscription; no deposit custody, collection operation, or official settlement role",
+    "payer_and_paid_event": "A central retail finance or compliance team pays for an initial historical exception audit and then for monthly monitoring when an evidence-backed exception file is closed",
+    "problem_trigger": "At monthly close, the retailer's legally required deposit records, operator documents, collection counts, and cash reimbursements do not agree and the existing operational host does not explain the exception"
+  },
+  "founder_fit": [
+    "Event matching and anomaly triage fit the founder's data-science and automation skills",
+    "A historical read-only audit can be piloted part-time without handling regulated deposit funds",
+    "Central finance buyers and integration partners reduce dependence on high-energy consumer selling or a personal brand"
+  ],
+  "parent": {
+    "candidate_id": "settle7-06",
+    "version": 1
+  },
+  "risks": [
+    "The exception pool may be too small after incumbent reconciliation",
+    "Operator and POS contracts may block data access or derived-data reuse",
+    "Incumbents can add exception workflows using existing integrations and distribution",
+    "Low per-store pricing can make custom connectors and support uneconomic",
+    "False discrepancy alerts can damage retailer-operator relationships",
+    "Sensitive transaction and bank data create security and procurement burdens"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eli.gov.pl/api/acts/DU/2026/619/text/T/D20260619L.pdf",
+    "https://www.gov.pl/web/klimat/system-kaucyjny-operatorzy",
+    "https://www.gov.pl/web/klimat/zebralismy-32-mld-opakowan-kaucyjnych",
+    "https://www.gov.pl/web/klimat/system-kaucyjny-pytania-i-odpowiedzi",
+    "https://www.gov.pl/web/klimat/prowadzisz-maly-sklep-poznaj-obowiazki-w-systemie-kaucyjnym",
+    "https://polskakaucja.pl/wp-content/uploads/2026/04/REGULAMIN-KORZYSTANIA-Z-SYSTEMU-IT-POLKA.pdf",
+    "https://kaucyjni.pl/dla-operatorow/",
+    "https://kaucyjni.pl/dla-sklepu/",
+    "https://www.insoft.com.pl/system-kaucyjny"
+  ],
+  "stage": "research",
+  "structure": {
+    "commercial_archetype": "Exception-audit SaaS for multi-store retail finance",
+    "control_point": "The normalized, evidence-linked exception between the retailer's own sales, returns, collections, operator documents, and cash receipt",
+    "critical_dependency": "Retailers must be able and willing to export sufficiently granular data from each relevant POS, RVM, operator portal, and accounting system"
+  },
+  "thesis": "Polish retail groups operating stores above 200 square metres face monthly deposit settlement, store-level recordkeeping, and potentially several operator relationships. Current operator, COMP, and POS products already automate core collection and settlement cheaply, so the remaining testable wedge is a read-only finance-control layer that compares retailer-authorized POS, RVM, collection, operator-document, and bank data, classifies only unexplained exceptions, and creates evidence packets without holding deposits or performing statutory operator duties.",
+  "title": "Deposit Exception Audit Poland",
+  "uncertainties": [
+    "Frequency, causes, and monetary size of unexplained retailer-operator variances after incumbent tooling is used",
+    "Whether operator portals and retail systems expose lawful, sufficiently granular exports or APIs to an independent auditor",
+    "Whether retailer contracts permit third-party processing and reuse of resolution data",
+    "Whether central finance teams will pay separately for exception assurance rather than rely on their POS vendor, operator, or accountant",
+    "Whether the proposed chain-level setup and subscription prices produce demonstrable payback",
+    "How many target chains actually operate heterogeneous multi-operator paths rather than one integrated host"
+  ],
+  "version": 2
+}

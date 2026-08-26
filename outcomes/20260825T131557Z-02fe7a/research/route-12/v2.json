@@ -1,0 +1,250 @@
+{
+  "candidate_id": "route-12",
+  "candidate_sha256": "b96b4b6b859a8c8e6ffbc9d5cae26574e79eaf339407bd1e77c2421261358dfd",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "r12-r1",
+      "evidence_refs": [
+        "r12-s1",
+        "r12-s2"
+      ],
+      "statement": "Dental radiography QA and repeat analysis are recognized audit activities, and EU law requires quality assurance and clinical audit for medical radiological practices."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r12-r2",
+      "evidence_refs": [
+        "r12-s3"
+      ],
+      "statement": "Non-diagnostic positioning language does not settle MDR status; intended purpose and function control qualification and classification."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r12-r3",
+      "evidence_refs": [
+        "r12-s4",
+        "r12-s5"
+      ],
+      "statement": "Retrospective dental images cannot be assumed anonymous merely because obvious identifiers are removed."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r12-r4",
+      "evidence_refs": [
+        "r12-s6"
+      ],
+      "statement": "DICOM lowers an interface barrier but does not guarantee interoperability across dental sensors and PACS products."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r12-r5",
+      "evidence_refs": [
+        "r12-s7",
+        "r12-s8"
+      ],
+      "statement": "Commercial incumbents already market image-quality checking and acquisition-time dental X-ray quality functions."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r12-r6",
+      "evidence_refs": [
+        "r12-s7",
+        "r12-s8",
+        "r12-s9"
+      ],
+      "statement": "A narrow QA add-on would compete for budget with full imaging software priced at USD 199 monthly per location and with bundled vendor features."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r12-r7",
+      "evidence_refs": [
+        "r12-s10",
+        "r12-s11"
+      ],
+      "statement": "Repeat rates vary from sub-1% in an experienced department to roughly 6-7% in a dental-school setting, making clinic-specific baseline measurement essential."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r12-r8",
+      "evidence_refs": [
+        "r12-s12"
+      ],
+      "statement": "Poland has a substantial dentist base, but the number of compatible imaging locations and reseller-reachable decision makers is not established."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r12-r9",
+      "evidence_refs": [],
+      "statement": "No public evidence reviewed establishes that a Polish or EU reseller will grant image, label, PACS and distribution rights for this product."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r12-r10",
+      "evidence_refs": [],
+      "statement": "No public evidence reviewed establishes the module's MDR class, notified-body requirement or conformity cost under its final intended purpose."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r12-r11",
+      "evidence_refs": [
+        "r12-s2",
+        "r12-s3"
+      ],
+      "statement": "A retrospective analytics and training wedge is less safety-sensitive than live accept-or-repeat guidance, but this is a staging inference rather than a regulatory determination."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r12-r12",
+      "evidence_refs": [
+        "r12-s10",
+        "r12-s11",
+        "r12-s9"
+      ],
+      "statement": "Avoided retakes alone are not a conservative economic case; renewal may need to be justified by audit, training and reseller-service value."
+    }
+  ],
+  "contrary_evidence": [
+    "Two named vendors already advertise functionality close to the original real-time quality-check thesis.",
+    "A mature department's 0.93% repeat rate demonstrates that high repeat savings are not universal.",
+    "DICOM is a standard, not a guarantee of operational interoperability or permission to access a vendor's system.",
+    "Dental morphology can support re-identification, so a de-identified pilot still needs careful privacy analysis.",
+    "Classification depends on actual intended purpose and function, making a formal opinion necessary before live use."
+  ],
+  "schema_version": 2,
+  "sources": [
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2010",
+      "publisher": "International Atomic Energy Agency",
+      "source_id": "r12-s1",
+      "source_type": "primary_guidance",
+      "stance": "supporting",
+      "title": "Comprehensive Clinical Audits of Diagnostic Radiology Practices: A Tool for Quality Improvement",
+      "url": "https://www-pub.iaea.org/MTCD/Publications/PDF/Pub1425_web.pdf"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2014-01-17",
+      "publisher": "EUR-Lex",
+      "source_id": "r12-s2",
+      "source_type": "primary_law",
+      "stance": "supporting",
+      "title": "Council Directive 2013/59/Euratom laying down basic safety standards for protection against ionising radiation",
+      "url": "https://eur-lex.europa.eu/legal-content/en/TXT/?uri=CELEX%3A32013L0059"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2025-06-17",
+      "publisher": "Medical Device Coordination Group",
+      "source_id": "r12-s3",
+      "source_type": "primary_regulatory_guidance",
+      "stance": "context",
+      "title": "MDCG 2019-11 rev.1: Guidance on Qualification and Classification of Software under MDR and IVDR",
+      "url": "https://health.ec.europa.eu/document/download/b45335c5-1679-4c71-a91c-fc7a4d37f12b_en?filename=mdcg_2019_11_en.pdf"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "European Commission",
+      "source_id": "r12-s4",
+      "source_type": "primary_regulatory_guidance",
+      "stance": "context",
+      "title": "Application of the GDPR",
+      "url": "https://commission.europa.eu/law/law-topic/data-protection/information-business-and-organisations/application-gdpr_en"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2024",
+      "publisher": "PLOS ONE",
+      "source_id": "r12-s5",
+      "source_type": "peer_reviewed_study",
+      "stance": "contradicting",
+      "title": "Can deep learning identify humans by automatically constructing a database with dental panoramic radiographs?",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11500890/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2026",
+      "publisher": "DICOM Standards Committee / NEMA",
+      "source_id": "r12-s6",
+      "source_type": "technical_standard",
+      "stance": "context",
+      "title": "DICOM PS3.1: Introduction and Overview",
+      "url": "https://dicom.nema.org/medical/dicom/current/output/html/part01.html"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "Overjet",
+      "source_id": "r12-s7",
+      "source_type": "vendor_product",
+      "stance": "contradicting",
+      "title": "IRIS AI-Native Imaging Software",
+      "url": "https://www.overjet.com/iris"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "Duerr Dental",
+      "source_id": "r12-s8",
+      "source_type": "vendor_product",
+      "stance": "contradicting",
+      "title": "VistaSoft AI included - artificial intelligence for quality and efficiency",
+      "url": "https://www.duerrdental.com/en/AE/products/imaging/software/vistasoft-ai-inklusive/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "Open Dental Software",
+      "source_id": "r12-s9",
+      "source_type": "vendor_pricing",
+      "stance": "contradicting",
+      "title": "Open Dental: Ordering",
+      "url": "https://opendental.com/site/order.html"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2015",
+      "publisher": "Journal of Natural Science, Biology and Medicine",
+      "source_id": "r12-s10",
+      "source_type": "peer_reviewed_study",
+      "stance": "supporting",
+      "title": "Repeat film analysis and its implications for quality assurance in dental radiology: An institutional case study",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26321841/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "1995-12",
+      "publisher": "British Journal of Radiology",
+      "source_id": "r12-s11",
+      "source_type": "peer_reviewed_study",
+      "stance": "contradicting",
+      "title": "An audit of film reject and repeat rates in a department of dental radiology",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/8777590/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2025-08-28",
+      "publisher": "Statistics Poland",
+      "source_id": "r12-s12",
+      "source_type": "official_statistics",
+      "stance": "supporting",
+      "title": "Human resources in selected medical professions based on administrative sources in 2024",
+      "url": "https://stat.gov.pl/files/gfx/portalinformacyjny/en/defaultaktualnosci/3325/20/3/1/human_resources_in_selected_medical_professions__based_on_administrative_sources_in_2024_2.pdf"
+    }
+  ],
+  "unknowns": [
+    "Final MDR qualification and class",
+    "Notified-body need and full conformity cost",
+    "Reseller commitment and channel economics",
+    "Clinic and reseller image-use rights",
+    "Lawful GDPR role and data-retention design",
+    "DICOM, TWAIN and proprietary export compatibility by device",
+    "Availability and consistency of accept-repeat and error-cause labels",
+    "Repeat baseline in experienced Polish private clinics",
+    "Incremental accuracy and workflow value over vendor-bundled QA",
+    "Willingness to pay for retrospective analytics and training"
+  ]
+}

@@ -1,0 +1,191 @@
+{
+  "candidate_id": "control8-04",
+  "candidate_sha256": "5c505dfe4f68e79ccaeed6669c2de46d0556b3bc7a5f84282e2f7c475fe79432",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "control8-04-r1",
+      "evidence_refs": [
+        "control8-04-s1",
+        "control8-04-s2"
+      ],
+      "statement": "The register structure is legally specified in Commission Implementing Regulation 2024/2956 and supported by an official EBA data model and reporting package."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "control8-04-r2",
+      "evidence_refs": [
+        "control8-04-s2",
+        "control8-04-s3"
+      ],
+      "statement": "The official EBA materials are a free substitute for software-only generation and validation features."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "control8-04-r3",
+      "evidence_refs": [
+        "control8-04-s3"
+      ],
+      "statement": "Data quality was difficult in the 2024 dry run: 6.5% of registers passed every check and half of the rest failed fewer than five of 116 checks."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "control8-04-r4",
+      "evidence_refs": [
+        "control8-04-s4"
+      ],
+      "statement": "Poland had a concrete 2025 remediation event in which entities with an EBA-rejected SPR-PF-18 had to resubmit using the latest KNF form."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "control8-04-r5",
+      "evidence_refs": [
+        "control8-04-s6"
+      ],
+      "statement": "Continued KNF training in 2026 indicates that accurate SPR-PF-18 preparation remains an operational concern, but it does not quantify commercial demand."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "control8-04-r6",
+      "evidence_refs": [
+        "control8-04-s4",
+        "control8-04-s5"
+      ],
+      "statement": "A Polish product must fit KNF's SSD and SPR-PF-18 workflow, not merely produce a generic EBA-shaped dataset."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "control8-04-r7",
+      "evidence_refs": [
+        "control8-04-s7",
+        "control8-04-s8"
+      ],
+      "statement": "The competitive set already includes enterprise GRC functionality and a small-entity product with public annual pricing from EUR 1,500 to EUR 12,500."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "control8-04-r8",
+      "evidence_refs": [
+        "control8-04-s7",
+        "control8-04-s8"
+      ],
+      "statement": "Price above the public specialist range is plausible only if private deployment, contract lineage or remediation services produce measurable incremental value."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "control8-04-r9",
+      "evidence_refs": [],
+      "statement": "No public evidence reviewed establishes target-customer willingness to buy, advisor channel commitment, acceptable security architecture, sales-cycle length or achievable margins for this proposed entrant."
+    }
+  ],
+  "contrary_evidence": [
+    "Official EBA and KNF tools, forms, examples and training let entities remediate without a new vendor.",
+    "ServiceNow already manages DORA register records and a DORA-native competitor publicly undercuts the original annual pricing hypothesis.",
+    "A one-time first-reporting rejection wave may decline as internal teams learn the process.",
+    "The evidence shows reporting friction, not a count of paying customers or budget ownership.",
+    "Financial-sector security review and contract-data sensitivity may prevent a part-time new entrant from accessing production data."
+  ],
+  "schema_version": 2,
+  "sources": [
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2024-12-02",
+      "publisher": "Official Journal of the European Union / EUR-Lex",
+      "source_id": "control8-04-s1",
+      "source_type": "regulation",
+      "stance": "supporting",
+      "title": "Commission Implementing Regulation (EU) 2024/2956 on standard templates for the register of information",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32024R2956"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "European Banking Authority",
+      "source_id": "control8-04-s2",
+      "source_type": "regulator_materials",
+      "stance": "context",
+      "title": "Preparations for reporting of DORA registers of information",
+      "url": "https://www.eba.europa.eu/activities/direct-supervision-and-oversight/digital-operational-resilience-act/preparation-dora-application"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2024-12-17",
+      "publisher": "European Banking Authority",
+      "source_id": "control8-04-s3",
+      "source_type": "regulator_report",
+      "stance": "context",
+      "title": "The ESAs' Dry Run exercise shows the goal of reporting registers of information under DORA in 2025 within reach",
+      "url": "https://www.eba.europa.eu/publications-and-media/press-releases/esas-dry-run-exercise-shows-goal-reporting-registers-information-under-digital-operational"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2025-05-23",
+      "publisher": "Polish Financial Supervision Authority (KNF)",
+      "source_id": "control8-04-s4",
+      "source_type": "national_regulator_notice",
+      "stance": "supporting",
+      "title": "Second stage for submitting registers of information on contracts with external ICT service providers (SPR-PF-18)",
+      "url": "https://www.knf.gov.pl/dla_rynku/dora/aktualnosci/II_etap_przekazania_rejestrow_informacji_dot_umow_z_zewnetrznymi_dostawcami_uslug_ict?articleId=93727&p_id=18"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2026-01-14",
+      "publisher": "Polish Financial Supervision Authority (KNF)",
+      "source_id": "control8-04-s5",
+      "source_type": "national_regulator_guidance",
+      "stance": "supporting",
+      "title": "Reporting obligations related to the DORA Regulation",
+      "url": "https://www.knf.gov.pl/dla_rynku/dora/sprawozdawczosc/obowiazki_sprawozdawcze_w_zwiazku_z_rozporzadzeniem_dora?articleId=91834&p_id=18"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2026-05-13",
+      "publisher": "Polish Financial Supervision Authority (KNF)",
+      "source_id": "control8-04-s6",
+      "source_type": "national_regulator_training",
+      "stance": "context",
+      "title": "CEDUR webinar on DORA third-party ICT risk and SPR-PF-18 reporting",
+      "url": "https://www.knf.gov.pl/dla_rynku/edukacja_cedur/seminaria?articleId=97084&p_id=18"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2026-03-12",
+      "publisher": "ServiceNow",
+      "source_id": "control8-04-s7",
+      "source_type": "incumbent_documentation",
+      "stance": "contradicting",
+      "title": "Maintaining Digital resilience third-party registers",
+      "url": "https://www.servicenow.com/docs/r/governance-risk-compliance/digi-resi-third-party-registers.html"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "DoraGuard",
+      "source_id": "control8-04-s8",
+      "source_type": "incumbent_pricing",
+      "stance": "contradicting",
+      "title": "DoraGuard DORA Register of Information software and pricing",
+      "url": "https://www.dora-guard.com/"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "European Banking Authority",
+      "source_id": "control8-04-s9",
+      "source_type": "regulator_framework",
+      "stance": "context",
+      "title": "EBA reporting frameworks",
+      "url": "https://www.eba.europa.eu/risk-and-data-analysis/reporting/reporting-frameworks"
+    }
+  ],
+  "unknowns": [
+    "Current number of Polish target entities using spreadsheets versus GRC products",
+    "Share and recurrence rate of SPR-PF-18 rejections after 2025",
+    "Baseline expert hours and external consultant spend per target entity",
+    "Hosted, single-tenant or on-premise security requirements by buyer segment",
+    "Advisor willingness to resell rather than build or use an incumbent",
+    "Conversion rate and willingness to pay at the revised price points",
+    "Exact maintenance burden of future EBA and KNF taxonomy changes"
+  ]
+}

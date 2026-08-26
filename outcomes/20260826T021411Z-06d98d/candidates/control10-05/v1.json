@@ -1,0 +1,80 @@
+{
+  "candidate_id": "control10-05",
+  "claims": [
+    {
+      "claim_id": "control10-05-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2024/3110/oj"
+      ],
+      "statement": "The revised Construction Products Regulation requires an electronic declaration of performance and conformity unless it is provided through a compliant digital product passport."
+    },
+    {
+      "claim_id": "control10-05-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2024/3110/oj"
+      ],
+      "statement": "The construction passport is designed to include declarations, technical documentation, labels and unique identifiers with role-based access."
+    },
+    {
+      "claim_id": "control10-05-c3",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2024/3110/oj"
+      ],
+      "statement": "Demand hypothesis: laboratories can distribute a neutral ledger because their test outputs are the earliest authoritative evidence in the release chain."
+    }
+  ],
+  "contrary_evidence": [
+    "Manufacturers can publish declarations on their own maintained websites.",
+    "Construction-passport adoption is phased and depends on later product-specific acts and standards."
+  ],
+  "economics": {
+    "acquisition_route": "Hypothesis: laboratories bundle the ledger after testing rather than the founder selling factory by factory",
+    "capital_required_pln": 65000,
+    "founder_net_worth_path": "Hypothesis: 200 manufacturers averaging 35000 PLN recurring annual revenue plus onboarding could exceed 7m PLN ARR and support founder equity over 5m PLN in 5-7 years",
+    "founder_time": "14-20 hours weekly with external construction-product expertise",
+    "gross_margin_basis": "Economics hypothesis: 72-86% once characteristic and translation templates are reusable",
+    "payback": "Hypothesis: 9-15 months with eight family onboardings and twenty subscriptions",
+    "pricing": "Economics hypothesis: 12000-40000 PLN onboarding per family plus 1200-3500 PLN monthly maintenance",
+    "retention_or_repeat": "New variants, changed inputs, renewed tests, translations and future passport migrations"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A versioned mapping from test evidence to characteristics, variants and country outputs compounds with every approved family",
+    "customer": "Small and mid-sized EU manufacturers of repeatable construction-product families",
+    "distribution_mechanism": "Embedded in construction-product laboratories, technical assessment bodies and specialist distributors",
+    "offer_and_business_model": "Evidence ledger and declaration generator sold as subscription plus per-family managed onboarding",
+    "payer_and_paid_event": "Manufacturer pays per product-family onboarding, declaration issuance and maintained market-language set",
+    "problem_trigger": "A product family or variant is released and must carry consistent performance, conformity and technical evidence across markets"
+  },
+  "founder_fit": [
+    "Data lineage and rule mapping fit the founder's technical profile",
+    "Renewable installers can expose candidate construction-product suppliers",
+    "A single product-family pilot is compatible with part-time work"
+  ],
+  "parent": null,
+  "risks": [
+    "Building too early for product groups not yet activated",
+    "Incorrect characteristic mapping could create market-access liability",
+    "Laboratory information systems may expand into this layer"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2024/3110/oj"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Product conformity record infrastructure",
+    "control_point": "The immutable declaration package released before a SKU is supplied",
+    "critical_dependency": "Product-specific harmonised specifications and the phased construction passport rollout"
+  },
+  "thesis": "A testing-lab-embedded ledger could bind test results, harmonised specifications, translations and product identifiers into machine-readable declarations of performance and conformity, then migrate those records into the construction digital-product-passport system as product groups activate. It would not replace assessment bodies. Demand and economics are hypotheses.",
+  "title": "Construction-Product Declaration Ledger",
+  "uncertainties": [
+    "Which product families activate first",
+    "Availability of official interfaces",
+    "Manufacturer willingness to pay beyond document consulting"
+  ],
+  "version": 1
+}

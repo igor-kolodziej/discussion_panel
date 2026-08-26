@@ -1,0 +1,233 @@
+{
+  "candidate_id": "control-03",
+  "candidate_sha256": "64692148898208e1e9f77823bcb52cecc0f1876f80ac98440c6417e86717be8e",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "control-03-r01",
+      "evidence_refs": [
+        "c3-s01"
+      ],
+      "statement": "ESPR requires DPPs, when imposed by a product-specific delegated act, to use persistent identifiers and open interoperable formats, while the delegated act defines data, granularity, access actors, update rights, and availability period."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "control-03-r02",
+      "evidence_refs": [
+        "c3-s01"
+      ],
+      "statement": "ESPR prohibits storing customer personal data in the statutory DPP without explicit consent and assigns creation responsibility to the economic operator placing the covered product on the market, so an installer service book must not imply statutory status."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "control-03-r03",
+      "evidence_refs": [
+        "c3-s02"
+      ],
+      "statement": "The Batteries Regulation requires an electronic battery passport from 18 February 2027 for each LMT battery, industrial battery above 2 kWh, and EV battery placed on the market or put into service."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "control-03-r04",
+      "evidence_refs": [
+        "c3-s03"
+      ],
+      "statement": "The repair directive applies its repair obligation to goods covered by product-specific reparability rules and provides for a public European repair platform, so it neither covers all renewable equipment automatically nor creates a private directory moat."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "control-03-r05",
+      "evidence_refs": [
+        "c3-s04"
+      ],
+      "statement": "At the end of 2025 Poland had 1,636,673 RES micro-installations, of which 99.9% were PV, demonstrating a large installed base available for service and handover experiments."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "control-03-r06",
+      "evidence_refs": [
+        "c3-s05"
+      ],
+      "statement": "SolarPower Europe reported 406 GW of EU solar fleet in 2025 but a fall in residential share of annual additions from 28% in 2023 to 14% in 2025, favouring an installed-base wedge over a new-install-only thesis."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "control-03-r07",
+      "evidence_refs": [
+        "c3-s06"
+      ],
+      "statement": "SolarEdge's installer account workflow associates sites with installer accounts and requires an inverter serial number and distributor information, illustrating manufacturer-specific records and potential data fragmentation."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "control-03-r08",
+      "evidence_refs": [
+        "c3-s07",
+        "c3-s08",
+        "c3-s10"
+      ],
+      "statement": "SolarPlus and InsTool already generate commissioning records, handover packs, and QR-linked customer documentation; Payaca includes compliant handover and customer-portal functions in a broader installer operations suite."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "control-03-r09",
+      "evidence_refs": [
+        "c3-s09"
+      ],
+      "statement": "Collecta publishes EUR149 per month for three models and 1,000 passports annually, with extra passports from EUR0.20 and lower volume tiers, showing that statutory passport generation can be a low-unit-price service."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "control-03-r10",
+      "evidence_refs": [
+        "c3-s10"
+      ],
+      "statement": "Payaca lists GBP999 per month on annual billing for its Growth installer operating suite plus GBP1,500 onboarding, showing meaningful software budget but also that handover is bundled with CRM, finance, scheduling, and automation."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "control-03-r11",
+      "evidence_refs": [
+        "c3-s11"
+      ],
+      "statement": "EU database law allows database makers to prohibit unauthorised extraction or reuse of substantial contents, so a compatibility graph cannot safely depend on bulk copying manufacturer databases without permission."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "control-03-r12",
+      "evidence_refs": [],
+      "statement": "No reviewed source establishes installer willingness to pay, owner transfer behaviour, manufacturer data licences, service conversion, transaction liquidity, or safe automated part matching."
+    }
+  ],
+  "contrary_evidence": [
+    "The statutory DPP framework is product-specific, and most current renewable equipment is not automatically covered by an operative delegated act.",
+    "Handover packs and QR customer records already exist inside installer suites and manufacturer portals.",
+    "Published battery-passport pricing is far below the original per-asset price hypothesis for a basic record.",
+    "The public EU repair platform will compete with any generic repair directory.",
+    "Database and copyright rights prevent assuming free wholesale reuse of manufacturer documentation and compatibility data.",
+    "Residential new-install share has contracted, making installer acquisition from new jobs alone less robust."
+  ],
+  "schema_version": 2,
+  "sources": [
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2024-06-13",
+      "publisher": "EUR-Lex / European Union",
+      "source_id": "c3-s01",
+      "source_type": "official_law",
+      "stance": "context",
+      "title": "Regulation (EU) 2024/1781 establishing a framework for ecodesign requirements for sustainable products",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/1781/eng"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2023-07-12",
+      "publisher": "EUR-Lex / European Union",
+      "source_id": "c3-s02",
+      "source_type": "official_law",
+      "stance": "supporting",
+      "title": "Regulation (EU) 2023/1542 concerning batteries and waste batteries",
+      "url": "https://eur-lex.europa.eu/eli/reg/2023/1542/oj?eliuri=eli%3Areg%3A2023%3A1542%3Aoj&locale=en"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2024-06-13",
+      "publisher": "European Commission",
+      "source_id": "c3-s03",
+      "source_type": "official_policy_guidance",
+      "stance": "context",
+      "title": "Directive on repair of goods",
+      "url": "https://commission.europa.eu/law/law-topic/consumer-protection-law/directive-repair-goods_en"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2026-04",
+      "publisher": "Energy Regulatory Office of Poland",
+      "source_id": "c3-s04",
+      "source_type": "official_market_statistics",
+      "stance": "supporting",
+      "title": "URE report: The number of RES micro-installations in Poland has already exceeded 1.6 million",
+      "url": "https://www.ure.gov.pl/en/communication/news/518%2CURE-report-The-number-of-RES-micro-installations-in-Poland-has-already-exceeded-.html"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2025-12",
+      "publisher": "SolarPower Europe",
+      "source_id": "c3-s05",
+      "source_type": "industry_market_report",
+      "stance": "context",
+      "title": "EU hits 2025 solar target but market contraction puts 2030 goal at risk",
+      "url": "https://www.solarpowereurope.org/press-releases/new-report-eu-hits-2025-solar-target-but-market-contraction-puts-2030-goal-at-risk"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2021-05",
+      "publisher": "SolarEdge",
+      "source_id": "c3-s06",
+      "source_type": "manufacturer_documentation",
+      "stance": "contradicting",
+      "title": "Creating and Managing a SolarEdge Account",
+      "url": "https://knowledge-center.solaredge.com/sites/kc/files/monitoring_portal_registering_and_managing_an_account.pdf"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "SolarPlus",
+      "source_id": "c3-s07",
+      "source_type": "incumbent_product_page",
+      "stance": "contradicting",
+      "title": "SolarPlus Key Features",
+      "url": "https://www.solarplus.co/key-features/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "InsTool",
+      "source_id": "c3-s08",
+      "source_type": "incumbent_product_page",
+      "stance": "contradicting",
+      "title": "InsTool - Less Admin, More Installs",
+      "url": "https://instool.co.uk/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "Collecta DPP",
+      "source_id": "c3-s09",
+      "source_type": "direct_competitor_pricing",
+      "stance": "contradicting",
+      "title": "Collecta DPP Pricing",
+      "url": "https://www.collectadpp.com/pricing"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2026-05",
+      "publisher": "Payaca",
+      "source_id": "c3-s10",
+      "source_type": "incumbent_pricing",
+      "stance": "context",
+      "title": "Pricing for solar, heat pump and EV charger installers",
+      "url": "https://payaca.com/pricing/uk"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "1996-03-11",
+      "publisher": "EUR-Lex / European Union",
+      "source_id": "c3-s11",
+      "source_type": "official_law",
+      "stance": "contradicting",
+      "title": "Directive 96/9/EC on the legal protection of databases - summary",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/LSU/?uri=celex%3A31996L0009"
+    }
+  ],
+  "unknowns": [
+    "Best first equipment category and actual service frequency.",
+    "Installer and owner activation, retention, consent, and transfer rates.",
+    "Lawful access to serial, diagnostic, warranty, and compatibility data.",
+    "Insurance and technician-verification cost for service routing.",
+    "Marketplace transaction volume, basket size, take rate, and dispute burden.",
+    "Interoperability with future statutory battery passports and manufacturer portals.",
+    "Polish willingness to pay for a narrow portable record versus broader installer software."
+  ]
+}

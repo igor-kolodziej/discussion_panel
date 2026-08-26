@@ -1,0 +1,89 @@
+{
+  "candidate_id": "transition-11",
+  "claims": [
+    {
+      "claim_id": "transition-11-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2024/573/2024-02-20/eng"
+      ],
+      "statement": "The F-gas Regulation prohibits use of Annex I gases with GWP of 2,500 or more for maintenance or servicing of air-conditioning and heat pumps from 1 January 2026, subject to specified reclaimed and recycled-gas exceptions through 2032."
+    },
+    {
+      "claim_id": "transition-11-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2024/573/2024-02-20/eng",
+        "https://climate.ec.europa.eu/areas-action/fluorinated-greenhouse-gases/climate-friendly-alternatives-f-gases/air-conditioning_en"
+      ],
+      "statement": "The regulation's Annex IV includes 1 January 2027 prohibitions affecting self-contained equipment and split air-to-water systems up to 12 kW that use fluorinated gases at or above specified GWP thresholds, with site-safety exceptions."
+    },
+    {
+      "claim_id": "transition-11-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://climate.ec.europa.eu/news-other-reads/news/f-gases-new-rules-labelling-reporting-certification-and-f-gas-portal-2024-09-20_en",
+        "https://www.gov.pl/web/klimat/rozporzadzenie-ws-certyfikacji-f-gazowej"
+      ],
+      "statement": "Commission and Polish ministry guidance state that certification requirements now extend to relevant alternatives, including natural refrigerants, for stationary refrigeration, air-conditioning, and heat-pump work."
+    }
+  ],
+  "contrary_evidence": [
+    "Equipment manufacturers and wholesalers may already remove non-compliant SKUs or provide their own selection rules.",
+    "Safety exceptions and equipment categories make a simple red-or-green decision potentially misleading.",
+    "Some restrictions concern placing equipment on the market rather than every installer quotation, weakening direct installer liability."
+  ],
+  "economics": {
+    "acquisition_route": "Demonstrate prevented quote errors in the family installer, then sell one white-label licence to a regional wholesaler before direct installer acquisition",
+    "capital_required_pln": 45000,
+    "founder_net_worth_path": "Scenario, not evidence: 4,000 installer-equivalents at PLN 3,000 annual revenue plus several wholesaler licences yields roughly PLN 12m-16m revenue; at a 40% operating margin, seven mature years could produce PLN 20m-plus founder wealth",
+    "founder_time": "Two to three hours per day for product and data maintenance plus a scheduled weekly technical review with the pilot installer",
+    "gross_margin_basis": "A shared maintained rules graph can exceed 85% gross margin; catalogue cleanup, technical review, and wholesaler integration lower initial blended margin",
+    "payback": "Target one to six months depending on whether the first wholesaler funds integration; direct installer acquisition must remain self-serve",
+    "pricing": "Assumption: PLN 150-400 per installer per month or PLN 60,000-200,000 per wholesaler per year based on active contractor accounts and catalogues",
+    "retention_or_repeat": "Every quote invokes the rule set and catalogues and deadlines continue to change, creating recurring value if the checker is embedded before ordering"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A maintained SKU-to-refrigerant-to-ban graph with site exceptions, certification mappings, and observed quote corrections across wholesaler catalogues",
+    "customer": "Polish HVAC and heat-pump installers, regional wholesalers, and renewable contractors configuring or servicing systems up to 12 kW",
+    "distribution_mechanism": "The family installer supplies the first workflow and error cases; one equipment wholesaler then embeds the API in its quote portal for portfolio distribution",
+    "offer_and_business_model": "A mobile and API rules engine that reads model, refrigerant, capacity, system type, date, site-safety exception, and technician credentials; it flags eligibility, suggests permitted catalogue alternatives, and stores the decision record",
+    "payer_and_paid_event": "A wholesaler pays an annual licence per active contractor, or an installer pays monthly, when model and site inputs are checked before the quote becomes a purchase order",
+    "problem_trigger": "The 2024 F-gas regime introduced new refrigerant restrictions and certification scope, including service restrictions from 1 January 2026 and important GWP-based placing-on-market prohibitions for small heat pumps and air-conditioning equipment from 1 January 2027"
+  },
+  "founder_fit": [
+    "The parents' renewable company is a direct pilot and domain-access advantage",
+    "Rules, product data, and exception analytics fit the founder's technical strengths",
+    "Wholesaler licensing can scale without thousands of installer meetings",
+    "A read-only quote checker is cheap and reversible before deeper commerce integration"
+  ],
+  "parent": null,
+  "risks": [
+    "Incorrect refrigerant or safety guidance could contribute to an unsafe installation.",
+    "Incomplete SKU metadata can create false approvals or block valid equipment.",
+    "A wholesaler can internalise the rules after a pilot.",
+    "Maintaining cross-country rules may exceed a part-time founder's capacity without expert partners."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2024/573/2024-02-20/eng",
+    "https://climate.ec.europa.eu/news-other-reads/news/f-gases-new-rules-labelling-reporting-certification-and-f-gas-portal-2024-09-20_en",
+    "https://www.gov.pl/web/klimat/rozporzadzenie-ws-certyfikacji-f-gazowej",
+    "https://climate.ec.europa.eu/areas-action/fluorinated-greenhouse-gases/climate-friendly-alternatives-f-gases/air-conditioning_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "White-label regulatory decision-rules API embedded in trade quoting",
+    "control_point": "The model-selection and purchase-order gate before an installer commits to equipment or service refrigerant",
+    "critical_dependency": "Complete manufacturer and wholesaler SKU metadata plus continuously correct interpretation of bans, safety exceptions, and Polish certification implementation"
+  },
+  "thesis": "A refrigerant-aware rules plug-in can stop small HVAC and heat-pump installers from quoting a model that conflicts with upcoming placing-on-market bans, servicing restrictions, or technician certification scope. The scalable buyer may be a wholesaler that pays to embed the gate across contractor accounts; the founder's parents' renewable company provides a realistic installer pilot without turning the founder into a full-time trade consultant.",
+  "title": "F-Gas Quote Gate for Heat-Pump Installers",
+  "uncertainties": [
+    "The frequency and financial cost of real quote-selection errors must be measured in the family-company pilot.",
+    "Wholesaler willingness to expose catalogue metadata and pay for an external rules layer is unknown.",
+    "Polish transition arrangements for existing certificates and refresh training need current operational confirmation.",
+    "The 4,000-installer-equivalent wealth path is an unvalidated distribution scenario."
+  ],
+  "version": 1
+}

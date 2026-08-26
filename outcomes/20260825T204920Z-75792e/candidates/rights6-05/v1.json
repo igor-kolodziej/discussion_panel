@@ -1,0 +1,71 @@
+{
+  "candidate_id": "rights6-05",
+  "claims": [
+    {
+      "claim_id": "rights6-05-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/dir/2012/19/2024-04-08/eng"
+      ],
+      "statement": "Photovoltaic panels are expressly within the WEEE framework, including producer-financing and collection obligations for covered panels."
+    },
+    {
+      "claim_id": "rights6-05-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://bdo.mos.gov.pl/wp-content/uploads/2021/01/BDO_IS_Nawigacja-po-systemie-wersja-1.1-.pdf"
+      ],
+      "statement": "Poland's BDO system provides registry, waste-record, reporting, and confirmation modules under the Waste Act."
+    }
+  ],
+  "contrary_evidence": [
+    "Existing producer-responsibility schemes and recyclers may already satisfy installer needs, while reuse claims cannot be used to evade waste rules."
+  ],
+  "economics": {
+    "acquisition_route": "Embed digital take-back selection in installer job closeout and acquire installers through wholesalers and the family company",
+    "capital_required_pln": 150000,
+    "founder_net_worth_path": "Enroll 150 installers by year 3 (unvalidated), process national multi-stream returns by year 6 (unvalidated), and build founder equity above PLN 5 million by year 8 (unvalidated)",
+    "founder_time": "12-18 hours per week during validation (unvalidated), with transport outsourced",
+    "gross_margin_basis": "Route aggregation, compliance records, and buyer matching while licensed partners handle regulated treatment; 30-50% gross margin (unvalidated)",
+    "payback": "Installer acquisition payback in 4-8 months (unvalidated)",
+    "pricing": "PLN 200-500 pickup administration per job (unvalidated), PLN 150-400 installer subscription per month (unvalidated), plus remarketing spread (unvalidated)",
+    "retention_or_repeat": "Annual installer subscriptions (unvalidated) and repeat flows on every replacement job"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Route density, provenance records, and repeat installer contracts improve recovery economics and buyer trust",
+    "customer": "Renewable installers, equipment producers, asset owners, reuse buyers, and licensed recyclers",
+    "distribution_mechanism": "Installer workflow integrations and electrical-wholesaler partnerships",
+    "offer_and_business_model": "Contracted take-back, condition evidence, chain of custody, and matched lawful destination",
+    "payer_and_paid_event": "Installer or producer pays when a return is documented and collected; buyer pays when reusable inventory transfers",
+    "problem_trigger": "A replacement or repowering job creates equipment whose title, condition, and lawful destination must be resolved"
+  },
+  "founder_fit": [
+    "Directly leverages the family installer channel.",
+    "Traceability and routing suit quantitative automation.",
+    "Licensed partners can own manual logistics."
+  ],
+  "parent": null,
+  "risks": [
+    "Misclassification or undocumented transport creates regulatory exposure.",
+    "Early PV waste volumes may be too sparse for route economics.",
+    "The stated PLN 150000 startup capital requirement is unvalidated."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/dir/2012/19/2024-04-08/eng",
+    "https://bdo.mos.gov.pl/wp-content/uploads/2021/01/BDO_IS_Nawigacja-po-systemie-wersja-1.1-.pdf"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Reverse-logistics and recommerce network with chain-of-custody services",
+    "control_point": "Installer take-back contracts and asset-level provenance from removal decision to authorized destination",
+    "critical_dependency": "Correct waste-versus-product classification, BDO duties, licensed logistics partners, and sufficient recovered value per route"
+  },
+  "thesis": "Embed signed take-back instructions into installer replacement jobs so panels, inverters, cable, and mounting hardware flow to documented reuse, parts harvesting, or licensed WEEE treatment. Start as a registered broker coordinating licensed carriers and processors, taking physical custody only after securing required permissions; earn compliance, collection, and remarketing revenue from a traceable national return network.",
+  "title": "PV Loop Title and Provenance Network",
+  "uncertainties": [
+    "What share of removed modules is lawfully reusable after testing?",
+    "Can producer schemes contract a specialist installer-facing collection layer?"
+  ],
+  "version": 1
+}

@@ -1,0 +1,86 @@
+{
+  "candidate_id": "spend-04",
+  "claims": [
+    {
+      "claim_id": "spend-04-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://pubmed.ncbi.nlm.nih.gov/33286447/"
+      ],
+      "statement": "A systematic review reports that patient no-shows cause revenue loss and longer waiting lists, while also finding that prediction remains technically challenging."
+    },
+    {
+      "claim_id": "spend-04-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://pubmed.ncbi.nlm.nih.gov/36508503/"
+      ],
+      "statement": "A review of controlled studies found high-certainty evidence that predictive-model-targeted text reminders reduced no-shows and moderate-certainty evidence for targeted phone calls, while reporting limited cost-effectiveness evidence."
+    },
+    {
+      "claim_id": "spend-04-c03",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.nfz.gov.pl/gfx/nfz/userfiles/_public/bip/dzialalnosc_nfz/sprawozdania_z_dzialalnosci_nfz/zalacznik_do_uchwaly_nr_15-sig.pdf"
+      ],
+      "statement": "NFZ reporting shows 1.35 million people were removed from waiting lists for failing to attend in 2024, up from 1.28 million in 2023, evidencing the operational scale in Poland's public system even though this product initially targets private clinics."
+    }
+  ],
+  "contrary_evidence": [
+    "The intervention review reports limited cost-effectiveness evidence and uncertain effects for predictive overbooking.",
+    "Simple universal reminders, deposits or short booking lead times may eliminate most recoverable loss without machine learning.",
+    "Public-system non-attendance counts do not establish private-clinic willingness to pay or appointment values."
+  ],
+  "economics": {
+    "acquisition_route": "Backtest one year of appointment data at a fixed price, run a randomized or stepped intervention with 5-10 clinics, and let one practice-management reseller distribute only after measured lift.",
+    "capital_required_pln": 60000,
+    "founder_net_worth_path": "One thousand locations averaging 850 PLN base monthly would create 10.2m PLN annual recurring revenue before outcome fees. At a mature 38% owner-cash margin, about 3.88m PLN per year could support more than 11m PLN in cumulative distributions over four mature years after reinvestment and tax allowances.",
+    "founder_time": "Use one specialty, one scheduling export and one message channel at 3-4 hours/day, with clinics handling all clinical prioritisation; maintain employment until repeat sales and positive contribution margin are sustained.",
+    "gross_margin_basis": "Prediction, message orchestration and waitlist matching are software; target 70-85% gross margin after message fees, integration support and outcome reconciliation.",
+    "payback": "Target clinic payback within one month from a small number of recovered high-value appointments; causal attribution and specialty-specific slot value must be proved.",
+    "pricing": "Assumption to test: 500-1800 PLN per location per month plus 3-8% of independently measured recovered slot revenue, with messaging passed through at cost.",
+    "retention_or_repeat": "Schedules and no-show risk recur daily; historical response data improve performance, though clinics with low lead times or deposits may have little residual problem."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Clinic-specific calibration plus a cross-clinic, privacy-preserving library of intervention response by lead time, visit type and channel improves which action is taken, not merely the risk score.",
+    "customer": "Polish private clinics with three or more chairs, rooms or clinicians and appointment values high enough that an empty slot is visibly costly.",
+    "distribution_mechanism": "Practice-management vendors, dental suppliers and multi-site clinic operators become channels; an ROI calculator and a historical-schedule backtest support mostly asynchronous sales.",
+    "offer_and_business_model": "Integration or CSV-first service that scores attendance risk, sends consented two-way messages, proposes human-call queues, releases confirmed cancellations and matches waitlisted patients by procedure and duration; base SaaS plus outcome fee.",
+    "payer_and_paid_event": "The clinic owner or operations manager pays per location and optionally a fee for a verified refilled slot; the recurring loss is idle clinician capacity and the existing spend is front-desk, scheduler and messaging cost.",
+    "problem_trigger": "The future schedule contains unconfirmed high-value appointments or a cancellation occurs too late for front-desk staff to find an appropriate replacement."
+  },
+  "founder_fit": [
+    "Attendance prediction and treatment-effect measurement directly use data-science skills.",
+    "A medical-student partner can help interpret clinic workflow without making clinical claims or decisions.",
+    "Historical backtests and outcome-based pilots make demand testable with low capital.",
+    "Software-vendor channels and automated onboarding reduce recurring networking and meeting load."
+  ],
+  "parent": null,
+  "risks": [
+    "Aggressive reminders or waitlist messaging could harm patients or the clinic's reputation.",
+    "Models may encode socioeconomic bias and selectively burden vulnerable patients.",
+    "Appointment data are health-related personal data requiring strong GDPR controls.",
+    "Scheduling incumbents can add prediction and refill features quickly."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://pubmed.ncbi.nlm.nih.gov/33286447/",
+    "https://pubmed.ncbi.nlm.nih.gov/36508503/",
+    "https://www.nfz.gov.pl/gfx/nfz/userfiles/_public/bip/dzialalnosc_nfz/sprawozdania_z_dzialalnosci_nfz/zalacznik_do_uchwaly_nr_15-sig.pdf"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Revenue-recovery workflow SaaS with measured-outcome pricing",
+    "control_point": "The confirmation and replacement decision in the final days before a monetisable appointment slot",
+    "critical_dependency": "Scheduling-system access, lawful messaging consent and credible attribution of a filled slot to the intervention"
+  },
+  "thesis": "Offer private dental, diagnostic and specialist clinics a layer that predicts appointment non-attendance, targets the least costly effective reminder, and refills genuinely released slots from a consented waitlist. Clinics already lose paid clinician capacity and buy scheduling/SMS tools; pricing can be tied partly to measured recovered appointments instead of another undifferentiated reminder subscription.",
+  "title": "Clinic No-Show Recovery and Waitlist Refill Engine",
+  "uncertainties": [
+    "No Polish private-clinic baseline no-show rate, recovered revenue or acceptable outcome fee has been established.",
+    "Integration access and consent records vary across scheduling vendors.",
+    "A waitlisted patient's clinical suitability cannot be inferred by the product and must remain under clinic control.",
+    "Pricing, margins, customer count and founder-wealth projections are unsourced assumptions."
+  ],
+  "version": 1
+}

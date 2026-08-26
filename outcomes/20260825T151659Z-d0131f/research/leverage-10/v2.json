@@ -1,0 +1,215 @@
+{
+  "candidate_id": "leverage-10",
+  "candidate_sha256": "9023ba55374f1c0eb1634001fd945bc68a31001320e3fe03d3d590a6cb124a8e",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "l10-r1",
+      "evidence_refs": [
+        "l10-s1",
+        "l10-s3"
+      ],
+      "statement": "Covered waste-shipment documents and information must be exchanged electronically from 21 May 2026, and interoperable commercial software is an expressly contemplated access path."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "l10-r2",
+      "evidence_refs": [
+        "l10-s3"
+      ],
+      "statement": "Commercial software is allowed in all member-state access configurations, but direct connection requires a registered operator, an authorized representative, and connection details obtained through the Commission helpdesk."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "l10-r3",
+      "evidence_refs": [
+        "l10-s3"
+      ],
+      "statement": "The Commission GUI is available without Commission-side fees, so third-party purchase is optional rather than a legal necessity."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "l10-r4",
+      "evidence_refs": [
+        "l10-s3"
+      ],
+      "statement": "DIWASS generally does not verify correctness of user-entered data and offers no operator reporting functionality, leaving room for data-quality, audit, and exception tooling while preserving operator responsibility."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "l10-r5",
+      "evidence_refs": [
+        "l10-s2"
+      ],
+      "statement": "Interconnecting systems face testing and document-authentication requirements, and users retain ownership and responsibility for submitted or generated information."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "l10-r6",
+      "evidence_refs": [
+        "l10-s3",
+        "l10-s4",
+        "l10-s5"
+      ],
+      "statement": "Annex VII remains in a paper-oriented transition through 31 December 2026, delaying the highest-volume digital workflow despite the PIC go-live."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "l10-r7",
+      "evidence_refs": [
+        "l10-s4"
+      ],
+      "statement": "The physical flow is large—26 million tonnes of PIC waste and 50 million tonnes of green-listed waste between member states in 2024—but the Commission estimates total annual DIWASS administrative savings at only EUR 1.4 million."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "l10-r8",
+      "evidence_refs": [
+        "l10-s6",
+        "l10-s7"
+      ],
+      "statement": "Travas and Axians post live prices materially below the discovery hypothesis, including Travas at EUR 495 yearly plus EUR 100 monthly and Axians at EUR 300 setup plus EUR 450 yearly with low per-document charges."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "l10-r9",
+      "evidence_refs": [
+        "l10-s8"
+      ],
+      "statement": "ZEDAL already markets DIWASS interoperability and publishes a customer testimonial claiming more than 310000 shipments processed since 2012, indicating mature incumbent workflow experience."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "l10-r10",
+      "evidence_refs": [
+        "l10-s3",
+        "l10-s6",
+        "l10-s7",
+        "l10-s8"
+      ],
+      "statement": "A generic direct-to-operator portal is therefore weakly differentiated; a white-label connector can be better positioned only if regional software partners value integration, regression testing, and exception support."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "l10-r11",
+      "evidence_refs": [
+        "l10-s2"
+      ],
+      "statement": "Permissioned mappings and failure signatures could reduce later integration cost, but confidentiality and user data ownership constrain reuse and make a data moat conditional rather than established."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "l10-r12",
+      "evidence_refs": [],
+      "statement": "Polish corridor transaction counts, operator software penetration, partner willingness to embed, API service levels, support load, and willingness to pay remain unknown."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "l10-r13",
+      "evidence_refs": [
+        "l10-s2",
+        "l10-s3"
+      ],
+      "statement": "No direct evidence reviewed establishes illegality or unobtainable essential rights: commercial software is expressly allowed, but production access remains conditional on operator registration, authorization, and technical onboarding."
+    }
+  ],
+  "contrary_evidence": [
+    "The Commission supplies a no-fee GUI, so compliance does not force operators to buy software.",
+    "Travas, Axians, and ZEDAL already cover the workflow at low or undisclosed incumbent prices and with production experience.",
+    "The Commission's EUR 1.4 million annual administrative-savings estimate is small relative to the original revenue thesis.",
+    "The Annex VII digital wedge is transitional until 1 January 2027.",
+    "Operators remain responsible for data correctness and classification; software cannot create consent or transfer regulatory responsibility."
+  ],
+  "schema_version": 2,
+  "sources": [
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2024-04-30",
+      "publisher": "European Parliament and Council / EUR-Lex",
+      "source_id": "l10-s1",
+      "source_type": "primary law",
+      "stance": "supporting",
+      "title": "Regulation (EU) 2024/1157 on shipments of waste",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/1157/oj"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2025-07-14",
+      "publisher": "European Commission / EUR-Lex",
+      "source_id": "l10-s2",
+      "source_type": "primary law",
+      "stance": "context",
+      "title": "Commission Implementing Regulation (EU) 2025/1290 on DIWASS interoperability",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A32025R1290"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "n.d.; continuously updated",
+      "publisher": "European Commission Green Forum",
+      "source_id": "l10-s3",
+      "source_type": "official implementation and FAQ",
+      "stance": "context",
+      "title": "Digital Waste Shipment System (DIWASS)",
+      "url": "https://green-forum.ec.europa.eu/green-business/digital-waste-shipment-system-diwass_en"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2026-05-21",
+      "publisher": "European Commission Directorate-General for Environment",
+      "source_id": "l10-s4",
+      "source_type": "official news and market statistics",
+      "stance": "context",
+      "title": "EU's new Waste Shipment Regulation and DIWASS digital platform go live",
+      "url": "https://environment.ec.europa.eu/news/new-waste-shipment-regulation-and-diwass-platform-go-live-2026-05-21_en"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "n.d.; current DIWASS information point",
+      "publisher": "Poland Chief Inspectorate of Environmental Protection (GIOS)",
+      "source_id": "l10-s5",
+      "source_type": "official national implementation page",
+      "stance": "context",
+      "title": "Punkt informacyjny DIWASS",
+      "url": "https://www.gov.pl/web/gios/punkt-informacyjny-diwass"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2026-08-09",
+      "publisher": "Travas DIWASS B.V.",
+      "source_id": "l10-s6",
+      "source_type": "incumbent product and pricing page",
+      "stance": "contradicting",
+      "title": "Travas DIWASS platform and pricing",
+      "url": "https://en.travas.eu/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "n.d.; current product page",
+      "publisher": "Axians eWaste GmbH",
+      "source_id": "l10-s7",
+      "source_type": "incumbent product and pricing page",
+      "stance": "contradicting",
+      "title": "eTFSportal license including DIWASS registration",
+      "url": "https://service.axians-ewaste.com/fum/en/shop/details?artikelnummer=eTFSMandant+EN"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "n.d.; current product page",
+      "publisher": "ZEDAL AG",
+      "source_id": "l10-s8",
+      "source_type": "incumbent product page",
+      "stance": "contradicting",
+      "title": "ZEDAL International transboundary waste shipment software",
+      "url": "https://www.zedal.com/en/start"
+    }
+  ],
+  "unknowns": [
+    "Polish and Central European shipment counts by procedure, operator, corridor, and current software stack.",
+    "Observed duplicate-entry time, exception frequency, delay losses, and paid demand beyond the free GUI.",
+    "Vendor-channel conversion, contract terms, downstream activation, and risk of partner internalization.",
+    "API onboarding duration, test burden, rate limits, service levels, version cadence, and incident history.",
+    "Production support load and insurable liability when a mapping error delays or compromises a shipment.",
+    "Whether customer contracts permit anonymized cross-customer learning from mappings and exception data."
+  ]
+}

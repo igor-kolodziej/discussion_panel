@@ -1,0 +1,69 @@
+{
+  "candidate_id": "channel-01",
+  "claims": [
+    {
+      "claim_id": "channel-01-claim-01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en"
+      ],
+      "statement": "The CBAM definitive regime applies from 1 January 2026; importers above the stated mass threshold must seek authorised-declarant status, buy certificates and declare embedded emissions."
+    },
+    {
+      "claim_id": "channel-01-claim-02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-verification_en"
+      ],
+      "statement": "The Commission's verification sequence makes installation evidence and accredited verification a concrete downstream quality test for actual-emissions packets."
+    }
+  ],
+  "contrary_evidence": [
+    "The Commission supplies a registry, manuals and default values, while large customs platforms can add their own validation; importers below the mass threshold reduce the addressable wedge."
+  ],
+  "economics": {
+    "acquisition_route": "UNVALIDATED HYPOTHESIS: one customs-software integration can deliver 20 paying broker offices without founder-led outbound to each importer.",
+    "capital_required_pln": 110000,
+    "founder_net_worth_path": "UNVALIDATED HYPOTHESIS: by year 8, PLN 9 million ARR and PLN 3 million EBITDA; at 4 times EBITDA, 70% founder ownership implies PLN 8.4 million of founder equity before liabilities, without counting retained earnings twice.",
+    "founder_time": "UNVALIDATED HYPOTHESIS: 15 founder hours weekly during pilot, falling to 10 after support playbooks and a contractor analyst.",
+    "gross_margin_basis": "UNVALIDATED HYPOTHESIS: 82% mature gross margin after document extraction, rules execution and encrypted evidence storage.",
+    "payback": "UNVALIDATED HYPOTHESIS: 9-month CAC payback after integration support and compliance onboarding.",
+    "pricing": "UNVALIDATED HYPOTHESIS — all commercial figures in this economics object, including capital_required_pln=110000, are hypotheses: PLN 3500 monthly per broker office plus PLN 35 per checked shipment.",
+    "retention_or_repeat": "UNVALIDATED HYPOTHESIS: 92% annual logo retention because the checker sits in repeat import and annual-declaration work."
+  },
+  "fingerprint": {
+    "compounding_advantage": "installation-to-product emissions graph enriched by recurring defects, accepted corrections and verifier outcomes",
+    "customer": "EU indirect customs representatives and specialist brokers handling mid-market CBAM importers",
+    "distribution_mechanism": "customs-declaration software and broker-office integrations",
+    "offer_and_business_model": "API checker, evidence vault and verifier-ready dossier sold as subscription plus per-shipment usage",
+    "payer_and_paid_event": "broker or importer pays when a shipment evidence packet passes pre-declaration checks",
+    "problem_trigger": "a covered import arrives with supplier emissions evidence that must support declaration and certificate obligations"
+  },
+  "founder_fit": [
+    "Strong data-engineering and quantitative fit, Poland/EU starting point, and channel-led low-social-energy sales. UNVALIDATED HYPOTHESIS: the PLN 110000 capital field is a pre-validation ceiling and the first test can use synthetic packets plus one broker design partner."
+  ],
+  "parent": null,
+  "risks": [
+    "Incorrect advice could create certificate or customs liability; sell deterministic evidence checks with human sign-off, not legal opinions.",
+    "Supplier data may be fabricated or unavailable."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en",
+    "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-verification_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "embedded per-import compliance verification network",
+    "control_point": "customs-broker release gate for a CBAM evidence packet",
+    "critical_dependency": "permissioned installation-level emissions data plus accredited-verifier correction outcomes"
+  },
+  "thesis": "Embed a verifier-ready emissions-packet checker inside customs brokers' workflows so a CBAM-covered shipment cannot advance until supplier, installation, goods-code and emissions evidence reconcile. The defensible asset is a permissioned graph of supplier installations, recurring calculation defects and later verifier corrections, not a generic compliance form.",
+  "title": "CBAM Supplier-Emissions Proof Network",
+  "uncertainties": [
+    "Willingness of brokers to share verifier outcomes",
+    "Availability and stability of registry integration interfaces",
+    "Actual rejection and correction frequency"
+  ],
+  "version": 1
+}

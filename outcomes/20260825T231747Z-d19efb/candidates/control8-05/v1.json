@@ -1,0 +1,86 @@
+{
+  "candidate_id": "control8-05",
+  "claims": [
+    {
+      "claim_id": "control8-05-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://digital-strategy.ec.europa.eu/en/policies/cra-reporting"
+      ],
+      "statement": "The Commission says CRA reporting obligations apply from 11 September 2026, with an early warning within 24 hours and a fuller notification within 72 hours for specified exploited vulnerabilities and severe incidents."
+    },
+    {
+      "claim_id": "control8-05-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://digital-strategy.ec.europa.eu/en/policies/cra-summary"
+      ],
+      "statement": "Before market placement, manufacturers must draw up technical documentation, perform the applicable conformity assessment, issue an EU declaration of conformity, and affix CE marking."
+    },
+    {
+      "claim_id": "control8-05-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://digital-strategy.ec.europa.eu/en/policies/cra-summary"
+      ],
+      "statement": "The CRA applies to products with digital elements made available commercially whose intended or foreseeable use includes a direct or indirect connection to a device or network, while specified categories are excluded."
+    }
+  ],
+  "contrary_evidence": [
+    "The main product obligations generally apply later than the September 2026 reporting duties, so some buyers may postpone full release-control spend.",
+    "Certain regulated products and non-commercial open-source software are outside or differently treated under the scope.",
+    "Existing secure-development and product-lifecycle platforms may absorb the required evidence with configuration rather than replacement."
+  ],
+  "economics": {
+    "acquisition_route": "Choose one device niche, run readiness assessments through two security consultancies, convert repeated evidence gaps into a product, and distribute through those firms",
+    "capital_required_pln": 60000,
+    "founder_net_worth_path": "Unvalidated 5-7 year scenario: 100 manufacturers averaging 60,000 PLN recurring revenue gives 6.0m PLN; at 32% EBITDA, 4x, and 70% founder ownership, equity value is about 5.38m PLN.",
+    "founder_time": "18-24 hours weekly for niche discovery and prototype; external product-security expertise covers high-consequence reviews",
+    "gross_margin_basis": "Evidence collection, validation, and versioning are scalable; security assessment and conformity advice remain partner services",
+    "payback": "Customer payback hypothesis: preventing one delayed launch or replacing recurring manual technical-file assembly can exceed a 50,000-120,000 PLN annual fee; quantify during readiness pilots",
+    "pricing": "Unvalidated hypothesis: 25,000-75,000 PLN implementation plus 36,000-120,000 PLN annual license by product-family and repository count",
+    "retention_or_repeat": "Every release, component change, vulnerability, support decision, and authority request depends on historical product evidence"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Product-version/component/control lineage and reusable remediation patterns become more valuable with every release and vulnerability event",
+    "customer": "Polish and EU SMEs manufacturing or private-labelling network-connected hardware, industrial devices, and IoT products",
+    "distribution_mechanism": "Embedded-security consultancies, test laboratories, notified-body-adjacent advisors without implying endorsement, hardware accelerators, and importer associations",
+    "offer_and_business_model": "Evidence graph, risk/control templates, component/change monitoring, release checklist, technical-file export, and timed incident workflow; hypothesis 25,000-75,000 PLN setup and 36,000-120,000 PLN annually",
+    "payer_and_paid_event": "Head of engineering, product security, or compliance pays implementation and an annual license per product family, with optional incident readiness",
+    "problem_trigger": "New product release, substantial modification, component vulnerability, support-period change, or reportable exploited vulnerability/severe incident"
+  },
+  "founder_fit": [
+    "Fits AI-assisted document extraction, data lineage, anomaly detection, and software workflow design",
+    "Narrow high-value B2B buyers reduce social and camera demands",
+    "Can start with scoped paid readiness work before building broad integrations",
+    "Founder can hire domain review while retaining technical product ownership"
+  ],
+  "parent": null,
+  "risks": [
+    "Security or compliance errors could expose customers and the company to severe liability",
+    "DevSecOps, product-lifecycle, and GRC incumbents may extend into CRA evidence",
+    "Hardware customers can have long integrations and procurement cycles",
+    "A checklist product without build-system integration would be easy to copy and weakly retained"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://digital-strategy.ec.europa.eu/en/policies/cra-reporting",
+    "https://digital-strategy.ec.europa.eu/en/policies/cra-summary",
+    "https://digital-strategy.ec.europa.eu/en/news/commission-publishes-new-guidance-support-businesses-implementation-cyber-resilience-act"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Engineering release-control SaaS with implementation and incident-readiness retainers",
+    "control_point": "The signed internal evidence package that authorizes a connected-product version to proceed to conformity assessment and market release",
+    "critical_dependency": "Deep integration with source/build/component and product-change systems plus credible cybersecurity and conformity interpretation"
+  },
+  "thesis": "Planning-stage hypothesis: sell a release gate for smaller manufacturers and importers of connected hardware, industrial controllers, and IoT products that links cybersecurity risk assessment, component inventory, test evidence, support-period commitments, technical documentation, declarations, and vulnerability-response ownership to each shipped version. The product does not certify compliance; it blocks internal release when the manufacturer's chosen evidence is missing and preserves the approved technical file. Incident workflows can reuse the same product/component graph for the CRA's short reporting windows. The defensible position is inside engineering change control, not as a one-off policy generator.",
+  "title": "Cyber Resilience Act Release-Evidence Gate",
+  "uncertainties": [
+    "Which connected-product niche lacks an incumbent and has enough common evidence structure",
+    "How final harmonised standards affect technical evidence expectations",
+    "Whether customers will permit repository/component metadata access",
+    "Security-review and cyber-insurance cost for a small vendor"
+  ],
+  "version": 1
+}

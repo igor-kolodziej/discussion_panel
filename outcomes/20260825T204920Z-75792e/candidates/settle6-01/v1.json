@@ -1,0 +1,74 @@
+{
+  "candidate_id": "settle6-01",
+  "claims": [
+    {
+      "claim_id": "settle6-01-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/faktura-ustrukturyzowana-i-struktura-logiczna-fa/"
+      ],
+      "statement": "For an online structured invoice, KSeF assigns legally relevant issuance and receipt timestamps, including receipt on assignment of the KSeF identifier."
+    },
+    {
+      "claim_id": "settle6-01-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32011L0007"
+      ],
+      "statement": "EU late-payment rules provide creditors with interest and a fixed recovery-cost compensation when the statutory conditions are met."
+    }
+  ],
+  "contrary_evidence": [
+    "A timestamp proves timing, not that every invoice is undisputed or collectible; contract-specific defences can defeat recovery."
+  ],
+  "economics": {
+    "acquisition_route": "UNVALIDATED: white-label distribution through bookkeeping networks, ERP resellers and invoice-finance brokers, each reaching many SME creditors.",
+    "capital_required_pln": 85000,
+    "founder_net_worth_path": "UNVALIDATED: reach 10 accounting partners and PLN 1.2m annualized revenue by month 24, 60 partners and PLN 5m annualized revenue by year 4, then a founder-owned cash-flow and equity value above PLN 5m in years 5-6.",
+    "founder_time": "UNVALIDATED: 3 hours per day through a narrow KSeF pilot, falling as exception review is delegated.",
+    "gross_margin_basis": "UNVALIDATED: software-heavy processing with variable bank/API, document and partner-legal-review costs only on activated cases.",
+    "payback": "UNVALIDATED: channel integration cost recovered within 4 months after roughly 12 successful settlements.",
+    "pricing": "UNVALIDATED: a small practice platform fee plus a share of cash actually recovered; all commercial figures in this economics object, including capital_required_pln, are unvalidated.",
+    "retention_or_repeat": "UNVALIDATED: recurring invoice flow creates repeat paid events; historical debtor-response and document-quality outcomes improve case selection."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Verified recovery outcomes build debtor-payment, evidence sufficiency and partner-execution benchmarks",
+    "customer": "Polish bookkeeping practices and invoice-finance firms serving cash-constrained SME creditors",
+    "distribution_mechanism": "Embedded module for accountants, ERP resellers and factors",
+    "offer_and_business_model": "Consented evidence-to-recovery workflow with outcome fee",
+    "payer_and_paid_event": "The creditor or finance partner pays only after recovered cash is matched to the overdue invoice or statutory recovery item",
+    "problem_trigger": "A B2B invoice passes its contractual due date without matched payment"
+  },
+  "founder_fit": [
+    "Data matching and automation suit the founder's skills",
+    "Asynchronous channel sales reduce constant social effort",
+    "Can begin part-time with one accounting partner",
+    "Verified recoveries create a reusable data asset"
+  ],
+  "parent": null,
+  "risks": [
+    "Unauthorized legal-practice or aggressive-collection risk",
+    "KSeF and bank-consent security",
+    "Damage to creditor-customer relationships",
+    "Channel partners may internalize the workflow"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/faktura-ustrukturyzowana-i-struktura-logiczna-fa/",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32011L0007"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Outcome-priced B2B recovery infrastructure embedded in accounting and invoice-finance channels",
+    "control_point": "The consented evidence packet, deadline clock and cash-reconciliation record that determines when a recovery fee is earned",
+    "critical_dependency": "Lawful KSeF and bank-data access plus a recovery workflow reviewed for Polish debt-collection and legal-services boundaries"
+  },
+  "thesis": "With each creditor's consent, combine immutable KSeF receipt dates, invoice terms and bank-payment evidence into accountant-approved recovery packets, then charge only when overdue interest or recovery compensation is actually paid. The product is a transaction rail, not a receivables dashboard: it detects the trigger, preserves evidence, routes the approved action through a qualified legal or accounting partner where needed, and reconciles the recovered cash.",
+  "title": "KSeF Late-Payment Recovery Rail",
+  "uncertainties": [
+    "Recovery conversion by invoice segment",
+    "Accountant willingness to sponsor outcome fees",
+    "Scope of bank-payment matching permissions"
+  ],
+  "version": 1
+}

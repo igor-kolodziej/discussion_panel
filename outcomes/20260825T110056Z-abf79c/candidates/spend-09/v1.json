@@ -1,0 +1,86 @@
+{
+  "candidate_id": "spend-09",
+  "claims": [
+    {
+      "claim_id": "spend-09-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://food.ec.europa.eu/food-safety/food-waste_en"
+      ],
+      "statement": "The European Commission reports more than 58 million tonnes of annual EU food waste with an estimated EUR 132 billion market value."
+    },
+    {
+      "claim_id": "spend-09-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ec.europa.eu/eurostat/statistics-explained/SEPDF/cache/110448.pdf"
+      ],
+      "statement": "Eurostat's 2023 sector table reports about 6.5 million tonnes from restaurants and food services and 4.5 million tonnes from retail and other food distribution in the EU."
+    },
+    {
+      "claim_id": "spend-09-c03",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ec.europa.eu/eurostat/cache/metadata/en/env_wasfw_esms.htm"
+      ],
+      "statement": "Eurostat documents an annual, standardised reporting methodology for food waste by sector, showing that the loss category is measurable even though individual small businesses may not yet log it well."
+    }
+  ],
+  "contrary_evidence": [
+    "Households generate more than half of EU food waste, so the headline market value substantially overstates the business-addressable portion.",
+    "Simple par levels and experienced managers may outperform a model when assortments and demand are stable.",
+    "Existing POS and inventory vendors can add basic forecasts and markdowns."
+  ],
+  "economics": {
+    "acquisition_route": "Run four weeks in shadow mode at 10-20 sites, compare recommendation error with manager forecasts, then let one POS vendor sell only where estimated annual waste supports a clear ROI.",
+    "capital_required_pln": 55000,
+    "founder_net_worth_path": "Two thousand locations averaging 400 PLN monthly would create 9.6m PLN annual recurring revenue before savings fees. At a mature 35% owner-cash margin, 3.36m PLN per year could support cumulative distributions above 10m PLN over five mature years without sale proceeds.",
+    "founder_time": "Serve one category and one POS export at about 3 hours/day, with all production decisions remaining human-approved; keep employment through paid multi-site renewals and stated runway gates.",
+    "gross_margin_basis": "Forecasting and reporting are low-cost software, but POS connectors and rollout support matter; target 72-86% gross margin once a chain is onboarded.",
+    "payback": "Target customer payback within 2 months from reduced ingredient loss; labour and waste baselines must be agreed before the live test.",
+    "pricing": "Assumption to test: 250-900 PLN per site monthly plus 5-10% of verified ingredient-and-disposal savings above a conservative baseline; initial data setup 1500-5000 PLN per chain.",
+    "retention_or_repeat": "Production decisions recur daily and models learn each site; retained value depends on staff using the recommendations and recording exceptions."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A library of item shelf-life, substitution, weather, calendar and site-ramp effects improves cold starts and makes the system useful before a single site has years of clean data.",
+    "customer": "Polish food businesses with 5-100 locations, perishable daily production and digital POS data but no central forecasting team.",
+    "distribution_mechanism": "Polish POS vendors, bakery ingredient wholesalers and franchise consultants resell the product, while a four-week shadow forecast serves as an asynchronous proof.",
+    "offer_and_business_model": "POS-connected forecast that recommends conservative item quantities, captures simple waste counts, suggests timed markdowns and reports forecast error and avoided cost; subscription per site with an optional savings component.",
+    "payer_and_paid_event": "The owner or operations director pays per location and optionally on measured waste-cost reduction; the existing recurring spend is ingredients, production labour, markdown and disposal for unsold goods.",
+    "problem_trigger": "Before each production shift, staff must set item quantities under uncertain demand, and at close they record or discard unsold food without a trusted cost-and-cause view."
+  },
+  "founder_fit": [
+    "Demand forecasting, uncertainty bounds and intervention measurement are core data-science work.",
+    "POS and wholesaler channels enable scalable regional distribution with limited founder-led networking.",
+    "A shadow-mode pilot avoids operational risk and can run alongside a full-time job.",
+    "The model monetises a measurable recurring loss with no inventory ownership or physical expansion."
+  ],
+  "parent": null,
+  "risks": [
+    "Underproduction can lose more gross profit and customer trust than waste savings create.",
+    "Savings claims may be confounded by price, assortment and promotion changes.",
+    "POS integrations can fragment implementation effort.",
+    "Low per-site revenue could create an uneconomic support burden without channel concentration."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://food.ec.europa.eu/food-safety/food-waste_en",
+    "https://ec.europa.eu/eurostat/statistics-explained/SEPDF/cache/110448.pdf",
+    "https://ec.europa.eu/eurostat/cache/metadata/en/env_wasfw_esms.htm"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Per-location operational optimisation SaaS with verified-savings option",
+    "control_point": "The daily production quantity recommendation and close-of-day waste ledger",
+    "critical_dependency": "Consistent item-level POS and waste data plus staff adherence to recommendations and recording"
+  },
+  "thesis": "Give multi-site bakeries, canteens, meal-prep operators and small grocers a simple daily production recommendation and verified waste-cost ledger driven by POS, weather, calendar and promotion data. These operators already buy ingredients and labour that become unsold waste; per-location software plus a modest verified-savings fee can align price to a recurring, countable loss.",
+  "title": "Daily Production and Waste Forecaster for Small Food Chains",
+  "uncertainties": [
+    "The typical waste cost and digital-data quality for Polish chains in each proposed segment are unknown.",
+    "Weather and event data may add little beyond recent sales for some categories.",
+    "Staff adherence, waste logging burden and the fair savings baseline need real pilots.",
+    "All price, margin, location-count and wealth figures are assumptions."
+  ],
+  "version": 1
+}

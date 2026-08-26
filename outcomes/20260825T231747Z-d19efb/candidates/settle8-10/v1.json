@@ -1,0 +1,88 @@
+{
+  "candidate_id": "settle8-10",
+  "claims": [
+    {
+      "claim_id": "settle8-10-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://support.gs1.org/support/solutions/articles/43000734250/",
+        "https://www.gs1.org/standards/edi/solutions"
+      ],
+      "statement": "Verified fact: GS1 EANCOM covers the transaction sequence through invoice and remittance advice and supports automated reconciliation of supplier invoices with receipt information."
+    },
+    {
+      "claim_id": "settle8-10-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://edi-ecom-xml.gs1.org/functional-user-guide/3_6/CN.pdf"
+      ],
+      "statement": "Verified fact: GS1's claims vocabulary includes promotion discounts, quantity discounts, incorrect references, and incorrect charges as adjustment reasons."
+    },
+    {
+      "claim_id": "settle8-10-c3",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://www.gs1.org/sites/gs1/files/docs/eancom/ean02s4/part1/part1toc.htm",
+        "https://edi-ecom-xml.gs1.org/functional-user-guide/3_6/CN.pdf"
+      ],
+      "statement": "Hypothesis (unvalidated): despite standardized messages, mid-sized suppliers have enough unresolved promotion deductions to pay a case-resolution layer and share outcome labels."
+    }
+  ],
+  "contrary_evidence": [
+    "GS1 already defines Commercial Dispute, Claims Notification, invoice, debit/credit, and remittance messages, so standard EDI and incumbents may be sufficient: https://www.gs1.org/sites/gs1/files/docs/eancom/ean02s4/part1/part1toc.htm",
+    "GS1 explicitly says buyers can automate invoice reconciliation with receipt information, reducing novelty in basic matching: https://support.gs1.org/support/solutions/articles/43000734250/"
+  ],
+  "economics": {
+    "acquisition_route": "Offer a fixed-scope historical deduction audit through EDI/finance partners, then convert recurring accounts-receivable workflows.",
+    "capital_required_pln": 45000,
+    "founder_net_worth_path": "Unvalidated scenario: 8 brands at PLN 7,000 MRR in year 2, 25 at PLN 12,000 MRR in year 4, and 40 at PLN 15,000 MRR in year 6 imply PLN 7.2m ARR before recovery fees. At 25% owner earnings or a 3-4x ARR value and 65% ownership, PLN 5m net worth is plausible in years 4-6; absence of measurable incremental recovery in three audits invalidates success-fee economics.",
+    "founder_time": "3-4 hours/day while piloting one retailer format; avoid using any employer-confidential information and recruit an independent FMCG finance adviser.",
+    "gross_margin_basis": "Hypothesis: 65-82%; human dispute work can erode margin, so the product must automate evidence assembly and limit bespoke negotiation.",
+    "payback": "Unvalidated customer hypothesis: verified incremental recoveries exceed annual subscription by at least 3x; only a blinded historical audit can test this.",
+    "pricing": "Unvalidated estimate: PLN 4,000-18,000 monthly plus 3-10% of contractually verified incremental recoveries, with no fee on merely reclassified valid deductions.",
+    "retention_or_repeat": "Retailer deductions and promotions recur continuously; retailer-specific mappings and outcome history improve every cycle."
+  },
+  "fingerprint": {
+    "compounding_advantage": "retailer-specific reason-code mappings and outcome-labeled case patterns improve automation; agreement and claim history becomes the operational memory for renewals",
+    "customer": "mid-sized CPG brands and distributors selling through Polish and Central European grocery, drugstore, and convenience chains",
+    "distribution_mechanism": "FMCG ERP/EDI consultancies, fractional finance leaders, distributors, and a paid historical-deduction recovery audit",
+    "offer_and_business_model": "EDI/email ingestion, promotion-term extraction, line-level claim matching, evidence assembly, workflow with sales, credit-note generation, and recovery analytics",
+    "payer_and_paid_event": "supplier finance or revenue-growth team pays a subscription plus a fee when a deduction is resolved or cash is demonstrably recovered",
+    "problem_trigger": "a retailer remittance arrives short or a debit note cites a promotion discount that finance cannot trace to agreement and sell-out evidence"
+  },
+  "founder_fit": [
+    "The founder understands FMCG data and business processes, subject to strict separation from employer confidential information.",
+    "Document matching, causal checks, and exception classification use AI and quantitative skills.",
+    "A historical audit validates value before a large product build.",
+    "Partner-led B2B distribution avoids a public-facing creator strategy."
+  ],
+  "parent": null,
+  "risks": [
+    "Employer conflict-of-interest and confidentiality boundaries must be explicit and independently reviewed.",
+    "Retailers may not accept machine-generated dispute evidence or expose detailed reason codes.",
+    "Success-fee attribution can be contentious.",
+    "ERP, trade-promotion-management, and EDI vendors may already address the workflow."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://support.gs1.org/support/solutions/articles/43000734250/",
+    "https://www.gs1.org/standards/edi/solutions",
+    "https://edi-ecom-xml.gs1.org/functional-user-guide/3_6/CN.pdf",
+    "https://www.gs1.org/sites/gs1/files/docs/eancom/ean02s4/part1/part1toc.htm"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "commercial deduction claims-resolution exchange",
+    "control_point": "promotion-agreement-to-remittance case file that determines whether a retailer deduction is accepted, disputed, credited, or recovered",
+    "critical_dependency": "access to retailer remittance/deduction detail, promotion terms, POS evidence, and stable product/location identifiers"
+  },
+  "thesis": "Build a claims exchange for mid-sized FMCG suppliers and distributors that joins a promotion agreement, item and location master, sell-in/sell-out evidence, invoice, remittance advice, retailer deduction, credit note, and resolution. It starts supplier-side and charges when a deduction is classified, accepted, disputed with evidence, or recovered. The control point is the commercial-dispute case file, not forecasting or generic EDI transport.",
+  "title": "FMCG Trade-Promotion Deduction Resolution Exchange",
+  "uncertainties": [
+    "The recoverable deduction rate in the target midmarket is not established.",
+    "Retailer data formats and contractual dispute windows need validation.",
+    "It is unknown whether finance, key-account sales, or revenue-growth management owns budget.",
+    "The founder cannot rely on non-public employer data, contacts, or processes for validation."
+  ],
+  "version": 1
+}

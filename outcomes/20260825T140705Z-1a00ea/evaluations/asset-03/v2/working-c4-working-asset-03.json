@@ -1,0 +1,119 @@
+{
+  "assumptions": [
+    "The initial business uses licensed third-party diagnostics rather than attempting to reproduce AVILOO or DEKRA testing algorithms from scratch.",
+    "Partner technicians perform physical tests, allowing the founder to remain within approximately 15-20 hours of weekly involvement.",
+    "No exclusive Polish data-access, dealer-distribution, insurer-acceptance, or fleet contract exists beyond the evidence provided.",
+    "The proposed exchange launches only after certificate-linked transactions demonstrate repeatable demand."
+  ],
+  "base_score": 4.32,
+  "candidate_id": "asset-03",
+  "candidate_sha256": "02c30ddf1e7ebe72cd6fa7171e97d08d73be0cb11fe254cf574f219d29c6e70b",
+  "candidate_version": 2,
+  "constrained_score": 4.12,
+  "evaluation_type": "working",
+  "evidence_needed_for_higher_score": "A paid Polish dealer or fleet pilot showing incremental conversion or sale-price lift, repeat orders, all-in contribution after license and technician costs, supported-model and inconclusive-test rates, and buyer or lender acceptance relative to incumbent certificates.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "Battery condition is unusually important to used-EV value, while legal access rights and the coming passport do not yet create uniform legacy-fleet evidence. Linking health evidence to realized Polish resale outcomes is a coherent insight, although independent testing itself is already established.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Uncertainty about remaining battery capacity can impair buyer trust and valuation, and incumbent certificate sales demonstrate some willingness to pay. However, Polish sale-price or conversion lift is unmeasured, and observed EUR 40 auction and EUR 99 retail prices constrain the plausible willingness to pay for another certificate.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "An inventory-light certificate and transaction-fee model can start within the stated capital, but each vehicle normally yields one certificate, contribution margin is unvalidated, and technician, license, support, liability, and failed-test costs may consume the pricing envelope. The path requiring roughly 15000 annual certificates or equivalent fleet GMV is ambitious without demonstrated repeat acquisition.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Polish dealers and fleet lessors are a sufficiently concrete first segment, and the EV installed base should grow. The current electrically chargeable fleet remains early, however, and the evidence does not establish the annual Polish remarketing volume addressable outside incumbent auction channels.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "AVILOO and DEKRA already possess model-specific algorithms and test databases, while BCA already embeds AVILOO reports in a scaled auction. A Poland-specific transaction dataset could eventually create a niche position, but the entrant begins without superior testing, exclusive inventory, institutional acceptance, or transaction liquidity.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "Validated certificate-linked outcomes could extend into fleet remarketing, residual-value analytics, lending, insurance, warranties, and battery repurposing. These adjacencies are logically related, but most require institutional acceptance that has not yet been demonstrated.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "A proprietary local dataset connecting tests, bids, and realized resale prices could compound if the platform controls enough transactions. Initially the licensed certificate is substitutable, interfaces remain fragmented, and better-capitalized diagnostic or auction incumbents can collect the same outcome data through their existing channels.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "The packet does not establish a material price, accuracy, coverage, speed, trust, or distribution advantage over AVILOO, DEKRA, or BCA. Local integration and localized residual-value evidence are plausible future advantages rather than current reasons for customers to switch.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "A growing EV fleet, formal state-of-health access rights, and the pre-2027 legacy-fleet gap support timely experimentation. The same regulatory momentum may later improve standardized data access and reduce differentiation based solely on obtaining battery information.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "Diagnostic shops, dealers, and fleet lessors provide identifiable B2B routes and the family renewable-energy context may help introductions. Repeatable CAC and partner conversion are unknown, and the strongest incumbent proposition is already embedded at the point of auction rather than sold as a separate workflow.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "The founder's analytics background and use of licensed partner technicians make a bounded pilot feasible within available capital and time. Model coverage, fragmented technical interfaces, test failure, professional indemnity, certificate disputes, and enterprise selling remain material, partly non-software execution risks.",
+      "score": 5,
+      "status": "scored"
+    }
+  ],
+  "final_score": 4.1,
+  "highest_value_structural_change": "Use an incumbent diagnostic under license and become the embedded Polish fleet-remarketing and residual-value intelligence layer, securing exclusive certificate-linked transaction outcomes instead of competing primarily as another certificate vendor.",
+  "interaction_adjustment": -0.2,
+  "judge_id": "c4-working-asset-03",
+  "main_structural_strength": "The business can turn a one-off diagnostic into a compounding local asset by binding battery-health evidence to bids and realized resale outcomes at the remarketing transaction.",
+  "primary_score_limiter": "The entrant has no demonstrated advantage or exclusive channel against diagnostic and auction incumbents that already combine credible testing, model databases, and low-priced transaction-integrated reports.",
+  "qualified": false,
+  "raw_response_path": "artifacts/research/raw-c4-working-asset-03.json",
+  "raw_response_sha256": "5f90662481a6c825d2227d0d1bb5a85d42e0f2ad0cf2e97822e41343a91d9a17",
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 2,
+  "strongest_disconfirming_evidence": "BCA already embeds AVILOO battery grading in European BEV auctions for EUR 40 per report, while AVILOO sells a EUR 99 retail certificate, directly contradicting both novelty and a materially higher standalone pricing premise.",
+  "unrounded_score": 4.12
+}

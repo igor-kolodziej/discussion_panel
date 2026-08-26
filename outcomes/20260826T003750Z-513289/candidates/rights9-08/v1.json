@@ -1,0 +1,69 @@
+{
+  "candidate_id": "rights9-08",
+  "claims": [
+    {
+      "claim_id": "rights9-08-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/topics/waste-and-recycling/batteries_en"
+      ],
+      "statement": "EU battery rules address the full lifecycle from sourcing through collection, recycling and repurposing."
+    },
+    {
+      "claim_id": "rights9-08-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1542/oj"
+      ],
+      "statement": "Regulation (EU) 2023/1542 establishes electronic battery-passport requirements for specified battery categories."
+    }
+  ],
+  "contrary_evidence": [],
+  "economics": {
+    "acquisition_route": "Pilot with one Polish commercial fleet and two stationary-storage buyers",
+    "capital_required_pln": 80000,
+    "founder_net_worth_path": "Unvalidated: 100000 monitored batteries plus 5000 annual transfers could support 7m PLN recurring and transaction revenue, enabling over 5m PLN founder equity in years 6-9",
+    "founder_time": "3-5 hours/day; physical diagnostics performed by partners",
+    "gross_margin_basis": "Unvalidated: 70-85% after data normalization and transaction support",
+    "payback": "Unvalidated: 18-24 months at 5000 monitored batteries",
+    "pricing": "Unvalidated: 100-300 PLN per battery/year plus 3-6% of resale value",
+    "retention_or_repeat": "Portfolio monitoring recurs annually; transfers recur with retirement cycles"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Observed degradation, bid and realized-resale data improve valuation and attract both sides",
+    "customer": "EV fleets, industrial battery owners, refurbishers and stationary-storage integrators",
+    "distribution_mechanism": "Fleet-management platforms, leasing companies and battery-service partners",
+    "offer_and_business_model": "Consent-based passport data room, normalized state-of-health model, forward purchase options and controlled bidding",
+    "payer_and_paid_event": "Winning buyer pays a success fee when an option or transfer contract is signed; owners can pay for portfolio analytics",
+    "problem_trigger": "An owner plans battery retirement but lacks trusted buyers able to assess residual value"
+  },
+  "founder_fit": [
+    "Strong fit with data science and renewable storage",
+    "Asset-light model fits capital constraints",
+    "Valuation automation creates scalable IP"
+  ],
+  "parent": null,
+  "risks": [
+    "OEM data lock-in",
+    "Safety and warranty liability",
+    "Long time to marketplace liquidity"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://environment.ec.europa.eu/topics/waste-and-recycling/batteries_en",
+    "https://eur-lex.europa.eu/eli/reg/2023/1542/oj"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "data-rights and future-asset exchange",
+    "control_point": "permissioned longitudinal battery record and residual-value benchmark",
+    "critical_dependency": "Owners must have lawful access to sufficiently interoperable battery data and transferable packs"
+  },
+  "thesis": "Let fleet and storage operators grant qualified refurbishers time-limited access to battery records and bid for future second-life purchase rights before packs are retired.",
+  "title": "Battery Passport Second-Life Rights Exchange",
+  "uncertainties": [
+    "Data access, supply timing and willingness to pay are unvalidated",
+    "Polish second-life transaction volume is unknown"
+  ],
+  "version": 1
+}

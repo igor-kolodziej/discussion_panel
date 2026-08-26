@@ -1,0 +1,500 @@
+{
+  "binding_limiters": [
+    "There is no evidence that a partner will pay for the proposed layer or that it materially outperforms spreadsheets and incumbent products, so the business's distribution, economics, and differentiation remain jointly unproven."
+  ],
+  "binding_score_floor": 4.9,
+  "campaign": {
+    "campaign_id": "campaign-20260825T110052Z-c143b1",
+    "cohort_number": 9,
+    "gap_brief_path": "briefs/cohort-9.json",
+    "gap_brief_sha256": "100bdf97a60d7e960762836018d4e19361af56eca93292d3e822c67b3ae69efe"
+  },
+  "candidates": [
+    {
+      "binding_limiters": [
+        "There is no evidence that a partner will pay for the proposed layer or that it materially outperforms spreadsheets and incumbent products, so the business's distribution, economics, and differentiation remain jointly unproven."
+      ],
+      "binding_score_floor": 4.9,
+      "candidate_artifact": "candidates/control9-03/v5.json",
+      "candidate_id": "control9-03",
+      "candidate_sha256": "4a3a3e03d086008ffcc79037d42ec5aabd3117365e469e1032c274bedeb00477",
+      "candidate_version": 5,
+      "capital_required_pln_numeric": 45000,
+      "contested": false,
+      "evaluation_artifacts": [
+        {
+          "evaluation_type": "holdout_native",
+          "judge_id": "c9-holdout-control9-03-j1",
+          "path": "holdout/control9-03/v5/native-c9-holdout-control9-03-j1.json",
+          "sha256": "578ce853ed94926953a88eb60c51196c0a713cac87003bfb847d390ad1dafd5f"
+        },
+        {
+          "evaluation_type": "holdout_native",
+          "judge_id": "c9-holdout-control9-03-j2",
+          "path": "holdout/control9-03/v5/native-c9-holdout-control9-03-j2.json",
+          "sha256": "5afb341fe714f92b6239564b966a5b125d30b0003c347b186908ea2fcee58b1b"
+        }
+      ],
+      "evaluation_diagnostics": [
+        {
+          "evaluation_type": "holdout_native",
+          "evidence_needed_for_higher_score": "A signed 12-month multi-entity partner minimum; a representative blinded benchmark showing materially better regulator-format pass rate and repair time than the partner's current process and named incumbents; measured human-review minutes, onboarding cost, gross margin, and partner-level CAC payback; documented security, liability, and cross-tenant data-rights acceptance; and evidence that register changes and annual cycles create enough repeat usage and renewal value.",
+          "final_score": 5,
+          "highest_value_structural_change": "Move the control point upstream from episodic filing repair to a continuous operator-side acceptance gate for every new or changed ICT contract, while retaining official register preflight as the measurable output. Contracting for embedded use across the partner's whole portfolio would create more frequent paid events, deeper workflow switching costs, and a better correction corpus; this change should be pursued only if a partner benchmark proves it does not recreate a costly system of record.",
+          "judge_id": "c9-holdout-control9-03-j1",
+          "main_structural_strength": "A single embedded operator relationship can aggregate many regulated entities, while the paid benchmark and minimum-volume condition prevent a speculative production build and make superior pass rate or repair time the commercial proof point.",
+          "primary_score_limiter": "There is no evidence that operators will pay the proposed minimum for a narrow repair layer often enough to sustain attractive economics, nor that its performance or defensibility exceeds existing full-register products and internal workflows.",
+          "strongest_disconfirming_evidence": "A Warsaw-based exact incumbent already sells automated validation and full-register functionality for EUR 2,000-8,000 annually, Vendorica and ReportAct offer overlapping recurring products, and official forms remain free; this makes the proposed 5,000-7,000 PLN per-entity repair economics and durable differentiation particularly uncertain."
+        },
+        {
+          "evaluation_type": "holdout_native",
+          "evidence_needed_for_higher_score": "A signed and prepaid 12-month multi-entity partner minimum, paired with a representative multilingual benchmark showing materially better validation pass rates or repair time than the partner's current process, bounded human-review minutes, acceptable security and liability terms, and partner-level CAC payback with a credible renewal trigger.",
+          "final_score": 4.9,
+          "highest_value_structural_change": "Make the repair gate the partner's continuous acceptance record for every material register or contract change, not only an annual or rejected-submission tool, and bind that workflow through a prepaid anchor agreement that grants narrowly permissioned reuse of correction patterns. This would improve usage frequency, switching cost, and defensibility without becoming another full system of record.",
+          "judge_id": "c9-holdout-control9-03-j2",
+          "main_structural_strength": "A benchmark-gated sale to one portfolio operator can validate both performance and distribution across multiple regulated entities before substantial capital is committed.",
+          "primary_score_limiter": "There is no evidence that a partner will pay for the proposed layer or that it materially outperforms spreadsheets and incumbent products, so the business's distribution, economics, and differentiation remain jointly unproven.",
+          "strongest_disconfirming_evidence": "A Warsaw-based exact incumbent already sells automated DORA register preparation and validation for EUR 2,000-8,000 annually, while Vendorica and ReportAct provide overlapping recurring products and official regulator tooling remains free."
+        }
+      ],
+      "external_scores": [],
+      "native_distribution_floor": 5,
+      "native_economics_floor": 5,
+      "native_scores": [
+        5,
+        4.9
+      ],
+      "official_native_score": 4.9,
+      "qualified": false,
+      "title": "White-Label DORA Register Repair Gate"
+    },
+    {
+      "binding_limiters": [
+        "The single proposed platform partner is simultaneously the payer, distribution channel, integration gate, and possible source of VoP rights, yet there is no commitment or evidence that contract value and activation can cover procurement, integration, security, revenue-share, support, and liability costs."
+      ],
+      "binding_score_floor": 4.8,
+      "candidate_artifact": "candidates/settle9-02/v5.json",
+      "candidate_id": "settle9-02",
+      "candidate_sha256": "afad973c422ddac19b84fdd37e6d0753c23c4ba6303520f986b16718af9aeeb2",
+      "candidate_version": 5,
+      "capital_required_pln_numeric": 50000,
+      "contested": false,
+      "evaluation_artifacts": [
+        {
+          "evaluation_type": "holdout_native",
+          "judge_id": "c9-holdout-settle9-02-j1",
+          "path": "holdout/settle9-02/v5/native-c9-holdout-settle9-02-j1.json",
+          "sha256": "d25bf4efd9c4d40003c654b7fef931a6e48deb8753a97df60a2af0e289fcd8e1"
+        },
+        {
+          "evaluation_type": "holdout_native",
+          "judge_id": "c9-holdout-settle9-02-j2",
+          "path": "holdout/settle9-02/v5/native-c9-holdout-settle9-02-j2.json",
+          "sha256": "bf875b06c3e075479a2472d3155cad00c0341139eb689b4849670fd575c56e0f"
+        }
+      ],
+      "evaluation_diagnostics": [
+        {
+          "evaluation_type": "holdout_native",
+          "evidence_needed_for_higher_score": "A paid, scoped pilot or binding conditional agreement with a Polish accounting or AP platform that specifies distribution, data rights, implementation effort, security obligations, and commercial terms, followed by measured activation, supplier completion, false-match, exception-labor, retention, and contribution-margin results.",
+          "final_score": 4.9,
+          "highest_value_structural_change": "Decouple economic proof from a full OEM deployment by making the first offer a low-integration, paid shadow-mode pilot for one portfolio operator, with registry, remediation, approval, and audit value that works without reusable VoP; require measured use and explicit data rights before undertaking production platform integration.",
+          "judge_id": "c9-holdout-settle9-02-j1",
+          "main_structural_strength": "Embedding prevention at the host's supplier-change and payment gate can amortize one control integration across a managed-company portfolio while monetizing workflow and evidence rather than the free underlying checks.",
+          "primary_score_limiter": "The same uncommitted platform relationship must supply the payer, distribution, integration surface, and any VoP or learning rights, leaving the channel, economics, and prospective moat jointly unresolved.",
+          "strongest_disconfirming_evidence": "The EPC interface is restricted to inter-PSP communication, Nordea illustrates that a corporate API may expose VoP only inside payment initiation, and both the mandated VoP check and Polish registry lookup are free, sharply limiting proprietary access and standalone pricing power."
+        },
+        {
+          "evaluation_type": "holdout_native",
+          "evidence_needed_for_higher_score": "A paid platform pilot or binding commercial term sheet showing an annual minimum, activation or usage economics, integration scope, sales-cycle burden, revenue share, and explicit data rights, followed by measured activation, supplier completion, false-match, exception-workload, implementation-cost, and renewal-intent results with and without reusable VoP evidence.",
+          "final_score": 4.8,
+          "highest_value_structural_change": "Require the first paid offering to be a standardized, registry-and-remediation-only module with a prepaid platform minimum and a capped integration scope; make VoP evidence an optional host-supplied enhancement. This decouples commercial proof from uncertain bank data rights and prevents bespoke integration work from masking weak unit economics.",
+          "judge_id": "c9-holdout-settle9-02-j2",
+          "main_structural_strength": "The module sits at a high-value supplier-change control point and uses one host integration to combine embedded distribution, portfolio reach, and recurring workflow usage without requiring direct SME selling or direct EPC access.",
+          "primary_score_limiter": "The single proposed platform partner is simultaneously the payer, distribution channel, integration gate, and possible source of VoP rights, yet there is no commitment or evidence that contract value and activation can cover procurement, integration, security, revenue-share, support, and liability costs.",
+          "strongest_disconfirming_evidence": "The core VoP check must be free to payment-service users and is not generally exposed to independent corporate applications, while established vendors already sell overlapping supplier-validation and approval workflows; this sharply limits standalone verification pricing and leaves the platform able to build, buy from an incumbent, or rely on bank-native controls."
+        }
+      ],
+      "external_scores": [],
+      "native_distribution_floor": 4.5,
+      "native_economics_floor": 4.5,
+      "native_scores": [
+        4.9,
+        4.8
+      ],
+      "official_native_score": 4.8,
+      "qualified": false,
+      "title": "Embedded Supplier-Change Control Module"
+    }
+  ],
+  "comparison": "strictly_greater_than",
+  "failed_jobs": [],
+  "founder_sha256": "2110e393cf8d266906924a394ac5764ce8470a79a76aba7c43555e742ef24f97",
+  "highest_working_score": 5.6,
+  "no_finalist_reason": null,
+  "official_score": 4.9,
+  "portfolio_decision": {
+    "amendment_artifacts": [],
+    "candidate_decisions": [
+      {
+        "candidate_id": "control9-02",
+        "candidate_sha256": "fb29a3b228fb676496c032ac203d82cf735abbfbc5a2fe607ac8439caffc7a56",
+        "candidate_version": 2,
+        "disposition": "not_selected",
+        "fatal_claim_ids": [],
+        "fatal_reason": null,
+        "rationale": "Outside the deterministic development prefix after recomputed working-score ranking; technician adoption, certificate scope, buyer urgency, channel access, price, and recurring economics remain adverse but nonfatal uncertainty."
+      },
+      {
+        "candidate_id": "control9-03",
+        "candidate_sha256": "612b269fa5b96fbc2891787bcd7cd575d2a83c4ee3cc7408e53a75eb34374e10",
+        "candidate_version": 2,
+        "disposition": "develop",
+        "fatal_claim_ids": [],
+        "fatal_reason": null,
+        "rationale": "Selected in the deterministic top development prefix by recomputed working score and configured tie-breaks; confidential contract access, official-tool substitution, channel commitment, security burden, pricing, and repeat demand remain adverse but nonfatal uncertainty."
+      },
+      {
+        "candidate_id": "control9-07",
+        "candidate_sha256": "a17968a3cd8291e808ebd0dc59319106baa0662b6bca691f98287e6f7e24eaef",
+        "candidate_version": 2,
+        "disposition": "not_selected",
+        "fatal_claim_ids": [],
+        "fatal_reason": null,
+        "rationale": "Outside the deterministic development prefix after recomputed working-score ranking; shipper data cooperation, carrier integration authority, incumbent forwarding capability, acquisition, liability, and recurring value remain adverse but nonfatal uncertainty."
+      },
+      {
+        "candidate_id": "rights9-09",
+        "candidate_sha256": "08f5ad833d9c40305683ff2847a7bc24b5dd20728510aba42981535c9ecd266e",
+        "candidate_version": 2,
+        "disposition": "not_selected",
+        "fatal_claim_ids": [],
+        "fatal_reason": null,
+        "rationale": "Outside the deterministic development prefix after recomputed working-score ranking; recycler commitment, battery classification, transport rules, price discovery, transaction frequency, and contribution margin remain adverse but nonfatal uncertainty."
+      },
+      {
+        "candidate_id": "settle9-02",
+        "candidate_sha256": "e98744971196a686bfc556f90def1b24fb128954db54251e2d1f8395bbeafe8c",
+        "candidate_version": 2,
+        "disposition": "develop",
+        "fatal_claim_ids": [],
+        "fatal_reason": null,
+        "rationale": "Selected in the deterministic top development prefix by recomputed working score and configured tie-breaks; bank verification access, false-confidence liability, ERP integration, paid demand, partner incentives, and repeat economics remain adverse but nonfatal uncertainty."
+      },
+      {
+        "candidate_id": "settle9-04",
+        "candidate_sha256": "0fe443f79c6bc5c398ea6fe38bc63e3adb9c3d1317331cc2a9dc206279622114",
+        "candidate_version": 2,
+        "disposition": "not_selected",
+        "fatal_claim_ids": [],
+        "fatal_reason": null,
+        "rationale": "Outside the deterministic development prefix after recomputed working-score ranking; operator data access, retailer authority, incumbent reporting, exception materiality, liability, and willingness to pay remain adverse but nonfatal uncertainty."
+      },
+      {
+        "candidate_id": "settle9-06",
+        "candidate_sha256": "c3da658673ca8fb54cb0aa65c3515591f7323e73775f26f79275ae837c89411c",
+        "candidate_version": 2,
+        "disposition": "develop",
+        "fatal_claim_ids": [],
+        "fatal_reason": null,
+        "rationale": "Selected in the deterministic top development prefix by recomputed working score and configured tie-breaks; signed-proof access, carrier and factor participation, incumbent overlap, pricing, liability, and network ignition remain adverse but nonfatal uncertainty."
+      },
+      {
+        "candidate_id": "settle9-11",
+        "candidate_sha256": "d61cf4fb6c649cae0faf9868d180eb1fd7a1ce5f5f1f2fd9e08d477e94e9dc1c",
+        "candidate_version": 2,
+        "disposition": "develop",
+        "fatal_claim_ids": [],
+        "fatal_reason": null,
+        "rationale": "Selected as the deterministic top development candidate; project-party adoption, authoritative evidence access, legal interpretation boundaries, public procurement integration, pricing, and repeatability remain adverse but nonfatal uncertainty."
+      }
+    ],
+    "development_decision_artifact": {
+      "path": "portfolio/development-decision.json",
+      "sha256": "21b92eda9916844b219e36ff6c5f165a205b3d50a5a7d38a19e969b263ca634c"
+    },
+    "missing_archetypes": [],
+    "selection_artifact": {
+      "path": "portfolio/selection.json",
+      "sha256": "b73fec3cecbe9f6735c6c253bcc4ad7a73362a8d04fbc07dec38ab91b9a6ec36"
+    },
+    "semantic_audit": {
+      "candidate_count": 8,
+      "commercial_archetype_count": 8,
+      "commercial_archetype_counts": {
+        "embedded transaction assurance workflow": 1,
+        "field service compliance saas": 1,
+        "multi sided clearing reconciliation middleware": 1,
+        "pre border data gateway": 1,
+        "project payment gate workflow": 1,
+        "proof to pay network embedded in logistics finance": 1,
+        "regulated treatment capacity exchange": 1,
+        "shared regulatory data utility": 1
+      },
+      "control_point_counts": {
+        "approval of supplier master creation or bank detail change immediately before payment authorization": 1,
+        "forward recycler capacity inventory tied to accepted chemistries": 1,
+        "release of a completed shipment invoice for approval or factoring": 1,
+        "retailer s approval of deposit system operator statements and settlement invoices": 1,
+        "submission and approval of a contractor draw or subcontractor direct payment evidence packet": 1,
+        "the complete and valid ens data packet required before an inbound consignment arrives at the eu border": 1,
+        "the contract approval and reporting gate at which an ict arrangement must be represented in the dora register": 1,
+        "the credential checked work record and equipment card update created at completion of regulated service": 1
+      },
+      "critical_dependency_counts": {
+        "accurate translation of polish cro and changing eu certification rules into low friction technician workflows": 1,
+        "fast multilingual participation by non eu shippers and accurate handoff into carriers existing ics2 or ncts filing providers": 1,
+        "high accuracy entity resolution and contract extraction across confidential inconsistent source documents": 1,
+        "licensed recyclers must expose reliable capacity and permit third party reservations": 1,
+        "machine readable store return machine pickup and operator statement data plus willingness of channel partners to support a neutral layer": 1,
+        "partner api access to official registry and bank provided verification of payee results without representing the service as a bank grade guarantee": 1,
+        "project participants must upload authoritative contracts acceptance records and payment proof legal interpretation remains with qualified advisers": 1,
+        "tms factor distribution and dependable access to signed delivery evidence without claiming that the product itself is an efti certified platform": 1
+      }
+    }
+  },
+  "qualification_label": null,
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "run_id": "20260826T003750Z-513289",
+  "run_status": "no_qualifier",
+  "schema_version": 2,
+  "selected_candidate_id": "control9-03",
+  "selected_candidate_version": 5,
+  "strongest_candidates": [
+    {
+      "binding_limiters": [
+        "There is no evidence that a partner will pay for the proposed layer or that it materially outperforms spreadsheets and incumbent products, so the business's distribution, economics, and differentiation remain jointly unproven."
+      ],
+      "binding_score_floor": 4.9,
+      "candidate_id": "control9-03",
+      "candidate_version": 5,
+      "contested": false,
+      "official_native_score": 4.9,
+      "qualified": false,
+      "title": "White-Label DORA Register Repair Gate"
+    },
+    {
+      "binding_limiters": [
+        "The single proposed platform partner is simultaneously the payer, distribution channel, integration gate, and possible source of VoP rights, yet there is no commitment or evidence that contract value and activation can cover procurement, integration, security, revenue-share, support, and liability costs."
+      ],
+      "binding_score_floor": 4.8,
+      "candidate_id": "settle9-02",
+      "candidate_version": 5,
+      "contested": false,
+      "official_native_score": 4.8,
+      "qualified": false,
+      "title": "Embedded Supplier-Change Control Module"
+    }
+  ],
+  "terminal_stage": "holdout",
+  "threshold": 8.5,
+  "unresolved_evidence": [
+    "A signed 12-month multi-entity partner minimum; a representative blinded benchmark showing materially better regulator-format pass rate and repair time than the partner's current process and named incumbents; measured human-review minutes, onboarding cost, gross margin, and partner-level CAC payback; documented security, liability, and cross-tenant data-rights acceptance; and evidence that register changes and annual cycles create enough repeat usage and renewal value.",
+    "A signed and prepaid 12-month multi-entity partner minimum, paired with a representative multilingual benchmark showing materially better validation pass rates or repair time than the partner's current process, bounded human-review minutes, acceptable security and liability terms, and partner-level CAC payback with a credible renewal trigger."
+  ],
+  "working_evaluation_coverage": {
+    "complete": true,
+    "development": {
+      "candidate_count": 4,
+      "complete": true,
+      "completed_count": 4,
+      "duplicates": [],
+      "missing": [],
+      "records": [
+        {
+          "candidate_id": "control9-03",
+          "candidate_sha256": "19cc56ecf0faeeed9071f2faac05511afdc9c5f6e929737cffe0d25be18c689b",
+          "candidate_stage": "development",
+          "candidate_version": 4,
+          "distribution_score": 5,
+          "economics_score": 5,
+          "evaluation_path": "evaluations/control9-03/v4/working-c9-dev-working-control9-03.json",
+          "evaluation_sha256": "4ebada0bb8ea14564c3f5c94f5e4e31a2d928db910a552c3493a5919afec8c48",
+          "evidence_needed_for_higher_score": "A signed 12-month multi-entity minimum-volume contract, accompanied by a benchmark on representative multilingual registers that shows materially better pass rate or repair time than the partner's current process and documents human-review minutes, onboarding cost, security acceptance, liability allocation, gross margin, and permitted reuse of correction data.",
+          "final_score": 5.1,
+          "judge_id": "c9-dev-working-control9-03",
+          "primary_score_limiter": "There is no evidence that an outsourced compliance or audit operator will accept the annual minimum or that savings after integration, security, specialist review, and human exception handling are large enough to support the proposed margins and renewal.",
+          "strongest_disconfirming_evidence": "A Warsaw-based incumbent already sells an automated full DORA register product, Vendorica overlaps on AI extraction and reconciliation, ReportAct offers a lower-entry recurring alternative, and official spreadsheet and validation materials are free; together these weaken both differentiation and the premise that a separate repair layer will command durable budget."
+        },
+        {
+          "candidate_id": "settle9-02",
+          "candidate_sha256": "f61cbb1d40830c0f026a96a0f8f587353ee6f3487d76822832bfc355dc55cf68",
+          "candidate_stage": "development",
+          "candidate_version": 4,
+          "distribution_score": 5.5,
+          "economics_score": 5.5,
+          "evaluation_path": "evaluations/settle9-02/v4/working-c9-dev-working-settle9-02.json",
+          "evaluation_sha256": "63ec74ed9498bd59e3f0a4c34ff688d2e6460dab8b418aba5e4886e3d477f155",
+          "evidence_needed_for_higher_score": "A paid or contractually priced pilot with a named Polish accounting or AP platform that specifies integration and data rights, demonstrates the registry-and-remediation workflow remains valuable without reusable VoP access, and measures activated entities, supplier-change volume, exception labor, implementation cost, gross margin, sales-cycle effort, renewal intent and loss-or-work reduction.",
+          "final_score": 5.6,
+          "judge_id": "c9-dev-working-settle9-02",
+          "primary_score_limiter": "The first platform contract is simultaneously the buyer, distribution channel, integration surface and source of any lawful VoP evidence, while willingness to pay, activation, implementation burden, margins and renewal are all unresolved.",
+          "strongest_disconfirming_evidence": "The core VoP check must be free to payment-service users and is not generically available to an independent AP application, while established vendors already sell overlapping verification, onboarding and audit workflows; this removes commodity-check pricing power and makes host adoption depend on differentiated surrounding workflow value."
+        },
+        {
+          "candidate_id": "settle9-06",
+          "candidate_sha256": "91925e5e61aa6b2b506b79aaaeb068f3b0bf32f59fa985a942692e97c66773af",
+          "candidate_stage": "development",
+          "candidate_version": 4,
+          "distribution_score": 4,
+          "economics_score": 5,
+          "evaluation_path": "evaluations/settle9-06/v4/working-c9-dev-working-settle9-06.json",
+          "evaluation_sha256": "b4f22e1d4f0b573e9ba40c690399ff2deca673717eaba19549d361236f3d28c2",
+          "evidence_needed_for_higher_score": "A signed paid backtest with a real factor; permissioned packets and baseline data on defect incidence, delay, loss, and manual cost; blinded backtest results for straight-through clearance, false positives, false negatives, and minutes per exception; conversion to paid implementation, authorized production access, and a portfolio minimum; then observed account contribution, implementation payback, renewal, and evidence that reusable mappings and rules improve the second deployment.",
+          "final_score": 4.7,
+          "judge_id": "c9-dev-working-settle9-06",
+          "primary_score_limiter": "There is no direct evidence that a factor will buy the backtest, grant the required production access, accept a recurring minimum, or renew, and there are no measured account economics or exception-operation results to show that this becomes reusable high-margin software rather than bespoke services.",
+          "strongest_disconfirming_evidence": "Transporeon already provides payment-ready freight-invoice verification and dispute workflow using native transport data, while Dashdoc already connects eCMR evidence and invoicing; these overlaps show that workflow owners can bundle much of the proposed value and possess stronger data and distribution positions."
+        },
+        {
+          "candidate_id": "settle9-11",
+          "candidate_sha256": "66d58949ea1d7f029ae752d194f77dd5309b5ccee825a9eaf494ced98b71ddb5",
+          "candidate_stage": "development",
+          "candidate_version": 4,
+          "distribution_score": 4,
+          "economics_score": 4.5,
+          "evaluation_path": "evaluations/settle9-11/v4/working-c9-dev-working-settle9-11.json",
+          "evaluation_sha256": "d458c80cbc8312e94f830aa00e07364e7241106b936869166051874c05cbca34",
+          "evidence_needed_for_higher_score": "A paid incumbent pilot or binding commercial commitment covering multiple projects, with an explicit minimum fee, pricing unit, revenue share, activation obligation, and partner ownership of customer onboarding and first-line support. A permissioned before-and-after pilot measuring the incidence and cash value of curable evidence defects, administrator hours, rejected draws, and days to payment attributable to the module. Observed configuration, specialist-review, integration, security, and ongoing maintenance hours across several projects using the same authority/form family, sufficient to estimate gross margin and payback. Contractual evidence that required records can be accessed and that de-identified exception/cure labels may be reused across the partner portfolio under appropriate privacy, retention, and audit controls. Evidence of portfolio activation and renewal behavior showing that value persists across project turnover rather than ending after one implementation.",
+          "final_score": 4.7,
+          "judge_id": "c9-dev-working-settle9-11",
+          "primary_score_limiter": "The same uncommitted incumbent partner must provide distribution, integration access, workflow data, pricing acceptance, portfolio activation, support capacity, and protection against appropriation, leaving economics and control jointly unproven.",
+          "strongest_disconfirming_evidence": "Free PEF infrastructure and existing PlanRadar, Archdesk, and PROGPOL document/payment workflows show that much of the surrounding job is already supplied, while PlanRadar's published per-user pricing indicates strong price pressure; together they support the risk that this is an absorbable incumbent feature rather than a standalone high-margin business."
+        }
+      ]
+    },
+    "highest_working_score": 5.6,
+    "research": {
+      "candidate_count": 8,
+      "complete": true,
+      "completed_count": 8,
+      "duplicates": [],
+      "missing": [],
+      "records": [
+        {
+          "candidate_id": "control9-02",
+          "candidate_sha256": "fb29a3b228fb676496c032ac203d82cf735abbfbc5a2fe607ac8439caffc7a56",
+          "candidate_stage": "research",
+          "candidate_version": 2,
+          "distribution_score": 4.1,
+          "economics_score": 4.6,
+          "evaluation_path": "evaluations/control9-02/v2/working-c9-working-control9-02.json",
+          "evaluation_sha256": "41c59b5caed54d96801d6940d1dfaf13a9892df54d9a169a5fef515226fb5a72",
+          "evidence_needed_for_higher_score": "A multi-firm paid pilot should show a material reduction in technician minutes per job or incremental maintenance revenue versus the best incumbent, conversion at sustainable pricing, low-touch onboarding and support, six-to-twelve-month retention, an accurate CRO transfer workflow, and a committed channel with measured CAC and payback.",
+          "final_score": 4.4,
+          "judge_id": "c9-working-control9-02",
+          "primary_score_limiter": "The proposed product lacks a demonstrated behavior-changing advantage or protected distribution control point against multiple direct Polish substitutes, including a free tier, which in turn caps pricing power and makes the customer share required for the wealth path difficult to acquire economically.",
+          "strongest_disconfirming_evidence": "Montak already offers the central proposed bundle—HVAC protocols, F-gas reminders, equipment history, and recurring inspections—with a non-expiring free tier and paid plans at 199 and 399 PLN per month, while three additional Polish products overlap the same workflow."
+        },
+        {
+          "candidate_id": "control9-03",
+          "candidate_sha256": "612b269fa5b96fbc2891787bcd7cd575d2a83c4ee3cc7408e53a75eb34374e10",
+          "candidate_stage": "research",
+          "candidate_version": 2,
+          "distribution_score": 4.2,
+          "economics_score": 5.3,
+          "evaluation_path": "evaluations/control9-03/v2/working-c9-working-control9-03.json",
+          "evaluation_sha256": "5dcb0d3dbc5ec810b2a7ed55a345d8ec884d2fcb10037a9c11339d6d35f2e5d4",
+          "evidence_needed_for_higher_score": "Obtain a paid pilot or binding portfolio commitment from a compliance or audit partner; benchmark field-level precision, exception-review minutes, and regulator-format pass rates on representative multilingual contracts against both manual work and at least one incumbent; document security and procurement requirements; and measure buyer price acceptance, partner share, onboarding effort, contract-change frequency, renewal intent, CAC, and expected payback across several independent entities.",
+          "final_score": 4.7,
+          "judge_id": "c9-working-control9-03",
+          "primary_score_limiter": "There is no demonstrated material advantage or controlled distribution channel against an exact local incumbent, two additional priced substitutes, and a free internal workflow; this makes the otherwise plausible SaaS economics and founder-wealth path depend on simultaneous unproven channel, accuracy, and retention assumptions.",
+          "strongest_disconfirming_evidence": "DAPR already sells an exact Warsaw-based DORA register product with automation, validation, provider dependencies, and supply-chain data, while Vendorica already combines AI agreement extraction with the proposed live vendor-contract graph. This directly contradicts the thesis that those features alone create a differentiated entry wedge."
+        },
+        {
+          "candidate_id": "control9-07",
+          "candidate_sha256": "a17968a3cd8291e808ebd0dc59319106baa0662b6bca691f98287e6f7e24eaef",
+          "candidate_stage": "research",
+          "candidate_version": 2,
+          "distribution_score": 3,
+          "economics_score": 4.3,
+          "evaluation_path": "evaluations/control9-07/v2/working-c9-working-control9-07.json",
+          "evaluation_sha256": "7fefc5b0c8653c683b4e7a0f1f25a0aba4c91e084736f779060ee43001ca9e6c",
+          "evidence_needed_for_higher_score": "A paid broker or TMS pilot should document reachable recurring volume, baseline field and linkage failure rates, attributable rework or delay cost, measured error reduction, non-EU shipper completion rates, willingness to pay separately from filing, gross margin after exceptions and channel share, retention intent, and contractual integration and data-reuse rights.",
+          "final_score": 4.2,
+          "judge_id": "c9-working-control9-07",
+          "primary_score_limiter": "The proposed layer lacks an owned payer relationship or distribution channel, while low-cost filing incumbents and TMS or broker workflow owners can bundle or copy the same validation and thereby squeeze both price and access.",
+          "strongest_disconfirming_evidence": "A Polish incumbent offers ICS2 submission at roughly 0.9-2 PLN per accepted MRN at package volumes and a free manual-upload path, while carriers and other providers offer complete filing for modest per-shipment fees; this directly undermines standalone preflight pricing and differentiation."
+        },
+        {
+          "candidate_id": "rights9-09",
+          "candidate_sha256": "08f5ad833d9c40305683ff2847a7bc24b5dd20728510aba42981535c9ecd266e",
+          "candidate_stage": "research",
+          "candidate_version": 2,
+          "distribution_score": 4,
+          "economics_score": 4,
+          "evaluation_path": "evaluations/rights9-09/v2/working-c9-working-rights9-09.json",
+          "evaluation_sha256": "bbe6feee9b670a01dd2e10ec501dec412b952040d3d7bbfe885330fcc44c8dcb",
+          "evidence_needed_for_higher_score": "A signed licensed-recycler anchor with usable acceptance criteria and priority capacity; a producer-responsibility organisation, collector, or generator channel that supplies recurring qualified tonnes; documented failed-match cost and route delays; a legal opinion defining the initial operating role; and several paid completed routes showing price per tonne, gross contribution after compliance and support, repeat usage, acquisition cost, payback, rejection rate, and resistance to off-platform contracting.",
+          "final_score": 3.9,
+          "judge_id": "c9-working-rights9-09",
+          "primary_score_limiter": "The venture lacks a defensible control point and proven economic wedge: direct platforms and bilateral contracts already address the workflow, while anchor access, willingness to pay, repeat volume, contribution margin, and scalable acquisition remain unknown.",
+          "strongest_disconfirming_evidence": "The European Commission's finding that relevant EU recycling capacity is largely under-used and feedstock access is the immediate constraint directly refutes the original capacity-scarcity forward-book premise; the simultaneous presence of overlapping marketplaces shows that merely inverting the flow does not create an exclusive position."
+        },
+        {
+          "candidate_id": "settle9-02",
+          "candidate_sha256": "e98744971196a686bfc556f90def1b24fb128954db54251e2d1f8395bbeafe8c",
+          "candidate_stage": "research",
+          "candidate_version": 2,
+          "distribution_score": 4,
+          "economics_score": 5,
+          "evaluation_path": "evaluations/settle9-02/v2/working-c9-working-settle9-02.json",
+          "evaluation_sha256": "ea8e3a5c3bf4606964cd0593ac8c3cedc3fb377b0cdcc2a8e1b5b77076e8f493",
+          "evidence_needed_for_higher_score": "A paid Polish pilot plus a binding bank, PSP, or AP-platform agreement should demonstrate lawful capture and retention of VoP evidence, partner economics, conversion at the proposed price, implementation time, false-match and manual-escalation rates, recurring usage, retention intent, CAC or channel cost, and security and liability costs.",
+          "final_score": 4.8,
+          "judge_id": "c9-working-settle9-02",
+          "primary_score_limiter": "The same uncommitted bank or AP partnership is needed both for lawful reusable VoP evidence and for scalable distribution, while incumbents and native bank or ERP features already control those surfaces.",
+          "strongest_disconfirming_evidence": "The EPC interface is restricted to inter-PSP communication and at least one major bank exposes VoP only inside payment initiation, while the mandated check is free to users; this directly undermines any standalone validation-access or per-check monetization premise."
+        },
+        {
+          "candidate_id": "settle9-04",
+          "candidate_sha256": "0fe443f79c6bc5c398ea6fe38bc63e3adb9c3d1317331cc2a9dc206279622114",
+          "candidate_stage": "research",
+          "candidate_version": 2,
+          "distribution_score": 3,
+          "economics_score": 4,
+          "evaluation_path": "evaluations/settle9-04/v2/working-c9-working-settle9-04.json",
+          "evaluation_sha256": "83f76949434f0595ad11c45727b99168c501926fc960955c8f53b298c2882365",
+          "evidence_needed_for_higher_score": "A contract-permitted 20-50-store pilot covering several monthly cycles should show the baseline outputs of existing tools, gross discrepancies found only by the independent audit, cash actually recovered, recovery time, manual hours and operator acceptance rate, then document a repeat purchase or signed willingness to pay that yields attractive contribution margin and CAC payback.",
+          "final_score": 4,
+          "judge_id": "c9-working-settle9-04",
+          "primary_score_limiter": "The business has not established that material, recoverable discrepancies persist after Kaucyjni, TOMRA, and operator tools, so willingness to pay, attractive unit economics, and a durable reason for the layer to exist all depend on the same unresolved premise.",
+          "strongest_disconfirming_evidence": "Kaucyjni already supplies multi-operator POS/RVM integration, reports, and settlement visibility for 39.90-79.90 PLN net per store per month, while TOMRA and operators provide their own APIs and reconciliation data; this directly contradicts a premium generic-reconciliation thesis."
+        },
+        {
+          "candidate_id": "settle9-06",
+          "candidate_sha256": "c3da658673ca8fb54cb0aa65c3515591f7323e73775f26f79275ae837c89411c",
+          "candidate_stage": "research",
+          "candidate_version": 2,
+          "distribution_score": 4.3,
+          "economics_score": 5.4,
+          "evaluation_path": "evaluations/settle9-06/v2/working-c9-working-settle9-06.json",
+          "evaluation_sha256": "915e1339eb4192bec657f7fee369af793d0b4bb5a192579e5b887310b50a74f2",
+          "evidence_needed_for_higher_score": "A paid anchor-partner pilot should measure the baseline share and value of invoices blocked by document defects, integration cost and elapsed time, straight-through clearance, false-positive and false-negative costs, manual minutes per exception, reduction in funding or payment delay, realized gross margin, and the partner's willingness to renew, expand volume, and permit reusable de-identified cure labels.",
+          "final_score": 5.2,
+          "judge_id": "c9-working-settle9-06",
+          "primary_score_limiter": "The opportunity depends on a factor or TMS simultaneously granting source-data access, adopting an external decision layer, delivering recurring volume, and paying separately even though that partner or an incumbent platform can internalize the feature.",
+          "strongest_disconfirming_evidence": "Transporeon already offers payment-ready freight verification and dispute workflow using native platform data, while Dashdoc already carries eCMR evidence through invoicing; this directly weakens the claim that a standalone sidecar has a durable or sufficiently superior wedge."
+        },
+        {
+          "candidate_id": "settle9-11",
+          "candidate_sha256": "d61cf4fb6c649cae0faf9868d180eb1fd7a1ce5f5f1f2fd9e08d477e94e9dc1c",
+          "candidate_stage": "research",
+          "candidate_version": 2,
+          "distribution_score": 5,
+          "economics_score": 5.5,
+          "evaluation_path": "evaluations/settle9-11/v2/working-c9-working-settle9-11.json",
+          "evaluation_sha256": "89ea76e468aca04df65e22d2bb2a51b6ff4d29954c42abbc98c02f558c308b49",
+          "evidence_needed_for_higher_score": "Two or more unrelated paid pilots should identify the actual budget owner and measure baseline versus achieved rejection rate, administrator hours, days-to-payment, configuration and legal-review hours, support burden, gross margin, sales cycle, CAC payback, and renewal or referral into the next project; one should also demonstrate authorized integration and reusable-pattern rights.",
+          "final_score": 5.4,
+          "judge_id": "c9-working-settle9-11",
+          "primary_score_limiter": "The opportunity has not yet shown that heterogeneous, legally reviewed project configurations can be delivered and sold repeatedly at premium project pricing with attractive margin, CAC payback, and project-to-project retention.",
+          "strongest_disconfirming_evidence": "Free PEF infrastructure and established products such as PlanRadar, Archdesk, and PROGPOL already cover substantial adjacent submission, document, approval, subcontractor, and payment workflows, while published PlanRadar pricing challenges the proposed specialized project fee."
+        }
+      ]
+    },
+    "total_candidate_versions": 12,
+    "total_completed": 12
+  }
+}

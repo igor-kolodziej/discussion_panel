@@ -1,0 +1,121 @@
+{
+  "assumptions": [
+    "The initial offer remains a batch-first, single-category diagnostic rather than requiring live multi-platform connectors before demand is proven.",
+    "Merchants retain all refund, abuse, customer-treatment, and disposition decisions and have lawful authority to provide the required records.",
+    "Initial pricing is 2,000-8,000 PLN for a bounded diagnostic and 400-1,500 PLN monthly for the recurring module, with no savings fee unless causal attribution is agreed in advance.",
+    "The provisional 60-75% gross-margin range is achievable only if data mappings, onboarding, and reviews become standardized and time-capped.",
+    "The cited vendor cases demonstrate feasibility of action and attribution in narrow settings but do not establish independent CEE demand or general implementation rates.",
+    "No agency, 3PL, or integrator channel commitment, paid conversion rate, CAC, or retention rate should be treated as established."
+  ],
+  "base_score": 4.23,
+  "candidate_id": "spend-08",
+  "candidate_sha256": "d5b55c3af6ac0af5efdfadcefbc6d998cdf829e5974f12c28ebd9ffbe2c3b7a6",
+  "candidate_version": 2,
+  "constrained_score": 4.03,
+  "evaluation_type": "working",
+  "evidence_needed_for_higher_score": "Obtain three to five paid same-category pilots showing sufficiently complete cross-platform reason and disposition records, at least one causally credible implemented intervention with verified avoidable loss above four times annual fees, standardized onboarding and review hours consistent with at least 70% gross margin, recurring renewal intent, and a signed referral or embedded-distribution commitment with measurable CAC.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "The opportunity correctly identifies that omnichannel merchants can see returns yet still lack a joined view from order and reason through intervention and final physical disposition, and that causal measurement is more valuable than another descriptive dashboard. That is a real operational gap, but it is an incremental refinement of an established returns-analytics category rather than a proprietary insight.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Returns are a recurring and potentially material margin problem, EU cancellation rights keep the workflow persistent, and the cited apparel and footwear cases show that merchants can act on product-level evidence and reduce returns. Existing paid tools also demonstrate some category willingness to pay, but the cases are vendor-selected and there is no evidence yet that CEE merchants will pay incremental fees for this cross-platform layer above native reports and inexpensive apps.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "A paid diagnostic followed by recurring software is capital-light and can fund validation, while fixed fees avoid disputed savings claims. However, comparable pricing of roughly 400-1,500 PLN monthly, provisional 60-75% gross margin, connector upkeep, category-specific data cleaning, and quarterly analysis create a meaningful risk of service-heavy economics; even the stated 200-customer case produces only 2.4m PLN ARR and about 600,000 PLN annual owner cash at a 25% margin, leaving the founder's 5m PLN path slow unless ARPU, scale, retention, or valuable equity materially exceeds the current evidence.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "CEE omnichannel fashion and footwear merchants with high return volumes form a coherent initial problem set, and the broad e-sales and Allegro merchant bases show a nontrivial surrounding market. The proposed 5,000-200,000 monthly-order range spans very different operating environments, home goods dilutes the initial category focus, and no evidence establishes how many accounts survive the volume, category, data-quality, and budget filters.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "Allegro and Shopify increasingly expose the underlying reason and disposition data, AfterShip covers analytics and routing, and ReasonWhy closely matches clustering, loss ranking, recommendations, and impact tracking at low prices. CEE-specific cross-platform joins and causal measurement could create a niche, but the candidate has not secured a privileged data source, workflow position, or channel that would let it dominate that niche against platforms or installed vendors.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A proven intervention and disposition system in one high-return category could extend to more CEE geographies, adjacent categories, supplier-quality workflows, 3PL operations, and recovered-value decisions. Expansion is only moderately attractive because new categories and systems can require fresh mappings, domain rules, and service work rather than benefiting automatically from the original beachhead.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "A permissioned intervention-to-outcome dataset could improve recommendations and measurement over time, and an embedded action backlog may create modest switching costs. Raw merchant data must remain isolated, reliable outcomes are not assured, core fields are becoming platform-native, and incumbents already possess integrations and customer access, so the proposed data advantage is prospective and readily challenged rather than durable today.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "For a genuinely omnichannel merchant, joining storefront, marketplace, warehouse, intervention, and disposition records could be materially more useful than siloed native reports, especially when it supports a controlled action. The candidate has not shown that this improvement is large or reliable enough to change purchasing behavior, while most visible analytics features are already available cheaply and the distinctive benefit depends on unusually complete data and merchant follow-through.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "Persistent EU return rights, broad e-commerce adoption, new disposition-related rules, and richer platform data make return-loss measurement timely. The same API improvements and 2026 product launches also accelerate commoditization, while the regulation is nonexclusive and phased by company size, so timing helps demand and feasibility without creating a privileged window.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "A focused paid diagnostic gives the founder a concrete direct-sales offer and agencies, 3PLs, or integrators are plausible concentrated channels. No partner commitment, conversion rate, CAC, or repeatable acquisition evidence exists, app-store discovery is crowded, and early founder-led selling plus merchant-specific onboarding is poorly matched to the founder's limited time and preference for low-social-energy work.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "The founder's data-science skills, AI leverage, available capital, and a CSV-first single-category pilot make initial execution realistic alongside employment. Scaling requires dependable multi-system data, privacy and access handling, connector maintenance, merchant implementation, causal experimental discipline, and standardized reviews; these are obtainable capabilities but collectively threaten the five-hour daily constraint and a software-like cost structure.",
+      "score": 5,
+      "status": "scored"
+    }
+  ],
+  "final_score": 4,
+  "highest_value_structural_change": "Embed the product with one committed CEE 3PL or WMS partner in a single high-return category so it standardizes inspection-to-disposition data and controlled intervention measurement at the operational source, gaining both a privileged workflow position and contracted distribution instead of selling standalone analytics merchant by merchant.",
+  "interaction_adjustment": -0.2,
+  "judge_id": "c1-working-spend-08",
+  "main_structural_strength": "The candidate targets a recurring and costly workflow with a sharper cross-platform intervention-and-measurement control point that fits the founder's analytical skills and can be tested through low-capital historical exports.",
+  "primary_score_limiter": "Plausible incremental willingness to pay and owner economics remain weak relative to low-priced incumbent coverage, so the current route does not yet show a compelling or timely path to the founder's 5m PLN net-worth objective.",
+  "qualified": false,
+  "raw_response_path": "artifacts/research/raw-c1-working-spend-08.json",
+  "raw_response_sha256": "ad127bdf7074cfea6ef2fa5320eb72bb9bea9914a85b5c67511316715545f4d0",
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 2,
+  "strongest_disconfirming_evidence": "ReasonWhy already offers AI return-reason clustering, product loss ranking, recommended fixes, and impact tracking for $49-$199 monthly, while AfterShip and platform-native Allegro and Shopify capabilities cover much of the surrounding analytics and data workflow.",
+  "unrounded_score": 4.03
+}

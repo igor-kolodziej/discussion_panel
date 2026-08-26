@@ -1,0 +1,83 @@
+{
+  "candidate_id": "channel-10",
+  "claims": [
+    {
+      "claim_id": "channel-10-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://edu.ezamowienia.gov.pl/pl/integracja/",
+        "https://ezamowienia.gov.pl/pl/regulamin/"
+      ],
+      "statement": "Poland's e-Zamówienia platform exposes a free BZP API for reading published notices and statistics without a formal integration procedure, enabling a low-capital domestic data product."
+    },
+    {
+      "claim_id": "channel-10-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://docs.ted.europa.eu/api/latest/search.html"
+      ],
+      "statement": "TED's unauthenticated Search API allows published procurement notices to be searched and downloaded for analysis and reuse, supporting later EU expansion and award-history features."
+    },
+    {
+      "claim_id": "channel-10-c03",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://docs.ted.europa.eu/api/latest/search.html",
+        "https://ezamowienia.gov.pl/mo-client-board/bzp/list"
+      ],
+      "statement": "Hypothesis: a vertical association or accounting/software partner can make a specialised feed a member benefit and distribute it more cheaply than acquiring fragmented SMEs one by one."
+    }
+  ],
+  "contrary_evidence": [
+    "Official portals already provide search, filters, and exports, while established tender-alert vendors compete on breadth.",
+    "Open notices reveal opportunity but do not consistently reveal why firms declined to bid or lost, limiting model labels without user feedback."
+  ],
+  "economics": {
+    "acquisition_route": "Prove precision for one trade with historical notices, then sell a single association or vertical platform rather than many individual SMEs",
+    "capital_required_pln": 25000,
+    "founder_net_worth_path": "Hypothesis: 30 vertical partners averaging 120000 PLN ARR plus premium member usage could reach 4.5-6 million PLN ARR in years 5-7; at 30% EBITDA, 5-7x EBITDA, and 80% ownership, founder equity could exceed 5 million PLN",
+    "founder_time": "12-18 hours weekly for the first vertical, declining to 6-10 hours weekly after automated ingestion and partner-led member support",
+    "gross_margin_basis": "Open-data ingestion and automated extraction should support 85-93% gross margin after inference and customer support",
+    "payback": "Target under 6 months for direct partner acquisition; one additional qualified win or avoided complex bid can cover annual member cost",
+    "pricing": "Hypothesis: 30000-120000 PLN annual association licence, 150-500 PLN per member monthly, or revenue share with a vertical software partner",
+    "retention_or_repeat": "New notices arrive continuously and historical award intelligence becomes more valuable as the vertical graph grows"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Vertical eligibility ontology, notice-to-award graph, and permissioned member decision/outcome labels improve ranking and create proprietary data",
+    "customer": "One specialist SME trade and the association or vertical software vendor serving its members",
+    "distribution_mechanism": "Syndicated into trade-association portals, member newsletters, accounting dashboards, and vertical ERP systems",
+    "offer_and_business_model": "Vertical procurement data feed, qualification extraction, bid/no-bid ranking, and award graph sold as a member or software add-on",
+    "payer_and_paid_event": "Association, software partner, or member pays for a recurring feed and each qualified opportunity workspace",
+    "problem_trigger": "A new public notice appears and the firm must rapidly decide whether it is eligible and worth bid effort"
+  },
+  "founder_fit": [
+    "Excellent fit for public-data engineering, language models, measurable ranking, and low-capital validation. Association distribution limits repeated selling and camera exposure. The founder can test accuracy on historical public notices before seeking any private outcome data."
+  ],
+  "parent": null,
+  "risks": [
+    "A broad tender-alert product would be undifferentiated and vulnerable to price competition.",
+    "Bad extraction can cause a member to miss a gate or waste bid effort.",
+    "Association sales cycles can be slow and politically influenced."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://docs.ted.europa.eu/api/latest/search.html",
+    "https://edu.ezamowienia.gov.pl/pl/integracja/",
+    "https://ezamowienia.gov.pl/mo-client-board/bzp/list",
+    "https://ezamowienia.gov.pl/pl/regulamin/"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Vertical public-data intelligence syndication",
+    "control_point": "The first bid/no-bid decision delivered where association members already monitor business opportunities",
+    "critical_dependency": "A narrow vertical with a willing distribution owner and enough outcome feedback to beat generic keyword alerts"
+  },
+  "thesis": "Turn open Polish and EU procurement notices into a vertical bid/no-bid feed embedded in trade-association member portals and specialist business software. For one narrow trade, the product would extract qualification gates, detect suspiciously poor fit, estimate preparation burden, connect related awards, and learn from members' private go/no-go and outcome feedback without exposing it to peers.",
+  "title": "TenderFit Member Feed",
+  "uncertainties": [
+    "Which single trade has enough procurement value, poor incumbent tooling, and an association willing to distribute is unknown.",
+    "Members may not share outcome data needed to improve ranking.",
+    "Notice attachments and eligibility requirements may be difficult to parse reliably across contracting authorities."
+  ],
+  "version": 1
+}

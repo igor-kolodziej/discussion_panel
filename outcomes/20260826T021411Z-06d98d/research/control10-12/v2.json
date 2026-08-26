@@ -1,0 +1,194 @@
+{
+  "candidate_id": "control10-12",
+  "candidate_sha256": "1cdf0aa7b2be8bfbcc370424eef07d632f4a634286cd36b73df3b24ef9c43dbc",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "efti-q1",
+      "evidence_refs": [
+        "efti-r1",
+        "efti-r3"
+      ],
+      "statement": "Authorities must accept compliant electronic freight information from 9 July 2027, while businesses are not required by the eFTI Regulation to choose electronic presentation."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "efti-q2",
+      "evidence_refs": [
+        "efti-r2"
+      ],
+      "statement": "The statutory definition of eFTI service includes processing by means of an eFTI platform alone or with other ICT solutions, and contractual service providers are certified under Article 13."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "efti-q3",
+      "evidence_refs": [
+        "efti-r1",
+        "efti-r2"
+      ],
+      "statement": "A direct-to-operator adapter cannot safely assume that certification is delegated merely because an upstream platform is certified."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "efti-q4",
+      "evidence_refs": [
+        "efti-r3",
+        "efti-r5"
+      ],
+      "statement": "The platform requirements reuse source data from TMS and ERP systems and require controlled authorisation, strong authentication, security, auditability, and authority access."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "efti-q5",
+      "evidence_refs": [
+        "efti-r4"
+      ],
+      "statement": "A public developer portal exposes API schemas and interoperability-test guidance, reducing pure protocol-discovery risk."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "efti-q6",
+      "evidence_refs": [
+        "efti-r6",
+        "efti-r7",
+        "efti-r8"
+      ],
+      "statement": "TransFollow and Ybil already target TMS vendors with open or plug-in APIs and report dozens of integrations; Shippeo also integrates eCMR by API."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "efti-q7",
+      "evidence_refs": [
+        "efti-r4",
+        "efti-r6",
+        "efti-r7"
+      ],
+      "statement": "The white space, if any, is a Polish legacy-schema component embedded inside a certified partner, rather than a generic eFTI API."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "efti-q8",
+      "evidence_refs": [],
+      "statement": "The reviewed sources do not establish a Polish TMS budget, upstream wholesale fee, or willingness to pay for a multi-platform adapter."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "efti-q9",
+      "evidence_refs": [
+        "efti-r3",
+        "efti-r5"
+      ],
+      "statement": "A part-time prototype is technically compatible with the founder, but enterprise security diligence and production support are not demonstrated as part-time-compatible."
+    }
+  ],
+  "contrary_evidence": [
+    "Paper remains a lawful substitute for operators after the authority-acceptance date.",
+    "A contractual adapter provider may itself fall within the certified eFTI service-provider perimeter.",
+    "Direct competitors already sell API integrations to TMS and ERP vendors and possess installed networks.",
+    "Shippeo states that certification processes are not fully available yet, while the Commission schedules remaining specifications for December 2026.",
+    "Official market data indicate weaker use of APIs and digital consignment notes among smaller freight firms than of more established tools."
+  ],
+  "schema_version": 2,
+  "sources": [
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "European Commission, Directorate-General for Mobility and Transport",
+      "source_id": "efti-r1",
+      "source_type": "regulator implementation page",
+      "stance": "context",
+      "title": "The eFTI Regulation",
+      "url": "https://transport.ec.europa.eu/transport-themes/logistics-and-multimodal-transport/efti-regulation_en"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2020-07-31",
+      "publisher": "Official Journal of the European Union",
+      "source_id": "efti-r2",
+      "source_type": "legislation",
+      "stance": "contradicting",
+      "title": "Regulation (EU) 2020/1056 on electronic freight transport information",
+      "url": "https://eur-lex.europa.eu/eli/reg/2020/1056/oj/eng"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2025-11-07",
+      "publisher": "Official Journal of the European Union",
+      "source_id": "efti-r3",
+      "source_type": "implementing regulation",
+      "stance": "context",
+      "title": "Commission Implementing Regulation (EU) 2025/2243 on functional requirements for eFTI platforms",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A32025R2243"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "Fintraffic",
+      "source_id": "efti-r4",
+      "source_type": "official developer documentation",
+      "stance": "supporting",
+      "title": "eFTI Platform Developer Portal API",
+      "url": "https://efti.fintraffic.fi/en/api/"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "Finnish Transport and Communications Agency Traficom",
+      "source_id": "efti-r5",
+      "source_type": "regulator implementation guidance",
+      "stance": "context",
+      "title": "How Can You Prepare for eFTI",
+      "url": "https://traficom.fi/en/transport-system/connected-and-automated-transport/how-can-you-prepare"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "TransFollow",
+      "source_id": "efti-r6",
+      "source_type": "direct competitor product page",
+      "stance": "contradicting",
+      "title": "TransFollow Connect",
+      "url": "https://www.transfollow.org/products/connect/"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "Ybil",
+      "source_id": "efti-r7",
+      "source_type": "direct competitor product page",
+      "stance": "contradicting",
+      "title": "Integration Partners: European Logistics Compliance API",
+      "url": "https://ybil.io/industries/integration-partners"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "Shippeo",
+      "source_id": "efti-r8",
+      "source_type": "direct competitor product page",
+      "stance": "contradicting",
+      "title": "Shippeo eCMR",
+      "url": "https://www.shippeo.com/platform/solutions/ecmr"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2024-12-31",
+      "publisher": "German Federal Logistics and Mobility Office",
+      "source_id": "efti-r9",
+      "source_type": "official market study",
+      "stance": "contradicting",
+      "title": "2024 Special Report on eFTI: Market Insights",
+      "url": "https://efti4eu.eu/wp-content/uploads/2025/02/24-1050_EN_BALM_Bericht_eFTI.pdf"
+    }
+  ],
+  "unknowns": [
+    "A written conformity analysis of the subcontracted component model",
+    "A signed certified-platform sandbox and commercial agreement",
+    "One Polish TMS paid pilot and its true mapping workload",
+    "Wholesale fees, service levels, indemnities, and certification-change costs",
+    "Polish carrier opt-in rate and transaction volume after July 2027",
+    "Public or quoted competitor pricing",
+    "Reachable number of independent Polish TMS vendors"
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "assumptions": [
+    "The offer is evaluated as a bounded vendor-funded assurance service, not as a certification, regulatory conformity assessment, or continuous monitoring platform.",
+    "A first engagement can be delivered within the stated 55000 PLN envelope using paid insurance and legal adjudicators, but no repeatable margin or delivery capacity is assumed.",
+    "Customer raw cases remain client-private, and only the generic harness, taxonomy, adapters, and packet template can be reused unless contracts explicitly grant broader rights.",
+    "Central European expansion is possible in principle but requires country-specific language, legal, insurance-process, and procurement adaptation."
+  ],
+  "base_score": 4.38,
+  "candidate_id": "network-05",
+  "candidate_sha256": "941eb3d5dc40dc751aafbca9ab28274ecdcea4ea1c27674f290c544fbcef9d79",
+  "candidate_version": 5,
+  "constrained_score": 4.38,
+  "evaluation_type": "holdout_native",
+  "evidence_needed_for_higher_score": "A paid vendor pilot with a named budget owner, contractually permitted representative cases, insurer-side acceptance criteria agreed before delivery, measured acquisition and integration effort, demonstrated contribution margin, and evidence that at least one partner will purchase additional packets for subsequent client deployments or model releases.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "Insurance AI adoption and governance expectations create a genuine need for release evidence, and embedding a claims-specific assurance packet in a vendor's workflow is more coherent than selling a new seal directly to every insurer. The insight is moderated by the fact that claims communications are not automatically high-risk and assurance is already an established category.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Tender, governance-review, release, and incident triggers can make assurance important, especially when an insurer demands evidence. However, the packet's procurement value, the vendor budget owner, insurer acceptance, and willingness to pay are wholly unvalidated, while vendors can test internally or use broader tools and standards.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Onboarding plus per-deployment or per-release fees aligns payment with discrete value events and could amortize a reusable harness across a partner's clients. No price, gross margin, CAC, payback, release frequency, retention, or owner-earnings case is established, and expert review, secure handling, localization, integration, and insurer-specific review may keep costs substantially variable.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Polish claims-AI vendors and implementation partners form a specific initial segment with identifiable release events, but its account count and spend are not quantified. Poland's 47 insurers cap downstream domestic demand, so an economically meaningful business likely depends on uncertain vendor portfolios and Central European expansion.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "Polish-language claims specialization, expert adjudication, and workflow integration could support a useful niche. Credo AI, Giskard, ISO/IEC 42001 processes, internal testing, and an existing insurance benchmark give buyers credible substitutes, and there is no evidence that the proposed packet can become the preferred release gate.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A successful Polish claims release workflow could extend to additional insurer clients, models, prompts, Central European languages, and adjacent insurance communications. Expansion is plausible but not automatic because each geography and client may require new permissions, experts, localization, security review, and acceptance criteria.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Integrated adapters, an expert failure taxonomy, packet templates, and longitudinal release records could accumulate into switching costs and domain know-how. The business assumes no pooled raw-data ownership, contracts may restrict cross-client learning, and competitors or vendors can reproduce much of the harness, leaving durability uncertain.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "Client-private Polish claims cases and domain-expert adjudication could be more relevant than generic evaluation tools, while vendor embedding may be more convenient than a separate insurer procurement. The packet has not shown superior predictive value, speed, cost, trust, or procurement recognition sufficient to change buyer behavior.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "Rapid insurance AI adoption and current EU insurance-AI governance expectations make release assurance timely. The tailwind is weaker than a mandatory-compliance thesis because not every claims use case is high-risk, and established assurance platforms and standards are already present.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "One vendor relationship could provide access to multiple insurer deployments and reduce the number of primary accounts. There is no committed partner, vendors may not fund an external packet, and each insurer may still require its own security and governance approval, so the intermediary strategy may add a sales layer rather than remove one.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "The founder fits the AI evaluation and automation work, the initial capital scope is bounded, and specialists can be hired per packet. Secure personal-data handling, credible insurance and legal adjudication, liability, DORA-related diligence, enterprise integration, and lengthy procurement are substantial burdens for a part-time founder and may make delivery bespoke.",
+      "score": 4,
+      "status": "scored"
+    }
+  ],
+  "final_score": 4.4,
+  "highest_value_structural_change": "Turn the packet into a jointly specified release gate by securing one design partner whose insurer client pre-approves the evidence schema and whose contract includes a minimum number of paid deployment or release packets; this would replace speculative channel leverage with a validated multi-release commercial unit.",
+  "interaction_adjustment": 0,
+  "judge_id": "c3-holdout-network05-j2",
+  "main_structural_strength": "A vendor-embedded, client-private release packet can concentrate acquisition into fewer relationships while reusing a claims-specific harness across multiple governed release events without depending on a legally dubious public seal or pooled customer data.",
+  "primary_score_limiter": "The central commercial loop is unproven: no vendor willingness to pay, insurer acceptance, reusable data rights, price, contribution margin, acquisition cost, payback, or repeat-release volume has been demonstrated.",
+  "qualified": false,
+  "raw_response_path": "holdout/jobs/raw-c3-holdout-network05-j2.json",
+  "raw_response_sha256": "e61c8de80ef0f4e771273682821e9dfb369c3ee33289ce0bf683d75f9fdf4a07",
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 2,
+  "strongest_disconfirming_evidence": "Buyers already have several credible alternatives—internal testing, Credo AI, Giskard, and ISO/IEC 42001—and claims copilots are not universally high-risk, while the Polish insurer base is only 47 companies; together these facts weaken urgency, differentiation, and the domestic scale case.",
+  "unrounded_score": 4.38
+}

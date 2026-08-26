@@ -1,0 +1,81 @@
+{
+  "candidate_id": "control7-10",
+  "claims": [
+    {
+      "claim_id": "control7-10-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://green-forum.ec.europa.eu/nature-and-biodiversity/deforestation-regulation-implementation_en"
+      ],
+      "statement": "The Commission states that EUDR applies from 30 December 2026 for large and medium operators and from 30 June 2027 for most micro and small operators."
+    },
+    {
+      "claim_id": "control7-10-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://green-forum.ec.europa.eu/nature-and-biodiversity/deforestation-regulation-implementation_en"
+      ],
+      "statement": "Covered commodities include cattle, cocoa, coffee, palm oil, rubber, soy, wood, and certain derived products; upstream suppliers may need to provide production locations."
+    },
+    {
+      "claim_id": "control7-10-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://green-forum.ec.europa.eu/nature-and-biodiversity/deforestation-regulation-implementation_en"
+      ],
+      "statement": "Official implementation resources include an information system for submitting due-diligence statements and guidance on geolocation and traceability."
+    }
+  ],
+  "contrary_evidence": [
+    "The EU amended the regulation in both 2024 and 2025, showing timing and administrative requirements are mutable.",
+    "Official systems already accept statements; a private clearinghouse must add supplier reuse and release-control value beyond submission."
+  ],
+  "economics": {
+    "acquisition_route": "Commodity-specific customs and compliance partners rather than broad outbound sales",
+    "capital_required_pln": 55000,
+    "founder_net_worth_path": "Illustrative, unvalidated path: 350 importers averaging 18000 PLN annual revenue could create about 6.3m PLN revenue; at 25% operating margin and 75% ownership, retained cash and a profit-based valuation could plausibly exceed 5m PLN around year 6",
+    "founder_time": "3-4 hours/day for data and product, with commodity and legal expertise contracted",
+    "gross_margin_basis": "Target 70-85% after geospatial processing, supplier support, secure storage, and expert escalation",
+    "payback": "Unvalidated: 12 SME importers at about 4000 PLN monthly could repay the pilot in 12-18 months",
+    "pricing": "Unvalidated: 2000-8000 PLN monthly per importer plus 5-25 PLN per plot or shipment package",
+    "retention_or_repeat": "Every covered shipment repeats; supplier evidence can be reused and updated across participating importers"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Permissioned supplier-plot graph, document reuse, anomaly history, and integration at shipment release",
+    "customer": "Polish and Central European importers of EUDR-covered commodities and products",
+    "distribution_mechanism": "Commodity brokers, customs advisors, trade associations, and one narrow commodity pilot",
+    "offer_and_business_model": "Supplier portal, plot validation, document lineage, risk workflow, statement-reference tracking, and audit export",
+    "payer_and_paid_event": "Importer pays subscription plus per supplier, plot, or shipment evidence package",
+    "problem_trigger": "A covered shipment is prepared for EU placement, sale, or export and due diligence must be evidenced"
+  },
+  "founder_fit": [
+    "Geospatial and entity-resolution work fits data science",
+    "Can start in one commodity with a software-led pilot",
+    "EU and Polish context provides a useful initial market",
+    "Channel partners can reduce high-frequency founder sales"
+  ],
+  "parent": null,
+  "risks": [
+    "Regulatory dates and simplifications have already changed",
+    "Bad supplier evidence can expose the importer and platform to liability",
+    "Large trade-compliance suites can add EUDR modules"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://green-forum.ec.europa.eu/nature-and-biodiversity/deforestation-regulation-implementation_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Shipment compliance clearinghouse and supplier data network",
+    "control_point": "Reusable supplier-plot evidence identity embedded in an importer's shipment-release workflow",
+    "critical_dependency": "Non-EU suppliers must provide reliable geolocation and legality evidence and importers must accept shared records"
+  },
+  "thesis": "Create a shared evidence workspace for Polish coffee, cocoa, wood, rubber, and related importers that binds supplier plots, legality documents, risk decisions, and due-diligence statement references to each incoming shipment. The control point is the reusable supplier-plot identity and the importer release gate, not one-off form filling.",
+  "title": "EUDR Shipment Evidence Clearinghouse",
+  "uncertainties": [
+    "Importer willingness to share supplier evidence in a common network",
+    "Actual Polish SME count and budget by commodity",
+    "How much verification responsibility customers expect the platform to assume"
+  ],
+  "version": 1
+}

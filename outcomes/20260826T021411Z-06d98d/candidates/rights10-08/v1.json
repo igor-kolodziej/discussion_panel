@@ -1,0 +1,84 @@
+{
+  "candidate_id": "rights10-08",
+  "claims": [
+    {
+      "claim_id": "rights10-08-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.ure.gov.pl/pl/oze/gwarancje-pochodzenia/6816,Gwarancja-pochodzenia-instrument-w-systemie-wsparcia-odnawialnych-zrodel-energii.html"
+      ],
+      "statement": "URE describes the guarantee of origin as the sole document confirming to an end customer that a specified amount of energy was produced from renewable sources."
+    },
+    {
+      "claim_id": "rights10-08-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.ure.gov.pl/pl/oze/gwarancje-pochodzenia/6816,Gwarancja-pochodzenia-instrument-w-systemie-wsparcia-odnawialnych-zrodel-energii.html"
+      ],
+      "statement": "Polish guarantees are electronic, uniquely numbered, time-limited, transferable independently of property rights in certificates, and retired through the registry with confirmation."
+    },
+    {
+      "claim_id": "rights10-08-c3",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://energy.ec.europa.eu/strategy/affordable-energy/actions-supporting-affordable-energy_en"
+      ],
+      "statement": "Demand hypothesis: small buyers will pay for pooled procurement only if evidence remains allocated and auditable at buyer level."
+    }
+  ],
+  "contrary_evidence": [
+    "Guarantees of origin do not themselves carry property rights and should not be presented as physical electricity delivery.",
+    "Registry members and energy sellers may already offer retirement reports."
+  ],
+  "economics": {
+    "acquisition_route": "Demand hypothesis: energy advisers can bundle the evidence rail into existing procurement and reporting engagements",
+    "capital_required_pln": 40000,
+    "founder_net_worth_path": "Hypothesis: 1 TWh administered yearly at 7 PLN per MWh produces 7m PLN revenue before subscriptions; 25% EBITDA at a 3x value could exceed 5m PLN in 4-7 years",
+    "founder_time": "10-15 hours weekly for a non-custodial pilot with one registry-capable partner",
+    "gross_margin_basis": "Economics hypothesis: 75-85% software and administration margin, excluding the certificate purchase price",
+    "payback": "Economics hypothesis: 30 SMEs averaging 1200 PLN monthly cover initial capital within 12-15 months after partner fees",
+    "pricing": "Economics hypothesis: 800-2000 PLN monthly per buyer plus 5-15 PLN per MWh administered",
+    "retention_or_repeat": "Monthly invoices, annual claims, certificate expiry, and forward volume renewals recur"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Buyer load profiles, counterpart performance, retirement histories, and pooled forward purchasing density",
+    "customer": "Polish SMEs facing customer renewable-energy requests, procurement advisers, energy sellers, and supply-chain platforms",
+    "distribution_mechanism": "Energy advisers, accountants, supply-chain reporting consultants, renewable installers, and licensed GO traders",
+    "offer_and_business_model": "Buyer mandate, pooled forward request, invoice matching, certificate allocation, retirement confirmation, and customer evidence export",
+    "payer_and_paid_event": "SME pays a workspace subscription and a per-MWh administration fee when attributes are allocated and retired",
+    "problem_trigger": "A buyer needs credible renewable-origin proof but its volume is small, procurement is fragmented, and certificate retirement evidence is disconnected from invoices"
+  },
+  "founder_fit": [
+    "Finance and renewable-energy interests",
+    "Data reconciliation is automatable",
+    "Family installer referrals are possible",
+    "No inventory or public brand required"
+  ],
+  "parent": null,
+  "risks": [
+    "Green-claims misstatement",
+    "Commodity-thin margins",
+    "Registry access dependence",
+    "Licensing perimeter"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.ure.gov.pl/pl/oze/gwarancje-pochodzenia/6816,Gwarancja-pochodzenia-instrument-w-systemie-wsparcia-odnawialnych-zrodel-energii.html",
+    "https://energy.ec.europa.eu/strategy/affordable-energy/actions-supporting-affordable-energy_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Permissioned procurement evidence rail",
+    "control_point": "Invoice-to-unique-certificate allocation and retirement record under the buyer's mandate",
+    "critical_dependency": "Access to registry-capable licensed counterparties and careful avoidance of unlicensed trading or misleading claims"
+  },
+  "thesis": "SMEs authorize the service to reconcile energy invoices with electronic guarantees of origin, reserve future volumes through licensed counterparties, and return retirement evidence to each buyer and its customers. Demand hypothesis: granular allocation and proof can make pooled renewable procurement usable for small supply-chain firms.",
+  "title": "SME Renewable-Attribute Allocation Rail",
+  "uncertainties": [
+    "SME willingness to pay",
+    "Volume aggregation threshold",
+    "Partner fee split",
+    "Customer reporting formats"
+  ],
+  "version": 1
+}

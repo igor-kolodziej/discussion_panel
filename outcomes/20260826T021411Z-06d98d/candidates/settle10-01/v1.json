@@ -1,0 +1,73 @@
+{
+  "candidate_id": "settle10-01",
+  "claims": [
+    {
+      "claim_id": "settle10-01-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.fronius.com/en-us/usa/solar-energy/home-owners/products-and-solutions/warranties",
+        "https://www.fronius.com/en-ca/canada/solar-energy/installers-partners/contact/service-providers"
+      ],
+      "statement": "Fronius states that warranty claims are handled between the installer and Fronius and that valid service cases can trigger replacement equipment."
+    },
+    {
+      "claim_id": "settle10-01-c2",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://www.fronius.com/en-us/usa/solar-energy/home-owners/products-and-solutions/warranties",
+        "https://digital-strategy.ec.europa.eu/en/news/eu-data-act-gives-users-control-over-data-connected-devices"
+      ],
+      "statement": "Demand hypothesis: wholesalers will subsidize an evidence relay because installer-handled claims create a recurring channel-service burden and measurable recoveries."
+    }
+  ],
+  "contrary_evidence": [
+    "OEMs already provide their own portals and troubleshooting tools.",
+    "The cited Fronius reimbursement terms are market-specific and may not transfer to Poland."
+  ],
+  "economics": {
+    "acquisition_route": "Private-label pilots with two wholesalers, using the founder's family installer as a design partner.",
+    "capital_required_pln": 35000,
+    "founder_net_worth_path": "Hypothesis: 300 installer accounts at 1200 PLN monthly can support over 4 million PLN ARR and a founder stake plausibly exceeding 5 million PLN in four to six years.",
+    "founder_time": "Three hours daily until channel onboarding becomes repeatable.",
+    "gross_margin_basis": "Hypothesis: 80-90% software margin after document extraction and support.",
+    "payback": "Hypothesis: setup capital returns after 20 installers or roughly 120 accepted claims.",
+    "pricing": "Hypothesis: 500-1500 PLN monthly per installer plus 8-12% of recovered labour or credits.",
+    "retention_or_repeat": "Mixed fleets create recurring faults, replacements, and reimbursement reconciliation."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Each resolved claim improves the model-specific evidence rules, fault-code mappings, and reimbursement benchmarks.",
+    "customer": "EU solar installers and small O&M firms with mixed inverter fleets.",
+    "distribution_mechanism": "Solar wholesalers embed it in installer portals and service desks as a private-label after-sales benefit.",
+    "offer_and_business_model": "Software assembles OEM-specific claim packs, tracks RMAs, and reconciles parts and labour credits on subscription plus success fee.",
+    "payer_and_paid_event": "A wholesaler or installer pays a subscription and a fee when a claim is accepted or reimbursed.",
+    "problem_trigger": "An inverter fault triggers a claim whose serial, registration, diagnostics, labour, and shipment evidence sit in different systems."
+  },
+  "founder_fit": [
+    "The family renewable-energy company can supply workflows without cold-start public exposure.",
+    "The evidence graph fits data-science automation and part-time operation."
+  ],
+  "parent": null,
+  "risks": [
+    "OEM portal restrictions could prevent automated submission.",
+    "Success fees may conflict with distributor or warranty terms."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.fronius.com/en-us/usa/solar-energy/home-owners/products-and-solutions/warranties",
+    "https://www.fronius.com/en-ca/canada/solar-energy/installers-partners/contact/service-providers",
+    "https://digital-strategy.ec.europa.eu/en/news/eu-data-act-gives-users-control-over-data-connected-devices"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Embedded claims infrastructure.",
+    "control_point": "The serial-to-fault-to-reimbursement evidence graph.",
+    "critical_dependency": "Export or API access to monitoring, distributor, and OEM claim records."
+  },
+  "thesis": "An embedded evidence relay can turn inverter faults into complete OEM warranty submissions and reconcile every reimbursement for small solar installers.",
+  "title": "Solar Warranty Relay for Installer Networks",
+  "uncertainties": [
+    "Installer claim volume and labour-credit value are unverified.",
+    "Wholesaler willingness to private-label the product is unverified."
+  ],
+  "version": 1
+}

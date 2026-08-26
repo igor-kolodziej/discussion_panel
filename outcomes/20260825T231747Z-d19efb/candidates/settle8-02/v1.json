@@ -1,0 +1,87 @@
+{
+  "candidate_id": "settle8-02",
+  "claims": [
+    {
+      "claim_id": "settle8-02-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/attachment/4369df4f-aa6a-43a4-b46d-01689735fb14"
+      ],
+      "statement": "Verified fact: Poland's deposit system is decentralized with multiple operators, and operator-retailer contracts must address deposit settlement and packaging collection rules."
+    },
+    {
+      "claim_id": "settle8-02-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/klimat/system-kaucyjny"
+      ],
+      "statement": "Verified fact: the Ministry reported about 2.3 billion returned containers through May 2026, with 87% returned via machines at 14,000 locations."
+    },
+    {
+      "claim_id": "settle8-02-c3",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://www.gov.pl/attachment/4369df4f-aa6a-43a4-b46d-01689735fb14",
+        "https://www.gov.pl/web/klimat/system-kaucyjny"
+      ],
+      "statement": "Hypothesis (unvalidated): multi-operator rules and transaction volume create enough recurring discrepancies to support an independent paid assurance layer."
+    }
+  ],
+  "contrary_evidence": [
+    "Official guidance says each operator may design its own detailed operating and settlement rules, which may favor vertically integrated tools rather than a neutral layer: https://www.gov.pl/attachment/4369df4f-aa6a-43a4-b46d-01689735fb14",
+    "The system is already operating at very large scale, so entering after core infrastructure deployment may make integration harder: https://www.gov.pl/web/klimat/system-kaucyjny"
+  ],
+  "economics": {
+    "acquisition_route": "Start with one producer or 20-100-store regional chain affected by multiple operators, then distribute through RVM and compliance partners.",
+    "capital_required_pln": 65000,
+    "founder_net_worth_path": "Unvalidated scenario: 5 customers at PLN 8,000 MRR in year 2, 20 at PLN 12,000 MRR in year 4, and 35 at PLN 14,000 MRR in year 6 imply PLN 5.88m ARR before usage fees. At 20-30% owner earnings or a 3x ARR value and 65% ownership, the PLN 5m founder-net-worth mark is plausible in years 5-7; inability to standardize a second operator feed is a kill condition.",
+    "founder_time": "4-5 hours/day for one design partner; cap concurrent integrations and contract a retail-data engineer after paid validation.",
+    "gross_margin_basis": "Hypothesis: 68-82% gross margin once feeds stabilize; early operator-specific mapping and dispute support will be service-heavy.",
+    "payback": "Unvalidated customer hypothesis: recovered variances or reduced finance review worth at least two monthly fees within six months; prove against historical statements before requesting a long contract.",
+    "pricing": "Unvalidated estimate: PLN 8,000-25,000 implementation, then PLN 3,000-15,000 per month plus PLN 0.002-0.01 per processed unit; recovery fees only on contractually accepted adjustments.",
+    "retention_or_repeat": "Deposit and handling-fee settlements recur monthly at high volume; historical unit-flow baselines and contract rules become embedded."
+  },
+  "fingerprint": {
+    "compounding_advantage": "cross-operator exception taxonomies and unit-flow benchmarks improve anomaly detection while participant-specific rule maps create durable switching costs",
+    "customer": "Polish beverage producers, regional grocers, convenience chains, and deposit-system operators participating across more than one operator",
+    "distribution_mechanism": "packaging-compliance advisers, RVM integrators, retail ERP partners, and targeted outreach using a synthetic reconciliation benchmark",
+    "offer_and_business_model": "data-ingestion and reconciliation SaaS plus independent exception review, priced by locations, statements, and processed units",
+    "payer_and_paid_event": "producer, retailer, or operator pays when a monthly settlement is certified; an optional success fee applies only to an accepted recovery",
+    "problem_trigger": "a monthly operator statement or disputed invoice whose unit counts, deposit cash, and handling fees differ across participants"
+  },
+  "founder_fit": [
+    "The work is quantitative, anomaly-driven, and suited to automated reconciliation.",
+    "Warsaw gives access to Polish scheme stakeholders without requiring a public persona.",
+    "A single historical-statement audit can validate value before a large build.",
+    "The recurring infrastructure model offers more compounding potential than manual compliance consulting."
+  ],
+  "parent": null,
+  "risks": [
+    "Operators may refuse data access or prohibit independent benchmarking.",
+    "Unit mismatches can involve fraud allegations and require careful evidentiary controls.",
+    "Large retailers and operators may build reconciliation internally.",
+    "A success-fee structure can create disputes over attribution and recovered amounts."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.gov.pl/web/klimat/system-kaucyjny",
+    "https://www.gov.pl/web/klimat/podsumowanie-wdrazania-systemu-kaucyjnego-i-zmiany-od-1-stycznia-2026-roku",
+    "https://www.gov.pl/attachment/4369df4f-aa6a-43a4-b46d-01689735fb14",
+    "https://www.gov.pl/attachment/2bee867b-2950-42f1-908b-c6d0aadab50a"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "multi-operator scheme settlement assurance",
+    "control_point": "independent variance certificate for deposits, returned units, and handling-fee entitlements",
+    "critical_dependency": "contractual access to retailer, producer, reverse-vending, logistics, and operator transaction feeds"
+  },
+  "thesis": "Create an independent assurance layer for beverage producers, regional retail chains, and deposit-system operators that reconciles product master data, deposits charged, manual and reverse-vending returns, logistics counts, handling fees, and operator statements. It does not run the deposit system; it produces a defensible variance file before a monthly statement is accepted. The paid event is statement certification or a recovered dispute, with volume pricing aligned to the scheme.",
+  "title": "Independent Deposit-Return Settlement Auditor",
+  "uncertainties": [
+    "The magnitude of real settlement leakage is not publicly established.",
+    "Feed formats, latency, and contractual audit rights across operators are unknown.",
+    "It is untested whether producers, retailers, or operators feel the strongest pain and own budget.",
+    "Sales cycles with scheme participants may exceed a part-time founder's capacity."
+  ],
+  "version": 1
+}

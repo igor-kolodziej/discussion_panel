@@ -1,0 +1,139 @@
+{
+  "candidate_id": "control-09",
+  "claims": [
+    {
+      "claim_id": "control-09-r01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/digital-health-technologies-remote-data-acquisition-clinical-investigations"
+      ],
+      "statement": "FDA guidance for digital health technologies used in clinical investigations calls for fit-for-purpose selection and verification and validation of measurements, creating a real evidence burden for clinical-study sponsors and device teams."
+    },
+    {
+      "claim_id": "control-09-r02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.physionet.org/content/wrist/1.0.0/",
+        "https://www.physionet.org/content/pulse-transit-time-ppg/1.1.0/csv/"
+      ],
+      "statement": "Open PhysioNet PPG resources include simultaneous motion and ECG references and are available under open database licences, so they support a low-cost benchmark pilot but also reduce scarcity for any offer based only on repackaging public data."
+    },
+    {
+      "claim_id": "control-09-r03",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.nature.com/articles/s41746-020-0226-6"
+      ],
+      "statement": "A six-device study of 53 people found significant device and activity-condition differences, with mean absolute heart-rate error during activity about 30% higher than at rest, supporting the need for context-specific testing rather than a single headline accuracy number."
+    },
+    {
+      "claim_id": "control-09-r04",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2016/679/2016-05-04/eng",
+        "https://eur-lex.europa.eu/eli/reg/2017/745/oj/eng"
+      ],
+      "statement": "Health and physiological data can be special-category personal data under GDPR, while EU medical-device rules require documented verification, validation, and clinical evaluation when the customer's intended purpose is medical; public-data engineering tests cannot automatically satisfy those obligations."
+    },
+    {
+      "claim_id": "control-09-r05",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.labfront.com/pricing",
+        "https://www.whaleteq.com/en",
+        "https://www.empatica.com/research/e4/"
+      ],
+      "statement": "Buyer-adjacent incumbents already sell wearable research infrastructure, data audits starting at USD 500, developer access starting at USD 4,000, full-stack sensor platforms, and ECG/PPG validation simulators, so a generic QA report faces both software and laboratory-tool substitutes."
+    },
+    {
+      "claim_id": "control-09-r06",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://www.labfront.com/pricing",
+        "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/digital-health-technologies-remote-data-acquisition-clinical-investigations"
+      ],
+      "statement": "A customer may pay materially more than adjacent software prices for confidential cross-device failure discovery tied to a release decision, but willingness to pay 8,000-20,000 PLN for a first engineering audit is unvalidated and must be tested with paid pilots."
+    }
+  ],
+  "contrary_evidence": [
+    "PhysioNet already provides openly licensed, reference-labelled PPG and ECG datasets; merely standardising those files is reproducible by customers and competitors.",
+    "Labfront advertises a data audit starting at USD 500 and twelve reports, creating a much lower adjacent price anchor than the original 15,000-50,000 PLN study hypothesis.",
+    "WhaleTeq sells dedicated ECG/PPG simulators for validation and compliance workflows, while Empatica bundles sensors and a research data platform, so procurement can favour established tooling rather than an independent benchmark vendor.",
+    "EU regulatory evidence is context-of-use specific. An engineering benchmark can inform, but cannot promise, conformity or clinical validation across intended purposes and target populations."
+  ],
+  "economics": {
+    "acquisition_route": "Sell one standardized motion-stress PPG release gate through a sample decision report, bounded direct outreach, and introductions from specialist CROs or regulatory consultants; no referral commitment is assumed. Require paid first audits and at least two customers purchasing a second gate after a version change before building a broader platform or proprietary corpus.",
+    "capital_required_pln": 80000,
+    "founder_net_worth_path": "The prior recurring-customer ARR path is not carried forward because neither subscription retention nor buyer volume is evidenced. This redesign first seeks repeat, up-front project revenue tied to release events, reinvests proven audit profit into reusable protocols and only rights-cleared derived failure features, and permits a later licence product only after repeat demand. A credible timing or volume path to 5m PLN founder net worth cannot be established from the present evidence and must be recomputed from paid conversion, delivery margin, repeat frequency, and channel acquisition data.",
+    "founder_time": "Keep delivery to a single PPG motion protocol that fits the existing 15-20 hour weekly ceiling; contract legal, privacy, regulatory, and any participant operations, and reject bespoke modality expansion until the release gate repeats.",
+    "gross_margin_basis": "The existing 60-75% audit-margin range remains an unvalidated hypothesis. Protocol reuse may reduce founder delivery time, while any referral share and specialist review reduce margin; the redesign assumes neither 75-85% software margin nor low-margin participant collection before repeat demand and reuse rights are proven.",
+    "payback": "Collect each release-gate fee up front. Measure customer payback only through documented internal validation time avoided or a release decision changed by a caught motion failure; neither benefit is presently evidenced. Measure acquisition payback separately for direct and partner-introduced audits.",
+    "pricing": "Retain the evidenced-as-hypothesis 8,000-20,000 PLN test range only for one device-algorithm version against the fixed PPG motion protocol. Do not sell monthly access, broad modality coverage, participant collection, regulatory certification, or a subscription until repeat purchase and delivery economics are observed.",
+    "retention_or_repeat": "Revenue repeats only when a customer pays for the same gate after a firmware or algorithm version change. At least two second purchases are the expansion gate; no subscription retention, automatic renewal, or CI integration is assumed."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A versioned motion-stress PPG protocol plus contractually reusable, de-identified derived failure signatures and release-gate decision templates; raw customer traces are not pooled or retained beyond the audit unless explicit lawful rights are obtained",
+    "customer": "Small wrist-wearable and PPG heart-rate algorithm teams preparing a firmware or algorithm release, initially reached directly or through specialist CRO and regulatory-consultant relationships",
+    "distribution_mechanism": "A public sample motion-failure protocol and decision report used in bounded technical outreach, with CRO and regulatory-consultant introductions tested as a channel without assuming any partner commitment",
+    "offer_and_business_model": "One standardized confidential motion-stress PPG release gate sold up front per device-algorithm version; broader benchmarks, subscriptions, new modalities, and proprietary data collection are deferred behind paid repeat-purchase evidence",
+    "payer_and_paid_event": "The engineering lead responsible for a PPG firmware or algorithm release pays before a fixed test window; a second payment occurs only when a later version is independently gated",
+    "problem_trigger": "A wrist-wearable PPG heart-rate firmware or algorithm version approaches release freeze and needs an independent check for motion-induced failure before shipment or study data lock"
+  },
+  "founder_fit": [
+    "The single PPG motion-failure scope uses the founder's neuroscience, biosignal, and data-science strengths without requiring a broad laboratory operation.",
+    "A fixed protocol, automated analysis, and decision report can be delivered within focused 15-20 hour weeks and without public-camera exposure, subject to actual pilot delivery measurement.",
+    "The founder must keep regulatory certification outside scope and use qualified privacy and regulatory support before handling identifiable physiological data or accepting broader evidence work."
+  ],
+  "parent": {
+    "candidate_id": "control-09",
+    "version": 3
+  },
+  "redesign": {
+    "changed_fingerprint_fields": [
+      "compounding_advantage",
+      "customer",
+      "distribution_mechanism",
+      "offer_and_business_model",
+      "payer_and_paid_event",
+      "problem_trigger"
+    ],
+    "economic_effect": "Replaces an unproven broad benchmark-plus-subscription model with up-front, per-release project revenue from one reusable PPG protocol. It defers proprietary collection, multi-modality delivery, and software-platform cost until at least two customers repurchase, while making channel cost, delivery margin, and release-triggered repeat frequency directly measurable. This lowers early capital exposure and scope risk but also removes assumed ARR and software margins, so the wealth path must be rebuilt from observed repeat economics rather than the prior volume forecast."
+  },
+  "risks": [
+    "The narrow motion-stress PPG gate may not occur frequently enough or command the proposed unvalidated price.",
+    "No CRO or regulatory-consultant referral commitment exists, so channel acquisition may fail or remain founder-intensive.",
+    "Public datasets and reproducible methods remain substitutes unless lawful derived failure signatures and decision trust compound across paid audits.",
+    "Customer contracts may prohibit retaining even de-identified derived failure features, preventing the intended data advantage.",
+    "Processing identifiable physiological data without an Article 9 condition and appropriate minimisation, security, and contracts creates GDPR exposure.",
+    "A release-gate report can be mistaken for clinical or regulatory validation unless the scope, claims, and qualified-partner boundary remain explicit."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/digital-health-technologies-remote-data-acquisition-clinical-investigations",
+    "https://eur-lex.europa.eu/eli/reg/2017/745/oj/eng",
+    "https://eur-lex.europa.eu/eli/reg/2016/679/2016-05-04/eng",
+    "https://www.physionet.org/content/wrist/1.0.0/",
+    "https://www.physionet.org/content/pulse-transit-time-ppg/1.1.0/csv/",
+    "https://www.nature.com/articles/s41746-020-0226-6",
+    "https://www.labfront.com/pricing",
+    "https://www.whaleteq.com/en",
+    "https://www.empatica.com/research/e4/"
+  ],
+  "stage": "development",
+  "structure": {
+    "commercial_archetype": "Productized per-release engineering gate that can later license a rights-cleared failure-signature asset",
+    "control_point": "The independent motion-stress PPG pass/fail report used immediately before a firmware or algorithm release decision",
+    "critical_dependency": "Paid repeat use of the same release gate and contracts that lawfully permit retention of de-identified derived failure features"
+  },
+  "thesis": "Build a neutral, fixed-scope release gate for motion-induced failures in wrist-wearable PPG heart-rate firmware and algorithms. Use license-compatible public data, synthetic artefacts, and customer-supplied traces only within a defined engineering protocol; charge up front for each version-specific decision report. Test CRO and regulatory-consultant introductions as distribution, but make no certification claim and assume no channel commitment. Do not build a broad benchmark, subscription platform, proprietary participant corpus, or additional modality until at least two customers pay for a second gate and contracts establish lawful reuse of derived failure features.",
+  "title": "PPG Motion-Regression Release Gate",
+  "uncertainties": [
+    "Whether a PPG engineering lead will pay 8,000-20,000 PLN for this narrow independent gate before a release freeze.",
+    "Whether at least two customers will buy the same gate again after a firmware or algorithm change.",
+    "Whether a CRO or regulatory consultant can introduce qualified buyers at an acquisition cost and sales effort compatible with part-time execution.",
+    "Whether contracts and GDPR controls permit retention and pooling of de-identified derived failure signatures without retaining customer raw traces.",
+    "Whether the fixed protocol changes release decisions or saves enough internal validation time to beat lower-cost audits, public datasets, platforms, and simulator tools.",
+    "Whether the narrow gate has enough buyer volume to support later licensing without premature modality or geographic expansion."
+  ],
+  "version": 4
+}

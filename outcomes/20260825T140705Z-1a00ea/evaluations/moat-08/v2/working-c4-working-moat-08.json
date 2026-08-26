@@ -1,0 +1,119 @@
+{
+  "assumptions": [
+    "The initial product only stores, links, versions, and routes assertion changes; qualified laboratory staff retain all patient-specific interpretation, reprioritization, and recontact decisions.",
+    "A genetics laboratory can lawfully provide pseudonymous case mappings and consent state under a data-processing agreement with appropriate security controls.",
+    "The founder contracts clinical-genetics, privacy, security, and regulatory expertise rather than attempting to supply non-delegable medical judgment.",
+    "The proposed pricing, labor savings, deployment effort, margins, and account volumes are unvalidated planning assumptions."
+  ],
+  "base_score": 4.28,
+  "candidate_id": "moat-08",
+  "candidate_sha256": "8d7ca72a7451d7ae02acf21d52dff08f253ee8102609e28bd3add5342b3d9e60",
+  "candidate_version": 2,
+  "constrained_score": 3.98,
+  "evaluation_type": "working",
+  "evidence_needed_for_higher_score": "A paid laboratory design partnership demonstrating accurate case matching, acceptable alert volume, documented consent handling, material staff-hour or risk savings, a validated non-device intended-use boundary, and an implementation payback acceptable to procurement.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "The useful insight is that the control point is not commodity ClinVar change detection but the longitudinal mapping of changes to historical cases, consent state, and an immutable clinician review trail. This is a real workflow distinction, although the evidence does not show that laboratories need a separate registry rather than the same function inside an interpretation suite or LIMS.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Professional guidance recognizes reevaluation work, and a large cohort found 4.60% of observed variants were reclassified, supporting a recurring operational problem. ESHG describes recontact as shared and resource-constrained rather than universally required, and there is no evidence of laboratory budget, time burden, paid demand, acceptable alert volume, or willingness to buy a narrow module.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Annual SaaS plus implementation can generate recurring revenue and workflow retention if connectors become reusable. Initial deployments are integration-heavy, security and support costs are unmeasured, CAC and procurement duration are unknown, and the claimed payback and 60-85% margin range are assumptions; reaching founder wealth requires roughly 90 high-value accounts in an incumbent-heavy clinical market.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Genetic laboratories with large longitudinal inherited-disease cohorts are a specific, coherent beachhead with an identifiable trigger. The evidence does not quantify reachable laboratories, historical case volume, budget ownership, national practice differences, or whether registry-only spend creates an economically meaningful segment.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "A data-minimized, clinician-controlled audit module could appeal to laboratories unwilling to replace their broader stack. However, Franklin already monitors variants and cases, QIAGEN and Fabric have mature interpretation workflows, ClinVar supplies the feed for free, and established vendors can bundle the narrow feature; no exclusive integration or channel supports dominance.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "Once case mappings and consent-aware workflows are embedded, the product could extend to customer-authored assertions, additional inherited-disease workflows, reporting, and new geographies. Many attractive adjacent features move toward patient-specific prioritization or interpretation, increasing regulatory burden, while country-specific recontact rules limit simple geographic replication.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Historical case mappings, review outcomes, consent records, and audit continuity can create genuine switching costs and customer-specific workflow knowledge. These assets begin only after difficult integrations, may not be reusable across customers, and do not prevent established interpretation or LIMS vendors from matching the feature inside a broader installed product.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "A focused registry could be simpler, more data-minimized, and more auditable than broad interpretation platforms while preserving clinician control. No evidence quantifies fewer missed changes, lower review time, better consent compliance, faster deployment, or lower total cost, and the narrowness may be a purchasing disadvantage rather than an advantage.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "Weekly public data, recognized reevaluation guidance, and documented ongoing reclassification make longitudinal monitoring increasingly feasible and relevant. Momentum is moderated by unsettled responsibility, absent cost-effectiveness evidence, variable consent practice, and the presence of mature vendors already responding to the same trend.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "One LIMS-connected laboratory design partnership is a sensible first route and could produce a referenceable deployment. There is no committed partner, founder channel advantage, validated procurement duration, repeatable connector strategy, CAC, or sales payback, and clinical data integrations create substantial trust and security friction.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "The founder can handle data normalization, versioning, and software development with AI leverage, while medical decisions can remain with qualified professionals. The project still requires accurate transcript and variant normalization, secure LIMS integration, special-category data governance, consent logic, regulatory boundary discipline, and clinical procurement; the full stated capital and four to five daily hours leave limited margin for setbacks.",
+      "score": 4,
+      "status": "scored"
+    }
+  ],
+  "final_score": 4,
+  "highest_value_structural_change": "Make the registry a contractually embedded audit and consent layer for a LIMS partner that lacks longitudinal recall functionality, with partner-led distribution and mandatory workflow logging that incumbents cannot displace without migrating the laboratory's historical record.",
+  "interaction_adjustment": -0.3,
+  "judge_id": "c4-working-moat-08",
+  "main_structural_strength": "Customer-specific case mappings, consent state, and immutable review history can turn a free public change feed into a recurring operational control point with real switching costs.",
+  "primary_score_limiter": "The product must remain narrow enough to avoid interpretation risk while being valuable enough for laboratories to buy separately from incumbent interpretation and LIMS suites.",
+  "qualified": false,
+  "raw_response_path": "artifacts/research/raw-c4-working-moat-08.json",
+  "raw_response_sha256": "3a82cf45f5998be895a1d8d4820a7fef8520408a2467f9cedcef89057784b1a4",
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 2,
+  "strongest_disconfirming_evidence": "Franklin already monitors variants and cases, QIAGEN and Fabric provide mature clinical workflows, and ESHG does not establish either a universal recontact duty or proven economic budget.",
+  "unrounded_score": 3.98
+}

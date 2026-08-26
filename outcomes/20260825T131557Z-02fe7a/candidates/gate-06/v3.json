@@ -1,0 +1,120 @@
+{
+  "candidate_id": "gate-06",
+  "claims": [
+    {
+      "claim_id": "gate-06-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2013/952/oj"
+      ],
+      "statement": "Union Customs Code Article 127 requires an Entry Summary Declaration before goods enter the Union; the carrier normally lodges it, but an importer, consignee, represented party, or another person able to present the goods may lodge instead."
+    },
+    {
+      "claim_id": "gate-06-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/customs/customs-security/import-control-system-2_en",
+        "https://taxation-customs.ec.europa.eu/customs/customs-security/import-control-system-2/faq_en"
+      ],
+      "statement": "The Commission expressly permits an economic operator to use an IT service provider; direct system-to-system access requires EORI/UUM&DS setup, certificates, an AS4 access point, registration, and self-conformance testing, with the IT provider acting as sender and the economic operator remaining declarant."
+    },
+    {
+      "claim_id": "gate-06-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/customs/customs-security/import-control-system-2_en",
+        "https://taxation-customs.ec.europa.eu/online-services/online-services-and-databases-customs/new-computerised-transit-system-ncts_en"
+      ],
+      "statement": "A forwarder can use the Commission's Shared Trader Portal, and road or rail ENS data can also be included in an NCTS Phase 6 transit declaration in opt-in countries, so a new gateway is not the only compliance route."
+    },
+    {
+      "claim_id": "gate-06-c4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ec.europa.eu/eurostat/fr/web/products-eurostat-news/w/ddn-20260731-2"
+      ],
+      "statement": "Eurostat reports that Polish-registered vehicles performed 381 billion tonne-kilometres in 2025, 20.2% of the EU total, establishing a large Polish road-freight context but not the number of small forwarders with extra-EU ENS filings."
+    },
+    {
+      "claim_id": "gate-06-c5",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.descartes.com/sites/default/files/media/documents/2022-05/5.12.22%20DES_0286_ICS2_Infographic_V2.pdf",
+        "https://www.aeb.com/en/customs-software-platform/index.php"
+      ],
+      "statement": "Established customs-software vendors already market portals, system-to-system connectivity, APIs, direct customs filing, and automated legal updates; no comparable public price was found in this pass."
+    },
+    {
+      "claim_id": "gate-06-c6",
+      "confidence": "low",
+      "evidence_refs": [],
+      "statement": "The proposed price, conversion rate, support burden, contribution margin, and 5 million PLN founder-net-worth path remain planning hypotheses rather than researched market facts."
+    }
+  ],
+  "contrary_evidence": [
+    "The free Shared Trader Portal and the NCTS Phase 6 combined-transit route reduce the need for a standalone filing gateway.",
+    "Descartes already offers an ICS2 portal and direct system-to-system option, while broad customs platforms such as AEB already integrate filing and automated updates.",
+    "Direct connectivity is not a lightweight generic API integration: it entails identity, certificate, AS4, role-registration, and conformance-testing work.",
+    "The observed freight-volume statistic does not establish how many target forwarders handle recurring extra-EU entries or how many are dissatisfied with current tools."
+  ],
+  "economics": {
+    "acquisition_route": "Research-stage hypothesis: test one TMS-reseller integration and three paid forwarder pilots before building direct ICS2 connectivity; no reseller commitment or channel conversion evidence exists.",
+    "capital_required_pln": 90000,
+    "founder_net_worth_path": "Not underwritten. A scenario of 100 retained customers averaging 3000 PLN per month would equal 3.6 million PLN ARR and could support the founder target through retained earnings and business equity in roughly years 7-10, but customer count, pricing, margin, retention, and valuation are all unvalidated.",
+    "founder_time": "Plan for at most 20 hours weekly by keeping the founder on product and partner work; production filing would still require contracted customs expertise and an on-call operating model whose feasibility is unknown.",
+    "gross_margin_basis": "Conservative planning range of 65-75% after hosting, monitoring, support, specialist review, and reseller share; no cost observations validate it.",
+    "payback": "Unknown until a reseller-sourced paid pilot measures integration effort, support time, and willingness to pay; do not assume nine-month payback.",
+    "pricing": "Test hypothesis only: 750-1500 PLN monthly preflight minimum plus usage, with direct filing priced separately after conformance costs are known; incumbent prices were not public in reviewed sources.",
+    "retention_or_repeat": "ENS events recur for extra-EU entries, but retention depends on error prevention, uptime, and embedded TMS workflow; no renewal evidence exists."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A lane-, shipper-, schema-, and rejection-specific correction graph that catches recurring defects before submission",
+    "customer": "Small Polish and Central European road or rail forwarders with recurring extra-EU entry movements and weak existing preflight",
+    "distribution_mechanism": "TMS resellers and customs agencies, beginning with one measurable embedded pilot",
+    "offer_and_business_model": "ENS preflight and observability adapter, with optional filing only under documented roles and permitted connectivity",
+    "payer_and_paid_event": "The forwarder pays a monthly minimum plus usage when a consignment receives a versioned ENS-ready or accepted state",
+    "problem_trigger": "A vehicle or consignment is approaching EU entry and its safety-and-security data must be complete before filing or combined transit submission"
+  },
+  "founder_fit": [
+    "Schema validation, anomaly scoring, and event telemetry fit the founder's data-science and automation skills.",
+    "A reseller-led wedge avoids dependence on a public persona and can be tested alongside employment.",
+    "The 90000 PLN envelope fits available capital only for a bounded preflight pilot; full production connectivity and on-call operations may exceed it.",
+    "Customs-domain interpretation and 24/7 operational responsibility are delegable in principle but must be costed before direct filing."
+  ],
+  "parent": {
+    "candidate_id": "gate-06",
+    "version": 2
+  },
+  "risks": [
+    "Incorrect sender, declarant, or representation setup could create unauthorized filings or disputed responsibility.",
+    "A production outage, certificate failure, or stale schema could delay cargo and create consequential customer losses.",
+    "Free official routes and incumbent suites may leave only a narrow preflight wedge with low willingness to pay.",
+    "The initial capital and part-time schedule may be insufficient for production-grade direct connectivity and support."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2013/952/oj",
+    "https://taxation-customs.ec.europa.eu/customs/customs-security/import-control-system-2_en",
+    "https://taxation-customs.ec.europa.eu/customs/customs-security/import-control-system-2/faq_en",
+    "https://taxation-customs.ec.europa.eu/document/download/f6265dc2-c550-48df-a26b-11cfa809b1f5_en?filename=ICS2-NTCS6+derogation+-+Guidance+for+road+and+rail_20250829.pdf",
+    "https://taxation-customs.ec.europa.eu/online-services/online-services-and-databases-customs/new-computerised-transit-system-ncts_en",
+    "https://ec.europa.eu/eurostat/fr/web/products-eurostat-news/w/ddn-20260731-2",
+    "https://www.descartes.com/sites/default/files/media/documents/2022-05/5.12.22%20DES_0286_ICS2_Infographic_V2.pdf",
+    "https://www.aeb.com/en/customs-software-platform/index.php"
+  ],
+  "stage": "development",
+  "structure": {
+    "commercial_archetype": "Transactional customs preflight and optional filing adapter",
+    "control_point": "Versioned ENS-ready or accepted state returned to the TMS before dispatch clearance",
+    "critical_dependency": "Documented filing roles, permitted ICS2 connectivity, measurable error reduction, and production-grade availability"
+  },
+  "thesis": "A narrow preflight-first adapter for small Central European road and rail forwarders could validate parties, commodity descriptions, routing, and required ICS2 data before the forwarder uses STP, NCTS Phase 6, an incumbent filer, or an optional documented filing connection. The defensible product would be the correction graph and TMS release state, not a claim to replace official filing routes or act as an undeclared customs representative.",
+  "title": "ICS2 Pre-Arrival Preflight Adapter for Small Road Forwarders",
+  "uncertainties": [
+    "The number and transaction volume of small Polish forwarders making extra-EU entries is unknown.",
+    "No evidence yet quantifies avoidable ENS rejections, delay cost, or willingness to pay for a separate preflight layer.",
+    "TMS API access, reseller interest, contract allocation of liability, insurance, and on-call cost are unknown.",
+    "The 90000 PLN capital figure and all price, margin, payback, scale, and valuation figures remain hypotheses."
+  ],
+  "version": 3
+}

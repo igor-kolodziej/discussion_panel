@@ -1,0 +1,71 @@
+{
+  "candidate_id": "control6-08",
+  "claims": [
+    {
+      "claim_id": "control6-08-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32025R0040"
+      ],
+      "statement": "The Packaging and Packaging Waste Regulation provides for a methodology to identify packaging material composition using standardised, open digital-marking technologies."
+    },
+    {
+      "claim_id": "control6-08-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32025R0040"
+      ],
+      "statement": "The Regulation applies from August 2026 but implementing details can continue to affect data requirements."
+    }
+  ],
+  "contrary_evidence": [
+    "The mandated technologies are intended to be open, which can reduce software lock-in and commoditise simple record display."
+  ],
+  "economics": {
+    "acquisition_route": "Unvalidated: sign a few packaging converters whose records automatically reach many brand customers; use the founder's FMCG domain understanding without employer data.",
+    "capital_required_pln": 85000,
+    "founder_net_worth_path": "Unvalidated scenario, not a forecast: map 1,000 SKUs in year 1, reach 4 million PLN ARR by year 4, build 4 million PLN founder equity and retained cash by year 6, and 5 million PLN founder net worth in years 7-9.",
+    "founder_time": "Unvalidated operating estimate: 2-4 hours per day with converter onboarding templates and external verification.",
+    "gross_margin_basis": "Unvalidated: 70%-90% gross margin after initial data mapping, verification and support.",
+    "payback": "Unvalidated: 9-18 months after the first converter portfolio goes live.",
+    "pricing": "Unvalidated commercial figures, including capital_required_pln: 40-120 PLN per active SKU per month, with 5,000-25,000 PLN converter onboarding.",
+    "retention_or_repeat": "Unvalidated: records recur while SKUs remain active and update on material changes; churn is unknown."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Cross-converter schemas, change histories and validation exceptions make onboarding faster and evidence more trusted",
+    "customer": "Packaging converters and EU FMCG brands maintaining packaging material records",
+    "distribution_mechanism": "Converters originate the record and distribute it downstream with every customer specification",
+    "offer_and_business_model": "Versioned packaging composition evidence with stable identifiers and system integrations",
+    "payer_and_paid_event": "A converter or brand pays for each active governed record and onboarding",
+    "problem_trigger": "A SKU launches or its packaging material, component or supplier changes"
+  },
+  "founder_fit": [
+    "Uses FMCG context without requiring employer information.",
+    "Strong fit for data modelling and automation.",
+    "Structural converter distribution limits outbound sales."
+  ],
+  "parent": null,
+  "risks": [
+    "Open standards make the basic product easy to copy.",
+    "Incorrect source data exposes customers to mislabelling.",
+    "Employer-conflict and confidentiality boundaries must be strict."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32025R0040"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Industry master-data utility",
+    "control_point": "Converter distribution agreements and contractual rights to normalise, version and serve packaging-composition evidence",
+    "critical_dependency": "Converters must supply accurate component data, brands must accept the evidence record and the service must align with final EU methods"
+  },
+  "thesis": "Contract packaging converters to maintain verified material bill-of-material records at the source, issue stable evidence identifiers and push updates into FMCG customer workflows. The product is a governed evidence rail with converter-originated data rights and change history, not a generic PPWR compliance dashboard.",
+  "title": "Packaging Composition Evidence Rail",
+  "uncertainties": [
+    "Who pays: converter, brand or producer-responsibility organisation",
+    "Final required data granularity",
+    "Willingness to grant durable evidence-serving rights"
+  ],
+  "version": 1
+}

@@ -1,0 +1,83 @@
+{
+  "candidate_id": "bottleneck-07",
+  "claims": [
+    {
+      "claim_id": "bottleneck-07-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://health.ec.europa.eu/document/download/a9ad86b7-1b8e-4bae-beb4-48b2b3ed2f05_en?filename=mdcg_2025-10_en.pdf"
+      ],
+      "statement": "Current MDCG guidance states that manufacturers must operate a structured, proactive PMS system within the quality system, gather and record data continuously throughout device life, and use results to update technical documentation and corrective or preventive action."
+    },
+    {
+      "claim_id": "bottleneck-07-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://health.ec.europa.eu/system/files/2023-01/mdcg_2022-21_en.pdf"
+      ],
+      "statement": "The MDCG PSUR guidance says a PSUR summarizes systematically gathered post-market data, benefit-risk conclusions, and relevant preventive or corrective actions for competent authorities and notified bodies."
+    },
+    {
+      "claim_id": "bottleneck-07-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://health.ec.europa.eu/medical-devices-eudamed/overview_en"
+      ],
+      "statement": "Four EUDAMED modules, including actor and UDI/device registration, became mandatory on 28 May 2026, while the vigilance and PMS module remains under development."
+    }
+  ],
+  "contrary_evidence": [
+    "Class I manufacturers prepare a PMS report rather than a PSUR, narrowing the initial PSUR customer segment.",
+    "EUDAMED's vigilance and PMS module is still under development, so near-term integration value is uncertain.",
+    "Established electronic quality-management and regulatory-information platforms already serve larger manufacturers."
+  ],
+  "economics": {
+    "acquisition_route": "A fixed-fee PMS traceability assessment, evidence-led technical content, direct outreach to small manufacturers, and QA/RA consultant referrals",
+    "capital_required_pln": 100000,
+    "founder_net_worth_path": "Modeled path: 150 customers at 36,000 PLN average annual recurring revenue equals 5.4m PLN ARR; a 40% owner-cash margin is 2.16m PLN/year and could produce more than 10m PLN over five mature years",
+    "founder_time": "Up to 5 hours/day for a two-customer design phase, with validation and regulatory review contracted to qualified specialists",
+    "gross_margin_basis": "Modeled 70-85% after secure hosting, validation maintenance, support, and contracted QA/RA review",
+    "payback": "Target under 9 months because onboarding is paid; regulated procurement and validation cycles are unmeasured",
+    "pricing": "Modeled 1,500-6,000 PLN/month by device-family and user count plus 15,000-50,000 PLN validated onboarding",
+    "retention_or_repeat": "PMS is continuous across the device lifetime and feeds recurring reports, risk updates, CAPA, and inspections"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A de-identified mapping corpus connecting event taxonomies, device exposure denominators, reviewer corrections, risk-file links, and accepted report structures",
+    "customer": "EU medical-device manufacturers with a small regulatory team and roughly 1-20 Class IIa or IIb device families",
+    "distribution_mechanism": "Technical PMS gap assessments, targeted outreach to small manufacturers, and referrals from independent QA/RA consultants",
+    "offer_and_business_model": "Validated intake, deduplication, exposure-normalized trends, risk and CAPA linking, controlled drafting, review signatures, and report exports sold as regulated-workflow SaaS",
+    "payer_and_paid_event": "The manufacturer pays an annual license and onboarding fee when it needs continuous PMS control and a defensible PSUR or PMS report package",
+    "problem_trigger": "A complaint, service event, literature review, trend calculation, CAPA, or periodic report cycle lacks a complete trace from raw evidence to approved safety conclusion"
+  },
+  "founder_fit": [
+    "Health and data-analysis interests align with signal detection and evidence traceability, while the medical-student partner can improve domain vocabulary without acting as a regulator.",
+    "The founder can build a narrow analytics and workflow layer rather than capital-intensive hardware or a diagnostic medical device.",
+    "A small number of high-value customers can support meaningful revenue without mass consumer marketing or a public persona."
+  ],
+  "parent": null,
+  "risks": [
+    "A missed safety signal or incorrect trend could cause patient harm and severe liability.",
+    "Health, complaint, and device data create heightened security and privacy obligations.",
+    "Part-time founder availability may be incompatible with urgent customer incident expectations unless support is explicitly bounded."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://health.ec.europa.eu/document/download/a9ad86b7-1b8e-4bae-beb4-48b2b3ed2f05_en?filename=mdcg_2025-10_en.pdf",
+    "https://health.ec.europa.eu/system/files/2023-01/mdcg_2022-21_en.pdf",
+    "https://health.ec.europa.eu/medical-devices-eudamed/overview_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "High-trust regulated evidence SaaS with paid validation and onboarding",
+    "control_point": "The audit trace from each post-market source event through signal analysis, benefit-risk decision, CAPA, approval, and periodic report statement",
+    "critical_dependency": "Manufacturers must provide complete source data and qualified regulatory personnel must approve every safety interpretation"
+  },
+  "thesis": "Build a controlled evidence workbench for small EU Class IIa and IIb medical-device manufacturers that turns complaints, service events, literature findings, sales exposure, vigilance cases, and CAPA actions into traceable PMS analyses and review-ready PSUR sections. Manufacturers pay because continuous post-market surveillance crosses support, quality, clinical, distributor, and regulatory data, while every conclusion must link back to source evidence and approved risk decisions.",
+  "title": "MDR Complaint-to-PSUR Evidence Workbench",
+  "uncertainties": [
+    "The willingness of small manufacturers and notified bodies to accept AI-assisted drafting within a validated process is unknown.",
+    "The cost and duration of software validation, security review, and customer data migration may exceed the base budget.",
+    "Modeled pricing, acquisition cycle, specialist cost, support load, and owner-cash margin require paid validation."
+  ],
+  "version": 1
+}

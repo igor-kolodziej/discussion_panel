@@ -1,0 +1,140 @@
+{
+  "candidate_id": "settle6-08",
+  "claims": [
+    {
+      "claim_id": "settle6-08-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.ups.com/gb/en/support/shipping-support/legal-terms-conditions/ups-service-guarantee"
+      ],
+      "statement": "UPS publishes a money-back guarantee for qualifying late deliveries, requires a timely claim with shipment details and allows account holders to request a refund through invoice dispute tooling."
+    },
+    {
+      "claim_id": "settle6-08-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.ups.com/pl/pl/support/shipping-support/legal-terms-conditions/ups-service-guarantee"
+      ],
+      "statement": "UPS Poland applies its money-back guarantee only to certain services and destinations, excludes VAT, duties, taxes and other charges, and requires a request within 15 calendar days of scheduled delivery; eligible account holders may request it through an invoice dispute in the UPS Billing Centre."
+    },
+    {
+      "claim_id": "settle6-08-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://bip.uke.gov.pl/raporty/raport-o-stanie-rynku-pocztowego-w-2025-r-,112.html"
+      ],
+      "statement": "Poland's communications regulator reports nearly 1.40 billion courier items in 2025, up 14.3%, establishing a large underlying parcel flow but not the fraction using guaranteed services or eligible for refunds."
+    },
+    {
+      "claim_id": "settle6-08-c4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.ups.com/pl/pl/business-solutions/ups-billing"
+      ],
+      "statement": "UPS Billing Centre supports downloadable invoice data and account roles that can view invoices and resolve claims, so an account owner can grant a bounded operational role rather than disclose payment credentials."
+    },
+    {
+      "claim_id": "settle6-08-c5",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.fedex.com/pl-pl/service-news.html",
+        "https://www.fedex.com/en-pl/customer-support/faq/complaints-and-refunds/fedex-refund.html"
+      ],
+      "statement": "FedEx Poland restored its money-back guarantee on 12 February 2026 only for a listed set of time-definite intercontinental services, and its Poland support flow directs a late-delivery refund or invoice-adjustment request through a form."
+    },
+    {
+      "claim_id": "settle6-08-c6",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://mrt2.ap.dhl.com/reverse/content/dam/downloads/global/en/mbg/money_back_guarantee_terms_and_conditions_en_jan2025.pdf.coredownload.pdf"
+      ],
+      "statement": "DHL Express's January 2025 guarantee covers only the premium above the corresponding end-of-day service for listed time-definite services, requires notice within 14 days of shipment, and says the customer may not permit another party to notify claims on its behalf."
+    },
+    {
+      "claim_id": "settle6-08-c7",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.lateshipment.com/platform/oneaudit/",
+        "https://www.refundretriever.com/pricing/"
+      ],
+      "statement": "Mature parcel-audit incumbents already market automated late-delivery and invoice-credit recovery on contingency: LateShipment.com publishes a 35% fee and broad carrier coverage, while Refund Retriever publishes 45-50% tiers for smaller annual shipping spend."
+    }
+  ],
+  "contrary_evidence": [
+    "Guarantees are service- and destination-specific and contain broad exclusions; carrier automation or suspensions can compress the recoverable pool.",
+    "FedEx Poland's current reinstatement covers a listed set of intercontinental time-definite services rather than the general parcel base.",
+    "DHL Express's January 2025 terms expressly prohibit a customer from letting another party notify a guarantee claim on its behalf, so DHL cannot be assumed to support the proposed third-party filing workflow.",
+    "LateShipment.com and Refund Retriever already sell automated carrier audit and verified-credit recovery on contingency, so late detection plus success pricing is not differentiated by itself."
+  ],
+  "economics": {
+    "acquisition_route": "UNVALIDATED: app integrations with shipping platforms, WMS vendors, ecommerce agencies and multi-merchant 3PLs; evidence does not establish partner willingness or a Poland-specific channel agreement.",
+    "capital_required_pln": 60000,
+    "founder_net_worth_path": "UNVALIDATED: monitor 2m parcels annually by year 3 and 20m by year 6, supporting founder equity plus retained cash above PLN 5m in years 5-7; UKE confirms a large parcel market but not the guaranteed-service share, refund incidence, achievable take rate or valuation.",
+    "founder_time": "UNVALIDATED: 2 hours per day after one carrier and one shipping platform are automated; carrier denials and portal-only workflows may require more operations.",
+    "gross_margin_basis": "UNVALIDATED: automated scan, commitment, exclusion and invoice processing at parcel scale, initially limited to carriers whose terms and account permissions allow the workflow.",
+    "payback": "UNVALIDATED: one 3PL integration recovers acquisition cost after 200 credited parcels or 3 months; neither credit incidence nor acquisition cost was evidenced.",
+    "pricing": "UNVALIDATED for Poland: percentage of confirmed carrier credits, optionally shared with the 3PL channel. Public incumbent benchmarks include 35% at LateShipment.com and 45-50% for Refund Retriever's smaller-spend tiers, but willingness to pay and a defensible channel share remain unknown.",
+    "retention_or_repeat": "UNVALIDATED: daily parcel flow provides frequent candidate events, while carrier decisions could improve service-, lane- and exclusion-specific rules; the eligible fraction and permission durability remain unknown."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Carrier decisions compound into service-, lane-, exclusion- and evidence-specific refund models",
+    "customer": "Ecommerce merchants and 3PLs with material spend on explicitly guaranteed parcel services, initially qualifying UPS Poland and FedEx intercontinental services",
+    "distribution_mechanism": "Shipping-platform, WMS and 3PL integrations",
+    "offer_and_business_model": "Carrier-specific eligibility, account-owner-authorized request workflow and invoice-credit matching for a contingency fee",
+    "payer_and_paid_event": "The merchant or 3PL pays after the carrier posts a refund or invoice credit",
+    "problem_trigger": "Carrier tracking shows delivery outside a guaranteed commitment and within the claim window"
+  },
+  "founder_fit": [
+    "Highly automatable",
+    "Clear paid event",
+    "Low starting capital",
+    "One integration can reach many merchants",
+    "A one-carrier Poland pilot can test incidence and operations before major spending"
+  ],
+  "parent": {
+    "candidate_id": "settle6-08",
+    "version": 1
+  },
+  "risks": [
+    "Carrier terms change",
+    "Refunds too small for support costs",
+    "Platform dependence",
+    "Merchants may already use audit tools",
+    "A carrier may limit eligible services or suspend its guarantee",
+    "Account roles may permit invoice disputes but not scalable third-party automated submission",
+    "Incumbents can bundle broader invoice errors and carrier coverage at established contingency prices",
+    "DHL's current no-third-party-notification clause blocks the assumed filing model for that carrier"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.ups.com/gb/en/support/shipping-support/legal-terms-conditions/ups-service-guarantee",
+    "https://www.ups.com/pl/pl/support/shipping-support/legal-terms-conditions/ups-service-guarantee",
+    "https://bip.uke.gov.pl/raporty/raport-o-stanie-rynku-pocztowego-w-2025-r-,112.html",
+    "https://www.ups.com/pl/pl/business-solutions/ups-billing",
+    "https://developer.ups.com/get-started",
+    "https://www.fedex.com/pl-pl/service-news.html",
+    "https://www.fedex.com/en-pl/customer-support/faq/complaints-and-refunds/fedex-refund.html",
+    "https://mrt2.ap.dhl.com/reverse/content/dam/downloads/global/en/mbg/money_back_guarantee_terms_and_conditions_en_jan2025.pdf.coredownload.pdf",
+    "https://www.lateshipment.com/platform/oneaudit/",
+    "https://www.refundretriever.com/pricing/"
+  ],
+  "stage": "research",
+  "structure": {
+    "commercial_archetype": "High-volume contingency refund recovery",
+    "control_point": "The deadline-aware eligibility engine and invoice-level proof that a carrier credit was received",
+    "critical_dependency": "The target carrier guarantee must apply, the account owner must grant lawful operational access, carrier terms must permit the filing workflow, and invoice credits must be reconcilable"
+  },
+  "thesis": "Begin with one tightly bounded UPS Poland workflow for merchants or 3PLs using explicitly guaranteed services: compare promised commitments with scans, apply carrier-specific exclusions, prepare or submit an account-owner-authorized request within the 15-day window, and reconcile the resulting invoice credit before charging a contingency fee. Add FedEx only for currently eligible services and through its supported claim flow. Do not assume DHL support because its January 2025 terms bar another party from notifying claims. Distribution still depends on shipping-software, WMS and 3PL integrations, while each accepted or denied decision can strengthen a carrier-, service-, lane- and exclusion-specific outcome corpus.",
+  "title": "Parcel Guarantee Refund Collector",
+  "uncertainties": [
+    "Refund incidence in Poland and EU lanes",
+    "Carrier API claim rights",
+    "3PL revenue-share appetite",
+    "Share of Poland parcel volume bought on explicitly guaranteed services",
+    "Average net eligible transport charge after taxes, surcharges and service-specific limits",
+    "Whether UPS permits automated third-party guarantee requests beyond an account-owner-assigned Billing Centre role",
+    "Denial and escalation workload per credited parcel",
+    "Customer willingness to switch from incumbent audit vendors or internal invoice review"
+  ],
+  "version": 2
+}

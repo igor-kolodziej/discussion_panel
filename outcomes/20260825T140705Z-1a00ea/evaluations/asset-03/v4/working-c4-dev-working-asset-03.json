@@ -1,0 +1,119 @@
+{
+  "assumptions": [
+    "Licensed diagnostic providers permit commercial use and normalization of their outputs at predictable per-vehicle cost.",
+    "Fleet lessors and dealers can lawfully grant permission to retain bids, routing decisions, realized sale prices, and time-to-sale for model development.",
+    "Licensed partners perform physical tests and vehicle handling while the founder limits work to software, analytics, integrations, and bounded account management.",
+    "The founder operates for 15-20 hours per week alongside employment and begins without an exclusive fleet, auction, diagnostic, lender, insurer, or buyer partnership."
+  ],
+  "base_score": 4.56,
+  "candidate_id": "asset-03",
+  "candidate_sha256": "7c4bc992c3bbbb274fd9b897a74838aa2a72ddda0bc0682f125b0141c8086067",
+  "candidate_version": 4,
+  "constrained_score": 4.26,
+  "evaluation_type": "working",
+  "evidence_needed_for_higher_score": "Repeated paid disposal batches from multiple fleet or dealer accounts with lawful outcome retention, measured improvement in reserve accuracy, conversion or time-to-sale versus the existing process, positive contribution after tests and integration, and customer renewal across successive batches.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "The redesign correctly recognizes that battery certificates are already supplied and shifts value toward linking normalized diagnostics to Polish bids, routing, realized prices, and sale speed. A local outcome loop could address a real information gap, although it requires transaction access that the business does not yet control.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Battery uncertainty can impair reserve pricing, buyer trust, and disposal decisions for recurring EV batches, giving fleets and dealers a plausible reason to care. No evidence yet shows that the workflow improves realized price, conversion, or time-to-sale enough to command a fee beyond low-cost tests and existing auction services.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Recurring batch fees and success-based transaction fees are structurally better than one-off certificate resale and avoid proprietary diagnostic development. Pricing, vehicles per account, test and integration cost, failed-test cost, support, liability, retention, CAC, payback, and contribution remain unknown, while BCA's EUR 40 embedded report constrains the available value pool.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Polish fleet lessors and high-volume used-EV dealers form a specific beachhead with recurring disposal events. The electrically chargeable fleet is growing but was still only 3.7% of the EU car fleet in 2024, and the evidence does not establish current Polish batch volume or a sufficiently large paid analytics segment.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "Local outcome calibration and diagnostic-agnostic workflows could distinguish the offer from a standalone certificate. BCA already combines battery reports with European auction distribution, and AVILOO, DEKRA, OEMs, auctions, or fleet software vendors possess stronger data, customer access, and a straightforward ability to add similar analytics.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "If the closed-loop dataset predicts outcomes, it can support reserve pricing, buyer routing, warranties, lending, insurance, cross-border remarketing, and adjacent fleet decisions. These adjacencies share the same core data asset, but none becomes accessible until repeat transaction outcomes are contractually captured.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Permissioned links between battery condition and local sale outcomes could compound into a useful proprietary dataset. The proposed moat has a severe cold start, customers may withhold outcomes, and incumbent auctions already observe far more bids and completed transactions and can incorporate equivalent model features.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "A decision workflow could be more useful than another certificate by recommending reserves and buyer routes rather than merely reporting state of health. There is no measured lift in price, conversion, or cycle time, while an auction such as BCA already bundles diagnostics with the transaction venue.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "The EV fleet is growing, practical automotive data access remains fragmented, and 2027 battery passports leave a legacy-fleet gap, making normalization timely. Standardization can also erode part of the access advantage, and entrenched diagnostic and auction providers are already responding.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "A small number of fleet and dealer accounts can supply concentrated recurring volume, making a focused pilot possible. Winning those accounts requires trust, integration, data permissions, and deliberate B2B selling against established auction routes, with no current commitment or naturally advantaged channel.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "Data normalization and residual-value modeling fit the founder well, and licensed partners keep physical testing and capital needs bounded. Part-time execution remains exposed to enterprise integrations, proprietary interfaces, data rights, model coverage, inconclusive tests, professional liability, account sales, and dependence on third parties.",
+      "score": 5,
+      "status": "scored"
+    }
+  ],
+  "final_score": 4.3,
+  "highest_value_structural_change": "Embed the product through a long-term or exclusive partnership with a Polish fleet lessor or auction that contractually supplies recurring batches and closed-sale outcomes, so reserve and routing recommendations run inside an existing transaction workflow instead of requiring a standalone exchange and cold-start acquisition.",
+  "interaction_adjustment": -0.3,
+  "judge_id": "c4-dev-working-asset-03",
+  "main_structural_strength": "The redesign treats mature incumbent diagnostics as inputs and focuses the proprietary asset on recurring, closed-loop Polish remarketing outcomes rather than competing to create another battery certificate.",
+  "primary_score_limiter": "The business does not control fleet transaction flow or closed-sale outcomes, yet those permissions are simultaneously required for distribution, demonstrated customer value, and the proposed data moat.",
+  "qualified": false,
+  "raw_response_path": "artifacts/development/raw-c4-dev-working-asset-03.json",
+  "raw_response_sha256": "c9775886a9fe32f11499341dab6360ab5412d307e6156a612837167768f663c8",
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 2,
+  "strongest_disconfirming_evidence": "BCA already embeds AVILOO battery grading inside a large European BEV auction for EUR 40 per vehicle, giving an incumbent both low-cost diagnostics and direct access to bids and completed-sale outcomes.",
+  "unrounded_score": 4.26
+}

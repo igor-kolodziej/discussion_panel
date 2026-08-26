@@ -1,0 +1,80 @@
+{
+  "candidate_id": "channel-06",
+  "claims": [
+    {
+      "claim_id": "channel-06-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://digital-strategy.ec.europa.eu/en/policies/nis2-directive"
+      ],
+      "statement": "NIS2 covers medium and large entities across many critical sectors and requires cybersecurity risk-management measures and significant-incident notification, expanding the compliance surface beyond traditional digital infrastructure."
+    },
+    {
+      "claim_id": "channel-06-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://digital-strategy.ec.europa.eu/en/faqs/directive-measures-high-common-level-cybersecurity-across-union-nis2-directive-faqs"
+      ],
+      "statement": "NIS2 explicitly includes supply-chain security and supplier relationships among the core risk-management elements, supporting a focused supplier-evidence wedge rather than another broad security dashboard."
+    },
+    {
+      "claim_id": "channel-06-c03",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://digital-strategy.ec.europa.eu/en/policies/nis2-directive",
+        "https://digital-strategy.ec.europa.eu/en/faqs/directive-measures-high-common-level-cybersecurity-across-union-nis2-directive-faqs"
+      ],
+      "statement": "Hypothesis: MSPs can distribute and maintain a supplier passport more efficiently than a standalone vendor because they already administer controls and evidence for multiple clients and benefit from standardised reviews."
+    }
+  ],
+  "contrary_evidence": [
+    "Member-state transposition remains uneven, so the exact buyer obligation and enforcement timing differ by jurisdiction.",
+    "Governance, risk, and compliance suites already provide questionnaire automation; the passport must win through MSP distribution and reusable evidence rather than feature breadth."
+  ],
+  "economics": {
+    "acquisition_route": "Recruit a small number of sector-focused MSPs or brokers, each activating dozens of clients and hundreds of suppliers",
+    "capital_required_pln": 70000,
+    "founder_net_worth_path": "Hypothesis: 10000 active supplier passports at 55 PLN monthly net revenue equals 6.6 million PLN ARR in years 6-8; at 25% EBITDA, 6x EBITDA, and 70% ownership, founder equity would be about 6.9 million PLN",
+    "founder_time": "18-24 hours weekly for secure MVP and mappings, then 8-12 hours weekly with MSP-owned remediation and onboarding",
+    "gross_margin_basis": "Evidence storage, mapping, and reminders can support 80-90% gross margin if partners handle remediation consulting",
+    "payback": "Target under 9 months per channel partner; their payback comes from replacing repeated questionnaire labour and adding a managed-service line",
+    "pricing": "Hypothesis: 40-120 PLN per supplier monthly with 30000-100000 PLN annual MSP minimums",
+    "retention_or_repeat": "Assertions expire, controls change, and annual supplier reviews recur; the evidence history raises switching cost"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Control-to-question mappings, expiring evidence lineage, and reciprocal passport acceptance reduce marginal review effort across the network",
+    "customer": "European MSPs, cyber-insurance brokers, NIS2-scope organisations, and their material suppliers",
+    "distribution_mechanism": "White-labelled inside MSP managed-security packages and cyber-insurance risk-improvement programmes",
+    "offer_and_business_model": "Reusable permissioned security-evidence graph and questionnaire-mapping SaaS sold through MSPs",
+    "payer_and_paid_event": "MSP or insured organisation pays per managed supplier passport and annual evidence renewal",
+    "problem_trigger": "A supplier onboarding or annual review needs current evidence for supply-chain cybersecurity controls"
+  },
+  "founder_fit": [
+    "Good fit for structured evidence, automation, and low-camera B2B work, with channel partners doing much of the relationship management. Security architecture and independent review require specialist help; the founder should not represent the tool as certification."
+  ],
+  "parent": null,
+  "risks": [
+    "A breach following a positive passport assertion could create severe trust and liability damage.",
+    "Sensitive security documents make the product an attractive attack target.",
+    "Large MSP platforms could internalise the workflow after channel validation."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://digital-strategy.ec.europa.eu/en/faqs/directive-measures-high-common-level-cybersecurity-across-union-nis2-directive-faqs",
+    "https://digital-strategy.ec.europa.eu/en/policies/nis2-directive"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Reusable B2B credential and evidence network",
+    "control_point": "The supplier-security approval and renewal record inside an MSP-managed client workflow",
+    "critical_dependency": "Partner and customer trust in secure permissioning, assertion provenance, and non-certification liability boundaries"
+  },
+  "thesis": "Offer MSPs and cyber-insurance brokers a reusable evidence graph for NIS2 supplier security. A managed client answers and evidences core controls once; the partner maps that passport into customer questionnaires, annual reviews, policy gaps, and incident-ready contact chains, with every assertion carrying an owner, expiry date, and source document.",
+  "title": "Supplier Security Passport",
+  "uncertainties": [
+    "Which supply-chain questionnaires converge enough to support automated mappings is untested.",
+    "MSP revenue share and appetite to white-label a third-party evidence layer are unknown.",
+    "Customers may resist sharing evidence across counterparties even with granular permissioning."
+  ],
+  "version": 1
+}

@@ -1,0 +1,86 @@
+{
+  "candidate_id": "control8-06",
+  "claims": [
+    {
+      "claim_id": "control8-06-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+      ],
+      "statement": "The Commission lists risk management, data quality, activity logging, detailed documentation, human oversight, robustness, cybersecurity, and accuracy among obligations for high-risk AI systems before market placement."
+    },
+    {
+      "claim_id": "control8-06-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://digital-strategy.ec.europa.eu/en/faqs/navigating-ai-act"
+      ],
+      "statement": "Official guidance says certain deployers must perform a fundamental-rights impact assessment, while deployers generally must monitor use, act on risks or incidents, and assign human oversight."
+    },
+    {
+      "claim_id": "control8-06-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://digital-strategy.ec.europa.eu/en/policies/guidelines-ai-high-risk-systems"
+      ],
+      "statement": "The Commission's current timeline says rules for specified high-risk areas apply from 2 December 2027 and product-integrated high-risk systems from 2 August 2028."
+    }
+  ],
+  "contrary_evidence": [
+    "The Commission says the vast majority of AI systems are minimal or no risk, so a broad horizontal target would have weak mandatory demand.",
+    "Current high-risk application dates are in 2027-2028, delaying urgency and leaving room for further implementation changes.",
+    "Draft classification guidance is not legally binding and was still undergoing consultation, so product rules cannot be treated as settled legal advice."
+  ],
+  "economics": {
+    "acquisition_route": "Select one vertical after 20-30 interviews, run paid evidence-mapping pilots with an AI/privacy advisor, and turn the common model into integrations",
+    "capital_required_pln": 50000,
+    "founder_net_worth_path": "Unvalidated 5-8 year scenario: 80 providers averaging 80,000 PLN annual revenue yields 6.4m PLN; at 30% EBITDA, 4x, and 70% ownership, equity value is about 5.38m PLN.",
+    "founder_time": "17-23 hours weekly, with external legal and sector assurance input at fixed milestones",
+    "gross_margin_basis": "Evidence orchestration and reusable vertical schemas are software; bespoke legal classification, bias studies, and assurance are partner-delivered services",
+    "payback": "Customer payback hypothesis: reducing enterprise diligence cycles and repeated evidence assembly could justify 50,000-120,000 PLN annually, but willingness before enforcement must be tested",
+    "pricing": "Unvalidated hypothesis: 20,000-60,000 PLN implementation and 36,000-120,000 PLN annual subscription per provider based on systems and deployments",
+    "retention_or_repeat": "Every data, model, intended-purpose, oversight, deployment, and incident change extends the same audit trail"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Longitudinal model/data/control lineage plus vertical evaluation and incident patterns, with customer-confidential data isolated",
+    "customer": "EU SME providers of AI systems in one selected high-risk vertical, initially HR, education, or credit software rather than general-purpose model labs",
+    "distribution_mechanism": "AI assurance firms, privacy advisors, sector software associations, and downloadable vertical evidence schemas that reveal readiness gaps",
+    "offer_and_business_model": "Classification decision log, data/evaluation lineage, control assignments, trace logging, technical-document export, and change gate; hypothesis 20,000-60,000 PLN setup plus 3,000-10,000 PLN monthly",
+    "payer_and_paid_event": "CTO, risk, or compliance leader pays onboarding and an annual license per governed system, with optional validation-study modules",
+    "problem_trigger": "Classification review, new model release, material data/model change, enterprise procurement review, authority request, or serious incident"
+  },
+  "founder_fit": [
+    "Direct match for data science, model evaluation, data lineage, and AI-assisted workflow building",
+    "Vertical product can be developed part-time and sold through specialist partners",
+    "Does not require the founder to become an influencer or make medical decisions",
+    "Quantitative evaluation and reproducible evidence match the founder's work style"
+  ],
+  "parent": null,
+  "risks": [
+    "AI Act timelines and guidance are still evolving, creating product and demand-timing risk",
+    "Incorrect classification or assurance language could be relied on as legal advice",
+    "Cloud and model-platform incumbents may add governance and logging features",
+    "Sensitive training and decision data create significant privacy and security duties"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+    "https://digital-strategy.ec.europa.eu/en/faqs/navigating-ai-act",
+    "https://digital-strategy.ec.europa.eu/en/policies/guidelines-ai-high-risk-systems"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Vertical AI-governance system of record licensed per governed model/system and deployment",
+    "control_point": "The lifecycle approval record linking high-risk classification, evidence, human oversight, and release authorization for each system version",
+    "critical_dependency": "Correct classification and intended-purpose scoping plus trustworthy access to training/evaluation data, logs, model changes, and accountable human owners"
+  },
+  "thesis": "Planning-stage hypothesis: create an evidence graph and approval workflow for smaller providers of potentially high-risk AI used in employment, education, credit, insurance, or regulated products. It would bind a system's intended purpose and classification decision to dataset lineage, evaluation slices, human-oversight controls, logs, technical documentation, change approvals, and post-market incidents. The wedge is a deterministic release packet for one vertical, such as Polish HR software vendors, with optional deployer evidence exports. The control point is the internal decision to release or materially change a system, while an accumulating lineage graph raises switching costs and makes audits less episodic.",
+  "title": "High-Risk AI Lifecycle Evidence Graph",
+  "uncertainties": [
+    "Best first vertical and number of genuinely high-risk SME providers in Poland/EU",
+    "Whether providers buy before applicable dates or wait for customer mandates",
+    "Minimum technical integrations needed to be a release gate rather than a document repository",
+    "How conformity and assurance standards settle for each vertical"
+  ],
+  "version": 1
+}

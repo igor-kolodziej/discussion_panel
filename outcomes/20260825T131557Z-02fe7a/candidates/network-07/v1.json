@@ -1,0 +1,84 @@
+{
+  "candidate_id": "network-07",
+  "claims": [
+    {
+      "claim_id": "network-07-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.acns.org/practice/guidelines",
+        "https://www.acns.org/UserFiles/file/EEGGuideline1Tech.pdf"
+      ],
+      "statement": "The American Clinical Neurophysiology Society publishes minimum technical requirements for EEG recording and multiple standards covering electrode placement, digital recording, and reporting."
+    },
+    {
+      "claim_id": "network-07-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://pubmed.ncbi.nlm.nih.gov/31233907/",
+        "https://pubmed.ncbi.nlm.nih.gov/27751622/"
+      ],
+      "statement": "Published EEG research notes that artifacts can substantially contaminate recordings, that quality varies across subjects, and that objective standardized quality assessment supports more reproducible multi-site data."
+    },
+    {
+      "claim_id": "network-07-c3",
+      "confidence": "low",
+      "evidence_refs": [],
+      "statement": "Hypothesis: small studios and research teams will pay for auditable signal-quality evidence that reduces unusable sessions and differentiates their technical process without making clinical claims."
+    }
+  ],
+  "contrary_evidence": [
+    "Open-source EEG preprocessing and quality tools may satisfy technically capable research labs.",
+    "Signal quality does not establish the efficacy of neurofeedback or the clinical validity of any interpretation."
+  ],
+  "economics": {
+    "acquisition_route": "Hypothesis: free local quality report on de-identified exports, then vendor/trainer bundles that make the check part of session closure.",
+    "capital_required_pln": 50000,
+    "founder_net_worth_path": "Hypothesis: 40 sites in year 2, 250 in year 4, and 900 sites/devices in year 6 at 1500 PLN monthly blended revenue yields 16.2M PLN ARR. At 3-5x ARR and 60% founder ownership, founder equity can exceed 5M PLN if the non-diagnostic wedge earns vendor distribution.",
+    "founder_time": "Hypothesis: 12-18 hours/week for pipeline development and customer QA, with qualified reviewers contracted per flagged batch.",
+    "gross_margin_basis": "Hypothesis: 72-85% after compute, encrypted storage, and sampled expert review; fully manual review is excluded from the base offer.",
+    "payback": "Hypothesis: 3-7 months at 2000-5000 PLN acquisition cost and 1000-2500 PLN monthly account revenue.",
+    "pricing": "Hypothesis: 15-35 PLN per session or 699-1999 PLN/month by device count and reviewer volume.",
+    "retention_or_repeat": "Hypothesis: session-level repetition and technician/device drift alerts support monthly use; target annual logo retention above 85% after integration."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Reviewed cross-device artifact corpus linked to technician, protocol, environment, remediation, and usable-session outcome",
+    "customer": "European neurofeedback studios, cognitive research labs, and small wearable-EEG study teams",
+    "distribution_mechanism": "Wearable-EEG vendors, neurofeedback training providers, BIDS-compatible research workflows, and reproducibility reports",
+    "offer_and_business_model": "Automated integrity checks, reviewer queue, transparent session credential, and device/site benchmark SaaS",
+    "payer_and_paid_event": "Studio or lab pays per processed session or monthly monitored-seat/device license",
+    "problem_trigger": "A recording ends, a batch is prepared for analysis, or a site/device quality drift is suspected"
+  },
+  "founder_fit": [
+    "Unusually close fit with the founder's neuroscience, EEG, and data-science training.",
+    "Can build on open formats and synthetic/public recordings before accepting sensitive data.",
+    "Technical distribution through device vendors and training programs reduces personal-brand dependence.",
+    "A repeated quality score creates a scalable data asset rather than manual EEG interpretation."
+  ],
+  "parent": null,
+  "risks": [
+    "Customers could misrepresent a signal-integrity credential as clinical efficacy or diagnosis.",
+    "Sensitive biosignal and participant metadata require rigorous consent and de-identification.",
+    "Expert-review cost may prevent attractive margins at low session volume."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.acns.org/practice/guidelines",
+    "https://www.acns.org/UserFiles/file/EEGGuideline1Tech.pdf",
+    "https://pubmed.ncbi.nlm.nih.gov/31233907/",
+    "https://pubmed.ncbi.nlm.nih.gov/27751622/"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "session metrology SaaS",
+    "control_point": "device-neutral signal-integrity record and reviewed artifact benchmark",
+    "critical_dependency": "reliable automated QA with a strictly controlled clinical-claims boundary"
+  },
+  "thesis": "A vendor-neutral quality-control layer for non-diagnostic neurofeedback studios and research labs. It scores electrode, channel, artifact, protocol, and annotation integrity, produces a session credential with transparent limits, and learns device- and technician-specific failure patterns from repeated reviewed recordings.",
+  "title": "EEG Signal Integrity Credential for Neurofeedback and Research",
+  "uncertainties": [
+    "The initial beachhead should be research/non-diagnostic quality control; medical-device implications need specialist review.",
+    "Device export formats, annotations, and ground-truth reviewer agreement may limit automation.",
+    "The 50000 PLN capital estimate and all pricing, adoption, payback, and valuation figures below are planning hypotheses."
+  ],
+  "version": 1
+}

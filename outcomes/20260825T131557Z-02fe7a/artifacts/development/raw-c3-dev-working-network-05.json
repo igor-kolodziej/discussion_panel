@@ -1,0 +1,86 @@
+{
+  "judge_id": "c3-dev-working-network-05",
+  "assumptions": [
+    "The initial buyer is a claims-AI vendor or implementation partner, while each insurer client remains an acceptance stakeholder rather than the primary payer.",
+    "The first offer is a bounded, version-specific advisory release packet and does not claim certification, regulatory conformity, or continuous monitoring.",
+    "Client cases can be processed only with explicit permission in a client-private environment, and raw cases are not pooled or retained across customers.",
+    "The founder can devote 15-20 hours per week and can buy insurance-domain and legal adjudication per release within the stated 55000 PLN initial envelope.",
+    "Reusable value is limited to the harness, non-client-specific taxonomy, adapters, and packet templates unless contracts expressly grant broader learning rights.",
+    "No partner commitment, insurer acceptance, price, release volume, retention, margin, CAC, or payback is assumed to have been validated.",
+    "Regional expansion is possible in principle but requires new language, legal, expert, and distribution work rather than being a frictionless extension of the Polish offer."
+  ],
+  "factors": [
+    {
+      "name": "core_insight",
+      "status": "scored",
+      "score": 7,
+      "rationale": "The redesign identifies a credible release-event problem and a sharper control point: embed domain-specific assurance in a claims-AI vendor's delivery workflow instead of selling a generic seal insurer by insurer. Reusing one harness across a partner's deployments is a meaningful structural insight, although the required payer-and-acceptor alignment is not yet demonstrated."
+    },
+    {
+      "name": "customer_pain_and_willingness_to_pay",
+      "status": "scored",
+      "score": 5,
+      "rationale": "Insurance AI adoption and EIOPA governance expectations support real concern about release quality, documentation, and customer-facing errors. However, claims communications are not universally high-risk under the AI Act, and no evidence shows that a vendor owns budget for independent assurance or that an insurer will value this packet enough to influence procurement or release approval."
+    },
+    {
+      "name": "business_model_and_economics",
+      "status": "scored",
+      "score": 5,
+      "rationale": "Onboarding plus per-deployment or per-release fees could amortize the harness, templates, sales effort, and diligence across multiple insurer clients, giving the model better operating leverage than direct one-off assessments. Yet price, gross margin, CAC, sales cycle, payback, repeat-release frequency, and owner earnings are all unknown, while expert adjudication, secure execution, localization, client review, and integration remain variable or bespoke costs. Partner concentration can also make revenue lumpy."
+    },
+    {
+      "name": "market_and_beachhead",
+      "status": "scored",
+      "score": 5,
+      "rationale": "Polish claims-AI releases form a sufficiently narrow initial use case, and vendor intermediaries could make the reachable account unit larger than the 47 domestic insurers. The beachhead's economic depth is still unclear because the number of suitable vendors, their insurer deployments, and release cadence are unknown; meaningful scale likely requires Central European expansion with added localization cost."
+    },
+    {
+      "name": "competitive_position_and_domination_potential",
+      "status": "scored",
+      "score": 4,
+      "rationale": "Polish-language claims specialization and workflow embedding could support a focused niche position, but the offer enters against internal insurer testing, Credo AI, Giskard, ISO/IEC 42001 processes, consultants, and an existing insurance benchmark. Nothing yet establishes exclusive access, channel control, recognized authority, or a reason a leading vendor could not build or procure a similar layer."
+    },
+    {
+      "name": "expansion_potential",
+      "status": "scored",
+      "score": 6,
+      "rationale": "A successful release workflow could extend to additional insurer clients of the same vendor, further Central European languages, other claims tasks, and adjacent regulated customer communications. Those adjacencies are logically connected to the harness and taxonomy, but each geography and use case may require separate legal interpretation, expert adjudication, data permissions, and acceptance."
+    },
+    {
+      "name": "defensibility_and_durability",
+      "status": "scored",
+      "score": 4,
+      "rationale": "Delivery adapters, a claims-specific failure taxonomy, insurer-accepted packet templates, and longitudinal release records could accumulate into modest switching costs and know-how. Durability is constrained because raw cases remain client-private, reuse rights may be narrow, much work may stay bespoke, and larger assurance platforms or vendors can reproduce the general evaluation workflow."
+    },
+    {
+      "name": "strength_of_advantage",
+      "status": "scored",
+      "score": 5,
+      "rationale": "A client-private Polish claims packet can be more relevant and easier to use at release time than a horizontal tool or generic management-system process. The magnitude of that advantage is unproven: the packet has no assumed accreditation or compliance status, and there is no comparative evidence that it improves approval speed, loss avoidance, tender success, or cost enough to change vendor or insurer behavior."
+    },
+    {
+      "name": "timing_and_momentum",
+      "status": "scored",
+      "score": 7,
+      "rationale": "Insurer AI adoption, expanding use of generative AI, EIOPA governance expectations, and broader EU scrutiny make release assurance timely. The timing creates attention rather than a guaranteed purchase mandate, and established governance and evaluation alternatives are advancing during the same window."
+    },
+    {
+      "name": "distribution",
+      "status": "scored",
+      "score": 5,
+      "rationale": "Selling through a vendor or implementation partner offers a plausible one-to-many route and suits the founder better than acquiring every insurer independently. It remains a hypothesis: no vendor has committed, the budget owner is unknown, insurer-by-insurer security and governance reviews may persist, and a partner layer could add rather than remove enterprise selling effort."
+    },
+    {
+      "name": "execution_and_risks",
+      "status": "scored",
+      "score": 5,
+      "rationale": "AI evaluation, quantitative testing, and automation fit the founder, and a bounded first packet can plausibly fit the capital envelope with paid specialists. Credibility, representative-case permissions, secure handling, liability, DORA-sensitive contracting, insurance and legal expert coordination, vendor integration, and long enterprise reviews could exceed a part-time founder's capacity before the workflow is standardized."
+    }
+  ],
+  "interaction_adjustment": -0.2,
+  "main_structural_strength": "A vendor-embedded, release-triggered offer can potentially turn one primary relationship into multiple paid insurer deployments while reusing a localized harness and keeping sensitive client data private.",
+  "primary_score_limiter": "The commercial control point is not yet real: vendor willingness to fund the work and insurer willingness to accept the resulting packet must both hold, leaving demand, repeat volume, and unit economics indeterminate.",
+  "strongest_disconfirming_evidence": "Established internal and external substitutes already exist, including Credo AI, Giskard, ISO/IEC 42001 processes, and insurance-domain benchmarking, while claims communications are not automatically high-risk under the AI Act; this weakens both urgency and differentiation for a new private packet.",
+  "evidence_needed_for_higher_score": "A paid anchor-vendor pilot using permissioned insurer cases, with insurer-approved acceptance criteria, measured delivery cost and cycle time, evidence that the packet changes a release or procurement decision, and a contracted second deployment or model-release event at positive contribution margin.",
+  "highest_value_structural_change": "Turn the optional project into a contractually bundled release gate inside one anchor vendor's standard implementation: use insurer-approved acceptance criteria, a minimum annual release commitment, and reusable secure delivery adapters while keeping expert adjudication variable-cost and the packet explicitly non-certifying."
+}

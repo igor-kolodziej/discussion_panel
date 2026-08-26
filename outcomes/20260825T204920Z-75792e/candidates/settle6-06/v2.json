@@ -1,0 +1,144 @@
+{
+  "candidate_id": "settle6-06",
+  "claims": [
+    {
+      "claim_id": "settle6-06-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ure.gov.pl/pl/oze/gwarancje-pochodzenia/6816,Gwarancja-pochodzenia-dokument-pochodzenia-energii-wytworzonej-ze-zrodel-odnawia.html"
+      ],
+      "statement": "Polish Guarantees of Origin are electronic, individually identified, transferred through a registry and confirmed on cancellation by the registry operator."
+    },
+    {
+      "claim_id": "settle6-06-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/dir/2018/2001/2023-11-20/eng"
+      ],
+      "statement": "EU renewable-energy rules use Guarantees of Origin for supplier disclosure and require controlled issuance, transfer and cancellation."
+    },
+    {
+      "claim_id": "settle6-06-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://rgp.tge.pl/"
+      ],
+      "statement": "TGE's April 2026 RGP release added bulk transactions and a bulletin-board marketplace, reducing some manual transaction and counterparty-discovery friction inside the registry."
+    },
+    {
+      "claim_id": "settle6-06-c4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ghgprotocol.org/sites/default/files/standards/Scope%202%20Guidance_Final_Sept26.pdf"
+      ],
+      "statement": "GHG Protocol Scope 2 quality criteria require contractual instruments to be uniquely tracked and redeemed, retired, or cancelled by or on behalf of the reporting entity, with applicable temporal and market boundaries."
+    },
+    {
+      "claim_id": "settle6-06-c5",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://uokik.gov.pl/en/greenwashing-bolt-tchibo-and-zara-face-allegations-from-the-president-of-uokik"
+      ],
+      "statement": "Poland's competition authority states that a '100% renewable energy' claim based largely on energy attribute certificates may mislead consumers if the certificate basis and limitations are not explained clearly."
+    },
+    {
+      "claim_id": "settle6-06-c6",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.ecohz.com/renewable-energy-procurement-portal-for-scope-2",
+        "https://www.soldera.org/corporate/faq",
+        "https://www.energysolution.pl/efektywnosc-energetyczna/gwarancje-pochodzenia/"
+      ],
+      "statement": "Incumbents already offer multi-entity EAC procurement, consumption uploads, cancellation plans, retirement-status dashboards, document repositories, and Polish TGE purchase-and-cancellation services."
+    },
+    {
+      "claim_id": "settle6-06-c7",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://www.europex.org/members/tge/"
+      ],
+      "statement": "Europex reports 53.219 TWh of Polish GO volume in 2025, making the candidate's unvalidated 0.5 TWh year-three and 4 TWh year-six targets roughly 0.94% and 7.5% of that reference volume."
+    }
+  ],
+  "contrary_evidence": [
+    "Registry participants and energy brokers already perform cancellation, so the wedge depends on multi-site matching and exception cost being painful enough.",
+    "TGE introduced bulk transactions and a marketplace in April 2026, directly reducing transaction-orchestration friction.",
+    "Ecohz and Soldera already offer multi-entity or multi-country consumption allocation, procurement, cancellation, status monitoring, and proof repositories.",
+    "Energy Solution already offers Polish purchase, cancellation, and TGE certificate delivery.",
+    "The candidate's year-six 4 TWh target would equal about 7.5% of the reported 2025 Polish GO volume, a substantial share without validated distribution."
+  ],
+  "economics": {
+    "acquisition_route": "UNVALIDATED: white-label through energy brokers, PPA advisers, renewable installers and corporate-energy procurement firms.",
+    "capital_required_pln": 70000,
+    "founder_net_worth_path": "UNVALIDATED: administer 500 GWh of confirmed retirements by year 3 and 4 TWh by year 6, producing founder equity plus retained cash above PLN 5m in years 6-8.",
+    "founder_time": "UNVALIDATED: 2.5 hours per day after registry workflow and broker partnership are established.",
+    "gross_margin_basis": "UNVALIDATED: software-led matching with registry, broker and exception-review costs passed through.",
+    "payback": "UNVALIDATED: channel integration recovered after 15 customer retirement batches or 10 months.",
+    "pricing": "UNVALIDATED: onboarding fee plus per confirmed cancellation batch, without taking speculative certificate inventory; all commercial figures in this economics object, including capital_required_pln, are unvalidated.",
+    "retention_or_repeat": "UNVALIDATED: recurring reporting periods and expiring certificates create repeat transactions and operational switching costs."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Confirmed transfers and cancellations build registry, issuer and matching-exception knowledge",
+    "customer": "Energy suppliers, PPA advisers and multi-site companies making renewable-energy claims",
+    "distribution_mechanism": "Energy brokers, PPA advisers and renewable installer channels",
+    "offer_and_business_model": "Registry orchestration and auditable proof packet charged per completed retirement",
+    "payer_and_paid_event": "The supplier, adviser or buyer pays when TGE cancellation is confirmed and bound to the required consumption lot",
+    "problem_trigger": "A reporting period closes or a certificate approaches expiry and consumption must be matched and retired"
+  },
+  "founder_fit": [
+    "Renewable and finance adjacency",
+    "Transaction evidence is highly structured",
+    "Broker distribution limits social load",
+    "Avoiding inventory keeps capital exposure controlled"
+  ],
+  "parent": {
+    "candidate_id": "settle6-06",
+    "version": 1
+  },
+  "risks": [
+    "Accidental double claiming",
+    "Registry authorization limits",
+    "Commodity-trading regulation",
+    "Liability for misleading environmental claims",
+    "TGE, brokers, and established EAC platforms may absorb the orchestration layer.",
+    "Certificate-backed claims may be presented as physical renewable supply unless proof packets enforce explicit wording and scope.",
+    "The year-six volume target requires a material share of the Polish reference market without validated partners.",
+    "Cross-border recognition and registry connectivity may be constrained by Poland's current AIB status and must be confirmed per transaction."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://ure.gov.pl/pl/oze/gwarancje-pochodzenia/6816,Gwarancja-pochodzenia-dokument-pochodzenia-energii-wytworzonej-ze-zrodel-odnawia.html",
+    "https://eur-lex.europa.eu/eli/dir/2018/2001/2023-11-20/eng",
+    "https://rgp.tge.pl/",
+    "https://decyzje.uokik.gov.pl/bp/dec_prez.nsf/43104c28a7a1be23c1257eac006d8dd4/67623fad63fc7ffdc12587df0040c28e/%24FILE/Decyzja%20PGE_TAURON.pdf",
+    "https://ghgprotocol.org/sites/default/files/standards/Scope%202%20Guidance_Final_Sept26.pdf",
+    "https://uokik.gov.pl/en/greenwashing-bolt-tchibo-and-zara-face-allegations-from-the-president-of-uokik",
+    "https://www.ecohz.com/renewable-energy-procurement-portal-for-scope-2",
+    "https://www.soldera.org/corporate/faq",
+    "https://www.energysolution.pl/efektywnosc-energetyczna/gwarancje-pochodzenia/",
+    "https://www.aib-net.org/facts/aib-member-countries-regions",
+    "https://www.aib-net.org/facts/european-residual-mix",
+    "https://www.europex.org/members/tge/"
+  ],
+  "stage": "research",
+  "structure": {
+    "commercial_archetype": "Registry-transaction orchestration and proof-of-retirement service",
+    "control_point": "The consumption-to-certificate allocation ledger and TGE cancellation confirmation",
+    "critical_dependency": "Authorized registry participation or partnership, plus accurate consumption and certificate-title data"
+  },
+  "thesis": "For renewable-energy retailers, PPA advisers and multi-site buyers, bind metered consumption, certificate inventory and disclosure requirements, then instruct an authorized registry participant to transfer and cancel the correct Guarantees of Origin. The paid event is TGE-confirmed cancellation matched to a customer site and reporting period, not a sustainability report. Energy brokers and installers distribute the service, while confirmed retirements compound into an auditable matching and exception corpus.",
+  "title": "Guarantee-of-Origin Retirement Desk",
+  "uncertainties": [
+    "API availability",
+    "Batch frequency among mid-market buyers",
+    "Broker willingness to white-label",
+    "Current TGE membership, user-role, bulk-upload, export, fee, and automation terms for the proposed operator or partner.",
+    "Observed multi-site allocation error rate, exception-review time, and customer willingness to pay per batch.",
+    "Whether brokers will grant white-label access while retaining registry and trading responsibility.",
+    "Exact legal boundary between administrative orchestration, brokerage, and regulated commodity activity.",
+    "Current Polish AIB/Hub connectivity and recognition workflow for imported certificates.",
+    "Validated customer acquisition cost, onboarding price, per-batch price, gross margin, and renewal rate.",
+    "No signed registry partner, broker channel, customer, or paid cancellation batch has been observed."
+  ],
+  "version": 2
+}

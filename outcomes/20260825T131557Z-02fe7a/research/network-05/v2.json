@@ -1,0 +1,182 @@
+{
+  "candidate_id": "network-05",
+  "candidate_sha256": "8d30a162112e984890f564325d34ff62de2081872db93cbad2e67263d1f4cd4e",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "n05-r1",
+      "evidence_refs": [
+        "n05-s1",
+        "n05-s2"
+      ],
+      "statement": "Insurance AI adoption and EIOPA governance expectations create a real assurance problem across claims and customer interaction use cases."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "n05-r2",
+      "evidence_refs": [
+        "n05-s2",
+        "n05-s3"
+      ],
+      "statement": "The compliance trigger is narrower than the original pitch: life and health pricing is expressly high-risk, while claims communications require use-case classification and sectoral governance rather than an automatic high-risk label."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "n05-r3",
+      "evidence_refs": [
+        "n05-s4"
+      ],
+      "statement": "An ongoing monitoring platform sold to insurers may face financial-sector ICT-provider diligence, security, access, audit, contractual, and exit requirements depending on function criticality."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "n05-r4",
+      "evidence_refs": [
+        "n05-s5"
+      ],
+      "statement": "The Polish insurer base is too small for an 80-insurer domestic scenario; material scale needs vendors, administrators, or Central European expansion."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "n05-r5",
+      "evidence_refs": [
+        "n05-s6",
+        "n05-s7",
+        "n05-s8",
+        "n05-s9",
+        "n05-s10"
+      ],
+      "statement": "Existing insurance governance deployments, horizontal continuous-testing tools, formal management-system certification, and a published insurance benchmark create strong substitutes and incumbents."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "n05-r6",
+      "evidence_refs": [
+        "n05-s1",
+        "n05-s2",
+        "n05-s5",
+        "n05-s6",
+        "n05-s7"
+      ],
+      "statement": "No reviewed source establishes lawful access to representative Polish claims outputs, procurement recognition of a new seal, local willingness to pay, renewal, expert cost, or conservative unit economics."
+    }
+  ],
+  "contrary_evidence": [
+    "Poland had only 47 insurance companies at end-2025.",
+    "Credo has an insurance/reinsurance governance case and Giskard offers continuous evaluation with a free entry tier and sales-led enterprise tier.",
+    "ISO/IEC 42001 and formal conformity processes are stronger recognized assurance substitutes than a new private seal.",
+    "An insurance-domain LLM benchmark has already been published outside Poland.",
+    "Not every claims AI use case is high-risk under the AI Act."
+  ],
+  "schema_version": 2,
+  "sources": [
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2025-04-10",
+      "publisher": "European Insurance and Occupational Pensions Authority",
+      "source_id": "n05-s1",
+      "source_type": "regulator_analysis",
+      "stance": "supporting",
+      "title": "From Traditional AI to Generative AI: Implications for the Insurance Sector",
+      "url": "https://www.eiopa.europa.eu/publications/traditional-ai-generative-ai-implications-insurance-sector_en"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2025-08-06",
+      "publisher": "European Insurance and Occupational Pensions Authority",
+      "source_id": "n05-s2",
+      "source_type": "regulator_opinion",
+      "stance": "supporting",
+      "title": "Opinion on Artificial Intelligence governance and risk management",
+      "url": "https://www.eiopa.europa.eu/publications/opinion-artificial-intelligence-governance-and-risk-management_en"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2024-07-12",
+      "publisher": "Official Journal of the European Union / EUR-Lex",
+      "source_id": "n05-s3",
+      "source_type": "primary_law",
+      "stance": "context",
+      "title": "Regulation (EU) 2024/1689 laying down harmonised rules on artificial intelligence",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj?locale=en"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2022-12-27",
+      "publisher": "Official Journal of the European Union / EUR-Lex",
+      "source_id": "n05-s4",
+      "source_type": "primary_law",
+      "stance": "context",
+      "title": "Regulation (EU) 2022/2554 on digital operational resilience for the financial sector",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1756728421099&uri=CELEX%3A32022R2554"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2026",
+      "publisher": "Statistics Poland",
+      "source_id": "n05-s5",
+      "source_type": "official_statistics",
+      "stance": "contradicting",
+      "title": "Poland in figures: selected financial institutions",
+      "url": "https://plwliczbach.stat.gov.pl/EN/pages/finances.html"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2024-04-09",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "source_id": "n05-s6",
+      "source_type": "government_case_study",
+      "stance": "contradicting",
+      "title": "Credo AI Governance Platform: Reinsurance Provider Algorithmic Bias Assessment and Reporting",
+      "url": "https://www.gov.uk/ai-assurance-techniques/credo-ai-governance-platform-reinsurance-provider-algorithmic-bias-assessment-and-reporting"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "Giskard",
+      "source_id": "n05-s7",
+      "source_type": "vendor_pricing",
+      "stance": "contradicting",
+      "title": "Giskard Pricing: AI Red Teaming and LLM Evaluation Plans",
+      "url": "https://www.giskard.ai/pricing"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2023-12",
+      "publisher": "International Organization for Standardization",
+      "source_id": "n05-s8",
+      "source_type": "standard",
+      "stance": "context",
+      "title": "ISO/IEC 42001:2023 AI management systems",
+      "url": "https://www.iso.org/standard/42001"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2025-11-11",
+      "publisher": "arXiv",
+      "source_id": "n05-s9",
+      "source_type": "research_preprint",
+      "stance": "contradicting",
+      "title": "Design, Results and Industry Implications of the World's First Insurance Large Language Model Evaluation Benchmark",
+      "url": "https://arxiv.org/abs/2511.07794"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2023-06-07",
+      "publisher": "UK Department for Science, Innovation and Technology",
+      "source_id": "n05-s10",
+      "source_type": "government_guidance",
+      "stance": "supporting",
+      "title": "Portfolio of AI assurance techniques",
+      "url": "https://www.gov.uk/guidance/portfolio-of-ai-assurance-techniques"
+    }
+  ],
+  "unknowns": [
+    "Representative Polish claims-case sources, permissions, retention rights, and secure evaluation interface.",
+    "Which insurer or vendor role owns budget and what evidence procurement accepts.",
+    "Whether an assessment remains advisory or becomes an ongoing ICT service with heavier DORA requirements.",
+    "Expert adjudicator availability, professional credibility, accreditation expectations, and liability insurance.",
+    "Achievable price, gross margin, CAC, sales-cycle length, payback, renewal, regional expansion, and founder-net-worth timing."
+  ]
+}

@@ -1,0 +1,223 @@
+{
+  "candidate_id": "niche-04",
+  "candidate_sha256": "23a58cd9462268b226aed3ec930fbaff94d884ca3782f090ba81083f409ca5ad",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "n04-q01",
+      "evidence_refs": [
+        "n04-s01"
+      ],
+      "statement": "Smaller PV systems can be too individually small for traditional O&M economics, experience fragmented service and delayed repairs, and benefit from portfolio bundling."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "n04-q02",
+      "evidence_refs": [
+        "n04-s02"
+      ],
+      "statement": "PVGIS supplies free irradiance and expected-performance data suitable for a first-pass baseline, but it does not establish equipment fault or contractual liability."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "n04-q03",
+      "evidence_refs": [
+        "n04-s03"
+      ],
+      "statement": "PV degradation and failure have multiple technology-specific mechanisms, requiring component-aware investigation rather than output-only diagnosis."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "n04-q04",
+      "evidence_refs": [
+        "n04-s04"
+      ],
+      "statement": "Poland had 21,225 MW of PV capacity in 2024, proving a large installed base but not the count of addressable commercial rooftop portfolios."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "n04-q05",
+      "evidence_refs": [
+        "n04-s05"
+      ],
+      "statement": "At least one major module warranty requires prompt notice, detailed identifiers, purchase evidence, photos or test reports, and potentially independent laboratory testing, which creates an evidence-assembly job."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "n04-q06",
+      "evidence_refs": [
+        "n04-s06"
+      ],
+      "statement": "Polish commercial counterparties may contractually limit or exclude statutory warranty liability, so the desk must screen actual contracts before modelling recovery."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "n04-q07",
+      "evidence_refs": [
+        "n04-s07",
+        "n04-s08"
+      ],
+      "statement": "Free manufacturer monitoring and Polish plans from 49 PLN net monthly that include warranty handling are direct substitutes for monitoring-led positioning."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "n04-q08",
+      "evidence_refs": [
+        "n04-s09"
+      ],
+      "statement": "Published Polish service prices for up-to-50-kWp systems range from 59 to 279 PLN net monthly, with a 2,299 PLN net one-off inspection; larger systems are quote-only."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "n04-q09",
+      "evidence_refs": [
+        "n04-s10"
+      ],
+      "statement": "PV curtailment was material in Poland in 2024, so dispatch and grid constraints can produce low measured output unrelated to a warranty defect."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "n04-q10",
+      "evidence_refs": [
+        "n04-s11"
+      ],
+      "statement": "Vendor API availability and accuracy are not guaranteed, increasing integration and evidentiary risk for a multi-vendor telemetry service."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "n04-q11",
+      "evidence_refs": [],
+      "statement": "The median Polish recovery amount, acceptance probability, resolution time, and conversion rate for a paid evidence desk are not established by the reviewed sources."
+    }
+  ],
+  "contrary_evidence": [
+    "Low-cost and free monitoring products already include alerting and, in some cases, warranty administration.",
+    "Commercial contractual exclusions can eliminate otherwise plausible statutory claims.",
+    "Curtailment and ordinary performance factors can mimic equipment underperformance.",
+    "Manufacturer claim procedures can shift testing cost back to the claimant when breach is not confirmed.",
+    "Vendor telemetry access is revocable or unstable and can make supposedly scalable onboarding bespoke."
+  ],
+  "schema_version": 2,
+  "sources": [
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2021-12",
+      "publisher": "National Renewable Energy Laboratory",
+      "source_id": "n04-s01",
+      "source_type": "government_technical_report",
+      "stance": "supporting",
+      "title": "Understanding Solar Photovoltaic System Performance",
+      "url": "https://www.nrel.gov/docs/fy22osti/80881.pdf"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "European Commission Joint Research Centre",
+      "source_id": "n04-s02",
+      "source_type": "official_data_service",
+      "stance": "supporting",
+      "title": "Photovoltaic Geographical Information System",
+      "url": "https://joint-research-centre.ec.europa.eu/photovoltaic-geographical-information-system-pvgis_en"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2025-02",
+      "publisher": "IEA Photovoltaic Power Systems Programme",
+      "source_id": "n04-s03",
+      "source_type": "intergovernmental_technical_report",
+      "stance": "context",
+      "title": "Degradation and Failure Modes in New Photovoltaic Cell and Module Technologies",
+      "url": "https://iea-pvps.org/wp-content/uploads/2025/02/IEA-PVPS-T13-30-2025-REPORT-Degradation-and-Failure.pdf"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2025-12-22",
+      "publisher": "Statistics Poland",
+      "source_id": "n04-s04",
+      "source_type": "official_market_statistics",
+      "stance": "supporting",
+      "title": "Energy from Renewable Sources in 2024",
+      "url": "https://stat.gov.pl/files/gfx/portalinformacyjny/pl/defaultaktualnosci/5485/3/19/1/energia_ze_zrodel_odnawialnych_2024.pdf"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2024-07-26",
+      "publisher": "JinkoSolar",
+      "source_id": "n04-s05",
+      "source_type": "manufacturer_warranty",
+      "stance": "supporting",
+      "title": "Limited Warranty for Linear Monofacial Modules for EU",
+      "url": "https://jinkosolar.eu/wp-content/uploads/2024/11/LIMITED-WARRANTY-REV.EN20240726-LINEAR-MONOFACIAL-MODULE-FOR-EU.pdf"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2023-08-14",
+      "publisher": "Chancellery of the Sejm of the Republic of Poland",
+      "source_id": "n04-s06",
+      "source_type": "law",
+      "stance": "contradicting",
+      "title": "Polish Civil Code, including Article 558",
+      "url": "https://isap.sejm.gov.pl/isap.Nsf/download.xsp/WDU20230001610/U/D20231610Lj.pdf"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "SMA Solar Technology",
+      "source_id": "n04-s07",
+      "source_type": "incumbent_product",
+      "stance": "contradicting",
+      "title": "SMA Smart Connected",
+      "url": "https://manuals.sma.de/SHPxxx21/en-US/10312892427.html"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "ResCare",
+      "source_id": "n04-s08",
+      "source_type": "polish_incumbent_pricing",
+      "stance": "contradicting",
+      "title": "ResCare business PV service plans",
+      "url": "https://rescare.pl/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "Podwójna Energia",
+      "source_id": "n04-s09",
+      "source_type": "polish_incumbent_pricing",
+      "stance": "contradicting",
+      "title": "PV monitoring and service packages",
+      "url": "https://podwojnaenergia.pl/serwis"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2025-10-10",
+      "publisher": "Polish Energy Regulatory Office",
+      "source_id": "n04-s10",
+      "source_type": "regulator_report",
+      "stance": "contradicting",
+      "title": "Electricity market: URE report on redispatch mechanisms in 2024",
+      "url": "https://www.ure.gov.pl/pl/urzad/informacje-ogolne/aktualnosci/12923,Rynek-energii-elektrycznej-sprawozdanie-Prezesa-URE-dotyczace-mechanizmow-redysp.html"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2013-08",
+      "publisher": "SolarEdge Technologies",
+      "source_id": "n04-s11",
+      "source_type": "vendor_data_terms",
+      "stance": "contradicting",
+      "title": "SolarEdge API License Terms and Agreement",
+      "url": "https://www.solaredge.com/sites/default/files/api_license_terms_and_conditions_aug2013.pdf"
+    }
+  ],
+  "unknowns": [
+    "Addressable target-site count by portfolio owner and inverter vendor.",
+    "Distribution of claim value, success probability, and days to recovery.",
+    "Contractual legality and buyer acceptance of percentage-based recovery fees in each claim type.",
+    "Completeness of historical commissioning and maintenance evidence.",
+    "Per-case accredited testing and legal cost.",
+    "Portfolio monitoring churn after a claim is resolved.",
+    "Partner willingness to refer high-value cases without demanding most of the fee."
+  ]
+}

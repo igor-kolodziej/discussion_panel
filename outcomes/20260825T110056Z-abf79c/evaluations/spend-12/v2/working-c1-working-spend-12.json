@@ -1,0 +1,120 @@
+{
+  "assumptions": [
+    "The initial product remains research-only, makes no clinical interpretation, and supports only two explicitly named acquisition families.",
+    "Customer datasets are either public or processed under customer-authorised terms with applicable GDPR safeguards.",
+    "The proposed prices, renewal rates, market count, and margins are hypotheses rather than existing traction.",
+    "The founder initially has approximately 50000 PLN of capital and three to four hours per day available for this business.",
+    "No regulated or trial-grade revenue is counted until the required system validation, procedures, and buyer acceptance criteria are established."
+  ],
+  "base_score": 4.46,
+  "candidate_id": "spend-12",
+  "candidate_sha256": "8298b76d1c49723305db7cd28d346412036cd38cc762bc1643992658b01a5e89",
+  "candidate_version": 2,
+  "constrained_score": 4.46,
+  "evaluation_type": "working",
+  "evidence_needed_for_higher_score": "Obtain three independently paid pilots with pre-agreed acceptance criteria and record price, hours and rework avoided, exception rate, delivery labor, gross margin, procurement cycle, and follow-on intent; also establish the reachable count of similar buyers, one paid referral commitment, and the exact validation requirements and budget for any regulated CRO tier.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "The opportunity correctly identifies that heterogeneous EEG metadata, events, anonymisation choices, and human artifact decisions create real handoff friction even when file conversion works. Reframing the paid control point as an accepted, traceable raw-to-curated handoff is sharper than selling another converter, although it remains uncertain whether this layer is painful enough outside regulated or repeatedly governed workflows.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Rework, inconsistent metadata, and inability to explain transformations can be consequential for core facilities, CROs, and neurotech teams with recurrent handoffs, while Polish grant rules provide a plausible purchasing route. However, MNE-BIDS, the BIDS Validator, EEGLAB, and a free vendor converter materially strengthen the staff-or-open-source alternative; no evidence yet establishes the proposed fees, avoided person-months, or renewals.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Per-dataset services can fund learning and an annual workspace could eventually have strong software margins, but early delivery is expert curation with estimated 50-65% blended gross margin and meaningful scope-overrun risk. CAC, retention, support cost by format, buyer payback, and cash conversion are unknown, while the stated wealth path requires an unsupported 200 recurring organisations plus service volume, making owner earnings at the required scale speculative.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "EEG core facilities, small neuroscience CROs, and research neurotech teams with recurrent multi-subject datasets form a coherent beachhead, and limiting the first offer to two acquisition families makes it operationally focused. The economically reachable European buyer count is not established, and the strongest paid need appears concentrated in a smaller regulated or formally governed subset rather than the broader academic EEG market.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "A trusted local operator could win a narrow Poland or CEE niche through accountable delivery, local deployment, and format-specific support. Yet the functional foundation is supplied by mature open-source projects, guided workflows are reproducible, and equipment vendors can bundle conversion, leaving no demonstrated exclusive channel, standard-setting authority, or procurement lock that would support segment domination.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A proven acceptance workflow could extend to more EEG formats, additional facilities, other European geographies, adjacent electrophysiology modalities, or validated CRO workflows. Each expansion adds edge cases, domain support, governance, and potentially formal computer-system validation, so adjacency is plausible but not automatically low-cost or enabled by the initial wedge.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Versioned acceptance templates, an exception library, de-identified QC reference distributions, and accumulated customer trust could modestly compound. The core conversion and validation capabilities are freely available, the workflow can be reproduced, customer switching costs are unproven, and vendors or specialist consultancies can absorb the same support layer, so durable protection is currently weak.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "Local processing, fixed acceptance criteria, human review queues, a signed transformation manifest, and accountable support can be substantially more convenient and trustworthy than assembling open-source tools for a recurrent high-stakes handoff. The performance and economic advantage has not been measured, and trial-grade claims would require validation and procedures beyond the proposed research-only product.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "BIDS adoption, reproducibility pressure, sensitive-data governance, and ICH E6(R3) requirements for interpretable audit trails, traceable transfers, and documented dataset finalisation support the direction now. The same maturation has also produced capable free tooling, so momentum expands usage while simultaneously commoditising the basic conversion layer.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "Three bounded paid archival conversions and published compatibility examples are a credible founder-led route to first evidence, and the niche is identifiable through facilities, CROs, and vendors. No referral partner, paid lead source, sales cycle, procurement path, or repeatable CAC is evidenced; equipment distributors may prefer their own free tools, and relationship-heavy enterprise or academic selling may strain a part-time founder.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "The founder's EEG, neuroscience, data-science, and automation background is unusually well matched, and a two-format research-only pilot can fit the stated capital and part-time envelope with AI assistance. Execution becomes materially harder if metadata rescue is unbounded, sensitive-data governance is mishandled, clinical interpretation is implied, or a regulated tier is promised without validated systems, qualified support, and compliance expertise.",
+      "score": 6,
+      "status": "scored"
+    }
+  ],
+  "final_score": 4.5,
+  "highest_value_structural_change": "Narrow the business to one repeated, high-cost handoff owned by a named core facility or CRO and one acquisition family, then sell a fixed-price accepted-dataset package with the buyer's pre-agreed traceability criteria before building an annual workspace; this converts an abstract compliance promise into a paid control point and caps bespoke support.",
+  "interaction_adjustment": 0,
+  "judge_id": "c1-working-spend-12",
+  "main_structural_strength": "The offer moves away from commoditized EEG-BIDS conversion toward a bounded acceptance and traceability control point for recurrent, consequential data handoffs, closely matching the founder's technical domain expertise and feasible starting constraints.",
+  "primary_score_limiter": "There is no demonstrated willingness to pay, renewal behavior, reachable buyer count, or repeatable acquisition path for the accountability layer, while direct evidence shows that capable free and vendor-supplied alternatives already cover much of the underlying workflow.",
+  "qualified": false,
+  "raw_response_path": "artifacts/research/raw-c1-working-spend-12.json",
+  "raw_response_sha256": "62f45546775e49fe8b770d692df5a5b494dd1c1015912d5ec6d9b718a0fa1413",
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 2,
+  "strongest_disconfirming_evidence": "MNE-BIDS supports BIDS and multiple manufacturer formats, the BIDS Validator and EEGLAB cover validation and interchange, and Brain Products gives away a source-available BV2BIDS converter; together these show that generic conversion and guided validation are reproducible and can be bundled at zero price.",
+  "unrounded_score": 4.46
+}

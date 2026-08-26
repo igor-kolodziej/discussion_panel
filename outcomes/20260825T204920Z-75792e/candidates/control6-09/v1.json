@@ -1,0 +1,71 @@
+{
+  "candidate_id": "control6-09",
+  "claims": [
+    {
+      "claim_id": "control6-09-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R1115"
+      ],
+      "statement": "The EUDR requires due-diligence information including the country of production and geolocation of all relevant production plots."
+    },
+    {
+      "claim_id": "control6-09-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R1115"
+      ],
+      "statement": "A plot associated with deforestation or forest degradation can disqualify relevant products from being placed on the market or exported."
+    }
+  ],
+  "contrary_evidence": [
+    "The Regulation establishes operator responsibility; buying an evidence pack does not transfer that duty or prove negligible risk."
+  ],
+  "economics": {
+    "acquisition_route": "Unvalidated: one producing-region cooperative at a time, distributed to Polish and EU importers through customs brokers and specialist traders.",
+    "capital_required_pln": 150000,
+    "founder_net_worth_path": "Unvalidated scenario, not a forecast: validate 5,000 plots in year 2, reach 5 million PLN ARR by year 5, build 4 million PLN founder equity and cash by year 7, and 5 million PLN founder net worth in years 8-10.",
+    "founder_time": "Unvalidated operating estimate: 2-4 hours per day after regional data collection is handled by contracted local operators.",
+    "gross_margin_basis": "Unvalidated: 55%-80% gross margin after cooperative payments, satellite checks, translation and exception handling.",
+    "payback": "Unvalidated: 15-30 months because upstream onboarding precedes importer volume.",
+    "pricing": "Unvalidated commercial figures, including capital_required_pln: 150-600 PLN per lot plus 20,000-80,000 PLN annual importer access.",
+    "retention_or_repeat": "Unvalidated: repeat follows every shipment and production season; importer and cooperative retention are unknown."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Recurring plot histories, corrections and shipment outcomes reduce exception cost and raise switching costs",
+    "customer": "EU importers and traders of in-scope commodities lacking durable upstream plot evidence",
+    "distribution_mechanism": "Upstream cooperative agreements on supply; customs brokers and commodity traders on demand",
+    "offer_and_business_model": "Contractually sourced, versioned lot-to-plot evidence with geospatial exception handling",
+    "payer_and_paid_event": "An importer pays when a shipment evidence pack is delivered and for ongoing network access",
+    "problem_trigger": "A shipment must be tied to production plots before being placed on or exported from the EU market"
+  },
+  "founder_fit": [
+    "Uses geospatial data and anomaly detection.",
+    "Can focus on systems while local collection is contracted.",
+    "B2B broker distribution avoids public-facing marketing."
+  ],
+  "parent": null,
+  "risks": [
+    "False plot or chain-of-custody data creates serious customer exposure.",
+    "Scope or timing changes can delay demand.",
+    "Cross-border data collection may require more social and field operations than founder fit allows."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R1115"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Provenance evidence network",
+    "control_point": "Multi-season data-rights agreements with producer cooperatives and a lot-to-plot evidence lineage",
+    "critical_dependency": "Reliable upstream identity and chain-of-custody data, lawful contracts, current EUDR scope and credible geospatial validation"
+  },
+  "thesis": "Secure recurring, consented access to plot geometries and production records through producer cooperatives, then provide lot-bound provenance evidence to EU importers via customs brokers and commodity traders. The moat is lawful upstream data access and correction history, not a surface-level due-diligence dashboard.",
+  "title": "EUDR Upstream Plot-Evidence Cooperative",
+  "uncertainties": [
+    "Cost to secure cooperative rights",
+    "Importer willingness to trust a new evidence provider",
+    "Most defensible initial commodity corridor"
+  ],
+  "version": 1
+}

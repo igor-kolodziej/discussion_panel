@@ -1,0 +1,82 @@
+{
+  "candidate_id": "settle9-10",
+  "claims": [
+    {
+      "claim_id": "settle9-10-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://uokik.gov.pl/przewaga-kontraktowa"
+      ],
+      "statement": "UOKiK lists unjustified reductions of amounts due after accepted delivery among prohibited practices in agricultural and food supply relationships."
+    },
+    {
+      "claim_id": "settle9-10-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://uokik.gov.pl/przewaga-kontraktowa"
+      ],
+      "statement": "UOKiK says certain marketing, advertising, storage and display charges are allowed only when clearly and unambiguously agreed in advance, making contract-to-charge evidence operationally relevant."
+    },
+    {
+      "claim_id": "settle9-10-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://uokik.gov.pl/Download/112"
+      ],
+      "statement": "UOKiK documented a case in which price or quantity discrepancies held back payment for an entire delivery and prolonged resolution, and the buyer committed to change disputed-invoice handling."
+    }
+  ],
+  "contrary_evidence": [
+    "UOKiK enforcement protects public interests and does not itself compensate an individual supplier, so software evidence does not assure recovery.",
+    "Large suppliers already run sophisticated trade-promotion and deduction teams; the wedge is the underserved mid-market."
+  ],
+  "economics": {
+    "acquisition_route": "Outsourced finance partners run a no-recovery-no-fee three-month remittance audit, then convert successful clients to monitoring",
+    "capital_required_pln": 45000,
+    "founder_net_worth_path": "Hypothesis: 100 suppliers at 48,000 PLN recurring ARR plus 1.5-3m PLN annual recovery fees yields 6-8m PLN revenue by years 4-6. Productization to 20%+ margin and majority ownership could create over 5m PLN founder net worth in years 5-7.",
+    "founder_time": "15-22 hours weekly at launch; use independent former supplier-finance specialists for review and avoid current-employer overlap",
+    "gross_margin_basis": "Hypothesis: 60-78% during managed launch, rising to 78-88% as retailer/reason-code automation improves",
+    "payback": "Hypothesis: under 3 months when first recoveries fund acquisition; 6-9 months if clients demand subscription-only pricing",
+    "pricing": "Hypothesis: 2,000-8,000 PLN monthly plus 8-15% of verified cash recoveries; fixed-fee prevention tier after six months",
+    "retention_or_repeat": "Every retailer remittance and promotion cycle repeats; contract and outcome history make future disputes cheaper and faster"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Retailer-specific deduction taxonomy, contract-clause mappings and anonymized resolution outcomes reveal which evidence closes each reason code fastest",
+    "customer": "Polish small and mid-sized food/FMCG suppliers selling through large retailers and wholesalers",
+    "distribution_mechanism": "Outsourced CFO/accounting firms, ERP implementers, food-industry associations and receivables insurers refer suppliers at the moment cash leakage is visible",
+    "offer_and_business_model": "Managed recovery audit evolving into retailer-specific deduction SaaS, with monthly subscription and bounded success fee",
+    "payer_and_paid_event": "Supplier pays a subscription for ongoing deduction monitoring and a success fee only when a documented accounting discrepancy is recovered",
+    "problem_trigger": "A retailer remittance is below the invoiced amount or a rebate/marketing fee lacks a clear contractual and performance link"
+  },
+  "founder_fit": [
+    "FMCG context and quantitative reconciliation provide unusually strong founder insight if confidentiality is protected.",
+    "A service-first audit is low-capital and measurable.",
+    "Partner referrals and document workflows minimize camera/public-brand demands."
+  ],
+  "parent": null,
+  "risks": [
+    "Current employment in FMCG creates conflict-of-interest and confidentiality risks requiring explicit boundaries.",
+    "Success-fee services can drift into legal advice unless scope and referrals are clear.",
+    "Retailers may retaliate commercially even when a supplier has a valid claim."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://uokik.gov.pl/przewaga-kontraktowa",
+    "https://uokik.gov.pl/Download/112",
+    "https://commission.europa.eu/document/download/747b797c-637b-4729-b587-92bee941001e_en.pdf?filename=fo_2024_4_unfair_trading_practices_en.pdf"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Recovery-led vertical SaaS",
+    "control_point": "Supplier acceptance or dispute of a retailer remittance deduction and promotion accrual close",
+    "critical_dependency": "Access to contracts and operational evidence, plus strict separation from legal representation and from the founder's employer-confidential information"
+  },
+  "thesis": "Offer smaller Polish food and FMCG suppliers a recovery and prevention layer for retailer deductions, quantity/price disputes, rebates and marketing charges. It ingests contracts, orders, proof of delivery, invoices, remittances and promotion evidence; separates valid deductions from unsupported ones; and produces a factual claim packet for the supplier's own finance/legal approval. Start as a contingency-priced reconciliation service, then productize retailer-specific reason codes and sell through outsourced finance teams, ERP implementers and industry associations. It is not a law firm and should exclude any employer-confidential logic or data.",
+  "title": "FMCG Retailer Deduction Resolver",
+  "uncertainties": [
+    "Recoverable deduction value among suppliers small enough to outsource",
+    "Availability and quality of promotion-performance evidence",
+    "Whether industry associations will endorse a neutral service"
+  ],
+  "version": 1
+}

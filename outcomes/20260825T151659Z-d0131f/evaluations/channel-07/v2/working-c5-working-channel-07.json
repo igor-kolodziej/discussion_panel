@@ -1,0 +1,119 @@
+{
+  "assumptions": [
+    "The gateway remains an OEM-contracted processor and operations layer and never asserts an independent right to telemetry.",
+    "The absence of pilots, request-volume measurements, and partner commitments is treated as uncertainty rather than proof of no demand.",
+    "The initial pilot is limited to one non-exempt device family, while legal review, security operations, and difficult adjudication are delegated within the founder's time and capital limits.",
+    "Only contract-permitted, non-confidential schema and adjudication abstractions can be reused across OEMs."
+  ],
+  "base_score": 4.08,
+  "candidate_id": "channel-07",
+  "candidate_sha256": "72263b814c325ac47885e74f70b0f9ff936fa7b26a5381a211fb30c3258ff811",
+  "candidate_version": 2,
+  "constrained_score": 3.88,
+  "evaluation_type": "working",
+  "evidence_needed_for_higher_score": "A paid design partnership with a confirmed non-exempt OEM; contractual telemetry, processor, and reuse rights; observed request and exception volumes; measured implementation and support hours; and evidence of gross margin, retention intent, and a repeatable partner acquisition route.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "The Data Act creates a real operational gap at the device-user identity and entitlement gate, and a vertical managed implementation is a coherent response. The insight is weakened, but not erased, by evidence that a specialist already sells the same core layer.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Non-exempt OEMs face a concrete compliance duty and meaningful disclosure risk, which gives a realistic basis for budget. However, request frequency and urgency are unknown, qualifying small manufacturers are generally exempt, and incumbent platforms may already satisfy the need.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Recurring OEM pricing and onboarding revenue could support software-like economics, but Steelbridge's public tiers cap pricing while integrations, egress, security, support, and human adjudication can be costly. Gross margin, retention, payback, and the stated wealth path have no operating evidence.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "One non-exempt heat-pump or energy-equipment family is narrow enough for a pilot and could lead to a meaningful mid-market OEM niche. The statutory exemption removes much of the original small-OEM pool, and no evidence quantifies eligible buyers or request volume.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "Steelbridge directly overlaps the proposed white-label compliance layer, while dDruid and Servitly can bundle it where telemetry already lives. Without exclusive vertical access or a clearly superior adjudication capability, a dominant position is unlikely.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "The operating pattern can extend from energy equipment into other connected-product categories and third-party service access. Each expansion still requires new schemas, contracts, identity logic, and safety or trade-secret treatment, so adjacency is plausible but not frictionless.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "A contract-permitted library of schemas and adjudication patterns could improve delivery over time. Confidentiality limits cross-OEM reuse, the raw telemetry remains controlled by customers or platforms, and those incumbents can internalize or bundle the workflow.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "Vertical implementation and managed exception handling could be more convenient than a generic tool, but no evidence shows a material advantage in speed, accuracy, cost, trust, or implementation burden over the specialist and platform alternatives.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "The Data Act has applied since September 2025, creating a current implementation and remediation window for covered OEMs. The same timing has already attracted specialist and platform responses, so urgency does not confer exclusivity.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "A design-partner sale followed by IoT-platform and warranty referrals is conceivable, but the essential OEM or platform contract is unproven and enterprise sales are likely slow. The family installer can expose use cases but neither controls telemetry nor represents the payer.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "A one-family read-only pilot fits the founder's data skills, part-time capacity, and stated capital in principle. Identity errors, unlawful disclosure, safety and trade-secret exceptions, security response, and enterprise integration require specialist review and disciplined operational limits.",
+      "score": 5,
+      "status": "scored"
+    }
+  ],
+  "final_score": 3.9,
+  "highest_value_structural_change": "Become the embedded, category-specific adjudication module for one committed IoT-platform or OEM partner, concentrating on hard device-user mapping and trade-secret or safety exceptions under a revenue-share contract instead of competing as a horizontal standalone compliance layer.",
+  "interaction_adjustment": -0.2,
+  "judge_id": "c5-working-channel-07",
+  "main_structural_strength": "A live regulatory duty creates a specific production control point immediately before an OEM releases sensitive connected-product data, making a correctly authorized workflow operationally important rather than merely informational.",
+  "primary_score_limiter": "The necessary telemetry authorization and customer access are controlled by OEM and IoT-platform gatekeepers that can buy an established specialist or bundle the capability themselves, preventing an independent wedge from easily compounding.",
+  "qualified": false,
+  "raw_response_path": "artifacts/research/raw-c5-working-channel-07.json",
+  "raw_response_sha256": "c703b66c2086c291ccc33905b8e3856be5c640b901d5eee5be5503120b4c2e86",
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 2,
+  "strongest_disconfirming_evidence": "Steelbridge already markets almost the same consent, third-party access, API, audit, and white-label layer at public prices near the proposed base fee, while IoT platforms advertise native Data Act functionality.",
+  "unrounded_score": 3.88
+}

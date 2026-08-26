@@ -1,0 +1,86 @@
+{
+  "candidate_id": "spend-06",
+  "claims": [
+    {
+      "claim_id": "spend-06-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.cbsa-asfc.gc.ca/agency-agence/reports-rapports/ae-ve/cp-ma/menu-eng.html"
+      ],
+      "statement": "A Canadian border-agency audit found that built-in exact-match controls did not prevent duplicate invoices and confirmed two duplicates among ten sampled potential duplicate pairs."
+    },
+    {
+      "claim_id": "spend-06-c02",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://www.gao.gov/assets/a109626.html"
+      ],
+      "statement": "A US GAO account describes recovery auditing finding millions in improper payments even after internal systems found no errors, including prevention of large duplicate wire payments; this establishes the mechanism, not a Polish recovery rate."
+    },
+    {
+      "claim_id": "spend-06-c03",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.ecb.europa.eu/press/pr/date/2025/html/ecb.pr251215~e133d9d683.et.html"
+      ],
+      "statement": "The ECB and EBA reported EUR 4.2 billion of EEA payment fraud in 2024 and said manipulation of payers is rising, supporting a separate bank-change and payment-anomaly check alongside duplicate detection."
+    }
+  ],
+  "contrary_evidence": [
+    "Modern ERPs already implement exact duplicate checks and approval controls.",
+    "The cited recoveries are public-sector or large-enterprise examples and do not establish a Polish SME base rate.",
+    "Most algorithmic candidates can be legitimate recurring invoices, requiring costly human confirmation."
+  ],
+  "economics": {
+    "acquisition_route": "Offer accountants a no-recovery-no-fee audit on one closed fiscal year, require a minimum invoice count, publish anonymised precision and recovery-time results, then attach monitoring at the next payment cycle.",
+    "capital_required_pln": 40000,
+    "founder_net_worth_path": "One hundred fifty clients averaging 50000 PLN annual blended monitoring and recovery revenue would yield 7.5m PLN per year. A mature 40% owner-cash margin is 3m PLN annually, allowing more than 10m PLN cumulative distributions over five mature years after reinvestment and tax allowances.",
+    "founder_time": "Cap early audits at two concurrent clients and 3-4 hours/day, automate evidence preparation, and keep all customer recovery communication under their finance team; employment remains until stated traction and runway gates.",
+    "gross_margin_basis": "Export ingestion and ranking are automated, but confirmation is human-heavy initially; target 55-70% gross margin on audits and 80% or more on mature monitoring.",
+    "payback": "Customer payback is immediate when fees are a share of recovered cash; founder acquisition payback should be under 3 months if channel partners supply qualified datasets.",
+    "pricing": "Assumption to test: 15-25% of cash actually recovered for the historical audit, then 1200-5000 PLN monthly by invoice volume for pre-payment monitoring; never charge on unconfirmed flags.",
+    "retention_or_repeat": "Payment batches recur weekly or monthly, supplier masters change and acquisitions/ERP migrations create repeat audits; retention is weak where invoice volume is small and ERP controls are mature."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A privacy-preserving library of vendor-name aliases, invoice-number transformations, credit-note patterns and adjudicated false positives improves precision without retaining customer invoices.",
+    "customer": "Polish firms with 50-500 employees, multiple entities or branches and at least several thousand supplier invoices per year, beginning with construction and field-service groups.",
+    "distribution_mechanism": "Accounting firms, ERP implementers and fractional CFOs offer the audit to existing clients; construction and renewable-installation contacts provide an initial low-trust-distance segment.",
+    "offer_and_business_model": "Air-gapped or tightly isolated analysis of AP, payment, supplier-master and credit-note exports, with explainable candidate pairs, bank-change alerts and a recovery evidence packet; one-off contingency audit that converts to recurring pre-payment monitoring.",
+    "payer_and_paid_event": "The CFO pays a percentage of independently confirmed recovered cash plus a fixed monitoring fee before future payment batches; the recurring loss is erroneous payment and the existing spend is AP control and audit labour.",
+    "problem_trigger": "A year-end audit, ERP migration, supplier dispute or pre-payment run creates a need to identify duplicate or erroneous disbursements that exact-match controls missed."
+  },
+  "founder_fit": [
+    "Entity resolution, fuzzy matching and anomaly ranking are a direct data-science fit.",
+    "Contingency pricing permits low-downside demand tests while the founder remains employed.",
+    "Accountants and ERP implementers can distribute a repeatable audit without continuous personal branding.",
+    "The product can remain read-only, avoiding custody of funds or authority to approve payments."
+  ],
+  "parent": null,
+  "risks": [
+    "False accusations could damage supplier relationships, so every flag must remain an explainable candidate for customer review.",
+    "Bank and invoice data are highly sensitive and attractive to attackers.",
+    "Contingency fees may have legal, tax or audit-independence constraints that require Polish advice.",
+    "Recovery revenue may be lumpy and fail to convert into recurring subscriptions."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.cbsa-asfc.gc.ca/agency-agence/reports-rapports/ae-ve/cp-ma/menu-eng.html",
+    "https://www.gao.gov/assets/a109626.html",
+    "https://www.ecb.europa.eu/press/pr/date/2025/html/ecb.pr251215~e133d9d683.et.html"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Contingency-fee recovery audit converting to financial-control SaaS",
+    "control_point": "The explainable exception queue reviewed before payment release and the evidence packet used to reclaim past overpayments",
+    "critical_dependency": "Complete, joinable AP/payment/supplier exports and customer cooperation in confirming and recovering flagged amounts"
+  },
+  "thesis": "Run a privacy-conscious, read-only recovery audit for Polish construction, distribution and multi-entity SMEs that finds fuzzy duplicate invoices, missed credit notes, unusual bank-detail changes and contract-price mismatches, then converts repeated checks into a subscription. The CFO already loses cash to payment errors and pays ERP/accounting staff; an initial contingency fee makes demand measurable without asking the buyer to buy abstract fraud software.",
+  "title": "Read-Only Accounts-Payable Recovery Audit for Mid-Market SMEs",
+  "uncertainties": [
+    "The recoverable-error rate, median recovery time and supplier cooperation rate in Polish target firms are unknown.",
+    "It is untested whether accounting partners will share contingency revenue or fear exposing their own process errors.",
+    "The minimum invoice volume needed for acceptable precision and economics needs empirical calibration.",
+    "Pricing, margins, client count and founder-wealth path are assumptions."
+  ],
+  "version": 1
+}

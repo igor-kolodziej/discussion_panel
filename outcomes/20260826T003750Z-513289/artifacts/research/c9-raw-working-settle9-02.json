@@ -1,0 +1,85 @@
+{
+  "judge_id": "c9-working-settle9-02",
+  "assumptions": [
+    "The product does not sell or guarantee the legally free Verification of Payee result; customers pay for supplier-change controls, remediation, approvals, and durable audit evidence.",
+    "A registry-first product can be launched without regulated fund custody or direct access to the EPC inter-PSP API.",
+    "Any bank-provided VoP result is stored or exported only when a bank, PSP, or payment-initiation partner grants contractual and data-protection rights to do so.",
+    "The initial customer is a Polish mid-market company or accounting/AP platform serving companies with enough supplier-payment volume and change events to justify a recurring subscription.",
+    "The stated 900-2000 PLN monthly price, 75-90% pre-overhead gross-margin range, channel conversion, retention, API cost, exception workload, and enterprise security cost remain hypotheses rather than established economics.",
+    "The founder keeps the product and initial integration within a 12-18 hour weekly scope until paid demand and partner access justify heavier enterprise work."
+  ],
+  "factors": [
+    {
+      "name": "Core insight",
+      "score": 6,
+      "status": "scored",
+      "rationale": "The concept correctly identifies a high-consequence control gap at supplier creation or bank-detail change: free registry and bank checks do not themselves provide remediation, approval discipline, or a coherent audit packet. That is a sound workflow insight, but it is not a newly discovered gap because established vendors already package overlapping controls."
+    },
+    {
+      "name": "Customer pain and willingness to pay",
+      "score": 6,
+      "status": "scored",
+      "rationale": "Regulatory warnings substantiate supplier-impersonation and fraudulent account-change risk, and paid incumbent offerings establish category-level willingness to pay. The loss severity can be large, yet event frequency, Polish buyer urgency, budget ownership, price sensitivity, and paid conversion for this narrower offer are still unknown."
+    },
+    {
+      "name": "Business model and economics",
+      "score": 5,
+      "status": "scored",
+      "rationale": "A recurring software subscription around onboarding, changes, and payment approvals can have attractive margins and operating leverage, and the proposed price could support a meaningful business. However CAC, sales cycle, retention, API or partner fees, manual mismatch handling, security support, liability costs, and payback are unmeasured; the founder-wealth arithmetic therefore remains possible but not yet credible enough to rate strongly."
+    },
+    {
+      "name": "Market and beachhead",
+      "score": 5,
+      "status": "scored",
+      "rationale": "Polish firms with material supplier-payment volume are a coherent regional starting point, and local registry integration supplies a concrete wedge. The stated audience still spans end-user SMEs, accounting firms, factors, banks, and AP vendors with different buying motions, so the first beachhead is not yet narrow or quantified enough to show that it can sustain the target economics."
+    },
+    {
+      "name": "Competitive position and domination potential",
+      "score": 4,
+      "status": "scored",
+      "rationale": "A Polish-language, registry-native, lower-friction workflow could win a localized niche, but SurePay, Trustpair, banks, and ERP vendors already occupy the relevant trust and integration surfaces. The candidate lacks an exclusive input, committed channel, or demonstrated performance advantage that would make a dominant position likely."
+    },
+    {
+      "name": "Expansion potential",
+      "score": 6,
+      "status": "scored",
+      "rationale": "If the product becomes embedded in a Polish AP workflow, the same supplier identity, approval, remediation, and evidence layer can extend to CEE geographies, accounting portfolios, payment batches, fraud monitoring, and adjacent master-data controls. Those adjacencies are plausible, but most depend on first securing reusable integrations and transferable data rights."
+    },
+    {
+      "name": "Defensibility and durability",
+      "score": 4,
+      "status": "scored",
+      "rationale": "Permissioned supplier history, resolved name variants, approved-change evidence, and workflow switching costs could compound after meaningful adoption. Initially, though, the registry source is free, underlying VoP is free to users and controlled by PSPs, the workflow is reproducible, and incumbent integration depth makes durable differentiation uncertain."
+    },
+    {
+      "name": "Strength of advantage",
+      "score": 5,
+      "status": "scored",
+      "rationale": "Combining official Polish evidence, a frozen change workflow, secure remediation, and an exportable approval packet is more useful than a bare lookup and may be simpler for underserved Polish teams. No evidence yet shows a step-change in fraud reduction, exception resolution speed, implementation effort, price, or coverage versus native bank features and established platforms."
+    },
+    {
+      "name": "Timing and momentum",
+      "score": 7,
+      "status": "scored",
+      "rationale": "The 2027 Polish VoP timetable creates a concrete integration and buyer-education window, while BEC awareness supports demand for stronger controls. The same regulatory rollout can also commoditize the visible name-match feature, so timing favors an embedded evidence workflow only if partnerships are established before banks and ERPs absorb the surrounding use case."
+    },
+    {
+      "name": "Distribution",
+      "score": 4,
+      "status": "scored",
+      "rationale": "A free supplier-master scan is a testable lead magnet, and accounting, AP, bank, factor, or insurer channels could efficiently aggregate customers while fitting the founder's profile. No partner commitment, viable revenue share, conversion evidence, or repeatable direct-acquisition route exists, and the most attractive distributors also control access and may build or favor competing functionality."
+    },
+    {
+      "name": "Execution and risks",
+      "score": 5,
+      "status": "scored",
+      "rationale": "The founder can plausibly build the registry, entity-resolution, anomaly, and audit prototype within the stated capital and part-time constraints using AI leverage. Production success additionally requires contractual data rights, payment or AP integration, privacy controls, enterprise security, careful assurance language, liability management, and exception operations that could exceed the available time and budget."
+    }
+  ],
+  "interaction_adjustment": -0.2,
+  "main_structural_strength": "The product sits at a recurring, high-consequence control point before supplier payments and can turn fragmented official checks into remediation, approval, and audit workflow whose value is separate from the free underlying name match.",
+  "primary_score_limiter": "The same uncommitted bank or AP partnership is needed both for lawful reusable VoP evidence and for scalable distribution, while incumbents and native bank or ERP features already control those surfaces.",
+  "strongest_disconfirming_evidence": "The EPC interface is restricted to inter-PSP communication and at least one major bank exposes VoP only inside payment initiation, while the mandated check is free to users; this directly undermines any standalone validation-access or per-check monetization premise.",
+  "evidence_needed_for_higher_score": "A paid Polish pilot plus a binding bank, PSP, or AP-platform agreement should demonstrate lawful capture and retention of VoP evidence, partner economics, conversion at the proposed price, implementation time, false-match and manual-escalation rates, recurring usage, retention intent, CAC or channel cost, and security and liability costs.",
+  "highest_value_structural_change": "Make a Polish accounting or AP platform the initial buyer and distribution partner, embedding the control inside its payment-initiation workflow under explicit rights to retain the bank response; charge for portfolio-wide supplier-change remediation and audit evidence so one integration simultaneously resolves data access, distribution, and workflow lock-in."
+}

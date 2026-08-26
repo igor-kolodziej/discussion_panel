@@ -1,0 +1,85 @@
+{
+  "candidate_id": "control8-03",
+  "claims": [
+    {
+      "claim_id": "control8-03-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1542/oj?locale=en"
+      ],
+      "statement": "EU Regulation 2023/1542 requires, from 18 February 2027, an electronic battery passport for each LMT battery, EV battery, and industrial battery above 2 kWh placed on the market or put into service."
+    },
+    {
+      "claim_id": "control8-03-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1542/oj?locale=en"
+      ],
+      "statement": "The passport is accessed through a QR code linked to a unique identifier, with different information access categories including public, authority, and legitimate-interest access."
+    },
+    {
+      "claim_id": "control8-03-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1542/oj?locale=en"
+      ],
+      "statement": "The economic operator placing the battery on the market is responsible for ensuring passport information is accurate, complete, and up to date."
+    }
+  ],
+  "contrary_evidence": [
+    "The passport obligation targets specified categories rather than every battery, and the above-2-kWh threshold narrows the stationary segment.",
+    "The regulation assigns accuracy responsibility to the economic operator, which may make operators reluctant to depend on a young vendor.",
+    "The 2027 start date gives OEMs and larger industrial platforms time to bundle their own solutions."
+  ],
+  "economics": {
+    "acquisition_route": "Use the family renewable installer to map the storage value chain, then target 3 private-label or assembler design partners and partner with storage distributors",
+    "capital_required_pln": 80000,
+    "founder_net_worth_path": "Unvalidated 5-8 year scenario: 60 manufacturers averaging 100,000 PLN annual recurring and usage revenue yields 6.0m PLN; at 30% EBITDA, 4x, and 75% ownership, equity value is about 5.4m PLN.",
+    "founder_time": "20-25 hours per week through the first integration, falling after templates and partner onboarding are standardized",
+    "gross_margin_basis": "Identifier issuance, data validation, and hosting are software-like; bespoke ERP/BMS integration and data remediation are the main margin leaks",
+    "payback": "Customer payback hypothesis: one shared passport layer can replace custom build and duplicate warranty/service records; compare total annual cost against internal engineering and recall support in pilots",
+    "pricing": "Unvalidated hypothesis: 20,000-60,000 PLN setup per manufacturer, 8-30 PLN per unit annually, and paid lifecycle modules for service or warranty teams",
+    "retention_or_repeat": "Passports persist with assets, new units are continually issued, and service/warranty events make migration costly if data portability and trust are handled well"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Longitudinal unit histories and normalized service/failure events can improve warranty triage, second-life decisions, and buyer trust when customers permit aggregate learning",
+    "customer": "EU stationary-storage battery assemblers, importers, and private-label operators placing industrial batteries above 2 kWh on the market",
+    "distribution_mechanism": "White-label distribution through battery assemblers, energy-storage installers, import compliance firms, and the founder's family renewable-energy network for discovery",
+    "offer_and_business_model": "Data templates, validation, access-control policy, unique-ID/QR issuance, immutable change history, and APIs for BMS/service partners; hypothesis 20,000-60,000 PLN integration plus 8-30 PLN per active unit per year",
+    "payer_and_paid_event": "Product or compliance lead pays integration and model onboarding, then per-unit issuance and annual active-passport hosting",
+    "problem_trigger": "Preparing products for the February 2027 passport requirement, launching a model, commissioning units, or needing auditable lifecycle updates"
+  },
+  "founder_fit": [
+    "Directly leverages the parents' renewable-energy installation context for workflow access without assuming customer commitments",
+    "Fits data modeling, sensor interest, anomaly detection, and asset-lifecycle analytics",
+    "Can begin as software and data operations rather than hardware inventory",
+    "A white-label infrastructure model minimizes personal-brand and high-volume social demands"
+  ],
+  "parent": null,
+  "risks": [
+    "Battery makers or major ecosystem platforms may provide passports themselves",
+    "Incorrect or stale safety and composition data could create serious liability",
+    "Long-lived hosting creates security, continuity, and data-portability obligations",
+    "Standards and delegated specifications may change implementation details before the deadline"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2023/1542/oj?locale=en",
+    "https://eur-lex.europa.eu/eli/reg/2023/1542/2025-07-31/eng/pdf"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Per-asset digital passport infrastructure with annual hosting and lifecycle-event fees",
+    "control_point": "The persistent QR-resolved electronic record that must exist for each covered battery placed on the market or put into service",
+    "critical_dependency": "Accurate manufacturer/BMS composition and performance data, stable identifier standards, and authority to maintain the passport throughout the battery lifecycle"
+  },
+  "thesis": "Planning-stage hypothesis: provide a hosted battery-passport and lifecycle-data service for EU economic operators placing stationary industrial batteries above 2 kWh on the market, beginning with smaller storage assemblers, importers, and private-label brands underserved by automotive-scale platforms. The product would issue standards-compatible unique identifiers and QR destinations, validate model and unit data, enforce access tiers, and preserve updates from commissioning through repair, second life, and recycling. The passport URL becomes a durable control point attached to each unit; recurring value can expand from initial compliance into warranty, service, residual-value, and recall records.",
+  "title": "Stationary-Battery Passport Operator",
+  "uncertainties": [
+    "Number of addressable smaller EU battery economic operators not already tied to a passport vendor",
+    "Who legally controls updates when batteries are resold, repaired, repurposed, or recycled",
+    "Willingness of OEMs and BMS suppliers to expose unit-level performance data",
+    "Viable per-unit price and minimum annual contract size"
+  ],
+  "version": 1
+}

@@ -1,0 +1,73 @@
+{
+  "candidate_id": "leverage-05",
+  "claims": [
+    {
+      "claim_id": "leverage-05-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/zakres-obowiazkowego-ksef/"
+      ],
+      "statement": "Poland's Ministry of Finance states that mandatory KSeF issuing began in phases in February and April 2026, while receiving through KSeF became mandatory from February 2026."
+    },
+    {
+      "claim_id": "leverage-05-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/tryby-szczegolne-wystawiania-faktur/",
+        "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/certyfikaty-ksef/"
+      ],
+      "statement": "Official guidance distinguishes online, offline24, scheduled-unavailability, emergency, and total-failure procedures with different later-submission rules; special modes use KSeF certificates."
+    }
+  ],
+  "contrary_evidence": [
+    "ERP and accounting vendors already implement core KSeF transport and may add reconciliation.",
+    "The Ministry offers free taxpayer applications, constraining a simple connector."
+  ],
+  "economics": {
+    "acquisition_route": "UNVALIDATED HYPOTHESIS — 4 accounting-software resellers bring 80 offices representing 2400 taxpayers in 24 months.",
+    "capital_required_pln": 50000,
+    "founder_net_worth_path": "UNVALIDATED HYPOTHESIS — 350 offices at 18000 PLN annual average gives 6.3 million PLN ARR by year 5; a 4x value and 80% ownership implies 20.16 million PLN equity, excluding distributions.",
+    "founder_time": "UNVALIDATED HYPOTHESIS — 20 hours weekly through launch and 8 after a support contractor and reseller playbook.",
+    "gross_margin_basis": "UNVALIDATED HYPOTHESIS — 86% gross margin after API traffic, encrypted retention, and second-line support.",
+    "payback": "UNVALIDATED HYPOTHESIS — under 3 months if an office saves 12 staff hours monthly or prevents one client penalty/escalation.",
+    "pricing": "UNVALIDATED HYPOTHESIS — all commercial numbers here, including capital_required_pln, are hypotheses: 1200 PLN monthly per accounting office plus 0.05 PLN per monitored invoice and 3000 PLN setup.",
+    "retention_or_repeat": "UNVALIDATED HYPOTHESIS — 94% annual office retention because monitoring runs on every invoice and client onboarding."
+  },
+  "fingerprint": {
+    "compounding_advantage": "a labelled corpus of KSeF failure sequences and resolution playbooks across many ERP implementations",
+    "customer": "Polish accounting firms managing many SME taxpayers across heterogeneous invoicing tools",
+    "distribution_mechanism": "accounting-software resellers, payroll/accounting associations, and white-label ERP connectors",
+    "offer_and_business_model": "read-mostly reconciliation API, deadline engine, exception queue, and exportable evidence trail",
+    "payer_and_paid_event": "the accounting office pays per office and invoice monitored",
+    "problem_trigger": "an invoice's local state diverges from KSeF or an offline/awaryjny deadline starts"
+  },
+  "founder_fit": [
+    "A Poland-specific, measurable automation wedge suited to data engineering and part-time work; one accounting-office integration reaches many end customers."
+  ],
+  "parent": null,
+  "risks": [
+    "Tax-document and credential security is critical.",
+    "Incorrect deadline advice can cause liability.",
+    "The service should monitor and evidence, not act as tax counsel."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/zakres-obowiazkowego-ksef/",
+    "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/tryby-szczegolne-wystawiania-faktur/",
+    "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/certyfikaty-ksef/"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "failure-mode reconciliation middleware",
+    "control_point": "the reconciled mapping between the taxpayer ledger, KSeF number, legal issue date, and offline resubmission deadline",
+    "critical_dependency": "stable KSeF API access plus trustworthy invoice identifiers and event sequences from client systems"
+  },
+  "thesis": "A wholesale reliability rail can sit between small accounting firms' client ERPs and KSeF, continuously detecting rejected, duplicated, missing, permission-blocked, and offline-mode invoices and preserving a human-readable resolution trail. It sells once to an accounting office but monitors many taxpayers and invoices, with every transmission exception creating measurable value.",
+  "title": "KSeF Exception and Offline Reconciliation Rail for Accounting Firms",
+  "uncertainties": [
+    "Exception frequency after KSeF matures.",
+    "API rate and permission constraints for multi-client offices.",
+    "Reseller revenue-share expectations."
+  ],
+  "version": 1
+}

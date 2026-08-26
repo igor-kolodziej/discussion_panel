@@ -1,0 +1,156 @@
+{
+  "candidate_id": "spend-12",
+  "claims": [
+    {
+      "claim_id": "spend-12-r2-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.nature.com/articles/s41597-019-0104-8"
+      ],
+      "statement": "EEG-BIDS addresses genuine interoperability and reproducibility friction across heterogeneous EEG data, metadata and events."
+    },
+    {
+      "claim_id": "spend-12-r2-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://mne.tools/mne-bids/stable/index.html",
+        "https://bids-standard.github.io/bids-validator/",
+        "https://eeglab.org/plugins/EEG-BIDS/"
+      ],
+      "statement": "The conversion and validation layer is already mature and free: MNE-BIDS supports BIDS formats and additional manufacturer formats, the browser validator does not upload files, and EEGLAB imports and exports EEG-BIDS."
+    },
+    {
+      "claim_id": "spend-12-r2-c03",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://mne.tools/mne-bids/stable/auto_examples/convert_eeg_to_bids.html"
+      ],
+      "statement": "Conversion still requires study knowledge and human decisions: MNE-BIDS documents required event mappings, manual metadata corrections and format-specific conversion choices rather than a fully automatic universal handoff."
+    },
+    {
+      "claim_id": "spend-12-r2-c04",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.brainproducts.com/support-resources/bv2bids/"
+      ],
+      "statement": "Equipment vendors can bundle the wedge: Brain Products provides a free, source-available BV2BIDS command-line tool for its recording format."
+    },
+    {
+      "claim_id": "spend-12-r2-c05",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC10853279/"
+      ],
+      "statement": "Guided open-source BIDS tools already combine heuristic mapping, human revision, QA and validation, demonstrating that the generic workflow is reproducible even though some tools focus on imaging rather than EEG."
+    },
+    {
+      "claim_id": "spend-12-r2-c06",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ncn.gov.pl/sites/default/files/pliki/uchwaly-rady/2026/uchwala18_2026-zal1_ang.pdf"
+      ],
+      "statement": "Polish NCN project rules permit crucial software and third-party research services, so a grant-backed budget route exists, but eligibility does not establish willingness to pay."
+    },
+    {
+      "claim_id": "spend-12-r2-c07",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://database.ich.org/sites/default/files/ICH_E6%28R3%29_Step4_FinalGuideline_2025_0106.pdf"
+      ],
+      "statement": "For clinical-trial work, ICH E6(R3) requires interpretable audit trails, attributable changes, logged workflow actions and documented data transfers, creating a narrower paid control point than BIDS conversion alone."
+    },
+    {
+      "claim_id": "spend-12-r2-c08",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://www.edpb.europa.eu/sites/edpb/files/files/file1/edpb_guidelines_202003_healthdatascientificresearchcovid19_en.pdf"
+      ],
+      "statement": "EEG datasets can reveal mental or physical health information, and scientific research processing still requires GDPR legal bases and safeguards, supporting local execution but not making it automatically compliant."
+    }
+  ],
+  "contrary_evidence": [
+    "MNE-BIDS, the BIDS Validator and EEG-BIDS already provide substantial free conversion and validation capability.",
+    "Brain Products supplies a free vendor-specific BV2BIDS tool, showing that device vendors can absorb format conversion.",
+    "Guided open-source tools demonstrate that heuristic mapping, human review, QA and validation are reproducible rather than scarce.",
+    "Grant rules allow software and outsourcing but do not prove lab procurement, renewal or the original 300-lab market assumption.",
+    "Audit-trail requirements create a paid wedge mainly in regulated or formally governed workflows, not all academic EEG research."
+  ],
+  "economics": {
+    "acquisition_route": "Sell exactly three fixed-price archival handoffs for one explicitly chosen acquisition family, using customer-authorised or public data and buyer-written acceptance criteria. Record paid price, founder hours, exceptions, rework avoided and follow-on intent before offering a workspace licence; seek referrals only after an accepted delivery.",
+    "capital_required_pln": 50000,
+    "founder_net_worth_path": "Not established by current market evidence. This service-first wedge does not count annual recurring revenue, renewal or a business valuation until repeat purchases demonstrate that the acceptance workflow can become software-supported recurring revenue; the reachable buyer count, mature margin and route to 5m PLN therefore remain unknown.",
+    "founder_time": "Three to four hours per day is plausible only with one supported acquisition family, explicit dataset and exception limits, local execution and fixed review windows. Open-ended metadata rescue, signal-method consulting or validated clinical-trial operations remain outside the employment-compatible offer.",
+    "gross_margin_basis": "The first accepted-dataset packages remain expert labour and retain the 50-65% validation-stage gross-margin planning range. Reusing one-family mappings, exception rules and acceptance templates is intended to reduce repeat labour, but no higher margin is counted until delivery-time evidence supports it.",
+    "payback": "Buyer payback is unknown and becomes a required pilot output: the buyer must record person-hours or rework avoided against the fixed package price. Grant eligibility is only a budget route and is not treated as payback evidence.",
+    "pricing": "Test one 15000 PLN fixed-price accepted-dataset package with explicit subject, acquisition-family and exception limits. Do not sell an annual workspace or regulated tier until paid repeat demand and applicable validation requirements are established.",
+    "retention_or_repeat": "A second paid accepted-dataset handoff from the same buyer is the initial repeat event. No licence renewal is assumed; a recurring workspace becomes a separate later offer only after repeated paid handoffs show reusable templates and audit history have value beyond free conversion."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A one-family library of paid-project exception resolutions, versioned buyer acceptance templates and de-identified QC reference distributions can reduce labour on later accepted handoffs; generic conversion code remains reproducible and is not treated as the advantage.",
+    "customer": "An EEG core facility or small neuroscience CRO with recurrent handoffs from one selected acquisition family, beginning with Brain Products data only where that is already the buyer's format, and a manager willing to define dataset acceptance criteria; other formats, one-off labs and broad neurotech accounts are excluded from the initial offer.",
+    "distribution_mechanism": "Directly sell three fixed-price archival handoffs for the single supported acquisition family, publish only the resulting compatibility and acceptance workflow examples, and request a referral after an accepted delivery; no distributor or recurring channel is assumed.",
+    "offer_and_business_model": "A productized, local-execution service for one supported acquisition family that delivers one EEG-BIDS dataset against buyer-written acceptance criteria, including a human decision log and signed raw-to-curated manifest; revenue is per accepted dataset, while workspace licensing is deferred until repeat paid handoffs demonstrate recurring demand.",
+    "payer_and_paid_event": "An EEG core-facility manager or small-CRO project lead pays a fixed project fee when one dataset from the supported acquisition family is accepted against the pre-agreed traceability criteria; a later purchase is a separate paid handoff, not an assumed licence renewal.",
+    "problem_trigger": "A batch from the supported acquisition family is due for archive or analyst handoff and the buyer must resolve and document events, metadata, exclusions and human artifact decisions well enough to accept the delivered dataset."
+  },
+  "founder_fit": [
+    "EEG, neuroscience, signal quality and reproducible data pipelines directly match the founder's background.",
+    "Local execution uses the founder's data-engineering strengths while reducing, but not eliminating, sensitive-data governance burden.",
+    "A one-family, fixed-acceptance service can fit three to four hours per day and less than 100000 PLN if exception limits are enforced.",
+    "The founder should not promise clinical interpretation, validated medical-device functionality, regulated-workflow validation or open-ended format support while employed."
+  ],
+  "parent": {
+    "candidate_id": "spend-12",
+    "version": 3
+  },
+  "redesign": {
+    "changed_fingerprint_fields": [
+      "customer",
+      "problem_trigger",
+      "payer_and_paid_event",
+      "offer_and_business_model",
+      "distribution_mechanism",
+      "compounding_advantage"
+    ],
+    "economic_effect": "Replacing a two-format software-plus-service offer with one fixed-price accepted-dataset service makes the first paid event explicit, defers licence build and renewal assumptions, and is intended to cap format and exception labour. It sacrifices immediate recurring-revenue claims; any margin improvement or software transition remains conditional on measured repeat delivery."
+  },
+  "risks": [
+    "Free Brain Products conversion may leave too little paid value in acceptance and traceability.",
+    "Metadata and event exceptions can still turn a fixed-price package into low-margin consulting unless contractual limits are enforced.",
+    "A generic quality score can be mistaken for clinical interpretation unless the product and contract are explicitly research-only.",
+    "Local execution reduces transfer risk but still processes potentially sensitive or re-identifiable human data.",
+    "Claiming trial-grade auditability without validated systems, procedures and regional regulatory review would create material compliance risk.",
+    "The narrow one-family service may validate delivery without revealing a market large enough for meaningful recurring software revenue."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.nature.com/articles/s41597-019-0104-8",
+    "https://mne.tools/mne-bids/stable/index.html",
+    "https://mne.tools/mne-bids/stable/auto_examples/convert_eeg_to_bids.html",
+    "https://bids-standard.github.io/bids-validator/",
+    "https://eeglab.org/plugins/EEG-BIDS/",
+    "https://www.brainproducts.com/support-resources/bv2bids/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC10853279/",
+    "https://ncn.gov.pl/sites/default/files/pliki/uchwaly-rady/2026/uchwala18_2026-zal1_ang.pdf",
+    "https://database.ich.org/sites/default/files/ICH_E6%28R3%29_Step4_FinalGuideline_2025_0106.pdf",
+    "https://www.edpb.europa.eu/sites/edpb/files/files/file1/edpb_guidelines_202003_healthdatascientificresearchcovid19_en.pdf"
+  ],
+  "stage": "development",
+  "structure": {
+    "commercial_archetype": "Productized fixed-price accepted-dataset service for one acquisition family, with software licensing deferred until repeat purchase",
+    "control_point": "Buyer sign-off on the human decision log and signed raw-to-curated manifest against pre-agreed traceability criteria",
+    "critical_dependency": "Buyers must pay for accepted traceable handoffs beyond free conversion, and one-family scope and exception limits must keep delivery within part-time economics"
+  },
+  "thesis": "Sell a fixed-price, local-execution accepted-dataset service to an EEG core facility or small neuroscience CRO for one acquisition family before building a workspace licence. The deliverable is not conversion software: it is one EEG-BIDS dataset accepted against buyer-written criteria with a human decision log and signed raw-to-curated manifest. Free tools remain the implementation foundation, while paid pilots test whether accountable handoff, bounded exception resolution and traceability are valuable enough to repeat.",
+  "title": "Fixed-Price EEG Accepted-Dataset Handoff for One Acquisition Family",
+  "uncertainties": [
+    "No evidence establishes that an EEG core facility or small CRO will pay 15000 PLN for the accepted-dataset package.",
+    "The person-hours and rework avoided per accepted dataset are unknown.",
+    "The exception rate, founder delivery time and gross margin for the selected acquisition family are unknown.",
+    "Whether a buyer will purchase a second handoff, and whether repeat handoffs support a workspace licence, is unknown.",
+    "The reachable number of buyers using the selected acquisition family with recurrent handoffs is unknown.",
+    "Referral willingness and acquisition cost remain unknown.",
+    "The validation package and procurement cycle for any later regulated tier remain unknown."
+  ],
+  "version": 4
+}

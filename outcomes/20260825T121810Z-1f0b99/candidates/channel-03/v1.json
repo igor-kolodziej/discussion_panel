@@ -1,0 +1,83 @@
+{
+  "candidate_id": "channel-03",
+  "claims": [
+    {
+      "claim_id": "channel-03-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.pse.pl/oire/portale-csire/q-a-portale-csire"
+      ],
+      "statement": "CSIRE makes contract, technical, consumption, and production data available to electricity users, including measurements at up to 15-minute resolution for compatible remote meters."
+    },
+    {
+      "claim_id": "channel-03-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.pse.pl/oire/portale-csire",
+        "https://www.pse.pl/oire/portale-csire/q-a-portale-csire"
+      ],
+      "statement": "The CSIRE portal allows a data owner to grant access to other entities and provides CSV or PDF exports for selected data, creating at least a consented-file MVP path before any direct system integration."
+    },
+    {
+      "claim_id": "channel-03-c03",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://www.pse.pl/pl_PL/funkcjonowanie-csire-raporty",
+        "https://www.ure.gov.pl/pl/urzad/informacje-ogolne/aktualnosci/12152%2CCSIRE-przedsiebiorstwa-energetyczne-powinny-przekazac-OIRE-informacje-o-punktach.html"
+      ],
+      "statement": "Hypothesis: embedded load-shape analysis will increase quote credibility and reduce manual sizing enough for wholesalers or installer CRMs to subsidise it as a conversion tool."
+    }
+  ],
+  "contrary_evidence": [
+    "CSIRE operator onboarding is staged through October 2026, so coverage and data completeness are not yet uniform.",
+    "The customer portal already supports data viewing and export, so the product must own recommendation quality and quote conversion rather than mere access."
+  ],
+  "economics": {
+    "acquisition_route": "Start with the family company for outcome calibration, then integrate once with a wholesaler or vertical CRM that already reaches installers",
+    "capital_required_pln": 45000,
+    "founder_net_worth_path": "Hypothesis: 25 platforms at 100000 PLN ARR plus usage revenue could exceed 3.5 million PLN ARR in years 5-7; at 35% EBITDA and 6x EBITDA with 80% ownership, founder equity would approach 5.9 million PLN, excluding any already-capitalised retained earnings",
+    "founder_time": "12-20 hours weekly for MVP and calibration, then 6-10 hours weekly if support and integration are standardised",
+    "gross_margin_basis": "Batch time-series modelling and report generation should produce 85-93% gross margin before partner support",
+    "payback": "A partner should recover fees from one incremental equipment sale; target founder CAC payback under 6 months",
+    "pricing": "Hypothesis: 20-60 PLN per analysis, 300-700 PLN monthly installer plans, or 50000-150000 PLN annual platform contracts",
+    "retention_or_repeat": "Partners repeat the analysis on every quote and retain calibration history across seasons and installed systems"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Consented anonymised load shapes linked to equipment choices and realised outcomes calibrate local recommendation models",
+    "customer": "Solar, battery, heat-pump, tariff, and energy-management sellers serving Polish homes and small businesses",
+    "distribution_mechanism": "Embedded in equipment distributor portals, installer CRMs, tariff comparison flows, and finance applications",
+    "offer_and_business_model": "Consent-based load-shape ingestion and sizing API with per-analysis and platform pricing",
+    "payer_and_paid_event": "Wholesaler, CRM, or installer pays per analysed metering point or successful quote generated",
+    "problem_trigger": "A seller needs to size equipment and substantiate expected savings while preparing a customer quote"
+  },
+  "founder_fit": [
+    "Excellent match for data science, Polish energy access, the family installer as a bounded pilot, and an embedded product model that avoids constant consumer sales. The founder must keep recommendations probabilistic and contractually prevent guaranteed-savings claims."
+  ],
+  "parent": null,
+  "risks": [
+    "Energy data are sensitive personal data in practice and require strict consent, minimisation, and deletion controls.",
+    "Wholesalers may copy a simple calculator unless the outcome dataset compounds quickly.",
+    "Savings estimates can be mis-sold as guarantees by downstream installers."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.pse.pl/oire/portale-csire",
+    "https://www.pse.pl/oire/portale-csire/q-a-portale-csire",
+    "https://www.pse.pl/pl_PL/funkcjonowanie-csire-raporty",
+    "https://www.ure.gov.pl/pl/urzad/informacje-ogolne/aktualnosci/12152%2CCSIRE-przedsiebiorstwa-energetyczne-powinny-przekazac-OIRE-informacje-o-punktach.html"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Embedded vertical decision API",
+    "control_point": "The equipment sizing and savings recommendation rendered inside the seller's quote",
+    "critical_dependency": "Scalable lawful consent to sufficiently granular CSIRE data and evidence that better recommendations lift partner economics"
+  },
+  "thesis": "Build a consent-based CSIRE data-to-recommendation API that lets solar, battery, heat-pump, and energy-tariff sellers generate an evidence-backed system size and savings range inside their existing quote. Distribution comes from equipment wholesalers and installer CRMs; the end customer supplies or authorises their own energy data.",
+  "title": "FlexSignal Quote API",
+  "uncertainties": [
+    "It is not established which commercial users can obtain scalable consented B2B access and under what contract.",
+    "Actual savings-prediction lift versus installer rules of thumb needs a blinded quote experiment.",
+    "Tariff, weather, equipment, and household-behaviour assumptions may dominate meter-data precision."
+  ],
+  "version": 1
+}

@@ -1,0 +1,131 @@
+{
+  "candidate_id": "network-05",
+  "claims": [
+    {
+      "claim_id": "network-05-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.eiopa.europa.eu/publications/traditional-ai-generative-ai-implications-insurance-sector_en"
+      ],
+      "statement": "EIOPA reported that 50% of non-life insurers and 24% of life insurers in its 2024 digitalisation work already used AI across use cases including claims management."
+    },
+    {
+      "claim_id": "network-05-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.eiopa.europa.eu/publications/opinion-artificial-intelligence-governance-and-risk-management_en"
+      ],
+      "statement": "EIOPA's August 2025 opinion applies risk-based and proportionate governance expectations to insurance AI, including systems outside the AI Act's prohibited and high-risk categories."
+    },
+    {
+      "claim_id": "network-05-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2024/1689/oj?locale=en"
+      ],
+      "statement": "The AI Act expressly classifies natural-person risk assessment and pricing for life and health insurance as high-risk, but it does not make every claims communication or claims copilot high-risk; a private benchmark seal cannot substitute for any applicable conformity assessment."
+    },
+    {
+      "claim_id": "network-05-c4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://plwliczbach.stat.gov.pl/EN/pages/finances.html"
+      ],
+      "statement": "Statistics Poland lists 47 insurance companies at the end of 2025, so an 80-customer scenario cannot be achieved from Polish insurers alone and requires vendors, administrators, or regional expansion."
+    },
+    {
+      "claim_id": "network-05-c5",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.uk/ai-assurance-techniques/credo-ai-governance-platform-reinsurance-provider-algorithmic-bias-assessment-and-reporting",
+        "https://www.giskard.ai/pricing",
+        "https://www.iso.org/standard/42001"
+      ],
+      "statement": "The assurance category already contains an insurance deployment by Credo AI, a free/open-source and quote-priced enterprise evaluation alternative from Giskard, and the certifiable ISO/IEC 42001 AI-management standard."
+    },
+    {
+      "claim_id": "network-05-c6",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://arxiv.org/abs/2511.07794"
+      ],
+      "statement": "A 2025 preprint describes a 14,430-question insurance LLM benchmark across 11 models, showing that insurance-domain benchmarking is not globally novel, although it does not address Polish claims communications."
+    },
+    {
+      "claim_id": "network-05-c7",
+      "confidence": "low",
+      "evidence_refs": [],
+      "statement": "Representative Polish claims-output access, procurement recognition of a new seal, insurer willingness to pay, and the proposed unit economics remain unknown."
+    }
+  ],
+  "contrary_evidence": [
+    "Only 47 insurance companies were listed in Poland at end-2025, materially below the original 80-customer insurer/vendor scenario if interpreted as Poland-only.",
+    "Credo AI, Giskard, Holistic-style governance platforms, ISO/IEC 42001 certification, and an existing insurance LLM benchmark create multiple incumbent and substitute paths.",
+    "Claims copilots are not automatically high-risk under the AI Act, reducing the strength of a broad mandatory-compliance sales claim.",
+    "DORA can increase due-diligence, contractual, audit, security, and exit requirements if the service qualifies as ongoing ICT support for a critical or important function.",
+    "No source shows that Polish procurement teams recognize or will pay for the proposed independent seal."
+  ],
+  "economics": {
+    "acquisition_route": "Research-stage hypothesis: publish a bounded Polish claims test set, sell one paid evaluation without a compliance seal, then seek one insurer or vendor renewal; no procurement commitment exists.",
+    "capital_required_pln": 55000,
+    "founder_net_worth_path": "Not underwritten. A scenario of 30 retained insurer/vendor customers averaging 80000 PLN annually would equal 2.4 million PLN ARR and might support the founder target through retained profit and equity in roughly years 7-10, but it requires high Polish penetration or regional expansion and has no validated price, renewal, margin, or valuation.",
+    "founder_time": "Plan for 15-20 hours weekly while expert adjudication and legal review are paid per packet; enterprise security reviews and bespoke integrations may break the part-time constraint.",
+    "gross_margin_basis": "Conservative planning range of 55-70% after expert adjudication, secure deployment, inference, sales engineering, and assurance documentation; no observed costs validate it.",
+    "payback": "Unknown. Enterprise sales-led incumbents and financial-sector due diligence imply that a 6-12 month payback assumption needs a paid pilot and measured acquisition effort before use.",
+    "pricing": "Test hypothesis only: 15000-30000 PLN for a bounded evaluation and 2000-4000 PLN monthly for monitored regression; Giskard's enterprise price and other comparable insurer contracts were not public.",
+    "retention_or_repeat": "Model and prompt releases create repeat testing events, but no evidence establishes that reports enter Polish governance packs or renew annually."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A permissioned Polish claims-communication test corpus, adjudicated failure taxonomy, and longitudinal release-to-incident record",
+    "customer": "Polish and later Central European insurers, claims administrators, and vendors deploying Polish-language customer-facing AI",
+    "distribution_mechanism": "One insurer or vendor design partner, AI implementation partners, and evidence-led procurement templates rather than an unrecognized public seal",
+    "offer_and_business_model": "Polish claims benchmark, bounded independent evaluation, and continuous regression service; any badge is descriptive and time-limited, not regulatory certification",
+    "payer_and_paid_event": "Insurer or vendor pays for a version-bound assessment and renews only when the regression record is accepted in its governance process",
+    "problem_trigger": "AI procurement, production launch, model or prompt change, control review, or customer-communication incident"
+  },
+  "founder_fit": [
+    "AI evaluation, adversarial testing, quantitative scoring, and automation strongly match the founder's skills.",
+    "A technical B2B evidence product avoids camera-led distribution and can start with synthetic and public-language cases.",
+    "The initial 55000 PLN envelope can fund a bounded benchmark and one assessment, but not assumed enterprise accreditation or a large secure platform.",
+    "Insurance and legal adjudication are delegable to paid reviewers, though credibility and procurement relationships remain founder responsibilities."
+  ],
+  "parent": {
+    "candidate_id": "network-05",
+    "version": 2
+  },
+  "risks": [
+    "A static benchmark or badge could create false assurance, be gamed, or be mistaken for regulatory conformity.",
+    "Representative outputs may contain personal, confidential, or proprietary information and require explicit contractual access and secure handling.",
+    "Large insurers can build internal evaluation suites or buy broader global governance platforms.",
+    "The Polish insurer base is small, so the founder-net-worth path depends on vendor and regional expansion.",
+    "Financial-sector due diligence, DORA-aligned contracting, expert credibility, and long procurement cycles may overwhelm a part-time founder."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.eiopa.europa.eu/publications/traditional-ai-generative-ai-implications-insurance-sector_en",
+    "https://www.eiopa.europa.eu/publications/opinion-artificial-intelligence-governance-and-risk-management_en",
+    "https://eur-lex.europa.eu/eli/reg/2024/1689/oj?locale=en",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1756728421099&uri=CELEX%3A32022R2554",
+    "https://plwliczbach.stat.gov.pl/EN/pages/finances.html",
+    "https://www.gov.uk/ai-assurance-techniques/credo-ai-governance-platform-reinsurance-provider-algorithmic-bias-assessment-and-reporting",
+    "https://www.giskard.ai/pricing",
+    "https://www.iso.org/standard/42001",
+    "https://arxiv.org/abs/2511.07794",
+    "https://www.gov.uk/guidance/portfolio-of-ai-assurance-techniques"
+  ],
+  "stage": "development",
+  "structure": {
+    "commercial_archetype": "Independent domain-specific AI assurance lab",
+    "control_point": "Governance-accepted Polish claims evaluation and longitudinal release record, without claiming regulatory certification",
+    "critical_dependency": "Representative permissioned cases, credible expert adjudication, secure evaluation access, and demonstrated procurement acceptance"
+  },
+  "thesis": "A narrow independent evaluation service for Polish claims communications could test factuality, omission, disclosure, fairness, privacy, and escalation on each model or prompt release. Its differentiation must be Polish claims specificity, permissioned representative cases, expert adjudication, and longitudinal evidence; it should sell version-bound reports and regression monitoring before attempting any seal, and must never imply legal conformity or certification.",
+  "title": "Polish Claims AI Benchmark and Regression Lab",
+  "uncertainties": [
+    "No evidence yet shows access to representative Polish claims outputs or the contractual right to retain them in a shared benchmark.",
+    "Procurement recognition, insurer willingness to pay, renewal behavior, and required professional credentials are unknown.",
+    "The boundary between an advisory assessment and an ongoing ICT service subject to heavier DORA review depends on the delivery model.",
+    "The 55000 PLN capital figure and all price, margin, CAC, payback, customer-count, expansion, and founder-net-worth figures remain hypotheses."
+  ],
+  "version": 3
+}

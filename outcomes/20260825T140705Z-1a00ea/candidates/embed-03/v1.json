@@ -1,0 +1,66 @@
+{
+  "candidate_id": "embed-03",
+  "claims": [
+    {
+      "claim_id": "embed-03-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.ema.europa.eu/en/human-regulatory-overview/post-authorisation/medicine-shortages-availability-issues/european-shortages-monitoring-platform-esmp"
+      ],
+      "statement": "EMA's ESMP collects shortage data from national authorities and marketing-authorisation holders and supports machine-to-machine interoperability."
+    },
+    {
+      "claim_id": "embed-03-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/gif/dostepnosc-lekowa"
+      ],
+      "statement": "Poland's GIF publishes weekly medicine-availability summaries for healthcare professionals based on multiple distribution-chain data sources."
+    }
+  ],
+  "contrary_evidence": [
+    "Public reporting and ZSMOPL already aggregate extensive supply-chain data, reducing the value of a second shortage dashboard."
+  ],
+  "economics": {
+    "acquisition_route": "One-to-many distribution through independent-pharmacy buying groups and licensed wholesalers.",
+    "capital_required_pln": 45000,
+    "founder_net_worth_path": "Hypothesis: reaching 2000 pharmacies at 250 PLN monthly blended revenue produces 6 million PLN ARR by year five, making majority founder equity plausibly exceed 5 million PLN without counting retained cash twice.",
+    "founder_time": "Hypothesis: 4 founder hours daily for data integration and monitoring while pharmacists retain every clinical decision.",
+    "gross_margin_basis": "Hypothesis: 65-80% gross margin after integration support, uptime, and pharmaceutical compliance review.",
+    "payback": "Hypothesis: a 30000 PLN buying-group integration pays back within 12 months at 200 subscribing pharmacies.",
+    "pricing": "Hypothesis, including the capital figure: 199 PLN per pharmacy monthly plus 2 PLN per verified shortage-resolution lookup paid by a buying group.",
+    "retention_or_repeat": "Every failed order, replenishment cycle, and weekly shortage watch creates a repeat use event."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Contracted rights to aggregate failed, attempted, and fulfilled order events create local availability intelligence",
+    "customer": "Independent Polish pharmacies and their purchasing groups",
+    "distribution_mechanism": "Buying-group ordering platforms and licensed wholesaler integrations",
+    "offer_and_business_model": "Non-clinical inventory routing and shortage forecasting sold as an embedded API",
+    "payer_and_paid_event": "A pharmacy group pays for a verified availability lookup or recurring site access",
+    "problem_trigger": "A prescribed product cannot be filled from the pharmacy's normal wholesaler"
+  },
+  "founder_fit": [
+    "The opportunity uses health-domain interest and forecasting skill while buying groups replace high-touch pharmacy-by-pharmacy sales."
+  ],
+  "parent": null,
+  "risks": [
+    "Routing must stay within licensed distribution and never recommend therapeutic substitution or expose commercially sensitive stock."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.ema.europa.eu/en/human-regulatory-overview/post-authorisation/medicine-shortages-availability-issues/european-shortages-monitoring-platform-esmp",
+    "https://www.gov.pl/web/gif/dostepnosc-lekowa"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Procurement availability network",
+    "control_point": "The failed medicine order and pharmacist-approved rerouting event",
+    "critical_dependency": "Near-real-time wholesaler inventory access and compliant pharmacy integrations"
+  },
+  "thesis": "Embed pharmacist-controlled shortage routing in buying-group ordering software, charging for verified availability events while pooling lawful attempted-versus-fulfilled order signals into a local supply map unavailable from public notices alone.",
+  "title": "PharmaFill Shortage Routing Network",
+  "uncertainties": [
+    "Wholesaler willingness to license usable inventory and fulfillment signals is unvalidated."
+  ],
+  "version": 1
+}

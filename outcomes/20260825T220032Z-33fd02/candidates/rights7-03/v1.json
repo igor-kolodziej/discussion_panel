@@ -1,0 +1,67 @@
+{
+  "candidate_id": "rights7-03",
+  "claims": [
+    {
+      "claim_id": "rights7-03-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://digital-strategy.ec.europa.eu/en/factpages/data-act-explained"
+      ],
+      "statement": "The EU Data Act enables users of connected products to access raw or preprocessed use data and share it with a third party of their choice, subject to stated limits."
+    }
+  ],
+  "contrary_evidence": [
+    "The Data Act source says inferred or derived data may be out of scope and obtained data cannot be used to develop a competing connected product.",
+    "A statutory access right does not guarantee clean APIs or permission for every proposed benchmark use."
+  ],
+  "economics": {
+    "acquisition_route": "Family installer pilot, revenue-sharing installation partners, equipment owners, then insurers and financiers",
+    "capital_required_pln": 60000,
+    "founder_net_worth_path": "A possible path is 50 enterprise customers at roughly 100000 PLN recurring revenue with high gross margin and founder-retained data-platform equity",
+    "founder_time": "Initially 12-18 hours per week with security and connector work partly contracted",
+    "gross_margin_basis": "Expected 70-85% after cloud, connectors, contributor rewards, security, and analyst support",
+    "payback": "Unvalidated; three to six enterprise licences could cover a lean first-year data platform",
+    "pricing": "Unvalidated: 40000-200000 PLN annual enterprise licence plus scoped studies; free or low-cost monitoring for contributors",
+    "retention_or_repeat": "Annual enterprise licences improve as cohorts lengthen; owner permissions require transparent renewal and revocation handling"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Longitudinal, multi-brand, permissioned data and contributor density create a dataset unavailable from a single vendor",
+    "customer": "Energy-equipment financiers, insurers, manufacturers, distributors, and O&M providers lacking independent field benchmarks",
+    "distribution_mechanism": "Installers embed permission in an optional monitoring service and receive a revenue share; enterprise customers are sold reports and APIs",
+    "offer_and_business_model": "Owner-authorized telemetry ingestion, anonymized cohort benchmarks, failure-rate studies, and asset-owner diagnostics funded by enterprise licences",
+    "payer_and_paid_event": "An enterprise pays an annual benchmark subscription or a scoped dataset and analysis licence",
+    "problem_trigger": "A buyer must price performance or failure risk but has only vendor-specific or sparse operational evidence"
+  },
+  "founder_fit": [
+    "Directly uses data science and AI skills",
+    "Leverages renewable-installation access without funding hardware ownership",
+    "Builds a scalable data asset rather than a manual service",
+    "Can be piloted part-time on a narrow equipment class"
+  ],
+  "parent": null,
+  "risks": [
+    "Cybersecurity failure could harm equipment owners",
+    "Data licences may conflict with vendor terms, trade secrets, or personal-data rules",
+    "Biased cohorts could produce misleading benchmarks",
+    "Enterprise buyers may demand audit-grade provenance before paying"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://digital-strategy.ec.europa.eu/en/factpages/data-act-explained"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Licensed benchmark-data cooperative",
+    "control_point": "Purpose-limited owner permissions to access and aggregate multi-brand connected-product telemetry",
+    "critical_dependency": "The relevant raw or preprocessed data must be technically accessible, standardizable, and lawfully reusable"
+  },
+  "thesis": "Contract with owners of heat pumps, batteries, inverters, and EV chargers for permission to collect and aggregate their machine data, then sell cross-brand reliability and performance benchmarks to financiers, insurers, manufacturers, and maintenance firms.",
+  "title": "Owner-Licensed Energy Asset Telemetry Trust",
+  "uncertainties": [
+    "Unknown which target devices fall within accessible Data Act scope",
+    "Unknown API quality and cost across vendors",
+    "Unknown owner opt-in rate and enterprise willingness to pay",
+    "No lawful data-use agreement has been tested"
+  ],
+  "version": 1
+}

@@ -1,0 +1,86 @@
+{
+  "judge_id": "c9-working-control9-07",
+  "assumptions": [
+    "The product remains an upstream data-collection, normalization, and preflight layer that hands a packet to an existing ICS2 or NCTS filing rail rather than becoming a filing rail itself.",
+    "The initial test is limited to one Polish inbound road corridor and one broker or carrier account, with no broker, TMS, or filing-provider commitment assumed.",
+    "The proposed pricing, reachable shipment volume, delay cost, conversion, retention, exception rate, and customer-acquisition cost are hypotheses rather than established facts.",
+    "Customs-domain review and time-sensitive production exceptions can be delegated to qualified contractors or partners, but their cost and availability are not assumed away.",
+    "No exclusive rights, proprietary source data, or permission to reuse counterparty and customs data exists at the outset.",
+    "A bounded pilot can fit within the stated 70000 PLN capital estimate and the founder's part-time availability, while production-scale operations may require additional people and capital.",
+    "Missing paid validation and partner participation are treated as uncertainty; the scores are reduced only where direct substitute pricing, workflow ownership, or operational structure supplies contrary evidence."
+  ],
+  "factors": [
+    {
+      "name": "Core insight",
+      "score": 6.4,
+      "status": "scored",
+      "rationale": "A mandatory, repeated pre-arrival filing event combines fragmented multi-party data, contractual linkage, multilingual input, and material delay risk, creating a credible upstream completeness problem. The sharper insight is to improve the packet before filing rather than replicate a filing rail. It is not yet a privileged insight, however: brokers, carriers, TMS vendors, and filing systems already see the same failure modes and can add similar checks."
+    },
+    {
+      "name": "Customer pain and willingness to pay",
+      "score": 5.7,
+      "status": "scored",
+      "rationale": "Regulatory evidence supports real pain from incomplete or inaccurate ENS data through rejection, referral, delay, and possible sanctions, and the workflow repeats per consignment. Separate willingness to pay for upstream preflight is unknown, while direct evidence that carriers bundle handling and complete filings are available cheaply materially limits the likely spend. A payer would need to attribute avoided rework or delay specifically to this layer rather than to the filing provider."
+    },
+    {
+      "name": "Business model and economics",
+      "score": 4.3,
+      "status": "scored",
+      "rationale": "Automated checks could support recurring usage, good cash conversion, and high gross margin when exception rates are low. Yet the credible 1-5 PLN automated price hypothesis sits against full-filing prices as low as roughly 0.9-2 PLN per accepted MRN at package scale, leaving little room for channel share, support, and customs review. CAC, LTV, payback, retention, reachable volume, and exception labor are unknown, and the illustrative founder-wealth path requires exceptionally high unproven volume plus enterprise accounts."
+    },
+    {
+      "name": "Market and beachhead",
+      "score": 5.1,
+      "status": "scored",
+      "rationale": "One corridor and one broker form a narrow, testable beachhead with a repeated workflow and a clear trigger. Broad EU-Ukraine road activity supports context, but no evidence establishes addressable shipment counts, concentration at reachable accounts, or enough standalone revenue in the first segment. The beachhead is operationally coherent but not yet shown to be economically meaningful."
+    },
+    {
+      "name": "Competitive position and domination potential",
+      "score": 3.1,
+      "status": "scored",
+      "rationale": "The proposed preflight gate could become valuable if embedded in a broker or TMS workflow, but the business initially controls neither that workflow nor the filing rail. Polish software, large carriers, official portals, NCTS, managed APIs, and low-cost full-filing services are credible substitutes, and incumbents can bundle upstream validation. Corridor specialization may win a pilot, but the current structure offers little basis for durable segment domination."
+    },
+    {
+      "name": "Expansion potential",
+      "score": 5.1,
+      "status": "scored",
+      "rationale": "A proven corridor workflow could extend to other origin languages, EU borders, TMS integrations, recurring party and goods profiles, and adjacent customs-document quality checks. Those adjacencies reuse core normalization and rules infrastructure. Expansion remains conditional on obtaining the same broker or TMS access, data permissions, and shipper participation that are unresolved in the beachhead, so it is plausible rather than unlocked."
+    },
+    {
+      "name": "Defensibility and durability",
+      "score": 2.9,
+      "status": "scored",
+      "rationale": "Rules, multilingual forms, normalization, and completeness checks are reproducible, while incumbents already possess workflow data and customer relationships. Reusable profiles and a permissioned corridor outcome graph could compound, but only after substantial volume and lawful reuse rights; customers may keep those profiles in their broker or TMS instead. Initial switching costs, exclusive supply, regulatory privilege, and network effects are weak."
+    },
+    {
+      "name": "Strength of advantage",
+      "score": 4.0,
+      "status": "scored",
+      "rationale": "A focused multilingual intake experience could be faster and more reliable than email and spreadsheet handoffs, especially for recurring shippers. No evidence yet quantifies a reduction in missing fields, rework, rejection, or delay, and a separate handoff can add friction. Low-cost filing products and incumbent-controlled data mean the offer is not yet demonstrably better enough in performance or economics to change buying behavior."
+    },
+    {
+      "name": "Timing and momentum",
+      "score": 6.6,
+      "status": "scored",
+      "rationale": "The all-mode ENS obligation and June 2026 transition create a current, non-discretionary compliance trigger, while cross-border road flows and multi-filer coordination sustain demand for cleaner inputs. The same deadline has already mobilized established software and logistics providers, so urgency helps discovery but does not confer a first-mover advantage and may leave only a short integration window."
+    },
+    {
+      "name": "Distribution",
+      "score": 3.0,
+      "status": "scored",
+      "rationale": "A tightly bounded paid broker pilot is a realistic first acquisition experiment, and one integration could aggregate recurring shipment volume. There is no committed broker, TMS, carrier, or filing-provider channel; those parties own the customer relationship and can prefer bundled or internal solutions. The founder lacks a demonstrated logistics channel, and repeatable acquisition likely requires enterprise selling, integration work, and partner economics that remain unknown."
+    },
+    {
+      "name": "Execution and risks",
+      "score": 5.2,
+      "status": "scored",
+      "rationale": "A file-based pilot is technically tractable within the founder's data-science strengths, available capital, and part-time schedule, and filing rights are obtainable rather than structurally blocked. Production requires accurate and changing customs rules, privacy permissions, integration contracts, multilingual shipper participation, liability control, and rapid exception support. These needs are delegable, but they can turn a software wedge into a time-sensitive operations desk incompatible with one part-time founder if not structurally contained."
+    }
+  ],
+  "interaction_adjustment": -0.1,
+  "main_structural_strength": "A legally mandatory, recurring shipment event exposes a concrete multi-party completeness and linkage gate before filing, allowing a corridor-specific pilot to measure avoided rework without first building a regulated filing rail.",
+  "primary_score_limiter": "The proposed layer lacks an owned payer relationship or distribution channel, while low-cost filing incumbents and TMS or broker workflow owners can bundle or copy the same validation and thereby squeeze both price and access.",
+  "strongest_disconfirming_evidence": "A Polish incumbent offers ICS2 submission at roughly 0.9-2 PLN per accepted MRN at package volumes and a free manual-upload path, while carriers and other providers offer complete filing for modest per-shipment fees; this directly undermines standalone preflight pricing and differentiation.",
+  "evidence_needed_for_higher_score": "A paid broker or TMS pilot should document reachable recurring volume, baseline field and linkage failure rates, attributable rework or delay cost, measured error reduction, non-EU shipper completion rates, willingness to pay separately from filing, gross margin after exceptions and channel share, retention intent, and contractual integration and data-reuse rights.",
+  "highest_value_structural_change": "Make the product an embedded, white-label shipper-intake and preflight module sold through one broker or TMS under an account minimum plus usage or shared-savings contract, so the incumbent supplies distribution and recurring volume while the product owns the multilingual upstream interaction and measurable data-quality outcome."
+}

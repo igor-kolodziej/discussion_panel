@@ -1,0 +1,71 @@
+{
+  "candidate_id": "leverage-07",
+  "claims": [
+    {
+      "claim_id": "leverage-07-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.eba.europa.eu/activities/direct-supervision-and-oversight/digital-operational-resilience-act/preparation-dora-application"
+      ],
+      "statement": "DORA became applicable on 17 January 2025 and requires in-scope financial entities to maintain a comprehensive register of ICT third-party contractual arrangements at relevant consolidation levels."
+    },
+    {
+      "claim_id": "leverage-07-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.eba.europa.eu/activities/single-rulebook/regulatory-activities/operational-resilience/implementing-technical-standards-establish-templates-register-information?version=2024"
+      ],
+      "statement": "Adopted implementing technical standards define register templates that competent authorities and the ESAs use for supervision and critical-provider designation."
+    }
+  ],
+  "contrary_evidence": [
+    "Governance, risk, and contract-lifecycle suites already target DORA.",
+    "Some smaller financial entities may outsource the whole task as annual consulting."
+  ],
+  "economics": {
+    "acquisition_route": "UNVALIDATED HYPOTHESIS — 6 compliance/MSP partners each place 15 entities over 36 months.",
+    "capital_required_pln": 80000,
+    "founder_net_worth_path": "UNVALIDATED HYPOTHESIS — 110 groups at 60000 PLN annual average yields 6.6 million PLN ARR by year 5; a 4x value and 70% ownership implies 18.48 million PLN equity, excluding distributions.",
+    "founder_time": "UNVALIDATED HYPOTHESIS — 18 hours weekly initially and 8 after specialist partner certification.",
+    "gross_margin_basis": "UNVALIDATED HYPOTHESIS — 79% gross margin after document extraction and specialist quality review.",
+    "payback": "UNVALIDATED HYPOTHESIS — under 8 months if automation avoids 120 analyst hours annually and one failed submission cycle.",
+    "pricing": "UNVALIDATED HYPOTHESIS — all commercial numbers here, including capital_required_pln, are hypotheses: 25000 PLN onboarding and 4500 PLN monthly per regulated group.",
+    "retention_or_repeat": "UNVALIDATED HYPOTHESIS — 93% annual retention from continuous contract amendments and annual reporting."
+  },
+  "fingerprint": {
+    "compounding_advantage": "a provenance-linked clause and validation corpus covering recurrent register defects",
+    "customer": "small EU insurers, payment firms, investment firms, credit unions, and compliance outsourcers",
+    "distribution_mechanism": "DORA consultancies, managed-service providers, legal firms, and core-platform implementers",
+    "offer_and_business_model": "contract extraction, controlled taxonomy, graph reconciliation, evidence lineage, validation, and regulator-format exports",
+    "payer_and_paid_event": "the regulated entity pays for implementation and continuous register maintenance",
+    "problem_trigger": "an ICT contract, subcontractor, entity perimeter, critical function, or regulator submission changes"
+  },
+  "founder_fit": [
+    "Good fit for knowledge graphs, document AI, validation, and low-social partner distribution; a Polish payments or insurance niche permits bounded entry."
+  ],
+  "parent": null,
+  "risks": [
+    "Extraction errors can propagate into regulatory submissions.",
+    "Financial-sector security and audit requirements raise delivery cost.",
+    "The product must preserve accountable human approval."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.eba.europa.eu/activities/direct-supervision-and-oversight/digital-operational-resilience-act/preparation-dora-application",
+    "https://www.eba.europa.eu/activities/single-rulebook/regulatory-activities/operational-resilience/implementing-technical-standards-establish-templates-register-information?version=2024"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "contract-to-register evidence graph service",
+    "control_point": "the quality-checked DORA Register of Information submission dataset and cell-level provenance",
+    "critical_dependency": "complete contract inventories and accurate provider, subcontractor, entity, and critical-function hierarchies"
+  },
+  "thesis": "A contract-ingestion graph can reconcile ICT services, entities, functions, subcontractors, identifiers, exit terms, and amendments into the DORA Register of Information format and keep evidence attached to every cell. Specialist compliance firms and MSPs can distribute it across portfolios; every vendor or contract change reopens the workflow.",
+  "title": "DORA Contract-to-Register Evidence Graph for Small Financial Entities",
+  "uncertainties": [
+    "Minimum viable customer segment under exemptions.",
+    "Partner access to contract data.",
+    "Extent of regulator-specific validation differences."
+  ],
+  "version": 1
+}

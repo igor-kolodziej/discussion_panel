@@ -1,0 +1,83 @@
+{
+  "candidate_id": "settle9-06",
+  "claims": [
+    {
+      "claim_id": "settle9-06-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://unece.org/trade/documents/2023/10/executive-guide-e-cmr"
+      ],
+      "statement": "UNECE describes the CMR note as a document primarily used for B2B commercial transport contracts and containing goods and party information used across cross-border carriage."
+    },
+    {
+      "claim_id": "settle9-06-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://unece.org/trade/documents/2023/10/executive-guide-e-cmr",
+        "https://unece.org/transport/documents/2021/08/working-documents/additional-protocol-cmr-concerning-electronic"
+      ],
+      "statement": "The 2008 Additional Protocol supports a paperless electronic CMR note, while UNECE's guide also notes that standardized-message adoption has been incomplete."
+    },
+    {
+      "claim_id": "settle9-06-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://transport.ec.europa.eu/transport-themes/logistics-and-multimodal-transport/efti-regulation_en"
+      ],
+      "statement": "The European Commission says the eFTI Regulation applies in full from 9 July 2027 and that business data will reside on secure certified platforms that can integrate with company systems."
+    }
+  ],
+  "contrary_evidence": [
+    "UNECE notes incomplete standardization of e-CMR messages, increasing integration cost rather than immediately creating interoperability.",
+    "Large TMS, e-CMR and factoring platforms can build native readiness scoring."
+  ],
+  "economics": {
+    "acquisition_route": "One factoring partner or regional TMS reseller can expose the product to hundreds of carriers; start with a no-cost readiness score on uploaded documents",
+    "capital_required_pln": 90000,
+    "founder_net_worth_path": "Hypothesis: 450,000 paid shipment checks annually at 12 PLN blended revenue creates 5.4m PLN ARR by years 5-7. With 20%+ margin and majority ownership, retained cash plus a 4-5x value could exceed 5m PLN founder net worth in years 6-8.",
+    "founder_time": "18-23 hours weekly for the first TMS/factor integration; document extraction and triage are highly AI-leverageable",
+    "gross_margin_basis": "Hypothesis: 78-91% for automatically cleared loads; managed disputes priced separately to protect margin",
+    "payback": "Hypothesis: 4-9 months through a factor or TMS channel; direct small-carrier acquisition is unlikely to pay back",
+    "pricing": "Hypothesis: 5-18 PLN per shipment or 1,500-7,000 PLN monthly minimum, with factors paying a portfolio rate",
+    "retention_or_repeat": "Every load repeats the proof-to-pay event, while carrier/consignee history improves scoring and financing workflows become sticky"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Lane, carrier, consignee and exception-resolution benchmarks plus cryptographically logged evidence lineage improve readiness scoring and predict dispute causes",
+    "customer": "Polish and Central European road carriers, freight forwarders and invoice factors financing transport receivables",
+    "distribution_mechanism": "Embed in TMS and factoring origination so every financed load is checked automatically; receiver links pull evidence from counterparties without account creation",
+    "offer_and_business_model": "API and web workspace priced per shipment, with a managed exception tier and partner revenue share",
+    "payer_and_paid_event": "Carrier, forwarder or factor pays per shipment when the evidence packet becomes payment-ready or an exception case is opened",
+    "problem_trigger": "Delivery is complete but the invoice or financing release is blocked by missing proof, contradictory consignment data, a deduction or an accessorial charge dispute"
+  },
+  "founder_fit": [
+    "Document AI and exception ranking fit the founder's technical leverage.",
+    "The factor/TMS route reduces high-touch carrier-by-carrier selling.",
+    "A file-based readiness audit can validate value before certification or large capital."
+  ],
+  "parent": null,
+  "risks": [
+    "Evidence authenticity and signature handling must be precise.",
+    "Cross-border transport contracts and liability rules vary by fact pattern.",
+    "A platform partner could appropriate the feature after learning demand."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://unece.org/trade/documents/2023/10/executive-guide-e-cmr",
+    "https://unece.org/transport/documents/2021/08/working-documents/additional-protocol-cmr-concerning-electronic",
+    "https://transport.ec.europa.eu/transport-themes/logistics-and-multimodal-transport/efti-regulation_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Proof-to-pay network embedded in logistics finance",
+    "control_point": "Release of a completed shipment invoice for approval or factoring",
+    "critical_dependency": "TMS/factor distribution and dependable access to signed delivery evidence without claiming that the product itself is an eFTI-certified platform"
+  },
+  "thesis": "Build an evidence exchange between Polish road carriers, forwarders and freight factors that converts delivery events and e-CMR data into a payment-readiness packet, then isolates shortages, waiting time, pallet balances and document defects into structured disputes. The factor or TMS provider distributes it because cleaner evidence can speed funding and reduce follow-up. The product initially integrates existing e-CMR/eFTI providers rather than seeking platform certification, and neither adjudicates legal liability nor purchases receivables.",
+  "title": "Freight Proof-to-Pay Exception Exchange",
+  "uncertainties": [
+    "Share of invoices delayed specifically by evidence defects",
+    "Factor willingness to condition funding on an external readiness score",
+    "Data formats used by the most distributive Polish TMS vendors"
+  ],
+  "version": 1
+}

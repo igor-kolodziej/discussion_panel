@@ -1,0 +1,81 @@
+{
+  "candidate_id": "niche-03",
+  "claims": [
+    {
+      "claim_id": "niche-03-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://czystepowietrze.gov.pl/poprzednie-edycje/pytania-i-odpowiedzi/jak-uzyskac-dotacje/wniosek-o-platnosc/1",
+        "https://czystepowietrze.gov.pl/wez-dofinansowanie/instrukcja-krok-po-kroku/krok-7-zrealizuj-i-rozlicz-inwestycje"
+      ],
+      "statement": "The official payment workflow can require invoices, proof of payment, product cards, technical evidence, an energy audit summary, and other attachments depending on project scope."
+    },
+    {
+      "claim_id": "niche-03-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://czystepowietrze.gov.pl/dla-gmin/do-pobrania/materialy-dla-gmin-2026-r"
+      ],
+      "statement": "NFOŚiGW updated operator checklists for rules effective 20 July 2026 and clarified that the final-visit protocol is not itself definitive proof of correct grant execution, demonstrating document-version and evidence complexity."
+    },
+    {
+      "claim_id": "niche-03-c03",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://czystepowietrze.gov.pl/wez-dofinansowanie/instrukcja-krok-po-kroku/krok-7-zrealizuj-i-rozlicz-inwestycje"
+      ],
+      "statement": "Hypothesis: invoice and photo checks performed before customer handover can remove enough rework to support a 600 to 1,200 PLN per-project price; contractor interviews and rejected-pack data are still required."
+    }
+  ],
+  "contrary_evidence": [
+    "Beneficiaries can receive free assistance from municipal consultation points and program operators, which may suppress willingness to pay for another checker.",
+    "Many contractors may handle too few eligible jobs for a subscription and may pass responsibility to the beneficiary or auditor."
+  ],
+  "economics": {
+    "acquisition_route": "Validate on family-company jobs, then let auditors and wholesalers bundle the pack at project close",
+    "capital_required_pln": 30000,
+    "founder_net_worth_path": "Hypothesis: 30 contractors and 600 packs produce about 0.5M PLN revenue in year 1; 250 contractors and 6,000 packs can exceed 5M PLN revenue by year 4. At 1.5M PLN EBITDA, a 4x value and 70% ownership imply 4.2M PLN equity; retained reinvested cash must add roughly 0.8M PLN for a 5M PLN net-worth path in years 6 to 7.",
+    "founder_time": "10 to 15 hours weekly during the first 100 dossiers, falling as exception rules stabilize",
+    "gross_margin_basis": "Target 70% to 85% after OCR and deterministic checks; human review is limited to flagged exceptions",
+    "payback": "One avoided callback, invoice correction, or delayed payment should cover a pack; measure actual hours and cash delay in the first 50 jobs",
+    "pricing": "600 to 1,200 PLN per completed job plus 499 PLN monthly for rule alerts and team workflow",
+    "retention_or_repeat": "Contractors repeat per installation, while changing forms and audit retention needs support subscription renewal"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A region-and-program-version defect corpus showing which evidence omissions cause questions, corrections, or delays",
+    "customer": "Small Polish heat-pump, insulation, and retrofit contractors completing Czyste Powietrze projects",
+    "distribution_mechanism": "Family-company proof, energy auditors, equipment wholesalers, and municipal-operator training partners",
+    "offer_and_business_model": "Per-project evidence gate plus a lightweight monthly contractor workspace",
+    "payer_and_paid_event": "The contractor pays when a job is checked and exported, or when renewing rule-version monitoring",
+    "problem_trigger": "Installation is nearing acceptance and the contractor needs a complete customer payment and audit dossier"
+  },
+  "founder_fit": [
+    "The family company offers direct workflow access and a low-cost Wielkopolska pilot, while document parsing and rules engines match the founder's AI and data skills. The initial service can run asynchronously and part-time, then productize rather than becoming manual grant consultancy."
+  ],
+  "parent": null,
+  "risks": [
+    "Customers may mistake automated checks for grant eligibility or legal certification.",
+    "The workflow contains identity, property, invoice, and financial data requiring GDPR controls.",
+    "Program rule changes could strand templates or sharply reduce project volume."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://czystepowietrze.gov.pl/dla-gmin/do-pobrania/materialy-dla-gmin-2026-r",
+    "https://czystepowietrze.gov.pl/poprzednie-edycje/pytania-i-odpowiedzi/jak-uzyskac-dotacje/wniosek-o-platnosc/1",
+    "https://czystepowietrze.gov.pl/wez-dofinansowanie/instrukcja-krok-po-kroku/krok-7-zrealizuj-i-rozlicz-inwestycje"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Transactional compliance workflow",
+    "control_point": "The evidence pack assembled immediately before final customer and grant payment submission",
+    "critical_dependency": "Contractors must experience measurable payment delay or rework that the checker can prevent"
+  },
+  "thesis": "Offer a per-job pre-submission gate for heat-pump, insulation, and whole-home retrofit contractors working under Czyste Powietrze. The system would read invoices, payment proofs, device cards, before-and-after energy documents, acceptance protocols, and photos; flag missing identifiers or version mismatches; and export a beneficiary-owned audit dossier. The wedge is not grant advice but fewer delayed payments and fewer contractor callbacks, initially validated in Wielkopolska through the family business and local energy auditors.",
+  "title": "Clean-Air Payment Pack for Small Polish Retrofit Contractors",
+  "uncertainties": [
+    "Frequency, causes, and monetary impact of payment-pack corrections by contractor segment.",
+    "Whether WFOŚiGW practices differ enough by region to require expensive manual maintenance.",
+    "Whether the program remains stable and funded long enough to support a standalone company."
+  ],
+  "version": 1
+}

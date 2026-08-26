@@ -1,0 +1,71 @@
+{
+  "candidate_id": "leverage-09",
+  "claims": [
+    {
+      "claim_id": "leverage-09-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2024/573/2024-02-20/eng"
+      ],
+      "statement": "Regulation (EU) 2024/573 requires specified F-gas equipment to receive periodic leak checks by certified people and prescribes check frequency by gas quantity and detection system."
+    },
+    {
+      "claim_id": "leverage-09-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2024/573/2024-02-20/eng"
+      ],
+      "statement": "Article 7 requires per-equipment records covering gas quantities, service parties and certificates, check and repair results, and decommissioning, generally retained for at least five years."
+    }
+  ],
+  "contrary_evidence": [
+    "Poland already has official certification and equipment-register processes.",
+    "Field-service software can add F-gas forms, and low-charge equipment may not trigger leak-check duties."
+  ],
+  "economics": {
+    "acquisition_route": "UNVALIDATED HYPOTHESIS — 6 wholesalers enrol 250 installer firms over 36 months, beginning with the founder's family-business network.",
+    "capital_required_pln": 60000,
+    "founder_net_worth_path": "UNVALIDATED HYPOTHESIS — 12 wholesalers and 1200 installer firms create 6 million PLN annual recurring and event revenue by year 5; a 3.5x value and 78% ownership implies 16.38 million PLN equity, excluding distributions.",
+    "founder_time": "UNVALIDATED HYPOTHESIS — 16 hours weekly during pilot and 7 after wholesaler-led onboarding.",
+    "gross_margin_basis": "UNVALIDATED HYPOTHESIS — 81% margin after mobile sync, messaging, and register support.",
+    "payback": "UNVALIDATED HYPOTHESIS — under 5 months if a 7-person installer saves 20 admin hours and avoids one repeat site visit.",
+    "pricing": "UNVALIDATED HYPOTHESIS — all commercial numbers here, including capital_required_pln, are hypotheses: wholesaler pays 3500 PLN monthly, installer pays 99 PLN per technician monthly, and 3 PLN per asset event.",
+    "retention_or_repeat": "UNVALIDATED HYPOTHESIS — 91% annual firm retention due to persistent asset histories and scheduled service obligations."
+  },
+  "fingerprint": {
+    "compounding_advantage": "a cross-firm asset history and recurring-fault map tied to verified service credentials",
+    "customer": "HVAC and heat-pump wholesalers, certified service firms, and equipment operators",
+    "distribution_mechanism": "wholesaler counters, training centres, certification bodies, and renewable-installation networks",
+    "offer_and_business_model": "offline-first field capture, credential verification, due-date scheduling, gas chain-of-custody, and dual-party records",
+    "payer_and_paid_event": "wholesalers pay for the network layer and contractors pay per technician and service event",
+    "problem_trigger": "equipment is sold, installed, serviced, leak-checked, charged, repaired, or decommissioned"
+  },
+  "founder_fit": [
+    "Direct family renewable-installation access enables a lawful pilot; the product combines operational automation with low-cost, partner-led distribution."
+  ],
+  "parent": null,
+  "risks": [
+    "Duplicate entry with official systems can kill adoption.",
+    "Credential data must be current.",
+    "Offline field errors can create false records."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2024/573/2024-02-20/eng",
+    "https://www.udt.gov.pl/uslugi-udt/szwo-i-f-gazy/o-f-gazach-i-szwo"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "credentialed asset-service ledger marketplace",
+    "control_point": "the credential-verified service event and equipment record accepted by operator, contractor, and inspector",
+    "critical_dependency": "installer adoption and reliable interoperability with certification and national equipment-register data"
+  },
+  "thesis": "A wholesaler-sponsored ledger can bind certified people and firms to each heat-pump or refrigeration asset, schedule leak checks, capture gas movements and repairs at the field edge, and hand both operator and contractor the required history. The wholesaler acquires many installers; every sale, visit, leak check, recovery, and decommissioning is a repeat event.",
+  "title": "F-Gas Credential and Asset-Service Ledger for HVAC Wholesalers",
+  "uncertainties": [
+    "Availability of official register integration.",
+    "Wholesaler willingness to sponsor competitors on one network.",
+    "Per-event volume among small installers."
+  ],
+  "version": 1
+}

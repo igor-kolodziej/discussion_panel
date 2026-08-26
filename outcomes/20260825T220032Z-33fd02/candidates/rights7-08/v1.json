@@ -1,0 +1,76 @@
+{
+  "candidate_id": "rights7-08",
+  "claims": [
+    {
+      "claim_id": "rights7-08-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/topics/forests/deforestation/regulation-deforestation-free-products_en"
+      ],
+      "statement": "The EUDR covers commodities including wood and derived products such as furniture, and requires relevant operators or traders to establish that products are deforestation-free and legal."
+    },
+    {
+      "claim_id": "rights7-08-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A32023R1115"
+      ],
+      "statement": "The regulation's due-diligence statement includes country of production and geolocation of relevant plots, showing that structured upstream evidence is operationally important."
+    }
+  ],
+  "contrary_evidence": [
+    "The Commission page records recent simplification measures and staggered application dates, so workload and timing are not stable assumptions.",
+    "Upstream statements and low-risk sourcing may reduce the amount of independent validation some downstream firms will buy."
+  ],
+  "economics": {
+    "acquisition_route": "Polish furniture and timber clusters through ERP, customs, and compliance channel partners",
+    "capital_required_pln": 50000,
+    "founder_net_worth_path": "A possible path is several hundred SME subscriptions and a reusable supplier graph producing high-margin recurring revenue across Central Europe",
+    "founder_time": "Initially 10-18 hours per week with legal interpretation provided by external specialists",
+    "gross_margin_basis": "Expected 70-85% after geospatial validation, secure storage, support, and regulatory review",
+    "payback": "Unvalidated; ten to twenty onboarding projects plus subscriptions could repay setup",
+    "pricing": "Unvalidated: 5000-20000 PLN onboarding plus 1000-5000 PLN monthly and usage fees",
+    "retention_or_repeat": "Evidence changes by shipment and supplier; subscriptions persist if reuse reduces repeated collection work"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Each authenticated supplier can serve multiple downstream customers, building a reusable permissioned supply graph and lower marginal onboarding cost",
+    "customer": "Polish furniture makers, wood importers, exporters, and retailers handling EUDR-relevant products",
+    "distribution_mechanism": "Furniture clusters, customs advisers, accounting and ERP partners, trade associations, and supplier-invited onboarding",
+    "offer_and_business_model": "Supplier permission capture, geolocation-file checks, evidence versioning, downstream reference delivery, and audit logs without guaranteeing legal compliance",
+    "payer_and_paid_event": "The operator pays onboarding, a monthly subscription, and optionally a per-statement validation fee",
+    "problem_trigger": "A covered shipment or product needs defensible upstream evidence and reference data before market placement or export"
+  },
+  "founder_fit": [
+    "Strong fit with data pipelines, geospatial validation, and automation",
+    "Can start as a narrow Polish B2B product",
+    "Does not require inventory or public influence",
+    "Permissioned reuse creates a scalable data asset"
+  ],
+  "parent": null,
+  "risks": [
+    "False supplier evidence could create customer liability",
+    "The company could be treated as giving regulated legal advice",
+    "Commercially sensitive geolocation data requires strong security",
+    "Regulatory simplification could reduce paid workload"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://environment.ec.europa.eu/topics/forests/deforestation/regulation-deforestation-free-products_en",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A32023R1115"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Permissioned compliance data utility",
+    "control_point": "Supplier-authorized access and controlled downstream reuse of geolocation and due-diligence evidence",
+    "critical_dependency": "Upstream suppliers must provide reliable plot-level data and the service must match evolving EUDR roles and rules"
+  },
+  "thesis": "Obtain authority from timber and furniture suppliers to collect, validate, and reuse their traceability packets for multiple downstream Polish buyers, creating a permissioned evidence graph and recurring compliance utility.",
+  "title": "EUDR Supplier Evidence Authority",
+  "uncertainties": [
+    "Customer roles and obligations must be mapped after recent amendments",
+    "Unknown supplier willingness to grant reuse authority",
+    "Unknown willingness to pay versus ERP or consultant alternatives",
+    "No evidence packet has been tested end to end"
+  ],
+  "version": 1
+}

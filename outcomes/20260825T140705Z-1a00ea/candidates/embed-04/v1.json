@@ -1,0 +1,66 @@
+{
+  "candidate_id": "embed-04",
+  "claims": [
+    {
+      "claim_id": "embed-04-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://joint-research-centre.ec.europa.eu/photovoltaic-geographical-information-system-pvgis_en"
+      ],
+      "statement": "The Commission's PVGIS provides solar-radiation and photovoltaic-performance estimates plus APIs for automated access."
+    },
+    {
+      "claim_id": "embed-04-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://iea-pvps.org/wp-content/uploads/2022/11/IEA-PVPS-Report-T13-25-2022-OandM-Guidelines.pdf"
+      ],
+      "statement": "IEA PVPS publishes formal guidance for operation and maintenance of photovoltaic plants across different climates."
+    }
+  ],
+  "contrary_evidence": [
+    "Inverter vendors and established O&M platforms already hold much of the telemetry and may offer their own reports."
+  ],
+  "economics": {
+    "acquisition_route": "One-to-many distribution through solar O&M portals, insurance brokers, lenders, and installers.",
+    "capital_required_pln": 35000,
+    "founder_net_worth_path": "Hypothesis: 1500 monitored assets at 3000 PLN blended annual revenue yields 4.5 million PLN ARR by year five and can support founder equity above 5 million PLN without double-counting distributions.",
+    "founder_time": "Hypothesis: 3-4 founder hours daily for models and integrations, with field inspections supplied by partners.",
+    "gross_margin_basis": "Hypothesis: 75-85% gross margin after connectors, anomaly review, document storage, and channel fees.",
+    "payback": "Hypothesis: one completed commercial-asset transaction repays a 2000 PLN channel onboarding cost.",
+    "pricing": "Hypothesis, including the capital figure: 2500 PLN per transaction pack plus 1200 PLN per asset-year for continuous verification.",
+    "retention_or_repeat": "Annual verification plus each sale, refinance, insurance renewal, and warranty claim creates a paid event."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Licensed expected-versus-actual histories build location, equipment, and service-adjusted degradation benchmarks",
+    "customer": "Owners, buyers, lenders, and insurers of small commercial PV assets",
+    "distribution_mechanism": "Embedded modules in O&M, lender, broker, and installer portals",
+    "offer_and_business_model": "Consent-based telemetry escrow and diligence certificate sold per transaction and asset-year",
+    "payer_and_paid_event": "The transaction beneficiary pays when a verified performance packet is issued",
+    "problem_trigger": "A PV asset is sold, refinanced, insured, warranted, or annually reviewed"
+  },
+  "founder_fit": [
+    "PV family access supplies pilot assets while the analytical core fits the founder's data skills and part-time constraint."
+  ],
+  "parent": null,
+  "risks": [
+    "Seller-selected data, missing meters, or changed hardware could make a certificate misleading unless provenance and gaps are explicit."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://joint-research-centre.ec.europa.eu/photovoltaic-geographical-information-system-pvgis_en",
+    "https://iea-pvps.org/wp-content/uploads/2022/11/IEA-PVPS-Report-T13-25-2022-OandM-Guidelines.pdf"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Transaction data escrow",
+    "control_point": "The verified performance packet required before capital changes hands",
+    "critical_dependency": "Durable owner consent and access to inverter, meter, and service-history feeds"
+  },
+  "thesis": "Create owner-consented PV telemetry and document escrow embedded with O&M portals and lenders, charging on sale, refinancing, warranty, and annual verification events while compounding a normalized degradation benchmark.",
+  "title": "SolarAsset Verified Performance Escrow",
+  "uncertainties": [
+    "The frequency and willingness to pay for diligence on small Polish commercial PV transfers are unvalidated."
+  ],
+  "version": 1
+}

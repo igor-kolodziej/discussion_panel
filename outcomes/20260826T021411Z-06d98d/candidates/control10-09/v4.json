@@ -1,0 +1,151 @@
+{
+  "candidate_id": "control10-09",
+  "claims": [
+    {
+      "claim_id": "control10-09-r2-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/topics/waste-and-recycling/packaging-waste_en",
+        "https://eur-lex.europa.eu/eli/reg/2025/40/ojS"
+      ],
+      "statement": "PPWR generally applies from 12 August 2026 and imposes packaging sustainability, conformity-assessment, technical-documentation, and declaration duties."
+    },
+    {
+      "claim_id": "control10-09-r2-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2025/40/ojS"
+      ],
+      "statement": "The brand or entity placing packaging or a packaged product under its own name is often the manufacturer, while packaging suppliers must provide the information needed for that manufacturer's evidence file."
+    },
+    {
+      "claim_id": "control10-09-r2-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://green-forum.ec.europa.eu/packaging-and-packaging-waste-regulation-implementation_en"
+      ],
+      "statement": "Important implementing methods and design-for-recycling acts phase through 2026-2028 and later, supporting update demand while also making early automated determinations risky."
+    },
+    {
+      "claim_id": "control10-09-r2-c4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ppwrconnect.com/ppwr-software",
+        "https://ppwrconnect.com/pricing"
+      ],
+      "statement": "PPWR Connect already markets declarations, technical files, component graphs, converter support, ERP/API access, and plans from EUR 29 to EUR 299 per month, directly contradicting the discovery pricing for a generic rail."
+    },
+    {
+      "claim_id": "control10-09-r2-c5",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.recyda.com/solutions/packaging-and-packaging-waste-regulation-ppwr",
+        "https://www.specright.com/press-releases/specright-ppwr-declaration-of-conformity-capability/",
+        "https://www.precongroup.com/vinq/"
+      ],
+      "statement": "Enterprise incumbents already collect supplier data, link component evidence, import through APIs, maintain audit trails, generate technical documentation and declarations, and add expert validation."
+    },
+    {
+      "claim_id": "control10-09-r2-c6",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2025/40/ojS",
+        "https://www.recyda.com/solutions/packaging-and-packaging-waste-regulation-ppwr"
+      ],
+      "statement": "A converter-led many-to-many evidence release network may reduce duplicate brand requests, but the gathered evidence does not establish an uncovered product gap or payer preference."
+    }
+  ],
+  "contrary_evidence": [
+    "PPWR Connect publicly sells a broad PPWR workspace from EUR 29 to EUR 299 per month and includes converter positioning and an enterprise API.",
+    "Recyda already provides APIs, supplier and component mapping, audit logs, portfolio dashboards, technical-documentation summaries, and declarations.",
+    "Specright already embeds PPWR declarations into specification data and has a dedicated supplier portal.",
+    "VINQ combines supplier requests, packaging dossiers, generated declarations, and human compliance validation.",
+    "Several material methodologies and delegated acts arrive later, so current urgency is not uniform across every PPWR requirement.",
+    "The legal manufacturer, frequently the brand owner, retains responsibility; a converter cannot make the brand's conformity decision for it."
+  ],
+  "economics": {
+    "acquisition_route": "Hypothesis: sign one fixed-scope paid syndication pilot with a converter for one packaging format, one existing source-data export, and one brand-approved destination connector; require the participating brands to confirm endpoint access and permissions before connector work begins. There is no converter commitment, brand consent, or adoption evidence yet.",
+    "capital_required_pln": 70000,
+    "founder_net_worth_path": "Illustrative hypothesis, not evidence: 70 converter accounts averaging 75000 PLN of recurring annual revenue would produce 5.25 million PLN ARR. At 75% gross margin, controlled operating costs, 70% founder ownership, and an assumed 2.5-times-ARR business value, founder equity could exceed 5 million PLN in roughly 6-9 years; every account count, revenue, margin, valuation multiple, ownership level, and timing assumption remains unvalidated, and failure to reuse connectors would break the path.",
+    "founder_time": "Hypothesis: 12-18 hours weekly for the first fixed-format pilot if a contractor builds the destination connector and external PPWR counsel defines the evidence boundary; scaling beyond two simultaneous integrations requires hired delivery capacity and strict separation from employer-confidential information.",
+    "gross_margin_basis": "Hypothesis: 60-75% across the first ten accounts because mapping, permissions, security review, and connectors are service-heavy, potentially rising to 75-85% only if destination connectors and evidence schemas are reused without bespoke implementation.",
+    "payback": "Hypothesis: 12-18 months if a 30000-60000 PLN implementation milestone is paid before connector development and the same account then pays a 24000-60000 PLN annual minimum; no evidence establishes acceptance of those terms or a repeatable sales cycle.",
+    "pricing": "Hypothesis: 30000-60000 PLN for a fixed source-to-destination implementation, plus a 24000-60000 PLN annual converter minimum and usage priced per active evidence-family mapping or acknowledged change delivery. The premium must be justified by avoided rekeying and reliable interoperability rather than PPWR content, and willingness to pay above EUR 29-299 monthly alternatives is unknown.",
+    "retention_or_repeat": "Retention would come from maintained source-to-destination mappings, permission rules, delivery receipts, and repeated material, supplier, artwork, or method changes. Change frequency, connector reuse, and switching friction are unmeasured, while incumbent APIs could provide the same lifecycle."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A reusable library of destination connectors plus customer-specific permission mappings, immutable evidence-version lineage, and delivery acknowledgements could lower the marginal cost of each authorized endpoint; confidentiality may block reuse and incumbents can copy this mechanism, so no compounding advantage is yet established.",
+    "customer": "EU packaging converters serving multiple brand manufacturers that already require source evidence through heterogeneous PLM, specification, or PPWR systems",
+    "distribution_mechanism": "A converter contracts for one source-to-destination flow during specification approval and names consenting brand endpoints; evidence is delivered into each brand's existing system, so the initial wedge requires no separate brand workspace or invited-user adoption.",
+    "offer_and_business_model": "A PLM-neutral evidence-syndication API and managed connector layer that normalizes converter-origin source records, enforces customer-specific permissions, publishes versioned evidence and change events into incumbent brand systems, and records delivery acknowledgements; it neither generates declarations nor makes conformity determinations.",
+    "payer_and_paid_event": "The converter pays a fixed connector implementation fee, an annual evidence-syndication minimum, and usage tied to active evidence-family mappings or acknowledged change deliveries; brands do not pay in the initial wedge.",
+    "problem_trigger": "A converter approves or revises source evidence for a packaging family and must deliver the authorized current version or delta into several brand-owned systems without repeated manual rekeying."
+  },
+  "founder_fit": [
+    "FMCG workflow familiarity, data modelling, change detection, and API-oriented automation fit the founder's skills.",
+    "One packaging format, one source export, and one destination connector create a bounded paid-pilot scope that can be attempted without public-camera distribution.",
+    "The founder must exclude all employer-confidential specifications, contacts, systems, and know-how and assess employment conflicts before operating in an adjacent FMCG market.",
+    "Converter contracting, brand permissions, security review, and cross-border integrations may require more social and implementation energy than preferred.",
+    "External legal and packaging-science expertise remains required to define the source-evidence boundary, while an integration contractor is required to keep delivery compatible with part-time founder capacity."
+  ],
+  "parent": {
+    "candidate_id": "control10-09",
+    "version": 3
+  },
+  "redesign": {
+    "changed_fingerprint_fields": [
+      "customer",
+      "problem_trigger",
+      "payer_and_paid_event",
+      "offer_and_business_model",
+      "distribution_mechanism",
+      "compounding_advantage"
+    ],
+    "economic_effect": "The redesign removes declaration generation, legal determination, and a second brand workspace, replacing a generic subscription with converter-funded implementation, annual minimum, and metered syndication. Upfront payment is intended to finance each connector and the narrower surface may lower product scope, but initial gross margin remains service-heavy and the modeled 70-account wealth path depends on unproven premium willingness, reusable connectors, endpoint access, low support cost, retained ownership, and repeat change traffic."
+  },
+  "risks": [
+    "Crowded direct competition from low-cost native tools, enterprise packaging platforms, and consultancies",
+    "Liability if evidence completeness is presented as a legal conformity determination",
+    "Implementing-act changes may invalidate calculations or schemas",
+    "Supplier and brand confidentiality may prevent reusable multi-tenant evidence",
+    "Brands may require evidence inside existing PLM or specification systems rather than a converter-selected platform",
+    "Potential conflict with the founder's current FMCG employment",
+    "International enterprise distribution and integrations may exceed part-time capacity",
+    "Brand security teams or incumbent vendors may deny API write access, leaving only low-value exports or bespoke manual delivery",
+    "Low change-event frequency or packaging-family aggregation may make usage revenue too small",
+    "Each destination may require bespoke mapping and support, preventing connector reuse and software-like margins"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://environment.ec.europa.eu/topics/waste-and-recycling/packaging-waste_en",
+    "https://eur-lex.europa.eu/eli/reg/2025/40/ojS",
+    "https://green-forum.ec.europa.eu/packaging-and-packaging-waste-regulation-implementation_en",
+    "https://environment.ec.europa.eu/publications/faq-packaging-and-packaging-waste-regulation-ppwr_en",
+    "https://ppwrconnect.com/ppwr-software",
+    "https://ppwrconnect.com/pricing",
+    "https://www.recyda.com/solutions/packaging-and-packaging-waste-regulation-ppwr",
+    "https://www.specright.com/press-releases/specright-ppwr-declaration-of-conformity-capability/",
+    "https://www.precongroup.com/vinq/"
+  ],
+  "stage": "development",
+  "structure": {
+    "commercial_archetype": "Converter-paid B2B evidence-syndication infrastructure with managed source-to-destination connectors",
+    "control_point": "The authenticated, permissioned handoff of converter-origin evidence versions and change events into brand-owned systems during specification approval, not the brand's conformity decision",
+    "critical_dependency": "A paid converter contract, brand-granted endpoint access, enforceable evidence permissions, reusable destination connectors, and a workflow gap that incumbent PPWR or specification-platform APIs do not already fill"
+  },
+  "thesis": "Do not build another PPWR workspace or declaration generator. Sell one packaging converter a narrow interoperability layer that normalizes evidence for one packaging format, applies contractual customer-specific permissions, and publishes immutable source-evidence versions and change events into each consenting brand's existing PLM, specification, or PPWR system through an API or structured export, with delivery acknowledgements. The brand or other legal manufacturer still performs its conformity assessment, maintains its technical file, and signs its declaration. The first contract is deliberately limited to one converter, one source export, and one paid destination connector; additional connectors are built only after paid demand. This changes the architecture and revenue logic from shared-workspace adoption to funded system-to-system delivery, but no gathered evidence proves an uncovered interoperability gap, converter budget ownership, brand endpoint access, willingness to pay, connector reuse, or a defensible advantage over incumbent APIs.",
+  "title": "Converter-Paid PPWR Evidence Syndication API",
+  "uncertainties": [
+    "Exact brand-versus-converter budget ownership by packaging format and contract",
+    "Number of repeated supplier evidence requests that a converter can eliminate",
+    "Whether packaging families materially reduce declaration volume and usage revenue",
+    "Integration and security requirements imposed by converters and brand PLM teams",
+    "An uncovered workflow that Recyda, Specright, VINQ, and PPWR Connect cannot already serve",
+    "Willingness to pay above low-cost self-serve plans",
+    "Conflict-of-interest constraints arising from the founder's employment",
+    "Whether converters can obtain contractual permission and API or import access for brand-owned endpoints",
+    "Actual frequency and economic value of acknowledged evidence-change deliveries",
+    "Whether destination connectors, schemas, and permission mappings can be reused across accounts without bespoke work"
+  ],
+  "version": 4
+}

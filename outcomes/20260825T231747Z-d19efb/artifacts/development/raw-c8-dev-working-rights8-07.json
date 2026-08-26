@@ -1,0 +1,84 @@
+{
+  "judge_id": "c8-dev-working-rights8-07",
+  "assumptions": [
+    "The opportunity is assessed at the planning stage under competent execution; the absence of a completed pilot is treated as uncertainty, while the take-or-pay, host-rights, pricing, margin, and renewal mechanics remain hypotheses rather than established facts.",
+    "The initial cluster is limited to one Warsaw or Wielkopolska route with a fleet that has a recurring, measurable charging-capacity shortfall and predictable dwell windows.",
+    "The pilot uses an incumbent compliant charging, payment, and reservation stack, requires no grid upgrade or custom software, and treats relevant sites as publicly accessible unless site-specific legal review establishes otherwise.",
+    "The founder remains employed and can contribute roughly 12-18 hours per week; a qualified local operator must own continuous bay checks, fault response, and exceptions before any SLA is offered.",
+    "The stated PLN 45,000 pilot capital, PLN 400-900 vehicle-equivalent monthly minimum, 25-45% gross-margin range, and 12-18 month payback are planning bounds to be tested, not evidence-backed economics."
+  ],
+  "factors": [
+    {
+      "name": "Core insight",
+      "score": 7,
+      "status": "scored",
+      "rationale": "The candidate correctly distinguishes software reservation from delivered physical availability. Research supports both the fleet charging-availability constraint and the fact that an incumbent reservation cannot ensure an unblocked bay, making enforceable site access, uptime, fallback, and exception handling a coherent service wedge rather than another booking app."
+    },
+    {
+      "name": "Customer pain and willingness to pay",
+      "score": 6,
+      "status": "scored",
+      "rationale": "A recurring route-level charging shortfall can disrupt fleet utilization and creates a credible basis for paying for reliability. However, the evidence is category-level only: no named Polish fleet, quantified cost of failure, budget owner, paid commitment, or acceptance of a take-or-pay minimum before demonstrated reliability is established."
+    },
+    {
+      "name": "Business model and economics",
+      "score": 5,
+      "status": "scored",
+      "rationale": "Take-or-pay gating, energy pass-through, incumbent software, and no speculative grid upgrade sensibly bound utilization and capital risk. Yet every decisive economic input is unvalidated, while firm host payments, redundant fallback, physical enforcement, insurance, monitoring, service credits, and local response can readily compress the proposed 25-45% gross margin; the wealth path also depends on thirty repeatable clusters and an assumed valuation multiple."
+    },
+    {
+      "name": "Market and beachhead",
+      "score": 5,
+      "status": "scored",
+      "rationale": "One route-specific fleet with predictable dwell windows is narrow enough for a disciplined pilot. The economic depth of that beachhead is uncertain because no local inventory, route density, compatible chargers, or buyer count is established, and the cited adoption evidence shows growth from a low base alongside infrastructure and total-cost constraints."
+    },
+    {
+      "name": "Competitive position and domination potential",
+      "score": 5,
+      "status": "scored",
+      "rationale": "Exclusive bay-and-entry windows, fallback capacity, and a measured reliability record could create a strong position within one tightly defined route cluster. That position is not yet secured, host rights may be contestable, and fleets can compare the service with depot investment and ordinary public charging; incumbent platforms already cover the generic access, tariff, and reservation layer."
+    },
+    {
+      "name": "Expansion potential",
+      "score": 6,
+      "status": "scored",
+      "rationale": "A proven cluster playbook could extend to additional fleets, routes, Polish cities, compatible hosts, and related managed-capacity services. Expansion is plausible but operationally local: each new cluster requires fresh demand, legal rights, site compatibility, fallback capacity, and an operator, so the first win does not automatically unlock low-friction scale."
+    },
+    {
+      "name": "Defensibility and durability",
+      "score": 5,
+      "status": "scored",
+      "rationale": "Enforceable exclusive windows, host relationships, incident data, trained operators, and a reliability history can compound and are harder to copy than software features alone. The durability depends on contract length and renewal, neither of which is evidenced; the operational know-how is replicable, the platform layer belongs to incumbents, and a lost anchor can strand the local rights base."
+    },
+    {
+      "name": "Strength of advantage",
+      "score": 6,
+      "status": "scored",
+      "rationale": "If delivered as promised, guaranteed physical access with monitored uptime and fallback is materially better for a reliability-sensitive fleet than a digital reservation that may lead to a blocked or failed charger. The advantage is presently contractual and operational rather than demonstrated, and its value can be offset by take-or-pay pricing, service limitations, or a fleet's depot alternative."
+    },
+    {
+      "name": "Timing and momentum",
+      "score": 6,
+      "status": "scored",
+      "rationale": "Commercial-fleet electrification and documented charging constraints create a relevant window, while mature incumbent charging stacks reduce the need for custom software. Momentum is moderated by low commercial-EV penetration, infrastructure and total-cost barriers, and a regulatory classification that expands rather than removes operating obligations."
+    },
+    {
+      "name": "Distribution",
+      "score": 4,
+      "status": "scored",
+      "rationale": "Installer, leasing, and local-business referrals are plausible introductions, and a single anchor limits broad outbound selling. No channel commitment or named buyer is evidenced, the founder's family leverage is more directly useful for host sourcing than fleet procurement, and requiring a take-or-pay commitment before a reliability record creates a difficult first sale and bilateral sequencing problem."
+    },
+    {
+      "name": "Execution and risks",
+      "score": 4,
+      "status": "scored",
+      "rationale": "Using an incumbent stack and limiting the pilot reduce technical and capital scope, and the founder fits the analytical planning work. Execution still combines public-charging compliance, CPO/MSP role allocation, leases and energy terms, two-sided enterprise contracting, charger compatibility, physical bay enforcement, fallback operations, and continuous SLA response; the required local operator and legally usable rights have not been obtained, and continuous exceptions are incompatible with a solo part-time founder."
+    }
+  ],
+  "interaction_adjustment": -0.2,
+  "main_structural_strength": "Demand-first activation ties host commitments to contracted fleet revenue and sells measurable delivered availability through physical rights, fallback capacity, and operations on top of an incumbent compliant stack, avoiding speculative inventory and an undifferentiated software build.",
+  "primary_score_limiter": "The business requires a fleet to accept contribution-positive take-or-pay terms before reliability is proven and hosts to grant enforceable exclusive and fallback rights before demand is fully de-risked; neither side of that closing sequence nor the resulting contribution margin is evidenced.",
+  "strongest_disconfirming_evidence": "Incumbent documentation shows that access groups, tariffs, cost tracking, and fleet reservations already exist, while Virta explicitly states that a digital reservation does not guarantee physical bay availability. This removes a software moat and forces the candidate's claimed advantage into costly, failure-prone site control and local operations.",
+  "evidence_needed_for_higher_score": "A signed paid or binding conditional take-or-pay commitment from a named fleet, matched conditional host agreements granting legally reviewed exclusive bay, entry, and fallback rights, a documented compliant CPO/MSP allocation, and a 60-90 day pilot showing positive contribution after all host, platform, insurance, operator, service-credit, and fallback costs. The pilot should also report successful-session, blocked-bay, fault, fallback-use, support-minute, and renewal-intent metrics.",
+  "highest_value_structural_change": "Replace the unconditioned bilateral sequence with matched capacity-option contracts: the fleet's minimum becomes binding only after named primary and fallback sites pass legal, technical, and availability acceptance tests, while each host's exclusivity becomes firm only when the corresponding fleet minimum activates. A non-refundable option fee should fund diligence and compensate hosts during the matching window, reducing both the first-sale credibility gap and stranded-capacity risk."
+}

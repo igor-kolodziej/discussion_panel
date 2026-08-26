@@ -1,0 +1,144 @@
+{
+  "candidate_id": "control9-07",
+  "claims": [
+    {
+      "claim_id": "control9-07-v2-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/customs/customs-security/import-control-system-2_en",
+        "https://taxation-customs.ec.europa.eu/online-services/online-services-and-databases-customs/new-computerised-transit-system-ncts_en"
+      ],
+      "statement": "From 1 June 2026, consignments entering the EU by any transport mode should have a valid ENS filed directly in ICS2 or through combined NCTS Phase 6 filing in opt-in countries."
+    },
+    {
+      "claim_id": "control9-07-v2-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/customs/customs-security/import-control-system-2_en"
+      ],
+      "statement": "The Commission states that incomplete ENS filings may be rejected or referred for more information and may delay processing and entry."
+    },
+    {
+      "claim_id": "control9-07-v2-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/customs/customs-security/import-control-system-2/faq_en"
+      ],
+      "statement": "Multiple filing requires contractual arrangements and advance exchange of linkage data among the carrier and other supply-chain filers."
+    },
+    {
+      "claim_id": "control9-07-v2-c4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/customs/customs-security/import-control-system-2_en",
+        "https://taxation-customs.ec.europa.eu/online-services/online-services-and-databases-customs/new-computerised-transit-system-ncts_en"
+      ],
+      "statement": "Economic operators can use the free Shared Trader Portal, their own conformance-tested connection, an IT service provider, or eligible NCTS Phase 6, so filing access itself is not scarce."
+    },
+    {
+      "claim_id": "control9-07-v2-c5",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.huzar.pl/moduly/ics2/"
+      ],
+      "statement": "Polish incumbent Huzar supports ICS2 preparation and direct submission, with published packages from 400 PLN for 200 MRNs to 7,200 PLN for 8,000 MRNs per month and a free manual-upload route."
+    },
+    {
+      "claim_id": "control9-07-v2-c6",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.dsv.com/pl-pl/wsparcie/dokumenty/strefa-klienta/road/oplaty-dodatkowe/ics2",
+        "https://www.customs-link.com/pricing",
+        "https://www.customs-declarations.uk/eu-import-control-system-2-ics2/"
+      ],
+      "statement": "DSV charges EUR 5.50 per covered import shipment while handling ICS2 itself, and other providers advertise full ENS filing at EUR 8.50 or GBP 4 per declaration."
+    },
+    {
+      "claim_id": "control9-07-v2-c7",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ademico-software.com/ics2/"
+      ],
+      "statement": "Managed ICS2 connectivity is available from EUR 3,300 per year for 10,000 registrations, so technical access is affordable but does not create distribution."
+    },
+    {
+      "claim_id": "control9-07-v2-c8",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://transport.ec.europa.eu/news-events/news/eu-and-ukraine-extend-road-transport-agreement-until-31-march-2027-2025-09-25_en"
+      ],
+      "statement": "EU-Ukraine road trade is substantial and Poland's road exports to Ukraine were 85% higher in 2024 than in 2021, but public tonnage does not establish reachable shipment counts."
+    }
+  ],
+  "contrary_evidence": [
+    "Huzar already provides a Polish ICS2 module and direct submission at roughly 0.9-2 PLN per accepted MRN at published package volumes, below the original per-shipment hypothesis.",
+    "DSV tells customers it handles the process and charges EUR 5.50 per shipment, reducing the chance of a separate payer relationship.",
+    "CustomsLink and Customs-Declarations.UK offer complete filing at EUR 8.50 or GBP 4, so an upstream-only product must cost less or prove additional savings.",
+    "The Shared Trader Portal and NCTS Phase 6 are official substitutes, while managed API access is inexpensive.",
+    "EU-Ukraine tonnage and Polish road-freight scale do not prove 1.5m reachable annual preflights or one broker's controlled volume."
+  ],
+  "economics": {
+    "acquisition_route": "Run a paid or tightly bounded pilot with one broker on one corridor, measure missing-field and rejection reduction against current practice, then integrate with one TMS only after the payer attributes value to the upstream layer.",
+    "capital_required_pln": 70000,
+    "founder_net_worth_path": "Illustrative, not validated: 1.5m annual preflights at 4 PLN plus 40 API or channel accounts at 60,000 PLN ARR yields 8.4m PLN revenue. At 25% EBITDA, 4x EBITDA, and 65% founder ownership, founder equity is about 5.46m PLN in years 7-10. This requires very high volume and partner access not supported by current evidence.",
+    "founder_time": "3-5 hours per day for a non-production preflight pilot; production support, customs rule review, and exceptions must be delegated because border operations cannot depend on founder availability.",
+    "gross_margin_basis": "Inference: 65-85% depending on exception rate, translation, channel share, and customs-domain review; automated high-volume checks can be high margin, but human exception handling cannot be hidden.",
+    "payback": "Unknown. Recovering a 70,000 PLN initial build within 12-18 months requires several thousand monthly preflights with low support or paid onboarding; no reachable volume, channel cost, or conversion evidence exists.",
+    "pricing": "Validation hypothesis: 1-5 PLN per automated preflight, 15-40 PLN only for routed exceptions, and 1,000-3,000 PLN monthly account minimums; full filing competitors create a hard price anchor.",
+    "retention_or_repeat": "Every inbound consignment repeats the workflow and reusable party and goods data can reduce re-entry, but switching cost is weak if the filing provider or TMS already stores those profiles."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A permissioned corridor graph of recurring shippers, consignees, goods descriptions, routes, and validation outcomes could improve preflight, but incumbent brokers and filing systems already observe much of the same data",
+    "customer": "Polish road carriers, customs agencies, and forwarders with recurring inbound EU consignments whose non-EU shipper data arrives incomplete or inconsistent",
+    "distribution_mechanism": "Pilot one Poland-Ukraine or Poland-UK corridor through a customs broker, then seek one TMS embedding; no broker, TMS, or filing-provider commitment is evidenced",
+    "offer_and_business_model": "Multilingual shipper portal, party and goods normalization, ENS completeness and linkage checks, exception routing, reusable profiles, and structured handoff to an existing ICS2 or NCTS provider",
+    "payer_and_paid_event": "A carrier, broker, or TMS account pays a monthly minimum plus usage or exception fees only when upstream preflight demonstrably reduces rejected filings, rework, or border-process delay",
+    "problem_trigger": "A truck is scheduled to depart for the EU but the complete ENS dataset is fragmented across shipper, buyer, carrier, house filer, forwarder, or broker and must be linked before pre-arrival filing"
+  },
+  "founder_fit": [
+    "The normalization, entity-resolution, validation, and error-analysis work fits the founder's data-science strengths.",
+    "A file-based single-corridor preflight can be tested part-time before any production filing integration.",
+    "The founder can avoid a public personal brand and use a customs-domain contractor for rule review.",
+    "The lack of an existing customs or logistics channel makes distribution materially weaker than the founder's renewable-installer access."
+  ],
+  "parent": {
+    "candidate_id": "control9-07",
+    "version": 1
+  },
+  "risks": [
+    "Low-cost full-filing incumbents cap the price of an upstream-only layer.",
+    "Incorrect validation can create the border delay the product promises to prevent.",
+    "Broker and TMS incumbents own the workflow, data, and distribution relationship.",
+    "Human exception handling can turn a software business into a time-sensitive operations desk incompatible with part-time work.",
+    "The network advantage may not accrue if customers cannot or will not permission reuse of customs and counterparty data."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://taxation-customs.ec.europa.eu/customs/customs-security/import-control-system-2_en",
+    "https://taxation-customs.ec.europa.eu/customs/customs-security/import-control-system-2/faq_en",
+    "https://taxation-customs.ec.europa.eu/news/eu-import-control-system-2-ics2-extends-rail-and-road-transportation-april-2025-2025-02-03_en",
+    "https://taxation-customs.ec.europa.eu/online-services/online-services-and-databases-customs/new-computerised-transit-system-ncts_en",
+    "https://www.huzar.pl/moduly/ics2/",
+    "https://www.dsv.com/pl-pl/wsparcie/dokumenty/strefa-klienta/road/oplaty-dodatkowe/ics2",
+    "https://www.customs-link.com/pricing",
+    "https://www.customs-declarations.uk/eu-import-control-system-2-ics2/",
+    "https://ademico-software.com/ics2/",
+    "https://transport.ec.europa.eu/news-events/news/eu-and-ukraine-extend-road-transport-agreement-until-31-march-2027-2025-09-25_en"
+  ],
+  "stage": "research",
+  "structure": {
+    "commercial_archetype": "pre-border data gateway",
+    "control_point": "the upstream completeness and linking gate before an ENS is handed to the carrier's filing rail",
+    "critical_dependency": "fast participation by non-EU shippers and paid broker or TMS access despite inexpensive bundled and direct filing alternatives"
+  },
+  "thesis": "Test a corridor-specific upstream data-quality layer for Polish carriers or brokers receiving incomplete ENS inputs from non-EU shippers. The legal trigger, multiple-party coordination, rejection risk, and repeat shipment flow are real. However, free official filing, NCTS Phase 6, Polish customs software, carrier-managed services, and low-cost filing providers constrain price and own the customer relationship. The product should not become a filing rail; it must prove that multilingual collection and preflight reduce measurable rework or delay before handing a validated packet to the chosen provider. Broker or TMS access, attributable delay costs, reachable volume, and willingness to pay separately remain unknown.",
+  "title": "ICS2 Shipper-to-Carrier Data Handshake",
+  "uncertainties": [
+    "Which missing fields and linkage failures create measurable delay on the selected Polish corridor.",
+    "Reachable monthly shipment volume controlled by one small or mid-sized broker or TMS.",
+    "Whether carriers or brokers will pay separately when filing is already bundled or inexpensive.",
+    "Technical and contractual handoff access to incumbent filing providers and TMS vendors.",
+    "Participation rate and data quality among non-EU shippers invited to an independent portal."
+  ],
+  "version": 2
+}

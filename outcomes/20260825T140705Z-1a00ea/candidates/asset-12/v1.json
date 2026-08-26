@@ -1,0 +1,70 @@
+{
+  "candidate_id": "asset-12",
+  "claims": [
+    {
+      "claim_id": "asset-12-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ezamowienia.gov.pl/pl/integracja/"
+      ],
+      "statement": "Poland's e-Zamówienia platform exposes APIs for reading national procurement notices and statistics without an integration procedure."
+    },
+    {
+      "claim_id": "asset-12-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://developer.ted.europa.eu/home"
+      ],
+      "statement": "The EU TED developer portal provides APIs, open data, and standards for searching and reusing procurement notices."
+    }
+  ],
+  "contrary_evidence": [
+    "Free public APIs make the raw notice feed easy for competitors to copy.",
+    "General tender-alert vendors already cover broad procurement categories."
+  ],
+  "economics": {
+    "acquisition_route": "Unvalidated hypothesis: recruit contractors through installer associations, accountants, and free regional tender digests.",
+    "capital_required_pln": 20000,
+    "founder_net_worth_path": "Unvalidated hypothesis: 3,000 CEE contractor seats and proprietary price benchmarks could support a 5 million PLN founder net-worth path in six to nine years.",
+    "founder_time": "Unvalidated hypothesis: automated ingestion and one vertical keep founder work below 15 hours weekly.",
+    "gross_margin_basis": "Unvalidated hypothesis: automated extraction could reach 85% gross margin before success-fee service, and every commercial number including capital_required_pln is hypothetical.",
+    "payback": "Unvalidated hypothesis: acquisition pays back within two subscription months.",
+    "pricing": "Unvalidated hypothesis: charge 900 PLN monthly per contractor plus 0.4% of won contract value.",
+    "retention_or_repeat": "Unvalidated hypothesis: daily notices, award tracking, and accumulated bid benchmarks create repeat use."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A private tender-to-bid-to-award graph learns real pricing, competitors, subcontractors, and win conditions",
+    "customer": "Small energy-retrofit, HVAC, photovoltaic, and electrical contractors",
+    "distribution_mechanism": "Free regional digests and installer-association referrals",
+    "offer_and_business_model": "Scored alerts, tender document extraction, bid/no-bid support, and award benchmark subscription",
+    "payer_and_paid_event": "The contractor pays for continuous intelligence and optionally when a tracked bid wins",
+    "problem_trigger": "A relevant public project appears before the contractor has allocated estimating resources"
+  },
+  "founder_fit": [
+    "This is a low-capital data product that can be tested inside the family business workflow.",
+    "Automated distribution avoids personal-brand and camera dependence."
+  ],
+  "parent": null,
+  "risks": [
+    "Customers may withhold the private cost and outcome data needed for defensibility.",
+    "Success fees may require careful contracting to avoid procurement conflicts."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://ezamowienia.gov.pl/pl/integracja/",
+    "https://developer.ted.europa.eu/home"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Vertical tender-intelligence subscription",
+    "control_point": "Scored opportunity alert and private bid decision record before the contractor commits estimating time",
+    "critical_dependency": "Stable public procurement feeds and customer submission of bid costs and outcomes"
+  },
+  "thesis": "Turn Polish and EU procurement notices into an early retrofit opportunity feed and proprietary contractor bid-outcome database.",
+  "title": "Energy-Retrofit Tender Intelligence Ledger",
+  "uncertainties": [
+    "The incremental value of vertical scoring over existing alerts is unverified.",
+    "All commercial numbers including capital_required_pln are unvalidated hypotheses."
+  ],
+  "version": 1
+}

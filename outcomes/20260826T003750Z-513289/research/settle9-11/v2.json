@@ -1,0 +1,219 @@
+{
+  "candidate_id": "settle9-11",
+  "candidate_sha256": "d61cf4fb6c649cae0faf9868d180eb1fd7a1ce5f5f1f2fd9e08d477e94e9dc1c",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "r11-legal-1",
+      "evidence_refs": [
+        "s11-1"
+      ],
+      "statement": "Current Polish law creates a recurring evidence gate: public construction contracts must condition contractor payment on proof of due subcontractor payment."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r11-legal-2",
+      "evidence_refs": [
+        "s11-1"
+      ],
+      "statement": "Direct-payment eligibility is not a simple checklist outcome because it depends on accepted or submitted contracts, timing, contractor comments, proof and possible denial or court deposit."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r11-pain-1",
+      "evidence_refs": [
+        "s11-2"
+      ],
+      "statement": "GDDKiA directly documents recurring defects in readability, cross-document consistency, evidence completeness, authorization, amendments and subcontract registration that block or delay requests."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r11-pain-2",
+      "evidence_refs": [
+        "s11-3"
+      ],
+      "statement": "GDDKiA's reported 1,800-plus accepted direct payments worth over 562m PLN and nearly 1,100 intervention-led payments worth over 353m PLN establish material payment-protection activity, though not document-defect causality alone."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r11-market-1",
+      "evidence_refs": [
+        "s11-4"
+      ],
+      "statement": "The underlying public-procurement construction market is large: procurement under the law was about 330.4bn PLN in 2024 and construction represented 39% of awarded value."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r11-substitute-1",
+      "evidence_refs": [
+        "s11-5"
+      ],
+      "statement": "PEF provides a free structured-invoice and related-document channel with API access, so the opportunity cannot rely on electronic submission alone."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r11-substitute-2",
+      "evidence_refs": [
+        "s11-6",
+        "s11-7",
+        "s11-8"
+      ],
+      "statement": "PlanRadar, Archdesk and PROGPOL already cover large parts of document control, approvals, subcontractor management, acceptance records and invoice workflows."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r11-budget-1",
+      "evidence_refs": [
+        "s11-6"
+      ],
+      "statement": "PlanRadar's EUR 26-129 per-internal-user monthly pricing is evidence of construction-software budget and strong price competition, not evidence for a 1,500-4,000 PLN specialized project fee."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r11-rights-1",
+      "evidence_refs": [
+        "s11-9"
+      ],
+      "statement": "A lawful workspace is possible with participant authorization and processor arrangements, but access, correction, retention and role controls are essential for personal and project data."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r11-distribution-1",
+      "evidence_refs": [],
+      "statement": "No reviewed source establishes that procurement advisers, contract administrators or wholesalers will distribute or pay for this adapter."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r11-economics-1",
+      "evidence_refs": [
+        "s11-1",
+        "s11-2",
+        "s11-6",
+        "s11-8"
+      ],
+      "statement": "Monthly draws can support repeat revenue within a project, but configuration effort, external sales cycles, project churn and mature gross margin are unknown."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r11-fatal-1",
+      "evidence_refs": [
+        "s11-1",
+        "s11-9"
+      ],
+      "statement": "No direct evidence reviewed establishes illegality, unobtainable essential rights, mathematically impossible conservative economics or a non-delegable founder incompatibility for software limited to administrative evidence mapping with qualified legal review."
+    }
+  ],
+  "contrary_evidence": [
+    "PEF is free and already carries structured public-procurement invoices and related documents.",
+    "PlanRadar, Archdesk and PROGPOL already cover substantial adjacent document, approval and payment workflows.",
+    "The legal entitlement branch includes adversarial and judicial steps that software cannot safely adjudicate.",
+    "Low published per-user construction SaaS prices challenge the proposed specialized project pricing.",
+    "GDDKiA's payment figures include contractor nonpayment and financial distress, not just missing-document problems.",
+    "A family-business pilot can produce access-biased false confidence without external paid demand."
+  ],
+  "schema_version": 2,
+  "sources": [
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2026-06-16",
+      "publisher": "Polish Electronic Legal Information System",
+      "source_id": "s11-1",
+      "source_type": "primary_law",
+      "stance": "context",
+      "title": "Consolidated Public Procurement Law, Articles 437-465",
+      "url": "https://eli.gov.pl/api/acts/DU/2026/793/text/I/D20260793.pdf"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "GDDKiA",
+      "source_id": "s11-2",
+      "source_type": "official_operational_guidance",
+      "stance": "supporting",
+      "title": "Practical notes for subcontractors, suppliers and service providers",
+      "url": "https://www.gov.pl/web/gddkia/uwagi-praktyczne-dla-podwykonawcow-dostawcow-i-uslugodawcow"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2022-04-08",
+      "publisher": "GDDKiA",
+      "source_id": "s11-3",
+      "source_type": "official_case_data",
+      "stance": "supporting",
+      "title": "Documented work on GDDKiA contracts is paid",
+      "url": "https://www.gov.pl/web/gddkia/udokumentowana-praca-na-kontraktach-gddkia-zawsze-z-wynagrodzeniem"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2025-09-03",
+      "publisher": "Polish Public Procurement Office",
+      "source_id": "s11-4",
+      "source_type": "official_market_report",
+      "stance": "supporting",
+      "title": "Report on the functioning of the public procurement system in 2024",
+      "url": "https://www.gov.pl/attachment/b61cce3a-f71c-4271-be11-d7eaa1a03f76"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "Polish Ministry of Development and Technology",
+      "source_id": "s11-5",
+      "source_type": "government_product",
+      "stance": "contradicting",
+      "title": "PEF services",
+      "url": "https://efaktura.gov.pl/uslugi-pef/"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "PlanRadar",
+      "source_id": "s11-6",
+      "source_type": "competitor_pricing",
+      "stance": "contradicting",
+      "title": "PlanRadar Poland pricing",
+      "url": "https://www.planradar.com/pl/ceny/"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "Archdesk",
+      "source_id": "s11-7",
+      "source_type": "competitor_product",
+      "stance": "contradicting",
+      "title": "Construction ERP software",
+      "url": "https://archdesk.com/solutions/erp"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "PROGPOL",
+      "source_id": "s11-8",
+      "source_type": "competitor_product",
+      "stance": "contradicting",
+      "title": "Construction execution and settlement system",
+      "url": "https://progpol.com/home/wykonawstwo/"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2021-11-23",
+      "publisher": "GDDKiA",
+      "source_id": "s11-9",
+      "source_type": "official_privacy_guidance",
+      "stance": "context",
+      "title": "Processing personal data of contractor and subcontractor employees",
+      "url": "https://www.gov.pl/web/gddkia/przetwarzanie-danych-osobowych-pracownikow-wykonawcow-i-podwykonawcow"
+    }
+  ],
+  "unknowns": [
+    "Incidence, delay and cash impact attributable specifically to curable evidence gaps",
+    "External payer identity and paid willingness at the proposed price",
+    "Hours and legal-review cost needed to configure each authority and contract form",
+    "Participant willingness and authority to share sensitive records",
+    "Integration effort for PEF, KSeF and contractor ERP/DMS products",
+    "Measured reduction in rejected draws, administrator hours and days to payment",
+    "Project-to-project renewal and adviser distribution conversion",
+    "Mature gross margin, support burden and sales payback",
+    "Permission to reuse de-identified rejection and cure patterns"
+  ]
+}

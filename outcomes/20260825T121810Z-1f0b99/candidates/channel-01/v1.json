@@ -1,0 +1,83 @@
+{
+  "candidate_id": "channel-01",
+  "claims": [
+    {
+      "claim_id": "channel-01-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://czystepowietrze.gov.pl/wez-dofinansowanie/pytania-i-odpowiedzi/nowy-program-czyste-powietrze-nabor-od-20-lipca-2026-r",
+        "https://czystepowietrze.gov.pl/pomocne-narzedzia/poradnik-dla-wykonawcow/4"
+      ],
+      "statement": "Poland's Clean Air programme requires an energy audit and a programme-format audit summary, and the works must match the audit; this creates a recurring document-consistency gate rather than a discretionary productivity problem."
+    },
+    {
+      "claim_id": "channel-01-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://czystepowietrze.gov.pl/wez-dofinansowanie/dokumenty-programowe/dokumenty-obowiazujace"
+      ],
+      "statement": "The official programme publishes structured forms and instructions for applications, audits, advance payments, contractor acceptance, and payment requests, which should make a rules-driven precheck technically feasible without automating the government's final decision."
+    },
+    {
+      "claim_id": "channel-01-c03",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://czystepowietrze.gov.pl/wez-dofinansowanie/dokumenty-programowe/dokumenty-obowiazujace",
+        "https://czystepowietrze.gov.pl/wez-dofinansowanie/pytania-i-odpowiedzi/operatorzy-w-programie-czyste-powietrze/informacje-o-operatorach-dla-beneficjentow/7"
+      ],
+      "statement": "Hypothesis: a heat-pump, insulation, or photovoltaic wholesaler can distribute the tool to hundreds of downstream installers because fewer rejected or delayed files improve both installer cash conversion and the wholesaler's sell-through."
+    }
+  ],
+  "contrary_evidence": [
+    "The programme already provides a government application generator, manuals, templates, and municipal operator support, so a generic form filler would have little pricing power.",
+    "Programme rules changed again in July 2026, demonstrating that maintenance costs and rule-change risk are real."
+  ],
+  "economics": {
+    "acquisition_route": "One wholesaler, audit network, or municipal software partner can activate many installers; use the family installer only as a validation site",
+    "capital_required_pln": 35000,
+    "founder_net_worth_path": "Hypothesis: 1500 active installers averaging 1000 PLN monthly plus channel fees could reach roughly 2.0-2.5 million PLN ARR in years 4-5; at 30% EBITDA, a 6-8x EBITDA value and at least 80% founder ownership could place founder equity above 5 million PLN in years 5-7, without double-counting retained cash",
+    "founder_time": "Initial 15-22 hours weekly for rules, parsing, and one integration; target under 8 hours weekly after partner onboarding and contracted domain review",
+    "gross_margin_basis": "Rules engine, document parsing, and support should support 75-88% software gross margin after model inference and partner support",
+    "payback": "Target partner acquisition payback under 6 months and installer payback from avoiding one material rework or delayed-payment episode",
+    "pricing": "Hypothesis: 80-180 PLN per completed dossier or 900-1800 PLN per installer per month, plus 20000-60000 PLN annual white-label partner licence",
+    "retention_or_repeat": "Every subsidised job creates a repeat validation event; rule history and stored equipment evidence create workflow retention"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A versioned rule graph plus anonymised validation-error and equipment-document corpus improves checks and partner switching costs",
+    "customer": "Polish retrofit installers, energy auditors, municipal programme operators, and their equipment wholesalers",
+    "distribution_mechanism": "Embedded in wholesaler quoting portals, auditor software, and municipal operator workflows; resold to downstream installers",
+    "offer_and_business_model": "White-label SaaS and API that validates audit-to-quote-to-acceptance evidence, sold per project plus channel licence",
+    "payer_and_paid_event": "Installer or channel partner pays per validated project file or per active installer seat when a dossier reaches payment-ready status",
+    "problem_trigger": "A subsidised retrofit quote, audit, acceptance protocol, or payment request must be internally consistent before submission"
+  },
+  "founder_fit": [
+    "Strong fit with the founder's renewable-energy family channel, Polish context, automation skills, and preference for a measurable product. A pilot can use synthetic files and consenting family-company cases while remaining part-time and avoiding public-facing selling."
+  ],
+  "parent": null,
+  "risks": [
+    "Incorrect eligibility advice could create financial and reputational liability; the product must remain a precheck with human sign-off.",
+    "A programme redesign or direct government validation feature could erase the wedge.",
+    "Installers may be fragmented and price-sensitive unless a channel partner subsidises adoption."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://czystepowietrze.gov.pl/pomocne-narzedzia/poradnik-dla-wykonawcow/4",
+    "https://czystepowietrze.gov.pl/wez-dofinansowanie/dokumenty-programowe/dokumenty-obowiazujace",
+    "https://czystepowietrze.gov.pl/wez-dofinansowanie/pytania-i-odpowiedzi/nowy-program-czyste-powietrze-nabor-od-20-lipca-2026-r",
+    "https://czystepowietrze.gov.pl/wez-dofinansowanie/pytania-i-odpowiedzi/operatorzy-w-programie-czyste-powietrze/informacje-o-operatorach-dla-beneficjentow/7"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Embedded mandatory-workflow compliance rail",
+    "control_point": "The final internal approval gate before a contractor signs or submits a payment dossier",
+    "critical_dependency": "Continued partner access to real project documents and rapid maintenance against official programme rule changes"
+  },
+  "thesis": "Build a white-label document-consistency and payment-readiness rail for Polish energy auditors, retrofit installers, and municipal Clean Air operators. The software would turn an audit and quote into a controlled checklist, equipment-evidence pack, acceptance protocol, and payment-file precheck, sitting inside the partner's existing quote-to-cash workflow rather than relying on direct homeowner acquisition.",
+  "title": "Retrofit Proofrail",
+  "uncertainties": [
+    "Actual rejection and rework rates by installer and document type are not public.",
+    "It is unproven whether wholesalers, auditors, or municipal operators have the strongest budget and integration incentive.",
+    "Government-system export and attachment formats may constrain a clean end-to-end workflow."
+  ],
+  "version": 1
+}

@@ -1,0 +1,80 @@
+{
+  "candidate_id": "control-10",
+  "claims": [
+    {
+      "claim_id": "control-10-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reco/2014/478/oj/eng"
+      ],
+      "statement": "The European Commission recommendation says operators should maintain policies and procedures for interacting when gambling behaviour indicates risk and should retain deposit and winnings records."
+    },
+    {
+      "claim_id": "control-10-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gamblingcommission.gov.uk/manual/customer-interaction-guidance-for-remote-gambling-licensees-formal-guidance/requirement-1-customer-interaction-guidance-for-remote-gambling-licensees-sr"
+      ],
+      "statement": "Current UK Gambling Commission guidance requires remote licensees to embed an ongoing identify-act-evaluate process, including recording actions and evaluating their effect, illustrating an operational control burden in a regulated market."
+    },
+    {
+      "claim_id": "control-10-c03",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reco/2014/478/oj/eng",
+        "https://www.gamblingcommission.gov.uk/manual/customer-interaction-guidance-for-remote-gambling-licensees-formal-guidance/requirement-1-customer-interaction-guidance-for-remote-gambling-licensees-sr"
+      ],
+      "statement": "Hypothesis: smaller licensed operators and platform vendors will buy an auditable intervention layer rather than build and continually validate one, but access to labelled outcomes and procurement appetite are unproven."
+    }
+  ],
+  "contrary_evidence": [
+    "Gambling rules vary by jurisdiction, and the EU instrument is a recommendation rather than a harmonised licence code.",
+    "Large operators already possess risk teams, behavioural data, and internal intervention engines."
+  ],
+  "economics": {
+    "acquisition_route": "Platform-vendor partnership, compliance and responsible-gambling advisers, and a fixed-price historical-data audit",
+    "capital_required_pln": 85000,
+    "founder_net_worth_path": "Hypothesis: 30 operators or platform deployments averaging 180,000 PLN ARR yields 5.4m PLN recurring revenue; a profitable majority-owned specialist risk platform could support over 5m PLN founder equity in four to seven years",
+    "founder_time": "15-20 hours weekly for a historical-data prototype; production support and jurisdiction tracking must be staffed or partnered",
+    "gross_margin_basis": "Core software could reach 75-90% gross margin, with legal updates, security, and model review reducing blended margin to 60-75%",
+    "payback": "Customer value is reduced remediation work and stronger licence evidence; vendor CAC payback target within one implementation plus six subscription months",
+    "pricing": "Hypothesis: 20,000-80,000 PLN implementation and 8,000-30,000 PLN monthly per operator or platform deployment",
+    "retention_or_repeat": "Monitoring is continuous, audit trails persist, and regulatory/model updates create recurring value and switching cost"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A labelled intervention-outcome dataset and versioned mapping from jurisdictional controls to executable workflows",
+    "customer": "Licensed online-gambling operators and platform providers with incomplete player-protection analytics",
+    "distribution_mechanism": "Gaming-platform integrations, compliance-consultant referrals, specialist conferences, and regulator-ready technical documentation",
+    "offer_and_business_model": "Risk-event ingestion, intervention workflow, evaluation analytics, control-library updates, and immutable audit replay",
+    "payer_and_paid_event": "Operator pays implementation fees and recurring usage or platform subscription for monitored accounts and audit evidence",
+    "problem_trigger": "A licence requirement, audit finding, regulator review, or internal harm incident exposes gaps in interaction controls"
+  },
+  "founder_fit": [
+    "The founder understands betting behaviour and has strong modelling and experimentation skills, while the B2B API avoids influencer-style exposure. The ethical boundary is explicit: reduce harm, never increase spend. Legal, clinical, and lived-experience review are essential."
+  ],
+  "parent": null,
+  "risks": [
+    "False negatives can expose players to harm; false positives can unfairly restrict customers.",
+    "The business handles sensitive behavioural and financial data and needs rigorous privacy and security.",
+    "Founder interest in gambling could create bias; governance must keep the product exclusively harm-reduction focused."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reco/2014/478/oj/eng",
+    "https://www.gamblingcommission.gov.uk/manual/customer-interaction-guidance-for-remote-gambling-licensees-formal-guidance/requirement-1-customer-interaction-guidance-for-remote-gambling-licensees-sr"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Regulated risk decisioning and audit infrastructure",
+    "control_point": "The auditable identify-act-evaluate workflow connecting behavioural risk to recorded intervention outcomes",
+    "critical_dependency": "Access to operator event data and acceptance by licence, legal, and responsible-gambling teams"
+  },
+  "thesis": "Provide licensed online-gambling operators with a jurisdiction-aware control layer that turns behavioural signals into review queues, records the intervention chosen, and measures whether it reduced harm indicators. Sell audit replay and controlled experimentation, not gambling acquisition or optimisation. Defensibility comes from the labelled sequence of risk pattern, action, and outcome plus an executable regulatory-control library.",
+  "title": "Responsible Gambling Intervention Audit API",
+  "uncertainties": [
+    "Whether the best payer is an operator, gaming-platform vendor, compliance consultancy, or regulator-facing auditor.",
+    "Which CEE jurisdiction has a concrete operational requirement and accessible design partners.",
+    "Whether cross-operator outcome learning is legally and commercially possible even with aggregation."
+  ],
+  "version": 1
+}

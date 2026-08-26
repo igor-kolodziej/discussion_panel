@@ -1,0 +1,224 @@
+{
+  "candidate_id": "settle7-10",
+  "candidate_sha256": "f8c7e5c38b85a515c11157081f10d476a552af1a58a70eba082097e7c06dfaf0",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "r10-c1",
+      "evidence_refs": [
+        "s10-battery-reg"
+      ],
+      "statement": "Since August 2024, EV battery management systems must contain current parameters for determining battery state of health, with non-discriminatory read-only access for legal purchasers and authorized third parties for residual-value and remaining-life evaluation."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r10-c2",
+      "evidence_refs": [
+        "s10-battery-reg"
+      ],
+      "statement": "Battery passports become mandatory from 18 February 2027 for EV batteries placed on the market or put into service, but the rule does not create a retrospective passport for every legacy used vehicle."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r10-c3",
+      "evidence_refs": [
+        "s10-data-act"
+      ],
+      "statement": "The Data Act has applied since September 2025 and covers user access and sharing of raw data from connected products including cars."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r10-c4",
+      "evidence_refs": [
+        "s10-ec-guidance"
+      ],
+      "statement": "Commission guidance notes that Battery Regulation data sharing focuses on potential second-life evaluation and does not necessarily provide real-time automotive data; vehicle-specific complementary measures remain relevant."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r10-c5",
+      "evidence_refs": [
+        "s10-aviloo-cert"
+      ],
+      "statement": "AVILOO already provides a rapid independent QR-verifiable certificate, benchmarks comparable vehicles, claims a maximum plus-or-minus 3 percent deviation in at least 95 percent of reference measurements, and expressly limits the result to battery condition at test time and data exposed by the vehicle."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r10-c6",
+      "evidence_refs": [
+        "s10-aviloo-guarantee"
+      ],
+      "statement": "AVILOO's new guarantee sets a vehicle-specific SoH threshold for one year and 20,000 kilometres and pays EUR 3,000 plus re-test cost if breached; its announcement describes a staged European rollout beginning in June 2026."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r10-c7",
+      "evidence_refs": [
+        "s10-aviloo-api"
+      ],
+      "statement": "AVILOO's API already exposes test, certificate, signal, battery-warranty, preview, and report endpoints to authorized organizations."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r10-c8",
+      "evidence_refs": [
+        "s10-aaa-test"
+      ],
+      "statement": "AAA AUTO Poland advertises AVILOO battery tests from 250 PLN including VAT, says it has performed several thousand tests, and uses the result in used-EV transactions."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r10-c9",
+      "evidence_refs": [
+        "s10-aaa-offer"
+      ],
+      "statement": "AAA AUTO Poland says every used EV receives a battery flash test, provides an AVILOO certificate, offers a free annual re-test, and uses its Carlife battery insurance where factory coverage is absent."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r10-c10",
+      "evidence_refs": [
+        "s10-dekra"
+      ],
+      "statement": "DEKRA provides a competing independent 15-minute battery-capacity test and certificate using real-time load data, a patented algorithm, and model-specific reference data."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r10-c11",
+      "evidence_refs": [
+        "s10-aviloo-cert",
+        "s10-aviloo-guarantee",
+        "s10-aviloo-api",
+        "s10-aaa-test",
+        "s10-aaa-offer",
+        "s10-dekra"
+      ],
+      "statement": "The standalone certificate-plus-reserve product is commercially duplicated; the remaining candidate is at most a localized authorized integration and reseller layer."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r10-c12",
+      "evidence_refs": [],
+      "statement": "No public source establishes that AVILOO or another provider will grant a new entrant Polish warranty rights, attractive margin, durable dealer ownership, or permission to build a proprietary longitudinal dataset."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r10-c13",
+      "evidence_refs": [],
+      "statement": "The regulatory classification and required permissions for arranging the guarantee or insurance in Poland are not established by the reviewed evidence."
+    }
+  ],
+  "contrary_evidence": [
+    "s10-aviloo-guarantee: the exact diagnostic-plus-bounded-future-protection structure already exists with a large diagnostic dataset behind it.",
+    "s10-aaa-test and s10-aaa-offer: a major Polish used-car seller already offers testing from 250 PLN and bundles certification, re-testing, and battery protection.",
+    "s10-aviloo-cert: the certificate is explicitly point-in-time, not a prediction, and cannot detect faults absent from exposed vehicle data.",
+    "s10-aviloo-api: the incumbent already owns an integration surface for tests and warranties, increasing disintermediation risk.",
+    "s10-dekra: another established independent test competes on speed, trust, model data, and certification.",
+    "s10-battery-reg and s10-data-act: regulatory data access and passports may commoditize basic health evidence for newer vehicles."
+  ],
+  "schema_version": 2,
+  "sources": [
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2025-07-31 consolidated text",
+      "publisher": "European Union / EUR-Lex",
+      "source_id": "s10-battery-reg",
+      "source_type": "official legislation",
+      "stance": "supporting",
+      "title": "Regulation (EU) 2023/1542 concerning batteries and waste batteries, consolidated text",
+      "url": "https://eur-lex.europa.eu/eli/reg/2023/1542/2025-07-31/eng/pdf"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2025-09-12",
+      "publisher": "European Commission, DG CONNECT",
+      "source_id": "s10-data-act",
+      "source_type": "official press release",
+      "stance": "supporting",
+      "title": "EU Data Act gives users control over data from connected devices",
+      "url": "https://digital-strategy.ec.europa.eu/en/news/eu-data-act-gives-users-control-over-data-connected-devices"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2025; Official Journal C/2025/3699",
+      "publisher": "European Commission / EUR-Lex",
+      "source_id": "s10-ec-guidance",
+      "source_type": "official guidance",
+      "stance": "context",
+      "title": "Commission Notice on sharing electricity and battery data under EU law (C/2025/3699)",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1749999534290&uri=CELEX%3A52025XC03699"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "AVILOO GmbH",
+      "source_id": "s10-aviloo-cert",
+      "source_type": "incumbent product documentation",
+      "stance": "contradicting",
+      "title": "AVILOO Certified",
+      "url": "https://aviloo.com/en-us/aviloo-certified"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2026-06",
+      "publisher": "AVILOO GmbH",
+      "source_id": "s10-aviloo-guarantee",
+      "source_type": "incumbent press release",
+      "stance": "contradicting",
+      "title": "AVILOO Batterie Garantie",
+      "url": "https://aviloo.com/files/Aviloo/content/pdf/AVILOO%20Batterie%20Garantie_de.pdf"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "AVILOO GmbH",
+      "source_id": "s10-aviloo-api",
+      "source_type": "incumbent technical documentation",
+      "stance": "contradicting",
+      "title": "AVILOO REST API documentation",
+      "url": "https://api-docs.aviloo.com/"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "AAA AUTO Poland",
+      "source_id": "s10-aaa-test",
+      "source_type": "Polish incumbent product and pricing page",
+      "stance": "contradicting",
+      "title": "Test stanu baterii Twojego samochodu",
+      "url": "https://www.aaaauto.pl/uslugi/testakumulatora"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "AAA AUTO Poland",
+      "source_id": "s10-aaa-offer",
+      "source_type": "Polish incumbent offer page",
+      "stance": "contradicting",
+      "title": "Used electric cars and hybrids at AAA AUTO",
+      "url": "https://www.aaaauto.pl/kup-auto/samochody-elektryczne-w-aaa-auto"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "DEKRA SE",
+      "source_id": "s10-dekra",
+      "source_type": "incumbent product documentation",
+      "stance": "contradicting",
+      "title": "Battery Test for Electric Cars",
+      "url": "https://www.dekra.com/en/battery-test-for-electric-cars/"
+    }
+  ],
+  "unknowns": [
+    "Current Polish availability, eligibility table, exclusions, and risk-bearing entity for AVILOO's guarantee",
+    "Partner pricing, reseller margin, hardware requirements, and API/warranty contract terms",
+    "Polish insurance-distribution, warranty, consumer, and claims-handling requirements for the orchestrator",
+    "Dealer conversion lift, days-to-sale reduction, avoided discount, and dispute reduction caused by the bundle",
+    "Eligible Polish transaction volume by model, age, mileage, and remaining OEM warranty",
+    "Re-test compliance, threshold breach rate, adverse selection, and claim cost",
+    "Customer and partner willingness to grant longitudinal data ownership or reusable derived-data rights",
+    "Ability to prevent direct provider-dealer contracting after the first integration",
+    "Any viable price or contribution margin beyond the observed 250 PLN retail reference"
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "candidate_id": "control-03",
+  "claims": [
+    {
+      "claim_id": "control-03-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://commission.europa.eu/law/law-topic/consumer-protection-law/directive-repair-goods_en"
+      ],
+      "statement": "EU right-to-repair rules require repair information and, for covered products, access to repair and reasonably priced spare parts, increasing the relevance of discoverable product and service records."
+    },
+    {
+      "claim_id": "control-03-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2024/1781/eng"
+      ],
+      "statement": "The EU digital-product-passport framework requires persistent identifiers, data carriers, interoperable machine-readable data, and defined access rights for product groups covered by delegated acts."
+    },
+    {
+      "claim_id": "control-03-c03",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://commission.europa.eu/law/law-topic/consumer-protection-law/directive-repair-goods_en",
+        "https://eur-lex.europa.eu/eli/reg/2024/1781/eng"
+      ],
+      "statement": "Hypothesis: installers will pay a small per-asset fee for cleaner handover and recurring service leads, while owners will preserve the QR record if it simplifies warranty and repair."
+    }
+  ],
+  "contrary_evidence": [
+    "The EU is also building a public repair platform, so a generic directory would have weak differentiation.",
+    "Manufacturers and distributors already hold some serial, warranty, and parts data and could restrict or duplicate the service."
+  ],
+  "economics": {
+    "acquisition_route": "Bundled installer handover, wholesaler referrals, service reminders to owners, and parts-search landing pages",
+    "capital_required_pln": 60000,
+    "founder_net_worth_path": "Hypothesis: 100,000 registered assets, 500 installer accounts, and 10,000 annual service or parts transactions could support 4-7m PLN revenue and a majority-owned network worth enough for over 5m PLN founder equity in five to eight years",
+    "founder_time": "10-15 hours weekly for the passport wedge; marketplace operations should begin only after service fulfilment can be delegated",
+    "gross_margin_basis": "Registry software is expected above 85% gross margin; blended margin may be 65-80% after verification and marketplace support",
+    "payback": "An installer recovers annual fees from one retained maintenance job; an owner recovers the passport cost through faster diagnosis or warranty proof",
+    "pricing": "Hypothesis: 20-60 PLN per new passport, 200-800 PLN monthly installer software tiers, and 8-15% marketplace take rate",
+    "retention_or_repeat": "Asset records persist for years, installers add every installation, and service events create recurring transactions"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Installed-base identity, configuration, failure, service, compatibility, and transaction histories tied to persistent asset records",
+    "customer": "Renewable installers initially, then equipment owners, repairers, wholesalers, and manufacturers",
+    "distribution_mechanism": "QR record installed during handover, seeded through the family company and expanded via wholesalers and service networks",
+    "offer_and_business_model": "White-label equipment passports followed by a verified repair-and-parts marketplace and lifecycle-data APIs",
+    "payer_and_paid_event": "Installer pays per registered asset or subscription; marketplace participants pay a transaction fee; manufacturers pay for verified data access",
+    "problem_trigger": "Equipment is commissioned, changes owner, fails, reaches warranty review, or needs a compatible replacement component"
+  },
+  "founder_fit": [
+    "The family installer offers a direct, lawful installation wedge and access to recurring service pain. The founder can automate document extraction, compatibility matching, and lifecycle analytics; technician verification and safety-sensitive recommendations should be delegated."
+  ],
+  "parent": null,
+  "risks": [
+    "Incorrect part compatibility can damage equipment or create safety exposure.",
+    "Owners may lose labels or fail to transfer records when property changes hands.",
+    "Installers may resist portable records that make switching service providers easier."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://commission.europa.eu/law/law-topic/consumer-protection-law/directive-repair-goods_en",
+    "https://eur-lex.europa.eu/eli/reg/2024/1781/eng",
+    "https://eur-lex.europa.eu/eli/reg/2023/1542/oj?locale=en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Asset registry expanding into a two-sided aftermarket",
+    "control_point": "The persistent equipment identity and authoritative lifecycle record created at installation",
+    "critical_dependency": "Installer adoption at handover and reliable manufacturer-to-part compatibility data"
+  },
+  "thesis": "Attach a persistent QR identity, warranty file, configuration record, and service history to solar inverters, heat pumps, and home batteries at installation, then use that identity to route verified replacement parts and service. The wedge is an installer handover product; the compounding business is the compatibility graph and transaction network for aging installed equipment.",
+  "title": "Renewable Equipment Passport and Aftermarket",
+  "uncertainties": [
+    "Which equipment category has the most acute documentation and compatibility failure.",
+    "Whether manufacturers permit reuse of manuals, part identifiers, and diagnostic information.",
+    "The transaction volume needed for a parts-and-service marketplace to become liquid."
+  ],
+  "version": 1
+}

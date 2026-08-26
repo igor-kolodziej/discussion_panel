@@ -1,0 +1,87 @@
+{
+  "candidate_id": "settle8-11",
+  "claims": [
+    {
+      "claim_id": "settle8-11-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.ure.gov.pl/pl/urzad/informacje-ogolne/aktualnosci/12810%2CTransformacja-energetyczna-16-podmiotow-w-wykazie-agregatorow.html"
+      ],
+      "statement": "Verified fact: Polish aggregation combines electricity demand, generation, or storage to sell energy or provide system and flexibility services; URE reported 16 entities in its aggregator list and requires evidence of actual aggregation activity."
+    },
+    {
+      "claim_id": "settle8-11-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1743757572944&uri=CELEX%3A32024R1747"
+      ],
+      "statement": "Verified fact: EU law explicitly permits dedicated measurement data, with customer consent, for observability and settlement of flexibility services when smart-meter data is absent or insufficiently granular."
+    },
+    {
+      "claim_id": "settle8-11-c3",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/C/2025/3699",
+        "https://www.ure.gov.pl/pl/urzad/informacje-ogolne/aktualnosci/12810%2CTransformacja-energetyczna-16-podmiotow-w-wykazie-agregatorow.html"
+      ],
+      "statement": "Hypothesis (unvalidated): emerging aggregators will outsource baseline, participant revenue allocation, and dispute evidence rather than treat all settlement as a core internal capability."
+    }
+  ],
+  "contrary_evidence": [
+    "Only 16 entities were in URE's aggregator list at the cited date, indicating a potentially small and immature immediate customer pool: https://www.ure.gov.pl/pl/urzad/informacje-ogolne/aktualnosci/12810%2CTransformacja-energetyczna-16-podmiotow-w-wykazie-agregatorow.html",
+    "EU baseline methodologies and financial-settlement principles are still being specified, creating rule-change risk: https://eur-lex.europa.eu/eli/C/2025/3699"
+  ],
+  "economics": {
+    "acquisition_route": "Partner with one battery/EMS integrator and run parallel shadow settlement for a registered aggregator without touching market bids or funds.",
+    "capital_required_pln": 70000,
+    "founder_net_worth_path": "Unvalidated scenario: 4 portfolios at PLN 10,000 MRR in year 2, 18 at PLN 16,000 MRR in year 4, and 30 at PLN 20,000 MRR in year 6 imply PLN 7.2m ARR before activation fees. At a 3-5x infrastructure-software value and 55% ownership, PLN 5m net worth is plausible in years 5-7; if baseline disputes cannot be reduced across two asset classes, the thesis fails.",
+    "founder_time": "4-5 hours/day for one asset class and one aggregator; keep market operations, 24/7 control, and licensing outside scope.",
+    "gross_margin_basis": "Hypothesis: 78-90% for automated settlement; meter remediation and disputes must be separately bounded.",
+    "payback": "Unvalidated customer hypothesis: fewer participant disputes and faster revenue allocation repay the platform within 6-12 months; compare shadow and production statements.",
+    "pricing": "Unvalidated estimate: PLN 3,000-15,000 monthly per portfolio plus PLN 10-60 per settled activation or 0.5-2% of revenue administered, subject to legal review.",
+    "retention_or_repeat": "Every activation and settlement period repeats; participant contracts and historical baselines make switching costly."
+  },
+  "fingerprint": {
+    "compounding_advantage": "event histories improve baseline diagnostics and asset reliability estimates; contractual rule and meter mappings create durable workflow lock-in",
+    "customer": "Polish independent aggregators, energy-service firms, and commercial battery or flexible-load portfolio owners",
+    "distribution_mechanism": "battery and energy-management integrators, meter-data vendors, and a shadow-settlement pilot with a registered aggregator",
+    "offer_and_business_model": "meter/dispatch ingestion, versioned baseline engine, event replay, revenue-share and imbalance allocation, participant statement, and dispute evidence API",
+    "payer_and_paid_event": "aggregator or portfolio owner pays per MW/site-month and per settled activation when participant statements close",
+    "problem_trigger": "a dispatch event or settlement period ends and the aggregator must prove delivered flexibility and allocate market revenue and imbalance adjustments to participating sites"
+  },
+  "founder_fit": [
+    "Counterfactual modeling, time-series data, and uncertainty quantification are strong founder matches.",
+    "Family renewable-energy context can help source asset-domain understanding without operating the market.",
+    "B2B technical channels avoid camera-led consumer acquisition.",
+    "A shadow settlement can validate safely while the founder remains employed."
+  ],
+  "parent": null,
+  "risks": [
+    "Baseline choice is contentious and can materially redistribute revenue.",
+    "Meter quality and customer consent may be inadequate.",
+    "Market rules and the EU demand-response network code are evolving.",
+    "Aggregators may regard settlement logic as core intellectual property and build it themselves."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.ure.gov.pl/pl/urzad/informacje-ogolne/aktualnosci/12810%2CTransformacja-energetyczna-16-podmiotow-w-wykazie-agregatorow.html",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1743757572944&uri=CELEX%3A32024R1747",
+    "https://eur-lex.europa.eu/eli/C/2025/3699",
+    "https://www.acer.europa.eu/sites/default/files/documents/Official_documents/Acts_of_the_Agency/Framework_Guidelines/Framework%20Guidelines/FG_DemandResponse.pdf"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "market-service baseline and revenue settlement agent",
+    "control_point": "agreed baseline-to-meter calculation that allocates a flexibility event's delivered volume, revenue, and imbalance cost across assets",
+    "critical_dependency": "high-granularity interval meter and dispatch data plus an aggregator contract that defines baseline and revenue-allocation rules"
+  },
+  "thesis": "Sell aggregators and owners of batteries, EV charging, refrigeration, or controllable industrial loads a neutral settlement service that reconstructs the counterfactual baseline, binds dispatch instructions to interval meter data, calculates delivered flexibility, attributes revenue and imbalance costs to sites, and produces a dispute-ready statement. It does not aggregate or trade energy initially; the aggregator pays per settled portfolio and retains market responsibility.",
+  "title": "Behind-the-Meter Flexibility Settlement Agent",
+  "uncertainties": [
+    "Polish activation volume and addressable third-party settlement spend are unknown.",
+    "The best first asset class and baseline method require partner data.",
+    "Whether revenue-share pricing creates regulated or agency obligations needs counsel.",
+    "It is unproven that neutrality matters enough to overcome aggregator integration friction."
+  ],
+  "version": 1
+}

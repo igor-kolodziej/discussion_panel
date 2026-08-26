@@ -1,0 +1,120 @@
+{
+  "assumptions": [
+    "The initial protocol supports only a deliberately narrow set of vehicle models and is validated separately for each model and software context.",
+    "Tests are delivered by trained partners rather than by a founder-operated mobile inspection workforce.",
+    "The certificate reports uncertainty and current condition and does not guarantee future degradation, resale value, or warranty eligibility.",
+    "Access to useful OBD or connected-vehicle variables is verified model by model; EU data-access rules are not assumed to create universal signal coverage.",
+    "Any reuse of VIN-linked or driver-linked longitudinal data requires explicit lawful terms and is not assumed to be available by default."
+  ],
+  "base_score": 4.26,
+  "candidate_id": "control-12",
+  "candidate_sha256": "835f0dd83f27cb5cb269874b2c26c45b3b7653dcdf9a4de6e1daab1b6b725a5c",
+  "candidate_version": 2,
+  "constrained_score": 4.06,
+  "evaluation_type": "working",
+  "evidence_needed_for_higher_score": "Blinded model-by-model validation against later measured capacity or adverse outcomes, repeated paid dealer or lease-return batches, measured impact on sale time, price, disputes, or warranty loss, supported-model failure rates, and fully loaded per-test contribution after every partner and support cost.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "Battery uncertainty is relevant at appraisal, lease return, sale, warranty, and finance decisions, and longitudinal outcomes could improve model-specific risk assessment. The generic trust-certificate insight is already well recognized by several commercial providers and is increasingly standardized by regulation.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Published 400 PLN and EUR 79-99 certificates demonstrate some willingness to pay, and battery replacement risk can matter in individual transactions. Average degradation appears modest, a free report exists for supported vehicles, and no evidence shows incremental resale value, faster sales, or lower warranty losses from this new certificate.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Partner delivery can avoid a labour-heavy founder service, but low per-test pricing leaves limited room for licensing, hardware, partner labour, support, insurance, and failed tests. The stated wealth path depends on 25,000 annual tests plus recurring partner fees across CEE, while attachment rate, CAC, repeat batches, contribution margin, and partner retention are all unknown.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "A few high-volume dealers or lease-return operators and a narrow model set form a sensible beachhead in a growing Polish fleet. Roughly 121,000 passenger BEVs at the end of 2025 is still a bounded domestic base, and neither used-transaction volume nor test attachment by model and channel is established.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "A Polish CARA Approved offer, Moba, AVILOO, DEKRA, Recurrent, and improving OEM or regulatory data create direct and credible alternatives. A new entrant currently lacks superior method validation, brand recognition, channel control, or a reason for dealers to replace recognized incumbent certificates.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "If the protocol and transaction record gain acceptance, the same data could support lease returns, warranty triage, residual-value models, finance, insurance, additional models, and CEE expansion. These are coherent adjacencies but depend on first winning repeated transaction volume.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "A consented longitudinal link among test signals, repairs, disputes, and resale outcomes could become defensible. That asset begins empty, incumbents have larger installed data advantages, manufacturer changes can stale parsers, and passports or standardized health metrics can commoditize simple read-outs.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "The proposed deeper anomaly escalation and uncertainty-rated report are potentially useful, but no reviewed evidence demonstrates greater predictive accuracy or transaction value than inexpensive incumbent tests or free longitudinal reporting. The offer therefore lacks a proven behavior-changing advantage.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "The Polish BEV fleet is growing and used transactions should increase, while upcoming battery-passport and data-access regimes validate the category. Those same regimes improve baseline data availability and may compress differentiation, so timing is mixed rather than uniquely favorable.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "Embedding tests in dealer, inspection, and lease-return workflows is more credible than broad consumer acquisition. No partner has shown willingness to run or repeat a paid batch, and established vendors can pursue the same channels with stronger brands and broader model coverage.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "The founder is well suited to uncertainty modelling and partner QA, and trained technicians can perform physical work. Model-specific access, validation across temperature and software versions, partner quality control, professional liability, insurance, and lawful longitudinal data use make this materially more complex than a software-only side business.",
+      "score": 5,
+      "status": "scored"
+    }
+  ],
+  "final_score": 4.1,
+  "highest_value_structural_change": "Replace the standalone consumer certificate with a white-label residual-risk and warranty-triage product for one lease-return or warranty partner and a narrow vehicle cohort, price it against avoided losses, and contract for longitudinal outcomes so each transaction improves the model.",
+  "interaction_adjustment": -0.2,
+  "judge_id": "c2-working-control-12",
+  "main_structural_strength": "The partner-delivered transaction workflow can generate repeated paid events and, if adopted, a longitudinal outcomes dataset with value beyond a one-off certificate.",
+  "primary_score_limiter": "There is no supported incremental predictive value or distribution advantage over recognized low-cost and free incumbents, so the business cannot yet justify either premium pricing or the volume needed for attractive owner economics.",
+  "qualified": false,
+  "raw_response_path": "artifacts/research/raw-c2-working-control-12.json",
+  "raw_response_sha256": "b5de93c9c75155ef8d71aeae171ac5ec3e7de611f88ec5bf84c28b220bb95733",
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 2,
+  "strongest_disconfirming_evidence": "A Polish provider already sells a CARA Approved certificate for 400 PLN, European competitors charge EUR 79-99, DEKRA markets a 15-minute test, and Recurrent offers supported owners a free report based on more than 30,000 connected EVs.",
+  "unrounded_score": 4.06
+}

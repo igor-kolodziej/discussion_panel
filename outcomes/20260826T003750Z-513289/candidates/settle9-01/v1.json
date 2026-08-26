@@ -1,0 +1,82 @@
+{
+  "candidate_id": "settle9-01",
+  "claims": [
+    {
+      "claim_id": "settle9-01-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/numer-ksef-i-zbiorczy-identyfikator/"
+      ],
+      "statement": "KSeF assigns a unique system number after accepting an invoice, and the official guidance says the number is returned in the UPO."
+    },
+    {
+      "claim_id": "settle9-01-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/numer-ksef-i-zbiorczy-identyfikator/"
+      ],
+      "statement": "The official KSeF guidance says correction invoices for structured originals identify the original invoice by its KSeF number, creating a machine-linkable correction chain."
+    },
+    {
+      "claim_id": "settle9-01-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ksef.podatki.gov.pl/ksef-news/najczestsze-pytania/"
+      ],
+      "statement": "Official FAQs describe offline invoices whose interim JPK designation must later be corrected after a KSeF number is obtained, evidencing a real exception state rather than universal straight-through processing."
+    }
+  ],
+  "contrary_evidence": [
+    "The Ministry provides free KSeF tools and ERP vendors can add matching features, so KSeF access alone is not a moat.",
+    "Structured invoices may reduce rather than expand exception volumes after the transition stabilizes."
+  ],
+  "economics": {
+    "acquisition_route": "Land one accounting office with a read-only diagnostic, convert its client portfolio, then recruit ERP/KSeF implementers on recurring revenue share",
+    "capital_required_pln": 55000,
+    "founder_net_worth_path": "Hypothesis: reach 35 portfolio customers and about 1.8m PLN ARR by year 2, 140 portfolios and 7-9m PLN ARR by years 5-6; with majority ownership, reinvested cash and a 4-6x profitable-software value, the founder stake could exceed 5m PLN in years 5-7. Validate churn, support labor and channel share before relying on this path.",
+    "founder_time": "15-20 hours weekly until repeatable onboarding; AI can draft mappings and explanations, while a part-time Polish accountant validates tax-sensitive edge cases",
+    "gross_margin_basis": "Hypothesis: 76-88% software gross margin after a rules library reduces human review to the ambiguous tail; managed review is separately metered",
+    "payback": "Hypothesis: 2-5 months of gross profit on founder-led/accounting-partner acquisition, excluding enterprise integrations",
+    "pricing": "Hypothesis: 1,500-6,000 PLN per month per accounting-office portfolio or finance team, plus 5,000-20,000 PLN onboarding; higher tiers by entity and invoice volume",
+    "retention_or_repeat": "Monthly close, continuous invoice intake, corrections and statutory reporting make the workflow recurrent; historical mappings raise switching cost"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A permissioned corpus mapping invoice structures, correction chains and exception causes to successful resolution rules, improving straight-through handling for every similar client",
+    "customer": "Polish accounting offices and finance teams serving multi-entity SMEs with purchase invoices, corrections and split-payment workflows",
+    "distribution_mechanism": "Revenue-share distribution through accounting offices and Polish ERP/KSeF implementation partners, using a free exception diagnostic on exported XML/JPK data as the entry offer",
+    "offer_and_business_model": "Multi-tenant SaaS plus optional managed exception desk, priced per connected entity and invoice band, with paid onboarding and no custody of funds",
+    "payer_and_paid_event": "The accounting office or SME pays a recurring fee when connected entities receive a monitored exception queue and auditable resolution record; implementation is paid when the first entity goes live",
+    "problem_trigger": "A KSeF invoice, offline invoice or correction fails to match an order, receipt, vendor record, payment reference or JPK entry and blocks close or payment"
+  },
+  "founder_fit": [
+    "Data-science and AI skills suit entity matching, anomaly detection and rule induction.",
+    "Can start part-time with file exports and a managed queue before deep integrations.",
+    "Polish location and finance-oriented thinking support credible local discovery without a public persona."
+  ],
+  "parent": null,
+  "risks": [
+    "Tax-sensitive automation could cause costly postings if human approval and audit logs are weak.",
+    "A multi-tenant accounting-office channel creates concentration and support risk.",
+    "The founder must avoid using confidential employer processes, data or code."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/numer-ksef-i-zbiorczy-identyfikator/",
+    "https://ksef.podatki.gov.pl/ksef-news/najczestsze-pytania/",
+    "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/zakres-obowiazkowego-ksef/"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Vertical reconciliation SaaS with a productized managed-exception launch wedge",
+    "control_point": "Release of a received invoice for posting and payment, and closure of its correction chain",
+    "critical_dependency": "Reliable customer-authorized access to KSeF and ledger exports plus accounting-partner trust; official API and schema changes must be tracked"
+  },
+  "thesis": "Build a Polish accounts-payable exception layer that links each KSeF invoice and correction to purchase orders, receipts, approvals, bank payments and JPK treatment, then gives accounting offices a shared queue for resolving the small subset that cannot be posted automatically. The initial wedge is a managed exception service for 10-100-client accounting firms; repeated resolution patterns become rules and a normalized exception corpus. It does not replace KSeF or the ledger and does not give tax advice. Demand, achievable automation and pricing are hypotheses to validate with anonymized sample files before building integrations.",
+  "title": "KSeF Exception-to-Payment Control Tower",
+  "uncertainties": [
+    "Exception rate per 1,000 KSeF invoices after 2026 stabilization",
+    "Whether accounting offices will pay centrally or pass fees through to clients",
+    "API permission and rate-limit friction for multi-entity access"
+  ],
+  "version": 1
+}

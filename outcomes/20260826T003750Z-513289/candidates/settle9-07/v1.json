@@ -1,0 +1,83 @@
+{
+  "candidate_id": "settle9-07",
+  "claims": [
+    {
+      "claim_id": "settle9-07-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1804/oj/eng"
+      ],
+      "statement": "AFIR defines e-roaming as the exchange of data and payments between a recharging-point operator and a mobility service provider."
+    },
+    {
+      "claim_id": "settle9-07-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A02023R1804-20260108"
+      ],
+      "statement": "AFIR requires transparent session-specific price information and distinguishes price components including e-roaming costs and other fees."
+    },
+    {
+      "claim_id": "settle9-07-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32023R1804"
+      ],
+      "statement": "AFIR requires operators or owners to make specified static and dynamic charging-infrastructure data available, supporting a more data-rich operating environment."
+    }
+  ],
+  "contrary_evidence": [
+    "Roaming hubs and charger-management platforms already perform clearing, and the most valuable data may be contractually closed.",
+    "AFIR price rules are primarily end-user protections, not evidence that operators currently lose enough money to buy an auditor."
+  ],
+  "economics": {
+    "acquisition_route": "Installer/maintenance channel offers a free 90-day settlement audit alongside service contracts, then converts operators to monitoring",
+    "capital_required_pln": 95000,
+    "founder_net_worth_path": "Hypothesis: 30 operators averaging 15,000 PLN monthly plus session overages can produce 6-8m PLN ARR by years 5-7. At 20-30% operating margin and majority ownership, retained profit plus a 4-6x revenue value could exceed 5m PLN founder net worth in years 6-8.",
+    "founder_time": "18-24 hours weekly for initial protocol and billing connectors, then exception-only operations",
+    "gross_margin_basis": "Hypothesis: 80-92% after protocol connectors stabilize; bespoke charger backends and manual disputes are separately scoped",
+    "payback": "Hypothesis: 5-10 months per channel-led operator; small sites without roaming volume are not economical",
+    "pricing": "Hypothesis: 2,000-10,000 PLN monthly platform minimum plus 0.20-0.70 PLN per reconciled session and 10% of historical recoveries",
+    "retention_or_repeat": "Every charging session produces financial records; cross-period baselines and accepted dispute history raise switching costs"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Cross-CPO/eMSP session-fingerprint library and counterparty-specific discrepancy outcomes improve expected settlement and root-cause detection",
+    "customer": "Independent and regional charging-point operators, fleet charging providers and mobility service providers with roaming counterparties",
+    "distribution_mechanism": "White-label via EV charger installers, maintenance firms, energy-service companies and smaller charger-management platforms",
+    "offer_and_business_model": "API-first reconciliation SaaS with historical leakage audit and optional managed dispute preparation",
+    "payer_and_paid_event": "Operator pays a platform minimum plus a per-session fee when sessions are reconciled and dispute evidence is generated",
+    "problem_trigger": "A charging session's meter data, displayed tariff, roaming record, processor charge, clearing statement or cash receipt differs"
+  },
+  "founder_fit": [
+    "Energy adjacency and data reconciliation align with the founder and family-business context.",
+    "A read-only historical audit can validate without processing money.",
+    "Installer-channel leverage minimizes constant direct selling."
+  ],
+  "parent": null,
+  "risks": [
+    "Protocol and tariff complexity can consume the initial capital before product-market fit.",
+    "Dominant hubs may block access or bundle reconciliation at low marginal cost.",
+    "Incorrect dispute calculations could damage partner relationships."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2023/1804/oj/eng",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A02023R1804-20260108",
+    "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32023R1804",
+    "https://transport.ec.europa.eu/transport-themes/clean-transport/alternative-fuels-sustainable-mobility-europe/alternative-fuels-infrastructure/questions-and-answers-regulation-deployment-alternative-fuels-infrastructure-eu-20231804_en?prefLang=lt"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Usage-event clearing and revenue-assurance SaaS",
+    "control_point": "Approval of monthly CPO/eMSP roaming and payment-processor settlement",
+    "critical_dependency": "Access to granular session, tariff and clearing data across protocols and counterparties, with sufficient independent-operator volume"
+  },
+  "thesis": "Create an independent session-level reconciliation service for smaller charging-point operators and mobility service providers in Poland and neighboring EU markets. It matches charger meter events, published tariff components, roaming messages, payment processor records, VAT invoices, partner clearing statements and bank receipts, producing counterparty-ready discrepancy cases. Distribution through charger installers and white-label back-office providers can reach fragmented operators; the data moat is a cross-network map of session and tariff failure modes. The service does not process charging payments at launch.",
+  "title": "EV Roaming Session Settlement Auditor",
+  "uncertainties": [
+    "Session-level discrepancy frequency and monetary value",
+    "Fragmentation of Polish CPO back-office systems",
+    "Whether installers control a durable software distribution relationship after commissioning"
+  ],
+  "version": 1
+}

@@ -1,0 +1,66 @@
+{
+  "candidate_id": "embed-05",
+  "claims": [
+    {
+      "claim_id": "embed-05-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2011/1169"
+      ],
+      "statement": "Regulation (EU) 1169/2011 makes listed allergens mandatory information and requires upstream food businesses to provide sufficient downstream information."
+    },
+    {
+      "claim_id": "embed-05-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://food.ec.europa.eu/food-safety/rasff_en"
+      ],
+      "statement": "The Commission's RASFF enables authorities to exchange food-chain health-risk information rapidly and can lead to market recalls."
+    }
+  ],
+  "contrary_evidence": [
+    "Large manufacturers already operate mature product-lifecycle and supplier-quality systems."
+  ],
+  "economics": {
+    "acquisition_route": "One-to-many distribution through ingredient distributors, certification auditors, and laboratory networks.",
+    "capital_required_pln": 30000,
+    "founder_net_worth_path": "Hypothesis: 600 sites at 1200 PLN blended monthly revenue creates 8.6 million PLN ARR by year five and majority founder equity well above 5 million PLN without treating retained earnings as distributions.",
+    "founder_time": "Hypothesis: 3 founder hours daily for graph logic and partner operations while food-safety experts review exceptions.",
+    "gross_margin_basis": "Hypothesis: 75-85% gross margin after parsing, human exception review, and distributor revenue share.",
+    "payback": "Hypothesis: a 10000 PLN distributor connector pays back in six months with 30 active sites.",
+    "pricing": "Hypothesis, including the capital figure: 390 PLN per assessed specification change plus 990 PLN monthly per manufacturing site.",
+    "retention_or_repeat": "Every supplier, formulation, allergen, or label change triggers another paid impact assessment."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Contracted anonymized rights to change decisions, false positives, remediation, and recall links improve prioritization",
+    "customer": "Small and mid-sized EU food manufacturers",
+    "distribution_mechanism": "Embedded alerting through ingredient distributors and certification auditors",
+    "offer_and_business_model": "Ingredient-to-label dependency graph sold per change and per-site subscription",
+    "payer_and_paid_event": "The manufacturer pays when a change-impact report is cleared for release",
+    "problem_trigger": "An ingredient supplier changes a composition, process, allergen declaration, or source"
+  },
+  "founder_fit": [
+    "Document parsing and dependency modeling suit AI leverage and a low-social-energy channel strategy."
+  ],
+  "parent": null,
+  "risks": [
+    "A missed allergen change can harm consumers, so the tool must preserve qualified human release approval and complete audit trails."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2011/1169",
+    "https://food.ec.europa.eu/food-safety/rasff_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Supply-chain change monitor",
+    "control_point": "The dependency graph from supplier specification to recipe, label, and release approval",
+    "critical_dependency": "Structured bills of material and timely supplier-specification feeds"
+  },
+  "thesis": "Embed a supplier-specification change graph with ingredient distributors and food auditors, charging whenever a change propagates to a recipe or label while accumulating permissioned remediation and incident links.",
+  "title": "AllergenChange Supplier Graph",
+  "uncertainties": [
+    "Supplier document variability and contractual data rights may prevent reliable automated propagation."
+  ],
+  "version": 1
+}

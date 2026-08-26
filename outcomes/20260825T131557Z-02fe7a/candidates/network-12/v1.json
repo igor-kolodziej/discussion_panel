@@ -1,0 +1,80 @@
+{
+  "candidate_id": "network-12",
+  "claims": [
+    {
+      "claim_id": "network-12-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/gis/suplementy-diety"
+      ],
+      "statement": "Poland's GIS explains that supplements are foods rather than medicines, do not undergo clinical trials as medicines do, and should be assessed using ingredient, warning, intended-user, and usage information."
+    },
+    {
+      "claim_id": "network-12-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/gis/pytania-i-odpowiedzi2."
+      ],
+      "statement": "GIS maintains a public notification register and states that businesses must notify market introduction while remaining responsible for documenting food-law compliance; notification is not the same as product approval."
+    },
+    {
+      "claim_id": "network-12-c3",
+      "confidence": "low",
+      "evidence_refs": [],
+      "statement": "Hypothesis: brands and retailers will pay for a tamper-evident lot record that makes third-party laboratory evidence easy to verify and that reduces support, delisting, or trust friction."
+    }
+  ],
+  "contrary_evidence": [
+    "Brands can publish certificates on their own sites, and sophisticated retailers already demand documentation directly.",
+    "A laboratory certificate only covers the tested sample and cannot prove every unit in a lot or clinical benefit."
+  ],
+  "economics": {
+    "acquisition_route": "Hypothesis: onboard one lab as the issuing channel, provide five free lot records to selected brands, then win retailer recognition that pulls more suppliers into the registry.",
+    "capital_required_pln": 70000,
+    "founder_net_worth_path": "Hypothesis: 30 brands and 500 lots in year 2, 250 brands and 8000 lots in year 4, and 700 brands across Central Europe in year 6 producing 8-14M PLN annual recurring and transaction revenue. At 3-5x revenue and 55-70% founder ownership, equity can exceed 5M PLN once lab-led distribution and retailer acceptance are repeatable.",
+    "founder_time": "Hypothesis: 12-18 hours/week through the first lab integration, with food-law and laboratory specialists retained for bounded reviews.",
+    "gross_margin_basis": "Hypothesis: 65-78% while documents receive sampled human verification, rising above 82% with lab-signed structured data.",
+    "payback": "Hypothesis: 4-8 months at 3000-8000 PLN acquisition/onboarding cost and 1500-3500 PLN monthly blended brand revenue.",
+    "pricing": "Hypothesis: 400-900 PLN per verified lot, 499-1499 PLN/month brand workspace, and retailer API contracts.",
+    "retention_or_repeat": "Hypothesis: every manufactured lot repeats; lab integration and retailer acceptance create high switching costs and target annual net revenue retention above 110%."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Lot-by-lot supplier consistency, document authenticity, assay variance, exception, and remediation history across participating labs and brands",
+    "customer": "Independent Polish supplement brands, contract manufacturers, testing laboratories, and specialist retailers",
+    "distribution_mechanism": "Participating laboratories issue records directly, brands place QR codes on packaging, and retailers request BatchProof during onboarding",
+    "offer_and_business_model": "Signed lot evidence page, GIS-notification link, laboratory document verification, exception workflow, QR, and retailer API",
+    "payer_and_paid_event": "Brand pays per verified lot and monthly registry workspace; retailer or marketplace pays for status API access",
+    "problem_trigger": "A new batch is released, retailer onboarding occurs, a document expires, or a consumer scans a lot code"
+  },
+  "founder_fit": [
+    "Matches health, supplements, data provenance, and FMCG process interests.",
+    "Document extraction, digital signatures, anomaly detection, and supplier benchmarking fit technical skills.",
+    "B2B lab and retailer integrations avoid a founder-led influencer brand.",
+    "Can validate with public registry records and synthetic COAs before receiving private brand documents."
+  ],
+  "parent": null,
+  "risks": [
+    "Consumers may confuse GIS notification or a COA with safety approval or therapeutic efficacy; copy and UI must explicitly prevent that.",
+    "Forged laboratory documents and sample-selection gaming.",
+    "Adverse findings create disclosure, recall, and liability workflows requiring qualified counsel."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.gov.pl/web/gis/suplementy-diety",
+    "https://www.gov.pl/web/gis/pytania-i-odpowiedzi2."
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "batch provenance registry",
+    "control_point": "signed lot-level evidence record linked to lab, brand, retailer, and public notification data",
+    "critical_dependency": "laboratory-authenticated records and retailer recognition without misleading approval claims"
+  },
+  "thesis": "A lot-level provenance and verification network for independent supplement brands. It links the public GIS notification record, brand-controlled specifications, signed laboratory certificates, manufacturing lot, and retailer-facing QR/API status without claiming drug approval; repeated lots create supplier-consistency and out-of-spec benchmarks.",
+  "title": "BatchProof Registry for Polish Supplements",
+  "uncertainties": [
+    "Which accredited laboratories will digitally sign or verify documents through an integration is unknown.",
+    "Retailer recognition may be more valuable than consumer QR engagement but must be tested.",
+    "The 70000 PLN capital estimate and all commercial figures below are planning hypotheses."
+  ],
+  "version": 1
+}

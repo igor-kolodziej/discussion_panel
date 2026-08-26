@@ -1,0 +1,66 @@
+{
+  "candidate_id": "embed-02",
+  "claims": [
+    {
+      "claim_id": "embed-02-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2024/573/2024-02-20/eng"
+      ],
+      "statement": "Article 7 of Regulation (EU) 2024/573 requires specified equipment records and generally requires operators and service undertakings to retain them for at least five years."
+    },
+    {
+      "claim_id": "embed-02-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.udt.gov.pl/uslugi-udt/szwo-i-f-gazy/faq-f-gazach-i-szwo"
+      ],
+      "statement": "UDT states that Polish businesses installing or servicing stationary refrigeration, air-conditioning, or heat-pump equipment containing F-gases require relevant certification."
+    }
+  ],
+  "contrary_evidence": [
+    "Existing contractor software and authority databases may already satisfy basic record-keeping without a paid intermediary."
+  ],
+  "economics": {
+    "acquisition_route": "One-to-many distribution through refrigerant wholesalers, training centers, and the founder's family installation network as pilot.",
+    "capital_required_pln": 28000,
+    "founder_net_worth_path": "Hypothesis: 600 contractors producing 350 PLN monthly equivalent revenue by year four yields about 2.5 million PLN ARR, supporting founder equity above 5 million PLN at a modest software multiple without counting retained earnings twice.",
+    "founder_time": "Hypothesis: 3 founder hours daily after launch because wholesalers handle onboarding and support can be delegated.",
+    "gross_margin_basis": "Hypothesis: 70-80% gross margin after digital signatures, support, storage, and wholesaler revenue share.",
+    "payback": "Hypothesis: a 12000 PLN wholesaler integration pays back in nine months at 80 active contractor accounts.",
+    "pricing": "Hypothesis, including the capital figure: 39 PLN per completed service event plus 149 PLN monthly per contractor account.",
+    "retention_or_repeat": "Leak checks, additions, recovery, repairs, and decommissioning each create a new paid ledger event."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Permissioned serial-level service and failure histories improve reminders, anomaly detection, and warranty evidence",
+    "customer": "Polish heat-pump and refrigeration service contractors",
+    "distribution_mechanism": "Wholesaler checkout and certified-technician training portals",
+    "offer_and_business_model": "Co-branded asset ledger sold per service event and contractor subscription",
+    "payer_and_paid_event": "The contractor or equipment operator pays when a compliant service record is signed",
+    "problem_trigger": "A regulated asset is installed, leak-checked, charged, repaired, or retired"
+  },
+  "founder_fit": [
+    "The family renewable-energy channel enables a low-cost pilot while the workflow rewards automation rather than constant selling."
+  ],
+  "parent": null,
+  "risks": [
+    "The ledger must not imply certification and must preserve regulator access, confidentiality, and accurate technician identity."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2024/573/2024-02-20/eng",
+    "https://www.udt.gov.pl/uslugi-udt/szwo-i-f-gazy/faq-f-gazach-i-szwo"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Serial-asset compliance ledger",
+    "control_point": "The link between refrigerant supply, certified technician identity, and equipment service record",
+    "critical_dependency": "Wholesaler participation and routine use by certified heat-pump technicians"
+  },
+  "thesis": "Give HVAC wholesalers a co-branded serial-number service ledger that certified contractors complete at each refrigerant purchase or service visit, creating repeat revenue and a permissioned failure-history asset.",
+  "title": "F-Gas ServiceChain Ledger",
+  "uncertainties": [
+    "Unknown whether wholesalers can legally and commercially connect purchaser records to downstream asset-service data."
+  ],
+  "version": 1
+}

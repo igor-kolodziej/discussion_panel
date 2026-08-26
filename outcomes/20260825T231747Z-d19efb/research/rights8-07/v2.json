@@ -1,0 +1,179 @@
+{
+  "candidate_id": "rights8-07",
+  "candidate_sha256": "7454f5011f3901f52ca66c36a37f39053b568a900c057a1d99bc1d5d2a0386af",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "r07-r1",
+      "evidence_refs": [
+        "r07-s1",
+        "r07-s2"
+      ],
+      "statement": "Under AFIR, a charging point on private property is publicly accessible when the property is open to a general class such as customers, whereas points restricted to a limited and determinate group such as employees or already-authorised persons are outside that category."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r07-r2",
+      "evidence_refs": [
+        "r07-s2"
+      ],
+      "statement": "The Commission interprets a limited and determinate group as identifiable people authorised to enter for a purpose other than using parking or charging; pre-booking, gate identification and limited operating hours do not by themselves make a generally available site private."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r07-r3",
+      "evidence_refs": [
+        "r07-s1",
+        "r07-s2",
+        "r07-s3"
+      ],
+      "statement": "If the network recruits unrelated fleets whose only reason to enter is parking and charging, the safer planning assumption is that those sites are publicly accessible and must meet the applicable AFIR and Polish public-station duties."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r07-r4",
+      "evidence_refs": [
+        "r07-s3"
+      ],
+      "statement": "Polish law separates the public-station operator's technical, metering and energy-contract duties from charging-service functions including user authorization, session records, payment, sales documentation and complaint handling, even though one entity may perform both roles."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r07-r5",
+      "evidence_refs": [
+        "r07-s4"
+      ],
+      "statement": "The Commission identifies dedicated charging availability and operational charging windows as material constraints for corporate fleets; trucks primarily use depot charging, while taxis and ride-hailing fleets depend on public urban charging."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r07-r6",
+      "evidence_refs": [
+        "r07-s5"
+      ],
+      "statement": "EU electric-commercial-vehicle adoption is rising from a low base: ACEA reports electrically chargeable vans at 11.2% of new EU van registrations and electric trucks above 3.5 tonnes at 4.2% in 2025, while also identifying infrastructure, energy cost and total cost of ownership as constraints."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r07-r7",
+      "evidence_refs": [
+        "r07-s6"
+      ],
+      "statement": "Monta already supports different public and member prices on the same charger, roaming, company-sponsored charging and cost tracking, so tariff and access software alone is not differentiated."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r07-r8",
+      "evidence_refs": [
+        "r07-s7"
+      ],
+      "statement": "Virta already offers fleet reservations on chargers that support OCPP reservation commands, but explicitly notes that a digital reservation does not guarantee physical bay access."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r07-r9",
+      "evidence_refs": [
+        "r07-s2",
+        "r07-s6",
+        "r07-s7"
+      ],
+      "statement": "The candidate's viable wedge is therefore contractual site control, dense local availability and operational reliability layered on an incumbent compliant charging stack, rather than building a new generic booking or tariff engine."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r07-r10",
+      "evidence_refs": [],
+      "statement": "No public evidence found establishes the number of idle compatible chargers in a Polish micro-market, host willingness to grant firm off-hours rights, fleet willingness to pay the proposed prices, utilization, renewal, gross margin or customer acquisition cost."
+    }
+  ],
+  "contrary_evidence": [
+    "A charging-only membership or booking gate does not appear sufficient to preserve private classification under the Commission's published interpretation.",
+    "The compliance and liability surface is wider than a marketplace contract because public-station and charging-service duties must be assigned and performed.",
+    "Monta and Virta already supply core access, tariff, roaming, cost-tracking and reservation capabilities.",
+    "Virta's own documentation says digital reservations cannot ensure the physical bay is free, making site operations a first-order cost rather than an edge case.",
+    "ACEA's 2025 data show adoption growth but also slow uptake and material infrastructure and total-cost barriers; local Polish fleet density remains unproven."
+  ],
+  "schema_version": 2,
+  "sources": [
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2023-09-22",
+      "publisher": "Official Journal of the European Union / EUR-Lex",
+      "source_id": "r07-s1",
+      "source_type": "law",
+      "stance": "context",
+      "title": "Regulation (EU) 2023/1804 on the deployment of alternative fuels infrastructure",
+      "url": "https://eur-lex.europa.eu/eli/reg/2023/1804/oj/eng"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "European Commission, Directorate-General for Mobility and Transport",
+      "source_id": "r07-s2",
+      "source_type": "regulator_guidance",
+      "stance": "contradicting",
+      "title": "Questions and answers on Regulation (EU) 2023/1804",
+      "url": "https://transport.ec.europa.eu/transport-themes/clean-transport/alternative-fuels-sustainable-mobility-europe/alternative-fuels-infrastructure/questions-and-answers-regulation-deployment-alternative-fuels-infrastructure-eu-20231804_en"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2024-08-26",
+      "publisher": "Polish Electronic Legal Acts / Chancellery of the Sejm",
+      "source_id": "r07-s3",
+      "source_type": "law",
+      "stance": "context",
+      "title": "Consolidated text of the Polish Act on Electromobility and Alternative Fuels",
+      "url": "https://eli.gov.pl/api/acts/DU/2024/1289/text.html"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2025-03-05",
+      "publisher": "European Commission",
+      "source_id": "r07-s4",
+      "source_type": "government_report",
+      "stance": "supporting",
+      "title": "Decarbonise Corporate Fleets, COM(2025) 96 final",
+      "url": "https://transport.ec.europa.eu/document/download/1498648c-63fc-4715-975d-ccbc64703da5_en?filename=Communication+-+Decarbonising+corporate+fleets.pdf"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2026-01-29",
+      "publisher": "European Automobile Manufacturers' Association (ACEA)",
+      "source_id": "r07-s5",
+      "source_type": "industry_data",
+      "stance": "context",
+      "title": "New commercial vehicle registrations: vans -8.8%, trucks -6.2%, buses +7.5% in 2025",
+      "url": "https://www.acea.auto/cv-registrations/new-commercial-vehicle-registrations-vans-8-8-trucks-6-2-buses-7-5-in-2025/"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "Monta",
+      "source_id": "r07-s6",
+      "source_type": "incumbent_documentation",
+      "stance": "contradicting",
+      "title": "Price Groups",
+      "url": "https://developer.monta.com/docs/price-groups"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2025-12-08",
+      "publisher": "Virta",
+      "source_id": "r07-s7",
+      "source_type": "incumbent_documentation",
+      "stance": "context",
+      "title": "Optimise Your Fleet Operations: How to Make Fleet Reservations at Charging Stations",
+      "url": "https://support.virta.global/hc/en-gb/articles/18351352579357-Optimise-Your-Fleet-Operations-How-to-Make-Fleet-Reservations-at-Charging-Stations"
+    }
+  ],
+  "unknowns": [
+    "Named fleet buyers, their route geometry, charging dwell windows, fallback cost and purchasing authority in one target cluster.",
+    "Named host sites, actual unused time windows, charger models, available power, metering quality and willingness to grant exclusive access.",
+    "Site-by-site AFIR classification and the lawful allocation of CPO, MSP, payment, tax, insurance and support responsibilities.",
+    "Contract rights under leases, energy supply agreements, parking rules and insurance policies.",
+    "Observed session reliability, blocked-bay rate, no-show rate, charger fault rate and exception-support workload.",
+    "Paid pilot price, host revenue share, CPMS and payment costs, gross contribution, sales cycle, churn and capital needed for compliant operation.",
+    "Whether the founder can bound host sales and daily exception handling within 12-18 hours per week before hiring an operator."
+  ]
+}

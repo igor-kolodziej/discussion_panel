@@ -1,0 +1,88 @@
+{
+  "candidate_id": "settle8-03",
+  "claims": [
+    {
+      "claim_id": "settle8-03-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1804/oj/eng",
+        "https://transport.ec.europa.eu/transport-themes/clean-transport/alternative-fuels-sustainable-mobility-europe/alternative-fuels-infrastructure/questions-and-answers-regulation-deployment-alternative-fuels-infrastructure-eu-20231804_en"
+      ],
+      "statement": "Verified fact: AFIR requires transparent session-specific prices and distinguishes charge-point operators from mobility service providers in contract-based charging."
+    },
+    {
+      "claim_id": "settle8-03-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32023R1804",
+        "https://transport.ec.europa.eu/transport-themes/clean-transport/alternative-fuels-sustainable-mobility-europe/alternative-fuels-infrastructure/questions-and-answers-regulation-deployment-alternative-fuels-infrastructure-eu-20231804_en"
+      ],
+      "statement": "Verified fact: EU rules require machine-readable static and dynamic public charging-infrastructure data, but AFIR does not require operators to participate in e-roaming."
+    },
+    {
+      "claim_id": "settle8-03-c3",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1804/oj/eng"
+      ],
+      "statement": "Hypothesis (unvalidated): smaller bilateral roaming relationships have enough tariff and CDR exceptions to pay a neutral per-session clearing layer."
+    }
+  ],
+  "contrary_evidence": [
+    "AFIR deliberately does not mandate e-roaming participation, so the addressable private-feed network could remain fragmented and voluntary: https://transport.ec.europa.eu/transport-themes/clean-transport/alternative-fuels-sustainable-mobility-europe/alternative-fuels-infrastructure/questions-and-answers-regulation-deployment-alternative-fuels-infrastructure-eu-20231804_en",
+    "Harmonized public-data specifications reduce differentiation for directory and availability features, forcing the product to win on private settlement evidence: https://transport.ec.europa.eu/news-events/news/commission-enhances-interoperability-and-transparency-alternative-fuels-infrastructure-data-2025-04-11_en"
+  ],
+  "economics": {
+    "acquisition_route": "Integrate with one Polish back-office vendor or fleet platform, publish a protocol conformance harness, and expand through technical channel partners.",
+    "capital_required_pln": 75000,
+    "founder_net_worth_path": "Unvalidated scenario: 8 customers at PLN 6,000 MRR in year 2, 25 at PLN 10,000 MRR in year 4, and 40 at PLN 12,000 MRR in year 6 imply PLN 5.76m ARR before per-session fees. A 3-4x infrastructure-software value at 60% founder ownership can exceed PLN 5m in years 5-7; failure to achieve 95% straight-through clearing on two independent networks blocks the thesis.",
+    "founder_time": "4-5 hours/day for the first integration; use contract protocol expertise rather than attempting simultaneous multi-network coverage.",
+    "gross_margin_basis": "Hypothesis: 72-86% at steady state; protocol support and disputed sessions are the main variable costs.",
+    "payback": "Unvalidated customer hypothesis: fewer disputed sessions and less manual invoicing repay onboarding within 6-9 months; must be proven from one operator's historical CDR set.",
+    "pricing": "Unvalidated estimate: PLN 2,500-12,000 monthly minimum plus PLN 0.10-0.40 per externally cleared session and paid onboarding for bespoke feeds.",
+    "retention_or_repeat": "Every charging session and monthly roaming invoice repeats; tariff archives and counterparty mappings are operationally sticky."
+  },
+  "fingerprint": {
+    "compounding_advantage": "a growing library of protocol and tariff edge cases improves straight-through clearing while bilateral mappings and dispute history raise switching costs",
+    "customer": "small and mid-sized EU charge-point operators, e-mobility service providers, and cross-border fleet charging programs",
+    "distribution_mechanism": "charger back-office integrators, hardware distributors, fleet-management vendors, and one-country-to-two-country expansion playbooks",
+    "offer_and_business_model": "OCPI/OCPP-adjacent normalization, tariff-version archive, automated bilateral netting, and dispute evidence API; usage SaaS without funds custody",
+    "payer_and_paid_event": "CPO, mobility provider, or fleet manager pays per cleared session plus a monthly platform minimum when a settlement statement closes",
+    "problem_trigger": "a roaming statement, fleet invoice, or end-user dispute where tariff components, session identity, and delivered kWh do not align"
+  },
+  "founder_fit": [
+    "Data normalization and anomaly detection fit the founder's technical profile.",
+    "The API-first product can be built without camera exposure or consumer marketing.",
+    "A bounded single-integration pilot fits available capital and part-time hours.",
+    "EU regulation and Polish market entry provide a local wedge with cross-border expansion potential."
+  ],
+  "parent": null,
+  "risks": [
+    "Roaming hubs and charger back-office incumbents may bundle clearing.",
+    "Meter certification, tariff interpretation, VAT, and cross-border invoicing can create liability.",
+    "Private session data may be contractually inaccessible.",
+    "Protocol fragmentation can turn software margins into integration services."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2023/1804/oj/eng",
+    "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32023R1804",
+    "https://transport.ec.europa.eu/news-events/news/commission-enhances-interoperability-and-transparency-alternative-fuels-infrastructure-data-2025-04-11_en",
+    "https://transport.ec.europa.eu/transport-themes/clean-transport/alternative-fuels-sustainable-mobility-europe/alternative-fuels-infrastructure/questions-and-answers-regulation-deployment-alternative-fuels-infrastructure-eu-20231804_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "protocol-normalizing transaction clearing gateway",
+    "control_point": "evidence-grade canonical charge-detail record binding identity, tariff version, meter values, and invoice line",
+    "critical_dependency": "private CPO and mobility-provider session feeds with trustworthy meter values and stable roaming identifiers"
+  },
+  "thesis": "Offer small charge-point operators, mobility-service providers, and commercial fleets a neutral gateway that freezes the tariff shown at session start, normalizes private charge-detail records, binds certified meter values and roaming IDs, and produces bilateral invoices and dispute packets. The product would not custody payments. The paid event is a cleared charging session or closed roaming statement, creating a narrow infrastructure wedge beyond public charger-directory data.",
+  "title": "Evidence-Grade EV Roaming Charge Clearing Gateway",
+  "uncertainties": [
+    "No evidence yet quantifies disputed-session rates or customer willingness to switch.",
+    "The smallest viable customer segment and geographic corridor are unknown.",
+    "It is uncertain whether a neutral evidence record is sufficiently differentiated from existing roaming hubs.",
+    "Required legal treatment of netting and invoice generation needs counsel."
+  ],
+  "version": 1
+}

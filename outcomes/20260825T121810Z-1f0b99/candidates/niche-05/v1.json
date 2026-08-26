@@ -1,0 +1,80 @@
+{
+  "candidate_id": "niche-05",
+  "claims": [
+    {
+      "claim_id": "niche-05-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC11276027/"
+      ],
+      "statement": "A 2024 multisite EEG methods paper recommends an immediate first-pass quality check because event-code and hardware problems can otherwise affect many participants before final analysis occurs months or years later."
+    },
+    {
+      "claim_id": "niche-05-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/digital-health-technologies-remote-data-acquisition-clinical-investigations"
+      ],
+      "statement": "FDA guidance for digital technologies in clinical investigations emphasizes fit-for-purpose verification, validation, data integrity, and consistent data quality, supporting a paid quality-control layer for sensor-derived trial data."
+    },
+    {
+      "claim_id": "niche-05-c03",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC11276027/"
+      ],
+      "statement": "Hypothesis: small studies will buy per-study QA when the service is cheaper than replacing even a few unusable participants and can work across their existing EEG hardware."
+    }
+  ],
+  "contrary_evidence": [
+    "EEGLAB, MNE, PREP, and lab-specific scripts make much of the technical checking available as open-source building blocks.",
+    "Large sponsored trials already use central EEG labs, while academic studies may have little procurement budget."
+  ],
+  "economics": {
+    "acquisition_route": "Publish a benchmark on public EEG datasets, then obtain channel referrals from one hardware vendor and two core facilities",
+    "capital_required_pln": 50000,
+    "founder_net_worth_path": "Hypothesis: 25 studies per year at a 150k PLN blended contract yield 3.75M PLN revenue and roughly 1.5M PLN EBITDA by year 6. A defensible scientific-QA provider at 5x EBITDA and 70% founder ownership implies about 5.25M PLN equity in years 7 to 9.",
+    "founder_time": "15 to 20 hours weekly through validation, then 10 to 15 hours with a contracted EEG reviewer",
+    "gross_margin_basis": "Target 60% to 75% after expert review; automated ingest and exception-only review drive margin",
+    "payback": "Avoiding recollection or loss of a handful of participants can cover the service, but the value must be quantified per protocol",
+    "pricing": "25,000 to 50,000 PLN setup plus 300 to 900 PLN per recording, or 90,000 to 250,000 PLN fixed per study",
+    "retention_or_repeat": "Studies recur by phase and protocol; CROs and sponsors can standardize the gate across programs and sites"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A permissioned artifact and protocol-deviation library indexed by hardware, task, site, population, and corrective action",
+    "customer": "Boutique CROs, neurotech startups, and investigator-led European studies collecting EEG across multiple sites",
+    "distribution_mechanism": "EEG hardware vendors, core facilities, boutique CRO partnerships, and reproducible methods benchmarks",
+    "offer_and_business_model": "Validated automated checks, cross-site dashboard, and bounded expert QA sold per study",
+    "payer_and_paid_event": "The sponsor, CRO, or principal investigator pays at study setup and per accepted recording batch",
+    "problem_trigger": "A participant recording finishes and the study team needs to know within 48 hours whether acquisition or protocol issues require correction"
+  },
+  "founder_fit": [
+    "Unusually strong founder-market fit from neuroscience, EEG, data science, and AI experience. Work is analytical, remote, and compatible with part-time delivery; a medical-student partner can help interpret clinical workflow boundaries but must not substitute for trial QA expertise."
+  ],
+  "parent": null,
+  "risks": [
+    "False negatives can allow irrecoverable data loss; every report needs explicit scope and human escalation.",
+    "Raw EEG and trial metadata can be sensitive health and research data.",
+    "The founder could drift into labor-intensive custom analysis rather than a repeatable gate."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC11276027/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC7916500/",
+    "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/digital-health-technologies-remote-data-acquisition-clinical-investigations"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Scientific quality-control service with software leverage",
+    "control_point": "The accept-or-correct decision issued within 48 hours of each EEG acquisition",
+    "critical_dependency": "Sponsors must accept validated automated metrics plus bounded expert review across heterogeneous EEG systems"
+  },
+  "thesis": "Provide a hardware-agnostic, human-reviewed EEG quality gate that runs immediately after each recording rather than months later during analysis. It would detect lost or garbled event codes, bad channels, artifact burden, trial-count shortfalls, protocol drift, and site-specific deviations, then return a red-amber-green report before the next participant. The beachhead is boutique CROs, neurotech startups, and investigator-led multicenter studies too small for a central EEG lab; it is research QA, not diagnosis or endpoint interpretation.",
+  "title": "First-48-Hour EEG Quality Gate for Small Multisite Trials",
+  "uncertainties": [
+    "Number of fundable small multicenter EEG studies in Europe and their QA budgets.",
+    "Whether hardware heterogeneity can be supported without expensive protocol-by-protocol work.",
+    "What level of validation sponsors require before relying on automated flags."
+  ],
+  "version": 1
+}

@@ -1,0 +1,121 @@
+{
+  "assumptions": [
+    "The opportunity is judged at the planning and pre-validation stage; absent pilots and customer commitments are treated as uncertainty rather than proof of failure.",
+    "The initial product remains a no-custody paid audit and one bilateral live lane, not a regulated payment or fund-holding service.",
+    "Target customers are regional CPO-eMSP relationships with enough recurring invoice complexity to justify a separate tool and that are not already economically satisfied by a hub's bundled service.",
+    "Both counterparties can lawfully provide sufficiently complete CDR, tariff, credit, invoice, tax, and contract-rule data for a bounded pilot.",
+    "The founder remains employed and contributes roughly 15-18 hours per week until objective traction supports delegation or a later transition.",
+    "Specialist legal, tax, security, and metering advice can be bought, but its cost and any resulting operating constraints are not assumed away."
+  ],
+  "base_score": 3.49,
+  "candidate_id": "settle7-05",
+  "candidate_sha256": "bb26764c8617e7a97fd206043a6c9ac9663c74a1b128aa5f8ae5ef41dfe1c4bd",
+  "candidate_version": 2,
+  "constrained_score": 3.29,
+  "evaluation_type": "working",
+  "evidence_needed_for_higher_score": "A complete paid pilot with at least one target bilateral pair should quantify CDR and invoice volume, mismatch frequency, disputed and recovered value, finance hours and credit delay avoided, implementation and support hours, false-dispute rate, security and legal cost, signed willingness to continue at a stated recurring price, and a repeatable path to acquire the next several pairs with one-sided and fully loaded CAC payback.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "The concept correctly separates standardized CDR and invoice mapping from the still bilateral work of applying contract rules, resolving exceptions, and producing accepted payable evidence. That is a coherent wedge, but the packet does not establish that this residual gap is both underserved and valuable enough to support an independent network rather than a feature or service engagement.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Immutable CDR corrections, invoice mapping, and incumbent dispute and invoicing services provide a realistic basis for recurring reconciliation pain. However, no target pair has supplied a sample, and mismatch frequency, disputed value, finance effort, credit delay, current workaround cost, and willingness to pay are all unknown; small bilateral operators may have too little recoverable value to support two-sided adoption.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "A fixed paid audit can contain validation cost, while recurring base and per-record fees could create software-like revenue without custody. Yet pricing, gross margin, CAC, payback, retention, implementation effort, support load, liability cost, and attainable volume are unsupported, and bilateral connectors, rule maintenance, dispute operations, security, and availability can turn the model into integration-heavy services. The founder-net-worth path is therefore not presently grounded in conservative unit economics.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Regional CPO-eMSP relationships outside economically suitable hub coverage form a reasonably narrow first segment, and the large EU charging footprint implies a growing transaction surface. Charge-point count does not establish addressable bilateral CDR volume, mismatch incidence, number of suitable relationships, or their spend, so the beachhead's economic significance remains unknown.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "Focusing on overlooked bilateral lanes and contract-specific exception governance offers some room to specialize. The position is nevertheless exposed to Hubject, GIREVE, e-clearing.net, charge-management vendors, and counterparties implementing OCPI invoice reconciliation; those players already possess network relationships and can bundle much of the workflow. No exclusive access, channel, or segment-specific reason for durable dominance is evidenced.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A successful lane could reuse connector, contract-rule, exception, and counterparty-reliability knowledge across additional charging relationships, geographies, protocols, and adjacent fleet or energy-settlement workflows. Expansion is plausible but conditional on proving that onboarding gets materially cheaper and that counterparties accept shared outcomes; otherwise each lane remains bespoke.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Mutually accepted exception outcomes, audit lineage, reliability histories, and reusable rule libraries could compound into switching costs and better resolution accuracy. Those assets start empty, require bilateral participation, and are vulnerable to standardization, incumbent network effects, and vendor bundling; invoice-to-CDR mapping itself is explicitly becoming standard rather than proprietary.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "The audit-first, no-custody offer may be narrower, cheaper, and easier to test than joining a full clearing hub, and contract-specific exception evidence could improve finance workflows. The packet provides no measured improvement in recovered value, labor, resolution speed, integration cost, accuracy, or risk versus internal processes and incumbent services, so there is not yet evidence of an advantage strong enough to change behavior.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "A growing EU charging footprint and the transitional state of OCPI invoice reconciliation create a near-term interoperability and migration window. The same standards momentum can commoditize the core mapping, and AFIR does not mandate the proposed clearing workflow, making timing mixed rather than a durable regulatory tailwind.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "A paid diagnostic sold to one known bilateral relationship is a concrete first-customer motion, and integrators, associations, fleet platforms, and referrals are plausible later channels. There is no demonstrated customer access or channel commitment, both counterparties must cooperate for the live lane, sales require trust around financial records, and the most natural partners can also bundle or redirect customers to incumbent hubs.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "The founder's data and automation skills fit ingestion, matching, anomaly analysis, and a bounded audit, which can be attempted part-time before major spending. Production execution adds bilateral onboarding, protocol variants, tax and contract logic, signed-meter sufficiency, security, liability, service levels, incident support, and disputes; these require specialist help and delegated operations, and the stated capital may not fund a reliable multi-party network.",
+      "score": 4,
+      "status": "scored"
+    }
+  ],
+  "final_score": 3.3,
+  "highest_value_structural_change": "Replace the initial two-sided membership requirement with a one-sided, outcome-priced reconciliation-recovery service distributed through an OCPI integrator or charge-management vendor: ingest one buyer's records, generate counterparty-ready evidence and credit claims under existing contracts, and charge a fixed minimum plus a share of verified recovery or savings. Only convert repeated rules into a licensed bilateral workflow after measured payback, reducing coordinated adoption, CAC, and premature network operating obligations.",
+  "interaction_adjustment": -0.2,
+  "judge_id": "c7-working-settle7-05",
+  "main_structural_strength": "A bounded, no-custody paid audit can test the residual exception-governance problem using existing billing records before the founder commits to a high-availability network, while any accepted rules and outcomes could become reusable operational assets.",
+  "primary_score_limiter": "The business requires enough recoverable bilateral reconciliation value to pay for two-party onboarding and ongoing rule, support, and liability costs, but neither that value nor the resulting unit economics is evidenced, and incumbent bundles plus OCPI standardization compress the available wedge.",
+  "qualified": false,
+  "raw_response_path": "artifacts/research/raw-c7-working-settle7-05.json",
+  "raw_response_sha256": "8927b7622b4509123a5a8cebe1bf8d1f8a4697faca79b7fb357836dc10ebca62",
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 2,
+  "strongest_disconfirming_evidence": "Hubject already provides CDR rating, invoicing, clearing, and settlement at large network scale, while GIREVE documents CDR validation, disputes, and delegated invoicing and OCPI is standardizing invoice-to-CDR reconciliation; together these directly challenge the premise that an independent mapping and clearing layer can own a scarce control point.",
+  "unrounded_score": 3.29
+}

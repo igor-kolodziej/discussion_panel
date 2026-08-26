@@ -1,0 +1,74 @@
+{
+  "candidate_id": "settle6-04",
+  "claims": [
+    {
+      "claim_id": "settle6-04-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1804/2026-01-08"
+      ],
+      "statement": "EU rules require public charging operators to make static and dynamic data, including operational status and availability, accessible through APIs."
+    },
+    {
+      "claim_id": "settle6-04-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg_impl/2025/655/oj/eng"
+      ],
+      "statement": "The implementing rules require dynamic charging data to update rapidly and impose source data-quality controls."
+    }
+  ],
+  "contrary_evidence": [
+    "Public operational-status data are not themselves proof that a private SLA was breached or that a credit is owed."
+  ],
+  "economics": {
+    "acquisition_route": "UNVALIDATED: one-to-many partnerships with charger installers, fleet-leasing firms, energy managers and insurance brokers.",
+    "capital_required_pln": 110000,
+    "founder_net_worth_path": "UNVALIDATED: cover 3,000 chargepoints by year 3 and 20,000 by year 5, reaching founder-owned equity plus retained cash above PLN 5m in years 6-7.",
+    "founder_time": "UNVALIDATED: 3 hours per day for a single CPO contract template and pilot portfolio.",
+    "gross_margin_basis": "UNVALIDATED: automated availability and invoice matching, with field-evidence review only for disputed outages.",
+    "payback": "UNVALIDATED: channel CAC recovered after 25 credited incidents or 7 months.",
+    "pricing": "UNVALIDATED: portfolio platform fee plus a share of accepted SLA credits; all commercial figures in this economics object, including capital_required_pln, are unvalidated.",
+    "retention_or_repeat": "UNVALIDATED: continuous charging operations create recurring monthly reconciliation and renewal leverage."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Resolved claims produce model- and operator-specific failure, exclusion and credit benchmarks",
+    "customer": "Fleet depots, landlords and charging-site operators with contracted uptime promises",
+    "distribution_mechanism": "Installer, fleet-leasing and energy-service channels",
+    "offer_and_business_model": "Evidence capture, eligibility determination, claim filing and credit reconciliation for a success fee",
+    "payer_and_paid_event": "The site owner or fleet pays after the CPO or OEM issues a verified service credit",
+    "problem_trigger": "A charger is unavailable or a contracted session fails beyond an SLA allowance"
+  },
+  "founder_fit": [
+    "Energy and data adjacency",
+    "Can validate with a small site portfolio",
+    "Outcome fee makes value measurable",
+    "No camera-led distribution"
+  ],
+  "parent": null,
+  "risks": [
+    "Contract heterogeneity",
+    "False outage attribution",
+    "CPO refusal to accept third-party evidence",
+    "Low recoverable credit value"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2023/1804/2026-01-08",
+    "https://eur-lex.europa.eu/eli/reg_impl/2025/655/oj/eng"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Outcome-priced infrastructure SLA recovery service",
+    "control_point": "The independently timestamped uptime evidence and invoice-level credit reconciliation",
+    "critical_dependency": "Contracts must contain enforceable credits and data must distinguish charger failure from vehicle, network and user causes"
+  },
+  "thesis": "For fleet depots and charging-site portfolios, independently reconcile charger availability, successful sessions, field-service records and the CPO or OEM contract. When a service-level failure qualifies, produce the claim packet and match the eventual credit to the invoice. Charge on accepted credits, distributed through charging installers, fleet lessors and energy-service firms; the accepted and rejected claims become a charger reliability and contract-enforceability asset.",
+  "title": "EV Chargepoint SLA Credit Recovery",
+  "uncertainties": [
+    "Prevalence of credit-bearing SLAs",
+    "Availability of session-level APIs",
+    "Installer channel incentives"
+  ],
+  "version": 1
+}

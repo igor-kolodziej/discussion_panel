@@ -1,0 +1,119 @@
+{
+  "assumptions": [
+    "The product remains a non-certifying decision-support layer: source, scope, owner, expiry, and human approval are preserved for every mapped assertion.",
+    "An MSP can lawfully supply the necessary questionnaire and supplier-evidence data and can exchange records with incumbent GRC systems under contract.",
+    "A bounded prototype and paid design partnership fit the founder's 25-hour weekly ceiling and 85000 PLN budget, while specialist security and legal work is purchased rather than improvised.",
+    "Pricing, supplier activation, customer acceptance of reuse, and MSP channel appetite are unresolved commercial variables rather than assumed failures."
+  ],
+  "base_score": 5.03,
+  "candidate_id": "channel-06",
+  "candidate_sha256": "70de83606f857695c640807a5ced6e7e74e479fa806b8b930f55df87839555ee",
+  "candidate_version": 2,
+  "constrained_score": 4.83,
+  "evaluation_type": "working",
+  "evidence_needed_for_higher_score": "A paid MSP design partnership should show customer permission to reuse evidence, supplier completion and renewal rates, documented review hours saved, clean import or export with incumbent systems, acceptable liability and security terms, and a first-year fee repaid within 12 months without bespoke support.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "NIS2 creates recurring direct-supplier review work, and an MSP-operated provenance and expiry ledger addresses a concrete coordination burden. The insight is useful but not novel: ProcessUnity already implements one-assessment, share-many-times reuse, and several suites cover adjacent evidence workflows.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Supply-chain security is a mandatory and recurring concern, while ENISA's reported gaps in dedicated roles and budget make labour-saving support credible. No reviewed evidence establishes willingness to pay for this overlay, supplier completion rates, or customer acceptance of reused evidence, so purchase intensity remains uncertain.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Annual MSP minimums plus active-supplier fees could produce recurring revenue and 75-85% mature gross margins. The proposed prices, CAC, implementation burden, support cost, payback, and retention are unvalidated, and the founder-wealth scenario is sensitive to reaching 30000 active records without bespoke integrations eroding a 20% EBITDA target.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Polish or CEE MSPs serving mid-market NIS2-scope customers form a coherent initial segment with repeat review volume. The packet does not establish the number of accessible MSPs, records per partner, or whether that regional beachhead alone is economically sufficient.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "MSP ownership, regional focus, and interoperability could create a narrow position, but the central reuse mechanism and most surrounding capabilities are already offered by ProcessUnity, Whistic, OneTrust, Vanta, and Drata. Large platforms can bundle a provenance-and-expiry feature, making domination unlikely without privileged channel control.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A successful MSP workflow could extend across customers, supplier categories, sectors, geographies, mappings, renewals, and incident updates. Expansion is constrained by sector-specific requirements, customer-specific risk judgments, and the need to preserve interoperability rather than impose a universal questionnaire.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Verified mapping history, expiry behaviour, and approved reuse patterns could accumulate into useful workflow data. The network effect is unproven, data must remain portable, MSP concentration weakens control, and incumbent GRC vendors already possess larger datasets and installed distribution.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "A tightly scoped ledger may be simpler and more MSP-aligned than replacing a full GRC suite. There is no measured advantage in review time, completion, accuracy, price, or renewal, and evidence reuse by itself is directly matched by established products.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "NIS2 and Regulation 2024/2690 create current attention and recurring supplier-governance obligations, while understaffed processes favour automation. Momentum is real but uneven because detailed rules have a defined sectoral scope rather than establishing one universal EU review template.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "One MSP design partner could expose hundreds of supplier reviews and become a leveraged channel. White-label appetite, data access, integrations, partner economics, and referral repeatability are all unknown, while concentration can turn the channel into bespoke enterprise service work.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "The founder fits structured data, automation, and a low-camera B2B build, and a prototype is feasible within available time and capital. Production operation involves a high-value security-data target, GDPR processor duties, penetration testing, insurance, liability allocation, and careful human approval that require specialists and disciplined scope.",
+      "score": 5,
+      "status": "scored"
+    }
+  ],
+  "final_score": 4.8,
+  "highest_value_structural_change": "Turn the product into a contractually embedded, white-label provenance and expiry module for one underserved regional MSP network with a guaranteed annual minimum and standard GRC connectors; sell measured managed-compliance capacity rather than a horizontal passport.",
+  "interaction_adjustment": -0.2,
+  "judge_id": "c2-working-channel-06",
+  "main_structural_strength": "A regulation-backed, recurring review trigger can be aggregated through MSPs, and provenance plus expiry plus human approval is a coherent workflow unit rather than a vague compliance score.",
+  "primary_score_limiter": "The product depends on an unvalidated MSP channel while offering capabilities that established GRC and security-exchange vendors already bundle, leaving weak evidence of a durable reason to adopt a small overlay.",
+  "qualified": false,
+  "raw_response_path": "artifacts/research/raw-c2-working-channel-06.json",
+  "raw_response_sha256": "3ef370c3920ddb5093a868b085ddae8d30fb830cf9a56bcf5c9ee4feb58001bc",
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 2,
+  "strongest_disconfirming_evidence": "ProcessUnity explicitly offers one assessment shared with multiple customers, while Whistic, OneTrust, Vanta, and Drata cover the surrounding inventory, questionnaire, evidence, monitoring, and reassessment workflows.",
+  "unrounded_score": 4.83
+}

@@ -1,0 +1,137 @@
+{
+  "candidate_id": "settle9-02",
+  "claims": [
+    {
+      "claim_id": "settle9-02-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.podatki.gov.pl/wykaz-podatnikow-vat-wyszukiwarka/?mnuid=173"
+      ],
+      "statement": "Poland's official VAT list exposes registered business settlement accounts and historical-date checks, providing a free official evidence source for Polish suppliers."
+    },
+    {
+      "claim_id": "settle9-02-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2024/886/oj/eng",
+        "https://finance.ec.europa.eu/consumer-finance-and-payments/payment-services/payment-services_en"
+      ],
+      "statement": "EU Regulation 2024/886 requires payer PSPs to provide Verification of Payee before authorisation, free to payment-service users, with the non-euro-area rollout reaching Poland in 2027."
+    },
+    {
+      "claim_id": "settle9-02-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.europeanpaymentscouncil.eu/document-library/implementation-guidelines/verification-payee-scheme-inter-psp-api-specifications",
+        "https://www.europeanpaymentscouncil.eu/faq/verification-payee-scheme/api-specifications?page=1"
+      ],
+      "statement": "The EPC's published VoP API is for the inter-PSP space only, so it does not create a general entitlement for an independent AP application to query VoP results."
+    },
+    {
+      "claim_id": "settle9-02-c4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://support.nordeaopenbanking.com/hc/en-us/articles/25160311028636-Verification-of-Payee-VoP-in-Corporate-Payout-API-FAQ"
+      ],
+      "statement": "Nordea's corporate API documentation integrates VoP into payment initiation but states there is no separate pre-payment account/name validation endpoint returning JSON, illustrating bank-specific access constraints."
+    },
+    {
+      "claim_id": "settle9-02-c5",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.knf.gov.pl/dla_konsumenta/kampanie_informacyjne/cyberoszustwa_inwestycyjne/schematy_oszustw/business_e-mail_compromise"
+      ],
+      "statement": "Poland's financial supervisor describes BEC attacks that impersonate suppliers, introduce new account numbers and induce high-value transfers, supporting a real operational control problem."
+    },
+    {
+      "claim_id": "settle9-02-c6",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.surepay.eu/pricing-uk/",
+        "https://trustpair.com/gb/"
+      ],
+      "statement": "Direct incumbents already sell supplier-account verification, master-data controls and ERP-integrated payment security; SurePay publicly prices UK portal plans at GBP 2400 and GBP 4900 per year, while Trustpair markets end-to-end supplier onboarding and monitoring."
+    },
+    {
+      "claim_id": "settle9-02-c7",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2024/886/oj/eng",
+        "https://www.surepay.eu/pricing-uk/"
+      ],
+      "statement": "Pricing power must come from workflow, supplier remediation, layered evidence and audit history rather than reselling the legally free bank name check."
+    }
+  ],
+  "contrary_evidence": [
+    "Verification of Payee must be free to the payment-service user, removing standalone pricing power from the core name/IBAN match.",
+    "EPC specifications are inter-PSP only and a bank's corporate API may expose VoP only inside payment initiation, not as a reusable supplier-master query.",
+    "SurePay and Trustpair already offer overlapping corporate account validation, supplier onboarding, monitoring and audit functions with established bank or ERP integrations.",
+    "The Polish VAT white-list check is free and already accessible, so registry lookup alone is not a defensible product."
+  ],
+  "economics": {
+    "acquisition_route": "Target a short list of Polish accounting and AP software vendors for one paid or otherwise economically testable design-partner pilot. The host, rather than the founder, would activate the module across managed companies. No partner commitment, customer-acquisition cost, conversion rate or revenue-share evidence exists.",
+    "capital_required_pln": 50000,
+    "founder_net_worth_path": "Unproven. OEM and portfolio licensing could reduce customer-acquisition and support cost because one platform contract can reach many managed entities, but no partner, platform fee, activation volume, churn or valuation evidence exists. A path to at least 5 million PLN of founder net worth requires a repeatable multi-platform licensing engine or profitable expansion through a sufficiently large first portfolio; no timing can yet be supported.",
+    "founder_time": "A registry and remediation SDK plus one sandbox integration could fit 12-18 hours weekly. Platform procurement, security review and integration spikes may still exceed the founder's part-time envelope and must be staged after an economically testable pilot rather than supported through simultaneous direct SME sales.",
+    "gross_margin_basis": "Potential contribution leverage is better than entity-by-entity selling because one host adapter and support relationship can serve a portfolio, but margin is unmeasured. Partner-specific integration, revenue share, exception operations, hosting, security and liability costs could dominate early revenue.",
+    "payback": "Unknown. A single platform contract could amortise acquisition and implementation across activated managed entities, but there is no evidence for platform sales cycle, implementation cost, activation rate, renewal or contract value.",
+    "pricing": "Unvalidated hypothesis: an annual OEM platform minimum plus a portfolio- or usage-linked fee for activated supplier-change control and audit workflow, never a fee for the legally free VoP result. No amount should be modelled as established until a platform accepts a paid pilot or binding commercial terms.",
+    "retention_or_repeat": "An annual host contract and embedding at supplier-change and payment gates could create platform-level renewal and recurring managed-entity usage. Actual activation, event frequency, switching cost and renewal intent are unknown."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Host-permissioned history of resolved supplier-name variants, change outcomes and exception rules plus integration depth across the platform's portfolio, subject to contractual data rights and lawful retention",
+    "customer": "Polish accounting or AP software platforms that stage supplier onboarding, bank-detail changes or payment initiation for portfolios of business customers",
+    "distribution_mechanism": "One narrowly targeted platform design partnership followed by bundled activation to that host's customer portfolio; no separate SME sales motion or assumed bank access",
+    "offer_and_business_model": "White-label SDK and hosted control service embedded in the platform: freeze changes, check official registries, accept bank-provided VoP evidence only through the host's authorised interface, route secure remediation and return an auditable approval packet",
+    "payer_and_paid_event": "The host accounting or AP platform pays an annual OEM minimum plus a portfolio- or usage-linked fee when the embedded supplier-change control is activated; pricing and willingness to pay are unvalidated",
+    "problem_trigger": "A managed business user's supplier is created or changes bank details inside the host platform before a material payment, creating a freeze-and-remediation event"
+  },
+  "founder_fit": [
+    "Entity resolution, anomaly detection, audit evidence and SDK automation match the founder's data-science and finance interests.",
+    "One platform integration and no direct SME support fleet are more compatible with part-time execution and lower recurring social load, although winning the first platform still requires concentrated commercial work.",
+    "A registry and remediation prototype avoids fund custody and direct EPC access; production security and data handling can be staged only after a platform agrees to an economically testable pilot."
+  ],
+  "parent": {
+    "candidate_id": "settle9-02",
+    "version": 4
+  },
+  "risks": [
+    "No accounting or AP platform has committed to buy, distribute or integrate the module, so the redesigned route may fail at its sole initial dependency.",
+    "The host may lack rights to expose, store or export a bank's VoP response; the module must remain useful through registry, remediation and approval controls without claiming such access.",
+    "A platform may build the surrounding workflow itself or choose SurePay, Trustpair, a bank or an ERP incumbent instead of an OEM module.",
+    "A misleading assurance label can cause users to override callback or dual-approval controls and create liability.",
+    "Supplier and sole-trader data require minimisation, access control, retention limits, tenant isolation and a documented lawful basis.",
+    "Platform security, procurement and integration requirements may exceed the stated prototype capital and founder-time envelope before commercial proof."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.podatki.gov.pl/wykaz-podatnikow-vat-wyszukiwarka/?mnuid=173",
+    "https://eur-lex.europa.eu/eli/reg/2024/886/oj/eng",
+    "https://finance.ec.europa.eu/consumer-finance-and-payments/payment-services/payment-services_en",
+    "https://www.europeanpaymentscouncil.eu/document-library/implementation-guidelines/verification-payee-scheme-inter-psp-api-specifications",
+    "https://www.europeanpaymentscouncil.eu/faq/verification-payee-scheme/api-specifications?page=1",
+    "https://www.knf.gov.pl/dla_konsumenta/kampanie_informacyjne/cyberoszustwa_inwestycyjne/schematy_oszustw/business_e-mail_compromise",
+    "https://www.surepay.eu/pricing-uk/",
+    "https://trustpair.com/gb/",
+    "https://support.nordeaopenbanking.com/hc/en-us/articles/25160311028636-Verification-of-Payee-VoP-in-Corporate-Payout-API-FAQ"
+  ],
+  "stage": "frozen",
+  "structure": {
+    "commercial_archetype": "B2B2B OEM supplier-control module with an annual platform minimum and portfolio-linked usage",
+    "control_point": "the host platform's supplier-master change and payment-initiation gate",
+    "critical_dependency": "one accounting or AP platform contract that combines embedded distribution with explicit rights for any VoP evidence; registry and remediation controls must operate without direct EPC access"
+  },
+  "thesis": "License a white-label supplier-change control module to a Polish accounting or AP platform rather than selling individual SMEs a standalone verifier. The host triggers a freeze when a managed client creates or changes supplier bank details, the module checks the official VAT list, and the host passes any bank-provided VoP response only under its contractual rights. Mismatches move through secure supplier remediation and dual approval, returning an auditable packet to the host. The platform pays for the OEM control and audit layer through an annual minimum plus portfolio- or usage-linked fees, so one integration can distribute across its client base. This converts access and distribution from two uncommitted dependencies into one explicit design-partner prerequisite, but it does not assume a partner, reusable VoP access, paid conversion or viable economics.",
+  "title": "Embedded Supplier-Change Control Module",
+  "uncertainties": [
+    "Whether any Polish accounting or AP platform will accept an economically testable design-partner pilot",
+    "Whether the host has contractual rights to pass, retain and export a bank-provided VoP response",
+    "Platform willingness to pay, annual minimum, usage basis, revenue share, sales cycle and procurement burden",
+    "Activation and recurring event rates across a host's managed-company portfolio",
+    "False-match, supplier-completion and manual-escalation rates for Polish company names and sole traders",
+    "Per-platform integration effort, security review, certification, hosting and professional-liability cost",
+    "Whether the registry and remediation layer is valuable enough when no reusable VoP response is available",
+    "Whether host-specific data rights permit learning to compound across tenants or platforms"
+  ],
+  "version": 5
+}

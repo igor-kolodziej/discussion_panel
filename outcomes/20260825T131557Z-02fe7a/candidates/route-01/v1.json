@@ -1,0 +1,73 @@
+{
+  "candidate_id": "route-01",
+  "claims": [
+    {
+      "claim_id": "route-01-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://joint-research-centre.ec.europa.eu/photovoltaic-geographical-information-system-pvgis_en"
+      ],
+      "statement": "The European Commission's PVGIS provides open solar-radiation and photovoltaic-performance data plus APIs suitable for automated expected-yield baselines."
+    },
+    {
+      "claim_id": "route-01-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://iea-pvps.org/key-topics/guidelines-for-operation-and-maintenance-of-photovoltaic-power-plants-in-different-climates/"
+      ],
+      "statement": "IEA PVPS operation-and-maintenance guidance treats monitoring, forecasting, performance analysis, and performance indicators as core PV O&M activities."
+    }
+  ],
+  "contrary_evidence": [
+    "Many inverters already ship with free monitoring portals, so generic dashboards have little value.",
+    "Residential owners may tolerate modest underperformance rather than pay a monthly fee."
+  ],
+  "economics": {
+    "acquisition_route": "Validate on 20-50 systems from the family-company network, then sell one fleet deployment to an inverter distributor or installer group.",
+    "capital_required_pln": 55000,
+    "founder_net_worth_path": "Hypothesis: 30000 active sites at 30 PLN monthly net revenue yield 10.8m PLN ARR; at 30% EBITDA, 4x EBITDA, and 65% founder ownership, business equity is about 8.4m PLN in year 5-7. This counts equity only and does not double-count retained earnings.",
+    "founder_time": "Hypothesis: 12-18 hours weekly for the first 12 months, with installer staff performing all site visits.",
+    "gross_margin_basis": "Hypothesis: 75-85% software gross margin after telemetry, support, and channel share once integrations are stable.",
+    "payback": "Hypothesis: 120-300 PLN activation and support cost per site, recovered in 5-10 months of net subscription revenue.",
+    "pricing": "Hypothesis: 39-59 PLN per site per month retail, with 20-30% retained by the installer; no field-service cost is included.",
+    "retention_or_repeat": "Hypothesis: four-year average retention because the alert history and warranty record remain tied to the system; annual service events reinforce value."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Normalized fault signatures, confirmed causes, and repair outcomes improve triage across inverter and installation types",
+    "customer": "Residential and small-commercial PV owners served by regional installers",
+    "distribution_mechanism": "Installers and inverter distributors bundle activation into handover, warranty, and annual-service workflows",
+    "offer_and_business_model": "White-label monitoring, triage, and warranty-evidence subscription with field work billed separately by the installer",
+    "payer_and_paid_event": "Owner pays a recurring monitoring fee at installation or maintenance renewal; installer receives a disclosed share",
+    "problem_trigger": "A newly commissioned or aging PV system produces less than weather-adjusted expectations or develops an intermittent fault"
+  },
+  "founder_fit": [
+    "Parents' renewable-energy installer can supply a bounded, trusted pilot and operational feedback.",
+    "Weather normalization, anomaly detection, and automated triage match the founder's data-science skills.",
+    "A reseller-led sale avoids a consumer personal brand and can be operated part-time before scale."
+  ],
+  "parent": null,
+  "risks": [
+    "False alerts could create service cost and installer distrust.",
+    "Inverter vendors can restrict API access or change schemas.",
+    "Warranty wording could accidentally imply a financial production guarantee."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://joint-research-centre.ec.europa.eu/photovoltaic-geographical-information-system-pvgis_en",
+    "https://iea-pvps.org/key-topics/guidelines-for-operation-and-maintenance-of-photovoltaic-power-plants-in-different-climates/"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "channel-sold preventive maintenance subscription",
+    "control_point": "Weather-normalized system health record and service-dispatch evidence",
+    "critical_dependency": "Installer cooperation and reliable access to inverter telemetry"
+  },
+  "thesis": "Give solar installers a white-label, recurring service they can attach at handover: weather-normalized yield monitoring, loss alerts, remote triage, and a warranty evidence log. The installer already owns the customer relationship and earns a revenue share while avoiding undiagnosed underperformance; the software company accumulates a cross-fleet failure-and-remediation dataset without operating a field-service workforce.",
+  "title": "Installer-Wrapped Solar Yield Assurance",
+  "uncertainties": [
+    "Which inverter APIs are stable enough for a low-support pilot?",
+    "Will installers sell the service at handover or include it only in premium maintenance plans?",
+    "How much avoided truck-roll cost can be demonstrated in one Polish installer fleet?"
+  ],
+  "version": 1
+}

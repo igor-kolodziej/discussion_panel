@@ -1,0 +1,118 @@
+{
+  "assumptions": [
+    "The initial buyer is a fleet with a recurring route-specific charging shortfall and predictable dwell windows for which ordinary public charging or near-term depot construction is materially inferior.",
+    "The pilot uses an incumbent compliant charging and payment stack, treats applicable sites as publicly accessible, and avoids custom software and grid upgrades.",
+    "Legally usable host rights, qualified local operations, and fallback capacity can be procured within the stated pilot capital, although the packet does not establish their actual cost or availability."
+  ],
+  "base_score": 4.77,
+  "candidate_id": "rights8-07",
+  "candidate_sha256": "c7eef3a9c469375fcb74160a87ec190db6eece0a62f058bd55227c1c0bf0f2ac",
+  "candidate_version": 5,
+  "constrained_score": 4.77,
+  "evaluation_type": "holdout_native",
+  "evidence_needed_for_higher_score": "A signed conditional take-or-pay pilot with a named fleet; legally reviewed, enforceable options from enough compatible sites to provide primary and fallback capacity; and paid-pilot data showing delivered availability, blocked-bay and fault rates, fallback use, support workload, service credits, acquisition cost, and positive contribution after all host, platform, compliance, insurance, and operator costs. Renewal or a second independently sold cluster would materially strengthen the scalability case.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "The candidate correctly distinguishes software reservation from delivered physical availability and focuses the offer on enforceable bay access, uptime, fallback, and accountability. Demand-gated activation and reuse of an incumbent stack make the insight commercially coherent, although the assumed gap between fleet alternatives and the proposed SLA is not locally validated.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Charging availability and operational windows are credible fleet constraints, especially where depot charging is unavailable or too slow to add. However, there is no named local buyer, quantified cost of the shortfall, signed commitment, pricing test, or evidence that a fleet will accept take-or-pay terms before reliability is proven.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Take-or-pay revenue, energy pass-through, activation only after modeled coverage, and limited pilot capital are sensible risk controls. The proposed pricing, margin, payback, retention, host payments, fallback costs, service-credit exposure, support burden, and multi-cluster owner earnings are all unvalidated, while one-anchor concentration can strand committed supply.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "One route-specific anchor and a compact Warsaw or Wielkopolska supply cluster form a focused, testable beachhead. Category adoption and charging constraints support plausibility, but the packet does not establish enough local electric fleets, urgent route gaps, compatible idle chargers, or density for economical redundancy in the first micro-market.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "Exclusive physical rights and a reliable local operating record could create a strong position in a narrow route cluster. Yet incumbent platforms already provide tariffs, access controls, roaming, and reservation functions, and CPOs, parking operators, installers, or fleets could replicate the managed-service layer if the opportunity proves attractive.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A proven cluster could extend to additional anchors, routes, fleet types, and cities, with operating data and contract templates lowering some subsequent setup cost. Expansion nevertheless requires new local rights, compliance review, fallback capacity, and operators in each cluster, so adjacency is operationally intensive rather than naturally low-cost.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Longer-lived exclusive site windows, measured reliability, trained operators, and dense fallback coverage could compound into meaningful local switching costs and reputation. The duration and exclusivity of those rights are unknown, the operational playbook is copyable, and the proposal has no demonstrated proprietary technology, network effect, or locked distribution channel.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "If delivered, guaranteed physical availability with monitored fallback is materially stronger for a reliability-sensitive fleet than an ordinary digital reservation. Its advantage over depot investment, existing public networks, or direct fleet-CPO contracting is not quantified, and the reliability promise may require costs that erase the customer or provider benefit.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "Commercial EV adoption is growing and infrastructure gaps create a plausible window for capacity services. The low starting penetration, infrastructure and total-cost constraints, and the added public-charging compliance burden can delay local demand, so favorable category momentum does not yet establish immediate cluster economics.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "Installer and local-business relationships may help source sites, and a single-anchor account strategy avoids broad marketplace acquisition. Selling an unproven take-or-pay SLA, then securing multiple enforceable host rights, is a difficult two-sided enterprise sale; no repeatable fleet referral channel, conversion evidence, sales-cycle data, or customer acquisition cost is shown.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "Using existing software and avoiding grid work makes a bounded pilot feasible within the founder's technical and capital profile. Execution still combines site diligence, public-charging compliance, contract allocation, hardware compatibility, physical bay control, continuous fault response, fallback delivery, and outsourced operations, several of which conflict with part-time founder availability until a reliable operator is secured.",
+      "score": 4,
+      "status": "scored"
+    }
+  ],
+  "final_score": 4.8,
+  "highest_value_structural_change": "Replace fragmented one-host-at-a-time supply aggregation with a master partnership with one compliant multi-site CPO, parking portfolio, or fleet-service operator that already controls and can physically enforce enough compatible primary and fallback bays. Keep the conditional anchor contract, but put site access, CPO duties, and local exception response under that partner's enforceable operating responsibility so the business sells a measurable enterprise availability layer without independently recreating a distributed charging operation.",
+  "interaction_adjustment": 0,
+  "judge_id": "c8-holdout-rights8-07-j1",
+  "main_structural_strength": "The design targets the physical reliability gap that generic charging software does not solve, while demand-gating supply commitments and reusing an incumbent compliance stack to limit speculative capital and product build.",
+  "primary_score_limiter": "The essential transaction is unvalidated on both sides: an anchor must accept contribution-positive take-or-pay terms before proof, while enough hosts must grant enforceable primary and fallback rights at costs that still support the SLA after operations, compliance, and service credits.",
+  "qualified": false,
+  "raw_response_path": "holdout/jobs/raw-c8-holdout-rights8-07-j1.json",
+  "raw_response_sha256": "6a23afa1b0280dad49e108fcfc02841e819e77ec618cc0b688df93e8dd6f640c",
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 2,
+  "strongest_disconfirming_evidence": "Incumbent documentation shows that tariffs, access groups, roaming, tracking, and charger reservations are already available, while reservations do not ensure a physically free bay. This removes the software moat and makes costly, failure-prone site control and local operations the candidate's indispensable differentiator.",
+  "unrounded_score": 4.77
+}

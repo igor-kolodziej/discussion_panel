@@ -1,0 +1,86 @@
+{
+  "candidate_id": "transition-08",
+  "claims": [
+    {
+      "claim_id": "transition-08-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/dostepnosc-cyfrowa/polski-akt-o-dostepnosci--uslugi-handlu-elektronicznego"
+      ],
+      "statement": "Polish government guidance says economic operators have had to ensure digital accessibility from 28 June 2025 under the Polish Accessibility Act, which implements the European Accessibility Act."
+    },
+    {
+      "claim_id": "transition-08-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/dostepnosc-cyfrowa/polski-akt-o-dostepnosci--uslugi-handlu-elektronicznego"
+      ],
+      "statement": "The Polish guidance describes e-commerce broadly as online consumer contracting for products or services and explicitly exempts microenterprises providing services."
+    },
+    {
+      "claim_id": "transition-08-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/dostepnosc-cyfrowa/obowiazki-informacyjne-w-pad"
+      ],
+      "statement": "Covered e-commerce providers must publish accessible information about how the service meets requirements and notify the Minister of Digital Affairs when the service does not comply, including planned corrective action or a claimed exception."
+    }
+  ],
+  "contrary_evidence": [
+    "Microenterprises providing services are exempt, removing many small online shops from the direct buyer pool.",
+    "Free scanners and agency audits are widely substitutable for basic automated detection.",
+    "Automated checks cannot establish full accessibility compliance and can create false confidence."
+  ],
+  "economics": {
+    "acquisition_route": "Per-portfolio agency resale, CMS marketplace listings, and fixed-price baseline scans for covered merchants",
+    "capital_required_pln": 45000,
+    "founder_net_worth_path": "Scenario, not evidence: 2,000 storefronts at PLN 6,000 annual recurring revenue yields PLN 12m revenue before audits; at a 40% operating margin, cumulative distributions over seven to nine years could build roughly PLN 20m founder net worth",
+    "founder_time": "Three hours per day for automation and issue triage, with expert manual reviews scheduled and subcontracted rather than handled ad hoc",
+    "gross_margin_basis": "Automated release checks and evidence storage can exceed 85% gross margin; manual spot checks lower the blended target to about 70%-75%",
+    "payback": "Target under three months because setup fees pay for baseline mapping and agency commission",
+    "pricing": "Assumption: PLN 2,000-8,000 baseline setup and PLN 300-1,200 per storefront per month, with expert remediation quoted separately by partners",
+    "retention_or_repeat": "Themes, checkout flows, plugins, and content change frequently, so regression monitoring repeats monthly if the product catches issues before complaints"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A labelled corpus of recurring accessibility defects and verified fixes at the theme, component, checkout, and CMS-plugin level",
+    "customer": "Polish e-commerce service providers above microenterprise status and WooCommerce or custom-web agencies managing portfolios of such consumer storefronts",
+    "distribution_mechanism": "Polish web agencies, commerce-platform extensions, and accessibility specialists resell the release gate across existing merchant portfolios",
+    "offer_and_business_model": "CI and URL-based testing, CMS-component issue clustering, annotated remediation tickets, accessible disclosure generation, and versioned evidence, with optional expert spot checks; per-site setup and subscription",
+    "payer_and_paid_event": "A web agency or merchant pays for a baseline assessment when a site enters coverage, then pays per storefront each month when deployments are scanned and evidence is refreshed",
+    "problem_trigger": "The Polish Accessibility Act has applied since 28 June 2025 to covered e-commerce services, requiring digital accessibility, public information on how the service meets requirements, and regulator notification when identified gaps are being remediated"
+  },
+  "founder_fit": [
+    "Automated testing, defect clustering, and regression analytics fit data and software skills",
+    "Agency resale offers portfolio acquisition without a founder brand or frequent individual sales calls",
+    "A single storefront can test demand with limited capital and reversible effort",
+    "Recurring scans and evidence archives form a scalable product rather than a pure audit consultancy"
+  ],
+  "parent": null,
+  "risks": [
+    "Marketing the product as certification rather than evidence support could create legal liability.",
+    "A crawler may miss authenticated checkout and dynamic-component barriers.",
+    "Agency partners may clone the workflow or bundle it at no incremental price.",
+    "Manual remediation demand could overwhelm the intended product model."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.gov.pl/web/dostepnosc-cyfrowa/polski-akt-o-dostepnosci--uslugi-handlu-elektronicznego",
+    "https://www.gov.pl/web/dostepnosc-cyfrowa/obowiazki-informacyjne-w-pad",
+    "https://eur-lex.europa.eu/eli/dir/2019/882/oj/eng"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Compliance release-gate SaaS with partner-delivered remediation",
+    "control_point": "The deployment check that prevents a storefront release from silently degrading its accessibility evidence",
+    "critical_dependency": "Meaningful human-verifiable coverage beyond automated scans and correct identification of merchants outside the microenterprise exemption"
+  },
+  "thesis": "A continuous accessibility release gate for Polish e-commerce services above the microenterprise exemption can combine automated checks, CMS-specific remediation tickets, public accessibility information, and a defensible evidence archive. The product should sell through agencies per managed storefront and explicitly avoid one-click overlay claims; recurring value comes from catching regressions every time a theme, checkout, or campaign changes.",
+  "title": "PAD Release Gate for Polish E-Commerce",
+  "uncertainties": [
+    "The number of covered Polish storefronts not already served by an agency accessibility process is unknown.",
+    "Merchants' willingness to pay monthly after a one-time remediation has not been tested.",
+    "No evidence validates agency resale economics or the 2,000-storefront wealth scenario.",
+    "The minimum defensible frequency and scope of expert manual checks require accessibility-specialist input."
+  ],
+  "version": 1
+}

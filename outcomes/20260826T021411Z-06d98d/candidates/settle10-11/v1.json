@@ -1,0 +1,73 @@
+{
+  "candidate_id": "settle10-11",
+  "claims": [
+    {
+      "claim_id": "settle10-11-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://corporate.visa.com/en/solutions/acceptance/chargebacks.html",
+        "https://usa.visa.com/content/dam/VCOM/regional/na/us/support-legal/documents/compelling-evidence-3.0-merchant-readiness-mar2023.pdf"
+      ],
+      "statement": "Visa says merchants may challenge chargebacks with receipts, shipping records, and customer communications, and CE3.0 uses structured transaction evidence."
+    },
+    {
+      "claim_id": "settle10-11-c2",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://usa.visa.com/solutions/post-purchase-solutions/merchants.html",
+        "https://corporate.visa.com/en/solutions/acceptance/chargebacks.html"
+      ],
+      "statement": "Demand hypothesis: smaller PSPs will buy an evidence layer because manual reviews consume resources and network-specific criteria reward complete structured data."
+    }
+  ],
+  "contrary_evidence": [
+    "Visa and established vendors already offer dispute tools.",
+    "Network rules and access can favor certified incumbent providers."
+  ],
+  "economics": {
+    "acquisition_route": "Win one PSP or commerce-platform integration rather than individual merchants.",
+    "capital_required_pln": 60000,
+    "founder_net_worth_path": "Hypothesis: 100000 monthly disputes at 5 PLN can produce 6 million PLN annual revenue and founder equity above 5 million PLN in five years.",
+    "founder_time": "Four hours daily during payment-network integration.",
+    "gross_margin_basis": "Hypothesis: 85-93% margin for automated evidence assembly and scoring.",
+    "payback": "Hypothesis: 10000 monthly disputes at 5 PLN repay initial capital within eighteen months.",
+    "pricing": "Hypothesis: 2-8 PLN per dispute plus 8-15% of recovered value under a platform contract.",
+    "retention_or_repeat": "Disputes and data retention operate continuously across merchant portfolios."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Merchant-specific evidence completeness and dispute outcomes improve decisioning and retention.",
+    "customer": "EU subscription merchants, marketplaces, payment facilitators, and acquirers.",
+    "distribution_mechanism": "Acquirers, PSPs, and commerce platforms embed it into merchant operations.",
+    "offer_and_business_model": "The API preserves eligible evidence and returns a network-rule-specific response or refund recommendation.",
+    "payer_and_paid_event": "A payment platform or merchant pays per transaction monitored and dispute represented.",
+    "problem_trigger": "A cardholder dispute requests supporting evidence from systems that use different identifiers and retention periods."
+  },
+  "founder_fit": [
+    "Fraud and evidence scoring suit data-science strengths.",
+    "Embedded distribution avoids a personal brand and merchant-by-merchant sales."
+  ],
+  "parent": null,
+  "risks": [
+    "Poor evidence matching could increase losses or dispute ratios.",
+    "Payment data creates PCI and privacy obligations."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://corporate.visa.com/en/solutions/acceptance/chargebacks.html",
+    "https://usa.visa.com/content/dam/VCOM/regional/na/us/support-legal/documents/compelling-evidence-3.0-merchant-readiness-mar2023.pdf",
+    "https://usa.visa.com/solutions/post-purchase-solutions/merchants.html"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Embedded payment-dispute decision and evidence rail.",
+    "control_point": "The tokenized customer-order-fulfilment evidence graph.",
+    "critical_dependency": "Acquirer submission access and reliable merchant data joins."
+  },
+  "thesis": "An acquirer-embedded evidence graph can assemble order, identity, delivery, communication, and prior-transaction proof before a card dispute deadline.",
+  "title": "Merchant Dispute Evidence Graph",
+  "uncertainties": [
+    "Unserved PSP dispute volume is unknown.",
+    "Platform revenue-share economics are unverified."
+  ],
+  "version": 1
+}

@@ -1,0 +1,156 @@
+{
+  "candidate_id": "transition-06",
+  "claims": [
+    {
+      "claim_id": "transition-06-r2-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/PL-EN/TXT/?uri=CELEX%3A32023R2854",
+        "https://digital-strategy.ec.europa.eu/en/library/commission-publishes-frequently-asked-questions-about-data-act"
+      ],
+      "statement": "The Data Act applies from 12 September 2025, while Article 3(1)'s access-by-design obligation applies to connected products and related services placed on the market after 12 September 2026."
+    },
+    {
+      "claim_id": "transition-06-r2-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/PL-EN/TXT/?uri=CELEX%3A32023R2854"
+      ],
+      "statement": "Chapter II does not apply to qualifying micro and small manufacturers or related-service providers unless linked to a non-small enterprise or subcontracted, and it gives a temporary exception to newly medium-sized firms and their newly placed products; the original small-OEM target was therefore overbroad."
+    },
+    {
+      "claim_id": "transition-06-r2-c03",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/PL-EN/TXT/?uri=CELEX%3A32023R2854",
+        "https://digital-strategy.ec.europa.eu/en/factpages/data-act-explained"
+      ],
+      "statement": "The Act covers raw and pre-processed data and relevant metadata that are readily available, but does not require storage or transmission of data that the product design does not retrieve and excludes inferred or derived insights from the basic scope."
+    },
+    {
+      "claim_id": "transition-06-r2-c04",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/PL-EN/TXT/?uri=CELEX%3A32023R2854",
+        "https://digital-strategy.ec.europa.eu/en/factpages/data-act-explained"
+      ],
+      "statement": "User and third-party access must coexist with GDPR legal bases, trade-secret measures and product security exceptions, so an API component alone cannot determine lawful disclosure."
+    },
+    {
+      "claim_id": "transition-06-r2-c05",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://learn.microsoft.com/en-us/rest/api/iothub/",
+        "https://cumulocity.com/docs/device-management-application/device-management-introduction/"
+      ],
+      "statement": "Major IoT platforms already expose secure device identity, twins, messaging, firmware and fleet-management functions, so they or their integrators can bundle a user export and entitlement layer."
+    },
+    {
+      "claim_id": "transition-06-r2-c06",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://aws.amazon.com/iot-core/pricing/?c=iot&p=ft&z=3"
+      ],
+      "statement": "Commodity IoT transport is inexpensive at scale in AWS's published examples, so 2-6 PLN per device per month can only be defended by compliance operations, adapters, support and release evidence rather than hosting cost."
+    },
+    {
+      "claim_id": "transition-06-r2-c07",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.w3.org/TR/wot-thing-description/"
+      ],
+      "statement": "W3C already standardises machine-readable Thing Descriptions for properties, actions, events and security metadata, making a generic schema gateway reproducible while leaving vendor and domain mappings as the implementation burden."
+    },
+    {
+      "claim_id": "transition-06-r2-c08",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng"
+      ],
+      "statement": "The Cyber Resilience Act adds vulnerability and incident-reporting obligations from 11 September 2026 and broader product cybersecurity obligations from 11 December 2027, increasing the security scope of any component in an OEM's product data path."
+    },
+    {
+      "claim_id": "transition-06-r2-c09",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ%3AC_202601695"
+      ],
+      "statement": "The Commission's 2026 standardisation programme still calls for work on data capture, APIs, identity, metadata and interoperability, indicating that a universal cross-sector implementation is not yet a simple fixed standard."
+    }
+  ],
+  "contrary_evidence": [
+    "Qualifying micro and small manufacturers are exempt from Chapter II, removing a significant part of the original target segment.",
+    "The Act does not require an OEM to create, store or transmit product data that its design does not otherwise make retrievable.",
+    "Azure IoT Hub and Cumulocity already provide secure APIs, device identity, data and fleet operations that can be extended to bundle the gateway.",
+    "W3C Thing Descriptions and evolving EU standards make the generic technical layer reproducible rather than scarce.",
+    "GDPR, trade-secret, safety and cybersecurity decisions remain with the OEM and its authorised advisers, not the gateway vendor.",
+    "AWS pricing shows raw IoT connectivity and messaging are too cheap to justify the proposed per-device price without a higher-value operational control point."
+  ],
+  "economics": {
+    "acquisition_route": "Sell one bounded heat-pump or building-control product-line pilot directly, requiring proof of SME status, telemetry authority, identity ownership and a paid statement of work. Use the resulting adapter and release packet to recruit one embedded integrator; do not model integrator distribution before a signed referral or resale commitment.",
+    "capital_required_pln": 100000,
+    "founder_net_worth_path": "Not established by current buyer or market-count evidence. A scenario hurdle is 30 OEMs averaging 180000 PLN recurring annual revenue, or 5.4m PLN ARR, plus implementation revenue used to fund delivery. At an assumed 25% after-tax owner-cash margin after reinvestment, about 1.35m PLN per mature year would require roughly four mature years to accumulate 5m PLN, excluding business equity and before ramp. The OEM count, sales cycle, retention and margin are unvalidated and no valuation is double-counted.",
+    "founder_time": "Four hours per day is plausible for one cloud-only pilot with no firmware changes and an external security or legal reviewer. Concurrent pilots, 24/7 incident duties or bespoke device work are incompatible with continued employment and require hired or partner capacity.",
+    "gross_margin_basis": "A stable gateway on an existing cloud stream can support 70-85% recurring gross margin because commodity connection and message costs are low. Early identity, semantic mapping, security review, customer-cloud deployment and firmware exceptions are implementation labour; treat the first pilots as 35-55% gross margin until a second OEM reuses the adapter.",
+    "payback": "No buyer payback is evidenced. A pilot should compare the prepaid fee with a quoted internal or integrator build and with the value of keeping a dated product release on schedule; fines or broad compliance fear are not used as the denominator.",
+    "pricing": "Test 40000-100000 PLN prepaid for one product-line implementation, then 2-6 PLN per active device per month subject to a 36000-72000 PLN annual minimum. Pricing must be tied to release evidence, operated access and support rather than raw cloud transport, whose commodity cost is far lower.",
+    "retention_or_repeat": "Live access requests, identity, logs and product updates recur, but Azure, Cumulocity and other IoT platforms can add or expose the same surface. Retention depends on tested release evidence, adapters and support embedded in the OEM process, not regulation alone."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Reusable entitlement patterns, field-classification templates, release tests and adapters across telemetry stacks can reduce implementation time; generic API code and AI-generated compliance checklists are reproducible and are not treated as a moat.",
+    "customer": "EU medium-sized and larger connected-equipment OEMs, plus non-exempt small manufacturers linked to a larger enterprise or acting as subcontractors, that already retrieve product telemetry and are refreshing product lines after 12 September 2026.",
+    "distribution_mechanism": "Win one product-line pilot directly through the founder's energy-equipment adjacency, then pursue embedded-development agencies and IoT-cloud integrators only after documenting a repeatable adapter and a paid referral or resale agreement.",
+    "offer_and_business_model": "An SDK and hosted or customer-cloud gateway for user authentication, entitlement, field catalogues, machine-readable access and export, third-party sharing, request logs and pre-contract disclosure evidence; implementation plus annual minimum and active-device or account usage. Firmware changes, legal opinions and creation of new telemetry are excluded or separately supplied by authorised partners.",
+    "payer_and_paid_event": "The OEM pays a fixed implementation fee when one existing telemetry stream and user-identity flow pass agreed access tests, then pays an annual minimum with usage tied to active devices or export accounts.",
+    "problem_trigger": "A product owner or compliance lead must release a connected product, answer an existing user's data request, or support user-directed third-party sharing, but the current device cloud lacks a documented entitlement, metadata, export and request-log layer."
+  },
+  "founder_fit": [
+    "Telemetry schemas, identity, metadata and access analytics fit the founder's data-engineering background.",
+    "The family renewable-energy company can provide domain interviews and a route to heat-pump or building-control OEM contacts without consumer marketing.",
+    "One read-only cloud-stream pilot with prepaid implementation can fit the founder's capital and four-hour daily limit.",
+    "Production security reviews, firmware work and multi-OEM sales cannot remain a solo side project; they require strict scope, an authorised integrator and a traction gate before leaving employment."
+  ],
+  "parent": {
+    "candidate_id": "transition-06",
+    "version": 2
+  },
+  "risks": [
+    "Targeting exempt micro or small manufacturers as mandatory-compliance buyers would misstate the law and collapse demand.",
+    "An access-control error could expose personal, operational or trade-secret data and enter the OEM's cybersecurity incident path.",
+    "Firmware, identity and semantic heterogeneity can turn each product line into bespoke engineering.",
+    "Incumbent IoT platforms and integrators can bundle export, identity and logging before a channel moat forms.",
+    "A compliance checklist or generic AI-generated API is easily reproduced; only repeatable integrations and release adoption can compound.",
+    "OEM procurement, security review and support obligations may exceed a solo founder's part-time capacity.",
+    "Concurrent Data Act, GDPR and Cyber Resilience Act requirements require qualified legal and security review outside the founder's core expertise."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/legal-content/PL-EN/TXT/?uri=CELEX%3A32023R2854",
+    "https://digital-strategy.ec.europa.eu/en/library/commission-publishes-frequently-asked-questions-about-data-act",
+    "https://digital-strategy.ec.europa.eu/en/factpages/data-act-explained",
+    "https://aws.amazon.com/iot-core/pricing/?c=iot&p=ft&z=3",
+    "https://learn.microsoft.com/en-us/rest/api/iothub/",
+    "https://cumulocity.com/docs/device-management-application/device-management-introduction/",
+    "https://www.w3.org/TR/wot-thing-description/",
+    "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ%3AC_202601695"
+  ],
+  "stage": "development",
+  "structure": {
+    "commercial_archetype": "Embedded compliance and user-data access infrastructure with implementation and recurring usage",
+    "control_point": "The tested, logged user-data egress and entitlement component included in the OEM's product-release evidence and operated for live access requests",
+    "critical_dependency": "A non-exempt OEM must control or contractually access an existing retrievable telemetry stream and identity system, accept an external component in the release path, and bound firmware, GDPR, trade-secret, safety and cybersecurity responsibilities"
+  },
+  "thesis": "Provide a white-label, evidence-bearing user-data access gateway for non-exempt EU connected-equipment OEMs that already retrieve telemetry but lack a secure entitlement, metadata, export and third-party-sharing surface. The immediate wedge is one medium-sized or otherwise non-exempt heat-pump, building-control, agricultural or industrial product line: connect one existing cloud stream, document in-scope fields and pre-contract disclosures, and produce request logs and release evidence for products placed on the market after 12 September 2026. This is not a promise to create telemetry the product does not retrieve or to replace firmware engineering.",
+  "title": "Data Act Access Gateway for Industrial Equipment OEMs",
+  "uncertainties": [
+    "The number of non-exempt regional OEMs with retrievable telemetry but no adequate user access surface is unknown.",
+    "OEM willingness to outsource a release-path component and pay the proposed implementation and annual minimum is unknown.",
+    "Whether target OEMs control firmware, cloud, identity and data-use contracts or depend on a platform vendor is unknown.",
+    "Average integration effort, security-review cost and liability allocation across equipment categories are unknown.",
+    "The practical boundary among raw, pre-processed, derived, personal and trade-secret fields requires product-specific legal and technical review.",
+    "Embedded-integrator and IoT-platform referral incentives are unknown and no partner gate is evidenced.",
+    "Sales-cycle length, renewal and the 30-OEM wealth scenario are unsupported by current buyer evidence."
+  ],
+  "version": 3
+}

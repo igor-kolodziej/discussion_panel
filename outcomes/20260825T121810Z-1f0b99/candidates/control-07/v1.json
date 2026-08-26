@@ -1,0 +1,78 @@
+{
+  "candidate_id": "control-07",
+  "claims": [
+    {
+      "claim_id": "control-07-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2025/40/oj"
+      ],
+      "statement": "The EU Packaging and Packaging Waste Regulation requires producer registers and extended producer responsibility for packaging first made available in a Member State."
+    },
+    {
+      "claim_id": "control-07-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2025/40/oj"
+      ],
+      "statement": "The regulation's reporting design includes producer identifiers, reporting periods, packaging quantities by weight and category, and interoperable machine-readable formats, creating a recurring data-reconciliation task."
+    },
+    {
+      "claim_id": "control-07-c03",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2025/40/oj"
+      ],
+      "statement": "Hypothesis: brands operating in three or more EU markets will pay for a single evidence ledger even when filings remain country-specific, especially if it reconciles producer-responsibility invoices to actual shipments."
+    }
+  ],
+  "contrary_evidence": [
+    "The regulation seeks harmonised and open reporting formats, which may let ERP, marketplace, or accounting vendors add basic reporting cheaply.",
+    "Extended producer-responsibility implementation and fees remain country-specific, increasing service burden and legal-review costs."
+  ],
+  "economics": {
+    "acquisition_route": "Revenue-share referrals from 3PLs and accountants, free packaging-liability calculators, and integration-directory listings",
+    "capital_required_pln": 55000,
+    "founder_net_worth_path": "Hypothesis: 300 brands at a 1,800 PLN average monthly fee yields about 6.5m PLN ARR before onboarding; a profitable majority-owned compliance ledger could exceed 5m PLN founder equity in four to seven years",
+    "founder_time": "12-18 hours weekly for the initial country corridor; maintain under 10 hours by partnering for local legal interpretation",
+    "gross_margin_basis": "Core reconciliation software can exceed 80% gross margin; country-specific filing support may reduce blended margin to 60-75%",
+    "payback": "Avoided overpayment, averted filing rework, or saved finance time should repay fees within one reporting cycle; target CAC payback under nine months",
+    "pricing": "Hypothesis: 600-3,000 PLN monthly per brand depending on countries and order volume, plus 3,000-12,000 PLN onboarding",
+    "retention_or_repeat": "Reporting repeats annually or more often, while SKU and country expansion increases account value"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A versioned graph of SKU packaging, fulfilment variants, destinations, filed quantities, corrections, and fee outcomes",
+    "customer": "Emerging consumer brands and e-commerce sellers shipping packaged goods into multiple EU Member States",
+    "distribution_mechanism": "3PL, accounting, marketplace-agency, and producer-responsibility-organisation referrals embedded at cross-border launch",
+    "offer_and_business_model": "SKU-level packaging data ledger, order reconciliation, reporting exports, and evidence vault sold as SaaS",
+    "payer_and_paid_event": "Brand pays monthly by country and order volume, plus optional onboarding and filing-support fees",
+    "problem_trigger": "A brand enters a new country, prepares an EPR report, receives a fee discrepancy, or changes packaging"
+  },
+  "founder_fit": [
+    "Strong data-pipeline and FMCG-adjacent fit, provided the founder uses no employer information or relationships. It is asynchronous, automatable, and can start with one corridor such as Poland-Germany-Czechia through accountants and 3PLs."
+  ],
+  "parent": null,
+  "risks": [
+    "Incorrect weight or destination mapping can cause under-reporting and penalties.",
+    "Country expansion may become a consulting-heavy trap.",
+    "A major e-commerce platform could provide bundled compliance to its merchants."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2025/40/oj"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Cross-border transaction-linked regtech ledger",
+    "control_point": "The canonical mapping from each shipped order to packaging liability and filed evidence",
+    "critical_dependency": "Accurate packaging bills of materials and reliable country-specific reporting interpretation"
+  },
+  "thesis": "Build a transaction-linked packaging ledger for Polish and Central European brands selling across several EU countries. It maps each SKU and fulfilment configuration to packaging materials and destination, reconciles quantities to producer-responsibility registrations and invoices, and produces country-ready reports. Its moat is the longitudinal SKU-order-country compliance graph and correction history embedded with fulfilment partners.",
+  "title": "Cross-Border Packaging Ledger for Emerging Brands",
+  "uncertainties": [
+    "The smallest cross-border seller with enough complexity and budget to buy.",
+    "Whether 3PL and marketplace order data exposes packaging configuration reliably.",
+    "Which filing activities can be automated without acting as a regulated or legally responsible representative."
+  ],
+  "version": 1
+}

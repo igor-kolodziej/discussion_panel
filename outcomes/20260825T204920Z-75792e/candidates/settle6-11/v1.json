@@ -1,0 +1,77 @@
+{
+  "candidate_id": "settle6-11",
+  "claims": [
+    {
+      "claim_id": "settle6-11-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.pzu.pl/_fileserver/item/1512241"
+      ],
+      "statement": "Current PZU home-insurance terms define covered flooding to include water escaping because of installation failure and other specified causes."
+    },
+    {
+      "claim_id": "settle6-11-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.pzu.pl/dla-ciebie-i-rodziny/majatek-podroze-oc/dom-i-mieszkanie/ubezpieczenie-domu",
+        "https://www.pzu.pl/kontakt-i-pomoc/zglaszanie-szkody/co-zrobic-po-szkodzie-lub-zdarzeniu-i-jakie-dokumenty-dostarczyc"
+      ],
+      "statement": "PZU provides home assistance and publishes specific documentation paths for water-damage claims."
+    }
+  ],
+  "contrary_evidence": [
+    "A sensor alert does not establish policy coverage, causation, damage value or insurer acceptance."
+  ],
+  "economics": {
+    "acquisition_route": "UNVALIDATED: portfolio agreements with insurers, housing associations, property managers and plumbing franchises.",
+    "capital_required_pln": 190000,
+    "founder_net_worth_path": "UNVALIDATED: cover 20,000 homes by year 3 and 150,000 by year 6, producing founder equity plus retained cash above PLN 5m in years 6-8.",
+    "founder_time": "UNVALIDATED: 4 hours per day during one-city pilot, falling after dispatcher and plumber playbooks stabilize.",
+    "gross_margin_basis": "UNVALIDATED: software and partner coordination without carrying claim risk or owning plumbing labor.",
+    "payback": "UNVALIDATED: one building portfolio repays deployment CAC after 20 closed events or 12 months.",
+    "pricing": "UNVALIDATED: insurer or housing-manager fee per verified close, with optional avoided-loss bonus defined before deployment; all commercial figures in this economics object, including capital_required_pln, are unvalidated.",
+    "retention_or_repeat": "UNVALIDATED: annual portfolio contracts recur; every verified leak and repair strengthens severity and response models."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Confirmed damage, mitigation and repair outcomes create building and installation risk curves",
+    "customer": "Home insurers, housing associations and multi-building property managers",
+    "distribution_mechanism": "Insurer, housing-manager and plumber-network portfolios",
+    "offer_and_business_model": "Evidence, response and repair-close orchestration paid per verified outcome",
+    "payer_and_paid_event": "The insurer or property manager pays when the claim or assistance case is accepted and closed, or a pre-agreed mitigation outcome is verified",
+    "problem_trigger": "A leak sensor or resident reports uncontrolled water escape"
+  },
+  "founder_fit": [
+    "Quantified-sensor interest",
+    "Outcome data can be modeled",
+    "Portfolio partners provide distribution",
+    "Operations can be delegated after a local pilot"
+  ],
+  "parent": null,
+  "risks": [
+    "False alarms",
+    "Emergency-response liability",
+    "Personal and household data",
+    "Hardware installation quality",
+    "Insurer procurement cycles"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.pzu.pl/dla-ciebie-i-rodziny/majatek-podroze-oc/dom-i-mieszkanie/ubezpieczenie-domu",
+    "https://www.pzu.pl/_fileserver/item/1512241",
+    "https://www.pzu.pl/kontakt-i-pomoc/zglaszanie-szkody/co-zrobic-po-szkodzie-lub-zdarzeniu-i-jakie-dokumenty-dostarczyc"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Insurance and assistance outcome orchestration",
+    "control_point": "The signed event timeline joining sensor evidence, mitigation, repair and insurer closure",
+    "critical_dependency": "Insurer acceptance of sensor evidence and a reliable installer or plumber response network"
+  },
+  "thesis": "Embed with housing managers, insurers and plumber networks to turn a leak sensor alert into a consented evidence timeline: detected water, shutoff or mitigation, plumber diagnosis, repair completion and damage documentation. The paid event is an insurer-accepted claim, assistance close or documented avoided escalation—not sensor monitoring. Verified claim and repair outcomes create installation-specific loss and response models that improve triage and insurer pricing.",
+  "title": "Sensor-to-Water-Claim Settlement",
+  "uncertainties": [
+    "Insurer willingness to pay for verified closes",
+    "Avoided-loss measurement",
+    "Cost of reliable response coverage"
+  ],
+  "version": 1
+}

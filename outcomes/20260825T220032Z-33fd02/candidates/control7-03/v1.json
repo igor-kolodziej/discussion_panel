@@ -1,0 +1,83 @@
+{
+  "candidate_id": "control7-03",
+  "claims": [
+    {
+      "claim_id": "control7-03-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://energy.ec.europa.eu/topics/energy-efficiency/energy-performance-buildings/energy-performance-buildings-directive_en"
+      ],
+      "statement": "The revised EPBD introduces building renovation passports and a common direction for stronger energy-performance certificates and financing mobilization."
+    },
+    {
+      "claim_id": "control7-03-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://czystepowietrze.gov.pl/wez-dofinansowanie/pytania-i-odpowiedzi/nowy-program-czyste-powietrze-nabor-od-20-lipca-2026-r"
+      ],
+      "statement": "The July 2026 Clean Air programme still requires an energy audit and an energy-performance certificate."
+    },
+    {
+      "claim_id": "control7-03-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://czystepowietrze.gov.pl/wez-dofinansowanie/pytania-i-odpowiedzi/nowy-program-czyste-powietrze-obowiazujacy-od-31-marca-2025/42"
+      ],
+      "statement": "As of July 2026, the Clean Air programme said it was still working with banks on a bank pathway under new cooperation rules."
+    }
+  ],
+  "contrary_evidence": [
+    "The bank pathway was not yet operating under the new rules in July 2026, so the proposed distribution gate does not yet exist.",
+    "Mandatory audits already have established qualified providers; normalization alone may not justify a new intermediary."
+  ],
+  "economics": {
+    "acquisition_route": "Family-company pilot, accredited energy auditors, municipal operators, and one financing-channel integration",
+    "capital_required_pln": 65000,
+    "founder_net_worth_path": "Illustrative, unvalidated path: a national channel processing 10000 properties yearly at 500 PLN net contribution plus monitoring could support more than 1.2m PLN operating profit; 70% founder ownership and retained cash could plausibly exceed 5m PLN around year 6-7",
+    "founder_time": "3-4 hours/day, with field inspection and regulated audit work performed by qualified partners",
+    "gross_margin_basis": "Target 55-70% after contracted site inspection, auditor review, data hardware, and support",
+    "payback": "Unvalidated: about 50 completed properties at 1500 PLN contribution each could repay the pilot within 18 months",
+    "pricing": "Unvalidated: 1500-3000 PLN per property plus 40-80 PLN monthly monitoring, with volume pricing to financiers",
+    "retention_or_repeat": "Each property has staged payments; lenders and installers can route recurring portfolios and monitoring can renew annually"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Property-performance baselines, contractor outcome data, accepted templates, and channel integration",
+    "customer": "Banks, retrofit finance providers, municipalities, ESCOs, and quality-focused installers",
+    "distribution_mechanism": "Pilot through the family installer and energy auditors, then embed with one lender or programme operator",
+    "offer_and_business_model": "Standard evidence file, anomaly checks, contractor commissioning pack, and optional metered performance monitoring",
+    "payer_and_paid_event": "Financier, programme operator, installer, or homeowner pays at audit normalization, approved drawdown, and monitoring renewal",
+    "problem_trigger": "A property seeks retrofit finance or subsidy payment and needs credible before-and-after evidence"
+  },
+  "founder_fit": [
+    "Uses renewable-energy family-business access",
+    "Rewards measurement, anomaly detection, and process automation",
+    "Fieldwork can be delegated to qualified auditors",
+    "Can start with a small regional validation cohort"
+  ],
+  "parent": null,
+  "risks": [
+    "Banks and public programmes may build their own evidence workflows",
+    "Incorrect assurance could create professional liability",
+    "Hardware and site visits can reduce software-like margins"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://energy.ec.europa.eu/topics/energy-efficiency/energy-performance-buildings/energy-performance-buildings-directive_en",
+    "https://czystepowietrze.gov.pl/wez-dofinansowanie/pytania-i-odpowiedzi/nowy-program-czyste-powietrze-nabor-od-20-lipca-2026-r",
+    "https://czystepowietrze.gov.pl/wez-dofinansowanie/pytania-i-odpowiedzi/nowy-program-czyste-powietrze-obowiazujacy-od-31-marca-2025/42"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Independent measurement-and-verification utility paid per financed property",
+    "control_point": "A lender- or programme-accepted property evidence record required at approval, drawdown, or warranty review",
+    "critical_dependency": "At least one bank, subsidy operator, or ESCO must accept the protocol in its funding workflow"
+  },
+  "thesis": "Create an independent evidence record that lenders, subsidy operators, and ESCOs can use at approval and payout for Polish home retrofits: pre-work audit normalization, contractor scope checks, commissioning evidence, and post-work energy monitoring. The business only becomes durable if a financing or subsidy channel adopts its record as a default gate.",
+  "title": "Renovation Finance Evidence Utility",
+  "uncertainties": [
+    "Polish implementation details for renovation passports",
+    "Whether a financier will make third-party evidence a real gate",
+    "Measured savings may be too noisy for simple guarantees"
+  ],
+  "version": 1
+}

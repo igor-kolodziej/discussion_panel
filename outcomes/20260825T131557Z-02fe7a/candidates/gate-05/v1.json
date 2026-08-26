@@ -1,0 +1,73 @@
+{
+  "candidate_id": "gate-05",
+  "claims": [
+    {
+      "claim_id": "gate-05-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en"
+      ],
+      "statement": "The European Commission says the definitive CBAM regime applies from 1 January 2026 and that EU importers or indirect representatives above the stated 50-tonne threshold must apply for authorised CBAM declarant status."
+    },
+    {
+      "claim_id": "gate-05-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-registry_en"
+      ],
+      "statement": "The official CBAM Registry supports authorisations, reporting, and emissions-data submissions, leaving supplier evidence collection and reconciliation as a distinct upstream control surface."
+    }
+  ],
+  "contrary_evidence": [
+    "The 50-tonne threshold removes many very small importers from the core obligation.",
+    "Customs suites, consultants, and the official registry already cover filing and authorisation."
+  ],
+  "economics": {
+    "acquisition_route": "Hypothesis: co-sell through two customs brokers rather than acquire importers one by one.",
+    "capital_required_pln": 80000,
+    "founder_net_worth_path": "Hypothesis: 300 importers at 2000 PLN monthly would create 7.2 million PLN ARR before usage fees; strong retention and founder ownership could support net worth above 5 million PLN in years 5 to 8.",
+    "founder_time": "Hypothesis: 20 hours weekly for a single CN-code cluster, with customs and emissions counsel contracted.",
+    "gross_margin_basis": "Hypothesis: 70% blended gross margin after paying external emissions reviewers for sampled cases.",
+    "payback": "Hypothesis: under six months if each enabled broker yields five retained 2000 PLN monthly accounts.",
+    "pricing": "Hypothesis: 2000 PLN monthly per importer plus 40 PLN per released customs line.",
+    "retention_or_repeat": "Hypothesis: recurring imports and annual certificate obligations create repeated reconciliation events."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Reusable mill evidence and a code-to-emissions exception graph shared across consented importer relationships",
+    "customer": "Polish mid-market importers of covered iron, steel, or aluminium inputs and their customs representatives",
+    "distribution_mechanism": "Customs brokers, freight forwarders, metals associations, and ERP implementation partners",
+    "offer_and_business_model": "Supplier evidence clearinghouse and compliance ledger, sold as SaaS with specialist verification add-ons",
+    "payer_and_paid_event": "The importer pays for each internally released customs lot plus an account subscription",
+    "problem_trigger": "A covered lot is approaching customs and its emissions, code, and declarant evidence must reconcile"
+  },
+  "founder_fit": [
+    "Carbon data reconciliation uses quantitative and automation strengths.",
+    "A customs-broker channel limits broad cold selling.",
+    "The initial build fits the founder's capital if confined to one metals niche."
+  ],
+  "parent": null,
+  "risks": [
+    "Incorrect CN classification or emissions calculations could create material liabilities.",
+    "A customs software incumbent could add the same evidence module.",
+    "Supplier verification may require expertise beyond a software-only team."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en",
+    "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-registry_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Supplier evidence clearinghouse",
+    "control_point": "Importer-issued CBAM-ready token before a customs instruction is released",
+    "critical_dependency": "Trustworthy non-EU installation data and correct customs classification"
+  },
+  "thesis": "A supplier-to-importer evidence clearinghouse for covered iron, steel, and aluminium inputs could turn mill emissions evidence, CN-code mapping, authorisation state, certificates, and customs lines into a reconciled quarterly ledger. A Polish importer would release a customs instruction only after the lot has an auditable CBAM state, while non-EU suppliers would reuse verified evidence across buyers.",
+  "title": "CBAM Emissions Evidence Clearinghouse for Metal Importers",
+  "uncertainties": [
+    "The density of underserved Polish importers above threshold by narrow CN-code family is unknown.",
+    "It is unclear whether non-EU mills will provide installation-specific evidence to small buyers.",
+    "The 80000 PLN capital figure and all prices and scale numbers below are hypotheses."
+  ],
+  "version": 1
+}

@@ -1,0 +1,175 @@
+{
+  "candidate_id": "settle8-10",
+  "claims": [
+    {
+      "claim_id": "settle8-10-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ref.gs1.org/standards/eancom/",
+        "https://www.gs1.org/standards/edi/solutions",
+        "https://edi-ecom-xml.gs1.org/functional-user-guide/3_6/CN.pdf"
+      ],
+      "statement": "Verified fact: GS1 EANCOM and GS1 XML cover order-to-cash, invoice and remittance flows, commercial disputes, and claims codes including promotion discounts, incorrect references, and incorrect charges."
+    },
+    {
+      "claim_id": "settle8-10-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/d0cb30f0658a42e5aeb9d1419f39cd71/aa22f6e6c86a468199301bdddeb58296.html",
+        "https://help.sap.com/docs/SAP_S4HANA_CLOUD/918bca53037f408f91a2295d04ac16bc/7101d553088f4308e10000000a174cb4.html"
+      ],
+      "statement": "Verified fact: SAP Revenue Growth Management Claims validates retailer deduction requests against condition contracts and supporting invoices or disputes, while SAP Dispute Management manages receivables discrepancies and investigation workflows."
+    },
+    {
+      "claim_id": "settle8-10-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.highradius.com/product/deductions-management-automation-software/",
+        "https://www.vistex.com/solutions/cloud-solutions/trade-promotion-management/",
+        "https://www.inmar.com/blog/insights/martech/understand-and-optimize-your-deductions"
+      ],
+      "statement": "Verified fact: HighRadius, Vistex, and Inmar document products that overlap the core offer through retailer-portal or EDI ingestion, promotion matching, claim validation, evidence assembly, dispute workflow, settlement, and ERP integration."
+    },
+    {
+      "claim_id": "settle8-10-c4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.vistex.com/case-studies/Ateeco-optimizes-trade-spend-programs.pdf"
+      ],
+      "statement": "Verified vendor-reported evidence: a 200-plus-employee food producer adopted Vistex paybacks and chargebacks software and reported reduced aged receivables, deduction-clearing time, and claims administration, showing both a mid-sized problem and a mature substitute outside the target geography."
+    },
+    {
+      "claim_id": "settle8-10-c5",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://uokik.gov.pl/public/index.php/en/contractual-advantage"
+      ],
+      "statement": "Verified fact: Polish rules for agricultural and food supply prohibit unjustified reductions after accepted delivery, while some marketing, advertising, storage, or display charges are permitted only if clearly agreed in advance; software evidence can support review but cannot itself establish legal entitlement."
+    },
+    {
+      "claim_id": "settle8-10-c6",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/zakres-obowiazkowego-ksef/"
+      ],
+      "statement": "Verified fact and inference: KSeF structured invoice receipt became mandatory in Poland from 1 February 2026 and issuance is phased in during 2026, reducing differentiation from generic invoice extraction but not supplying promotion agreements, remittance detail, portal evidence, or case outcomes."
+    },
+    {
+      "claim_id": "settle8-10-c7",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://www.highradius.com/product/deductions-management-automation-software/",
+        "https://www.vistex.com/case-studies/Ateeco-optimizes-trade-spend-programs.pdf",
+        "https://www.inmar.com/blog/insights/martech/understand-and-optimize-your-deductions"
+      ],
+      "statement": "Evidence-supported inference: the only plausible initial wedge is a supplier-authorized historical audit and retailer-specific evidence layer for a mid-market account whose existing stack leaves measurable recovery or labor gaps; generic matching is not differentiated."
+    },
+    {
+      "claim_id": "settle8-10-c8",
+      "confidence": "low",
+      "evidence_refs": [],
+      "statement": "Unknown: Polish and CEE mid-market recoverable deduction rates, buyer willingness, data rights, price, gross margin, and success-fee attribution have not been verified."
+    }
+  ],
+  "contrary_evidence": [
+    "SAP's current Revenue Growth Management Claims product already validates deduction claims against condition contracts and source disputes or invoices: https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/d0cb30f0658a42e5aeb9d1419f39cd71/aa22f6e6c86a468199301bdddeb58296.html",
+    "HighRadius documents automated portal and email capture, item-level trade-promotion matching, evidence collection, dispute submission, and ERP updates, closely matching the proposed layer: https://www.highradius.com/product/deductions-management-automation-software/",
+    "Vistex already automates claims validation, reconciliation, payments, credits, and deductions inside trade-promotion management: https://www.vistex.com/solutions/cloud-solutions/trade-promotion-management/",
+    "A vendor case study for a 200-plus-employee food producer reports that an incumbent reduced undetermined-deduction clearing time by 50%, showing an established mid-market substitute: https://www.vistex.com/case-studies/Ateeco-optimizes-trade-spend-programs.pdf",
+    "GS1 already standardizes commercial-dispute and claims messages and detailed adjustment reason codes: https://edi-ecom-xml.gs1.org/functional-user-guide/3_6/CN.pdf",
+    "Poland's 2026 KSeF mandate makes structured invoice data broadly available through the national system, weakening invoice parsing as a wedge: https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/zakres-obowiazkowego-ksef/"
+  ],
+  "economics": {
+    "acquisition_route": "Hypothesis: one independent ERP or EDI adviser introduces or white-labels the bounded audit for an existing client that passes the eligibility gate. No partner willingness, revenue share, lead flow, or conversion is established, and no employer data, contacts, or confidential process knowledge may be used.",
+    "capital_required_pln": 18000,
+    "founder_net_worth_path": "Unknown. The lower-capital audit design can test demand and contribution economics before a broader build, but no evidence supports audit volume, repeat conversion, margins, obtainable customer count, valuation, distributions, or timing to the founder's net-worth objective. Recompute only from contracted revenue and measured contribution margin without double-counting retained earnings.",
+    "founder_time": "Design constraint: run at most one capped audit concurrently, with no live connector, inside the founder's maximum five-hour daily allocation. Actual extraction, finance review, adviser coordination, and security time are unmeasured and could still make the model incompatible with part-time execution.",
+    "gross_margin_basis": "Unknown. The redesign removes persistent portal and ERP connectors and pre-specifies exports, case volume, and deliverables, but still requires data cleaning and human finance review. Measure adviser share, founder and reviewer hours, security cost, and rework on paid audits before claiming contribution margin or software-like economics.",
+    "payback": "Unknown. Before the audit, agree a written counterfactual and current handling baseline; after it, count only verified incremental cash recovered or documented labor avoided, net of ordinary staff action and later credits. No return multiple, recovery rate, or time-to-value is assumed.",
+    "pricing": "Hypothesis: a quoted fixed fee tied to an explicit data specification, case cap, review boundary, and delivered exception register, with no recovery percentage. No price has been buyer-validated. A separately prepaid recurring batch review is considered only after the first audit demonstrates attributable value and repeat case volume.",
+    "retention_or_repeat": "One-off audit revenue is the default hypothesis. Offer a prepaid recurring batch review only if the first audit documents ongoing eligible case volume, complete authorized exports, attributable value, and acceptable delivery effort; renewal rate and any path to software remain unknown."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Hypothesis: permissioned retailer-specific audit templates, evidence-completeness rules, and outcome labels could reduce delivery effort and improve triage across consenting customers; transferability, data rights, and defensibility against incumbents are unverified.",
+    "customer": "Design-hypothesis beachhead: an independent mid-sized Polish or CEE CPG supplier that can export authorized data for one retailer and one high-value deduction class, documents a material unresolved batch, and lacks an adequate existing staff, adviser, ERP, EDI, or trade-promotion workflow; whether enough such accounts exist is unknown.",
+    "distribution_mechanism": "Hypothesis: an independent ERP or EDI adviser offers a co-branded or white-label data-quality and deduction diagnostic to existing clients; no adviser commitment, commercial terms, or conversion evidence exists, and founder-employer contacts are excluded.",
+    "offer_and_business_model": "A productized, fixed-scope audit using customer-created exports for one retailer and one deduction class; it returns data-quality findings, prioritized exceptions, and human-reviewable evidence packets without portal automation, dispute submission, or legal decisions. A prepaid recurring batch-review module is only a later hypothesis after measured repeat value.",
+    "payer_and_paid_event": "Hypothesis: the supplier's finance or accounts-receivable owner pays a quoted fixed fee for an accepted audit scope and delivered evidence-ready exception register; budget ownership, price, and acceptance of this paid event are unverified, and no success fee is assumed.",
+    "problem_trigger": "Before buying integrations or recurring software, a supplier has a bounded batch of aged or repeated retailer deductions in one claim class and wants to test whether complete authorized records expose incremental recoveries or measurable labor savings."
+  },
+  "founder_fit": [
+    "The founder's FMCG-adjacent data and business-analysis experience fits a bounded export audit, subject to strict separation from all employer-confidential data, processes, and contacts.",
+    "Document matching, data-quality analysis, anomaly detection, and exception classification fit the founder's AI and quantitative skills.",
+    "A fixed data specification, one retailer and claim class, a case cap, and no live connector make part-time testing more bounded, but actual hours remain unmeasured.",
+    "A hypothetical adviser-led channel avoids public-facing creator work, but no adviser has committed and direct selling may still be required.",
+    "Customer humans retain finance, commercial, and legal judgments; the founder cannot delegate all domain review to automation."
+  ],
+  "parent": {
+    "candidate_id": "settle8-10",
+    "version": 3
+  },
+  "redesign": {
+    "changed_fingerprint_fields": [
+      "customer",
+      "problem_trigger",
+      "payer_and_paid_event",
+      "offer_and_business_model",
+      "distribution_mechanism",
+      "compounding_advantage"
+    ],
+    "economic_effect": "Hypothesis: replacing the PLN 45,000 integration-oriented build with a PLN 18,000 fixed-audit envelope, customer-created exports, capped case batches, and a fixed fee for a defined deliverable reduces upfront capital, connector maintenance, success-fee attribution disputes, and open-ended labor. Recurring revenue is deliberately deferred until paid audits prove incremental value, contribution margin, repeat case volume, permissions, and adviser-led acquisition; none of those outcomes is validated."
+  },
+  "risks": [
+    "SAP Revenue Growth Management Claims and Dispute Management already validate deductions against agreements and manage dispute workflows.",
+    "HighRadius, Vistex, and Inmar already offer portal and EDI ingestion, promotion matching, evidence assembly, dispute workflow, ERP updates, and claims settlement.",
+    "GS1 EANCOM and GS1 XML already standardize order-to-cash, commercial-dispute, remittance, and claims reason-code messages.",
+    "Mandatory KSeF structured invoicing in Poland reduces differentiation in invoice capture, although it does not resolve promotion terms or retailer evidence.",
+    "Retailer portal credentials, promotion contracts, sell-out data, and proof-of-performance documents may be unavailable or contractually restricted.",
+    "Retailer dispute windows and format changes create ongoing operational maintenance and missed-deadline liability.",
+    "Success-fee attribution can be contested because recoveries may result from existing staff, later credits, offsets, or unrelated negotiation.",
+    "For agri-food suppliers, Polish unfair-contractual-advantage law makes some reductions unlawful and some marketing charges lawful only when agreed in advance; software cannot safely classify legal entitlement without reviewed facts.",
+    "Employer conflict-of-interest, confidentiality, and reputational boundaries require independent clearance before any adjacent commercial activity.",
+    "Human review and bespoke retailer workflows can turn the product into a labor-intensive service.",
+    "The eligibility gate may reveal that too few suppliers combine material unresolved deductions, complete authorized evidence, budget, and a genuine incumbent-workflow gap.",
+    "ERP or EDI advisers may decline to introduce the audit, demand uneconomic revenue share, or already provide an adequate diagnostic; no partner commitment exists.",
+    "A fixed-fee audit may remain one-off, labor-intensive consulting with weak retention and no credible path to a scalable recurring module.",
+    "Customer-created exports may omit portal-only evidence or contain inconsistent identifiers, leaving the bounded audit unable to produce actionable cases.",
+    "The PLN 18,000 capital envelope is a design hypothesis rather than an evidence-based build or delivery cost."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://ref.gs1.org/standards/eancom/",
+    "https://www.gs1.org/standards/edi/solutions",
+    "https://edi-ecom-xml.gs1.org/functional-user-guide/3_6/CN.pdf",
+    "https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/d0cb30f0658a42e5aeb9d1419f39cd71/aa22f6e6c86a468199301bdddeb58296.html",
+    "https://help.sap.com/docs/SAP_S4HANA_CLOUD/918bca53037f408f91a2295d04ac16bc/7101d553088f4308e10000000a174cb4.html",
+    "https://www.highradius.com/product/deductions-management-automation-software/",
+    "https://www.vistex.com/solutions/cloud-solutions/trade-promotion-management/",
+    "https://www.vistex.com/case-studies/Ateeco-optimizes-trade-spend-programs.pdf",
+    "https://www.inmar.com/blog/insights/martech/understand-and-optimize-your-deductions",
+    "https://uokik.gov.pl/public/index.php/en/contractual-advantage",
+    "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/zakres-obowiazkowego-ksef/"
+  ],
+  "stage": "development",
+  "structure": {
+    "commercial_archetype": "channel-delivered fixed-scope recovery diagnostic with a conditional recurring batch-review upsell",
+    "control_point": "the pre-integration eligibility and evidence-readiness gate that identifies which bounded deduction cases are complete enough for the customer's humans to pursue and whether recurring monitoring merits purchase",
+    "critical_dependency": "documented material unresolved deductions plus complete customer-authorized exports and promotion evidence for one retailer and claim class, an accountable human owner, and an adviser willing to introduce the audit; none is yet established in the target segment"
+  },
+  "thesis": "Replace the broad claims exchange with a design-hypothesis test of the missing customer intersection: a productized, fixed-scope diagnostic for one retailer and one high-value deduction class, delivered through an ERP or EDI adviser using only customer-created, contract-authorized exports. An eligibility gate requires a documented deduction batch, usable promotion and remittance evidence, an accountable human owner, and a demonstrated gap in the supplier's existing workflow before work begins. The deliverable is a data-quality report, prioritized exception register, and human-reviewable evidence packets; it excludes persistent portal connectors, dispute submission, legal determinations, and customer impersonation. A prepaid recurring batch-review module is only a later hypothesis after paid audits measure incremental recovery or labor savings, permissions, delivery effort, contribution margin, and repeat demand.",
+  "title": "Retailer-Specific Deduction Recovery Diagnostic",
+  "uncertainties": [
+    "The incidence, value, age, and recoverability of trade-promotion deductions among mid-sized Polish and CEE suppliers are not established.",
+    "It is unknown whether accounts receivable, finance, key-account sales, revenue-growth management, or the owner controls budget in the target segment.",
+    "No target supplier has authorized a representative historical audit or confirmed data completeness.",
+    "No Polish or CEE buyer has validated fixed-audit pricing, procurement timing, deliverable acceptance, a recurring batch-review fee, or acceptable data-processing terms.",
+    "The incremental recovery attributable to this layer versus existing ERP, EDI, adviser, or staff work is unknown.",
+    "The feasibility of any later retailer portal connector without customer impersonation or prohibited credential use remains unknown; the initial diagnostic excludes such connectors.",
+    "Both the prior PLN 45,000 figure and the redesigned PLN 18,000 figure are planning envelopes, not evidence-based build or delivery costs.",
+    "No evidence supports a founder-net-worth timeline.",
+    "No ERP or EDI adviser has validated the co-branded or white-label distribution hypothesis, revenue share, lead flow, or conversion.",
+    "It is unknown whether a standardized export and capped case batch can bound data cleaning, finance review, security work, and rework sufficiently for attractive contribution margin.",
+    "It is unknown whether a paid one-off diagnostic will reveal enough repeat eligible volume to justify a recurring module rather than remain consulting."
+  ],
+  "version": 4
+}

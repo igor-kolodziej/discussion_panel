@@ -1,0 +1,80 @@
+{
+  "candidate_id": "network-10",
+  "claims": [
+    {
+      "claim_id": "network-10-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32019H1658"
+      ],
+      "statement": "EU energy-efficiency guidance emphasizes measurement, monitoring, control, quality, and independent verification of energy savings, including metered savings and statistically representative checks."
+    },
+    {
+      "claim_id": "network-10-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reco/2024/2476/oj/eng"
+      ],
+      "statement": "EU guidance defines energy performance contracting around verified and monitored savings and notes that quality labels, measurement methodologies, and certified providers can support uptake."
+    },
+    {
+      "claim_id": "network-10-c3",
+      "confidence": "low",
+      "evidence_refs": [],
+      "statement": "Hypothesis: a low-cost standardized certificate for smaller multi-family projects can serve a segment below traditional ESCO economics and create lender or installer willingness to pay."
+    }
+  ],
+  "contrary_evidence": [
+    "Certified energy auditors and ESCOs already perform measurement and verification for larger projects.",
+    "EU guidance notes that traditional energy-performance contracts often need large contract values, which may leave small buildings uneconomic even with cheaper software."
+  ],
+  "economics": {
+    "acquisition_route": "Hypothesis: start as the measurement subcontractor for three auditors/installers, then obtain lender recognition for repeat portfolio use.",
+    "capital_required_pln": 60000,
+    "founder_net_worth_path": "Hypothesis: 50 buildings in year 2, 500 in year 4, and 2000 annual building cycles across Poland and neighbors in year 7 at 6000 PLN average revenue yields 12M PLN annual revenue. At 15-22% operating margin, a 2-4x revenue value, and 55-70% ownership, founder equity could exceed 5M PLN after lender-channel repeatability.",
+    "founder_time": "Hypothesis: 12-18 hours/week for modeling and partner delivery; site inspection remains with qualified auditors.",
+    "gross_margin_basis": "Hypothesis: 55-70% early with expert baseline review, rising to 75-82% as ingestion and exception handling automate.",
+    "payback": "Hypothesis: 5-10 months at 5000-12000 PLN channel acquisition cost and 15000-30000 PLN annual revenue per active partner.",
+    "pricing": "Hypothesis: 3000-8000 PLN per building measurement cycle plus 300-800 PLN/month monitoring for larger portfolios.",
+    "retention_or_repeat": "Hypothesis: each building produces baseline and follow-up events; partner retention depends on a continuing retrofit pipeline and accepted certificates."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Predicted-versus-realized savings corpus by building archetype, intervention, contractor, climate, and operating pattern",
+    "customer": "Polish condominium boards and the installers, auditors, ESCOs, or lenders serving 10-100-unit buildings",
+    "distribution_mechanism": "Energy auditors, retrofit installers, banks, subsidy advisors, and property-management software",
+    "offer_and_business_model": "Standardized baseline, data-quality check, weather-normalized realized-savings report, and shareable outcome credential",
+    "payer_and_paid_event": "Installer, ESCO, lender, or condo board pays at baseline approval and again when the realized-savings certificate is issued",
+    "problem_trigger": "Retrofit proposal, financing decision, contractor guarantee, or first 12-month post-retrofit review"
+  },
+  "founder_fit": [
+    "Strong fit with causal modeling, weather normalization, and quantitative evaluation.",
+    "Parents' renewable-energy network can identify installer and auditor workflows while avoiding direct access to private data without consent.",
+    "Can start with retrospective, permissioned bill datasets and desktop analysis.",
+    "Product creates reusable outcome benchmarks and can later support underwriting."
+  ],
+  "parent": null,
+  "risks": [
+    "Bad baselines can unfairly reward or penalize contractors; model assumptions must be transparent and independently reviewable.",
+    "Meter and household data permission complexity.",
+    "Long outcome windows delay proof and cash conversion."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32019H1658",
+    "https://eur-lex.europa.eu/eli/reco/2024/2476/oj/eng"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "outcome-verification service",
+    "control_point": "accepted weather-normalized baseline and realized-savings certificate",
+    "critical_dependency": "permissioned longitudinal meter data and recognition by retrofit finance channels"
+  },
+  "thesis": "A weather- and occupancy-aware measurement service for Polish condominium boards that compares predicted and realized savings after heating, insulation, or control-system retrofits. The paid certificate helps installers, ESCOs, and lenders evidence outcomes, while each building adds to a local archetype benchmark for future underwriting and guarantees.",
+  "title": "Retrofit Reality: Verified Savings Benchmark for Condo Boards",
+  "uncertainties": [
+    "Condo-board decision cycles and access to complete pre/post energy bills may be slow.",
+    "A certificate's value depends on lender, insurer, subsidy, or installer recognition.",
+    "The 60000 PLN capital estimate and all numeric commercial assumptions below are planning hypotheses."
+  ],
+  "version": 1
+}

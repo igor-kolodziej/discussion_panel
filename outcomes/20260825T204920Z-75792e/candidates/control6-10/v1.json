@@ -1,0 +1,72 @@
+{
+  "candidate_id": "control6-10",
+  "claims": [
+    {
+      "claim_id": "control6-10-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2025/327/oj/"
+      ],
+      "statement": "The European Health Data Space framework covers genetic, genomic and other health data for specified secondary-use purposes subject to safeguards and permits."
+    },
+    {
+      "claim_id": "control6-10-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0746"
+      ],
+      "statement": "The IVDR regulates in-vitro diagnostic devices and specifically addresses genetic testing and information about its implications."
+    }
+  ],
+  "contrary_evidence": [
+    "EHDS access is purpose-limited and permit-based; it does not create an unrestricted proprietary data asset or commercial exclusivity."
+  ],
+  "economics": {
+    "acquisition_route": "Unvalidated: one accredited Polish lab integration, then expand through lab networks and research collaborations rather than direct-to-consumer sales.",
+    "capital_required_pln": 195000,
+    "founder_net_worth_path": "Unvalidated scenario, not a forecast: process 5,000 tests by year 2, reach 6 million PLN ARR by year 5, build 4 million PLN founder equity and cash by year 7, and 5 million PLN founder net worth in years 8-11.",
+    "founder_time": "Unvalidated operating estimate: 2-4 hours per day only if a clinical lead and quality consultant own regulated operations.",
+    "gross_margin_basis": "Unvalidated: 55%-80% gross margin after clinical review, quality management, secure compute and data-governance costs.",
+    "payback": "Unvalidated: 24-42 months because regulatory and clinical validation precede scale.",
+    "pricing": "Unvalidated commercial figures, including capital_required_pln: 120-350 PLN per interpreted test and 100,000-400,000 PLN annual benchmark licence.",
+    "retention_or_repeat": "Unvalidated: lab orders recur and the curation corpus updates; contract renewal is not evidenced."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Each lawfully consented follow-up and adjudicated interpretation deepens population-specific evidence and reduces review effort",
+    "customer": "Central-European diagnostic laboratories and clinical researchers",
+    "distribution_mechanism": "Embedded in existing lab orders and result-delivery workflows",
+    "offer_and_business_model": "White-label interpretation with clinician oversight plus permitted derived-evidence licensing",
+    "payer_and_paid_event": "A lab pays per clinician-ready interpretation; approved researchers or product developers pay for governed benchmark access",
+    "problem_trigger": "A lab generates a genetic result whose local-population interpretation and follow-up evidence are weak"
+  },
+  "founder_fit": [
+    "Strong match to genetics, neuroscience and data science.",
+    "Lab distribution avoids influencer marketing.",
+    "Medical-student household context helps frame clinical questions but does not substitute for qualified governance."
+  ],
+  "parent": null,
+  "risks": [
+    "Clinical harm from incorrect interpretation.",
+    "Regulatory and quality-system cost exceeds bootstrap capital.",
+    "A lab retains the channel and derived-data rights."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2025/327/oj/",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0746"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Lab-embedded interpretation and governed evidence licensing",
+    "control_point": "Exclusive lab distribution contracts and lawful rights to derived, de-identified curation and outcome benchmarks with participant protections",
+    "critical_dependency": "IVDR classification and quality system, clinical governance, valid GDPR and EHDS pathways, and sufficiently representative data"
+  },
+  "thesis": "Partner with accredited diagnostic labs to deliver a white-label, clinician-reviewed interpretation layer for legally obtained genetic tests while building a consented Central-European variant, ancestry and follow-up evidence corpus. Labs provide structural distribution; the controlled asset is a governed derived benchmark and curation history, never ownership of patients' data rights.",
+  "title": "Central-European Variant Evidence Network",
+  "uncertainties": [
+    "Regulatory classification of the exact service",
+    "Consent and secondary-use rights obtainable from lab partners",
+    "Incremental value of Central-European evidence"
+  ],
+  "version": 1
+}

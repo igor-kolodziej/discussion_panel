@@ -1,0 +1,85 @@
+{
+  "candidate_id": "bottleneck-02",
+  "claims": [
+    {
+      "claim_id": "bottleneck-02-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en"
+      ],
+      "statement": "The definitive CBAM regime applies from 1 January 2026, and EU importers or indirect customs representatives importing more than the single 50-tonne threshold of covered goods must seek authorised CBAM declarant status."
+    },
+    {
+      "claim_id": "bottleneck-02-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-registry_en"
+      ],
+      "statement": "The CBAM Registry includes reporting and emissions-data functions, and its third-country installation module lets non-EU operators upload emissions once and share them with declarants."
+    },
+    {
+      "claim_id": "bottleneck-02-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-verification_en",
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/price-cbam-certificates_en"
+      ],
+      "statement": "Importers may base annual declarations on actual verified emissions or default values; the Commission's current timeline places first verification reports and certificate purchasing in 2027 for 2026 imports."
+    }
+  ],
+  "contrary_evidence": [
+    "The Commission's own Registry already supports supplier-to-declarant emissions sharing, so a private product cannot be merely another submission form.",
+    "The 50-tonne threshold removes most low-volume importers from authorisation and reporting obligations and sharply reduces the addressable customer count.",
+    "Customs brokers, large consultancies, and enterprise trade-compliance platforms can bundle CBAM work into existing relationships."
+  ],
+  "economics": {
+    "acquisition_route": "Free annual-threshold and CN-code diagnostic, focused outbound to affected importers, then broker and accredited-verifier referrals",
+    "capital_required_pln": 90000,
+    "founder_net_worth_path": "Modeled path: 250 importers at 2,500 PLN average monthly recurring revenue equals 7.5m PLN ARR; a 35% owner-cash margin would be 2.63m PLN/year and could accumulate more than 10m PLN in about four mature years without an exit",
+    "founder_time": "Up to 5 hours/day for a single-sector MVP; specialist reviews and onboarding must be contractorized before expanding sectors",
+    "gross_margin_basis": "Modeled 75-88% after document processing, secure storage, support, and limited emissions-specialist review",
+    "payback": "Target under 6 months because onboarding services partly fund acquisition; unvalidated against real sales cycles",
+    "pricing": "Modeled 1,200-4,500 PLN/month per importer plus 5,000-20,000 PLN onboarding based on supplier and customs-line complexity",
+    "retention_or_repeat": "Covered imports, supplier changes, quarterly certificate-price exposure, and annual declarations create recurring use"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A permissioned mapping library across CN codes, supplier installations, evidence failure modes, verifier feedback, and accepted corrections",
+    "customer": "EU importers above the CBAM mass threshold, initially Polish metal distributors and manufacturers importing iron, steel, or aluminium",
+    "distribution_mechanism": "CN-code and threshold diagnostic content, targeted importer lists derived from lawful public trade directories, and customs-broker or verifier referral partnerships",
+    "offer_and_business_model": "Supplier evidence portal, shipment-emissions matching engine, verification queue, and registry-ready exports sold as annual SaaS plus onboarding",
+    "payer_and_paid_event": "The importer or its customs/compliance provider pays on onboarding and monthly usage when covered shipments must be made declaration-ready",
+    "problem_trigger": "A CBAM-covered customs line arrives without usable installation-level emissions, verification, or carbon-price evidence for the annual declaration"
+  },
+  "founder_fit": [
+    "The product rewards quantitative data modeling, entity resolution, and anomaly detection rather than charisma-led selling.",
+    "Poland is a practical beachhead for an EU-wide regulation, while English-language workflows can extend the same product across the Union.",
+    "A narrow steel and aluminium pilot can be tested with synthetic and customer-provided shipment files within the founder's 5-hour daily limit."
+  ],
+  "parent": null,
+  "risks": [
+    "Incorrect CN-code or emissions treatment could cause material certificate costs, penalties, or customs disruption.",
+    "Regulatory simplification or better native Registry automation could compress the product's value.",
+    "Handling commercially sensitive supplier and emissions data creates security and contractual exposure."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en",
+    "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-registry_en",
+    "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-verification_en",
+    "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/price-cbam-certificates_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Cross-company regulatory data-exchange SaaS with implementation fees",
+    "control_point": "The auditable join from customs declaration line and supplier installation to verified embedded emissions and surrendered-certificate calculation inputs",
+    "critical_dependency": "Non-EU suppliers must provide sufficiently accurate emissions data and cooperate with accredited verification and Registry workflows"
+  },
+  "thesis": "Build a workflow for Polish and nearby EU importers of iron, steel, aluminium, fertiliser, cement, hydrogen, or electricity that binds customs lines to non-EU installation emissions, verification status, carbon-price evidence, and annual declaration inputs. Importers pay to reduce the recurring coordination failure between purchasing, customs brokers, suppliers, verifiers, and the CBAM Registry rather than for generic carbon accounting.",
+  "title": "CBAM Shipment-to-Emissions Evidence Exchange",
+  "uncertainties": [
+    "The reachable count of Polish and EU importers above the threshold in the initial metal categories is not yet established.",
+    "The frequency with which suppliers fail to use the official third-country portal, and the cost of correcting that failure, is unknown.",
+    "Pricing, onboarding labor, liability allocation, sales-cycle length, and the modeled margin require validation with paid design partners."
+  ],
+  "version": 1
+}

@@ -1,0 +1,153 @@
+{
+  "candidate_id": "channel-12",
+  "claims": [
+    {
+      "claim_id": "channel-12-claim-01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2024/886/oj/eng"
+      ],
+      "statement": "Regulation (EU) 2024/886 requires the payer's PSP to offer verification before authorization and requires that verification service to be free to the payment-service user."
+    },
+    {
+      "claim_id": "channel-12-claim-02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.ecb.europa.eu/paym/retail/instant_payments/html/instant_payments_regulation.en.html"
+      ],
+      "statement": "The verification obligation applies to euro standard and instant credit transfers; the deadline for PSPs in non-euro Member States, including Poland, is 9 July 2027."
+    },
+    {
+      "claim_id": "channel-12-claim-03",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.europeanpaymentscouncil.eu/faq/verification-payee-scheme/rulebook/clarifications-about-provision-vop-services-bulk-files"
+      ],
+      "statement": "Non-consumer bulk users may opt out, PSPs choose how to provide bulk verification, corporate systems must handle close-match, no-match and unavailable results, and the corporate remains liable for the authorized payment."
+    },
+    {
+      "claim_id": "channel-12-claim-04",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.europeanpaymentscouncil.eu/document-library/implementation-guidelines/verification-payee-scheme-inter-psp-api-specifications-0"
+      ],
+      "statement": "The EPC's published Verification of Payee API specification covers inter-PSP messages only, so an AP vendor needs a PSP, bank or authorized solution-provider interface rather than assuming direct scheme access."
+    },
+    {
+      "claim_id": "channel-12-claim-05",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.surepay.eu/verification-of-payee-api/building-blocks-of-vop-bulk-verification-in-white-label-portal/",
+        "https://www.surepay.eu/"
+      ],
+      "statement": "SurePay already offers bulk APIs, a bank-branded corporate portal, audit logs and account-verification intelligence at substantial scale, directly overlapping the proposed workflow and data advantage."
+    },
+    {
+      "claim_id": "channel-12-claim-06",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.aib.ie/business/ways-to-bank/vop"
+      ],
+      "statement": "AIB already gives bulk-payment customers a SurePay portal that returns per-payee results in downloadable CSV, demonstrating bank-controlled distribution of a native corporate workflow."
+    },
+    {
+      "claim_id": "channel-12-claim-07",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.iban.com/pricing?lang=en"
+      ],
+      "statement": "A public Bank Account Verification price card charges EUR 2,000 for 2,500 checks down to EUR 25,000 for 50,000 checks, establishing an upstream cost comparator but not enterprise willingness to pay for exception handling."
+    },
+    {
+      "claim_id": "channel-12-claim-08",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.eba.europa.eu/publications-and-media/press-releases/joint-eba-ecb-report-payment-fraud-strong-authentication-remains-effective-fraudsters-are-adapting"
+      ],
+      "statement": "The EBA and ECB reported EUR 2.5 billion of fraudulent credit transfers in 2024 and that users bore about 85% of credit-transfer fraud losses, supporting real payment-fraud pain but not this product's conversion."
+    },
+    {
+      "claim_id": "channel-12-claim-09",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://www.europeanpaymentscouncil.eu/what-we-do/other-schemes/verification-payee"
+      ],
+      "statement": "The EPC states that Verification of Payee is messaging functionality and cannot itself be relied on to identify a private or legal person, so an exception console must not treat a close match as identity proof."
+    }
+  ],
+  "contrary_evidence": [
+    "SurePay already provides the bulk API, white-label portal, audit trail and shared verification intelligence proposed here.",
+    "AIB demonstrates that banks can distribute the corporate portal natively and retain the customer relationship.",
+    "The EPC API is inter-PSP only, making access to regulated responses partner-controlled.",
+    "The mandated verification is free to users and commodity APIs publish per-check pricing, limiting monetization of the check itself.",
+    "Corporate bulk users may opt out, and the corporate retains payment liability even after receiving a result.",
+    "Polish non-euro PSPs do not face the deadline until 9 July 2027 and the regulation concerns euro credit transfers."
+  ],
+  "economics": {
+    "acquisition_route": "UNVALIDATED HYPOTHESIS: one AP software or PSP design partner provides a read-only result feed and five enterprise pilots, followed by two additional platform partners; no partner commitment or procurement-cycle evidence exists.",
+    "capital_required_pln": 95000,
+    "founder_net_worth_path": "UNVALIDATED HYPOTHESIS: by year 9, PLN 11 million ARR and PLN 3.1 million EBITDA with 65% founder ownership at five times EBITDA imply about PLN 10.1 million founder equity before liabilities; revenue, margin, dilution and multiple assumptions are unvalidated.",
+    "founder_time": "UNVALIDATED HYPOTHESIS: 16-22 founder hours weekly through one read-only pilot, declining to 9-12 only after regulated-payments advice, enterprise support and security operations are delegated.",
+    "gross_margin_basis": "UNVALIDATED HYPOTHESIS: 70%-80% mature gross margin when the PSP supplies the mandated result without a per-check resale charge; buying third-party checks at published rates could materially reduce or eliminate event-level margin.",
+    "payback": "UNVALIDATED HYPOTHESIS: 12-18 month integration acquisition payback; bank and AP-platform sales cycles, security reviews and partner revenue shares are unknown.",
+    "pricing": "UNVALIDATED HYPOTHESIS: PLN 3000 per enterprise tenant monthly including 100 exception cases, then PLN 25 per documented resolution; the mandated PSP verification is never resold. capital_required_pln=95000 is an unvalidated pilot ceiling, and published upstream check prices are cost comparators rather than validation of buyer willingness.",
+    "retention_or_repeat": "UNVALIDATED HYPOTHESIS: 85%-94% annual tenant retention if the evidence vault is embedded in supplier-master and approval controls; bank-native portals and AP-vendor features may sharply reduce retention."
+  },
+  "fingerprint": {
+    "compounding_advantage": "tenant-specific supplier-alias and evidence playbooks weighted by confirmed outcomes; no cross-tenant identity graph is assumed without explicit lawful permission",
+    "customer": "euro-area enterprise AP teams and payment bureaus whose bank or AP platform exposes Verification of Payee results; Polish euro workflows become a later 2027 wedge",
+    "distribution_mechanism": "contracted AP-software, PSP and accounting-platform integrations that expose the payer's verification result",
+    "offer_and_business_model": "read-only exception console, beneficiary-evidence vault, supplier-master correction and human approval workflow; it neither performs the mandated verification nor releases funds",
+    "payer_and_paid_event": "enterprise or AP platform pays a tenant subscription and documented-resolution fee, never a charge for the mandated PSP verification",
+    "problem_trigger": "a payer's PSP returns close match, no match or verification unavailable before a euro credit transfer is authorized"
+  },
+  "founder_fit": [
+    "Strong technical fit with finance, entity resolution, anomaly detection and auditable data workflows.",
+    "The founder can prototype a read-only console part-time, but bank-grade security, payments counsel and enterprise integration support must be delegated.",
+    "The UNVALIDATED HYPOTHESIS that capital_required_pln=95000 funds a controlled pilot fits the founder's own capital ceiling, but the lack of a PSP or AP relationship and the 2027 Polish timing weaken immediate founder access."
+  ],
+  "parent": {
+    "candidate_id": "channel-12",
+    "version": 1
+  },
+  "risks": [
+    "A false or overconfident resolution can facilitate fraud or a misdirected payment.",
+    "The product could cross into regulated payment activity if it initiates, blocks or authorizes transfers rather than remaining read-only workflow software.",
+    "Payment, beneficiary and supplier-master data require bank-grade security, retention controls and incident response.",
+    "A bank, PSP or AP vendor can withhold the verification response or bundle the same exception workflow.",
+    "Cross-tenant alias learning may lack a legal basis, breach confidentiality or amplify poisoned supplier data.",
+    "A low exception rate may leave insufficient value beyond the free bank-provided result."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2024/886/oj/eng",
+    "https://www.ecb.europa.eu/paym/retail/instant_payments/html/instant_payments_regulation.en.html",
+    "https://finance.ec.europa.eu/publications/clarification-requirements-instant-payments-regulation_en",
+    "https://www.europeanpaymentscouncil.eu/faq/verification-payee-scheme/rulebook/clarifications-about-provision-vop-services-bulk-files",
+    "https://www.europeanpaymentscouncil.eu/document-library/implementation-guidelines/verification-payee-scheme-inter-psp-api-specifications-0",
+    "https://www.europeanpaymentscouncil.eu/what-we-do/other-schemes/verification-payee",
+    "https://www.surepay.eu/verification-of-payee-api/building-blocks-of-vop-bulk-verification-in-white-label-portal/",
+    "https://www.surepay.eu/",
+    "https://www.aib.ie/business/ways-to-bank/vop",
+    "https://www.iban.com/pricing?lang=en",
+    "https://www.eba.europa.eu/publications-and-media/press-releases/joint-eba-ecb-report-payment-fraud-strong-authentication-remains-effective-fraudsters-are-adapting"
+  ],
+  "stage": "research",
+  "structure": {
+    "commercial_archetype": "PSP-authorized corporate beneficiary-exception workflow and evidence service",
+    "control_point": "enterprise AP approval queue after a PSP result and before a human authorizes the payment",
+    "critical_dependency": "a contracted PSP or AP-platform interface exposing verification results plus lawful access to the enterprise supplier master"
+  },
+  "thesis": "Sell a read-only exception and evidence layer to euro-area enterprise AP teams only where a bank, PSP or AP platform contractually exposes the Verification of Payee result. After a close match, no match or unavailable result, the product gathers supplier-master, legal-name and trusted-contact evidence, recommends a supplier-record correction or escalation, and preserves an audit trail for a human approver; it never performs the mandated verification, treats a close match as identity proof, or releases funds. The initial moat is tenant-specific resolution history, not an assumed cross-enterprise alias graph. Direct bank and SurePay products make distribution and differentiation the central problem, while Poland is a later euro-flow market because its deadline is July 2027.",
+  "title": "Verification-of-Payee Exception Network",
+  "uncertainties": [
+    "Whether banks and AP platforms expose machine-readable verification results to an independent workflow vendor",
+    "Close-match, no-match and unavailable-result volume by enterprise and payment file",
+    "Enterprise willingness to pay beyond a bank-provided free result and portal",
+    "Permissible use and retention of supplier aliases, legal identifiers and resolution outcomes across tenants",
+    "Security certification, insurance, payments-law review and integration cost for a bank-grade pilot",
+    "Whether documented resolution reduces fraud or merely shifts manual work and liability",
+    "Partner sales cycle, churn, support burden and founder-compatible operating load"
+  ],
+  "version": 2
+}

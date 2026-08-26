@@ -1,0 +1,86 @@
+{
+  "candidate_id": "control8-07",
+  "claims": [
+    {
+      "claim_id": "control8-07-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://poisoncentres.echa.europa.eu/generate-and-apply-the-ufi"
+      ],
+      "statement": "ECHA states that all hazardous mixtures in scope require a UFI and that a product must not be placed on the market until the UFI is included in a valid poison-centre notification."
+    },
+    {
+      "claim_id": "control8-07-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://poisoncentres.echa.europa.eu/generate-and-apply-the-ufi"
+      ],
+      "statement": "ECHA states that each UFI corresponds to one mixture composition and uses an internal formulation number in its generation."
+    },
+    {
+      "claim_id": "control8-07-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://poisoncentres.echa.europa.eu/documents/1789887/1803644/pc_leaflet_en.pdf/4416d63b-902d-b5ce-85ad-d269321c563d"
+      ],
+      "statement": "The harmonised PCN information includes the full mixture composition, covering hazardous and non-hazardous components."
+    }
+  ],
+  "contrary_evidence": [
+    "Only hazardous mixtures within scope need this workflow; non-hazardous portfolios do not create the same gate.",
+    "ECHA supplies a UFI generator and submission ecosystem, limiting willingness to pay for generation alone.",
+    "A supplier can withhold full composition and instead provide MiM identifiers, making end-to-end formula lineage incomplete."
+  ],
+  "economics": {
+    "acquisition_route": "Partner with two SDS/CLP consultants, pilot on a redacted or sandbox portfolio, and use label-to-UFI preflight as a lead tool",
+    "capital_required_pln": 65000,
+    "founder_net_worth_path": "Unvalidated 5-7 year scenario: 120 customers averaging 45,000 PLN annual revenue yields 5.4m PLN; at 35% EBITDA, 4x, and 75% ownership, equity value is about 5.67m PLN.",
+    "founder_time": "18-24 hours per week, with chemistry/regulatory sign-off from contracted specialists and security design treated as a core deliverable",
+    "gross_margin_basis": "Data transformations and consistency checks are repeatable; expert CLP review, translation, and incomplete supplier data are variable-cost drivers",
+    "payback": "Customer payback hypothesis: avoiding rework across labels, SDS files, and national products can recover a 20,000-60,000 PLN annual cost for multi-SKU portfolios; validate against consultant spend",
+    "pricing": "Unvalidated hypothesis: 5,000-20,000 PLN secure onboarding, 2,000-7,000 PLN per new or materially changed formula, and 1,500-5,000 PLN monthly portfolio monitoring",
+    "retention_or_repeat": "Every formula, supplier, label, language, product-name, and market change touches the same confidential record and can require notification updates"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A customer-specific formula and supplier lineage graph plus validated exception rules makes every later variant and update faster while increasing migration cost",
+    "customer": "Small EU formulators, importers, and private-label operators of hazardous cleaning, coating, adhesive, and maintenance mixtures",
+    "distribution_mechanism": "Chemical regulatory consultants, SDS authors, contract manufacturers, packaging/label agencies, and private-label trade groups",
+    "offer_and_business_model": "Encrypted formula vault, UFI/formula mapping, label/SDS reconciliation, PCN dataset generation, approvals, and update alerts; hypothesis 2,000-7,000 PLN per formula plus 1,500-5,000 PLN monthly portfolio fee",
+    "payer_and_paid_event": "Regulatory or product-development lead pays secure onboarding, per-formula preparation, and annual vault/change-monitoring fees",
+    "problem_trigger": "New formulation or private-label SKU, composition/supplier change, new member-state market, label revision, or rejected PCN submission"
+  },
+  "founder_fit": [
+    "Strong data-lineage and validation fit with FMCG familiarity, without assuming use of employer IP",
+    "Partner-led B2B distribution reduces continuous social selling",
+    "Can start as a tightly scoped secure workflow before automating submission formats",
+    "Requires explicit conflict-of-interest review and strict avoidance of Reckitt data, formulations, vendors, or work time"
+  ],
+  "parent": null,
+  "risks": [
+    "A formula breach would be catastrophic; security and isolation costs may exceed the starting budget",
+    "Chemical classification errors can harm users and create liability",
+    "ECHA tools and established regulatory consultants may be sufficient for small portfolios",
+    "Employer conflict or perceived competitive overlap could make this opportunity unsuitable"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://poisoncentres.echa.europa.eu/generate-and-apply-the-ufi",
+    "https://poisoncentres.echa.europa.eu/documents/1789887/1803644/pc_leaflet_en.pdf/4416d63b-902d-b5ce-85ad-d269321c563d",
+    "https://echa.europa.eu/documents/10162/113506043/2025_05_13_Q%26A_Poson_Centres_Webinar_ECHA_EN.pdf/e03a3aaa-d306-eb7d-a93c-b4417623c887?t=1748268883678"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Confidential formulation vault with per-formula notification operations and recurring change-control subscription",
+    "control_point": "The formula-version release record proving that the UFI printed on the product is linked to a valid poison-centre notification",
+    "critical_dependency": "Complete and accurate composition/MiM data from formulators and suppliers, secure handling of trade secrets, and valid ECHA submission identities/formats"
+  },
+  "thesis": "Planning-stage hypothesis: offer a secure formula-to-market release workflow for small EU makers and importers of detergents, cleaners, adhesives, coatings, and other hazardous mixtures. It would maintain confidential composition and mixture-in-mixture lineage, generate and bind each UFI to the correct formulation, assemble harmonised Poison Centre Notification data, reconcile labels/SDS/product names, and trigger updates when composition or market coverage changes. A SKU cannot leave the client's internal release queue until the UFI is linked to a valid notification. Because formula history is sensitive and costly to reconstruct, secure custody and deterministic change control can create unusually strong retention if trust is earned.",
+  "title": "UFI Formula-Release Vault for Hazardous Mixtures",
+  "uncertainties": [
+    "Willingness of formulators to entrust exact composition data to a young company",
+    "Whether consultant channels see software as leverage or competition",
+    "Submission automation and authorization constraints in each target workflow",
+    "Portfolio size at which recurring software beats project-based consulting"
+  ],
+  "version": 1
+}

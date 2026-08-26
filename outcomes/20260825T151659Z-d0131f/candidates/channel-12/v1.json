@@ -1,0 +1,69 @@
+{
+  "candidate_id": "channel-12",
+  "claims": [
+    {
+      "claim_id": "channel-12-claim-01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2024/886/oj/eng"
+      ],
+      "statement": "Regulation (EU) 2024/886 requires a payer's PSP to offer payee verification immediately after payee information is supplied and before the payer authorises the transfer."
+    },
+    {
+      "claim_id": "channel-12-claim-02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2024/886/oj/eng"
+      ],
+      "statement": "The regulation distinguishes match, close-match and mismatch handling and requires the PSP verification service to be free to payment-service users, constraining the opportunity to enterprise exception workflow rather than resale of verification."
+    }
+  ],
+  "contrary_evidence": [
+    "Banks and AP incumbents may resolve exceptions natively; PSP verification is free to users and corporate bulk-payment users can opt out in specified circumstances."
+  ],
+  "economics": {
+    "acquisition_route": "UNVALIDATED HYPOTHESIS: 3 AP software, payment-initiation or accounting-platform partners each deliver 20 enterprise tenants.",
+    "capital_required_pln": 115000,
+    "founder_net_worth_path": "UNVALIDATED HYPOTHESIS: by year 9, PLN 11 million ARR and PLN 3.1 million EBITDA; 65% founder ownership at 5 times EBITDA implies PLN 10.1 million founder equity before liabilities.",
+    "founder_time": "UNVALIDATED HYPOTHESIS: 16 founder hours weekly until a regulated payments adviser and security operator are retained, then 9.",
+    "gross_margin_basis": "UNVALIDATED HYPOTHESIS: 80% mature gross margin after identity queries, encrypted audit storage and fraud-operations review.",
+    "payback": "UNVALIDATED HYPOTHESIS: 12-month integration CAC payback.",
+    "pricing": "UNVALIDATED HYPOTHESIS — all commercial figures here, including capital_required_pln=115000, are hypotheses: PLN 3000 per AP platform tenant monthly plus PLN 2.50 per resolved beneficiary exception; the mandated PSP verification itself is not resold or charged to the user.",
+    "retention_or_repeat": "UNVALIDATED HYPOTHESIS: 94% annual tenant retention due to embedded payment controls and recurring supplier changes."
+  },
+  "fingerprint": {
+    "compounding_advantage": "consented legal-name, trading-name and account-alias graph weighted by prior safe resolutions and fraud outcomes",
+    "customer": "enterprise accounts-payable teams and payment bureaus processing large supplier files",
+    "distribution_mechanism": "AP automation vendors, payment-initiation providers and accounting platforms",
+    "offer_and_business_model": "exception console, beneficiary evidence vault and API charged per tenant and resolution",
+    "payer_and_paid_event": "enterprise or AP platform pays when an exception is resolved with an auditable decision",
+    "problem_trigger": "the PSP returns a no-match or close-match result before payment authorisation"
+  },
+  "founder_fit": [
+    "Strong finance, entity-resolution and anomaly-detection fit with platform-led sales, but payments expertise is mandatory. UNVALIDATED HYPOTHESIS: PLN 115000 is a pre-validation ceiling for a read-only exception pilot that never initiates funds."
+  ],
+  "parent": null,
+  "risks": [
+    "A false resolution could facilitate fraud or misdirect funds.",
+    "Payment and beneficiary data demand bank-grade security and careful regulated-activity boundaries."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2024/886/oj/eng",
+    "https://finance.ec.europa.eu/news/new-eu-rules-make-instant-euro-payments-faster-and-safer-2025-10-10_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "federated beneficiary-exception resolution network",
+    "control_point": "corporate payment release after a payee-verification mismatch",
+    "critical_dependency": "PSP verification responses plus consented beneficiary-master and legal-identity data"
+  },
+  "thesis": "Embed in accounts-payable platforms to resolve beneficiary-name mismatches before a corporate payment is released, using consented legal-name, tax-ID, account-alias and prior-resolution evidence. Banks remain responsible for the mandated free verification; the paid layer gives enterprises workflow, audit and a federated alias graph that reduces repeated false exceptions without bypassing warnings.",
+  "title": "Verification-of-Payee Exception Network",
+  "uncertainties": [
+    "Mismatch volume in Polish non-euro payment flows",
+    "PSP response granularity",
+    "Whether enterprises permit federated alias learning"
+  ],
+  "version": 1
+}

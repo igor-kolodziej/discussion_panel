@@ -1,0 +1,84 @@
+{
+  "candidate_id": "rights10-01",
+  "claims": [
+    {
+      "claim_id": "rights10-01-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/2854"
+      ],
+      "statement": "The EU Data Act gives connected-product users access to generated data and permits sharing with third parties of their choice in defined circumstances."
+    },
+    {
+      "claim_id": "rights10-01-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/2854"
+      ],
+      "statement": "Required access can include relevant metadata in a structured, commonly used, machine-readable format, while security, personal-data, and trade-secret constraints remain binding."
+    },
+    {
+      "claim_id": "rights10-01-c3",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/EN/legal-content/summary/rules-on-fair-access-to-and-use-of-data-data-act.html"
+      ],
+      "statement": "Demand hypothesis: mixed-fleet industrial users will buy a neutral mandate and connector layer rather than manage each OEM request themselves."
+    }
+  ],
+  "contrary_evidence": [
+    "The Data Act does not itself create a legal basis for sharing personal data and permits protections for security and trade secrets.",
+    "Some connected products may store no remotely accessible useful data, making a mandate commercially empty."
+  ],
+  "economics": {
+    "acquisition_route": "Demand hypothesis: two industrial energy or maintenance partners can provide the first 10 paid sites",
+    "capital_required_pln": 55000,
+    "founder_net_worth_path": "Hypothesis: 250 sites at 2500 PLN monthly yields 7.5m PLN ARR; at 20% EBITDA and a 4x EBITDA value, founder equity could exceed 5m PLN in 4-6 years without counting distributions",
+    "founder_time": "15-20 hours weekly for a six-month narrow-equipment pilot; implementation support can later be delegated",
+    "gross_margin_basis": "Economics hypothesis: 75-85% software gross margin after the main OEM connectors stabilize; early integrations are service-heavy",
+    "payback": "Economics hypothesis: recover initial capital within 12-18 months at 10 sites averaging 2500 PLN monthly after direct integration costs",
+    "pricing": "Economics hypothesis: 4000-12000 PLN onboarding per site plus 1500-4000 PLN monthly and usage charges",
+    "retention_or_repeat": "Continuous data delivery, mandate renewals, audit evidence, and additional approved use cases create recurring use"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Reusable OEM connectors, resolved access playbooks, and a growing graph of verified users, assets, and approved recipients",
+    "customer": "Polish and EU factories operating mixed fleets of connected production, HVAC, and energy equipment",
+    "distribution_mechanism": "Energy auditors, maintenance integrators, industrial insurers, and targeted outreach to plant technical managers",
+    "offer_and_business_model": "Permission registry, OEM request workflow, connector layer, audit log, and approved-recipient workspace sold as SaaS plus onboarding",
+    "payer_and_paid_event": "The asset user pays at mandate onboarding and monthly per connected site or asset",
+    "problem_trigger": "An owner needs data for an aftermarket service but the OEM portal, format, mandate, and trade-secret boundaries differ by asset"
+  },
+  "founder_fit": [
+    "Direct use of data engineering and AI automation",
+    "Capital-light and testable beside employment",
+    "Low need for public-facing content",
+    "Polish industrial entry with EU expansion potential"
+  ],
+  "parent": null,
+  "risks": [
+    "OEM resistance or slow APIs",
+    "Cybersecurity liability",
+    "Long industrial sales cycles",
+    "Unclear user status for leased or jointly operated assets"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2023/2854",
+    "https://eur-lex.europa.eu/EN/legal-content/summary/rules-on-fair-access-to-and-use-of-data-data-act.html"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Permissioned data trustee and vertical SaaS",
+    "control_point": "Verified asset-user mandate plus the normalized connector and audit layer",
+    "critical_dependency": "The customer must qualify as the connected-product user and useful data must be readily available without prohibited disclosure"
+  },
+  "thesis": "A factory appoints the service as its permissioned Data Act access agent; the service retrieves non-personal machine data, normalizes it, and routes it to approved maintenance, energy, or insurance vendors. Demand hypothesis: multi-brand plants will pay to avoid repeating OEM access negotiations and connector work.",
+  "title": "Industrial Connected-Asset Data Mandate Hub",
+  "uncertainties": [
+    "Accessible data depth by OEM",
+    "Plant willingness to appoint an external agent",
+    "Integration support cost",
+    "Achievable monthly price"
+  ],
+  "version": 1
+}

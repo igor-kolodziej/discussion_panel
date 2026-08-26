@@ -1,0 +1,73 @@
+{
+  "candidate_id": "route-10",
+  "claims": [
+    {
+      "claim_id": "route-10-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://developer.apple.com/documentation/healthkit"
+      ],
+      "statement": "Apple HealthKit provides a permission-controlled repository through which apps can access, combine, analyze, and visualize health and fitness data from multiple sources."
+    },
+    {
+      "claim_id": "route-10-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.who.int/europe/publications/i/item/WHO-EURO-2023-8209-47977-71019"
+      ],
+      "statement": "WHO Europe reports that workplace physical-activity programs can improve health, wellbeing, productivity, and job satisfaction, while noting implementation challenges for SMEs."
+    }
+  ],
+  "contrary_evidence": [
+    "Wearable vendors already provide recovery scores and training suggestions at no extra charge.",
+    "Corporate wellness programs often struggle with sustained engagement and selection bias."
+  ],
+  "economics": {
+    "acquisition_route": "Run a 50-100 member opt-in pilot with one Warsaw gym or benefits broker, measuring retention and visits rather than medical outcomes.",
+    "capital_required_pln": 50000,
+    "founder_net_worth_path": "Hypothesis: 40000 paid members at 22 PLN monthly net revenue yield 10.56m PLN ARR; at 25% EBITDA, 4x EBITDA, and 60% founder ownership, equity is about 6.3m PLN in year 5-8, with no separate retained-earnings count.",
+    "founder_time": "Hypothesis: 10-15 hours weekly, with certified coaches reviewing recommendation boundaries on contract.",
+    "gross_margin_basis": "Hypothesis: 75-85% after channel share, wearable ingestion, inference, and support at scale.",
+    "payback": "Hypothesis: under 25 PLN variable activation cost per member and channel-led CAC, recovered within 2-4 paid months.",
+    "pricing": "Hypothesis: 19-39 PLN per member monthly, with 25-35% retained by the gym or benefits platform.",
+    "retention_or_repeat": "Hypothesis: 55-70% annual retention among active wearable users, with gym renewal and recurring training cycles as triggers."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Consent-based links among recommendations, adherence, gym attendance, and self-reported recovery improve personalization",
+    "customer": "Gym members or employees already reached by a gym chain or benefits platform",
+    "distribution_mechanism": "Gyms and employee-benefit platforms surface activation in existing membership apps and renewal journeys",
+    "offer_and_business_model": "White-label, non-medical wearable trend coaching and adherence subscription",
+    "payer_and_paid_event": "Member or employer pays a monthly add-on, with the gym or platform retaining a contracted share",
+    "problem_trigger": "Wearable and training data accumulate without a simple, conservative plan for today's activity or recovery"
+  },
+  "founder_fit": [
+    "Matches the founder's gym routine, wearables interest, and quantified-self mindset.",
+    "Personalization and longitudinal modelling are strong data-science use cases.",
+    "Gym and benefits channels remove the need for on-camera content or high-volume direct acquisition."
+  ],
+  "parent": null,
+  "risks": [
+    "Health-data privacy failures would damage both the channel and company.",
+    "Overconfident recovery guidance could contribute to injury or become a medical claim.",
+    "Wearable API policies and available metrics can change."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://developer.apple.com/documentation/healthkit",
+    "https://www.who.int/europe/publications/i/item/WHO-EURO-2023-8209-47977-71019"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "membership-platform white-label wellness upsell",
+    "control_point": "Cross-device recommendation and adherence history embedded in membership renewal",
+    "critical_dependency": "A channel partner able to demonstrate that the service improves retention or engagement"
+  },
+  "thesis": "Give gym chains and employee-benefit platforms a private-label, non-medical recovery and activity coach using member-permissioned wearable data, training history, and short check-ins. It turns trends into conservative session-intensity suggestions, adherence nudges, and coach-ready summaries. The channel owns recurring member access and receives revenue share; the founder does not need to become a fitness influencer.",
+  "title": "Gym-Embedded Wearable Recovery Coach",
+  "uncertainties": [
+    "Which gym or benefits-platform outcome justifies payment: retention, visits, coaching uptake, or employee engagement?",
+    "Whether members will grant enough data access to create differentiated advice.",
+    "Can recommendations remain clearly wellness-oriented and device-agnostic?"
+  ],
+  "version": 1
+}

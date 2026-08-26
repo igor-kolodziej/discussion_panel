@@ -1,0 +1,500 @@
+{
+  "binding_limiters": [
+    "The same unvalidated provider must be willing to pay, possess client data rights, control payment release, accept liability allocation, and mandate rollout; without that combination the product loses its control point, distribution leverage, retention mechanism, and economics together."
+  ],
+  "binding_score_floor": 4.4,
+  "campaign": {
+    "campaign_id": "campaign-20260825T110052Z-c143b1",
+    "cohort_number": 7,
+    "gap_brief_path": "briefs/cohort-7.json",
+    "gap_brief_sha256": "cc99621eeefee154205abc31e5f237ce5d3a41fe922641980f7e0df9b2b4b5db"
+  },
+  "candidates": [
+    {
+      "binding_limiters": [
+        "The same unvalidated provider must be willing to pay, possess client data rights, control payment release, accept liability allocation, and mandate rollout; without that combination the product loses its control point, distribution leverage, retention mechanism, and economics together."
+      ],
+      "binding_score_floor": 4.4,
+      "candidate_artifact": "candidates/control7-02/v5.json",
+      "candidate_id": "control7-02",
+      "candidate_sha256": "5ba36d0387b036a25b7059ee094917daace05263b372deb95386c19308ff30ca",
+      "candidate_version": 5,
+      "capital_required_pln_numeric": 45000,
+      "contested": false,
+      "evaluation_artifacts": [
+        {
+          "evaluation_type": "holdout_native",
+          "judge_id": "c7-holdout-control7-02-j1",
+          "path": "holdout/control7-02/v5/native-c7-holdout-control7-02-j1.json",
+          "sha256": "0013c3e9e30312292bef1d2970bdd1c99b43fd10f216c6c9f7e4b98823f0119f"
+        },
+        {
+          "evaluation_type": "holdout_native",
+          "judge_id": "c7-holdout-control7-02-j2",
+          "path": "holdout/control7-02/v5/native-c7-holdout-control7-02-j2.json",
+          "sha256": "588e470e5824ebd18d1dddfbc28713cfaf7e2f3dad28fad4c64a126b79a2d6d3"
+        }
+      ],
+      "evaluation_diagnostics": [
+        {
+          "evaluation_type": "holdout_native",
+          "evidence_needed_for_higher_score": "A paid pilot contract with a provider that has client authorization and actual payment-gate authority, including portfolio rollout rights; measured willingness to pay, eligible managed-client and payment volume, account-change incidence, false-positive and exception-handling rates, avoided-loss evidence, integration and support cost, security and liability terms, gross margin, sales-cycle length, adoption, and retained renewal behavior.",
+          "final_score": 4.5,
+          "highest_value_structural_change": "Restrict the initial product and buyer to a managed-AP or payment-operations provider that contractually controls payment release, maintains an independently verified supplier-contact master, and will make the module a mandatory stop-payment gate across an agreed portfolio; exclude advisory-only accounting providers and make portfolio rollout authority a condition of the pilot.",
+          "judge_id": "c7-holdout-control7-02-j1",
+          "main_structural_strength": "One provider can serve simultaneously as payer, workflow control point, and portfolio distribution surface, allowing a differentiated supplier-change policy and audit layer to reach many managed SMEs through one integration.",
+          "primary_score_limiter": "The entire commercial structure depends on obtaining a provider that lawfully controls the relevant payment workflow and will pay, integrate, and mandate the gate, yet no such partner, authority, demand, rollout, or unit economics is established.",
+          "strongest_disconfirming_evidence": "Free government account matching, existing ERP-bundled verification, and mandatory PSP payee verification by July 2027 show that baseline identity checking is becoming infrastructure controlled by powerful incumbents, while optional KSeF bank-account fields prevent complete invoice-only coverage."
+        },
+        {
+          "evaluation_type": "holdout_native",
+          "evidence_needed_for_higher_score": "A paid pilot with an outsourced finance provider that has delegated payment-release authority and documented client permissions, showing agreed portfolio pricing, active-client rollout, account-change volume, false-positive and escalation rates, confirmation cost, integration and support burden, liability allocation, gross margin, payment-cycle impact, and a credible renewal or mandated expansion decision.",
+          "final_score": 4.4,
+          "highest_value_structural_change": "Narrow the beachhead to outsourced providers with explicit delegated payment-release authority and make the product the contractually mandatory release gate and signed audit record for every supplier-detail change, rather than serving providers that only prepare records or offering another advisory account check.",
+          "judge_id": "c7-holdout-control7-02-j2",
+          "main_structural_strength": "One provider-level integration could place a differentiated supplier-change governance control at a recurring workflow event and distribute it across many managed clients.",
+          "primary_score_limiter": "The same unvalidated provider must be willing to pay, possess client data rights, control payment release, accept liability allocation, and mandate rollout; without that combination the product loses its control point, distribution leverage, retention mechanism, and economics together.",
+          "strongest_disconfirming_evidence": "The underlying account check is already available free from government infrastructure, bundled by major ERP vendors, and scheduled to gain a bank-provided substitute by July 2027, leaving the proposed governance layer—not the observable check—as the sole differentiated value, with no paid-demand evidence for that layer."
+        }
+      ],
+      "external_scores": [],
+      "native_distribution_floor": 4,
+      "native_economics_floor": 4,
+      "native_scores": [
+        4.5,
+        4.4
+      ],
+      "official_native_score": 4.4,
+      "qualified": false,
+      "title": "Portfolio Supplier-Change Control for Outsourced Finance Providers"
+    },
+    {
+      "binding_limiters": [
+        "There is no evidence that installers will pay repeatedly for the checkpoint or that sparse removal volume, partner coordination, legal and insurance allocation, and exception handling can produce attractive contribution economics; the proposed control point is also non-exclusive and readily replicable."
+      ],
+      "binding_score_floor": 3.5,
+      "candidate_artifact": "candidates/rights7-06/v5.json",
+      "candidate_id": "rights7-06",
+      "candidate_sha256": "07681989866d2864bb2a9e9feada9530d0bfcae081e3994927c9e2f0e138be12",
+      "candidate_version": 5,
+      "capital_required_pln_numeric": 70000,
+      "contested": false,
+      "evaluation_artifacts": [
+        {
+          "evaluation_type": "holdout_native",
+          "judge_id": "c7-holdout-rights7-06-j1",
+          "path": "holdout/rights7-06/v5/native-c7-holdout-rights7-06-j1.json",
+          "sha256": "cfa1cdeb5aca7910ead8d490fac41a785c3ea30a24e7257f74047936c96ded27"
+        },
+        {
+          "evaluation_type": "holdout_native",
+          "judge_id": "c7-holdout-rights7-06-j2",
+          "path": "holdout/rights7-06/v5/native-c7-holdout-rights7-06-j2.json",
+          "sha256": "950723760fa86dfcfea32709e6ff26b13cc901ea93e56ddf1ac428fb9f96b2b3"
+        }
+      ],
+      "evaluation_diagnostics": [
+        {
+          "evaluation_type": "holdout_native",
+          "evidence_needed_for_higher_score": "A Polish counsel opinion on the exact no-custody flow, signed buyer and authorized-operator service-level terms, and a consecutive paid pilot showing conversion, repeat use, removal density, route outcomes, response times, disputes or returns, and fully loaded contribution margin independently of salvage proceeds.",
+          "final_score": 4.3,
+          "highest_value_structural_change": "Convert the optional one-off checkpoint into a contracted, white-label route-decision layer embedded across an installer cluster's replacement workflow, backed by an authorized operator and professional buyer with quote-time service levels, minimum job volume, and clear liability allocation; this would address distribution, density, repeat revenue, and data access together.",
+          "judge_id": "c7-holdout-rights7-06-j1",
+          "main_structural_strength": "The pre-removal, no-custody gate puts evidence and route selection at the moment when lawful options can still be preserved, while keeping regulated physical activity and inventory risk with authorized counterparties.",
+          "primary_score_limiter": "There is no evidence that installers will pay enough, often enough, for a separate checkpoint to cover fully loaded coordination and liability costs, and the proposed distribution point is neither contracted nor exclusive.",
+          "strongest_disconfirming_evidence": "PV CYCLE and SecondSol already span much of the compliance, collection, testing, repair, logistics, resale, and recycling stack, directly weakening the claim that a separate routing layer has a durable control point or unmet paid demand."
+        },
+        {
+          "evaluation_type": "holdout_native",
+          "evidence_needed_for_higher_score": "Paid and repeated work orders from both the family installer and at least one unrelated installer; an activity-based record of fee, founder time, partner costs, exception costs, contribution margin, and turnaround time; a Polish legal opinion covering classification, advisory liability, documentation, and handoff boundaries; binding or trial SLAs from authorized operators and professional buyers; and completed-route evidence showing transfer rates, disputes, returns, and repeat usage.",
+          "final_score": 3.5,
+          "highest_value_structural_change": "Convert the proposed one-off checkpoint into a contracted portfolio-wide workflow embedded in installer work-order systems, backed by an authorized-operator and professional-buyer response-time SLA and, if obtainable, insurer or processor endorsement. This would create recurring paid volume, a more defensible control point, and systematic outcome data rather than relying on ad hoc coordination.",
+          "judge_id": "c7-holdout-rights7-06-j2",
+          "main_structural_strength": "The pre-removal, no-custody gate is a bounded and capital-light way to test whether better evidence and routing can create value while authorized partners retain regulated physical activities.",
+          "primary_score_limiter": "There is no evidence that installers will pay repeatedly for the checkpoint or that sparse removal volume, partner coordination, legal and insurance allocation, and exception handling can produce attractive contribution economics; the proposed control point is also non-exclusive and readily replicable.",
+          "strongest_disconfirming_evidence": "PV CYCLE and SecondSol already provide much of the compliance, collection, testing, repair, resale, logistics, and recycling stack, while PV CYCLE describes treatment as high-volume and low-return; this weakens both the claimed service gap and the prospect of wide margins without a contracted upstream mandate."
+        }
+      ],
+      "external_scores": [],
+      "native_distribution_floor": 4,
+      "native_economics_floor": 4,
+      "native_scores": [
+        4.3,
+        3.5
+      ],
+      "official_native_score": 3.5,
+      "qualified": false,
+      "title": "Pre-Removal Disposition Gate for Commercial PV Inverters"
+    }
+  ],
+  "comparison": "strictly_greater_than",
+  "failed_jobs": [],
+  "founder_sha256": "2110e393cf8d266906924a394ac5764ce8470a79a76aba7c43555e742ef24f97",
+  "highest_working_score": 5,
+  "no_finalist_reason": null,
+  "official_score": 4.4,
+  "portfolio_decision": {
+    "amendment_artifacts": [],
+    "candidate_decisions": [
+      {
+        "candidate_id": "control7-02",
+        "candidate_sha256": "84af63c2769d61ca90f480cf761087e477deeb7d893bb6e8bb3647a4910557e5",
+        "candidate_version": 2,
+        "disposition": "develop",
+        "fatal_claim_ids": [],
+        "fatal_reason": null,
+        "rationale": "Selected in the deterministic top development prefix by recomputed working score and configured tie-breaks; workflow access, willingness to pay, false positives, and incumbent bundling remain adverse but nonfatal uncertainty."
+      },
+      {
+        "candidate_id": "control7-04",
+        "candidate_sha256": "20499f560b7ad420b8b5febece3d76aff01b3d79ec79fcf1a83db029b91b1703",
+        "candidate_version": 2,
+        "disposition": "develop",
+        "fatal_claim_ids": [],
+        "fatal_reason": null,
+        "rationale": "Selected in the deterministic top development prefix by recomputed working score and configured tie-breaks; governance authority, lawful basis, operator participation, and procurement remain adverse but nonfatal uncertainty."
+      },
+      {
+        "candidate_id": "control7-05",
+        "candidate_sha256": "c0edf0d53d4bf78d5ef68f2ee8e0e06b2d5b4a2248e7ea262a346861f947b88a",
+        "candidate_version": 2,
+        "disposition": "develop",
+        "fatal_claim_ids": [],
+        "fatal_reason": null,
+        "rationale": "Selected in the deterministic top development prefix by recomputed working score and configured tie-breaks; laboratory adoption, data governance, volume, recurring price, and integration cost remain adverse but nonfatal uncertainty."
+      },
+      {
+        "candidate_id": "rights7-06",
+        "candidate_sha256": "48e89aa91ed46efafa9ae0ff3573e4997338ce0183a2208d027b3e284ad6e477",
+        "candidate_version": 2,
+        "disposition": "develop",
+        "fatal_claim_ids": [],
+        "fatal_reason": null,
+        "rationale": "Selected as the deterministic top-ranked development candidate; source rights, product-versus-waste classification, partner economics, density, and realized margin remain adverse but nonfatal uncertainty."
+      },
+      {
+        "candidate_id": "rights7-07",
+        "candidate_sha256": "4f9c4a9b3d94787ad2092721ab9a380c49958786697bc2fa584d49859ddbbbd9",
+        "candidate_version": 2,
+        "disposition": "not_selected",
+        "fatal_claim_ids": [],
+        "fatal_reason": null,
+        "rationale": "Outside the deterministic development prefix after recomputed working-score ranking; guarantees, joint liability, working capital, bid costs, and win rate remain adverse but nonfatal uncertainty."
+      },
+      {
+        "candidate_id": "settle7-05",
+        "candidate_sha256": "bb26764c8617e7a97fd206043a6c9ac9663c74a1b128aa5f8ae5ef41dfe1c4bd",
+        "candidate_version": 2,
+        "disposition": "not_selected",
+        "fatal_claim_ids": [],
+        "fatal_reason": null,
+        "rationale": "Outside the deterministic development prefix after recomputed working-score ranking; two-party onboarding, residual recovery value, incumbent coverage, and support economics remain adverse but nonfatal uncertainty."
+      },
+      {
+        "candidate_id": "settle7-06",
+        "candidate_sha256": "7647f6b2f4df1f2623fd6ca604dbec03f055f6143d6a070adc194375efca1e6f",
+        "candidate_version": 2,
+        "disposition": "not_selected",
+        "fatal_claim_ids": [],
+        "fatal_reason": null,
+        "rationale": "Outside the deterministic development prefix after recomputed working-score ranking; residual variance value, data access, integration cost, incumbent pricing, and acquisition remain adverse but nonfatal uncertainty."
+      },
+      {
+        "candidate_id": "settle7-10",
+        "candidate_sha256": "f8c7e5c38b85a515c11157081f10d476a552af1a58a70eba082097e7c06dfaf0",
+        "candidate_version": 2,
+        "disposition": "not_selected",
+        "fatal_claim_ids": [],
+        "fatal_reason": null,
+        "rationale": "Outside the deterministic development prefix after recomputed working-score ranking; upstream provider control, Polish eligibility, margin, non-circumvention, and data rights remain adverse but nonfatal uncertainty."
+      }
+    ],
+    "development_decision_artifact": {
+      "path": "portfolio/development-decision.json",
+      "sha256": "91a779f4ace63a50a48a06f69b491545aefa37f5f79395e2b4168f2c42007d82"
+    },
+    "missing_archetypes": [],
+    "selection_artifact": {
+      "path": "portfolio/selection.json",
+      "sha256": "c100796e3cbcb9f98144c75404573c399cfb793b097b43c14af30c364912a5e1"
+    },
+    "semantic_audit": {
+      "candidate_count": 8,
+      "commercial_archetype_count": 8,
+      "commercial_archetype_counts": {
+        "certified transaction warranty funded by inspection and guarantee premium revenue": 1,
+        "circular consignment and recovery marketplace": 1,
+        "longitudinal record subscription with paid laboratory reanalysis workflow": 1,
+        "managed prime contractor and tender consortium": 1,
+        "member clearing network charging subscription and per record fees": 1,
+        "member funded data cooperative and real time risk signal bureau": 1,
+        "per location compliance reconciliation saas for retailers": 1,
+        "per transaction verification bureau and approval api": 1
+      },
+      "control_point_counts": {
+        "a player consented token queried at the deposit bonus or account reactivation gate across participating operators": 1,
+        "exclusive tender specific bidding mandates and reserved regional installation capacity": 1,
+        "first refusal and title transfer rights over deinstalled equipment at the moment of replacement": 1,
+        "patient consent and the persistent laboratory to patient recontact channel for an existing genetic result": 1,
+        "the canonical bilateral charge detail record lineage including tariff snapshot immutable original credit record dispute state and accepted invoice mapping": 1,
+        "the item level match among deposit marked barcode sale return collection operator statement and store reimbursement": 1,
+        "the mandatory pre payment approval call plus a permissioned history of verified supplier identities and account changes": 1,
+        "the signed state of health benchmark and contractual reserve release schedule for a specific vehicle transfer": 1
+      },
+      "critical_dependency_counts": {
+        "clinical laboratories must import historical variants and retain responsibility for medically reviewed reinterpretation under ivdr": 1,
+        "customers must grant lawful ksef erp and payment workflow access and treat the signal as an approval gate": 1,
+        "enough counterparties must contribute complete ocpi data and contractually accept common reconciliation and dispute rules": 1,
+        "equipment must be lawfully classified safely transported economically testable and valuable to repeat buyers": 1,
+        "member firms must meet qualification financial geographic and service obligations consistently": 1,
+        "multiple licensed operators and privacy counsel must approve a lawful common governance and data minimization model": 1,
+        "reliable oem or bms data access a reproducible diagnostic and a licensed warranty or reserve partner willing to accept the trigger": 1,
+        "retailers and multiple scheme operators must expose usable event and statement exports with stable identifiers": 1
+      }
+    }
+  },
+  "qualification_label": null,
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "run_id": "20260825T220032Z-33fd02",
+  "run_status": "no_qualifier",
+  "schema_version": 2,
+  "selected_candidate_id": "control7-02",
+  "selected_candidate_version": 5,
+  "strongest_candidates": [
+    {
+      "binding_limiters": [
+        "The same unvalidated provider must be willing to pay, possess client data rights, control payment release, accept liability allocation, and mandate rollout; without that combination the product loses its control point, distribution leverage, retention mechanism, and economics together."
+      ],
+      "binding_score_floor": 4.4,
+      "candidate_id": "control7-02",
+      "candidate_version": 5,
+      "contested": false,
+      "official_native_score": 4.4,
+      "qualified": false,
+      "title": "Portfolio Supplier-Change Control for Outsourced Finance Providers"
+    },
+    {
+      "binding_limiters": [
+        "There is no evidence that installers will pay repeatedly for the checkpoint or that sparse removal volume, partner coordination, legal and insurance allocation, and exception handling can produce attractive contribution economics; the proposed control point is also non-exclusive and readily replicable."
+      ],
+      "binding_score_floor": 3.5,
+      "candidate_id": "rights7-06",
+      "candidate_version": 5,
+      "contested": false,
+      "official_native_score": 3.5,
+      "qualified": false,
+      "title": "Pre-Removal Disposition Gate for Commercial PV Inverters"
+    }
+  ],
+  "terminal_stage": "holdout",
+  "threshold": 8.5,
+  "unresolved_evidence": [
+    "A paid pilot contract with a provider that has client authorization and actual payment-gate authority, including portfolio rollout rights; measured willingness to pay, eligible managed-client and payment volume, account-change incidence, false-positive and exception-handling rates, avoided-loss evidence, integration and support cost, security and liability terms, gross margin, sales-cycle length, adoption, and retained renewal behavior.",
+    "A paid pilot with an outsourced finance provider that has delegated payment-release authority and documented client permissions, showing agreed portfolio pricing, active-client rollout, account-change volume, false-positive and escalation rates, confirmation cost, integration and support burden, liability allocation, gross margin, payment-cycle impact, and a credible renewal or mandated expansion decision."
+  ],
+  "working_evaluation_coverage": {
+    "complete": true,
+    "development": {
+      "candidate_count": 4,
+      "complete": true,
+      "completed_count": 4,
+      "duplicates": [],
+      "missing": [],
+      "records": [
+        {
+          "candidate_id": "control7-02",
+          "candidate_sha256": "92fb25b7f50c39c92a7e1ec8fa37bdd2b4ecfaccbc023ea105431b58200c767c",
+          "candidate_stage": "development",
+          "candidate_version": 4,
+          "distribution_score": 5,
+          "economics_score": 4,
+          "evaluation_path": "evaluations/control7-02/v4/working-c7-dev-working-control7-02.json",
+          "evaluation_sha256": "c29baf1fa7a821db8d4c8ecdc3e84dc35de913152e218bd1e174a35759fadc78",
+          "evidence_needed_for_higher_score": "A paid pilot with an outsourced provider that has delegated payment authority and documented client data rights, followed by mandatory rollout across a measurable client cohort, would need to show accepted portfolio pricing, provider and client conversion, reliable independent-contact coverage, incremental fraud or error detection versus existing controls, low false-positive and payment-delay rates, bounded liability, implementation and support cost, gross margin, retained usage, and a repeatable route to additional providers.",
+          "final_score": 4.4,
+          "judge_id": "c7-dev-working-control7-02",
+          "primary_score_limiter": "The model has not established a provider that both controls payment release and possesses the client authorizations, supplier-contact process, and willingness to pay and mandate the gate; without that combination, the product becomes an advisory feature and the distribution and recurring-economics thesis collapses.",
+          "strongest_disconfirming_evidence": "The core account-matching input is already free public infrastructure, major ERP vendors already embed whitelist checks, mandatory PSP payee verification arrives by July 2027, and KSeF account fields are optional; together these facts materially weaken any claim that invoice-account verification itself can sustain differentiation or pricing."
+        },
+        {
+          "candidate_id": "control7-04",
+          "candidate_sha256": "1b427c6862e8bd55c0adf6ef206eba69afff188dfea784cae1e0eb30f566cce0",
+          "candidate_stage": "development",
+          "candidate_version": 4,
+          "distribution_score": 2.5,
+          "economics_score": 4,
+          "evaluation_path": "evaluations/control7-04/v4/working-c7-dev-working-control7-04.json",
+          "evaluation_sha256": "377d37843184d34c5919006d858969a576ff2d85fbb7f7b6767408e0da473db6",
+          "evidence_needed_for_higher_score": "A materially higher score requires a named authorized sponsor or prime to fund scoped discovery under a credible procurement route, documentary evidence of the mandate and binding operator participation, and buyer-validated proof that the component will be outsourced. It also requires priced implementation and recurring terms showing prime share, assurance and support costs, liability, gross margin, payback, retention, procurement timing, and a credible multi-jurisdiction pipeline.",
+          "final_score": 3.4,
+          "judge_id": "c7-dev-working-control7-04",
+          "primary_score_limiter": "The commercial control point remains outside the company. No authorized buyer, Polish scheme trigger, outsourcing decision, paid engagement, operator commitment, or supplier-access channel is evidenced, and any eventual controller or prime would hold both buyer power and the durable institutional moat.",
+          "strongest_disconfirming_evidence": "The successful British and Swedish comparators obtain coverage through licence or statutory compulsion, whereas the reviewed Polish law establishes operator-level controls but no shared registry and STS already provides an internal self-exclusion workflow. This directly weakens the premise that a Polish scheme buyer or voluntary demand for an external shared module is imminent."
+        },
+        {
+          "candidate_id": "control7-05",
+          "candidate_sha256": "6fd69ae4aba8608315050f06d265e74f1219eb0abe85177a96f3beb4b51a0aaa",
+          "candidate_stage": "development",
+          "candidate_version": 4,
+          "distribution_score": 3,
+          "economics_score": 4,
+          "evaluation_path": "evaluations/control7-05/v4/working-c7-dev-working-control7-05.json",
+          "evaluation_sha256": "f374de095ddd7e343621fc038f7ee9b7454da4fc3d40cd2a471e55c9ca6c0dd9",
+          "evidence_needed_for_higher_score": "A paid lab-hosted pilot should show the exact intended-purpose assessment, installation time and fully loaded cost, eligible and completed workflow volume, baseline versus achieved staff time and missed-case reduction, collected site and usage revenue, support burden, renewal intent, and contribution payback; a written OEM or reseller commitment with connector rights, lead flow, revenue share, support allocation, and non-competing scope would materially strengthen distribution and defensibility.",
+          "final_score": 4.3,
+          "judge_id": "c7-dev-working-control7-05",
+          "primary_score_limiter": "The business does not control its route to market or prove its economics: laboratories and incumbent system vendors control integration and customer access, no buyer or channel has committed, and those same parties can reject, bundle, or appropriate the workflow before site-license, usage-volume, margin, renewal, CAC, or payback assumptions are validated.",
+          "strongest_disconfirming_evidence": "SeqOne already automates monthly historical-case reevaluation, Polish laboratories already monetize reanalysis internally, and the study covering all nine Dutch clinical molecular genetics laboratories found active periodic reinterpretation was viewed as unfeasible; together these facts challenge both whitespace and willingness to operationalize a separate recurring workflow product."
+        },
+        {
+          "candidate_id": "rights7-06",
+          "candidate_sha256": "7e659006169b8f3b49076df41c4a92637b1bfce9b3f2adfaef4397d00e667af6",
+          "candidate_stage": "development",
+          "candidate_version": 4,
+          "distribution_score": 5.5,
+          "economics_score": 5,
+          "evaluation_path": "evaluations/rights7-06/v4/working-c7-dev-working-rights7-06.json",
+          "evaluation_sha256": "73bb4cc89a68c7209f4a125c32d6e68b1daeabdee637953b79a0a43893796953",
+          "evidence_needed_for_higher_score": "Multiple paid work orders, including repeat use and at least one installer outside the family relationship, showing accepted fixed pricing, full activity-based contribution margin, prompt buyer and authorized-operator quotes, lawful route outcomes, low exception burden, and a quantified advantage over the installer's current process.",
+          "final_score": 5,
+          "judge_id": "c7-dev-working-rights7-06",
+          "primary_score_limiter": "There is no evidence that installers will authorize and pay enough for this separate checkpoint, at sufficient repeat density, to cover legal, insurance, partner-coordination, and exception costs when established downstream providers may already solve enough of the problem.",
+          "strongest_disconfirming_evidence": "PV CYCLE and SecondSol already provide substantial portions of the proposed downstream compliance, collection, testing, repair, resale, logistics, and recycling stack, directly weakening the claim that this workflow occupies an unserved control point or offers a strong enough advantage to change installer behavior."
+        }
+      ]
+    },
+    "highest_working_score": 5,
+    "research": {
+      "candidate_count": 8,
+      "complete": true,
+      "completed_count": 8,
+      "duplicates": [],
+      "missing": [],
+      "records": [
+        {
+          "candidate_id": "control7-02",
+          "candidate_sha256": "84af63c2769d61ca90f480cf761087e477deeb7d893bb6e8bb3647a4910557e5",
+          "candidate_stage": "research",
+          "candidate_version": 2,
+          "distribution_score": 3,
+          "economics_score": 4,
+          "evaluation_path": "evaluations/control7-02/v2/working-c7-working-control7-02.json",
+          "evaluation_sha256": "6aab8078702f5d5716fa1d187aae04116c486887ea8adeca893686194783d2f8",
+          "evidence_needed_for_higher_score": "Several paid pilots should show buyer conversion at the proposed price, measurable reduction in manual review or expected fraud loss, acceptable false-positive and escalation rates, gross margin after security and support, renewal intent, and at least one repeatable channel whose economics and incentives survive incumbent bundling.",
+          "final_score": 4.2,
+          "judge_id": "c7-working-control7-02",
+          "primary_score_limiter": "The business has neither demonstrated incremental willingness to pay nor a defensible route into the payment workflow, while ERP vendors and banks already own adjacent surfaces and can bundle the core control.",
+          "strongest_disconfirming_evidence": "The combined direct evidence that the government provides free NIP-account matching and bulk data, major Polish ERP vendors already embed whitelist verification, and PSPs must add payee verification by July 2027 undermines standalone pricing power and leaves the proposed governance layer vulnerable to bundling."
+        },
+        {
+          "candidate_id": "control7-04",
+          "candidate_sha256": "20499f560b7ad420b8b5febece3d76aff01b3d79ec79fcf1a83db029b91b1703",
+          "candidate_stage": "research",
+          "candidate_version": 2,
+          "distribution_score": 3,
+          "economics_score": 4,
+          "evaluation_path": "evaluations/control7-04/v2/working-c7-working-control7-04.json",
+          "evaluation_sha256": "b2df362a8d78e85c06eaca15e4a6c5976e69e7e56c2f2c9fea1510cc4790292c",
+          "evidence_needed_for_higher_score": "A written sponsor commitment from the relevant Polish authority or credible operator association; a specialist legal opinion defining lawful basis, controller roles, withdrawal and appeals; binding paid-pilot or conditional rollout commitments from several material operators; and a costed model showing integration expense, security and uptime burden, price, margin, procurement timing, retention, and a conservative founder-net-worth path.",
+          "final_score": 4.2,
+          "judge_id": "c7-working-control7-04",
+          "primary_score_limiter": "The company cannot create its own essential control point: without regulator, ministry, or credible association authority that supplies a lawful governance model and binding operator participation, coverage, willingness to pay, recurrence, and defensibility all remain hypothetical.",
+          "strongest_disconfirming_evidence": "The reviewed Polish statute provides operator-level responsible-gambling controls but no shared-registry mandate, while the successful British and Swedish comparators obtain cross-operator coverage through licence or statutory obligations; an incumbent Polish operator already offers its own account-specific exclusion."
+        },
+        {
+          "candidate_id": "control7-05",
+          "candidate_sha256": "c0edf0d53d4bf78d5ef68f2ee8e0e06b2d5b4a2248e7ea262a346861f947b88a",
+          "candidate_stage": "research",
+          "candidate_version": 2,
+          "distribution_score": 4,
+          "economics_score": 4,
+          "evaluation_path": "evaluations/control7-05/v2/working-c7-working-control7-05.json",
+          "evaluation_sha256": "25de95c1e4c35a76a9179ebb60f48846b37ce9e7e6c30166b51cedd69fcf51a8",
+          "evidence_needed_for_higher_score": "A paid laboratory pilot with a signed intended-purpose boundary and data-responsibility allocation; verified eligible-record volume; measured staff time, missed-case, and turnaround improvements; actual implementation, security, support, and acquisition costs; and evidence of annual renewal at a price yielding attractive gross margin and payback.",
+          "final_score": 4.3,
+          "judge_id": "c7-working-control7-05",
+          "primary_score_limiter": "There is no evidence that laboratories will accept an ongoing third-party recontact workflow and pay recurring per-record fees at volumes and margins sufficient to overcome enterprise sales, integration, genetic-data security, and governance costs.",
+          "strongest_disconfirming_evidence": "The study covering all nine Dutch clinical molecular genetics laboratories found reactive reinterpretation common but active periodic reinterpretation broadly viewed as infeasible, directly challenging the operational appetite on which a recurring longitudinal workflow depends."
+        },
+        {
+          "candidate_id": "rights7-06",
+          "candidate_sha256": "48e89aa91ed46efafa9ae0ff3573e4997338ce0183a2208d027b3e284ad6e477",
+          "candidate_stage": "research",
+          "candidate_version": 2,
+          "distribution_score": 6,
+          "economics_score": 4,
+          "evaluation_path": "evaluations/rights7-06/v2/working-c7-working-rights7-06.json",
+          "evaluation_sha256": "3af0fab7afbb1d7f4d6c6002592e3c551edb12a23b5f31c85e78960442e3d3e3",
+          "evidence_needed_for_higher_score": "A narrow multi-installer pilot should produce signed first-notice and title-transfer terms, an activity-specific Polish legal opinion, binding partner and insurance quotes, and a serial-level cohort showing removal volume, product-versus-waste share, buyer bids, realized sale-through, returns, full landed contribution margin, repeat use, and acquisition payback. Results should be reported separately for one equipment class and compared with the incumbent disposal route.",
+          "final_score": 4.4,
+          "judge_id": "c7-working-rights7-06",
+          "primary_score_limiter": "There is no evidence that recoverable value plus a service fee consistently exceeds the full compliant cost of acquisition, classification, testing, logistics, returns, and partner margins, nor that installers will grant the source rights needed at sufficient density.",
+          "strongest_disconfirming_evidence": "Established operators already provide much of the downstream stack, while an industry operator characterizes treatment as high-volume and low-return and reports unresolved second-hand PV guidance; together this directly challenges both intermediary differentiation and wide-margin assumptions."
+        },
+        {
+          "candidate_id": "rights7-07",
+          "candidate_sha256": "4f9c4a9b3d94787ad2092721ab9a380c49958786697bc2fa584d49859ddbbbd9",
+          "candidate_stage": "research",
+          "candidate_version": 2,
+          "distribution_score": 5,
+          "economics_score": 3,
+          "evaluation_path": "evaluations/rights7-07/v2/working-c7-working-rights7-07.json",
+          "evaluation_sha256": "e95e6870a92a6fb41426f1c703847d79a15ce814930c03b1193cbf24bf9aaaf1",
+          "evidence_needed_for_higher_score": "One completed or contract-ready pilot packet showing signed tender-specific member commitments, a buyer-acceptable qualification structure, bank or insurer guarantee terms, member quotations, the payment waterfall, fully loaded bid and delivery costs, contribution margin under loss and defect scenarios, bid hours, win probability, and buyer or member willingness to pay the disclosed fee.",
+          "final_score": 4.1,
+          "judge_id": "c7-working-rights7-07",
+          "primary_score_limiter": "There is no evidence that the coordinator can secure guarantees and working capital, price joint liability and losing-bid costs, and still retain attractive contribution margin and owner earnings at a repeatable win rate.",
+          "strongest_disconfirming_evidence": "Polish procurement law imposes joint and several performance responsibility and potentially material bid and performance security, while official platforms already provide free tender discovery and consortium matching and established EPCs already provide nationwide turnkey delivery."
+        },
+        {
+          "candidate_id": "settle7-05",
+          "candidate_sha256": "bb26764c8617e7a97fd206043a6c9ac9663c74a1b128aa5f8ae5ef41dfe1c4bd",
+          "candidate_stage": "research",
+          "candidate_version": 2,
+          "distribution_score": 3,
+          "economics_score": 3,
+          "evaluation_path": "evaluations/settle7-05/v2/working-c7-working-settle7-05.json",
+          "evaluation_sha256": "ffbfea0bd2620c3b642772e2eb0d29a81c00b5ff3ddf68f1f0fa6282e4d1ec13",
+          "evidence_needed_for_higher_score": "A complete paid pilot with at least one target bilateral pair should quantify CDR and invoice volume, mismatch frequency, disputed and recovered value, finance hours and credit delay avoided, implementation and support hours, false-dispute rate, security and legal cost, signed willingness to continue at a stated recurring price, and a repeatable path to acquire the next several pairs with one-sided and fully loaded CAC payback.",
+          "final_score": 3.3,
+          "judge_id": "c7-working-settle7-05",
+          "primary_score_limiter": "The business requires enough recoverable bilateral reconciliation value to pay for two-party onboarding and ongoing rule, support, and liability costs, but neither that value nor the resulting unit economics is evidenced, and incumbent bundles plus OCPI standardization compress the available wedge.",
+          "strongest_disconfirming_evidence": "Hubject already provides CDR rating, invoicing, clearing, and settlement at large network scale, while GIREVE documents CDR validation, disputes, and delegated invoicing and OCPI is standardizing invoice-to-CDR reconciliation; together these directly challenge the premise that an independent mapping and clearing layer can own a scarce control point."
+        },
+        {
+          "candidate_id": "settle7-06",
+          "candidate_sha256": "7647f6b2f4df1f2623fd6ca604dbec03f055f6143d6a070adc194375efca1e6f",
+          "candidate_stage": "research",
+          "candidate_version": 2,
+          "distribution_score": 4,
+          "economics_score": 4,
+          "evaluation_path": "evaluations/settle7-06/v2/working-c7-working-settle7-06.json",
+          "evaluation_sha256": "3fc14b495e941c95e850b9272d3202b70d26adabe3535fb5b46c4de938cdbff1",
+          "evidence_needed_for_higher_score": "Results from at least three heterogeneous multi-store chains showing the post-incumbent variance rate and PLN value, recovery and false-positive rates, finance hours saved, lawful export availability, onboarding and connector cost, a named budget owner paying a value-based fee, repeat monitoring demand, and an acquisition path with credible CAC and payback.",
+          "final_score": 3.9,
+          "judge_id": "c7-working-settle7-06",
+          "primary_score_limiter": "The opportunity has not established that post-incumbent residual variances are frequent and valuable enough to fund heterogeneous data access and integration; low incumbent pricing and incumbent control of both data and channels reinforce this uncertainty across economics, advantage, and distribution.",
+          "strongest_disconfirming_evidence": "COMP already markets multi-operator settlement visibility, reports, integrations, and 19.90-79.90 PLN monthly retailer tiers, while PolKa verifies the quantities and values used for settlement and Insoft embeds settlement reporting in an established POS product; this directly weakens the premise that retailers retain a separately monetizable reconciliation gap."
+        },
+        {
+          "candidate_id": "settle7-10",
+          "candidate_sha256": "f8c7e5c38b85a515c11157081f10d476a552af1a58a70eba082097e7c06dfaf0",
+          "candidate_stage": "research",
+          "candidate_version": 2,
+          "distribution_score": 3,
+          "economics_score": 3,
+          "evaluation_path": "evaluations/settle7-10/v2/working-c7-working-settle7-10.json",
+          "evaluation_sha256": "b9924d60d2192003b8fb784c36f9a12a9f639be7c38ad3dd967a4ea648b38eec",
+          "evidence_needed_for_higher_score": "Written partner terms must establish Polish warranty availability, attractive per-vehicle and recurring software margin, lead or account protection, non-circumvention, and reusable data rights. A dealer pilot must then show incremental willingness to pay, supported eligible volume, measurable reduction in days-to-sale, discounting or disputes, repeat usage, acquisition cost, contribution margin, payback, and a compliant claims arrangement.",
+          "final_score": 3,
+          "judge_id": "c7-working-settle7-10",
+          "primary_score_limiter": "The venture lacks an owned control point: one upstream provider can determine product access, Polish eligibility, margin, data rights, and guarantee terms while also being able to bypass the orchestrator and contract directly with dealers.",
+          "strongest_disconfirming_evidence": "AVILOO already offers the rapid certificate, authorized API surface, and one-year/20,000-kilometre EUR 3,000 guarantee contemplated by the concept, while AAA AUTO already deploys AVILOO testing in Poland from 250 PLN and bundles certification, re-testing, and battery protection; DEKRA adds a second established rapid-certificate competitor."
+        }
+      ]
+    },
+    "total_candidate_versions": 12,
+    "total_completed": 12
+  }
+}

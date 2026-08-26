@@ -1,0 +1,84 @@
+{
+  "candidate_id": "control10-01",
+  "claims": [
+    {
+      "claim_id": "control10-01-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://czystepowietrze.gov.pl/wez-dofinansowanie/na-co-i-ile"
+      ],
+      "statement": "Czyste Powietrze currently requires qualifying heat pumps to be on List ZUM on the invoice date."
+    },
+    {
+      "claim_id": "control10-01-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://czystepowietrze.gov.pl/wazne-komunikaty/nowe-zasady-na-liscie-zum-wiekszy-wybor-urzadzen-z-troska-o-beneficjentow",
+        "https://www.gov.pl/web/nfosigw/od-kwietnia-zmiany-w-programie-czyste-powietrze"
+      ],
+      "statement": "The programme ties eligibility to laboratory or recognised quality evidence, with accredited laboratory testing retained for popular air-to-water pumps."
+    },
+    {
+      "claim_id": "control10-01-c3",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://lista-zum.ios.edu.pl/docs/REGULAMIN_161225.pdf"
+      ],
+      "statement": "Demand hypothesis: overseas OEMs will pay a local intermediary to reduce rejected or stale model submissions and preserve subsidised-channel access."
+    }
+  ],
+  "contrary_evidence": [
+    "Suppliers can submit directly and may treat the process as an occasional consulting task rather than recurring software.",
+    "Recognised quality marks simplify entry for several pump categories, reducing evidence complexity."
+  ],
+  "economics": {
+    "acquisition_route": "Hypothesis: two laboratory or master-distributor channels can introduce many non-Polish OEMs without founder-led mass outreach",
+    "capital_required_pln": 55000,
+    "founder_net_worth_path": "Hypothesis: 120 suppliers averaging 45000 PLN annual revenue could support roughly 5.4m PLN ARR; durable profitability and adjacent subsidy-list expansion could make founder equity exceed 5m PLN in 4-6 years",
+    "founder_time": "12-18 hours weekly for a narrow pilot; specialist review purchased per file",
+    "gross_margin_basis": "Economics hypothesis: 70-85% software-led gross margin after document review is standardised",
+    "payback": "Hypothesis: setup capital recovered in 6-10 months with six onboarding projects and ten monitored families",
+    "pricing": "Economics hypothesis: 10000-25000 PLN onboarding per model family plus 1500-4000 PLN monthly monitoring",
+    "retention_or_repeat": "New SKUs, report revisions, EPREL checks, programme changes and annual catalogue refreshes"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A permissioned corpus of report-to-SKU mappings, validation failures and change histories improves preflight checks and raises switching costs",
+    "customer": "Heat-pump manufacturers, importers and distributors seeking subsidised Polish sales",
+    "distribution_mechanism": "White-label referral inside accredited laboratory and HVAC-distributor workflows",
+    "offer_and_business_model": "Managed evidence workspace plus fixed-fee onboarding and recurring per-model monitoring subscription",
+    "payer_and_paid_event": "Supplier pays at initial evidence-pack submission, each new model-family submission and ongoing status monitoring",
+    "problem_trigger": "A SKU must be on List ZUM when invoiced to qualify under Czyste Powietrze, while evidence and status can change"
+  },
+  "founder_fit": [
+    "Direct leverage from the family renewable-installation channel",
+    "Document parsing and status monitoring suit data-science and AI automation skills",
+    "Can begin part-time without public-facing content"
+  ],
+  "parent": null,
+  "risks": [
+    "Programme or ZUM rules may change abruptly.",
+    "Incorrect preflight advice could delay market access, so contractual scope and expert sign-off are essential.",
+    "Laboratories or large distributors could build the workflow themselves."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://czystepowietrze.gov.pl/wez-dofinansowanie/na-co-i-ile",
+    "https://czystepowietrze.gov.pl/wazne-komunikaty/nowe-zasady-na-liscie-zum-wiekszy-wybor-urzadzen-z-troska-o-beneficjentow",
+    "https://lista-zum.ios.edu.pl/docs/REGULAMIN_161225.pdf",
+    "https://www.gov.pl/web/nfosigw/od-kwietnia-zmiany-w-programie-czyste-powietrze"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Regulatory evidence operations SaaS with managed-service wedge",
+    "control_point": "The model-specific evidence pack released before ZUM submission and subsidised-channel listing",
+    "critical_dependency": "Continued ZUM gate relevance plus access to supplier-owned reports and laboratory partners"
+  },
+  "thesis": "A document-control service sold through accredited laboratories and Polish HVAC distributors could turn test reports, EPREL records, labels and List ZUM submissions into a release gate for each heat-pump SKU. It would prepare and monitor evidence, not perform tests or promise approval. Demand and economics are hypotheses to validate.",
+  "title": "ZUM Evidence Gate for Heat-Pump Suppliers",
+  "uncertainties": [
+    "Number of suppliers with enough Polish revenue to pay recurring fees",
+    "Availability of machine-readable status data or permitted automation",
+    "Actual submission rejection and update frequency"
+  ],
+  "version": 1
+}

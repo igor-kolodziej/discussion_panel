@@ -1,0 +1,74 @@
+{
+  "candidate_id": "settle10-06",
+  "claims": [
+    {
+      "claim_id": "settle10-06-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/zakres-obowiazkowego-ksef/",
+        "https://peppol.org/documentation/technical-documentation/post-award-documentation/"
+      ],
+      "statement": "Poland made KSeF receipt mandatory from February 2026 and issuance mandatory in phases, while Peppol specifications include invoice-response messages."
+    },
+    {
+      "claim_id": "settle10-06-c2",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/",
+        "https://peppol.org/learn-more/peppol-interoperability-framework/"
+      ],
+      "statement": "Demand hypothesis: accounting channels will pay for shared exception automation because structured invoice transport does not itself resolve commercial mismatches."
+    }
+  ],
+  "contrary_evidence": [
+    "ERP and accounting vendors can add native KSeF exception tools.",
+    "KSeF's structured format may eliminate many basic errors over time."
+  ],
+  "economics": {
+    "acquisition_route": "Recruit accounting offices and ERP resellers rather than selling entity by entity.",
+    "capital_required_pln": 30000,
+    "founder_net_worth_path": "Hypothesis: 2000 entities at 250 PLN monthly can create 6 million PLN ARR and founder equity above 5 million PLN in four years.",
+    "founder_time": "Three hours daily for rules, integrations, and partner support.",
+    "gross_margin_basis": "Hypothesis: 88-94% margin for automated classification and workflow.",
+    "payback": "Hypothesis: 150 entities at 250 PLN monthly recover initial capital within one year.",
+    "pricing": "Hypothesis: 150-500 PLN per entity monthly plus 2-8 PLN per resolved exception.",
+    "retention_or_repeat": "Every monthly close produces new invoices, exceptions, and payment follow-up."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Counterparty-specific error mappings and resolution outcomes improve with every invoice.",
+    "customer": "Polish accounting firms, ERP integrators, and mid-market finance teams.",
+    "distribution_mechanism": "Accounting offices and ERP resellers embed it across hundreds of client entities.",
+    "offer_and_business_model": "The API classifies exceptions, gathers missing evidence, proposes corrections, and records counterparty responses.",
+    "payer_and_paid_event": "The accounting firm or ERP vendor pays per managed entity and resolved exception.",
+    "problem_trigger": "A structured invoice is received but fails validation, matching, acceptance, or payment."
+  },
+  "founder_fit": [
+    "Warsaw and Polish language provide a natural local wedge.",
+    "The work is rules-heavy, measurable, and compatible with part-time AI leverage."
+  ],
+  "parent": null,
+  "risks": [
+    "Government API changes could raise maintenance cost.",
+    "Incorrect correction proposals could create tax or accounting errors."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/zakres-obowiazkowego-ksef/",
+    "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/",
+    "https://peppol.org/documentation/technical-documentation/post-award-documentation/",
+    "https://peppol.org/learn-more/peppol-interoperability-framework/"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Embedded financial exception-resolution layer.",
+    "control_point": "The canonical invoice-exception and counterparty-response record.",
+    "critical_dependency": "Stable KSeF, Peppol, and ERP interfaces."
+  },
+  "thesis": "A KSeF and Peppol exception layer can diagnose rejected, unmatched, or disputed invoices and coordinate a machine-readable resolution between buyer and supplier.",
+  "title": "KSeF Invoice Exception Resolver",
+  "uncertainties": [
+    "Paid exception volume per entity is unknown.",
+    "Accounting-firm channel margins are untested."
+  ],
+  "version": 1
+}

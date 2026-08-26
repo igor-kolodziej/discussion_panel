@@ -1,0 +1,202 @@
+{
+  "candidate_id": "settle7-06",
+  "candidate_sha256": "7647f6b2f4df1f2623fd6ca604dbec03f055f6143d6a070adc194375efca1e6f",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "r06-c1",
+      "evidence_refs": [
+        "s06-law"
+      ],
+      "statement": "Retailers above 200 square metres must contract with every operator that approaches them, while smaller stores contract with at least one; retailer-operator and inter-operator financial settlement must occur no less often than monthly."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r06-c2",
+      "evidence_refs": [
+        "s06-law"
+      ],
+      "statement": "Retailers collecting returns must keep annual records of acquired and sold products, returned containers, and collected, returned, and unreturned deposits, and retain them for five years."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r06-c3",
+      "evidence_refs": [
+        "s06-operators"
+      ],
+      "statement": "The Ministry page lists eight authorized system operators, including two authorized during 2026."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r06-c4",
+      "evidence_refs": [
+        "s06-volume"
+      ],
+      "statement": "By 21 August 2026, the Ministry reported 3.2 billion returned containers, over 60,000 return points, 17,500 RVM-equipped points, and 88 percent of returns through RVMs."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r06-c5",
+      "evidence_refs": [
+        "s06-qa",
+        "s06-small-shop"
+      ],
+      "statement": "Official guidance confirms that each operator designs detailed settlement rules contractually, so processes and documents can differ by operator and retailer participation model."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r06-c6",
+      "evidence_refs": [
+        "s06-polka-it"
+      ],
+      "statement": "PolKa's IT system already receives return and voucher data in real time or manual reports weekly, exposes settlement documents, and verifies quantities and values used for retailer settlement."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r06-c7",
+      "evidence_refs": [
+        "s06-comp-operator",
+        "s06-comp-retail",
+        "s06-insoft"
+      ],
+      "statement": "COMP markets multi-operator support, settlement visibility, accounting/API integrations, and retailer packages priced 19.90-79.90 PLN net monthly; Insoft embeds COMP and Zwrotka workflows and settlement reports in established POS software."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r06-c8",
+      "evidence_refs": [
+        "s06-polka-it",
+        "s06-comp-retail",
+        "s06-insoft"
+      ],
+      "statement": "Given the breadth and price of incumbent operational tooling, a new entrant would need to sell independent exception assurance or recovered-value evidence rather than another primary DRS ledger."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r06-c9",
+      "evidence_refs": [],
+      "statement": "The incidence and cash value of unresolved variances after incumbent reconciliation are not established by public sources."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r06-c10",
+      "evidence_refs": [],
+      "statement": "Public materials do not establish that retailers can export item-level operator, RVM, collection, voucher, and settlement data to an independent third party on commercially workable terms."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r06-c11",
+      "evidence_refs": [],
+      "statement": "No sourced evidence establishes retailer willingness to buy a separate exception-audit subscription or the proposed chain-level pricing."
+    }
+  ],
+  "contrary_evidence": [
+    "s06-comp-retail and s06-comp-operator: COMP already offers multi-operator handling, settlement reports, API/accounting integration, and low per-store pricing.",
+    "s06-polka-it: an operator-native system already provides transaction ingestion, settlement documents, and automated verification.",
+    "s06-insoft: a widely used POS product already includes DRS cashier, voucher, bag, and return-settlement workflows.",
+    "s06-volume: rapid deployment and transaction volume imply that core infrastructure and channel contracts are substantially in place."
+  ],
+  "schema_version": 2,
+  "sources": [
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2026-05-08",
+      "publisher": "Dziennik Ustaw / Chancellery of the Sejm",
+      "source_id": "s06-law",
+      "source_type": "official legislation",
+      "stance": "supporting",
+      "title": "Consolidated Act on Packaging and Packaging Waste, Dz.U. 2026 item 619",
+      "url": "https://eli.gov.pl/api/acts/DU/2026/619/text/T/D20260619L.pdf"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated; content current through 2026-04-29",
+      "publisher": "Polish Ministry of Climate and Environment",
+      "source_id": "s06-operators",
+      "source_type": "official registry page",
+      "stance": "context",
+      "title": "Operatorzy systemu kaucyjnego",
+      "url": "https://www.gov.pl/web/klimat/system-kaucyjny-operatorzy"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2026-08-21",
+      "publisher": "Polish Ministry of Climate and Environment",
+      "source_id": "s06-volume",
+      "source_type": "official operating update",
+      "stance": "supporting",
+      "title": "Zebraliśmy 3,2 mld opakowań kaucyjnych!",
+      "url": "https://www.gov.pl/web/klimat/zebralismy-32-mld-opakowan-kaucyjnych"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "Polish Ministry of Climate and Environment",
+      "source_id": "s06-qa",
+      "source_type": "official guidance",
+      "stance": "supporting",
+      "title": "System kaucyjny: pytania i odpowiedzi",
+      "url": "https://www.gov.pl/web/klimat/system-kaucyjny-pytania-i-odpowiedzi"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2026-07-24",
+      "publisher": "Polish Ministry of Climate and Environment",
+      "source_id": "s06-small-shop",
+      "source_type": "official guidance",
+      "stance": "context",
+      "title": "Prowadzisz mały sklep? Poznaj obowiązki w systemie kaucyjnym",
+      "url": "https://www.gov.pl/web/klimat/prowadzisz-maly-sklep-poznaj-obowiazki-w-systemie-kaucyjnym"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2026-04",
+      "publisher": "PolKa Operator Systemu Kaucyjnego Not For Profit S.A.",
+      "source_id": "s06-polka-it",
+      "source_type": "operator primary documentation",
+      "stance": "contradicting",
+      "title": "Regulamin korzystania z systemu IT PolKa",
+      "url": "https://polskakaucja.pl/wp-content/uploads/2026/04/REGULAMIN-KORZYSTANIA-Z-SYSTEMU-IT-POLKA.pdf"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "COMP S.A. / Kaucyjni",
+      "source_id": "s06-comp-operator",
+      "source_type": "incumbent product page",
+      "stance": "contradicting",
+      "title": "COMP solutions for deposit-system operators",
+      "url": "https://kaucyjni.pl/dla-operatorow/"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "COMP S.A. / Kaucyjni",
+      "source_id": "s06-comp-retail",
+      "source_type": "incumbent product and pricing page",
+      "stance": "contradicting",
+      "title": "COMP deposit-system offer for retailers",
+      "url": "https://kaucyjni.pl/dla-sklepu/"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "INSOFT sp. z o.o.",
+      "source_id": "s06-insoft",
+      "source_type": "incumbent POS documentation",
+      "stance": "contradicting",
+      "title": "System kaucyjny DRS w PC-Market",
+      "url": "https://www.insoft.com.pl/system-kaucyjny"
+    }
+  ],
+  "unknowns": [
+    "Measured variance rate and PLN loss per store-month after existing controls",
+    "Export/API availability and field-level identifiers for each target operator, POS, RVM, and accounting stack",
+    "Contractual right to process and learn from retailer and operator data",
+    "Named buyer, budget owner, and willingness to pay for independent exception assurance",
+    "Time and cost to integrate a heterogeneous chain",
+    "Recovery rate, false-positive rate, close-time reduction, and retention from a real pilot",
+    "Whether incumbents will partner, block access, or quickly copy exception analytics"
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "candidate_id": "control7-09",
+  "claims": [
+    {
+      "claim_id": "control7-09-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+      ],
+      "statement": "Following the 2026 AI Omnibus, Annex III high-risk AI rules are scheduled for 2 December 2027 and product-embedded high-risk rules for 2 August 2028."
+    },
+    {
+      "claim_id": "control7-09-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+      ],
+      "statement": "The Commission lists risk management, data quality, logging, documentation, human oversight, robustness, cybersecurity, and accuracy among high-risk obligations."
+    },
+    {
+      "claim_id": "control7-09-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://digital-strategy.ec.europa.eu/en/faqs/navigating-ai-act"
+      ],
+      "statement": "The Commission states that conformity assessment may require an independent body for some systems and that harmonized AI standards remain under development."
+    }
+  ],
+  "contrary_evidence": [
+    "The 2026 timeline extension delays compulsory high-risk demand.",
+    "Some conformity assessments require authorized independent bodies, so this business may remain a subcontractor or pre-assessment service."
+  ],
+  "economics": {
+    "acquisition_route": "Counsel and security-assessment referrals, then buyer-mandated vendor assessments",
+    "capital_required_pln": 70000,
+    "founder_net_worth_path": "Illustrative, unvalidated path: 100 clients averaging 60000 PLN annual revenue could create 6m PLN revenue; at 30% operating margin and 75% founder ownership, a profit-based valuation could plausibly exceed 5m PLN around year 5-6",
+    "founder_time": "4 hours/day initially, with legal interpretation and domain experts contracted",
+    "gross_margin_basis": "Target 60-75% after specialist review, compute, quality assurance, insurance, and sales partner fees",
+    "payback": "Unvalidated: two full assessments plus one monitoring contract could cover initial build cost within 12 months",
+    "pricing": "Unvalidated: 20000-80000 PLN per assessment plus 5000-15000 PLN per quarter for monitored releases",
+    "retention_or_repeat": "New models, datasets, and releases trigger retesting; enterprise evidence contracts can renew annually"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Proprietary benchmark cases, failure corpus, accepted report format, and historical evidence across versions",
+    "customer": "EU AI vendors and deployers in employment, education, finance, and other sensitive workflows",
+    "distribution_mechanism": "Partnerships with AI counsel, security assessors, procurement advisors, and selected enterprise buyers",
+    "offer_and_business_model": "Independent technical tests, reproducible evidence pack, remediation queue, and release monitoring; not legal certification",
+    "payer_and_paid_event": "Provider or deployer pays per assessment and quarterly or release-based monitoring",
+    "problem_trigger": "A high-impact AI system enters procurement, changes model or data, or approaches a compliance milestone"
+  },
+  "founder_fit": [
+    "Directly uses data science, AI, experimentation, and documentation discipline",
+    "Service can begin manually before tooling is automated",
+    "Enterprise referrals reduce dependence on public-facing content",
+    "Capital needs are primarily labor and secure compute"
+  ],
+  "parent": null,
+  "risks": [
+    "Unauthorized certification language could create regulatory exposure",
+    "Standards and implementation dates can change",
+    "Large assurance firms can bundle testing with legal and audit services"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+    "https://digital-strategy.ec.europa.eu/en/faqs/navigating-ai-act"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Independent testing lab with recurring version-monitoring contracts",
+    "control_point": "A buyer-accepted, version-bound test packet embedded in procurement and model-change approval",
+    "critical_dependency": "Major buyers, insurers, or authorized conformity bodies must accept the test protocol as useful evidence"
+  },
+  "thesis": "Build a technically rigorous pre-conformity evidence service for EU employers and other sensitive-use AI vendors: dataset tests, robustness and bias suites, logging checks, human-oversight exercises, and a version-bound evidence packet that a buyer can require before procurement. It must not claim statutory certification unless separately authorized.",
+  "title": "Procurement-Grade AI Evidence Lab",
+  "uncertainties": [
+    "Which buyer will make the report a mandatory gate",
+    "Whether clients will expose models and sensitive datasets",
+    "Whether harmonized standards will commoditize the testing suite"
+  ],
+  "version": 1
+}

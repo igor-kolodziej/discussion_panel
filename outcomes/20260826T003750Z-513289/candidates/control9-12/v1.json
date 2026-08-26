@@ -1,0 +1,84 @@
+{
+  "candidate_id": "control9-12",
+  "claims": [
+    {
+      "claim_id": "control9-12-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/kultura/nowe-przepisy-dotyczace-przywozu-dobr-kultury-na-obszar-unii-europejskiej"
+      ],
+      "statement": "Since 28 June 2025, covered cultural goods imported from outside the EU require, depending on type, an import-licence application, importer statement, or standardised description through the electronic ICG module in TRACES NT."
+    },
+    {
+      "claim_id": "control9-12-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/kultura/procedura-ubiegania-sie-o-pozwolenie-na-przywoz"
+      ],
+      "statement": "A person importing archaeological objects or parts of monuments older than 250 years from a third country must apply for an import licence in the member state where the goods first enter a qualifying customs procedure."
+    },
+    {
+      "claim_id": "control9-12-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/kultura/procedura-ubiegania-sie-o-pozwolenie-na-przywoz",
+        "https://taxation-customs.ec.europa.eu/system/files/2023-12/2.%20MASP-C_Rev.%202023_Annex%202_Consolidated%20fiches_v1.0.pdf"
+      ],
+      "statement": "Licence applications, electronic signatures, importer statements, and transmission to customs are handled through ICG, making the dossier a concrete digital border gate."
+    }
+  ],
+  "contrary_evidence": [
+    "ICG is already the public authoritative system, and specialist customs agents or lawyers may bundle dossier preparation.",
+    "Covered cultural-goods import volume may be too small in Poland alone, making EU-wide channel expansion essential."
+  ],
+  "economics": {
+    "acquisition_route": "Pilot with one Polish art-logistics or customs firm and one auction house, process 20 historical/sandbox dossiers, then offer a white-label intake portal to EU specialist shippers",
+    "capital_required_pln": 45000,
+    "founder_net_worth_path": "Hypothesis: 250 EU trade firms at 24000 PLN ARR plus 2500 dossiers at 1600 PLN yields 10m PLN revenue; at 22% EBITDA, 4x EBITDA, and 70% founder ownership, equity could exceed 6.1m PLN in years 6-9. Validate the niche's transaction count and exclude retained cash from a second count.",
+    "founder_time": "2.5-4 hours per day for workflow and evidence tooling; contract cultural-property and customs experts per case and never make unsupervised legal determinations",
+    "gross_margin_basis": "Hypothesis: 58-75% while experts review cases, rising above 80% for repeat counterparties and standard importer statements",
+    "payback": "Hypothesis: 9-15 months at 18 monthly dossiers averaging 1800 PLN plus five firm subscriptions; validate case mix and expert-review cost",
+    "pricing": "Hypothesis: 900-3500 PLN per standard object dossier, 5000-15000 PLN for complex licence cases, and 6000-24000 PLN annual vault subscriptions for trade firms",
+    "retention_or_repeat": "Provenance evidence is reused for insurance, resale, finance, export, and future import; trusted custody and version history create long-lived switching cost"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A permissioned object-document-owner-jurisdiction graph with prior authority outcomes detects gaps, prevents evidence loss, and becomes valuable again at resale, insurance, financing, or re-import",
+    "customer": "EU auction houses, antiquities and art dealers, museums, specialist art shippers, and customs representatives importing cultural goods from outside the EU",
+    "distribution_mechanism": "White-label through art-logistics firms, auction software, specialist insurers, conservators, customs representatives, and trade associations that repeatedly handle objects",
+    "offer_and_business_model": "Object classification intake, provenance evidence escrow, standard description, ICG licence or statement packet, authority workflow tracking, and reusable resale/insurance dossier",
+    "payer_and_paid_event": "The dealer, auction house, or customs representative pays per object dossier when accepting the consignment and annually for provenance-vault custody",
+    "problem_trigger": "A third-country acquisition or consignment may enter the EU only after its category, age, provenance, description, and required ICG document are resolved"
+  },
+  "founder_fit": [
+    "Strong fit with forensic data lineage, anomaly detection, and document automation",
+    "Concentrated B2B intermediaries offer low-volume, high-value distribution without a personal media brand",
+    "Can validate with historical or test dossiers under the 5-hour daily constraint",
+    "Low capital intensity, provided legal and cultural-property judgement is delegated"
+  ],
+  "parent": null,
+  "risks": [
+    "Provenance evidence may be forged, incomplete, disputed, or legally sensitive.",
+    "A classification or licence error can delay valuable objects and expose the service to claims.",
+    "The niche may demand reputation and domain relationships that take years to build."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.gov.pl/web/kultura/nowe-przepisy-dotyczace-przywozu-dobr-kultury-na-obszar-unii-europejskiej",
+    "https://www.gov.pl/web/kultura/procedura-ubiegania-sie-o-pozwolenie-na-przywoz",
+    "https://taxation-customs.ec.europa.eu/system/files/2023-12/2.%20MASP-C_Rev.%202023_Annex%202_Consolidated%20fiches_v1.0.pdf"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "provenance escrow and permit bureau",
+    "control_point": "the ICG import licence or importer statement transmitted to customs before covered cultural goods enter the EU",
+    "critical_dependency": "trusted handling of sensitive provenance documents and expert determination of object category, age, origin, and documentary sufficiency"
+  },
+  "thesis": "Build a provenance-evidence escrow and ICG dossier service for EU auction houses, antiquities dealers, museums, specialist customs agents, and art-logistics firms importing cultural goods from third countries. Before purchase or consignment acceptance, the service identifies the object category and age, collects ownership/export history and standardised descriptions, hashes and versions supporting evidence, and prepares the correct ICG import-licence application or importer statement for electronic delivery to customs. Distribution is concentrated through auction-management software, specialist shippers, insurers, conservators, and customs agents rather than individual collectors. A privacy-preserving object-to-owner-to-document-to-authority-outcome graph can become the trusted provenance rail for repeat trade, insurance, finance, resale, and lawful border movement across the EU.",
+  "title": "CultureGate ICG Provenance Escrow",
+  "uncertainties": [
+    "Annual covered-object volume and current dossier fees across EU specialist firms",
+    "Whether auction houses and insurers will trust an early-stage digital escrow",
+    "Delegated ICG access, qualified-signature workflow, and professional-liability requirements"
+  ],
+  "version": 1
+}

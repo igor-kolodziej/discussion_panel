@@ -1,0 +1,83 @@
+{
+  "candidate_id": "control9-03",
+  "claims": [
+    {
+      "claim_id": "control9-03-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.eba.europa.eu/activities/single-rulebook/regulatory-activities/operational-resilience/implementing-technical-standards-establish-templates-register-information?version=2024"
+      ],
+      "statement": "DORA implementing standards specify templates that financial entities must maintain and update for contractual arrangements with ICT third-party providers."
+    },
+    {
+      "claim_id": "control9-03-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.eba.europa.eu/sites/default/files/2025-03/31bb6e60-7d10-4405-a8c5-9f04934630ac/20250328%20-%20DORA%20RoI%20reporting%20FAQ%20%28updated%29.pdf"
+      ],
+      "statement": "The register obligation arises under Article 28(3) of DORA and the reporting format includes practical submission files governed by Commission Implementing Regulation 2024/2956."
+    },
+    {
+      "claim_id": "control9-03-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.eba.europa.eu/publications-and-media/press-releases/european-supervisory-authorities-designate-critical-ict-third-party-providers-under-digital"
+      ],
+      "statement": "The European Supervisory Authorities have already used financial entities' registers of information to assess and designate critical ICT third-party providers, demonstrating that the data has supervisory use beyond internal recordkeeping."
+    }
+  ],
+  "contrary_evidence": [
+    "The templates and FAQ are publicly available, so entities with mature GRC teams can maintain the register internally.",
+    "Large GRC and vendor-risk platforms may already cover the enterprise segment; the proposed wedge depends on an underserved smaller-entity channel."
+  ],
+  "economics": {
+    "acquisition_route": "Acquire the first 5 entities through one Polish audit or compliance partner, publish a free template preflight, then use vendor-profile invitations to expand across shared suppliers",
+    "capital_required_pln": 50000,
+    "founder_net_worth_path": "Hypothesis: 220 entities at 42000 PLN ARR produces 9.24m PLN ARR; at 25% EBITDA, 4x EBITDA, and 70% founder ownership, equity could exceed 6m PLN in years 5-7. Validate procurement cycles and exclude retained earnings from a second count.",
+    "founder_time": "3-5 hours per day during pilot; constrain scope to the register, use a contracted DORA specialist for legal interpretation, and avoid becoming a broad GRC consultancy",
+    "gross_margin_basis": "Hypothesis: 75-86% after initial contract normalization, with premium fees for human-verified exception handling",
+    "payback": "Hypothesis: 6-12 months if one partner yields five entities at 30000 PLN first-year revenue each; validate partner economics and security-review lead time",
+    "pricing": "Hypothesis: 18000-60000 PLN annual base per financial entity plus 80-250 PLN per ICT arrangement; multi-client partner license from 90000 PLN annually",
+    "retention_or_repeat": "Registers must remain updated as contracts and subcontractors change; historical versions and regulator-ready exports create recurring utility and switching cost"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A cross-client permissioned map of ICT providers, parent entities, service categories, identifiers, and subcontractors improves matching and reduces repeated evidence collection",
+    "customer": "Small and mid-sized DORA-scope financial entities and outsourced compliance teams with fragmented ICT supplier contracts",
+    "distribution_mechanism": "Sell through Polish IT auditors, compliance outsourcers, core-system integrators, and insurance associations; vendor profiles spread when one supplier serves multiple regulated customers",
+    "offer_and_business_model": "Contract extraction, vendor identity resolution, hierarchy validation, subcontractor evidence requests, and export to DORA templates as an annual data-utility subscription",
+    "payer_and_paid_event": "The regulated entity pays annually per legal entity and vendor count when maintaining its regulator-ready register; vendors can pay for an enhanced reusable profile",
+    "problem_trigger": "An ICT contract is onboarded, renewed, changed, or requested by a competent authority and the entity must update or submit a complete structured register"
+  },
+  "founder_fit": [
+    "Strong fit with entity resolution, structured data, document extraction, and finance interest",
+    "A narrow register product can be built and tested part-time before broader risk modules",
+    "Partner-led distribution limits continuous founder networking",
+    "Capital need is within the founder's available amount"
+  ],
+  "parent": null,
+  "risks": [
+    "Handling confidential contracts creates demanding security, data-residency, and procurement requirements.",
+    "AI extraction errors in legal-entity or subcontractor fields could contaminate regulatory submissions.",
+    "A compliance partner may capture most of the economics or build the workflow itself."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.eba.europa.eu/activities/single-rulebook/regulatory-activities/operational-resilience/implementing-technical-standards-establish-templates-register-information?version=2024",
+    "https://www.eba.europa.eu/sites/default/files/2025-03/31bb6e60-7d10-4405-a8c5-9f04934630ac/20250328%20-%20DORA%20RoI%20reporting%20FAQ%20%28updated%29.pdf",
+    "https://www.eba.europa.eu/publications-and-media/press-releases/european-supervisory-authorities-designate-critical-ict-third-party-providers-under-digital"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "shared regulatory data utility",
+    "control_point": "the contract-approval and reporting gate at which an ICT arrangement must be represented in the DORA register",
+    "critical_dependency": "high-accuracy entity resolution and contract extraction across confidential, inconsistent source documents"
+  },
+  "thesis": "Build a shared vendor-data utility for smaller EU insurers, payment firms, investment firms, and regulated financial cooperatives that converts ICT contracts and vendor attestations into the exact DORA register-of-information hierarchy. The operational gate is contract approval or renewal: procurement cannot close until the vendor, ultimate parent, service chain, critical-function relationship, and identifiers are complete enough to update and report. Sell first to Polish compliance outsourcers and IT auditors that can onboard multiple entities, while giving ICT vendors one reusable profile that they permission to customers. A normalized, versioned graph of vendors, subcontractors, identifiers, services, and contract clauses can become a durable European data asset that generic document-generation tools lack.",
+  "title": "DORA Contract-to-Register Data Utility",
+  "uncertainties": [
+    "Count and budget of small Polish and EU DORA entities not already served by a group solution",
+    "How often competent authorities require submissions and what local validation rules differ",
+    "Whether ICT vendors will maintain reusable profiles without direct regulatory compulsion"
+  ],
+  "version": 1
+}

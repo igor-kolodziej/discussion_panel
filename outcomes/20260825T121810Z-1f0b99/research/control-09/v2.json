@@ -1,0 +1,178 @@
+{
+  "candidate_id": "control-09",
+  "candidate_sha256": "5d48c718fce0dbc470d3e34e5218ed6ed3470a8a8a00b811340b5ca11c6d198a",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "c09-q01",
+      "evidence_refs": [
+        "c09-s01"
+      ],
+      "statement": "FDA guidance makes fit-for-purpose verification and validation a concrete requirement for DHT-derived measurements used in clinical investigations."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "c09-q02",
+      "evidence_refs": [
+        "c09-s02"
+      ],
+      "statement": "EU medical-device compliance is tied to intended purpose and requires technical documentation, verification and validation, clinical evaluation, and post-market processes where applicable."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "c09-q03",
+      "evidence_refs": [
+        "c09-s03"
+      ],
+      "statement": "Physiological and health data may require a GDPR Article 9 condition such as explicit consent in addition to ordinary data-protection controls."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "c09-q04",
+      "evidence_refs": [
+        "c09-s04",
+        "c09-s05"
+      ],
+      "statement": "PhysioNet already offers open-license PPG datasets with motion channels and ECG or related references, making an initial benchmark feasible but a public-data-only moat weak."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "c09-q05",
+      "evidence_refs": [
+        "c09-s06"
+      ],
+      "statement": "Device and activity context materially change optical heart-rate error, so cross-device and real-world protocol design is a substantive technical problem."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "c09-q06",
+      "evidence_refs": [
+        "c09-s07"
+      ],
+      "statement": "Labfront's USD 500 starting price for twelve data-audit reports and USD 4,000 starting price for developer access are concrete adjacent price anchors below the discovery-stage bespoke-study price hypothesis."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "c09-q07",
+      "evidence_refs": [
+        "c09-s07",
+        "c09-s08",
+        "c09-s09"
+      ],
+      "statement": "Existing research platforms and hardware simulators cover parts of data capture, compliance testing, and waveform validation, so differentiation must come from independent held-out field performance and decision-grade reporting."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "c09-q08",
+      "evidence_refs": [],
+      "statement": "No public evidence reviewed establishes that 40-50 small wearable teams will buy recurring neutral benchmark access at the proposed economics."
+    }
+  ],
+  "contrary_evidence": [
+    "Open, licensed datasets and published methods are credible self-service substitutes for technically capable customers.",
+    "Adjacent audit and research-platform pricing is substantially lower than the original bespoke-study hypothesis.",
+    "Established vendors already occupy sensor collection and validation-tool budgets.",
+    "Clinical and regulatory evidence remains purpose- and population-specific, limiting claims that a common benchmark can support."
+  ],
+  "schema_version": 2,
+  "sources": [
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2023-12",
+      "publisher": "U.S. Food and Drug Administration",
+      "source_id": "c09-s01",
+      "source_type": "regulator_guidance",
+      "stance": "supporting",
+      "title": "Digital Health Technologies for Remote Data Acquisition in Clinical Investigations",
+      "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/digital-health-technologies-remote-data-acquisition-clinical-investigations"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2017-05-05",
+      "publisher": "EUR-Lex",
+      "source_id": "c09-s02",
+      "source_type": "law",
+      "stance": "context",
+      "title": "Regulation (EU) 2017/745 on medical devices",
+      "url": "https://eur-lex.europa.eu/eli/reg/2017/745/oj/eng"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2016-05-04",
+      "publisher": "EUR-Lex",
+      "source_id": "c09-s03",
+      "source_type": "law",
+      "stance": "context",
+      "title": "Regulation (EU) 2016/679 (General Data Protection Regulation)",
+      "url": "https://eur-lex.europa.eu/eli/reg/2016/679/2016-05-04/eng"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2017-10-20",
+      "publisher": "PhysioNet",
+      "source_id": "c09-s04",
+      "source_type": "public_dataset",
+      "stance": "context",
+      "title": "Wrist PPG During Exercise v1.0.0",
+      "url": "https://www.physionet.org/content/wrist/1.0.0/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2022-03-18",
+      "publisher": "PhysioNet",
+      "source_id": "c09-s05",
+      "source_type": "public_dataset",
+      "stance": "contradicting",
+      "title": "Pulse Transit Time PPG Dataset v1.1.0",
+      "url": "https://www.physionet.org/content/pulse-transit-time-ppg/1.1.0/csv/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2020-02-10",
+      "publisher": "npj Digital Medicine",
+      "source_id": "c09-s06",
+      "source_type": "peer_reviewed_primary_research",
+      "stance": "supporting",
+      "title": "Investigating sources of inaccuracy in wearable optical heart rate sensors",
+      "url": "https://www.nature.com/articles/s41746-020-0226-6"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "Labfront",
+      "source_id": "c09-s07",
+      "source_type": "incumbent_pricing",
+      "stance": "contradicting",
+      "title": "Labfront Transparent Pricing",
+      "url": "https://www.labfront.com/pricing"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "WhaleTeq",
+      "source_id": "c09-s08",
+      "source_type": "incumbent_product",
+      "stance": "contradicting",
+      "title": "Health Wearables Testing Solutions",
+      "url": "https://www.whaleteq.com/en"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "Empatica",
+      "source_id": "c09-s09",
+      "source_type": "incumbent_product",
+      "stance": "context",
+      "title": "E4 wristband and Empatica research platform",
+      "url": "https://www.empatica.com/research/e4/"
+    }
+  ],
+  "unknowns": [
+    "Paid pilot conversion rate and decision-maker budget ownership.",
+    "Contractual permission to retain or aggregate customer traces.",
+    "Cost per usable, consented proprietary recording across demographic and activity strata.",
+    "Frequency of algorithm releases that actually trigger paid repeat testing.",
+    "Whether buyers require accredited laboratory or notified-body relationships before accepting a report."
+  ]
+}

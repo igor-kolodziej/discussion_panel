@@ -1,0 +1,119 @@
+{
+  "assumptions": [
+    "The opportunity is evaluated at planning stage, with no customers, partner commitment, rollout rights, or operating metrics beyond what the packet states.",
+    "A technically competent founder can build a narrow prototype with AI and contractors, but lawful data access, security acceptance, and liability allocation still require external agreement and specialist work.",
+    "Some outsourced finance or payment-operations providers may control payment preparation or release strongly enough to impose a mandatory supplier-change gate, but the existence and accessible number of such providers is unverified.",
+    "No market size, price, gross margin, incident-frequency, conversion, retention, or founder-net-worth estimate is assumed where the packet provides none."
+  ],
+  "base_score": 4.5,
+  "candidate_id": "control7-02",
+  "candidate_sha256": "5ba36d0387b036a25b7059ee094917daace05263b372deb95386c19308ff30ca",
+  "candidate_version": 5,
+  "constrained_score": 4.5,
+  "evaluation_type": "holdout_native",
+  "evidence_needed_for_higher_score": "A paid pilot contract with a provider that has client authorization and actual payment-gate authority, including portfolio rollout rights; measured willingness to pay, eligible managed-client and payment volume, account-change incidence, false-positive and exception-handling rates, avoided-loss evidence, integration and support cost, security and liability terms, gross margin, sales-cycle length, adoption, and retained renewal behavior.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "The proposal correctly recognizes that public and bundled account matching is commoditized and moves the value proposition to supplier-change governance, independent confirmation, human approval, and audit evidence. That is a coherent response to a documented fraud pattern, although the claim that providers value this combined control remains an inference.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Payment-detail substitution can cause severe, immediate losses and creates a plausible risk-control need. The packet does not establish incident frequency among the chosen providers, the economic buyer's perceived urgency, willingness to pay beyond existing controls, or whether the provider rather than each managed client bears enough loss or liability to buy.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "A provider license or per-managed-client fee could amortize one integration across a portfolio and support recurring revenue. However, price, conversion, gross margin, CAC, sales-cycle cost, rollout, support burden, false-positive handling, liability, retention, payback, owner earnings, and founder-net-worth timing are all unknown, while enterprise security and integration costs could be substantial.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Polish outsourced finance and payment-operations providers are a specific, operationally coherent beachhead, and one provider could expose the product to many managed SMEs. The packet gives no count, payment volume, spend authority, reachable segment size, or evidence that enough providers actually control the relevant payment gate for the segment to be economically meaningful.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "Embedding a mandatory standard operating procedure at the provider layer could create a strong niche position if achieved. Yet major ERP vendors, banks, and providers already own adjacent workflow surfaces and can bundle similar governance, while the public matching infrastructure is available to every entrant and no exclusive channel or control point is secured.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "Reusable ERP connectors, approved-change histories, and audit workflows could extend to other payment anomalies, supplier-master controls, managed clients, and later geographies. Those adjacencies are plausible but not demonstrated, and expansion may require new regulatory integrations, contact data, partner permissions, and local operating procedures.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Client-isolated histories, provider-specific policies, connectors, evidence records, and embedded operating routines could accumulate switching costs after meaningful deployment. Before that scale, the workflow is reproducible by incumbents or the provider itself, core registry data is public, and the proposed advantage depends heavily on a small number of nonexclusive partners.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "Independent confirmation and an auditable approval gate offer broader protection than a whitelist or payee-name check alone, especially for changed supplier details. The magnitude of loss reduction, coverage when KSeF omits account fields, reliability of independent contact routes, false-positive friction, and superiority over incumbent extensions are unmeasured.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "Mandatory KSeF receipt creates fresh structured workflow volume and a near-term integration transition, while the documented fraud pattern supports current relevance. Conversely, mandatory PSP payee verification by July 2027 will commoditize part of the value proposition, making the window useful only if the governance layer proves materially better.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "A single provider relationship could concentrate selling and distribute the control across an existing client portfolio, which is well suited to a founder who prefers fewer high-value relationships. No provider access, commitment, rollout right, or channel conversion is established; enterprise negotiation may be long and relationship-heavy, and relying on a few providers creates concentration risk.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "The API and automation work fit the founder's skills, and a narrow prototype appears compatible with the stated initial capital. Production execution requires lawful multi-client KSeF and ERP access, data isolation, security review, reliable out-of-band confirmation, human exception operations, contractual liability allocation, provider integration, and incident support; these are substantial for a part-time founder and cannot be replaced by AI alone.",
+      "score": 4,
+      "status": "scored"
+    }
+  ],
+  "final_score": 4.5,
+  "highest_value_structural_change": "Restrict the initial product and buyer to a managed-AP or payment-operations provider that contractually controls payment release, maintains an independently verified supplier-contact master, and will make the module a mandatory stop-payment gate across an agreed portfolio; exclude advisory-only accounting providers and make portfolio rollout authority a condition of the pilot.",
+  "interaction_adjustment": 0,
+  "judge_id": "c7-holdout-control7-02-j1",
+  "main_structural_strength": "One provider can serve simultaneously as payer, workflow control point, and portfolio distribution surface, allowing a differentiated supplier-change policy and audit layer to reach many managed SMEs through one integration.",
+  "primary_score_limiter": "The entire commercial structure depends on obtaining a provider that lawfully controls the relevant payment workflow and will pay, integrate, and mandate the gate, yet no such partner, authority, demand, rollout, or unit economics is established.",
+  "qualified": false,
+  "raw_response_path": "holdout/jobs/raw-c7-holdout-control7-02-j1.json",
+  "raw_response_sha256": "c46e93bc5e5462a2c0c79a17c96f39029c28e9e72ff31bf62498365a58e2a56a",
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 2,
+  "strongest_disconfirming_evidence": "Free government account matching, existing ERP-bundled verification, and mandatory PSP payee verification by July 2027 show that baseline identity checking is becoming infrastructure controlled by powerful incumbents, while optional KSeF bank-account fields prevent complete invoice-only coverage.",
+  "unrounded_score": 4.5
+}

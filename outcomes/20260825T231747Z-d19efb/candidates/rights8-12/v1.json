@@ -1,0 +1,87 @@
+{
+  "candidate_id": "rights8-12",
+  "claims": [
+    {
+      "claim_id": "rights8-12-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.easa.europa.eu/en/domains/drones-air-mobility/operating-drone/open-category-low-risk-civil-drones"
+      ],
+      "statement": "EASA says the open category covers most low-risk commercial drone activity but imposes subcategory, aircraft, distance, people and training constraints."
+    },
+    {
+      "claim_id": "rights8-12-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.easa.europa.eu/en/document-library/easy-access-rules/online-publications/easy-access-rules-unmanned-aircraft-systems?erules-id=ERULES-1963177438-15550"
+      ],
+      "statement": "EASA's current rules distinguish open operations that need no prior operational authorization from specific-category operations that require authorization or a qualifying declaration."
+    },
+    {
+      "claim_id": "rights8-12-c3",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://www.easa.europa.eu/en/the-agency/faqs/drones-uas",
+        "https://digital-strategy.ec.europa.eu/en/news/eu-data-act-gives-users-control-over-data-connected-devices"
+      ],
+      "statement": "Hypothesis: multi-year permissioned condition histories are more defensible and valuable than one-off drone imagery; renewal, warranty recovery and institutional reliance are unvalidated."
+    }
+  ],
+  "contrary_evidence": [
+    "EASA rules make some flights simple but not all PV inspections fit the open category; specific-category authorization, local airspace checks or explicit owner requests may be needed.",
+    "Legal access to connected-device data does not guarantee that a given inverter's useful history is readily available or that an insurer will rely on the report."
+  ],
+  "economics": {
+    "acquisition_route": "Use the family installer to recruit ten permissioned systems, conduct paired telemetry and inspection reviews, and measure recovered energy, warranty value or diligence time before offering a subscription.",
+    "capital_required_pln": 60000,
+    "founder_net_worth_path": "Unvalidated path: 1,500 sites at PLN 3,500 blended annual revenue would produce PLN 5.25m revenue; at 30% operating profit and a 5x value, a 70% founder stake would be about PLN 5.5m. A 7-9 year route requires installer-channel scale, strong renewals and evidence that reports affect economic decisions.",
+    "founder_time": "10-16 hours per week for data integration, report design and customer review; qualified pilots and local inspections are scheduled in batches.",
+    "gross_margin_basis": "Unvalidated estimate: 50-70% after contracted pilot, travel, image review, data connectors and professional review; automated triage cannot replace required expert sign-off.",
+    "payback": "Unvalidated target: 12-20 months at 40-70 subscribed sites, depending on inspection batching and whether customers accept annual prepayment.",
+    "pricing": "Unvalidated hypothesis: PLN 2,000-8,000 annual per site plus PLN 1,500-5,000 for an on-demand inspection or transaction report, scaled by system size and access complexity.",
+    "retention_or_repeat": "Annual inspections, continuous telemetry and warranty histories support multi-year renewals; lenders or insurers can add portfolio-level repeat demand."
+  },
+  "fingerprint": {
+    "compounding_advantage": "longitudinal, multi-vendor failure and remediation histories improve triage and diligence comparability while contracts preserve recurring site access",
+    "customer": "owners, lenders, insurers and buyers of distributed commercial PV portfolios that lack consistent cross-installer condition records",
+    "distribution_mechanism": "installers embed access terms at handover and maintenance renewal; portfolio lenders, brokers and insurers refer assets needing standardized evidence",
+    "offer_and_business_model": "scheduled access, telemetry normalization, thermal and visual evidence, anomaly triage, defect history and warranty packet sold as recurring monitoring plus event-driven diligence",
+    "payer_and_paid_event": "the asset owner pays an annual per-site monitoring subscription and an inspection/event fee; a buyer or lender may pay a separate diligence fee for an authorized report",
+    "problem_trigger": "underperformance, warranty expiry, annual insurance renewal, refinancing, portfolio sale or a suspected defect after weather damage"
+  },
+  "founder_fit": [
+    "Directly leverages the family solar-installation base and the founder's data-science skills.",
+    "Can start with ten sites, contract pilots and no owned drone fleet.",
+    "Longitudinal monitoring creates a scalable data and workflow asset.",
+    "Acquisition can be embedded in installer handover rather than driven by founder publicity."
+  ],
+  "parent": null,
+  "risks": [
+    "Drone category, airspace, people, site and weather constraints can prevent or delay capture.",
+    "Inverter APIs and owner permissions may be fragmented or revoked.",
+    "Generic drone inspection is competitive and price-sensitive.",
+    "Reports can create professional liability if defects are missed or recommendations are overstated."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.easa.europa.eu/en/domains/drones-air-mobility/operating-drone/open-category-low-risk-civil-drones",
+    "https://www.easa.europa.eu/en/document-library/easy-access-rules/online-publications/easy-access-rules-unmanned-aircraft-systems?erules-id=ERULES-1963177438-15550",
+    "https://www.easa.europa.eu/en/the-agency/faqs/drones-uas",
+    "https://digital-strategy.ec.europa.eu/en/news/eu-data-act-gives-users-control-over-data-connected-devices"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "monitoring concession and asset-intelligence subscription",
+    "control_point": "multi-year contractual permission for scheduled physical inspection and telemetry use, producing a continuous, owner-authorized condition history",
+    "critical_dependency": "owners and telemetry vendors must grant durable access, flight or site operations must be lawful, and reports must influence maintenance, warranty, insurance or transaction decisions"
+  },
+  "thesis": "Embed a multi-year site-access and telemetry permission into commercial PV maintenance agreements, then deliver standardized condition evidence to owners, lenders, insurers and asset buyers. Coordinate lawful drone or handheld thermal capture through qualified operators, reconcile imagery with inverter and weather data, and generate warranty-ready action packets. The moat is permissioned longitudinal evidence across many small portfolios, not drone flight itself; start with manual reports and prove that they recover money or reduce diligence time.",
+  "title": "Longitudinal PV Condition-Data Concessions",
+  "uncertainties": [
+    "What percentage of small commercial PV sites produce enough recoverable value to justify annual monitoring?",
+    "Will installers embed multi-year access clauses and share telemetry credentials?",
+    "Which report format will lenders, insurers or asset buyers actually rely on?",
+    "Can inspection and expert-review cost fall enough at regional route density?"
+  ],
+  "version": 1
+}

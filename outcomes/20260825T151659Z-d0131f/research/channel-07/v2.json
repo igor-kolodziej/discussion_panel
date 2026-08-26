@@ -1,0 +1,191 @@
+{
+  "candidate_id": "channel-07",
+  "candidate_sha256": "72263b814c325ac47885e74f70b0f9ff936fa7b26a5381a211fb30c3258ff811",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "ch07-rcl-01",
+      "evidence_refs": [
+        "ch07-s01",
+        "ch07-s02"
+      ],
+      "statement": "The Data Act applies since 12 September 2025 and creates user access and third-party sharing rights for raw and pre-processed connected-product data that is readily available to the data holder."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "ch07-rcl-02",
+      "evidence_refs": [
+        "ch07-s01",
+        "ch07-s02"
+      ],
+      "statement": "The gateway cannot rely on the Data Act as an independent telemetry right: roles and access must be grounded in the OEM/data-holder relationship and a valid legal basis remains necessary for personal data."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "ch07-rcl-03",
+      "evidence_refs": [
+        "ch07-s01",
+        "ch07-s02"
+      ],
+      "statement": "Qualifying micro and small manufacturers are generally exempt from the Chapter II obligations, so the original small-OEM segment is materially narrower than stated at discovery."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "ch07-rcl-04",
+      "evidence_refs": [
+        "ch07-s01",
+        "ch07-s02"
+      ],
+      "statement": "Trade-secret, health, safety and security protections can justify safeguards, suspension or refusal in specified circumstances, which prevents a fully automatic entitlement engine from safely resolving every request."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "ch07-rcl-05",
+      "evidence_refs": [
+        "ch07-s03"
+      ],
+      "statement": "Commission model terms cover data-holder-to-user, user-to-recipient and data-holder-to-recipient relationships, showing that the essential contract is obtainable in principle but not eliminating OEM negotiation."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "ch07-rcl-06",
+      "evidence_refs": [
+        "ch07-s04",
+        "ch07-s05"
+      ],
+      "statement": "Steelbridge already sells consent, authorization, APIs, audit and white-label deployment for this exact regulatory use case at EUR 250, EUR 500 and EUR 750 per month plus optional EUR 1500 onboarding."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "ch07-rcl-07",
+      "evidence_refs": [
+        "ch07-s06",
+        "ch07-s07"
+      ],
+      "statement": "dDruid and Servitly demonstrate that incumbent IoT and after-sales platforms can bundle the compliance layer because they already manage telemetry, customer roles and service workflows."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "ch07-rcl-08",
+      "evidence_refs": [
+        "ch07-s04",
+        "ch07-s05",
+        "ch07-s06",
+        "ch07-s07",
+        "ch07-s08"
+      ],
+      "statement": "The defensible wedge, if any, is a vertical OEM integration with contract-permitted schema and adjudication reuse; generic request intake and identity verification are not differentiated."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "ch07-rcl-09",
+      "evidence_refs": [],
+      "statement": "No source establishes request volume, OEM conversion, willingness to pay, partner-sourced acquisition, gross margin, retention or enterprise payback for this candidate."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "ch07-rcl-10",
+      "evidence_refs": [],
+      "statement": "No source establishes that cross-OEM schema, identity or adjudication data may be retained and reused under customer confidentiality, GDPR and trade-secret constraints."
+    }
+  ],
+  "contrary_evidence": [
+    "A direct specialist already offers the same compliance layer, white labelling and public price tiers.",
+    "Qualifying micro and small manufacturers are generally exempt from the relevant Data Act obligations.",
+    "Broader IoT and servitization platforms already advertise native Data Act capabilities at the telemetry layer.",
+    "Generic privacy-rights software already automates intake, identity verification, retrieval and secure response.",
+    "Trade-secret, safety and personal-data constraints require case-specific controls and sometimes human review."
+  ],
+  "schema_version": 2,
+  "sources": [
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2023-12-22",
+      "publisher": "Official Journal of the European Union / EUR-Lex",
+      "source_id": "ch07-s01",
+      "source_type": "official_regulation",
+      "stance": "context",
+      "title": "Regulation (EU) 2023/2854 (Data Act)",
+      "url": "https://eur-lex.europa.eu/eli/reg/2023/2854/oj/eng"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated; current as accessed",
+      "publisher": "European Commission, Shaping Europe's digital future",
+      "source_id": "ch07-s02",
+      "source_type": "official_guidance",
+      "stance": "context",
+      "title": "Data Act explained",
+      "url": "https://digital-strategy.ec.europa.eu/en/factpages/data-act-explained"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2025-11-19",
+      "publisher": "European Commission, Shaping Europe's digital future",
+      "source_id": "ch07-s03",
+      "source_type": "official_contractual_guidance",
+      "stance": "supporting",
+      "title": "Draft Recommendation on non-binding model contractual terms on data access and use",
+      "url": "https://digital-strategy.ec.europa.eu/en/library/draft-recommendation-non-binding-model-contractual-terms-data-access-and-use-and-non-binding"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated; 2026 copyright",
+      "publisher": "Steelbridge Oy",
+      "source_id": "ch07-s04",
+      "source_type": "incumbent_pricing",
+      "stance": "contradicting",
+      "title": "Pricing — EU Data Act compliance platform",
+      "url": "https://www.steelbridge.fi/pricing"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated; 2026 copyright",
+      "publisher": "Steelbridge Oy",
+      "source_id": "ch07-s05",
+      "source_type": "incumbent_product_page",
+      "stance": "contradicting",
+      "title": "Compliance infrastructure for the EU Data Act",
+      "url": "https://www.steelbridge.fi/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated; current as accessed",
+      "publisher": "dDruid",
+      "source_id": "ch07-s06",
+      "source_type": "incumbent_product_page",
+      "stance": "contradicting",
+      "title": "Data Act Compliance: IoT magic Builder",
+      "url": "https://ddruid.io/data-act-compliance/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated; page metrics updated April 2026",
+      "publisher": "Servitly",
+      "source_id": "ch07-s07",
+      "source_type": "incumbent_product_page",
+      "stance": "contradicting",
+      "title": "Servitly digital product-service system",
+      "url": "https://www.servitly.com/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated; 2026 copyright",
+      "publisher": "OneTrust",
+      "source_id": "ch07-s08",
+      "source_type": "adjacent_incumbent_product_page",
+      "stance": "contradicting",
+      "title": "Data Subject Request Automation",
+      "url": "https://www.onetrust.com/products/data-subject-request-dsr-automation/"
+    }
+  ],
+  "unknowns": [
+    "Monthly access-request volume and urgency for one heat-pump or energy-equipment OEM",
+    "Signed willingness to pay for a one-device-family pilot and production rollout",
+    "Whether an OEM or IoT platform will grant the necessary telemetry, identity, audit and processor rights",
+    "Measured implementation hours, egress cost, security cost, insurance cost and support burden",
+    "Permitted cross-OEM reuse of schemas and entitlement outcomes",
+    "Partner conversion, sales-cycle length, retention and founder-compatible operating load"
+  ]
+}

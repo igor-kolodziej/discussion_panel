@@ -1,0 +1,125 @@
+{
+  "candidate_id": "rights7-06",
+  "claims": [
+    {
+      "claim_id": "rights7-06-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012L0019"
+      ],
+      "statement": "EU WEEE rules require item-level functionality evidence, transfer documentation, a non-waste declaration, and protective packaging to substantiate cross-border shipment as used EEE rather than WEEE; absent the required proof, authorities may treat the load as WEEE and presume an illegal shipment."
+    },
+    {
+      "claim_id": "rights7-06-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eli.gov.pl/api/acts/DU/2024/573/text.html",
+        "https://www.gov.pl/web/klimat/rejestr-bdo"
+      ],
+      "statement": "Polish WEEE law requires compliant storage and transport, directs collectors to authorized processing plants, and reserves dismantling and preparation for reuse of equipment already classified as WEEE to processing plants."
+    },
+    {
+      "claim_id": "rights7-06-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1542/oj?locale=en"
+      ],
+      "statement": "For waste industrial, EV, and light-means-of-transport batteries prepared for reuse or repurposing, EU battery rules require state-of-health evidence and documentation of further use through an invoice or ownership-transfer contract before demonstrating that the battery is no longer waste."
+    },
+    {
+      "claim_id": "rights7-06-c4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/LSU/?uri=CELEX:32023R0988"
+      ],
+      "statement": "The EU General Product Safety Regulation applies to used, repaired, and reconditioned consumer products made available on the market, so resale does not eliminate product-safety duties."
+    },
+    {
+      "claim_id": "rights7-06-c5",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://pvcycle.org/pv-cycle-europe-services",
+        "https://www.secondsol.com/en/index.htm"
+      ],
+      "statement": "Established operators already cover much of the proposed downstream stack: PV CYCLE provides EU-wide compliance, collection, preparation-for-reuse, and treatment services, while SecondSol markets new, used, and refurbished renewable equipment and offers buyback, testing, repair, logistics, and recycling."
+    },
+    {
+      "claim_id": "rights7-06-c6",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://pvcycle.org/annual-reports/2025-annual-report"
+      ],
+      "statement": "PV CYCLE reports rising PV-system waste and reuse activity but also says second-hand PV lacks mature international guidance, which supports both a growing supply event and material grading/safety uncertainty."
+    }
+  ],
+  "contrary_evidence": [
+    "If an item is already WEEE in Poland, preparation for reuse and dismantling cannot lawfully be performed as an informal outsourced test or parts-harvesting step outside an authorized processing plant.",
+    "PV CYCLE already offers EU-wide collection and treatment, and SecondSol already combines a large professional secondary marketplace with buyback, testing, repair, fulfillment, and recycling.",
+    "PV CYCLE characterizes waste treatment as high-volume and low-return and reports that second-hand PV still lacks mature international guidance, weakening assumptions of easy grading and wide margins.",
+    "Used or refurbished products sold to consumers remain subject to product-safety obligations."
+  ],
+  "economics": {
+    "acquisition_route": "Family-installer pilot, then installer and service agreements; professional resale and compliance partners supply the demand and lawful-processing side",
+    "capital_required_pln": "Unvalidated. The v1 70,000 PLN placeholder is not a reliable budget; a lawful asset-light pilot should avoid operating its own WEEE collection, storage, or processing facility and price contracted partners before fixing capital.",
+    "founder_net_worth_path": "Hypothesis only. A national supply-and-data network could create equity, but no sourced removal volume, usable share, contribution margin, or repeat buyer evidence presently supports the thousands-of-units scale assumed in v1.",
+    "founder_time": "Potentially part-time if all physical handling and regulated operations are delegated; partner qualification, exceptions, title checks, and buyer disputes remain founder-intensive during the pilot",
+    "gross_margin_basis": "Unknown. Model demonstrably reusable units separately from WEEE and waste batteries, including licensed testing, compliant transport and storage, returns, marketplace competition, recycler charges, and units with no positive residual value; the v1 40-65% estimate is unsupported.",
+    "payback": "Unknown until a cohort of actual removals establishes usable share, sale-through time, returns, transport cost, licensed-partner fees, and whether installers will pay for routing",
+    "pricing": "Unvalidated. No primary source found supports the v1 300-1,500 PLN triage fee or 15-25% commission; live incumbent listings show that residual values vary from free or very low-value modules to higher-value equipment, so pricing must follow a sampled serial, condition, logistics, and buyer-bid test.",
+    "retention_or_repeat": "Installers can generate repeat removals, but buyer repeat requires consistent grading, documentation, and economically dense lots"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Exclusive deinstallation supply rights, serialized test and disposition histories, buyer-demand data, and route density could improve recovery decisions and unit economics",
+    "customer": "Installers and equipment owners needing compliant disposition, plus professional refurbishers, spare-parts buyers, and secondary equipment users",
+    "distribution_mechanism": "Pilot through the family installer, then recruit regional installers and service firms; use established testing, resale, producer-responsibility, and recycling channels rather than rebuilding them",
+    "offer_and_business_model": "First-notice and conditional first-refusal agreements, serial-level intake, documented product-versus-waste triage, outsourced professional testing, consignment resale of reusable whole units, and routing of WEEE or waste batteries to authorized operators without unlicensed dismantling",
+    "payer_and_paid_event": "Hypothesis: an installer or owner pays when documented triage and compliant routing save handling cost or recover value, and a professional buyer pays on transfer of a tested reusable unit; the network retains a disclosed fee or commission",
+    "problem_trigger": "A repair, upgrade, insurance event, or repowering job creates removed equipment whose title, functional condition, waste status, and residual value are uncertain"
+  },
+  "founder_fit": [
+    "The family installer provides a bounded source-side pilot without broad cold outreach",
+    "Serial-level grading and routing fit data-science and automation skills",
+    "The founder can remain asset-light only by outsourcing regulated collection, storage, preparation for reuse, and hazardous handling",
+    "The workflow can be tested part-time before committing to inventory or facilities"
+  ],
+  "parent": {
+    "candidate_id": "rights7-06",
+    "version": 1
+  },
+  "risks": [
+    "Misclassifying waste as a reusable product could create waste-shipment and BDO violations.",
+    "Handling, storing, or dismantling WEEE or waste batteries outside authorized channels could be unlawful.",
+    "Safety defects, inaccurate grading, and unclear warranty allocation could create return and liability losses.",
+    "Strong incumbents can absorb attractive supply or undercut a new intermediary.",
+    "Low-value units may not cover pickup, testing, packaging, and compliant downstream treatment."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012L0019",
+    "https://eli.gov.pl/api/acts/DU/2024/573/text.html",
+    "https://www.gov.pl/web/klimat/rejestr-bdo",
+    "https://eur-lex.europa.eu/eli/reg/2023/1542/oj?locale=en",
+    "https://eur-lex.europa.eu/legal-content/EN/LSU/?uri=CELEX:32023R0988",
+    "https://pvcycle.org/pv-cycle-europe-services",
+    "https://pvcycle.org/annual-reports/2025-annual-report",
+    "https://www.secondsol.com/en/index.htm",
+    "https://publications.jrc.ec.europa.eu/repository/handle/JRC137207"
+  ],
+  "stage": "research",
+  "structure": {
+    "commercial_archetype": "Circular consignment and recovery network",
+    "control_point": "Contractual first-notice and conditional title-transfer rights over removed equipment before final product-versus-waste routing",
+    "critical_dependency": "Each unit must have clear title and lawful classification, and licensed partners must safely test, transport, store, resell, or process it at a cost below recoverable value plus service revenue"
+  },
+  "thesis": "Contract installers and equipment owners for first notice and conditional first refusal before discarded equipment is routed. Record title, serial number, condition, and the product-versus-waste decision; send demonstrably reusable whole units to professional testing and resale channels, while sending WEEE and waste batteries only through registered collectors and authorized processing partners. The defensible wedge would be supply rights at deinstallation and reliable grading data, not an unlicensed recycling or generic marketplace operation.",
+  "title": "Renewable Equipment First-Refusal Recovery Network",
+  "uncertainties": [
+    "No signed installer or owner has granted first-notice, first-refusal, or title-transfer rights.",
+    "Annual removed-unit volume and the share that remain products rather than waste are unknown.",
+    "No Polish legal opinion maps the exact classification point for each proposed equipment class and workflow.",
+    "No licensed collector, processing plant, battery operator, tester, insurer, or logistics partner has quoted the pilot.",
+    "No professional buyer has provided serial-specific bids, acceptable test protocols, warranty terms, or return rates.",
+    "The incidence of stolen, leased, subsidized, warrantied, or otherwise encumbered equipment is unknown."
+  ],
+  "version": 2
+}

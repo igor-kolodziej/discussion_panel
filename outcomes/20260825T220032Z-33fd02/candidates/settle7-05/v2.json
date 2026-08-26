@@ -1,0 +1,139 @@
+{
+  "candidate_id": "settle7-05",
+  "claims": [
+    {
+      "claim_id": "settle7-05-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://github.com/ocpi/ocpi/blob/2.3.0/release/core/mod_cdrs.asciidoc"
+      ],
+      "statement": "In OCPI, the CDR is the billing-relevant record for a completed charging session, cannot be changed once sent, and is corrected with a credit CDR; it can contain tariff, total-cost, meter, and optional signed-data fields."
+    },
+    {
+      "claim_id": "settle7-05-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://github.com/ocpi/ocpi/blob/2.3.0/release/core/mod_invoice_reconciliation.asciidoc",
+        "https://github.com/ocpi/ocpi"
+      ],
+      "statement": "The OCPI core release branch now contains an Invoice Reconciliation module that maps invoice identifiers to CDR identifiers, while deliberately leaving invoice-document transfer, payment, and billing timing to the parties."
+    },
+    {
+      "claim_id": "settle7-05-c3",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://evroaming.org/wp-content/uploads/2025/02/OCPI-2.3.0.pdf",
+        "https://github.com/ocpi/ocpi"
+      ],
+      "statement": "The public OCPI 2.3.0 release state is transitional: the published 2025 PDF lacks invoice reconciliation, while the repository describes it as an Edition 2 core improvement and exposes module source; actual counterparty implementation is therefore unknown."
+    },
+    {
+      "claim_id": "settle7-05-c4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1804/oj/eng",
+        "https://transport.ec.europa.eu/news-events/news/commission-enhances-interoperability-and-transparency-alternative-fuels-infrastructure-data-2025-04-11_en"
+      ],
+      "statement": "AFIR and the 2025 infrastructure-data implementing rules require price transparency and interoperable static and dynamic charging-infrastructure data, but do not themselves mandate bilateral invoice reconciliation or settlement clearing."
+    },
+    {
+      "claim_id": "settle7-05-c5",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.hubject.com/",
+        "https://support.hubject.com/hc/en-us/articles/4412735107089-Introduction-and-functionalities"
+      ],
+      "statement": "Hubject already combines a large e-roaming network with CDR rating, invoice creation, clearing, and financial settlement, and publicly reports more than one million connected charge points and thousands of B2B partners."
+    },
+    {
+      "claim_id": "settle7-05-c6",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gireve.com/wp-content/uploads/2022/09/GIREVE-OPEN-Services-description-%E2%80%93-2.0.3-July-2021.pdf",
+        "https://www.e-clearing.net/starter-package"
+      ],
+      "statement": "GIREVE's service documentation already covers CDR checks, dispute deadlines and statuses, invoice preparation, and billing-agent services; e-clearing.net offers multi-protocol roaming and data exchange to a large partner base."
+    },
+    {
+      "claim_id": "settle7-05-c7",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://alternative-fuels-observatory.ec.europa.eu/"
+      ],
+      "statement": "EU public charging infrastructure exceeds one million points, supporting a growing transaction surface but not establishing RoamNet's addressable CDR count, mismatch rate, or willingness to pay."
+    }
+  ],
+  "contrary_evidence": [
+    "OCPI is standardizing invoice-to-CDR reconciliation, so the record mapping itself is not a durable proprietary control point.",
+    "AFIR infrastructure-data interoperability is not evidence of a regulatory mandate for the proposed financial clearing service.",
+    "Hubject already sells CDR rating, invoicing, clearing, and settlement at far greater network scale.",
+    "GIREVE already documents CDR dispute workflows and delegated invoicing, while e-clearing.net supplies roaming connectivity and data exchange.",
+    "No source reviewed provides observed mismatch rates, disputed value, finance labor savings, or public incumbent pricing."
+  ],
+  "economics": {
+    "acquisition_route": "Paid audit for one direct regional CPO-eMSP relationship, followed by a single live lane; integration partners and member referrals only after measured payback",
+    "capital_required_pln": "Unvalidated. The v1 100,000 PLN may fund a bounded no-custody audit and connector pilot, but not necessarily the security, support, legal, tax, and availability obligations of a multi-party clearing network.",
+    "founder_net_worth_path": "Unsupported at present. Public charging-point counts do not establish 20-30 million addressable annual CDRs, attainable members, a 0.05 EUR take rate, or defensible valuation.",
+    "founder_time": "A single audit and bilateral lane may fit 15-18 hours weekly; production incident support, onboarding, and disputes must be delegated before scale",
+    "gross_margin_basis": "Unknown. Include bilateral connector maintenance, protocol-version variation, tariff and tax rule updates, high-availability infrastructure, support, dispute operations, security, liability, and sales cost; no evidence supports the implied software margin.",
+    "payback": "Unknown until complete transaction samples reveal mismatch frequency, disputed value, resolution time, finance labor, credit delay, and implementation cost",
+    "pricing": "Unvalidated. No primary or incumbent public price substantiates 500-2,000 EUR monthly plus 0.03-0.10 EUR per CDR; begin with a fixed paid audit priced against sampled finance effort and recoverable discrepancy value.",
+    "retention_or_repeat": "Every billing cycle creates recurring records, but the service is replaceable if counterparties adopt OCPI invoice reconciliation or move to Hubject, GIREVE, e-clearing.net, or another bundled platform"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Mutually accepted exception outcomes, counterparty reliability histories, and reusable connector and contract-rule libraries could reduce onboarding and false disputes",
+    "customer": "Smaller and regional EU charge-point operators, e-mobility service providers, and fleet charging platforms with bilateral OCPI relationships not fully served by incumbent hubs",
+    "distribution_mechanism": "Begin with a paid audit for one regional bilateral relationship, then use OCPI integrators, charging associations, fleet platforms, and member referrals; avoid relationships already bundled into hub clearing",
+    "offer_and_business_model": "OCPI adapters, immutable lineage, invoice-to-CDR mapping, bilateral exception and dispute workflow, credit-CDR handling, audit evidence, and approved bank-ready payable files without custody",
+    "payer_and_paid_event": "Hypothesis: each bilateral party pays a base fee and/or per-reconciled-record fee after a paid audit proves recoverable leakage or finance-hour savings",
+    "problem_trigger": "A periodic invoice or payable run does not match the parties' sessions, tariff snapshots, immutable CDRs, credit CDRs, tax treatment, or contract-specific acceptance rules"
+  },
+  "founder_fit": [
+    "Reconciliation and protocol data engineering fit the founder's quantitative skills",
+    "A B2B protocol product does not require a public personal brand",
+    "A paid audit can test the need before building a high-availability network",
+    "Avoiding custody and using existing payment providers contains regulatory and capital scope, subject to legal confirmation"
+  ],
+  "parent": {
+    "candidate_id": "settle7-05",
+    "version": 1
+  },
+  "risks": [
+    "Hubject, GIREVE, e-clearing.net, or charge-management vendors can bundle the same function into existing relationships.",
+    "OCPI invoice-reconciliation adoption can commoditize invoice-to-CDR mapping.",
+    "A two-sided bilateral onboarding requirement can create slow sales and integration-heavy economics.",
+    "Incorrect rules or payable files can create material tax, payment, and contractual liability.",
+    "Sparse or unsigned meter data can make disputes impossible to resolve automatically."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://github.com/ocpi/ocpi/blob/2.3.0/release/core/mod_cdrs.asciidoc",
+    "https://github.com/ocpi/ocpi/blob/2.3.0/release/core/mod_invoice_reconciliation.asciidoc",
+    "https://github.com/ocpi/ocpi",
+    "https://evroaming.org/wp-content/uploads/2025/02/OCPI-2.3.0.pdf",
+    "https://eur-lex.europa.eu/eli/reg/2023/1804/oj/eng",
+    "https://transport.ec.europa.eu/news-events/news/commission-enhances-interoperability-and-transparency-alternative-fuels-infrastructure-data-2025-04-11_en",
+    "https://www.hubject.com/",
+    "https://support.hubject.com/hc/en-us/articles/4412735107089-Introduction-and-functionalities",
+    "https://www.gireve.com/wp-content/uploads/2022/09/GIREVE-OPEN-Services-description-%E2%80%93-2.0.3-July-2021.pdf",
+    "https://www.e-clearing.net/starter-package",
+    "https://alternative-fuels-observatory.ec.europa.eu/"
+  ],
+  "stage": "research",
+  "structure": {
+    "commercial_archetype": "Bilateral reconciliation network charging subscription and per-record fees",
+    "control_point": "Contractually accepted exception state and audit lineage linking each invoice to immutable CDR and credit-CDR evidence",
+    "critical_dependency": "Two counterparties must supply complete data, accept common exception and dispute rules, and perceive value beyond current OCPI modules and incumbent hub financial services"
+  },
+  "thesis": "Offer a paid bilateral audit and narrow live reconciliation lane for regional CPO-eMSP relationships that are not already economically served by a roaming hub. Ingest existing OCPI sessions, tariffs, CDRs, credit CDRs, signed data, and invoice mappings; apply contract-specific exception and dispute rules; and produce approved payment files without holding funds. The scarce asset would have to be mutually accepted exception outcomes and counterparty history, because OCPI is adding invoice reconciliation and incumbent hubs already sell CDR rating, invoicing, dispute, clearing, and settlement.",
+  "title": "RoamNet Proof Clearing",
+  "uncertainties": [
+    "No CPO-eMSP pair has supplied a complete transaction and invoice sample.",
+    "Observed mismatch frequency, disputed value, credit latency, and finance hours are unknown.",
+    "Counterparty willingness to adopt a neutral dispute clock and retain shared audit evidence is unknown.",
+    "Actual adoption timing and interoperability of the OCPI invoice-reconciliation module are unknown.",
+    "The smallest bilateral volume with positive implementation payback is unknown.",
+    "Tax, metering, security, liability, service-level, and no-custody legal requirements need specialist review."
+  ],
+  "version": 2
+}

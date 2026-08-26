@@ -1,0 +1,72 @@
+{
+  "candidate_id": "control6-06",
+  "claims": [
+    {
+      "claim_id": "control6-06-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/dir/2019/944/oj/eng"
+      ],
+      "statement": "The Electricity Directive provides for market-based procurement of flexibility services from distributed generation, demand response and energy storage."
+    },
+    {
+      "claim_id": "control6-06-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2019/943/oj?locale=en"
+      ],
+      "statement": "EU electricity-market rules contemplate aggregation and non-discriminatory market access for demand response and storage."
+    }
+  ],
+  "contrary_evidence": [
+    "EU market principles do not establish Polish product eligibility, accessible revenue pools or viable economics for small sites."
+  ],
+  "economics": {
+    "acquisition_route": "Unvalidated: embed opt-in and compatible controls in battery, HVAC and refrigeration installer handover.",
+    "capital_required_pln": 160000,
+    "founder_net_worth_path": "Unvalidated scenario, not a forecast: control 2 MW in year 2, 15 MW by year 4, build 4 million PLN founder equity and cash by year 6, and reach 5 million PLN founder net worth in years 7-10.",
+    "founder_time": "Unvalidated operating estimate: 2-4 hours per day after monitoring and incident response are staffed.",
+    "gross_margin_basis": "Unvalidated: 45%-70% gross margin after gateway, telemetry, partner and support costs at sufficient device density.",
+    "payback": "Unvalidated: 18-36 months, depending on market qualification, device density and revenue per controllable kilowatt.",
+    "pricing": "Unvalidated commercial figures, including capital_required_pln: retain 15%-30% of net flexibility revenue after the site and licensed market partner are paid.",
+    "retention_or_repeat": "Unvalidated: contracts could renew annually because installed devices persist, but churn and opt-out are unknown."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Every activation improves the private response and reliability model, enabling tighter bids and better site selection",
+    "customer": "SMEs with controllable energy assets and licensed flexibility-market participants needing aggregated capacity",
+    "distribution_mechanism": "Opt-in contracts and controls embedded in installer commissioning",
+    "offer_and_business_model": "Managed device aggregation without initially becoming the licensed market participant",
+    "payer_and_paid_event": "A licensed partner or market counterparty pays for availability or activation; proceeds are shared",
+    "problem_trigger": "A compatible asset is installed but earns no grid-service revenue"
+  },
+  "founder_fit": [
+    "Combines energy access with predictive modelling.",
+    "Can start through a licensed partner rather than a trading desk.",
+    "Creates recurring, measurable revenue without personal-brand exposure."
+  ],
+  "parent": null,
+  "risks": [
+    "Dispatch harms customer operations or equipment.",
+    "Cyber intrusion or telemetry failure creates liability.",
+    "The licensed partner captures the economics or customer."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/dir/2019/944/oj/eng",
+    "https://eur-lex.europa.eu/eli/reg/2019/943/oj?locale=en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Distributed-energy aggregation and revenue-share network",
+    "control_point": "Term-limited device dispatch permissions, secure integrations and site-specific response models obtained through installer channels",
+    "critical_dependency": "Licensed market-access partner, equipment interoperability, cyber security and enough dependable flexible capacity"
+  },
+  "thesis": "Use installer agreements to contract dispatch permission over compatible SME batteries, HVAC, refrigeration and other flexible loads, then pool them through a licensed balancing or energy-market partner. Sites receive a transparent revenue share; exclusive control rights and measured response histories create an aggregation moat.",
+  "title": "Installer-Distributed Flexibility Revenue Cooperative",
+  "uncertainties": [
+    "Compatible installed base",
+    "Polish qualification thresholds and revenue",
+    "Installer and customer willingness to grant control rights"
+  ],
+  "version": 1
+}

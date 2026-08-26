@@ -1,0 +1,84 @@
+{
+  "candidate_id": "settle7-09",
+  "claims": [
+    {
+      "claim_id": "settle7-09-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/taxation/tax-transparency-cooperation/administrative-co-operation-and-mutual-assistance/dac7_en"
+      ],
+      "statement": "DAC7 places seller-information collection, verification, and financial reporting duties on platform operators, including the total consideration paid or credited to each reportable seller."
+    },
+    {
+      "claim_id": "settle7-09-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32021L0514"
+      ],
+      "statement": "The DAC7 directive provides that after specified reminders a platform may close the seller account or withhold consideration until required information is supplied."
+    },
+    {
+      "claim_id": "settle7-09-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://commission.europa.eu/news-and-media/news/digital-services-act-keeping-us-safe-online-2025-09-22_en"
+      ],
+      "statement": "The European Commission describes the DSA know-your-trader obligation as requiring marketplaces to verify sellers and display contact information."
+    }
+  ],
+  "contrary_evidence": [
+    "Marketplace operators are already legally responsible for these controls and may prefer first-party systems or full-service compliance providers.",
+    "DAC7 explicitly supplies one hold mechanism, but combining tax, DSA, and product-safety policies into a single payout decision may not be legally or operationally appropriate for every platform."
+  ],
+  "economics": {
+    "acquisition_route": "A compliance gap assessment and shadow-mode integration through PSP and marketplace consultants before any live hold decision",
+    "capital_required_pln": 80000,
+    "founder_net_worth_path": "A plausible 5-7 year path would require roughly one to two million active seller profiles across several platform verticals, implementation revenue, low review cost, and founder retention of a large equity stake",
+    "founder_time": "Approximately 12-16 hours per week, with legal interpretation approved by external counsel and customer compliance owners",
+    "gross_margin_basis": "Rules and receipt infrastructure less identity checks, product-data calls, secure review labour, and enterprise support",
+    "payback": "A marketplace may recover fees through reduced manual review and fewer unsupported holds or releases; these costs need to be measured in shadow mode",
+    "pricing": "Approximately 1-3 PLN per active seller per month plus 0.05-0.20 PLN per payout decision, with implementation fees",
+    "retention_or_repeat": "Seller evidence expires, regulations and policies change, and every payout produces a recurring decision"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A cross-marketplace library of evidence failure modes, resolution paths, and false-hold outcomes could make policy rollout faster and exceptions more precise",
+    "customer": "EU mid-market goods, services, rental, and creator marketplaces with many long-tail sellers",
+    "distribution_mechanism": "Sell through marketplace payment consultants, platform software vendors, PSP implementation partners, and EU compliance boutiques",
+    "offer_and_business_model": "Configurable rules, evidence expiry, reminder tracking, payout-provider webhooks, human-review queue, and downloadable compliance receipts",
+    "payer_and_paid_event": "The marketplace pays per active seller and per policy decision when a payout is released, held, or escalated with an auditable reason",
+    "problem_trigger": "A seller payout approaches while required identity, tax-reporting, trader, or product-safety evidence is missing, stale, or contradictory"
+  },
+  "founder_fit": [
+    "Policy engines, evidence graphs, and anomaly detection align with data and AI skills",
+    "The API model is scalable and avoids personal-brand distribution",
+    "Shadow-mode validation allows testing without making live payout decisions initially"
+  ],
+  "parent": null,
+  "risks": [
+    "False holds can harm sellers and create marketplace liability",
+    "Legal rules vary by seller activity and member state",
+    "KYC, tax, and marketplace-compliance vendors may already bundle the feature",
+    "Handling identity and tax evidence creates significant security obligations"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://taxation-customs.ec.europa.eu/taxation/tax-transparency-cooperation/administrative-co-operation-and-mutual-assistance/dac7_en",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32021L0514",
+    "https://commission.europa.eu/news-and-media/news/digital-services-act-keeping-us-safe-online-2025-09-22_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Per-seller compliance decision infrastructure API",
+    "control_point": "The machine-readable policy decision and evidence receipt attached to a specific seller payout identifier",
+    "critical_dependency": "Marketplace counsel and payment operations must delegate policy execution and provide complete identity, tax, product, reminder, and payout events"
+  },
+  "thesis": "Mid-market EU marketplaces could use a policy-decision API that combines seller identity, reminder history, DAC7 fields, trader verification, and product-safety signals to return release, hold, or manual-review decisions for their existing payout provider. Each decision would carry a reproducible compliance receipt, reducing ad hoc spreadsheet holds without the startup taking custody.",
+  "title": "ReleasePolicy API for Marketplaces",
+  "uncertainties": [
+    "Whether mid-market platforms currently coordinate these checks in one or several systems",
+    "Which party bears liability for an erroneous release or hold recommendation",
+    "The share of seller payouts requiring manual intervention",
+    "Access to product-safety and trader-verification events at decision time"
+  ],
+  "version": 1
+}

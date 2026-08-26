@@ -1,0 +1,80 @@
+{
+  "candidate_id": "niche-12",
+  "claims": [
+    {
+      "claim_id": "niche-12-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2025/40/2025-01-22/eng"
+      ],
+      "statement": "The PPWR requires producers to register in each member state where they first make packaging or packaged products available, and online platforms must obtain producer registration numbers and compliance self-certification."
+    },
+    {
+      "claim_id": "niche-12-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.verpackungsregister.org/en/knowledge-bases/authorising-a-representative"
+      ],
+      "statement": "Since 12 August 2026, foreign companies without a German branch that sell packaged products directly to German end users must appoint an authorized representative and record it in LUCID before market placement."
+    },
+    {
+      "claim_id": "niche-12-c03",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.verpackungsregister.org/en/knowledge-bases/checking-a-registration-status"
+      ],
+      "statement": "Germany's packaging register provides a machine-readable registration-status check, enabling evidence verification rather than relying solely on merchant screenshots."
+    }
+  ],
+  "contrary_evidence": [
+    "German authorized representatives and EPR service firms can bundle dashboards, reporting, and system participation.",
+    "Marketplaces may build their own clearance workflows and expose only a simple registration-number field."
+  ],
+  "economics": {
+    "acquisition_route": "Embed a Germany-readiness check in two ecommerce agencies and one authorized-representative partner instead of selling merchants one by one",
+    "capital_required_pln": 50000,
+    "founder_net_worth_path": "Hypothesis: 800 merchants at 9k PLN blended ARR yield 7.2M PLN recurring revenue and about 2.2M PLN EBITDA by year 5. At 3.5x EBITDA and 70% founder ownership, equity is about 5.4M PLN in years 5 to 7, provided channels keep CAC low and partner work stays pass-through.",
+    "founder_time": "10 to 16 hours weekly once German partner operations are documented; country expansion is deferred until this flow is repeatable",
+    "gross_margin_basis": "Target 65% to 80% on software and evidence verification; statutory partner services are transparent pass-through or referral revenue",
+    "payback": "Keeping German listings active or avoiding a delayed market launch can repay a year of software for an established seller; validate suspension frequency",
+    "pricing": "499 to 1,499 PLN monthly per merchant plus fixed partner-pass-through fees for representation and filings",
+    "retention_or_repeat": "Registration status, packaging quantities, SKUs, partner mandates, and marketplace evidence require ongoing updates"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A verified merchant-jurisdiction-SKU evidence graph plus rule-version and partner-resolution history",
+    "customer": "Polish marketplace and web-shop merchants shipping packaged goods directly to German end users",
+    "distribution_mechanism": "Allegro and Shopify agencies, ecommerce accountants, German authorized representatives, and fulfillment partners",
+    "offer_and_business_model": "SKU-to-jurisdiction EPR cockpit, verified status record, partner handoff, and marketplace evidence API",
+    "payer_and_paid_event": "The merchant pays at Germany onboarding and monthly for listing clearance, evidence refresh, and filing handoff",
+    "problem_trigger": "A merchant enters Germany, adds a packaged SKU, changes packaging, or a marketplace requests current EPR evidence"
+  },
+  "founder_fit": [
+    "A timely Polish-to-German wedge suits the founder's EU context, automation skills, capital ceiling, and low-camera distribution preference. Accounting and ecommerce agencies can aggregate merchants, while local legal representation remains with qualified partners."
+  ],
+  "parent": null,
+  "risks": [
+    "Incorrect producer-role mapping can lead to suspended listings or non-compliance.",
+    "A partner representative's service failure directly damages the product's reputation.",
+    "Multi-country expansion can become low-margin manual filing rather than software."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2025/40/2025-01-22/eng",
+    "https://www.verpackungsregister.org/en/knowledge-bases/authorising-a-representative",
+    "https://www.verpackungsregister.org/en/knowledge-bases/checking-a-registration-status"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Cross-border compliance orchestration SaaS",
+    "control_point": "The verified EPR clearance record required before a packaged SKU remains sellable in Germany",
+    "critical_dependency": "Qualified German representative partners and marketplace-accessible status evidence must be reliable enough for automated clearance"
+  },
+  "thesis": "Create an EPR evidence cockpit for Polish marketplace merchants selling packaged goods directly to German end users, then expand one jurisdiction at a time. It would map SKUs and shipment packaging to the correct producer role, track LUCID registration and system-participation evidence, route mandatory authorized-representative work to a vetted German partner, verify current status, and provide an API-ready listing-clearance record to marketplaces and fulfillment firms. It does not itself act as the statutory representative unless separately authorized and qualified.",
+  "title": "Marketplace Listing Clearance for Polish Sellers into Germany",
+  "uncertainties": [
+    "Number of Polish merchants newly blocked or delayed by the August 2026 representative requirement.",
+    "Gross margin after required local-representative and system-participation partner fees.",
+    "Which marketplace and fulfillment APIs permit automated listing clearance and evidence refresh."
+  ],
+  "version": 1
+}

@@ -1,0 +1,83 @@
+{
+  "candidate_id": "control7-04",
+  "claims": [
+    {
+      "claim_id": "control7-04-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/finanse/legalny-hazard"
+      ],
+      "statement": "Poland maintains a current public list of licensed internet gambling and betting entities, updated in April 2026."
+    },
+    {
+      "claim_id": "control7-04-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/finanse/legalne-gry-hazardowe-przez-internet"
+      ],
+      "statement": "Poland's Ministry of Finance states that gambling is regulated partly to limit harmful social effects and is restricted to adults."
+    },
+    {
+      "claim_id": "control7-04-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A52022DC0554"
+      ],
+      "statement": "The European Commission's supranational AML risk assessment identifies emerging risk factors for online gambling operators and recommends awareness programmes."
+    }
+  ],
+  "contrary_evidence": [
+    "Poland reserves online casino activity to the state monopoly, reducing the available private-operator market.",
+    "No source reviewed establishes that Polish law currently permits or requires the proposed cross-operator token."
+  ],
+  "economics": {
+    "acquisition_route": "A few direct compliance partnerships rather than mass-market sales; use an industry advisor for introductions",
+    "capital_required_pln": 90000,
+    "founder_net_worth_path": "Illustrative, unvalidated path: 10-15 Central European operator groups at roughly 250000 PLN annual blended revenue could support 1.2m PLN operating profit; 75% founder ownership and retained cash could plausibly exceed 5m PLN by year 6-7",
+    "founder_time": "3 hours/day for product and analytics, with legal, clinical, and operator-relations specialists contracted",
+    "gross_margin_basis": "Target 70-80% after secure infrastructure, governance, legal review, and independent audits",
+    "payback": "Unvalidated: three paid operator pilots could cover initial legal and product cost in 18-24 months",
+    "pricing": "Unvalidated: 60000-200000 PLN annual operator membership plus 0.05-0.20 PLN per decision call",
+    "retention_or_repeat": "Every protected event creates usage; network coverage and governance integration may make operator membership sticky"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Operator membership coverage, accepted governance, longitudinal safety outcomes, and the default API position",
+    "customer": "Licensed Polish online betting operators and their compliance or safer-gambling teams",
+    "distribution_mechanism": "Closed pilot with a licensed operator, specialist gambling counsel, and an independent health or player-protection partner",
+    "offer_and_business_model": "Consented shared limit and exclusion token, API, audit log, and governance service; no gambling operation or consumer wagering",
+    "payer_and_paid_event": "Operator pays an annual membership fee and usage fee per token check",
+    "problem_trigger": "A participant deposits, reactivates, changes limits, or moves between operator brands"
+  },
+  "founder_fit": [
+    "Uses personal understanding of betting behavior without requiring the founder to operate gambling",
+    "Data-science work dominates the product",
+    "Small number of enterprise customers limits continuous social selling",
+    "Potential for measurable harm-reduction outcomes"
+  ],
+  "parent": null,
+  "risks": [
+    "Sensitive-data misuse could harm players and create major legal liability",
+    "Operators may resist a signal that can reduce short-term revenue",
+    "A consortium could be viewed as anticompetitive or discriminatory if poorly governed"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.gov.pl/web/finanse/legalny-hazard",
+    "https://www.gov.pl/web/finanse/legalne-gry-hazardowe-przez-internet",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A52022DC0554"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Member-funded data cooperative and real-time risk-signal bureau",
+    "control_point": "A player-consented token queried at the deposit, bonus, or account-reactivation gate across participating operators",
+    "critical_dependency": "Multiple licensed operators and privacy counsel must approve a lawful common governance and data-minimization model"
+  },
+  "thesis": "Offer licensed betting operators a privacy-preserving, consented token that lets a player carry self-set limits, cooling-off state, and verified self-exclusion between participating brands. Operators call it before deposits or bonuses; no raw betting history is exchanged. The potential moat is a multi-operator safety network, but legality, proportionality, and operator commitment are unresolved.",
+  "title": "Consented Gambling Safety Signal Cooperative",
+  "uncertainties": [
+    "Whether explicit consent is sufficient for each proposed data flow",
+    "Whether Polish regulators would support cross-operator portability",
+    "Whether enough operators will join to create useful coverage"
+  ],
+  "version": 1
+}

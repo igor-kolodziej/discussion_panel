@@ -1,0 +1,83 @@
+{
+  "judge_id": "c4-working-embed-05",
+  "assumptions": [
+    "The initial product remains decision support only, with qualified customer personnel or contracted food-safety professionals retaining label and release authority.",
+    "A first paid pilot can be attempted within the stated capital and part-time constraints, but no distributor, auditor, or manufacturer commitment is assumed.",
+    "The proposed prices, margins, site count, integration costs, and retention are planning hypotheses rather than validated economics.",
+    "Supplier specifications can be processed only where contracts grant narrowly scoped access and derived-data rights."
+  ],
+  "factors": [
+    {
+      "name": "Core insight",
+      "status": "scored",
+      "score": 6,
+      "rationale": "Mandatory allergen and traceability duties make supplier-specification changes a recurring, high-consequence trigger. The integration-first exception-clearing wedge is coherent, but the underlying dependency-graph and impact-analysis need is already recognized and served by established specification-management vendors."
+    },
+    {
+      "name": "Customer pain and willingness to pay",
+      "status": "scored",
+      "score": 6,
+      "rationale": "Missed allergen changes can create serious safety, recall, and compliance consequences, so the operational pain is credible. There is no evidence that digitally underserved SMEs will pay separately for this layer rather than use spreadsheets, retailer portals, incumbent PLM features, or services already supplied by auditors and distributors."
+    },
+    {
+      "name": "Business model and economics",
+      "status": "scored",
+      "score": 4,
+      "rationale": "Onboarding, recurring site fees, and paid human-cleared reports could support recurring revenue, but every important economic input is unobserved. Multilingual extraction, connector maintenance, professional review, support, insurance, and channel share could materially reduce the asserted margin, while the path to 300 sites assumes successful channel conversion and retention without evidence."
+    },
+    {
+      "name": "Market and beachhead",
+      "status": "scored",
+      "score": 6,
+      "rationale": "EU food processing is large and fragmented, and SMEs without integrated change control form a plausible beachhead. The research does not quantify that underserved subset, its change volume, or its software budget, so aggregate sector scale does not yet establish an economically attractive reachable market."
+    },
+    {
+      "name": "Competitive position and domination potential",
+      "status": "scored",
+      "score": 3,
+      "rationale": "TraceGains, Specright, FoodChain ID, and Foods Connected already advertise much of the core functionality. A distributor- or auditor-embedded position could create a focused route to SMEs, but no privileged channel, feed, or exclusive workflow position exists yet, and incumbents could bundle an exception layer."
+    },
+    {
+      "name": "Expansion potential",
+      "status": "scored",
+      "score": 6,
+      "rationale": "A trusted supplier-to-recipe dependency layer could expand from allergens into origin, formulation, packaging, label, recall, and broader specification-change workflows across markets. Expansion is conditional on first obtaining reusable integrations and becoming the accepted record rather than another disconnected repository."
+    },
+    {
+      "name": "Defensibility and durability",
+      "status": "scored",
+      "score": 4,
+      "rationale": "Permissioned exception decisions, remediation outcomes, and embedded audit trails could produce switching costs and useful proprietary data. Those advantages require data rights, sustained workflow adoption, and sufficient volume; the core parsing and graph features are reproducible, public incident data lack supplier identities, and stronger vendors already occupy adjacent systems of record."
+    },
+    {
+      "name": "Strength of advantage",
+      "status": "scored",
+      "score": 4,
+      "rationale": "Partner-branded exception clearing may be lighter and easier to adopt than replacing a PLM. No evidence yet shows materially better accuracy, response time, cost, audit outcomes, or integration effort than incumbent tools and current manual workflows, while mandatory human review limits pure automation gains."
+    },
+    {
+      "name": "Timing and momentum",
+      "status": "scored",
+      "score": 6,
+      "rationale": "Durable EU food-safety duties and improving document extraction support the timing. The regulatory need is longstanding rather than newly opened, and established vendors have already incorporated many of the same capabilities, limiting any clear timing window."
+    },
+    {
+      "name": "Distribution",
+      "status": "scored",
+      "score": 5,
+      "rationale": "A distributor or certification auditor could provide one-to-many access and reduce direct founder selling. Partner willingness, incentives, feed access, resale economics, and conversion are wholly unvalidated; the fallback of direct SME sales would be slower, integration-heavy, and less compatible with attractive acquisition economics."
+    },
+    {
+      "name": "Execution and risks",
+      "status": "scored",
+      "score": 5,
+      "rationale": "Document parsing and dependency modelling fit the founder, and a bounded pilot appears possible part-time. Production use adds high-consequence false-negative risk, multilingual document variance, sensitive formula data, integration security, insurance, and continuing qualified review; these cannot be delegated to AI and may strain the stated capital and time."
+    }
+  ],
+  "interaction_adjustment": -0.2,
+  "main_structural_strength": "A recurring, legally consequential supplier-change event can be captured inside an existing distributor or auditor channel, potentially combining an urgent workflow with one-to-many distribution and an accumulating audit trail.",
+  "primary_score_limiter": "The business lacks evidence for the essential combination of partner feed rights, channel commitment, incremental SME willingness to pay, and economics after human review, while established vendors already cover the core workflow.",
+  "strongest_disconfirming_evidence": "Four established specification-management vendors publicly offer supplier collaboration, version control, allergen propagation, BOM linkage, and recipe-to-label impact analysis, directly contradicting any claim that the core functionality is an open market gap.",
+  "evidence_needed_for_higher_score": "A paid, contractually permissioned pilot through a distributor or auditor with several manufacturers should show timely feed delivery, measured extraction and exception accuracy, bounded onboarding and review labor, positive first-year contribution after channel share, repeated use, and customer willingness to renew.",
+  "highest_value_structural_change": "Make one ingredient distributor the anchor payer and controlled data source, embedding a standardized supplier-change intake and human-governed exception service into its customer workflow instead of relying on separate SME subscriptions; this would align feed rights, distribution, and commercial incentive in one relationship."
+}

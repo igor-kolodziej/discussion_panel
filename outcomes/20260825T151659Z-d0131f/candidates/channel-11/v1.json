@@ -1,0 +1,70 @@
+{
+  "candidate_id": "channel-11",
+  "claims": [
+    {
+      "claim_id": "channel-11-claim-01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://commission.europa.eu/system/files/2023-07/factsheet%20GPSR%20final.pdf"
+      ],
+      "statement": "The GPSR became applicable on 13 December 2024 and strengthens online-sales duties, including an EU responsible person for relevant products coming from outside the EU."
+    },
+    {
+      "claim_id": "channel-11-claim-02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://commission.europa.eu/topics/business-and-industry/product-safety_en"
+      ],
+      "statement": "Safety Gate is the official rapid-alert system for dangerous non-food products and supports post-listing monitoring and action."
+    }
+  ],
+  "contrary_evidence": [
+    "Major marketplaces enforce listing fields natively, responsible-person firms bundle documentation, and sellers with few SKUs can manage records manually."
+  ],
+  "economics": {
+    "acquisition_route": "UNVALIDATED HYPOTHESIS: 8 feed-management or listing agencies each onboard 25 merchants.",
+    "capital_required_pln": 60000,
+    "founder_net_worth_path": "UNVALIDATED HYPOTHESIS: year-8 ARR of PLN 8 million, EBITDA of PLN 2.6 million and 76% founder ownership at 4 times EBITDA imply PLN 7.9 million founder equity before liabilities.",
+    "founder_time": "UNVALIDATED HYPOTHESIS: 12 founder hours weekly during two-marketplace mapping and 7 after agency enablement.",
+    "gross_margin_basis": "UNVALIDATED HYPOTHESIS: 84% mature gross margin after monitoring, evidence storage and feed API calls.",
+    "payback": "UNVALIDATED HYPOTHESIS: 8-month CAC payback after agency revenue share.",
+    "pricing": "UNVALIDATED HYPOTHESIS — every commercial figure here, including capital_required_pln=60000, is a hypothesis: PLN 14 per active SKU annually plus PLN 120 per verified safety-incident workflow, with PLN 700 monthly minimums.",
+    "retention_or_repeat": "UNVALIDATED HYPOTHESIS: 89% annual merchant retention while active SKUs remain listed across marketplaces."
+  },
+  "fingerprint": {
+    "compounding_advantage": "cross-market product identity, listing-rejection correction and recall-match graph",
+    "customer": "EU importers, responsible persons and marketplace sellers managing many non-food consumer SKUs",
+    "distribution_mechanism": "marketplace listing agencies and feed-management platforms",
+    "offer_and_business_model": "verified evidence record, marketplace feed adapter and alert-to-takedown workflow",
+    "payer_and_paid_event": "merchant or responsible person pays per active syndicated SKU and handled incident",
+    "problem_trigger": "a SKU is created or changed for an EU marketplace, or a safety alert requires action"
+  },
+  "founder_fit": [
+    "Data-entity-resolution and automation fit with agency-led distribution and no personal brand. UNVALIDATED HYPOTHESIS: PLN 60000 funds a two-marketplace, one-category pilot."
+  ],
+  "parent": null,
+  "risks": [
+    "False product matching can wrongly suppress a listing.",
+    "Unverified supplier documents create liability and counterfeit risk."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://commission.europa.eu/system/files/2023-07/factsheet%20GPSR%20final.pdf",
+    "https://commission.europa.eu/topics/business-and-industry/product-safety_en",
+    "https://commission.europa.eu/news-and-media/news/increased-action-against-dangerous-products-eu-2025-2026-03-09_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "multi-market product-safety evidence syndication",
+    "control_point": "SKU listing-feed approval and recall-takedown command",
+    "critical_dependency": "verified manufacturer and responsible-person records plus marketplace feed permissions"
+  },
+  "thesis": "Maintain a verified evidence record for each non-food consumer SKU and syndicate manufacturer, EU responsible-person, warning and safety fields into marketplace feeds, then trigger takedowns when a matching Safety Gate signal appears. Multi-market feed corrections and recall matches compound into a product-identity graph that listing agencies cannot reproduce from static templates.",
+  "title": "GPSR Listing-Evidence Syndicator",
+  "uncertainties": [
+    "Marketplace API access and field consistency",
+    "Merchant willingness to pay per SKU",
+    "Ability to verify overseas manufacturer evidence remotely"
+  ],
+  "version": 1
+}

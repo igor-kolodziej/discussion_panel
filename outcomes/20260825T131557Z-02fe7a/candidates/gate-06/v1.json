@@ -1,0 +1,73 @@
+{
+  "candidate_id": "gate-06",
+  "claims": [
+    {
+      "claim_id": "gate-06-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/customs/customs-security/import-control-system-2/faq_en"
+      ],
+      "statement": "The Commission's ICS2 FAQ says the carrier bringing goods into the EU customs territory is generally obliged to lodge the Entry Summary Declaration."
+    },
+    {
+      "claim_id": "gate-06-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/system/files/2020-03/ics2-factsheet-en.pdf"
+      ],
+      "statement": "The Commission's ICS2 factsheet says consignments without the necessary data are stopped at the EU customs border and customs will not proceed with clearance."
+    }
+  ],
+  "contrary_evidence": [
+    "The Commission provides a trader portal, so low-volume operators can submit without this product.",
+    "TMS and customs-software incumbents may already offer ICS2 connectivity."
+  ],
+  "economics": {
+    "acquisition_route": "Hypothesis: embed through a TMS reseller that activates cohorts of forwarders.",
+    "capital_required_pln": 90000,
+    "founder_net_worth_path": "Hypothesis: 80 forwarders averaging 6000 PLN monthly would produce 5.76 million PLN ARR; an embedded, profitable gateway could support founder net worth above 5 million PLN in years 6 to 9.",
+    "founder_time": "Hypothesis: 20 hours weekly for product and partner work, with customs engineering and on-call operations contracted.",
+    "gross_margin_basis": "Hypothesis: 85% software gross margin before high-availability support and partner revenue share.",
+    "payback": "Hypothesis: channel setup repays within nine months if it produces ten minimum-fee accounts.",
+    "pricing": "Hypothesis: 1.50 PLN per consignment with a 1000 PLN monthly minimum.",
+    "retention_or_repeat": "Hypothesis: every inbound movement repeats the gate and deeply embeds the API in operations."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A lane-, shipper-, and schema-specific rejection graph that catches recurring defects before submission",
+    "customer": "Small Polish and Central European road or rail forwarders with recurring EU entry movements",
+    "distribution_mechanism": "TMS resellers, customs agencies, carrier associations, and freight-accounting vendors",
+    "offer_and_business_model": "Transactional compliance API gateway plus a low-code portal",
+    "payer_and_paid_event": "The forwarder pays per accepted pre-arrival transaction with a monthly minimum",
+    "problem_trigger": "A vehicle or consignment is approaching EU entry and its ENS must be accepted before clearance"
+  },
+  "founder_fit": [
+    "Schema validation, anomaly scoring, and event telemetry fit the founder's technical profile.",
+    "TMS resellers and customs agencies can provide channel distribution.",
+    "A narrow road-freight MVP can be built within available capital, subject to interface access."
+  ],
+  "parent": null,
+  "risks": [
+    "The gateway becomes operationally critical and may require round-the-clock reliability.",
+    "Incorrect role assignment could constitute unauthorized representation.",
+    "A single schema change or outage could stop customers' goods."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://taxation-customs.ec.europa.eu/customs/customs-security/import-control-system-2/faq_en",
+    "https://taxation-customs.ec.europa.eu/system/files/2020-03/ics2-factsheet-en.pdf"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Transactional customs API gateway",
+    "control_point": "Machine-readable ENS-ready or accepted state returned before TMS dispatch clearance",
+    "critical_dependency": "Permitted ICS2 connectivity and production-grade availability"
+  },
+  "thesis": "A transactional gateway for small Central European road and rail forwarders could validate shipper data, party roles, commodity descriptions, routing, and deadlines before lodging or handing off an Entry Summary Declaration. It would return a machine-readable release state to the forwarder's TMS and preserve every correction, without acting as an undeclared customs representative.",
+  "title": "ICS2 Pre-Arrival Gateway for Small Road Forwarders",
+  "uncertainties": [
+    "Certification, availability, and security requirements for a production gateway need specialist verification.",
+    "The underserved transaction volume among small Polish forwarders is unknown.",
+    "The 90000 PLN capital figure and every commercial number below are hypotheses."
+  ],
+  "version": 1
+}

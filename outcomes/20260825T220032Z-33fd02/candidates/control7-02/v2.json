@@ -1,0 +1,140 @@
+{
+  "candidate_id": "control7-02",
+  "claims": [
+    {
+      "claim_id": "control7-02-r1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/zakres-obowiazkowego-ksef/"
+      ],
+      "statement": "KSeF receipt became mandatory on 1 February 2026, while issuance applied from 1 February or 1 April 2026 depending on taxpayer size, with a temporary 2026 small-sales exception."
+    },
+    {
+      "claim_id": "control7-02-r2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ksef.podatki.gov.pl/wyjasnienia/publikacja-dokumentacji-api-ksef-20-oraz-struktury-logicznej-fa-3-30062025/"
+      ],
+      "statement": "The Ministry provides an OpenAPI contract, SDKs, guides, and environments for third-party KSeF integration."
+    },
+    {
+      "claim_id": "control7-02-r3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ksef.podatki.gov.pl/media/20shej34/aplikacja-podatnika-ksef-20-podrecznik-uzytkownika_01042026.pdf"
+      ],
+      "statement": "The KSeF 2.0 taxpayer-app manual labels invoice bank-account and factor-account sections optional, so invoice data alone cannot guarantee an account is present."
+    },
+    {
+      "claim_id": "control7-02-r4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/kas/api-wykazu-podatnikow-vat"
+      ],
+      "statement": "The government VAT-register API returns NIP/REGON-account matches and confirmation keys, and a daily flat file supports high-volume checks."
+    },
+    {
+      "claim_id": "control7-02-r5",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://wsparcie.symfonia.pl/hc/pl/articles/18350666538130--SeD-Weryfikacja-z-bia%C5%82%C4%85-list%C4%85-podatnik%C3%B3w-VAT",
+        "https://help.comarch.com/standard/20245/?ht_kb=defining-customer-vendor"
+      ],
+      "statement": "Symfonia and Comarch already expose VAT-whitelist account verification inside accounting or vendor workflows."
+    },
+    {
+      "claim_id": "control7-02-r6",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R0886"
+      ],
+      "statement": "EU Regulation 2024/886 requires payee-verification service by PSPs in non-euro Member States by 9 July 2027, further commoditizing account-identity checking."
+    },
+    {
+      "claim_id": "control7-02-r7",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://mazowiecka.policja.gov.pl/ra/aktualnosci/aktualnosci/131942,Falszywe-faktury-z-podmienionym-numerem-konta-Firmy-na-celowniku-cyberprzestepco.html"
+      ],
+      "statement": "A 2026 Polish police case documents compromised business email and a look-alike invoice with a substituted account, and recommends independent verification of changed details."
+    },
+    {
+      "claim_id": "control7-02-r8",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://www.gov.pl/web/kas/api-wykazu-podatnikow-vat",
+        "https://wsparcie.symfonia.pl/hc/pl/articles/18350666538130--SeD-Weryfikacja-z-bia%C5%82%C4%85-list%C4%85-podatnik%C3%B3w-VAT",
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R0886"
+      ],
+      "statement": "The defensible wedge is therefore inferred to be supplier-change governance and audit evidence rather than a registry lookup."
+    }
+  ],
+  "contrary_evidence": [
+    "Government VAT-register infrastructure already supplies free account matching, confirmation keys, and a daily bulk file.",
+    "KSeF bank-account fields are optional, preventing deterministic coverage from the invoice record.",
+    "Established ERP vendors already bundle whitelist verification into vendor, invoice, or payment workflows.",
+    "Mandatory PSP payee verification due in Poland by July 2027 will reduce the standalone value of account-identity matching."
+  ],
+  "economics": {
+    "acquisition_route": "Paid AP design partners first, then ERP and bookkeeping integrations; incumbent ownership of the basic verification surface makes channel access both useful and difficult",
+    "capital_required_pln": 45000,
+    "founder_net_worth_path": "Not evidence-backed at research stage. A path to 5m PLN would require a large base of retained mid-market customers or a high-volume channel plus durable margins; customer count, ARPU, churn, and valuation evidence are all missing, so timing cannot responsibly be estimated before paid pilots",
+    "founder_time": "About 3 hours/day for a narrow pilot, with security review, enterprise onboarding, and incident support contracted; channel negotiations may temporarily exceed this",
+    "gross_margin_basis": "Target 70-80% after registry access, hosting, security, support, and manual escalation; no observed cost data validates the target",
+    "payback": "Unknown until paid-pilot conversion, integration cost, escalation rate, and incident-liability terms are observed",
+    "pricing": "Unvalidated: 500-3000 PLN monthly minimum plus 0.10-0.50 PLN per checked invoice; basic whitelist lookup cannot support this price, so pilots must establish willingness to pay for change control and audit evidence",
+    "retention_or_repeat": "Payment runs recur and approval-policy integration may be sticky, but no renewal evidence was found"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Permissioned histories of approved supplier changes, customer-specific false-positive feedback, embedded approval policy, and workflow switching costs",
+    "customer": "Polish mid-market accounts-payable and treasury teams, accounting platforms, and outsourced bookkeeping firms handling repeated supplier payments",
+    "distribution_mechanism": "Paid design-partner pilots with AP teams followed by integrations or resale through ERP, document-workflow, and bookkeeping vendors",
+    "offer_and_business_model": "API and review console combining KSeF evidence, VAT-whitelist confirmation, supplier-master history, out-of-band confirmation tasks, human approvals, and an exportable audit record",
+    "payer_and_paid_event": "A finance organization or accounting platform pays monthly and/or per invoice routed through the change-control gate",
+    "problem_trigger": "A KSeF invoice or payment instruction contains an account or supplier detail that differs from the approved supplier master before a payment run"
+  },
+  "founder_fit": [
+    "Direct match for data science, anomaly detection, and API automation",
+    "A narrow software pilot can fit the available capital and part-time schedule",
+    "Polish regulatory and language context is useful",
+    "ERP-channel distribution can reduce repeated founder-led selling, but security and enterprise onboarding need delegated specialists"
+  ],
+  "parent": {
+    "candidate_id": "control7-02",
+    "version": 1
+  },
+  "risks": [
+    "Financial and invoice data create material security and contractual liability",
+    "False positives or unavailable registries could delay legitimate payments",
+    "ERP vendors and banks can extend their existing controls into the proposed wedge",
+    "A supplier-change history without independent confirmation can reproduce compromised source data",
+    "The founder-net-worth path lacks paid-pilot and channel-conversion evidence"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/zakres-obowiazkowego-ksef/",
+    "https://ksef.podatki.gov.pl/wyjasnienia/publikacja-dokumentacji-api-ksef-20-oraz-struktury-logicznej-fa-3-30062025/",
+    "https://ksef.podatki.gov.pl/media/20shej34/aplikacja-podatnika-ksef-20-podrecznik-uzytkownika_01042026.pdf",
+    "https://www.gov.pl/web/kas/api-wykazu-podatnikow-vat",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R0886",
+    "https://mazowiecka.policja.gov.pl/ra/aktualnosci/aktualnosci/131942,Falszywe-faktury-z-podmienionym-numerem-konta-Firmy-na-celowniku-cyberprzestepco.html",
+    "https://wsparcie.symfonia.pl/hc/pl/articles/18350666538130--SeD-Weryfikacja-z-bia%C5%82%C4%85-list%C4%85-podatnik%C3%B3w-VAT",
+    "https://help.comarch.com/standard/20245/?ht_kb=defining-customer-vendor"
+  ],
+  "stage": "research",
+  "structure": {
+    "commercial_archetype": "Embedded finance-control workflow and per-event evidence service",
+    "control_point": "The mandatory internal approval record for supplier-master or payment-detail changes before payment release",
+    "critical_dependency": "Customers must grant lawful KSeF and ERP access, provide a trusted independent supplier contact route, and adopt the service as an approval gate rather than an advisory lookup"
+  },
+  "thesis": "Embed a documented supplier-master and payment-change approval step between receipt of a KSeF invoice and payment release. The product should treat KSeF authenticity and the VAT whitelist as commodity evidence inputs, then add change detection, independent confirmation, human approval, and an audit trail. The potential control point is the approved-supplier-change workflow, not public registry access or deterministic account matching.",
+  "title": "KSeF Supplier-Change Approval Gate",
+  "uncertainties": [
+    "Incremental willingness to pay for change-control evidence beyond bundled ERP and bank checks",
+    "Exact KSeF delegation scopes and security obligations for the intended integration",
+    "Availability of trustworthy out-of-band supplier contact data",
+    "False-positive, liability, sales-cycle, and support economics",
+    "Whether customers will permit any cross-customer learning rather than customer-isolated histories"
+  ],
+  "version": 2
+}

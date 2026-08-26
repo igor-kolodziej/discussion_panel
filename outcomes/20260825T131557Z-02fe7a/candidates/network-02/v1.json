@@ -1,0 +1,80 @@
+{
+  "candidate_id": "network-02",
+  "claims": [
+    {
+      "claim_id": "network-02-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.ure.gov.pl/pl/urzad/informacje-ogolne/aktualnosci/13173%2CRaport-URE-w-Polsce-mamy-juz-ponad-16-mln-mikroinstalacji-OZE.html"
+      ],
+      "statement": "Poland had 1,636,673 grid-connected renewable micro-installations at the end of 2025, 99.9% of which were photovoltaic, creating a large installed base rather than only a new-sales market."
+    },
+    {
+      "claim_id": "network-02-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://iea-pvps.org/key-topics/guidelines-for-operation-and-maintenance-of-photovoltaic-power-plants-in-different-climates/"
+      ],
+      "statement": "IEA PVPS operations-and-maintenance guidance treats performance indicators, monitoring, forecasting, analysis, maintenance services, and advanced inspections as core O&M functions."
+    },
+    {
+      "claim_id": "network-02-c3",
+      "confidence": "low",
+      "evidence_refs": [],
+      "statement": "Hypothesis: small O&M operators will contribute labeled repair outcomes in exchange for faster diagnosis and cross-fleet benchmarks if tenant isolation and contractual data rights are explicit."
+    }
+  ],
+  "contrary_evidence": [
+    "Large inverter vendors already provide monitoring portals and may improve their own fault recommendations.",
+    "Many residential faults may be infrequent or uneconomic for owners to repair, limiting per-site value."
+  ],
+  "economics": {
+    "acquisition_route": "Hypothesis: land O&M portfolios through a free alert-history import and charge after the first 30 days of recovered-production evidence.",
+    "capital_required_pln": 70000,
+    "founder_net_worth_path": "Hypothesis: 10000 monitored sites in year 2, 75000 in year 4, and 250000 in year 6 at 4 PLN/site/month yields 12M PLN ARR. At a 4-6x ARR value and 55-70% founder ownership, the equity path clears 5M PLN well before the terminal milestone if churn and data rights hold.",
+    "founder_time": "Hypothesis: 15-20 hours/week for two vendor connectors and one fleet pilot, then support can be partially delegated.",
+    "gross_margin_basis": "Hypothesis: 82-90% at scale after cloud telemetry, alert delivery, and support; early connector maintenance will depress margin.",
+    "payback": "Hypothesis: 4-7 months at 5000 PLN acquisition cost for a 500-site operator paying 2500-4000 PLN monthly.",
+    "pricing": "Hypothesis: 3-8 PLN per monitored site per month with a 499 PLN monthly floor and premium dispatch analytics.",
+    "retention_or_repeat": "Hypothesis: high repeat from continuous monitoring, accumulated asset history, and technician workflow integration; target net revenue retention above 105% through site growth."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Normalized cross-vendor telemetry joined to technician-confirmed cause, repair action, part, and recovery outcome",
+    "customer": "Regional PV installers and O&M firms managing 100-5000 small systems",
+    "distribution_mechanism": "O&M portfolio migration tool, inverter/wholesaler integrations, and an initial reference implementation through the family business",
+    "offer_and_business_model": "Vendor-neutral anomaly triage and repair-learning SaaS with technician feedback loops",
+    "payer_and_paid_event": "O&M firm pays per monitored site or fleet subscription when the system enters active monitoring",
+    "problem_trigger": "An inverter alert, underproduction anomaly, or technician dispatch decision"
+  },
+  "founder_fit": [
+    "Direct fit with anomaly detection, predictive modeling, and data pipelines.",
+    "Parents' installer base can seed real but permissioned fault workflows and labels.",
+    "Remote, asynchronous product is compatible with low-social-energy preferences.",
+    "Can begin with CSV/email ingestion before expensive integrations."
+  ],
+  "parent": null,
+  "risks": [
+    "Incorrect repair suggestions could cause safety incidents or equipment damage; outputs need qualified-technician review.",
+    "Telemetry security and household-identification leakage.",
+    "A few dominant manufacturers could close APIs or replicate the product."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.ure.gov.pl/pl/urzad/informacje-ogolne/aktualnosci/13173%2CRaport-URE-w-Polsce-mamy-juz-ponad-16-mln-mikroinstalacji-OZE.html",
+    "https://iea-pvps.org/key-topics/guidelines-for-operation-and-maintenance-of-photovoltaic-power-plants-in-different-climates/"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "diagnostic intelligence SaaS",
+    "control_point": "cross-vendor fault-to-repair outcome graph embedded in technician triage",
+    "critical_dependency": "durable telemetry access and consistent technician outcome labeling"
+  },
+  "thesis": "A telemetry-normalization and repair-learning layer for regional photovoltaic maintenance firms. It maps inverter alerts and production anomalies to technician-confirmed causes, actions, parts, and time-to-recovery, so every resolved fault improves triage recommendations across the network.",
+  "title": "PV FaultGraph for Regional O&M Firms",
+  "uncertainties": [
+    "API availability and contractual reuse rights vary by inverter vendor.",
+    "The density of labeled faults required to outperform vendor manuals is unknown.",
+    "The 70000 PLN capital estimate and all pricing, adoption, payback, and valuation figures below are planning hypotheses."
+  ],
+  "version": 1
+}

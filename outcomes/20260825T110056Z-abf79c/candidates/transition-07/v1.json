@@ -1,0 +1,86 @@
+{
+  "candidate_id": "transition-07",
+  "claims": [
+    {
+      "claim_id": "transition-07-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.eba.europa.eu/activities/direct-supervision-and-oversight/digital-operational-resilience-act/preparation-dora-application"
+      ],
+      "statement": "The European Banking Authority states that DORA became applicable on 17 January 2025 and that in-scope financial entities must maintain comprehensive registers of contractual arrangements with ICT third-party providers."
+    },
+    {
+      "claim_id": "transition-07-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32022R2554"
+      ],
+      "statement": "DORA requires financial entities, before entering ICT contracts, to assess criticality, risks, supervisory conditions, conflicts, and prospective-provider suitability and due diligence."
+    },
+    {
+      "claim_id": "transition-07-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1785353451055&uri=OJ%3AL_202402956"
+      ],
+      "statement": "The implementing regulation defines linked templates and identifiers for contracts, entities, functions, services, and parts of the ICT supply chain, supporting a structured export use case."
+    }
+  ],
+  "contrary_evidence": [
+    "DORA's legal obligation remains with financial entities, which may reject supplier-generated formats or require their own portals.",
+    "Mature GRC, trust-centre, and security-questionnaire platforms already serve overlapping workflows.",
+    "A vendor with only one regulated customer may tolerate manual diligence rather than buy another subscription."
+  ],
+  "economics": {
+    "acquisition_route": "Triggered referrals from ISO auditors, compliance advisers, and regulated-customer vendor portals when a diligence request is opened",
+    "capital_required_pln": 60000,
+    "founder_net_worth_path": "Scenario, not evidence: 1,200 vendors at PLN 18,000 annual recurring revenue yields PLN 21.6m revenue; a 40% operating margin and five mature years of distributions could create PLN 20m-plus founder net worth",
+    "founder_time": "Three hours per day for product and scheduled evidence review plus one hour for channel support during early cohorts",
+    "gross_margin_basis": "Reusable structured evidence and exports should exceed 80% gross margin; initial evidence cleanup and contract mapping reduce blended first-year margin",
+    "payback": "Target one to three months because onboarding is paid and channel commission is tied to the first completed room",
+    "pricing": "Assumption: PLN 5,000-15,000 onboarding and PLN 750-2,500 per month based on services, subcontractors, and active customer rooms",
+    "retention_or_repeat": "Evidence, subcontractors, services, and customer renewals change continuously, supporting annual retention if multiple buyers reuse the record"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A reusable mapping between supplier facts, service relationships, contract clauses, evidence documents, and the structured register fields requested across many financial entities",
+    "customer": "Small cloud, analytics, cybersecurity, and software vendors already selling or trying to sell to EU insurers, payment firms, asset managers, credit institutions, and other DORA-covered entities",
+    "distribution_mechanism": "ISO auditors, financial-compliance advisers, MSPs, and cloud marketplaces refer vendors at the point a regulated customer requests evidence",
+    "offer_and_business_model": "A canonical vendor-and-service evidence graph with signed source documents, subcontractor chains, DORA register exports, reusable answers, and contract-clause gap flags; paid setup plus annual subscription",
+    "payer_and_paid_event": "The ICT vendor pays at the first regulated-customer diligence request, then subscribes per service and active customer evidence room",
+    "problem_trigger": "Since 17 January 2025, covered financial entities must maintain comprehensive registers of ICT third-party contracts, assess providers before contracting, and monitor third-party risk, repeatedly pulling structured facts and evidence from vendors"
+  },
+  "founder_fit": [
+    "Relational supplier graphs and data-quality checks match the founder's analytical background",
+    "Finance interest helps with buyer vocabulary without requiring regulated investment activity",
+    "The vendor-side wedge supports self-serve onboarding and asynchronous evidence exchange",
+    "Auditor and adviser channels reduce constant enterprise networking"
+  ],
+  "parent": null,
+  "risks": [
+    "The platform would store highly sensitive security and subcontractor evidence.",
+    "Incorrect contract-clause guidance could delay or damage a procurement decision.",
+    "Network value will not compound if each bank insists on incompatible evidence formats.",
+    "Sales may remain consultant-led and meeting-heavy despite the intended channel model."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.eba.europa.eu/activities/direct-supervision-and-oversight/digital-operational-resilience-act/preparation-dora-application",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1785353451055&uri=OJ%3AL_202402956",
+    "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32022R2554"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Supplier-side procurement passport and evidence-room subscription",
+    "control_point": "The reusable service-and-subcontractor record presented before a regulated financial customer approves or renews an ICT vendor",
+    "critical_dependency": "Acceptance of exports and source-linked evidence by financial buyers that remain legally responsible for their own due diligence"
+  },
+  "thesis": "A supplier-side DORA evidence passport can let small ICT vendors maintain one structured record of services, entities, subcontractors, controls, contracts, and evidence links, then export customer-specific rooms for regulated financial buyers. DORA puts the legal duty on financial entities, but that duty becomes a procurement constraint for their suppliers; the product wins only if it removes repeated questionnaires without asking banks to abandon their own systems.",
+  "title": "DORA Supplier Evidence Passport for Finance-Facing ICT Vendors",
+  "uncertainties": [
+    "No evidence yet shows regulated buyers will accept a portable evidence room as reducing their workload.",
+    "The target vendor count, questionnaire frequency, and renewal churn are unmeasured.",
+    "The proposed pricing and 1,200-vendor wealth scenario are unvalidated assumptions.",
+    "Which DORA fields can be vendor-authored versus financial-entity-authored needs precise mapping."
+  ],
+  "version": 1
+}

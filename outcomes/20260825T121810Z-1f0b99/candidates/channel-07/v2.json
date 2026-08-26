@@ -1,0 +1,137 @@
+{
+  "candidate_id": "channel-07",
+  "claims": [
+    {
+      "claim_id": "channel-07-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gamblingcommission.gov.uk/licensees-and-businesses/lccp/condition/3-4-3-remote-customer-interaction"
+      ],
+      "statement": "British remote licensees must act on strong indicators of harm, manually review automated processes in each affected customer's case, let the customer contest an automated decision, and evaluate both individual interactions and the overall approach."
+    },
+    {
+      "claim_id": "channel-07-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gamblingcommission.gov.uk/manual/customer-interaction-guidance-for-remote-gambling-licensees-formal-guidance/requirement-5-customer-interaction-guidance-for-remote-gambling-licensees-sr",
+        "https://www.gamblingcommission.gov.uk/guidance/customer-interaction-guidance-for-remote-gambling-licensees-formal-guidance/requirement-12-customer-interaction-guidance-for-remote-gambling-licensees"
+      ],
+      "statement": "Formal guidance requires multiple categories of behavioural and account indicators and a process for measuring what happened after an intervention, supporting an auditable ledger and evaluation tool."
+    },
+    {
+      "claim_id": "channel-07-c03",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gamblingcommission.gov.uk/licensees-and-businesses/guide/what-is-gambling-software"
+      ],
+      "statement": "The Gambling Commission states that general performance analytics, affiliate, and CRM software are not ordinarily treated as gambling software, but classification is fact-specific and the Commission advises legal advice when uncertain."
+    },
+    {
+      "claim_id": "channel-07-c04",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/individual-rights/individual-rights/rights-related-to-automated-decision-making-including-profiling/"
+      ],
+      "statement": "UK GDPR restricts solely automated decisions with legal or similarly significant effects and requires transparency, bias and error controls, challenge and review rights, and a DPIA for high-risk profiling."
+    },
+    {
+      "claim_id": "channel-07-c05",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.playtech.com/products/betbuddy/"
+      ],
+      "statement": "Playtech's BetBuddy already markets predictive safer-gambling analytics, early identification, personalised insights, and automated interaction support, establishing direct incumbent competition."
+    },
+    {
+      "claim_id": "channel-07-c06",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://doi.org/10.1016/j.chbr.2024.100427",
+        "https://pubmed.ncbi.nlm.nih.gov/35067833/"
+      ],
+      "statement": "Peer-reviewed evidence supports behavioural risk modelling but also shows indicator drift and threshold sensitivity, so models require ongoing local calibration and cannot be sold as universal classifiers."
+    },
+    {
+      "claim_id": "channel-07-c07",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://www.gamblingcommission.gov.uk/news/article/an-update-on-the-single-customer-view-industry-challenge"
+      ],
+      "statement": "Hypothesis: a platform-integrated tool can distribute to several operators, but cross-operator pooling cannot be assumed because the Commission and ICO treated lawful basis and special-category processing as central design questions in the Single Customer View work."
+    }
+  ],
+  "contrary_evidence": [
+    "BetBuddy already offers the central predictive-analytics and player-protection proposition through a major gambling technology supplier.",
+    "The Gambling Commission's own licensing guidance says general performance analytics and CRM are usually outside gambling-software licensing, so regulation creates buyer obligations but not necessarily a licence-based moat for this component.",
+    "The Single Customer View work demonstrates that cross-operator behavioural-data sharing raises unresolved or design-specific lawful-basis and special-category questions; pooled learning cannot be a base-case assumption.",
+    "Research shows behavioural indicators and model performance shift over time, and separate research found that most observed sports bettors never crossed marker thresholds, possibly because of thresholds or marker design.",
+    "No reviewed incumbent publishes pricing, and no public source validates representative event-data access, a platform integration, operator conversion, or willingness to delegate model validation to a small vendor."
+  ],
+  "economics": {
+    "acquisition_route": "Publish a reproducible offline benchmark with one authorised operator, obtain independent safety and legal review, then pursue one player-account platform; no live ingest before a signed data-processing and governance package.",
+    "capital_required_pln": 100000,
+    "founder_net_worth_path": "Unvalidated years 8-12 scenario: 30 operator or platform contracts at 250000 PLN ARR produce 7.5 million PLN ARR. At 20% EBITDA, a 5x EBITDA value, and 70% founder ownership, founder equity is about 5.25 million PLN; this excludes retained cash and depends on lawful data access, safety performance, and partner-led regulated operations.",
+    "founder_time": "20-25 hours weekly for the offline product and benchmark; live deployment is not compatible with the founder's employment unless a platform funds dedicated compliance and support capacity.",
+    "gross_margin_basis": "Target 65-80% after secure compute, model monitoring, independent validation, privacy counsel, security testing, and expert support; early pilots may be service-heavy and below target.",
+    "payback": "Unknown. The buyer case should rely on reduced manual review and demonstrable evaluation compliance, not increased gambling revenue; require a sponsor-defined 12-18 month payback case before live build-out.",
+    "pricing": "Unvalidated hypothesis: 60000-120000 PLN fixed offline validation, then 180000-350000 PLN annual operator or platform licence plus scoped implementation; BetBuddy and other reviewed pages do not publish comparable prices.",
+    "retention_or_repeat": "Monitoring and intervention records are continuous, thresholds require drift review, and annual validation creates repeat work, but the operator must retain ownership of decisions and exportability."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Versioned threshold performance, intervention-outcome evidence, subgroup audits, and drift history accumulated under explicit data permissions",
+    "customer": "Licensed remote-gambling operators and player-account platforms serving Great Britain, initially through an offline validation sponsor",
+    "distribution_mechanism": "One paid operator benchmark followed by a platform integration only after licensing and privacy opinions",
+    "offer_and_business_model": "Interpretable indicator, drift, human-review, intervention-ledger, and outcome-evaluation API with independent validation support",
+    "payer_and_paid_event": "Operator or platform pays for an authorised validation project and then an annual monitored deployment tier",
+    "problem_trigger": "A player event stream shows possible harm indicators and the operator must identify, act, record, manually review, and evaluate outcomes"
+  },
+  "founder_fit": [
+    "Strong technical fit with data science, model monitoring, causal evaluation, and interpretable analytics, with no need for a public-facing creator persona.",
+    "The founder's gambling interest supplies domain curiosity but also creates a conflict; independent safer-gambling and clinical advisors need authority over safety boundaries.",
+    "An offline benchmark is compatible with a 20-25 hour weekly ceiling, while a live regulated deployment should be partner-funded and supported by dedicated privacy, security, and compliance specialists.",
+    "The founder should not make individual player decisions or market the system as diagnosing gambling disorder."
+  ],
+  "parent": {
+    "candidate_id": "channel-07",
+    "version": 1
+  },
+  "risks": [
+    "False negatives can leave harmful play unaddressed; false positives can unfairly restrict customers and generate distress or discrimination.",
+    "A model can satisfy aggregate metrics while failing particular vulnerable groups, requiring subgroup testing and human oversight.",
+    "Processing detailed financial and behavioural histories creates severe privacy and security exposure.",
+    "Operator incentives can conflict with harm reduction; product governance must prohibit engagement or revenue optimisation using the risk model.",
+    "A change in product function can move an analytics component into gambling-software licensing or technical-standard scope.",
+    "The founder's personal interest in gambling creates a conflict that needs documented independent safety governance."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.gamblingcommission.gov.uk/licensees-and-businesses/lccp/condition/3-4-3-remote-customer-interaction",
+    "https://www.gamblingcommission.gov.uk/manual/customer-interaction-guidance-for-remote-gambling-licensees-formal-guidance/requirement-5-customer-interaction-guidance-for-remote-gambling-licensees-sr",
+    "https://www.gamblingcommission.gov.uk/guidance/customer-interaction-guidance-for-remote-gambling-licensees-formal-guidance/requirement-12-customer-interaction-guidance-for-remote-gambling-licensees",
+    "https://www.gamblingcommission.gov.uk/licensees-and-businesses/guide/what-is-gambling-software",
+    "https://www.gamblingcommission.gov.uk/licensees-and-businesses/guide/remote-gambling-and-software-technical-standards",
+    "https://www.gamblingcommission.gov.uk/licensees-and-businesses/licences-and-fees/remote-gambling-software-licence",
+    "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/individual-rights/individual-rights/rights-related-to-automated-decision-making-including-profiling/",
+    "https://www.gamblingcommission.gov.uk/news/article/an-update-on-the-single-customer-view-industry-challenge",
+    "https://www.playtech.com/products/betbuddy/",
+    "https://doi.org/10.1016/j.chbr.2024.100427",
+    "https://pubmed.ncbi.nlm.nih.gov/35067833/"
+  ],
+  "stage": "research",
+  "structure": {
+    "commercial_archetype": "Embedded regulated behavioural-analytics API",
+    "control_point": "The versioned indicator, human-review, intervention, and outcome-evaluation ledger in the operator's customer-interaction process",
+    "critical_dependency": "Authorised representative data and intervention outcomes under a product design that passes gambling-licensing, privacy, and independent safety review"
+  },
+  "thesis": "Build an offline-first, interpretable harm-indicator and intervention-evaluation layer for remote-gambling operators or their account platforms. It would combine operator-defined indicators, versioned thresholds, drift tests, a human-review queue, intervention records, and outcome evaluation; it would not place bets, alter odds, award bonuses, or make final account decisions. Live deployment proceeds only with authorised operator data, privacy review, independent safer-gambling oversight, and a written licensing-perimeter opinion.",
+  "title": "SaferPlay Evidence API",
+  "uncertainties": [
+    "Whether the exact product architecture falls outside the gambling-software licence after specialist review.",
+    "Whether one platform or operator will provide a properly authorised, representative offline dataset and intervention outcomes.",
+    "Which ground truth and success outcome operators and regulators will accept, beyond proxy behavioural change.",
+    "Whether models transfer across operators, products, jurisdictions, customer mixes, and intervention policies.",
+    "Procurement cycle, security requirements, public-liability insurance, and support burden.",
+    "Commercial pricing and whether an incumbent platform will distribute rather than build or acquire."
+  ],
+  "version": 2
+}

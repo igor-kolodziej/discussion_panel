@@ -1,0 +1,88 @@
+{
+  "candidate_id": "spend-07",
+  "claims": [
+    {
+      "claim_id": "spend-07-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/klimat/prosument"
+      ],
+      "statement": "Poland's climate ministry reports about 1.631 million prosumers by April 2026 and 127386 prosumer batteries by March 2026, indicating a large installed base and an emerging controllable-storage segment."
+    },
+    {
+      "claim_id": "spend-07-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/klimat/prosument-netbilling",
+        "https://www.gov.pl/web/klimat/dlaczego-warto-zostac-prosumentem"
+      ],
+      "statement": "Official guidance says self-consumption and battery management are central to net-billing economics and specifically describes shifting device use and charging or discharging in response to production and hourly prices."
+    },
+    {
+      "claim_id": "spend-07-c03",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/priorytety/p31"
+      ],
+      "statement": "A government priority page targets 200000 home energy-storage systems by the end of 2027 and reported two support programmes in development or approval as of March 2026."
+    }
+  ],
+  "contrary_evidence": [
+    "Many inverters, batteries and smart-home systems already include free scheduling and monitoring apps.",
+    "Official guidance presents simple behavioural scheduling that may capture much of the value without paid optimisation.",
+    "A large prosumer count does not show that household savings are large enough to sustain monthly software fees."
+  ],
+  "economics": {
+    "acquisition_route": "Connect one inverter family and 30-50 volunteered sites from the family company, measure bill-normalised lift in shadow mode, then sell wholesalers a co-branded installer retention product.",
+    "capital_required_pln": 70000,
+    "founder_net_worth_path": "Forty thousand sites averaging 15 PLN net monthly revenue would produce 7.2m PLN recurring annual revenue before diagnostics and referrals. At a mature 42% owner-cash margin, about 3.02m PLN per year could yield more than 10m PLN cumulative distributions over five mature years without assuming a sale.",
+    "founder_time": "Support one inverter protocol and advisory reports at 3-4 hours/day, with all device changes executed by qualified installers; keep employment until multi-installer repeat demand and contribution margin are proven.",
+    "gross_margin_basis": "Data ingestion, forecasts and reports are software-heavy; target 75-88% gross margin on licences and diagnostics, excluding any pass-through hardware or on-site labour.",
+    "payback": "Target installer payback within one converted retrofit or reduced diagnostic truck roll; homeowner payback depends on measured bill savings and is not yet known.",
+    "pricing": "Assumption to test: installer licence of 15-35 PLN per monitored site monthly, a 300-700 PLN homeowner diagnostic, and a transparent 1-3% referral fee on qualified storage or control retrofits.",
+    "retention_or_repeat": "Energy data and bills recur continuously, while new tariffs, seasons and devices refresh recommendations; low savings or closed OEM ecosystems can cause churn."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A device-protocol library and longitudinal Polish load, weather, tariff and intervention-response dataset improve counterfactual savings estimates and configuration recommendations.",
+    "customer": "Polish installers with hundreds of residential prosumer sites, initially those combining PV with batteries, heat pumps or EV charging.",
+    "distribution_mechanism": "Pilot on the founder's family installer base, then distribute via inverter/battery wholesalers and installer buying groups; homeowner acquisition remains owned by installers.",
+    "offer_and_business_model": "White-label data layer that imports meter/inverter history, forecasts solar and controllable load, simulates tariff-aware schedules and retrofit ROI, then issues a verified savings report; SaaS per monitored site plus qualified-install referral revenue.",
+    "payer_and_paid_event": "The installer pays a wholesale per-site monitoring licence and the prosumer pays for an optimisation audit or premium monitoring; existing paid events are the electricity bill, service call and hardware retrofit.",
+    "problem_trigger": "A customer receives a disappointing electricity bill, considers a battery/EMS retrofit, or asks the installer whether existing equipment is scheduled optimally under net-billing."
+  },
+  "founder_fit": [
+    "The family renewable-energy business offers a trusted installed-base pilot and installer-language feedback.",
+    "Forecasting, optimisation and counterfactual measurement are strong data-science problems.",
+    "Installer-owned distribution avoids direct mass-market support and public-persona marketing.",
+    "An advisory-only first version limits hardware and safety liability while remaining testable alongside employment."
+  ],
+  "parent": null,
+  "risks": [
+    "Bad advice could shorten battery life, reduce comfort or increase bills.",
+    "OEM API closure can strand integrations.",
+    "Savings claims require transparent baselines to avoid consumer-protection problems.",
+    "A mass homeowner support burden would conflict with the founder's time and interaction preferences."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.gov.pl/web/klimat/prosument",
+    "https://www.gov.pl/web/klimat/prosument-netbilling",
+    "https://www.gov.pl/web/klimat/dlaczego-warto-zostac-prosumentem",
+    "https://www.gov.pl/web/priorytety/p31"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Installer-channel energy-analytics SaaS with retrofit referral upside",
+    "control_point": "The verified baseline and ROI report used to schedule equipment and approve a battery, EMS or heat-pump control change",
+    "critical_dependency": "Reliable inverter/meter data access and enough flexible household load for recommendations to create measurable savings"
+  },
+  "thesis": "Give Polish PV, battery and heat-pump installers a vendor-neutral monitoring and recommendation layer that uses meter, inverter, tariff and weather data to show where each customer's net-billing value is lost and which schedule or retrofit produces a defensible payback. Prosumers already pay electricity bills and buy energy hardware; installers gain recurring revenue and better-qualified battery or EMS upsells from their installed base.",
+  "title": "White-Label PV Self-Consumption Optimizer for Installers",
+  "uncertainties": [
+    "Accessible APIs, data quality and remote-control permissions vary by equipment vendor.",
+    "The incremental savings over OEM defaults and simple schedules have not been measured on Polish bills.",
+    "Installer willingness to pay for ongoing monitoring rather than one-off hardware margin is unknown.",
+    "Pricing, margins, adoption scale and wealth projections are assumptions."
+  ],
+  "version": 1
+}

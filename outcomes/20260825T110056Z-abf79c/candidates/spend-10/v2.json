@@ -1,0 +1,161 @@
+{
+  "candidate_id": "spend-10",
+  "claims": [
+    {
+      "claim_id": "spend-10-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.eiopa.europa.eu/structure-eu-insurance-distribution-market_en"
+      ],
+      "statement": "EIOPA reports that commissions were the prevalent remuneration model in 24 Member States in 2024 and that agents and brokers handled most distribution in most Member States."
+    },
+    {
+      "claim_id": "spend-10-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.knf.gov.pl/knf/pl/komponenty/img/Sprawozdanie_UKNF_KNF_2024_94423.pdf",
+        "https://www.knf.gov.pl/dla_rynku/posrednictwo_finansowe/rynek_ubezpieczen/dzialalnosc_agencyjna"
+      ],
+      "statement": "KNF's 2024 activity report records 28,365 insurance agents and 1,418 insurance brokers at year end, but these are broad registry counts rather than the addressable multi-carrier, export-capable subset."
+    },
+    {
+      "claim_id": "spend-10-c03",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://super-agent.pl/"
+      ],
+      "statement": "SuperAgent states that agencies can upload original commission files received from insurers, automate insurer-by-insurer settlement, and buy the bundled system from tens of PLN per month."
+    },
+    {
+      "claim_id": "spend-10-c04",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://super-broker.pl/"
+      ],
+      "statement": "SuperBroker advertises import of commission notes from all insurers, verification of paid commission against internal records, discrepancy follow-up, and pricing of 99-199 PLN monthly."
+    },
+    {
+      "claim_id": "spend-10-c05",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://bergsystem.pl/branze/ubezpieczenia/broker-ubezpieczeniowy/"
+      ],
+      "statement": "Berg System likewise advertises import of insurer commission notes, commission reports, and a dedicated commission-settlement system, confirming that the proposed core workflow is already an incumbent feature category."
+    },
+    {
+      "claim_id": "spend-10-c06",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://crm.ka-system.pl/"
+      ],
+      "statement": "KA System reports more than 1,200 users and 30 million calculated commission entries and describes commission control, which is vendor evidence of incumbent adoption but not independent proof of leakage or accuracy."
+    },
+    {
+      "claim_id": "spend-10-c07",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://commission.europa.eu/law/law-topic/data-protection/information-business-and-organisations/application-gdpr_en"
+      ],
+      "statement": "EU guidance permits a customer organisation to appoint an external processor under a binding Article 28 contract with documented instructions, confidentiality, security, and subprocessor controls, so lawful SaaS processing is possible rather than categorically prohibited."
+    },
+    {
+      "claim_id": "spend-10-c08",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://www.knf.gov.pl/knf/pl/komponenty/img/Komunikat_UKNF_Chmura_Obliczeniowa_68669.pdf"
+      ],
+      "statement": "KNF's cloud communication treats cloud processing of legally protected financial-sector information as a governed outsourcing risk, increasing security and procurement work rather than creating a defensible monopoly."
+    },
+    {
+      "claim_id": "spend-10-c09",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www1.appliedsystems.com/en-us/blog/posts/how-to-fix-reconciliation-applied-recon/"
+      ],
+      "statement": "Applied Systems launched embedded carrier-statement ingestion and matching inside Applied Epic in 2026, illustrating a credible platform-bundling response by larger broker-management incumbents."
+    },
+    {
+      "claim_id": "spend-10-c10",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://www.knf.gov.pl/knf/pl/komponenty/img/Sprawozdanie_UKNF_KNF_2024_94423.pdf",
+        "https://super-agent.pl/",
+        "https://super-broker.pl/",
+        "https://bergsystem.pl/branze/ubezpieczenia/broker-ubezpieczeniowy/"
+      ],
+      "statement": "The evidence supports testing an independent recovery audit but does not support the original 400-2,500 PLN monthly range, 1,000-account Polish denominator, or a reseller-led acquisition model."
+    }
+  ],
+  "contrary_evidence": [
+    "SuperAgent and SuperBroker already automate original insurer-file imports and commission settlement at tens to 199 PLN per month, directly compressing standalone pricing.",
+    "SuperBroker and Berg System explicitly offer paid-versus-internal commission verification and discrepancy workflows, so the candidate does not uniquely control the reconciliation ledger.",
+    "Applied Systems is embedding similar ingestion and matching into a major broker-management platform, making bundling a demonstrated response rather than a hypothetical one.",
+    "KNF's registry counts do not disclose the multi-carrier, active, export-capable, dissatisfied subset, so the 1,000-account denominator is unsupported."
+  ],
+  "economics": {
+    "acquisition_route": "Sell a bounded audit directly to 10-20 export-capable intermediaries and measure paid conversion, recovered value, and support time. Accountant referrals are a testable secondary route; broker-management vendors are not counted as distributors without a signed commitment because they already own overlapping features.",
+    "capital_required_pln": 45000,
+    "founder_net_worth_path": "The original 1,000-account at 700 PLN monthly path is not underwritten. At an evidence-informed scenario of 500 accounts at 250 PLN monthly, ARR is 1.5m PLN; a 25% owner-cash margin is 375,000 PLN per mature year, implying more than 13 mature years to accumulate 5m PLN before tax and without double-counting equity. A faster path requires demonstrated recovery-based ARPU, a larger verified multi-agency denominator, or cross-border expansion; none is yet evidenced, but the broad agent and EU intermediary populations mean mathematical impossibility is not established.",
+    "founder_time": "A two-format, batch-only pilot is compatible with 2.5-4 hours per day. Proceed only if exception review averages below 20 minutes per customer-month after onboarding and security/compliance work can be scheduled without exceeding the five-hour daily limit.",
+    "gross_margin_basis": "A file-upload product can be software-heavy, but use a provisional 60-75% gross-margin range after parser maintenance, secure storage, onboarding, and exception support. The pilot must measure manual minutes per statement because bespoke reconciliation would turn this into a service.",
+    "payback": "Require verified annual recovered commission plus valued administrator time of at least four times the annual recurring fee, with a target customer payback under six months. No Polish leakage baseline currently supports a blanket payback promise.",
+    "pricing": "Observed Polish bundles are materially cheaper than the discovery assumption: SuperAgent starts at tens of PLN per month and SuperBroker lists 99-199 PLN per month. Research-stage pricing should test 1,000-3,000 PLN for a bounded historical audit and 199-499 PLN monthly for an overlay; any higher price requires customer-level proof of incremental recovery not already supplied by the incumbent.",
+    "retention_or_repeat": "Statements, clawbacks, producer payouts, and renewals recur monthly, but retention depends on continuing to catch valuable exceptions beyond incumbent reports; a customer whose existing system reconciles accurately has weak repeat need."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A permissioned library of carrier-format mappings, identifier-resolution rules, and adjudicated exception outcomes can lower onboarding and false-positive rates; generic parsing or an LLM alone is reproducible and is not a defensible advantage.",
+    "customer": "Polish multi-agencies and small-to-mid-sized insurance brokerages that receive commission files from several carriers and can show a material reconciliation workload or unresolved exceptions despite their existing broker or agency system.",
+    "distribution_mechanism": "Begin with a narrowly scoped historical reconciliation diagnostic sold to agencies that can export their own files; insurance-focused accountants may refer clients, while broker-software resale remains an uncommitted option because incumbent vendors already sell overlapping reconciliation features.",
+    "offer_and_business_model": "Secure importer and audit ledger that normalises original insurer files, calculates expected-versus-paid policy and producer amounts, ranks explainable exceptions, tracks human-approved disputes, and exports evidence back to the incumbent system; paid historical audit followed by a fixed subscription, without contingent recovery fees until attribution is contractually unambiguous.",
+    "payer_and_paid_event": "The agency or brokerage owner pays for an independent historical audit and then a recurring statement-by-statement control when measured recovered commission or avoided administrator work exceeds the fee; the agency and carrier retain authority over disputes and payouts.",
+    "problem_trigger": "A monthly insurer commission file arrives and the intermediary must match paid amounts, clawbacks, cancellations, producer splits, and renewals to its own policy records before accepting revenue and paying producers."
+  },
+  "founder_fit": [
+    "Record linkage, parsing, exception ranking, and audit-trail design fit the founder's data-science and AI skills.",
+    "A batch-file diagnostic can be built and tested within the founder's 100,000 PLN capital envelope without selling insurance or advising consumers.",
+    "The work can start at 2.5-4 hours per day if the pilot caps carrier formats and keeps every dispute and payout decision with the customer.",
+    "The founder's low preference for constant social interaction is a constraint because no reseller commitment is evidenced; early founder-led customer discovery cannot be assumed away."
+  ],
+  "parent": {
+    "candidate_id": "spend-10",
+    "version": 1
+  },
+  "risks": [
+    "Incorrect expected-commission logic could generate invalid disputes or producer payouts; the product must remain advisory with human approval and source-level audit trails.",
+    "Policy, remuneration, and producer data may contain personal and commercially sensitive information requiring processor contracts, minimisation, encryption, access controls, deletion rules, and customer-specific cloud review.",
+    "Incumbent broker and agency systems can bundle the feature or block integration, while generic AI parsers can reproduce the visible artifact.",
+    "Without a low-touch exception process, bespoke mapping and dispute support would become a service business rather than scalable software.",
+    "A software-vendor reseller strategy conflicts with vendors that already monetise the same workflow and cannot be counted before commitment.",
+    "The founder-net-worth path is slow at observed incumbent price levels and depends on unverified recovery ARPU or geographic expansion."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.eiopa.europa.eu/structure-eu-insurance-distribution-market_en",
+    "https://www.knf.gov.pl/knf/pl/komponenty/img/Sprawozdanie_UKNF_KNF_2024_94423.pdf",
+    "https://www.knf.gov.pl/dla_rynku/posrednictwo_finansowe/rynek_ubezpieczen/dzialalnosc_agencyjna",
+    "https://super-agent.pl/",
+    "https://super-broker.pl/",
+    "https://bergsystem.pl/branze/ubezpieczenia/broker-ubezpieczeniowy/",
+    "https://crm.ka-system.pl/",
+    "https://commission.europa.eu/law/law-topic/data-protection/information-business-and-organisations/application-gdpr_en",
+    "https://www.knf.gov.pl/knf/pl/komponenty/img/Komunikat_UKNF_Chmura_Obliczeniowa_68669.pdf",
+    "https://www1.appliedsystems.com/en-us/blog/posts/how-to-fix-reconciliation-applied-recon/"
+  ],
+  "stage": "research",
+  "structure": {
+    "commercial_archetype": "Revenue-assurance and reconciliation SaaS",
+    "control_point": "The independent expected-versus-paid audit ledger reviewed before an agency accepts carrier revenue, pays producers, or opens a dispute",
+    "critical_dependency": "Customers must lawfully provide insurer statements and reliable policy, commission-rule, and producer data, and the overlay must find recurring value not already delivered by low-priced incumbent systems"
+  },
+  "thesis": "Sell Polish multi-agencies and small-to-mid-sized brokers an independent file-upload audit layer that joins insurer commission statements to policy and producer records, explains expected-versus-paid variances, and preserves an evidence trail for human-authorised disputes and payouts. The recurring workflow and access to original insurer files are real, but Polish incumbents already bundle commission import, reconciliation, and reports at low monthly prices. The viable wedge is therefore measured incremental recovery or exception detection that the incumbent system misses, not a generic commission dashboard or an assumed software-reseller channel.",
+  "title": "Expected-versus-Paid Commission Ledger for Insurance Intermediaries",
+  "uncertainties": [
+    "No public Polish evidence quantifies the frequency, value, or persistence of underpaid or misallocated commissions after use of current systems.",
+    "Carrier contracts, expected-rate schedules, policy identifiers, and permissions for third-party processing must be checked per customer and carrier.",
+    "No broker-software vendor or insurance-focused accountant has committed to resell or refer the overlay; channel conversion and CAC are unknown.",
+    "Willingness to pay above low-priced incumbent bundles is unknown until an audit produces verified incremental recovery.",
+    "The manual exception-review burden and carrier-format maintenance rate are unknown.",
+    "The addressable count of active Polish multi-agencies with several direct carrier relationships is unknown."
+  ],
+  "version": 2
+}

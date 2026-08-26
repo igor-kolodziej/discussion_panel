@@ -1,0 +1,84 @@
+{
+  "judge_id": "c2-working-control-09",
+  "assumptions": [
+    "The initial offer remains an engineering QA audit and does not claim to provide regulatory certification or clinical validation.",
+    "Public, synthetic, and customer-supplied data are sufficient for the first paid pilots, and proprietary participant collection is deferred until repeat demand is demonstrated.",
+    "Customers can lawfully provide traces for a bounded audit under suitable contracts, but permission to retain, pool, or reuse those traces is not assumed.",
+    "The founder limits the business to roughly 15-20 hours per week and contracts privacy, regulatory, and participant-operations work where required.",
+    "The proposed audit prices and frequency of paid repeat testing remain hypotheses rather than established buyer behavior."
+  ],
+  "factors": [
+    {
+      "name": "Core insight",
+      "status": "scored",
+      "score": 7,
+      "rationale": "Wearable error varies materially by device and activity context, while clinical-study users face fit-for-purpose evidence requirements. A neutral, held-out robustness test therefore addresses a real decision rather than merely repackaging a headline accuracy metric."
+    },
+    {
+      "name": "Customer pain and willingness to pay",
+      "status": "scored",
+      "score": 6,
+      "rationale": "A missed release regression or unusable study signal can be costly, giving engineering and clinical-operations leads a credible reason to pay. However, no reviewed evidence establishes willingness to pay 8,000-20,000 PLN or to buy repeatedly, and Labfront's much lower audit anchor weakens pricing confidence."
+    },
+    {
+      "name": "Business model and economics",
+      "status": "scored",
+      "score": 5,
+      "rationale": "Up-front fixed-scope audits are capital-efficient and could produce acceptable service gross margins, with software regression runs offering later operating leverage. The subscription, retention, CAC, and payback assumptions are untested, proprietary collection would be materially lower margin, and the stated wealth path requires substantial cross-border recurring volume."
+    },
+    {
+      "name": "Market and beachhead",
+      "status": "scored",
+      "score": 5,
+      "rationale": "Small wearable companies, biosignal vendors, study teams, and specialist CROs form a coherent beachhead around a specific release or data-lock trigger. The reachable buyer count, budget ownership, and size of the CEE starting segment are not evidenced, and meaningful scale likely requires broader European sales."
+    },
+    {
+      "name": "Competitive position and domination potential",
+      "status": "scored",
+      "score": 4,
+      "rationale": "Labfront, Empatica, WhaleTeq, public datasets, and capable internal teams already cover adjacent audit, collection, and validation needs. A strong niche position is possible only if independent held-out field performance becomes a trusted release gate, which has not yet been shown."
+    },
+    {
+      "name": "Expansion potential",
+      "status": "scored",
+      "score": 6,
+      "rationale": "A successful narrow audit can logically expand into continuous regression testing, additional biosignal modalities, study-quality audits, and qualified CRO or regulatory-partner work. Those adjacencies reuse protocols and failure taxonomies, although none is yet validated commercially."
+    },
+    {
+      "name": "Defensibility and durability",
+      "status": "scored",
+      "score": 4,
+      "rationale": "Public data and reproducible methods make the initial offer easy to imitate. A rights-cleared edge-case corpus, customer-derived failure taxonomy, and trusted version history could compound, but durable reuse rights, representative coverage, refresh costs, and customer willingness to contribute data are unresolved."
+    },
+    {
+      "name": "Strength of advantage",
+      "status": "scored",
+      "score": 5,
+      "rationale": "Neutral context-specific testing could reveal field failures that a simulator, vendor platform, or aggregate accuracy figure misses. There is not yet evidence that the report changes a release decision, saves enough internal work, or outperforms incumbent and self-service alternatives by a behavior-changing margin."
+    },
+    {
+      "name": "Timing and momentum",
+      "status": "scored",
+      "score": 6,
+      "rationale": "Current FDA guidance and EU medical-device evidence obligations make measurement validity salient, while frequent firmware and algorithm changes create plausible regression triggers. Regulation also limits the offer because a common engineering benchmark cannot substitute for purpose- and population-specific evidence."
+    },
+    {
+      "name": "Distribution",
+      "status": "scored",
+      "score": 5,
+      "rationale": "An open benchmark, targeted outreach to a bounded technical buyer list, and referrals from CROs or regulatory consultants are plausible low-capital routes. No paid conversion, referral commitment, repeatable CAC, or channel ownership is evidenced, and technical trust may make sales founder-intensive."
+    },
+    {
+      "name": "Execution and risks",
+      "status": "scored",
+      "score": 7,
+      "rationale": "The founder's biosignal, neuroscience, and data-science background is unusually well matched, and an audit-first version is feasible part-time within the stated capital. Scientific validity, health-data protection, liability boundaries, and eventual proprietary collection require specialist support but are delegable if scope remains disciplined."
+    }
+  ],
+  "interaction_adjustment": -0.1,
+  "main_structural_strength": "A real, high-consequence technical evidence problem is paired with exceptional founder fit and a service-first pilot that can test demand before expensive proprietary data collection.",
+  "primary_score_limiter": "The offer has neither demonstrated paid repeat demand nor an initial moat: its recurring economics and defensibility both depend on earning trust and lawful private-data access that public-data audits do not provide.",
+  "strongest_disconfirming_evidence": "Labfront advertises data audits from USD 500 while established platforms and simulators already occupy adjacent budgets, and open reference-labelled PPG/ECG datasets let capable buyers reproduce much of a public-data-only benchmark.",
+  "evidence_needed_for_higher_score": "Independent paid pilots at the proposed price, at least two customers purchasing a second audit after a version change, documented release or study decisions changed by findings, repeatable acquisition cost, and contracts granting durable rights to retain derived failure evidence without compromising customer confidentiality.",
+  "highest_value_structural_change": "Narrow the initial product to one frequent release-gating failure mode and sell it through CRO or regulatory-consultant channels, with a standard contract that permits pooling de-identified failure features; postpone the broad benchmark and subscription until that workflow produces repeat purchases."
+}

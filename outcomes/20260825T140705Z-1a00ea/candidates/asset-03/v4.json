@@ -1,0 +1,129 @@
+{
+  "candidate_id": "asset-03",
+  "claims": [
+    {
+      "claim_id": "asset-03-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1542/oj"
+      ],
+      "statement": "EU battery law requires qualifying EV batteries to expose current state-of-health data in the BMS to lawful purchasers or their agents for residual-value and reuse assessment."
+    },
+    {
+      "claim_id": "asset-03-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://single-market-economy.ec.europa.eu/news/guidance-support-preparations-digital-batteries-passport-2026-08-21_en",
+        "https://eur-lex.europa.eu/eli/reg/2023/1542/oj"
+      ],
+      "statement": "Battery passports become mandatory from 18 February 2027 for relevant newly placed EV batteries and include performance, durability, reuse, and recycling information, so they do not solve near-term coverage of the legacy fleet."
+    },
+    {
+      "claim_id": "asset-03-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.aviloocertificate.com/",
+        "https://www.dekra.com/en/battery-test-for-electric-cars/",
+        "https://www.bca.com/Templates/Global/Pages/LayoutPage.aspx?epslanguage=en&id=99780"
+      ],
+      "statement": "Independent certificate supply is already mature: AVILOO and DEKRA offer rapid model-specific tests, and BCA embeds AVILOO reports in European BEV auctions for EUR 40 per tested vehicle."
+    },
+    {
+      "claim_id": "asset-03-c4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://transport.ec.europa.eu/document/download/89b3143e-09b6-4ae6-a826-932b90ed0816_en"
+      ],
+      "statement": "The Commission still describes automotive data access as fragmented and potentially needing complementary measures beyond the Data Act, so legal entitlement is not equivalent to a uniform technical interface."
+    },
+    {
+      "claim_id": "asset-03-c5",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://www.bca.com/Templates/Global/Pages/LayoutPage.aspx?epslanguage=en&id=99780",
+        "https://www.acea.auto/publication/report-vehicles-on-european-roads-2026/"
+      ],
+      "statement": "A Poland-first entrant could pilot through licensed diagnostics and dealer partners, but a defensible exchange requires local resale outcomes and transaction integration rather than another standalone certificate."
+    }
+  ],
+  "contrary_evidence": [
+    "BCA already combines an independent battery report with a large European auction and charges only EUR 40 per report.",
+    "AVILOO advertises a EUR 99 retail certificate, below the original 700 PLN certificate hypothesis.",
+    "DEKRA and AVILOO have model-specific algorithms and accumulated test databases that a new entrant would initially lack.",
+    "Battery-passport and BMS-access rights do not create a uniform interface for the existing used-EV fleet."
+  ],
+  "economics": {
+    "acquisition_route": "Pilot with two to five Warsaw and Wielkopolska fleet lessors or high-volume used-EV dealers by processing an actual disposal batch, using licensed incumbent test outputs and capturing bids and realized outcomes only with participant permission. Do not launch a general exchange until repeated paid batches and lawful outcome access demonstrate a recurring workflow.",
+    "capital_required_pln": 85000,
+    "founder_net_worth_path": "The prior path dependent on roughly 15000 annual one-off certificates is replaced by a still-unvalidated recurring fleet-account path: prove paid repeat batches, positive annual contribution per account, and a compounding outcome dataset before projecting any route or timing to 5 million PLN of founder net worth. Current evidence supports no conservative valuation or timing claim.",
+    "founder_time": "About 15-20 hours weekly if licensed partners perform physical tests and vehicle handling while the founder builds data normalization, bid and sale-outcome workflows, integrations, and bounded account management.",
+    "gross_margin_basis": "No diagnostic resale margin is assumed. Contribution must be measured after licensed-test, integration, support, liability, failed-test, and transaction-handling costs against any recurring workflow or completed-sale fee.",
+    "payback": "The earlier 850-certificate payback claim is withdrawn. Payback cannot be estimated until paid batches establish pricing, test and integration cost, vehicles processed per account, repeat cadence, and contribution after failures and support.",
+    "pricing": "Validate a per-batch or recurring remarketing-workflow fee, with a transaction fee only when the service actually sources a buyer and a sale closes; no fee level or willingness to pay is assumed.",
+    "retention_or_repeat": "Fleet lessors and high-volume dealers can have recurring disposal batches, unlike a one-off certificate per vehicle, but repeat cadence, outcome-data access, and account retention remain unvalidated."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A diagnostic-agnostic Polish dataset linking normalized incumbent test outputs and vehicle attributes to bids, realized sale prices, buyer route, and time-to-sale",
+    "customer": "Polish fleet lessors and high-volume used-EV dealers disposing of recurring vehicle batches",
+    "distribution_mechanism": "Direct fleet-disposal batch pilots and remarketing-workflow integrations, followed by account expansion only after repeat paid batches",
+    "offer_and_business_model": "Battery-informed fleet remarketing workflow and residual-value intelligence using licensed incumbent diagnostics, monetized through recurring or per-batch workflow fees and completed-sale fees rather than a proprietary certificate",
+    "payer_and_paid_event": "Fleet owner or dealer pays when a disposal batch is processed; an additional transaction fee applies only when the service sources the buyer and the sale closes, with all fee levels unvalidated",
+    "problem_trigger": "A fleet or dealer must dispose of a used-EV batch without Polish outcome evidence for reserve prices, buyer routing, or the resale effect of battery condition"
+  },
+  "founder_fit": [
+    "Normalizing diagnostics and modeling residual value fit the founder's data-science and renewable-energy background.",
+    "Licensed partners can keep physical testing and vehicle handling bounded while the founder focuses on software and analytics.",
+    "The narrowed fleet-account model still requires deliberate B2B selling and data permissions, but not a public personal brand."
+  ],
+  "parent": {
+    "candidate_id": "asset-03",
+    "version": 3
+  },
+  "redesign": {
+    "changed_fingerprint_fields": [
+      "compounding_advantage",
+      "customer",
+      "distribution_mechanism",
+      "offer_and_business_model",
+      "payer_and_paid_event",
+      "problem_trigger"
+    ],
+    "economic_effect": "This abandons the price-compressed one-off certificate path and makes licensed incumbent tests an input to a recurring fleet-disposal workflow, so the conservative economic unit becomes annual contribution per repeat account and completed batch rather than 15000 certificates. It does not establish paid batches, pricing, contribution, outcome-data rights, retention, or a 5 million PLN founder-net-worth path."
+  },
+  "risks": [
+    "Incorrect or overstated certificates can create valuation, warranty, and safety liability.",
+    "AVILOO, DEKRA, BCA, OEM programs, or another auction can compress price and capture the transaction data.",
+    "Unsupported models, inconclusive tests, and proprietary interfaces can interrupt service coverage.",
+    "A certificate may improve trust without producing enough incremental sale value to support acquisition cost.",
+    "Fleet owners or auction partners may withhold closed-sale outcomes, preventing the proposed data loop from compounding.",
+    "BCA, AVILOO, DEKRA, OEM programs, or fleet software vendors can add equivalent local remarketing analytics through their existing distribution."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2023/1542/oj",
+    "https://single-market-economy.ec.europa.eu/news/guidance-support-preparations-digital-batteries-passport-2026-08-21_en",
+    "https://transport.ec.europa.eu/document/download/89b3143e-09b6-4ae6-a826-932b90ed0816_en",
+    "https://www.acea.auto/publication/report-vehicles-on-european-roads-2026/",
+    "https://www.aviloocertificate.com/",
+    "https://shop.aviloo.com/en/includes-en",
+    "https://www.dekra.com/en/battery-test-for-electric-cars/",
+    "https://www.bca.com/Templates/Global/Pages/LayoutPage.aspx?epslanguage=en&id=99780"
+  ],
+  "stage": "development",
+  "structure": {
+    "commercial_archetype": "B2B fleet remarketing workflow and residual-value data service",
+    "control_point": "Permissioned closed-loop linkage of licensed diagnostics to bids, routing decisions, realized sale prices, and time-to-sale",
+    "critical_dependency": "Repeat paid fleet batches, lawful access to closed transaction outcomes, and enough decision improvement to justify a workflow fee despite incumbent auctions"
+  },
+  "thesis": "Provide a diagnostic-agnostic batch remarketing workflow for Polish fleet lessors and high-volume used-EV dealers, using licensed incumbent battery tests as inputs and binding them to bids, realized sale prices, and time-to-sale so the business competes on local disposal decisions and outcome data rather than on another battery certificate.",
+  "title": "Polish EV Remarketing Intelligence",
+  "uncertainties": [
+    "Polish dealers' willingness to pay above embedded European auction pricing is untested.",
+    "No evidence yet shows insurers, lenders, or buyers will accept a new certificate methodology.",
+    "Supported-model coverage, license cost, test failure rate, and professional-indemnity cost are unknown.",
+    "The incremental sale-price or conversion lift in Poland has not been independently measured.",
+    "No evidence yet establishes paid repeat disposal batches, lawful permission to retain closed-sale outcomes, or measurable improvement in reserve prices, routing, conversion, or time-to-sale.",
+    "No exclusive diagnostic, fleet, dealer, auction, buyer, insurer, or lender commitment is established by this redesign."
+  ],
+  "version": 4
+}

@@ -1,0 +1,267 @@
+{
+  "candidate_id": "settle8-10",
+  "candidate_sha256": "a8540b78ed2e456a5f583745c649a1d07cba9990e8b63c07add82f20d29cb477",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "settle8-10-r1",
+      "evidence_refs": [
+        "s10-01",
+        "s10-02"
+      ],
+      "statement": "GS1 EANCOM remains a maintained standard for transaction flows, and GS1 EDI supports order, delivery, invoice, settlement, and remittance messages that can make order-to-cash paperless."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "settle8-10-r2",
+      "evidence_refs": [
+        "s10-03"
+      ],
+      "statement": "The GS1 Claims Notification guide already includes adjustment codes for trade and promotion discounts, incorrect references, incorrect charges, tax differences, advertising costs, and incorrect product identification."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "settle8-10-r3",
+      "evidence_refs": [
+        "s10-04"
+      ],
+      "statement": "SAP Revenue Growth Management Claims processes retailer deduction claims arising from promotional agreements, links a claim to a condition contract and source document, and validates the request against contractual terms."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "settle8-10-r4",
+      "evidence_refs": [
+        "s10-05"
+      ],
+      "statement": "SAP Dispute Management is designed for customer underpayments and discrepancies, copying accounting information into a case and supporting investigation, workflow, correspondence, and cross-organizational handling."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "settle8-10-r5",
+      "evidence_refs": [
+        "s10-06"
+      ],
+      "statement": "HighRadius documents automated claim capture from retailer portals, email, and EDI; item-level matching to trade promotions and external POS data; evidence assembly; dispute submission; and updates to ERP and trade-promotion systems."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "settle8-10-r6",
+      "evidence_refs": [
+        "s10-07"
+      ],
+      "statement": "Vistex documents automated validation and reconciliation of billback, scanback, and chargeback claims, with settlement through payments, credits, or deductions inside an integrated trade-promotion suite."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "settle8-10-r7",
+      "evidence_refs": [
+        "s10-08"
+      ],
+      "statement": "A Vistex-published case study says a 200-plus-employee food producer used SAP Paybacks and Chargebacks by Vistex and reported a 50% reduction in time to clear undetermined deductions plus lower administrative cost; this is vendor-reported evidence, not an independent causal study."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "settle8-10-r8",
+      "evidence_refs": [
+        "s10-09"
+      ],
+      "statement": "Inmar describes a recurring supplier workflow in which AR teams retrieve claim material from retailer or distributor portals, work within retailer-specific dispute windows, and use software to aggregate and prioritize deductions."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "settle8-10-r9",
+      "evidence_refs": [
+        "s10-10"
+      ],
+      "statement": "Polish unfair-contractual-advantage rules for agricultural and food supply prohibit unjustified reductions after accepted delivery and allow specified marketing, advertising, storage, or display charges only if clearly agreed in advance."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "settle8-10-r10",
+      "evidence_refs": [
+        "s10-11"
+      ],
+      "statement": "Mandatory KSeF invoice receipt began in Poland on 1 February 2026, and mandatory issuance was phased from February and April 2026, making structured invoice data a weaker standalone differentiation."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "settle8-10-r11",
+      "evidence_refs": [
+        "s10-03",
+        "s10-04",
+        "s10-06",
+        "s10-09",
+        "s10-11"
+      ],
+      "statement": "KSeF does not by itself provide promotion contracts, remittance explanations, retailer-portal backup, sell-out or proof-of-performance evidence, or the human resolution outcome, so those joins remain a possible workflow gap."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "settle8-10-r12",
+      "evidence_refs": [
+        "s10-01",
+        "s10-03",
+        "s10-04",
+        "s10-06",
+        "s10-07",
+        "s10-08",
+        "s10-09"
+      ],
+      "statement": "Because standards and incumbents already cover basic matching and claims workflow, a plausible entrant wedge is limited to a supplier-authorized historical audit and retailer-specific evidence layer that proves incremental recovery or lower handling cost in an account whose existing stack leaves a measurable gap."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "settle8-10-r13",
+      "evidence_refs": [],
+      "statement": "The incidence, value, and recoverability of trade-promotion deductions for mid-sized Polish and CEE suppliers are not established by the reviewed public evidence."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "settle8-10-r14",
+      "evidence_refs": [],
+      "statement": "No reviewed evidence establishes the target budget owner, willingness to authorize portal and ERP access, subscription or success-fee price, attribution method, conversion rate, retention, or service margin."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "settle8-10-r15",
+      "evidence_refs": [],
+      "statement": "No reviewed evidence supports the candidate's earlier payback, customer-count, gross-margin, ARR, valuation, or founder-wealth timing scenarios."
+    }
+  ],
+  "contrary_evidence": [
+    "[s10-01, s10-02, s10-03] GS1 already standardizes the order-to-cash sequence, commercial disputes, and detailed claim reason codes, reducing novelty in message normalization.",
+    "[s10-04, s10-05] SAP directly covers promotion-linked claim validation and receivables dispute workflows inside the system of record.",
+    "[s10-06] HighRadius markets nearly the full proposed supplier-side data and resolution flow, including retailer portal retrieval, promotion matching, evidence packets, disputes, and ERP updates.",
+    "[s10-07] Vistex bundles claims validation, reconciliation, settlement, credits, and deductions with trade-promotion management.",
+    "[s10-08] A vendor case study documents incumbent use by a 200-plus-employee food producer, weakening the premise that mid-sized suppliers are necessarily underserved.",
+    "[s10-09] Inmar already offers a SaaS deductions product centered on retailer-portal aggregation and AR review.",
+    "[s10-11] KSeF makes Polish invoice capture increasingly structured, removing part of the document-extraction wedge.",
+    "All quantitative recovery evidence reviewed is vendor-published and primarily outside Poland or CEE; it cannot validate local willingness to pay or the candidate's unit economics."
+  ],
+  "schema_version": 2,
+  "sources": [
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2025-09-08",
+      "publisher": "GS1",
+      "source_id": "s10-01",
+      "source_type": "technical_standard",
+      "stance": "contradicting",
+      "title": "GS1 EANCOM current standard",
+      "url": "https://ref.gs1.org/standards/eancom/"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "GS1",
+      "source_id": "s10-02",
+      "source_type": "standard_maintainer_documentation",
+      "stance": "contradicting",
+      "title": "GS1 EDI solutions: order to cash",
+      "url": "https://www.gs1.org/standards/edi/solutions"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2023-03-01",
+      "publisher": "GS1",
+      "source_id": "s10-03",
+      "source_type": "technical_standard_guide",
+      "stance": "contradicting",
+      "title": "GS1 XML 3.6 Claims Notification Business Message Guide",
+      "url": "https://edi-ecom-xml.gs1.org/functional-user-guide/3_6/CN.pdf"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2026-02",
+      "publisher": "SAP",
+      "source_id": "s10-04",
+      "source_type": "incumbent_product_documentation",
+      "stance": "contradicting",
+      "title": "Revenue Growth Management Claims",
+      "url": "https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/d0cb30f0658a42e5aeb9d1419f39cd71/aa22f6e6c86a468199301bdddeb58296.html"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "SAP",
+      "source_id": "s10-05",
+      "source_type": "incumbent_product_documentation",
+      "stance": "context",
+      "title": "Dispute Resolution in SAP Dispute Management",
+      "url": "https://help.sap.com/docs/SAP_S4HANA_CLOUD/918bca53037f408f91a2295d04ac16bc/7101d553088f4308e10000000a174cb4.html"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "HighRadius",
+      "source_id": "s10-06",
+      "source_type": "incumbent_product_documentation",
+      "stance": "contradicting",
+      "title": "AI-Powered Deductions Management Software",
+      "url": "https://www.highradius.com/product/deductions-management-automation-software/"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "Vistex",
+      "source_id": "s10-07",
+      "source_type": "incumbent_product_documentation",
+      "stance": "contradicting",
+      "title": "Trade Promotion Management",
+      "url": "https://www.vistex.com/solutions/cloud-solutions/trade-promotion-management/"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2021",
+      "publisher": "Vistex",
+      "source_id": "s10-08",
+      "source_type": "vendor_case_study",
+      "stance": "context",
+      "title": "Ateeco optimizes trade spend programs",
+      "url": "https://www.vistex.com/case-studies/Ateeco-optimizes-trade-spend-programs.pdf"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2024-10-21",
+      "publisher": "Inmar Intelligence",
+      "source_id": "s10-09",
+      "source_type": "incumbent_product_guidance",
+      "stance": "context",
+      "title": "Automated Deductions Management for CPGs",
+      "url": "https://www.inmar.com/blog/insights/martech/understand-and-optimize-your-deductions"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "Polish Office of Competition and Consumer Protection (UOKiK)",
+      "source_id": "s10-10",
+      "source_type": "official_legal_guidance",
+      "stance": "context",
+      "title": "Contractual advantage",
+      "url": "https://uokik.gov.pl/public/index.php/en/contractual-advantage"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "Polish Ministry of Finance",
+      "source_id": "s10-11",
+      "source_type": "official_tax_guidance",
+      "stance": "context",
+      "title": "Scope and timetable of mandatory KSeF",
+      "url": "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/zakres-obowiazkowego-ksef/"
+    }
+  ],
+  "unknowns": [
+    "Distribution of promotion deductions by value, reason, age, recoverability, and retailer among mid-sized Polish and CEE suppliers.",
+    "Whether target suppliers' existing ERP, EDI, TPM, advisers, or staff already resolve the highest-value cases economically.",
+    "Exact buyer and budget authority across accounts receivable, finance, key-account sales, revenue-growth management, and ownership.",
+    "Contractual and technical permission to use retailer portals, credentials, remittance files, sell-out data, promotion terms, and proof-of-performance documents.",
+    "Retailer-specific dispute windows, submission channels, evidence acceptance, and change frequency in Poland and CEE.",
+    "A defensible baseline for attributing recovered cash or avoided labor to the product rather than ordinary staff action or later credits.",
+    "Public or buyer-validated pricing, implementation effort, support load, sales cycle, procurement requirements, gross margin, and retention.",
+    "How much human finance or legal review is mandatory and whether that requirement prevents software-like margins.",
+    "Independent clearance of the founder's employment conflict, confidentiality, non-solicitation, and adjacent-market restrictions.",
+    "Any evidence-backed route or timing to the founder's net-worth objective."
+  ]
+}

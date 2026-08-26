@@ -1,0 +1,125 @@
+{
+  "candidate_id": "route-11",
+  "claims": [
+    {
+      "claim_id": "route-11-v2-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.who.int/tools/quality-management-system-for-non-laboratory-settings/pillar-3--procurement-supply-chain-and-inventory-management"
+      ],
+      "statement": "WHO guidance for testing sites calls for tracking stock levels, expiration dates, consumption and reordering times to reduce stockouts and expiry waste, establishing a real operational problem but not a Poland-specific willingness to pay."
+    },
+    {
+      "claim_id": "route-11-v2-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.ema.europa.eu/en/human-regulatory-overview/research-development/compliance-research-development/good-manufacturing-practice/guidance-good-manufacturing-practice-good-distribution-practice-questions-answers"
+      ],
+      "statement": "EMA's GDP interpretation says medicinal products generally cannot be supplied back from a pharmacy or other public supplier to a wholesaler except as a return to the wholesaler that originally supplied them, so the product must not enable clinic-to-clinic medicine trading."
+    },
+    {
+      "claim_id": "route-11-v2-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1685433681978&uri=CELEX%3A32017R0746",
+        "https://health.ec.europa.eu/medical-devices-topics-interest/unique-device-identifier-udi_en"
+      ],
+      "statement": "IVDR places traceability and manufacturer-specified storage and transport duties on distributors, while the EU UDI system supports device identification; neither source grants a startup access to a wholesaler's lot, expiry, order or usage data."
+    },
+    {
+      "claim_id": "route-11-v2-c4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://plwliczbach.stat.gov.pl/EN/assets/pdf/poland-in-figures-2026.pdf"
+      ],
+      "statement": "Statistics Poland reports 24,225 outpatient departments and 3,040 publicly funded doctors' and dentists' practices in 2024, showing a large venue base but not the number with sufficient expiring inventory or compatible wholesalers."
+    },
+    {
+      "claim_id": "route-11-v2-c5",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.sortly.com/pricing/",
+        "https://bodegamed.com/"
+      ],
+      "statement": "Existing self-serve products already offer low-stock or date alerts, lot and expiry tracking and reorder reports, with current published prices ranging from low-cost general inventory plans to Bodega's USD 149 per clinic per month."
+    },
+    {
+      "claim_id": "route-11-v2-c6",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://newsroom.cardinalhealth.com/2025-07-07-Connecting-clinical-and-supply-chain-teams-to-advance-delivery-of-care",
+        "https://www.sciencedirect.com/science/article/pii/S240560302400044X"
+      ],
+      "statement": "Hospital evidence and an enterprise incumbent show that instrumented inventory workflows can reduce expiry and waste, but those results do not establish comparable savings, data quality or unit economics in small independent Polish clinics."
+    }
+  ],
+  "contrary_evidence": [
+    "The original exchange framing is too broad: direct EMA evidence blocks clinic-to-clinic redistribution of medicinal products and restricts returns to the original supplying wholesaler.",
+    "Bodega, Sortly and Cardinal Health already cover substantial portions of lot tracking, expiry alerts, reorder logic and analytics, so forecasting alone is not differentiated.",
+    "The strongest savings evidence comes from hospitals with instrumented workflows and cannot be transferred directly to small clinics.",
+    "UDI supports identification and traceability but does not ensure that expiry, on-hand quantities or consumption events are captured at clinic level or licensed to a third party."
+  ],
+  "economics": {
+    "acquisition_route": "Hypothesis: secure one Polish medical-device or IVD wholesaler and run a paid-design or low-cost offline pilot across 10-20 consenting clinics in one ambient-storage consumable family. Import order exports and periodic stock counts; do not process patient data, execute transfers, or automate orders. Obtain written regulatory and quality approval from the wholesaler before exposing any return-eligibility workflow.",
+    "capital_required_pln": 80000,
+    "founder_net_worth_path": "Hypothesis, not forecast: 4,500 sites across Poland and adjacent EU markets at 225 PLN monthly net revenue would produce about 12.15m PLN ARR. At 25% EBITDA, a 4x EBITDA value and 55% founder ownership, founder equity would be about 6.7m PLN in year 8-12. This requires several durable wholesaler channels, verified retention and regional expansion; retained earnings are not added again.",
+    "founder_time": "Hypothesis: 12-16 hours weekly during the export-based pilot, with all regulated distribution, storage, return and quality decisions retained by licensed partners. Founder workload becomes incompatible if every clinic requires bespoke counting or integration.",
+    "gross_margin_basis": "Hypothesis: 50-65% after a 20-30% channel share, cloud costs, onboarding, data normalization, support and quality review. No inventory is owned and no savings fee is recognized until a defensible baseline exists.",
+    "payback": "Hypothesis: 25,000-45,000 PLN of one-wholesaler integration and onboarding cost could be recovered in 12-24 months only after roughly 25-50 paying sites with stable counts; this remains unvalidated.",
+    "pricing": "Test 180-280 PLN per site monthly, inclusive of the wholesaler's channel share. Defer shared-savings pricing until expiry loss and counterfactual avoided waste can be independently measured.",
+    "retention_or_repeat": "Potential repeat comes from replenishment and monthly expiry review embedded in the wholesaler portal, but renewal depends on staff maintaining counts and the wholesaler continuing to provide order and lot data; neither is evidenced."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Wholesaler-authorized order history combined with clinic stock counts, lot/expiry outcomes and return eligibility could improve product-family forecasts and exception rules",
+    "customer": "Independent clinics and testing sites buying ambient-storage IVD and medical consumables through a participating licensed wholesaler",
+    "distribution_mechanism": "A wholesaler embeds the service in its existing ordering portal and service workflow",
+    "offer_and_business_model": "Per-site forecast, low-stock and expiry alerts, reorder suggestions and wholesaler-controlled return-eligibility workflow; subscription first and shared savings only after validation",
+    "payer_and_paid_event": "Wholesaler or clinic pays a recurring site fee after an export-based pilot demonstrates reliable counts and avoided operating work or waste",
+    "problem_trigger": "A counted lot approaches expiry, stock falls below a validated threshold, or an order would create an avoidable surplus"
+  },
+  "founder_fit": [
+    "Forecasting, anomaly detection and data normalization fit the founder's data-science skills.",
+    "An export-first pilot can remain part-time and below the founder's available capital.",
+    "A wholesaler channel can reduce continuous founder-led sales, while licensed partners retain non-delegable distribution and quality responsibilities."
+  ],
+  "parent": {
+    "candidate_id": "route-11",
+    "version": 1
+  },
+  "risks": [
+    "The wholesaler may not grant portal, order, lot or expiry data rights, making the control point unavailable.",
+    "Clinic counts may be incomplete or stale, causing harmful reorder suggestions or false expiry alerts.",
+    "Medicine returns and any redistribution are tightly restricted; the software must never create an unlicensed exchange.",
+    "Existing inventory products may be adequate at lower cost, leaving too little incremental value for a channel share.",
+    "A wholesaler may economically prefer higher stock levels or may not want responsibility for disputed savings calculations."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.who.int/tools/quality-management-system-for-non-laboratory-settings/pillar-3--procurement-supply-chain-and-inventory-management",
+    "https://www.ema.europa.eu/en/human-regulatory-overview/research-development/compliance-research-development/good-manufacturing-practice/guidance-good-manufacturing-practice-good-distribution-practice-questions-answers",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1685433681978&uri=CELEX%3A32017R0746",
+    "https://health.ec.europa.eu/medical-devices-topics-interest/unique-device-identifier-udi_en",
+    "https://plwliczbach.stat.gov.pl/EN/assets/pdf/poland-in-figures-2026.pdf",
+    "https://www.sortly.com/pricing/",
+    "https://bodegamed.com/",
+    "https://newsroom.cardinalhealth.com/2025-07-07-Connecting-clinical-and-supply-chain-teams-to-advance-delivery-of-care",
+    "https://www.sciencedirect.com/science/article/pii/S240560302400044X"
+  ],
+  "stage": "research",
+  "structure": {
+    "commercial_archetype": "wholesaler-embedded per-site inventory-control SaaS",
+    "control_point": "Wholesaler-authorized order data joined to clinic counts, lot/expiry outcomes and compliant return eligibility",
+    "critical_dependency": "A licensed wholesaler must grant durable data and portal rights and own every regulated disposition decision"
+  },
+  "thesis": "Embed a narrow inventory-control module in a licensed medical-device or IVD wholesaler's ordering portal for independent clinics. Start with one ambient-storage consumable family and combine wholesaler order exports with clinic stock counts to produce expiry alerts, reorder suggestions and wholesaler-controlled return-eligibility prompts. The service never permits clinic-to-clinic medicine sales, never owns inventory and never executes a return or transfer; regulated disposition remains with the supplying wholesaler. The initial business model is a per-site subscription, with any shared-savings component deferred until a credible baseline is demonstrated.",
+  "title": "Wholesaler-Embedded Expiry and Reorder Control for Clinic Consumables",
+  "uncertainties": [
+    "Will a Polish wholesaler grant the required order, lot, expiry and portal integration rights?",
+    "Which ambient-storage IVD or medical consumable family has enough expiry loss and repeat purchasing for a first wedge?",
+    "Can clinics maintain sufficiently accurate on-hand and consumption data without adding unacceptable labor?",
+    "What returns are permitted for each product class, and can eligibility be represented without the startup making a regulated decision?",
+    "Is measured value high enough above Bodega, Sortly and wholesaler ERP functionality to support 180-280 PLN monthly pricing?",
+    "Will the wholesaler accept reduced customer inventory as aligned with its economics?"
+  ],
+  "version": 2
+}

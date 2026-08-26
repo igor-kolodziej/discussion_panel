@@ -1,0 +1,85 @@
+{
+  "candidate_id": "control9-10",
+  "claims": [
+    {
+      "claim_id": "control9-10-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/news/commission-updates-product-scope-and-tools-support-eudr-2026-07-13_en",
+        "https://environment.ec.europa.eu/topics/forests/deforestation/regulation-deforestation-free-products_en"
+      ],
+      "statement": "The EUDR covers cattle, cocoa, coffee, palm oil, rubber, soy, and wood plus derived products, and operators placing covered goods on the EU market or exporting them must demonstrate deforestation-free and legally produced origin."
+    },
+    {
+      "claim_id": "control9-10-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/topics/forests/deforestation/regulation-deforestation-free-products_en",
+        "https://environment.ec.europa.eu/news/commission-updates-product-scope-and-tools-support-eudr-2026-07-13_en"
+      ],
+      "statement": "Current application dates are 30 December 2026 for large and medium operators and micro or small operators already covered by the Timber Regulation, and 30 June 2027 for other micro and small operators."
+    },
+    {
+      "claim_id": "control9-10-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/topics/forests/deforestation/regulation-deforestation-free-products_en",
+        "https://environment.ec.europa.eu/news/commission-updates-product-scope-and-tools-support-eudr-2026-07-13_en"
+      ],
+      "statement": "The Commission launched the EUDR Information System in December 2024 and adopted 2026 measures specifying its operation for due-diligence statements and simplified declarations."
+    }
+  ],
+  "contrary_evidence": [
+    "The 2025 simplification shifted duties toward first placers and reduced downstream filing burdens, narrowing the number of direct payers.",
+    "Application for many micro and small operators is delayed until June 2027, and established supply-chain platforms are likely targeting large companies."
+  ],
+  "economics": {
+    "acquisition_route": "Pilot with three Polish wood first-placers via one timber auditor, solve one supplier-country corridor, and expand upstream through reusable supplier invitations",
+    "capital_required_pln": 75000,
+    "founder_net_worth_path": "Hypothesis: 400 operators at 30000 PLN ARR gives 12m PLN ARR; at 23% EBITDA, 4x EBITDA, and 65% founder ownership, equity could exceed 7.1m PLN in years 6-8. Validate the reduced post-simplification buyer universe and exclude retained cash from a second count.",
+    "founder_time": "3-5 hours per day for one commodity/corridor; use external forestry and trade-law reviewers for risk-policy approval",
+    "gross_margin_basis": "Hypothesis: 76-88% with commodity satellite data and automated geometry checks; manual country-legality research priced separately",
+    "payback": "Hypothesis: 9-15 months if 15 operators average 24000 PLN first-year revenue and satellite/API costs remain below 10% of revenue",
+    "pricing": "Hypothesis: 12000-48000 PLN annual platform fee per operator plus 20-80 PLN per covered lot or 400-1500 PLN per active supplier",
+    "retention_or_repeat": "Plots and suppliers recur across lots and buyers, statement references must remain traceable, and accumulated anomaly history lowers future due-diligence cost"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A time-versioned graph of plots, suppliers, documents, species, quantities, lots, satellite signals, and statement references improves anomaly detection and creates supplier-side network effects",
+    "customer": "Polish and Central European first operators importing or exporting wood, panels, pallets, furniture inputs, and other covered EUDR products",
+    "distribution_mechanism": "Sell through timber compliance auditors, customs agents, certification organisations, buying groups, and Polish wood-industry software; buyers invite suppliers who reuse verified plots",
+    "offer_and_business_model": "Mobile polygon capture, geospatial validation, legality-document lineage, lot allocation, risk workflow, information-system packet, and downstream reference relay",
+    "payer_and_paid_event": "The first operator pays per active supplier and covered lot when releasing a due-diligence packet; supplier groups can pay for reusable plot libraries",
+    "problem_trigger": "A purchase order or export lot cannot be released confidently until its production plots, legality evidence, product scope, risk assessment, and statement data reconcile"
+  },
+  "founder_fit": [
+    "Excellent fit with geospatial data science, anomaly detection, and evidence lineage",
+    "A single corridor and product code can be tested part-time",
+    "Supplier invite loops and auditor channels can replace constant founder sales",
+    "Capital requirement stays under 100000 PLN"
+  ],
+  "parent": null,
+  "risks": [
+    "False geolocation or weak legality evidence upstream could create a misleading compliance packet.",
+    "Commodity-specific requirements and country law make broad coverage expensive.",
+    "Certification organisations may build competing portals or refuse interoperability."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://environment.ec.europa.eu/topics/forests/deforestation/regulation-deforestation-free-products_en",
+    "https://environment.ec.europa.eu/news/commission-updates-product-scope-and-tools-support-eudr-2026-07-13_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "geospatial provenance network",
+    "control_point": "purchase-order or lot release by the first operator before submitting the EUDR due-diligence evidence",
+    "critical_dependency": "accurate farm or forest plot data from upstream suppliers and defensible geospatial risk analysis"
+  },
+  "thesis": "Build a geospatial evidence relay for first operators importing or exporting wood and wood-derived goods through Poland, starting with small furniture, pallets, panels, and specialty timber supply chains that receive weak upstream coordinates. At purchase-order release, suppliers capture plots or polygons, legal-production documents, species and quantity; the platform validates geometry, date and lot consistency, preserves risk-assessment evidence, creates the due-diligence packet, and passes statement references downstream. Timber auditors, customs agents, certification bodies, and buying groups provide aggregated distribution. The defensive asset is a supplier-plot-lot graph with satellite-change signals, repeated document provenance, and authority-ready lineage; once a supplier has a verified plot library, using the relay for every buyer becomes the lowest-friction option.",
+  "title": "EUDR Plot-to-Lot Provenance Relay",
+  "uncertainties": [
+    "Polish first-operator count and willingness to pay after the latest simplifications",
+    "Quality and reuse rate of plot data in target timber corridors",
+    "Whether official information-system interfaces support economical delegated submission"
+  ],
+  "version": 1
+}

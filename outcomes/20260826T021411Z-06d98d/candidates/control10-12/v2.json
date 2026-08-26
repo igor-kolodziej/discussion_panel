@@ -1,0 +1,121 @@
+{
+  "candidate_id": "control10-12",
+  "claims": [
+    {
+      "claim_id": "control10-12-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://transport.ec.europa.eu/transport-themes/logistics-and-multimodal-transport/efti-regulation_en",
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A32025R2243"
+      ],
+      "statement": "From 9 July 2027 Member State authorities must accept regulatory freight information supplied through certified eFTI platforms, but economic operators retain the option to present paper instead."
+    },
+    {
+      "claim_id": "control10-12-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2020/1056/oj/eng",
+        "https://transport.ec.europa.eu/transport-themes/logistics-and-multimodal-transport/efti-regulation_en"
+      ],
+      "statement": "An entity contractually providing eFTI processing is an eFTI service provider under Regulation 2020/1056, and eFTI service providers as well as platforms are subject to certification; a middleware label alone does not establish an exemption."
+    },
+    {
+      "claim_id": "control10-12-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A32025R2243",
+        "https://efti.fintraffic.fi/en/api/",
+        "https://traficom.fi/en/transport-system/connected-and-automated-transport/how-can-you-prepare"
+      ],
+      "statement": "Official specifications anticipate reuse of TMS or ERP data and expose platform-to-gate interfaces, so a mapping and validation component is technically plausible."
+    },
+    {
+      "claim_id": "control10-12-c4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.transfollow.org/products/connect/",
+        "https://ybil.io/industries/integration-partners",
+        "https://www.shippeo.com/platform/solutions/ecmr"
+      ],
+      "statement": "Direct incumbents already market API-first TMS integration: TransFollow reports more than 25 software integrations, Ybil advertises more than 30 integrations and an open API, and Shippeo offers API-connected eCMR workflows while acknowledging that certification frameworks are still being finalized."
+    },
+    {
+      "claim_id": "control10-12-c5",
+      "confidence": "low",
+      "evidence_refs": [],
+      "statement": "The proposed Polish TMS willingness to pay, certified-partner wholesale fees, and achievable per-consignment margin remain unknown because no reviewed source publishes comparable wholesale pricing or a Polish purchase commitment."
+    }
+  ],
+  "contrary_evidence": [
+    "The 2027 obligation falls on authorities to accept compliant electronic data; operators can still use paper, weakening a deadline-led demand claim.",
+    "The adapter may itself meet the statutory definition of an eFTI service provider and therefore require certification unless it is genuinely only a component under a certified provider's responsibility.",
+    "TransFollow, Ybil, and Shippeo already sell the API and integration experience that the proposed adapter would offer.",
+    "The remaining service-provider and certification specifications are scheduled for adoption only by December 2026, leaving a moving compliance boundary.",
+    "Official market evidence shows many smaller freight firms have limited use of APIs and digital consignment notes, increasing onboarding friction."
+  ],
+  "economics": {
+    "acquisition_route": "First obtain one certified-platform or service-provider design partnership, then recruit one Polish TMS pilot; direct outreach to carriers is deliberately excluded.",
+    "capital_required_pln": 100000,
+    "founder_net_worth_path": "A purely mathematical path is 60 vendors at 90000 PLN annual revenue each, or 5.4m PLN recurring revenue; at 30% EBITDA and a 5x multiple this is 8.1m PLN enterprise value. No source validates the reachable vendor count, price, margin, or founder ownership, so the path is possible but currently unsubstantiated.",
+    "founder_time": "18-25 hours weekly for a sandbox component and one pilot; production support should remain with the certified partner while the founder retains employment.",
+    "gross_margin_basis": "A component licence could be high margin after the first mapping, but bespoke onboarding, security support, upstream fees, and partner revenue share are unpriced; 60-80% is only a planning range, not evidence.",
+    "payback": "Not underwritten. Four 25000 PLN implementation projects equal the 100000 PLN setup budget before founder labour and support; recurring payback cannot be estimated until upstream fees and sales-cycle length are quoted.",
+    "pricing": "Unvalidated. Test a 20000-50000 PLN paid implementation plus 1000-4000 PLN monthly component licence per TMS, with all certified-platform usage fees passed through; no reviewed competitor publishes a comparable wholesale price.",
+    "retention_or_repeat": "Schema changes, authority subsets, audit requirements, and recurring consignments can create repeat work, but paper remains permitted and an upstream platform can replace the component with its own connector."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Reusable mappings, validation failures, national data subsets, and regression tests across Polish TMS schemas accumulate with each integration",
+    "customer": "Polish TMS vendors and certified eFTI platform or service providers serving road-freight operators",
+    "distribution_mechanism": "Secure one certified-platform design partnership, then sell through a small number of Polish TMS vendors into their installed carrier bases",
+    "offer_and_business_model": "Schema mapping, validation, test fixtures, connector orchestration, and audit observability supplied as a software component inside a certified partner's compliance perimeter",
+    "payer_and_paid_event": "A TMS vendor or certified eFTI partner pays an implementation fee and recurring component licence when a production integration is activated",
+    "problem_trigger": "A TMS vendor needs to map existing transport records into certified eFTI workflows before customers elect electronic presentation to authorities"
+  },
+  "founder_fit": [
+    "Data mapping, API validation, observability, and regression testing fit the founder's technical strengths.",
+    "A partner-led sale concentrates distribution in a small number of software relationships and avoids a public personal brand.",
+    "A prototype can fit the founder's 100000 PLN capital ceiling if it excludes certification, production hosting, and 24/7 operational liability.",
+    "Enterprise integration, security diligence, and partner support may exceed a steady part-time schedule during pilots."
+  ],
+  "parent": {
+    "candidate_id": "control10-12",
+    "version": 1
+  },
+  "risks": [
+    "Unintended certification or regulated-service scope",
+    "Security, availability, authentication, and audit-log liability",
+    "Incumbent platform disintermediation",
+    "Voluntary operator adoption and continued paper substitution",
+    "Long enterprise procurement and integration cycles",
+    "Specifications changing after the component is built"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://transport.ec.europa.eu/transport-themes/logistics-and-multimodal-transport/efti-regulation_en",
+    "https://eur-lex.europa.eu/eli/reg/2020/1056/oj/eng",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A32025R2243",
+    "https://efti.fintraffic.fi/en/api/",
+    "https://traficom.fi/en/transport-system/connected-and-automated-transport/how-can-you-prepare",
+    "https://www.transfollow.org/products/connect/",
+    "https://ybil.io/industries/integration-partners",
+    "https://www.shippeo.com/platform/solutions/ecmr",
+    "https://efti4eu.eu/wp-content/uploads/2025/02/24-1050_EN_BALM_Bericht_eFTI.pdf"
+  ],
+  "stage": "research",
+  "structure": {
+    "commercial_archetype": "Regulated-network integration component",
+    "control_point": "The validated mapping and test layer between a TMS record and a certified partner's eFTI workflow",
+    "critical_dependency": "A contract with a certified platform or service provider and a defensible determination that the component vendor is inside, rather than independently outside, that certification perimeter"
+  },
+  "thesis": "License a narrow mapping, validation, and audit component to a certified eFTI platform or to a TMS vendor operating under a certified service provider's contract. The component would translate Polish TMS records into eFTI data sets and return authority-access identifiers, but it would not hold itself out as an eFTI platform or service provider until classification and certification obligations are resolved. Official specifications make the integration technically plausible, while operator use remains voluntary and direct platform APIs already compete for the same integration point.",
+  "title": "eFTI Compliance Component for Polish TMS Vendors",
+  "uncertainties": [
+    "Whether Polish authorities, TMS vendors, and carriers will adopt eFTI materially before or soon after July 2027",
+    "Whether a software component subcontractor avoids separate eFTI service-provider certification",
+    "Certified-platform API terms, usage fees, indemnities, and support obligations",
+    "Number of reachable independent Polish TMS vendors and their installed consignment volume",
+    "Whether multi-platform normalization is valuable after common EU data sets and direct platform connectors mature",
+    "A price point and sales cycle that support part-time founder economics"
+  ],
+  "version": 2
+}

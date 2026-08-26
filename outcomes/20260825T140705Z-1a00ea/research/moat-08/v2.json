@@ -1,0 +1,204 @@
+{
+  "candidate_id": "moat-08",
+  "candidate_sha256": "8d7ca72a7451d7ae02acf21d52dff08f253ee8102609e28bd3add5342b3d9e60",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "moat-r1",
+      "evidence_refs": [
+        "moat-s1"
+      ],
+      "statement": "ClinVar offers synchronized weekly public data through downloads and APIs."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "moat-r2",
+      "evidence_refs": [
+        "moat-s2"
+      ],
+      "statement": "ClinVar exposes conflicts but does not decide which ordinary submitter classification is correct."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "moat-r3",
+      "evidence_refs": [
+        "moat-s3",
+        "moat-s4"
+      ],
+      "statement": "Professional guidance recognizes reevaluation and reanalysis as a real laboratory workflow."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "moat-r4",
+      "evidence_refs": [
+        "moat-s5"
+      ],
+      "statement": "In a large cohort, 4.60% of observed variants were reclassified over eight years."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "moat-r5",
+      "evidence_refs": [
+        "moat-s4"
+      ],
+      "statement": "ESHG frames recontact as shared, consent-aware, and resource-constrained rather than a universal automatic duty."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "moat-r6",
+      "evidence_refs": [
+        "moat-s8",
+        "moat-s9",
+        "moat-s10"
+      ],
+      "statement": "Franklin, QIAGEN, and Fabric create strong substitute and bundling pressure."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "moat-r7",
+      "evidence_refs": [
+        "moat-s6"
+      ],
+      "statement": "Pure storage and transfer may avoid device scope, while patient-specific interpretation or reprioritization may qualify as IVD software."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "moat-r8",
+      "evidence_refs": [
+        "moat-s7"
+      ],
+      "statement": "Case-linked genetic data requires a GDPR Article 9 condition and appropriate safeguards."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "moat-r9",
+      "evidence_refs": [
+        "moat-s2",
+        "moat-s4",
+        "moat-s6"
+      ],
+      "statement": "A narrow non-interpretive registry may still differentiate on immutable workflow and consent audit history."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "moat-r10",
+      "evidence_refs": [],
+      "statement": "Buyer willingness, integration effort, alert tolerance, and conservative unit economics remain unknown."
+    }
+  ],
+  "contrary_evidence": [
+    "The public change feed is free and updated weekly.",
+    "Franklin Community already monitors variants and cases.",
+    "QIAGEN and Fabric have established clinical interpretation workflows.",
+    "Recontact responsibility and economic evidence remain unsettled."
+  ],
+  "schema_version": 2,
+  "sources": [
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2026-02-11",
+      "publisher": "NCBI ClinVar",
+      "source_id": "moat-s1",
+      "source_type": "official_database",
+      "stance": "supporting",
+      "title": "How to access ClinVar data",
+      "url": "https://www.ncbi.nlm.nih.gov/clinvar/docs/access/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "NCBI ClinVar",
+      "source_id": "moat-s2",
+      "source_type": "official_database",
+      "stance": "context",
+      "title": "How ClinVar validates submissions",
+      "url": "https://www.ncbi.nlm.nih.gov/clinvar/docs/validation/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2019-04-24",
+      "publisher": "ACMG / Genetics in Medicine / PubMed",
+      "source_id": "moat-s3",
+      "source_type": "professional_guidance",
+      "stance": "supporting",
+      "title": "Points to consider in the reevaluation and reanalysis of genomic test results",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31015575/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2018-10-11",
+      "publisher": "European Society of Human Genetics",
+      "source_id": "moat-s4",
+      "source_type": "professional_guidance",
+      "stance": "context",
+      "title": "Recontacting patients in clinical genetics services: recommendations of the ESHG",
+      "url": "https://www.nature.com/articles/s41431-018-0285-1"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2024-11-07",
+      "publisher": "JAMA Network Open / PubMed",
+      "source_id": "moat-s5",
+      "source_type": "peer_reviewed_study",
+      "stance": "supporting",
+      "title": "Clinical Variant Reclassification in Hereditary Disease Genetic Testing",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39504018/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2025-06-17",
+      "publisher": "Medical Device Coordination Group",
+      "source_id": "moat-s6",
+      "source_type": "regulatory_guidance",
+      "stance": "context",
+      "title": "MDCG 2019-11 Rev.1: Qualification and Classification of Software",
+      "url": "https://health.ec.europa.eu/document/download/b45335c5-1679-4c71-a91c-fc7a4d37f12b_en?filename=mdcg_2019_11_en.pdf"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2016-04-27",
+      "publisher": "Official Journal of the European Union",
+      "source_id": "moat-s7",
+      "source_type": "law",
+      "stance": "context",
+      "title": "Regulation (EU) 2016/679",
+      "url": "https://eur-lex.europa.eu/eli/reg/2016/679/2016-05-04/eng"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2023-07-12",
+      "publisher": "Franklin by Genoox",
+      "source_id": "moat-s8",
+      "source_type": "vendor_documentation",
+      "stance": "contradicting",
+      "title": "Conducting Automated Reanalysis in Franklin",
+      "url": "https://help.genoox.com/en/articles/8116651-conducting-automated-reanalysis-in-franklin"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2024-06-13",
+      "publisher": "QIAGEN",
+      "source_id": "moat-s9",
+      "source_type": "vendor_documentation",
+      "stance": "contradicting",
+      "title": "QCI Interpret accelerates clinical reporting for high-throughput NGS labs",
+      "url": "https://corporate.qiagen.com/English/newsroom/press-releases/press-release-details/2024/QIAGENs-software-QCI-Interpret-accelerates-clinical-reporting-turnaround-time-for-high-throughput-NGS-testing-labs/default.aspx"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "Fabric Genomics",
+      "source_id": "moat-s10",
+      "source_type": "vendor_documentation",
+      "stance": "contradicting",
+      "title": "Fabric GEM",
+      "url": "https://fabricgenomics.com/fabric-gem/"
+    }
+  ],
+  "unknowns": [
+    "Paid demand for a registry-only module and acceptable alert volume.",
+    "LIMS integration cost, procurement duration, and labor savings.",
+    "Country-specific recontact rules, consent coverage, and regulatory classification."
+  ]
+}

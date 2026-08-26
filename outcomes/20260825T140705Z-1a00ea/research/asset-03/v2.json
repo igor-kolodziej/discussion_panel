@@ -1,0 +1,162 @@
+{
+  "candidate_id": "asset-03",
+  "candidate_sha256": "02c30ddf1e7ebe72cd6fa7171e97d08d73be0cb11fe254cf574f219d29c6e70b",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "asset-03-r1",
+      "evidence_refs": [
+        "asset-03-s1"
+      ],
+      "statement": "Article 14 grants a lawful battery purchaser or its agent non-discriminatory access to qualifying BMS state-of-health data for residual-value and reuse assessment."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "asset-03-r2",
+      "evidence_refs": [
+        "asset-03-s1",
+        "asset-03-s2"
+      ],
+      "statement": "The battery passport starts on 18 February 2027 for relevant batteries placed on the market or put into service, leaving a legacy-fleet coverage gap."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "asset-03-r3",
+      "evidence_refs": [
+        "asset-03-s3"
+      ],
+      "statement": "The Commission says connected-vehicle data remains fragmented and may require measures beyond the Data Act, so practical access is not standardized today."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "asset-03-r4",
+      "evidence_refs": [
+        "asset-03-s5",
+        "asset-03-s7"
+      ],
+      "statement": "AVILOO and DEKRA already offer rapid independent tests using model-specific algorithms and databases."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "asset-03-r5",
+      "evidence_refs": [
+        "asset-03-s6",
+        "asset-03-s8"
+      ],
+      "statement": "BCA already embeds AVILOO grading in European BEV auctions for EUR 40 per report, while AVILOO advertises a EUR 99 retail certificate."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "asset-03-r6",
+      "evidence_refs": [
+        "asset-03-s4"
+      ],
+      "statement": "Electrically chargeable cars were 3.7% of the EU car fleet in 2024, supporting a growing but still early installed base."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "asset-03-r7",
+      "evidence_refs": [
+        "asset-03-s5",
+        "asset-03-s7",
+        "asset-03-s8"
+      ],
+      "statement": "A new entrant's defensible asset would need certificate-linked Polish bid and resale outcomes; the certificate algorithm alone starts behind incumbents."
+    }
+  ],
+  "contrary_evidence": [
+    "The diagnostic certificate and auction combination already exists at BCA.",
+    "Observed incumbent pricing is below the discovery-stage 700 PLN hypothesis.",
+    "EU law improves access but explicitly does not yet eliminate automotive data fragmentation."
+  ],
+  "schema_version": 2,
+  "sources": [
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2023-07-28",
+      "publisher": "Official Journal of the European Union",
+      "source_id": "asset-03-s1",
+      "source_type": "law",
+      "stance": "supporting",
+      "title": "Regulation (EU) 2023/1542 concerning batteries and waste batteries",
+      "url": "https://eur-lex.europa.eu/eli/reg/2023/1542/oj"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2026-08-21",
+      "publisher": "European Commission",
+      "source_id": "asset-03-s2",
+      "source_type": "regulator_guidance",
+      "stance": "context",
+      "title": "Guidance to support preparations for the Digital Batteries Passport",
+      "url": "https://single-market-economy.ec.europa.eu/news/guidance-support-preparations-digital-batteries-passport-2026-08-21_en"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2025-03-05",
+      "publisher": "European Commission",
+      "source_id": "asset-03-s3",
+      "source_type": "policy_document",
+      "stance": "contradicting",
+      "title": "Industrial Action Plan for the European automotive sector: flagship actions",
+      "url": "https://transport.ec.europa.eu/document/download/89b3143e-09b6-4ae6-a826-932b90ed0816_en"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2026-01-15",
+      "publisher": "ACEA",
+      "source_id": "asset-03-s4",
+      "source_type": "industry_statistics",
+      "stance": "supporting",
+      "title": "Vehicles on European Roads 2026",
+      "url": "https://www.acea.auto/publication/report-vehicles-on-european-roads-2026/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "AVILOO",
+      "source_id": "asset-03-s5",
+      "source_type": "incumbent_product",
+      "stance": "contradicting",
+      "title": "The Independent Battery Certificate for Electric Vehicles",
+      "url": "https://www.aviloocertificate.com/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "AVILOO",
+      "source_id": "asset-03-s6",
+      "source_type": "vendor_pricing",
+      "stance": "contradicting",
+      "title": "AVILOO Certificate pricing",
+      "url": "https://shop.aviloo.com/en/includes-en"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "DEKRA",
+      "source_id": "asset-03-s7",
+      "source_type": "incumbent_service",
+      "stance": "contradicting",
+      "title": "Battery Test for Electric Cars",
+      "url": "https://www.dekra.com/en/battery-test-for-electric-cars/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "BCA Europe",
+      "source_id": "asset-03-s8",
+      "source_type": "incumbent_marketplace",
+      "stance": "contradicting",
+      "title": "BCA BEV Auctions and EV Battery Health Grading",
+      "url": "https://www.bca.com/Templates/Global/Pages/LayoutPage.aspx?epslanguage=en&id=99780"
+    }
+  ],
+  "unknowns": [
+    "Polish certificate willingness-to-pay and sale-price lift",
+    "Licensed test cost, model coverage, and inconclusive-test frequency",
+    "Insurer and lender acceptance",
+    "Professional-indemnity and dispute cost"
+  ]
+}

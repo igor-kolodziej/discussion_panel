@@ -1,0 +1,180 @@
+{
+  "candidate_id": "spend-08",
+  "claims": [
+    {
+      "claim_id": "spend-08-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://europa.eu/youreurope/citizens/consumers/shopping/shopping-consumer-rights/index_en.htm"
+      ],
+      "statement": "EU guidance last checked in April 2026 says online consumers generally may cancel and return an order within 14 days without justification, with stated exemptions and cost rules."
+    },
+    {
+      "claim_id": "spend-08-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ec.europa.eu/eurostat/de/web/interactive-publications/digitalisation-2025"
+      ],
+      "statement": "Eurostat reports that 24% of EU enterprises conducted e-sales in 2024, including 46% of large businesses and 23% of SMEs, confirming a broad base but not the candidate's order-volume subset."
+    },
+    {
+      "claim_id": "spend-08-c03",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/news/new-eu-rules-stop-destruction-unsold-clothes-and-shoes-2026-02-09_en"
+      ],
+      "statement": "The European Commission's 2026 apparel and footwear rules require disclosure of discarded unsold products and phase in a destruction ban for large companies in July 2026 and medium companies in 2030; this creates context for disposition data but not exclusive control."
+    },
+    {
+      "claim_id": "spend-08-c04",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://about.allegro.eu/system/files-encrypted/nasdaq_kms/assets/2025/09/17/18-54-32/Prezentacja.pdf"
+      ],
+      "statement": "Allegro reported 164,000 LTM active verified merchants in Poland as of Q2 2025, a broad upper bound that does not disclose which merchants process 5,000-200,000 physical-goods orders monthly."
+    },
+    {
+      "claim_id": "spend-08-c05",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://help.allegro.com/pl/sell/a/nowa-opcja-w-zakladce-zwroty-towarow-eKq6E8jn4CK"
+      ],
+      "statement": "Since May 2026 Allegro sellers can export up to two years of return reports containing returned products, value, selected reason, and logistics data, so basic line-level diagnostics are becoming marketplace-native."
+    },
+    {
+      "claim_id": "spend-08-c06",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://shopify.dev/changelog/new-return-reason-definitions-api-for-better-return-insights"
+      ],
+      "statement": "Shopify's 2026 API introduced stable, category-specific return reason definitions on return line items, improving data access while making reason analytics easier for competitors to reproduce."
+    },
+    {
+      "claim_id": "spend-08-c07",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://shopify.dev/docs/apps/build/orders-fulfillment/returns-apps/manage-reverse-fulfillment-orders"
+      ],
+      "statement": "Shopify supports item inspection and disposition states such as missing, processing required, restocked, and not restocked, but the merchant or fulfilment service must actually record the outcome."
+    },
+    {
+      "claim_id": "spend-08-c08",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://shopify.dev/docs/apps/build/authentication-authorization/manage-access-scopes"
+      ],
+      "statement": "Shopify order access is limited to 60 days by default; a six-to-twelve-month app diagnostic needs read_all_orders approval plus merchant authorisation or an export route."
+    },
+    {
+      "claim_id": "spend-08-c09",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.aftership.com/pricing/returns"
+      ],
+      "statement": "AfterShip bundles SKU and order return reasons, return analytics, routing, integrations, and low entry pricing, demonstrating strong incumbent coverage of the operational workflow."
+    },
+    {
+      "claim_id": "spend-08-c10",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://apps.shopify.com/reasonwhy"
+      ],
+      "statement": "ReasonWhy launched in June 2026 at $49-$199 monthly with AI clustering of return reasons, product ranking by loss impact, recommended product-page fixes, and before/after impact tracking, closely matching the generic analytics wedge."
+    },
+    {
+      "claim_id": "spend-08-c11",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://www.loopreturns.com/case-studies/case-study-progress-jiu-jitsu/"
+      ],
+      "statement": "A Loop vendor case reports that Progress Jiu Jitsu acted on product-level sizing evidence, changed customer guidance and manufacturing measurements, and reduced its overall return rate from 17% to 7%; this is useful actionability evidence but not an independent controlled study."
+    },
+    {
+      "claim_id": "spend-08-c12",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://www.strut.fit/case-studies/hoka/"
+      ],
+      "statement": "A StrutFit vendor case reports a four-month A/B test for HOKA EMEA with lower return rate plus conversion and average-order-value effects, showing that attribution is possible for a specific online sizing intervention but not validating generic recommendations or disposition savings."
+    }
+  ],
+  "contrary_evidence": [
+    "Allegro now gives sellers two years of return reports with item, value, reason, and logistics fields, reducing the value of a basic marketplace dashboard.",
+    "Shopify exposes category-specific line-item reasons and disposition states, making core data fields platform-native and generic AI analysis reproducible.",
+    "AfterShip already bundles return analytics and routing from about $16 monthly, while ReasonWhy offers the proposed AI clustering, ranking, fixes, and impact tracking for $49-$199 monthly.",
+    "The strongest action and attribution examples are vendor-selected apparel and footwear cases; they do not establish cross-category merchant implementation rates or savings-share accuracy."
+  ],
+  "economics": {
+    "acquisition_route": "Recruit 10-15 merchants in one category for paid batch diagnostics and publish only customer-approved, causally bounded results. Test agency, 3PL, and integrator referrals separately; no channel CAC, conversion, or commitment is currently evidenced.",
+    "capital_required_pln": 90000,
+    "founder_net_worth_path": "The original 200 merchants at 4,000 PLN monthly is not supported by current comparable pricing. At 200 merchants paying 1,000 PLN monthly, ARR is 2.4m PLN; a 25% owner-cash margin is 600,000 PLN per mature year, requiring more than eight mature years to accumulate 5m PLN before tax and without double-counting equity. A faster path requires several hundred suitable accounts, enterprise cross-platform ARPU, or a defensible data product; Allegro's 164,000 active merchants show a broad upper bound but the 5,000-200,000-order fit subset is unknown.",
+    "founder_time": "Start with CSV exports, one category, and no real-time workflow at 3.5-5 hours per day. Continue only if onboarding can be templated, merchant teams own implementation, and each quarterly review stays below a predetermined service-hours cap.",
+    "gross_margin_basis": "Use a provisional 60-75% gross-margin range after data mapping, connector upkeep, privacy controls, and outcome reviews. Quarterly analyst work and category-specific data cleaning must be time-boxed or the offer becomes consulting disguised as software.",
+    "payback": "Require a pre-pilot loss baseline and annual addressable loss of at least four times annual fees, then measure content or sizing interventions through randomised, stepped-wedge, or matched-cohort designs and disposition gains through recorded before-and-after unit states. A generic pre/post return-rate comparison is insufficient.",
+    "pricing": "Current benchmarks are far below the discovery assumption: AfterShip starts around $16 monthly with returns analytics, and ReasonWhy lists $49-$199 monthly for AI reason clustering, prioritisation, recommendations, and impact tracking. Test 2,000-8,000 PLN for a bounded historical diagnostic and 400-1,500 PLN monthly for a cross-platform category module; charge above that only after measured incremental value, and use savings fees only with an agreed attribution design.",
+    "retention_or_repeat": "Returns recur by season and launch, but platform-native reports and low-priced apps weaken retention. Repeat value requires cross-channel joins, reliable condition outcomes, implemented experiments, and a continuing action backlog rather than a static dashboard."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A permissioned, category-specific intervention-to-return and inspection-to-disposition dataset can improve prioritisation and measurement while keeping each merchant's raw customer data isolated; generic AI clustering and platform-native reason fields are reproducible and do not themselves compound into scarce control.",
+    "customer": "CEE omnichannel merchants in fashion, footwear, and selected home-goods categories processing roughly 5,000-200,000 physical-goods orders per month and able to export at least six months of order, return, and warehouse inspection or disposition records.",
+    "distribution_mechanism": "Sell a paid six-to-twelve-month diagnostic directly to one category cohort, then test referrals from CEE e-commerce agencies, 3PLs, and integrators; no channel is counted before commitment, and app-store acquisition is treated as crowded because low-priced incumbents already offer adjacent analytics.",
+    "offer_and_business_model": "Batch-first connector and action queue that estimates fully loaded return loss, ranks SKU and workflow root causes, recommends category-specific content or sizing tests, flags abuse for human review, and links inspected units to restock, repair, outlet, liquidation, or disposal outcomes; fixed diagnostic plus SaaS, with a savings fee only where attribution is auditable.",
+    "payer_and_paid_event": "The e-commerce operations, merchandising, or finance lead pays for a historical diagnostic and recurring cross-platform action queue when verified avoidable return or disposition loss exceeds the fee; any savings share is paid only against a pre-agreed causal measurement design.",
+    "problem_trigger": "A weekly or seasonal return cohort shows rising refunds, repeated SKU reasons, slow restocking, or value loss, but the merchant cannot reliably connect the outcome to product content, sizing, supplier, channel, carrier, or warehouse disposition and then measure a corrective action."
+  },
+  "founder_fit": [
+    "Causal measurement, cohort analysis, anomaly ranking, and SKU-level modelling fit the founder's data-science skills.",
+    "A batch-export diagnostic can start within the 90,000 PLN capital assumption and without taking title to returned inventory.",
+    "The founder can keep all refund, abuse, and disposition decisions with merchant staff and avoid acting as the legal decision-maker.",
+    "The five-hour daily limit is compatible with one-category batch pilots, but only if onboarding and quarterly reviews are standardised rather than disguised consulting.",
+    "Agency and 3PL channels may reduce social selling later, but no commitment or CAC evidence currently removes the need for early founder-led sales."
+  ],
+  "parent": {
+    "candidate_id": "spend-08",
+    "version": 1
+  },
+  "risks": [
+    "A generic AI root-cause report is easily reproduced by platforms and low-priced apps and does not establish scarce control.",
+    "Unreliable reason or condition data can generate confident but wrong interventions and disposition recommendations.",
+    "Poor baselines can overstate avoided loss and make savings-share contracts disputed; fees should remain fixed unless causal attribution is agreed.",
+    "Abuse scores must never auto-deny statutory rights; merchants retain every refund, rejection, and customer-treatment decision.",
+    "Platform scope changes, 60-day defaults, protected data requirements, and marketplace export rules can raise connector and onboarding cost.",
+    "Regulation encourages better handling but applies unevenly by company size and is not a moat; incumbents can add compliance reporting.",
+    "Quarterly analysis and category-specific support can become consulting disguised as product if service hours are not capped.",
+    "The founder-net-worth path is much slower at comparable SaaS prices than the discovery model assumed."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://europa.eu/youreurope/citizens/consumers/shopping/shopping-consumer-rights/index_en.htm",
+    "https://ec.europa.eu/eurostat/de/web/interactive-publications/digitalisation-2025",
+    "https://environment.ec.europa.eu/news/new-eu-rules-stop-destruction-unsold-clothes-and-shoes-2026-02-09_en",
+    "https://about.allegro.eu/system/files-encrypted/nasdaq_kms/assets/2025/09/17/18-54-32/Prezentacja.pdf",
+    "https://help.allegro.com/pl/sell/a/nowa-opcja-w-zakladce-zwroty-towarow-eKq6E8jn4CK",
+    "https://shopify.dev/changelog/new-return-reason-definitions-api-for-better-return-insights",
+    "https://shopify.dev/docs/apps/build/orders-fulfillment/returns-apps/manage-reverse-fulfillment-orders",
+    "https://shopify.dev/docs/apps/build/authentication-authorization/manage-access-scopes",
+    "https://www.aftership.com/pricing/returns",
+    "https://apps.shopify.com/reasonwhy",
+    "https://www.loopreturns.com/case-studies/case-study-progress-jiu-jitsu/",
+    "https://www.strut.fit/case-studies/hoka/"
+  ],
+  "stage": "research",
+  "structure": {
+    "commercial_archetype": "Loss-reduction analytics SaaS with optional savings share",
+    "control_point": "The merchant-approved SKU intervention backlog and per-unit disposition queue where measured return loss can be prevented or recovered",
+    "critical_dependency": "Line-level reasons and physical-condition outcomes must be consistently recorded across channels, merchants must implement recommendations, and avoided loss must be attributable beyond seasonality, promotion, assortment, and platform-native analytics"
+  },
+  "thesis": "Sell mid-sized CEE fashion, footwear, and selected home-goods merchants a batch-first, cross-platform analytics layer that joins orders, return reasons, product changes, and warehouse dispositions to prioritise avoidable loss and measure implemented interventions. Returns are compulsory in many online-consumer cases and merchants can act on category-specific evidence, but Shopify, Allegro, AfterShip, Loop, and a new low-priced AI app already expose reasons, analytics, prioritisation, fraud controls, or dispositions. The defensible wedge must therefore be reliable omnichannel CEE data, category-specific intervention measurement, and disposition outcomes—not a generic dashboard, AI summary, or regulatory narrative.",
+  "title": "Return-Loss Root Cause and Disposition Engine for CEE Merchants",
+  "uncertainties": [
+    "The count of CEE merchants in the 5,000-200,000 monthly-order range with adequate line-level condition and disposition data is unknown.",
+    "Return reasons are selected fields and may be missing, strategic, or inconsistent; physical condition must be recorded by merchant or fulfilment staff.",
+    "Merchant implementation rates for content, sizing, supplier, routing, repair, and liquidation recommendations are unknown outside selected cases.",
+    "Savings attribution across seasonality, promotions, assortment, price, channel, and customer mix is unknown unless the merchant accepts a causal design.",
+    "No agency, 3PL, or integrator has committed to distribution, and channel CAC and conversion are unknown.",
+    "Willingness to pay 400-1,500 PLN monthly for cross-platform incremental analysis above platform-native and low-priced tools is unknown.",
+    "Historical access permissions, protected customer-data review, and marketplace export terms must be checked per connector.",
+    "Category support requirements outside apparel and footwear may create a services-heavy implementation burden."
+  ],
+  "version": 2
+}

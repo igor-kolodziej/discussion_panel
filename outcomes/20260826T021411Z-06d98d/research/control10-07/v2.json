@@ -1,0 +1,189 @@
+{
+  "candidate_id": "control10-07",
+  "candidate_sha256": "c5128b794283d8864a988c2e5e2ad7fb5e35a0c0cb9591a48b19cc93a925acd6",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "mach-r1",
+      "evidence_refs": [
+        "mach-s1",
+        "mach-s2"
+      ],
+      "statement": "The 2023 Machinery Regulation is mandatory from 20 January 2027 and expands explicit treatment of AI safety functions, compliance-relevant software data, and cyber-safety."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "mach-r2",
+      "evidence_refs": [
+        "mach-s1",
+        "mach-s2"
+      ],
+      "statement": "A person making a substantial modification becomes the manufacturer for the affected machinery and assumes conformity duties; an ordinary change does not automatically create that role."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "mach-r3",
+      "evidence_refs": [
+        "mach-s2"
+      ],
+      "statement": "Technical documentation, declarations, and in some cases safety-related source code or programming logic must remain available to authorities for at least ten years."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "mach-r4",
+      "evidence_refs": [
+        "mach-s3",
+        "mach-s4"
+      ],
+      "statement": "Safexpert directly overlaps the proposed workflow through technical-documentation checklists, declarations, change tracking, traceable history, teamwork, standards monitoring, and reusable projects."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "mach-r5",
+      "evidence_refs": [
+        "mach-s5",
+        "mach-s7"
+      ],
+      "statement": "CEM4 and CEDOC provide further software substitutes for risk assessment, technical files, CE documentation, collaboration, and expert support."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "mach-r6",
+      "evidence_refs": [
+        "mach-s4",
+        "mach-s5",
+        "mach-s7",
+        "mach-s8"
+      ],
+      "statement": "Incumbent public prices show a real compliance budget but constrain an undifferentiated SaaS: products are sold from hundreds to several thousand euros, with service and expert add-ons."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "mach-r7",
+      "evidence_refs": [
+        "mach-s6",
+        "mach-s8"
+      ],
+      "statement": "Full-process machinery-safety consultancies can compile the technical file, perform tests, and support or assume formal roles, competing with the managed-service wedge."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "mach-r8",
+      "evidence_refs": [
+        "mach-s3",
+        "mach-s5",
+        "mach-s7"
+      ],
+      "statement": "Automatic binding of PLC/safety-program version identifiers to the handover baseline is a material uncovered gap in incumbent products."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "mach-r9",
+      "evidence_refs": [
+        "mach-s3",
+        "mach-s5",
+        "mach-s6"
+      ],
+      "statement": "Polish integrators will adopt a separate release layer rather than extend their current CE, PLM, or project tools."
+    }
+  ],
+  "contrary_evidence": [
+    "Safexpert already covers change tracking, traceable histories, technical documentation, standards monitoring, and multi-user project work.",
+    "CEM4 offers technical-file and risk-assessment functionality at public prices below the discovery subscription hypothesis.",
+    "CEDOC includes onboarding and optional machinery-safety expert support.",
+    "Pilz and other consultancies already perform full conformity-assessment support.",
+    "The legal trigger is substantial modification, not every owner or integrator change."
+  ],
+  "schema_version": 2,
+  "sources": [
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "European Commission Directorate-General for Internal Market, Industry, Entrepreneurship and SMEs",
+      "source_id": "mach-s1",
+      "source_type": "official_regulatory_guidance",
+      "stance": "supporting",
+      "title": "Machinery",
+      "url": "https://single-market-economy.ec.europa.eu/sectors/mechanical-engineering/machinery_en"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2026-07-27",
+      "publisher": "EUR-Lex",
+      "source_id": "mach-s2",
+      "source_type": "primary_regulation",
+      "stance": "supporting",
+      "title": "Consolidated Regulation (EU) 2023/1230 on machinery",
+      "url": "https://eur-lex.europa.eu/eli/reg/2023/1230/2026-07-27/eng"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "IBF Solutions",
+      "source_id": "mach-s3",
+      "source_type": "direct_competitor_product",
+      "stance": "contradicting",
+      "title": "Safexpert – software for CE marking",
+      "url": "https://www.ibf-solutions.com/en/ce-marking-software-safexpert"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2026-01-01",
+      "publisher": "IBF Solutions / Cert Partner",
+      "source_id": "mach-s4",
+      "source_type": "direct_competitor_pricing",
+      "stance": "contradicting",
+      "title": "Safexpert cennik EUR – styczeń 2026",
+      "url": "https://safexpert.luc.pl/download/Safexpert-cennik-pl-eur-2026.pdf"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "Certifico",
+      "source_id": "mach-s5",
+      "source_type": "direct_competitor_product_pricing",
+      "stance": "contradicting",
+      "title": "CEM4 products and store",
+      "url": "https://www.cem4.eu/en/products"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "Pilz",
+      "source_id": "mach-s6",
+      "source_type": "direct_incumbent_service",
+      "stance": "contradicting",
+      "title": "CE marking and services for machinery",
+      "url": "https://www.pilz.com/en-US/services/international-compliance/ce-marking"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "JL Safety / CEDOC",
+      "source_id": "mach-s7",
+      "source_type": "direct_competitor_pricing",
+      "stance": "contradicting",
+      "title": "CEDOC licenses and prices",
+      "url": "https://cedoc.com/en/licenses/"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "CE Gate",
+      "source_id": "mach-s8",
+      "source_type": "direct_service_pricing",
+      "stance": "context",
+      "title": "CE Gate machinery compliance pricing",
+      "url": "https://cegatesafety.com/pricing"
+    }
+  ],
+  "unknowns": [
+    "Documented handover failure rate and cost among Polish automation integrators",
+    "First machine category with repeatable artefacts and sufficient project volume",
+    "Actual incumbent coverage of PLC repository, safety-program hash, and as-built configuration ingestion",
+    "Integrator willingness to grant system access and replace or augment established tools",
+    "Qualified-assessor channel terms and liability allocation",
+    "Sales-cycle length and implementation hours compatible with part-time execution"
+  ]
+}

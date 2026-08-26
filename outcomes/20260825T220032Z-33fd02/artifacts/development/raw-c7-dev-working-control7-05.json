@@ -1,0 +1,84 @@
+{
+  "judge_id": "c7-dev-working-control7-05",
+  "assumptions": [
+    "The opportunity is judged at the planning stage under competent execution, with missing customer, channel, and operating evidence treated as uncertainty rather than proof of failure.",
+    "The founder remains employed, contributes no more than five hours per day, and initially has about 100000 PLN available, so clinical governance, privacy, security, regulatory, and integration expertise must be obtained within a tightly staged pilot plan.",
+    "The product remains strictly administrative: it receives only laboratory-approved change events and never classifies variants, diagnoses, recommends treatment, or independently decides whom to recontact; the actual EU regulatory classification is still unresolved.",
+    "No laboratory-information or interpretation-system vendor grants integration access, distribution, exclusivity, or favorable economics unless evidenced by a future commitment.",
+    "Published patient-facing reanalysis prices demonstrate a paid clinical event but do not establish laboratory willingness to pay the proposed site license or completed-workflow fee."
+  ],
+  "factors": [
+    {
+      "name": "Core insight",
+      "status": "scored",
+      "score": 6,
+      "rationale": "The redesign identifies a real gap between changing variant knowledge and the consent, identity, audit, queue, and recontact work needed after a laboratory has approved a change. Keeping the module administrative and lab-hosted is a sharper insight than building another interpretation engine, although it is an understandable workflow extension rather than a uniquely controlled breakthrough."
+    },
+    {
+      "name": "Customer pain and willingness to pay",
+      "status": "scored",
+      "score": 5,
+      "rationale": "Professional guidance and the Dutch laboratory study support a genuine burden, and Polish reanalysis prices show that the downstream clinical event can be paid. However, periodic reinterpretation was viewed as operationally infeasible, responsibility is unsettled, and there is no evidence that a laboratory will buy this separate administrative layer or accept either proposed fee."
+    },
+    {
+      "name": "Business model and economics",
+      "status": "scored",
+      "score": 4,
+      "rationale": "A site license plus completed-workflow fee is better aligned than charging for every archived record and could support recurring software revenue. Yet price, eligible volume, renewal, channel share, integration and support cost, gross margin, CAC, payback, and owner earnings are all unknown; lab-local deployments and clinical-grade controls could make a nominally high-margin model service-heavy, and no credible path or timing to the founder's wealth objective can yet be calculated."
+    },
+    {
+      "name": "Market and beachhead",
+      "status": "scored",
+      "score": 5,
+      "rationale": "Polish clinical genetics laboratories that already sell episodic reanalysis form a coherent and testable beachhead. It is narrow enough for a focused pilot, but its economically reachable size and workflow volume are not evidenced, and achieving substantial scale would likely require expansion across fragmented EU laboratory systems and governance regimes."
+    },
+    {
+      "name": "Competitive position and domination potential",
+      "status": "scored",
+      "score": 4,
+      "rationale": "An administrative-only, lab-controlled positioning may avoid direct competition on clinical interpretation and could win a local workflow niche. Nevertheless, SeqOne already occupies automated historical reevaluation, laboratories own their reanalysis workflows, and the information or interpretation vendors needed for access are well placed to bundle, copy, or block the module, leaving no demonstrated route to segment dominance."
+    },
+    {
+      "name": "Expansion potential",
+      "status": "scored",
+      "score": 6,
+      "rationale": "Successful connectors, consent logic, audit trails, and recontact operations could extend from a Polish pilot to other EU genetics laboratories and adjacent approved review workflows. That expansion is plausible because the underlying governance problem recurs, but each new system, country, and intended purpose can add integration and regulatory friction rather than becoming automatically low-cost."
+    },
+    {
+      "name": "Defensibility and durability",
+      "status": "scored",
+      "score": 4,
+      "rationale": "Installed connectors, configured consent and identity workflows, and accumulated audit history can create moderate switching costs. The design deliberately forgoes a pooled genomic-data advantage, however, and its workflow logic, deployment templates, and usage pricing are copyable by incumbent interpretation or laboratory-system vendors that already control the customer interface."
+    },
+    {
+      "name": "Strength of advantage",
+      "status": "scored",
+      "score": 5,
+      "rationale": "Local processing, clinician-controlled events, and a bounded administrative purpose could reduce central data-custody exposure and make adoption safer than an autonomous interpretation product. No measured evidence yet shows a material reduction in staff time, missed cases, liability, turnaround, total cost, or integration burden versus internal processes or incumbent tools, so the behavior-changing advantage remains plausible rather than established."
+    },
+    {
+      "name": "Timing and momentum",
+      "status": "scored",
+      "score": 5,
+      "rationale": "Changing genomic classifications and established calls for reevaluation policies create a persistent need. Timing is not unusually favorable: the cited laboratory evidence also shows resistance to routine reinterpretation, EHDS milestones are mainly in 2031, there is no near-term universal recontact duty, and current privacy and medical-software boundaries increase adoption friction."
+    },
+    {
+      "name": "Distribution",
+      "status": "scored",
+      "score": 3,
+      "rationale": "A paid reference pilot followed by an OEM or reseller channel is a sensible sequence in theory and could reduce founder-led enterprise selling. In practice neither the pilot nor channel exists, clinical laboratories have long trust-heavy procurement and integration cycles, and the proposed system-vendor channel controls access while potentially competing with the product, so repeatable CAC and payback are especially uncertain."
+    },
+    {
+      "name": "Execution and risks",
+      "status": "scored",
+      "score": 3,
+      "rationale": "The founder's data-science and genetics interests fit prototype and analytics work, and AI can accelerate non-clinical implementation. But identity errors or premature notification can cause harm, genetic data require strong safeguards, regulatory scope is unresolved, local integrations and enterprise contracting need scarce specialists, and a part-time founder with the stated initial capital may not be able to fund and coordinate a credible clinical-grade pilot without an unusually supportive design partner."
+    }
+  ],
+  "interaction_adjustment": 0,
+  "main_structural_strength": "The lab-hosted, administrative-only architecture accepts only laboratory-approved events and leaves every medical decision with the laboratory, creating a focused wedge around consent, identity, audit, and recontact while avoiding central custody of raw genomic data and aligning usage revenue with a real completed clinical workflow.",
+  "primary_score_limiter": "The business does not control its route to market or prove its economics: laboratories and incumbent system vendors control integration and customer access, no buyer or channel has committed, and those same parties can reject, bundle, or appropriate the workflow before site-license, usage-volume, margin, renewal, CAC, or payback assumptions are validated.",
+  "strongest_disconfirming_evidence": "SeqOne already automates monthly historical-case reevaluation, Polish laboratories already monetize reanalysis internally, and the study covering all nine Dutch clinical molecular genetics laboratories found active periodic reinterpretation was viewed as unfeasible; together these facts challenge both whitespace and willingness to operationalize a separate recurring workflow product.",
+  "evidence_needed_for_higher_score": "A paid lab-hosted pilot should show the exact intended-purpose assessment, installation time and fully loaded cost, eligible and completed workflow volume, baseline versus achieved staff time and missed-case reduction, collected site and usage revenue, support burden, renewal intent, and contribution payback; a written OEM or reseller commitment with connector rights, lead flow, revenue share, support allocation, and non-competing scope would materially strengthen distribution and defensibility.",
+  "highest_value_structural_change": "Convert the uncommitted multi-system standalone strategy into a white-label embedded module for one committed laboratory-information or interpretation-system vendor, with that vendor owning the connector and first-line deployment while the company owns the consent, audit, and recontact workflow layer and receives contracted recurring revenue per live site plus completed workflow. This narrows reach initially but directly removes bespoke integration and founder-led acquisition from the cost structure and contractually resolves the channel-control conflict."
+}

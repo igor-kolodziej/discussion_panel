@@ -1,0 +1,132 @@
+{
+  "candidate_id": "spend-07",
+  "claims": [
+    {
+      "claim_id": "spend-07-r2-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/klimat/prosument"
+      ],
+      "statement": "Poland had 1,631,400 prosumer installations at the end of April 2026 and 127,386 prosumer storage systems at the end of March 2026, creating a large installed base but a much smaller storage-led initial segment."
+    },
+    {
+      "claim_id": "spend-07-r2-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/klimat/prosument-netbilling"
+      ],
+      "statement": "Official Polish guidance identifies self-consumption and storage management as core net-billing levers and describes hourly-price scheduling, so the optimisation trigger is real."
+    },
+    {
+      "claim_id": "spend-07-r2-c03",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://www.ure.gov.pl/en/communication/news/501,The-President-of-the-Energy-Regulatory-Office-URE-has-approved-the-tariffs-for-t.html"
+      ],
+      "statement": "URE's 2026 approved household tariff averages 495.16 PLN/MWh for the energy component and reports 1.8 MWh average annual G11 consumption, so a 180-420 PLN annual software fee is a demanding household denominator unless flexible-load savings or installer value is directly measured."
+    },
+    {
+      "claim_id": "spend-07-r2-c04",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.solaredge.com/en/solaredge-one"
+      ],
+      "statement": "SolarEdge already bundles tariff-, weather-, load- and battery-aware optimisation, device scheduling and homeowner control in SolarEdge ONE, making a generic optimiser reproducible and vulnerable to OEM bundling."
+    },
+    {
+      "claim_id": "spend-07-r2-c05",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://knowledge-center.solaredge.com/sites/kc/files/se_monitoring_api.pdf",
+        "https://www.fronius.com/en/solar-energy/solar-solutions/energy-management/solarweb-query-api"
+      ],
+      "statement": "OEM data access is technically possible but commercially and operationally gated: SolarEdge documents rate limits, while Fronius restricts productive Solar.web Query API access to contracted business partners and charges by data package."
+    },
+    {
+      "claim_id": "spend-07-r2-c06",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/2854/oj/eng"
+      ],
+      "statement": "The EU Data Act supports a user's ability to request readily available connected-product data for a chosen third party, but it does not create a personal-data legal basis, eliminate security or trade-secret controls, or confer remote-control and firmware-alteration rights."
+    },
+    {
+      "claim_id": "spend-07-r2-c07",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://evo-world.org/en/products-services-mainmenu-en/protocols/ipmvp"
+      ],
+      "statement": "A savings report needs an explicit measurement boundary and baseline method because whole-site bills mix the intervention with weather, occupancy and other changes; the artifact is not defensible merely because an optimisation model is useful."
+    }
+  ],
+  "contrary_evidence": [
+    "SolarEdge ONE already performs the core tariff-, weather-, load- and battery-aware optimisation and controls devices inside its ecosystem.",
+    "Fronius offers a professional API for monitoring, O&M, smart-home and control uses, so an OEM or platform can bundle much of the data layer.",
+    "The average G11 household's energy-supply component makes the proposed annual software fee material before distribution, taxes and fixed charges; the addressable value is concentrated in higher-consumption flexible-load homes.",
+    "The Data Act improves user-directed data access but does not grant remote-control, firmware or warranty authority and retains GDPR, security and trade-secret constraints.",
+    "A protocol library and AI-generated optimiser are reproducible; durable value must come from permissioned integrations, longitudinal interventions and installer adoption of the report."
+  ],
+  "economics": {
+    "acquisition_route": "Use 30-50 authorised sites from the family company to run shadow recommendations and pre-specified baseline tests for one inverter family, then seek three unrelated installers who pay for the same report. Do not count wholesalers or buying groups as distribution until a referral or resale commitment exists.",
+    "capital_required_pln": 70000,
+    "founder_net_worth_path": "Not established by current evidence. A scenario hurdle is 20000 paid sites at 20 PLN monthly net revenue, or 4.8m PLN recurring annual revenue before diagnostics. At an assumed 25% after-tax owner-cash margin after operating reinvestment, that is about 1.2m PLN yearly and would require roughly five mature years to accumulate 5m PLN, excluding business equity and before ramp. The paid-site count, margin and retention are all unvalidated and must not be double-counted with a valuation.",
+    "founder_time": "Three to four hours per day is feasible for one read-only adapter and one installer pilot if the family company performs customer support and every equipment change. Remote control, several OEMs or direct homeowner support would require added staff or a narrower scope before launch.",
+    "gross_margin_basis": "Read-only ingestion, models and reports can support roughly 70-85% software gross margin after OEM API, hosting and support costs once an adapter is stable. Early multi-vendor integration, bill normalisation and installer support are implementation work and can reduce blended gross margin below 60%; this must be measured in the pilot.",
+    "payback": "Buyer payback is not established. A recurring installer licence should be accepted only if one avoided diagnostic visit or one incremental profitable retrofit covers at least twelve months of fees; a homeowner audit should be priced below conservatively measured bill savings, not forecast savings.",
+    "pricing": "Test rather than assume: 300-700 PLN for a one-off homeowner diagnostic and 10-25 PLN per authorised site per month for an installer workflow, with any retrofit referral fee disclosed. At 15-35 PLN monthly, the original recurring fee would equal 180-420 PLN per year, a material share of the average household's 2026 energy-supply component, so the first paid segment should have batteries or other flexible high loads and a concrete installer event.",
+    "retention_or_repeat": "Seasonal bills, tariffs, faults and retrofit decisions recur, but free OEM scheduling and monitoring can absorb routine use. Retention therefore depends on cross-vendor evidence, installer workflow history and proven avoided labour or incremental retrofit conversion."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A permissioned device-protocol library plus longitudinal Polish load, tariff, weather and intervention-response data can reduce integration time and improve counterfactual estimates, but only if OEM access remains lawful and paid installers contribute repeated cases.",
+    "customer": "Polish installers with a material installed base of residential prosumer sites, initially households that combine PV with batteries, heat pumps or EV charging and whose equipment exposes authorised read access.",
+    "distribution_mechanism": "Pilot through the founder's family installation company, prove one inverter-family workflow and measured installer value, then sell directly to comparable installers; wholesaler or buying-group distribution remains an unvalidated second channel.",
+    "offer_and_business_model": "White-label, read-first software that imports authorised meter and inverter history, models tariff and weather effects, compares baseline and intervention periods, and produces a versioned optimisation or retrofit report; per-site installer SaaS plus fixed-price diagnostics, with referral revenue only where transparently disclosed.",
+    "payer_and_paid_event": "The installer pays for per-site monitoring or a decision report when triaging a service call or qualifying a retrofit; the prosumer may pay for a one-off audit, but recurring homeowner willingness to pay is unproven.",
+    "problem_trigger": "A prosumer receives a disappointing bill, considers a battery or EMS retrofit, or asks the installer whether existing equipment is scheduled well under net-billing, creating a service or retrofit decision that needs quantified evidence."
+  },
+  "founder_fit": [
+    "The family renewable-energy company provides an unusually credible, low-social-cost route to a bounded pilot and access to installer workflows.",
+    "Forecasting, counterfactual measurement and tariff simulation fit the founder's data-science strengths.",
+    "A read-first product with all physical or control changes executed by qualified installers limits safety exposure and is compatible with continued employment.",
+    "The founder must hold the scope to one protocol and installer-facing support; multi-OEM homeowner support would exceed the stated part-time envelope."
+  ],
+  "parent": {
+    "candidate_id": "spend-07",
+    "version": 2
+  },
+  "risks": [
+    "Poor advice or unapproved control could increase bills, reduce comfort, accelerate battery degradation or create warranty and safety disputes.",
+    "OEM API terms, quotas, pricing or account permissions can strand an adapter or eliminate margin.",
+    "Savings claims without a documented baseline can create consumer-protection and installer-liability exposure.",
+    "OEMs can bundle optimisation and installer dashboards, leaving the product without a scarce control point.",
+    "Multi-vendor edge cases and homeowner support can turn a software product into an incompatible part-time services business."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.gov.pl/web/klimat/prosument",
+    "https://www.gov.pl/web/klimat/prosument-netbilling",
+    "https://www.ure.gov.pl/en/communication/news/501,The-President-of-the-Energy-Regulatory-Office-URE-has-approved-the-tariffs-for-t.html",
+    "https://www.solaredge.com/en/solaredge-one",
+    "https://knowledge-center.solaredge.com/sites/kc/files/se_monitoring_api.pdf",
+    "https://www.fronius.com/en/solar-energy/solar-solutions/energy-management/solarweb-query-api",
+    "https://evo-world.org/en/products-services-mainmenu-en/protocols/ipmvp",
+    "https://eur-lex.europa.eu/eli/reg/2023/2854/oj/eng"
+  ],
+  "stage": "development",
+  "structure": {
+    "commercial_archetype": "Installer-channel energy-analytics SaaS with paid diagnostics and retrofit-decision support",
+    "control_point": "The versioned baseline, intervention and ROI report an installer uses to approve a configuration change, avoid a truck roll or recommend a retrofit",
+    "critical_dependency": "Authorised, sufficiently granular meter and inverter data plus installer acceptance of the report as a paid operational decision artifact; remote device control is not assumed"
+  },
+  "thesis": "Give Polish PV, battery and heat-pump installers a vendor-neutral, read-first monitoring and decision layer that uses authorised meter and inverter data to identify losses under net-billing, compare a documented baseline with an intervention, and issue a retrofit or configuration report the installer can stand behind. The commercial wedge is the installer-paid decision and verification workflow around service calls and hardware retrofits, not a generic optimisation algorithm or another homeowner dashboard.",
+  "title": "White-Label PV Self-Consumption Optimizer for Installers",
+  "uncertainties": [
+    "Incremental bill savings over OEM defaults and simple schedules are unknown and require a pre-specified field test.",
+    "Installer willingness to pay for recurring monitoring, avoided truck rolls or retrofit qualification is unknown.",
+    "Account-level API permission, commercial reuse rights, control rights and warranty treatment differ by OEM and remain unknown beyond the documented examples.",
+    "The number of Polish sites combining batteries or other controllable high loads with supported devices and installers willing to participate is unknown.",
+    "Wholesaler, buying-group and installer referral channels are hypotheses with no commitment evidence.",
+    "The 20000-site wealth scenario, contribution margin and renewal rate are assumptions rather than market evidence."
+  ],
+  "version": 3
+}

@@ -1,0 +1,74 @@
+{
+  "candidate_id": "control7-07",
+  "claims": [
+    {
+      "claim_id": "control7-07-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://transport.ec.europa.eu/transport-themes/clean-transport/alternative-fuels-sustainable-mobility-europe/alternative-fuels-infrastructure/questions-and-answers-regulation-deployment-alternative-fuels-infrastructure-eu-20231804_en"
+      ],
+      "statement": "AFIR recognizes separate charge-point-operator and mobility-service-provider roles and permits contract-based charging services through a mobility service provider."
+    },
+    {
+      "claim_id": "control7-07-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://transport.ec.europa.eu/news-events/news/commission-enhances-interoperability-and-transparency-alternative-fuels-infrastructure-data-2025-04-11_en"
+      ],
+      "statement": "Commission Implementing Regulation 2025/655 established interoperable and real-time data specifications for alternative-fuels infrastructure."
+    }
+  ],
+  "contrary_evidence": [
+    "Mandatory interoperability and accessible data can commoditize public-charger discovery, so exclusivity must come from private contracts.",
+    "AFIR treatment depends on whether a site becomes publicly accessible; the private-site model needs legal review."
+  ],
+  "economics": {
+    "acquisition_route": "Start with one fleet corridor and recruit sites via logistics parks, solar installers, and charger operators",
+    "capital_required_pln": 55000,
+    "founder_net_worth_path": "Illustrative, unvalidated path: 100m PLN annual booking value at a 10% take rate could produce 10m PLN revenue; at 20% operating margin and 70% founder ownership, a profit-based valuation could plausibly exceed 5m PLN around year 6",
+    "founder_time": "3 hours/day for scheduling and platform work, with field access support contracted",
+    "gross_margin_basis": "Target 60-75% after depot revenue share, payment costs, access support, and SLA reserves",
+    "payback": "Unvalidated: 1000 monthly bookings and 20 fleet subscriptions could repay a software-led pilot in 18-24 months",
+    "pricing": "Unvalidated: 8-15% booking take rate plus 500-2000 PLN monthly fleet availability subscription",
+    "retention_or_repeat": "Fleet routes and reserved windows recur; depot contracts and integrations can renew annually"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Exclusive capacity contracts, utilization history, fleet route demand, and SLA performance data",
+    "customer": "Electric van and truck fleets needing dependable charging away from their home base",
+    "distribution_mechanism": "Anchor fleet plus a corridor of depot owners, logistics parks, and renewable installers",
+    "offer_and_business_model": "Reservation, access credential, charger-status integration, SLA, and fallback support for private capacity",
+    "payer_and_paid_event": "Fleet pays subscription and booking fee; depot receives a revenue share after a completed reserved session",
+    "problem_trigger": "A dispatch plan requires a guaranteed charge at a specific corridor and time"
+  },
+  "founder_fit": [
+    "Applies optimization and forecasting to a physical network",
+    "Renewable-installer relationships can help recruit depot supply",
+    "Can pilot without owning chargers",
+    "Enterprise platform can scale beyond the founder's personal time"
+  ],
+  "parent": null,
+  "risks": [
+    "Site access, safety, insurance, and charger uptime create operational liability",
+    "Public charging expansion may reduce fleet need",
+    "A marketplace cannot launch without locally balanced supply and demand"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://transport.ec.europa.eu/transport-themes/clean-transport/alternative-fuels-sustainable-mobility-europe/alternative-fuels-infrastructure/questions-and-answers-regulation-deployment-alternative-fuels-infrastructure-eu-20231804_en",
+    "https://transport.ec.europa.eu/news-events/news/commission-enhances-interoperability-and-transparency-alternative-fuels-infrastructure-data-2025-04-11_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Two-sided capacity marketplace with availability guarantees",
+    "control_point": "Exclusive reservation rights over specific private charging windows and their measured reliability history",
+    "critical_dependency": "Private-site owners must permit third-party fleet access and sufficient supply and demand must overlap geographically and temporally"
+  },
+  "thesis": "Contract exclusive reservable windows from underused chargers at warehouses, fleet depots, and commercial sites, then sell fleet operators a route-level charging availability guarantee. The marketplace must control bookable private capacity and performance SLAs; public charger discovery data alone is not a moat.",
+  "title": "Private Depot Charging Capacity Exchange",
+  "uncertainties": [
+    "How much truly spare private charging capacity exists",
+    "Whether depot owners will grant exclusivity",
+    "Whether fleets will pay for guarantees instead of building their own depots"
+  ],
+  "version": 1
+}

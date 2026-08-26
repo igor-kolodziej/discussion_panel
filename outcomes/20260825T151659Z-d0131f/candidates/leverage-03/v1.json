@@ -1,0 +1,72 @@
+{
+  "candidate_id": "leverage-03",
+  "claims": [
+    {
+      "claim_id": "leverage-03-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/news/commission-updates-product-scope-and-tools-support-eudr-2026-07-13_en"
+      ],
+      "statement": "The Commission states that EUDR will apply from 30 December 2026 to large and medium operators and certain small operators, with other micro and small operators following in 2027."
+    },
+    {
+      "claim_id": "leverage-03-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02023R1115-20251226"
+      ],
+      "statement": "The regulation requires relevant products to be deforestation-free, legally produced, and covered by a due diligence statement, supported by plot geolocation and retained supply-chain information."
+    }
+  ],
+  "contrary_evidence": [
+    "The 2025 simplification amendments reduce duties for some downstream and small actors.",
+    "Certification and supply-chain platforms already possess relevant supplier relationships."
+  ],
+  "economics": {
+    "acquisition_route": "UNVALIDATED HYPOTHESIS — 5 commodity-agent or ERP partners produce 100 customers in 30 months.",
+    "capital_required_pln": 85000,
+    "founder_net_worth_path": "UNVALIDATED HYPOTHESIS — 240 customers at 26000 PLN annual average produces 6.24 million PLN ARR by year 5; 3.5x ARR and 72% ownership implies 15.72 million PLN equity, excluding distributions.",
+    "founder_time": "UNVALIDATED HYPOTHESIS — 19 hours weekly in year 1 and 8 after supplier templates mature.",
+    "gross_margin_basis": "UNVALIDATED HYPOTHESIS — 76% gross margin after geospatial processing and exception support.",
+    "payback": "UNVALIDATED HYPOTHESIS — under 6 months if the system saves 15 staff hours monthly or prevents one held shipment.",
+    "pricing": "UNVALIDATED HYPOTHESIS — all commercial numbers here, including capital_required_pln, are hypotheses: 12000 PLN onboarding, 1400 PLN monthly, and 6 PLN per submitted or referenced lot.",
+    "retention_or_repeat": "UNVALIDATED HYPOTHESIS — 88% annual retention, with repeat use on every relevant lot and annual due-diligence-system review."
+  },
+  "fingerprint": {
+    "compounding_advantage": "a permissioned supplier-plot graph plus learned validation rules for recurring geospatial and quantity defects",
+    "customer": "EU importers and first placers of cocoa, coffee, rubber, soy, cattle, palm, or wood products with fragmented suppliers",
+    "distribution_mechanism": "commodity agents, certification consultants, freight forwarders, and vertical ERP connectors",
+    "offer_and_business_model": "geospatial intake, lot genealogy, risk-workflow evidence, reference propagation, and Information System submission support",
+    "payer_and_paid_event": "the operator pays for setup, platform access, and each lot statement or upstream-reference bundle",
+    "problem_trigger": "a relevant lot needs traceable plot, legality, risk, quantity, and upstream-statement evidence before release"
+  },
+  "founder_fit": [
+    "Excellent data-science and geospatial automation fit, low-camera and partner-led, with a narrow Polish importer wedge and capital-light validation."
+  ],
+  "parent": null,
+  "risks": [
+    "False geolocation or broken mass balance can create serious customer exposure.",
+    "Satellite checks must be framed as risk evidence, not a legal guarantee.",
+    "Product-scope and Information System changes require rapid updates."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://environment.ec.europa.eu/news/commission-updates-product-scope-and-tools-support-eudr-2026-07-13_en",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02023R1115-20251226",
+    "https://environment.ec.europa.eu/publications/faq-eudr-implementation_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "geospatial provenance clearinghouse",
+    "control_point": "the negligible-risk lot lineage and due-diligence-statement reference required before market placement or export",
+    "critical_dependency": "accurate plot geolocation, chain-of-custody, and legality evidence supplied by producers and traders"
+  },
+  "thesis": "A provenance clearinghouse can convert supplier plot files, legality documents, upstream references, and shipment quantities into auditable lot lineage and EUDR Information System submissions. It sells through commodity agents and food/wood ERP integrators, and compounds as the same permissioned plots and upstream statements recur across lots and downstream buyers.",
+  "title": "EUDR Parcel Provenance Clearinghouse for Ingredient and Timber Importers",
+  "uncertainties": [
+    "How much evidence reuse customers will legally and commercially permit.",
+    "Actual exception rates in the revised Information System.",
+    "Partner willingness to share customer ownership."
+  ],
+  "version": 1
+}

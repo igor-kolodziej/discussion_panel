@@ -1,0 +1,83 @@
+{
+  "judge_id": "c4-dev-working-embed-05",
+  "assumptions": [
+    "The opportunity is assessed at planning stage, with the stated 70000 PLN capital envelope and roughly three founder hours per day treated as hard constraints until objective traction supports a change.",
+    "Any pilot would keep label and release authority with qualified customer personnel or a contracted food-safety professional; the service would not make autonomous release decisions.",
+    "A regional distributor has recurring supplier-specification changes and a meaningful downstream QA workload, but neither the volume nor the distributor's current cost of handling it is assumed to be known.",
+    "The cited incumbent product pages establish that competing functionality is commercially offered, but do not establish its penetration, pricing, service quality, or suitability for the proposed distributor workflow."
+  ],
+  "factors": [
+    {
+      "name": "Core insight",
+      "status": "scored",
+      "score": 6,
+      "rationale": "Making a distributor the payer, permissioned data source, and deployment channel is a coherent response to fragmented SME acquisition and sensitive supplier data. It identifies a plausible control point around specification changes, but it remains an inference rather than evidence that distributors experience an unmet exception-clearing problem or want to own this workflow."
+    },
+    {
+      "name": "Customer pain and willingness to pay",
+      "status": "scored",
+      "score": 5,
+      "rationale": "Allergen information, traceability, and controlled records are mandatory and errors can be consequential, giving the underlying workflow real importance. The proposed payer is the distributor, however, and there is no evidence of its incremental cost, liability reduction, customer-retention benefit, budget ownership, or willingness to fund a managed service instead of using staff, spreadsheets, portals, or an incumbent platform."
+    },
+    {
+      "name": "Business model and economics",
+      "status": "scored",
+      "score": 4,
+      "rationale": "A distributor-funded portfolio contract could concentrate revenue and avoid costly manufacturer-by-manufacturer selling, while a paid scoped pilot is an appropriately capital-disciplined gate. Yet price, change volume, review burden, connector maintenance, support, security, insurance, gross margin, payback, renewal, and owner earnings are all unknown, and no defensible founder-wealth path can currently be quantified. Human review and bespoke integrations could leave the model service-heavy with weak operating leverage."
+    },
+    {
+      "name": "Market and beachhead",
+      "status": "scored",
+      "score": 5,
+      "rationale": "One regional ingredient distributor and a bounded manufacturer cohort form a narrow, testable beachhead inside a large, fragmented food-processing sector. The evidence does not size the reachable distributor segment, identify digitally underserved buyers, quantify changes per portfolio, or show that a single anchor can support an economically meaningful contract, so beachhead value remains uncertain."
+    },
+    {
+      "name": "Competitive position and domination potential",
+      "status": "scored",
+      "score": 4,
+      "rationale": "An integration-first managed desk could coexist with existing systems and win a specific neglected workflow without replacing a full PLM. However, established vendors already advertise supplier collaboration, version control, BOM linkage, allergen propagation, and recipe-to-label impact analysis; they or the distributor's internal QA team could bundle the same exception workflow. No exclusive access, unique capability, or demonstrated underserved niche supports domination yet."
+    },
+    {
+      "name": "Expansion potential",
+      "status": "scored",
+      "score": 5,
+      "rationale": "A successful anchor could expand across its customer portfolio and then to other distributors, and the normalized intake and review machinery may transfer across adjacent change types. Replication is not yet demonstrated, confidential data is likely siloed by contract, and each distributor may require new integrations, governance, and enterprise selling, limiting frictionless expansion."
+    },
+    {
+      "name": "Defensibility and durability",
+      "status": "scored",
+      "score": 4,
+      "rationale": "Embedded intake, audit history, connector knowledge, and a permissioned corpus of human decisions could create workflow switching costs and improve prioritization within one portfolio. Those advantages depend on unproven processing and derived-data rights, may not transfer across customers, and are vulnerable to termination by the anchor or bundling by incumbent PLM vendors; the core parsing and triage technology is readily reproducible."
+    },
+    {
+      "name": "Strength of advantage",
+      "status": "scored",
+      "score": 4,
+      "rationale": "Bundling a human-governed exception service through the distributor could be more convenient for SMEs than adopting another standalone repository and could shorten change handling. There is no measured baseline or pilot evidence showing a material improvement in speed, accuracy, labor cost, audit readiness, or risk versus incumbent tools and existing QA processes, so the behavior-changing advantage is not established."
+    },
+    {
+      "name": "Timing and momentum",
+      "status": "scored",
+      "score": 5,
+      "rationale": "Modern document extraction and agent tooling make multilingual specification triage cheaper to prototype, while persistent EU food-safety duties sustain the need. The key regulations are longstanding, mature vendors already serve the category, and the packet identifies no new regulatory deadline, platform shift, or channel disruption that creates unusual urgency or a temporary entry window."
+    },
+    {
+      "name": "Distribution",
+      "status": "scored",
+      "score": 5,
+      "rationale": "Using one distributor to reach a portfolio of manufacturers is structurally more efficient than separately acquiring fragmented SMEs and fits a low-public-profile founder. Winning that anchor is still an unvalidated enterprise sale requiring trust, security diligence, feed rights, workflow change, and likely sustained relationship work; no warm route, commitment, sales cycle, or repeatable acquisition method is evidenced."
+    },
+    {
+      "name": "Execution and risks",
+      "status": "scored",
+      "score": 5,
+      "rationale": "A bounded non-autonomous pilot is feasible within the founder's data-science strengths, AI leverage, stated time, and capital, especially with qualified review contracted or retained by the customer. Production operation is materially harder: inconsistent multilingual documents, missed-allergen harm, auditability, access control, liability, insurance, connector upkeep, and human review all demand capabilities beyond a lightweight software build, while single-anchor concentration can halt the business."
+    }
+  ],
+  "interaction_adjustment": -0.3,
+  "main_structural_strength": "The redesign aligns payer, permissioned source, and deployment channel in one distributor relationship, potentially converting a fragmented SME compliance problem into a bounded portfolio contract and an embedded workflow.",
+  "primary_score_limiter": "The entire model depends on an unvalidated distributor anchor that must simultaneously pay, grant timely processing rights, drive account adoption, and support sufficient volume and contract value to cover review, integration, security, support, and insurance costs.",
+  "strongest_disconfirming_evidence": "Four established vendors already market supplier collaboration, specification change control, allergen propagation, BOM linkage, and recipe-to-label impact analysis, directly weakening the claim that the proposed functional layer is scarce or difficult for incumbents to bundle.",
+  "evidence_needed_for_higher_score": "A paid anchor agreement granting narrowly scoped feed, processing, and derived-data rights, followed by a representative pilot that measures change volume, extraction and exception accuracy, qualified-review minutes, integration and support effort, fully loaded contribution margin, manufacturer adoption, renewal intent, and the distributor's quantified avoided cost or service benefit.",
+  "highest_value_structural_change": "Tie the service to one existing distributor-owned QA cost center and one frequent high-risk change class, taking over the complete intake-to-qualified-signoff workflow under a measurable SLA; this would give the payer a concrete budget and ROI basis, make data rights operationally necessary, and create deeper workflow ownership than a broad optional exception layer."
+}

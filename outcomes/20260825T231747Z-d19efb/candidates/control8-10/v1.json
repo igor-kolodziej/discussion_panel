@@ -1,0 +1,86 @@
+{
+  "candidate_id": "control8-10",
+  "claims": [
+    {
+      "claim_id": "control8-10-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2024/573/oj?eliuri=eli%3Areg%3A2024%3A573%3Aoj&locale=en"
+      ],
+      "statement": "EU Regulation 2024/573 requires operators of equipment subject to leak checks to establish and keep records for each piece of equipment."
+    },
+    {
+      "claim_id": "control8-10-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2024/573/oj?eliuri=eli%3Areg%3A2024%3A573%3Aoj&locale=en"
+      ],
+      "statement": "Required record elements include gas quantities, additions and recovery, the identity and certificate details of service actors, and dates/results of checks and repairs."
+    },
+    {
+      "claim_id": "control8-10-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://climate.ec.europa.eu/eu-action/fluorinated-greenhouse-gases/stakeholder-obligations_en?prefLang=lt"
+      ],
+      "statement": "The Commission describes qualified personnel, obligatory leak checks, and gas recovery/destruction among stakeholder obligations under the current F-gas regime."
+    }
+  ],
+  "contrary_evidence": [
+    "The per-equipment record duty applies to equipment subject to leak checks, not every heat pump or refrigeration asset.",
+    "The regulation permits the Commission to determine record formats, which could force rework or favor official systems.",
+    "General field-service management products already provide asset QR codes, forms, and schedules."
+  ],
+  "economics": {
+    "acquisition_route": "Observe 20 real but authorized service workflows via local contractors, pilot with one 5-15 technician company, then sell through wholesalers and training partners",
+    "capital_required_pln": 45000,
+    "founder_net_worth_path": "Unvalidated 5-8 year scenario: 150 contractor/operator accounts averaging 35,000 PLN annual revenue gives 5.25m PLN; at 32% EBITDA, 4x, and 75% ownership, equity value is about 5.04m PLN.",
+    "founder_time": "15-22 hours per week, with scheduled field discovery and asynchronous product/support work",
+    "gross_margin_basis": "Mobile records, schedules, and exports are software; onboarding legacy assets and first-line field support are the largest variable costs",
+    "payback": "Customer payback hypothesis: saving 10-20 minutes of admin per technician job plus preventing missed checks can repay 120-250 PLN per technician monthly; measure during pilot",
+    "pricing": "Unvalidated hypothesis: 1,500-6,000 PLN onboarding, 120-250 PLN per technician monthly, and portfolio pricing of 2-8 PLN per asset monthly",
+    "retention_or_repeat": "Records persist for each asset, checks recur, technicians change, and customers need history across the equipment lifecycle"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Longitudinal equipment/gas/repair histories and contractor performance data improve anomaly detection, renewal timing, and multi-contractor handovers",
+    "customer": "Polish HVAC/R service companies with certified technicians and commercial operators of covered refrigeration, air-conditioning, and heat-pump equipment",
+    "distribution_mechanism": "HVAC wholesalers, certification/training bodies, industry associations, commercial property managers, and the family renewable installer network for workflow discovery",
+    "offer_and_business_model": "Mobile capture, QR asset identity, certificate validation, gas ledger, signatures/photos, scheduling, customer handover, and export; hypothesis 120-250 PLN per technician monthly plus 2-8 PLN per managed asset",
+    "payer_and_paid_event": "Service-company owner pays per technician or completed asset record; larger operators pay per active equipment portfolio and contractor access",
+    "problem_trigger": "Installation, scheduled leak check, gas addition/recovery, leak repair, technician handoff, customer audit, or authority request"
+  },
+  "founder_fit": [
+    "Adjacent to the family renewable/installation business and local B2B operational automation",
+    "Data capture, scheduling, and anomaly detection fit the founder's technical skills",
+    "Can validate locally with bounded field observation rather than broad networking",
+    "Recurring asset records can become a scalable product rather than a manual service"
+  ],
+  "parent": null,
+  "risks": [
+    "Technicians may resist extra mobile entry and continue using paper or existing field-service tools",
+    "Wrong threshold or certification logic could create compliance failures",
+    "Transition toward low-GWP or natural refrigerants may shrink parts of the recordkeeping market",
+    "Small contractors may be price sensitive and require high-touch support"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2024/573/oj?eliuri=eli%3Areg%3A2024%3A573%3Aoj&locale=en",
+    "https://climate.ec.europa.eu/eu-action/fluorinated-greenhouse-gases/stakeholder-obligations_en?prefLang=lt",
+    "https://climate.ec.europa.eu/eu-action/fluorinated-greenhouse-gases/faq_en?prefLang=de"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Two-sided field compliance record licensed to service contractors and commercial asset portfolios",
+    "control_point": "The complete per-equipment F-gas service, leak-check, repair, recovery, and certificate record retained by the responsible operator",
+    "critical_dependency": "Accurate on-site capture by certified people, correct determination of equipment subject to checks, and acceptance of digital records by customers and authorities"
+  },
+  "thesis": "Planning-stage hypothesis: make a QR-linked service and refrigerant record for Polish HVAC/R contractors and commercial equipment operators. Technicians would capture equipment identity, gas type and quantity, certificate identity, leak-check results, repairs, recovery, and signed evidence at the job site; operators retain a shared audit record and automatic next-check schedule. The control point is the per-equipment record required for equipment subject to leak checks, not a generic field-service calendar. Starting through renewable/HVAC installer relationships could establish a local wedge, while normalized asset histories can later support warranty, gas inventory, and maintenance decisions.",
+  "title": "F-Gas Certified Field-Service Record",
+  "uncertainties": [
+    "Current Polish field workflow, incumbent software penetration, and record format expectations",
+    "Share of target equipment actually subject to leak checks under the current rules",
+    "Whether the buyer is the contractor, equipment operator, or property manager",
+    "Ability to verify certificates and share records across companies without an official API"
+  ],
+  "version": 1
+}

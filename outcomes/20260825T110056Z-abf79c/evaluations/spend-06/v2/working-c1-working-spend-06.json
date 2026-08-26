@@ -1,0 +1,121 @@
+{
+  "assumptions": [
+    "Customers provide complete and joinable AP, payment, supplier-master and credit-note exports and retain all authority for supplier contact, settlement and payment decisions.",
+    "The initial ideal customer is a multi-entity construction or field-service firm with at least several thousand supplier invoices per year rather than an average Polish SME.",
+    "Initial fees are 20-25% of cash actually recovered, with no fee on unconfirmed flags, and recurring monitoring is offered only after a paid audit demonstrates value.",
+    "Early delivery gross margin is 45-60%; 70-80% monitoring margin is attainable only if evidence assembly is automated and customer finance teams perform confirmation and recovery work.",
+    "The 60,000 PLN pilot budget and a cap of two concurrent audits are sufficient for validation but are not assumed to fund scaled security, integrations, sales and support.",
+    "Cross-client aliases and adjudication features are not reused unless contracts, confidentiality duties and data-protection analysis explicitly permit a transferable representation."
+  ],
+  "base_score": 4.94,
+  "candidate_id": "spend-06",
+  "candidate_sha256": "08fb9753a7682775341fae187b7799b7de226b8960a3e72f1139e4388eaf3571",
+  "candidate_version": 2,
+  "constrained_score": 4.94,
+  "evaluation_type": "working",
+  "evidence_needed_for_higher_score": "A cohort of closed-period pilots in tightly qualified Polish firms should report invoice volume and spend, true-positive rate, confirmed and cash-collected recovery, time to collection, disputes, delivery hours, gross margin, sales and onboarding cost, and then independently observed audit-to-monitoring conversion, retention and signed accountant or ERP-channel economics.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "The opportunity is grounded in a real control gap: official evidence shows duplicate payments can survive configured controls, and a read-only, contingent audit can align the paid event with recovered cash while leaving authority with the buyer. The insight is useful but not proprietary or novel; duplicate recovery and similarity matching are established categories, so success depends on making them economical for a smaller Polish segment rather than on a scarce technical discovery.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Erroneous payments create direct cash loss, supplier friction and control risk, and the NHS recovery case, published contingency pricing and a public software award demonstrate category-level willingness to pay. Contingent pricing reduces adoption risk for a first audit. However, all quantified evidence comes from high-volume UK or Canadian settings, so the frequency, recoverability and economic importance of leakage for Polish firms with only several thousand invoices remain genuinely unknown.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "A fee on cash actually recovered gives customers fast payback and avoids charging for false-positive flags, while recurring pre-payment monitoring could eventually create better margins and retention. The current wedge is still human-reviewed recovery work with modeled early gross margin of only 45-60%, uncertain recovery time, one-off and declining audit yield, unknown CAC, and no evidence for subscription conversion or the proposed Polish monitoring price. The stated 150-customer scenario does not by itself reach the founder's 5 million PLN net-worth target under the supplied margin, ownership and valuation assumptions, leaving material dependence on stronger economics, additional customers or non-double-counted distributions.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Multi-entity construction and field-service firms are a coherent first segment because branch complexity, supplier volume and the founder's warm access may concentrate the problem. Poland's 17,601 medium enterprises provide a broad ceiling that could support a meaningful business, but the evidence does not identify how many meet the required invoice-volume, systems-fragmentation and recoverable-leakage conditions. The economically viable beachhead is therefore plausible but not yet sized.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "A privacy-conscious read-only workflow, customer-approved exception queue and locally adapted recovery packet could win a focused niche, especially through trusted finance intermediaries. Yet established recovery providers already sell contingent audits, SAP and Microsoft already bundle matching controls, and no exclusive channel, proprietary data right or demonstrated performance edge is present. A strong or dominant position is possible only after a much sharper segment and distribution control point are established.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A successful historical audit creates a credible route into pre-payment monitoring, unapplied credits, vendor-master and bank-change anomalies, contract mismatches, additional entities and adjacent CEE markets. The same ingestion and evidence workflow can support those adjacencies. Expansion is not frictionless, however, because each control type adds validation and legal-operational work, and privacy and customer contracts may prevent cross-client learning from transferring.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Adjudicated alias patterns, false-positive explanations, integration templates and trusted accountant relationships could compound modestly. Their durability is uncertain because customer data rights may block reuse, generic entity resolution is reproducible, incumbents can bundle similar controls, and customers should experience lower recovery yield after controls improve. No present moat clearly prevents copying or margin erosion.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "The strongest offer-level advantages are no upfront recovery fee, isolated read-only analysis, explainable evidence packets and customer retention of supplier and payment authority. Those features can improve trust and convenience relative to an internal ad hoc review. There is no measured precision, recovery lift, speed advantage or total-cost advantage versus recovery specialists, ERP configuration or AP automation suites, so the proposition is differentiated in packaging rather than demonstrably step-change better.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "Modern data tooling and AI can reduce the cost of entity resolution, evidence assembly and exception ranking enough to make a smaller-client service more plausible, while persistent control failures show the problem has not disappeared. The same technology also lowers entry barriers and strengthens incumbent products, and the supplied evidence identifies no regulation, platform transition or customer-behavior shift that uniquely opens the Polish beachhead now.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "Warm construction and renewable-installation contacts offer a credible way to obtain a small number of low-trust-distance pilots, and a no-upfront-fee audit can reduce initial sales resistance. Scalable distribution is only a proposal: accountants, fractional CFOs and ERP implementers have made no commitments, with channel CAC, revenue share and lead volume unknown. Selling access to sensitive finance data is trust-intensive, and a founder-led direct-sales motion would fit the founder poorly and risk becoming the bottleneck.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "A bounded read-only pilot fits the founder's data-science skills, available capital and part-time limit, and avoiding custody of funds materially reduces operational risk. The founder can use legal and security specialists and require the customer's finance team to approve and pursue claims. Execution still requires reliable joins across messy exports, secure processing, GDPR contracts, audit-quality evidence, finance-domain judgment and disciplined handling of disputed or legally unrecoverable payments; failure to standardize human review would turn the model into a demanding service business.",
+      "score": 6,
+      "status": "scored"
+    }
+  ],
+  "final_score": 4.9,
+  "highest_value_structural_change": "Turn accountants or ERP implementers into the contractual distribution and first-line review layer for a tightly qualified high-volume, multi-entity construction beachhead, while the product standardizes ingestion, evidence and pre-payment exceptions; this would replace founder-led recovery operations with an embedded channel and make monitoring, feedback data and switching costs more likely to compound.",
+  "interaction_adjustment": 0,
+  "judge_id": "c1-working-spend-06",
+  "main_structural_strength": "The contingent, read-only wedge ties payment to confirmed recovered cash while letting the customer's finance team keep authority, making a concrete and costly control failure testable with limited customer downside and strong founder-technical fit.",
+  "primary_score_limiter": "There is no segment-specific evidence that Polish mid-market invoice volumes and recoverable leakage can support attractive human-reviewed unit economics, nor a committed channel capable of acquiring enough trusted finance customers at acceptable CAC.",
+  "qualified": false,
+  "raw_response_path": "artifacts/research/raw-c1-working-spend-06.json",
+  "raw_response_sha256": "b17c37039bba0e741f9338cab205e80eeb6be1ceaa4e5803759b31b9c466a38d",
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 2,
+  "strongest_disconfirming_evidence": "The best quantified recovery example required analysis of 645,000 transactions plus senior-auditor verification and recovery work, which directly challenges the premise that firms with only several thousand invoices can produce enough collectible leakage to cover manual effort and acquisition cost.",
+  "unrounded_score": 4.94
+}

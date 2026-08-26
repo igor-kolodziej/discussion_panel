@@ -1,0 +1,69 @@
+{
+  "candidate_id": "rights9-04",
+  "claims": [
+    {
+      "claim_id": "rights9-04-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism_en"
+      ],
+      "statement": "CBAM's definitive regime applies from 1 January 2026 and introduces authorisation, reporting, certificate-purchase and surrender obligations."
+    },
+    {
+      "claim_id": "rights9-04-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism_en"
+      ],
+      "statement": "CBAM initially covers cement, iron and steel, aluminium, fertilisers, electricity and hydrogen imports."
+    }
+  ],
+  "contrary_evidence": [],
+  "economics": {
+    "acquisition_route": "Win Polish importers through customs brokers, then invite their suppliers into shared passports",
+    "capital_required_pln": 60000,
+    "founder_net_worth_path": "Unvalidated: 700 plants at 12000 PLN average recurring revenue could exceed 8m PLN ARR; 65% founder ownership could exceed 5m PLN equity in years 5-7",
+    "founder_time": "3-5 hours/day with carbon-accounting review contracted",
+    "gross_margin_basis": "Unvalidated: 75-90% after onboarding once evidence mappings are reusable",
+    "payback": "Unvalidated: 9-14 months at 25 subscribed plants",
+    "pricing": "Unvalidated: 6000-18000 PLN per plant/year plus 200-500 PLN per importer share",
+    "retention_or_repeat": "Annual subscription plus recurring shipment, methodology and facility updates"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Supplier-to-importer evidence reuse and exception history create a cross-company data network",
+    "customer": "Non-EU steel, aluminium, cement and fertiliser suppliers plus their Polish importers",
+    "distribution_mechanism": "Customs brokers, trade associations and Polish import-accounting partners",
+    "offer_and_business_model": "Structured evidence vault, methodology checks, versioning, consented sharing and verifier-ready exports; no assurance claim",
+    "payer_and_paid_event": "Supplier pays annual passport subscription; importers pay per accepted data share",
+    "problem_trigger": "A definitive-regime shipment needs credible embedded-emissions evidence for importer reporting and verification"
+  },
+  "founder_fit": [
+    "Strong data-lineage and automation fit",
+    "Warsaw base supports EU B2B launch",
+    "Asynchronous product avoids constant social selling"
+  ],
+  "parent": null,
+  "risks": [
+    "Liability from bad source data",
+    "ERP vendors may add similar workflows",
+    "Cross-border onboarding friction"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism_en",
+    "https://eur-lex.europa.eu/eli/reg/2023/956/oj"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "reusable compliance passport",
+    "control_point": "permissioned plant-level source-data graph and change history",
+    "critical_dependency": "Importers and accredited verifiers must accept the packet format while retaining their legal duties"
+  },
+  "thesis": "Build one permissioned emissions evidence packet per non-EU plant that can be safely reused across its Polish/EU importer customers and handed to accredited verifiers.",
+  "title": "CBAM Supplier Evidence Passport",
+  "uncertainties": [
+    "Willingness to pay and evidence reuse rates are unvalidated",
+    "Final verifier acceptance patterns are unknown"
+  ],
+  "version": 1
+}

@@ -1,0 +1,213 @@
+{
+  "candidate_id": "channel-06",
+  "candidate_sha256": "70de83606f857695c640807a5ced6e7e74e479fa806b8b930f55df87839555ee",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "channel-06-r01",
+      "evidence_refs": [
+        "c6-s01"
+      ],
+      "statement": "NIS2 Article 21(2)(d) expressly includes supply-chain security and direct supplier or service-provider relationships, while Article 21(3) requires consideration of supplier-specific vulnerabilities and cybersecurity practices."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "channel-06-r02",
+      "evidence_refs": [
+        "c6-s04"
+      ],
+      "statement": "For entities within Regulation 2024/2690's specified scope, the detailed rules include a supply-chain policy, supplier selection criteria, contract requirements, periodic monitoring, and a current direct-supplier directory."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "channel-06-r03",
+      "evidence_refs": [
+        "c6-s01",
+        "c6-s04"
+      ],
+      "statement": "Regulation 2024/2690 does not itself create a single detailed questionnaire for every entity and sector covered by NIS2, so cross-sector standardisation remains a product hypothesis."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "channel-06-r04",
+      "evidence_refs": [
+        "c6-s02"
+      ],
+      "statement": "ENISA reported that 86% of surveyed organisations had ICT/OT supply-chain security policies, 47% allocated budget, 76% lacked dedicated roles and responsibilities, 61% required supplier certification, 43% used security ratings, and 37% used due-diligence or risk assessments."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "channel-06-r05",
+      "evidence_refs": [
+        "c6-s03",
+        "c6-s04"
+      ],
+      "statement": "ENISA's technical guidance supplies implementation advice, examples of evidence, and requirement mappings for the sectors governed by Regulation 2024/2690, which can seed but not prove commercial questionnaire mappings."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "channel-06-r06",
+      "evidence_refs": [
+        "c6-s05"
+      ],
+      "statement": "ProcessUnity already allows a third party to complete one assessment and share its answers and assessment with multiple customers, directly overlapping the passport's reuse mechanism."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "channel-06-r07",
+      "evidence_refs": [
+        "c6-s06",
+        "c6-s07",
+        "c6-s08",
+        "c6-s09"
+      ],
+      "statement": "Whistic operates an exchange for on-demand security and compliance information, while OneTrust, Vanta, and Drata provide vendor inventories, questionnaires, evidence collection, risk decisions, monitoring, and recurring reassessments."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "channel-06-r08",
+      "evidence_refs": [],
+      "statement": "No reviewed source validates that MSPs will white-label a small vendor's evidence layer, provide the required customer and supplier data, or accept the proposed revenue model."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "channel-06-r09",
+      "evidence_refs": [
+        "c6-s10"
+      ],
+      "statement": "Where the service processes personal data on a customer's behalf, GDPR processor duties include documented instructions, confidentiality, security, subprocessor authorisation, assistance with data-subject and breach obligations, return or deletion, and audit support."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "channel-06-r10",
+      "evidence_refs": [
+        "c6-s01",
+        "c6-s04",
+        "c6-s05",
+        "c6-s06",
+        "c6-s07",
+        "c6-s08",
+        "c6-s09"
+      ],
+      "statement": "The most defensible initial position is an MSP-operated provenance and expiry ledger interoperable with incumbent GRC tools, not a new certification or universal supplier score."
+    }
+  ],
+  "contrary_evidence": [
+    "The closest examined incumbent, ProcessUnity, already advertises one assessment shared with multiple customers.",
+    "The broader feature set is crowded by Whistic, OneTrust, Vanta, and Drata; the proposed network effect is therefore neither novel nor established.",
+    "NIS2 obligations are risk-based and the detailed implementing regulation has a defined sectoral scope, weakening a universal compliance-template pitch.",
+    "Public product pages do not reveal directly comparable prices or partner economics, so the forecast has no market price validation."
+  ],
+  "schema_version": 2,
+  "sources": [
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2022-12-14",
+      "publisher": "EUR-Lex / European Union",
+      "source_id": "c6-s01",
+      "source_type": "official_law",
+      "stance": "supporting",
+      "title": "Directive (EU) 2022/2555 (NIS2)",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32022L2555"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2023-06",
+      "publisher": "European Union Agency for Cybersecurity (ENISA)",
+      "source_id": "c6-s02",
+      "source_type": "official_research_report",
+      "stance": "supporting",
+      "title": "Good Practices for Supply Chain Cybersecurity",
+      "url": "https://www.enisa.europa.eu/sites/default/files/publications/Good%20Practices%20for%20Supply%20Chain%20Cybersecurity.pdf"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2025-06-26",
+      "publisher": "European Union Agency for Cybersecurity (ENISA)",
+      "source_id": "c6-s03",
+      "source_type": "official_guidance",
+      "stance": "supporting",
+      "title": "NIS2 Technical Implementation Guidance",
+      "url": "https://www.enisa.europa.eu/publications/nis2-technical-implementation-guidance"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2024-10-17",
+      "publisher": "EUR-Lex / European Union",
+      "source_id": "c6-s04",
+      "source_type": "official_law",
+      "stance": "context",
+      "title": "Commission Implementing Regulation (EU) 2024/2690",
+      "url": "https://eur-lex.europa.eu/eli/reg_impl/2024/2690"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "ProcessUnity",
+      "source_id": "c6-s05",
+      "source_type": "incumbent_product_documentation",
+      "stance": "contradicting",
+      "title": "Third-Party Legal FAQ - The ProcessUnity Exchange",
+      "url": "https://processunity.zendesk.com/hc/en-us/articles/33974053261595-Third-Party-Legal-FAQ"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "Whistic",
+      "source_id": "c6-s06",
+      "source_type": "incumbent_product_page",
+      "stance": "contradicting",
+      "title": "Whistic Trust Center Exchange",
+      "url": "https://www.whistic.com/trust-catalog"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "OneTrust",
+      "source_id": "c6-s07",
+      "source_type": "incumbent_product_page",
+      "stance": "contradicting",
+      "title": "Third-Party Risk Management",
+      "url": "https://www.onetrust.com/products/third-party-risk-management/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2026-07-09",
+      "publisher": "Vanta",
+      "source_id": "c6-s08",
+      "source_type": "incumbent_product_documentation",
+      "stance": "contradicting",
+      "title": "Third Party Risk Management Product Overview",
+      "url": "https://help.vanta.com/en/articles/11345557-third-party-risk-management-product-overview"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "Drata",
+      "source_id": "c6-s09",
+      "source_type": "incumbent_product_page",
+      "stance": "contradicting",
+      "title": "Third-Party Risk Management Software",
+      "url": "https://drata.com/products/third-party-risk-management"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "European Data Protection Board",
+      "source_id": "c6-s10",
+      "source_type": "official_privacy_guidance",
+      "stance": "context",
+      "title": "Data controller or data processor",
+      "url": "https://www.edpb.europa.eu/sme/learn-the-basics/data-controller-or-data-processor_en"
+    }
+  ],
+  "unknowns": [
+    "Paid MSP design-partner demand and white-label terms.",
+    "Supplier completion and evidence-renewal rates.",
+    "Customer acceptance of reuse versus bespoke questionnaires.",
+    "Required insurance, liability caps, hosting location, and security attestations.",
+    "Integration access to MSP and incumbent GRC systems.",
+    "Achievable per-supplier price and support cost."
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "candidate_id": "bottleneck-05",
+  "claims": [
+    {
+      "claim_id": "bottleneck-05-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://climate.ec.europa.eu/news-other-reads/news/f-gases-new-rules-labelling-reporting-certification-and-f-gas-portal-2024-09-20_en"
+      ],
+      "statement": "The 2024 F-gas regime expanded certification requirements for technicians working on stationary refrigeration, air-conditioning, and heat pumps, including covered alternatives to F-gases."
+    },
+    {
+      "claim_id": "bottleneck-05-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2024/573/oj/pol"
+      ],
+      "statement": "For equipment subject to leak checks, operators must keep device-level records including gas quantities and types, additions and recovery, service entity and certificate details, check dates and results, repairs, and decommissioning actions."
+    },
+    {
+      "claim_id": "bottleneck-05-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.udt.gov.pl/uslugi-udt/szwo-i-f-gazy/rejestry"
+      ],
+      "statement": "Poland's UDT maintains public registers covering certified personnel, certified undertakings, and training or assessment bodies for F-gas work."
+    }
+  ],
+  "contrary_evidence": [
+    "Some hermetically sealed or low-charge residential equipment is outside periodic leak-check requirements, limiting the addressable device base.",
+    "Poland already has official registers and the CRO workflow, while general field-service software can store similar job records.",
+    "The planned transition away from high-GWP F-gases could reduce some traditional gas-handling work even as alternative-refrigerant training broadens."
+  ],
+  "economics": {
+    "acquisition_route": "One installer pilot, free device-record and certificate-expiry checker, trade-search content, then wholesaler and training-provider referrals",
+    "capital_required_pln": 50000,
+    "founder_net_worth_path": "Modeled path: 2,000 teams at 250 PLN average monthly recurring revenue equals 6m PLN ARR; a 30% owner-cash margin is 1.8m PLN/year and could exceed 10m PLN cumulatively in six mature years",
+    "founder_time": "Up to 4 hours/day for MVP and first 20 teams, with regulatory questions escalated to a paid specialist rather than handled in meetings",
+    "gross_margin_basis": "Modeled 82-92% after mobile hosting, document generation, notifications, and support",
+    "payback": "Target below 4 months with self-serve onboarding and sub-1,000 PLN acquisition cost; unvalidated",
+    "pricing": "Modeled 149-599 PLN/month per team plus 5-15 PLN per signed client evidence pack above plan allowance",
+    "retention_or_repeat": "Equipment service histories, recurring leak-check dates, technician certificates, and repeat maintenance support multi-year retention"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A validated library of equipment, refrigerants, certificate scopes, mandatory fields, service intervals, and recurring field-entry errors",
+    "customer": "Polish HVAC, refrigeration, and heat-pump installation and service firms with 2-30 field technicians",
+    "distribution_mechanism": "Pilot through a renewable installer, self-serve compliance checklists, and referrals from HVAC wholesalers, training providers, and bookkeeping firms",
+    "offer_and_business_model": "Mobile job workflow, certificate guard, equipment register, leak-check scheduler, signed evidence pack, and optional CRO handoff sold as team SaaS",
+    "payer_and_paid_event": "The service contractor pays per team each month when it needs compliant job closure, reminders, and customer-ready records",
+    "problem_trigger": "A regulated installation, leak check, service, repair, gas recovery, or decommissioning job is completed without all device, gas, technician, certificate, and result fields"
+  },
+  "founder_fit": [
+    "The founder can observe a related installation workflow through the family business and test usability without broad networking.",
+    "Rules engines, scheduling, anomaly checks, and structured mobile capture fit data-science and software leverage.",
+    "A Polish field-team wedge has low initial capital needs and can operate alongside employment if onboarding remains self-serve."
+  ],
+  "parent": null,
+  "risks": [
+    "Incorrect regulatory logic could cause missed inspections or invalid records.",
+    "Technicians may resist extra mobile entry unless the workflow replaces rather than adds paperwork.",
+    "A national CRO upgrade or field-service incumbent could remove the integration advantage."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://climate.ec.europa.eu/news-other-reads/news/f-gases-new-rules-labelling-reporting-certification-and-f-gas-portal-2024-09-20_en",
+    "https://eur-lex.europa.eu/eli/reg/2024/573/oj/pol",
+    "https://www.udt.gov.pl/uslugi-udt/szwo-i-f-gazy/rejestry",
+    "https://eur-lex.europa.eu/legal-content/en/LSU/?uri=CELEX%3A32024R0573"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Mobile vertical workflow SaaS priced per field team and active equipment portfolio",
+    "control_point": "The signed job-to-device record connecting technician authorization, refrigerant movement, test result, repair, and next required action",
+    "critical_dependency": "Field technicians must capture truthful data, and any national CRO integration or export must be legally and technically reliable"
+  },
+  "thesis": "Build a mobile-first job recorder for small HVAC, refrigeration, and heat-pump service companies that checks technician and company certification, captures refrigerant additions, recovery, leaks, repairs, and decommissioning at the job site, and emits a client/device compliance record. Contractors pay because the legal record is assembled across technicians, equipment owners, certificates, and national systems after the van has already left, making missing fields and overdue checks expensive to reconstruct.",
+  "title": "F-Gas Field Record and Certificate Guard",
+  "uncertainties": [
+    "The exact share of small contractors still using paper, spreadsheets, or duplicate entry instead of capable field-service software is unknown.",
+    "Technical access and authorization conditions for automated CRO handoff have not been established.",
+    "The modeled price, paid conversion, per-team support effort, churn, and owner-cash margin require validation."
+  ],
+  "version": 1
+}

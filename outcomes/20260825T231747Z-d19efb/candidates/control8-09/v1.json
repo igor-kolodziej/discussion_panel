@@ -1,0 +1,86 @@
+{
+  "candidate_id": "control8-09",
+  "claims": [
+    {
+      "claim_id": "control8-09-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eli.gov.pl/api/acts/DU/2024/927/text.html"
+      ],
+      "statement": "Polish law requires businesses placing packaged products on the market to establish packaging mass from prescribed records and retain the information for five years."
+    },
+    {
+      "claim_id": "control8-09-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eli.gov.pl/api/acts/DU/2024/927/text.html"
+      ],
+      "statement": "The law provides for authority estimation of packaging mass when records are absent or unreliable, showing that the underlying ledger is a substantive obligation rather than only a filing convenience."
+    },
+    {
+      "claim_id": "control8-09-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/klimat/rejestr-bdo"
+      ],
+      "statement": "Poland's official BDO register covers entities introducing products and packaging and requires specified registered entities to place their BDO number on business documents."
+    }
+  ],
+  "contrary_evidence": [
+    "The core calculation can be performed in a spreadsheet for companies with few stable SKUs, limiting ARPU.",
+    "BDO is already the official electronic reporting environment; this product only prepares and substantiates data.",
+    "Accountants and recovery organisations may already collect the same source records as part of bundled services."
+  ],
+  "economics": {
+    "acquisition_route": "Pilot with 5-10 e-commerce clients of one accountant, productize the annual-close checklist, then distribute as an accountant and fulfilment add-on",
+    "capital_required_pln": 35000,
+    "founder_net_worth_path": "Unvalidated 5-8 year scenario: 700 entities averaging 8,000 PLN annual revenue yields 5.6m PLN; at 32% EBITDA, 4x, and 75% ownership, equity value is about 5.38m PLN. Channel-led acquisition is essential for this scale.",
+    "founder_time": "14-20 hours per week during the first accountant-led cohort, compatible with a full-time job if support is asynchronous",
+    "gross_margin_basis": "Commerce ingestion and mass arithmetic are highly automatable; measuring dirty SKU catalogs and interpreting edge cases are onboarding costs",
+    "payback": "Customer payback hypothesis: replacing 20-60 hours of annual spreadsheet work and reducing unreliable-record risk can justify 4,000-12,000 PLN annually; validate by timed close studies",
+    "pricing": "Unvalidated hypothesis: 2,000-8,000 PLN onboarding and 250-900 PLN per month, with accountant multi-entity plans and paid annual close",
+    "retention_or_repeat": "Orders and packaging versions continuously update the annual ledger; historical evidence must be preserved and each annual close repeats"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Versioned packaging specifications and exception benchmarks by product/packaging archetype make later SKU onboarding and anomaly detection cheaper",
+    "customer": "Polish DTC brands, marketplace sellers, importers, and small manufacturers placing products in packaging on the Polish market",
+    "distribution_mechanism": "Accounting firms, packaging suppliers, fulfilment centers, Shopify/WooCommerce/Allegro implementers, and recovery organisations",
+    "offer_and_business_model": "SKU packaging master, scale/photo evidence capture, order ingestion, mass calculations, audit trail, anomaly alerts, and BDO-ready exports; hypothesis 2,000-8,000 PLN setup plus 250-900 PLN monthly",
+    "payer_and_paid_event": "Owner, finance lead, or accountant pays annual SaaS per legal entity/SKU/order tier, with paid setup for packaging baselining",
+    "problem_trigger": "BDO registration, annual report close, new SKU or packaging version, marketplace expansion, or an accountant asking for packaging masses"
+  },
+  "founder_fit": [
+    "Polish-specific, quantitative, automatable workflow fits founder skills and geography",
+    "Low initial capital and accountant-led distribution allow part-time validation",
+    "No camera presence or high-energy consumer community is required",
+    "Can become a durable data product rather than a manual reporting bureau"
+  ],
+  "parent": null,
+  "risks": [
+    "Low willingness to pay among microbusinesses and high support burden can destroy unit economics",
+    "Accountants, recovery organisations, and BDO specialists may bundle the service cheaply",
+    "Incorrect category or mass mapping can produce statutory errors",
+    "Platform/API changes and future packaging rules may require continuous maintenance"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eli.gov.pl/api/acts/DU/2024/927/text.html",
+    "https://www.gov.pl/web/klimat/rejestr-bdo",
+    "https://rejestr-bdo.mos.gov.pl/productreportapi/swagger/index.html"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Embedded compliance subledger sold as low-touch SaaS through accountants and e-commerce operations partners",
+    "control_point": "The defensible packaging-type and mass record used as the legal basis for annual BDO reporting and fee/recovery calculations",
+    "critical_dependency": "Accurate versioned per-SKU packaging weights and transaction flows mapped to current Polish categories and client-authorized BDO outputs"
+  },
+  "thesis": "Planning-stage hypothesis: build a packaging-mass subledger for Polish e-commerce brands, importers, and small manufacturers that turns SKU packaging specifications and order flows into a versioned record of material masses placed on the market. It would flag missing weights, preserve the calculation basis, reconcile recovery documents, and produce BDO-ready annual outputs for client or authorised-accountant submission. The statutory evidence ledger, rather than the annual form, is the control point. Integrations with common storefronts, warehouses, and accounting systems can create a low-touch distribution wedge and a permissioned benchmark of packaging-data quality without sharing confidential sales volumes.",
+  "title": "Polish BDO Packaging-Mass Ledger",
+  "uncertainties": [
+    "Exact segment where packaging complexity and willingness to pay overlap",
+    "Availability and permitted use of BDO APIs for client-authorized workflows",
+    "Cost of obtaining trustworthy starting packaging weights",
+    "Whether a multi-entity accountant channel can keep acquisition and support costs low"
+  ],
+  "version": 1
+}

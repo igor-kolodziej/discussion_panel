@@ -1,0 +1,151 @@
+{
+  "candidate_id": "transition-01",
+  "claims": [
+    {
+      "claim_id": "transition-01-v2-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/zakres-obowiazkowego-ksef/"
+      ],
+      "statement": "Official guidance says KSeF receipt became mandatory on 1 February 2026, issuing became mandatory for most taxpayers on 1 April 2026, and taxpayers at or below PLN 10,000 monthly invoiced gross sales retain only a temporary issuing exception through 2026."
+    },
+    {
+      "claim_id": "transition-01-v2-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ksef.podatki.gov.pl/wyjasnienia/1-kwietnia-rusza-ii-etap-wdrozenia-krajowego-systemu-e-faktur/"
+      ],
+      "statement": "By 30 March 2026, the Ministry reported more than 345,000 issuing entities and 87 million invoices in the first two months, but also stated that no sanctions for KSeF usage errors would be imposed for 2026."
+    },
+    {
+      "claim_id": "transition-01-v2-c03",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ksef.podatki.gov.pl/aplikacja-podatnika-ksef-i-inne-narzedzia/"
+      ],
+      "statement": "The Ministry provides free taxpayer, mobile and e-microfirm tools for issuing, receiving, viewing and managing KSeF invoices and permissions, so compliance transmission alone has a zero-price substitute."
+    },
+    {
+      "claim_id": "transition-01-v2-c04",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ksef.podatki.gov.pl/wyjasnienia/ministerstwo-finansow-udostepnilo-w-e-us-modul-zgloszen-faktur-z-zalacznikiem-dla-ksef-20/"
+      ],
+      "statement": "KSeF invoice attachments are structured XML and explicitly cannot be used to send contracts, acceptance protocols or unstructured files, preserving a need for an upstream evidence repository."
+    },
+    {
+      "claim_id": "transition-01-v2-c05",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ksef.podatki.gov.pl/ksef-na-okres-obligatoryjny/wsparcie-dla-integratorow/",
+        "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/certyfikaty-ksef/"
+      ],
+      "statement": "The production KSeF API, OpenAPI contract, test environments and reference libraries are public, while production use requires real customer-granted rights; API access is obtainable but not proprietary."
+    },
+    {
+      "claim_id": "transition-01-v2-c06",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://serwis-pro.app/"
+      ],
+      "statement": "Serwis Pro markets to Polish HVAC, photovoltaic and electrical firms with technician photos, offline signed protocols, invoices, FA(3) KSeF submission and UPO in one workflow, directly overlapping the candidate."
+    },
+    {
+      "claim_id": "transition-01-v2-c07",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://majsta.pl/"
+      ],
+      "statement": "Majsta markets offers, signatures, milestone payments, acceptance protocols, photos and direct KSeF to Polish contractors at PLN 39 and PLN 89 per month, creating strong price and bundling pressure."
+    },
+    {
+      "claim_id": "transition-01-v2-c08",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://ksef.podatki.gov.pl/wyjasnienia/ministerstwo-finansow-udostepnilo-w-e-us-modul-zgloszen-faktur-z-zalacznikiem-dla-ksef-20/",
+        "https://serwis-pro.app/",
+        "https://majsta.pl/"
+      ],
+      "statement": "The candidate has a distinct paid control point only if contract-specific evidence rules block or release invoicing in ways observed end-to-end incumbents do not; willingness to pay for that distinction is untested."
+    },
+    {
+      "claim_id": "transition-01-v2-c09",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://stat.gov.pl/files/gfx/portalinformacyjny/en/defaultaktualnosci/3317/29/1/1/active_enterprises_in_the_fourth_quarter_of_2024.pdf"
+      ],
+      "statement": "Statistics Poland reports that construction represents 15.2% of 2.79 million active enterprises, but this broad denominator does not identify relevant installation trades, worker counts, contract structures or software spend."
+    }
+  ],
+  "contrary_evidence": [
+    "Free Ministry tools perform KSeF issuance, receipt and permission management.",
+    "No monetary sanctions are imposed for KSeF usage errors in 2026, reducing penalty-led urgency.",
+    "Serwis Pro already combines field photos, offline signed protocols, job data and KSeF for the exact audience.",
+    "Majsta offers the broader offer-to-protocol-to-KSeF flow at PLN 39-89 per month.",
+    "Public API documentation and reference libraries make basic integration reproducible."
+  ],
+  "economics": {
+    "acquisition_route": "Use the parents' installer to document ten recurring closeout cases, then run paid pilots through two bookkeeping offices and one wholesaler only if they accept a written referral process. No evidence supports partner conversion, white-label demand or paid CAC.",
+    "capital_required_pln": 55000,
+    "founder_net_worth_path": "At a blended 1,800 PLN recurring annual revenue, about 4,700 customers produce 8.46m PLN ARR. At a 25% normalized earnings margin, 80% founder ownership and a 3x earnings value, founder equity is about 5.08m PLN before liabilities and without counting retained earnings twice. This implies an 8-10 year channel-led path and roughly 1.1% of the broad Polish construction-enterprise count inferred from official statistics, but the relevant installation subset, attainable share and margin are unknown.",
+    "founder_time": "Reserve up to 3 hours per day for product and data work and 1 hour for a bounded pilot-support window. Keep KSeF submission approval with the contractor or accountant, document support limits, and delegate onboarding before expanding beyond five live firms.",
+    "gross_margin_basis": "Model 55-70% gross margin during pilots because mapping contract milestones, permissions and exceptions requires setup and support; 75-85% is possible only after a trade template repeatedly onboards without founder work. No measured support load exists.",
+    "payback": "Onboarding should cover setup and any channel commission; recurring CAC payback target is six months. Actual acquisition cycle, commission and churn are unknown.",
+    "pricing": "Test 750-2,000 PLN onboarding and 99-249 PLN per month, with usage only for successfully released documents. The discovery range of 149-499 PLN per month is not validated and faces an observed contractor product offering signature, acceptance protocol and direct KSeF at 39-89 PLN per month.",
+    "retention_or_repeat": "Jobs and invoices recur, but basic KSeF transmission is free and heavily bundled. Retention depends on contract-specific evidence gating, exception history and measurable reduction in invoice delay or dispute, none yet measured."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A proprietary corpus linking specific contract milestones, signed field evidence, VAT treatments and returned KSeF exceptions to reusable closeout rules could compound; generic trade templates and AI-written reports do not, because current competitors already reproduce the broader workflow.",
+    "customer": "Polish renewable-energy, HVAC and electrical contractors with two to twenty field workers whose contracts require milestone or acceptance evidence before invoicing.",
+    "distribution_mechanism": "Pilot in the founder's parents' renewable installer, then test template-led resale through bookkeeping offices, trade wholesalers and field-service software vendors; these channels are hypotheses without signed distribution.",
+    "offer_and_business_model": "Vertical workflow SaaS that captures acceptance protocols, photos and milestone evidence outside KSeF, validates contract and invoice fields, records human approval, hands an FA(3)-ready payload to an authorised KSeF or accounting connector, and monitors identifiers and offline exceptions; paid onboarding plus subscription and optional usage.",
+    "payer_and_paid_event": "The contractor or bookkeeping office pays onboarding when a contract-specific evidence template and KSeF permissions are configured, then pays a recurring fee when accepted job closeouts pass the invoice-release gate.",
+    "problem_trigger": "Mandatory KSeF receipt began on 1 February 2026 and issuing began for most taxpayers on 1 April 2026, while field-service firms still need to turn scattered site evidence into an approved invoice release; the smallest temporary exemption ends after 2026."
+  },
+  "founder_fit": [
+    "The parents' installer provides a low-cost design environment for mapping real closeout exceptions without cold outreach.",
+    "Schema validation, exception classification and workflow automation fit the founder's technical background.",
+    "A narrow pilot can be built in bounded daily blocks, with the customer retaining KSeF authority and final submission approval.",
+    "The risk is distribution and support scale: thousands of low-ARPA contractors and bookkeeping partners would be needed for the founder-wealth path."
+  ],
+  "parent": {
+    "candidate_id": "transition-01",
+    "version": 1
+  },
+  "risks": [
+    "The candidate may be a feature already bundled by vertical field-service software.",
+    "Low incumbent prices could force a customer count incompatible with founder-led distribution.",
+    "KSeF certificates, tokens and permissions create security and accountability obligations.",
+    "Trade-specific onboarding may turn the product into customization services.",
+    "A Poland-only tax handoff concentrates platform and regulatory-change risk."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/zakres-obowiazkowego-ksef/",
+    "https://ksef.podatki.gov.pl/wyjasnienia/1-kwietnia-rusza-ii-etap-wdrozenia-krajowego-systemu-e-faktur/",
+    "https://ksef.podatki.gov.pl/aplikacja-podatnika-ksef-i-inne-narzedzia/",
+    "https://ksef.podatki.gov.pl/wyjasnienia/ministerstwo-finansow-udostepnilo-w-e-us-modul-zgloszen-faktur-z-zalacznikiem-dla-ksef-20/",
+    "https://ksef.podatki.gov.pl/ksef-na-okres-obligatoryjny/wsparcie-dla-integratorow/",
+    "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/certyfikaty-ksef/",
+    "https://serwis-pro.app/",
+    "https://majsta.pl/",
+    "https://stat.gov.pl/files/gfx/portalinformacyjny/en/defaultaktualnosci/3317/29/1/1/active_enterprises_in_the_fourth_quarter_of_2024.pdf"
+  ],
+  "stage": "research",
+  "structure": {
+    "commercial_archetype": "Vertical field-workflow SaaS with transaction-metered compliance handoff",
+    "control_point": "The contract-configured, human-approved signed-job-to-KSeF release gate where operational evidence becomes an invoice payload",
+    "critical_dependency": "Evidence that signed milestone documents actually govern invoice release, plus stable KSeF API behavior and customer-granted permissions for an authorised accounting or invoicing connector"
+  },
+  "thesis": "Build a narrow, contract-configured release gate that turns signed field evidence, site photos, milestones and VAT metadata into an approved invoice payload for an authorised KSeF connector. The upstream evidence repository is separate because KSeF attachments cannot carry acceptance protocols or unstructured files. However, KSeF submission is open, documented and served by free Ministry tools, while current Polish field-service products already join photos, signatures, protocols and KSeF at prices as low as PLN 39-89 per month. The candidate remains distinct only if a pilot proves that trade-specific milestone evidence and exception rules prevent delayed or disputed invoice release better than these incumbents.",
+  "title": "KSeF Field-Service Closeout Ledger for Polish Installation Crews",
+  "uncertainties": [
+    "The frequency and cost of invoice delays caused specifically by missing signed field evidence are unknown.",
+    "Whether contract-specific evidence gating materially beats current Serwis Pro or Majsta workflows is unknown.",
+    "The parents' company has not produced paid willingness-to-pay evidence or representative exception frequencies.",
+    "Bookkeeping offices, wholesalers and field-service vendors have not committed to distribution.",
+    "Support load, churn and gross margin at low SMB pricing are unknown.",
+    "The relevant addressable subset behind the broad construction denominator is unknown."
+  ],
+  "version": 2
+}

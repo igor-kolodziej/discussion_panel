@@ -1,0 +1,70 @@
+{
+  "candidate_id": "asset-10",
+  "claims": [
+    {
+      "claim_id": "asset-10-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2017/745/2020-04-24"
+      ],
+      "statement": "The EU Medical Device Regulation requires each manufacturer to plan, document, maintain, and update a post-market surveillance system for each device."
+    },
+    {
+      "claim_id": "asset-10-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://health.ec.europa.eu/latest-updates/mdcg-2025-10-guidance-post-market-surveillance-medical-devices-and-vitro-diagnostic-medical-devices-2025-12-19_en"
+      ],
+      "statement": "The Medical Device Coordination Group published dedicated post-market surveillance guidance in December 2025."
+    }
+  ],
+  "contrary_evidence": [
+    "Manufacturers may refuse pooled benchmarking because complaint data are commercially and legally sensitive.",
+    "Established quality-management platforms already cover complaint workflows."
+  ],
+  "economics": {
+    "acquisition_route": "Unvalidated hypothesis: partner with notified-body advisers, PRRC consultants, and small device accelerators.",
+    "capital_required_pln": 30000,
+    "founder_net_worth_path": "Unvalidated hypothesis: 400 device families and a defensible failure benchmark could support a 5 million PLN founder net-worth path in eight to eleven years.",
+    "founder_time": "Unvalidated hypothesis: a regulatory partner reviews outputs while founder work remains below 20 hours weekly.",
+    "gross_margin_basis": "Unvalidated hypothesis: automated normalization could reach 65% gross margin, and every commercial number including capital_required_pln is hypothetical.",
+    "payback": "Unvalidated hypothesis: acquisition pays back with the first annual device-family contract.",
+    "pricing": "Unvalidated hypothesis: charge 18,000 PLN per device family yearly plus 6,000 PLN per safety report.",
+    "retention_or_repeat": "Unvalidated hypothesis: continuous surveillance and periodic reporting create multi-year retention."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A permissioned cross-manufacturer failure taxonomy improves signal detection and benchmark value",
+    "customer": "Small EU connected-medical-device manufacturers",
+    "distribution_mechanism": "Regulatory-consultant and notified-body-adviser referrals",
+    "offer_and_business_model": "Managed surveillance intake, trend detection, report drafting, and anonymized peer benchmarks",
+    "payer_and_paid_event": "The manufacturer pays annually per device family and when a formal report is produced",
+    "problem_trigger": "A manufacturer must continuously analyze complaints and update post-market evidence"
+  },
+  "founder_fit": [
+    "Health interest and statistical signal detection are strong founder matches.",
+    "A qualified regulatory partner is essential because data science alone is insufficient."
+  ],
+  "parent": null,
+  "risks": [
+    "Missed safety signals could create severe liability and reputational harm.",
+    "Anonymization may be insufficient for rare devices or incidents."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2017/745/2020-04-24",
+    "https://health.ec.europa.eu/latest-updates/mdcg-2025-10-guidance-post-market-surveillance-medical-devices-and-vitro-diagnostic-medical-devices-2025-12-19_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Shared regulatory-surveillance cooperative",
+    "control_point": "Complaint intake and normalized evidence feeding each periodic safety report",
+    "critical_dependency": "Manufacturer data-sharing contracts and quality-system integration"
+  },
+  "thesis": "Pool permissioned complaint and device-performance records so small manufacturers can produce better surveillance reports and benchmarks.",
+  "title": "Medical-Device Post-Market Evidence Cooperative",
+  "uncertainties": [
+    "The cooperative's lawful data model and benchmark usefulness are unvalidated.",
+    "All commercial numbers including capital_required_pln are unvalidated hypotheses."
+  ],
+  "version": 1
+}

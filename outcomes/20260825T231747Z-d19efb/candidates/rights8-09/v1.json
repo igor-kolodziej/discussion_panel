@@ -1,0 +1,87 @@
+{
+  "candidate_id": "rights8-09",
+  "claims": [
+    {
+      "claim_id": "rights8-09-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.knf.gov.pl/dla_rynku/procesy_licencyjne/platniczy/AISP/Rejestracja_AISP"
+      ],
+      "statement": "Poland's KNF states that providing account-information services as an AISP is regulated activity requiring entry in its payment-services register, even though it does not require a full authorization decision."
+    },
+    {
+      "claim_id": "rights8-09-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.eba.europa.eu/single-rule-book-qa/qna/view/publicId/2018_4309",
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1786486126044&uri=CELEX%3A02015L2366-20250117"
+      ],
+      "statement": "EBA states that an AISP may access payment-account information only with the payment service user's explicit consent; PSD2 also limits access and storage to the explicitly requested account-information service."
+    },
+    {
+      "claim_id": "rights8-09-c3",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://finance.ec.europa.eu/consumer-finance-and-payments/payment-services/payment-services_en"
+      ],
+      "statement": "Hypothesis: a voluntary, non-adverse-use safety feature has enterprise willingness to pay and improves user control; demand and outcomes are unvalidated."
+    }
+  ],
+  "contrary_evidence": [
+    "PSD2 limits an AISP to data from designated accounts and associated transactions and forbids using, accessing or storing data beyond the service explicitly requested by the user.",
+    "A legal consent flow does not by itself make behavioral profiling safe, accurate or acceptable to a bank's risk and compliance teams."
+  ],
+  "economics": {
+    "acquisition_route": "Build a synthetic-data demo, obtain privacy and payments counsel, then seek one paid discovery or pilot through a financial-wellbeing or support provider; do not ingest live bank data before a compliant partner contract.",
+    "capital_required_pln": 70000,
+    "founder_net_worth_path": "Unvalidated path: 150,000 opted-in monthly active users at PLN 4 monthly B2B revenue would yield PLN 7.2m annual recurring revenue; at 30% operating profit and a 4x value, a 70% founder stake would be about PLN 6m. A 5-8 year route requires trusted distribution, demonstrated benefit and exceptionally low privacy incident rates.",
+    "founder_time": "12-18 hours per week for model design, compliance and one enterprise integration; clinical claims and crisis response are excluded unless qualified partners own them.",
+    "gross_margin_basis": "Unvalidated estimate: 65-80% after AISP/API, security, customer support and compliance costs; classification-review and enterprise integration are the main variable costs.",
+    "payback": "Unvalidated target: 12-24 months after one enterprise minimum or roughly 15,000-30,000 paid active users.",
+    "pricing": "Unvalidated hypothesis: PLN 15,000-50,000 monthly platform minimum per large distributor or PLN 2-6 per opted-in monthly active user, with a free user experience where possible.",
+    "retention_or_repeat": "Institutional contracts can recur annually and users may monitor continuously, but consent withdrawal and remission should be expected and made easy."
+  },
+  "fingerprint": {
+    "compounding_advantage": "distribution integrations, consent UX and user-corrected merchant labels improve coverage while raw account data remains purpose-limited and non-transferable",
+    "customer": "financial-wellbeing apps, banks, employee-assistance programs and debt-support organizations serving adults who voluntarily seek gambling-spend visibility",
+    "distribution_mechanism": "embed through regulated fintech and support organizations rather than acquire vulnerable consumers with paid social ads; start with synthetic data and a compliance-reviewed prototype",
+    "offer_and_business_model": "consent interface, account-feed connection through a regulated provider, merchant and pattern classification, user-set alerts, guardrail tracking and support export sold as B2B software",
+    "payer_and_paid_event": "the institutional distributor pays a platform minimum and per-consenting-active-user fee; no fee is earned from gambling operators or from adverse decisions about the user",
+    "problem_trigger": "a user notices loss of control, a support journey begins, or a financial-wellbeing provider needs a private opt-in monitoring feature"
+  },
+  "founder_fit": [
+    "Combines data science, finance and first-hand understanding of betting behavior without requiring public disclosure or an influencer persona.",
+    "Can begin with synthetic data and a narrow B2B prototype before any sensitive processing.",
+    "API economics and partner distribution fit part-time, high-leverage work.",
+    "The mission aligns with proactive monitoring and quantified-self interests when designed as voluntary user control."
+  ],
+  "parent": null,
+  "risks": [
+    "Transaction patterns can reveal highly sensitive behavior and create severe privacy, stigma and security harm.",
+    "AISP activity is regulated and data use is limited to the explicitly requested service.",
+    "False positives and simplistic risk scores may distress users or damage trust.",
+    "Banks and established open-banking vendors can build similar classification features."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.knf.gov.pl/dla_rynku/procesy_licencyjne/platniczy/AISP/Rejestracja_AISP",
+    "https://www.eba.europa.eu/single-rule-book-qa/qna/view/publicId/2018_4309",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1786486126044&uri=CELEX%3A02015L2366-20250117",
+    "https://finance.ec.europa.eu/consumer-finance-and-payments/payment-services/payment-services_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "embedded consumer-safety analytics API",
+    "control_point": "long-term white-label distribution integrations and a purpose-limited, user-authorized transaction classification and feedback taxonomy",
+    "critical_dependency": "a compliant AISP route, explicit informed consent, accurate merchant classification and evidence that users and institutional buyers value the voluntary intervention"
+  },
+  "thesis": "Offer banks, fintech wellbeing tools, employee-assistance providers and debt-support services a white-label feature that lets an adult explicitly opt in to classify gambling-related account transactions, set personal guardrails, receive private alerts and export a self-chosen support summary. Obtain account data only through a registered AISP partner or later registration, use it solely for the requested service, and prohibit underwriting, employment, insurance, gambling marketing or adverse eligibility decisions. The controllable asset is embedded distribution and a consented classification workflow, not the underlying bank data.",
+  "title": "Opt-In Betting-Spend Safety API",
+  "uncertainties": [
+    "Will financial institutions pay for an opt-in wellbeing feature that cannot be used in underwriting?",
+    "Can gambling spend be classified accurately across transfers, cash withdrawals and ambiguous merchants?",
+    "Which outcome can be measured ethically without making a medical-treatment claim?",
+    "Can a partner AISP contract support the exact processing and data-retention design?"
+  ],
+  "version": 1
+}

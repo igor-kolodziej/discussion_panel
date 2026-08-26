@@ -1,0 +1,74 @@
+{
+  "candidate_id": "settle6-02",
+  "claims": [
+    {
+      "claim_id": "settle6-02-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/dir/2023/1791/oj/"
+      ],
+      "statement": "The EU Energy Efficiency Directive recognizes metered savings and requires performance contracts to address measurement, verification, financial implications and penalties."
+    },
+    {
+      "claim_id": "settle6-02-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://energy.ec.europa.eu/topics/energy-efficiency/financing/private-and-innovative-financing_en"
+      ],
+      "statement": "The European Commission describes energy performance contracting as financing repaid through achieved, contractually guaranteed savings and identifies measurement uncertainty as a market barrier."
+    }
+  ],
+  "contrary_evidence": [
+    "Weather, occupancy and production changes can make apparently objective savings materially contestable."
+  ],
+  "economics": {
+    "acquisition_route": "UNVALIDATED: embed with retrofit lenders, ESCO associations, property managers and regional installer groups, including the founder's family-business network as an initial learning channel.",
+    "capital_required_pln": 145000,
+    "founder_net_worth_path": "UNVALIDATED: validate 20 buildings by month 18, administer PLN 30m of contracted retrofit value by year 4, and reach founder equity plus retained cash above PLN 5m in years 6-7.",
+    "founder_time": "UNVALIDATED: 4 hours per day during methodology and first portfolio deployment, then exception-led oversight.",
+    "gross_margin_basis": "UNVALIDATED: mostly automated meter ingestion and calculation, with independent engineer review reserved for exceptions.",
+    "payback": "UNVALIDATED: partner integration repaid after 6 settled buildings or within 9 months.",
+    "pricing": "UNVALIDATED: setup fee per building plus a percentage of each verified performance payment; all commercial figures in this economics object, including capital_required_pln, are unvalidated.",
+    "retention_or_repeat": "UNVALIDATED: multi-year contracts settle repeatedly; verified baselines and dispute resolutions compound by building type and technology."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Accepted project outcomes improve normalized baselines, technology degradation curves and dispute precedents",
+    "customer": "Small ESCOs, retrofit financiers and multi-building landlords",
+    "distribution_mechanism": "Portfolio embedding through installers, lenders and property managers",
+    "offer_and_business_model": "Independent measurement, dispute record and performance-payment administration",
+    "payer_and_paid_event": "The ESCO, financier or owner pays when the verified settlement statement is accepted and the related transfer is released",
+    "problem_trigger": "A contractual measurement period ends and savings must be converted into a payment, clawback or guarantee adjustment"
+  },
+  "founder_fit": [
+    "Strong quantitative and renewable-energy fit",
+    "Family installer access can support non-commercial process learning",
+    "Portfolio software can run beside employment",
+    "No personal brand is required"
+  ],
+  "parent": null,
+  "risks": [
+    "Professional-liability exposure",
+    "Meter gaps and baseline manipulation",
+    "Long sales cycles in property finance",
+    "Installer conflict if settlements reduce payment"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/dir/2023/1791/oj/",
+    "https://energy.ec.europa.eu/topics/energy-efficiency/financing/private-and-innovative-financing_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Independent performance-contract settlement administrator",
+    "control_point": "The versioned baseline and signed measurement-and-verification statement used to release performance payments",
+    "critical_dependency": "Contract parties must accept the methodology and provide reliable meter, weather and occupancy inputs"
+  },
+  "thesis": "Provide an independent measurement-and-settlement layer for small ESCOs, heat-pump and solar installers, landlords and retrofit financiers. It freezes the baseline, normalizes weather and occupancy, issues a signed savings statement, and executes the contractual split or guarantee adjustment only after savings are verified. Distribution through installer and finance portfolios turns each partner into a one-to-many channel while resolved projects improve baseline and dispute models.",
+  "title": "Verified Retrofit Savings Split",
+  "uncertainties": [
+    "Willingness to appoint a small independent administrator",
+    "Cost of accredited review",
+    "Frequency and size of settlement disputes"
+  ],
+  "version": 1
+}

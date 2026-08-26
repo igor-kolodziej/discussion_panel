@@ -1,0 +1,84 @@
+{
+  "judge_id": "c5-dev-working-leverage-07",
+  "assumptions": [
+    "The opportunity is judged at the planning stage under competent execution, so absent pilots are treated as uncertainty rather than as proof of weak demand.",
+    "The initial customer is a specialist DORA outsourcer serving complex regulated groups, not small financial entities with limited provider inventories.",
+    "The engine remains assistive: proposed mappings and graph changes require human approval, and the incumbent register or GRC remains the system of record.",
+    "Each regulated client must authorize deployment and contract access; confidential client content is not reused across tenants without explicit rights.",
+    "The founder remains employed during validation and can use contractors or specialist regulatory review within the stated initial-capital range."
+  ],
+  "factors": [
+    {
+      "name": "Core insight",
+      "status": "scored",
+      "score": 7,
+      "rationale": "The concept isolates a credible gap between contract evidence and the relational, controlled DORA register rather than entering the crowded register-of-record category directly. Official templates, live reporting, and dry-run quality failures support the underlying reconciliation problem, although they do not establish how frequently it creates enough work to sustain a separate product."
+    },
+    {
+      "name": "Customer pain and willingness to pay",
+      "status": "scored",
+      "score": 6,
+      "rationale": "The compliance obligation is mandatory and operationally used by supervisors, so accuracy, provenance, and remediation matter. Published incumbent prices demonstrate some software budget, but there is no observed willingness to pay for this narrower engine, and inexpensive alternatives plus the limited number of failed checks for many dry-run participants constrain confidence in a large recurring pain budget."
+    },
+    {
+      "name": "Business model and economics",
+      "status": "scored",
+      "score": 6,
+      "rationale": "A base partner licence plus active-tenant fees could create attractive recurring revenue and operating leverage from one relationship, while the proposed pilot fits the founder's available capital. The model only becomes compelling if connectors and rule packs are substantially reusable and at least several tenants activate; bespoke integrations, assurance work, specialist QA, and support could instead produce service-like margins. Pricing, retention, payback, activation, and the year-six wealth scenario are all unvalidated."
+    },
+    {
+      "name": "Market and beachhead",
+      "status": "scored",
+      "score": 6,
+      "rationale": "DORA outsourcers serving complex financial groups form a coherent beachhead with denser provider graphs and more potential value than the smallest regulated entities. The segment is narrow enough for focused selling but could be economically meaningful through multi-client partners; however, no evidence quantifies the number of suitable outsourcers, their portfolio density, or obtainable spend."
+    },
+    {
+      "name": "Competitive position and domination potential",
+      "status": "scored",
+      "score": 5,
+      "rationale": "Embedding between tenant-held contracts and incumbent systems could make the engine useful without demanding a system-of-record replacement, and workflow integration may create a defensible niche within a partner. Yet existing vendors already provide validation, exports, auditability, and overlapping contract analysis, while partners and GRC vendors can build, bundle, or switch comparable functionality; no exclusive channel or control point is secured."
+    },
+    {
+      "name": "Expansion potential",
+      "status": "scored",
+      "score": 6,
+      "rationale": "A successful deployment can expand across additional client tenants, partners, languages, incumbent systems, and related third-party evidence workflows using the same reconciliation primitives. Expansion becomes materially easier only if integrations and non-confidential mappings transfer across tenants, which is presently unknown and limited by client-specific environments and reuse rights."
+    },
+    {
+      "name": "Defensibility and durability",
+      "status": "scored",
+      "score": 5,
+      "rationale": "Permissioned connectors, schema mappings, regression cases, and deep embedding in partner delivery could compound into switching costs and implementation know-how. Public regulatory rules are not proprietary, tenant segregation limits pooled learning, confidential corrections may be non-reusable, and incumbents can add provenance and reconciliation features, leaving durability moderate unless contractual reuse and workflow control are secured."
+    },
+    {
+      "name": "Strength of advantage",
+      "status": "scored",
+      "score": 6,
+      "rationale": "Client-tenant processing, human-approved diffs, evidence manifests, and compatibility with incumbent registers offer credible trust and adoption advantages over a replacement platform, while reducing central data custody. The magnitude of saved labour, prevented rework, accuracy improvement, deployment speed, and security-friction reduction has not been measured against incumbent products or manual delivery."
+    },
+    {
+      "name": "Timing and momentum",
+      "status": "scored",
+      "score": 6,
+      "rationale": "DORA is live, the register is broadly required, supervisory use has begun, and demonstrated data-quality difficulty creates timely demand for better controls. Conversely, the initial implementation rush may already have passed, many dry-run registers were close to passing, and the evidence does not show that ongoing change volume supports a durable high-value remediation layer."
+    },
+    {
+      "name": "Distribution",
+      "status": "scored",
+      "score": 5,
+      "rationale": "Selling through retained compliance outsourcers could turn a small number of relationships into multiple deployments and reduce founder-intensive direct sales. No partner has committed, every client may still require authorization, security review, and procurement, and partner concentration creates channel power and renewal risk; repeatable acquisition and activation are therefore plausible but unproven."
+    },
+    {
+      "name": "Execution and risks",
+      "status": "scored",
+      "score": 5,
+      "rationale": "The founder's data science and AI background fits document extraction, graph reconciliation, validation, and quality measurement, and one bounded pilot appears feasible within stated time and capital. Financial-sector assurance, regulatory QA, multilingual contract accuracy, connectors, incident support, and parallel tenant deployments require expertise and operational coverage that are difficult to sustain part-time without early delegation."
+    }
+  ],
+  "interaction_adjustment": -0.2,
+  "main_structural_strength": "The non-replacement, client-tenant architecture can attach to an outsourcer's existing trusted workflow, keep sensitive contracts inside each regulated client's environment, and turn one partner relationship into multiple recurring tenant deployments.",
+  "primary_score_limiter": "The model's distribution, margins, retention, and defensibility all depend on the same unproven condition: an outsourcer must obtain client authorization and repeat sufficiently standardized integrations across enough tenants to justify the licence and support burden.",
+  "strongest_disconfirming_evidence": "Transparent incumbents already offer inexpensive DORA validation and regulator-ready exports, one also overlaps contract-clause analysis, and the dry-run evidence shows many deficient registers failed only a small fraction of checks; this weakens the case for a large, durable, differentiated reconciliation budget.",
+  "evidence_needed_for_higher_score": "A paid pilot should include written partner and end-client authorization and measure baseline versus post-deployment remediation hours, extraction and reconciliation accuracy, human-review time, assurance and integration cost, and connector reuse; the strongest evidence would be the same partner activating at least four tenants and renewing at the proposed price with positive measured payback.",
+  "highest_value_structural_change": "Narrow the initial customer to outsourcers whose existing managed-service agreements and platform boundary already permit deployment for multiple clients, then sell a white-label embedded module with a minimum annual tenant commitment and explicit rights to reuse non-confidential mappings and regression tests. This would reduce repeated authorization friction, make partner economics more predictable, and strengthen the only plausible compounding asset."
+}

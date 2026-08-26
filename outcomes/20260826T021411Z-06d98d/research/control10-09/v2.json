@@ -1,0 +1,200 @@
+{
+  "candidate_id": "control10-09",
+  "candidate_sha256": "05892eba42c3bcf93f3cbf47e4b6ed58692ffcab0b73f0106bea8cc4e4f6791b",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "ppwr-r1",
+      "evidence_refs": [
+        "ppwr-s1",
+        "ppwr-s2"
+      ],
+      "statement": "PPWR generally applies from 12 August 2026 and covers all packaging placed on the EU market."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "ppwr-r2",
+      "evidence_refs": [
+        "ppwr-s2",
+        "ppwr-s4"
+      ],
+      "statement": "A manufacturer must perform or commission the conformity assessment, compile technical documentation, draw up the declaration, and retain it for five years for single-use packaging or ten years for reusable packaging."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "ppwr-r3",
+      "evidence_refs": [
+        "ppwr-s2",
+        "ppwr-s4"
+      ],
+      "statement": "A brand owner can be the manufacturer when packaging or a packaged product is made under its own name, while suppliers must provide the manufacturer with necessary packaging information and documentation."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "ppwr-r4",
+      "evidence_refs": [
+        "ppwr-s3",
+        "ppwr-s4"
+      ],
+      "statement": "Several labelling, recycled-content, minimisation, and design-for-recycling methods are delivered through later implementing or delegated acts, creating both continuing update work and present uncertainty."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "ppwr-r5",
+      "evidence_refs": [
+        "ppwr-s5",
+        "ppwr-s6"
+      ],
+      "statement": "A low-cost native competitor already offers per-SKU technical files, declarations, converter positioning, component graphs, AI assistance, and ERP/API connectivity at EUR 29-299 per month before enterprise pricing."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "ppwr-r6",
+      "evidence_refs": [
+        "ppwr-s7"
+      ],
+      "statement": "Recyda directly covers supplier data, component relationships, APIs, audit trails, portfolio status, technical documentation, and declarations."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "ppwr-r7",
+      "evidence_refs": [
+        "ppwr-s8",
+        "ppwr-s9"
+      ],
+      "statement": "Specright has added PPWR declarations to an existing specification-management platform, while VINQ combines supplier collection and expert-validated packaging files."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "ppwr-r8",
+      "evidence_refs": [
+        "ppwr-s2",
+        "ppwr-s7",
+        "ppwr-s8"
+      ],
+      "statement": "Converters will choose and pay for a shared evidence exchange that their brand customers adopt alongside existing PLM systems."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "ppwr-r9",
+      "evidence_refs": [
+        "ppwr-s5",
+        "ppwr-s7",
+        "ppwr-s8",
+        "ppwr-s9"
+      ],
+      "statement": "Many-to-many reuse of converter evidence creates a defensible network effect not available from incumbent supplier portals and APIs."
+    }
+  ],
+  "contrary_evidence": [
+    "PPWR Connect offers broad functionality at EUR 29-299 per month and already targets converters.",
+    "Recyda offers nearly the full proposed evidence graph, API, audit, and declaration workflow to enterprise customers.",
+    "Specright embeds PPWR into incumbent packaging specification management and already has supplier collection.",
+    "VINQ includes human expert validation, weakening a managed-service differentiator.",
+    "The brand or other legal manufacturer remains responsible for the declaration, limiting a converter's control point.",
+    "Later implementing acts delay or change parts of the detailed requirement set."
+  ],
+  "schema_version": 2,
+  "sources": [
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "European Commission Directorate-General for Environment",
+      "source_id": "ppwr-s1",
+      "source_type": "official_regulatory_overview",
+      "stance": "supporting",
+      "title": "Packaging waste",
+      "url": "https://environment.ec.europa.eu/topics/waste-and-recycling/packaging-waste_en"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2025-01-22",
+      "publisher": "EUR-Lex",
+      "source_id": "ppwr-s2",
+      "source_type": "primary_regulation",
+      "stance": "supporting",
+      "title": "Regulation (EU) 2025/40 on packaging and packaging waste",
+      "url": "https://eur-lex.europa.eu/eli/reg/2025/40/ojS"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "European Commission",
+      "source_id": "ppwr-s3",
+      "source_type": "official_implementation_timeline",
+      "stance": "context",
+      "title": "Packaging and Packaging Waste Regulation implementation",
+      "url": "https://green-forum.ec.europa.eu/packaging-and-packaging-waste-regulation-implementation_en"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2026-08-03",
+      "publisher": "European Commission Directorate-General for Environment",
+      "source_id": "ppwr-s4",
+      "source_type": "official_guidance",
+      "stance": "context",
+      "title": "FAQ on Packaging and Packaging Waste Regulation",
+      "url": "https://environment.ec.europa.eu/publications/faq-packaging-and-packaging-waste-regulation-ppwr_en"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "PPWR Connect / ColorLoop",
+      "source_id": "ppwr-s5",
+      "source_type": "direct_competitor_product",
+      "stance": "contradicting",
+      "title": "PPWR compliance software",
+      "url": "https://ppwrconnect.com/ppwr-software"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "PPWR Connect / ColorLoop",
+      "source_id": "ppwr-s6",
+      "source_type": "direct_competitor_pricing",
+      "stance": "contradicting",
+      "title": "PPWR Compliance pricing",
+      "url": "https://ppwrconnect.com/pricing"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "Recyda",
+      "source_id": "ppwr-s7",
+      "source_type": "direct_competitor_product",
+      "stance": "contradicting",
+      "title": "PPWR software",
+      "url": "https://www.recyda.com/solutions/packaging-and-packaging-waste-regulation-ppwr"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2026-07-22",
+      "publisher": "Specright",
+      "source_id": "ppwr-s8",
+      "source_type": "direct_competitor_product_release",
+      "stance": "contradicting",
+      "title": "Specright launches automated PPWR Declaration of Conformity reporting",
+      "url": "https://www.specright.com/press-releases/specright-ppwr-declaration-of-conformity-capability/"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "Précon Group",
+      "source_id": "ppwr-s9",
+      "source_type": "direct_competitor_product_service",
+      "stance": "contradicting",
+      "title": "VINQ PPWR compliance software",
+      "url": "https://www.precongroup.com/vinq/"
+    }
+  ],
+  "unknowns": [
+    "Converter versus brand budget ownership and procurement authority",
+    "Quantified duplicate-request pain and time saved per packaging family",
+    "Permission model for sharing source evidence across competing brand customers",
+    "Unserved integration or workflow gap after accounting for incumbent APIs and supplier portals",
+    "Customer willingness to pay above published self-serve alternatives",
+    "Part-time feasibility of enterprise integrations and cross-border sales",
+    "Employment-conflict constraints for the founder"
+  ]
+}

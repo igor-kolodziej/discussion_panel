@@ -1,0 +1,81 @@
+{
+  "candidate_id": "control-04",
+  "claims": [
+    {
+      "claim_id": "control-04-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/dir/2019/944/oj/eng"
+      ],
+      "statement": "EU electricity-market rules define independent aggregation and require Member States to allow demand response through aggregation and non-discriminatory participation in electricity markets."
+    },
+    {
+      "claim_id": "control-04-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.pse.pl/web/pse-eng/areas-of-activity/electricity-market/general-information",
+        "https://www.pse.pl/obszary-dzialalnosci/uslugi-przesylania-energii-elektrycznej-udzial-w-rynku-bilansujacym"
+      ],
+      "statement": "Poland operates a balancing-market segment administered by PSE to cover balance-adjusting actions and settlements, but technical qualification and balance responsibility remain material entry constraints."
+    },
+    {
+      "claim_id": "control-04-c03",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/dir/2019/944/oj/eng"
+      ],
+      "statement": "Hypothesis: fragmented SME loads can produce attractive net revenue after partner, telemetry, and customer shares once a portfolio reaches meaningful controllable capacity; a live shadow-dispatch pilot is essential before claiming economics."
+    }
+  ],
+  "contrary_evidence": [
+    "The same EU rules make aggregators financially responsible for imbalances or require them to delegate that responsibility, which can absorb margin.",
+    "A small flexible asset may not justify integration, metering, qualification, and support costs."
+  ],
+  "economics": {
+    "acquisition_route": "Family installer and commercial-energy partners identify eligible sites; savings simulations and shadow-dispatch reports convert owners",
+    "capital_required_pln": 95000,
+    "founder_net_worth_path": "Hypothesis: control of 20-40 MW across several hundred sites, with recurring monitoring and a defensible share of flexibility value, could yield several million PLN of annual gross profit and over 5m PLN founder equity in five to nine years",
+    "founder_time": "Up to 20 hours weekly during a narrow shadow pilot; live operations require partner SLAs and hired monitoring before scale",
+    "gross_margin_basis": "Software gross margin can be high, but partner fees, telemetry hardware, support, and imbalance exposure could reduce blended contribution to 35-65%",
+    "payback": "No-upfront revenue share should give customers immediate payback; platform hardware and CAC should recover within 12-18 months only after shadow-pilot proof",
+    "pricing": "Hypothesis: retain 15-25% of net flexibility revenue plus 200-600 PLN monthly for monitoring or bill optimisation where independently valuable",
+    "retention_or_repeat": "Two-to-five-year dispatch-right contracts can retain capacity, while response history improves renewal and cross-selling"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Exclusive controllable-capacity contracts plus asset-level response, availability, and settlement history",
+    "customer": "Polish SMEs with controllable batteries, EV chargers, HVAC, refrigeration, flexible process loads, or rooftop generation",
+    "distribution_mechanism": "Renewable installers, energy auditors, equipment distributors, and ESCOs embed enrolment at installation or retrofit",
+    "offer_and_business_model": "Portfolio monitoring, dispatch-right contracts, optimisation, and revenue sharing through a licensed route to market",
+    "payer_and_paid_event": "Market-access partner or energy buyer pays for delivered flexibility; customer and platform split verified revenue, with optional monitoring subscription",
+    "problem_trigger": "An owner has underused flexible equipment or faces volatile energy costs and is offered a no-upfront revenue-share programme"
+  },
+  "founder_fit": [
+    "High analytical and renewable-channel fit with asymmetric upside from contracted capacity rather than capital-intensive ownership. The founder can start with forecasting and shadow dispatch beside a full-time job, while licensed market access, controls engineering, and 24/7 operations stay with partners."
+  ],
+  "parent": null,
+  "risks": [
+    "Dispatch error could damage customer operations or equipment.",
+    "Market-rule, price, or partner changes could eliminate expected revenue.",
+    "Cybersecurity and remote-control obligations may exceed a part-time founder's safe operating capacity until a specialist team is hired."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/dir/2019/944/oj/eng",
+    "https://www.pse.pl/web/pse-eng/areas-of-activity/electricity-market/general-information",
+    "https://www.pse.pl/obszary-dzialalnosci/uslugi-przesylania-energii-elektrycznej-udzial-w-rynku-bilansujacym"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Asset-light flexibility aggregator and revenue-share network",
+    "control_point": "Contractual dispatch rights over a pooled portfolio and the proof of delivered response",
+    "critical_dependency": "A licensed route-to-market partner and unit economics that survive telemetry, settlement, and imbalance costs"
+  },
+  "thesis": "Aggregate the contractual right and telemetry needed to shift small commercial batteries, EV charging, heat pumps, refrigeration, and rooftop generation, then monetise the pooled flexibility through a licensed balancing or energy-market partner. Begin as monitoring and optimisation software; build defensibility through exclusive, time-bounded dispatch rights and verified response history rather than owning energy assets.",
+  "title": "SME Flex Rights Pool",
+  "uncertainties": [
+    "The current Polish route, minimum bid sizes, and partner terms for each asset class.",
+    "How much reliable flexibility target SMEs can provide without disrupting operations.",
+    "Customer willingness to grant dispatch rights and accept cyber-connected controls."
+  ],
+  "version": 1
+}

@@ -1,0 +1,133 @@
+{
+  "candidate_id": "leverage-10",
+  "claims": [
+    {
+      "claim_id": "leverage-10-r2-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2024/1157/oj"
+      ],
+      "statement": "Regulation (EU) 2024/1157 requires covered waste-shipment information and documents to be submitted and exchanged electronically, including through interoperable systems or software, from 21 May 2026."
+    },
+    {
+      "claim_id": "leverage-10-r2-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://green-forum.ec.europa.eu/green-business/digital-waste-shipment-system-diwass_en"
+      ],
+      "statement": "The Commission states that commercial software may be used in all access configurations, but a direct software connection requires the economic operator to be registered, represented by an authorized user, and to obtain connection details through the Commission helpdesk."
+    },
+    {
+      "claim_id": "leverage-10-r2-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://green-forum.ec.europa.eu/green-business/digital-waste-shipment-system-diwass_en"
+      ],
+      "statement": "The Commission offers a direct DIWASS GUI without Commission-side fees, and DIWASS neither generally verifies user-entered data correctness nor provides operator reporting functionality."
+    },
+    {
+      "claim_id": "leverage-10-r2-c4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A32025R1290"
+      ],
+      "statement": "The interoperability regulation assigns users ownership and responsibility for submitted or generated data and requires testing of interconnecting systems plus authentication of relevant documents."
+    },
+    {
+      "claim_id": "leverage-10-r2-c5",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/news/new-waste-shipment-regulation-and-diwass-platform-go-live-2026-05-21_en"
+      ],
+      "statement": "The Commission reports 26 million tonnes of PIC waste and 50 million tonnes of green-listed waste moved between Member States in 2024, while estimating total DIWASS administrative savings at only EUR 1.4 million per year."
+    },
+    {
+      "claim_id": "leverage-10-r2-c6",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://en.travas.eu/",
+        "https://service.axians-ewaste.com/fum/en/shop/details?artikelnummer=eTFSMandant+EN"
+      ],
+      "statement": "Live incumbent pricing is far below the discovery hypothesis: Travas posts EUR 495 per year plus EUR 100 per month for 240 shipments and EUR 3 per excess shipment, while Axians posts EUR 300 setup, EUR 450 annual license, and per-document charges of EUR 2 or less."
+    },
+    {
+      "claim_id": "leverage-10-r2-c7",
+      "confidence": "medium; product claim and vendor-published testimonial",
+      "evidence_refs": [
+        "https://www.zedal.com/en/start"
+      ],
+      "statement": "ZEDAL markets an existing DIWASS-interoperable cross-border shipment product and presents a customer testimonial claiming more than 310000 processed shipments since 2012, indicating mature incumbent workflow experience rather than a greenfield category."
+    }
+  ],
+  "contrary_evidence": [
+    "The Commission provides a direct GUI with no Commission-side fee, so legal compulsion creates a workflow but not compulsory demand for third-party software.",
+    "Travas and Axians publish much lower prices than the discovery economics, and ZEDAL has long operating history, integrations, and shipment experience.",
+    "The Commission estimates only EUR 1.4 million of total annual administrative savings from DIWASS, which sharply limits a value proposition based solely on clerical time savings.",
+    "Annex VII documents remain in a paper-oriented transition through 31 December 2026, delaying the highest-volume digital wedge.",
+    "Operators remain responsible for their data and classification; an adapter cannot lawfully substitute for required consent or authority decisions."
+  ],
+  "economics": {
+    "acquisition_route": "UNVALIDATED HYPOTHESIS — win 2 paid vendor pilots covering 20 operators in year 1, then 8 regional software partners covering 180 operators by year 3; partner willingness, sales cycles, and downstream activation are unknown.",
+    "capital_required_pln": 85000,
+    "founder_net_worth_path": "UNVALIDATED SCENARIO — year 1 reaches 2 paid partners and 20 operators; year 3 reaches 8 partners and 180 operators; year 6 reaches 600 operators at 6000 PLN blended annual revenue each, or 3.6 million PLN revenue. At an unvalidated 3x revenue value and 75% founder ownership, founder equity would be 8.1 million PLN. This excludes retained cash and distributions, does not double-count earnings, and fails if partner distribution or cross-country reuse is not proven.",
+    "founder_time": "UNVALIDATED HYPOTHESIS — 18 founder hours weekly through the first 2 production integrations and 9 hours weekly after partner support and a waste specialist absorb first-line exceptions; incident timing remains untested.",
+    "gross_margin_basis": "UNVALIDATED HYPOTHESIS — 72% blended gross margin after cloud, security monitoring, partner revenue share, and specialist exception support; neither support incidence nor partner share has been observed.",
+    "payback": "UNVALIDATED HYPOTHESIS — a paid pilot must show payback inside 6 months from avoided duplicate entry, faster exception resolution, or reduced support load; no independent time study or avoided-delay value has been obtained.",
+    "pricing": "UNVALIDATED HYPOTHESIS — every commercial figure in this economics object, including capital_required_pln=85000, remains unvalidated: 6000 PLN partner onboarding, a 12000 PLN annual connector minimum, 250 PLN per downstream operator per month, and 2 PLN per routed movement. Public incumbent prices show that a generic portal cannot justify this level without embedded integration and support value.",
+    "retention_or_repeat": "UNVALIDATED HYPOTHESIS — 85% annual partner retention once the connector is embedded; mandatory recurring workflows support repeat use, but low-cost alternatives and in-house builds make retention uncertain."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A permissioned library of ERP mappings, API-version regression fixtures, jurisdiction-routing rules, and anonymized failure signatures that reduces implementation and exception cost for later partners",
+    "customer": "Central and Eastern European waste-ERP, weighbridge, and transport-software vendors serving cross-border waste operators, plus a limited direct tier of high-volume operators with legacy systems",
+    "distribution_mechanism": "Embed through regional waste, weighbridge, and TMS vendors after a bounded conformance pilot, with direct operator sales used only to prove integrations and exception handling",
+    "offer_and_business_model": "White-label DIWASS connector SDK, mapping templates, sandbox/conformance harness, idempotent document submission, event webhooks, acknowledgement ledger, exception queue, and audit export; classification and authority decisions remain outside the service",
+    "payer_and_paid_event": "A software vendor pays a connector minimum and downstream-operator fee; direct operators pay onboarding and recurring usage for live DIWASS-connected workflows",
+    "problem_trigger": "A notified movement or, after the 2026 transition, an Annex VII movement must be created and updated without re-keying data, losing multi-party status, or submitting against stale consent"
+  },
+  "founder_fit": [
+    "Strong technical fit: API integration, state machines, data quality, anomaly triage, and automated regression testing match the founder's data-science and AI-leverage strengths.",
+    "A white-label partner model can reduce camera exposure and repeated direct sales, but early waste-domain discovery and partner contracting still require focused B2B conversations.",
+    "Part-time execution is plausible only with a retained waste-shipment specialist and defined support escalation; regulation-critical incidents and specification changes could otherwise exceed the founder's available schedule.",
+    "The unvalidated 85000 PLN initial-capital hypothesis is within the founder's stated own-capital envelope, but it would concentrate most available capital and should follow paid pilot evidence."
+  ],
+  "parent": {
+    "candidate_id": "leverage-10",
+    "version": 1
+  },
+  "risks": [
+    "A low-price incumbent or the Commission GUI may satisfy most operators, leaving too few partners that need an embedded connector.",
+    "API and member-state routing changes can create recurring engineering and urgent support work.",
+    "Credential, authorization, tenant-isolation, document-authentication, and audit-log failures could expose sensitive shipment data or block submissions.",
+    "Misclassification or stale consent could interrupt a lawful shipment; the product must enforce human review boundaries and never represent authority approval.",
+    "Channel partners control customer access and could internalize the connector after learning the integration pattern.",
+    "The founder lacks waste-shipment domain credentials and needs a delegable specialist relationship before production use."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2024/1157/oj",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A32025R1290",
+    "https://green-forum.ec.europa.eu/green-business/digital-waste-shipment-system-diwass_en",
+    "https://environment.ec.europa.eu/news/new-waste-shipment-regulation-and-diwass-platform-go-live-2026-05-21_en",
+    "https://www.gov.pl/web/gios/punkt-informacyjny-diwass",
+    "https://en.travas.eu/",
+    "https://service.axians-ewaste.com/fum/en/shop/details?artikelnummer=eTFSMandant+EN",
+    "https://www.zedal.com/en/start"
+  ],
+  "stage": "research",
+  "structure": {
+    "commercial_archetype": "white-label regulatory connector licensed through vertical-software channels",
+    "control_point": "the maintained mapping, conformance test suite, and replayable acknowledgement ledger inside a partner's operational workflow",
+    "critical_dependency": "continued DIWASS API access through registered and authorized operators, changing Commission and local-system specifications, and partner willingness to embed rather than build or buy an incumbent"
+  },
+  "thesis": "The defensible wedge is not another DIWASS portal: the Commission offers a no-fee GUI and several vendors already sell low-cost portals. Instead, provide regional weighbridge, waste-ERP, and transport-software vendors with a white-label connector that maps their existing records into DIWASS, tests conformance, makes submissions idempotent, reconciles acknowledgements, and exposes an auditable exception queue. Economic operators retain registration, authorization, classification, and legal responsibility; the product sells integration reliability and workflow continuity rather than regulatory approval or legal advice.",
+  "title": "White-Label DIWASS Connector for Regional Waste-Software Vendors",
+  "uncertainties": [
+    "Number, frequency, and software stack of Polish and Central European cross-border waste operators by notification type.",
+    "Whether regional waste-software vendors will embed an external connector instead of using Commission APIs themselves or reselling an incumbent.",
+    "Actual DIWASS API onboarding time, conformance-test burden, rate limits, service levels, breaking-change cadence, and production incident history.",
+    "Observed duplicate-entry time, exception frequency, border-delay cost, and willingness to pay beyond the free GUI.",
+    "Whether permissioned exception data can be anonymized and reused across customers without breaching confidentiality, data ownership, or contractual restrictions.",
+    "Support load and liability allocation when a mapping error contributes to an unlawful or delayed shipment."
+  ],
+  "version": 2
+}

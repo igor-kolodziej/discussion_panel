@@ -1,0 +1,73 @@
+{
+  "candidate_id": "route-07",
+  "claims": [
+    {
+      "claim_id": "route-07-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.who.int/publications-detail-redirect/9789241548274"
+      ],
+      "statement": "WHO's laboratory quality-management handbook is based on ISO 15189 and covers essential quality-management topics across clinical and public-health laboratory processes."
+    },
+    {
+      "claim_id": "route-07-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.who.int/tools/quality-management-system-for-non-laboratory-settings"
+      ],
+      "statement": "WHO quality-system guidance explicitly includes internal and third-party quality control, external quality assessment, continuous improvement, and regular review and analysis of testing data."
+    }
+  ],
+  "contrary_evidence": [
+    "Modern analyzers and laboratory information systems already include QC charts and rule alerts.",
+    "A reagent vendor may resist exposing cross-site lot problems that could increase claims."
+  ],
+  "economics": {
+    "acquisition_route": "Begin with CSV exports from 3-5 consenting labs recruited by one regional IVD distributor, then prove earlier root-cause isolation.",
+    "capital_required_pln": 65000,
+    "founder_net_worth_path": "Hypothesis: 2500 analyzers at 300 PLN monthly net revenue yield 9m PLN ARR; at 32% EBITDA, 4x EBITDA, and 60% founder ownership, equity is about 6.9m PLN in year 6-9. Retained cash is not added again.",
+    "founder_time": "Hypothesis: 12-18 hours weekly, with a laboratory quality specialist contracted for validation and alert policy.",
+    "gross_margin_basis": "Hypothesis: 75-85% after ingestion, alert review, and support once a connector is reused across sites.",
+    "payback": "Hypothesis: 15000-35000 PLN onboarding cost per distributor recovered within 6-10 months at 20 connected analyzers.",
+    "pricing": "Hypothesis: 250-600 PLN per connected analyzer monthly, with a distributor portfolio minimum and paid connector setup.",
+    "retention_or_repeat": "Analyzer and reagent contracts are multi-year; every new QC run and reagent lot is a repeat event."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Cross-laboratory, confirmed reagent-lot and instrument-behavior benchmarks improve detection beyond any single site",
+    "customer": "Clinical laboratories using analyzers and reagent lots supplied by an IVD distributor",
+    "distribution_mechanism": "IVD distributors bundle the service into reagent, analyzer, and support contracts with recurring lab buyers",
+    "offer_and_business_model": "Cross-site QC drift detection, lot benchmarking, and investigation packets sold as portfolio-quality SaaS",
+    "payer_and_paid_event": "Distributor or vendor pays a recurring fee per connected analyzer or laboratory site",
+    "problem_trigger": "Quality-control values shift, a lot performs inconsistently, or support must distinguish instrument, reagent, and process causes"
+  },
+  "founder_fit": [
+    "Statistical process control and anomaly detection closely match the founder's training.",
+    "The model sells through a small number of reagent distributors rather than many laboratories.",
+    "A software-only pilot can stay within capital and part-time limits if it begins with file exports."
+  ],
+  "parent": null,
+  "risks": [
+    "Missed or false drift alerts can affect laboratory decisions.",
+    "The product may fall under IVDR depending on intended purpose and claims.",
+    "Instrument vendors may block data access or bundle a competing feature."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.who.int/publications-detail-redirect/9789241548274",
+    "https://www.who.int/tools/quality-management-system-for-non-laboratory-settings"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "distributor-bundled cross-customer quality intelligence",
+    "control_point": "Network benchmark for reagent-lot and analyzer QC behavior",
+    "critical_dependency": "Permissioned QC data from enough labs using a common reagent or analyzer family"
+  },
+  "thesis": "Let IVD reagent distributors bundle a QC analytics layer with the instruments and reagents they repeatedly sell to small and mid-sized laboratories. The service ingests de-identified control measurements, detects within-lab drift, compares a reagent lot across participating sites, and creates an investigation packet for the lab and distributor. The distributor reduces support ambiguity and protects reagent relationships; pooled confirmed issues become a difficult-to-recreate lot-performance asset.",
+  "title": "Reagent-Lot Drift Sentinel",
+  "uncertainties": [
+    "Can enough labs share de-identified QC data under their quality agreements?",
+    "Which analyzer export or middleware interface offers the cheapest initial integration?",
+    "Will distributors pay for fewer support cases or will labs need to be the payer?"
+  ],
+  "version": 1
+}

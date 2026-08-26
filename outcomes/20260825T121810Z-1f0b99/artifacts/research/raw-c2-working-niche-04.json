@@ -1,0 +1,84 @@
+{
+  "judge_id": "c2-working-niche-04",
+  "assumptions": [
+    "The first customers are owners, lessors, or independent O&M firms with portfolios of roughly 50 kW to 1 MW rooftop systems, not residential micro-installations.",
+    "Every case is screened for contractual rights, counterparty solvency, expected recovery, and evidentiary cost before field or contingent work begins.",
+    "A paid diagnostic is required up front, and any percentage-based recovery fee is used only after Polish legal review and precise contractual definition of the recovered value.",
+    "Weather-normalized telemetry is only triage evidence; component causation and recoverability require appropriate records and accredited field testing where necessary.",
+    "The family installation network can supply a few permissioned learning cases but is not assumed to prove market-wide distribution or representative claim yield."
+  ],
+  "factors": [
+    {
+      "name": "Core insight",
+      "status": "scored",
+      "score": 7,
+      "rationale": "Small commercial PV portfolios can fall between economical O&M coverage and complex manufacturer, installer, or insurer claim requirements. Separating low-cost monitoring from contract-screened evidence reconstruction and recovery is a sharper control point than another alerting dashboard."
+    },
+    {
+      "name": "Customer pain and willingness to pay",
+      "status": "scored",
+      "score": 6,
+      "rationale": "Delayed repair and unrecovered component or workmanship failures can create material generation loss, and warranty terms demonstrably impose an evidence-assembly burden. Willingness to pay 2,000-6,000 PLN plus field or recovery fees is not established, and low-cost Polish plans already include some warranty administration."
+    },
+    {
+      "name": "Business model and economics",
+      "status": "scored",
+      "score": 5,
+      "rationale": "Paid triage before contingent work is a sound way to protect cash conversion, and a defined recovery fee aligns value when claims succeed. Blended gross margin is constrained by bespoke records, accredited testing, legal coordination, long resolution cycles, and failed cases; the stated scale requires hundreds of diagnostics and recoveries whose yield, CAC, and duration are unknown."
+    },
+    {
+      "name": "Market and beachhead",
+      "status": "scored",
+      "score": 6,
+      "rationale": "Poland's 21,225 MW PV installed base supports a meaningful underlying asset pool, and 50 kW to 1 MW portfolios with weak or orphaned O&M are a reasonably bounded starting segment. The evidence does not isolate the number, ownership concentration, telemetry access, or recoverable-claim incidence of that beachhead."
+    },
+    {
+      "name": "Competitive position and domination potential",
+      "status": "scored",
+      "score": 5,
+      "rationale": "Contract screening, curtailment-aware analysis, and an evidence dossier differentiate the offer from simple monitoring. Existing Polish service firms already bundle monitoring and warranty handling cheaply, and O&M incumbents could add more disciplined claim administration if the niche proves profitable."
+    },
+    {
+      "name": "Expansion potential",
+      "status": "scored",
+      "score": 6,
+      "rationale": "A repeatable claim workflow could expand across component types, lessors, insurers, O&M partners, portfolio monitoring, and neighboring CEE markets. Much of the process and outcomes data is reusable, although differing contracts, vendors, and legal regimes limit frictionless expansion."
+    },
+    {
+      "name": "Defensibility and durability",
+      "status": "scored",
+      "score": 5,
+      "rationale": "A permissioned corpus linking telemetry, contract terms, evidence packages, counterparty responses, and realized recoveries could improve triage and reputation over time. Data access is fragmented, APIs are unstable, early cases are bespoke, and incumbents with customer access can copy the workflow before that corpus becomes substantial."
+    },
+    {
+      "name": "Strength of advantage",
+      "status": "scored",
+      "score": 5,
+      "rationale": "The combined contract, weather, curtailment, and technical dossier should be more decision-useful than an inverter alert or output comparison alone. No evidence yet shows higher claim acceptance, faster resolution, or net owner recovery than existing O&M or warranty-handling options, so the magnitude of advantage is uncertain."
+    },
+    {
+      "name": "Timing and momentum",
+      "status": "scored",
+      "score": 6,
+      "rationale": "A large installed Polish PV base is aging into service and warranty events, while fragmented small-system O&M creates a timely aggregation opportunity. Material curtailment and evolving technologies increase analytical need but also create non-recoverable false positives and evidentiary complexity."
+    },
+    {
+      "name": "Distribution",
+      "status": "scored",
+      "score": 6,
+      "rationale": "The family installation network offers unusually relevant access to initial cases, and electricians, lessors, wholesalers, insurers, and O&M firms are logical referral channels with existing asset relationships. No channel commitment, referral economics, portfolio conversion, or scalable acquisition cost has been demonstrated."
+    },
+    {
+      "name": "Execution and risks",
+      "status": "scored",
+      "score": 6,
+      "rationale": "The founder's time-series and automation skills plus family renewable-energy context fit desk triage well, and electrical, legal, and testing tasks can be delegated. Contract variation, missing historical records, unsafe field work, professional liability, API fragility, and long-tail negotiation can still turn the service into exhausting bespoke case management unless tightly standardized."
+    }
+  ],
+  "interaction_adjustment": 0.0,
+  "main_structural_strength": "The offer converts an observable technical anomaly into a contract-screened, decision-grade recovery process, and the founder has both the analytical fit and a credible family-network route to initial permissioned cases.",
+  "primary_score_limiter": "The core economic variable is unknown: what share of flagged anomalies have enforceable rights, solvent counterparties, provable causation, and recoveries large and fast enough to cover bespoke technical and legal work.",
+  "strongest_disconfirming_evidence": "Polish commercial contracts may limit or exclude statutory warranty liability, manufacturer terms can shift proof and testing costs to the owner, and documented curtailment plus ordinary performance factors can create low output without any recoverable defect.",
+  "evidence_needed_for_higher_score": "A permissioned retrospective and paid pilot set showing contract-screen pass rate, claim acceptance, median verified recovery, days to resolution, field and legal cost, and owner net benefit, followed by unrelated portfolio owners buying diagnostics and at least one referral channel sending repeat cases at sustainable fully loaded margin.",
+  "highest_value_structural_change": "Start with one repeatable claim archetype and a solvent counterparty class that has a standardized evidence protocol, sell batch contract-and-telemetry triage through lessors or O&M firms, and keep field testing and legal escalation on pre-priced partner scopes; use monitoring only as a lead generator."
+}

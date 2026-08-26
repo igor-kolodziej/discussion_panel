@@ -1,0 +1,147 @@
+{
+  "candidate_id": "channel-11",
+  "claims": [
+    {
+      "claim_id": "channel-11-claim-01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/988/oj/eng",
+        "https://eur-lex.europa.eu/eli/C/2025/6233/oj/eng"
+      ],
+      "statement": "The GPSR applies since 13 December 2024, requires an EU-established responsible person for covered products and requires specified manufacturer, responsible-person, product-identification, warning and safety information in distance-sale offers."
+    },
+    {
+      "claim_id": "channel-11-claim-02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://op.europa.eu/webpub/just/safety-gate-2025-report/en/"
+      ],
+      "statement": "Safety Gate validated 4,671 alerts and 5,794 follow-up actions in 2025, and its public alerts can be integrated into business and marketplace processes."
+    },
+    {
+      "claim_id": "channel-11-claim-03",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://webgate.ec.europa.eu/safety/consumers/consumers_safety_gate/menu/documents/New_disclaimer_EN.pdf"
+      ],
+      "statement": "The Commission permits reuse of published Safety Gate alerts when meaning is not distorted and the required attribution is preserved, so the core alert feed is usable but not proprietary."
+    },
+    {
+      "claim_id": "channel-11-claim-04",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.ebay.com/sellercenter/resources/general-product-safety-regulation",
+        "https://help.shopify.com/en/manual/international/gpsr",
+        "https://help.etsy.com/hc/en-us/articles/28211364687383-What-is-the-General-Product-Safety-Regulation-GPSR"
+      ],
+      "statement": "eBay, Shopify and Etsy already provide native listing fields or bulk workflows for GPSR manufacturer, economic-operator and safety information."
+    },
+    {
+      "claim_id": "channel-11-claim-05",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.ebay.com/sellercenter/resources/general-product-safety-regulation"
+      ],
+      "statement": "eBay states that listings missing required GPSR information may be hidden from or made unpurchasable by EU and Northern Ireland buyers, evidencing a concrete merchant trigger."
+    },
+    {
+      "claim_id": "channel-11-claim-06",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.channable.com/pricing",
+        "https://apps.shopify.com/eu-gpsr-compliance-suite-pro"
+      ],
+      "statement": "General feed management and GPSR record tools are publicly offered at low monthly prices, including Channable from EUR 59 per month for 5,000 items and a Shopify GPSR app up to USD 79.99 per month for unlimited products and API access."
+    },
+    {
+      "claim_id": "channel-11-claim-07",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://webgate.ec.europa.eu/safety-business-gateway/assets/public/Safety_Business_Gateway_Economic_Operator_user_manual.pdf"
+      ],
+      "statement": "Not every business-submitted Safety Gate field is published, including manufacturer-identification fields described in the official manual, which can make automated recall-to-SKU matching incomplete."
+    },
+    {
+      "claim_id": "channel-11-claim-08",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/C/2025/6233/oj/eng",
+        "https://www.ebay.com/sellercenter/resources/general-product-safety-regulation"
+      ],
+      "statement": "A software syndicator may prepare and transmit evidence under merchant authorization, but the responsible economic operator retains the underlying product-safety duties and a model should not represent unverified documents as legal certification."
+    }
+  ],
+  "contrary_evidence": [
+    "Major commerce platforms already expose native GPSR fields, and eBay supports individual and bulk updates.",
+    "Channable handles large multi-channel catalogs from EUR 59 per month and a GPSR Shopify app offers unlimited-product API access for USD 79.99 per month, pressuring per-SKU pricing.",
+    "Safety Gate alerts are public and reusable with attribution, so the raw alert corpus is not a data moat.",
+    "Some Safety Business Gateway fields are not published, making exact recall matching harder and increasing false-positive risk.",
+    "Etsy already directs sellers to responsible-person partners, and native marketplace or feed vendors can extend into document verification.",
+    "Low-SKU merchants can comply manually or exit EEA sales rather than buy another system."
+  ],
+  "economics": {
+    "acquisition_route": "UNVALIDATED HYPOTHESIS: eight feed-management, responsible-person or listing agencies each onboard 25 high-SKU merchants; no agency commitment, conversion rate or channel-conflict evidence exists.",
+    "capital_required_pln": 60000,
+    "founder_net_worth_path": "UNVALIDATED HYPOTHESIS: year-8 ARR of PLN 8 million, EBITDA of PLN 2.6 million and 76% founder ownership at four times EBITDA imply about PLN 7.9 million of founder equity before liabilities; customer count, margin, dilution and valuation multiple are unvalidated.",
+    "founder_time": "UNVALIDATED HYPOTHESIS: 12-18 founder hours weekly for one product category and two commerce channels, declining to 7-10 only after document review and incident operations are delegated.",
+    "gross_margin_basis": "UNVALIDATED HYPOTHESIS: 70%-84% mature gross margin after document verification, monitoring, translation, storage, feed APIs, human match review and liability support.",
+    "payback": "UNVALIDATED HYPOTHESIS: 8-14 month acquisition payback after agency revenue share; no merchant willingness, churn or onboarding-effort data exists.",
+    "pricing": "UNVALIDATED HYPOTHESIS: PLN 700 monthly minimum plus PLN 14 per active SKU annually and PLN 120 per verified incident workflow, with capital_required_pln=60000. Published Channable and Shopify-app prices are competitive anchors, not validation that merchants will pay this premium for verified cross-market evidence and recall handling.",
+    "retention_or_repeat": "UNVALIDATED HYPOTHESIS: 80%-89% annual merchant retention when multiple marketplaces and recurring safety monitoring are active; native marketplace features and low-cost apps may cause substantial churn."
+  },
+  "fingerprint": {
+    "compounding_advantage": "merchant-authorized product-identity graph of verified evidence provenance, listing rejections and human-confirmed recall matches rather than a proprietary claim over public alerts",
+    "customer": "responsible persons, importers and listing agencies managing thousands of non-food consumer SKUs across several EU commerce channels",
+    "distribution_mechanism": "responsible-person firms, listing agencies and feed-management implementers using merchant-granted channel credentials",
+    "offer_and_business_model": "verified evidence record, channel-field mapping, feed export and human-confirmed Safety Gate match-to-action workflow; no legal certification or automatic takedown",
+    "payer_and_paid_event": "responsible person, agency or high-SKU merchant pays a tenant minimum, active-SKU meter and verified incident fee",
+    "problem_trigger": "a high-volume catalog must publish or update GPSR fields across channels, or a Safety Gate alert may match an active SKU"
+  },
+  "founder_fit": [
+    "Strong fit with entity resolution, data pipelines, audit trails and automation, with no camera or public-persona requirement.",
+    "The work can start part-time with one category and two channels under the UNVALIDATED HYPOTHESIS that capital_required_pln=60000 covers legal review, connectors and a controlled pilot.",
+    "The founder lacks product-safety document expertise and agency distribution; a qualified reviewer and channel partner must be delegated rather than turning the founder into the responsible person or continuous incident operator."
+  ],
+  "parent": {
+    "candidate_id": "channel-11",
+    "version": 1
+  },
+  "risks": [
+    "A false match can suppress a lawful listing or miss a dangerous product.",
+    "Supplier documents can be forged, stale, incomplete or inconsistent across languages and channels.",
+    "Marketing the record as certified compliance could create liability beyond a software evidence role.",
+    "Marketplace APIs and fields can change or remain inaccessible without merchant-granted credentials.",
+    "Marketplaces, feed vendors and responsible-person firms can bundle the same workflow at lower marginal cost.",
+    "Incident volume may concentrate in categories that require specialist chemistry, toy or electrical-safety judgment."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2023/988/oj/eng",
+    "https://eur-lex.europa.eu/eli/C/2025/6233/oj/eng",
+    "https://op.europa.eu/webpub/just/safety-gate-2025-report/en/",
+    "https://webgate.ec.europa.eu/safety/consumers/consumers_safety_gate/menu/documents/New_disclaimer_EN.pdf",
+    "https://webgate.ec.europa.eu/safety-business-gateway/assets/public/Safety_Business_Gateway_Economic_Operator_user_manual.pdf",
+    "https://www.ebay.com/sellercenter/resources/general-product-safety-regulation",
+    "https://help.shopify.com/en/manual/international/gpsr",
+    "https://help.etsy.com/hc/en-us/articles/28211364687383-What-is-the-General-Product-Safety-Regulation-GPSR",
+    "https://www.channable.com/pricing",
+    "https://apps.shopify.com/eu-gpsr-compliance-suite-pro"
+  ],
+  "stage": "research",
+  "structure": {
+    "commercial_archetype": "multi-market product-safety evidence syndication and monitored incident workflow",
+    "control_point": "merchant-authorized catalog record immediately before channel publication and a human-confirmed incident action",
+    "critical_dependency": "verified manufacturer and responsible-person evidence plus durable merchant-authorized feed access and sufficiently identifying public alert data"
+  },
+  "thesis": "Serve responsible persons, importers and listing agencies with large multi-market catalogs, not low-SKU merchants. Maintain a provenance-bound record for each SKU, map required manufacturer, responsible-person, identification, warning and safety fields into merchant-authorized channel feeds, and monitor reusable public Safety Gate alerts. A suspected alert match is reviewed by a human and routed to the responsible economic operator before any takedown; the product never certifies safety or replaces the operator's legal duty. The only plausible moat is a growing graph of verified document provenance, channel rejection fixes and confirmed product matches, because marketplaces already provide native fields and low-cost feed and GPSR tools constrain pricing.",
+  "title": "GPSR Listing-Evidence Syndicator",
+  "uncertainties": [
+    "Signed willingness to pay from responsible persons, listing agencies or high-SKU importers",
+    "Which marketplace APIs expose every GPSR field and allow reliable bulk correction and incident action",
+    "Recall-match precision when public alerts omit or inconsistently format manufacturer, batch, barcode and model identifiers",
+    "Cost and liability of verifying overseas manufacturer documents and translations",
+    "Whether verified evidence and rejection outcomes may be reused across merchants without confidentiality conflicts",
+    "Actual active-SKU counts, incident frequency, onboarding effort, churn and agency economics"
+  ],
+  "version": 2
+}

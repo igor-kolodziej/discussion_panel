@@ -1,0 +1,79 @@
+{
+  "candidate_id": "niche-01",
+  "claims": [
+    {
+      "claim_id": "niche-01-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.ure.gov.pl/download/9/15446/Sprawozdanie2024.pdf"
+      ],
+      "statement": "URE's 2024 report records 5,980 renewable-source connection refusals across the five major distribution operators for applications filed in 2024 or earlier, with solar representing most recorded refusals; this is direct evidence that pre-application selection is a costly workflow rather than a theoretical inconvenience."
+    },
+    {
+      "claim_id": "niche-01-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://joint-research-centre.ec.europa.eu/photovoltaic-geographical-information-system-pvgis_en"
+      ],
+      "statement": "The European Commission's PVGIS already supplies location-specific solar-resource and production estimates, so a prototype can obtain a credible public generation baseline without buying satellite data."
+    },
+    {
+      "claim_id": "niche-01-c03",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://www.ure.gov.pl/download/9/15446/Sprawozdanie2024.pdf"
+      ],
+      "statement": "Hypothesis: an installer will pay 2,500 PLN for a preflight when one avoided low-probability engineering submission or a better-selected parcel is worth materially more; this willingness-to-pay has not been validated."
+    }
+  ],
+  "contrary_evidence": [
+    "Experienced developers already use grid engineers and informal DSO knowledge, so a score based mainly on public statistics would be too shallow.",
+    "Granular refusal and successful-connection outcomes may be unavailable or contractually restricted, preventing the proposed data moat."
+  ],
+  "economics": {
+    "acquisition_route": "Prove five cases inside the family business, then bundle trials through wholesalers and grid engineers who already reach installers",
+    "capital_required_pln": 45000,
+    "founder_net_worth_path": "Hypothesis: reach 20 paid teams and roughly 0.5M PLN ARR in year 1, 120 teams at a 35k PLN blended ARR in year 3, and about 2M PLN EBITDA by year 6. At 4x EBITDA and 65% founder ownership, business equity would be about 5.2M PLN; the path fails if outcome data never becomes granular.",
+    "founder_time": "12 to 18 hours weekly for a six-month MVP and dataset partnerships, within the five-hours-per-day ceiling",
+    "gross_margin_basis": "Expected 80% to 90% after automated public-data ingestion and bounded expert review; early bespoke engineering is excluded",
+    "payback": "Buyer hypothesis: one avoided weak application or one improved site choice repays several reports; founder CAC should repay within three reports from a referred account",
+    "pricing": "2,500 PLN per standard preflight; 24,000 to 60,000 PLN per year for team workflow and benchmarks",
+    "retention_or_repeat": "Every new parcel creates a repeat event, while DSO updates and portfolio benchmarking support annual renewal"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A consented parcel-by-DSO outcome graph linking document features, requested capacity, refusal reason, amendment, and eventual connection",
+    "customer": "Polish C&I PV and battery installers and small project developers pursuing 50 kW to 5 MW sites",
+    "distribution_mechanism": "Family-installer beachhead, electrical wholesalers, grid-engineering partners, and downloadable benchmark reports aimed at DSO territories",
+    "offer_and_business_model": "2,500 PLN decision report or 24,000 to 60,000 PLN annual team subscription",
+    "payer_and_paid_event": "The installer or developer pays when ordering a parcel preflight or renewing a pipeline intelligence seat",
+    "problem_trigger": "A parcel enters the development pipeline and the team must decide whether to fund grid-connection engineering and an application"
+  },
+  "founder_fit": [
+    "Strong fit with the founder's data-science skills, Polish location, low-social-energy product preference, and direct access to a seven-person renewable installer for workflow observation and early cases. A useful prototype can run part-time and without founder-led video marketing."
+  ],
+  "parent": null,
+  "risks": [
+    "Customers could treat a probabilistic score as engineering or legal assurance.",
+    "Outcome data may contain commercially sensitive parcel information and require strict access controls.",
+    "DSO process changes can make learned patterns stale."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://joint-research-centre.ec.europa.eu/photovoltaic-geographical-information-system-pvgis_en",
+    "https://www.ure.gov.pl/download/9/15446/Sprawozdanie2024.pdf"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Vertical data-intelligence subscription",
+    "control_point": "The go-or-no-go record created before grid-connection engineering spend",
+    "critical_dependency": "Lawful access to enough granular successful and refused application outcomes to produce lift beyond a checklist"
+  },
+  "thesis": "Build a paid parcel-and-DSO preflight for 50 kW to 5 MW solar and battery projects. It would combine public refusal statistics, voluntarily contributed application outcomes, document-completeness checks, and PV yield baselines to rank plausible connection paths before a developer buys a full engineering package. The initial beachhead is installers in ENEA, ENERGA, and PGE territories, seeded through the founder's family renewable-energy company; the score is explicitly a probability estimate, never a promise of connection.",
+  "title": "DSO Refusal Atlas for Polish C&I Solar and Storage",
+  "uncertainties": [
+    "Whether twenty installers will contribute outcome data in exchange for credits or benchmarks.",
+    "Whether a parcel-level model can outperform a simple DSO-territory checklist without confidential grid data.",
+    "The actual spend wasted per rejected application and the point at which developers authorize preflight spend."
+  ],
+  "version": 1
+}

@@ -1,0 +1,72 @@
+{
+  "candidate_id": "leverage-10",
+  "claims": [
+    {
+      "claim_id": "leverage-10-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/news/new-waste-shipment-regulation-and-diwass-platform-go-live-2026-05-21_en"
+      ],
+      "statement": "The revised Waste Shipment Regulation and DIWASS went live on 21 May 2026, replacing paper procedures with electronic exchange for covered movements, with a paper transition through 2026."
+    },
+    {
+      "claim_id": "leverage-10-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/news/commission-adopts-key-legal-act-digitalise-eu-waste-shipments-2025-07-02_en"
+      ],
+      "statement": "The Commission designed DIWASS as a central hub able to exchange documents with member-state systems and commercial business software."
+    }
+  ],
+  "contrary_evidence": [
+    "DIWASS itself offers direct access to operators without software.",
+    "Existing waste and TMS vendors are natural integration incumbents, and paper remains temporarily available in 2026."
+  ],
+  "economics": {
+    "acquisition_route": "UNVALIDATED HYPOTHESIS — 5 weighbridge/TMS partners activate 100 operators within 30 months.",
+    "capital_required_pln": 75000,
+    "founder_net_worth_path": "UNVALIDATED HYPOTHESIS — 220 operators at 30000 PLN annual average yields 6.6 million PLN revenue by year 5; a 3.5x value and 76% ownership implies 17.56 million PLN equity, excluding distributions.",
+    "founder_time": "UNVALIDATED HYPOTHESIS — 18 hours weekly until integrations stabilise and 7 with partner support.",
+    "gross_margin_basis": "UNVALIDATED HYPOTHESIS — 83% gross margin after API traffic and exception support.",
+    "payback": "UNVALIDATED HYPOTHESIS — under 4 months if 40 monthly shipments each save 20 minutes and one delayed load is avoided.",
+    "pricing": "UNVALIDATED HYPOTHESIS — all commercial numbers here, including capital_required_pln, are hypotheses: 9000 PLN integration, 900 PLN monthly, and 30 PLN per routed shipment.",
+    "retention_or_repeat": "UNVALIDATED HYPOTHESIS — 93% annual retention among active cross-border shippers because every movement repeats the workflow."
+  },
+  "fingerprint": {
+    "compounding_advantage": "a corridor-specific library of classification and state-transition exceptions across authorities and systems",
+    "customer": "cross-border waste brokers, carriers, recovery facilities, and high-frequency industrial waste shippers",
+    "distribution_mechanism": "weighbridge software, transport-management vendors, waste brokers, and facility networks",
+    "offer_and_business_model": "DIWASS adapter, document assembly, state machine, acknowledgement reconciliation, and exception queue",
+    "payer_and_paid_event": "the broker or shipper pays for integration, access, and each routed movement",
+    "problem_trigger": "a notified or green-listed waste movement needs digital parties, documents, consent status, and completion evidence"
+  },
+  "founder_fit": [
+    "Pure integration and state-machine work fits the founder's automation skills, is measurable per movement, and can scale through a few software channels."
+  ],
+  "parent": null,
+  "risks": [
+    "Misclassification or missed consent state can interrupt lawful shipment.",
+    "Cross-border document security is material.",
+    "The router must never bypass authority approval."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://environment.ec.europa.eu/news/new-waste-shipment-regulation-and-diwass-platform-go-live-2026-05-21_en",
+    "https://environment.ec.europa.eu/news/commission-adopts-key-legal-act-digitalise-eu-waste-shipments-2025-07-02_en",
+    "https://environment.ec.europa.eu/topics/waste-and-recycling/waste-shipments/implementation-waste-shipment-regulation_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "cross-border document-routing API",
+    "control_point": "the acknowledged digital movement record that releases and traces a cross-border waste shipment",
+    "critical_dependency": "DIWASS interoperability plus correct waste classification, party identity, consent, and facility data"
+  },
+  "thesis": "An API-first router can map weighbridge, carrier, consent, facility, and movement data into DIWASS, watch state changes, and reconcile acknowledgements back into logistics software. Waste brokers and weighbridge vendors reach many shippers; every movement is a paid, recurring transaction.",
+  "title": "DIWASS Document Router for Cross-Border Waste Operators",
+  "uncertainties": [
+    "Commercial API onboarding conditions.",
+    "Transaction volumes by Polish corridor.",
+    "Whether incumbents will partner or build directly."
+  ],
+  "version": 1
+}

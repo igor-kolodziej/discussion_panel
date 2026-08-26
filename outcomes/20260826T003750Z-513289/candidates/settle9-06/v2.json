@@ -1,0 +1,146 @@
+{
+  "candidate_id": "settle9-06",
+  "claims": [
+    {
+      "claim_id": "settle9-06-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eli.gov.pl/api/acts/DU/2019/1487/text.html"
+      ],
+      "statement": "In Poland, an electronic CMR that satisfies the Additional Protocol has the same evidentiary value and effect as a paper CMR, but it requires reliable authentication, integrity, authorized-party access and agreed issuance, delivery-confirmation and amendment procedures."
+    },
+    {
+      "claim_id": "settle9-06-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://transport.ec.europa.eu/transport-themes/logistics-and-multimodal-transport/efti-regulation_en",
+        "https://eur-lex.europa.eu/eli/reg/2020/1056/oj/eng"
+      ],
+      "statement": "From 9 July 2027 authorities must accept regulatory freight information supplied through certified eFTI platforms; operators remain free to use paper, while electronic submissions to authorities must use certified eFTI infrastructure."
+    },
+    {
+      "claim_id": "settle9-06-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20250709-1"
+      ],
+      "statement": "Polish-registered vehicles performed 368 billion tonne-kilometres in 2024, nearly 20% of EU road freight activity, confirming a large and recurrent underlying shipment base."
+    },
+    {
+      "claim_id": "settle9-06-c4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eclkontor.com/en/ecllogistics-termsandconditions/"
+      ],
+      "statement": "One Poland-focused forwarder's published terms start a default 45-day payment period only after the invoice and complete CMR/POD set are uploaded, permit payment withholding for damage questions and penalize late document delivery."
+    },
+    {
+      "claim_id": "settle9-06-c5",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.factris.com/en/support-faq/"
+      ],
+      "statement": "Factris says a transport invoice needs confirmed delivery such as a CMR receipt, funds can arrive within one working day after complete documentation and advances can reach 90% of invoice value."
+    },
+    {
+      "claim_id": "settle9-06-c6",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.dashdoc.com/en/ecmr",
+        "https://www.transporeon.com/en/platform/freight-audit-payment-hub/freight-audit/selfservice"
+      ],
+      "statement": "Dashdoc already connects eCMR, delivery evidence and invoicing, while Transporeon already validates freight invoices through payment-ready verification and manages disputes inside its transport platform."
+    },
+    {
+      "claim_id": "settle9-06-c7",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://www.dashdoc.com/fr/blog/tms-definition"
+      ],
+      "statement": "Dashdoc's 2026 market guide places transport SaaS around EUR 50-150 per user or EUR 30-80 per vehicle monthly plus setup, which is a budget anchor but not evidence that buyers will pay separately for a readiness sidecar."
+    },
+    {
+      "claim_id": "settle9-06-c8",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://single-market-economy.ec.europa.eu/smes/challenges-and-resilience/late-payment/eu-payment-observatory/observatory-analysis_en?prefLang=lt"
+      ],
+      "statement": "The EU Payment Observatory reported that more than half of companies experienced late-payment difficulties in 2024 and average B2B and government-to-business payment periods exceeded 60 days, but this does not isolate document defects as the cause."
+    }
+  ],
+  "contrary_evidence": [
+    "Dashdoc already joins eCMR, attachments, signatures and immediate invoicing, directly overlapping the proposed carrier-facing workflow.",
+    "Transporeon already provides platform-native freight audit, payment-ready verification and dispute management, giving a large incumbent a structural data and distribution advantage.",
+    "Factris already accepts a CMR receipt as underlying delivery proof; no public evidence shows a factor needs or will pay for a separate readiness score.",
+    "EU-wide late-payment evidence establishes cash-flow pain but not the share caused by missing or contradictory freight documents.",
+    "eFTI certification is required for electronic regulatory submissions to authorities, so any product presenting itself as an eFTI platform would face a materially larger compliance scope."
+  ],
+  "economics": {
+    "acquisition_route": "Begin with one permissioned factor or regional TMS pilot covering a narrow document set and one country pair; do not assume carrier-by-carrier acquisition or a partner marketplace listing until a partner supplies data and a paid pilot.",
+    "capital_required_pln": 85000,
+    "founder_net_worth_path": "Scenario, not forecast: roughly 940,000 annual checks at 8 PLN blended revenue would produce about 7.5m PLN ARR. At 22% EBITDA, a 4x operating-value multiple and 80% founder ownership, equity could be about 5.3m PLN in years 7-10; this requires partner-scale distribution and must not double-count retained cash.",
+    "founder_time": "18-25 hours weekly for the first integration, evidence mapping and exception review, near the founder's five-hour daily ceiling; legal review and manual exception handling must be contracted rather than founder-bound.",
+    "gross_margin_basis": "Hypothesis: 50-70% blended margin in pilots because mapping and exception work are service-heavy, potentially 72-86% after stable schemas and automated straight-through clearance; no production cost data exist.",
+    "payback": "Unknown. A partner-channel target below 12 months is plausible only if one integration activates recurring portfolio volume; direct small-carrier acquisition and bespoke TMS mapping are likely to extend payback.",
+    "pricing": "Unvalidated pilot hypothesis: 1,500-4,000 PLN monthly platform minimum plus 4-10 PLN per checked shipment and 60-150 PLN per managed exception. Existing TMS budgets show software spend, not willingness to buy this add-on.",
+    "retention_or_repeat": "Each financed or approved load repeats the proof event, but retention is only strong if the check is embedded in funding or accounts-payable release; standalone upload usage can be displaced by native TMS, eCMR or freight-audit features."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Permissioned, labeled rejection-and-cure patterns by lane, carrier, consignee and document schema improve exception ranking, provided partners allow reuse of de-identified outcomes.",
+    "customer": "Polish and Central European road carriers, forwarders and invoice factors handling transport receivables across fragmented document systems",
+    "distribution_mechanism": "A paid factor or regional TMS integration embeds a narrow readiness check before funding or accounts-payable release; receiver links collect missing evidence without requiring a full account.",
+    "offer_and_business_model": "Authorized evidence-readiness API and exception workspace priced by checked shipment plus a managed-exception tier; it consumes existing eCMR/POD records and does not issue legal opinions or hold itself out as an eFTI platform.",
+    "payer_and_paid_event": "A factor, forwarder or TMS customer pays when a completed shipment packet passes a configured funding or payment-release checklist or is routed to a priced exception queue.",
+    "problem_trigger": "Delivery is complete, but invoicing, factoring or payment review cannot proceed because the invoice, CMR/POD, order data, signature, damage reservation or accessorial evidence is missing or inconsistent."
+  },
+  "founder_fit": [
+    "Document extraction, entity matching and exception ranking fit the founder's data-science and AI leverage.",
+    "A single narrow factor/TMS pilot can fit within 85,000 PLN and validate value before certification or multi-country expansion.",
+    "The model avoids public-facing content but partner selling and integration support still require sustained relationship work.",
+    "The proposed 18-25 weekly hours are feasible only with tightly bounded document types and outsourced legal review."
+  ],
+  "parent": {
+    "candidate_id": "settle9-06",
+    "version": 1
+  },
+  "risks": [
+    "A readiness label could be mistaken for a guarantee of authenticity, collectability or legal entitlement; the product must expose source evidence and configurable checks rather than adjudicate.",
+    "Electronic CMR validity depends on authentication, integrity, authorized access and agreed procedures that uploaded scans alone may not establish.",
+    "Partner data can contain personal and commercially sensitive information, requiring scoped authorization, processor terms, access controls, retention rules and audit logs.",
+    "TMS/eCMR/freight-audit incumbents can bundle the same feature and already control the source workflow.",
+    "Cross-border schemas and contractual rules can make each integration bespoke, eroding margin and part-time feasibility.",
+    "Factors or orders may prohibit assignment or impose fact-specific document conditions that a generic score cannot override."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eli.gov.pl/api/acts/DU/2019/1487/text.html",
+    "https://transport.ec.europa.eu/transport-themes/logistics-and-multimodal-transport/efti-regulation_en",
+    "https://eur-lex.europa.eu/eli/reg/2020/1056/oj/eng",
+    "https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20250709-1",
+    "https://single-market-economy.ec.europa.eu/smes/challenges-and-resilience/late-payment/eu-payment-observatory/observatory-analysis_en?prefLang=lt",
+    "https://eclkontor.com/en/ecllogistics-termsandconditions/",
+    "https://www.factris.com/en/support-faq/",
+    "https://www.dashdoc.com/en/ecmr",
+    "https://www.transporeon.com/en/platform/freight-audit-payment-hub/freight-audit/selfservice",
+    "https://www.dashdoc.com/fr/blog/tms-definition"
+  ],
+  "stage": "research",
+  "structure": {
+    "commercial_archetype": "Proof-to-pay sidecar embedded in logistics finance or accounts payable",
+    "control_point": "The configured document-completeness decision immediately before funding, invoicing or payment release",
+    "critical_dependency": "A factor or TMS must grant recurring authorized access to source evidence and adopt the sidecar without requiring it to be the legal eCMR or certified eFTI system of record."
+  },
+  "thesis": "Build a narrow, authorized proof-to-pay sidecar for a Polish factor or regional TMS: it reconciles invoice, order and existing eCMR/POD evidence, shows the source trail and routes mismatches before funding or accounts-payable release. The payment gate is real, but the product must differentiate from Dashdoc and Transporeon's native workflows through cross-system reconciliation rather than another document store. It neither creates a legally dispositive eCMR, certifies authenticity, decides liability nor presents itself as an eFTI platform. A paid partner pilot is the necessary validation gate because public evidence does not establish separate willingness to pay.",
+  "title": "Freight Proof-to-Pay Reconciliation Sidecar",
+  "uncertainties": [
+    "Share and value of Polish transport invoices delayed specifically by document defects rather than contractual payment terms, disputes or debtor behavior",
+    "Factor or TMS willingness to expose source data, embed an external decision and pay a separate per-check fee",
+    "False-positive tolerance and which missing fields actually stop funding or payment for each partner",
+    "Achievable straight-through rate and manual minutes per exception on real Polish/Central European portfolios",
+    "Country, customer and TMS schema variation across the first distributive partner's book",
+    "Whether a partner permits de-identified rejection outcomes to train reusable scoring models",
+    "Actual sales cycle, integration cost, churn and contribution margin",
+    "Whether incumbents will close the cross-system reconciliation gap before a wedge reaches scale"
+  ],
+  "version": 2
+}

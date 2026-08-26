@@ -1,0 +1,76 @@
+{
+  "candidate_id": "rights7-10",
+  "claims": [
+    {
+      "claim_id": "rights7-10-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://health.ec.europa.eu/ehealth-digital-health-and-care/european-health-data-space-regulation-ehds_en"
+      ],
+      "statement": "The EHDS framework supports secure secondary use of health data for research and innovation, but key provisions apply gradually and require safeguards and authorized purposes."
+    },
+    {
+      "claim_id": "rights7-10-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://commission.europa.eu/law/law-topic/data-protection/information-business-and-organisations/legal-grounds-processing-data_en"
+      ],
+      "statement": "European Commission GDPR guidance requires a lawful basis and applies additional constraints to sensitive health data, including explicit consent in some research settings."
+    }
+  ],
+  "contrary_evidence": [
+    "The Commission says most EHDS obligations do not apply immediately and major secondary-use rules phase in later.",
+    "EHDS restricts purposes, requires safeguards, and prohibits some uses; it is not a general commercial data licence."
+  ],
+  "economics": {
+    "acquisition_route": "Clinician and university partnerships on supply; regulatory, CRO, and medtech channels on demand",
+    "capital_required_pln": 100000,
+    "founder_net_worth_path": "A possible path is a multi-clinic evidence network completing 15-25 studies annually with retained protocol and operations infrastructure, not ownership of patient data",
+    "founder_time": "Initially 15-20 hours per week, with clinical, privacy, and ethics leadership formally contracted",
+    "gross_margin_basis": "Expected 40-65% after clinic, participant, secure-compute, insurance, ethics, and scientific oversight costs",
+    "payback": "Unknown; one or two properly priced pilots might cover setup, but approval and sales cycles may be long",
+    "pricing": "Unvalidated: 100000-500000 PLN per scoped observational or validation study plus per-participant costs",
+    "retention_or_repeat": "Sponsors may commission repeat studies; participant permissions are purpose-specific and revocable where applicable"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Trusted clinic agreements, repeat participant cohorts, protocol execution history, and harmonized longitudinal measures reduce future study setup cost",
+    "customer": "European medtech, diagnostics, wearables, and health-AI developers needing real-world research evidence",
+    "distribution_mechanism": "Begin with a narrow Warsaw clinical specialty through physician and university partners; sell to medtech via research and regulatory advisers",
+    "offer_and_business_model": "Clinic recruitment, protocol operations, consent and governance workflow, secure analysis, and aggregate research outputs with clinics and participants compensated",
+    "payer_and_paid_event": "The sponsor pays a setup fee, per-participant study fee, and analysis milestone fees under an approved protocol",
+    "problem_trigger": "A developer needs a defined longitudinal cohort or external validation study but cannot recruit and govern multiple clinics efficiently"
+  },
+  "founder_fit": [
+    "Combines neuroscience, biosignal, data-science, and health interests",
+    "The founder's medical-student partner may improve domain understanding but is not treated as a credential or channel",
+    "Secure analysis and automation are high-leverage",
+    "Can start with one non-interventional research use case"
+  ],
+  "parent": null,
+  "risks": [
+    "A privacy breach could cause severe patient harm",
+    "Invalid consent or purpose creep could make processing unlawful",
+    "Biased cohorts or weak protocols could mislead sponsors",
+    "Clinical, ethics, medical-device, and insurance obligations may make this unsuitable for part-time operation"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://health.ec.europa.eu/ehealth-digital-health-and-care/european-health-data-space-regulation-ehds_en",
+    "https://commission.europa.eu/law/law-topic/data-protection/information-business-and-organisations/legal-grounds-processing-data_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Distributed contract research network",
+    "control_point": "Clinic access agreements and purpose-specific participant permissions for repeat longitudinal cohorts",
+    "critical_dependency": "A valid legal basis, approvals, secure processing, adequate cohort quality, and clinic participation must all be maintained"
+  },
+  "thesis": "Build a network of independent clinics that grants study-execution and data-governance authority for defined research uses, recruit appropriately consented participants, and sell secure longitudinal evidence studies to medtech and diagnostic developers rather than exporting raw patient data.",
+  "title": "Clinic-Partnered Longitudinal Evidence Network",
+  "uncertainties": [
+    "No clinic, participant group, or sponsor has committed",
+    "Required Polish ethics and health-data approvals are unverified",
+    "EHDS implementation is gradual and does not create immediate commercial access",
+    "Study pricing, recruitment speed, and founder workload are unknown"
+  ],
+  "version": 1
+}

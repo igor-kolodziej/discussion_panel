@@ -1,0 +1,87 @@
+{
+  "candidate_id": "spend-02",
+  "claims": [
+    {
+      "claim_id": "spend-02-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/klimat/komunikat-mkis-w-zakresie-oplaty-produktowej"
+      ],
+      "statement": "Poland's environment ministry issued a March 2026 notice specifically because the 15 March 2026 deadline required correct BDO completion and transfer of product fees to regional authorities."
+    },
+    {
+      "claim_id": "spend-02-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eli.gov.pl/api/acts/DU/2024/927/text.html"
+      ],
+      "statement": "Polish law calculates the product-fee base from kilograms of each packaging type and provides for annual calculation and payment, making packaging mass a financially consequential data field."
+    },
+    {
+      "claim_id": "spend-02-c03",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/en/LSU/?uri=CELEX%3A32025R0040"
+      ],
+      "statement": "EU Regulation 2025/40 places lifecycle and extended-producer-responsibility obligations on producers and requires reporting information that supports those obligations."
+    }
+  ],
+  "contrary_evidence": [
+    "BDO already provides official reporting forms and instructions, so form completion alone is not a defensible product.",
+    "Many businesses transfer obligations to recovery organisations or advisers that may already maintain their calculations.",
+    "Small catalogues with stable packaging can be handled cheaply in a spreadsheet once per year."
+  ],
+  "economics": {
+    "acquisition_route": "Win one accounting or environmental adviser with 30-100 obligated clients, run a fixed-fee historical reconciliation, and share subscription revenue for converted accounts.",
+    "capital_required_pln": 50000,
+    "founder_net_worth_path": "Eight hundred customers averaging 900 PLN monthly would produce 8.64m PLN annual recurring revenue. At a mature 42% owner-cash margin, about 3.63m PLN per year could support cumulative post-reinvestment distributions above 10m PLN over four mature years without a sale.",
+    "founder_time": "Start with one packaging category and no more than two adviser channels at about 3 hours/day, automating only after repeated paid reconciliations; stay employed through the stated traction and runway gates.",
+    "gross_margin_basis": "After BOM setup, reconciliation and workpaper generation are software-heavy; target 70-85% gross margin, with separately priced human classification review.",
+    "payback": "Target payback within one annual reporting cycle and under 5 months for channel-acquired accounts; proof requires measuring current adviser hours and fee corrections.",
+    "pricing": "Assumption to test: 1500-6000 PLN implementation, 350-1800 PLN monthly by SKU/transaction band, and 1500-5000 PLN for an independently reviewable annual filing pack.",
+    "retention_or_repeat": "New SKUs, supplier changes, monthly sales and annual obligations recur; a maintained BOM also becomes costly to replace, but very small catalogues may stay on spreadsheets."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A material- and packaging-type reference graph, supplier-document parser library and reconciliation-error corpus reduce setup cost across similar catalogues without pooling customer sales data.",
+    "customer": "Polish e-commerce brands, private-label importers and distributors placing packaged goods on the Polish market, especially firms with hundreds or thousands of SKUs.",
+    "distribution_mechanism": "Accounting offices, environmental-compliance boutiques, packaging suppliers and fulfilment providers distribute a co-branded tool to their existing merchant base; onboarding is asynchronous from ERP exports.",
+    "offer_and_business_model": "SaaS plus optional managed setup that maintains packaging BOMs, requests missing supplier evidence, infers suspect weights for review, reconciles transaction exports and produces documented BDO/producer-responsibility workpapers.",
+    "payer_and_paid_event": "The operations or finance owner pays per company and SKU band at each reporting cycle; existing paid events include accountant or environmental-consultant time, recovery-organisation fees and product fees based on packaging mass.",
+    "problem_trigger": "A new SKU or supplier is introduced without reliable packaging weights, or the annual BDO/product-fee deadline requires sales and import data to be reconciled by packaging material."
+  },
+  "founder_fit": [
+    "The product is primarily data reconciliation, document extraction and rules engineering rather than relationship-heavy consulting.",
+    "Polish BDO complexity provides a local entry point while PPWR creates an EU expansion surface.",
+    "Accounting and fulfilment channels can support scalable distribution with limited public-persona demands.",
+    "A spreadsheet-in, workpaper-out pilot can be sold before a full platform is built."
+  ],
+  "parent": null,
+  "risks": [
+    "Automated weight inference could be mistaken for evidence and create an indefensible filing.",
+    "National EPR reform could change fee logic or consolidate the buyer set.",
+    "Advisers may resist a tool that reduces billable manual work.",
+    "SKU, supplier and sales data require contractual confidentiality and strict segregation."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.gov.pl/web/klimat/komunikat-mkis-w-zakresie-oplaty-produktowej",
+    "https://eli.gov.pl/api/acts/DU/2024/927/text.html",
+    "https://eur-lex.europa.eu/legal-content/en/LSU/?uri=CELEX%3A32025R0040",
+    "https://bdo.mos.gov.pl/wp-content/uploads/2025/01/BDO_SPR_IS-Sprawozdanie-o-produktach-opakowaniach-i-o-gospodarowaniu-odpadami-wersja-1.2.pdf"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Compliance data ledger SaaS with annual filing service",
+    "control_point": "The canonical packaging BOM and placed-on-market mass calculation behind fees and filings",
+    "critical_dependency": "Customers must supply transaction exports and defensible packaging weights, while Polish implementation rules must remain machine-maintainable"
+  },
+  "thesis": "Give Polish product importers and e-commerce brands a SKU-level packaging bill-of-materials ledger that reconciles purchases, imports and sales into BDO/EPR reporting and fee calculations. These firms already pay accountants, recovery organisations and product fees; the wedge is preventing repeated manual weighing, classification errors and unsupported annual totals as Polish rules coexist with the EU Packaging and Packaging Waste Regulation.",
+  "title": "Packaging-Mass Reconciliation for BDO and EU EPR",
+  "uncertainties": [
+    "The share of obligated merchants with sufficiently large, changing catalogues to justify monthly software is unknown.",
+    "No evidence yet shows how often packaging-mass errors lead to overpayment, arrears or audit findings in the target segment.",
+    "The practical availability of packaging weights from Asian and EU suppliers must be tested.",
+    "Pricing, channel conversion, margins and the wealth path are unsourced operating assumptions."
+  ],
+  "version": 1
+}

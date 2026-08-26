@@ -1,0 +1,227 @@
+{
+  "candidate_id": "settle9-06",
+  "candidate_sha256": "c3da658673ca8fb54cb0aa65c3515591f7323e73775f26f79275ae837c89411c",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "r06-legal-1",
+      "evidence_refs": [
+        "s06-1"
+      ],
+      "statement": "A compliant electronic CMR is legally equivalent to paper in Poland, but the protocol requires authentication, integrity, authorized access and agreed operating procedures."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r06-legal-2",
+      "evidence_refs": [
+        "s06-2",
+        "s06-3"
+      ],
+      "statement": "The sidecar can avoid eFTI certification only if it does not serve as the platform used to submit regulatory information electronically to authorities; that boundary needs counsel and product controls."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r06-pain-1",
+      "evidence_refs": [
+        "s06-6"
+      ],
+      "statement": "There is direct operational evidence that at least one forwarder conditions the start of a 45-day payment clock on a complete invoice plus CMR/POD packet and can extend payment for missing documents."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r06-pain-2",
+      "evidence_refs": [
+        "s06-7"
+      ],
+      "statement": "Factoring also uses proof of completed delivery: Factris explicitly cites a CMR receipt for transport invoices and conditions one-day funding on complete documentation."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r06-market-1",
+      "evidence_refs": [
+        "s06-4"
+      ],
+      "statement": "Poland supplies a large recurring road-freight base, but tonne-kilometres cannot be converted into addressable checks or revenue without shipment-count and customer-mix data."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r06-demand-1",
+      "evidence_refs": [
+        "s06-5"
+      ],
+      "statement": "Late payment is a widespread EU business problem, but available public evidence does not quantify how often freight payment delay is caused primarily by evidence defects."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r06-substitute-1",
+      "evidence_refs": [
+        "s06-8"
+      ],
+      "statement": "Dashdoc already supports signed eCMR, attachments, partner sharing and rapid invoicing, so a carrier-facing document workspace is not differentiated."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r06-substitute-2",
+      "evidence_refs": [
+        "s06-9"
+      ],
+      "statement": "Transporeon already performs payment-ready invoice verification and dispute workflow with native transport data, making a cross-system or factor-specific wedge essential."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r06-budget-1",
+      "evidence_refs": [
+        "s06-10"
+      ],
+      "statement": "Published TMS price ranges demonstrate software budget, but no reviewed source establishes willingness to add 4-10 PLN per shipment for this sidecar."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r06-distribution-1",
+      "evidence_refs": [],
+      "statement": "No reviewed source establishes that a factor or Polish TMS will distribute, integrate or revenue-share with the proposed product."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r06-economics-1",
+      "evidence_refs": [
+        "s06-6",
+        "s06-7",
+        "s06-9"
+      ],
+      "statement": "A high-margin repeat model is possible only after one mapping supports large recurring volume with few manual exceptions; actual exception rates and integration cost are unknown."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r06-fatal-1",
+      "evidence_refs": [
+        "s06-1",
+        "s06-2",
+        "s06-3"
+      ],
+      "statement": "No direct evidence reviewed establishes illegality, unobtainable essential rights, mathematically impossible conservative economics or a non-delegable founder incompatibility for the bounded sidecar model."
+    }
+  ],
+  "contrary_evidence": [
+    "Dashdoc already covers eCMR creation, signatures, attachments, sharing and invoicing.",
+    "Transporeon already offers payment-ready freight audit and dispute management using native platform data.",
+    "Factris directly accepts CMR receipts, so a factor may improve its own rules instead of buying a separate score.",
+    "Broad late-payment data does not show that document defects are a large enough causal wedge.",
+    "Certification becomes mandatory if the product is used for electronic regulatory submissions to authorities.",
+    "Published TMS pricing is much broader product value and cannot validate the proposed per-check price."
+  ],
+  "schema_version": 2,
+  "sources": [
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2019-08-08",
+      "publisher": "Polish Electronic Legal Information System",
+      "source_id": "s06-1",
+      "source_type": "primary_law",
+      "stance": "context",
+      "title": "Additional Protocol to the CMR concerning the electronic consignment note",
+      "url": "https://eli.gov.pl/api/acts/DU/2019/1487/text.html"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "European Commission",
+      "source_id": "s06-2",
+      "source_type": "regulator_guidance",
+      "stance": "context",
+      "title": "The eFTI Regulation",
+      "url": "https://transport.ec.europa.eu/transport-themes/logistics-and-multimodal-transport/efti-regulation_en"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2020-07-31",
+      "publisher": "EUR-Lex",
+      "source_id": "s06-3",
+      "source_type": "primary_law",
+      "stance": "context",
+      "title": "Regulation (EU) 2020/1056 on electronic freight transport information",
+      "url": "https://eur-lex.europa.eu/eli/reg/2020/1056/oj/eng"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2025-07-09",
+      "publisher": "Eurostat",
+      "source_id": "s06-4",
+      "source_type": "official_statistics",
+      "stance": "supporting",
+      "title": "EU road freight transport sees 0.6% increase in 2024",
+      "url": "https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20250709-1"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2025-12-15",
+      "publisher": "European Commission",
+      "source_id": "s06-5",
+      "source_type": "official_market_analysis",
+      "stance": "supporting",
+      "title": "EU Payment Observatory: Annual Report 2025 summary",
+      "url": "https://single-market-economy.ec.europa.eu/smes/challenges-and-resilience/late-payment/eu-payment-observatory/observatory-analysis_en?prefLang=lt"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "ECL Logistics",
+      "source_id": "s06-6",
+      "source_type": "buyer_terms",
+      "stance": "supporting",
+      "title": "Terms and Conditions - ECL Logistics Poland",
+      "url": "https://eclkontor.com/en/ecllogistics-termsandconditions/"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "Factris",
+      "source_id": "s06-7",
+      "source_type": "factor_product_terms",
+      "stance": "supporting",
+      "title": "Support and FAQs About Invoice Factoring",
+      "url": "https://www.factris.com/en/support-faq/"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "Dashdoc",
+      "source_id": "s06-8",
+      "source_type": "competitor_product",
+      "stance": "contradicting",
+      "title": "Dashdoc eCMR",
+      "url": "https://www.dashdoc.com/en/ecmr"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "Transporeon",
+      "source_id": "s06-9",
+      "source_type": "competitor_product",
+      "stance": "contradicting",
+      "title": "Freight Audit SelfService",
+      "url": "https://www.transporeon.com/en/platform/freight-audit-payment-hub/freight-audit/selfservice"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2026-05-18",
+      "publisher": "Dashdoc",
+      "source_id": "s06-10",
+      "source_type": "competitor_pricing_context",
+      "stance": "context",
+      "title": "Transport Management System guide 2026",
+      "url": "https://www.dashdoc.com/fr/blog/tms-definition"
+    }
+  ],
+  "unknowns": [
+    "Document-defect incidence and monetary impact in a real Polish factor or forwarder portfolio",
+    "Paid partner commitment and authority to access source documents",
+    "Straight-through clearance rate, false-positive cost and exception labor",
+    "Per-check willingness to pay and channel revenue share",
+    "TMS and eCMR API coverage across the initial country pairs",
+    "Required retention, security and processor terms for each partner",
+    "Whether partners allow reusable de-identified cure labels",
+    "Sales cycle, implementation payback, churn and incumbent response"
+  ]
+}

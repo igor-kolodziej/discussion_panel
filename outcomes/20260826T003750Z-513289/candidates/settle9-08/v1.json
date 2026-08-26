@@ -1,0 +1,81 @@
+{
+  "candidate_id": "settle9-08",
+  "claims": [
+    {
+      "claim_id": "settle9-08-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1542/oj?locale=en"
+      ],
+      "statement": "EU Regulation 2023/1542 requires an electronic battery passport from 18 February 2027 for each LMT battery, EV battery and industrial battery above 2 kWh placed on the market or put into service."
+    },
+    {
+      "claim_id": "settle9-08-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1542/oj?locale=en"
+      ],
+      "statement": "The passport's restricted individual-battery data includes state of health, status, charge cycles, negative events and operating conditions."
+    },
+    {
+      "claim_id": "settle9-08-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1542/oj?locale=en"
+      ],
+      "statement": "When a battery becomes waste, the regulation transfers responsibility for specified passport obligations to the producer, producer-responsibility organization or selected waste operator."
+    }
+  ],
+  "contrary_evidence": [
+    "Manufacturers and passport vendors may provide lifecycle and warranty workflows as part of compliance.",
+    "The regulation restricts reuse of passport data by service operators, limiting data-moat strategies unless consent and purpose are carefully designed."
+  ],
+  "economics": {
+    "acquisition_route": "Use a renewable installer as design partner, then sell white-label to storage distributors that activate the ledger at commissioning",
+    "capital_required_pln": 90000,
+    "founder_net_worth_path": "Hypothesis: 70,000 monitored commercial batteries at 70 PLN blended annual revenue plus transfer fees yields 5-7m PLN ARR by years 6-8. Majority ownership, 20%+ margins and a 4-6x data-software value could cross 5m PLN founder net worth in years 7-9.",
+    "founder_time": "15-22 hours weekly; hardware protocol work is bounded to one battery family in the pilot",
+    "gross_margin_basis": "Hypothesis: 75-90%; API data is high-margin, while physical diagnostics are performed by certified partners and passed through",
+    "payback": "Hypothesis: 6-12 months for a distributor cohort; economics fail if activation remains one-off without monitoring revenue",
+    "pricing": "Hypothesis: 20-80 PLN per commercial battery-year, 150-600 PLN per enhanced transfer packet and 1,500-5,000 PLN monthly organization minimum",
+    "retention_or_repeat": "Battery evidence persists across years, service events and transfers; downstream counterparties are invited into the same asset record"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Longitudinal state-of-health, operating-event and warranty-resolution dataset by model and use case improves anomaly detection, residual-value estimates and partner trust",
+    "customer": "EU commercial battery distributors, renewable-storage installers, O&M providers and second-life operators",
+    "distribution_mechanism": "Bundle at battery commissioning through distributors and renewable installers, then invite downstream service and second-life parties through each transfer packet",
+    "offer_and_business_model": "Asset-level evidence ledger, workflow API and white-label handoff portal priced per battery and service organization",
+    "payer_and_paid_event": "Distributor or service provider pays per active battery-year and per signed handoff packet; buyer may pay for enhanced independent diagnostics",
+    "problem_trigger": "A battery is commissioned, fails, changes owner/status, is repurposed or becomes waste and the parties disagree about condition, warranty responsibility or missing evidence"
+  },
+  "founder_fit": [
+    "Direct leverage from the family renewable-installation business for workflow observation and a pilot channel.",
+    "Sensor and longitudinal-data work fits the founder's biosignal/data background.",
+    "A single battery family constrains capital and supports part-time execution."
+  ],
+  "parent": null,
+  "risks": [
+    "Battery telemetry is safety-sensitive and may be proprietary or inconsistent.",
+    "Residual-value outputs could be mistaken for guarantees unless tightly caveated.",
+    "The 2027 deadline and implementing details can shift partner priorities."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2023/1542/oj?locale=en",
+    "https://eur-lex.europa.eu/eli/reg/2023/1542/2025-07-31/eng/pdf"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Asset-lifecycle evidence network",
+    "control_point": "Commissioning, warranty approval and ownership/status handoff of an individual battery",
+    "critical_dependency": "Permissioned access to battery-management data and manufacturer passport identifiers, plus clear separation from the obligated operator's legal passport duty"
+  },
+  "thesis": "Build a battery-passport companion for commercial storage installers, distributors, service firms and second-life buyers that captures commissioning baseline, service events, state-of-health evidence, warranty exceptions and signed status handoffs. At resale, repurposing or waste transfer it produces a bilateral condition and responsibility packet tied to the passport identifier. Begin with stationary batteries above 2 kWh sold by a Polish installer/distributor channel, while the manufacturer remains responsible for official passport compliance. Longitudinal condition and resolution data can become the underwriting-quality asset without initially offering insurance.",
+  "title": "Battery Handoff Liability Ledger",
+  "uncertainties": [
+    "Installer access to model-specific state-of-health data",
+    "Who controls permission for longitudinal passport data after transfer",
+    "Annual willingness to pay versus a one-time commissioning fee"
+  ],
+  "version": 1
+}

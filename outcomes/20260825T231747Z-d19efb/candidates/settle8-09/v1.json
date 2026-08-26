@@ -1,0 +1,86 @@
+{
+  "candidate_id": "settle8-09",
+  "claims": [
+    {
+      "claim_id": "settle8-09-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.fronius.com/~/downloads/Solar%20Energy/Terms%20of%20Warranties/SE_ToW_Battery_EN.pdf"
+      ],
+      "statement": "Verified example: Fronius warranty terms can require a commissioning protocol, invoice with serial number, rating-plate photo, and additional defect information before Fronius decides the warranty service."
+    },
+    {
+      "claim_id": "settle8-09-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.solaredge.com/sites/default/files/warranty%20reimbursement%20%28updated%20March%202022%29.pdf"
+      ],
+      "statement": "Verified example: SolarEdge publishes a labor-reimbursement workflow for approved RMA replacements that requires an invoice and follows remote diagnosis and RMA approval."
+    },
+    {
+      "claim_id": "settle8-09-c3",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://www.fronius.com/en-us/usa/solar-energy/home-owners/products-and-solutions/warranties",
+        "https://www.solaredge.com/sites/default/files/warranty%20reimbursement%20%28updated%20March%202022%29.pdf"
+      ],
+      "statement": "Hypothesis (unvalidated): a distributor or second-tier OEM will pay for a neutral multi-brand workflow and permit enough data reuse to create a claims benchmark."
+    }
+  ],
+  "contrary_evidence": [
+    "Fronius already runs serial-based registration, certificates, and installer-mediated claims, showing that OEM portals can own the workflow: https://www.fronius.com/en-us/usa/solar-energy/home-owners/products-and-solutions/warranties",
+    "SolarEdge already defines remote diagnosis, RMA approval, and labor reimbursement, so a neutral layer needs OEM authorization rather than merely digitizing public rules: https://www.solaredge.com/sites/default/files/warranty%20reimbursement%20%28updated%20March%202022%29.pdf"
+  ],
+  "economics": {
+    "acquisition_route": "Build a quantified claim-journey dossier from installers, then sell a 90-day white-label pilot to one regional distributor rather than acquiring installers one by one.",
+    "capital_required_pln": 80000,
+    "founder_net_worth_path": "Unvalidated scenario: 2 networks at PLN 15,000 MRR in year 2, 10 at PLN 22,000 MRR in year 4, and 18 at PLN 25,000 MRR in year 6 imply PLN 5.4m ARR before per-claim revenue. At 3-5x network-software value and 55% ownership, PLN 5m founder net worth is plausible in years 5-7; inability to secure one OEM/distributor design partner within 18 months invalidates the network path.",
+    "founder_time": "4-5 hours/day through one network pilot; use a contract field-service specialist and do not promise 24/7 claim handling.",
+    "gross_margin_basis": "Hypothesis: 65-82%; manual technical adjudication and multilingual installer support are major costs and should be limited or partner-delivered.",
+    "payback": "Unvalidated customer hypothesis: fewer incomplete claims, lower handling time, and better reserve visibility repay implementation within 9-12 months; establish against the buyer's baseline.",
+    "pricing": "Unvalidated estimate: PLN 8,000-30,000 monthly per OEM/distributor network plus PLN 30-150 per closed claim; paid implementation for rule mapping.",
+    "retention_or_repeat": "Installed fleets generate claims for years; warranty rules, serial mappings, and service histories deeply embed the platform."
+  },
+  "fingerprint": {
+    "compounding_advantage": "permissioned cross-case defect, evidence, parts, and resolution data improve triage and reserve estimates; installer adoption creates a two-sided workflow moat",
+    "customer": "PV, inverter, battery, and heat-pump OEMs or distributors with fragmented installer service networks in Central Europe",
+    "distribution_mechanism": "use the family renewables firm to document multi-brand friction, then approach one distributor or second-tier OEM with a bounded white-label pilot",
+    "offer_and_business_model": "white-label installer portal, rules engine, evidence completeness, telemetry attachments, RMA and shipment state, labor-invoice matching, and service analytics",
+    "payer_and_paid_event": "OEM or distributor pays a platform fee and per claim when a case reaches an agreed disposition and reimbursement state",
+    "problem_trigger": "a field failure creates a warranty claim that crosses installer diagnosis, OEM approval, replacement logistics, labor evidence, and reimbursement"
+  },
+  "founder_fit": [
+    "The parents' installation company offers direct understanding of installer-side claim evidence without inventing customer commitments.",
+    "AI document extraction and failure classification suit the founder's data skills.",
+    "The model can scale through distributor/OEM networks rather than personal content.",
+    "A software-administration role avoids inventory-heavy hardware operations."
+  ],
+  "parent": null,
+  "risks": [
+    "OEMs may see claim data and adjudication as strategically sensitive.",
+    "Hardware diagnosis errors can create safety, liability, and customer-service harm.",
+    "Enterprise sales cycles may be long for a part-time founder.",
+    "Cross-brand benchmarking needs strict permissions and competition-law safeguards."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.fronius.com/~/downloads/Solar%20Energy/Terms%20of%20Warranties/SE_ToW_Battery_EN.pdf",
+    "https://www.fronius.com/en-us/usa/solar-energy/home-owners/products-and-solutions/warranties",
+    "https://www.solaredge.com/sites/default/files/warranty%20reimbursement%20%28updated%20March%202022%29.pdf"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "multi-party warranty claims adjudication network",
+    "control_point": "complete claim case linking device entitlement, defect evidence, RMA disposition, field work, and reimbursement",
+    "critical_dependency": "OEM and distributor participation with serial, warranty-rule, RMA, shipment, and reimbursement data"
+  },
+  "thesis": "Create a neutral claim-administration layer between PV/storage OEMs, distributors, and installers. It binds serial number, warranty entitlement, commissioning and invoice evidence, telemetry-led diagnosis, RMA approval, site labor, replacement shipment, and reimbursement into one case. OEMs retain adjudication authority; the network earns on a completed claim and enterprise workflow subscription, then compounds a permissioned defect and repair benchmark across brands.",
+  "title": "Multi-Brand Renewable Warranty Claim Clearing Network",
+  "uncertainties": [
+    "Claim volume, processing cost, and rejection rate in the target region are unknown.",
+    "It is unclear whether an OEM, distributor, or large installer is the best initial payer.",
+    "OEM APIs and rights to normalize warranty rules are untested.",
+    "The amount of genuinely reusable cross-brand data may be limited by confidentiality."
+  ],
+  "version": 1
+}

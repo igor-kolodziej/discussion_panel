@@ -1,0 +1,85 @@
+{
+  "candidate_id": "spend-01",
+  "claims": [
+    {
+      "claim_id": "spend-01-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en"
+      ],
+      "statement": "The European Commission states that the definitive CBAM regime applies from 1 January 2026 and that EU importers or indirect customs representatives importing more than the single 50-tonne threshold must apply for authorised CBAM declarant status."
+    },
+    {
+      "claim_id": "spend-01-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en"
+      ],
+      "statement": "The Commission identifies cement, iron and steel, aluminium, fertilisers, electricity and hydrogen as covered sectors and says authorised declarants buy CBAM certificates from the national competent authority."
+    },
+    {
+      "claim_id": "spend-01-c03",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/system/files/2023-11/CBAM%20Frequently%20Asked%20Questions_November%202023.pdf"
+      ],
+      "statement": "Commission guidance states that independent external verification becomes mandatory in the definitive period, creating a concrete evidence-quality requirement rather than a one-time awareness need."
+    }
+  ],
+  "contrary_evidence": [
+    "The 50-tonne threshold removes many small importers from the addressable market.",
+    "Customs brokers, large consultancies and ERP vendors may absorb the workflow into existing contracts.",
+    "Official registry tooling may cover enough validation that a separate ledger is valuable only for multi-supplier or high-volume importers."
+  ],
+  "economics": {
+    "acquisition_route": "Recruit 2-3 customs brokers with 20-100 relevant clients each, prove a reconciliation on historical files, then convert broker portfolios; avoid broad enterprise direct sales initially.",
+    "capital_required_pln": 80000,
+    "founder_net_worth_path": "At 300 importer-equivalent accounts averaging 2500 PLN monthly, annual recurring revenue is 9.0m PLN. A mature 45% owner-cash margin would be about 4.05m PLN per year, so four mature years could distribute more than 12m PLN after allowing for tax and reinvestment, without assuming VC or a sale.",
+    "founder_time": "Build a secure CSV/PDF preflight and serve no more than five design partners at 3-4.5 hours/day; remain employed until repeatable paid usage, positive contribution margin and personal plus business runway meet the stated departure gates.",
+    "gross_margin_basis": "Software validation and automated supplier follow-up should support roughly 75-88% gross margin after secure hosting and limited compliance support; expert review would be separately priced.",
+    "payback": "Target customer acquisition payback under 4 months through channel revenue share; whether brokers will actively distribute rather than merely refer is unproven.",
+    "pricing": "Assumption to test: 6000-15000 PLN onboarding, then 1500-5000 PLN per legal entity per month plus a small import-line fee; broker portfolios receive wholesale pricing.",
+    "retention_or_repeat": "Import activity, supplier evidence updates, annual declarations and certificate reconciliation recur; retention weakens if a customer imports only sporadically or an ERP/broker bundles the workflow."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A permissioned corpus of supplier evidence patterns, CN-code mappings, validation failures and resolution playbooks that improves exception detection while each customer's raw commercial data stays segregated.",
+    "customer": "Polish and nearby-EU importers above the CBAM mass threshold, plus indirect customs representatives managing many smaller importer accounts.",
+    "distribution_mechanism": "White-label distribution through customs brokers and trade-compliance accounting firms, supplemented by narrow search content for specific CBAM sectors and asynchronous file-based pilots.",
+    "offer_and_business_model": "Secure SaaS that maps CN codes, quantities, suppliers, installations, verified embedded emissions and certificate obligations into an auditable ledger, with exception queues and registry-ready exports; priced as onboarding plus recurring subscription and usage.",
+    "payer_and_paid_event": "The importer compliance lead or customs broker pays a legal-entity subscription plus a per-import-line fee when CBAM entries are ingested and validated; the existing spend is customs/compliance labour and CBAM certificate exposure.",
+    "problem_trigger": "A CBAM-covered shipment is booked without complete installation, emissions or carbon-price evidence, or a compliance owner must reconcile the annual declaration and certificate position across customs entries."
+  },
+  "founder_fit": [
+    "The core work is structured-data ingestion, entity resolution and anomaly detection, closely matching a data scientist's leverage.",
+    "A customs-broker channel can concentrate distribution and reduce the need for constant founder-led meetings.",
+    "A Warsaw base gives direct access to Polish importers while the same EU regulation supports later cross-border reuse.",
+    "A file-upload preflight MVP can be tested alongside employment before building deep registry integrations."
+  ],
+  "parent": null,
+  "risks": [
+    "A rule or registry change could break mappings during a filing window.",
+    "Incorrect emissions treatment could create material regulatory or certificate liability.",
+    "Commercially sensitive supplier and customs data require strong tenancy, access control and auditability.",
+    "A broker channel could demand exclusivity or capture most of the economics."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en",
+    "https://taxation-customs.ec.europa.eu/system/files/2023-11/CBAM%20Frequently%20Asked%20Questions_November%202023.pdf"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Vertical regulatory-operations SaaS with per-import usage pricing",
+    "control_point": "The auditable shipment-to-emissions ledger used before declaration and certificate reconciliation",
+    "critical_dependency": "Reliable access to customs-entry data and supplier emissions evidence, plus timely maintenance of official CBAM schemas and rules"
+  },
+  "thesis": "Sell Polish and EU importers of steel, aluminium, cement and fertilisers a shipment-level evidence ledger that converts customs entries and supplier emissions files into a reviewable CBAM position. The buyer already pays customs brokers, compliance staff and, in the definitive regime, for CBAM certificates; the product targets the recurring labour and error exposure around those paid events rather than selling generic regulatory advice.",
+  "title": "CBAM Evidence Ledger for Mid-Market Importers",
+  "uncertainties": [
+    "The number of Polish importer entities above the threshold that still use spreadsheets is unknown.",
+    "The attainable reduction in consultant hours, declaration corrections or certificate over-purchasing has not been measured.",
+    "Registry import/export interfaces, supplier response rates and acceptable evidence formats need validation with current operators.",
+    "All pricing, margin and wealth-path figures are hypotheses rather than sourced market facts."
+  ],
+  "version": 1
+}

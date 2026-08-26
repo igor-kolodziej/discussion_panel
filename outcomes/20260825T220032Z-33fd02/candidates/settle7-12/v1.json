@@ -1,0 +1,84 @@
+{
+  "candidate_id": "settle7-12",
+  "claims": [
+    {
+      "claim_id": "settle7-12-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/dir/2024/884/oj/eng"
+      ],
+      "statement": "EU WEEE law includes photovoltaic panels and requires producers to bear defined collection, treatment, recovery, and environmentally sound disposal costs for relevant electrical equipment."
+    },
+    {
+      "claim_id": "settle7-12-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/klimat/rejestr-bdo"
+      ],
+      "statement": "Poland's BDO system provides electronic waste records and reporting, and its public register lets businesses check the declared legal activity of collectors, transporters, and processors."
+    },
+    {
+      "claim_id": "settle7-12-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://pliki.biznes.gov.pl/20210810/pliki/Ewidencja_i_przekazywanie_odpadow_w_BDO/wzor_karty_przekazania_odpadow.pdf"
+      ],
+      "statement": "The official Polish waste-transfer-card format records approval, transport confirmation, waste takeover, mass, and timestamps, providing candidate release events for a recycling receipt."
+    }
+  ],
+  "contrary_evidence": [
+    "Collective producer-responsibility schemes already pool compliance and recycling funding, potentially making a new per-serial layer redundant.",
+    "A present-day reserve for an event decades away may be unattractive unless it solves a current compliance, financing, or asset-transfer need."
+  ],
+  "economics": {
+    "acquisition_route": "A distributor or producer-responsibility pilot combined with one licensed recycler and a small installer group",
+    "capital_required_pln": 100000,
+    "founder_net_worth_path": "A plausible 6-8 year route would require around one million annual panel registrations across several distributors at about 6 PLN average platform revenue, recurring lifecycle services, credible long-term governance, and substantial founder ownership",
+    "founder_time": "Approximately 12-16 hours per week if physical logistics, waste treatment, legal compliance, and reserve custody remain with licensed partners",
+    "gross_margin_basis": "Registry, compliance, and orchestration revenue less identity, record integration, long-term storage, customer support, and partner fees; reserved treatment funds are not startup revenue",
+    "payback": "Customers must value lower compliance administration, traceable reserves, or predictable decommissioning cost; a pilot should compare total per-panel cost with existing collective schemes",
+    "pricing": "Target 5-12 PLN administration revenue per registered panel plus contracted logistics and recycling charges passed through to reserve or producer-responsibility partners",
+    "retention_or_repeat": "Importers register every shipment, asset owners transfer records, and eventual recovery events close the lifecycle"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A long-lived installed-base registry with ownership, location, deinstallation, transport, treatment, and recovery outcomes could lower reverse-logistics cost and forecast regional panel flows",
+    "customer": "PV panel importers, distributors, producer-responsibility organisations, large installers, asset owners, and decommissioning firms in Poland",
+    "distribution_mechanism": "Use the family installer network for process discovery, then partner with distributors, producer-responsibility organisations, insurers, and licensed PV recyclers",
+    "offer_and_business_model": "Serial registry, reserve receipt, owner transfer, deinstallation booking, licensed-operator verification, BDO evidence mapping, and producer compliance export",
+    "payer_and_paid_event": "The importer or distributor pays an administration fee per registered panel and passes a recycling reserve to a licensed partner; the recycler and logistics provider are paid when BDO-backed handoff or treatment events verify performance",
+    "problem_trigger": "A panel is placed on the market or later removed, while funding responsibility, equipment identity, lawful waste handoff, and evidence of treatment sit in separate systems and years apart"
+  },
+  "founder_fit": [
+    "The family renewable business offers practical access to installation and deinstallation records",
+    "Lifecycle forecasting and record linkage fit the founder's data-science strengths",
+    "A partner network avoids owning recycling plants or tying up the founder's capital in reserves"
+  ],
+  "parent": null,
+  "risks": [
+    "Long-duration reserves create governance, insolvency, and custody complexity",
+    "Serials may be unavailable or unreliable on older installations",
+    "Existing collective compliance schemes may already solve the producer's obligation cheaply",
+    "Waste status, transport, and treatment must be handled only by properly authorised parties"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/dir/2024/884/oj/eng",
+    "https://www.gov.pl/web/klimat/rejestr-bdo",
+    "https://pliki.biznes.gov.pl/20210810/pliki/Ewidencja_i_przekazywanie_odpadow_w_BDO/wzor_karty_przekazania_odpadow.pdf"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Per-unit compliance reserve and reverse-logistics network",
+    "control_point": "The serial-linked reserve ledger and verified BDO transfer or treatment event that authorises recycler and logistics payment",
+    "critical_dependency": "A lawful structure with producer-responsibility organisations, long-duration reserve custody, and licensed waste operators whose records can be linked to equipment serials"
+  },
+  "thesis": "Photovoltaic importers, distributors, and large installers could attach a serial-level circularity receipt and partner-held recycling reserve to panels placed on the Polish market. At deinstallation, a licensed waste operator's BDO transfer and treatment confirmation would trigger payment and close the producer or service obligation, creating an auditable bridge between today's per-unit funding and a distant recovery event.",
+  "title": "PV Circularity Reserve",
+  "uncertainties": [
+    "Whether Polish producer-responsibility rules permit a serial-level supplemental reserve structure",
+    "Per-panel administrative willingness to pay",
+    "Availability of BDO interfaces or lawful exports for automatic receipt matching",
+    "Timing and regional volume of PV deinstallations in the first years"
+  ],
+  "version": 1
+}

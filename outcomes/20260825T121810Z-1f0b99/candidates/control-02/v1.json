@@ -1,0 +1,81 @@
+{
+  "candidate_id": "control-02",
+  "claims": [
+    {
+      "claim_id": "control-02-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/dir/2023/1791/oj/"
+      ],
+      "statement": "EU law defines energy performance contracting around monitored and verified improvement and lists transparent measurement and verification of guaranteed savings among minimum contract items."
+    },
+    {
+      "claim_id": "control-02-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A32024L1275",
+        "https://energy.ec.europa.eu/topics/energy-efficiency/energy-performance-buildings/energy-performance-buildings-directive_en"
+      ],
+      "statement": "The revised buildings framework introduces renovation passports and policy pressure for staged renovations, creating more projects whose estimated and realised energy performance must be reconciled."
+    },
+    {
+      "claim_id": "control-02-c03",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/dir/2023/1791/oj/"
+      ],
+      "statement": "Hypothesis: an independent, lower-cost settlement layer can unlock performance guarantees for projects too small for traditional ESCO overhead, but installer and financier willingness must be tested."
+    }
+  ],
+  "contrary_evidence": [
+    "Energy savings are sensitive to weather, occupancy, energy prices, and operational changes, so a simple before-and-after comparison is not dispute-grade.",
+    "Large ESCOs already have measurement practices; the unproven opening is an independent product for smaller contracts."
+  ],
+  "economics": {
+    "acquisition_route": "Family installer pilot, white-label inclusion in installer quotes, energy-auditor referrals, and lender risk teams",
+    "capital_required_pln": 70000,
+    "founder_net_worth_path": "Hypothesis: 1,500 monitored sites at a 300 PLN blended monthly fee yields 5.4m PLN ARR before setup and settlement fees; a profitable majority-owned monitoring platform could pass 5m PLN founder equity in four to seven years",
+    "founder_time": "Initially 15 hours weekly for method and integrations; target 8-10 hours weekly once field installation and audit review are delegated",
+    "gross_margin_basis": "After remote ingestion is standardised, software monitoring can exceed 80% gross margin; field meters and auditor review reduce blended margin to an estimated 60-75%",
+    "payback": "One detected control fault or objectively resolved guarantee dispute can exceed several years of fees; target vendor CAC payback under nine months",
+    "pricing": "Hypothesis: 2,000-6,000 PLN setup plus 180-600 PLN per building per month and a small fee on settled performance payments",
+    "retention_or_repeat": "Contracts naturally persist for 24-60 months and installers repeat across new sites if reports reduce disputes"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Normalised baseline-to-outcome data by building type, equipment, installer, weather, tariff, and operating pattern",
+    "customer": "Installers, energy-service firms, lenders, property managers, and housing associations financing small-to-mid-sized retrofits",
+    "distribution_mechanism": "Embedded in installer and energy-auditor proposals, followed by lender and property-manager channel agreements",
+    "offer_and_business_model": "Independent M&V setup, telemetry software, exception reports, and contract settlement as a recurring per-building service",
+    "payer_and_paid_event": "Installer, owner, or financier pays at baseline setup and monthly through the verification term, with optional settlement fee",
+    "problem_trigger": "A retrofit proposal includes a savings promise, financing covenant, warranty dispute, or post-installation underperformance concern"
+  },
+  "founder_fit": [
+    "Excellent quantitative and renewable-family fit: the founder can build baselines, anomaly detection, and automated reports while a qualified energy auditor validates methodology. A first family-company project can be bounded and part-time, with low personal-brand dependence."
+  ],
+  "parent": null,
+  "risks": [
+    "Disputes can create professional-liability exposure if the method is underspecified.",
+    "Hardware installation and data gaps can erode gross margin.",
+    "A financier or installer may prefer its own methodology and block a neutral layer."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/dir/2023/1791/oj/",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A32024L1275",
+    "https://energy.ec.europa.eu/topics/energy-efficiency/energy-performance-buildings/energy-performance-buildings-directive_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Measurement, verification, and settlement infrastructure",
+    "control_point": "The mutually accepted baseline and authoritative calculation of realised savings",
+    "critical_dependency": "Installer, owner, and financier acceptance of the measurement method and data access"
+  },
+  "thesis": "Provide independent baselining, telemetry normalisation, measurement, and settlement for heat-pump, insulation, solar, and control-system performance contracts. Start with small commercial buildings and housing associations where installers, lenders, or owners need a shared answer to whether promised savings occurred. The durable asset is a cross-vendor building-performance benchmark and a trusted settlement record.",
+  "title": "Verified Retrofit Savings Rail",
+  "uncertainties": [
+    "Minimum site size at which recurring telemetry and verification are economical.",
+    "Whether customers value neutral settlement enough to pay separately rather than rely on the installer.",
+    "Availability and consistency of meter, tariff, weather, and building-operation data in Poland."
+  ],
+  "version": 1
+}

@@ -1,0 +1,138 @@
+{
+  "candidate_id": "settle9-04",
+  "claims": [
+    {
+      "claim_id": "settle9-04-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/klimat/16-mld-opakowan-wrocilo-do-obiegu-pol-roku-systemu-kaucyjnego"
+      ],
+      "statement": "Poland's deposit-return system reached about 1.6 billion returned containers and 62000 return points by the end of May 2026, creating high recurring transaction volume."
+    },
+    {
+      "claim_id": "settle9-04-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/klimat/system-kaucyjny-drogerie-apteki-sklepy-sportowe",
+        "https://www.gov.pl/web/klimat/prowadzisz-maly-sklep-poznaj-obowiazki-w-systemie-kaucyjnym"
+      ],
+      "statement": "Retailers selling covered products must collect deposits, stores over 200 square metres must accept covered returns, and each covered business must contract with at least one authorised operator."
+    },
+    {
+      "claim_id": "settle9-04-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/klimat/system-kaucyjny-operatorzy"
+      ],
+      "statement": "The Ministry's current operator page lists eight authorised deposit-system operators, supporting a real multi-operator integration surface."
+    },
+    {
+      "claim_id": "settle9-04-c4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://kaucyjni.pl/dla-sklepu/",
+        "https://kaucyjni.pl/cennik/"
+      ],
+      "statement": "COMP's Kaucyjni is a near-direct incumbent: it offers one panel for multiple operators, POS and RVM integration, settlement visibility and reports at public prices of 39.90-79.90 PLN net per store per month for integrated plans."
+    },
+    {
+      "claim_id": "settle9-04-c5",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://instalacja.kaucyjni.pl/download/operatorzy/Instrukcja_integracja_z_operatorem_28012026.pdf"
+      ],
+      "statement": "Kaucyjni's integration guide documents working connections to five operators and requires a signed operator agreement, portal access and registered collection points, showing both technical feasibility and contract-bound access."
+    },
+    {
+      "claim_id": "settle9-04-c6",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.tomra.com/pl-pl/reverse-vending/our-offering/tomra-apis",
+        "https://www.kaucja.pl/do-pobrania",
+        "https://polskakaucja.pl/"
+      ],
+      "statement": "Other incumbents also expose reconciliation substitutes: TOMRA APIs provide session and container-count data for operator settlement checks, Kaucja.pl publishes store and RVM APIs, and PolKa provides reporting and settlement tools."
+    },
+    {
+      "claim_id": "settle9-04-c7",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://kaucyjni.pl/cennik/",
+        "https://www.tomra.com/pl-pl/reverse-vending/our-offering/tomra-apis"
+      ],
+      "statement": "The proposed 250-750 PLN per-store monthly price is unsupported for generic reconciliation because a near-direct competitor charges under 80 PLN and TOMRA offers connected digital tools without extra cost."
+    }
+  ],
+  "contrary_evidence": [
+    "Kaucyjni already provides multi-operator handling, integrated POS/RVM workflows, reports and settlement visibility—the central v1 offer.",
+    "Kaucyjni's public integrated-plan prices of 39.90-79.90 PLN net per store per month are far below the proposed 250-750 PLN range.",
+    "TOMRA provides session-level data and container counts specifically to reconcile operator payments, and describes its connected digital tools as free.",
+    "Operators themselves publish portals, APIs, reporting and settlement tools, so neutral-layer access and incremental value are not guaranteed.",
+    "No public source established recoverable discrepancy value per store, despite very high system volume."
+  ],
+  "economics": {
+    "acquisition_route": "Do not pursue generic POS middleware. Validate a chain-level independent exception audit using exports from one 20-50-store group; pursue POS or wholesaler distribution only if it recovers discrepancies that Kaucyjni, TOMRA and operator portals leave unresolved.",
+    "capital_required_pln": 75000,
+    "founder_net_worth_path": "Not established at incumbent pricing. At 60 PLN per store per month, 1200 stores produce 864000 PLN ARR, not the v1 5.76m PLN. A path above 5m PLN founder net worth therefore requires materially more stores, validated chain-level fees or success-based recovery revenue without double counting.",
+    "founder_time": "A file-based audit pilot can fit 15-20 hours weekly, but live POS, RVM and operator integrations plus field exception handling could exceed part-time capacity unless channel support is delegated.",
+    "gross_margin_basis": "Hypothesis: 70-85% for standardised file-based audit; bespoke mappings, missing data and claim follow-up may materially reduce margin.",
+    "payback": "Unknown. No observed leakage or recovery rate supports a 3-6 month customer payback, and the incumbent price anchor limits recoverable CAC.",
+    "pricing": "Incumbent benchmark is 39.90-79.90 PLN net per store per month for integrated functionality. Any premium chain audit, onboarding fee or 8-15% recovery fee requires measured incremental recoveries and contractual permission.",
+    "retention_or_repeat": "Deposit settlement is continuous and system volume is high, but recurring value depends on discrepancies remaining material after operators and incumbent tools mature."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A cross-operator exception taxonomy and independently verified recovery history could improve chain audits, but generic operational data is already accumulated by POS, RVM and operator incumbents.",
+    "customer": "Polish convenience chains, franchise groups, forecourt retailers and wholesalers with multiple sites and unresolved deposit-settlement exceptions",
+    "distribution_mechanism": "Direct chain-level recovery audit first; POS vendor or wholesaler channel only after proving incremental value beyond Kaucyjni, TOMRA and operator portals",
+    "offer_and_business_model": "Read-only exception audit and evidence packets layered on existing POS, RVM and operator exports, priced at chain level or on documented incremental recoveries; no custody of deposits",
+    "payer_and_paid_event": "A retail group pays when an independent monthly audit identifies and documents discrepancies not resolved by its existing tools",
+    "problem_trigger": "Existing POS, RVM and operator records fail to reconcile and the unresolved amount exceeds the cost of an independent exception audit"
+  },
+  "founder_fit": [
+    "Multi-source reconciliation and anomaly detection match the founder's analytical strengths.",
+    "A read-only file pilot can start below 100000 PLN and alongside employment.",
+    "The founder should avoid hardware service and store-by-store implementation; any viable form needs partner-supported integrations and delegated field work."
+  ],
+  "parent": {
+    "candidate_id": "settle9-04",
+    "version": 1
+  },
+  "risks": [
+    "A near-direct incumbent with POS distribution and operator integrations can bundle the feature at a much lower price.",
+    "Operator, POS and RVM contracts may restrict exports, automated access or third-party claims.",
+    "Measured discrepancies may be too small or transient to support a premium audit after system maturation.",
+    "Bespoke chain mappings and field investigation can erase software margins and exceed part-time founder capacity.",
+    "Success-fee claims must remain accounting recovery and avoid unauthorised legal representation or deposit custody."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.gov.pl/web/klimat/16-mld-opakowan-wrocilo-do-obiegu-pol-roku-systemu-kaucyjnego",
+    "https://www.gov.pl/web/klimat/system-kaucyjny-drogerie-apteki-sklepy-sportowe",
+    "https://www.gov.pl/web/klimat/prowadzisz-maly-sklep-poznaj-obowiazki-w-systemie-kaucyjnym",
+    "https://www.gov.pl/web/klimat/system-kaucyjny-operatorzy",
+    "https://kaucyjni.pl/dla-sklepu/",
+    "https://kaucyjni.pl/cennik/",
+    "https://instalacja.kaucyjni.pl/download/operatorzy/Instrukcja_integracja_z_operatorem_28012026.pdf",
+    "https://www.tomra.com/pl-pl/reverse-vending/our-offering/tomra-apis",
+    "https://www.kaucja.pl/do-pobrania",
+    "https://polskakaucja.pl/"
+  ],
+  "stage": "research",
+  "structure": {
+    "commercial_archetype": "independent multi-system settlement audit",
+    "control_point": "retail group's review and escalation of unresolved operator settlement exceptions",
+    "critical_dependency": "machine-readable exports and discrepancy value that remain available and material after incumbent POS, RVM and operator reconciliation"
+  },
+  "thesis": "Poland's live deposit-return system has enormous recurring volume and multiple authorised operators, but generic multi-operator reconciliation is already served by COMP's Kaucyjni at under 80 PLN per store per month, alongside TOMRA and operator portals/APIs. The only credible remaining wedge is a read-only, chain-level independent exception audit that proves recoveries beyond those incumbent tools. It should begin with exported files from one regional group, never hold deposits, and advance only if observed recoveries support a premium chain fee or lawful success fee.",
+  "title": "Deposit-Return Settlement Switchboard",
+  "uncertainties": [
+    "Actual unresolved discrepancy value per store after incumbent reconciliation",
+    "Frequency, age and recoverability of operator settlement exceptions",
+    "Export and API rights under retailer, operator, POS and RVM contracts",
+    "Incremental value beyond Kaucyjni, TOMRA and operator portals",
+    "Retail-chain willingness to pay for independent assurance",
+    "Manual evidence-cleanup and operator-claim workload",
+    "Whether discrepancies persist as the system matures"
+  ],
+  "version": 2
+}

@@ -1,0 +1,73 @@
+{
+  "candidate_id": "route-06",
+  "claims": [
+    {
+      "claim_id": "route-06-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://health.ec.europa.eu/ehealth-digital-health-and-care/european-health-data-space-regulation-ehds_en"
+      ],
+      "statement": "The European Health Data Space creates an EU framework for access, control, exchange, interoperability, and secure reuse of electronic health data, with laboratory results among priority categories scheduled for cross-border exchange."
+    },
+    {
+      "claim_id": "route-06-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.who.int/publications-detail-redirect/9789241548274"
+      ],
+      "statement": "WHO laboratory quality guidance treats accuracy, reliability, timely reporting, documentation, and information management as essential parts of clinical laboratory operations."
+    }
+  ],
+  "contrary_evidence": [
+    "Large laboratory chains already operate patient portals and may add trend views themselves.",
+    "Many consumers test infrequently, weakening willingness to pay for an annual subscription."
+  ],
+  "economics": {
+    "acquisition_route": "Prototype on user-provided redacted reports, obtain clinician review through the founder's trusted network, then run an opt-in pilot with one independent laboratory group.",
+    "capital_required_pln": 60000,
+    "founder_net_worth_path": "Hypothesis: 150000 members at 90 PLN yearly net revenue yield 13.5m PLN ARR; at 25% EBITDA, 4x EBITDA, and 60% founder ownership, equity is about 8.1m PLN in year 5-8, excluding any separate count of retained earnings.",
+    "founder_time": "Hypothesis: 12-16 hours weekly, with licensed clinicians reviewing boundaries and content on contract.",
+    "gross_margin_basis": "Hypothesis: 72-82% after channel share, hosting, support, and periodic clinical-content review.",
+    "payback": "Hypothesis: under 20 PLN product and support cost per activated subscriber and zero direct paid-media CAC; laboratory integration pays back after 1500-3000 conversions.",
+    "pricing": "Hypothesis: 15-30 PLN per enhanced report or 99-149 PLN annually, with 25-35% paid to the laboratory.",
+    "retention_or_repeat": "Annual membership is reinforced by every new result; hypothesis is 55-70% year-one renewal among users with at least two tests yearly."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Validated mappings among assays, methods, units, reference ranges, and preparation context improve safe normalization",
+    "customer": "Consumers receiving repeated preventive or wellbeing blood tests from diagnostic laboratories",
+    "distribution_mechanism": "Diagnostic labs present activation inside their existing result-delivery portal after every paid test",
+    "offer_and_business_model": "White-label, non-diagnostic longitudinal results record and clinician handoff subscription",
+    "payer_and_paid_event": "Consumer pays a report upgrade or annual passport subscription; laboratory retains a disclosed channel share",
+    "problem_trigger": "A new laboratory report arrives in a format that is hard to compare with prior results or share concisely with a clinician"
+  },
+  "founder_fit": [
+    "Directly uses the founder's interest in biomarkers, longevity, and quantified self.",
+    "Data harmonization and careful trend modelling match data-science skills.",
+    "Laboratory distribution and a clinician reviewer minimize public-facing sales and camera exposure."
+  ],
+  "parent": null,
+  "risks": [
+    "Sensitive health data creates high privacy and security obligations.",
+    "Generated language can drift into medical-device or medical-advice territory.",
+    "Normalization errors can make longitudinal comparisons unsafe."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://health.ec.europa.eu/ehealth-digital-health-and-care/european-health-data-space-regulation-ehds_en",
+    "https://www.who.int/publications-detail-redirect/9789241548274"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "laboratory-distributed white-label consumer data subscription",
+    "control_point": "Normalized longitudinal assay record carried across repeated testing events",
+    "critical_dependency": "A laboratory integration that preserves method and reference-range metadata with explicit consent"
+  },
+  "thesis": "Offer diagnostic laboratories a white-label, consent-based results passport that normalizes units and reference ranges, visualizes personal trends, records test-preparation context, and produces a clinician handoff summary. It explicitly avoids diagnosis and treatment recommendations. Labs distribute it immediately after every test, earn a share of a consumer subscription, and improve repeat testing without relying on the founder's personal health brand.",
+  "title": "Lab-Branded Longitudinal Results Passport",
+  "uncertainties": [
+    "Which non-diagnostic feature creates measurable repeat-testing or retention lift for a lab?",
+    "Whether consumers prefer a lab-specific passport or an independent cross-lab record.",
+    "How reliably Polish lab exports encode methods, units, and reference ranges?"
+  ],
+  "version": 1
+}

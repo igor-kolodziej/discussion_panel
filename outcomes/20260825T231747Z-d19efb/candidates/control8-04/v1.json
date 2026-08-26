@@ -1,0 +1,86 @@
+{
+  "candidate_id": "control8-04",
+  "claims": [
+    {
+      "claim_id": "control8-04-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.eba.europa.eu/activities/direct-supervision-and-oversight/digital-operational-resilience-act/preparation-dora-application"
+      ],
+      "statement": "The EBA says financial entities in scope need a comprehensive register of contractual arrangements with ICT third-party service providers at entity, sub-consolidated, and consolidated levels."
+    },
+    {
+      "claim_id": "control8-04-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.eba.europa.eu/activities/single-rulebook/regulatory-activities/operational-resilience/implementing-technical-standards-establish-templates-register-information?version=2024"
+      ],
+      "statement": "The implementing technical standards for the Register of Information are adopted and published and define templates for contractual arrangements with ICT third-party providers."
+    },
+    {
+      "claim_id": "control8-04-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.eba.europa.eu/activities/single-rulebook/regulatory-activities/operational-resilience/implementing-technical-standards-establish-templates-register-information?version=2024"
+      ],
+      "statement": "The EBA describes the register as part of third-party risk supervision and an input to identifying critical ICT third-party providers."
+    }
+  ],
+  "contrary_evidence": [
+    "The EBA provides an illustrative spreadsheet, data model, and official materials, so entities with few contracts can maintain the register without another product.",
+    "DORA implementation is already underway, meaning many larger buyers have selected tools or consultants.",
+    "The presence of template-specific Q&A and changing implementation details increases maintenance cost and error risk."
+  ],
+  "economics": {
+    "acquisition_route": "Recruit one boutique DORA advisor and 2-3 smaller regulated design partners, demonstrate deterministic validation on redacted contracts, then sell through the advisor channel",
+    "capital_required_pln": 55000,
+    "founder_net_worth_path": "Unvalidated 5-7 year scenario: 90 entities averaging 60,000 PLN annual revenue yields 5.4m PLN; 35% EBITDA at 4x and 75% ownership implies about 5.67m PLN founder equity value.",
+    "founder_time": "16-22 hours per week for a pilot, with financial-regulation interpretation contracted and customer data processed in isolated environments",
+    "gross_margin_basis": "Taxonomy validation and updates are reusable software; initial contract mapping is service-heavy and must be templated or performed by certified partners",
+    "payback": "Customer payback hypothesis: reducing annual manual compilation and remediation by 80-200 expert hours could justify a 30,000-90,000 PLN license; baseline labor must be measured",
+    "pricing": "Unvalidated hypothesis: 20,000-60,000 PLN setup and 30,000-90,000 PLN annual subscription based on entity, contract, and reporting complexity",
+    "retention_or_repeat": "Registers must remain updated as contracts, subcontractors, functions, and entities change; source lineage and prior approvals create recurring operational dependence"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A reusable map from real contract language and vendor hierarchies to register fields, validation failures, and remediation patterns without pooling confidential contract text",
+    "customer": "Smaller Polish/EU insurers, payment institutions, investment firms, credit unions, and regulated groups with many ICT suppliers but limited GRC engineering",
+    "distribution_mechanism": "Implementation partnerships with boutique DORA advisors, audit firms, managed security providers, and banking-software consultancies",
+    "offer_and_business_model": "Contract ingestion, clause-to-field lineage, vendor/entity resolution, validation, change approvals, and regulator-format export; hypothesis 20,000-60,000 PLN setup plus 30,000-90,000 PLN annually",
+    "payer_and_paid_event": "CISO, operational-risk, or compliance leader pays implementation and an annual license per entity or consolidated perimeter",
+    "problem_trigger": "New or amended ICT contract, acquisition or entity change, annual supervisory request, or failed taxonomy validation"
+  },
+  "founder_fit": [
+    "Excellent fit for structured data validation, entity resolution, document AI, and deterministic exports",
+    "High contract value allows a small customer count and low-publicity B2B distribution",
+    "Can be piloted part-time with redacted or synthetic contracts",
+    "Requires strict separation from the founder's employer systems and information"
+  ],
+  "parent": null,
+  "risks": [
+    "Financial entities may treat contract and operational-resilience data as too sensitive for a small vendor",
+    "Established GRC platforms and large consultancies can add the same taxonomy",
+    "AI extraction errors must never silently populate a regulatory register",
+    "Long procurement and security reviews may conflict with part-time availability"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.eba.europa.eu/activities/direct-supervision-and-oversight/digital-operational-resilience-act/preparation-dora-application",
+    "https://www.eba.europa.eu/activities/single-rulebook/regulatory-activities/operational-resilience/implementing-technical-standards-establish-templates-register-information?version=2024",
+    "https://www.eba.europa.eu/sites/default/files/2025-03/b90dc121-77cd-47cc-a8c7-ceebda33e381/20250319%2520-%2520DORA%2520RoI%2520reporting%2520FAQ%2520%2528updated%2529.pdf"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Regulatory data compiler licensed per financial entity and reporting perimeter",
+    "control_point": "The validated DORA Register of Information dataset used for ICT third-party governance and supervisory reporting",
+    "critical_dependency": "Complete access to vendor contracts, service and entity hierarchies, plus exact implementation of the current ESA data model and reporting taxonomy"
+  },
+  "thesis": "Planning-stage hypothesis: build a contract-to-register compiler for smaller EU financial entities and groups that continuously converts ICT vendor contracts, service inventories, subcontractor chains, and legal-entity relationships into the DORA Register of Information taxonomy. Unlike a generic GRC system, the product would make every source clause and responsible owner traceable to each required field, validate identifiers and primary keys, and generate regulator-ready reporting files. The register becomes a recurring system of record for procurement changes and supervisor submissions, with a narrow Polish implementation-and-validation wedge before expansion through compliance partners.",
+  "title": "DORA Third-Party Register Compiler",
+  "uncertainties": [
+    "How many small regulated entities still rely on spreadsheets after initial DORA implementation",
+    "Procurement willingness to accept a hosted product versus on-premise or private deployment",
+    "Frequency and cost of taxonomy updates and supervisory corrections",
+    "Whether advisors will channel customers or regard the product as displacing billable work"
+  ],
+  "version": 1
+}

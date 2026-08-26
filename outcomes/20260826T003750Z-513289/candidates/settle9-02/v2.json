@@ -1,0 +1,134 @@
+{
+  "candidate_id": "settle9-02",
+  "claims": [
+    {
+      "claim_id": "settle9-02-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.podatki.gov.pl/wykaz-podatnikow-vat-wyszukiwarka/?mnuid=173"
+      ],
+      "statement": "Poland's official VAT list exposes registered business settlement accounts and historical-date checks, providing a free official evidence source for Polish suppliers."
+    },
+    {
+      "claim_id": "settle9-02-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2024/886/oj/eng",
+        "https://finance.ec.europa.eu/consumer-finance-and-payments/payment-services/payment-services_en"
+      ],
+      "statement": "EU Regulation 2024/886 requires payer PSPs to provide Verification of Payee before authorisation, free to payment-service users, with the non-euro-area rollout reaching Poland in 2027."
+    },
+    {
+      "claim_id": "settle9-02-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.europeanpaymentscouncil.eu/document-library/implementation-guidelines/verification-payee-scheme-inter-psp-api-specifications",
+        "https://www.europeanpaymentscouncil.eu/faq/verification-payee-scheme/api-specifications?page=1"
+      ],
+      "statement": "The EPC's published VoP API is for the inter-PSP space only, so it does not create a general entitlement for an independent AP application to query VoP results."
+    },
+    {
+      "claim_id": "settle9-02-c4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://support.nordeaopenbanking.com/hc/en-us/articles/25160311028636-Verification-of-Payee-VoP-in-Corporate-Payout-API-FAQ"
+      ],
+      "statement": "Nordea's corporate API documentation integrates VoP into payment initiation but states there is no separate pre-payment account/name validation endpoint returning JSON, illustrating bank-specific access constraints."
+    },
+    {
+      "claim_id": "settle9-02-c5",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.knf.gov.pl/dla_konsumenta/kampanie_informacyjne/cyberoszustwa_inwestycyjne/schematy_oszustw/business_e-mail_compromise"
+      ],
+      "statement": "Poland's financial supervisor describes BEC attacks that impersonate suppliers, introduce new account numbers and induce high-value transfers, supporting a real operational control problem."
+    },
+    {
+      "claim_id": "settle9-02-c6",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.surepay.eu/pricing-uk/",
+        "https://trustpair.com/gb/"
+      ],
+      "statement": "Direct incumbents already sell supplier-account verification, master-data controls and ERP-integrated payment security; SurePay publicly prices UK portal plans at GBP 2400 and GBP 4900 per year, while Trustpair markets end-to-end supplier onboarding and monitoring."
+    },
+    {
+      "claim_id": "settle9-02-c7",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2024/886/oj/eng",
+        "https://www.surepay.eu/pricing-uk/"
+      ],
+      "statement": "Pricing power must come from workflow, supplier remediation, layered evidence and audit history rather than reselling the legally free bank name check."
+    }
+  ],
+  "contrary_evidence": [
+    "Verification of Payee must be free to the payment-service user, removing standalone pricing power from the core name/IBAN match.",
+    "EPC specifications are inter-PSP only and a bank's corporate API may expose VoP only inside payment initiation, not as a reusable supplier-master query.",
+    "SurePay and Trustpair already offer overlapping corporate account validation, supplier onboarding, monitoring and audit functions with established bank or ERP integrations.",
+    "The Polish VAT white-list check is free and already accessible, so registry lookup alone is not a defensible product."
+  ],
+  "economics": {
+    "acquisition_route": "Start with a free supplier-master change audit using the Polish VAT list, then seek one accounting/AP or bank API partner; factoring and cyber-insurance distribution remain unvalidated and should follow a working integration.",
+    "capital_required_pln": 65000,
+    "founder_net_worth_path": "Possible but unvalidated. The v1 arithmetic of 250 entities at 24000 PLN ARR equals 6m PLN ARR, but reaching it requires partner access, conversion and retention against mature incumbents. Security certification, support and API fees must be included before applying any valuation or retained-earnings path.",
+    "founder_time": "A registry-first prototype and one integration can fit 12-18 hours weekly; enterprise security reviews and partner sales may temporarily exceed the founder's part-time envelope and should be staged.",
+    "gross_margin_basis": "Hypothesis revised to 75-90% before enterprise security and support overhead; bank or verification-provider API pricing and manual mismatch escalation are unknown.",
+    "payback": "Unknown. SurePay's public annual plans establish that businesses buy the category, but no Polish channel CAC, conversion rate or sales-cycle evidence was found.",
+    "pricing": "Hypothesis: 900-2000 PLN per month per legal entity for workflow, remediation and audit evidence, not for the free VoP result; SurePay's UK benchmark is GBP 2400/year for 1200 checks and GBP 4900/year for 5000 checks, with API pricing undisclosed.",
+    "retention_or_repeat": "Supplier onboarding, bank-detail changes and payment batches recur; retention depends on being embedded in approvals because banks and ERPs can provide the underlying check natively."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Permissioned supplier identity, historical name variants, approved change evidence and false-mismatch resolutions, subject to lawful retention and partner data rights",
+    "customer": "Polish and Central European SMEs with material supplier-payment volume, accounting firms, factors and AP software providers",
+    "distribution_mechanism": "Embedded accounting/AP or bank workflow plus a free Polish supplier-master scan; no assumption of direct access to the EPC inter-PSP API",
+    "offer_and_business_model": "Subscription workflow that freezes bank-detail changes, checks official registries, captures bank-provided VoP results where contractually available, routes secure supplier remediation and preserves layered approval evidence",
+    "payer_and_paid_event": "The buying company or portfolio partner pays for continuous supplier-change control and audit evidence, not for the legally free bank VoP check",
+    "problem_trigger": "A supplier is created or changes bank details before a material payment and registry, name-match or internal master data disagree"
+  },
+  "founder_fit": [
+    "Entity resolution, anomaly detection and audit evidence match the founder's data-science and finance interests.",
+    "A registry-first prototype avoids fund custody and can be built alongside employment.",
+    "Partner-led distribution fits the founder better than continuous direct selling, but obtaining the first bank or ERP integration still requires concentrated commercial work."
+  ],
+  "parent": {
+    "candidate_id": "settle9-02",
+    "version": 1
+  },
+  "risks": [
+    "Bank or PSP terms may not allow third-party retrieval, storage or reuse of VoP results outside payment initiation.",
+    "A misleading assurance label can cause users to override callback or dual-approval controls and create liability.",
+    "SurePay, Trustpair, banks and ERP vendors already control key data and distribution surfaces.",
+    "Supplier and sole-trader data require minimisation, access control, retention limits and a documented lawful basis.",
+    "Enterprise security expectations may require more cash and founder time than the prototype budget implies."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.podatki.gov.pl/wykaz-podatnikow-vat-wyszukiwarka/?mnuid=173",
+    "https://eur-lex.europa.eu/eli/reg/2024/886/oj/eng",
+    "https://finance.ec.europa.eu/consumer-finance-and-payments/payment-services/payment-services_en",
+    "https://www.europeanpaymentscouncil.eu/document-library/implementation-guidelines/verification-payee-scheme-inter-psp-api-specifications",
+    "https://www.europeanpaymentscouncil.eu/faq/verification-payee-scheme/api-specifications?page=1",
+    "https://www.knf.gov.pl/dla_konsumenta/kampanie_informacyjne/cyberoszustwa_inwestycyjne/schematy_oszustw/business_e-mail_compromise",
+    "https://www.surepay.eu/pricing-uk/",
+    "https://trustpair.com/gb/",
+    "https://support.nordeaopenbanking.com/hc/en-us/articles/25160311028636-Verification-of-Payee-VoP-in-Corporate-Payout-API-FAQ"
+  ],
+  "stage": "research",
+  "structure": {
+    "commercial_archetype": "embedded transaction-assurance workflow",
+    "control_point": "supplier-master creation or bank-detail change before payment authorisation",
+    "critical_dependency": "contractual access to bank-provided VoP results or payment-flow integration without presenting the product as a bank guarantee"
+  },
+  "thesis": "Build an AP control for Polish and Central European firms that freezes supplier bank-detail changes, checks the free Polish VAT list, captures the payer bank's free Verification of Payee response where an authorised interface exposes it, routes mismatches through secure supplier remediation, and preserves a layered approval packet. The pain is real, but the product cannot charge for VoP itself and cannot assume access to inter-PSP APIs. Its opportunity is a lower-friction Polish workflow and partner distribution around official checks, provided one bank or AP integration and paid conversion can be demonstrated against SurePay, Trustpair and native bank features.",
+  "title": "Supplier Bank-Change Evidence Rail",
+  "uncertainties": [
+    "Which Polish banks will expose VoP status to corporate or payment-initiation APIs in a reusable form",
+    "Contractual rights to retain a VoP response in an external audit packet",
+    "Polish SME willingness to pay for workflow around free bank and registry checks",
+    "False-match and manual-escalation rates for Polish company names and sole traders",
+    "Conversion through accounting firms, factors, insurers or AP vendors",
+    "Security certification and professional-liability cost at the first enterprise deployment"
+  ],
+  "version": 2
+}

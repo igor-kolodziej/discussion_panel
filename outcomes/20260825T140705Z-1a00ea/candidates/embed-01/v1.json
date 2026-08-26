@@ -1,0 +1,66 @@
+{
+  "candidate_id": "embed-01",
+  "claims": [
+    {
+      "claim_id": "embed-01-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2025/40/oj/eng"
+      ],
+      "statement": "Regulation (EU) 2025/40 covers all packaging and establishes lifecycle, sustainability, labelling, and extended-producer-responsibility requirements."
+    },
+    {
+      "claim_id": "embed-01-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/topics/waste-and-recycling/packaging-waste_en"
+      ],
+      "statement": "The Commission says the PPWR entered into force on 11 February 2025 and generally applies from 12 August 2026."
+    }
+  ],
+  "contrary_evidence": [
+    "Large packaging groups may build compliance checks internally, and harmonized guidance may commoditize basic rules."
+  ],
+  "economics": {
+    "acquisition_route": "One-to-many acquisition through packaging printers, label converters, and their MIS or ERP vendors.",
+    "capital_required_pln": 22000,
+    "founder_net_worth_path": "Hypothesis: five channel integrations and 100 brands by year two can grow to 350 brands at 24000 PLN annual revenue by year five, making a majority founder stake plausibly exceed 5 million PLN without double-counting retained cash.",
+    "founder_time": "Hypothesis: 3-4 founder hours daily for product and partner enablement, with packaging-law review contracted out.",
+    "gross_margin_basis": "Hypothesis: 75-85% gross margin after automated checks, amortized expert review, storage, and channel revenue share.",
+    "payback": "Hypothesis: an 8000 PLN integration and enablement cost pays back within six months after 15 activated brand customers.",
+    "pricing": "Hypothesis, including the capital figure: 690 PLN per SKU dossier, 199 PLN per annual refresh, or 4900 PLN monthly API bundles.",
+    "retention_or_repeat": "A paid event recurs for every new SKU, artwork change, material substitution, and annual evidence refresh."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Rights to anonymized material decisions, exceptions, and accepted remediation outcomes improve the rules engine",
+    "customer": "EU consumer-brand SMEs and packaging compliance managers",
+    "distribution_mechanism": "Embedded reseller integration inside printer and converter quoting workflows",
+    "offer_and_business_model": "API-generated PPWR evidence dossier sold per event and by channel bundle",
+    "payer_and_paid_event": "The brand owner pays when a SKU dossier is approved or refreshed",
+    "problem_trigger": "A packaging SKU is created or its artwork, supplier, or material changes"
+  },
+  "founder_fit": [
+    "The rules engine suits data-science automation, part-time validation, low capital, and low-camera one-to-many selling."
+  ],
+  "parent": null,
+  "risks": [
+    "Wrong classifications could delay launches or create liability, so the product must remain an evidence workflow with qualified review rather than legal certification."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2025/40/oj/eng",
+    "https://environment.ec.europa.eu/topics/waste-and-recycling/packaging-waste_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Embedded compliance tollbooth",
+    "control_point": "The evidence check immediately before packaging artwork is approved for production",
+    "critical_dependency": "Printer integrations plus reliable legal and material-classification updates"
+  },
+  "thesis": "Embed a packaging-compliance preflight in printers' and converters' quoting flows, charging on every SKU or material revision while contractually pooling anonymized outcomes into a hard-to-copy classification corpus.",
+  "title": "PackProof Embedded PPWR Preflight",
+  "uncertainties": [
+    "Unknown willingness of converters to share specification and remediation outcomes under reusable data rights."
+  ],
+  "version": 1
+}

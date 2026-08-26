@@ -1,0 +1,84 @@
+{
+  "candidate_id": "settle7-07",
+  "claims": [
+    {
+      "claim_id": "settle7-07-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/attachment/0d8e1a14-a736-4160-9559-5c23675d379e"
+      ],
+      "statement": "A 2025 Polish Justice Ministry consultation document describes guarantee retentions as common in construction, often deducted from monthly compensation and sometimes held for up to five years."
+    },
+    {
+      "claim_id": "settle7-07-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/gddkia/informacja-dla-podwykonawcow-bioracych-udzial-w-realizacji-inwestycji-gddkia"
+      ],
+      "statement": "GDDKiA guidance for subcontractor direct-payment requests requires acceptance without reservations and documentary proof, showing that release depends on a structured evidence packet in public works."
+    },
+    {
+      "claim_id": "settle7-07-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2014/910/oj"
+      ],
+      "statement": "Under eIDAS, an electronic signature cannot be denied legal effect solely because it is electronic, and a qualified electronic signature has the equivalent legal effect of a handwritten signature."
+    }
+  ],
+  "contrary_evidence": [
+    "Retention terms are contract-specific and a digital evidence vault does not resolve insolvency, bad-faith withholding, or genuine defects.",
+    "Document-management and construction ERP products may already cover part of the closeout workflow."
+  ],
+  "economics": {
+    "acquisition_route": "Begin with a construction lawyer or guarantee broker that can bring a small portfolio of active retentions",
+    "capital_required_pln": 55000,
+    "founder_net_worth_path": "A plausible 6-8 year path would require approximately 1,500-2,000 active projects at about 4,000 PLN average annual recurring revenue, partner-led acquisition, and a valuable contract/outcome dataset while the founder retains material ownership",
+    "founder_time": "Approximately 10-14 hours per week with legal interpretation and dispute advice explicitly outsourced",
+    "gross_margin_basis": "Workflow software and automated contract extraction less qualified-signature, storage, and specialist review costs",
+    "payback": "One timely retention tranche or avoided evidence reconstruction can exceed annual fees, but willingness to pay before a dispute is uncertain",
+    "pricing": "Roughly 2,500 PLN project onboarding plus 300-600 PLN per active project month, with optional release-packet fees",
+    "retention_or_repeat": "Projects remain active throughout delivery and warranty periods, and contractors start new projects repeatedly"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A clause and outcome library could identify recurring release blockers, improve contract setup, and create reliable counterparty process histories",
+    "customer": "Polish construction subcontractors, general contractors, project SPVs, and guarantee or receivables-finance providers",
+    "distribution_mechanism": "Distribute through subcontractor accountants, construction-law firms, guarantee brokers, industry associations, and public-project consultants",
+    "offer_and_business_model": "Contract extraction, milestone calendar, e-sign acceptance, defect notice workflow, evidence vault, and lender- or court-ready export",
+    "payer_and_paid_event": "A contractor, subcontractor consortium, or finance partner pays per project and per year; a completion fee applies when a release-ready tranche receipt is countersigned",
+    "problem_trigger": "Work is accepted but part of compensation remains retained for years and the parties disagree or lose track of defects, notices, warranty dates, or release documentation"
+  },
+  "founder_fit": [
+    "The workflow rewards structured evidence, automation, and quantitative ageing analysis",
+    "It can be tested on historical project files without founder camera exposure",
+    "Partner distribution can reduce the need for constant direct networking"
+  ],
+  "parent": null,
+  "risks": [
+    "The platform cannot compel a reluctant counterparty to release money",
+    "Legal advice boundaries and professional liability must be explicit",
+    "General contractors may resist a tool that increases release transparency",
+    "Construction documents are inconsistent and may require expensive review"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.gov.pl/attachment/0d8e1a14-a736-4160-9559-5c23675d379e",
+    "https://www.gov.pl/web/gddkia/informacja-dla-podwykonawcow-bioracych-udzial-w-realizacji-inwestycji-gddkia",
+    "https://eur-lex.europa.eu/eli/reg/2014/910/oj"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Per-project closeout and retention evidence vault",
+    "control_point": "The counterparty-signed acceptance clock and complete defect-and-remedy record that supports each retention-release tranche",
+    "critical_dependency": "General contractors must participate and contracts must recognise the digital acceptance and notice trail as valid evidence"
+  },
+  "thesis": "Polish construction subcontractors and general contractors could share a project-specific retention passport that extracts release conditions from the contract, records signed partial and final acceptance, tracks defects and warranty clocks, and produces a release-ready evidence packet. It would not force payment or hold funds; it would make the exact contractual release event and unresolved exceptions visible to both sides and to financing or guarantee partners.",
+  "title": "Retention Release Passport",
+  "uncertainties": [
+    "Average administrative cost and delayed amount per SME subcontractor",
+    "Whether the buyer is the subcontractor, general contractor, lender, or guarantee broker",
+    "Which signature and notice methods typical contracts accept",
+    "How often missing evidence rather than insolvency or substantive defects causes delayed release"
+  ],
+  "version": 1
+}

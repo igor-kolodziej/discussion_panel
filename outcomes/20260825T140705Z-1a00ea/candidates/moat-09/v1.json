@@ -1,0 +1,67 @@
+{
+  "candidate_id": "moat-09",
+  "claims": [
+    {
+      "claim_id": "moat09-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/digital-health-technologies-remote-data-acquisition-clinical-investigations"
+      ],
+      "statement": "FDA guidance recommends fit-for-purpose selection and validation of digital technologies used for remote trial data."
+    },
+    {
+      "claim_id": "moat09-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://pubmed.ncbi.nlm.nih.gov/31239435/"
+      ],
+      "statement": "EEG-BIDS is a published standardized extension of BIDS for electroencephalography."
+    }
+  ],
+  "contrary_evidence": [
+    "Central EEG vendors and academic pipelines already perform QC."
+  ],
+  "economics": {
+    "acquisition_route": "Unvalidated hypothesis: central EEG labs and CRO protocol teams.",
+    "capital_required_pln": 80000,
+    "founder_net_worth_path": "Unvalidated hypothesis: 100 studies at 100000 PLN yield 10 million PLN revenue and founder equity above 5 million PLN in six to eight years.",
+    "founder_time": "Unvalidated hypothesis: 15-20 hours weekly with neurophysiology reviewers.",
+    "gross_margin_basis": "Unvalidated hypothesis: 68% after expert adjudication.",
+    "payback": "Unvalidated hypothesis: one midsize study.",
+    "pricing": "Unvalidated hypothesis: 20000-80000 PLN setup plus 40-150 PLN per recording.",
+    "retention_or_repeat": "Unvalidated hypothesis: validated pipelines repeat across studies."
+  },
+  "fingerprint": {
+    "compounding_advantage": "More devices, artifacts, and adjudications expand benchmark coverage",
+    "customer": "CROs and multi-site EEG research sponsors",
+    "distribution_mechanism": "CRO protocol specification and central-lab partnerships",
+    "offer_and_business_model": "Automated QC with expert escalation and site benchmarks",
+    "payer_and_paid_event": "The sponsor pays at setup and per recording",
+    "problem_trigger": "A study needs early proof that recordings are usable"
+  },
+  "founder_fit": [
+    "EEG and data-science experience provide rare credibility without camera-led distribution."
+  ],
+  "parent": null,
+  "risks": [
+    "False passes corrupt endpoints and false fails waste recordings.",
+    "Procurement may be slow."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/digital-health-technologies-remote-data-acquisition-clinical-investigations",
+    "https://pubmed.ncbi.nlm.nih.gov/31239435/"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Quality-assurance lab as software",
+    "control_point": "A de-identified corpus linking artifacts and deviations to expert labels and usability",
+    "critical_dependency": "Learning rights and reproducible expert agreement"
+  },
+  "thesis": "Protocol-aware EEG quality assurance for CROs builds a cross-device annotated artifact corpus and site benchmark from every study.",
+  "title": "NeuroQC Benchmark",
+  "uncertainties": [
+    "Training rights, cross-device accuracy, and study volume are unknown."
+  ],
+  "version": 1
+}

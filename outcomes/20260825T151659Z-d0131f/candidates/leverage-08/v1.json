@@ -1,0 +1,72 @@
+{
+  "candidate_id": "leverage-08",
+  "claims": [
+    {
+      "claim_id": "leverage-08-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://health.ec.europa.eu/document/download/a9ad86b7-1b8e-4bae-beb4-48b2b3ed2f05_en?filename=mdcg_2025-10_en.pdf"
+      ],
+      "statement": "MDCG 2025-10 describes PMS as a system spanning from first market placement through the intended lifetime of the last device and interacting with the quality-management system."
+    },
+    {
+      "claim_id": "leverage-08-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://health.ec.europa.eu/system/files/2023-01/mdcg_2022-21_en.pdf"
+      ],
+      "statement": "MDCG 2022-21 explains that MDR PSURs require systematic review of PMS data for class IIa, IIb, and III devices."
+    }
+  ],
+  "contrary_evidence": [
+    "Established eQMS and regulatory platforms include complaint and PMS modules.",
+    "The official guidance explicitly preserves manufacturer accountability and does not make automated drafts sufficient."
+  ],
+  "economics": {
+    "acquisition_route": "UNVALIDATED HYPOTHESIS — 5 authorised-representative or regulatory partners each refer 8 manufacturers by year 3.",
+    "capital_required_pln": 120000,
+    "founder_net_worth_path": "UNVALIDATED HYPOTHESIS — 70 manufacturers at 100000 PLN annual average yields 7 million PLN recurring revenue by year 5; a 3x value and 68% ownership implies 14.28 million PLN equity, excluding distributions.",
+    "founder_time": "UNVALIDATED HYPOTHESIS — 20 hours weekly for product work while contracted experts review outputs; 9 hours after workflow maturity.",
+    "gross_margin_basis": "UNVALIDATED HYPOTHESIS — 70% gross margin after medical-regulatory review and literature access.",
+    "payback": "UNVALIDATED HYPOTHESIS — under 10 months if the system replaces 150 annual analyst hours or shortens one notified-body remediation.",
+    "pricing": "UNVALIDATED HYPOTHESIS — all commercial numbers here, including capital_required_pln, are hypotheses: 30000 PLN setup and 7500 PLN monthly per manufacturer for up to 3 device families.",
+    "retention_or_repeat": "UNVALIDATED HYPOTHESIS — 95% annual retention because PMS spans the marketed lifetime and data arrives continuously."
+  },
+  "fingerprint": {
+    "compounding_advantage": "device-specific terminology maps and a reviewer-labelled corpus of signal classifications and evidence defects",
+    "customer": "small EU medical-device and IVD manufacturers with limited in-house surveillance analytics",
+    "distribution_mechanism": "authorised representatives, regulatory consultancies, quality-system implementers, and testing laboratories",
+    "offer_and_business_model": "multi-source ingestion, deduplication, denominator tracking, explainable signal detection, and citation-bound draft evidence",
+    "payer_and_paid_event": "the manufacturer pays a recurring device-family surveillance subscription",
+    "problem_trigger": "a complaint, incident, literature result, corrective action, sales update, or periodic report cutoff arrives"
+  },
+  "founder_fit": [
+    "Unusually strong neuroscience, health, data-science, and medical-adjacent fit; experts can be contracted while the founder builds the automation and evidence lineage."
+  ],
+  "parent": null,
+  "risks": [
+    "Missed signals could harm patients and expose customers and provider.",
+    "Clinical judgments require qualified reviewers.",
+    "Health data and literature licensing must be handled lawfully."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://health.ec.europa.eu/medical-devices-sector/new-regulations/guidance-mdcg-endorsed-documents-and-other-guidance_en",
+    "https://health.ec.europa.eu/document/download/a9ad86b7-1b8e-4bae-beb4-48b2b3ed2f05_en?filename=mdcg_2025-10_en.pdf",
+    "https://health.ec.europa.eu/system/files/2023-01/mdcg_2022-21_en.pdf"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "regulated surveillance evidence factory",
+    "control_point": "the reviewed signal table and traceable PMS or PSUR evidence pack maintained over the device lifetime",
+    "critical_dependency": "lawful access to complete complaint, vigilance, sales, literature, and device-identifier data plus qualified human sign-off"
+  },
+  "thesis": "A device-family-specific workflow can continuously deduplicate complaints, vigilance events, literature, corrective actions, and sales denominators, surface explainable signals, and draft traceable PMS/PSUR evidence for accountable regulatory review. Regulatory consultancies and authorised representatives provide distribution; every new datum and reporting cycle repeats demand.",
+  "title": "Post-Market Safety Signal Factory for Small Medical-Device Makers",
+  "uncertainties": [
+    "Ability to obtain complete denominators and complaint feeds.",
+    "Professional-liability cost.",
+    "Willingness of authorised representatives to distribute rather than build."
+  ],
+  "version": 1
+}

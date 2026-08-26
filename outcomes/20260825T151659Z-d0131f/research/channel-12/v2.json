@@ -1,0 +1,225 @@
+{
+  "candidate_id": "channel-12",
+  "candidate_sha256": "9ffa6a8fcca9ba1e9acdc7fb4470b93ad92c5cc5caae52468dda7eccc7baa88a",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "ch12-rclaim-01",
+      "evidence_refs": [
+        "ch12-s01",
+        "ch12-s02"
+      ],
+      "statement": "The payer's payment-service provider, not an independent AP software vendor, must provide Verification of Payee before authorization and must provide that verification free to the payment-service user."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "ch12-rclaim-02",
+      "evidence_refs": [
+        "ch12-s01",
+        "ch12-s02"
+      ],
+      "statement": "For payment-service providers in non-euro Member States such as Poland, the relevant Verification of Payee deadline is 9 July 2027, and the regulation concerns euro credit transfers."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "ch12-rclaim-03",
+      "evidence_refs": [
+        "ch12-s01",
+        "ch12-s03",
+        "ch12-s04"
+      ],
+      "statement": "Non-consumer users can opt out for bulk files; nevertheless, corporate systems must adapt to verification results and the corporate remains liable for a payment it authorizes."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "ch12-rclaim-04",
+      "evidence_refs": [
+        "ch12-s05",
+        "ch12-s06"
+      ],
+      "statement": "The EPC's published API specification is for inter-PSP messages, so direct scheme access by an ordinary enterprise workflow vendor is not established."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "ch12-rclaim-05",
+      "evidence_refs": [
+        "ch12-s07",
+        "ch12-s08"
+      ],
+      "statement": "SurePay already offers bulk Verification of Payee through APIs and a white-label portal with audit-related workflow features, and reports coverage of more than 5,000 banks, 12 billion checks and 20,000 organizations."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "ch12-rclaim-06",
+      "evidence_refs": [
+        "ch12-s09"
+      ],
+      "statement": "AIB already distributes a bank-native corporate Verification of Payee portal accepting files and returning per-beneficiary results, which demonstrates bank control of a key distribution point."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "ch12-rclaim-07",
+      "evidence_refs": [
+        "ch12-s10"
+      ],
+      "statement": "IBAN.COM publishes annual API license prices from EUR 2,000 for 2,500 requests through EUR 25,000 for 50,000 requests, providing a concrete but not equivalent upstream-data cost benchmark."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "ch12-rclaim-08",
+      "evidence_refs": [
+        "ch12-s11"
+      ],
+      "statement": "Official 2024 fraud data report EUR 2.5 billion of fraudulent credit transfers in the EEA and indicate that users bore about 85% of credit-transfer fraud losses, supporting material buyer pain but not demand for this specific product."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "ch12-rclaim-09",
+      "evidence_refs": [
+        "ch12-s04",
+        "ch12-s05",
+        "ch12-s07",
+        "ch12-s09"
+      ],
+      "statement": "A viable independent product is more plausibly a read-only exception-resolution and evidence layer downstream of a contracted PSP result than a substitute for the legally mandated verification service."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "ch12-rclaim-10",
+      "evidence_refs": [],
+      "statement": "Exception volume, enterprise willingness to pay, partner access, gross margin, cross-tenant data rights and the product's effect on fraud outcomes remain unvalidated."
+    }
+  ],
+  "contrary_evidence": [
+    "SurePay already supplies bulk APIs, a white-label portal, audit-oriented workflow and broad bank connectivity, creating direct product and partner competition.",
+    "AIB demonstrates that banks can bundle file-based corporate Verification of Payee directly into business banking, controlling buyer access and potentially eliminating a separate software budget.",
+    "The EPC API specification is explicitly inter-PSP, so essential verification-result access is not proven for an independent vendor without a contractually authorized partner.",
+    "The mandated verification result must be free to the payment-service user, while IBAN.COM exposes relatively low-cost validation APIs; both constrain commodity-check pricing.",
+    "Corporate bulk users may opt out and remain liable for authorized payments, so regulatory obligation alone does not guarantee adoption of an exception-resolution layer.",
+    "Poland's non-euro PSP deadline is July 2027 and the regulation concerns euro transfers, weakening an immediate Poland-first regulatory wedge."
+  ],
+  "schema_version": 2,
+  "sources": [
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2024-03-19",
+      "publisher": "Official Journal of the European Union / EUR-Lex",
+      "source_id": "ch12-s01",
+      "source_type": "official_regulation",
+      "stance": "context",
+      "title": "Regulation (EU) 2024/886 on instant credit transfers in euro",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/886/oj/eng"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated; current as accessed",
+      "publisher": "European Central Bank",
+      "source_id": "ch12-s02",
+      "source_type": "official_implementation_page",
+      "stance": "context",
+      "title": "Instant Payments Regulation",
+      "url": "https://www.ecb.europa.eu/paym/retail/instant_payments/html/instant_payments_regulation.en.html"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2024-07-23; updated 2025-07-28",
+      "publisher": "European Commission, Directorate-General for Financial Stability, Financial Services and Capital Markets Union",
+      "source_id": "ch12-s03",
+      "source_type": "official_guidance",
+      "stance": "context",
+      "title": "Clarification of requirements of the Instant Payments Regulation",
+      "url": "https://finance.ec.europa.eu/publications/clarification-requirements-instant-payments-regulation_en"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2025-07-17",
+      "publisher": "European Payments Council",
+      "source_id": "ch12-s04",
+      "source_type": "scheme_guidance",
+      "stance": "context",
+      "title": "Clarifications about the provision of VOP-services for bulk files",
+      "url": "https://www.europeanpaymentscouncil.eu/faq/verification-payee-scheme/rulebook/clarifications-about-provision-vop-services-bulk-files"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2026-05-04",
+      "publisher": "European Payments Council",
+      "source_id": "ch12-s05",
+      "source_type": "official_scheme_api_specification",
+      "stance": "contradicting",
+      "title": "Verification Of Payee Scheme Inter-PSP API Specifications v1.1.1",
+      "url": "https://www.europeanpaymentscouncil.eu/document-library/implementation-guidelines/verification-payee-scheme-inter-psp-api-specifications-0"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated; current as accessed",
+      "publisher": "European Payments Council",
+      "source_id": "ch12-s06",
+      "source_type": "official_scheme_overview",
+      "stance": "context",
+      "title": "Verification Of Payee",
+      "url": "https://www.europeanpaymentscouncil.eu/what-we-do/other-schemes/verification-payee"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated; 2026 copyright",
+      "publisher": "SurePay",
+      "source_id": "ch12-s07",
+      "source_type": "incumbent_product_page",
+      "stance": "contradicting",
+      "title": "Bulk Verification for VOP",
+      "url": "https://www.surepay.eu/verification-of-payee-api/building-blocks-of-vop-bulk-verification-in-white-label-portal/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated; 2026 copyright",
+      "publisher": "SurePay",
+      "source_id": "ch12-s08",
+      "source_type": "incumbent_product_page",
+      "stance": "contradicting",
+      "title": "Verification of Payee for European Banks and PSPs",
+      "url": "https://www.surepay.eu/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated; current as accessed",
+      "publisher": "AIB Business Banking",
+      "source_id": "ch12-s09",
+      "source_type": "bank_product_page",
+      "stance": "contradicting",
+      "title": "Verification of Payee",
+      "url": "https://www.aib.ie/business/ways-to-bank/vop"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated; 2026 copyright",
+      "publisher": "IBAN.COM",
+      "source_id": "ch12-s10",
+      "source_type": "competitor_pricing",
+      "stance": "contradicting",
+      "title": "IBAN License information and pricing plans",
+      "url": "https://www.iban.com/pricing?lang=en"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2025-12-15",
+      "publisher": "European Banking Authority and European Central Bank",
+      "source_id": "ch12-s11",
+      "source_type": "official_statistical_report",
+      "stance": "supporting",
+      "title": "Joint EBA-ECB report on payment fraud: strong authentication remains effective but fraudsters are adapting",
+      "url": "https://www.eba.europa.eu/publications-and-media/press-releases/joint-eba-ecb-report-payment-fraud-strong-authentication-remains-effective-fraudsters-are-adapting"
+    }
+  ],
+  "unknowns": [
+    "Which banks, PSPs or AP platforms will contractually expose machine-readable Verification of Payee results to an independent vendor",
+    "Close-match, no-match and unavailable-result frequency by enterprise, bank and payment file",
+    "Enterprise willingness to pay beyond a free bank result or included portal",
+    "Legal basis and contractual permission for retaining supplier aliases, legal identifiers and outcomes across tenants",
+    "Security certification, insurance, payments-law review and integration cost for a bank-grade pilot",
+    "Whether documented resolution measurably reduces fraud, loss or cycle time rather than shifting manual work and liability",
+    "Partner sales cycle, retention, support burden and founder-compatible operating load",
+    "Conservative gross margin after partner, data, compliance and enterprise-support costs"
+  ]
+}

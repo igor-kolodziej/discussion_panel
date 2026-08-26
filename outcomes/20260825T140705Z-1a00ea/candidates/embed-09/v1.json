@@ -1,0 +1,66 @@
+{
+  "candidate_id": "embed-09",
+  "claims": [
+    {
+      "claim_id": "embed-09-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://pubmed.ncbi.nlm.nih.gov/31239435/"
+      ],
+      "statement": "EEG-BIDS provides a community data and metadata structure intended to make EEG datasets more transparent, reusable, and reproducible."
+    },
+    {
+      "claim_id": "embed-09-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://pubmed.ncbi.nlm.nih.gov/41953081/"
+      ],
+      "statement": "A 2026 primary study developed lightweight CNNs for automated detection of eye, muscle, and non-physiological artifacts in continuous clinical EEG."
+    }
+  ],
+  "contrary_evidence": [
+    "Open-source EEG toolchains and device-vendor QC features may make basic artifact detection free."
+  ],
+  "economics": {
+    "acquisition_route": "One-to-many distribution through EEG device SDKs, neuroscience CROs, and research-data platforms.",
+    "capital_required_pln": 25000,
+    "founder_net_worth_path": "Hypothesis: 80 device, CRO, or lab accounts at 6000 PLN blended monthly revenue yields 5.8 million PLN ARR by year five and can support founder equity above 5 million PLN without double-counting cash.",
+    "founder_time": "Hypothesis: 3 founder hours daily for modeling and integration, with expert annotations purchased in bounded batches.",
+    "gross_margin_basis": "Hypothesis: 80-90% gross margin after inference, storage, expert-label acquisition, and integration support.",
+    "payback": "Hypothesis: a 10000 PLN device integration pays back within a year at 1500 recordings monthly.",
+    "pricing": "Hypothesis, including the capital figure: 8 PLN per recording or a 1500 PLN monthly SDK minimum.",
+    "retention_or_repeat": "Every new recording, protocol revision, and data-release QC run creates another paid event."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Consented expert corrections across hardware, montages, and protocols improve generalization and calibration",
+    "customer": "EEG device vendors, neuroscience CROs, and high-throughput research laboratories",
+    "distribution_mechanism": "Embedded device SDK and neuroscience workflow integration",
+    "offer_and_business_model": "Research-use artifact detection and provenance API sold per recording and SDK minimum",
+    "payer_and_paid_event": "The platform or laboratory pays when a recording receives a QC result",
+    "problem_trigger": "A recording must pass quality control before analysis, delivery, or dataset release"
+  },
+  "founder_fit": [
+    "This directly leverages the founder's EEG, neuroscience, data-science, and AI background with low capital and asynchronous sales."
+  ],
+  "parent": null,
+  "risks": [
+    "The initial product must be labeled research-use-only and must not make diagnostic claims without appropriate medical-device compliance."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://pubmed.ncbi.nlm.nih.gov/31239435/",
+    "https://pubmed.ncbi.nlm.nih.gov/41953081/"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Usage-metered scientific quality SDK",
+    "control_point": "The acceptance gate before an EEG recording enters analysis or a research dataset",
+    "critical_dependency": "Cross-device validation and explicit rights to expert-labeled signal segments"
+  },
+  "thesis": "Embed automated EEG artifact scoring in device SDKs and research-data platforms, charging for every recording accepted or rejected while accumulating consented expert correction labels across devices.",
+  "title": "NeuroQC Recording Gate API",
+  "uncertainties": [
+    "Cross-device error rates and buyers' willingness to license correction labels remain unvalidated."
+  ],
+  "version": 1
+}

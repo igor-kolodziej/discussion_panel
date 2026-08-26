@@ -1,0 +1,81 @@
+{
+  "candidate_id": "channel-12",
+  "claims": [
+    {
+      "claim_id": "channel-12-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://energy.ec.europa.eu/topics/energy-efficiency/energy-performance-buildings/energy-performance-buildings-directive_en"
+      ],
+      "statement": "The revised EU Energy Performance of Buildings Directive strengthens EPCs, introduces building renovation passports, and gradually sets minimum energy-performance standards for non-residential stock."
+    },
+    {
+      "claim_id": "channel-12-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://energy.ec.europa.eu/topics/energy-efficiency/energy-performance-buildings/energy-performance-buildings-directive/energy-renovation-buildings_en"
+      ],
+      "statement": "A renovation passport is described as a tailored staged roadmap prepared with an expert, which supports an expert-tool distribution model rather than a direct-to-owner calculator."
+    },
+    {
+      "claim_id": "channel-12-c03",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://energy.ec.europa.eu/topics/energy-efficiency/energy-performance-buildings/energy-performance-buildings-directive_en",
+        "https://energy.ec.europa.eu/topics/energy-efficiency/energy-performance-buildings/national-building-renovation-plans_en"
+      ],
+      "statement": "Hypothesis: assessors, property managers, and lenders will pay for a shared calculation and evidence schema because portfolios need comparable staged plans, while each country's implementation creates local workflow complexity."
+    }
+  ],
+  "contrary_evidence": [
+    "The EU describes renovation passports as voluntary, so demand depends on national implementation, financing, and expert workflow value rather than a universal immediate mandate.",
+    "EPC and building-energy software incumbents can add staged-planning modules."
+  ],
+  "economics": {
+    "acquisition_route": "Start with a Polish assessor software or property manager, then distribute through lender and building-software integrations",
+    "capital_required_pln": 70000,
+    "founder_net_worth_path": "Hypothesis: 20000 annual small-building passports plus 15 enterprise licences could reach 5-7 million PLN ARR in years 6-8; at 25% EBITDA, 6x EBITDA, and 75% founder ownership, founder equity could exceed 5.6 million PLN",
+    "founder_time": "16-22 hours weekly for one-country MVP, declining to 8-12 hours weekly after expert partners own surveys and partner support",
+    "gross_margin_basis": "Scenario calculation and document generation can support 80-90% gross margin; local benchmark maintenance and enterprise integrations are the main costs",
+    "payback": "Target under 9 months for an assessor platform and under 15 months for a lender integration; partners must save report labour or increase financed project conversion",
+    "pricing": "Hypothesis: 150-500 PLN per residential passport, 1000-5000 PLN per commercial building, and 50000-250000 PLN annual platform licences",
+    "retention_or_repeat": "Passports are versioned as measures are completed, portfolios are monitored annually, and financing scenarios update with prices and performance"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Local measure-cost benchmarks, realised energy outcomes, building archetypes, and lender-accepted evidence templates improve recommendations",
+    "customer": "Energy-performance assessors, commercial property managers, banks, green-lending platforms, and building-software vendors",
+    "distribution_mechanism": "Embedded in EPC assessor tools, property-management systems, bank technical due diligence, and green-loan workflows",
+    "offer_and_business_model": "Calculation, scenario, evidence, and portfolio API with per-building and enterprise licensing",
+    "payer_and_paid_event": "Assessor, property manager, or lender pays per issued passport or per building under annual portfolio monitoring",
+    "problem_trigger": "An EPC, portfolio review, refinancing, sale, or renovation decision requires a staged and comparable investment roadmap"
+  },
+  "founder_fit": [
+    "Strong renewable-energy, modelling, finance, and family-business adjacency, with an assessor and lender channel that avoids homeowner-by-homeowner selling. The family company could validate workflow assumptions on non-confidential cases, while accredited experts own certification."
+  ],
+  "parent": null,
+  "risks": [
+    "Poor recommendations can misallocate large renovation budgets; professionals must own final reports.",
+    "Country-specific calculation rules can turn expansion into consulting-heavy maintenance.",
+    "Property-data integrations and lender security reviews may extend sales cycles."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://energy.ec.europa.eu/topics/energy-efficiency/energy-performance-buildings/energy-performance-buildings-directive/energy-renovation-buildings_en",
+    "https://energy.ec.europa.eu/topics/energy-efficiency/energy-performance-buildings/energy-performance-buildings-directive_en",
+    "https://energy.ec.europa.eu/topics/energy-efficiency/energy-performance-buildings/national-building-renovation-plans_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Expert-issued assessment and financing infrastructure",
+    "control_point": "The signed staged-renovation plan used to prioritise works and support financing or portfolio decisions",
+    "critical_dependency": "Accredited partner adoption and locally valid calculation and cost data accepted by owners and lenders"
+  },
+  "thesis": "Provide energy-performance assessors, property managers, and green-lending platforms with an API that converts an EPC and building survey into a staged renovation passport: measures, dependencies, cost ranges, energy and carbon scenarios, financing evidence, and versioned assumptions. The accredited professional signs the result; the software becomes the reusable calculation and portfolio-data layer.",
+  "title": "Renovation Passport Engine",
+  "uncertainties": [
+    "Polish transposition details, assessor accreditation, and approved calculation methods need confirmation.",
+    "Banks may accept only their own technical due-diligence formats.",
+    "Cost and performance estimates require local calibration and may become stale quickly."
+  ],
+  "version": 1
+}

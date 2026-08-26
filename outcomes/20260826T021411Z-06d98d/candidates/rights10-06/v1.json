@@ -1,0 +1,86 @@
+{
+  "candidate_id": "rights10-06",
+  "claims": [
+    {
+      "claim_id": "rights10-06-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/topics/waste-and-recycling/packaging-waste_en"
+      ],
+      "statement": "PPWR generally applies from 12 August 2026 and imposes packaging sustainability, composition, conformity, and documentation requirements."
+    },
+    {
+      "claim_id": "rights10-06-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2025/40/ojS"
+      ],
+      "statement": "Packaging-material suppliers must provide manufacturers the information and documentation needed to demonstrate conformity, while manufacturers retain technical files and declarations."
+    },
+    {
+      "claim_id": "rights10-06-c3",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/topics/waste-and-recycling/packaging-waste/packaging-packaging-waste-regulation_en"
+      ],
+      "statement": "Demand hypothesis: manufacturers will pay for evidence reuse and forward supply reservations before recycled-content targets tighten."
+    }
+  ],
+  "contrary_evidence": [
+    "Several implementing methodologies and label details remain staged or product-specific.",
+    "Large packaging groups may impose their own supplier portals."
+  ],
+  "economics": {
+    "acquisition_route": "Demand hypothesis: labs and PPWR advisers will refer clients if the rail reduces repetitive evidence chasing",
+    "capital_required_pln": 60000,
+    "founder_net_worth_path": "Hypothesis: 150 manufacturers at 3000 PLN monthly yields 5.4m PLN ARR before capacity fees; 30% EBITDA at a 4x value could exceed 6m PLN in 4-6 years",
+    "founder_time": "15-20 hours weekly, with legal conformity decisions retained by manufacturers and qualified advisers",
+    "gross_margin_basis": "Economics hypothesis: 75-85% once evidence mappings and supplier onboarding are reusable",
+    "payback": "Economics hypothesis: 20 manufacturers at 3000 PLN monthly cover initial capital in 12-15 months after onboarding costs",
+    "pricing": "Economics hypothesis: 2000-5000 PLN monthly per manufacturer plus 0.5-1.5% of booked capacity value",
+    "retention_or_repeat": "Every batch, supplier change, annual audit, and forward procurement cycle refreshes the record"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Supplier-to-batch evidence graph, auditor acceptance feedback, and visibility into forward compliant capacity",
+    "customer": "Plastic packaging manufacturers, importers, brand owners, recyclers, and compounders",
+    "distribution_mechanism": "Packaging advisers, testing labs, converters, recycler associations, and ERP implementation partners",
+    "offer_and_business_model": "Supplier evidence vault, technical-file mapping, change alerts, batch allocation, forward capacity reservations, and audit export",
+    "payer_and_paid_event": "Manufacturer pays per packaging family monthly; supplier or buyer pays a small fee when capacity is reserved",
+    "problem_trigger": "A packaging producer must substantiate conformity and recycled content while suppliers provide inconsistent evidence and uncertain future volume"
+  },
+  "founder_fit": [
+    "Strong data-lineage and automation fit",
+    "Regulation creates a timed validation window",
+    "No physical inventory",
+    "Scalable across the EU"
+  ],
+  "parent": null,
+  "risks": [
+    "Methodology change",
+    "Fraudulent supplier evidence",
+    "Concentration in a few recyclers",
+    "Liability for overstated recycled content"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://environment.ec.europa.eu/topics/waste-and-recycling/packaging-waste_en",
+    "https://eur-lex.europa.eu/eli/reg/2025/40/ojS",
+    "https://environment.ec.europa.eu/topics/waste-and-recycling/packaging-waste/packaging-packaging-waste-regulation_en",
+    "https://www.gov.pl/web/klimat/rejestr-bdo"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Compliance evidence network plus forward-capacity marketplace",
+    "control_point": "Reusable supplier evidence mapped to each buyer's declaration and reserved production batch",
+    "critical_dependency": "Recyclers must authorize verifiable data and the final methodology must accept the captured evidence"
+  },
+  "thesis": "Packaging makers collect supplier-authorized recycled-content evidence once, map it into their technical documentation, and reserve future compliant recyclate capacity from verified suppliers. Demand hypothesis: the accepted evidence chain and booked volume, not a generic PPWR checklist, can become the durable control point.",
+  "title": "Recycled-Packaging Evidence and Capacity Rail",
+  "uncertainties": [
+    "SME compliance budget",
+    "Auditor acceptance",
+    "Forward-capacity liquidity",
+    "ERP integration effort"
+  ],
+  "version": 1
+}

@@ -1,0 +1,74 @@
+{
+  "candidate_id": "settle10-12",
+  "claims": [
+    {
+      "claim_id": "settle10-12-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://joint-research-centre.ec.europa.eu/photovoltaic-geographical-information-system-pvgis/using-pvgis-5/pvgis-5-tools/grid-connected-pv_en",
+        "https://energy.ec.europa.eu/topics/markets-and-consumers/smart-grids-and-meters_en"
+      ],
+      "statement": "The Commission's PVGIS provides API-accessible estimates of monthly and yearly PV production using weather and system parameters, while EU rules support access to metering data."
+    },
+    {
+      "claim_id": "settle10-12-c2",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://energy.ec.europa.eu/topics/energy-efficiency/financing/private-and-innovative-financing_en",
+        "https://joint-research-centre.ec.europa.eu/photovoltaic-geographical-information-system-pvgis_en"
+      ],
+      "statement": "Demand hypothesis: financiers and ESCOs will pay for neutral settlement because energy performance contracts tie payment to contractually guaranteed measured savings."
+    }
+  ],
+  "contrary_evidence": [
+    "Monitoring portals already show energy production and faults.",
+    "Small solar contracts may not include formal performance guarantees."
+  ],
+  "economics": {
+    "acquisition_route": "Pilot through the family solar business, then sell portfolios through lenders and installer groups.",
+    "capital_required_pln": 50000,
+    "founder_net_worth_path": "Hypothesis: 150 MW monitored at 2 PLN per kWp monthly can create 3.6 million PLN recurring revenue plus settlements and founder equity above 5 million PLN in five years.",
+    "founder_time": "Three to four hours daily for models and channel onboarding.",
+    "gross_margin_basis": "Hypothesis: 85-92% margin after automated data normalization.",
+    "payback": "Hypothesis: 3 MW monitored at 2 PLN per kWp monthly repays initial capital within eighteen months.",
+    "pricing": "Hypothesis: 1-3 PLN per kWp monthly plus 3-8% of settled credits.",
+    "retention_or_repeat": "Each financed system needs monthly monitoring and annual true-up for its contract life."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A growing portfolio of normalized system performance and settlement outcomes improves baselines and underwriting.",
+    "customer": "Commercial solar installers, ESCOs, lessors, lenders, and property owners.",
+    "distribution_mechanism": "Solar finance providers and installer networks embed it in performance-guaranteed contracts.",
+    "offer_and_business_model": "The API freezes baselines, normalizes meter and inverter data, and issues an auditable credit or no-credit statement.",
+    "payer_and_paid_event": "The installer, lessor, or financier pays per kWp monitored and per annual settlement.",
+    "problem_trigger": "A monthly or annual guarantee misses target and parties dispute weather, load, downtime, curtailment, or tariff adjustments."
+  },
+  "founder_fit": [
+    "The family solar company offers immediate data and contracting context.",
+    "Quantitative baselining closely matches the founder's data-science skills."
+  ],
+  "parent": null,
+  "risks": [
+    "Baseline disputes can become contractual or legal disputes.",
+    "Missing meter data can make settlements inconclusive."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://joint-research-centre.ec.europa.eu/photovoltaic-geographical-information-system-pvgis/using-pvgis-5/pvgis-5-tools/grid-connected-pv_en",
+    "https://energy.ec.europa.eu/topics/markets-and-consumers/smart-grids-and-meters_en",
+    "https://energy.ec.europa.eu/topics/energy-efficiency/financing/private-and-innovative-financing_en",
+    "https://joint-research-centre.ec.europa.eu/photovoltaic-geographical-information-system-pvgis_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Performance-contract measurement and settlement rail.",
+    "control_point": "The versioned baseline and accepted adjustment ledger.",
+    "critical_dependency": "Meter and inverter access plus standardized guarantee clauses."
+  },
+  "thesis": "A neutral measurement engine can reconcile promised solar savings against weather, meter, inverter, tariff, and outage evidence for financed commercial systems.",
+  "title": "Solar Performance Guarantee Settlement Engine",
+  "uncertainties": [
+    "The share of Polish commercial systems with guarantees is unknown.",
+    "Financier willingness to accept a third-party method is unverified."
+  ],
+  "version": 1
+}

@@ -1,0 +1,83 @@
+{
+  "candidate_id": "settle7-11",
+  "claims": [
+    {
+      "claim_id": "settle7-11-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reco/2019/1019/oj/eng"
+      ],
+      "statement": "EU guidance defines energy performance contracting as a monitored arrangement in which investments are paid in relation to an agreed energy-efficiency improvement or financial savings."
+    },
+    {
+      "claim_id": "settle7-11-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reco/2019/1019/oj/eng"
+      ],
+      "statement": "The same guidance calls for clear provisions on measuring and verifying guaranteed savings, including milestones, reference dates, documented changes, quality checks, and guarantees."
+    },
+    {
+      "claim_id": "settle7-11-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://digital-strategy.ec.europa.eu/en/news/eu-data-act-gives-users-control-over-data-connected-devices"
+      ],
+      "statement": "The EU Data Act gives industrial-equipment users access to performance data that can support efficiency and operations services."
+    }
+  ],
+  "contrary_evidence": [
+    "Energy performance contracting already uses established measurement and verification standards and specialist consultants.",
+    "Data access rights do not guarantee clean, real-time, or contractually admissible meter and operating data."
+  ],
+  "economics": {
+    "acquisition_route": "Co-design with one controls installer or ESCO on a small portfolio, then partner with energy auditors and equipment finance providers",
+    "capital_required_pln": 70000,
+    "founder_net_worth_path": "A plausible 5-7 year path would require approximately 800-1,200 active sites at around 9,000-12,000 PLN annual recurring revenue, partner-led acquisition, and founder ownership of the software and performance dataset",
+    "founder_time": "Approximately 12-16 hours per week with accredited energy and M&V specialists contracted for methodology approval",
+    "gross_margin_basis": "Analytics and billing software less meter connectors, data cleaning, specialist M&V review, and customer support",
+    "payback": "A site can justify the fee if transparent calculations accelerate invoice approval or avoid recurring specialist reconciliation; dispute frequency must be measured",
+    "pricing": "About 750-1,500 PLN per site per month plus 0.25-0.75% of accepted performance-linked payments",
+    "retention_or_repeat": "Performance contracts run for years and issue monthly receipts; contractors originate additional sites"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A cross-project library of baseline adjustments, exception frequency, and realised savings could make new contracts easier to price and finance",
+    "customer": "Polish and Central European SME ESCOs, HVAC controls firms, industrial-efficiency contractors, and their building or factory clients",
+    "distribution_mechanism": "Sell through energy auditors, controls installers, ESCO finance providers, and renovation one-stop shops",
+    "offer_and_business_model": "Baseline versioning, adjustment models, exception approval, transparent calculation receipt, and accounting-system invoice instructions",
+    "payer_and_paid_event": "The ESCO or customer pays per monitored site plus a small share when a monthly savings amount is jointly accepted and invoiced",
+    "problem_trigger": "An efficiency project is paid from measured savings but baseline changes, weather, occupancy, production, or equipment downtime make the invoice contestable"
+  },
+  "founder_fit": [
+    "Causal baselines, time-series models, and transparent calculation receipts match the founder's data-science skills",
+    "Renewable-family relationships provide access to adjacent controls and energy-service firms",
+    "The model can start as software and specialist-assisted verification without financing equipment"
+  ],
+  "parent": null,
+  "risks": [
+    "Baseline disputes may require experts rather than software",
+    "Bad models could generate incorrect invoices and liability",
+    "Building-management and M&V vendors may bundle this function",
+    "Long performance contracts can create slow onboarding and demanding support"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reco/2019/1019/oj/eng",
+    "https://digital-strategy.ec.europa.eu/en/news/eu-data-act-gives-users-control-over-data-connected-devices"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Shared-savings billing middleware charging per site and per verified payout",
+    "control_point": "The contract-bound, versioned baseline and jointly accepted monthly savings receipt that determines the performance-linked invoice",
+    "critical_dependency": "Both parties must accept the measurement and verification method and provide reliable meter and operating-condition data"
+  },
+  "thesis": "Small ESCOs and contractors selling energy-efficiency upgrades on guaranteed-savings or shared-savings terms could use a neutral measurement, verification, and invoice-split engine. It would freeze the baseline and adjustment policy at contract signing, ingest meter and operating data, produce a jointly signed monthly savings receipt, and send approved invoice instructions to existing accounting and payment systems.",
+  "title": "SavingsSplit Billing Engine",
+  "uncertainties": [
+    "Number of SME performance contracts with unresolved monthly billing friction",
+    "Whether Polish counterparties accept an external M&V receipt",
+    "Typical meter and operating-data quality",
+    "Which vertical has sufficiently standard adjustments for a narrow first product"
+  ],
+  "version": 1
+}

@@ -1,0 +1,73 @@
+{
+  "candidate_id": "control7-06",
+  "claims": [
+    {
+      "claim_id": "control7-06-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://commission.europa.eu/news-and-media/news/new-packaging-rules-less-waste-and-easier-recycling-2026-08-12_en"
+      ],
+      "statement": "New EU packaging rules began applying on 12 August 2026 and require packaging to be reusable or recoverable."
+    },
+    {
+      "claim_id": "control7-06-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://commission.europa.eu/news-and-media/news/new-packaging-rules-less-waste-and-easier-recycling-2026-08-12_en"
+      ],
+      "statement": "The Commission describes the rules as promoting reuse, refill, collection, and deposit-return systems, with some single-use packaging bans beginning in 2030."
+    }
+  ],
+  "contrary_evidence": [
+    "The rules cover many packaging strategies and do not require customers to use this particular pooled-container model.",
+    "Reuse can perform poorly when return distances, cleaning, or loss rates are high."
+  ],
+  "economics": {
+    "acquisition_route": "Direct pilot with regional distributors, potentially using the family company's supplier and transport relationships",
+    "capital_required_pln": 100000,
+    "founder_net_worth_path": "Illustrative, unvalidated path: 1.5m annual loops at 5 PLN average revenue could reach 7.5m PLN revenue; 20% operating margin and 70% founder ownership could support founder equity above 5m PLN around year 7 if asset losses remain controlled",
+    "founder_time": "Initially 3-4 hours/day for analytics and coordination, with cleaning and transport outsourced",
+    "gross_margin_basis": "Target 45-60% after container depreciation, washing, repair, scanning, repositioning, and losses",
+    "payback": "Unvalidated: container payback requires roughly 25-40 successful turns and portfolio payback may take 24-36 months",
+    "pricing": "Unvalidated: 4-9 PLN per completed loop plus monthly minimums and loss charges",
+    "retention_or_repeat": "Every delivery creates another loop; packaging and warehouse-process integration can support multi-year contracts"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Container density, route-level return data, standardized operations, and contracted node coverage",
+    "customer": "Regional distributors and manufacturers with repeat shipments between known business locations",
+    "distribution_mechanism": "One vertical and one dense regional route first, then supplier and depot referrals",
+    "offer_and_business_model": "Tracked reusable crates, collection, cleaning, repair, and loop analytics under a service contract",
+    "payer_and_paid_event": "Shipper pays per container loop and for losses, special cleaning, or dedicated inventory",
+    "problem_trigger": "A shipper must reduce disposable packaging, damage, or waste on a recurring closed route"
+  },
+  "founder_fit": [
+    "Operational data and routing can be optimized quantitatively",
+    "A small closed-loop pilot fits available capital",
+    "Physical operations can be outsourced after procedures are proven",
+    "Does not depend on personal-brand marketing"
+  ],
+  "parent": null,
+  "risks": [
+    "Loss, contamination, and reverse logistics can erase margins",
+    "Large packaging-pool incumbents can pursue proven verticals",
+    "Food or pharma use may impose demanding hygiene rules"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://commission.europa.eu/news-and-media/news/new-packaging-rules-less-waste-and-easier-recycling-2026-08-12_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Pooled physical-asset rental with per-loop logistics fees",
+    "control_point": "Owned standardized container fleet and contracted return nodes on closed distribution routes",
+    "critical_dependency": "Customers must have dense repeat routes with high return rates and acceptable cleaning and loss economics"
+  },
+  "thesis": "Own a standardized pool of reusable crates and totes for repeat Polish B2B routes such as parts distributors, pharmacies, and food wholesalers, charging per completed loop and operating the return scan, cleaning, and repair process. Density, asset ownership, and accepted packaging dimensions form the control point; a generic packaging marketplace would not.",
+  "title": "Reusable B2B Packaging Pool for Regional Loops",
+  "uncertainties": [
+    "Which Polish vertical has both pain and closed-loop density",
+    "Actual turns per container and return compliance",
+    "Customer willingness to change packing and warehouse processes"
+  ],
+  "version": 1
+}

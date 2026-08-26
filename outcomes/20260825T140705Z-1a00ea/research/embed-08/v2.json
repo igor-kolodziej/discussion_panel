@@ -1,0 +1,173 @@
+{
+  "candidate_id": "embed-08",
+  "candidate_sha256": "6e0b219cff52f37e9860e19cf69840c15ed40025e485c5e5789b390ace435374",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "e08-r1",
+      "evidence_refs": [
+        "e08-s1",
+        "e08-s2"
+      ],
+      "statement": "UK remote operators have a binding, ongoing duty to identify, act and evaluate and remain accountable for third-party systems."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "e08-r2",
+      "evidence_refs": [
+        "e08-s1"
+      ],
+      "statement": "The current rule explicitly requires manual review and contestability for strong-indicator automated action."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "e08-r3",
+      "evidence_refs": [
+        "e08-s3",
+        "e08-s4"
+      ],
+      "statement": "The GB remote market is economically large, and recent enforcement demonstrates costly customer-interaction failure."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "e08-r4",
+      "evidence_refs": [
+        "e08-s5"
+      ],
+      "statement": "Profiling and intervention orchestration require privacy-by-design, lawful basis, transparency and challenge mechanisms."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "e08-r5",
+      "evidence_refs": [
+        "e08-s1",
+        "e08-s2",
+        "e08-s9"
+      ],
+      "statement": "An audit-first platform-channel wedge is safer than autonomous intervention, but commercial access is unproven."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "e08-r6",
+      "evidence_refs": [],
+      "statement": "Cross-operator rights, causal lift, price and procurement time are unknown."
+    }
+  ],
+  "contrary_evidence": [
+    "Mindway AI has an installed detection product and is building intervention selection and outcome evaluation that directly overlaps the thesis.",
+    "A major platform vendor already bundles responsible-gaming compliance controls.",
+    "A 2026 randomized pilot found no clear advantage of its brief intervention over active control.",
+    "The EU instrument is a recommendation rather than a harmonised binding operator code."
+  ],
+  "schema_version": 2,
+  "sources": [
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2022-09-12",
+      "publisher": "UK Gambling Commission",
+      "source_id": "e08-s1",
+      "source_type": "regulator_code",
+      "stance": "supporting",
+      "title": "LCCP 3.4.3 Remote customer interaction",
+      "url": "https://www.gamblingcommission.gov.uk/licensees-and-businesses/lccp/condition/3-4-3-remote-customer-interaction"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2023-08-23",
+      "publisher": "UK Gambling Commission",
+      "source_id": "e08-s2",
+      "source_type": "regulator_guidance",
+      "stance": "supporting",
+      "title": "Remote customer interaction guidance: Requirement 12",
+      "url": "https://www.gamblingcommission.gov.uk/guidance/customer-interaction-guidance-for-remote-gambling-licensees-formal-guidance/requirement-12-customer-interaction-guidance-for-remote-gambling-licensees"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2025-11-25",
+      "publisher": "UK Gambling Commission",
+      "source_id": "e08-s3",
+      "source_type": "official_statistics",
+      "stance": "supporting",
+      "title": "Industry Statistics April 2024 to March 2025",
+      "url": "https://www.gamblingcommission.gov.uk/statistics-and-research/publication/industry-statistics-annual-report-financial-year-april-2024-to-march-2025"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2025-10-22",
+      "publisher": "UK Gambling Commission",
+      "source_id": "e08-s4",
+      "source_type": "enforcement_action",
+      "stance": "supporting",
+      "title": "GBP10m fine for online operator Platinum Gaming Limited",
+      "url": "https://www.gamblingcommission.gov.uk/news/article/gbp10m-fine-for-online-operator-platinum-gaming-limited"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "Information Commissioner's Office",
+      "source_id": "e08-s5",
+      "source_type": "regulator_guidance",
+      "stance": "context",
+      "title": "Rights related to automated decision making including profiling",
+      "url": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/individual-rights/individual-rights/rights-related-to-automated-decision-making-including-profiling/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2014-07-19",
+      "publisher": "Official Journal of the European Union",
+      "source_id": "e08-s6",
+      "source_type": "official_recommendation",
+      "stance": "context",
+      "title": "Commission Recommendation 2014/478/EU on online gambling consumer protection",
+      "url": "https://eur-lex.europa.eu/eli/reco/2014/478/oj/eng"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "Mindway AI",
+      "source_id": "e08-s7",
+      "source_type": "vendor_product_page",
+      "stance": "contradicting",
+      "title": "GameScanner",
+      "url": "https://mindway.ai/gamescanner/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2026-06-25",
+      "publisher": "Mindway AI",
+      "source_id": "e08-s8",
+      "source_type": "vendor_announcement",
+      "stance": "contradicting",
+      "title": "Mindway AI tackles the second half of safer gambling",
+      "url": "https://mindway.ai/news_and_knowledge/mindway-ai-partners-with-industry-pioneer-will-mace-to-solve-the-second-half-of-the-safer-gambling-equation/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "EveryMatrix",
+      "source_id": "e08-s9",
+      "source_type": "vendor_product_page",
+      "stance": "contradicting",
+      "title": "Responsible Gambling and iGaming Compliance Tools",
+      "url": "https://everymatrix.com/gammatrix/compliance-and-risk/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2026-07-10",
+      "publisher": "PubMed / Journal of Clinical Psychology",
+      "source_id": "e08-s10",
+      "source_type": "primary_research",
+      "stance": "contradicting",
+      "title": "Evaluating the Efficacy of e-SBIRT for Gambling",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42431181/"
+    }
+  ],
+  "unknowns": [
+    "Platform and operator commitment.",
+    "Lawful and comparable cross-operator outcome rights.",
+    "Causal effectiveness by intervention and player context.",
+    "Procurement, security and specialist-governance cost.",
+    "Price and gross margin after channel share."
+  ]
+}

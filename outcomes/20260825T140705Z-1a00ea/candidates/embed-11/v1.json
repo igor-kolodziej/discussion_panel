@@ -1,0 +1,66 @@
+{
+  "candidate_id": "embed-11",
+  "claims": [
+    {
+      "claim_id": "embed-11-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32024R1689"
+      ],
+      "statement": "The AI Act requires providers of high-risk systems to document post-market monitoring that actively collects and analyzes lifecycle performance data."
+    },
+    {
+      "claim_id": "embed-11-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+      ],
+      "statement": "The Commission lists risk management, data quality, logging, documentation, human oversight, robustness, cybersecurity, and accuracy among high-risk AI obligations."
+    }
+  ],
+  "contrary_evidence": [
+    "Cloud vendors, governance suites, and quality consultancies already offer broad AI compliance tooling, while implementation timelines remain changeable."
+  ],
+  "economics": {
+    "acquisition_route": "One-to-many distribution through cybersecurity insurers, AI quality consultancies, and conformity-assessment partners.",
+    "capital_required_pln": 20000,
+    "founder_net_worth_path": "Hypothesis: 250 vendors at 2500 PLN blended monthly revenue yields 7.5 million PLN ARR by year five and can support founder equity above 5 million PLN without double-counting retained earnings.",
+    "founder_time": "Hypothesis: 3-4 founder hours daily on evidence automation while external counsel owns legal classification.",
+    "gross_margin_basis": "Hypothesis: 80-88% gross margin after storage, test compute, reviewer escalation, and channel share.",
+    "payback": "Hypothesis: a 7000 PLN partner integration pays back after three release packs.",
+    "pricing": "Hypothesis, including the capital figure: 2500 PLN per model-release pack plus 1900 PLN monthly evidence retention and monitoring.",
+    "retention_or_repeat": "Every release, substantial modification, periodic audit, and serious incident produces another evidence event."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Permissioned failure-taxonomy and remediation outcomes improve test selection without exposing customer models",
+    "customer": "Small EU providers of potentially high-risk AI systems",
+    "distribution_mechanism": "Embedded workflow distributed by insurers, AI quality firms, and assessment partners",
+    "offer_and_business_model": "Model lineage, evaluation, logging, and monitoring evidence sold per release and subscription",
+    "payer_and_paid_event": "The AI provider pays when a version-bound evidence pack is signed and retained",
+    "problem_trigger": "A model version is released, materially changed, audited, or implicated in an incident"
+  },
+  "founder_fit": [
+    "AI governance evidence is technically aligned, capital-light, repeatable, and distributable without a personal brand."
+  ],
+  "parent": null,
+  "risks": [
+    "The service cannot promise conformity and must keep classifications, legal advice, and final approvals with qualified parties."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32024R1689",
+    "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Release-gating assurance platform",
+    "control_point": "The immutable link among model version, evaluation evidence, logs, approval, and post-market plan",
+    "critical_dependency": "Correct scope classification and acceptance by auditors, insurers, or notified bodies"
+  },
+  "thesis": "Embed a signed model-version evidence gate with AI quality consultancies and insurers, charging on every release, substantial modification, and incident while pooling anonymized evaluation-failure patterns under explicit rights.",
+  "title": "ModelRelease AI Evidence Gate",
+  "uncertainties": [
+    "It is unknown whether channel partners value shared failure benchmarks enough to grant derivative-data rights."
+  ],
+  "version": 1
+}

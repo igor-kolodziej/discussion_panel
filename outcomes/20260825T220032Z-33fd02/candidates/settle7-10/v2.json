@@ -1,0 +1,137 @@
+{
+  "candidate_id": "settle7-10",
+  "claims": [
+    {
+      "claim_id": "settle7-10-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1542/2025-07-31/eng/pdf"
+      ],
+      "statement": "The EU Batteries Regulation requires current battery-health parameters in EV battery management systems and read-only access for a legal purchaser or authorized third party for residual-value and remaining-life evaluation."
+    },
+    {
+      "claim_id": "settle7-10-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1542/2025-07-31/eng/pdf"
+      ],
+      "statement": "From 18 February 2027, newly placed or commissioned EV batteries require a battery passport, but that does not create a complete retrospective passport for the legacy used-EV fleet."
+    },
+    {
+      "claim_id": "settle7-10-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://digital-strategy.ec.europa.eu/en/news/eu-data-act-gives-users-control-over-data-connected-devices",
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1749999534290&uri=CELEX%3A52025XC03699"
+      ],
+      "statement": "The EU Data Act has applied since September 2025 and gives users of connected products such as cars rights to access and share generated raw data, although automotive access implementation remains product-specific."
+    },
+    {
+      "claim_id": "settle7-10-c4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://aviloo.com/en-us/aviloo-certified"
+      ],
+      "statement": "AVILOO already issues an independent rapid certificate and says its result describes the battery only at test time, is within plus or minus 3 percent in at least 95 percent of reference measurements, and cannot detect defects absent from vehicle diagnostic data."
+    },
+    {
+      "claim_id": "settle7-10-c5",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://aviloo.com/files/Aviloo/content/pdf/AVILOO%20Batterie%20Garantie_de.pdf"
+      ],
+      "statement": "AVILOO launched a provider-held guarantee based on its FLASH Test with a one-year, 20,000-kilometre term and EUR 3,000 compensation if a vehicle-specific health threshold is breached, followed by a staged European rollout."
+    },
+    {
+      "claim_id": "settle7-10-c6",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.aaaauto.pl/uslugi/testakumulatora",
+        "https://www.aaaauto.pl/kup-auto/samochody-elektryczne-w-aaa-auto"
+      ],
+      "statement": "AAA AUTO already offers AVILOO tests in Poland from 250 PLN including VAT and bundles battery certificates, a free annual re-test, and battery insurance for eligible used EV sales."
+    },
+    {
+      "claim_id": "settle7-10-c7",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.dekra.com/en/battery-test-for-electric-cars/"
+      ],
+      "statement": "DEKRA supplies a competing independent 15-minute EV battery certificate across European markets, confirming that rapid neutral diagnostics are already an incumbent category."
+    }
+  ],
+  "contrary_evidence": [
+    "AVILOO already combines the exact certificate, longitudinal health threshold, bounded compensation, dealer dashboard, and provider-held risk contemplated by the v1 concept.",
+    "AAA AUTO already deploys AVILOO testing, certificates, repeat testing, and battery protection in Poland, with tests advertised from 250 PLN including VAT.",
+    "AVILOO explicitly says a test is a point-in-time result rather than a prediction and cannot detect defects not exposed through vehicle data.",
+    "DEKRA provides another rapid independent certificate, reducing differentiation of a test-only offer.",
+    "EU access and battery-passport rules can lower the scarcity of raw health information, especially for newer vehicles."
+  ],
+  "economics": {
+    "acquisition_route": "First obtain written Polish reseller/API/guarantee terms, then pilot with one dealer group not already using AVILOO, DEKRA, or an equivalent warranty stack",
+    "capital_required_pln": 100000,
+    "founder_net_worth_path": "No evidence supports several hundred PLN of net revenue per vehicle or defensible ownership of diagnostic data. A path to 5 million PLN founder net worth is currently unproven and would require contracted margin, repeatable dealer distribution, defensible software/data rights, and scale beyond a thin local reseller business.",
+    "founder_time": "Approximately 12-16 hours weekly if testing is executed by dealer staff or trained contractors and all risk-bearing remains with an authorized partner",
+    "gross_margin_basis": "Partner margin and software/support revenue less field execution, hardware logistics, integrations, customer support, and claims administration; no underwriting spread is assumed",
+    "payback": "A dealer may benefit from faster sale, reduced discount, or fewer disputes, but no independent Polish A/B evidence or provider margin schedule was found",
+    "pricing": "Observed Polish consumer reference: AAA AUTO advertises AVILOO testing from 250 PLN including VAT; AVILOO markets its new guarantee as free within AVILOO Connect. Revenue must therefore come from an unvalidated reseller margin or dealer implementation/support fee, not the v1 assumption of 450-900 PLN plus a 1-2 percent premium.",
+    "retention_or_repeat": "Dealer customers repeat per used EV and re-tests create a second event, but the provider can own the dealer relationship and data"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Localized dealer integrations, eligibility rules, and claim-resolution operations may improve deployment efficiency, but any longitudinal data advantage depends on explicit partner and customer data rights",
+    "customer": "Polish mid-sized used-EV dealers, leasing remarketers, and auctions that lack an integrated battery test and warranty workflow",
+    "distribution_mechanism": "Secure reseller/API and guarantee terms from an established diagnostic or warranty provider, then integrate with Polish dealer groups, lease-return inspectors, auctions, and dealer software",
+    "offer_and_business_model": "Partner-authorized test ordering, certificate ingestion, listing display, guarantee eligibility, re-test scheduling, and claims workflow; earn reseller margin or B2B implementation/support fees while the licensed provider carries diagnostic and risk obligations",
+    "payer_and_paid_event": "The dealer pays an authorized diagnostic provider per vehicle and may pay the orchestrator an integration or support fee; a provider-issued guarantee is attached only when the vehicle is eligible",
+    "problem_trigger": "At vehicle intake or sale, the remarketer needs credible battery evidence and bounded post-sale protection but does not want to build diagnostics, hold reserves, or administer claims manually"
+  },
+  "founder_fit": [
+    "Partner and workflow integration use the founder's data and automation strengths without requiring him to invent a safety-critical diagnostic",
+    "The model can pilot with one dealer and outsourced field execution alongside employment",
+    "B2B channel sales avoid a camera-led consumer brand, though partner negotiation remains necessary"
+  ],
+  "parent": {
+    "candidate_id": "settle7-10",
+    "version": 1
+  },
+  "risks": [
+    "The partner can sell directly or give the workflow to larger dealers",
+    "Reseller margin may be too small for field support and integration",
+    "Diagnostic model coverage and access vary across vehicle platforms",
+    "A point-in-time certificate can be mistaken for a future-performance promise",
+    "Offering or arranging protection may create insurance-distribution or warranty obligations",
+    "Incumbents own larger diagnostic datasets and validated algorithms",
+    "Battery passports and OEM tools may commoditize basic health evidence"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2023/1542/2025-07-31/eng/pdf",
+    "https://digital-strategy.ec.europa.eu/en/news/eu-data-act-gives-users-control-over-data-connected-devices",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1749999534290&uri=CELEX%3A52025XC03699",
+    "https://aviloo.com/en-us/aviloo-certified",
+    "https://aviloo.com/files/Aviloo/content/pdf/AVILOO%20Batterie%20Garantie_de.pdf",
+    "https://api-docs.aviloo.com/",
+    "https://www.aaaauto.pl/uslugi/testakumulatora",
+    "https://www.aaaauto.pl/kup-auto/samochody-elektryczne-w-aaa-auto",
+    "https://www.dekra.com/en/battery-test-for-electric-cars/"
+  ],
+  "stage": "research",
+  "structure": {
+    "commercial_archetype": "B2B reseller and workflow integration for third-party battery certification and guarantee",
+    "control_point": "A contractual right to embed the provider's certificate and guarantee into Polish dealer transaction workflows",
+    "critical_dependency": "An established diagnostic and licensed risk partner must grant reseller/API access, Polish warranty eligibility, usable margins, and sufficient data rights"
+  },
+  "thesis": "Independent EV battery diagnostics and a bounded post-sale health guarantee are technically and commercially real, but the original standalone offer is already duplicated. AVILOO combines a rapid certificate with a one-year, 20,000-kilometre, EUR 3,000 battery guarantee and exposes test and warranty APIs; AAA AUTO already sells AVILOO testing in Poland from 250 PLN and bundles certificates, repeat testing, and battery insurance. The only preserved research-stage hypothesis is a partner-authorized Polish dealer workflow that integrates an existing test and licensed guarantee, manages eligibility, re-test, and claims, and earns reseller or implementation revenue without underwriting or claiming proprietary diagnostic accuracy.",
+  "title": "Polish EV Battery Warranty Orchestrator",
+  "uncertainties": [
+    "Whether AVILOO's new guarantee is currently available for Polish dealer inventory and under what eligibility exclusions",
+    "Actual reseller, API, hardware, test, and warranty economics offered to a new Polish partner",
+    "Which licensed or regulated entity bears warranty or insurance risk in Poland and what permissions the orchestrator would need",
+    "Dealer willingness to pay any incremental fee beyond existing AVILOO, DEKRA, OEM, or insurance offerings",
+    "Polish dealer and auction transaction volume by supported EV model",
+    "Claims frequency, threshold calibration, adverse selection, and exclusions for used vehicles",
+    "Contractual ownership and reuse rights for test, re-test, and claims data",
+    "Whether a workflow reseller can retain the customer relationship rather than being disintermediated by the provider"
+  ],
+  "version": 2
+}

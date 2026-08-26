@@ -1,0 +1,87 @@
+{
+  "candidate_id": "spend-03",
+  "claims": [
+    {
+      "claim_id": "spend-03-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://czystepowietrze.gov.pl/wez-dofinansowanie/dokumenty-programowe/dokumenty-obowiazujace"
+      ],
+      "statement": "The official programme page updated in July 2026 provides multiple current documents, including funding and payment instructions, an energy-audit summary, a contractor agreement and a contractor acceptance protocol."
+    },
+    {
+      "claim_id": "spend-03-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://czystepowietrze.gov.pl/wez-dofinansowanie/instrukcja-krok-po-kroku/krok-2-ustal-zakres-prac-w-budynku"
+      ],
+      "statement": "The programme states that an energy audit and audit-summary document are required before the funding application for relevant thermal-modernisation work."
+    },
+    {
+      "claim_id": "spend-03-c03",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://czystepowietrze.gov.pl/wez-dofinansowanie/instrukcja-krok-po-kroku/krok-5-wybierz-rzetelnego-wykonawce"
+      ],
+      "statement": "Official contractor guidance updated in April 2026 says a contractor must meet an experience condition and that a non-standard contractor agreement must still contain mandatory terms from the official template."
+    }
+  ],
+  "contrary_evidence": [
+    "The programme funds municipal consultation points that provide beneficiaries free support with applications and documents.",
+    "Official templates and instructions reduce the value of a tool for contractors with disciplined administration.",
+    "The beneficiary, not the contractor, holds ultimate responsibility for grant spending, which may limit contractor willingness to pay."
+  ],
+  "economics": {
+    "acquisition_route": "Use 20-30 historical jobs from the family firm to measure catches, recruit two neighbouring contractors via suppliers, then offer wholesalers a portfolio dashboard and recurring referral share.",
+    "capital_required_pln": 30000,
+    "founder_net_worth_path": "Six hundred installer accounts averaging 700 PLN monthly plus 30000 dossiers per year at 70 PLN would yield about 7.14m PLN annual revenue. At a mature 40% owner-cash margin, roughly 2.86m PLN per year could compound to more than 10m PLN of distributions over five mature years without exit value.",
+    "founder_time": "Limit the first release to checklist selection and cross-document consistency at roughly 2.5-4 hours/day; keep employment until channel-led repeat purchases and contribution economics are demonstrated.",
+    "gross_margin_basis": "Once templates and extraction are stable, project checks are low-cost compute; target 75-88% gross margin excluding separately billed human audit support.",
+    "payback": "Target payback from one avoided correction cycle or a few saved administrator hours, but actual delay and correction costs need to be observed rather than assumed.",
+    "pricing": "Assumption to test: 299-999 PLN per installer branch per month plus 40-120 PLN per completed dossier, with a 1000-3000 PLN assisted setup tier.",
+    "retention_or_repeat": "Every eligible project creates a repeated dossier, and programme revisions increase the value of maintained rules; retention falls if contractors leave subsidised retrofit work."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A versioned rule graph linking programme clauses, device eligibility, document fields and anonymised correction patterns improves detection of project-specific dossier gaps.",
+    "customer": "Three-to-thirty-person Polish retrofit contractors and energy auditors completing repeat projects under the Czyste Powietrze programme.",
+    "distribution_mechanism": "Dogfood with the founder's parents' seven-person renewable-installation company, then sell through regional wholesalers, auditors and installer associations using short recorded demos and self-serve trials.",
+    "offer_and_business_model": "White-label web workspace that selects the applicable programme version, builds an evidence checklist, extracts values from audit/contract/invoice/protocol files, flags contradictions and emits a signed preflight report; subscription plus project usage.",
+    "payer_and_paid_event": "The contractor pays per active project or per branch when a dossier is preflighted; current spend is administrator time, correction work and cash tied up between installation and a clean payment submission.",
+    "problem_trigger": "A contractor is about to sign a project, order equipment or submit an acceptance/payment packet under a specific programme version and cannot quickly verify that all required facts and attachments agree."
+  },
+  "founder_fit": [
+    "The family installation company supplies an unusually low-cost, trusted pilot environment and domain feedback loop.",
+    "Document extraction, cross-field validation and rule versioning fit AI and data-science strengths.",
+    "Regional wholesalers and auditors can distribute the product without the founder becoming a public sales personality.",
+    "The initial workflow can be validated on past, redacted projects within a modest capital envelope while employment continues."
+  ],
+  "parent": null,
+  "risks": [
+    "A false green check could cause equipment commitment on an ineligible project.",
+    "Programme revisions can make cached rules obsolete quickly.",
+    "Files include personal, property and financial data requiring GDPR-compliant handling.",
+    "Free public operators or incumbent grant-service firms could bundle the same check."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://czystepowietrze.gov.pl/wez-dofinansowanie/dokumenty-programowe/dokumenty-obowiazujace",
+    "https://czystepowietrze.gov.pl/wez-dofinansowanie/instrukcja-krok-po-kroku/krok-2-ustal-zakres-prac-w-budynku",
+    "https://czystepowietrze.gov.pl/wez-dofinansowanie/instrukcja-krok-po-kroku/krok-3-przygotuj-niezbedne-dokumenty",
+    "https://czystepowietrze.gov.pl/wez-dofinansowanie/instrukcja-krok-po-kroku/krok-5-wybierz-rzetelnego-wykonawce"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Per-project document-quality SaaS for a regulated installation workflow",
+    "control_point": "The go/no-go dossier check before equipment commitment and payment submission",
+    "critical_dependency": "Accurate machine-readable maintenance of each current programme version and access to real installer files with known correction outcomes"
+  },
+  "thesis": "Sell small Polish insulation, window and heating installers a version-aware dossier preflight that catches missing or inconsistent grant, audit, contract, invoice and acceptance documents before work starts and before payment is requested. Installers already fund back-office labour and working capital while customer subsidy files are assembled; the product is a quality gate for paid projects, not consumer grant brokering.",
+  "title": "Clean-Air Retrofit Dossier Preflight for Installers",
+  "uncertainties": [
+    "The frequency, causes and cash cost of installer-side dossier corrections are not publicly quantified.",
+    "It is unknown whether contractors control enough of the beneficiary paperwork to use a unified workspace.",
+    "The family company may not represent installers with different project mixes or administrative maturity.",
+    "All price, margin, volume and wealth-path values are hypotheses requiring paid pilots."
+  ],
+  "version": 1
+}

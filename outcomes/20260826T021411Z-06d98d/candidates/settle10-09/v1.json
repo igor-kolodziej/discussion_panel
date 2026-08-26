@@ -1,0 +1,74 @@
+{
+  "candidate_id": "settle10-09",
+  "claims": [
+    {
+      "claim_id": "settle10-09-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1674883978126&uri=CELEX%3A32022R2554",
+        "https://finance.ec.europa.eu/regulation-and-supervision/financial-services-legislation/implementing-and-delegated-acts/digital-operational-resilience-regulation_en"
+      ],
+      "statement": "DORA establishes standardized ICT incident reporting and third-party information registers for financial entities."
+    },
+    {
+      "claim_id": "settle10-09-c2",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://www.enisa.europa.eu/publications/nis2-technical-implementation-guidance",
+        "https://www.enisa.europa.eu/sites/default/files/2025-06/ENISA_Technical_implementation_guidance_on_cybersecurity_risk_management_measures_version_1.0.pdf"
+      ],
+      "statement": "Demand hypothesis: MSPs can monetize recurring evidence readiness because ENISA guidance explicitly maps NIS2 measures to examples of evidence."
+    }
+  ],
+  "contrary_evidence": [
+    "Security platforms already retain logs and compliance evidence.",
+    "Cyber insurers may require their own forms and forensic vendors."
+  ],
+  "economics": {
+    "acquisition_route": "One MSP can embed the vault across dozens of regulated clients.",
+    "capital_required_pln": 75000,
+    "founder_net_worth_path": "Hypothesis: 1000 clients at 600 PLN monthly can exceed 7 million PLN ARR and support founder net worth above 5 million PLN in five years.",
+    "founder_time": "Four to five hours daily until security operations are delegated.",
+    "gross_margin_basis": "Hypothesis: 78-88% margin after secure storage and exception support.",
+    "payback": "Hypothesis: 120 managed clients at 600 PLN monthly repay initial capital within eighteen months.",
+    "pricing": "Hypothesis: 300-900 PLN per client monthly plus 1500-5000 PLN per incident packet.",
+    "retention_or_repeat": "Evidence refreshes continuously and becomes valuable at every audit, renewal, and incident."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Control-to-evidence mappings and anonymized incident completeness benchmarks improve over time.",
+    "customer": "EU MSPs, regulated SMEs, and cyber-insurance brokers.",
+    "distribution_mechanism": "MSPs and brokers bundle it with managed security or renewal services.",
+    "offer_and_business_model": "The vault maps recurring evidence to controls and generates time-bound incident reports without judging coverage.",
+    "payer_and_paid_event": "An MSP or broker pays per protected client monthly and per incident packet.",
+    "problem_trigger": "A control review or cyber incident requires logs, timelines, supplier records, and actions in several incompatible formats."
+  },
+  "founder_fit": [
+    "Technical and analytical work suits the founder.",
+    "Embedded MSP distribution reduces direct enterprise selling."
+  ],
+  "parent": null,
+  "risks": [
+    "A breach of the vault would be highly damaging.",
+    "The product must avoid compliance and coverage guarantees."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1674883978126&uri=CELEX%3A32022R2554",
+    "https://finance.ec.europa.eu/regulation-and-supervision/financial-services-legislation/implementing-and-delegated-acts/digital-operational-resilience-regulation_en",
+    "https://www.enisa.europa.eu/publications/nis2-technical-implementation-guidance",
+    "https://www.enisa.europa.eu/sites/default/files/2025-06/ENISA_Technical_implementation_guidance_on_cybersecurity_risk_management_measures_version_1.0.pdf"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Recurring assurance and incident-evidence infrastructure.",
+    "control_point": "The time-stamped control and incident evidence graph.",
+    "critical_dependency": "Secure log access and trusted MSP or broker distribution."
+  },
+  "thesis": "An MSP-embedded vault can continuously preserve control evidence and convert an incident into consistent regulator, client, and cyber-insurance packets.",
+  "title": "Cyber Incident Evidence Vault for MSPs",
+  "uncertainties": [
+    "MSP revenue-share tolerance is unknown.",
+    "Incident packet acceptance across insurers is unverified."
+  ],
+  "version": 1
+}

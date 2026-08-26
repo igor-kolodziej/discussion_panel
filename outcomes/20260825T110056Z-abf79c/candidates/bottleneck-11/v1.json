@@ -1,0 +1,84 @@
+{
+  "candidate_id": "bottleneck-11",
+  "claims": [
+    {
+      "claim_id": "bottleneck-11-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://finance.ec.europa.eu/publications/commission-presents-voluntary-sustainability-reporting-standard-ease-burden-smes_en"
+      ],
+      "statement": "In July 2025 the Commission recommended a voluntary sustainability reporting standard for SMEs intended to make responses to large-company and financial-institution information requests easier and less burdensome."
+    },
+    {
+      "claim_id": "bottleneck-11-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://finance.ec.europa.eu/document/download/99e7ff59-ff8a-445b-8f48-eb7648941712_en?filename=250730-recommendation-vsme-questions-answers_en.pdf"
+      ],
+      "statement": "The Commission's Q&A reports that SMEs and intended users supported VSME as a simplified, credible replacement for a substantial portion of questionnaires sent by banks and large value-chain companies."
+    },
+    {
+      "claim_id": "bottleneck-11-c3",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://finance.ec.europa.eu/document/download/a608ffd4-1dfa-44a1-8ef1-7b5df83149e8_en?filename=260318-sustainable-finance-platform-responce-esrs_en.pdf"
+      ],
+      "statement": "The standard remains policy-sensitive: a 2026 Platform on Sustainable Finance response describes a future voluntary standard intended to replace the current VSME recommendation."
+    }
+  ],
+  "contrary_evidence": [
+    "VSME is voluntary, and the Commission only encourages requesters to use it as far as possible rather than forcing universal acceptance.",
+    "Current EU policy work points toward a successor voluntary standard, so a product hard-coded to the 2025 VSME could become obsolete.",
+    "Spreadsheets, accountants, ESG platforms, banks, and procurement networks may already collect the needed data at low incremental cost."
+  ],
+  "economics": {
+    "acquisition_route": "Free questionnaire-overlap report, VSME readiness template, targeted SME content, and accounting, ISO-adviser, or finance-broker referrals",
+    "capital_required_pln": 45000,
+    "founder_net_worth_path": "Modeled path: 1,000 SMEs at 450 PLN average monthly recurring revenue equals 5.4m PLN ARR; a 35% owner-cash margin is 1.89m PLN/year and could exceed 10m PLN in six mature years",
+    "founder_time": "Up to 4 hours/day for a spreadsheet-first product and two accounting channels, with no custom sustainability consulting included",
+    "gross_margin_basis": "Modeled 82-92% after document processing, calculation services, storage, template maintenance, and support",
+    "payback": "Target under 4 months with channel onboarding and reusable customer imports; unvalidated",
+    "pricing": "Modeled 300-1,500 PLN/month per SME by questionnaire and entity volume, or wholesale pricing to accounting offices",
+    "retention_or_repeat": "Annual customer and lender requests plus expiring source periods require refresh, while reuse across requesters deepens retention"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A mapping corpus from diverse buyer and bank questions to canonical metrics, source evidence, calculation methods, and accepted answer formats",
+    "customer": "Polish manufacturing and business-service SMEs repeatedly answering sustainability requests from enterprise customers, lenders, or investors",
+    "distribution_mechanism": "Free questionnaire deduplicator, Polish VSME data checklist, and referrals from accounting offices, ISO advisers, lender brokers, and procurement platforms",
+    "offer_and_business_model": "Evidence ingestion, indicator calculations, VSME-aligned canonical profile, requester-template mapping, approval, expiry reminders, and export sold as SaaS",
+    "payer_and_paid_event": "The SME or its accounting and advisory provider pays annually when it must answer, refresh, and evidence multiple external questionnaires",
+    "problem_trigger": "A customer onboarding, annual supplier review, tender, or financing request demands sustainability fields whose source evidence is scattered or stale"
+  },
+  "founder_fit": [
+    "Metric calculation, provenance, document extraction, and questionnaire mapping fit a data scientist's comparative advantage.",
+    "Accounting-office distribution can aggregate SMEs while limiting founder meetings and public-persona work.",
+    "A low-risk spreadsheet-import MVP can validate repeated demand before building integrations or leaving employment."
+  ],
+  "parent": null,
+  "risks": [
+    "Policy simplification could reduce the volume of value-chain requests faster than software adoption grows.",
+    "Unverified customer inputs could produce misleading sustainability statements or greenwashing exposure.",
+    "Buyer-specific customization could turn a scalable data utility into low-margin questionnaire services."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://finance.ec.europa.eu/publications/commission-presents-voluntary-sustainability-reporting-standard-ease-burden-smes_en",
+    "https://finance.ec.europa.eu/document/download/99e7ff59-ff8a-445b-8f48-eb7648941712_en?filename=250730-recommendation-vsme-questions-answers_en.pdf",
+    "https://finance.ec.europa.eu/news/feedback-sustainability-reporting-standards-additional-explanatory-information-regarding-value-chain-2026-05-06_en",
+    "https://finance.ec.europa.eu/document/download/a608ffd4-1dfa-44a1-8ef1-7b5df83149e8_en?filename=260318-sustainable-finance-platform-responce-esrs_en.pdf"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Reusable supplier-data utility sold directly and through accounting or advisory channels",
+    "control_point": "The approved, time-versioned metric-and-evidence record from which every sustainability response is generated",
+    "critical_dependency": "Large customers and financial institutions must accept a standardized evidence-backed response instead of continuing unlimited bespoke requests"
+  },
+  "thesis": "Build a lightweight evidence vault for Polish SMEs that receives recurring sustainability questionnaires from large customers and banks, stores source documents once, calculates versioned indicators, maps them to the Commission-recommended VSME structure and buyer-specific fields, and flags unsupported answers. SMEs or their accountants pay because the same energy, workforce, policy, emissions, and incident facts are repeatedly requested in incompatible spreadsheets with no durable provenance.",
+  "title": "Reusable VSME Evidence Vault for Supplier Requests",
+  "uncertainties": [
+    "The actual annual count and labor cost of sustainability requests among Polish SMEs is unknown.",
+    "It is unknown whether SMEs, accounting offices, large buyers, or banks are the party with the strongest willingness to pay.",
+    "Modeled pricing, channel economics, template-maintenance cost, churn, and owner-cash margin require paid demand tests."
+  ],
+  "version": 1
+}

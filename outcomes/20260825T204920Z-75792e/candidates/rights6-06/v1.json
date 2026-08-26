@@ -1,0 +1,71 @@
+{
+  "candidate_id": "rights6-06",
+  "claims": [
+    {
+      "claim_id": "rights6-06-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.udt.gov.pl/en/areas-of-activity/technical-inspection/types-of-equipment-subject-to-technical-inspection/handling-equipment/passenger-lifts"
+      ],
+      "statement": "UDT states that all passenger lifts are subject to technical inspection and require operating documentation covering maintenance, inspection, repair, and periodic checks."
+    },
+    {
+      "claim_id": "rights6-06-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.udt.gov.pl/component/content?Itemid=601&id=141"
+      ],
+      "statement": "UDT states that lift maintenance personnel require appropriate qualification certificates."
+    }
+  ],
+  "contrary_evidence": [
+    "Mandatory inspection already supplies an official safety gate, so owners may see supplemental monitoring as unnecessary."
+  ],
+  "economics": {
+    "acquisition_route": "Housing-manager portfolios and independent maintenance firms receive co-branded reports and bulk digital onboarding",
+    "capital_required_pln": 120000,
+    "founder_net_worth_path": "Monitor 400 lifts by year 2 (unvalidated), 5000 lifts by year 6 (unvalidated), and support founder equity above PLN 5 million by year 7 (unvalidated)",
+    "founder_time": "10-16 hours per week during validation (unvalidated), with qualified partners doing all lift work",
+    "gross_margin_basis": "Low-cost sensing, automated reports, and partner installation support 58-72% gross margin (unvalidated)",
+    "payback": "Hardware and acquisition payback in 10-16 months (unvalidated)",
+    "pricing": "PLN 300-600 per lift per month (unvalidated) plus PLN 10000-40000 portfolio benchmark projects (unvalidated)",
+    "retention_or_repeat": "Three-year monitoring agreements (unvalidated) aligned to maintenance planning"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Cross-brand incident and repair-outcome data improve failure baselines and vendor comparisons",
+    "customer": "Housing managers, commercial-property portfolios, lift maintenance firms, and equipment insurers",
+    "distribution_mechanism": "Portfolio-level property-manager contracts and maintenance-partner installation",
+    "offer_and_business_model": "Independent condition history, downtime alerts, procurement evidence, and aggregated risk benchmarks",
+    "payer_and_paid_event": "Building owner pays when monitoring activates; portfolio buyer pays for an approved benchmark",
+    "problem_trigger": "Repeated outages, a maintenance retender, modernization planning, or a disputed repair recommendation"
+  },
+  "founder_fit": [
+    "Strong time-series and anomaly-detection fit.",
+    "Portfolio sales reduce repeated social effort.",
+    "All regulated physical work remains with qualified partners."
+  ],
+  "parent": null,
+  "risks": [
+    "Safety liability or sensor interference concerns.",
+    "Incumbent maintainers may withhold logs.",
+    "The stated PLN 120000 startup capital requirement is unvalidated."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.udt.gov.pl/en/areas-of-activity/technical-inspection/types-of-equipment-subject-to-technical-inspection/handling-equipment/passenger-lifts",
+    "https://www.udt.gov.pl/component/content?Itemid=601&id=141"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Regulated-asset monitoring subscription with permissioned risk benchmarking",
+    "control_point": "Longitudinal owner-authorized condition and repair-outcome dataset spanning otherwise siloed maintenance vendors",
+    "critical_dependency": "Sensor installation and data use must be approved by owners and qualified maintainers without affecting lift safety or certification"
+  },
+  "thesis": "With building-owner permission and qualified maintenance partners, attach non-invasive uptime sensors and normalize maintenance, entrapment, repair, and inspection evidence across lift brands. Sell owners an independent condition record for procurement and planning, then offer insurers and portfolio managers governed aggregate benchmarks; never represent the service as a statutory inspection.",
+  "title": "LiftLedger Condition Data Cooperative",
+  "uncertainties": [
+    "Which non-invasive signals predict useful faults across lift types?",
+    "Will owners share incident and invoice records?"
+  ],
+  "version": 1
+}

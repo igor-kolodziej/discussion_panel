@@ -1,0 +1,70 @@
+{
+  "candidate_id": "asset-01",
+  "claims": [
+    {
+      "claim_id": "asset-01-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1542/oj"
+      ],
+      "statement": "The EU Batteries Regulation requires passports from 18 February 2027 for EV, LMT, and industrial batteries above 2 kWh."
+    },
+    {
+      "claim_id": "asset-01-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://single-market-economy.ec.europa.eu/single-market/digital-product-passport/batteries_en"
+      ],
+      "statement": "The Commission describes the passport as decentralized and maintained by the responsible economic operator."
+    }
+  ],
+  "contrary_evidence": [
+    "Open interoperability requirements constrain lock-in and may make basic hosting commoditized.",
+    "Large manufacturers may build the capability internally before the deadline."
+  ],
+  "economics": {
+    "acquisition_route": "Unvalidated hypothesis: acquire customers through Polish battery distributors, customs advisers, and storage installers.",
+    "capital_required_pln": 45000,
+    "founder_net_worth_path": "Unvalidated hypothesis: 300 importers and 120,000 annual passports could support a 5 million PLN founder net-worth path in seven to nine years without double-counting retained earnings.",
+    "founder_time": "Unvalidated hypothesis: an automated pilot can remain below 20 founder hours weekly.",
+    "gross_margin_basis": "Unvalidated hypothesis: software-led delivery could reach 75% gross margin, and every commercial number including capital_required_pln is hypothetical.",
+    "payback": "Unvalidated hypothesis: recover acquisition cost within six months after five activated batches.",
+    "pricing": "Unvalidated hypothesis: charge 400 PLN per activated passport plus 1,200 PLN per importer monthly.",
+    "retention_or_repeat": "Unvalidated hypothesis: lifecycle updates and new battery batches create recurring usage."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A permissioned component-data graph and exception library improve each subsequent onboarding",
+    "customer": "CEE home-storage and industrial-battery importers",
+    "distribution_mechanism": "Distributor and customs-adviser referrals plus targeted importer outreach",
+    "offer_and_business_model": "Managed passport onboarding, hosting, registry integration, and update subscription",
+    "payer_and_paid_event": "The responsible economic operator pays when a passport is activated and maintained",
+    "problem_trigger": "A covered battery is prepared for EU market placement without a compliant persistent record"
+  },
+  "founder_fit": [
+    "The work uses data engineering, AI-assisted document extraction, and Polish renewable-industry access.",
+    "A narrow importer pilot can run part-time without camera-led distribution."
+  ],
+  "parent": null,
+  "risks": [
+    "Incorrect source data could create customer liability that contract terms do not fully contain.",
+    "Standards and delegated acts may change the implementation workload."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2023/1542/oj",
+    "https://single-market-economy.ec.europa.eu/single-market/digital-product-passport/batteries_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Decentralized compliance-registry operator",
+    "control_point": "Passport creation, registry submission, and lifecycle update workflow",
+    "critical_dependency": "Complete manufacturer data and continuing alignment with EU technical standards"
+  },
+  "thesis": "Operate the persistent battery-passport record for CEE storage importers that lack an internal compliance data team.",
+  "title": "CEE Battery Passport Custodian",
+  "uncertainties": [
+    "Importer willingness to delegate the legally sensitive record is unverified.",
+    "All commercial numbers including capital_required_pln are unvalidated hypotheses."
+  ],
+  "version": 1
+}

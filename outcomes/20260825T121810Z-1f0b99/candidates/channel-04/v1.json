@@ -1,0 +1,81 @@
+{
+  "candidate_id": "channel-04",
+  "claims": [
+    {
+      "claim_id": "channel-04-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en"
+      ],
+      "statement": "The definitive CBAM regime has applied since 1 January 2026 and requires covered importers above the stated mass threshold to become authorised declarants, declare embedded emissions, and surrender certificates."
+    },
+    {
+      "claim_id": "channel-04-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/price-cbam-certificates_en"
+      ],
+      "statement": "Certificate prices are officially published and tied to EU ETS auction prices, so procurement and finance teams face a recurring, quantifiable exposure that can be estimated from validated import data."
+    },
+    {
+      "claim_id": "channel-04-c03",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en",
+        "https://taxation-customs.ec.europa.eu/news/european-commission-publishes-series-guidance-documents-support-cbam-implementation-definitive-2026-08-14_en"
+      ],
+      "statement": "Hypothesis: indirect customs representatives and freight forwarders are a lower-friction reseller channel than selling separately to each importer because the compliance packet can be attached to an import workflow they already administer."
+    }
+  ],
+  "contrary_evidence": [
+    "A 50-tonne threshold removes many smaller importers from the core obligation and narrows the initial addressable base.",
+    "The Commission supplies extensive sector guidance and registry tooling, so the defensible value is cross-company evidence collection and validation, not regulatory information."
+  ],
+  "economics": {
+    "acquisition_route": "Sign specialist customs advisers for one covered sector, then let each partner activate its importer portfolio",
+    "capital_required_pln": 75000,
+    "founder_net_worth_path": "Hypothesis: 35 brokers averaging 100000 PLN ARR plus packet fees could reach 5 million PLN ARR across the EU in years 5-7; at 25% EBITDA, 6x EBITDA, and 75% ownership, founder equity would be about 5.6 million PLN, with upside from supplier-network density",
+    "founder_time": "18-25 hours weekly during sector-template and first-broker integration work, then target 10-12 hours weekly with partner-led onboarding",
+    "gross_margin_basis": "Document ingestion and workflow software can reach 75-88% gross margin; multilingual exception support and expert review are the main variable costs",
+    "payback": "Target under 9 months per broker; importer value comes from avoiding manual supplier chasing and quantifying certificate exposure earlier",
+    "pricing": "Hypothesis: 150-500 PLN per supplier-shipment packet plus 30000-120000 PLN annual broker platform licence",
+    "retention_or_repeat": "Annual declarations, repeated imports, changing certificate prices, and persistent supplier profiles create recurring use"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Reusable supplier-installation profiles, provenance chains, sector error patterns, and broker integrations reduce repeated evidence cost",
+    "customer": "EU customs brokers, freight forwarders, authorised CBAM declarants, and importers of covered goods",
+    "distribution_mechanism": "Embedded or white-labelled in customs broker and freight-forwarder job-management portals",
+    "offer_and_business_model": "Multi-party supplier evidence exchange, validation engine, and registry-packet workspace sold through brokers",
+    "payer_and_paid_event": "Broker or importer pays per covered supplier-shipment packet and annual entity workspace",
+    "problem_trigger": "A covered import job lacks verified supplier emissions and cost-exposure evidence needed for annual CBAM compliance"
+  },
+  "founder_fit": [
+    "Strong quantitative, EU, automation, and evidence-provenance fit. The broker-channel design reduces founder-led sales, while multilingual supplier requests can be automated. Sector methodology and legal sign-off should be contracted rather than improvised."
+  ],
+  "parent": null,
+  "risks": [
+    "Incorrect emissions data can create certificate and enforcement exposure; a verifier or declarant must remain accountable.",
+    "Large customs platforms may bundle the function rapidly.",
+    "Cross-border supplier onboarding could become a high-touch service burden."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en",
+    "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/price-cbam-certificates_en",
+    "https://taxation-customs.ec.europa.eu/news/european-commission-publishes-series-guidance-documents-support-cbam-implementation-definitive-2026-08-14_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Multi-party regulatory evidence exchange",
+    "control_point": "The broker-managed compliance packet joining a customs job to supplier emissions provenance",
+    "critical_dependency": "Accurate supplier data acquisition and broker acceptance of a clear human-verification and liability boundary"
+  },
+  "thesis": "Create a CBAM supplier-evidence exchange that customs brokers and freight forwarders can embed in import jobs. It would request production data from non-EU suppliers, validate it against sector templates, preserve provenance, calculate certificate exposure scenarios, and hand a human declarant a registry-ready packet.",
+  "title": "Carbon Packet Relay",
+  "uncertainties": [
+    "The fraction of brokers willing to assume a reseller role and their liability boundaries are unknown.",
+    "Supplier response rates and primary emissions-data quality may be too low for automation.",
+    "Registry interfaces and verifier expectations may change as the definitive regime matures."
+  ],
+  "version": 1
+}

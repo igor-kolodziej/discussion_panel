@@ -1,0 +1,80 @@
+{
+  "candidate_id": "network-11",
+  "claims": [
+    {
+      "claim_id": "network-11-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.ema.europa.eu/en/human-regulatory-overview/research-development/clinical-trials-human-medicines/clinical-trials-information-system"
+      ],
+      "statement": "EMA's Clinical Trials Information System supports sponsor-authority interactions across the trial lifecycle and makes public searchable information available, including sponsor, recruitment dates, trial dates, and locations subject to transparency rules."
+    },
+    {
+      "claim_id": "network-11-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.ema.europa.eu/en/human-regulatory-overview/research-development/clinical-trials-human-medicines/clinical-trials-information-system-ctis-training-support"
+      ],
+      "statement": "CTIS public information must balance transparency with protection of personal data and commercially confidential information, so any private outcome layer requires separate permissions and careful disclosure controls."
+    },
+    {
+      "claim_id": "network-11-c3",
+      "confidence": "low",
+      "evidence_refs": [],
+      "statement": "Hypothesis: independent sites will contribute verified operational metrics to earn a portable reliability credential, and CROs will pay when it improves feasibility decisions beyond public CTIS data."
+    }
+  ],
+  "contrary_evidence": [
+    "CROs and sponsors already maintain private preferred-site histories and may treat them as strategically confidential.",
+    "Public CTIS records do not provide all site-level operational outcomes needed for a fair score."
+  ],
+  "economics": {
+    "acquisition_route": "Hypothesis: launch free CTIS-derived Polish site profiles, let sites verify public facts, then sell one therapeutic-area feasibility pack to a CRO.",
+    "capital_required_pln": 75000,
+    "founder_net_worth_path": "Hypothesis: 5 buyers and 50 sites in year 2, 35 buyers and 400 sites in year 4, and 120 European buyers at 50000 PLN average annual revenue in year 7 yields 6M PLN ARR before site tools. At 4-6x ARR and 50-65% ownership, founder equity can exceed 5M PLN if independent outcome contributions become durable.",
+    "founder_time": "Hypothesis: 15-22 hours/week through the first paid feasibility cycles, with medical and governance review contracted.",
+    "gross_margin_basis": "Hypothesis: 70-82% after data verification, site appeals, security, and analyst support.",
+    "payback": "Hypothesis: 9-18 months at 30000-70000 PLN enterprise acquisition cost and 50000-120000 PLN first-year buyer value.",
+    "pricing": "Hypothesis: 30000-80000 PLN/year per CRO or sponsor team plus 500-1500 PLN/month site workflow tier that does not affect ranking.",
+    "retention_or_repeat": "Hypothesis: every study repeats site selection; operational histories and portfolio integrations support annual buyer renewal above 85%."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Longitudinal site-level startup, recruitment, data-quality, and closeout outcomes with transparent normalization and appeals",
+    "customer": "Independent Polish clinical-trial sites seeking differentiation and CRO/sponsor feasibility teams selecting sites",
+    "distribution_mechanism": "Free verified site profiles, CTIS-linked discovery, site networks, and CRO feasibility workflow integrations",
+    "offer_and_business_model": "Public-data site map, permissioned operational benchmark, portable site credential, and contributor-gated feasibility intelligence",
+    "payer_and_paid_event": "CRO/sponsor pays for search and decision support; site optionally pays for workflow tools but never for a higher score",
+    "problem_trigger": "New-country feasibility, site shortlist, study startup, or annual preferred-site review"
+  },
+  "founder_fit": [
+    "Neuroscience and medical adjacency support understanding of study workflows.",
+    "Data-quality, uncertainty, and fair benchmarking are core data-science problems.",
+    "Public CTIS data enables a product demonstration without outreach or private records.",
+    "A self-serve site profile and contribution workflow can reduce founder networking load."
+  ],
+  "parent": null,
+  "risks": [
+    "A flawed score could unfairly damage site reputation; transparent methodology, minimum samples, appeals, and no pay-to-rank are essential.",
+    "Commercially confidential and patient information must never leak into benchmark outputs.",
+    "Chicken-and-egg adoption between sites and CRO buyers."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.ema.europa.eu/en/human-regulatory-overview/research-development/clinical-trials-human-medicines/clinical-trials-information-system",
+    "https://www.ema.europa.eu/en/human-regulatory-overview/research-development/clinical-trials-human-medicines/clinical-trials-information-system-ctis-training-support"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "contributor-gated intelligence exchange",
+    "control_point": "fair, permissioned site reliability history used in feasibility selection",
+    "critical_dependency": "trusted two-sided contribution with defensible attribution and confidentiality"
+  },
+  "thesis": "A contributor-gated feasibility and reliability index for independent Polish clinical-trial sites. It combines public CTIS facts with permissioned operational outcomes such as startup time, recruitment delivery, query burden, and closeout reliability, giving sites a fair credential and CROs a better repeat-selection tool.",
+  "title": "TrialSite Reliability Exchange for Poland",
+  "uncertainties": [
+    "Sites and CROs may disagree on metric definitions, attribution, and appeal rights.",
+    "The sales cycle and information-security bar may be difficult alongside full-time employment.",
+    "The 75000 PLN capital estimate and all numeric business assumptions below are planning hypotheses."
+  ],
+  "version": 1
+}

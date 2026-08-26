@@ -1,0 +1,149 @@
+{
+  "candidate_id": "route-07",
+  "claims": [
+    {
+      "claim_id": "route-07-v4-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.who.int/publications-detail-redirect/9789241548274",
+        "https://www.who.int/publications/m/item/overview-of-external-quality-assessment-eqa"
+      ],
+      "statement": "Laboratory quality systems require internal quality control and external assessment, and peer comparison is an established form of external quality assessment."
+    },
+    {
+      "claim_id": "route-07-v4-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://pubmed.ncbi.nlm.nih.gov/21097677/",
+        "https://www.sciencedirect.com/science/article/abs/pii/S0031302519303745",
+        "https://clsi.org/shop/standards/ep26/"
+      ],
+      "statement": "Reagent-lot shifts are a real quality problem, but QC material can be noncommutable with patient samples, so a support workflow must preserve human investigation and cannot treat pooled QC as conclusive clinical lot validation."
+    },
+    {
+      "claim_id": "route-07-v4-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.bio-rad.com/webroot/web/pdf/cdg/literature/Q1181_QCDataManagement.pdf",
+        "https://www.randox.com/core-disciplines/quality-control/qc-data-management",
+        "https://www.technopathclinicaldiagnostics.com/products/informatics-solutions/iamqc-software-solutions/iamqc-peer/"
+      ],
+      "statement": "Bio-Rad, Randox, and Technopath already offer interlaboratory peer comparison, alerts, automated connectivity, and reagent-lot reporting, so a generic standalone peer-QC product lacks a credible competitive wedge."
+    },
+    {
+      "claim_id": "route-07-v4-c4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://clsi.org/shop/standards/auto16/"
+      ],
+      "statement": "A standard exists for exchanging patient and QC test orders and results between IVD instruments and managing systems, but it does not cover calibration data, nomenclature, or privacy and does not establish that a distributor has enabled, lawful, or inexpensive access."
+    },
+    {
+      "claim_id": "route-07-v4-c5",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2017/746/oj/eng",
+        "https://health.ec.europa.eu/document/download/b45335c5-1679-4c71-a91c-fc7a4d37f12b_en?filename=mdcg_2019_11_en.pdf"
+      ],
+      "statement": "IVDR status turns on intended purpose and functionality; changing the buyer and workflow does not remove the need for qualified analysis of the exact claims before the product is sold."
+    },
+    {
+      "claim_id": "route-07-v4-c6",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://commission.europa.eu/law/law-topic/data-protection/information-business-and-organisations/application-gdpr_en"
+      ],
+      "statement": "Irreversibly anonymized data is outside GDPR, while pseudonymized or re-identifiable exports remain personal data; any pilot must minimize fields and prevent patient and operator identifiers from entering the workflow."
+    },
+    {
+      "claim_id": "route-07-v4-c7",
+      "confidence": "low",
+      "evidence_refs": [],
+      "statement": "No gathered evidence establishes a suitable distributor without a proprietary peer platform, lawful service-export rights, paid demand for a white-label support workspace, measurable support-cost savings, implementation cost, renewal pricing, or retention."
+    }
+  ],
+  "contrary_evidence": [
+    "Three established QC vendors already market peer comparison, alerts, cloud delivery, automated submission, and reagent-lot views, and could extend into support-case workflow.",
+    "QC material may be noncommutable with patient samples, limiting the conclusions that any cross-site support packet can support.",
+    "Intended-purpose choices can move the software into IVDR scope even when the buyer is a distributor and outputs are human reviewed.",
+    "Interface standards grant no export permission, and a distributor may lack both rights and technically consistent data across its installed portfolio."
+  ],
+  "economics": {
+    "acquisition_route": "Seek one paid white-label pilot with a mid-sized reagent or analyzer distributor that lacks a proprietary peer platform, contingent on written authority for the exact QC-only service exports and participating laboratories. Embed in its existing support desk and measure incident-resolution work rather than sell lab-by-lab subscriptions.",
+    "capital_required_pln": 85000,
+    "founder_net_worth_path": "Planning hypothesis, not forecast: retain the prior 7.5M PLN ARR scale target needed to produce about 5.4M PLN of founder equity at 30% EBITDA, 4x EBITDA, and 60% founder ownership in year 7-10, but reach it through annual distributor portfolio-support licences and implementations rather than 5000 analyzer subscriptions. The evidence does not establish contract value or the number of distributors required; those must be recomputed from paid-pilot results, and retained cash is not added again.",
+    "founder_time": "15-20 hours weekly for one distributor support-desk pilot, with the founder building analytics and workflow automation while laboratory quality review, security, and IVDR analysis remain contracted specialist work.",
+    "gross_margin_basis": "The redesign seeks to replace recurring lab-by-lab acquisition and mapping with a distributor-funded implementation and reusable support workflow. Use the existing 50-65% manual-phase and 70-80% reused-workflow ranges only as planning bounds; implementation, white-label maintenance, export normalization, and specialist review are unmeasured and could erase the expected improvement.",
+    "payback": "Unknown. Require the paid pilot and any implementation fee to cover scoped onboarding, then compare measured support hours and resolution time with total delivery cost before offering an annual licence or custom integration.",
+    "pricing": "Retain the evidence-free test of a 30000-80000 PLN six-month distributor pilot, but remove the 80-200 PLN per-analyzer hypothesis. Price any renewal as an annual white-label portfolio-support licence plus separately scoped implementation only after ticket volume, resolution cost, integration effort, and procurement constraints are observed.",
+    "retention_or_repeat": "Recurring lot and instrument support cases could make an embedded case-history workflow repeatable, but renewal, switching costs, incident volume, distributor concentration, and incumbent response remain unknown."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Distributor-owned normalized support-case history linking QC evidence, instrument or reagent context, investigation steps, reusable playbooks, and human-confirmed closure inside the daily support workflow",
+    "customer": "Mid-sized EU reagent or analyzer distributors without a proprietary peer-QC platform and with an existing centralized technical-support function",
+    "distribution_mechanism": "Directly win one distributor support organization, deploy a white-label workspace inside its current case process, and expand only through that buyer's lawfully authorized portfolio",
+    "offer_and_business_model": "White-label support-operations workspace with scoped implementation and an annual portfolio licence; it organizes authorized QC evidence and human dispositions without replacing laboratory QC or issuing lot decisions",
+    "payer_and_paid_event": "Distributor pays for a time-boxed support-desk pilot, then only after measured value for implementation and an annual portfolio-support licence rather than a connected-analyzer fee",
+    "problem_trigger": "A distributor opens a multi-site lot, reagent, or analyzer support case and needs to assemble comparable QC evidence, coordinate investigation, and preserve the human-confirmed resolution"
+  },
+  "founder_fit": [
+    "Analytics, anomaly triage, provenance, and workflow automation match the founder's data-science strengths.",
+    "Selling a higher-value support-operations contract to a small number of distributors concentrates outreach and avoids lab-by-lab acquisition, though enterprise discovery and sales remain necessary.",
+    "A single QC-only white-label pilot can fit the founder's capital and part-time limits only if custom exports and integrations are contract-gated.",
+    "Laboratory clinical judgment, regulatory interpretation, security review, and quality-system responsibility must remain with qualified specialists and the relevant organizations."
+  ],
+  "parent": {
+    "candidate_id": "route-07",
+    "version": 3
+  },
+  "redesign": {
+    "changed_fingerprint_fields": [
+      "compounding_advantage",
+      "customer",
+      "distribution_mechanism",
+      "offer_and_business_model",
+      "payer_and_paid_event",
+      "problem_trigger"
+    ],
+    "economic_effect": "The redesign changes the paid unit from a lab-facing connected-analyzer subscription to a distributor-funded white-label implementation and annual support-operations licence. It aims to pull onboarding cost into a paid implementation, concentrate acquisition in one support organization, and reuse mappings and case playbooks across that distributor's authorized portfolio, while pricing against measured support work rather than generic peer-QC access. This is material only if a paid pilot shows lawful reusable exports, lower delivery cost than support value, and a renewable portfolio contract; none of those conditions is currently validated, and customer concentration and white-label work may offset the intended margin and acquisition benefits."
+  },
+  "risks": [
+    "A support packet or workflow could still influence laboratory operations; outputs must remain investigational and human reviewed until regulatory status and performance are established.",
+    "The exact intended purpose may make the software IVD medical-device software or an accessory under IVDR despite white-label positioning.",
+    "Bio-Rad, Randox, Technopath, or another installed vendor could add support-case orchestration to a larger existing peer network.",
+    "The target distributor may not exist with the assumed combination of portfolio breadth, unmet need, centralized support, and lawful export and pooling rights.",
+    "White-label customization, integration, specialist review, security work, and concentrated enterprise sales can turn the product into a low-margin services business.",
+    "QC-only service files can still contain patient, operator, or identifiable site data and require minimization, access control, and contractual governance."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.who.int/publications-detail-redirect/9789241548274",
+    "https://www.who.int/publications/m/item/overview-of-external-quality-assessment-eqa",
+    "https://eur-lex.europa.eu/eli/reg/2017/746/oj/eng",
+    "https://health.ec.europa.eu/document/download/b45335c5-1679-4c71-a91c-fc7a4d37f12b_en?filename=mdcg_2019_11_en.pdf",
+    "https://clsi.org/shop/standards/ep26/",
+    "https://pubmed.ncbi.nlm.nih.gov/21097677/",
+    "https://www.sciencedirect.com/science/article/abs/pii/S0031302519303745",
+    "https://www.bio-rad.com/webroot/web/pdf/cdg/literature/Q1181_QCDataManagement.pdf",
+    "https://www.randox.com/core-disciplines/quality-control/qc-data-management",
+    "https://www.technopathclinicaldiagnostics.com/products/informatics-solutions/iamqc-software-solutions/iamqc-peer/",
+    "https://commission.europa.eu/law/law-topic/data-protection/information-business-and-organisations/application-gdpr_en",
+    "https://clsi.org/shop/standards/auto16/"
+  ],
+  "stage": "development",
+  "structure": {
+    "commercial_archetype": "white-label distributor support-operations software with paid implementation and annual portfolio licensing",
+    "control_point": "The distributor support team's system of record for assembling authorized QC evidence, coordinating investigation, and preserving human-confirmed case closure",
+    "critical_dependency": "A distributor without a proprietary peer platform must have lawful, technically usable access across enough comparable cases and must pay for measurable support-work reduction under a regulatorily supportable intended purpose"
+  },
+  "thesis": "Do not compete as another laboratory peer-QC platform. Provide a white-label support-operations workspace to one mid-sized reagent or analyzer distributor that lacks such a platform. Using only exports the distributor and participating laboratories are demonstrably authorized to share, the workspace assembles QC evidence for an opened support case, coordinates human investigation, and records the confirmed disposition. It makes no patient-result release or lot-safety decision. The first pilot is paid, time boxed, restricted to one product family, and judged on measured support work and resolution time before any annual licence or integration expansion.",
+  "title": "White-Label Distributor Incident Desk",
+  "uncertainties": [
+    "Whether a mid-sized distributor lacking a proprietary peer platform has enough recurring multi-site incidents and support cost to fund the product.",
+    "Whether that distributor and participating laboratories possess and will document the necessary export, pooling, and processing rights.",
+    "Whether the exact support-only intended purpose stays outside IVDR medical-device software or accessory scope.",
+    "Whether support-case orchestration is sufficiently distinct from incumbent QC platforms to win and retain a white-label contract.",
+    "Paid pilot demand, measurable support savings, implementation burden, annual contract value, renewal, margin, and the number of distributor accounts needed for the wealth path."
+  ],
+  "version": 4
+}

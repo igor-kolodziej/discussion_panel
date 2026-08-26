@@ -1,0 +1,83 @@
+{
+  "candidate_id": "bottleneck-09",
+  "claims": [
+    {
+      "claim_id": "bottleneck-09-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/dostepnosc-cyfrowa/polski-akt-o-dostepnosci--uslugi-handlu-elektronicznego"
+      ],
+      "statement": "Poland's accessibility act has applied since 28 June 2025 and covers e-commerce services offered at a distance through websites or mobile devices for concluding consumer contracts."
+    },
+    {
+      "claim_id": "bottleneck-09-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/dostepnosc-cyfrowa/obowiazki-informacyjne-w-pad"
+      ],
+      "statement": "Covered e-commerce service providers must publish information describing the service, what is needed to use it, and how it meets accessibility requirements."
+    },
+    {
+      "claim_id": "bottleneck-09-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/european-accessibility-act-eaa_en"
+      ],
+      "statement": "The European Accessibility Act covers e-commerce alongside banking, passenger transport, e-books, communications, and specified products across the EU."
+    }
+  ],
+  "contrary_evidence": [
+    "Polish microenterprises providing services are excluded, removing much of the smallest-shop market.",
+    "Automated scanners cannot establish full accessibility or legal compliance, so the product needs explicit human-test boundaries.",
+    "Accessibility scanners, browser extensions, agency audit services, and CI products are already abundant."
+  ],
+  "economics": {
+    "acquisition_route": "Free checkout scan, WooCommerce and Shopify integrations, defect-specific search content, and agency resale margins",
+    "capital_required_pln": 45000,
+    "founder_net_worth_path": "Modeled path: 500 agency portfolios at 900 PLN average monthly recurring revenue equals 5.4m PLN ARR; a 35% owner-cash margin is 1.89m PLN/year and could exceed 10m PLN cumulatively in six mature years",
+    "founder_time": "Up to 4 hours/day for two commerce platforms, with manual disability testing offered by vetted contractors only when separately purchased",
+    "gross_margin_basis": "Modeled 80-92% after browser-test compute, screenshot retention, support, and periodic expert QA sampling",
+    "payback": "Target below 4 months through self-serve agency trials and portfolio expansion; unvalidated",
+    "pricing": "Modeled 499-2,499 PLN/month per agency portfolio, with overages above included storefront and release counts",
+    "retention_or_repeat": "Every release can introduce regressions, while scheduled evidence and client reporting recur monthly"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A platform-and-component-specific defect-to-fix corpus that clusters repeated failures across themes, plug-ins, and releases",
+    "customer": "Polish e-commerce agencies maintaining portfolios of non-microenterprise WooCommerce, Shopify, Magento, or custom storefronts",
+    "distribution_mechanism": "Platform plug-ins, free checkout scan, searchable Polish remediation guides, and agency resale to existing client portfolios",
+    "offer_and_business_model": "CI and scheduled scanning, guided human test protocol, component-level defect clustering, evidence snapshots, and accessibility-notice maintenance sold as portfolio SaaS",
+    "payer_and_paid_event": "The agency pays by active storefront when it needs a pass-fail release gate, remediation tickets, and client-ready evidence",
+    "problem_trigger": "A theme, checkout, plug-in, campaign, or content release changes a covered e-commerce service without a repeatable accessibility review and evidence snapshot"
+  },
+  "founder_fit": [
+    "Automated testing, defect clustering, and code-aware remediation use analytical and software skills without requiring a public-facing creator business.",
+    "Agency distribution aggregates many storefronts behind a small number of relationships and supports asynchronous product-led trials.",
+    "A plug-in and CI wedge is low-capital and can be tested alongside employment within a 5-hour daily ceiling."
+  ],
+  "parent": null,
+  "risks": [
+    "A false pass could expose the customer and vendor to complaints or enforcement.",
+    "Rapid storefront and plug-in changes can make tests brittle and support-intensive.",
+    "Competing free scanners may anchor willingness to pay near zero unless release workflow value is proven."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.gov.pl/web/dostepnosc-cyfrowa/polski-akt-o-dostepnosci--uslugi-handlu-elektronicznego",
+    "https://www.gov.pl/web/dostepnosc-cyfrowa/obowiazki-informacyjne-w-pad",
+    "https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/european-accessibility-act-eaa_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Embedded QA and compliance SaaS sold through web agencies per storefront portfolio",
+    "control_point": "The release gate connecting changed interface components, automated and human test evidence, assigned fixes, approval, and public accessibility information",
+    "critical_dependency": "The combined automated and guided-human protocol must catch material barriers without claiming that scanning alone proves legal compliance"
+  },
+  "thesis": "Build a release-control product for Polish e-commerce agencies that tests every storefront change against automated accessibility checks, prompts the exact human checks automation cannot cover, links defects to theme components, and retains dated evidence plus the service accessibility notice. Agencies pay at deployment because a compliant launch can regress whenever a theme, checkout app, campaign page, or content block changes across dozens of client stores.",
+  "title": "Accessibility Release Gate for E-Commerce Agencies",
+  "uncertainties": [
+    "The enforcement-driven willingness to pay among Polish mid-market stores and their agencies has not been measured.",
+    "The amount of agency labor saved by component-level deduplication versus existing scanners is unknown.",
+    "Modeled pricing, platform support cost, agency churn, expert-review cost, and margin require paid pilots."
+  ],
+  "version": 1
+}

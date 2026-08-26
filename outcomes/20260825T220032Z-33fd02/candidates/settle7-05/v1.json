@@ -1,0 +1,84 @@
+{
+  "candidate_id": "settle7-05",
+  "claims": [
+    {
+      "claim_id": "settle7-05-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://github.com/ocpi/ocpi/blob/2.3.0/release/core/mod_cdrs.asciidoc"
+      ],
+      "statement": "OCPI defines the CDR as the billing-relevant object for a completed charging session; sent CDRs cannot be changed or deleted and corrections use a linked credit CDR."
+    },
+    {
+      "claim_id": "settle7-05-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://github.com/ocpi/ocpi"
+      ],
+      "statement": "The OCPI project explicitly supports session and CDR exchange and lists invoice reconciliation in its specification contents."
+    },
+    {
+      "claim_id": "settle7-05-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://transport.ec.europa.eu/news-events/news/commission-enhances-interoperability-and-transparency-alternative-fuels-infrastructure-data-2025-04-11_en"
+      ],
+      "statement": "EU implementing rules adopted in 2025 require more compatible, interoperable, and real-time alternative-fuels infrastructure data."
+    }
+  ],
+  "contrary_evidence": [
+    "OCPI already contains invoice-reconciliation concepts, so the opportunity depends on operational adoption and shared governance rather than a missing data format.",
+    "Existing roaming hubs and charge-point-management vendors are natural incumbents for this function."
+  ],
+  "economics": {
+    "acquisition_route": "A paid reconciliation audit followed by a narrow bilateral live lane, then member referrals and OCPI integration partners",
+    "capital_required_pln": 100000,
+    "founder_net_worth_path": "A plausible 5-7 year path would require roughly 20-30 million annual CDRs at about 0.05 EUR average usage revenue plus member subscriptions, disciplined support costs, and founder ownership of a network-valued software business",
+    "founder_time": "Approximately 15-18 hours per week during early bilateral integrations, declining as connectors standardise",
+    "gross_margin_basis": "Protocol ingestion, rules execution, and exception support less high-availability infrastructure and partner onboarding",
+    "payback": "A member can justify the service through fewer finance hours, faster credits, and reduced leakage; real mismatch rates and disputed value require transaction samples",
+    "pricing": "Approximately 500-2,000 EUR monthly per member plus 0.03-0.10 EUR per reconciled CDR depending on volume",
+    "retention_or_repeat": "Every charging session and monthly invoice produces recurring records; bilateral acceptance creates operational switching cost"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Each bilateral connection makes the shared exception taxonomy and counterparty reliability history more useful, supporting lower-cost onboarding and earlier error detection",
+    "customer": "Smaller and regional EU charge-point operators, e-mobility service providers, fleet charging platforms, and roaming intermediaries",
+    "distribution_mechanism": "Start with one fleet platform and its regional CPO counterparties, then recruit through OCPI implementers and charging-industry associations",
+    "offer_and_business_model": "OCPI connectors, immutable reconciliation ledger, bilateral exception workflow, credit-CDR handling, and bank-ready net payable files",
+    "payer_and_paid_event": "Members pay a base subscription and a few euro cents when a CDR is matched, cleared, or converted into a documented dispute packet",
+    "problem_trigger": "Month-end invoices do not match session, tariff, CDR, credit, or tax records across bilateral roaming relationships"
+  },
+  "founder_fit": [
+    "The reconciliation engine is a strong match for quantitative and data-engineering skills",
+    "A protocol-first product can be built without consumer brand exposure",
+    "The initial service can avoid custody by sending approved net files to existing payment providers"
+  ],
+  "parent": null,
+  "risks": [
+    "The two-sided member cold start may stall",
+    "Tax invoice and metering rules vary by jurisdiction",
+    "A bad netting instruction could create material liability",
+    "Established roaming hubs may add equivalent reconciliation"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://github.com/ocpi/ocpi/blob/2.3.0/release/core/mod_cdrs.asciidoc",
+    "https://github.com/ocpi/ocpi",
+    "https://transport.ec.europa.eu/news-events/news/commission-enhances-interoperability-and-transparency-alternative-fuels-infrastructure-data-2025-04-11_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Member clearing network charging subscription and per-record fees",
+    "control_point": "The canonical bilateral charge-detail-record lineage, including tariff snapshot, immutable original, credit record, dispute state, and accepted invoice mapping",
+    "critical_dependency": "Enough counterparties must contribute complete OCPI data and contractually accept common reconciliation and dispute rules"
+  },
+  "thesis": "Regional EV charge-point operators, mobility providers, and fleet networks could join a neutral proof-clearing service that matches OCPI sessions, tariffs, charge detail records, credits, and invoices; applies a bilateral dispute clock; and produces a net-payable file for existing payment providers. The scarce asset would be accepted cross-party CDR lineage, not another consumer charging app.",
+  "title": "RoamNet Proof Clearing",
+  "uncertainties": [
+    "Observed CDR mismatch rates among regional operators",
+    "Whether parties will accept a neutral dispute clock and data retention terms",
+    "Availability of signed metering data at sufficient quality",
+    "The smallest bilateral volume at which integration produces clear payback"
+  ],
+  "version": 1
+}

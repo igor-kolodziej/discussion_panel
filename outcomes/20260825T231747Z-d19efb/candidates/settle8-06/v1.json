@@ -1,0 +1,87 @@
+{
+  "candidate_id": "settle8-06",
+  "claims": [
+    {
+      "claim_id": "settle8-06-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://bdo.mos.gov.pl/wp-content/uploads/2023/11/BDO_EWI_IS-Karta-przekazania-odpadow-wersja-1.2.pdf"
+      ],
+      "statement": "Verified fact: BDO transfer cards expose a multi-party status flow involving the transferor, transporter, and receiver, including receiver acceptance or rejection."
+    },
+    {
+      "claim_id": "settle8-06-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08de7927-dcb3-b51e-056e-e50001ac1d37"
+      ],
+      "statement": "Verified example: a Polish public procurement contract used weighbridge evidence as the basis of waste settlement and required each transport to be recorded in both the weighing system and BDO."
+    },
+    {
+      "claim_id": "settle8-06-c3",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://bdo.mos.gov.pl/wp-content/uploads/2023/11/BDO_EWI_IS-Karta-przekazania-odpadow-wersja-1.2.pdf",
+        "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08de7927-dcb3-b51e-056e-e50001ac1d37"
+      ],
+      "statement": "Hypothesis (unvalidated): private construction projects have enough mismatched cards, weights, and invoices to support paid proof-to-pay reconciliation."
+    }
+  ],
+  "contrary_evidence": [
+    "BDO already records card states and retains withdrawn cards, so the product must prove commercial invoice value beyond duplicating the official register: https://bdo.mos.gov.pl/wp-content/uploads/2023/11/BDO_EWI_IS-Karta-przekazania-odpadow-wersja-1.2.pdf",
+    "Sophisticated buyers can specify BDO and weighbridge reconciliation contractually, as this procurement does, reducing the need for a separate platform: https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08de7927-dcb3-b51e-056e-e50001ac1d37"
+  ],
+  "economics": {
+    "acquisition_route": "Sell a historical three-way audit through environmental consultants, then convert the project to recurring proof-to-pay.",
+    "capital_required_pln": 40000,
+    "founder_net_worth_path": "Unvalidated scenario: 15 active projects at PLN 3,000 MRR in year 2, 75 at PLN 3,500 MRR in year 4, and 140 at PLN 4,000 MRR in year 6 imply PLN 6.72m ARR. A 2.5-3.5x vertical-software value at 70% ownership can pass PLN 5m in years 5-7; inability to ingest evidence without manual rekeying after two pilots is a stop condition.",
+    "founder_time": "3-4 hours/day for one waste class and one project workflow; use consultant channels for domain interpretation.",
+    "gross_margin_basis": "Hypothesis: 70-84% after connector stabilization; OCR and exception support scale with load volume and must be monitored.",
+    "payback": "Unvalidated customer hypothesis: one duplicate or overweight invoice plus faster project handover can repay a quarter's fees; validate on closed project data.",
+    "pricing": "Unvalidated estimate: PLN 1,500-6,000 per active project per month plus PLN 3-12 per cleared load; fixed-fee historical audits as entry product.",
+    "retention_or_repeat": "Waste movements and subcontractor invoices repeat throughout a project; evidence archives remain valuable at handover and audit."
+  },
+  "fingerprint": {
+    "compounding_advantage": "receiver/hauler exception histories and site-specific mass patterns improve anomaly detection; project evidence archives create high workflow switching costs",
+    "customer": "Polish developers, general contractors, demolition firms, and industrial sites buying recurring waste transport and treatment",
+    "distribution_mechanism": "waste consultants, construction accounting implementers, environmental auditors, and paid historical-project audits",
+    "offer_and_business_model": "read-only BDO reconciliation, ticket capture, rate-card matching, duplicate-load detection, subcontractor exception portal, and final project evidence export",
+    "payer_and_paid_event": "developer or contractor pays per active project and per cleared load when an invoice line is approved or an audit packet closes",
+    "problem_trigger": "a load is invoiced or project acceptance is due while KPO status, receiver confirmation, and measured tonnage conflict"
+  },
+  "founder_fit": [
+    "Entity matching, OCR, and anomaly detection fit the founder's data background.",
+    "The Polish regulatory workflow provides a narrow local wedge.",
+    "A retrospective audit can validate savings with low capital and part-time work.",
+    "Consultant-led distribution avoids dependence on constant founder networking."
+  ],
+  "parent": null,
+  "risks": [
+    "BDO access and automation constraints may force manual exports.",
+    "Weight discrepancies can be legitimate due to measurement timing or equipment tolerance.",
+    "Evidence errors could delay lawful waste movement or subcontractor payment.",
+    "Construction software and waste operators may already bundle this workflow."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.gov.pl/web/klimat/rejestr-bdo",
+    "https://bdo.mos.gov.pl/wp-content/uploads/2023/11/BDO_EWI_IS-Karta-przekazania-odpadow-wersja-1.2.pdf",
+    "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08de7927-dcb3-b51e-056e-e50001ac1d37",
+    "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08deaf40-e3fd-dca2-5fad-950001a8c165"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "regulated-chain proof-to-pay clearinghouse",
+    "control_point": "payment approval for a waste load only after BDO status, receiver acceptance, measured mass, and contract rate agree",
+    "critical_dependency": "timely BDO exports or authorized views plus tamper-resistant weighbridge, hauler, and project-contract data"
+  },
+  "thesis": "For developers, general contractors, and waste subcontractors, reconcile each construction-waste movement across the BDO transfer-card state, vehicle, weighbridge ticket, receiver acceptance, contract rate, and hauler invoice. Produce a project evidence packet and approve only matched tonnage for payment. The official BDO record remains untouched; the business controls the commercial proof-to-pay step and charges per active project or cleared load.",
+  "title": "Construction-Waste Proof-to-Pay Clearinghouse",
+  "uncertainties": [
+    "Actual invoice leakage and administrative time per project are unknown.",
+    "Data ownership across developer, hauler, and receiver contracts needs testing.",
+    "The optimal initial waste category and buyer persona are unvalidated.",
+    "Project-based revenue may be less predictable than the recurring model assumes."
+  ],
+  "version": 1
+}

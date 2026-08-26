@@ -1,0 +1,120 @@
+{
+  "assumptions": [
+    "The evaluated product is a supplier-change governance and audit gate, not a standalone KSeF or VAT-whitelist lookup.",
+    "The first buyer is a Polish mid-market finance team or an accounting platform with enough repeated supplier payments and detail changes to justify a formal approval control.",
+    "Customers can lawfully grant the required KSeF and ERP access and can provide a trustworthy out-of-band supplier contact route; neither condition is yet validated.",
+    "The founder retains full-time employment during validation, limits personal effort to at most five hours per day, and uses contractors for security, legal review, enterprise onboarding, and incident support.",
+    "Proposed pricing, gross margin, retention, acquisition cost, and channel conversion are planning assumptions rather than demonstrated economics."
+  ],
+  "base_score": 4.39,
+  "candidate_id": "control7-02",
+  "candidate_sha256": "84af63c2769d61ca90f480cf761087e477deeb7d893bb6e8bb3647a4910557e5",
+  "candidate_version": 2,
+  "constrained_score": 4.19,
+  "evaluation_type": "working",
+  "evidence_needed_for_higher_score": "Several paid pilots should show buyer conversion at the proposed price, measurable reduction in manual review or expected fraud loss, acceptable false-positive and escalation rates, gross margin after security and support, renewal intent, and at least one repeatable channel whose economics and incentives survive incumbent bundling.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "The proposal correctly recognizes that KSeF authenticity and VAT-whitelist matching are commodity inputs and relocates value to the supplier-change decision, independent confirmation, and audit record. That is a coherent workflow insight tied to a documented fraud pattern, although it is an incremental control that ERP vendors, banks, or security providers can also recognize and implement.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Account-substitution fraud can cause severe, urgent losses, and recurring payment runs provide a credible operational setting for prevention. However, the research establishes the risk rather than buyer frequency, budget ownership, incremental willingness to pay, or paid conversion for this particular gate; free registry checks and forthcoming bank verification may make many buyers view the residual control as a feature rather than a separate product.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Recurring SaaS and usage revenue could have operating leverage, and a narrow pilot fits the stated initial capital. The proposed 500-3000 PLN monthly price, 70-80% gross margin, payback, retention, support burden, liability allocation, and founder-net-worth path have no observed basis; security review, integration, manual escalation, and enterprise support could materially weaken margin and CAC payback.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Polish mid-market AP and treasury teams handling repeated supplier payments are a specific, reachable use case, and KSeF creates a broad recurring event stream. The research does not establish the number of buyers with sufficient uncovered exposure, the incidence of supplier-detail changes, or a beachhead revenue pool large enough to support the founder wealth objective, while mixing direct finance teams, ERP platforms, and bookkeeping firms leaves the initial payer somewhat diffuse.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "The candidate could specialize more deeply in approval evidence than generic accounting software, but it does not yet control a scarce input, buyer relationship, or channel. Major ERP vendors already occupy vendor and payment workflows, the government supplies the basic match, and banks will supply payee verification, giving better-positioned incumbents credible paths to bundle the differentiated layer.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A successful supplier-change control could extend into vendor-master governance, payment-policy enforcement, fraud evidence, outsourced bookkeeping, and related CEE or EU workflows. Those adjacencies are logically useful, but country-specific data access, authorization, accounting integrations, and regulation would make geographic expansion non-automatic.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Customer-specific approved histories, policy configuration, audit records, and embedded approval routines could create switching costs over time. The underlying registry data and KSeF interface are public, cross-customer learning may be contractually unavailable, and incumbents can reproduce workflow logic inside systems customers already use, so the proposed compounding advantage is plausible but weak before deep integrations or privileged distribution exist.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "Combining change detection, independent confirmation, human approval, and exportable evidence is materially more complete than a point registry lookup and may improve control quality. There is no evidence yet that it reduces fraud, review time, false positives, or audit cost enough to change purchasing behavior, and optional invoice account fields prevent deterministic coverage from KSeF alone.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "The 2026 KSeF rollout creates a timely integration trigger and structured invoice volume, while a documented 2026 fraud case makes the threat concrete. The window is partly perishable because mandatory PSP payee verification is due by July 2027, increasing urgency to prove that governance and independent confirmation retain value beyond account-name matching.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "Paid design-partner pilots are a plausible first motion, and ERP or bookkeeping channels could eventually aggregate demand. No buyer access, partner commitment, conversion evidence, or repeatable acquisition route is established; direct enterprise selling is security- and integration-heavy, channel owners have incentives to build the feature themselves, and sustained founder-led relationship selling is a weaker fit for the founder profile.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "The API, anomaly-detection, and workflow software are compatible with the founder's technical skills, AI leverage, capital, and a narrow part-time pilot. Reliable independent-contact data, lawful permissions, financial-data security, false-positive handling, contractual liability, enterprise onboarding, and payment-critical support remain material operational risks that cannot be automated away and may exceed the proposed part-time model if adoption grows.",
+      "score": 5,
+      "status": "scored"
+    }
+  ],
+  "final_score": 4.2,
+  "highest_value_structural_change": "Make the control an embedded, partner-distributed vendor-change policy module rather than an independent invoice-checking tool: secure a bookkeeping, ERP, bank, or cyber-insurance partner that makes the approval record part of its standard workflow and ties payment to governed change events or risk reduction. This would concentrate the beachhead, lower direct CAC, and create a stronger control point, but it should be adopted only after a binding partner and loss-allocation terms are validated.",
+  "interaction_adjustment": -0.2,
+  "judge_id": "c7-working-control7-02",
+  "main_structural_strength": "The offer converts public and increasingly commoditized verification signals into a customer-adopted control point: an approval record for supplier or payment-detail changes before release, with recurring workflow usage and potential switching costs.",
+  "primary_score_limiter": "The business has neither demonstrated incremental willingness to pay nor a defensible route into the payment workflow, while ERP vendors and banks already own adjacent surfaces and can bundle the core control.",
+  "qualified": false,
+  "raw_response_path": "artifacts/research/raw-c7-working-control7-02.json",
+  "raw_response_sha256": "ae9a9925b1a06f3ed96ac15a9499f68be6802f342a13088ef5bbe4ffbf723e59",
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 2,
+  "strongest_disconfirming_evidence": "The combined direct evidence that the government provides free NIP-account matching and bulk data, major Polish ERP vendors already embed whitelist verification, and PSPs must add payee verification by July 2027 undermines standalone pricing power and leaves the proposed governance layer vulnerable to bundling.",
+  "unrounded_score": 4.19
+}

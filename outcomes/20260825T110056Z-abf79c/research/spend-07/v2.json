@@ -1,0 +1,182 @@
+{
+  "candidate_id": "spend-07",
+  "candidate_sha256": "ac38b53d1aaf055638205e2bc91dfdc9dde8a0c6940b495aeda36eff527b29f6",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "spend-07-research-c01",
+      "evidence_refs": [
+        "spend-07-s01"
+      ],
+      "statement": "The Polish installed base is large, but storage-equipped prosumers are a substantially narrower initial segment."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "spend-07-research-c02",
+      "evidence_refs": [
+        "spend-07-s02"
+      ],
+      "statement": "Net-billing creates a real self-consumption and timing problem for households with flexible loads or storage."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "spend-07-research-c03",
+      "evidence_refs": [
+        "spend-07-s03"
+      ],
+      "statement": "The original monthly fee is material relative to the 2026 average G11 energy-supply denominator, so broad homeowner SaaS is not a conservative starting assumption."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "spend-07-research-c04",
+      "evidence_refs": [
+        "spend-07-s04"
+      ],
+      "statement": "SolarEdge already bundles the generic optimisation loop, including tariff and weather inputs, household production and consumption, batteries and controllable devices."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "spend-07-research-c05",
+      "evidence_refs": [
+        "spend-07-s05",
+        "spend-07-s06"
+      ],
+      "statement": "Commercial OEM API access cannot be assumed to be free or unrestricted; documented examples include rate limits, contracts, business-partner restrictions and usage billing."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "spend-07-research-c06",
+      "evidence_refs": [
+        "spend-07-s08"
+      ],
+      "statement": "Data Act user-directed sharing can help read access, but it does not itself authorise personal-data processing or remote control and permits proportionate security and trade-secret measures."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "spend-07-research-c07",
+      "evidence_refs": [
+        "spend-07-s04",
+        "spend-07-s07"
+      ],
+      "statement": "The paid control point must be a pre-specified, auditable installer decision and verification artifact, because generic forecasts and schedules are reproducible and already bundled."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "spend-07-research-c08",
+      "evidence_refs": [],
+      "statement": "Incremental household savings over OEM defaults and simple behavioural scheduling are not established."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "spend-07-research-c09",
+      "evidence_refs": [],
+      "statement": "Installer willingness to pay and the number of avoided visits or incremental retrofits per monitored site are not established."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "spend-07-research-c10",
+      "evidence_refs": [],
+      "statement": "Wholesaler distribution, OEM control rights and a path to 20000 paid sites remain unvalidated."
+    }
+  ],
+  "contrary_evidence": [
+    "SolarEdge provides a bundled AI energy optimiser and homeowner control surface.",
+    "Fronius exposes professional monitoring and control-oriented data interfaces under its own commercial terms.",
+    "Average household consumption constrains the savings pool available to support a recurring fee.",
+    "The Data Act does not eliminate GDPR, security, trade-secret, firmware or warranty constraints.",
+    "Measurement standards make clear that a whole-site savings claim needs a defined baseline and boundary."
+  ],
+  "schema_version": 2,
+  "sources": [
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "Polish Ministry of Climate and Environment",
+      "source_id": "spend-07-s01",
+      "source_type": "government_webpage",
+      "stance": "supporting",
+      "title": "Prosument",
+      "url": "https://www.gov.pl/web/klimat/prosument"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "Polish Ministry of Climate and Environment",
+      "source_id": "spend-07-s02",
+      "source_type": "government_guidance",
+      "stance": "supporting",
+      "title": "Jak zwiększyć efektywność w systemie net-billing?",
+      "url": "https://www.gov.pl/web/klimat/prosument-netbilling"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2026-02-10",
+      "publisher": "Energy Regulatory Office of Poland",
+      "source_id": "spend-07-s03",
+      "source_type": "regulator_notice",
+      "stance": "context",
+      "title": "The President of the Energy Regulatory Office has approved the tariffs for the sale and distribution of electricity for 2026",
+      "url": "https://www.ure.gov.pl/en/communication/news/501,The-President-of-the-Energy-Regulatory-Office-URE-has-approved-the-tariffs-for-t.html"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "SolarEdge",
+      "source_id": "spend-07-s04",
+      "source_type": "vendor_product_documentation",
+      "stance": "contradicting",
+      "title": "Next-Gen Energy Management with SolarEdge ONE",
+      "url": "https://www.solaredge.com/en/solaredge-one"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "SolarEdge",
+      "source_id": "spend-07-s05",
+      "source_type": "vendor_api_documentation",
+      "stance": "context",
+      "title": "SolarEdge Monitoring Server API",
+      "url": "https://knowledge-center.solaredge.com/sites/kc/files/se_monitoring_api.pdf"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "Fronius International",
+      "source_id": "spend-07-s06",
+      "source_type": "vendor_api_documentation",
+      "stance": "contradicting",
+      "title": "Fronius Solar.web Query API",
+      "url": "https://www.fronius.com/en/solar-energy/solar-solutions/energy-management/solarweb-query-api"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2022-01-01",
+      "publisher": "Efficiency Valuation Organization",
+      "source_id": "spend-07-s07",
+      "source_type": "industry_standard",
+      "stance": "context",
+      "title": "International Performance Measurement and Verification Protocol",
+      "url": "https://evo-world.org/en/products-services-mainmenu-en/protocols/ipmvp"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2023-12-22",
+      "publisher": "European Union",
+      "source_id": "spend-07-s08",
+      "source_type": "regulation",
+      "stance": "context",
+      "title": "Regulation (EU) 2023/2854 on harmonised rules on fair access to and use of data",
+      "url": "https://eur-lex.europa.eu/eli/reg/2023/2854/oj/eng"
+    }
+  ],
+  "unknowns": [
+    "Measured incremental savings on Polish battery, heat-pump and EV households versus OEM defaults",
+    "Installer willingness to pay and renewal behaviour",
+    "Avoided truck rolls and incremental retrofit conversion attributable to the product",
+    "Per-OEM API pricing, commercial reuse, data granularity and remote-control authority",
+    "Number of supported high-flexibility sites reachable through installers",
+    "Wholesaler or buying-group partner commitments",
+    "Conservative paid-site scale and founder cash margin"
+  ]
+}

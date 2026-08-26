@@ -1,0 +1,72 @@
+{
+  "candidate_id": "gate-02",
+  "claims": [
+    {
+      "claim_id": "gate-02-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://bdo.mos.gov.pl/wp-content/uploads/2023/11/BDO_EWI_IS-Karta-przekazania-odpadow-wersja-1.2.pdf"
+      ],
+      "statement": "The official BDO transfer-card manual documents a stateful workflow in which the receiving waste holder confirms takeover or rejects the card and returns it for correction."
+    },
+    {
+      "claim_id": "gate-02-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://bdo.mos.gov.pl/wp-content/uploads/2023/11/BDO_EWI_IS-Karta-przekazania-odpadow-wersja-1.2.pdf"
+      ],
+      "statement": "The same official manual gives the transporter a bounded role and records transport confirmation, date, vehicle, waste code, transferor, and recipient, making a role-signed field preflight technically plausible."
+    }
+  ],
+  "contrary_evidence": [
+    "BDO itself already records the legally relevant statuses and parties.",
+    "Generic waste-management software may already solve this for large operators."
+  ],
+  "economics": {
+    "acquisition_route": "Hypothesis: one receiving site can pull multiple carriers and waste producers into the workflow.",
+    "capital_required_pln": 48000,
+    "founder_net_worth_path": "Hypothesis: 1000 fleets or installer accounts averaging 699 PLN monthly would exceed 8 million PLN ARR; a profitable, founder-owned network at that scale could support more than 5 million PLN of founder net worth in years 5 to 8.",
+    "founder_time": "Hypothesis: 15 hours weekly for one waste stream and one carrier integration before expansion.",
+    "gross_margin_basis": "Hypothesis: 75% gross margin after mobile support and evidence storage.",
+    "payback": "Hypothesis: channel-led acquisition repays within four months at 699 PLN monthly and 70% contribution margin.",
+    "pricing": "Hypothesis: 9 PLN per released handoff or 699 PLN per fleet-month.",
+    "retention_or_repeat": "Hypothesis: every regulated pickup repeats the transaction and preserves the shared ledger."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A correction graph across waste codes, site types, carriers, receivers, and rejection reasons",
+    "customer": "Small and midsize Polish construction, HVAC, solar, and battery installers plus their waste carriers",
+    "distribution_mechanism": "Waste receiving sites, carrier fleets, installer wholesalers, and environmental-accounting firms invite downstream crews",
+    "offer_and_business_model": "Per-handoff mobile chain-of-custody software with fleet subscriptions",
+    "payer_and_paid_event": "The waste producer or carrier pays when a QR handoff is released and later reconciles to a completed transfer",
+    "problem_trigger": "Waste is about to leave a job site and the transfer record must be valid and receivable"
+  },
+  "founder_fit": [
+    "The family renewable company offers a bounded route to observe real waste handoffs.",
+    "Computer vision can assist evidence capture while deterministic rules retain control.",
+    "The product minimizes founder-facing sales by using carriers and waste sites as channels."
+  ],
+  "parent": null,
+  "risks": [
+    "Offline sites and hurried drivers may bypass the field token.",
+    "Incorrect waste-code suggestions could create regulatory exposure.",
+    "The payer may be fragmented across waste producer, carrier, and receiver."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://bdo.mos.gov.pl/wp-content/uploads/2023/11/BDO_EWI_IS-Karta-przekazania-odpadow-wersja-1.2.pdf"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Chain-of-custody transaction network",
+    "control_point": "Role-signed QR release at physical waste pickup before the vehicle departs",
+    "critical_dependency": "Field adoption and reliable synchronization with the official BDO record"
+  },
+  "thesis": "A mobile chain-of-custody layer for renewable and construction crews could prevent a skip, pallet, or hazardous component from leaving a job until the BDO waste-transfer card, vehicle, carrier, photos, and receiving site agree. It would preserve an auditable QR handoff and synchronize the official record rather than replacing BDO.",
+  "title": "BDO Waste Handoff Token for Field Crews",
+  "uncertainties": [
+    "The official integration options and permitted automation scope need verification.",
+    "The rate of rejected or retrospectively corrected cards among small installers is unknown.",
+    "The 48000 PLN capital figure and all pricing or scale figures below are hypotheses."
+  ],
+  "version": 1
+}

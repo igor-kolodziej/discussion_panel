@@ -1,0 +1,145 @@
+{
+  "candidate_id": "control9-03",
+  "claims": [
+    {
+      "claim_id": "control9-03-v4-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32024R2956"
+      ],
+      "statement": "Implementing Regulation 2024/2956 prescribes interlinked standard templates for registers covering contractual arrangements with direct ICT third-party providers."
+    },
+    {
+      "claim_id": "control9-03-v4-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.eba.europa.eu/publications-and-media/press-releases/esas-dry-run-exercise-shows-goal-reporting-registers-information-under-digital-operational"
+      ],
+      "statement": "Only 6.5% of almost 1,000 registers in the 2024 ESA dry run passed all 116 data-quality checks, directly evidencing preparation difficulty."
+    },
+    {
+      "claim_id": "control9-03-v4-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.knf.gov.pl/dla_rynku/dora/aktualnosci/II_etap_przekazania_rejestrow_informacji_dot_umow_z_zewnetrznymi_dostawcami_uslug_ict?articleId=93727&p_id=18"
+      ],
+      "statement": "KNF required a second 2025 submission stage for entities that had not filed or whose registers were rejected by EBA validation."
+    },
+    {
+      "claim_id": "control9-03-v4-c4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.knf.gov.pl/dla_rynku/dora/aktualnosci/wezwanie_do_przekazania_rejestrow_informacji_umowy_z_zewnetrznymi_dostawcami_uslug_ict?articleId=93323&p_id=18"
+      ],
+      "statement": "KNF also supplies an official spreadsheet form and instructions, making internal spreadsheet completion a free substitute."
+    },
+    {
+      "claim_id": "control9-03-v4-c5",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://doraregister.io/"
+      ],
+      "statement": "Warsaw-based DAPR already sells DORA Register with automation, validation, provider dependencies, supply-chain data, and annual prices from EUR 2,000 to EUR 8,000 by external ICT-contract count."
+    },
+    {
+      "claim_id": "control9-03-v4-c6",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://vendorica.com/pricing/"
+      ],
+      "statement": "Vendorica markets AI contract extraction, a live vendor-contract-asset graph, reconciled DORA exports, and a EUR 899 monthly professional plan, directly overlapping the original differentiation."
+    },
+    {
+      "claim_id": "control9-03-v4-c7",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://reportact.com/en/pricing"
+      ],
+      "statement": "ReportAct offers a DORA register and incident product at EUR 299 per month per location plus EUR 7 per active supplier, adding another transparent price anchor."
+    }
+  ],
+  "contrary_evidence": [
+    "DAPR is a Warsaw-based exact full-register incumbent with mature automation, validation, provider dependencies, supply-chain handling, and transparent EUR 2,000-8,000 annual pricing.",
+    "Vendorica already offers AI agreement extraction, a live vendor-contract-asset graph, continuous reconciliation, and regulatory export.",
+    "ReportAct offers another low-entry recurring product, while official KNF and ESA forms, rules, examples, and validation materials remain free.",
+    "The dry-run and resubmission failure evidence establishes pain but not durable demand for a separate repair layer; error rates may fall after early cycles.",
+    "Confidential-data security, regulated procurement, and error liability favor established vendors, internal GRC platforms, or partner-owned manual workflows."
+  ],
+  "economics": {
+    "acquisition_route": "Approach outsourced DORA compliance and audit operators rather than individual regulated entities. Offer a bounded paid benchmark on de-identified or partner-controlled sample registers, compare total repair time and check pass rate with the partner's current process, and do not fund a production build unless one partner signs a 12-month multi-entity minimum-volume contract. No partner commitment or benchmark result exists.",
+    "capital_required_pln": 45000,
+    "founder_net_worth_path": "Illustrative and unvalidated: 30 retained partners averaging 20 covered entities at 7,000 PLN realized annual revenue per entity would produce 4.2m PLN ARR. At 35% EBITDA, 5x EBITDA, 75% founder ownership, and no double-counted distributions, founder equity would be about 5.51m PLN in years 7-10. This requires 600 covered entities, durable partner retention, permitted cross-tenant learning, and likely EU expansion; none is evidenced.",
+    "founder_time": "Cap founder work at 3-5 hours per day: build the deterministic QA core and measurement harness, concentrate selling on a small number of portfolio partners, and contract DORA, security, and liability expertise. Partner onboarding and procurement may still require daytime attention and exceed this limit.",
+    "gross_margin_basis": "Inference, not measured: 65-80% gross margin could be possible if partners retain source-document custody, integrations remain standardized, and human exception review stays below two hours per entity cycle. Bespoke remediation, full-contract handling, or specialist sign-off would reduce margin materially.",
+    "payback": "Unknown. A sub-12-month partner-level CAC payback is only a gate: it would require an upfront annual minimum and bounded acquisition plus onboarding cost. Sales-cycle length, partner share, implementation cost, usage, and renewal are unmeasured.",
+    "pricing": "Validation hypothesis, not an observed willingness-to-pay result: 60,000 PLN annual partner minimum covering up to 10 entity preflight or repair cycles, then 5,000 PLN per additional entity-year, with a fixed onboarding fee only for a bounded integration. Test this against manual rework cost and the disclosed per-entity incumbent anchors before building.",
+    "retention_or_repeat": "The partner reuses the embedded gate across annual submissions, new clients, and register changes, but recurring use depends on sustained error volume, workflow integration, and partner renewal. Filing frequency and switching behavior remain unknown."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A versioned regression-test suite and measured library linking validation failures to verified corrections and repair outcomes, reusable across tenants only where explicit data rights permit; otherwise learning remains tenant-local. Partner workflow integration and accumulated audit trails could add switching cost, but no rights, corpus, or performance advantage exists yet",
+    "customer": "Outsourced DORA compliance and audit operators that already manage register preparation for portfolios of small and mid-sized regulated entities and repeatedly absorb pre-submission QA or rejection-repair work",
+    "distribution_mechanism": "Concentrated partner sale through a paid benchmark and a 12-month multi-entity minimum-volume gate; after signing, the partner embeds or white-labels the repair layer across its existing portfolio. Production development stops if no partner accepts the gate, and no commitment is currently evidenced",
+    "offer_and_business_model": "A white-label, partner-embedded QA and exception-repair workbench or API that ingests official-format register files, requests only evidence excerpts needed for flagged cells, runs versioned cross-template checks, produces an evidence-linked repair queue and audit trail, and returns a resubmission package. It is not the system of record and is sold via an annual portfolio minimum plus per-entity usage",
+    "payer_and_paid_event": "The compliance or audit operator pays an annual minimum only after accepting a paid multi-entity deployment, then pays usage when each client register enters a measured preflight or rejection-repair cycle; regulated entities remain the partner's clients rather than separate acquisition targets",
+    "problem_trigger": "A partner's client register is nearing submission, fails published cross-template checks, or is rejected and the partner must locate inconsistent cells, tie each repair to source evidence, document the change, and resubmit under a deadline"
+  },
+  "founder_fit": [
+    "A deterministic validation and measurement harness fits the founder's data-science, entity-resolution, and automation skills.",
+    "Portfolio-partner distribution replaces hundreds of direct regulated-entity sales with a smaller number of high-value relationships and does not require a public camera-led brand.",
+    "A synthetic or de-identified benchmark can be built part-time before any production security commitment, with the staged capital cap below the founder's available free capital.",
+    "Partner procurement, DORA interpretation, security, insurance, and error liability still require paid specialists and may strain a five-hour daily limit."
+  ],
+  "parent": {
+    "candidate_id": "control9-03",
+    "version": 3
+  },
+  "redesign": {
+    "changed_fingerprint_fields": [
+      "customer",
+      "problem_trigger",
+      "payer_and_paid_event",
+      "offer_and_business_model",
+      "distribution_mechanism",
+      "compounding_advantage"
+    ],
+    "economic_effect": "Replaces entity-by-entity acquisition and a competing full register system with one contracted portfolio payer, a minimum annual commitment, metered multi-entity repair work, and a narrower evidence surface. This can lower CAC, implementation scope, confidential-document exposure, and capital at risk while concentrating learning on objectively measured failures. Those benefits are hypotheses: production spend is gated on a paid partner minimum, and the redesign fails rather than reverting to speculative SaaS if no partner accepts it."
+  },
+  "risks": [
+    "No compliance or audit partner has accepted the paid minimum-volume gate, and partners may prefer their own spreadsheets or an incumbent.",
+    "Incumbents can add exception-repair workflows, while a standalone QA layer may be too narrow or easily copied.",
+    "A wrong repair can contaminate a regulatory submission; specialist review, insurance, contractual liability limits, and auditability are unresolved.",
+    "Security and procurement may remain onerous even when source files stay partner-controlled and only evidence excerpts are requested.",
+    "Human exception handling or bespoke partner integrations could erase the proposed gross margin and overwhelm the founder's time.",
+    "Cross-tenant correction learning may be contractually or legally unavailable, preventing the proposed compounding advantage."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32024R2956",
+    "https://www.eba.europa.eu/activities/direct-supervision-and-oversight/digital-operational-resilience-act/preparation-dora-application",
+    "https://www.eba.europa.eu/publications-and-media/press-releases/esas-dry-run-exercise-shows-goal-reporting-registers-information-under-digital-operational",
+    "https://www.eba.europa.eu/sites/default/files/2025-03/31bb6e60-7d10-4405-a8c5-9f04934630ac/20250328%20-%20DORA%20RoI%20reporting%20FAQ%20%28updated%29.pdf",
+    "https://www.knf.gov.pl/dla_rynku/dora/aktualnosci/wezwanie_do_przekazania_rejestrow_informacji_umowy_z_zewnetrznymi_dostawcami_uslug_ict?articleId=93323&p_id=18",
+    "https://www.knf.gov.pl/dla_rynku/dora/aktualnosci/II_etap_przekazania_rejestrow_informacji_dot_umow_z_zewnetrznymi_dostawcami_uslug_ict?articleId=93727&p_id=18",
+    "https://doraregister.io/",
+    "https://vendorica.com/pricing/",
+    "https://reportact.com/en/pricing"
+  ],
+  "stage": "development",
+  "structure": {
+    "commercial_archetype": "white-label portfolio QA and exception-repair infrastructure",
+    "control_point": "the outsourced operator's pre-submission and resubmission acceptance gate, where failed cross-template checks become an evidence-linked repair queue before the register leaves the partner's workflow",
+    "critical_dependency": "one paid multi-entity minimum-volume partner contract plus measured superior pass rate or repair time on representative multilingual registers, with security, liability, and reusable-data rights that preserve the economics"
+  },
+  "thesis": "Do not build another DORA register system of record. Test a white-label exception-repair and evidence-linked QA layer for outsourced compliance or audit operators that already aggregate multiple regulated clients. The product sits inside the partner's existing spreadsheet or GRC workflow, takes official-format register files rather than default custody of entire contract repositories, identifies cross-template failures, requests only the evidence needed for flagged repairs, and produces a documented resubmission package. The production build is conditional on one partner paying for a 12-month multi-entity minimum after a measured benchmark; this converts the original uncontrolled distribution assumption into a commercial gate and reduces direct competition, acquisition count, data exposure, and capital at risk. Official failure and resubmission evidence supports the repair problem, while partner demand, willingness to pay, security acceptance, accuracy, review cost, retention, and data rights remain unvalidated.",
+  "title": "White-Label DORA Register Repair Gate",
+  "uncertainties": [
+    "Whether any Polish or EU compliance or audit operator will sign the paid 12-month multi-entity minimum rather than use spreadsheets, DAPR, Vendorica, ReportAct, or its own tooling.",
+    "Reachable partner count, average covered entity portfolio, approved budget, partner share, procurement duration, and renewal behavior.",
+    "Field- and cross-template-level precision, regulator-format pass rate, repair-time reduction, and human-review minutes on representative multilingual registers.",
+    "Security, data-residency, insurance, contractual liability, and procurement requirements even with partner-controlled source documents.",
+    "Whether explicit agreements permit reusable de-identified correction and rejection-pattern learning; otherwise the compounding asset remains tenant-local.",
+    "Post-filing change frequency and whether annual or rejection-driven usage is sufficient for recurring revenue.",
+    "Whether incumbent products can match the narrow workflow before the partner channel and measured correction corpus become meaningful."
+  ],
+  "version": 4
+}

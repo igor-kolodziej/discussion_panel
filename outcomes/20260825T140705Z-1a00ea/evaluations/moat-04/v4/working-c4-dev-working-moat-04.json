@@ -1,0 +1,119 @@
+{
+  "assumptions": [
+    "The service remains limited to obsolete off-warranty inverters and optimizers rather than low-value module refurbishment.",
+    "OEM replacement and SecondSol are checked before the service attempts a paid resolution, so revenue comes only from genuinely unresolved cases.",
+    "Qualified partners retain responsibility for functionality testing, waste-status documentation, warehousing, transport, and installation, with contractual limits on the founder's liability.",
+    "The founder operates the business for 15-20 hours per week alongside employment and receives no exclusive supply, testing, or installer rights at launch."
+  ],
+  "base_score": 4.93,
+  "candidate_id": "moat-04",
+  "candidate_sha256": "bdc5c28050936d900f9af53217ed889d571792301852d9fecdca64a01cc98cf4",
+  "candidate_version": 4,
+  "constrained_score": 4.73,
+  "evaluation_type": "working",
+  "evidence_needed_for_higher_score": "A prospective cohort of real off-warranty failures showing the OEM-and-SecondSol-unresolved rate, at least several paid successful resolutions, all-in contribution after partner and risk costs, repeat submissions from the same installer accounts, and documented avoided repowering cost.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "A large Polish installed base and shorter inverter life create a credible stream of legacy failures where documented component fitment can avoid costly repowering. The insight is narrowed intelligently to cases that ordinary channels cannot solve, but the economically relevant residual slice is still unknown.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "An unresolved inverter or optimizer failure can stop production and force redesign, making successful resolution valuable. Outcome-contingent pricing aligns payment with value, but there is no direct evidence yet of installer willingness to pay, recurrence, or avoided-cost levels in the targeted cases.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "The inventory-light desk and pass-through partner costs reduce capital exposure, and declining incumbent-resolved cases avoids bad inventory. However, price, success rate, contribution, repeat frequency, returns, warranty, insurance, support, and payback are all unresolved; a bespoke case service may retain substantial variable labor and liability while serving a thin tail.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Polish installers with obsolete off-warranty electronics are a coherent and reachable beachhead, supported by more than 1.6 million microinstallations. Its economic size is uncertain because OEM replacement and SecondSol remove many attractive failures, while rare-part demand fragments by model, voltage, firmware, grid code, and vintage.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "Local intake, fitment support, and verified repair outcomes could make the service useful to Polish installers. Yet SecondSol already has European liquidity and a closely matching service stack, OEMs resolve compatible replacements, and no exclusive installer, supplier, or tester relationship establishes a controllable niche.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A proven case graph could extend across additional inverter brands, storage electronics, neighboring geographies, or maintenance workflows. Expansion also multiplies compatibility, regulatory, sourcing, and assurance complexity, and it depends on first proving that one narrow equipment cluster has repeatable positive economics.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Closed-loop records connecting failures, searches, serial tests, fitment, and repair outcomes could improve routing over time. The loop has no data at inception, installers may not contribute outcomes, and an established marketplace or OEM network can accumulate or replicate the same knowledge from a larger transaction base.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "For a truly unresolved case, a documented compatible component can offer a large cost and speed advantage over repowering. No evidence yet quantifies resolution speed, total savings, success rate, or warranty quality, and the offer has little advantage whenever OEM or incumbent supply already works.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "Poland's expanding and aging solar fleet should increase off-warranty inverter demand, while circularity rules make rigorous documentation more valuable. The strongest volume may still be ahead, and existing OEM and marketplace infrastructure has had time to occupy the obvious opportunity.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "The family installation company provides unusually low-cost access to authentic cases and a credible seed channel, after which installer accounts can be targeted around concrete failures. Repeatable acquisition remains unproven, and low case frequency per installer could require a broad, relationship-heavy sales footprint.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "The founder fits the data, routing, and automation work, the proposed capital is within reach, and partner outsourcing can make a pilot part-time. Execution still depends on scarce-part sourcing, competent testers, item-level non-waste evidence, safe fitment, returns, insurance, and carefully bounded product-liability exposure.",
+      "score": 5,
+      "status": "scored"
+    }
+  ],
+  "final_score": 4.7,
+  "highest_value_structural_change": "Turn the general desk into a contracted service for one demonstrated high-failure model or vintage cluster, combining minimum annual installer portfolio volume with a qualified tester-repairer that provides first-look supply, standardized evidence, and a partner-backed warranty.",
+  "interaction_adjustment": -0.2,
+  "judge_id": "c4-dev-working-moat-04",
+  "main_structural_strength": "The redesign uses an inventory-light, outcome-contingent resolution desk and the founder's family-installer access to test high-avoidance failures without first building marketplace liquidity.",
+  "primary_score_limiter": "There is no evidence that enough valuable cases remain unresolved after OEM and SecondSol searches to support recurring installer revenue and positive contribution after testing, warranty, returns, support, and liability costs.",
+  "qualified": false,
+  "raw_response_path": "artifacts/development/raw-c4-dev-working-moat-04.json",
+  "raw_response_sha256": "08b5cdf6838785d44b94e87d9e39d9fa8019d9e42bd85a773aa8b9ab868c5d69",
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 2,
+  "strongest_disconfirming_evidence": "SecondSol already serves more than 60000 users with over 250000 spare parts plus testing, repair, logistics, auctions, and recycling, while OEM replacement programs can resolve technically substitutable legacy failures quickly.",
+  "unrounded_score": 4.73
+}

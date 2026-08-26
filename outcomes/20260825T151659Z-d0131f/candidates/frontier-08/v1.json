@@ -1,0 +1,59 @@
+{
+  "candidate_id": "frontier-08",
+  "claims": [
+    {
+      "claim_id": "frontier-08-claim-01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2017/745/oj/eng"
+      ],
+      "statement": "The MDR requires systematic post-market surveillance and, for class IIa, IIb, and III devices, periodic safety update reports; it also requires methods and thresholds for identifying statistically significant incident trends."
+    }
+  ],
+  "contrary_evidence": [
+    "Manufacturers can perform these analyses within existing quality-management systems, and heterogeneous devices may make peer benchmarks invalid."
+  ],
+  "economics": {
+    "acquisition_route": "UNVALIDATED COMMERCIAL HYPOTHESIS: recruit a founding cohort of 12 non-competing device makers through quality-system consultants.",
+    "capital_required_pln": 195000,
+    "founder_net_worth_path": "UNVALIDATED COMMERCIAL HYPOTHESIS: 350 members by year 7 at 10 million PLN recurring revenue could support founder net worth above 5 million PLN.",
+    "founder_time": "UNVALIDATED COMMERCIAL HYPOTHESIS: 4 hours per day with a fractional regulatory lead.",
+    "gross_margin_basis": "UNVALIDATED COMMERCIAL HYPOTHESIS: 62-76% gross margin after regulatory review, secure computation, and support.",
+    "payback": "UNVALIDATED COMMERCIAL HYPOTHESIS: acquisition payback in 6 months.",
+    "pricing": "UNVALIDATED COMMERCIAL HYPOTHESIS: 24000 PLN annual membership plus 7000 PLN per PSUR evidence export.",
+    "retention_or_repeat": "UNVALIDATED COMMERCIAL HYPOTHESIS: 5-year retention tied to recurring PMS and PSUR cycles."
+  },
+  "fingerprint": {
+    "compounding_advantage": "a minimum-cell-size benchmark across permissioned peer signals improves detection while raw data remains isolated",
+    "customer": "EU micro and small manufacturers of comparable class IIa, IIb, or III medical devices",
+    "distribution_mechanism": "MDR quality consultants and notified-body readiness specialists refer manufacturers",
+    "offer_and_business_model": "segregated complaint ingestion, trend detection, peer benchmark, traceable analysis, and qualified-review workflow",
+    "payer_and_paid_event": "the manufacturer pays at annual cooperative renewal and when an audit-ready evidence export is approved",
+    "problem_trigger": "a PMS review, trend assessment, PSUR cycle, or notified-body audit is due"
+  },
+  "founder_fit": [
+    "Strong biosignal, statistics, and health-domain fit, but launch requires external MDR and privacy experts and must avoid clinical decision-making."
+  ],
+  "parent": null,
+  "risks": [
+    "Sensitive vigilance data creates security and competition-law risk.",
+    "Bad pooling logic could conceal a safety signal."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2017/745/oj/eng"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "privacy-preserving safety-signal cooperative",
+    "control_point": "the statistically justified trend threshold and evidence export before periodic safety review or notified-body audit",
+    "critical_dependency": "manufacturer rights to contribute de-identified signals, sufficient comparable devices, and qualified regulatory review"
+  },
+  "thesis": "Let micro and small medical-device manufacturers benchmark complaint and non-serious-incident trends against a privacy-preserving peer cohort, while producing their own PMS and PSUR evidence. The cooperative controls only derived benchmarks; raw manufacturer records remain segregated. All commercial numbers, including capital_required_pln, are unvalidated hypotheses.",
+  "title": "Privacy-Preserving MDR Safety Signal Cooperative",
+  "uncertainties": [
+    "A legally safe minimum viable cohort is unknown.",
+    "Notified-body acceptance of cooperative benchmarks is unvalidated."
+  ],
+  "version": 1
+}

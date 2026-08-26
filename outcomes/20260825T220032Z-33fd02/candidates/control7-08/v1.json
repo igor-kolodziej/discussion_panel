@@ -1,0 +1,74 @@
+{
+  "candidate_id": "control7-08",
+  "claims": [
+    {
+      "claim_id": "control7-08-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.ure.gov.pl/en/communication/news/518%2CURE-report-The-number-of-RES-micro-installations-in-Poland-has-already-exceeded-.html"
+      ],
+      "statement": "URE reported 1,636,673 Polish RES micro-installations at the end of 2025, with PV representing 99.9% of them."
+    },
+    {
+      "claim_id": "control7-08-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/klimat/prosument"
+      ],
+      "statement": "Poland's climate ministry reported about 1.63m prosumer installations by April 2026, 99% photovoltaic."
+    }
+  ],
+  "contrary_evidence": [
+    "The large installed base does not prove that owners have unresolved faults or that installers will outsource monitoring.",
+    "OEM portals already monitor many systems, so the control point requires actual dispatch adoption rather than another dashboard."
+  ],
+  "economics": {
+    "acquisition_route": "Family-business fleet first, then distributors and installer groups with portfolio migration tools",
+    "capital_required_pln": 40000,
+    "founder_net_worth_path": "Illustrative, unvalidated path: 300000 monitored systems at 2.5 PLN monthly plus service revenue could exceed 9m PLN annual revenue; 25% operating margin and 75% ownership could support founder equity above 5m PLN around year 6",
+    "founder_time": "2-3 hours/day for data and product, with technicians and customer support delegated",
+    "gross_margin_basis": "Target blended 50-65%, with high-margin software offset by lower-margin support and dispatch",
+    "payback": "Unvalidated: 20000 monitored systems plus 200 monthly paid dispatches could repay the pilot within 18 months",
+    "pricing": "Unvalidated: 1-4 PLN per monitored site monthly plus 10-15% of service or parts transactions",
+    "retention_or_repeat": "Continuous monitoring subscription and recurring faults, warranties, inspections, and upgrades"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Cross-brand failure signatures, repair outcomes, parts knowledge, and ownership of the dispatch workflow",
+    "customer": "Polish and Central European small PV installers responsible for legacy customer fleets",
+    "distribution_mechanism": "Pilot on the parents' installed base, then installer associations, inverter distributors, and white-label partnerships",
+    "offer_and_business_model": "Multi-brand monitoring, triage, customer communication, technician dispatch, warranty evidence, and parts routing",
+    "payer_and_paid_event": "Installer pays per monitored site; platform also earns on dispatched service and parts transactions",
+    "problem_trigger": "An inverter alert, underperformance signal, warranty question, or customer service request occurs"
+  },
+  "founder_fit": [
+    "Immediate pilot access through the parents' installation company",
+    "Strong fit for anomaly detection and automation",
+    "Can start part-time with fieldwork delegated",
+    "Builds a data asset from a practical service wedge"
+  ],
+  "parent": null,
+  "risks": [
+    "Inverter vendors can restrict APIs or bundle their own monitoring",
+    "False alarms and missed faults can damage installer relationships",
+    "Residential customers may not pay enough to support human support"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.ure.gov.pl/en/communication/news/518%2CURE-report-The-number-of-RES-micro-installations-in-Poland-has-already-exceeded-.html",
+    "https://www.gov.pl/web/klimat/prosument"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Embedded vertical SaaS with managed service and parts-marketplace revenue",
+    "control_point": "Installer-authorized telemetry and the default fault-to-dispatch workflow for its installed fleet",
+    "critical_dependency": "Stable inverter data access and installer willingness to route warranty and service work through the platform"
+  },
+  "thesis": "Give small solar installers a white-label monitoring and warranty triage layer across multiple inverter brands, making it the default route for fault classification, customer messaging, technician dispatch, and parts ordering. The installer retains the customer; the platform gains permissioned telemetry and resolution outcomes across fleets.",
+  "title": "Installer-Owned PV Fault Dispatch Network",
+  "uncertainties": [
+    "API coverage across the dominant installed inverter brands",
+    "Actual unresolved service load within installer portfolios",
+    "Installer willingness to pay per site rather than reactively per fault"
+  ],
+  "version": 1
+}

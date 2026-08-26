@@ -1,0 +1,70 @@
+{
+  "candidate_id": "asset-02",
+  "claims": [
+    {
+      "claim_id": "asset-02-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg_impl/2024/2215/oj/eng"
+      ],
+      "statement": "EU rules establish certification requirements for natural and legal persons working on stationary refrigeration, air conditioning, and heat pumps."
+    },
+    {
+      "claim_id": "asset-02-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.udt.gov.pl/uslugi-udt/szwo-i-f-gazy/rejestry"
+      ],
+      "statement": "UDT publishes Polish registers for certified personnel and certified enterprises."
+    }
+  ],
+  "contrary_evidence": [
+    "The public UDT register already supports manual verification at no charge.",
+    "Equipment manufacturers may bundle similar records into their own service apps."
+  ],
+  "economics": {
+    "acquisition_route": "Unvalidated hypothesis: sell through two regional HVAC wholesalers and certified installer associations.",
+    "capital_required_pln": 35000,
+    "founder_net_worth_path": "Unvalidated hypothesis: 250 wholesalers and service networks across CEE could create a 5 million PLN founder net-worth path in eight to ten years.",
+    "founder_time": "Unvalidated hypothesis: onboarding one wholesaler at a time keeps founder work below 18 hours weekly.",
+    "gross_margin_basis": "Unvalidated hypothesis: verification software could reach 70% gross margin, and every commercial number including capital_required_pln is hypothetical.",
+    "payback": "Unvalidated hypothesis: customer acquisition pays back within four months at one active wholesaler branch.",
+    "pricing": "Unvalidated hypothesis: charge wholesalers 2,500 PLN monthly plus 8 PLN per verified service event.",
+    "retention_or_repeat": "Unvalidated hypothesis: recurring installations, leak checks, and certificate changes sustain use."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A credential-to-equipment service graph reveals repeat compliance failures and trusted contractors",
+    "customer": "HVAC and heat-pump wholesalers with certified installer channels",
+    "distribution_mechanism": "Wholesale-branch integrations and installer-association partnerships",
+    "offer_and_business_model": "Verification API, signed service ledger, and compliance dashboard subscription",
+    "payer_and_paid_event": "The wholesaler pays when credentials and service events are verified",
+    "problem_trigger": "Equipment or refrigerant is released for work without a current credential and auditable record"
+  },
+  "founder_fit": [
+    "The parents' installation company offers a lawful design-partner environment.",
+    "The business rewards workflow automation more than high-energy public selling."
+  ],
+  "parent": null,
+  "risks": [
+    "Register access may not support reliable automated queries.",
+    "Wholesalers may resist responsibility for policing installer eligibility."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg_impl/2024/2215/oj/eng",
+    "https://www.udt.gov.pl/uslugi-udt/szwo-i-f-gazy/rejestry"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Credential-verification and maintenance-ledger network",
+    "control_point": "Technician eligibility check and signed service event at equipment handoff",
+    "critical_dependency": "Wholesaler integrations and authoritative certificate-status access"
+  },
+  "thesis": "Embed certificate verification and immutable service records into the equipment-sale and maintenance workflow of HVAC wholesalers.",
+  "title": "F-Gas Credential and Service Ledger",
+  "uncertainties": [
+    "The frequency and cost of current verification failures are unknown.",
+    "All commercial numbers including capital_required_pln are unvalidated hypotheses."
+  ],
+  "version": 1
+}

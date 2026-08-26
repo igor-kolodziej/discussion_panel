@@ -1,0 +1,83 @@
+{
+  "candidate_id": "settle7-10",
+  "claims": [
+    {
+      "claim_id": "settle7-10-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1542/oj?locale=en"
+      ],
+      "statement": "The EU Batteries Regulation says end users or their agents should be able to determine battery state of health and expected lifetime from BMS data for evaluating residual value and further use."
+    },
+    {
+      "claim_id": "settle7-10-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1542/oj?locale=en"
+      ],
+      "statement": "The same regulation requires a battery passport from 18 February 2027 for each electric-vehicle battery placed on the market or put into service, with structured individual-battery information and access controls."
+    },
+    {
+      "claim_id": "settle7-10-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://digital-strategy.ec.europa.eu/en/news/eu-data-act-gives-users-control-over-data-connected-devices"
+      ],
+      "statement": "The EU Data Act has applied since September 2025 and includes connected cars among products whose users can access and share generated data."
+    }
+  ],
+  "contrary_evidence": [
+    "Mandatory battery information and OEM diagnostics may reduce the long-term price of a basic certificate.",
+    "The regulation supports access to health data but does not establish that a short post-sale degradation reserve is technically predictable or insurable."
+  ],
+  "economics": {
+    "acquisition_route": "A dealer or lease-return pilot on a few EV models, followed by warranty brokers and auction integrations",
+    "capital_required_pln": 100000,
+    "founder_net_worth_path": "A plausible 5-7 year path would require roughly 15,000-25,000 transactions annually, several hundred PLN net revenue per vehicle, credible longitudinal data, and retained founder equity without underwriting losses on the startup balance sheet",
+    "founder_time": "Approximately 12-16 hours per week if field tests are performed by trained contractors and underwriting remains external",
+    "gross_margin_basis": "Diagnostic and software revenue plus partner commission less technician, device, data-access, and re-test costs; no founder-funded warranty reserve",
+    "payback": "Dealers may recover the fee through faster sale, reduced negotiation discount, or fewer battery disputes; this needs an A/B pilot by vehicle model",
+    "pricing": "Approximately 450-900 PLN per diagnostic plus a 1-2% transaction guarantee premium, with risk capital supplied by a warranty or reserve partner",
+    "retention_or_repeat": "Dealer and auction customers repeat on each used EV; paired re-tests and claims deepen model-specific data"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Paired transfer and follow-up measurements linked to model, age, use, climate, and claim outcomes could improve reserve pricing and certificate credibility",
+    "customer": "Used-EV dealer groups, leasing companies, B2B vehicle auctions, and buyers of higher-value used electric vehicles",
+    "distribution_mechanism": "Integrate with dealer groups, lease-return inspectors, B2B auctions, and vehicle-finance or warranty brokers",
+    "offer_and_business_model": "Independent health test, signed certificate, price band, partner-held reserve, re-test workflow, and claim receipt; earn testing margin and partner commission",
+    "payer_and_paid_event": "The dealer or buyer pays for the diagnostic and a 1-2% guarantee premium at sale; the reserve is released after the agreed re-test or paid against a valid bounded claim",
+    "problem_trigger": "A used EV is sold while battery condition and near-term degradation risk are difficult for buyer and seller to price or verify"
+  },
+  "founder_fit": [
+    "Longitudinal health modelling fits the founder's biosignal, data-science, and quantified-monitoring interests",
+    "The EU data environment creates a technical wedge without requiring vehicle inventory",
+    "Dealer-channel distribution avoids a camera-led consumer brand"
+  ],
+  "parent": null,
+  "risks": [
+    "A state-of-health metric may not predict sudden defects or future degradation reliably",
+    "Data access can differ by vehicle and OEM",
+    "A warranty structure may trigger insurance regulation",
+    "Adverse selection could concentrate weak batteries in the product"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2023/1542/oj?locale=en",
+    "https://digital-strategy.ec.europa.eu/en/news/eu-data-act-gives-users-control-over-data-connected-devices"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Certified transaction warranty funded by inspection and guarantee-premium revenue",
+    "control_point": "The signed state-of-health benchmark and contractual reserve-release schedule for a specific vehicle transfer",
+    "critical_dependency": "Reliable OEM or BMS data access, a reproducible diagnostic, and a licensed warranty or reserve partner willing to accept the trigger"
+  },
+  "thesis": "Used-EV dealer groups and leasing remarketers could attach an independent battery-health certificate, price-adjustment rule, and partner-held degradation reserve to each sale. A repeatable diagnostic at transfer and again after a defined period would trigger reserve release to the seller or a bounded buyer remedy, turning state-of-health data into a controlled transaction event rather than a marketing claim.",
+  "title": "Battery Health Escrow Warranty",
+  "uncertainties": [
+    "Diagnostic repeatability across major used-EV models",
+    "Dealer willingness to expose sale and follow-up data",
+    "Underwriter pricing and exclusions for a degradation reserve",
+    "Whether emerging battery passports commoditise or strengthen independent certification"
+  ],
+  "version": 1
+}

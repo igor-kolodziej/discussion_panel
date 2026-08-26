@@ -1,0 +1,176 @@
+{
+  "candidate_id": "control7-05",
+  "claims": [
+    {
+      "claim_id": "control7-05-r1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC6559819/"
+      ],
+      "statement": "ACMG says variant interpretation changes over time, laboratories should maintain reevaluation and reanalysis policies, and additional professional-service fees may be warranted."
+    },
+    {
+      "claim_id": "control7-05-r2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://pubmed.ncbi.nlm.nih.gov/31779608/"
+      ],
+      "statement": "A study representing all nine Dutch clinical molecular genetics laboratories found reactive reinterpretation common and active periodic reinterpretation viewed as unfeasible."
+    },
+    {
+      "claim_id": "control7-05-r3",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://www.eshg.org/fileadmin/eshg/consultations/Recontacting_Draft_ESHG__Recommendations_March_2018_for_membership.pdf"
+      ],
+      "statement": "European genetics guidance describes recontact as desirable where possible but does not establish a universal legal or professional duty."
+    },
+    {
+      "claim_id": "control7-05-r4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://health.ec.europa.eu/document/download/b45335c5-1679-4c71-a91c-fc7a4d37f12b_en?filename=mdcg_2019_11_en.pdf"
+      ],
+      "statement": "Current EU guidance treats software analyzing NGS data to support diagnosis or treatment as IVD medical-device software, making an automated interpretation claim regulatory in substance."
+    },
+    {
+      "claim_id": "control7-05-r5",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1526560528451&uri=CELEX:32016R0679"
+      ],
+      "statement": "GDPR expressly classifies genetic data as special-category personal data."
+    },
+    {
+      "claim_id": "control7-05-r6",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://health.ec.europa.eu/ehealth-digital-health-and-care/european-health-data-space-regulation-ehds_en"
+      ],
+      "statement": "EHDS lab-result exchange and genomic secondary-use milestones apply mainly from March 2031, so EHDS does not establish near-term demand."
+    },
+    {
+      "claim_id": "control7-05-r7",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.congenica.com/news-insights/genomealert-automating-genetic-variant-reassessment"
+      ],
+      "statement": "SeqOne GenomeAlert already automates monthly review of historical cases against updated variant knowledge, directly occupying the automated-reevaluation layer."
+    },
+    {
+      "claim_id": "control7-05-r8",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://warsawgenomics.pl/panel/badanie-caloeksomowe-jednej-osoby-wes-reanaliza-danych",
+        "https://diagnostyka.genomed.pl/pl/shop/product/EXOME-2/",
+        "https://csk.umed.pl/cenniki/zaklad-i-poradnia-gen-kli/"
+      ],
+      "statement": "Polish laboratories currently sell WES reanalysis at published prices, including 1300 PLN at Genomed, 2194 PLN at Warsaw Genomics, and scoped or external-lab reanalysis from 300 to 1200 PLN at a university hospital."
+    },
+    {
+      "claim_id": "control7-05-r9",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.ncbi.nlm.nih.gov/clinvar/docs/submit/"
+      ],
+      "statement": "ClinVar is a free weekly-updated comparison layer for variant classifications, though its submitted classifications are not a patient-specific recontact workflow."
+    },
+    {
+      "claim_id": "control7-05-r10",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC6559819/",
+        "https://pubmed.ncbi.nlm.nih.gov/31779608/",
+        "https://health.ec.europa.eu/document/download/b45335c5-1679-4c71-a91c-fc7a4d37f12b_en?filename=mdcg_2019_11_en.pdf",
+        "https://www.congenica.com/news-insights/genomealert-automating-genetic-variant-reassessment"
+      ],
+      "statement": "A lab-owned consent, audit, and recontact layer is inferred to be more defensible and more regulatory-bounded than another autonomous interpretation engine."
+    }
+  ],
+  "contrary_evidence": [
+    "Automated genomic reevaluation is already offered by SeqOne GenomeAlert, a direct incumbent.",
+    "Polish laboratories already monetize reanalysis internally, so a new platform may displace existing workflow or margin rather than create it.",
+    "Clinical laboratories reported routine periodic reinterpretation as unfeasible and responsibility remains unsettled.",
+    "IVDR can make diagnostic interpretation software a regulated IVD, incompatible with a rapid low-capital launch.",
+    "EHDS genomic milestones are too late to validate immediate demand.",
+    "ClinVar supplies a free, weekly-updated public classification comparison source."
+  ],
+  "economics": {
+    "acquisition_route": "Hypothesis: secure one paid lab-hosted Polish pilot, measure implementation and workflow economics, then pursue an uncommitted OEM or reseller route through an existing laboratory-information or interpretation-system vendor. There is no customer or partner commitment.",
+    "capital_required_pln": 95000,
+    "founder_net_worth_path": "Unknown. The redesign would need evidenced site-license and completed-workflow revenue, repeatable OEM-assisted acquisition, attractive contribution margin, renewal, and enough reachable laboratories before any credible timing to 5m PLN can be estimated; none of those inputs is validated.",
+    "founder_time": "Target no more than about 3 hours/day for product and data work while clinical governance, privacy, security, intended-purpose review, deployment, and enterprise contracting are delegated. Whether local deployments and an OEM route can fit that target is untested.",
+    "gross_margin_basis": "Unknown. Hypothesis: processing inside the laboratory lowers central genetic-data custody and hosting burden, while standardized connectors and an OEM route lower bespoke integration, support, and acquisition cost. Evidence does not establish those savings, partner terms, workflow volume, or margin.",
+    "payback": "Unknown until a pilot measures implementation and support cost, completed workflow volume, staff time or missed-case reduction, collected site and usage revenue, channel economics, and renewal intent.",
+    "pricing": "Hypothesis only: a negotiated annual site license plus a usage fee for each completed laboratory-approved review or recontact workflow, with no asserted price level. Evidence that Polish providers charge 300-2194 PLN for clinical reanalysis supports a paid clinical event but not this software pricing or willingness to pay.",
+    "retention_or_repeat": "Hypothesis: the installed connector, annual site operation, recurring approved change events, and accumulated audit history support renewal. Evidence shows episodic reanalysis and changing classifications, not annual software renewal or usage frequency."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Reusable lab-side connectors, regulatory-bounded deployment templates, configured consent and audit workflows, and installed event-to-action history that deepen workflow switching costs without depending on pooled genetic data",
+    "customer": "Polish and later EU clinical genetics laboratories that already perform episodic paid reanalysis, retain the medical relationship, and use a laboratory-information or interpretation system capable of sending approved change events",
+    "distribution_mechanism": "Validate through one paid lab-hosted Polish pilot, then pursue an OEM or reseller integration with a laboratory-information or interpretation-system vendor; no laboratory or channel partner is currently committed",
+    "offer_and_business_model": "A lab-hosted administrative module and connector that receives only laboratory-approved change events and manages consent, identity mapping, queues, audit, and approved recontact; sold as a site license plus completed-workflow usage fee, with no autonomous classification, diagnosis, treatment recommendation, or central custody of raw genomic data",
+    "payer_and_paid_event": "The laboratory pays a hypothesized annual site license plus a usage fee only for each completed laboratory-approved review or recontact workflow; the laboratory continues to price and bill any clinical reanalysis, and no fee level or willingness to pay is evidenced",
+    "problem_trigger": "A laboratory-approved variant change, new phenotype, or external reanalysis request makes an historical case eligible for review and possible recontact"
+  },
+  "founder_fit": [
+    "Strong match for genetics, health, data science, and evidence automation",
+    "A lab-hosted administrative prototype can use AI for non-clinical workflow support while clinicians retain every medical decision",
+    "An OEM or reseller route could reduce repeated trust-heavy direct selling and avoids camera-led marketing, but no channel partner is committed",
+    "Clinical governance, privacy, security, intended-purpose assessment, deployments, and contracting still require delegated specialists and may exceed available capital or part-time capacity"
+  ],
+  "parent": {
+    "candidate_id": "control7-05",
+    "version": 3
+  },
+  "redesign": {
+    "changed_fingerprint_fields": [
+      "customer",
+      "payer_and_paid_event",
+      "offer_and_business_model",
+      "distribution_mechanism",
+      "compounding_advantage"
+    ],
+    "economic_effect": "Evidence: Polish providers charge 300-2194 PLN for episodic clinical reanalysis; routine periodic reinterpretation was viewed as infeasible by the studied Dutch laboratories; SeqOne occupies automated reevaluation; and no reviewed source establishes annual subscription demand, channel commitment, or implementation economics. Hypothesis: lab-local deployment can reduce central data-custody and security burden; charging a site license plus usage only for completed lab-approved workflows can align vendor revenue with a paid clinical event; and an OEM or reseller route can lower direct enterprise acquisition and repeated integration cost. The cost reduction, partner access, price, margin, conversion, workflow volume, renewal, and payback effects are all unvalidated."
+  },
+  "risks": [
+    "Incorrect identity matching or premature notification can cause clinical harm",
+    "Genetic data remain special-category data even when processing stays in the laboratory environment",
+    "Interpretation or laboratory-system incumbents can copy or bundle the administrative workflow",
+    "Laboratories may reject ongoing recontact operations, local integration, or event-aligned software fees",
+    "The hoped-for OEM route may be unavailable, slow, costly, or controlled by a competing incumbent",
+    "Regulatory scope can expand with product language, workflow logic, or functionality",
+    "The preserved 95000 PLN capital estimate is an unvalidated budget assumption and may not cover clinical quality, security, integration, insurance, and specialist review"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC6559819/",
+    "https://pubmed.ncbi.nlm.nih.gov/31779608/",
+    "https://www.eshg.org/fileadmin/eshg/consultations/Recontacting_Draft_ESHG__Recommendations_March_2018_for_membership.pdf",
+    "https://health.ec.europa.eu/document/download/b45335c5-1679-4c71-a91c-fc7a4d37f12b_en?filename=mdcg_2019_11_en.pdf",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1526560528451&uri=CELEX:32016R0679",
+    "https://health.ec.europa.eu/ehealth-digital-health-and-care/european-health-data-space-regulation-ehds_en",
+    "https://www.congenica.com/news-insights/genomealert-automating-genetic-variant-reassessment",
+    "https://warsawgenomics.pl/panel/badanie-caloeksomowe-jednej-osoby-wes-reanaliza-danych",
+    "https://diagnostyka.genomed.pl/pl/shop/product/EXOME-2/",
+    "https://csk.umed.pl/cenniki/zaklad-i-poradnia-gen-kli/",
+    "https://www.ncbi.nlm.nih.gov/clinvar/docs/submit/"
+  ],
+  "stage": "development",
+  "structure": {
+    "commercial_archetype": "Lab-hosted B2B workflow infrastructure: annual site license plus usage fee for completed approved workflows, with an OEM or reseller distribution hypothesis",
+    "control_point": "The installed lab-side connector and configuration binding approved change events to consent, identity, audit, and recontact actions inside each laboratory's controlled environment",
+    "critical_dependency": "A laboratory and an uncommitted information- or interpretation-system channel must permit local integration and accept event-aligned pricing, while specialist review confirms the administrative intended-purpose boundary; none is established"
+  },
+  "thesis": "Install a strictly administrative workflow module inside a clinical genetics laboratory's controlled environment. It accepts only laboratory-approved change events from the laboratory's existing interpretation or information system, then manages consent, identity matching, review queues, audit, and approved recontact without classifying variants or issuing clinical advice. Replace the unproven per-record subscription with a hypothesized annual site license plus usage fee for completed laboratory-approved review or recontact workflows, and pursue an uncommitted OEM or reseller route through an existing system vendor. The redesign aligns payment with the evidenced paid reanalysis event and may reduce centralized data-custody and bespoke-sales burden, but willingness to pay, channel access, regulatory classification, savings, conversion, and renewal remain unknown.",
+  "title": "Lab-Hosted Genomic Review and Recontact Workflow via Existing Systems",
+  "uncertainties": [
+    "Laboratory willingness to run the module locally and pay a site license plus completed-workflow fee",
+    "Whether the exact workflow-only intended purpose avoids IVD qualification",
+    "Whether any laboratory-information or interpretation-system vendor will permit, embed, resell, or economically support the connector",
+    "Eligible completed-workflow volume, historical-data portability, consent coverage, identity quality, and contact accuracy",
+    "Measured reduction in staff time, missed cases, liability exposure, turnaround, or total cost",
+    "Implementation, security, support, channel, insurance, and acquisition costs; renewal; gross margin; and founder-net-worth timing"
+  ],
+  "version": 4
+}

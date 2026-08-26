@@ -1,0 +1,201 @@
+{
+  "candidate_id": "settle7-05",
+  "candidate_sha256": "bb26764c8617e7a97fd206043a6c9ac9663c74a1b128aa5f8ae5ef41dfe1c4bd",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "s5-q1",
+      "evidence_refs": [
+        "s5-s1"
+      ],
+      "statement": "OCPI defines an immutable billing-relevant CDR and uses credit CDRs for corrections, providing most of the core technical lineage assumed by the concept."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "s5-q2",
+      "evidence_refs": [
+        "s5-s2"
+      ],
+      "statement": "OCPI's invoice-reconciliation work maps invoice IDs to CDR IDs but deliberately leaves invoice-document delivery, payment, and billing timing outside the module, leaving a narrower contract-governance and exception opportunity."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "s5-q3",
+      "evidence_refs": [
+        "s5-s2",
+        "s5-s3",
+        "s5-s4"
+      ],
+      "statement": "Invoice reconciliation is in a transitional release state: it is present in the core branch and described as an Edition 2 improvement, while the published 2025 OCPI 2.3.0 PDF does not contain it; production adoption is not established."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "s5-q4",
+      "evidence_refs": [
+        "s5-s5",
+        "s5-s6"
+      ],
+      "statement": "AFIR and Implementing Regulation 2025/655 address price transparency and interoperable infrastructure data, not a required common bilateral invoice-clearing service."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "s5-q5",
+      "evidence_refs": [
+        "s5-s7",
+        "s5-s8"
+      ],
+      "statement": "Hubject already offers a large e-roaming network plus CDR rating, invoicing, clearing, and financial settlement, presenting direct incumbent substitution."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "s5-q6",
+      "evidence_refs": [
+        "s5-s9",
+        "s5-s10"
+      ],
+      "statement": "GIREVE already documents CDR validation, dispute workflows, and billing-agent invoicing, while e-clearing.net provides multi-protocol roaming connectivity and data management to many partners."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "s5-q7",
+      "evidence_refs": [
+        "s5-s11"
+      ],
+      "statement": "The EU charging footprint is large and growing, but charge-point count is not a proxy for addressable bilateral CDR volume, mismatch rate, or paid conversion."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "s5-q8",
+      "evidence_refs": [],
+      "statement": "Mismatch rates, disputed value, finance-hour savings, implementation cost, member willingness, and attainable price remain unknown because no bilateral transaction sample or customer commitment was provided."
+    }
+  ],
+  "contrary_evidence": [
+    "s5-s2 and s5-s3 show that invoice-to-CDR mapping is becoming a standard OCPI capability rather than a proprietary moat.",
+    "s5-s5 and s5-s6 do not create the inferred regulatory mandate for financial clearing.",
+    "s5-s7 through s5-s10 show incumbent hubs already provide substantial reconciliation, dispute, invoicing, and settlement functionality.",
+    "s5-s11 establishes infrastructure scale but not the proposed 20-30 million annual CDR path or paid demand."
+  ],
+  "schema_version": 2,
+  "sources": [
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2025 (2.3.0 release branch)",
+      "publisher": "EVRoaming Foundation / OCPI project",
+      "source_id": "s5-s1",
+      "source_type": "official_technical_specification",
+      "stance": "supporting",
+      "title": "OCPI 2.3.0 CDRs module",
+      "url": "https://github.com/ocpi/ocpi/blob/2.3.0/release/core/mod_cdrs.asciidoc"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated Edition 2 branch source",
+      "publisher": "EVRoaming Foundation / OCPI project",
+      "source_id": "s5-s2",
+      "source_type": "official_technical_specification",
+      "stance": "contradicting",
+      "title": "OCPI Invoice Reconciliation module",
+      "url": "https://github.com/ocpi/ocpi/blob/2.3.0/release/core/mod_invoice_reconciliation.asciidoc"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "continuously updated",
+      "publisher": "EVRoaming Foundation / OCPI project",
+      "source_id": "s5-s3",
+      "source_type": "official_release_repository",
+      "stance": "context",
+      "title": "Open Charge Point Interface repository and release status",
+      "url": "https://github.com/ocpi/ocpi"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2025-02",
+      "publisher": "EVRoaming Foundation",
+      "source_id": "s5-s4",
+      "source_type": "official_technical_specification",
+      "stance": "context",
+      "title": "OCPI 2.3.0 specification PDF",
+      "url": "https://evroaming.org/wp-content/uploads/2025/02/OCPI-2.3.0.pdf"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2023-09-22",
+      "publisher": "Official Journal of the European Union / EUR-Lex",
+      "source_id": "s5-s5",
+      "source_type": "official_law",
+      "stance": "context",
+      "title": "Regulation (EU) 2023/1804 on the deployment of alternative fuels infrastructure",
+      "url": "https://eur-lex.europa.eu/eli/reg/2023/1804/oj/eng"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2025-04-11",
+      "publisher": "European Commission Directorate-General for Mobility and Transport",
+      "source_id": "s5-s6",
+      "source_type": "official_regulatory_news",
+      "stance": "context",
+      "title": "Commission enhances interoperability and transparency of alternative fuels infrastructure data",
+      "url": "https://transport.ec.europa.eu/news-events/news/commission-enhances-interoperability-and-transparency-alternative-fuels-infrastructure-data-2025-04-11_en"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated live page",
+      "publisher": "Hubject GmbH",
+      "source_id": "s5-s7",
+      "source_type": "incumbent_service_page",
+      "stance": "contradicting",
+      "title": "Hubject eRoaming and Financial Services",
+      "url": "https://www.hubject.com/"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2023-08-03",
+      "publisher": "Hubject Support",
+      "source_id": "s5-s8",
+      "source_type": "incumbent_product_documentation",
+      "stance": "contradicting",
+      "title": "Invoice Management: introduction and functionalities",
+      "url": "https://support.hubject.com/hc/en-us/articles/4412735107089-Introduction-and-functionalities"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2021-07",
+      "publisher": "GIREVE",
+      "source_id": "s5-s9",
+      "source_type": "incumbent_service_documentation",
+      "stance": "contradicting",
+      "title": "GIREVE OPEN! Services description 2.0.3",
+      "url": "https://www.gireve.com/wp-content/uploads/2022/09/GIREVE-OPEN-Services-description-%E2%80%93-2.0.3-July-2021.pdf"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated live page",
+      "publisher": "e-clearing.net GmbH",
+      "source_id": "s5-s10",
+      "source_type": "incumbent_service_page",
+      "stance": "contradicting",
+      "title": "e-clearing.net Starter Package",
+      "url": "https://www.e-clearing.net/starter-package"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2026-08-21",
+      "publisher": "European Commission Directorate-General for Mobility and Transport",
+      "source_id": "s5-s11",
+      "source_type": "official_market_data",
+      "stance": "supporting",
+      "title": "European Alternative Fuels Observatory homepage and August 2026 data update",
+      "url": "https://alternative-fuels-observatory.ec.europa.eu/"
+    }
+  ],
+  "unknowns": [
+    "Complete bilateral CDR, tariff, credit, invoice, tax, and payment samples",
+    "Observed mismatch frequency, monetary leakage, finance labor, and credit latency",
+    "Current and planned implementation of OCPI invoice reconciliation among target counterparties",
+    "Willingness of both sides to accept a neutral exception taxonomy and dispute clock",
+    "Incumbent pricing and the bilateral volume at which a separate service has positive payback",
+    "No-custody legal perimeter, tax responsibility, signed-meter sufficiency, liability caps, and SLA cost"
+  ]
+}

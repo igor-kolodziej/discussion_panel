@@ -1,0 +1,73 @@
+{
+  "candidate_id": "gate-11",
+  "claims": [
+    {
+      "claim_id": "gate-11-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.podatki.gov.pl/podatki-firmowe/vat/poradniki-i-informatory/mechanizm-podzielonej-platnosci-mpp"
+      ],
+      "statement": "Polish tax guidance says split payment is mandatory when the invoice exceeds 15000 PLN, at least one item is in Annex 15, and both parties are VAT taxpayers; listed examples include construction services, waste, and electrical machinery."
+    },
+    {
+      "claim_id": "gate-11-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://podatki.gov.pl/podatki-firmowe/vat/poradniki-i-informatory/mechanizm-podzielonej-platnosci-mpp"
+      ],
+      "statement": "The same official guidance says a buyer who fails to use mandatory split payment can face a sanction equal to 30% of the VAT attributable to the covered goods or services."
+    }
+  ],
+  "contrary_evidence": [
+    "Banking and accounting products can encode the same statutory conditions.",
+    "Many experienced construction accountants already apply the rule manually."
+  ],
+  "economics": {
+    "acquisition_route": "Hypothesis: one accounting office can deploy the plug-in across thirty construction clients.",
+    "capital_required_pln": 40000,
+    "founder_net_worth_path": "Hypothesis: 1800 entities at 299 PLN monthly would exceed 6.4 million PLN ARR before usage fees; profitable founder ownership could support net worth above 5 million PLN in years 5 to 8.",
+    "founder_time": "Hypothesis: 12 to 15 hours weekly for a file-export MVP, with tax interpretation owned by licensed advisers.",
+    "gross_margin_basis": "Hypothesis: 85% software gross margin, with tax-review cases billed by an external professional.",
+    "payback": "Hypothesis: partner onboarding repays within six months if ten clients retain at 299 PLN monthly.",
+    "pricing": "Hypothesis: 299 PLN monthly per entity plus 2 PLN per controlled payment above an included allowance.",
+    "retention_or_repeat": "Hypothesis: every accounts-payable cycle repeats and the audit trail becomes costly to remove."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A reviewer-confirmed invoice-line classification corpus and counterparty exception ledger",
+    "customer": "Polish construction, installation, and renewable-energy SMEs with mixed Annex 15 invoices",
+    "distribution_mechanism": "Construction accountants, ERP implementers, payment bureaus, wholesalers, and eventually bank partners",
+    "offer_and_business_model": "Accounts-payable policy plug-in sold per legal entity and payment volume",
+    "payer_and_paid_event": "The buyer pays monthly for each entity whose signed bank-export batch passes policy control",
+    "problem_trigger": "An accounts-payable batch is ready and the correct statutory payment method must be chosen"
+  },
+  "founder_fit": [
+    "Finance-oriented reasoning and data classification match the founder's strengths.",
+    "The family renewable business provides a controlled accounts-payable pilot.",
+    "Accountants and ERP partners offer low-social-energy distribution."
+  ],
+  "parent": null,
+  "risks": [
+    "A wrong release decision could create direct tax loss.",
+    "The product may be treated as tax advice and require clear professional boundaries.",
+    "Banks or ERP vendors could absorb the feature."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.podatki.gov.pl/podatki-firmowe/vat/poradniki-i-informatory/mechanizm-podzielonej-platnosci-mpp",
+    "https://podatki.gov.pl/podatki-firmowe/vat/poradniki-i-informatory/mechanizm-podzielonej-platnosci-mpp"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Accounts-payable policy enforcement plug-in",
+    "control_point": "Signed bank-batch export released only after split-payment classification and review",
+    "critical_dependency": "Accurate line classification and accounting or banking workflow integration"
+  },
+  "thesis": "An accounts-payable policy plug-in for Polish construction and renewable SMEs could classify invoice lines against mandatory split-payment conditions, preserve the evidence and reviewer decision, and generate a bank batch only after the payment method is resolved. The initial control point is the signed export file, avoiding custody of customer money.",
+  "title": "Split-Payment Release Control for Construction Accounts Payable",
+  "uncertainties": [
+    "The avoidable error rate and expected sanction exposure among target SMEs are unknown.",
+    "Accurate Annex 15 classification from messy descriptions may still require human review.",
+    "The 40000 PLN capital figure and all pricing or scale figures below are hypotheses."
+  ],
+  "version": 1
+}

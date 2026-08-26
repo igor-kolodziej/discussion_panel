@@ -1,0 +1,127 @@
+{
+  "candidate_id": "rights6-11",
+  "claims": [
+    {
+      "claim_id": "rights6-11-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/en/TXT/?uri=CELEX%3A52013XC1123%2801%29"
+      ],
+      "statement": "EU Good Distribution Practice guidance requires transport deviations such as temperature excursions or damage to be reported to the distributor and recipient."
+    },
+    {
+      "claim_id": "rights6-11-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/en/TXT/?uri=CELEX%3A52013XC1123%2801%29",
+        "https://eli.gov.pl/api/acts/DU/2022/1287/text.html"
+      ],
+      "statement": "EU guidance and Poland's consolidated GDP requirements require temperature-monitoring equipment used in transport containers or vehicles to be regularly maintained and calibrated; the Polish rule specifies at least annual calibration."
+    },
+    {
+      "claim_id": "rights6-11-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eli.gov.pl/api/acts/DU/2022/1287/text.html"
+      ],
+      "statement": "Polish GDP rules keep the supplying pharmaceutical entrepreneur responsible for transport conditions, require written controls for vehicles and equipment, require route risk assessment, and require a third-party transport contract to incorporate outsourced-activity requirements."
+    },
+    {
+      "claim_id": "rights6-11-c4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.pelibiothermal.com/services/",
+        "https://pages.csafeglobal.com/silverpod-max-re",
+        "https://www.va-q-tec.com/en/products/va-q-med/"
+      ],
+      "statement": "Established vendors already market reusable pharmaceutical cold-chain containers through rental or leasing models that include return logistics, inspection, refurbishment, and related services."
+    },
+    {
+      "claim_id": "rights6-11-c5",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://pages.csafeglobal.com/silverpod-max-re",
+        "https://www.dhl.com/pl-pl/home/logistyka-dla-nauk-biologicznych-i-opieki-zdrowotnej/wyroby-farmaceutyczne.html"
+      ],
+      "statement": "Incumbents already bundle real-time temperature and location monitoring, alerts, reports, route tracking, risk analytics, and compliant pharmaceutical logistics, directly overlapping the proposed monitoring and analytics layer."
+    },
+    {
+      "claim_id": "rights6-11-c6",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://www.va-q-tec.com/en/business-areas/last-mile-pharma/application-examples-for-last-mile-pharma/case-study-swiss-post/"
+      ],
+      "statement": "A disclosed reusable-box deployment used roughly 8,000 boxes for more than one million deliveries and emphasized proximity to logistics routes, cleaning, quality checks, and repair, indicating that density and service-center operations are material to performance."
+    }
+  ],
+  "contrary_evidence": [
+    "GDP compliance remains the authorized distributor's responsibility even when transport is outsourced, so the pool cannot replace the customer's quality system or release decisions.",
+    "Peli BioThermal, CSafe, va-Q-tec, and DHL already offer overlapping combinations of reusable assets, reverse logistics, qualification support, telemetry, reports, and supply-chain analytics.",
+    "The Swiss Post deployment cited by va-Q-tec used about 8,000 boxes and a nearby service center, suggesting that a small Warsaw pilot may not reproduce mature network economics."
+  ],
+  "economics": {
+    "acquisition_route": "Wholesaler-quality teams, courier integrations, and laboratory procurement portals with standardized qualification packs",
+    "capital_required_pln": 190000,
+    "founder_net_worth_path": "Operate 1500 container turns per month by year 3 (unvalidated), expand to regional lane pools by year 7 (unvalidated), and support founder equity above PLN 5 million by year 9 (unvalidated)",
+    "founder_time": "12-18 hours per week during validation (unvalidated), with cleaning and courier operations contracted",
+    "gross_margin_basis": "Repeated asset turns and automated reports after cleaning, calibration, and reverse logistics; 38-55% gross margin (unvalidated)",
+    "payback": "Container-pool payback in 18-30 months (unvalidated)",
+    "pricing": "PLN 90-220 per container trip (unvalidated) plus PLN 1000-4000 per customer per month for lane analytics (unvalidated)",
+    "retention_or_repeat": "Annual framework agreements (unvalidated) with recurring weekly lanes"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Pool density lowers reverse-logistics cost while lane history improves packaging selection and audit evidence",
+    "customer": "Authorized pharmaceutical wholesalers, specialty pharmacies, clinical laboratories, and trial logistics providers",
+    "distribution_mechanism": "Quality-team framework contracts and courier-lane integrations",
+    "offer_and_business_model": "Qualified reusable-container rental, calibrated monitoring, reverse logistics, and lane analytics",
+    "payer_and_paid_event": "Authorized shipper pays per qualified trip and for monthly lane-performance evidence",
+    "problem_trigger": "A temperature excursion, packaging audit, new recurring lane, or avoidable single-use packaging spend"
+  },
+  "founder_fit": [
+    "Sensor analytics and route optimization fit founder skills.",
+    "Framework customers provide repeat revenue with limited public selling.",
+    "Operational partners can handle physical work."
+  ],
+  "parent": {
+    "candidate_id": "rights6-11",
+    "version": 2
+  },
+  "risks": [
+    "Qualification failure or missing custody events.",
+    "Reverse-logistics losses and asset damage.",
+    "The stated PLN 190000 startup capital requirement is unvalidated.",
+    "Customer quality units may reject a shared pool or require lane-specific qualification that limits fungibility.",
+    "Integrated global packaging and logistics incumbents may bundle the proposed analytics at little incremental price.",
+    "Cleaning, calibration, repair, insurance, logger connectivity, and failed-return costs may erase the assumed margin."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/legal-content/en/TXT/?uri=CELEX%3A52013XC1123%2801%29",
+    "https://eli.gov.pl/api/acts/DU/2022/1287/text.html",
+    "https://www.gov.pl/web/chief-pharmaceutical-inspectorate/reporting-the-list-of-transport-means",
+    "https://www.pelibiothermal.com/services/",
+    "https://pages.csafeglobal.com/silverpod-max-re",
+    "https://www.va-q-tec.com/en/products/va-q-med/",
+    "https://www.va-q-tec.com/en/business-areas/last-mile-pharma/application-examples-for-last-mile-pharma/case-study-swiss-post/",
+    "https://www.dhl.com/pl-pl/home/logistyka-dla-nauk-biologicznych-i-opieki-zdrowotnej/wyroby-farmaceutyczne.html",
+    "https://www.va-q-tec.com/en/va-q-tec-global-specialist-for-tempchain-transport-solutions-and-energy-efficiency-continues-on-successful-track-in-the-first-half-of-2022/"
+  ],
+  "stage": "development",
+  "structure": {
+    "commercial_archetype": "Pooled reusable asset rental with compliance evidence and permissioned lane analytics",
+    "control_point": "Qualified reusable container inventory plus longitudinal, contract-authorized lane-performance records",
+    "critical_dependency": "Containers, calibration, cleaning, qualification, custody, and data boundaries must satisfy each authorized distributor's GDP quality system"
+  },
+  "thesis": "Own a pool of reusable, lane-qualified transport containers and calibrated loggers rented to authorized pharmaceutical distributors and clinical laboratories. Customer contracts grant narrowly defined rights to non-personal temperature, handling, and lane-performance data, creating evidence for excursion reduction and packaging optimization; the company rents equipment and analytics but does not distribute medicines.",
+  "title": "ColdTrace Crate Pool",
+  "uncertainties": [
+    "Which recurring Polish lanes have sufficient density for reusable pooling?",
+    "Will quality units accept a shared asset pool and derived lane benchmarks?",
+    "What lane-specific qualification, cleaning validation, calibration, insurance, and custody evidence will each customer require?",
+    "What are observed container loss, damage, reverse-logistics, connectivity, and labor costs in Poland?",
+    "Can a startup obtain qualified containers and loggers within PLN 190000 while maintaining enough spares and utilization?",
+    "Will customers pay separately for analytics already bundled by packaging and logistics incumbents?",
+    "No signed customer, courier, cleaning, calibration, or data-rights commitment has been observed."
+  ],
+  "version": 3
+}

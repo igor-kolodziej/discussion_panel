@@ -1,0 +1,165 @@
+{
+  "candidate_id": "control7-05",
+  "claims": [
+    {
+      "claim_id": "control7-05-r1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC6559819/"
+      ],
+      "statement": "ACMG says variant interpretation changes over time, laboratories should maintain reevaluation and reanalysis policies, and additional professional-service fees may be warranted."
+    },
+    {
+      "claim_id": "control7-05-r2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://pubmed.ncbi.nlm.nih.gov/31779608/"
+      ],
+      "statement": "A study representing all nine Dutch clinical molecular genetics laboratories found reactive reinterpretation common and active periodic reinterpretation viewed as unfeasible."
+    },
+    {
+      "claim_id": "control7-05-r3",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://www.eshg.org/fileadmin/eshg/consultations/Recontacting_Draft_ESHG__Recommendations_March_2018_for_membership.pdf"
+      ],
+      "statement": "European genetics guidance describes recontact as desirable where possible but does not establish a universal legal or professional duty."
+    },
+    {
+      "claim_id": "control7-05-r4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://health.ec.europa.eu/document/download/b45335c5-1679-4c71-a91c-fc7a4d37f12b_en?filename=mdcg_2019_11_en.pdf"
+      ],
+      "statement": "Current EU guidance treats software analyzing NGS data to support diagnosis or treatment as IVD medical-device software, making an automated interpretation claim regulatory in substance."
+    },
+    {
+      "claim_id": "control7-05-r5",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1526560528451&uri=CELEX:32016R0679"
+      ],
+      "statement": "GDPR expressly classifies genetic data as special-category personal data."
+    },
+    {
+      "claim_id": "control7-05-r6",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://health.ec.europa.eu/ehealth-digital-health-and-care/european-health-data-space-regulation-ehds_en"
+      ],
+      "statement": "EHDS lab-result exchange and genomic secondary-use milestones apply mainly from March 2031, so EHDS does not establish near-term demand."
+    },
+    {
+      "claim_id": "control7-05-r7",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.congenica.com/news-insights/genomealert-automating-genetic-variant-reassessment"
+      ],
+      "statement": "SeqOne GenomeAlert already automates monthly review of historical cases against updated variant knowledge, directly occupying the automated-reevaluation layer."
+    },
+    {
+      "claim_id": "control7-05-r8",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://warsawgenomics.pl/panel/badanie-caloeksomowe-jednej-osoby-wes-reanaliza-danych",
+        "https://diagnostyka.genomed.pl/pl/shop/product/EXOME-2/",
+        "https://csk.umed.pl/cenniki/zaklad-i-poradnia-gen-kli/"
+      ],
+      "statement": "Polish laboratories currently sell WES reanalysis at published prices, including 1300 PLN at Genomed, 2194 PLN at Warsaw Genomics, and scoped or external-lab reanalysis from 300 to 1200 PLN at a university hospital."
+    },
+    {
+      "claim_id": "control7-05-r9",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.ncbi.nlm.nih.gov/clinvar/docs/submit/"
+      ],
+      "statement": "ClinVar is a free weekly-updated comparison layer for variant classifications, though its submitted classifications are not a patient-specific recontact workflow."
+    },
+    {
+      "claim_id": "control7-05-r10",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC6559819/",
+        "https://pubmed.ncbi.nlm.nih.gov/31779608/",
+        "https://health.ec.europa.eu/document/download/b45335c5-1679-4c71-a91c-fc7a4d37f12b_en?filename=mdcg_2019_11_en.pdf",
+        "https://www.congenica.com/news-insights/genomealert-automating-genetic-variant-reassessment"
+      ],
+      "statement": "A lab-owned consent, audit, and recontact layer is inferred to be more defensible and more regulatory-bounded than another autonomous interpretation engine."
+    }
+  ],
+  "contrary_evidence": [
+    "Automated genomic reevaluation is already offered by SeqOne GenomeAlert, a direct incumbent.",
+    "Polish laboratories already monetize reanalysis internally, so a new platform may displace existing workflow or margin rather than create it.",
+    "Clinical laboratories reported routine periodic reinterpretation as unfeasible and responsibility remains unsettled.",
+    "IVDR can make diagnostic interpretation software a regulated IVD, incompatible with a rapid low-capital launch.",
+    "EHDS genomic milestones are too late to validate immediate demand.",
+    "ClinVar supplies a free, weekly-updated public classification comparison source."
+  ],
+  "economics": {
+    "acquisition_route": "A paid pilot with a Polish lab retaining its own WES data, followed by integrations with lab systems and interpretation incumbents rather than consumer acquisition",
+    "capital_required_pln": 95000,
+    "founder_net_worth_path": "The v1 scenario of 100000 active records at 60 PLN annually is not validated. Current evidence proves paid reanalysis and workflow burden but not subscription conversion, addressable records, churn, or margins, so a credible timing to 5m PLN remains unknown before paid lab pilots",
+    "founder_time": "About 3 hours/day for product and data work if clinical interpretation, regulatory quality, security, and laboratory sales are delegated; an IVD path would likely exceed the part-time wedge",
+    "gross_margin_basis": "Target 55-75% after secure hosting, consent operations, identity reconciliation, support, audits, and clinical-workflow integration; no cost evidence validates the target",
+    "payback": "Unknown until a lab discloses eligible record volume, import quality, staff time saved, security cost, and paid renewal intent",
+    "pricing": "Unvalidated platform price of 60-180 PLN per active record yearly; public Polish clinical reanalysis prices observed range from 300 PLN for scoped work to 2194 PLN for WES reanalysis, but those service prices do not prove platform willingness to pay",
+    "retention_or_repeat": "Historical records persist and approved change events recur, but public Polish offers are episodic reanalysis services rather than proven annual registry subscriptions"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Laboratory integrations, consent and contact continuity, case-to-report mappings, audited outcomes, and embedded recontact workflow rather than a proprietary medical classifier",
+    "customer": "EU clinical genetics laboratories and genetics clinics that retain historical sequencing results and patient contact responsibility",
+    "distribution_mechanism": "One Polish laboratory pilot using its own archived WES cases, then white-label integrations with laboratory information and interpretation systems",
+    "offer_and_business_model": "Consent registry, import and identity mapping, lab-owned review queue, audit trail, approved-notice workflow, and patient recontact portal; no autonomous variant classification or diagnosis",
+    "payer_and_paid_event": "A laboratory or clinic pays per active historical record and workflow; the laboratory separately bills any clinician-approved reanalysis",
+    "problem_trigger": "A laboratory-approved variant change, new phenotype, or external reanalysis request makes an historical case eligible for review and possible recontact"
+  },
+  "founder_fit": [
+    "Strong match for genetics, health, data science, and evidence automation",
+    "A workflow-only pilot can use AI for triage while clinicians retain all decisions",
+    "B2B laboratory distribution avoids camera-led marketing",
+    "Clinical, privacy, security, and regulatory responsibilities require delegated specialists and may exceed the initial capital if the product is deemed IVD software"
+  ],
+  "parent": {
+    "candidate_id": "control7-05",
+    "version": 2
+  },
+  "risks": [
+    "Incorrect matching or premature notification can cause clinical harm",
+    "Genetic data require exceptional privacy, security, and breach response",
+    "Interpretation incumbents can add consent and recontact features",
+    "Laboratories may reject ongoing duties or third-party data custody",
+    "Regulatory scope can expand with product language or functionality",
+    "The available capital may not cover clinical quality and certification if the administrative boundary fails"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC6559819/",
+    "https://pubmed.ncbi.nlm.nih.gov/31779608/",
+    "https://www.eshg.org/fileadmin/eshg/consultations/Recontacting_Draft_ESHG__Recommendations_March_2018_for_membership.pdf",
+    "https://health.ec.europa.eu/document/download/b45335c5-1679-4c71-a91c-fc7a4d37f12b_en?filename=mdcg_2019_11_en.pdf",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1526560528451&uri=CELEX:32016R0679",
+    "https://health.ec.europa.eu/ehealth-digital-health-and-care/european-health-data-space-regulation-ehds_en",
+    "https://www.congenica.com/news-insights/genomealert-automating-genetic-variant-reassessment",
+    "https://warsawgenomics.pl/panel/badanie-caloeksomowe-jednej-osoby-wes-reanaliza-danych",
+    "https://diagnostyka.genomed.pl/pl/shop/product/EXOME-2/",
+    "https://csk.umed.pl/cenniki/zaklad-i-poradnia-gen-kli/",
+    "https://www.ncbi.nlm.nih.gov/clinvar/docs/submit/"
+  ],
+  "stage": "development",
+  "structure": {
+    "commercial_archetype": "Longitudinal clinical-workflow subscription with lab-billed reanalysis",
+    "control_point": "The laboratory-authorized consent and recontact channel linking an historical case to an approved updated report",
+    "critical_dependency": "Laboratories must export structured historical identifiers, remain the medical decision-maker, accept an ongoing workflow, and obtain a favorable regulatory intended-purpose assessment"
+  },
+  "thesis": "Give clinical genetics laboratories a vendor-neutral consent, case-queue, audit, and patient-recontact layer that receives laboratory-approved change events from existing interpretation systems. The product should not classify variants or issue diagnoses: laboratories retain medical judgment, reports, and reanalysis fees. This narrower workflow wedge addresses documented policy and recontact burden while avoiding direct competition with mature interpretation engines, though IVDR qualification still requires an intended-purpose assessment.",
+  "title": "Laboratory-Owned Genomic Reanalysis and Recontact Workflow",
+  "uncertainties": [
+    "Laboratory willingness to import historical records into a third-party workflow and accept continuing recontact operations",
+    "Whether the workflow-only intended purpose avoids IVD qualification in the exact implementation",
+    "Who pays the annual record fee versus episodic clinical reanalysis",
+    "Consent scope, patient identity resolution, contact decay, and deletion or withdrawal handling",
+    "Eligible record volumes and structured-data portability across laboratories",
+    "Paid pilot conversion, integration cost, renewal, gross margin, and founder-net-worth timing"
+  ],
+  "version": 3
+}

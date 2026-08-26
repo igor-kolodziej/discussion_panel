@@ -1,0 +1,171 @@
+{
+  "candidate_id": "asset-05",
+  "candidate_sha256": "5f6db0cef6d92fcfeb7d645e3c07087fdb3330e345a6e583cad8024a4914a2d9",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "asset-05-r1",
+      "evidence_refs": [
+        "asset-05-s1"
+      ],
+      "statement": "Polish law includes photovoltaic panels in WEEE group 4 and allows duties to be performed directly or through a recovery organization under written contract while producer responsibility remains."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "asset-05-r2",
+      "evidence_refs": [
+        "asset-05-s1"
+      ],
+      "statement": "A statutory recovery organization must be a producer-side joint-stock company with at least 5 million PLN fully paid in cash before registration; debt funding is prohibited, and ownership, reserves, environmental management, education, and audits are constrained by law."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "asset-05-r3",
+      "evidence_refs": [
+        "asset-05-s2",
+        "asset-05-s3"
+      ],
+      "statement": "EU law assigns producers financing responsibility for PV-panel collection and treatment, confirming recurring demand for compliant execution."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "asset-05-r4",
+      "evidence_refs": [
+        "asset-05-s4",
+        "asset-05-s5"
+      ],
+      "statement": "BDO reporting records producer contracts and collection, processing, recovery, and recycling mass flows."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "asset-05-r5",
+      "evidence_refs": [
+        "asset-05-s7",
+        "asset-05-s8",
+        "asset-05-s9"
+      ],
+      "statement": "ElektroEko, ELECTRO-SYSTEM, and TOM already sell the full compliance and treatment-network bundle to producers and importers."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "asset-05-r6",
+      "evidence_refs": [
+        "asset-05-s6"
+      ],
+      "statement": "At year-end 2025 Poland had 1,636,673 renewable microinstallations totaling nearly 13.9 GW, 99.9% photovoltaic, creating a large eventual installed base."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "asset-05-r7",
+      "evidence_refs": [
+        "asset-05-s1"
+      ],
+      "statement": "The frozen statutory collective cannot be bootstrapped with 65000 PLN or the founder's available 100000-200000 PLN because the non-debt paid-in legal floor is 5 million PLN."
+    }
+  ],
+  "contrary_evidence": [
+    "The legal capital requirement directly invalidates the discovery-stage capital assumption.",
+    "Statutory ownership limits constrain founder-owned equity.",
+    "Multiple incumbents already provide the end-to-end duty-transfer bundle."
+  ],
+  "schema_version": 2,
+  "sources": [
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2024-04-26",
+      "publisher": "Polish Electronic Legal Acts system",
+      "source_id": "asset-05-s1",
+      "source_type": "law",
+      "stance": "contradicting",
+      "title": "Consolidated Polish Act of 11 September 2015 on waste electrical and electronic equipment",
+      "url": "https://eli.gov.pl/api/acts/DU/2024/573/text.html"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2024-04-08",
+      "publisher": "Official Journal of the European Union",
+      "source_id": "asset-05-s2",
+      "source_type": "law",
+      "stance": "supporting",
+      "title": "Consolidated Directive 2012/19/EU on WEEE",
+      "url": "https://eur-lex.europa.eu/eli/dir/2012/19/2024-04-08/eng"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2024-03-19",
+      "publisher": "Official Journal of the European Union",
+      "source_id": "asset-05-s3",
+      "source_type": "law",
+      "stance": "supporting",
+      "title": "Directive (EU) 2024/884 amending the WEEE Directive for photovoltaic panels",
+      "url": "https://eur-lex.europa.eu/eli/dir/2024/884/oj"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2025-01-01",
+      "publisher": "Polish BDO",
+      "source_id": "asset-05-s4",
+      "source_type": "regulator_manual",
+      "stance": "context",
+      "title": "BDO reporting manual for products, packaging, and waste management, version 1.3",
+      "url": "https://bdo.mos.gov.pl/wp-content/uploads/2025/01/BDO_SPR_IS-Sprawozdanie-o-produktach-opakowaniach-i-o-gospodarowaniu-odpadami-wersja-1.3.pdf"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "Chief Inspectorate of Environmental Protection",
+      "source_id": "asset-05-s5",
+      "source_type": "regulator_guidance",
+      "stance": "context",
+      "title": "General information on waste electrical and electronic equipment obligations",
+      "url": "https://www.gov.pl/web/gios/informacje-ogolne"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2026-03-25",
+      "publisher": "Polish Energy Regulatory Office",
+      "source_id": "asset-05-s6",
+      "source_type": "official_statistics",
+      "stance": "supporting",
+      "title": "Poland has more than 1.6 million renewable microinstallations",
+      "url": "https://www.ure.gov.pl/pl/urzad/informacje-ogolne/aktualnosci/13173%2CRaport-URE-w-Polsce-mamy-juz-ponad-16-mln-mikroinstalacji-OZE.html"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "ElektroEko",
+      "source_id": "asset-05-s7",
+      "source_type": "incumbent_service",
+      "stance": "contradicting",
+      "title": "Producer responsibility services",
+      "url": "https://www.elektroeko.pl/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "ELECTRO-SYSTEM",
+      "source_id": "asset-05-s8",
+      "source_type": "incumbent_service",
+      "stance": "contradicting",
+      "title": "WEEE compliance services for producers and importers",
+      "url": "https://www.electro-system.pl/en/home/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2024-08-01",
+      "publisher": "TOM WEEE Recovery Organization via Gov.pl",
+      "source_id": "asset-05-s9",
+      "source_type": "incumbent_primary_document",
+      "stance": "contradicting",
+      "title": "TOM WEEE Recovery Organization EMAS environmental statement",
+      "url": "https://www.gov.pl/attachment/9b1de0b7-6e96-4a6d-b94e-72b7dc681cf2"
+    }
+  ],
+  "unknowns": [
+    "Whether eligible producers would capitalize and appoint the founder",
+    "Incumbent contract prices and importer switching rates",
+    "PV return mass by cohort and treatment cost",
+    "Guarantee, insurance, audit, and product-fee exposure"
+  ]
+}

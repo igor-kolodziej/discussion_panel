@@ -1,0 +1,127 @@
+{
+  "candidate_id": "channel-06",
+  "claims": [
+    {
+      "claim_id": "channel-06-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32022L2555"
+      ],
+      "statement": "NIS2 Article 21 requires covered entities to address supply-chain security, including security-related aspects of relationships with direct suppliers and service providers, and to consider supplier-specific vulnerabilities and cybersecurity practices."
+    },
+    {
+      "claim_id": "channel-06-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg_impl/2024/2690"
+      ],
+      "statement": "Commission Implementing Regulation (EU) 2024/2690 requires the digital-sector entities within its scope to maintain a direct-supplier directory and adopt supplier selection, contracting, review, and exit requirements; it is not a universal detailed template for every NIS2 sector."
+    },
+    {
+      "claim_id": "channel-06-c03",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.enisa.europa.eu/sites/default/files/publications/Good%20Practices%20for%20Supply%20Chain%20Cybersecurity.pdf"
+      ],
+      "statement": "ENISA's 2022 survey found broad supply-chain policy adoption but thinner staffing and budget coverage, consistent with a labour-saving managed workflow need rather than evidence of willingness to buy this particular product."
+    },
+    {
+      "claim_id": "channel-06-c04",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://processunity.zendesk.com/hc/en-us/articles/33974053261595-Third-Party-Legal-FAQ",
+        "https://www.whistic.com/trust-catalog",
+        "https://www.onetrust.com/products/third-party-risk-management/",
+        "https://drata.com/products/third-party-risk-management"
+      ],
+      "statement": "Established products already offer reusable assessments, security-information exchanges, vendor inventories, questionnaires, monitoring, and recurring reviews, so evidence reuse alone is not differentiated."
+    },
+    {
+      "claim_id": "channel-06-c05",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://www.edpb.europa.eu/sme/learn-the-basics/data-controller-or-data-processor_en"
+      ],
+      "statement": "A passport operator that processes identifiable contacts or other personal data for MSP clients needs explicit controller-processor allocation, contractual instructions, security measures, and audit support under GDPR."
+    },
+    {
+      "claim_id": "channel-06-c06",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://www.enisa.europa.eu/publications/nis2-technical-implementation-guidance",
+        "https://help.vanta.com/en/articles/11345557-third-party-risk-management-product-overview"
+      ],
+      "statement": "Hypothesis: a constrained evidence-and-expiry layer can earn adoption if it maps official guidance into an MSP's existing process and imports or exports to incumbent GRC systems; no source establishes MSP willingness to white-label it or the proposed price."
+    }
+  ],
+  "contrary_evidence": [
+    "ProcessUnity already describes a one-assessment, share-many-times exchange, which directly overlaps the reusable-passport premise.",
+    "Whistic, OneTrust, Vanta, and Drata already cover security-document exchange, vendor inventories, questionnaires, evidence collection, monitoring, and recurring assessments.",
+    "The detailed requirements in Regulation 2024/2690 apply to specified digital and ICT-service entities, while obligations and enforcement details elsewhere depend on sector and national implementation; a universal NIS2 questionnaire is not established.",
+    "None of the reviewed incumbent pages publishes a directly comparable per-supplier price, and no public evidence validates MSP revenue share, white-label appetite, supplier response rates, or customer acceptance of a third-party passport."
+  ],
+  "economics": {
+    "acquisition_route": "Secure one paid Polish or CEE MSP design partner, prove reuse on 100-300 supplier reviews, then sell through MSP referrals and interoperable exports rather than replacing the customer's GRC suite.",
+    "capital_required_pln": 85000,
+    "founder_net_worth_path": "Unvalidated years 7-10 scenario: 30000 active supplier records at a blended 22 PLN per month produces about 7.92 million PLN ARR. At 20% EBITDA, a 5x EBITDA value, and 70% founder ownership, founder equity is about 5.54 million PLN; this excludes retained cash to avoid double counting and requires repeatable MSP activation, controlled liability, and low integration cost.",
+    "founder_time": "18-25 hours weekly through design partnership and security-hardening; reduce below 15 hours only after onboarding and evidence-review operations are partner-owned.",
+    "gross_margin_basis": "Target 75-85% after encrypted storage, audit logging, security monitoring, and partner support; independent security reviews, insurance, and bespoke integrations are operating expenses that can depress early margins.",
+    "payback": "Unknown until a partner measures hours saved and activation. A go/no-go target is that the MSP's first-year fee be recoverable from documented review labour or a separately sold managed-compliance package within 12 months.",
+    "pricing": "Unvalidated conservative hypothesis: 18000-45000 PLN annual MSP minimum plus 12-35 PLN per active supplier-month; reviewed incumbents use demos, contact sales, or add-ons and do not supply a clean public benchmark.",
+    "retention_or_repeat": "Supplier reviews recur, evidence expires, contracts change, and incidents create updates; retention still depends on remaining inside the MSP workflow and exporting data cleanly."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Verified mapping history, evidence-expiry behaviour, and customer-approved reuse patterns accumulated across MSP-managed reviews",
+    "customer": "European MSPs serving mid-market NIS2-scope organisations and the organisations' direct ICT suppliers",
+    "distribution_mechanism": "Paid MSP design partners followed by integration into their managed-security or compliance packages",
+    "offer_and_business_model": "Permissioned evidence provenance, expiry, questionnaire mapping, and review-ledger SaaS embedded in an MSP service",
+    "payer_and_paid_event": "MSP pays an annual platform minimum plus a low fee for each active supplier record under review",
+    "problem_trigger": "A supplier is onboarded, renewed, materially changed, or implicated in an incident and current control evidence must be reviewed"
+  },
+  "founder_fit": [
+    "Strong fit with structured evidence, data modelling, automation, and low-camera B2B work.",
+    "The founder can run a bounded prototype alongside employment, but secure architecture, penetration testing, and contractual review require paid specialists.",
+    "The product should never be marketed as certification, and the founder should avoid personally making supplier-security approval decisions.",
+    "MSP-led selling reduces but does not eliminate relationship-heavy enterprise discovery; a design-partner gate is needed before a full build."
+  ],
+  "parent": {
+    "candidate_id": "channel-06",
+    "version": 1
+  },
+  "risks": [
+    "A stale or over-broad assertion could be relied upon in a supplier approval and create contractual, regulatory, and reputational exposure.",
+    "Centralised security evidence and contact chains create a high-value attack target and raise the product's own NIS2 and GDPR diligence burden.",
+    "Large GRC vendors or MSP platforms can bundle the narrow workflow once demand is demonstrated.",
+    "MSP concentration can turn a nominally scalable channel into bespoke integration and support work.",
+    "Questionnaire mappings can obscure customer-specific risk unless every mapping preserves source, scope, owner, expiry, and human approval."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32022L2555",
+    "https://www.enisa.europa.eu/sites/default/files/publications/Good%20Practices%20for%20Supply%20Chain%20Cybersecurity.pdf",
+    "https://www.enisa.europa.eu/publications/nis2-technical-implementation-guidance",
+    "https://eur-lex.europa.eu/eli/reg_impl/2024/2690",
+    "https://processunity.zendesk.com/hc/en-us/articles/33974053261595-Third-Party-Legal-FAQ",
+    "https://www.whistic.com/trust-catalog",
+    "https://www.onetrust.com/products/third-party-risk-management/",
+    "https://help.vanta.com/en/articles/11345557-third-party-risk-management-product-overview",
+    "https://drata.com/products/third-party-risk-management",
+    "https://www.edpb.europa.eu/sme/learn-the-basics/data-controller-or-data-processor_en"
+  ],
+  "stage": "research",
+  "structure": {
+    "commercial_archetype": "Reusable B2B credential and evidence network",
+    "control_point": "The evidence provenance, expiry, and human approval record inside an MSP-managed direct-supplier review",
+    "critical_dependency": "MSP distribution plus customer acceptance of permissioned evidence reuse without treating the record as certification"
+  },
+  "thesis": "Offer European MSPs a permissioned supplier-security evidence layer that records evidence provenance and expiry, maps the same evidence into risk-specific customer questionnaires, and leaves approval and remediation decisions with the MSP or customer. The defensible wedge is not generic questionnaire automation but a narrowly scoped, MSP-operated record that can be reused across annual direct-supplier reviews without being represented as certification.",
+  "title": "Supplier Security Passport",
+  "uncertainties": [
+    "Whether two or more Polish or CEE MSPs will sponsor a paid design partnership and provide anonymised questionnaire corpora.",
+    "What minimum common control set can map across customer questionnaires without creating misleading equivalence.",
+    "Whether customers will accept evidence uploaded once by a supplier or insist on their own portal, attestations, or fresh audit reports.",
+    "What security architecture, insurance, and contractual liability caps enterprise buyers will require.",
+    "Whether incumbents expose sufficient import, export, or API surfaces for an MSP-owned overlay instead of forcing replacement."
+  ],
+  "version": 2
+}

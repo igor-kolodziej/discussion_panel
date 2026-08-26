@@ -1,0 +1,83 @@
+{
+  "judge_id": "c5-working-channel-12",
+  "assumptions": [
+    "The product remains read-only downstream of the payer's PSP result, and a human at the customer always authorizes or rejects the payment.",
+    "The absence of partner access, exception-volume data, pilots, and willingness-to-pay evidence is treated as uncertainty rather than proof of no demand.",
+    "The initial beachhead is euro-area multi-bank enterprises or payment bureaus; Poland is not assumed to provide the immediate regulatory wedge before July 2027.",
+    "Supplier identity and resolution data remain tenant-specific unless explicit contractual and legal permission supports broader reuse."
+  ],
+  "factors": [
+    {
+      "name": "Core insight",
+      "status": "scored",
+      "score": 6,
+      "rationale": "A verification result does not resolve the close-match, no-match, or unavailable case, so the gap between regulated messaging and safe supplier-master remediation is real. The insight is useful but already adjacent to incumbent portal and audit functionality."
+    },
+    {
+      "name": "Customer pain and willingness to pay",
+      "status": "scored",
+      "score": 7,
+      "rationale": "Fraudulent credit transfers cause large documented losses, users bear most losses, and unresolved beneficiary exceptions can delay or misdirect high-value payments. This provides a strong basis for buyer pain, although exception frequency and incremental willingness to pay beyond a free bank result are unknown."
+    },
+    {
+      "name": "Business model and economics",
+      "status": "scored",
+      "score": 4,
+      "rationale": "A tenant subscription plus documented-resolution fee can align with enterprise value without reselling the mandated check. Long partner and security reviews, revenue share, support, low possible exception volume, and third-party data costs threaten margin and payback; all retention and wealth-path assumptions are unvalidated."
+    },
+    {
+      "name": "Market and beachhead",
+      "status": "scored",
+      "score": 6,
+      "rationale": "Euro-area enterprise AP teams and payment bureaus with complex bulk and multi-bank workflows are a narrow, economically consequential segment. The free PSP service, bulk opt-out, and later Polish deadline reduce the immediately addressable software budget but do not eliminate the operational niche."
+    },
+    {
+      "name": "Competitive position and domination potential",
+      "status": "scored",
+      "score": 2,
+      "rationale": "SurePay already has extensive bank coverage, enormous verification volume, thousands of organizational users, APIs, a white-label portal, and audit functionality, while banks such as AIB own the corporate channel. An independent vendor has little basis for segment domination without a privileged AP-platform position."
+    },
+    {
+      "name": "Expansion potential",
+      "status": "scored",
+      "score": 6,
+      "rationale": "A trusted exception layer can expand into supplier-master hygiene, change-of-bank-detail controls, payment-bureau workflows, additional banks, and adjacent fraud evidence. Those adjacencies remain security-sensitive and dependent on partner interfaces, but they are commercially coherent."
+    },
+    {
+      "name": "Defensibility and durability",
+      "status": "scored",
+      "score": 4,
+      "rationale": "Tenant-specific supplier aliases, confirmed outcomes, and embedded approval playbooks can create switching costs and improve recommendations. Without lawful cross-tenant learning there is no true network effect, and the incumbent already operates a much broader shared verification graph."
+    },
+    {
+      "name": "Strength of advantage",
+      "status": "scored",
+      "score": 3,
+      "rationale": "Structured evidence gathering and supplier-record correction can be more useful than a bare verification result. The packet does not establish a material advantage over SurePay's workflow or bank-native portals in fraud reduction, speed, accuracy, auditability, or total cost."
+    },
+    {
+      "name": "Timing and momentum",
+      "status": "scored",
+      "score": 6,
+      "rationale": "The regulatory rollout forces euro payment workflows to ingest new results and creates a timely integration window. Corporate opt-out, an established provider ecosystem, and Poland's July 2027 deadline make the momentum uneven for this founder's most accessible geography."
+    },
+    {
+      "name": "Distribution",
+      "status": "scored",
+      "score": 2,
+      "rationale": "The published scheme API is inter-PSP, so a bank, PSP, or AP platform must expose the result contractually. No such relationship exists, and the same gatekeepers can provide or bundle competing exception workflows while retaining the enterprise customer."
+    },
+    {
+      "name": "Execution and risks",
+      "status": "scored",
+      "score": 4,
+      "rationale": "The founder is technically suited to entity resolution and auditable data systems, and a read-only prototype is conceivable within stated time. Bank-grade security, payments counsel, insurance, enterprise integration, false-resolution liability, partner support, and near-ceiling pilot capital materially complicate part-time execution."
+    }
+  ],
+  "interaction_adjustment": -0.3,
+  "main_structural_strength": "The workflow sits after a mandatory verification message but before an irreversible human-authorized payment, allowing a well-integrated product to tie supplier-master correction and evidence directly to avoided loss and approval-cycle time.",
+  "primary_score_limiter": "Essential data access and customer distribution depend on PSP, bank, or AP-platform partners that already control the workflow and can choose an incumbent, bundle the exception layer, or withhold the interface.",
+  "strongest_disconfirming_evidence": "SurePay already supplies bulk APIs, white-label portals, audit-oriented workflow, broad bank connectivity, and massive verification intelligence, and AIB demonstrates that a bank can distribute that corporate workflow natively.",
+  "evidence_needed_for_higher_score": "A contractually authorized PSP or AP-platform design partner; paid pilots with measured exception rates and resolution time; proof of fraud-loss or labor reduction beyond the free result; security and legal feasibility; and validated partner costs, gross margin, retention, and enterprise acquisition payback.",
+  "highest_value_structural_change": "Replace the independent network thesis with a white-label, multi-bank supplier-master remediation module for one AP platform or payment bureau, using that partner's authorized result feeds and distribution to solve cross-bank normalization that individual bank portals do not."
+}

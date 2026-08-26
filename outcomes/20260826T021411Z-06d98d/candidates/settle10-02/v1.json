@@ -1,0 +1,73 @@
+{
+  "candidate_id": "settle10-02",
+  "claims": [
+    {
+      "claim_id": "settle10-02-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.daikin.eu/en_us/service/warranty/stand-by-me.html",
+        "https://www.daikin.eu/content/dam/deio/Daikin%20Stand%20By%20Me%20-%20Homeowner%20registration%20guide.pdf"
+      ],
+      "statement": "Daikin's Stand By Me portal lets owners and installers manage registration, maintenance records, service comments, and warranty-related documents."
+    },
+    {
+      "claim_id": "settle10-02-c2",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://climate.ec.europa.eu/system/files/2022-04/f-gases_impact_assessment_en.pdf",
+        "https://www.daikin.eu/en_us/service/warranty/stand-by-me.html"
+      ],
+      "statement": "Demand hypothesis: multi-brand service networks will pay for a neutral ledger because EU F-gas controls include leak checks and company recordkeeping."
+    }
+  ],
+  "contrary_evidence": [
+    "Major OEMs already maintain brand-specific service portals.",
+    "Not every heat pump or refrigerant charge triggers the same inspection duties."
+  ],
+  "economics": {
+    "acquisition_route": "One distributor pilot can recruit an existing installer base without founder-led mass selling.",
+    "capital_required_pln": 45000,
+    "founder_net_worth_path": "Hypothesis: 25000 managed assets across several distributors can produce 3-5 million PLN recurring revenue and founder equity above 5 million PLN in five years.",
+    "founder_time": "Three to four hours daily for product and channel support.",
+    "gross_margin_basis": "Hypothesis: 82-90% margin once service templates and exports are automated.",
+    "payback": "Hypothesis: 150 technicians and 3000 assets repay initial capital within twelve months.",
+    "pricing": "Hypothesis: 80-180 PLN per technician monthly plus 3-8 PLN per managed asset.",
+    "retention_or_repeat": "Mandatory or warranty-linked service visits renew the evidence record every year."
+  },
+  "fingerprint": {
+    "compounding_advantage": "The asset-level history and model-specific service rules become harder to replace with every visit.",
+    "customer": "HVAC service networks, heat-pump installers, and commercial equipment owners.",
+    "distribution_mechanism": "Refrigerant and HVAC distributors bundle it with technician accounts, parts, or extended-warranty programs.",
+    "offer_and_business_model": "Mobile capture creates a verified service history and exports audit or warranty-ready dossiers.",
+    "payer_and_paid_event": "A distributor or service network pays per technician and per active asset each month.",
+    "problem_trigger": "A leak check, annual service, or failure requires records that are scattered across technicians, owners, and OEM portals."
+  },
+  "founder_fit": [
+    "Renewable-installation family access supports a low-cost pilot.",
+    "Recurring data capture suits analytical automation and limited social energy."
+  ],
+  "parent": null,
+  "risks": [
+    "Incorrect compliance prompts could create liability.",
+    "Technician data entry may be inconsistent."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.daikin.eu/en_us/service/warranty/stand-by-me.html",
+    "https://www.daikin.eu/content/dam/deio/Daikin%20Stand%20By%20Me%20-%20Homeowner%20registration%20guide.pdf",
+    "https://climate.ec.europa.eu/system/files/2022-04/f-gases_impact_assessment_en.pdf"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Recurring compliance ledger with warranty recovery.",
+    "control_point": "The time-stamped asset service and refrigerant history.",
+    "critical_dependency": "Reliable technician capture and country-specific rule maintenance."
+  },
+  "thesis": "A technician-native ledger can preserve maintenance and refrigerant evidence once and reuse it for recurring audits, warranty eligibility, and equipment claims.",
+  "title": "Heat-Pump Service Evidence Ledger",
+  "uncertainties": [
+    "Distributor willingness to mandate the workflow is unknown.",
+    "The addressable multi-brand asset count in Poland is unverified."
+  ],
+  "version": 1
+}

@@ -1,0 +1,83 @@
+{
+  "candidate_id": "settle9-12",
+  "claims": [
+    {
+      "claim_id": "settle9-12-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.pse.pl/pl_PL/redysponowanie-nierynkowe"
+      ],
+      "statement": "PSE states that owners of renewable installations that complied with PSE output-reduction commands may apply for financial compensation for non-market redispatch."
+    },
+    {
+      "claim_id": "settle9-12-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.pse.pl/WOZE"
+      ],
+      "statement": "PSE's WOZE portal supports configured redispatch commands, compensation applications and published calculation rules for PV and wind installations."
+    },
+    {
+      "claim_id": "settle9-12-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.pse.pl/WOZE",
+        "https://www.pse.pl/instalacje-fw"
+      ],
+      "statement": "PSE explicitly allows different roles for owners and entities serving applicants, and its wind guidance describes a temporary route for service entities submitting many applications, supporting a portfolio-channel model."
+    }
+  ],
+  "contrary_evidence": [
+    "PSE now provides WOZE and calculation guidance, so simple form filling has little durable value.",
+    "Owners and O&M firms with large portfolios may build internal claim automation."
+  ],
+  "economics": {
+    "acquisition_route": "Pilot one multi-asset O&M portfolio on historical redispatch events, prove missed-value or labor savings, then distribute through asset managers and traders",
+    "capital_required_pln": 70000,
+    "founder_net_worth_path": "Hypothesis: 1.5-2.0 GW monitored at 250-300 PLN per MW-month plus recovery fees yields 5-8m PLN annual revenue by years 5-7. With 20-30% margin, majority ownership and retained earnings, founder net worth could exceed 5m PLN in years 6-8.",
+    "founder_time": "15-22 hours weekly during the first telemetry integration and historical audit; event operations can become exception-only",
+    "gross_margin_basis": "Hypothesis: 65-80% during managed launch, rising above 82% once telemetry mappings and calculation checks standardize",
+    "payback": "Hypothesis: 2-6 months if a historical audit finds valid missed compensation; otherwise 6-12 months on monitoring fees",
+    "pricing": "Hypothesis: 250-900 PLN per monitored MW monthly plus 4-10% of incremental valid compensation recovered; portfolio minimum 3,000 PLN monthly",
+    "retention_or_repeat": "Monitoring is continuous and each redispatch event creates a new claim/reconciliation cycle; asset history improves expected-output diagnostics"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Command-to-telemetry-to-outcome dataset improves counterfactual-quality checks, detects missing claim windows and benchmarks which evidence/calculation issues delay acceptance",
+    "customer": "Polish owners and O&M managers of PV and wind installations exposed to PSE non-market redispatch",
+    "distribution_mechanism": "Renewable O&M firms, installers, asset managers and energy traders bundle the desk across managed portfolios; the founder's family company can open adjacent installer discovery, not supply confidential customer data",
+    "offer_and_business_model": "Authorized claim-preparation and reconciliation SaaS with a managed evidence desk, priced by MW and recovered amount",
+    "payer_and_paid_event": "Asset owner pays per monitored MW-month and a success fee when a valid compensation claim is paid or an underpayment is corrected",
+    "problem_trigger": "PSE orders output reduction and the owner must turn command, telemetry and calculation evidence into a complete compensation application or reconcile the paid amount"
+  },
+  "founder_fit": [
+    "Strong renewable-energy adjacency through the family business and local market knowledge.",
+    "Time-series modeling and evidence reconciliation fit data-science strengths.",
+    "A multi-asset O&M partner offers scalable distribution without a founder persona."
+  ],
+  "parent": null,
+  "risks": [
+    "Counterfactual generation estimates are contestable and require transparent formulas.",
+    "Market-rule changes can alter eligibility and calculations.",
+    "Success fees and authorization must be contractually compatible with PSE processes and Polish law."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.pse.pl/pl_PL/redysponowanie-nierynkowe",
+    "https://www.pse.pl/WOZE",
+    "https://www.pse.pl/instalacje-fw"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Contingent-recovery service evolving into asset-monitoring SaaS",
+    "control_point": "Owner approval and submission of a WOZE compensation application, followed by reconciliation of PSE's calculation and payment",
+    "critical_dependency": "Authorized access to high-quality plant telemetry and PSE claim inputs, plus stable calculation rules and a channel with a multi-asset portfolio"
+  },
+  "thesis": "Build a data-to-claim service for Polish PV and wind owners whose installations comply with non-market redispatch instructions. It reconciles PSE commands, plant telemetry, availability, market and settlement inputs, contractual allocations and submitted WOZE calculations; flags missing or inconsistent periods; and prepares an owner-approved compensation packet. Start with a renewable O&M firm or installer serving multiple assets, charging a monitored-MW fee plus a bounded recovery fee. The product acts only with customer authorization, does not manufacture counterfactual output and leaves formal acceptance to the owner and PSE.",
+  "title": "OZE Curtailment Compensation Desk",
+  "uncertainties": [
+    "Total MW outside sophisticated in-house asset managers",
+    "Observed rejection, underpayment and missed-claim rate",
+    "Telemetry standardization across PV and wind controllers"
+  ],
+  "version": 1
+}

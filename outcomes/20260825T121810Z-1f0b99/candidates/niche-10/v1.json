@@ -1,0 +1,80 @@
+{
+  "candidate_id": "niche-10",
+  "claims": [
+    {
+      "claim_id": "niche-10-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eli.gov.pl/api/acts/DU/2024/904/text.html"
+      ],
+      "statement": "Polish tariff rules provide specific charges for exceeding contracted active power, calculated from recorded power excesses, and provide correction procedures for billing or metering errors."
+    },
+    {
+      "claim_id": "niche-10-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.tauron-dystrybucja.pl/uslugi-dystrybucyjne/stawki-oplat-dystrybucyjnych/energia-bierna"
+      ],
+      "statement": "TAURON publicly explains that excessive reactive-energy consumption is charged separately by delivery point and that customers must remain within both reactive-power and contracted-power limits."
+    },
+    {
+      "claim_id": "niche-10-c03",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://www.ure.gov.pl/pl/konsumenci/rachunki-pod-kontrola-konsumen/skladowe-rachunku-za-energie-e/12783%2CSkladowe-rachunku-za-energie-elektryczna.html"
+      ],
+      "statement": "Hypothesis: a portfolio-level scanner sold on verified savings can reach sites ignored by traditional energy audits, but the frequency and magnitude of avoidable charges must be established from real invoices."
+    }
+  ],
+  "contrary_evidence": [
+    "Electrical contractors and energy consultants already diagnose reactive power and can bundle hardware with an audit.",
+    "Many SMEs have charges too small or too volatile to support a meaningful success fee."
+  ],
+  "economics": {
+    "acquisition_route": "Scan invoices from family-business customers, then let electrical contractors offer the no-upfront audit during service visits",
+    "capital_required_pln": 45000,
+    "founder_net_worth_path": "Hypothesis: 1,000 monitored sites at about 3.6k PLN ARR plus 1M PLN annual success fees produce 4.6M PLN revenue and 1.8M PLN EBITDA by year 5. At 4x EBITDA and 70% ownership, equity reaches about 5M PLN in years 5 to 7.",
+    "founder_time": "10 to 16 hours weekly for model QA and partner enablement after the first twenty audited portfolios",
+    "gross_margin_basis": "Target 70% to 85% for software audits; inspection and installation are pass-through partner services",
+    "payback": "Pricing is funded from measured savings; the customer keeps at least 80% in year 1 and nearly all recurring savings thereafter",
+    "pricing": "20% of verified first-year savings plus 199 to 399 PLN per site monthly monitoring",
+    "retention_or_repeat": "New invoices, load changes, equipment additions, tariff revisions, and additional sites create recurring value"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A delivery-point ledger connecting invoice patterns, interval load, implemented remediation, equipment type, and realized savings",
+    "customer": "Polish SMEs operating 20 to 200 electricity delivery points with motors, refrigeration, HVAC, or variable load",
+    "distribution_mechanism": "Electrical contractors, renewable installers, bookkeeping platforms, franchise associations, and equipment lessors",
+    "offer_and_business_model": "Portfolio invoice scan, counterfactual tariff and power model, remediation brief, savings verification, and recurring alerts",
+    "payer_and_paid_event": "The operator pays a share of independently verified first-year savings and then a per-site monitoring fee",
+    "problem_trigger": "A monthly invoice contains reactive-energy charges, contracted-power excesses, or an unexplained distribution-cost increase"
+  },
+  "founder_fit": [
+    "Strong quantitative billing use case with a practical installer channel through the family company. The founder can automate invoice parsing and counterfactuals part-time, while qualified partners inspect and install; success-fee pricing reduces high-energy outbound selling."
+  ],
+  "parent": null,
+  "risks": [
+    "Poor baselines can overstate savings or recommend a harmful capacity change.",
+    "Installer commissions could compromise vendor neutrality and customer trust.",
+    "Hardware remediation requires qualified electricians and clear liability boundaries."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eli.gov.pl/api/acts/DU/2024/904/text.html",
+    "https://www.tauron-dystrybucja.pl/uslugi-dystrybucyjne/stawki-oplat-dystrybucyjnych/energia-bierna",
+    "https://www.ure.gov.pl/pl/konsumenci/rachunki-pod-kontrola-konsumen/skladowe-rachunku-za-energie-e/12783%2CSkladowe-rachunku-za-energie-elektryczna.html"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Verified-savings recovery plus monitoring",
+    "control_point": "The invoice anomaly-to-remediation-to-realized-savings ledger",
+    "critical_dependency": "The target segments must have frequent, material, and technically remediable charges visible in accessible data"
+  },
+  "thesis": "Launch a success-fee audit and verification layer for Polish multi-site grocers, bakeries, cold stores, gyms, and light manufacturers. It would ingest electricity invoices and interval data, isolate reactive-energy and contracted-capacity penalties by delivery point, simulate tariff and compensation changes, generate a vendor-neutral remediation brief, and verify savings after an electrician acts. The family renewable company provides an installer channel, while the product owns the invoice-to-action-to-savings ledger rather than selling capacitors.",
+  "title": "Reactive-Power and Contract-Capacity Recovery for Multi-Site SMEs",
+  "uncertainties": [
+    "Prevalence and median avoidable annual charge by the selected multi-site segments.",
+    "Availability and format of interval meter data across DSOs and tariff groups.",
+    "Whether clients will share invoices continuously after a one-time recovery."
+  ],
+  "version": 1
+}

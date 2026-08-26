@@ -1,0 +1,73 @@
+{
+  "candidate_id": "route-04",
+  "claims": [
+    {
+      "claim_id": "route-04-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://energy.ec.europa.eu/topics/energy-efficiency/financing/financing-building-renovations_en"
+      ],
+      "statement": "The European Commission estimates building-efficiency investment needs at 242 billion euros per year from 2021 to 2030 and describes national renovation plans as a way to establish predictable project pipelines."
+    },
+    {
+      "claim_id": "route-04-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://energy.ec.europa.eu/topics/energy-efficiency/energy-performance-buildings/energy-performance-buildings-directive/solar-energy-buildings_sk"
+      ],
+      "statement": "The revised Energy Performance of Buildings Directive introduces staged solar-readiness and installation requirements for several classes of new, renovated, and public buildings where suitable and feasible."
+    }
+  ],
+  "contrary_evidence": [
+    "Local engineering firms already prepare audits and tenders, often through relationship-based processes.",
+    "Housing-cooperative board decisions can remain slow even when analysis is improved."
+  ],
+  "economics": {
+    "acquisition_route": "Start with one regional property manager and 5-10 buildings, using family-company contractors only as transparent market participants.",
+    "capital_required_pln": 70000,
+    "founder_net_worth_path": "Hypothesis: 5000 active buildings at 1800 PLN annual net revenue yield 9m PLN ARR; at 35% EBITDA, 4x EBITDA, and 55% founder ownership, equity is about 6.9m PLN in year 7-10, without separately counting retained earnings.",
+    "founder_time": "Hypothesis: 15-20 hours weekly in the pilot, with engineering review purchased per project rather than hired full-time.",
+    "gross_margin_basis": "Hypothesis: 72-82% after document processing and customer success; licensed engineers remain external to the software fee.",
+    "payback": "Hypothesis: 10000-25000 PLN to onboard a manager, recovered from 10-15 active buildings within 12 months.",
+    "pricing": "Hypothesis: 1500-3000 PLN per active building per year, with portfolio minimums and no hidden contractor commission.",
+    "retention_or_repeat": "Managers retain annual portfolio records while each building cycles through audits, tenders, maintenance, and later renovations."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Comparable scopes, regional bid data, change orders, and realized outcomes improve estimates and vendor benchmarking",
+    "customer": "Housing cooperatives and multi-building owners administered by professional property managers",
+    "distribution_mechanism": "Property managers and housing associations roll the workflow across their recurring building portfolios",
+    "offer_and_business_model": "Neutral renovation procurement and decision-support operating system with fixed, disclosed software fees",
+    "payer_and_paid_event": "Manager or building pays an annual project-workspace fee for each active building",
+    "problem_trigger": "A board or owner must scope, compare, approve, and track a renovation across fragmented vendors and documents"
+  },
+  "founder_fit": [
+    "Local access to renewable contractors helps build realistic templates and bid normalization.",
+    "Document automation and comparative analysis suit an AI-leveraged, analytical founder.",
+    "Portfolio distribution through managers replaces repeated one-building-at-a-time selling."
+  ],
+  "parent": null,
+  "risks": [
+    "Procurement rules and engineering liability vary by project.",
+    "A transaction marketplace could undermine trust if fee disclosure is weak.",
+    "Long renovation cycles delay proof of ROI and revenue recognition."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://energy.ec.europa.eu/topics/energy-efficiency/financing/financing-building-renovations_en",
+    "https://energy.ec.europa.eu/topics/energy-efficiency/energy-performance-buildings/energy-performance-buildings-directive/solar-energy-buildings_sk"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "association-amplified portfolio procurement operating system",
+    "control_point": "Comparable scope, bid, approval, and outcome record across managed buildings",
+    "critical_dependency": "A property manager willing to standardize its renovation process across multiple buildings"
+  },
+  "thesis": "Give property managers and housing-cooperative associations a portfolio workflow that turns bills and building records into comparable retrofit scopes, standardized requests for quote, bid normalization, board-ready decision packs, and post-project tracking. Managers distribute it across buildings they repeatedly serve; the product remains a neutral software system paid by the building or manager, rather than an undisclosed lead seller.",
+  "title": "Housing-Manager Renovation Tender OS",
+  "uncertainties": [
+    "Whether managers will pay centrally or pass a per-building fee to owners.",
+    "Which document and bid formats recur often enough to standardize first in Poland.",
+    "Can the product stay neutral while contractors demand paid access to tenders?"
+  ],
+  "version": 1
+}

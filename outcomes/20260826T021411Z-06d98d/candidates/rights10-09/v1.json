@@ -1,0 +1,87 @@
+{
+  "candidate_id": "rights10-09",
+  "claims": [
+    {
+      "claim_id": "rights10-09-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://food.ec.europa.eu/food-safety/food-waste/frequently-asked-questions-reducing-food-waste-eu_en"
+      ],
+      "statement": "EU guidance permits food no longer marketable for people, such as unsold bread or broken biscuits, to be used as animal feed when safe and legally compliant."
+    },
+    {
+      "claim_id": "rights10-09-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2005/183/oj/eng",
+        "https://www.wetgiw.gov.pl/handel-eksport-import/rejestry-podmiotow-paszowych"
+      ],
+      "statement": "Feed businesses must use registered or approved establishments and maintain hygiene, HACCP where applicable, and traceability controls."
+    },
+    {
+      "claim_id": "rights10-09-c3",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://food.ec.europa.eu/food-safety/food-waste/eu-food-waste-relevant-legislation/food-use-and-waste-hierarchy_en"
+      ],
+      "statement": "Demand hypothesis: feed processors will reserve consistent side streams when historical composition and rejection evidence are available."
+    }
+  ],
+  "contrary_evidence": [
+    "Human redistribution ranks above feed use when food remains suitable.",
+    "Animal-derived inputs and contaminated or mixed streams face additional prohibitions and controls."
+  ],
+  "economics": {
+    "acquisition_route": "Demand hypothesis: one regional bakery or brewery network plus two registered feed processors can seed a repeat corridor",
+    "capital_required_pln": 50000,
+    "founder_net_worth_path": "Hypothesis: 30m PLN annual GMV at 4% plus 200 generators at 1000 PLN monthly yields 3.6m PLN revenue; 25% EBITDA at a 6x marketplace value could exceed 5m PLN in 5-7 years",
+    "founder_time": "15-20 hours weekly; food and feed safety decisions require qualified partners",
+    "gross_margin_basis": "Economics hypothesis: 65-80% after lab and onboarding costs, with haulage contracted directly between parties",
+    "payback": "Economics hypothesis: 25 generators at 1500 PLN monthly recover initial capital within 12-18 months after validation costs",
+    "pricing": "Economics hypothesis: 1000-2500 PLN monthly per generator plus 3-5% of offtake GMV",
+    "retention_or_repeat": "Daily or weekly production, batch records, seasonal forecasting, and recurring buyer demand"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Stream-specific quality history, approved recipient graph, seasonal supply forecasts, and actual rejection data",
+    "customer": "Food manufacturers with safe former foodstuffs, registered feed businesses, farms, and specialist processors",
+    "distribution_mechanism": "Food-industry clusters, feed advisers, veterinary registers, labs, baker and brewer associations",
+    "offer_and_business_model": "Stream approval workflow, batch records, sample scheduling, registered-counterparty checks, forward reservations, and recall-ready traceability",
+    "payer_and_paid_event": "Generator pays a monthly stream fee and either party pays a transaction fee on a contracted offtake",
+    "problem_trigger": "A safe recurring side stream loses food-market value but cannot enter feed without reliable specifications, traceability, and eligible counterparties"
+  },
+  "founder_fit": [
+    "FMCG adjacency without using employer data",
+    "Strong quantitative quality-control fit",
+    "AI can structure batch records",
+    "Regional corridor can be tested part-time"
+  ],
+  "parent": null,
+  "risks": [
+    "Feed contamination",
+    "Recall liability",
+    "Logistics spoilage",
+    "Operator registration lapse"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://food.ec.europa.eu/food-safety/food-waste/frequently-asked-questions-reducing-food-waste-eu_en",
+    "https://eur-lex.europa.eu/eli/reg/2005/183/oj/eng",
+    "https://www.wetgiw.gov.pl/handel-eksport-import/rejestry-podmiotow-paszowych",
+    "https://food.ec.europa.eu/food-safety/food-waste/eu-food-waste-relevant-legislation/food-use-and-waste-hierarchy_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Regulated side-stream marketplace with forward contracts",
+    "control_point": "Recurring generator authorization bound to batch traceability and an eligible receiver",
+    "critical_dependency": "Each material and operator must remain lawful under food, feed, waste, and animal-by-product rules"
+  },
+  "thesis": "Bakeries, breweries, and food factories authorize recurring side-stream listings with batch composition, safety, traceability, and registered-recipient checks; feed operators reserve forward volumes. Demand hypothesis: normalized quality and repeat rights can outperform spot waste brokerage for safe non-animal former foodstuffs.",
+  "title": "Former-Food-to-Feed Forward Offtake Exchange",
+  "uncertainties": [
+    "Stable local volumes",
+    "Feed price versus transport cost",
+    "Lab frequency",
+    "Contract allocation of recall risk"
+  ],
+  "version": 1
+}

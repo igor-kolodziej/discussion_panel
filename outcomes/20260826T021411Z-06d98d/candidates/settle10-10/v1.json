@@ -1,0 +1,74 @@
+{
+  "candidate_id": "settle10-10",
+  "claims": [
+    {
+      "claim_id": "settle10-10-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32009L0104",
+        "https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ%3AL%3A2009%3A260%3A0005%3A0019%3AEN%3APDF"
+      ],
+      "statement": "EU work-equipment rules require periodic or special inspections, recorded results, and physical evidence when equipment is used outside the undertaking."
+    },
+    {
+      "claim_id": "settle10-10-c2",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://www.hilti.com/content/resources/faqs/local/support-fleet",
+        "https://www.hilti.com/content/resources/faqs/local/support-repair"
+      ],
+      "statement": "Demand hypothesis: dealer and rental channels will pay for a neutral ledger because fleet programs already track repair status, coverage, and downtime."
+    }
+  ],
+  "contrary_evidence": [
+    "Rental-management systems already track inspections and damage.",
+    "Large OEM fleet programs may keep customers inside proprietary portals."
+  ],
+  "economics": {
+    "acquisition_route": "Integrate with a regional rental-software vendor or dealer network.",
+    "capital_required_pln": 45000,
+    "founder_net_worth_path": "Hypothesis: 30000 assets at 18 PLN monthly can exceed 6 million PLN ARR and support founder net worth above 5 million PLN in five years.",
+    "founder_time": "Three to four hours daily with field setup delegated to channel partners.",
+    "gross_margin_basis": "Hypothesis: 80-90% margin for evidence capture and routing.",
+    "payback": "Hypothesis: 3000 active assets at 15 PLN monthly repay initial capital within eighteen months.",
+    "pricing": "Hypothesis: 10-30 PLN per asset monthly plus 50-150 PLN per resolved damage case.",
+    "retention_or_repeat": "Every rental cycle creates a new inspection and custody event."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Asset, user, damage, repair, and claim histories improve risk scoring and residual-value decisions.",
+    "customer": "Construction equipment rental firms, dealers, and equipment insurers.",
+    "distribution_mechanism": "Rental-software vendors and equipment dealers embed it in fleet and repair modules.",
+    "offer_and_business_model": "Mobile handoff and inspection capture creates a defensible evidence timeline and routes each exception.",
+    "payer_and_paid_event": "The rental platform, dealer, or fleet owner pays per active asset monthly.",
+    "problem_trigger": "An inspection expires or returned equipment shows damage that must be allocated among renter, fleet, warranty, and insurer."
+  },
+  "founder_fit": [
+    "The ledger is data-intensive and automatable.",
+    "Channel-led deployment avoids constant field sales."
+  ],
+  "parent": null,
+  "risks": [
+    "Images and telematics may not prove causation.",
+    "Local inspection rules vary by asset and country."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32009L0104",
+    "https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ%3AL%3A2009%3A260%3A0005%3A0019%3AEN%3APDF",
+    "https://www.hilti.com/content/resources/faqs/local/support-fleet",
+    "https://www.hilti.com/content/resources/faqs/local/support-repair"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Asset evidence and damage-settlement ledger.",
+    "control_point": "The serial-level inspection and custody history.",
+    "critical_dependency": "Consistent handoff capture and fleet-system integration."
+  },
+  "thesis": "A serial-level ledger can join mandatory inspections, handoff condition, telematics, repairs, and damage-waiver claims for equipment rental fleets.",
+  "title": "Rental Equipment Inspection-to-Claim Ledger",
+  "uncertainties": [
+    "The value of reduced disputes per asset is unknown.",
+    "Dealer integration appetite is unverified."
+  ],
+  "version": 1
+}

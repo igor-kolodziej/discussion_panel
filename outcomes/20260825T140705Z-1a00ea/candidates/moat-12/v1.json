@@ -1,0 +1,67 @@
+{
+  "candidate_id": "moat-12",
+  "claims": [
+    {
+      "claim_id": "moat12-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://energy.ec.europa.eu/topics/energy-efficiency/energy-performance-buildings/energy-performance-buildings-directive/energy-renovation-buildings_en"
+      ],
+      "statement": "The Commission estimates roughly 75% of EU buildings perform poorly and annual renovation is about 1%."
+    },
+    {
+      "claim_id": "moat12-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://evo-world.org/en/products-services-mainmenu-en/protocols/ipmvp"
+      ],
+      "statement": "IPMVP determines savings through consistent before-and-after measurement with adjustments for changing conditions."
+    }
+  ],
+  "contrary_evidence": [
+    "Certificates, utilities, auditors, and IPMVP practitioners already provide parts of this service."
+  ],
+  "economics": {
+    "acquisition_route": "Unvalidated hypothesis: ESCOs, banks, subsidy advisers, and family installers.",
+    "capital_required_pln": 90000,
+    "founder_net_worth_path": "Unvalidated hypothesis: 5000 projects at 1800 PLN yield 9 million PLN revenue and founder equity above 5 million PLN in six to eight years.",
+    "founder_time": "Unvalidated hypothesis: 15-20 hours weekly with energy-auditor approval.",
+    "gross_margin_basis": "Unvalidated hypothesis: 65% after data review and partner share.",
+    "payback": "Unvalidated hypothesis: ten channel-originated projects.",
+    "pricing": "Unvalidated hypothesis: 1000-4000 PLN per project plus a lawful 1-3% enablement fee.",
+    "retention_or_repeat": "Unvalidated hypothesis: contractors submit each project and lenders repeatedly query benchmarks."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Each project improves yield curves and future risk selection",
+    "customer": "Building owners, ESCOs, banks, and guarantee providers",
+    "distribution_mechanism": "Embedded intake through lenders and subsidy advisers",
+    "offer_and_business_model": "Meter-based verification plus portfolio benchmark API",
+    "payer_and_paid_event": "A contractor, lender, or owner pays when verification is issued",
+    "problem_trigger": "A retrofit needs credible ex-post savings evidence"
+  },
+  "founder_fit": [
+    "Statistical modeling and family installer access align while finance and audit functions stay with partners."
+  ],
+  "parent": null,
+  "risks": [
+    "Poor baselines can misstate savings.",
+    "Guarantees may require licensed partners."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://energy.ec.europa.eu/topics/energy-efficiency/energy-performance-buildings/energy-performance-buildings-directive/energy-renovation-buildings_en",
+    "https://evo-world.org/en/products-services-mainmenu-en/protocols/ipmvp"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Performance registry and underwriting API",
+    "control_point": "A normalized dataset linking retrofit packages to verified savings, variance, contractor, and persistence",
+    "critical_dependency": "Consented interval data, credible baselines, and a financing partner"
+  },
+  "thesis": "An independent retrofit measurement registry turns consented meter data into intervention yield curves and underwriting analytics for lenders and guarantee partners.",
+  "title": "Retrofit Yield Registry",
+  "uncertainties": [
+    "Meter access, small-project budgets, and lender reliance are unknown."
+  ],
+  "version": 1
+}

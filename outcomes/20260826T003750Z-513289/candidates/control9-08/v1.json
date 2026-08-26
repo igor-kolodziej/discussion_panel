@@ -1,0 +1,83 @@
+{
+  "candidate_id": "control9-08",
+  "claims": [
+    {
+      "claim_id": "control9-08-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://agriculture.ec.europa.eu/farming/organic-farming/trade_en"
+      ],
+      "statement": "All organic products imported into the EU need an electronic certificate of inspection administered through TRACES, and without that certificate the product is not released from its EU port of arrival."
+    },
+    {
+      "claim_id": "control9-08-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/wijhars-zielona-gora/import-produktow-ekologicznych-i-produktow-w-okresie-konwersji"
+      ],
+      "statement": "Polish guidance requires a COI for each covered consignment, registration and approval of importers and first recipients in TRACES, and advance arrival notification in the system."
+    },
+    {
+      "claim_id": "control9-08-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/gsse-warszawa/Kontrolagraniczna"
+      ],
+      "statement": "Polish border guidance warns that confirming field 31 of the COI before completion of the relevant controls can block CHED-D finalisation and prevent later customs clearance."
+    }
+  ],
+  "contrary_evidence": [
+    "TRACES is already the authoritative electronic workflow and public guidance is detailed, so importers with disciplined staff may not need another layer.",
+    "The target segment may have modest shipment counts and use incumbent customs agents that bundle this work."
+  ],
+  "economics": {
+    "acquisition_route": "Pilot 20 paid consignments for two Warsaw specialty importers via one customs agent, measure avoided corrections and release time, then white-label to control bodies and forwarders",
+    "capital_required_pln": 40000,
+    "founder_net_worth_path": "Hypothesis: 12000 annual EU consignments at 700 PLN plus 200 monitoring accounts at 9000 PLN ARR yields 10.2m PLN revenue; at 20% EBITDA, 4x EBITDA, and 70% founder ownership, equity could exceed 5.7m PLN in years 6-9. Validate total reachable volume before assuming cross-border expansion.",
+    "founder_time": "3-4 hours per day for the first lanes, with strict service windows and an experienced customs/organic contractor covering exceptions",
+    "gross_margin_basis": "Hypothesis: 55-72% initially as a managed service, rising to 78-85% after repeat exporter/product lanes become automated",
+    "payback": "Hypothesis: 6-12 months at 35 monthly consignments and 750 PLN average revenue, assuming at least half become repeatable and low-touch",
+    "pricing": "Hypothesis: 450-1200 PLN per consignment plus 600-1800 PLN monthly exporter-monitoring tier; complex exception work separately scoped",
+    "retention_or_repeat": "Importers reorder from the same certified exporters, must preserve certificate history, and benefit from accumulated lane-specific timing and exception knowledge"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A graph of exporter, control body, product/CN code, route, authority, certificate timing, tests, and exceptions predicts release risk and compresses future lead time",
+    "customer": "Polish specialty-food and ingredient importers receiving organic consignments from non-EU countries",
+    "distribution_mechanism": "Referrals from organic control bodies, customs agents, border laboratories, and food freight forwarders; exporters and first consignees are invited into reusable profiles",
+    "offer_and_business_model": "Managed TRACES-ready evidence intake, actor and certificate checks, deadline workflow, COI/CHED sequencing, first-consignee confirmation control, and audit archive",
+    "payer_and_paid_event": "The importer pays per shipment when the release packet is opened, with a monthly minimum for ongoing exporter monitoring",
+    "problem_trigger": "A certified organic purchase order is booked for EU import and must arrive with a valid e-COI, correct actors, pre-notification, and correctly sequenced official-control documents"
+  },
+  "founder_fit": [
+    "Clear, measurable workflow with strong document and data-lineage leverage",
+    "Can validate on a handful of recurring lanes within the part-time limit",
+    "Channel-led acquisition and asynchronous operations fit an introverted founder",
+    "Low initial capital and no inventory exposure"
+  ],
+  "parent": null,
+  "risks": [
+    "A mistimed action can block a shipment, creating high liability relative to transaction revenue.",
+    "Manual exception work could turn the business into a low-margin customs service.",
+    "Control bodies or freight forwarders may not permit white-label access."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://agriculture.ec.europa.eu/farming/organic-farming/trade_en",
+    "https://www.gov.pl/web/wijhars-zielona-gora/import-produktow-ekologicznych-i-produktow-w-okresie-konwersji",
+    "https://www.gov.pl/web/gsse-warszawa/Kontrolagraniczna"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "managed customs-release coordination",
+    "control_point": "the valid electronic certificate of inspection and correctly sequenced COI/CHED finalisation required for release as organic",
+    "critical_dependency": "timely cooperation by third-country exporters and control bodies before cargo departure"
+  },
+  "thesis": "Create a shipment-release coordinator for Polish importers of organic coffee, tea, spices, oils, fruit, and ingredients. It opens each purchase order before departure, verifies that the third-country control body, importer, first consignee, CN code, e-COI, pre-notification, CHED where applicable, and physical receiver are synchronized, then controls the precise handoff and field-31 acknowledgement after official checks. The sharp wedge is avoiding a status or timing mistake that blocks documents and customs clearance, not generic organic certification. Organic control bodies, specialist customs agents, food laboratories, and freight forwarders can prescribe the workspace; recurring exporter-control-body-product combinations form a lead-time and exception graph that makes the service progressively better.",
+  "title": "Organic Import COI Release Desk",
+  "uncertainties": [
+    "Reachable annual organic-import consignment count in Poland and adjacent EU markets",
+    "Current prices charged by customs agents for COI/CHED coordination",
+    "Availability of TRACES integrations or delegated access for a managed service"
+  ],
+  "version": 1
+}

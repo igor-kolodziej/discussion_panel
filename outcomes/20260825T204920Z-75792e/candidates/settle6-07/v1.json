@@ -1,0 +1,75 @@
+{
+  "candidate_id": "settle6-07",
+  "claims": [
+    {
+      "claim_id": "settle6-07-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2020/1056/oj/eng"
+      ],
+      "statement": "The eFTI Regulation creates a common framework for machine-readable freight information and certified service providers."
+    },
+    {
+      "claim_id": "settle6-07-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://unece.org/trade/documents/2023/10/executive-guide-e-cmr"
+      ],
+      "statement": "The e-CMR framework supports electronic consignment notes used for commercial transport-contract evidence."
+    }
+  ],
+  "contrary_evidence": [
+    "Neither eFTI nor e-CMR creates a detention entitlement; the underlying contract and factual causation remain decisive."
+  ],
+  "economics": {
+    "acquisition_route": "UNVALIDATED: integrations with TMS vendors, freight factors, digital freight exchanges and carrier associations.",
+    "capital_required_pln": 90000,
+    "founder_net_worth_path": "UNVALIDATED: process 50,000 shipments by year 2 and 1m shipments annually by year 5, enabling founder equity plus retained cash above PLN 5m in years 5-7.",
+    "founder_time": "UNVALIDATED: 3 hours per day for one corridor and contract family, with claims operations delegated.",
+    "gross_margin_basis": "UNVALIDATED: automated document and telematics matching, plus multilingual exception review on contested claims.",
+    "payback": "UNVALIDATED: channel integration repaid after 30 successful detention settlements or 6 months.",
+    "pricing": "UNVALIDATED: share of collected detention charges with no advance funding; all commercial figures in this economics object, including capital_required_pln, are unvalidated.",
+    "retention_or_repeat": "UNVALIDATED: every shipment creates a new trigger; outcome history identifies payable lanes and effective evidence combinations."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Settled and rejected claims build shipper, lane, contract-clause and evidence-response intelligence",
+    "customer": "European SME road carriers and freight factors",
+    "distribution_mechanism": "TMS, factoring and carrier-network integrations",
+    "offer_and_business_model": "Evidence assembly, claim routing and cash reconciliation for a success fee",
+    "payer_and_paid_event": "The carrier or factor pays when the shipper issues a credit note or pays the detention claim",
+    "problem_trigger": "A truck's verified loading or unloading dwell exceeds a contract's free-time allowance"
+  },
+  "founder_fit": [
+    "Structured evidence and anomaly matching fit data skills",
+    "Success pricing makes value concrete",
+    "Channel distribution reduces direct sales load",
+    "Can pilot without advancing capital"
+  ],
+  "parent": null,
+  "risks": [
+    "Shipper retaliation",
+    "Telematics spoofing",
+    "Cross-border contract differences",
+    "Claims may be too small or slow",
+    "Factoring regulation if funds are advanced"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2020/1056/oj/eng",
+    "https://unece.org/trade/documents/2023/10/executive-guide-e-cmr"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Outcome-priced logistics claim settlement service",
+    "control_point": "The tamper-evident dwell-time evidence packet and matched settlement receipt",
+    "critical_dependency": "Contractual detention entitlement and trusted timestamps accepted by shippers or their dispute process"
+  },
+  "thesis": "For road carriers and freight factors, bind e-CMR or eFTI shipment records, geofenced arrival and departure, dock acknowledgements and the transport contract into a detention claim. Track the claim through credit note or cash receipt and charge only on settlement. TMS vendors, factoring firms and carrier associations offer one-to-many distribution; verified resolutions build lane, shipper and evidence-sufficiency benchmarks rather than a generic fleet dashboard.",
+  "title": "Freight Detention Evidence Settlement",
+  "uncertainties": [
+    "European recovery rates",
+    "Availability of signed dock events",
+    "TMS partner economics"
+  ],
+  "version": 1
+}

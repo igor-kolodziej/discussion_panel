@@ -1,0 +1,65 @@
+{
+  "candidate_id": "settle6-08",
+  "claims": [
+    {
+      "claim_id": "settle6-08-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.ups.com/gb/en/support/shipping-support/legal-terms-conditions/ups-service-guarantee"
+      ],
+      "statement": "UPS publishes a money-back guarantee for qualifying late deliveries, requires a timely claim with shipment details and allows account holders to request a refund through invoice dispute tooling."
+    }
+  ],
+  "contrary_evidence": [
+    "Guarantees are service- and destination-specific and contain broad exclusions; carrier automation or suspensions can compress the recoverable pool."
+  ],
+  "economics": {
+    "acquisition_route": "UNVALIDATED: app integrations with shipping platforms, WMS vendors, ecommerce agencies and multi-merchant 3PLs.",
+    "capital_required_pln": 60000,
+    "founder_net_worth_path": "UNVALIDATED: monitor 2m parcels annually by year 3 and 20m by year 6, supporting founder equity plus retained cash above PLN 5m in years 5-7.",
+    "founder_time": "UNVALIDATED: 2 hours per day after one carrier and one shipping platform are automated.",
+    "gross_margin_basis": "UNVALIDATED: automated scan, commitment, exclusion and invoice processing at parcel scale.",
+    "payback": "UNVALIDATED: one 3PL integration recovers acquisition cost after 200 credited parcels or 3 months.",
+    "pricing": "UNVALIDATED: percentage of confirmed carrier credits, optionally shared with the 3PL channel; all commercial figures in this economics object, including capital_required_pln, are unvalidated.",
+    "retention_or_repeat": "UNVALIDATED: daily parcel flow provides frequent paid events and ever-better carrier exclusion logic."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Carrier decisions compound into service-, lane-, exclusion- and evidence-specific refund models",
+    "customer": "Ecommerce merchants and 3PLs with guaranteed parcel services",
+    "distribution_mechanism": "Shipping-platform, WMS and 3PL integrations",
+    "offer_and_business_model": "Automated eligibility, request submission and credit matching for a contingency fee",
+    "payer_and_paid_event": "The merchant or 3PL pays after the carrier posts a refund or invoice credit",
+    "problem_trigger": "Carrier tracking shows delivery outside a guaranteed commitment and within the claim window"
+  },
+  "founder_fit": [
+    "Highly automatable",
+    "Clear paid event",
+    "Low starting capital",
+    "One integration can reach many merchants"
+  ],
+  "parent": null,
+  "risks": [
+    "Carrier terms change",
+    "Refunds too small for support costs",
+    "Platform dependence",
+    "Merchants may already use audit tools"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.ups.com/gb/en/support/shipping-support/legal-terms-conditions/ups-service-guarantee"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "High-volume contingency refund recovery",
+    "control_point": "The deadline-aware eligibility engine and invoice-level proof that a carrier credit was received",
+    "critical_dependency": "Carrier guarantees must apply in the target services and account permissions must allow claim submission and credit reconciliation"
+  },
+  "thesis": "Continuously compare promised delivery commitments with carrier scans and invoice lines for ecommerce merchants and 3PLs. When a shipment qualifies under the carrier's guarantee, submit the documented request within the deadline, track exclusions and match the carrier credit back to the invoice. Charge only on credited shipping charges and distribute through shipping software, WMS vendors and 3PLs; each carrier decision strengthens an exclusion and refund-outcome corpus.",
+  "title": "Parcel Guarantee Refund Collector",
+  "uncertainties": [
+    "Refund incidence in Poland and EU lanes",
+    "Carrier API claim rights",
+    "3PL revenue-share appetite"
+  ],
+  "version": 1
+}

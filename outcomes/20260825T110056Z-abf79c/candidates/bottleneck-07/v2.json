@@ -1,0 +1,162 @@
+{
+  "candidate_id": "bottleneck-07",
+  "claims": [
+    {
+      "claim_id": "bottleneck-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/en/TXT/?uri=CELEX:02017R0745-20260101"
+      ],
+      "statement": "MDR requires a continuous post-market surveillance system and periodic safety update reports for Class IIa/IIb devices, including sales or usage denominators and benefit-risk conclusions."
+    },
+    {
+      "claim_id": "bottleneck-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://health.ec.europa.eu/document/download/a9ad86b7-1b8e-4bae-beb4-48b2b3ed2f05_en?filename=mdcg_2025-10_en.pdf"
+      ],
+      "statement": "Current MDCG guidance connects complaints, service information, exposure, trend thresholds, risk management and CAPA, supporting a real cross-source traceability job."
+    },
+    {
+      "claim_id": "bottleneck-c03",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://health.ec.europa.eu/system/files/2023-01/mdcg_2022-21_en.pdf"
+      ],
+      "statement": "MDCG's PSUR guidance provides a systematic template and cadence but does not make an external software vendor a mandatory control point."
+    },
+    {
+      "claim_id": "bottleneck-c04",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://health.ec.europa.eu/system/files/2023-12/md_mdcg_2019_7_guidance_art15_mdr_ivdr_en.pdf"
+      ],
+      "statement": "A qualified PRRC and manufacturer personnel must retain regulatory compliance authority; the founder cannot substitute software for those qualifications."
+    },
+    {
+      "claim_id": "bottleneck-c05",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/en/TXT/?uri=CELEX:02017R0745-20260101"
+      ],
+      "statement": "Serious incident reporting can run on two-, ten- or fifteen-day clocks, so founder-only support would be incompatible with critical reporting operations."
+    },
+    {
+      "claim_id": "bottleneck-c06",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://health.ec.europa.eu/medical-devices-eudamed/overview_en"
+      ],
+      "statement": "EUDAMED's PMS and vigilance module remains under development even though four other modules became mandatory in May 2026, leaving workflow gaps but no exclusive platform gate."
+    },
+    {
+      "claim_id": "bottleneck-c07",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.mastercontrol.com/postmarket/",
+        "https://www.greenlight.guru/post-market-medical-device-software"
+      ],
+      "statement": "MasterControl and Greenlight Guru already market integrated post-market, complaint, risk, CAPA and reporting workflows, creating direct bundling pressure."
+    },
+    {
+      "claim_id": "bottleneck-c08",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2016/679/2016-05-04/eng",
+        "https://www.edpb.europa.eu/sme/learn-the-basics/data-controller-or-data-processor_en"
+      ],
+      "statement": "Complaint records may contain health data, requiring a lawful GDPR basis, minimization, security and clear controller-processor responsibilities rather than unrestricted model training."
+    },
+    {
+      "claim_id": "bottleneck-c09",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://www.medtecheurope.org/news-and-events/press-releases/medtech-europe-unveils-facts-figures-2025-a-snapshot-of-innovation-and-impact-in-europe/"
+      ],
+      "statement": "Europe has more than 38,000 medical-technology companies and roughly 90% are SMEs, but that broad statistic does not establish the reachable Class IIa/IIb segment or a conservative customer denominator."
+    },
+    {
+      "claim_id": "bottleneck-c10",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://health.ec.europa.eu/document/download/a9ad86b7-1b8e-4bae-beb4-48b2b3ed2f05_en?filename=mdcg_2025-10_en.pdf",
+        "https://www.mastercontrol.com/postmarket/",
+        "https://www.greenlight.guru/post-market-medical-device-software"
+      ],
+      "statement": "The candidate earns a distinct budget only if a paid pilot shows faster, more complete complaint-to-denominator-to-risk-to-PSUR lineage than incumbent QMS/PMS suites and consultant workarounds."
+    }
+  ],
+  "contrary_evidence": [
+    "Established QMS vendors already bundle complaints, PMS, risk, CAPA and regulatory reporting.",
+    "MDCG templates and regulatory duties create a required artifact, not an exclusive vendor-controlled gate.",
+    "Qualified customer personnel retain safety, reportability and approval authority.",
+    "EUDAMED module evolution may absorb portions of the workflow.",
+    "Generic AI extraction and drafting are reproducible and cannot alone support defensibility."
+  ],
+  "economics": {
+    "acquisition_route": "Founder-led fixed-fee traceability assessments for the first two customers, then independent QA/RA consultant referrals; conversion, referral economics and CAC are unknown.",
+    "capital_required_pln": 100000,
+    "founder_net_worth_path": "Illustrative rather than validated: 175 customers at PLN 60,000 ARR equals PLN 10.5m ARR; at 25% normalized earnings, 80% founder ownership and a 3x earnings value, founder equity is about PLN 6.3m. Reaching this in 8-10 years requires proof of price, retention, service leverage and a reachable pool; the 38,000-plus European medtech firms and 90% SME statistic is only a broad denominator.",
+    "founder_time": "At most five hours daily while employed, capped initially at two design partners; contract qualified QA/RA and validation help, keep regulatory reporting with the customer, and establish an escalation rotation independent of the founder.",
+    "gross_margin_basis": "Estimated 55-70% gross margin during implementation-heavy early years and 70-80% only after connectors, validation artifacts and support are standardized; qualified QA/RA review remains customer-paid or explicitly passed through.",
+    "payback": "Onboarding should cover configuration and validation labor, while recurring gross profit should repay acquisition cost within 12 months; sales-cycle duration and actual CAC remain unknown.",
+    "pricing": "Test PLN 15,000-50,000 for scoped onboarding and validation plus PLN 1,500-6,000 per month per manufacturer; these remain unvalidated assumptions and must be tested against bundled QMS/PMS alternatives.",
+    "retention_or_repeat": "Continuous PMS and periodic PSUR duties support recurring use, but retention is threatened by QMS-suite consolidation, consultant-led workarounds and customer insourcing."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Customer-specific validated lineage rules and, with lawful permission, de-identified mappings of complaint patterns to evidence requests could improve implementation, but health-data limits, validation burden, incumbent suites and reproducible AI extraction sharply constrain this advantage.",
+    "customer": "Small EU Class IIa/IIb medical-device manufacturers managing roughly 1-20 device families with lean QA/RA teams and fragmented complaint, service, exposure and risk evidence.",
+    "distribution_mechanism": "A fixed-fee complaint-to-PSUR traceability assessment followed by software conversion, supplemented by referrals from independent QA/RA consultants; no signed channel or conversion evidence exists.",
+    "offer_and_business_model": "Validated SaaS for controlled intake, deduplication, trend and denominator workpapers, risk/CAPA linking, PSUR drafting, qualified sign-off and audit exports, sold through onboarding plus subscription; it does not autonomously decide safety, reportability or regulatory submissions.",
+    "payer_and_paid_event": "The manufacturer's head of QA/RA or quality leader pays an annual software license plus validated onboarding when fragmented evidence and recurring PSUR work justify a controlled system; actual willingness to pay is unknown.",
+    "problem_trigger": "A complaint, service signal, periodic review or PSUR due date exposes incomplete traceability from raw post-market evidence through trend denominators, vigilance assessment, risk/CAPA actions and the approved report."
+  },
+  "founder_fit": [
+    "The founder's data-science and health interests fit entity resolution, signal normalization, trend workpapers and evidence retrieval.",
+    "A narrow evidence-lineage product is feasible alongside employment only if it avoids device-safety judgment and supports a small number of high-value customers.",
+    "The founder is not established as a qualified PRRC or regulatory professional, so qualified customer or contracted QA/RA personnel must own regulated conclusions and validation.",
+    "Two-, ten- and fifteen-day vigilance clocks require customer-owned reporting and an independent support escalation path rather than founder-only availability."
+  ],
+  "parent": {
+    "candidate_id": "bottleneck-07",
+    "version": 1
+  },
+  "risks": [
+    "Incumbent bundling makes the product a feature rather than a company.",
+    "Services-heavy validation and ontology work prevent software gross margins.",
+    "Health and complaint data increase privacy, security and contractual liability.",
+    "Customers may mistakenly rely on automation for non-delegable regulatory judgments.",
+    "Founder availability cannot cover vigilance-critical incidents without independent operations.",
+    "An unsupported broad SME denominator could overstate the founder wealth path."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/legal-content/en/TXT/?uri=CELEX:02017R0745-20260101",
+    "https://health.ec.europa.eu/document/download/a9ad86b7-1b8e-4bae-beb4-48b2b3ed2f05_en?filename=mdcg_2025-10_en.pdf",
+    "https://health.ec.europa.eu/system/files/2023-01/mdcg_2022-21_en.pdf",
+    "https://health.ec.europa.eu/system/files/2023-12/md_mdcg_2019_7_guidance_art15_mdr_ivdr_en.pdf",
+    "https://health.ec.europa.eu/medical-devices-eudamed/overview_en",
+    "https://eur-lex.europa.eu/eli/reg/2016/679/2016-05-04/eng",
+    "https://www.edpb.europa.eu/sme/learn-the-basics/data-controller-or-data-processor_en",
+    "https://www.mastercontrol.com/postmarket/",
+    "https://www.greenlight.guru/post-market-medical-device-software",
+    "https://www.medtecheurope.org/news-and-events/press-releases/medtech-europe-unveils-facts-figures-2025-a-snapshot-of-innovation-and-impact-in-europe/"
+  ],
+  "stage": "research",
+  "structure": {
+    "commercial_archetype": "High-trust regulated evidence SaaS with paid validation and onboarding",
+    "control_point": "The auditable lineage from source complaint or service evidence through exposure denominator and trend analysis to risk/CAPA disposition, qualified approval and PSUR output.",
+    "critical_dependency": "Complete customer data, validated software and security controls, plus qualified PRRC/QA/RA personnel at the customer who retain safety, reportability, submission and approval authority."
+  },
+  "thesis": "A controlled evidence workbench can help small Class IIa/IIb manufacturers continuously connect complaints, service records, literature and exposure denominators to vigilance assessment, risk management, CAPA and PSUR drafting. MDR and MDCG guidance establish the recurring cross-source traceability job, but QMS/PMS incumbents already bundle much of it; a distinct paid control point exists only if the product proves materially deeper complaint-to-denominator-to-risk-to-PSUR lineage while qualified customer personnel retain every safety, reportability and approval decision.",
+  "title": "MDR Complaint-to-PSUR Evidence Workbench",
+  "uncertainties": [
+    "Paid willingness to adopt a separate traceability layer rather than an incumbent QMS module",
+    "Representative complaint volume, data fragmentation and PSUR preparation hours",
+    "Validated reduction in review time, missing links and audit findings",
+    "Integration and software-validation burden per customer",
+    "Consultant channel commitment, CAC, sales cycle and churn",
+    "Reachable count of small EU Class IIa/IIb manufacturers with the relevant pain"
+  ],
+  "version": 2
+}

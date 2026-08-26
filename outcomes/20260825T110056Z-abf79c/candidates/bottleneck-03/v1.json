@@ -1,0 +1,85 @@
+{
+  "candidate_id": "bottleneck-03",
+  "claims": [
+    {
+      "claim_id": "bottleneck-03-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/topics/forests/deforestation/regulation-deforestation-free-products_en"
+      ],
+      "statement": "The current Commission timetable applies EUDR from 30 December 2026 for large and medium operators, from 30 June 2027 for most micro and small operators, and from 30 December 2026 for micro and small operators already covered by EUTR."
+    },
+    {
+      "claim_id": "bottleneck-03-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32023R1115"
+      ],
+      "statement": "The regulation requires due diligence before market placement or export, including collection of plot geolocation and legality evidence, and requires submission and five-year retention of due-diligence statements."
+    },
+    {
+      "claim_id": "bottleneck-03-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/news/commission-updates-product-scope-and-tools-support-eudr-2026-07-13_en",
+        "https://environment.ec.europa.eu/news/eu-deforestation-regulation-information-system-launches-2024-12-06_en"
+      ],
+      "statement": "In July 2026 the Commission adopted updated product-scope and Information-System measures, while the official system supports geolocation-file testing and due-diligence statement submission."
+    }
+  ],
+  "contrary_evidence": [
+    "Recent EU amendments postponed application and simplified reporting, demonstrating that the operational burden can shrink before renewal revenue stabilizes.",
+    "The Commission provides a free Information System and geolocation-file testing, so submission automation alone is not defensible.",
+    "SME operators may rely on upstream due-diligence statement references for already-diligenced inputs, reducing work for simpler chains."
+  ],
+  "economics": {
+    "acquisition_route": "Free geofile and due-diligence-reference checker, targeted timber-sector content, and broker, auditor, or ERP referral channels",
+    "capital_required_pln": 85000,
+    "founder_net_worth_path": "Modeled path: 400 operators at 1,200 PLN average monthly recurring revenue equals 5.76m PLN ARR; a 35% owner-cash margin is about 2.02m PLN/year and could produce over 10m PLN of cumulative founder cash in five mature years",
+    "founder_time": "Up to 4.5 hours/day through a timber-only MVP; commodity expansion deferred until support is standardized",
+    "gross_margin_basis": "Modeled 78-90% after geospatial processing, secure document storage, and exception support; excludes legal opinions",
+    "payback": "Target under 5 months with paid onboarding and a focused timber schema; unvalidated",
+    "pricing": "Modeled 800-3,500 PLN/month plus 20-100 PLN per newly onboarded upstream supplier or high-complexity lot",
+    "retention_or_repeat": "Every new supplier, lot, transformation, and shipment refreshes the evidence chain, supporting annual renewal"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A product-and-supplier evidence graph that learns recurring geolocation, CN-code, legality-document, and lot-splitting failure patterns",
+    "customer": "Polish medium-sized timber, furniture, panel, and paper operators plus small timber operators already covered by the former EUTR",
+    "distribution_mechanism": "Timber-specific readiness diagnostics, Polish-language templates, and referrals from customs brokers, forestry certification auditors, and ERP implementers",
+    "offer_and_business_model": "Supplier collection portal, geofile validator, lot genealogy graph, risk-evidence checklist, and EUDR-system submission preparation sold as SaaS",
+    "payer_and_paid_event": "The operator pays an annual platform fee plus supplier or lot-volume tier when it must clear material for placement on or export from the EU market",
+    "problem_trigger": "A timber lot is purchased, transformed, imported, or exported without a complete link to geolocation, legality evidence, and applicable upstream due-diligence references"
+  },
+  "founder_fit": [
+    "Geospatial validation, data lineage, and risk scoring are strong matches for an analytical data scientist.",
+    "A Polish timber-only wedge is narrow enough to prototype part-time while retaining a larger EU expansion path.",
+    "The product can acquire demand through technical readiness tools and channel partners instead of constant founder networking."
+  ],
+  "parent": null,
+  "risks": [
+    "Another postponement or substantive simplification could defer demand.",
+    "False assurance about geolocation or legality could expose customers and the vendor to enforcement and contractual claims.",
+    "Incumbent traceability, forestry-certification, or ERP platforms may absorb the timber-specific workflow."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://environment.ec.europa.eu/topics/forests/deforestation/regulation-deforestation-free-products_en",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32023R1115",
+    "https://environment.ec.europa.eu/news/commission-updates-product-scope-and-tools-support-eudr-2026-07-13_en",
+    "https://environment.ec.europa.eu/news/eu-deforestation-regulation-information-system-launches-2024-12-06_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Supply-chain compliance network SaaS priced by operator and evidence volume",
+    "control_point": "The immutable genealogy from upstream due-diligence statement and production plot through purchased lot to downstream timber SKU or shipment",
+    "critical_dependency": "Suppliers must disclose valid origin and legality evidence that can survive EUDR risk assessment and system submission"
+  },
+  "thesis": "Build a timber-focused evidence router for Polish furniture, panel, paper, and wood-product operators that captures upstream due-diligence references, plot geolocation, legality files, and lot transformations, then produces a defensible chain into the EU EUDR Information System. Customers pay at each inbound lot and product transformation because supplier evidence arrives in mismatched files and upstream references alone do not eliminate the operator's responsibility.",
+  "title": "EUDR Timber-Lot Evidence Router",
+  "uncertainties": [
+    "The number of target firms with enough lot and supplier complexity to pay recurring software fees has not been measured.",
+    "It is unknown whether customers will demand deep ERP integration or accept a standalone evidence layer during the first compliance year.",
+    "The modeled pricing, implementation effort, sales cycle, churn, and owner-cash margin are unvalidated."
+  ],
+  "version": 1
+}

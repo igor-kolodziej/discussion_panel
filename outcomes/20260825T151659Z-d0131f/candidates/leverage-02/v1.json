@@ -1,0 +1,71 @@
+{
+  "candidate_id": "leverage-02",
+  "claims": [
+    {
+      "claim_id": "leverage-02-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en"
+      ],
+      "statement": "The CBAM definitive regime applies from 1 January 2026; covered importers above the stated mass threshold must obtain authorised-declarant status, declare embedded emissions, and surrender certificates."
+    },
+    {
+      "claim_id": "leverage-02-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-verification_en"
+      ],
+      "statement": "The Commission's 2026 verification timeline provides for accredited verifiers to issue reports that operators share with declarants through the CBAM Registry."
+    }
+  ],
+  "contrary_evidence": [
+    "The official registry already handles declarations and verification-report exchange, limiting value to upstream evidence operations.",
+    "Customs and ESG suites can extend into this workflow."
+  ],
+  "economics": {
+    "acquisition_route": "UNVALIDATED HYPOTHESIS — white-label through 8 customs brokers, each introducing 20 importers over 24 months.",
+    "capital_required_pln": 75000,
+    "founder_net_worth_path": "UNVALIDATED HYPOTHESIS — 180 importers at 36000 PLN average annual revenue yields 6.48 million PLN ARR by year 5; a 3.5x value at 75% ownership implies 17.01 million PLN founder equity, excluding distributions.",
+    "founder_time": "UNVALIDATED HYPOTHESIS — 20 hours weekly initially and 9 after broker enablement and templated supplier support.",
+    "gross_margin_basis": "UNVALIDATED HYPOTHESIS — 78% blended gross margin after supplier support and document review.",
+    "payback": "UNVALIDATED HYPOTHESIS — under 4 months if better primary data or proof of foreign carbon price avoids 12000 PLN of excess certificate cost or manual work.",
+    "pricing": "UNVALIDATED HYPOTHESIS — all commercial numbers here, including capital_required_pln, are hypotheses: 8000 PLN importer setup, 1800 PLN monthly, and 35 PLN per covered customs line.",
+    "retention_or_repeat": "UNVALIDATED HYPOTHESIS — 92% annual account retention while customers continue covered imports, with usage repeating per shipment and declaration year."
+  },
+  "fingerprint": {
+    "compounding_advantage": "permissioned reuse of producer-installation evidence and a growing map of supplier data exceptions",
+    "customer": "EU customs brokers and mid-market importers of covered steel, aluminium, cement, fertiliser, hydrogen, or electricity goods",
+    "distribution_mechanism": "customs-broker and indirect-representative channels that reach many importers",
+    "offer_and_business_model": "white-label supplier portal, evidence validation, version control, allocation engine, and declaration-ready export",
+    "payer_and_paid_event": "the importer or broker pays for account access and each covered declaration line",
+    "problem_trigger": "a covered customs line arrives without reusable, verified embedded-emissions evidence"
+  },
+  "founder_fit": [
+    "Strong quantitative and automation fit, with asynchronous partner distribution and clear per-shipment value; a single commodity corridor can validate demand part-time."
+  ],
+  "parent": null,
+  "risks": [
+    "Never claim verifier status; accredited verification remains external.",
+    "Method changes can invalidate calculation logic.",
+    "Cross-border supplier data may be incomplete or commercially sensitive."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en",
+    "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-verification_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "supplier-to-importer transaction evidence network",
+    "control_point": "the emissions evidence packet bound to the authorised declarant's annual CBAM declaration",
+    "critical_dependency": "credible installation-level emissions data and verification outputs from non-EU producers"
+  },
+  "thesis": "A customs-broker-distributed exchange can request, validate, version, and reuse installation-level embedded-emissions evidence from non-EU suppliers, then bind it to importer declarations. Each covered shipment and annual declaration is a paid event; shared supplier records create a network advantage without the founder becoming the verifier.",
+  "title": "CBAM Supplier Evidence Exchange for Customs Intermediaries",
+  "uncertainties": [
+    "Broker appetite for a white-label layer.",
+    "Frequency with which primary data materially beats defaults.",
+    "Integration access to customs and registry workflows."
+  ],
+  "version": 1
+}

@@ -1,0 +1,83 @@
+{
+  "candidate_id": "control10-06",
+  "claims": [
+    {
+      "claim_id": "control10-06-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://digital-strategy.ec.europa.eu/en/library/commission-publishes-new-guidance-support-timely-cyber-resilience-act-implementation",
+        "https://digital-strategy.ec.europa.eu/en/policies/cra-reporting"
+      ],
+      "statement": "CRA incident and actively exploited vulnerability reporting applies from 11 September 2026, while the main product obligations apply from 11 December 2027."
+    },
+    {
+      "claim_id": "control10-06-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng"
+      ],
+      "statement": "Manufacturers must document conformity with cybersecurity and vulnerability-handling requirements, with CE marking and third-party assessment for specified important products."
+    },
+    {
+      "claim_id": "control10-06-c3",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://digital-strategy.ec.europa.eu/en/policies/cra-reporting"
+      ],
+      "statement": "Demand hypothesis: smaller OEMs will adopt an external release manifest because compliance spans engineering, product support and rapid incident reporting."
+    }
+  ],
+  "contrary_evidence": [
+    "Many products can use manufacturer self-assessment, reducing the need for a separate platform.",
+    "Existing application-security and SBOM vendors may extend into CRA workflows."
+  ],
+  "economics": {
+    "acquisition_route": "Hypothesis: design houses and test labs refer OEMs at the point a release file is already being assembled",
+    "capital_required_pln": 75000,
+    "founder_net_worth_path": "Hypothesis: 150 OEMs averaging 60000 PLN recurring annual revenue could reach 9m PLN ARR; durable lab channels and high retention could create founder equity above 5m PLN in 4-6 years",
+    "founder_time": "16-22 hours weekly with contracted cybersecurity and regulatory review",
+    "gross_margin_basis": "Economics hypothesis: 75-88% after reusable control mapping; specialist review remains variable cost",
+    "payback": "Hypothesis: 10-16 months with twelve onboarded products",
+    "pricing": "Economics hypothesis: 18000-50000 PLN onboarding plus 2000-7000 PLN per product monthly",
+    "retention_or_repeat": "Every release, component update, incident, vulnerability and support-period year"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Reusable control mappings plus customer-owned component and vulnerability history increase accuracy and switching cost over the support period",
+    "customer": "Small EU manufacturers and importers of connected hardware and commercial software products",
+    "distribution_mechanism": "Bundled into electronics design-house, EMS and cybersecurity-laboratory handovers",
+    "offer_and_business_model": "CRA evidence workspace, release checks and incident-report packet generation sold per product subscription",
+    "payer_and_paid_event": "OEM pays per product onboarding, each release manifest and annual support-period monitoring",
+    "problem_trigger": "A product version ships or a vulnerability is found and lifecycle cybersecurity evidence must be current"
+  },
+  "founder_fit": [
+    "Strong match for AI-assisted evidence mapping and data pipelines",
+    "Can start with one narrow device category",
+    "Technical channel sales avoid personal-brand dependence"
+  ],
+  "parent": null,
+  "risks": [
+    "Security-sensitive data creates a high trust and breach burden.",
+    "Harmonised standards may arrive late or change templates.",
+    "Customers may mistake evidence tooling for legal certification."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://digital-strategy.ec.europa.eu/en/library/commission-publishes-new-guidance-support-timely-cyber-resilience-act-implementation",
+    "https://digital-strategy.ec.europa.eu/en/policies/cra-reporting",
+    "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Lifecycle conformity evidence gate",
+    "control_point": "A signed evidence manifest required by the OEM before each product release",
+    "critical_dependency": "OEM engineering data, evolving harmonised standards and clear separation from notified-body judgments"
+  },
+  "thesis": "An evidence layer embedded by electronics design houses and cybersecurity test labs could block product release until the OEM has a scoped risk assessment, component inventory, vulnerability process, support-period evidence and declaration inputs. It would prepare evidence and reporting workflows, not issue CE approval. Demand and economics are hypotheses.",
+  "title": "CRA Release Manifest for Small Connected-Device OEMs",
+  "uncertainties": [
+    "Small-OEM compliance budgets",
+    "Best first connected-product niche",
+    "Channel willingness among labs and design houses"
+  ],
+  "version": 1
+}

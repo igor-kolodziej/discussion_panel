@@ -1,0 +1,169 @@
+{
+  "candidate_id": "niche-04",
+  "claims": [
+    {
+      "claim_id": "niche-04-r01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.nrel.gov/docs/fy22osti/80881.pdf"
+      ],
+      "statement": "NREL documents fragmented monitoring, delayed repairs, and weak standalone O&M economics for smaller PV systems, and specifically recommends bundling small systems for more efficient contracted management."
+    },
+    {
+      "claim_id": "niche-04-r02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://joint-research-centre.ec.europa.eu/photovoltaic-geographical-information-system-pvgis_en"
+      ],
+      "statement": "PVGIS offers free performance and irradiance data and an API suitable for weather normalisation, but model limitations mean it can flag deviation rather than prove a warranty breach by itself."
+    },
+    {
+      "claim_id": "niche-04-r03",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://iea-pvps.org/wp-content/uploads/2025/02/IEA-PVPS-T13-30-2025-REPORT-Degradation-and-Failure.pdf"
+      ],
+      "statement": "IEA PVPS documents multiple technology-specific module degradation modes, so diagnosis must distinguish component mechanisms and cannot infer a recoverable defect from low generation alone."
+    },
+    {
+      "claim_id": "niche-04-r04",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://stat.gov.pl/files/gfx/portalinformacyjny/pl/defaultaktualnosci/5485/3/19/1/energia_ze_zrodel_odnawialnych_2024.pdf"
+      ],
+      "statement": "Poland's PV capacity reached 21,225 MW in 2024, confirming a large and rapidly growing installed asset base, although the reviewed national statistic does not isolate the target 50 kW to 1 MW commercial rooftop segment."
+    },
+    {
+      "claim_id": "niche-04-r05",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://jinkosolar.eu/wp-content/uploads/2024/11/LIMITED-WARRANTY-REV.EN20240726-LINEAR-MONOFACIAL-MODULE-FOR-EU.pdf"
+      ],
+      "statement": "Jinko's EU module warranty places the burden of establishing breach on the customer, requires purchase, serial, location, photo or test evidence and prompt notice, and may require independent testing, directly supporting demand for disciplined evidence reconstruction."
+    },
+    {
+      "claim_id": "niche-04-r06",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://isap.sejm.gov.pl/isap.Nsf/download.xsp/WDU20230001610/U/D20231610Lj.pdf"
+      ],
+      "statement": "Polish Civil Code Article 558 allows parties to extend, limit, or exclude statutory warranty liability, subject to consumer protections and concealment exceptions, so a commercial owner's recoverable rights must be screened from the actual contracts rather than assumed."
+    },
+    {
+      "claim_id": "niche-04-r07",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://manuals.sma.de/SHPxxx21/en-US/10312892427.html",
+        "https://rescare.pl/"
+      ],
+      "statement": "Monitoring and warranty administration are already inexpensive: SMA offers free product monitoring through Sunny Portal, and Polish ResCare advertises business monitoring plus manufacturer-warranty handling from 49 PLN net per month."
+    },
+    {
+      "claim_id": "niche-04-r08",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://podwojnaenergia.pl/serwis"
+      ],
+      "statement": "Another Polish provider advertises monitoring-led packages from 59 to 279 PLN net per month for systems up to 50 kWp and a 2,299 PLN net one-off inspection, which constrains standalone monitoring and diagnostic pricing even though systems above 50 kWp are quoted individually."
+    },
+    {
+      "claim_id": "niche-04-r09",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.ure.gov.pl/pl/urzad/informacje-ogolne/aktualnosci/12923,Rynek-energii-elektrycznej-sprawozdanie-Prezesa-URE-dotyczace-mechanizmow-redysp.html"
+      ],
+      "statement": "Poland's regulator reports that transmission-operator PV curtailment reached 597.26 GWh in 2024 and distribution operators curtailed a further 24.12 GWh, so dispatch records must be excluded before attributing low output to equipment or workmanship."
+    },
+    {
+      "claim_id": "niche-04-r10",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://www.solaredge.com/sites/default/files/api_license_terms_and_conditions_aug2013.pdf"
+      ],
+      "statement": "SolarEdge's API terms disclaim completeness and accuracy and permit changes or termination, showing that durable multi-vendor monitoring depends on customer-authorised access and resilient connectors rather than an assumed perpetual data feed."
+    },
+    {
+      "claim_id": "niche-04-r11",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://jinkosolar.eu/wp-content/uploads/2024/11/LIMITED-WARRANTY-REV.EN20240726-LINEAR-MONOFACIAL-MODULE-FOR-EU.pdf",
+        "https://rescare.pl/"
+      ],
+      "statement": "A paid evidence diagnostic plus a tightly defined recovery fee may command more than monitoring because it addresses an accepted claim or repair outcome, but Polish success rates, median recoveries, and owner conversion remain unvalidated."
+    }
+  ],
+  "contrary_evidence": [
+    "SMA provides free connected-product monitoring, while Polish providers bundle monitoring and manufacturer-warranty handling from 49 PLN net per month; monitoring alone is not a defensible premium offer.",
+    "Published Polish service prices for smaller systems range from 59 to 279 PLN net monthly and 2,299 PLN net for a one-off inspection, below or overlapping the discovery pricing hypothesis.",
+    "Commercial warranty and statutory-liability rights can be limited by contract, and manufacturer warranties impose strict evidence, notice, and testing conditions; not every technical fault is recoverable.",
+    "Weather, curtailment, soiling, shading, configuration, and ordinary degradation can all cause apparent underperformance without a valid manufacturer, installer, or insurer claim.",
+    "Vendor APIs can change, terminate, or provide incomplete data, raising onboarding and maintenance cost for a multi-vendor desk."
+  ],
+  "economics": {
+    "acquisition_route": "Audit three to five permissioned cases from the family installation network without assuming they are claims, publish anonymised process evidence, and approach lessors, electricians, and O&M firms with a portfolio triage offer. Require paid diagnostics before accepting success-fee work.",
+    "capital_required_pln": 55000,
+    "founder_net_worth_path": "A target case would require about 800 C&I sites averaging 1,800 PLN ARR, 300 diagnostics per year averaging 5,000 PLN, and 150 successful recoveries averaging a 15,000 PLN fee, for roughly 5.2m PLN annual revenue and perhaps 1.4-1.8m PLN EBITDA after partner and case costs. At a 4x EBITDA value and about 70% ownership, equity could be 3.9-5.0m PLN; retained cash could take founder net worth above 5m PLN in seven to ten years. This depends on channel distribution and claim yield that are currently unknown.",
+    "founder_time": "12-18 hours per week for analytics, triage, productisation, and channel management; inspections and legal escalation are contracted per case with workload caps.",
+    "gross_margin_basis": "Desk diagnostics may yield 55-70% gross margin when inputs are complete; monitoring can reach 70-85% after connectors stabilise. Field tests and claim coordination likely reduce blended gross margin to 45-65%, and failed contingent cases must be limited by paid triage.",
+    "payback": "The owner should recover the diagnostic fee through an accepted replacement, cash settlement, verified contractor repair, or avoided generation loss. The business protects payback by refusing contingent work unless contract rights, counterparty solvency, and expected recovery exceed field and legal costs.",
+    "pricing": "Charge 2,000-6,000 PLN for desk-based contract and telemetry triage; quote another 3,000-12,000 PLN for field evidence when justified; test an 8-12% fee only on precisely defined verified recovery. Price C&I monitoring at 75-200 PLN per site monthly with a 1,500-3,000 PLN portfolio minimum, not the original blanket 250-500 PLN per site.",
+    "retention_or_repeat": "Portfolio owners can repeat across sites and component events. Monitoring retention is plausible only if cross-vendor normalisation and escalation outperform free portals and low-cost service bundles; this remains unproven."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A permissioned corpus linking component, weather, telemetry, contract terms, evidence packages, counterparty responses, and realised claim outcomes",
+    "customer": "Polish owners, lessors, and independent O&M firms with portfolios of approximately 50 kW to 1 MW rooftop PV systems",
+    "distribution_mechanism": "Documented family-network pilot cases, then referrals from independent electricians, equipment lessors, wholesalers, insurers, and O&M firms with orphaned portfolios",
+    "offer_and_business_model": "Contract-rights triage, weather- and curtailment-normalised evidence dossier, coordinated accredited testing, claim administration, and optional lower-priced portfolio monitoring",
+    "payer_and_paid_event": "The asset owner pays for a bounded evidence diagnostic and, only under a clear contract, a percentage of verified cash, replacement, or repair recovery",
+    "problem_trigger": "A site materially underperforms, a component fails, or a manufacturer, installer, lessor, or insurer requests evidence before repair or payment"
+  },
+  "founder_fit": [
+    "Strong fit with the founder's time-series, anomaly-detection, AI, and Polish renewable-energy family-network advantages.",
+    "A desk-based triage and evidence workflow is compatible with 12-18 focused hours per week and low public exposure.",
+    "Accredited inspection, electrical work, and legal claim strategy should be delegated; bespoke negotiation must be capped to avoid exhausting founder time."
+  ],
+  "parent": {
+    "candidate_id": "niche-04",
+    "version": 2
+  },
+  "risks": [
+    "The desk can spend substantial analyst and legal time on claims that fail for contractual rather than technical reasons.",
+    "A contingent fee can create disputes about causation, baseline output, and the value of replacement rather than cash recovery.",
+    "Manufacturers, installers, or special-purpose owners may be insolvent or unreachable before long warranties mature.",
+    "Unsafe or unqualified site work by contractors creates electrical, fire, and professional-liability exposure.",
+    "Vendor API instability and fragmented data ownership can make portfolio onboarding bespoke and margin-dilutive.",
+    "Existing O&M firms can add claim administration to low-priced monitoring contracts."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.nrel.gov/docs/fy22osti/80881.pdf",
+    "https://joint-research-centre.ec.europa.eu/photovoltaic-geographical-information-system-pvgis_en",
+    "https://iea-pvps.org/wp-content/uploads/2025/02/IEA-PVPS-T13-30-2025-REPORT-Degradation-and-Failure.pdf",
+    "https://stat.gov.pl/files/gfx/portalinformacyjny/pl/defaultaktualnosci/5485/3/19/1/energia_ze_zrodel_odnawialnych_2024.pdf",
+    "https://jinkosolar.eu/wp-content/uploads/2024/11/LIMITED-WARRANTY-REV.EN20240726-LINEAR-MONOFACIAL-MODULE-FOR-EU.pdf",
+    "https://isap.sejm.gov.pl/isap.Nsf/download.xsp/WDU20230001610/U/D20231610Lj.pdf",
+    "https://manuals.sma.de/SHPxxx21/en-US/10312892427.html",
+    "https://rescare.pl/",
+    "https://podwojnaenergia.pl/serwis",
+    "https://www.ure.gov.pl/pl/urzad/informacje-ogolne/aktualnosci/12923,Rynek-energii-elektrycznej-sprawozdanie-Prezesa-URE-dotyczace-mechanizmow-redysp.html",
+    "https://www.solaredge.com/sites/default/files/api_license_terms_and_conditions_aug2013.pdf"
+  ],
+  "stage": "development",
+  "structure": {
+    "commercial_archetype": "Paid evidence diagnostic and contingent claims-recovery service with optional monitoring",
+    "control_point": "The contract-screened, weather- and curtailment-normalised evidence dossier accepted by the responsible counterparty",
+    "critical_dependency": "A sufficient share of anomalies must have enforceable rights, solvent counterparties, provable causation, and recoveries large enough to fund inspection and case work"
+  },
+  "thesis": "Build a vendor-neutral evidence and recovery desk for Polish owners and O&M firms managing portfolios of roughly 50 kW to 1 MW rooftop PV systems. Normalise inverter telemetry against weather and documented curtailment, reconstruct commissioning and warranty records, triage likely component or workmanship failures, and coordinate accredited field evidence for claims. Lead with a paid diagnostic and apply a success fee only to contractually defined, verified cash or replacement recovery; monitoring is an optional lower-priced feeder rather than the core differentiation.",
+  "title": "PV Warranty-Recovery Desk for Small Commercial Roof Portfolios",
+  "uncertainties": [
+    "Number and capacity of Polish 50 kW to 1 MW commercial rooftop portfolios with accessible telemetry and orphaned or weak O&M.",
+    "Median verified recovery, claim acceptance rate, and time to resolution by component and counterparty.",
+    "Whether success fees calculated as a percentage of replacement or avoided loss are enforceable and acceptable under Polish contracts and insurance rules.",
+    "Availability of commissioning records, invoices, serial numbers, maintenance logs, and assignable warranty rights.",
+    "Cost and availability of accredited local tests required by manufacturers or insurers.",
+    "Owner willingness to authorise inverter, meter, curtailment, insurance, and contract data access.",
+    "Incremental retention of a monitoring subscription after a claim closes."
+  ],
+  "version": 3
+}

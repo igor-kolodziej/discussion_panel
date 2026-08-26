@@ -1,0 +1,133 @@
+{
+  "candidate_id": "moat-04",
+  "claims": [
+    {
+      "claim_id": "moat04-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/dir/2012/19/2024-04-08/eng",
+        "https://environment.ec.europa.eu/topics/waste-and-recycling/waste-shipments/waste-shipments-correspondents-guidelines_en"
+      ],
+      "statement": "EU WEEE rules require item-level functionality testing, records, direct-reuse documentation, and protective transport evidence to treat shipped reclaimed electrical equipment as used equipment rather than presumptively illegal waste."
+    },
+    {
+      "claim_id": "moat04-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.ure.gov.pl/pl/urzad/informacje-ogolne/aktualnosci/13173%2CRaport-URE-w-Polsce-mamy-juz-ponad-16-mln-mikroinstalacji-OZE.html",
+        "https://iea-pvps.org/wp-content/uploads/2020/01/Report_IEA-PVPS_T13-08_2017_Technical_Assumptions_Used_in_PV_Financial_Models.pdf"
+      ],
+      "statement": "Poland's 1.6 million-plus microinstallations and a documented 10-15-year inverter service life create a real future repair and replacement base, especially for off-warranty electronics."
+    },
+    {
+      "claim_id": "moat04-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://publications.jrc.ec.europa.eu/repository/bitstream/JRC141760/JRC141760_01.pdf"
+      ],
+      "statement": "Module reuse economics are weak today: JRC reports low warranty returns, roughly 30-year module life, and refurbishment costs that can exceed new production costs."
+    },
+    {
+      "claim_id": "moat04-c4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.secondsol.com/en/index.htm"
+      ],
+      "statement": "SecondSol already operates the near-exact European marketplace with more than 60000 users, over 250000 spare parts, used and refurbished components, testing, repair, auctions, logistics, and recycling."
+    },
+    {
+      "claim_id": "moat04-c5",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://www.secondsol.com/en/index.htm",
+        "https://www.sma.de/en/service/device-replacement",
+        "https://iea-pvps.org/wp-content/uploads/2026/02/IEA-PVPS-T13-37-2026-REPORT-Second-Life-PV.pdf"
+      ],
+      "statement": "A viable Polish wedge must focus on documented fitment for obsolete, off-warranty components unavailable from OEM replacement channels, not generic used modules."
+    }
+  ],
+  "contrary_evidence": [
+    "SecondSol already has the same marketplace, testing, repair, auction, logistics, and spare-part scope at European scale.",
+    "SMA sends current-portfolio replacement devices, reducing demand for reclaimed units where OEM substitution is technically feasible.",
+    "JRC finds module return rates low and present refurbishment economics inferior to cheap new modules.",
+    "Second-life PV repair methods and assurance standards remain incompletely standardized."
+  ],
+  "economics": {
+    "acquisition_route": "Seed case intake with actual off-warranty inverter and optimizer failures from the family installer, then recruit installer accounts around unresolved cases. For every case, query the OEM first and then SecondSol and qualified recycler or repair partners; do not hold inventory or launch an open marketplace before paid resolved cases demonstrate a repeatable gap.",
+    "capital_required_pln": 75000,
+    "founder_net_worth_path": "The prior path dependent on roughly 70 million PLN of marketplace GMV is replaced by a still-unvalidated recurring installer-account path: first establish positive contribution on resolved high-avoidance cases, then measure annual resolved cases and contribution per account before projecting any route or timing to 5 million PLN of founder net worth. The present evidence does not support that projection.",
+    "founder_time": "About 15-20 hours weekly only if qualified partners retain responsibility for testing, waste-status assessment, warehousing, transport, and installation while the founder runs intake, source routing, fitment data, and account automation.",
+    "gross_margin_basis": "No software-like margin is assumed. Contribution must be measured per resolved case after sourcing, third-party testing, returns, warranty, insurance, support, and any fitment-guarantee cost; OEM or incumbent-resolved cases should be declined or routed without carrying inventory.",
+    "payback": "The earlier 500-order payback claim is withdrawn. Payback cannot be estimated until paid cases establish resolution rate, all-in contribution per resolved case, repeat frequency per installer, and the share of cases already solved by OEMs or SecondSol.",
+    "pricing": "Test an outcome-contingent procurement and documented-fitment fee plus pass-through qualified-partner costs only on cases where avoided repowering cost is documented; the fee level and willingness to pay remain unvalidated.",
+    "retention_or_repeat": "An installer account can submit recurring failures across its installed base, but repeat frequency and the economically unresolved share are unknown and must be measured before treating the account as recurring revenue."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A cross-source case graph linking failed legacy equipment, OEM and marketplace search results, serial-level tests, installation context, chosen replacement, and verified repair outcome",
+    "customer": "Polish solar installers handling obsolete off-warranty inverter and optimizer failures not straightforwardly resolved by an OEM",
+    "distribution_mechanism": "Installer case intake seeded by the family installer and expanded through recurring procurement accounts, with OEM, SecondSol, and qualified recycler or repair partners used as supply channels",
+    "offer_and_business_model": "Managed obsolete-component procurement and documented-fitment resolution service that aggregates existing channels instead of operating a standalone marketplace",
+    "payer_and_paid_event": "Installer or system owner pays an outcome-contingent procurement and fitment fee when a documented compatible solution is sourced; fee level is unvalidated",
+    "problem_trigger": "An off-warranty inverter or optimizer fails and initial OEM replacement plus ordinary marketplace search cannot resolve the job without repowering"
+  },
+  "founder_fit": [
+    "The family installer can supply real failure cases and expose whether the narrowed unresolved-case wedge exists.",
+    "Data modeling, source routing, and workflow automation match the founder's technical strengths.",
+    "Qualified partners must continue to own testing, waste-status assessment, warehousing, transport, and installation so the service remains part-time."
+  ],
+  "parent": {
+    "candidate_id": "moat-04",
+    "version": 3
+  },
+  "redesign": {
+    "changed_fingerprint_fields": [
+      "compounding_advantage",
+      "customer",
+      "distribution_mechanism",
+      "offer_and_business_model",
+      "payer_and_paid_event",
+      "problem_trigger"
+    ],
+    "economic_effect": "This replaces the capital- and liquidity-dependent standalone marketplace path with an inventory-light case-resolution wedge that monetizes only demonstrably unresolved, high-avoidance events and uses existing channels as supply. It removes the unsupported 70 million PLN GMV and 500-order payback assumptions, but it does not establish case volume, price, contribution, repeat demand, or a 5 million PLN founder-net-worth path."
+  },
+  "risks": [
+    "Untested or poorly documented goods can be treated as WEEE, including illegal-shipment consequences.",
+    "A substantial modification can shift manufacturer-like product liability to the modifier; even ordinary resale carries conformity and defect exposure.",
+    "SecondSol's established liquidity and services make a broad European marketplace non-differentiated.",
+    "OEM current-product replacement can be safer and cheaper than reclaimed fitment.",
+    "Rare-part liquidity fragments by model, voltage, firmware, grid code, and vintage.",
+    "The resolution desk may discover that OEMs and SecondSol already solve most economically attractive cases, leaving too little paid case volume.",
+    "Reliance on third-party sources and testers can limit service levels and makes any fitment promise costly unless responsibilities are contractually bounded."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/dir/2012/19/2024-04-08/eng",
+    "https://environment.ec.europa.eu/topics/waste-and-recycling/waste-shipments/waste-shipments-correspondents-guidelines_en",
+    "https://eur-lex.europa.eu/eli/dir/2024/2853/oj",
+    "https://publications.jrc.ec.europa.eu/repository/handle/JRC132558",
+    "https://publications.jrc.ec.europa.eu/repository/bitstream/JRC141760/JRC141760_01.pdf",
+    "https://iea-pvps.org/wp-content/uploads/2026/02/IEA-PVPS-T13-37-2026-REPORT-Second-Life-PV.pdf",
+    "https://iea-pvps.org/wp-content/uploads/2020/01/Report_IEA-PVPS_T13-08_2017_Technical_Assumptions_Used_in_PV_Financial_Models.pdf",
+    "https://www.secondsol.com/en/index.htm",
+    "https://www.sma.de/en/service/device-replacement",
+    "https://www.ure.gov.pl/pl/urzad/informacje-ogolne/aktualnosci/13173%2CRaport-URE-w-Polsce-mamy-juz-ponad-16-mln-mikroinstalacji-OZE.html"
+  ],
+  "stage": "development",
+  "structure": {
+    "commercial_archetype": "Managed B2B procurement and fitment-resolution service with a data layer",
+    "control_point": "Cross-source intake and the closed-loop record from failed component through documented successful repair",
+    "critical_dependency": "A sufficient recurring volume of paid cases genuinely unresolved by OEMs and SecondSol, plus qualified partners able to establish non-waste status, safety, and fitment at positive contribution"
+  },
+  "thesis": "Operate an installer-facing case-resolution desk for obsolete off-warranty inverters and optimizers: check OEM replacement first, then source through SecondSol and qualified recycler or repair partners, and provide documented fitment only for cases where those channels do not already offer a straightforward solution.",
+  "title": "Obsolete PV Resolution Desk",
+  "uncertainties": [
+    "The annual count and avoided cost of Polish legacy-component failures are unknown.",
+    "SecondSol's Polish usage, seller fees, fulfillment performance, and inventory coverage are unknown.",
+    "Testing, return, insurance, warranty, and fitment-guarantee costs have not been quoted.",
+    "It is unknown which reclaimed component classes remain non-waste and safe after recycler intake.",
+    "No evidence yet proves technicians will switch procurement or contribute fitment outcomes.",
+    "The paid resolution rate, contribution per resolved case, and repeat case frequency per installer account are unknown.",
+    "No supplier, tester, installer, or customer commitment is established by this redesign."
+  ],
+  "version": 4
+}

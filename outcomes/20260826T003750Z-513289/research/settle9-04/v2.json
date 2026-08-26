@@ -1,0 +1,211 @@
+{
+  "candidate_id": "settle9-04",
+  "candidate_sha256": "0fe443f79c6bc5c398ea6fe38bc63e3adb9c3d1317331cc2a9dc206279622114",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "settle9-04-r1",
+      "evidence_refs": [
+        "s4-s1"
+      ],
+      "statement": "The live system produces very high recurring volume: about 1.6 billion containers were returned through 62000 points by the end of May 2026."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "settle9-04-r2",
+      "evidence_refs": [
+        "s4-s2",
+        "s4-s3"
+      ],
+      "statement": "Retail obligations and required operator agreements create a recurring settlement workflow for covered stores."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "settle9-04-r3",
+      "evidence_refs": [
+        "s4-s4"
+      ],
+      "statement": "Eight authorised operators are listed by the Ministry, creating genuine multi-operator complexity."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "settle9-04-r4",
+      "evidence_refs": [
+        "s4-s5"
+      ],
+      "statement": "Kaucyjni already offers one multi-operator panel, POS/RVM integration, reports and settlement visibility for stores and chains."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "settle9-04-r5",
+      "evidence_refs": [
+        "s4-s6"
+      ],
+      "statement": "Kaucyjni's integrated public plans cost 39.90-79.90 PLN net per store per month, materially below the candidate's proposed price."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "settle9-04-r6",
+      "evidence_refs": [
+        "s4-s7"
+      ],
+      "statement": "Working multi-operator integrations require signed operator agreements, portal access and operator-specific store identifiers; access is possible but relationship-bound."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "settle9-04-r7",
+      "evidence_refs": [
+        "s4-s8",
+        "s4-s9",
+        "s4-s10"
+      ],
+      "statement": "TOMRA, Kaucja.pl and PolKa provide APIs, session or count data, reporting and settlement tools that can substitute for a neutral reconciliation layer."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "settle9-04-r8",
+      "evidence_refs": [
+        "s4-s1",
+        "s4-s4",
+        "s4-s5",
+        "s4-s8"
+      ],
+      "statement": "High volume and multiple operators imply a large reconciliation surface, but they do not prove that unresolved, recoverable discrepancies are economically material after incumbent controls."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "settle9-04-r9",
+      "evidence_refs": [],
+      "statement": "A 20-50-store chain will pay a premium or success fee for independent audit recoveries beyond existing tools."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "settle9-04-r10",
+      "evidence_refs": [
+        "s4-s5",
+        "s4-s7",
+        "s4-s8"
+      ],
+      "statement": "A read-only file audit is compatible with the founder's capital and part-time constraints, while live integrations and field service are not yet demonstrated to be delegable within the same envelope."
+    }
+  ],
+  "contrary_evidence": [
+    "A near-exact multi-operator competitor already has POS distribution, operator connections, reporting and settlement modules.",
+    "That competitor's public integrated price is below 80 PLN per store per month.",
+    "RVM vendors and system operators provide their own data, APIs and reconciliation tooling.",
+    "No direct evidence quantifies unresolved recoverable leakage per store or proves that it persists after system maturation."
+  ],
+  "schema_version": 2,
+  "sources": [
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2026-07-02",
+      "publisher": "Polish Ministry of Climate and Environment",
+      "source_id": "s4-s1",
+      "source_type": "official_statistics",
+      "stance": "supporting",
+      "title": "1.6 billion packages returned to circulation: six months of the deposit system",
+      "url": "https://www.gov.pl/web/klimat/16-mld-opakowan-wrocilo-do-obiegu-pol-roku-systemu-kaucyjnego"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2025-08-08",
+      "publisher": "Polish Ministry of Climate and Environment",
+      "source_id": "s4-s2",
+      "source_type": "official_guidance",
+      "stance": "supporting",
+      "title": "Deposit system and pharmacies, drugstores or sports shops",
+      "url": "https://www.gov.pl/web/klimat/system-kaucyjny-drogerie-apteki-sklepy-sportowe"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2026-07-24",
+      "publisher": "Polish Ministry of Climate and Environment",
+      "source_id": "s4-s3",
+      "source_type": "official_guidance",
+      "stance": "context",
+      "title": "Do you run a small shop? Learn your deposit-system obligations",
+      "url": "https://www.gov.pl/web/klimat/prowadzisz-maly-sklep-poznaj-obowiazki-w-systemie-kaucyjnym"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "Polish Ministry of Climate and Environment",
+      "source_id": "s4-s4",
+      "source_type": "official_registry",
+      "stance": "supporting",
+      "title": "Deposit-system operators",
+      "url": "https://www.gov.pl/web/klimat/system-kaucyjny-operatorzy"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "COMP S.A. / Kaucyjni",
+      "source_id": "s4-s5",
+      "source_type": "competitor_product",
+      "stance": "contradicting",
+      "title": "Kaucyjni for stores",
+      "url": "https://kaucyjni.pl/dla-sklepu/"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "COMP S.A. / Kaucyjni",
+      "source_id": "s4-s6",
+      "source_type": "competitor_pricing",
+      "stance": "contradicting",
+      "title": "Kaucyjni pricing",
+      "url": "https://kaucyjni.pl/cennik/"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2026-01-28",
+      "publisher": "COMP S.A. / Kaucyjni",
+      "source_id": "s4-s7",
+      "source_type": "competitor_integration_guide",
+      "stance": "contradicting",
+      "title": "Instructions for connecting to a deposit-system operator",
+      "url": "https://instalacja.kaucyjni.pl/download/operatorzy/Instrukcja_integracja_z_operatorem_28012026.pdf"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "TOMRA",
+      "source_id": "s4-s8",
+      "source_type": "incumbent_product",
+      "stance": "contradicting",
+      "title": "TOMRA APIs for reverse-vending and deposit-system data",
+      "url": "https://www.tomra.com/pl-pl/reverse-vending/our-offering/tomra-apis"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "Kaucja.pl – Krajowy System Kaucyjny S.A.",
+      "source_id": "s4-s9",
+      "source_type": "operator_product",
+      "stance": "contradicting",
+      "title": "Kaucja.pl downloads and open APIs",
+      "url": "https://www.kaucja.pl/do-pobrania"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "undated",
+      "publisher": "PolKa Operator Systemu Kaucyjnego Not For Profit S.A.",
+      "source_id": "s4-s10",
+      "source_type": "operator_product",
+      "stance": "contradicting",
+      "title": "PolKa deposit-system operator",
+      "url": "https://polskakaucja.pl/"
+    }
+  ],
+  "unknowns": [
+    "Unresolved discrepancy value and recovery rate per store",
+    "Data-export and third-party audit rights",
+    "Exception resolution time and manual evidence cost",
+    "Retailer willingness to pay above incumbent software prices",
+    "Incremental recovery attributable to an independent layer",
+    "Channel partner commitment and revenue-share terms",
+    "Persistence of discrepancies after operational maturation"
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "assumptions": [
+    "The initial product remains a laboratory workflow and traceability tool and makes no autonomous classification, diagnostic, or direct-to-patient recommendation.",
+    "A qualified laboratory professional retains authorization responsibility, while clinical-genetics, data-protection, and regulatory expertise can be contracted for a bounded pilot.",
+    "Some target laboratories have linkable digital historical records, but data normalization and consent completeness vary and must be measured rather than assumed.",
+    "The founder limits initial spending to the stated 100,000 PLN and 18 to 22 hours per week, with production compliance and deep integrations deferred until paid evidence supports them."
+  ],
+  "base_score": 3.95,
+  "candidate_id": "niche-06",
+  "candidate_sha256": "e450d305651290578655c3d7ee3866ae06b64cc1e3b1e48b976a9407e3a921c6",
+  "candidate_version": 2,
+  "constrained_score": 3.75,
+  "evaluation_type": "working",
+  "evidence_needed_for_higher_score": "A paid pilot should establish the current manual baseline, historical-data import cost, alert precision, actionable-review rate, professional minutes per alert, report-amendment yield, security and regulatory path, incumbent feature gap, renewal intent, and an account-level census showing enough reachable laboratories at a validated contract value.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "There is a genuine lifecycle gap between versioned evidence changes and a laboratory's documented decision on an old report, and current Polish standards make reconstructability and named authorization salient. The insight is bounded correctly around workflow, but a ClinVar change is not itself a patient-level action and professional guidance treats recontact as consent-aware, resource-constrained shared responsibility rather than an automatic duty.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Missed clinically important changes and non-reconstructable decisions can be consequential, so the underlying pain is credible. However, European guidance found no economic evidence for systematic recontact, surveyed reanalysis demand was usually low and provider-initiated, and neither a budget owner nor willingness to pay for this separate queue is established.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Onboarding plus recurring surveillance can in principle support software-like gross margins and repeat revenue. The proposed price, 42-account scale, payback, alert workload, integration cost, compliance cost, and retention are all unresolved, while qualified review cannot be automated away; the wealth path is therefore arithmetically possible but commercially fragile.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Polish hereditary-cancer, cardiogenetics, or rare-disease laboratories form a coherent first segment with a clear trigger. The current target-account census, structured-record readiness, incumbent coverage, and number of buyers able to sustain the proposed contract value are unknown, so the beachhead may be too small or inaccessible for the required scale.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "A localized, consent-aware authorization queue is narrower than generic interpretation, but QIAGEN and Fabric already cover substantial interpretation, reanalysis, reporting, workflow, and integration territory. No evidence shows a sufficiently important gap in incumbent products that a standalone entrant could own, and installed vendors can add this workflow.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A successful queue could extend across disease areas, more CEE laboratories, guideline changes, and adjacent report-lifecycle quality workflows. Expansion is plausible but not automatic because every new laboratory and jurisdiction adds data mapping, governance, integration, language, and regulatory work.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Embedded signed procedures, normalized historical mappings, consent states, decision trails, and measured alert outcomes could create switching costs and a useful proprietary workflow record. The evidence feeds are public, data stays under laboratory control, and LIMS or interpretation incumbents can reproduce the product unless exclusive integrations or a privileged channel develop.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "A bounded queue with immutable evidence snapshots and professional signoff could be safer and more auditable than spreadsheets or ad hoc searches. There is no measured alert precision, review-time reduction, amendment yield, onboarding speed, or feature comparison showing that the improvement is large enough to induce a purchase or switch.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "The 2025 Polish laboratory quality standards and continuing changes in genomic evidence make traceable lifecycle review timely. At the same time, GDPR sensitivity and possible IVDR qualification raise the cost and time of converting that timing into a production product.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "A reference-laboratory pilot followed by LIMS integrators, quality advisers, and professional networks is a coherent route. No laboratory, integrator, or adviser commitment is evidenced, the buyer set is specialized, and security, quality, and procurement reviews are likely long while incumbents already possess the strongest channels.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "The founder's data, genetics interest, AI leverage, available capital, and preference for systemized B2B work fit a non-production prototype. Production requires scarce clinical-genetics governance, reliable identity matching, GDPR safeguards, regulatory classification, quality management, integrations, and incident response, making the plan difficult to operate part-time without a committed laboratory or channel partner.",
+      "score": 4,
+      "status": "scored"
+    }
+  ],
+  "final_score": 3.8,
+  "highest_value_structural_change": "Make the queue an embedded, co-sold lifecycle-compliance module for a committed CEE genetics LIMS or laboratory network, with customer-financed integration and clinical governance, rather than a standalone alert product competing for direct access to each laboratory.",
+  "interaction_adjustment": -0.2,
+  "judge_id": "c2-working-niche-06",
+  "main_structural_strength": "The product is anchored at a defensible human control point: an immutable evidence change is linked to a prior report, consent state, and a named laboratory professional's signed action rather than being presented as autonomous clinical interpretation.",
+  "primary_score_limiter": "The business has not established that a sufficiently large set of laboratories experiences an expensive incumbent-unserved workflow problem and will pay enough to overcome integration, clinical-governance, and compliance costs.",
+  "qualified": false,
+  "raw_response_path": "artifacts/research/raw-c2-working-niche-06.json",
+  "raw_response_sha256": "cca32ff93a93e820b6c4605234d6399e7023b5cbb6b8e38163f305836276692b",
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 2,
+  "strongest_disconfirming_evidence": "Mature interpretation platforms already advertise reanalysis, workflow, reporting, and LIMS or EMR integration, while ESHG found no economic evidence for systematic recontact and observed reanalysis requests were generally low despite broad availability.",
+  "unrounded_score": 3.75
+}

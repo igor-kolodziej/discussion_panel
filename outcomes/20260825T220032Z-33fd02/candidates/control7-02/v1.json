@@ -1,0 +1,83 @@
+{
+  "candidate_id": "control7-02",
+  "claims": [
+    {
+      "claim_id": "control7-02-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/zakres-obowiazkowego-ksef/"
+      ],
+      "statement": "Poland's mandatory KSeF rollout covers remaining taxpayers from 1 April 2026 subject to a temporary small-sales exception through 2026."
+    },
+    {
+      "claim_id": "control7-02-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ksef.podatki.gov.pl/ksef-na-okres-obligatoryjny/wsparcie-dla-integratorow/"
+      ],
+      "statement": "The Ministry of Finance publishes an OpenAPI contract, SDKs, and production/integration environments for KSeF 2.0."
+    },
+    {
+      "claim_id": "control7-02-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/kas/api-wykazu-podatnikow-vat"
+      ],
+      "statement": "The VAT taxpayer registry supports automated checks of NIP or REGON against a bank account and returns an electronic confirmation key."
+    }
+  ],
+  "contrary_evidence": [
+    "Government tools already provide free NIP-account verification and mass-check data, so a basic lookup has little defensibility.",
+    "KSeF bank-account fields are optional, limiting deterministic invoice-to-account matching."
+  ],
+  "economics": {
+    "acquisition_route": "Accounting-software integrations first, then finance-team referrals and bookkeeping channels",
+    "capital_required_pln": 45000,
+    "founder_net_worth_path": "Illustrative, unvalidated path: 1200 customers averaging 500 PLN monthly plus usage revenue could reach about 7m PLN annual revenue; at 25% operating margin and 80% founder ownership, a profit-based business value plus accumulated cash could plausibly exceed 5m PLN around year 5-6",
+    "founder_time": "3 hours/day for an API pilot, with security review and sales support contracted as needed",
+    "gross_margin_basis": "Target 75-85% after registry calls, hosting, security, and manual escalation review",
+    "payback": "Unvalidated: 60 customers contributing roughly 800 PLN monthly gross margin could repay the pilot in 12-18 months",
+    "pricing": "Unvalidated: 500-3000 PLN monthly minimum plus 0.10-0.50 PLN per checked invoice",
+    "retention_or_repeat": "Every payment run repeats; ERP integration and accumulated supplier history may support annual retention"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Permissioned cross-customer patterns, verified supplier histories, false-positive feedback, and workflow switching costs",
+    "customer": "Polish mid-market finance teams, accounting platforms, and outsourced bookkeeping firms",
+    "distribution_mechanism": "Integrations and revenue share with Polish accounting, ERP, and bookkeeping vendors",
+    "offer_and_business_model": "API and review console combining KSeF fields, VAT whitelist checks, change detection, and auditable approvals",
+    "payer_and_paid_event": "Business or accounting platform pays monthly and/or per invoice verified before payment release",
+    "problem_trigger": "A structured invoice arrives or supplier payment details change before an accounts-payable run"
+  },
+  "founder_fit": [
+    "Direct match for data science, anomaly detection, and API automation",
+    "Low-capital software pilot alongside employment",
+    "Polish regulatory and language context is useful",
+    "Channel sales can reduce constant founder-led outreach"
+  ],
+  "parent": null,
+  "risks": [
+    "Handling financial and invoice data creates high security and liability exposure",
+    "False positives could delay legitimate payments",
+    "ERP incumbents or banks can bundle basic verification"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/zakres-obowiazkowego-ksef/",
+    "https://ksef.podatki.gov.pl/ksef-na-okres-obligatoryjny/wsparcie-dla-integratorow/",
+    "https://www.gov.pl/web/kas/api-wykazu-podatnikow-vat"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Per-transaction verification bureau and approval API",
+    "control_point": "The mandatory pre-payment approval call plus a permissioned history of verified supplier identities and account changes",
+    "critical_dependency": "Customers must grant lawful KSeF, ERP, and payment-workflow access and treat the signal as an approval gate"
+  },
+  "thesis": "Embed a verification step between receipt of a structured KSeF invoice and ERP payment approval. The service checks invoice identity, NIP-account consistency, duplicate and change patterns, and customer-specific supplier history, while requiring human confirmation for anomalies. The defensible asset would be the permissioned supplier-change graph and position in the approval workflow, not access to public registries.",
+  "title": "KSeF Supplier Payment Trust Gate",
+  "uncertainties": [
+    "Whether customers will share enough permissioned outcomes to create a network advantage",
+    "Whether KSeF access scopes permit the intended integration model",
+    "The incremental willingness to pay beyond free government checks"
+  ],
+  "version": 1
+}

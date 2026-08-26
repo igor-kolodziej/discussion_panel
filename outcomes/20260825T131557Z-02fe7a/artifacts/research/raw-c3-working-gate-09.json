@@ -1,0 +1,84 @@
+{
+  "judge_id": "c3-working-gate-09",
+  "assumptions": [
+    "The product can receive an authorized local export and return an audit result without replacing the incumbent HIS or unnecessarily moving identifiable health data to the cloud.",
+    "Some economically material rehabilitation-claim errors may remain after incumbent validation, but their existence and frequency are not assumed as established.",
+    "A provider or billing outsourcer can attribute recovered reimbursement to the incremental preflight sufficiently well to support value-based purchasing.",
+    "NFZ interpretation, privacy, security, and incident-response expertise can be retained within a bounded pilot, while the ongoing burden remains unknown.",
+    "The proposed price, margin, retention, penetration, and founder-net-worth path remain unvalidated planning assumptions."
+  ],
+  "factors": [
+    {
+      "name": "Core insight",
+      "status": "scored",
+      "score": 6,
+      "rationale": "A specialty-specific, local, explainable audit focused only on errors missed by the incumbent HIS is a disciplined use of public and changing NFZ rules. It targets a concrete pre-submission control point, although its central premise is the still-unknown incremental gap in existing products."
+    },
+    {
+      "name": "Customer pain and willingness to pay",
+      "status": "scored",
+      "score": 5,
+      "rationale": "Rejected or delayed reimbursement directly affects provider cash flow, so a verified recovery tool has a credible payment basis. The available evidence establishes validation rules, not the frequency or value of avoidable rehabilitation losses, errors missed by current systems, or actual purchasing intent."
+    },
+    {
+      "name": "Business model and economics",
+      "status": "scored",
+      "score": 5,
+      "rationale": "Monthly claim batches and changing rules can support recurring revenue, and a deterministic engine has software-like reuse. Low proposed account revenue, fragmented connectors, rule maintenance, privacy controls, expert review, and support may constrain margin and payback; the 250-provider scenario and all unit economics are unvalidated."
+    },
+    {
+      "name": "Market and beachhead",
+      "status": "scored",
+      "score": 6,
+      "rationale": "Rehabilitation is a clear single-specialty beachhead within a reported population of 2,768 providers, large enough for focused discovery and potentially meaningful penetration. The independent-provider subset, claim volume, avoidable-loss pool, and realistic serviceable share are not established."
+    },
+    {
+      "name": "Competitive position and domination potential",
+      "status": "scored",
+      "score": 4,
+      "rationale": "mMedica and KS-SOMED already automate rehabilitation workflows and NFZ settlement, control the primary interfaces, and can extend their own checks. A narrow position is possible around independently verified incremental recovery, but no demonstrated blind spot or protected channel currently supports domination."
+    },
+    {
+      "name": "Expansion potential",
+      "status": "scored",
+      "score": 6,
+      "rationale": "A successful rule-to-correction engine and audit workflow could extend to other NFZ specialties and to billing outsourcers managing many providers. Each specialty and HIS combination adds domain, connector, privacy, and support work, so expansion is plausible rather than automatic."
+    },
+    {
+      "name": "Defensibility and durability",
+      "status": "scored",
+      "score": 4,
+      "rationale": "A de-identified taxonomy of actual missed errors and their resolution could compound and improve explanations. NFZ rules and message specifications are public, while incumbent HIS vendors possess broader workflow access and data, making durability weak until unique recovery data and distribution rights exist."
+    },
+    {
+      "name": "Strength of advantage",
+      "status": "scored",
+      "score": 4,
+      "rationale": "Local processing, versioned explanations, and a focus on economically material exceptions are useful design advantages. The offer has not shown a measurable accuracy, recovery, speed, or trust improvement over the clinic's existing settlement tooling."
+    },
+    {
+      "name": "Timing and momentum",
+      "status": "scored",
+      "score": 5,
+      "rationale": "Continuing NFZ specification amendments create persistent maintenance demand and make versioned auditability relevant. There is no demonstrated discontinuity that disadvantages incumbents, which already maintain rehabilitation settlement products."
+    },
+    {
+      "name": "Distribution",
+      "status": "scored",
+      "score": 5,
+      "rationale": "Billing outsourcers can aggregate providers and make a recovered-value sale more efficient than clinic-by-clinic acquisition. HIS partners offer technical reach but may view the product as overlapping, and no partner commitment, connector permission, buying process, CAC, or conversion evidence exists."
+    },
+    {
+      "name": "Execution and risks",
+      "status": "scored",
+      "score": 5,
+      "rationale": "Compiling deterministic rules and running a bounded local audit match the founder's technical and healthcare-adjacent background. Fragmented integrations, health-data safeguards, possible DPIA duties, rule-interpretation liability, and support needs create material operating risk beyond the prototype."
+    }
+  ],
+  "interaction_adjustment": 0.0,
+  "main_structural_strength": "The product can sit immediately before NFZ submission and tie an auditable incremental finding to recovered provider cash rather than asking a clinic to replace its core system.",
+  "primary_score_limiter": "The business has not established that incumbent rehabilitation systems leave a frequent, valuable class of correctable errors, which makes the pain, advantage, pricing, and retention thesis jointly uncertain.",
+  "strongest_disconfirming_evidence": "mMedica and KS-SOMED already provide directly overlapping rehabilitation-cycle and NFZ settlement automation, while the underlying rules and XML specifications are public.",
+  "evidence_needed_for_higher_score": "An authorized retrospective study across several clinics comparing submitted batches and incumbent warnings against the new engine, followed by a paid pilot that documents incremental accepted corrections, recovered PLN, connector effort, security burden, and buyer renewal intent.",
+  "highest_value_structural_change": "Sell a locally executed revenue-recovery module through a rehabilitation billing outsourcer and price it against verified incremental reimbursement, concentrating integration and distribution while avoiding a generic per-clinic HIS add-on."
+}

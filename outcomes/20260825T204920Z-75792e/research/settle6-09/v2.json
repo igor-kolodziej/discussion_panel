@@ -1,0 +1,270 @@
+{
+  "candidate_id": "settle6-09",
+  "candidate_sha256": "0c95ae509cfc4b30787ecefdbacabe6cb012abce62503f5911e16f2bb31d7333",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "r09-c01",
+      "evidence_refs": [
+        "s09-01"
+      ],
+      "statement": "Visa CE3.0 creates a structured remedy for certain first-party-misuse disputes when a merchant supplies the prescribed historical transaction evidence through Verifi Order Insight before dispute or through its acquirer after dispute."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r09-c02",
+      "evidence_refs": [
+        "s09-01"
+      ],
+      "statement": "CE3.0 requires two prior undisputed transactions 120-365 days before the dispute, at least two matching core data elements including IP or device evidence, and transactions from the same merchant; another cooperative member's transactions cannot satisfy this rule."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r09-c03",
+      "evidence_refs": [
+        "s09-02"
+      ],
+      "statement": "Visa itself offers Order Insight, Rapid Dispute Resolution, CE3.0 submission and dispute optimization, so the card network already controls significant pre-dispute and evidence-routing infrastructure."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r09-c04",
+      "evidence_refs": [
+        "s09-03"
+      ],
+      "statement": "VAMP combines fraud and dispute activity in a monitored ratio, requires mitigation when thresholds are exceeded, and excludes some pre-dispute resolutions and CE3.0-qualified fraud, creating buyer value for prevention and resolution beyond representment win rate alone."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r09-c05",
+      "evidence_refs": [
+        "s09-04"
+      ],
+      "statement": "Mastercard's current merchant chargeback guide assigns formal actions to issuers and acquirers and contains region- and effective-date-specific evidence rules, making scheme/version normalization a continuing operational requirement rather than a one-time packet template."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r09-c06",
+      "evidence_refs": [
+        "s09-05",
+        "s09-06"
+      ],
+      "statement": "Stripe permits programmatic retrieval, evidence upload and dispute response, while Stripe Poland also sells Smart Disputes at 30% of the disputed amount for each win; the PSP has both the submission rail and a native automated competitor."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r09-c07",
+      "evidence_refs": [
+        "s09-07"
+      ],
+      "statement": "Adyen's API can retrieve disputes, upload defense documents, accept or defend and follow outcomes through webhooks, but requires a dispute-management role and notes that not all dispute types can be defended."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r09-c08",
+      "evidence_refs": [
+        "s09-08",
+        "s09-09"
+      ],
+      "statement": "Chargeflow publishes end-to-end automated evidence and submission at 25% of recovered chargebacks with 100+ integrations, while Justt states success-based pricing, more than 50 PSP integrations and cross-merchant application of learned evidence tactics."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r09-c09",
+      "evidence_refs": [
+        "s09-10",
+        "s09-11"
+      ],
+      "statement": "GDPR requires a lawful basis, specified purposes and data minimization for EU personal-data processing; EDPB guidance treats pseudonymisation as a safeguard that controls attribution, not as an automatic removal of data from the GDPR regime."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r09-c10",
+      "evidence_refs": [
+        "s09-12"
+      ],
+      "statement": "PCI SSC says a service provider that can impact payment-account-data security may have assessment scope covering the people, processes and technology used to provide the service even when it does not directly store, process or transmit account data."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r09-c11",
+      "evidence_refs": [
+        "s09-02",
+        "s09-05",
+        "s09-06",
+        "s09-07",
+        "s09-08",
+        "s09-09"
+      ],
+      "statement": "Because submission rails, native automation and generic success pricing are already available, a plausible entrant needs proprietary vertical evidence, demonstrable incremental net recovery or unusually effective embedded distribution rather than generic packet generation."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r09-c12",
+      "evidence_refs": [
+        "s09-01",
+        "s09-09",
+        "s09-10",
+        "s09-11"
+      ],
+      "statement": "Cross-merchant outcome aggregates may improve reason-code and vertical evidence selection, but merchant-specific transaction evidence must remain separate for CE3.0 and any shared learning requires a documented lawful basis, purpose analysis and minimized architecture."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r09-c13",
+      "evidence_refs": [],
+      "statement": "No independent evidence establishes the candidate's incremental win-rate or net-recovery lift, reliable access to final decision labels, merchant demand, partner commitment, or which vertical evidence remains unavailable to current PSPs and incumbents."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r09-c14",
+      "evidence_refs": [],
+      "statement": "The 500-merchant and 5,000-merchant milestones, six-month partner payback, three-hour daily founder workload, PLN 130,000 capital sufficiency and founder-net-worth path remain unsupported assumptions."
+    }
+  ],
+  "contrary_evidence": [
+    "Visa already provides Order Insight, Rapid Dispute Resolution, CE3.0 submission and its own dispute-optimization service.",
+    "Stripe and Adyen control programmatic dispute rails; Stripe also prices its native AI evidence product on the same success-based outcome as the candidate.",
+    "Chargeflow and Justt already provide end-to-end, multi-provider, success-priced automation and claim learning across merchant outcomes.",
+    "Visa CE3.0 requires two historical transactions from the same merchant, sharply limiting the direct evidentiary value of a cross-merchant transaction cooperative.",
+    "GDPR purpose, lawful-basis and minimization duties continue for pseudonymised personal data, and PCI DSS scope may reach a provider that can affect payment-data security.",
+    "Scheme rules, evidence eligibility and provider roles vary, and not every dispute is defendable."
+  ],
+  "schema_version": 2,
+  "sources": [
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2023-03",
+      "publisher": "Visa",
+      "source_id": "s09-01",
+      "source_type": "card_network_guidance",
+      "stance": "supporting",
+      "title": "Compelling Evidence 3.0 Merchant Readiness",
+      "url": "https://usa.visa.com/content/dam/VCOM/regional/na/us/support-legal/documents/compelling-evidence-3.0-merchant-readiness-mar2023.pdf"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "n.d.",
+      "publisher": "Visa",
+      "source_id": "s09-02",
+      "source_type": "card_network_product_page",
+      "stance": "contradicting",
+      "title": "Next generation post-purchase solutions",
+      "url": "https://usa.visa.com/solutions/post-purchase-solutions/merchants.html"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2025",
+      "publisher": "Visa",
+      "source_id": "s09-03",
+      "source_type": "card_network_program_fact_sheet",
+      "stance": "context",
+      "title": "Visa Acquirer Monitoring Program Overview",
+      "url": "https://corporate.visa.com/content/dam/VCOM/corporate/visa-perspectives/security-and-trust/documents/visa-acquirer-monitoring-program-fact-sheet-2025.pdf"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2026-05-19",
+      "publisher": "Mastercard",
+      "source_id": "s09-04",
+      "source_type": "card_network_rules",
+      "stance": "context",
+      "title": "Chargeback Guide Merchant Edition",
+      "url": "https://www.mastercard.com/content/dam/mccom/shared/business/support/rules-pdfs/chargeback-guide.pdf"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "n.d.",
+      "publisher": "Stripe",
+      "source_id": "s09-05",
+      "source_type": "psp_api_documentation",
+      "stance": "supporting",
+      "title": "Use the API to respond to disputes",
+      "url": "https://docs.stripe.com/disputes/api?locale=en-GB"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "n.d.",
+      "publisher": "Stripe",
+      "source_id": "s09-06",
+      "source_type": "psp_product_and_pricing",
+      "stance": "contradicting",
+      "title": "Pricing & Fees - Poland",
+      "url": "https://stripe.com/en-pl/pricing"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "n.d.",
+      "publisher": "Adyen",
+      "source_id": "s09-07",
+      "source_type": "psp_api_documentation",
+      "stance": "context",
+      "title": "Manage disputes with the Disputes API",
+      "url": "https://docs.adyen.com/risk-management/disputes-api/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "n.d.",
+      "publisher": "Chargeflow",
+      "source_id": "s09-08",
+      "source_type": "incumbent_product_and_pricing",
+      "stance": "contradicting",
+      "title": "Chargeflow Pricing with 4x ROI Guarantee",
+      "url": "https://www.chargeflow.io/pricing"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "n.d.",
+      "publisher": "Justt",
+      "source_id": "s09-09",
+      "source_type": "incumbent_product_documentation",
+      "stance": "contradicting",
+      "title": "Frequently Asked Questions",
+      "url": "https://justt.ai/frequently-asked-questions/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2016-05-04",
+      "publisher": "Official Journal of the European Union via EUR-Lex",
+      "source_id": "s09-10",
+      "source_type": "official_law",
+      "stance": "context",
+      "title": "Regulation (EU) 2016/679 (General Data Protection Regulation)",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2025-01",
+      "publisher": "European Data Protection Board",
+      "source_id": "s09-11",
+      "source_type": "official_regulatory_guidance",
+      "stance": "context",
+      "title": "Guidelines 01/2025 on Pseudonymisation",
+      "url": "https://www.edpb.europa.eu/system/files/2025-01/edpb_guidelines_202501_pseudonymisation_en.pdf"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2024-06",
+      "publisher": "PCI Security Standards Council",
+      "source_id": "s09-12",
+      "source_type": "official_security_standard_guidance",
+      "stance": "context",
+      "title": "PCI DSS scope for service providers that can impact payment account data security",
+      "url": "https://www.pcisecuritystandards.org/faqs/1580/"
+    }
+  ],
+  "unknowns": [
+    "Which single vertical supplies high-signal fulfillment or usage evidence not already available to the PSP?",
+    "What is the incremental win-rate and net-recovery lift versus Stripe Smart Disputes, Adyen-native workflows, Chargeflow and Justt on a matched cohort?",
+    "Can a PSP, acquirer or vertical SaaS partner authorize dispute submission, final outcome access and commercial revenue sharing?",
+    "What dispute volume per merchant and per reason-code segment is available in Poland and the broader EU target market?",
+    "What success fee remains after PSP dispute fees, countering fees, channel share, analyst exceptions and security/compliance costs?",
+    "What lawful basis and controller-processor allocation supports each merchant-specific processing purpose?",
+    "Is cross-merchant model training compatible with the original collection purposes, and what data can be aggregated or anonymized without losing predictive value?",
+    "What exact architecture and provider access place the company inside PCI DSS scope, and what certification or assessment cost follows?",
+    "Can the founder complete partner sales, security review and exception oversight within five hours per day before hiring?",
+    "How will the system detect and refuse merchants seeking to fabricate or misuse dispute evidence?",
+    "How quickly do scheme and PSP rule changes require model, template and workflow maintenance?"
+  ]
+}

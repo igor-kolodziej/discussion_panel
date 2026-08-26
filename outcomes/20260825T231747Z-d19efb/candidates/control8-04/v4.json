@@ -1,0 +1,148 @@
+{
+  "candidate_id": "control8-04",
+  "claims": [
+    {
+      "claim_id": "control8-04-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32024R2956",
+        "https://www.eba.europa.eu/activities/direct-supervision-and-oversight/digital-operational-resilience-act/preparation-dora-application"
+      ],
+      "statement": "Commission Implementing Regulation (EU) 2024/2956 sets the standard templates for DORA registers of contractual arrangements, and the EBA publishes the associated data model, reporting package, validation materials and example template."
+    },
+    {
+      "claim_id": "control8-04-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.eba.europa.eu/publications-and-media/press-releases/esas-dry-run-exercise-shows-goal-reporting-registers-information-under-digital-operational"
+      ],
+      "statement": "In the 2024 ESA dry run, only 6.5% of analysed registers passed all data-quality checks, while half of the remaining registers failed fewer than five of 116 checks."
+    },
+    {
+      "claim_id": "control8-04-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.knf.gov.pl/dla_rynku/dora/aktualnosci/II_etap_przekazania_rejestrow_informacji_dot_umow_z_zewnetrznymi_dostawcami_uslug_ict?articleId=93727&p_id=18"
+      ],
+      "statement": "KNF opened a second 2025 submission window for Polish entities that had not filed SPR-PF-18 or whose registers had been rejected during EBA validation, and warned that an outdated or externally sourced form would fail validation."
+    },
+    {
+      "claim_id": "control8-04-c4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.knf.gov.pl/dla_rynku/edukacja_cedur/seminaria?articleId=97084&p_id=18"
+      ],
+      "statement": "KNF still ran dedicated free training in March 2026 on preparing and submitting SPR-PF-18, explicitly aiming to improve data accuracy and reduce reporting errors."
+    },
+    {
+      "claim_id": "control8-04-c5",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.servicenow.com/docs/r/governance-risk-compliance/digi-resi-third-party-registers.html",
+        "https://www.dora-guard.com/"
+      ],
+      "statement": "Direct competitors already span enterprise and smaller-entity segments: ServiceNow documents a DORA register application with GUI and Excel import/export, while DoraGuard publicly lists annual plans from EUR 1,500 to EUR 12,500 with validation and xBRL-CSV export."
+    },
+    {
+      "claim_id": "control8-04-c6",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.eba.europa.eu/activities/direct-supervision-and-oversight/digital-operational-resilience-act/preparation-dora-application",
+        "https://www.eba.europa.eu/risk-and-data-analysis/reporting/reporting-frameworks"
+      ],
+      "statement": "The official reporting stack is available without a commercial vendor and continues to be versioned through the EBA reporting framework, so maintenance against the current taxonomy and national submission workflow is a recurring product obligation rather than a one-time build."
+    }
+  ],
+  "contrary_evidence": [
+    "The EBA supplies the official template, data model, sample files, reporting package and validation materials, so a financial entity can operate without buying another product.",
+    "ServiceNow already supports DORA register records and bulk Excel workflows, and a DORA-native entrant publicly offers EUR 1,500-EUR 12,500 annual plans; the original high subscription range is not defensible for a small standalone entity without substantial implementation or private-deployment value.",
+    "The 2025 Polish resubmission episode proves validation failure occurred but does not establish how many entities failed, how often failures recur, or that affected entities will pay a new vendor.",
+    "Free KNF training and updated official forms are direct non-commercial substitutes for paid remediation.",
+    "Contract, provider and critical-function data are security-sensitive, and no evidence establishes that a small new vendor can pass financial-sector procurement or obtain hosted access.",
+    "No reviewed evidence establishes that a DORA advisor or managed-service provider will become payer and prime contractor, bring repeat client volume, accept the proposed prices or contribute reusable remediation feedback.",
+    "Putting an advisor in front of the runtime does not prove that regulated clients will waive direct security, outsourcing, procurement or audit requirements for the underlying vendor."
+  ],
+  "economics": {
+    "acquisition_route": "Unvalidated hypothesis: recruit one boutique DORA advisor or managed-service provider for a bounded, non-production evaluation on synthetic or redacted data, then seek a paid white-label pilot in which that partner is payer and prime contractor and brings one consenting client workflow. Do not count an advisor conversation, unpaid design input or client introduction as channel validation; no partner commitment or lead flow has been verified.",
+    "capital_required_pln": 42000,
+    "founder_net_worth_path": "Unvalidated 6-8 year scenario: 25 partner firms averaging eight active client entities, a 20,000 PLN annual platform fee per partner and 18,000 PLN annual software revenue per active entity yield 4.1m PLN annual revenue. At 45% EBITDA, 4x EBITDA and 75% founder ownership, implied founder equity is about 5.54m PLN. This requires repeatable partner activation, low-support customer-controlled deployment and multi-country expansion; none is validated, and the scenario does not add retained earnings or distributions to the same equity value.",
+    "founder_time": "Hypothesized 12-18 hours per week for a bounded partner pilot because the partner owns client remediation, regulatory interpretation and meetings; the founder still owns runtime engineering, taxonomy updates, partner enablement and incident support, and production demands may exceed part-time capacity.",
+    "gross_margin_basis": "The partner, as prime contractor, is hypothesized to perform contract collection, data preparation, regulatory interpretation, remediation and client-facing implementation while the vendor supplies a packaged customer-controlled runtime, versioned rules and support. This could reduce service labor per end entity, but deployment isolation, integrations, partner enablement and taxonomy maintenance remain unmeasured and may prevent software-like margins.",
+    "payback": "Partner payback is an unvalidated hypothesis to be measured as retained remediation gross profit plus saved expert and rework hours across active client entities, net of platform, per-entity, deployment and support costs. The runtime must outperform the free official stack and priced specialist alternatives on observed partner economics before savings are claimed.",
+    "pricing": "Unvalidated hypothesis: 10,000-25,000 PLN annual partner platform fee plus 8,000-22,000 PLN per active client entity annually, or 4,000-10,000 PLN for a bounded reporting-cycle activation; the partner separately prices and retains its advisory and remediation work. Public specialist pricing demonstrates price pressure and does not validate these amounts.",
+    "retention_or_repeat": "The partner renews only if it repeatedly uses the runtime across annual reporting, contract and provider changes, or new client engagements. Per-active-entity licensing and exportability avoid artificial lock-in; recurrence, partner portfolio size, activation rate and renewal intent are unknown."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A versioned, non-confidential library of EBA/KNF rule adapters, error-to-remediation patterns and partner-authored clause mappings reusable across customer-controlled runtimes without pooling client contract text; whether partners contribute enough lawful, non-sensitive feedback for this asset to compound is unvalidated.",
+    "customer": "Boutique DORA advisors, managed-security providers and banking-software consultancies serving multiple smaller Polish/EU regulated financial entities; the partner is the direct customer and prime contractor, while each financial entity remains a consenting end user.",
+    "distribution_mechanism": "Focused direct recruitment and enablement of a small number of trusted advisor/MSP partners that would carry the white-label runtime into existing or newly won client engagements; this hypothesized one-to-many channel has no committed partner, verified portfolio access or measured lead flow.",
+    "offer_and_business_model": "White-label, customer-controlled contract-to-register runtime with clause lineage, entity resolution, deterministic validation, approvals and current EBA/KNF export; unvalidated 10,000-25,000 PLN annual partner platform fee plus 8,000-22,000 PLN per active entity annually or 4,000-10,000 PLN per bounded reporting-cycle activation, while the partner retains remediation fees.",
+    "payer_and_paid_event": "A DORA advisor or managed-service provider pays when it has a consenting client engagement that requires register remediation, annual production or ongoing maintenance, and activates the runtime per entity or reporting cycle; no payer commitment or willingness to pay has been verified.",
+    "problem_trigger": "The partner wins or renews a client engagement involving a rejected or upcoming SPR-PF-18/EBA submission, a new or amended ICT contract, or a provider, subcontractor, function or entity change that requires source-linked register maintenance."
+  },
+  "founder_fit": [
+    "Excellent fit for structured data validation, entity resolution, document AI, deterministic exports and packaging a repeatable customer-controlled runtime",
+    "A small number of partner accounts and white-label delivery could reduce direct financial-entity selling and public exposure, although recruiting and supporting partners still requires relationship work",
+    "A synthetic or redacted partner evaluation can be piloted part-time; production deployment, taxonomy releases and incident support may still exceed part-time capacity",
+    "The partner owns regulatory interpretation and client remediation under the hypothesis, narrowing the founder's role but not eliminating software assurance or liability",
+    "Requires strict separation from the founder's employer systems, information, vendors and work time"
+  ],
+  "parent": {
+    "candidate_id": "control8-04",
+    "version": 3
+  },
+  "redesign": {
+    "changed_fingerprint_fields": [
+      "customer",
+      "payer_and_paid_event",
+      "distribution_mechanism",
+      "offer_and_business_model",
+      "problem_trigger",
+      "compounding_advantage"
+    ],
+    "economic_effect": "Hypothesis: moving client contracting, regulatory interpretation and remediation labor to an advisor/MSP prime contractor changes revenue from service-heavy direct implementations and entity subscriptions to partner platform plus per-active-entity or reporting-cycle software fees. It is intended to lower repeated direct acquisition, onboarding labor and initial capital from 55,000 PLN to 42,000 PLN while preserving partner service revenue, but channel conversion, security acceptance, support cost, gross margin and willingness to pay remain unvalidated."
+  },
+  "risks": [
+    "Financial entities may treat contract and operational-resilience data as too sensitive for a small vendor",
+    "Established GRC platforms and low-cost DORA-native products already cover register maintenance, validation and export",
+    "AI extraction errors must never silently populate a regulatory register; every inferred field needs provenance and human approval",
+    "Long procurement and security reviews may conflict with part-time availability",
+    "National forms, EBA taxonomy versions and validation behavior can diverge or change, creating continuous maintenance and liability",
+    "Free regulator tools, training and consultant remediation may cap both conversion and price",
+    "A prime-contractor partner may not shield the runtime vendor from the regulated entity's security, outsourcing, procurement or audit requirements",
+    "Advisors may prefer their current tools, build internally, protect billable workflows or refuse to become the payer, leaving the redesigned channel unavailable",
+    "Revenue and learning may concentrate in a few partners that can demand concessions, withhold reusable feedback or churn with multiple end entities at once"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32024R2956",
+    "https://www.eba.europa.eu/activities/direct-supervision-and-oversight/digital-operational-resilience-act/preparation-dora-application",
+    "https://www.eba.europa.eu/publications-and-media/press-releases/esas-dry-run-exercise-shows-goal-reporting-registers-information-under-digital-operational",
+    "https://www.knf.gov.pl/dla_rynku/dora/aktualnosci/II_etap_przekazania_rejestrow_informacji_dot_umow_z_zewnetrznymi_dostawcami_uslug_ict?articleId=93727&p_id=18",
+    "https://www.knf.gov.pl/dla_rynku/dora/sprawozdawczosc/obowiazki_sprawozdawcze_w_zwiazku_z_rozporzadzeniem_dora?articleId=91834&p_id=18",
+    "https://www.knf.gov.pl/dla_rynku/edukacja_cedur/seminaria?articleId=97084&p_id=18",
+    "https://www.servicenow.com/docs/r/governance-risk-compliance/digi-resi-third-party-registers.html",
+    "https://www.dora-guard.com/",
+    "https://www.eba.europa.eu/risk-and-data-analysis/reporting/reporting-frameworks"
+  ],
+  "stage": "development",
+  "structure": {
+    "commercial_archetype": "White-label compliance production infrastructure licensed to DORA advisors and managed-service providers per partner, active client entity or reporting cycle",
+    "control_point": "The partner-operated, customer-controlled compilation and validation runtime that produces source-linked DORA register deliverables while the advisor or MSP remains payer and prime contractor",
+    "critical_dependency": "A trusted advisor or MSP must agree to pay, remain prime contractor, obtain each client's permission and operate the runtime across repeat engagements, while the vendor must exactly maintain the current EBA data model, validation rules and target NCA workflow; none of the partner conditions is verified"
+  },
+  "thesis": "Development-stage structural redesign hypothesis: sell a white-label, customer-controlled contract-to-register runtime to a boutique DORA advisor or managed-service provider that remains the payer and prime contractor for its regulated clients. The runtime supplies clause-to-field lineage, vendor/entity resolution, deterministic validation, approvals and current EBA/KNF export; the partner supplies regulatory interpretation, client data preparation, remediation and the commercial relationship, and retains those service fees. Pricing shifts to a partner platform fee plus per-active-entity or bounded reporting-cycle software fees. This structure is intended to align the channel rather than displace its billable work and to reduce repeated direct procurement, but no partner commitment, willingness to pay, security acceptance, lead flow, margin or client permission has been verified. Free official tooling, regulator training, first-cycle learning, incumbent products and sensitive-data constraints remain binding contrary evidence.",
+  "title": "White-Label DORA Register Runtime for Advisors",
+  "uncertainties": [
+    "How many target entities still have repeated validation or source-lineage problems after the first two reporting cycles",
+    "Whether regulated clients will permit a partner-operated customer-controlled runtime, require a different deployment model or refuse a young underlying vendor entirely",
+    "Whether a synthetic or redacted preflight can predict production errors without exposing confidential contract data",
+    "Whether advisors or managed-service providers will become payer and prime contractor, carry the runtime across multiple clients and retain remediation revenue rather than use or build an incumbent alternative",
+    "What measurable remediation cost remains after free KNF training, updated templates and low-cost DORA-native tools",
+    "How much ongoing engineering and partner support are required for EBA and national form changes",
+    "Minimum partner portfolio size, end-entity activation rate, sales cycle, renewal rate and concentration risk",
+    "Whether the proposed partner and per-entity price points produce positive partner payback and vendor gross margin",
+    "Whether partner intermediation materially reduces or merely duplicates each financial entity's security and procurement review"
+  ],
+  "version": 4
+}

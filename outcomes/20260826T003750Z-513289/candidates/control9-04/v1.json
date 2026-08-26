@@ -1,0 +1,82 @@
+{
+  "candidate_id": "control9-04",
+  "claims": [
+    {
+      "claim_id": "control9-04-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://health.ec.europa.eu/latest-updates/eudamed-four-first-modules-will-be-mandatory-use-28-may-2026-2025-11-27_en"
+      ],
+      "statement": "Actor, UDI/device, notified-body and certificate, and market-surveillance modules of EUDAMED became mandatory on 28 May 2026."
+    },
+    {
+      "claim_id": "control9-04-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/urpl/komunikat-prezesa-urzedu-rejestracji-produktow-leczniczych-wyrobow-medycznych-i-produktow-biobojczych-z-dnia-25-maja-2026-r-w-sprawie-uruchomienia-bazy-eudamed"
+      ],
+      "statement": "Poland's URPL states that manufacturers must submit device information to EUDAMED before first placing a medical device on the EU market, while importers must verify the registration and add their details."
+    },
+    {
+      "claim_id": "control9-04-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/urpl/komunikat-prezesa-urzedu-rejestracji-produktow-leczniczych-wyrobow-medycznych-i-produktow-biobojczych-z-dnia-25-maja-2026-r-w-sprawie-uruchomienia-bazy-eudamed"
+      ],
+      "statement": "URPL set 27 November 2026 as the deadline for manufacturers to enter information on older devices that remained on the EU market after the mandatory-use date."
+    }
+  ],
+  "contrary_evidence": [
+    "Manufacturers can use EUDAMED directly and many already employ regulatory consultants, so the standalone value must be data integrity and ongoing change control.",
+    "The largest one-time backfill deadline is close, making pure migration revenue temporary."
+  ],
+  "economics": {
+    "acquisition_route": "Pilot with two Polish regulatory consultants representing at least ten manufacturers, then add a free importer-verification report that generates manufacturer referrals",
+    "capital_required_pln": 70000,
+    "founder_net_worth_path": "Hypothesis: 450 manufacturers at 24000 PLN recurring revenue yields 10.8m PLN ARR; at 24% EBITDA, 4x EBITDA, and 65% founder ownership, equity could exceed 6.7m PLN in years 6-8. Validate the addressable lean-team segment and avoid double-counting retained cash.",
+    "founder_time": "3-5 hours per day during a narrow Class I/low-complexity pilot, with a contracted medical-device regulatory professional approving production rules",
+    "gross_margin_basis": "Hypothesis: 68-82% once validations are rule-driven; keep mandatory human release review in the price",
+    "payback": "Hypothesis: 9-15 months if 15 manufacturers average 14000 PLN first-year revenue; validate liability insurance and consultant margin",
+    "pricing": "Hypothesis: 4500-12000 PLN onboarding per Basic UDI-DI family plus 9000-30000 PLN annual maintenance per manufacturer; partner volume discounts",
+    "retention_or_repeat": "Device records, actor links, certificates, and labels change over long market lifecycles; audit history and product hierarchies are costly to reconstruct"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A structured history of accepted device records, EMDN mappings, certificate relationships, and validation failures reduces error rates and creates high switching costs",
+    "customer": "Polish and Central European micro and small medical-device and IVD manufacturers, authorised representatives, and importers with lean regulatory teams",
+    "distribution_mechanism": "White-label through regulatory consultancies and authorised representatives; importer verification requests bring additional manufacturers into the system",
+    "offer_and_business_model": "Human-verified product-master-data validation, UDI hierarchy management, EUDAMED submission support, change monitoring, and immutable approval evidence",
+    "payer_and_paid_event": "The manufacturer pays per product family at first release and an annual maintenance fee; representatives pay for multi-manufacturer workspaces",
+    "problem_trigger": "A new device is about to be placed on the EU market, an existing device must be backfilled, or a certificate, actor, label, or importer record changes"
+  },
+  "founder_fit": [
+    "Leverages health-domain interest, data science, and meticulous evidence workflows",
+    "AI can assist extraction while a human retains regulated approval authority",
+    "A consultant channel avoids camera-based marketing and constant broad sales",
+    "A narrow pilot is possible within the founder's time and capital constraints"
+  ],
+  "parent": null,
+  "risks": [
+    "A wrong device, UDI, certificate, or actor relationship could block market access or create regulatory exposure.",
+    "Consultancies may treat the product as a threat rather than a channel.",
+    "EUDAMED interface changes could require frequent maintenance."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://health.ec.europa.eu/latest-updates/eudamed-four-first-modules-will-be-mandatory-use-28-may-2026-2025-11-27_en",
+    "https://www.gov.pl/web/urpl/komunikat-prezesa-urzedu-rejestracji-produktow-leczniczych-wyrobow-medycznych-i-produktow-biobojczych-z-dnia-25-maja-2026-r-w-sprawie-uruchomienia-bazy-eudamed"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "managed regulatory data bureau",
+    "control_point": "the verified UDI/device record required before first EU market placement and maintained through product changes",
+    "critical_dependency": "near-perfect device hierarchy and certificate mapping plus lawful, reliable access to EUDAMED submission workflows"
+  },
+  "thesis": "Offer a managed data-release desk for small Polish and Central European medical-device and IVD manufacturers whose product master data must reconcile across their quality system, Basic UDI-DI hierarchy, EMDN coding, certificates, labels, importers, and EUDAMED records. The product acts as a pre-market release gate: it validates the record, routes exceptions to an accountable human, submits or prepares the authoritative update, and retains evidence of who approved what. Enter through medical-device regulatory consultants, authorised representatives, and UDI issuing organisations, which each aggregate many manufacturers. The durable asset is a versioned device-to-certificate-to-actor graph and an error corpus that makes subsequent registrations and change control faster across the EU.",
+  "title": "EUDAMED UDI Release Desk",
+  "uncertainties": [
+    "Submission/API access available to an authorised service acting for manufacturers",
+    "Number of small manufacturers with enough device complexity and budget",
+    "Professional-liability, quality-system, and validation requirements for the service"
+  ],
+  "version": 1
+}

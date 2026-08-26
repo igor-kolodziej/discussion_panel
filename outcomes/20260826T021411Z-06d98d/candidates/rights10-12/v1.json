@@ -1,0 +1,86 @@
+{
+  "candidate_id": "rights10-12",
+  "claims": [
+    {
+      "claim_id": "rights10-12-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/dir/2012/19/2024-04-08/eng"
+      ],
+      "statement": "The WEEE Directive covers photovoltaic panels and promotes preparation for reuse, recycling, and recovery."
+    },
+    {
+      "claim_id": "rights10-12-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1426181926861&uri=CELEX%3A32012L0019"
+      ],
+      "statement": "For used EEE shipments, EU rules require ownership or transfer documents, functionality-test evidence, item records, transport documentation, and protection against damage; absent proof, authorities may presume WEEE."
+    },
+    {
+      "claim_id": "rights10-12-c3",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/topics/waste-and-recycling/waste-electrical-and-electronic-equipment-weee/implementation-weee-directive_en"
+      ],
+      "statement": "Demand hypothesis: scheduled, tested domestic lots will attract reuse buyers that reject anonymous removed panels."
+    }
+  ],
+  "contrary_evidence": [
+    "New-panel price declines can erase the economic case for used modules.",
+    "Preparation-for-reuse remains a small share of WEEE recovery and testing cannot eliminate long-tail failure risk."
+  ],
+  "economics": {
+    "acquisition_route": "Demand hypothesis: the family renewable installer can validate one decommissioning workflow and recruit neighboring EPCs",
+    "capital_required_pln": 80000,
+    "founder_net_worth_path": "Hypothesis: 100000 modules yearly at 45 PLN blended revenue yields 4.5m PLN; 20% EBITDA at a 6x data-marketplace value could exceed 5m PLN in 5-7 years",
+    "founder_time": "15-20 hours weekly, with physical testing and transport delegated",
+    "gross_margin_basis": "Economics hypothesis: 55-70% after field test and serial-capture partners; platform does not own panels",
+    "payback": "Economics hypothesis: documenting 2000 modules at 45 PLN average recovers initial capital in 12-18 months before resale fees",
+    "pricing": "Economics hypothesis: 30-60 PLN per module for evidence and listing plus 4-7% of resale GMV",
+    "retention_or_repeat": "EPC portfolios generate scheduled repowering lots; buyers maintain standing performance and model requirements"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Installer-sourced provenance, module-level test history, realized degradation and resale data, and recurring buyer thresholds",
+    "customer": "Commercial PV owners, EPCs, repowering contractors, second-life installers, refurbishers, and WEEE operators",
+    "distribution_mechanism": "Pilot through renewable installers, then EPCs, asset managers, insurers, and preparation-for-reuse operators",
+    "offer_and_business_model": "Owner mandate, forward decommissioning lots, serial capture, independent functionality tests, title packet, buyer reservation, and WEEE routing",
+    "payer_and_paid_event": "Owner or repowering contractor pays per documented module or lot and a transaction fee at transfer",
+    "problem_trigger": "A site will repower but removed panels lack a trusted title, test record, buyer, and compliant fallback"
+  },
+  "founder_fit": [
+    "Direct family-company channel",
+    "Renewable asset knowledge",
+    "Computer vision and data-science leverage",
+    "Marketplace can avoid inventory ownership"
+  ],
+  "parent": null,
+  "risks": [
+    "Electrical and fire liability",
+    "Illegal waste shipment",
+    "Transport breakage",
+    "Buyer warranty expectations"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/dir/2012/19/2024-04-08/eng",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1426181926861&uri=CELEX%3A32012L0019",
+    "https://environment.ec.europa.eu/topics/waste-and-recycling/waste-electrical-and-electronic-equipment-weee/implementation-weee-directive_en",
+    "https://www.gov.pl/web/klimat/rejestr-bdo"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Owner-authorized second-life marketplace with evidence escrow",
+    "control_point": "Pre-removal title and provenance bound to a credible functionality test and scheduled lot",
+    "critical_dependency": "Used-module classification must be supportable; failed units need licensed WEEE handling with no hidden export"
+  },
+  "thesis": "Solar owners and installers authorize future decommissioned-module lots; the exchange binds serials, provenance, functionality tests, ownership transfer, packing, and a BDO-qualified waste fallback. Demand hypothesis: credible used-versus-waste evidence and scheduled supply can unlock higher-value reuse before recycling.",
+  "title": "PV Module Second-Life Title and Test Exchange",
+  "uncertainties": [
+    "Near-term Polish repowering volume",
+    "Used-module price",
+    "Test throughput cost",
+    "Insurer acceptance"
+  ],
+  "version": 1
+}

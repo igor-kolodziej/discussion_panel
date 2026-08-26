@@ -1,0 +1,72 @@
+{
+  "candidate_id": "control6-12",
+  "claims": [
+    {
+      "claim_id": "control6-12-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/customs/customs-tariff/tariff-classification-goods/eu-binding-tariff-information-bti_en"
+      ],
+      "statement": "Binding Tariff Information is a legal classification decision issued by EU customs authorities, generally valid across the EU for three years and binding on authorities and the holder."
+    },
+    {
+      "claim_id": "control6-12-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/customs/common-customs-tariff-cct/tariff-classification-goods_en"
+      ],
+      "statement": "Tariff classification determines customs duty and can also determine non-tariff measures such as licences, restrictions and origin-related requirements."
+    }
+  ],
+  "contrary_evidence": [
+    "Valid and invalid BTI decisions are already public in the EBTI database, so defensibility must come from confidential fact patterns, workflow distribution and outcome data rather than public rulings."
+  ],
+  "economics": {
+    "acquisition_route": "Unvalidated: white-label inside freight forwarders and customs agencies at the moment a new or ambiguous SKU enters Europe.",
+    "capital_required_pln": 75000,
+    "founder_net_worth_path": "Unvalidated scenario, not a forecast: resolve 100 cases in year 1, reach 3 million PLN ARR by year 4, build 3.5 million PLN founder equity and retained cash by year 6, and 5 million PLN founder net worth in years 7-10.",
+    "founder_time": "Unvalidated operating estimate: 2-3 hours per day with customs opinions provided by contracted specialists.",
+    "gross_margin_basis": "Unvalidated: 55%-80% gross margin after customs-expert review, translation and case support.",
+    "payback": "Unvalidated: 8-16 months if one forwarder supplies repeat cases.",
+    "pricing": "Unvalidated commercial figures, including capital_required_pln: 2,000-12,000 PLN per complex classification case plus 1,000-5,000 PLN monthly forwarder workspace.",
+    "retention_or_repeat": "Unvalidated: repeat follows new SKUs, rule changes and product modifications; no case frequency or retention is validated."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Consented private mappings between product facts, questions, rulings, appeals and landed-cost outcomes improve retrieval and expert efficiency",
+    "customer": "EU importers and freight forwarders handling novel or ambiguous products",
+    "distribution_mechanism": "White-label insertion into forwarder and customs-agent onboarding of new products",
+    "offer_and_business_model": "Structured product evidence, expert review and BTI application support, without pretending to issue a binding ruling",
+    "payer_and_paid_event": "The importer or forwarder pays for a reviewed case pack and ongoing workflow access",
+    "problem_trigger": "A new SKU lacks a defensible tariff classification or faces a classification dispute"
+  },
+  "founder_fit": [
+    "Strong match for structured evidence retrieval and AI-assisted analysis.",
+    "Forwarder distribution reduces direct prospecting.",
+    "Expert review can be contracted while the founder builds the data system."
+  ],
+  "parent": null,
+  "risks": [
+    "Incorrect product facts lead to an invalid or harmful classification.",
+    "Confidential-data reuse violates client terms.",
+    "Public AI tools commoditise simple classification research."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://taxation-customs.ec.europa.eu/customs/customs-tariff/tariff-classification-goods/eu-binding-tariff-information-bti_en",
+    "https://taxation-customs.ec.europa.eu/customs/common-customs-tariff-cct/tariff-classification-goods_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Expert decision network with case-outcome data cooperative",
+    "control_point": "Forwarder channel agreements and contractual rights to reuse de-identified product-description, decision and exception outcomes",
+    "critical_dependency": "Qualified customs expertise, confidentiality-safe data rights, accurate product facts and client acceptance of the BTI process"
+  },
+  "thesis": "Embed with freight forwarders and customs representatives to structure difficult product-classification cases and, with client permission, retain anonymised product-feature, ruling, appeal and realised-cost outcomes. The control point is a private case-outcome network and forwarder distribution, while qualified customs professionals remain responsible for advice and representation.",
+  "title": "Customs Classification Outcome Cooperative",
+  "uncertainties": [
+    "Forwarder case volume and exclusivity",
+    "Scope of activities requiring customs-representative credentials",
+    "Value of private outcomes beyond public EBTI records"
+  ],
+  "version": 1
+}

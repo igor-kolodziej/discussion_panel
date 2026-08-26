@@ -1,0 +1,87 @@
+{
+  "candidate_id": "settle8-05",
+  "claims": [
+    {
+      "claim_id": "settle8-05-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ure.gov.pl/pl/oze/gwarancje-pochodzenia/6816%2CGwarancja-pochodzenia-dokument-pochodzenia-energii-wytworzonej-ze-zrodel-odnawia.html"
+      ],
+      "statement": "Verified fact: Poland's regulator describes a Guarantee of Origin as the sole document proving to the final customer that a specified amount of energy was produced from renewable sources."
+    },
+    {
+      "claim_id": "settle8-05-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ure.gov.pl/pl/oze/gwarancje-pochodzenia/6816%2CGwarancja-pochodzenia-dokument-pochodzenia-energii-wytworzonej-ze-zrodel-odnawia.html",
+        "https://rgp.tge.pl/"
+      ],
+      "statement": "Verified fact: Polish Guarantees of Origin are electronic, individually numbered, generally valid for 12 months, issued to 1 MWh precision, and cancellation is recorded in the registry."
+    },
+    {
+      "claim_id": "settle8-05-c3",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://rgp.tge.pl/"
+      ],
+      "statement": "Hypothesis (unvalidated): a material subset of suppliers and brokers need a contract-and-meter allocation layer outside the official registry and will pay recurring portfolio fees."
+    }
+  ],
+  "contrary_evidence": [
+    "The official Polish registry launched bulk transaction handling and a buy/sell bulletin board in 2026, so it may absorb more workflow over time: https://rgp.tge.pl/",
+    "Registry users can already receive, transfer, and cancel GOs under standardized terms, making this an internal-control layer rather than a replacement network: https://www.aib-net.org/standard-terms-and-conditions"
+  ],
+  "economics": {
+    "acquisition_route": "Start with one broker or supplier that manages many end-customer allocations, using a read-only reconciliation of an already closed period.",
+    "capital_required_pln": 45000,
+    "founder_net_worth_path": "Unvalidated scenario: 10 portfolios at PLN 5,000 MRR in year 2, 35 at PLN 8,000 MRR in year 4, and 60 at PLN 9,000 MRR in year 6 imply PLN 6.48m ARR before volume fees. At 25% owner earnings and a 3-4x ARR value with 65% ownership, the founder could cross PLN 5m in years 5-7; no demonstrated allocation error or labor saving in three pilots invalidates the wedge.",
+    "founder_time": "3-4 hours/day for a single-energy-carrier Polish wedge; do not pursue cross-border and multi-carrier support before repeat revenue.",
+    "gross_margin_basis": "Hypothesis: 80-90% if registry ingestion is export/API based; advisory work and manual registry operations are separately priced.",
+    "payback": "Unvalidated customer hypothesis: avoiding one shortfall, duplicate allocation, or expired certificate plus faster customer evidence repays several months; historical replay must establish value.",
+    "pricing": "Unvalidated estimate: PLN 2,000-10,000 per portfolio per month plus PLN 0.01-0.05 per MWh allocated or cancelled.",
+    "retention_or_repeat": "Energy delivery, certificate acquisition, allocation, expiry, and cancellation recur; contract and beneficiary mappings are sticky."
+  },
+  "fingerprint": {
+    "compounding_advantage": "allocation histories and exception rules form a defensible operational graph; anonymized timing benchmarks improve procurement and expiry controls",
+    "customer": "Polish energy suppliers, GO brokers, renewable generators managing customer allocations, and multi-site corporate electricity buyers",
+    "distribution_mechanism": "energy brokers, sustainability-reporting advisers, PPA consultants, and integrations with billing systems rather than a broad direct-sales motion",
+    "offer_and_business_model": "contract-to-meter allocation engine, expiry and shortfall alerts, registry-export reconciliation, cancellation evidence, and customer claim API; portfolio subscription plus volume",
+    "payer_and_paid_event": "supplier, broker, or corporate buyer pays per portfolio month and optionally per MWh allocated when a cancellation packet is issued",
+    "problem_trigger": "monthly or annual disclosure when purchased certificates, contract promises, meter consumption, expiry, and registry cancellations must agree"
+  },
+  "founder_fit": [
+    "Combines renewable-energy context, quantitative allocation, and finance-oriented controls.",
+    "Can begin as an export-based audit without regulated trading or certificate custody.",
+    "Broker and adviser channels reduce reliance on a public personal brand.",
+    "A small Polish vertical is compatible with part-time execution and can later expand across EU registries."
+  ],
+  "parent": null,
+  "risks": [
+    "The official registry may be sufficient for many users and may restrict automated access.",
+    "Incorrect allocation could support misleading renewable claims.",
+    "Large suppliers likely have existing energy-trading and risk-management systems.",
+    "Certificate rules and cross-border recognition add legal complexity."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://ure.gov.pl/pl/oze/gwarancje-pochodzenia/6816%2CGwarancja-pochodzenia-dokument-pochodzenia-energii-wytworzonej-ze-zrodel-odnawia.html",
+    "https://rgp.tge.pl/",
+    "https://www.aib-net.org/standard-terms-and-conditions",
+    "https://www.aib-net.org/facts/european-residual-mix"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "environmental-attribute entitlement subledger",
+    "control_point": "pre-cancellation allocation of each electronic Guarantee of Origin to a contract, consumption period, and final beneficiary",
+    "critical_dependency": "authorized access or exports from the Polish registry plus trustworthy contract and meter-consumption data"
+  },
+  "thesis": "Build an internal entitlement subledger for Polish energy sellers, brokers, and multi-site buyers that maps individually numbered Guarantees of Origin to purchase contracts, meters, customer claims, validity dates, transfers, and registry cancellation confirmations. The official registry remains the legal source; this layer controls allocation before cancellation and generates customer-specific evidence after it. The paid event is a reconciled monthly portfolio or completed customer cancellation packet.",
+  "title": "Guarantee-of-Origin Allocation and Cancellation Subledger",
+  "uncertainties": [
+    "The number of Polish organizations with genuinely complex subledger pain is unknown.",
+    "Registry export/API capabilities and automation rights need validation.",
+    "It is unclear whether energy suppliers, brokers, or end buyers hold the most urgent budget.",
+    "Price sensitivity per MWh and sales-cycle length are untested."
+  ],
+  "version": 1
+}

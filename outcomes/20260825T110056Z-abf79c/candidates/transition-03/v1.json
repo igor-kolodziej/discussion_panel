@@ -1,0 +1,86 @@
+{
+  "candidate_id": "transition-03",
+  "claims": [
+    {
+      "claim_id": "transition-03-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/topics/forests/deforestation/regulation-deforestation-free-products_en"
+      ],
+      "statement": "The Commission's current EUDR page gives application dates of 30 December 2026 for large and medium operators, 30 June 2027 for most micro and small operators, and 30 December 2026 for micro and small operators already covered by the EU Timber Regulation."
+    },
+    {
+      "claim_id": "transition-03-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/document/download/a3c5c3a0-232e-43c4-b0b8-1eecb1df45c7_en?filename=Report+from+the+Commission+to+the+Council+and+Parliament+on+the+EUDR.pdf"
+      ],
+      "statement": "The Commission reports that the December 2025 revision shifted due-diligence-statement responsibility to the first operator placing a relevant product on the EU market or exporting it, while downstream operators and traders no longer submit their own statements."
+    },
+    {
+      "claim_id": "transition-03-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/news/eu-deforestation-regulation-information-system-launches-2024-12-06_en"
+      ],
+      "statement": "The Commission launched the EUDR Information System for submitting and managing due diligence statements, supporting an integration or upload-preparation product rather than a replacement filing registry."
+    }
+  ],
+  "contrary_evidence": [
+    "The 2025 revision delayed application by another year and removed submission duties from downstream operators and traders, reducing both urgency and addressable buyers.",
+    "Large commodity groups may already operate traceability systems or impose their own supplier portals.",
+    "The EU Information System is available directly, so a product must win on evidence quality and workflow rather than access."
+  ],
+  "economics": {
+    "acquisition_route": "Referral agreements with customs and commodity-compliance advisers, starting with one Polish wood or coffee vertical",
+    "capital_required_pln": 90000,
+    "founder_net_worth_path": "Scenario, not evidence: 700 first operators at PLN 60,000 annual recurring revenue yields PLN 42m revenue; a 30% operating margin and four to five mature years of distributions could exceed PLN 20m founder net worth without a sale",
+    "founder_time": "Four to five hours per day for the first three lanes, with no promise of supplier outreach beyond a structured evidence request portal",
+    "gross_margin_basis": "Repeat plots and suppliers can be processed largely in software; first-lane document review and ambiguous geometry remain analyst-heavy, targeting 65%-75% blended gross margin",
+    "payback": "Target one paid onboarding to recover direct acquisition and analyst cost within the first month",
+    "pricing": "Assumption: PLN 10,000-30,000 per supply-lane onboarding, PLN 2,000-6,000 monthly base fee, or PLN 250-800 per shipment lot",
+    "retention_or_repeat": "Recurring import lanes, supplier changes, and shipment statements create repeat use; downstream firms removed from submission responsibility will not retain"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A permissioned graph of recurring plots, suppliers, commodities, CN-code interpretations, geometry failures, and evidence corrections that makes repeat lanes cheaper to clear",
+    "customer": "Medium and large EU first operators, initially Polish timber-product importers, furniture-input buyers, and independent coffee roasters sourcing covered goods from outside the EU",
+    "distribution_mechanism": "Customs and commodity-compliance advisers resell a co-branded workspace; focused calculators and sample polygon validators capture self-serve demand",
+    "offer_and_business_model": "A geospatial due-diligence workspace that ingests supplier polygons and documents, detects geometry and lot-link anomalies, maintains risk decisions, and prepares Information System submission data; onboarding plus subscription and shipment usage",
+    "payer_and_paid_event": "The importing legal entity pays for each approved supply lane and shipment lot when provenance evidence passes the internal release gate, with a base subscription for supplier and plot maintenance",
+    "problem_trigger": "Revised EUDR application begins on 30 December 2026 for large and medium operators, 30 June 2027 for most micro and small operators, and 30 December 2026 for micro and small operators already covered by the prior timber regime"
+  },
+  "founder_fit": [
+    "Geospatial anomaly detection and evidence scoring are strong data-science problems",
+    "A lane-by-lane pilot is reversible and can be capped to five hours per day",
+    "Customs-adviser distribution limits public-facing marketing and networking",
+    "The EU-wide rule supports expansion from a Polish operational base"
+  ],
+  "parent": null,
+  "risks": [
+    "Supplier fraud or inaccurate coordinates could pass automated checks and create false assurance.",
+    "Manual review of ambiguous land and legality records could destroy gross margin.",
+    "Further legislative simplification or deferral could postpone demand.",
+    "Commodity-specific legal interpretation may require external experts beyond the founder's competence."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://environment.ec.europa.eu/topics/forests/deforestation/regulation-deforestation-free-products_en",
+    "https://environment.ec.europa.eu/document/download/a3c5c3a0-232e-43c4-b0b8-1eecb1df45c7_en?filename=Report+from+the+Commission+to+the+Council+and+Parliament+on+the+EUDR.pdf",
+    "https://environment.ec.europa.eu/news/eu-deforestation-regulation-information-system-launches-2024-12-06_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Transaction-clearance geospatial data utility",
+    "control_point": "The immutable shipment-lot release gate before a first operator places covered goods on the EU market",
+    "critical_dependency": "Authentic supplier geolocation and legality evidence plus reliable interoperability with the EU EUDR Information System"
+  },
+  "thesis": "A shipment-release data utility can serve EU first operators importing wood, coffee, cocoa, rubber, or other EUDR goods by validating plot geometry, supplier evidence, product-lot links, and due-diligence-statement inputs before the goods are placed on the market. The revised law concentrates submission responsibility on the first operator, making this a narrower but better-defined buyer than generic downstream sustainability software.",
+  "title": "EUDR Plot-Provenance Gate for First-Operator Importers",
+  "uncertainties": [
+    "The number of independent first operators with enough shipments but no incumbent traceability system is unknown.",
+    "It is untested whether importers will pay per lane, per lot, or only for one-time readiness work.",
+    "API and bulk-upload capabilities of the Information System at the 2026 application date need verification.",
+    "The 700-customer wealth path assumes successful expansion beyond Poland and is not market evidence."
+  ],
+  "version": 1
+}

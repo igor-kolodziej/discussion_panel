@@ -1,0 +1,81 @@
+{
+  "candidate_id": "control10-09",
+  "claims": [
+    {
+      "claim_id": "control10-09-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/topics/waste-and-recycling/packaging-waste_en"
+      ],
+      "statement": "PPWR generally applies from 12 August 2026 and covers all packaging, with requirements on composition, manufacture and recoverability."
+    },
+    {
+      "claim_id": "control10-09-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2025/40/oj"
+      ],
+      "statement": "The regulation requires conformity assessment for specified packaging requirements and an EU declaration of conformity maintained by the manufacturer."
+    },
+    {
+      "claim_id": "control10-09-c3",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2025/40/oj"
+      ],
+      "statement": "Demand hypothesis: converters can become the distribution point because they already originate much of the material and test evidence needed for a brand's packaging file."
+    }
+  ],
+  "contrary_evidence": [
+    "Some PPWR technical requirements and methods phase in later, weakening immediate urgency.",
+    "Large packaging and product-lifecycle platforms can add these fields."
+  ],
+  "economics": {
+    "acquisition_route": "Hypothesis: a converter deploys the shared workspace to dozens of brand customers as part of specification approval",
+    "capital_required_pln": 60000,
+    "founder_net_worth_path": "Hypothesis: 150 converters averaging 60000 PLN recurring annual revenue could reach 9m PLN ARR; embedded specification switching costs could create founder equity above 5m PLN in 4-6 years",
+    "founder_time": "14-20 hours weekly for one packaging format",
+    "gross_margin_basis": "Economics hypothesis: 78-90% after material and declaration schemas stabilise",
+    "payback": "Hypothesis: 9-15 months with eight converters and 2000 active specifications",
+    "pricing": "Economics hypothesis: 2500-10000 PLN monthly per converter plus 10-40 PLN per active specification",
+    "retention_or_repeat": "Material substitutions, artwork changes, supplier changes and continuing declaration updates"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A permissioned material-component evidence graph and change lineage makes repeat declarations cheaper and supplier switching safer",
+    "customer": "EU packaging converters and consumer-goods manufacturers managing many packaging specifications",
+    "distribution_mechanism": "Embedded in converter quotation and specification-approval portals, with laboratory referrals",
+    "offer_and_business_model": "Shared specification evidence workspace and release API sold as multi-tenant SaaS",
+    "payer_and_paid_event": "Converter or brand pays per active specification, evidence refresh and released declaration pack",
+    "problem_trigger": "A packaging specification is approved or changed after PPWR conformity duties begin applying"
+  },
+  "founder_fit": [
+    "FMCG employment provides workflow intuition without using employer-confidential information",
+    "Data modelling and change detection fit founder skills",
+    "One converter pilot can be delivered part-time"
+  ],
+  "parent": null,
+  "risks": [
+    "Premature automation before implementing acts stabilise",
+    "Supplier confidentiality conflicts in a shared evidence graph",
+    "Liability if missing evidence is mistaken for confirmed conformity"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://environment.ec.europa.eu/topics/waste-and-recycling/packaging-waste_en",
+    "https://eur-lex.europa.eu/eli/reg/2025/40/oj"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Supply-chain conformity data rail",
+    "control_point": "Packaging-spec approval before production and market placement",
+    "critical_dependency": "Implementing guidance, test evidence availability and converter participation"
+  },
+  "thesis": "A packaging-converter-embedded rail could attach material, composition, test and supplier evidence to each packaging specification and generate the manufacturer's versioned conformity-declaration packet at SKU release. It would surface missing evidence, not independently determine compliance. Demand and economics are hypotheses.",
+  "title": "PPWR Packaging-Spec Conformity Rail",
+  "uncertainties": [
+    "Which packaging format has the highest pain now",
+    "Number of declarations per customer",
+    "Whether brands or converters own the budget"
+  ],
+  "version": 1
+}

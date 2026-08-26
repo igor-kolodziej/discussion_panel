@@ -1,0 +1,70 @@
+{
+  "candidate_id": "channel-02",
+  "claims": [
+    {
+      "claim_id": "channel-02-claim-01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://green-forum.ec.europa.eu/deforestation-regulation-implementation/deforestation-due-diligence-registry_en"
+      ],
+      "statement": "The EUDR Information System accepts bulk GeoJSON origins and lets downstream parties refer to upstream statements using reference and verification numbers."
+    },
+    {
+      "claim_id": "channel-02-claim-02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://green-forum.ec.europa.eu/nature-and-biodiversity/deforestation-regulation-implementation/understand-due-diligence_en"
+      ],
+      "statement": "Official guidance says required information includes geolocation of all production plots and adequately conclusive, verifiable evidence of deforestation-free and lawful production."
+    }
+  ],
+  "contrary_evidence": [
+    "The official Information System already offers manual, CSV and GeoJSON workflows, and the latest amendments delay application for many operators; low-risk sourcing can simplify diligence."
+  ],
+  "economics": {
+    "acquisition_route": "UNVALIDATED HYPOTHESIS: 3 trade-finance, certification or commodity-ERP channel partners each introduce 12 importers.",
+    "capital_required_pln": 90000,
+    "founder_net_worth_path": "UNVALIDATED HYPOTHESIS: year-8 ARR of PLN 10 million, EBITDA of PLN 2.8 million and 72% founder ownership valued at 4 times EBITDA imply PLN 8.1 million founder equity before liabilities.",
+    "founder_time": "UNVALIDATED HYPOTHESIS: 16 founder hours weekly until geospatial review is delegated, then 9.",
+    "gross_margin_basis": "UNVALIDATED HYPOTHESIS: 76% mature gross margin after satellite-data calls, geospatial compute and multilingual evidence review.",
+    "payback": "UNVALIDATED HYPOTHESIS: 10-month CAC payback including supplier onboarding assistance.",
+    "pricing": "UNVALIDATED HYPOTHESIS — all commercial figures here, including capital_required_pln=90000, are hypotheses: PLN 120 per supplier plot annually plus PLN 45 per released lot, with buyer minimums of PLN 1800 monthly.",
+    "retention_or_repeat": "UNVALIDATED HYPOTHESIS: 90% annual buyer retention and repeated supplier reuse across harvest lots."
+  },
+  "fingerprint": {
+    "compounding_advantage": "cross-buyer library of resolved polygon, land-right and upstream-reference defects without exposing buyer-confidential data",
+    "customer": "EU commodity importers and downstream operators buying from fragmented farms and forestry suppliers",
+    "distribution_mechanism": "commodity ERP, trade-finance and certification-workflow partnerships",
+    "offer_and_business_model": "multi-buyer supplier evidence identity, GeoJSON QA and reference-chain vault sold per plot and lot",
+    "payer_and_paid_event": "importer pays when a supplier plot is maintained and a shipment lot obtains a complete evidence bundle",
+    "problem_trigger": "a relevant commodity lot lacks reusable plot-level traceability before market placement or export"
+  },
+  "founder_fit": [
+    "Excellent geospatial/data-quality and AI-document fit with asynchronous channel distribution. UNVALIDATED HYPOTHESIS: PLN 90000 is enough for a narrow one-commodity pilot; no field inspection is promised."
+  ],
+  "parent": null,
+  "risks": [
+    "Bad plot evidence can halt trade and create liability.",
+    "Remote sensing cannot itself prove land rights or lawful production."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://green-forum.ec.europa.eu/deforestation-regulation-implementation/deforestation-due-diligence-registry_en",
+    "https://green-forum.ec.europa.eu/nature-and-biodiversity/deforestation-regulation-implementation/understand-due-diligence_en",
+    "https://green-forum.ec.europa.eu/nature-and-biodiversity/deforestation-regulation-implementation/traceability-and-geolocation-commodities-subject-eudr_fi"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "shared geospatial supplier-evidence utility",
+    "control_point": "commodity purchase-lot release after plot and reference-number resolution",
+    "critical_dependency": "supplier-provided plot geolocation and lawful-production documents with reuse permission"
+  },
+  "thesis": "Create a shared geospatial evidence utility for coffee, cocoa, wood and rubber supply chains that normalises plot polygons, lawful-origin evidence and upstream due-diligence references before a purchase lot is released. Reuse across buyers gives suppliers one maintained evidence identity while a resolution corpus learns which plot and chain-of-custody defects block a statement.",
+  "title": "EUDR Plot-Evidence Utility",
+  "uncertainties": [
+    "Supplier consent to reuse evidence across buyers",
+    "Commodity-specific willingness to pay",
+    "How much national enforcement practice differs"
+  ],
+  "version": 1
+}

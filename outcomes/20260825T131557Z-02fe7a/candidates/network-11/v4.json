@@ -1,0 +1,127 @@
+{
+  "candidate_id": "network-11",
+  "claims": [
+    {
+      "claim_id": "network-11-v2-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.ema.europa.eu/en/human-regulatory-overview/research-development/clinical-trials-human-medicines/clinical-trials-information-system",
+        "https://www.ema.europa.eu/system/files/documents/other/cttm22_faqs_en.pdf"
+      ],
+      "statement": "CTIS supplies searchable public trial facts and downloadable search or trial records, which is enough for a public-data prototype but not evidence of site-level startup, recruitment-delivery, query-burden, or closeout performance."
+    },
+    {
+      "claim_id": "network-11-v2-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32014R0536",
+        "https://www.ema.europa.eu/system/files/documents/other/revised_ctis_transparency_rules_en.pdf"
+      ],
+      "statement": "The EU clinical-trial transparency regime expressly protects personal data and commercially confidential information, so non-public operational outcomes require separate authority, contractual permissions, minimisation, and disclosure controls."
+    },
+    {
+      "claim_id": "network-11-v2-c3",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC6907246/",
+        "https://link.springer.com/article/10.1186/s13063-015-0653-x"
+      ],
+      "statement": "Published research supports startup speed, recruitment, patient access, and data quality as relevant site-selection or performance dimensions, but it does not validate one portable score or prove that Polish sites and CROs will share the required data."
+    },
+    {
+      "claim_id": "network-11-v2-c4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.citeline.com/en/solutions/clinical/feasibility-and-site-selection",
+        "https://www.iqvia.com/solutions/technologies/site-suite/feasibility",
+        "https://www.medidata.com/en/study-experience/clinical-trial-analytics/"
+      ],
+      "statement": "Citeline, IQVIA, and Medidata already market sophisticated feasibility, site-selection, site-performance, workflow, and proprietary-data products, making generic site discovery or ranking an unattractive wedge."
+    },
+    {
+      "claim_id": "network-11-v4-c5",
+      "confidence": "low",
+      "evidence_refs": [],
+      "statement": "It remains an unvalidated hypothesis that one CRO or sponsor will prepay a closed cohort, that invited sites will have usable sharing rights, and that repeat buyer use can support the existing pilot and annual price hypotheses."
+    }
+  ],
+  "contrary_evidence": [
+    "Major vendors already advertise proprietary site-level performance, enrollment, quality, workflow, and API capabilities.",
+    "CTIS public records do not contain the private operational outcomes that would make the closed cohort valuable.",
+    "The published performance literature does not establish a fair cross-sponsor attribution method or willingness to fund a closed cohort.",
+    "No anchor commitment, site sharing right, repeat-use evidence, or public incumbent pricing was found."
+  ],
+  "economics": {
+    "acquisition_route": "Do not recruit an open site network. Use bounded founder-led outreach to seek one paid CRO or sponsor anchor; build only the scoped packet after prepayment, then invite only the sites required for that cohort. No anchor or site commitment is assumed.",
+    "capital_required_pln": 90000,
+    "founder_net_worth_path": "The prior path requiring 800 paying site accounts is removed. No founder-net-worth path is underwritten until a repeat-paid anchor establishes price, delivery cost, renewal, and expansion. Using only the prior planning ceiling of 100000 PLN annual buyer revenue and its 22% EBITDA, 4x EBITDA, and 60% ownership assumptions, roughly 95 retained anchor accounts would be required for about 5.0M PLN of equity, which exposes rather than resolves the scale risk; retained cash is not double-counted.",
+    "founder_time": "Keep the same 15-20 hour weekly ceiling, focused on one anchor sale, the bounded packet, and measurement; contract clinical-operations, privacy, and security work, and do not operate a broad site-support network.",
+    "gross_margin_basis": "Remove the unsupported 55-80% range from the launch decision. Measure specialist verification, security, site support, and dispute cost inside the prepaid pilot; an annual product is permitted only after positive contribution is observed.",
+    "payback": "Unknown. Require pilot prepayment within the already proposed 10000-25000 PLN scoped-packet range and size the scope so the fee covers budgeted direct pilot cost; stop rather than fund shared infrastructure if this cannot be contracted.",
+    "pricing": "Sites pay nothing. Test only the existing 10000-25000 PLN prepaid scoped-pilot range; after evidenced repeat use, test the existing 40000-100000 PLN annual buyer-access range. These are hypotheses and approval gates, not observed willingness to pay.",
+    "retention_or_repeat": "Repeat revenue is limited to additional studies and an annual renewal by the same anchor; site subscriptions and assumed contribution revenue are removed. Neither repeat use nor renewal is evidenced."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Permissioned longitudinal evidence produced under one buyer-agreed definition set, with provenance, sample thresholds, disclosure controls, and appeal history across repeat studies",
+    "customer": "A mid-sized CRO or sponsor feasibility team with repeated Polish studies; independent sites participate in the closed cohort but are not paying customers",
+    "distribution_mechanism": "Bounded direct outreach to win one paid anchor first, followed only by anchor-nominated or explicitly invited sites; no open two-sided launch",
+    "offer_and_business_model": "Pre-sold private evidence cohort for one therapeutic area, combining CTIS factual profiles with permissioned site evidence under anchor-agreed definitions, followed conditionally by an annual buyer-funded workflow",
+    "payer_and_paid_event": "The anchor CRO or sponsor prepays a scoped cohort pilot and, only after demonstrated repeat use, may pay annual access; sites pay nothing and no party pays to improve a rank",
+    "problem_trigger": "A CRO or sponsor is preparing feasibility for a near-term Polish study and is willing to prepay a bounded cohort pilot before any shared infrastructure is built"
+  },
+  "founder_fit": [
+    "One bounded pre-sale and cohort fits the founder's data-provenance and automation strengths better than operating an open two-sided exchange.",
+    "The design can be tested part-time and avoids a public persona, but still requires a finite enterprise sale.",
+    "Clinical-operations methodology, privacy, and security remain specialist work that must be contracted within the capital ceiling.",
+    "A no-build-before-prepayment gate contains downside while the decisive buyer and rights assumptions remain unknown."
+  ],
+  "parent": {
+    "candidate_id": "network-11",
+    "version": 3
+  },
+  "redesign": {
+    "changed_fingerprint_fields": [
+      "customer",
+      "problem_trigger",
+      "payer_and_paid_event",
+      "offer_and_business_model",
+      "distribution_mechanism",
+      "compounding_advantage"
+    ],
+    "economic_effect": "This removes 800 assumed paying site accounts, site-side acquisition, and an open two-sided cold start. A single prepaid buyer pilot becomes the financing and demand gate, so shared build and site recruitment do not consume capital before revenue. The tradeoff is anchor concentration and a harder enterprise-only scale requirement; price, contribution, renewal, rights, and commitment remain explicitly unvalidated."
+  },
+  "risks": [
+    "No CRO or sponsor may prepay a site-controlled cohort when incumbents already own broader data and procurement access.",
+    "Invited sites may lack reuse rights or comparable records, leaving the paid scope undeliverable.",
+    "Anchor-specific definitions may not transfer across buyers, weakening expansion and the longitudinal asset.",
+    "Security review, verification, disputes, and enterprise sales may still exceed the founder's time and capital constraints."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.ema.europa.eu/en/human-regulatory-overview/research-development/clinical-trials-human-medicines/clinical-trials-information-system",
+    "https://www.ema.europa.eu/system/files/documents/other/cttm22_faqs_en.pdf",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32014R0536",
+    "https://www.ema.europa.eu/system/files/documents/other/revised_ctis_transparency_rules_en.pdf",
+    "https://www.citeline.com/en/solutions/clinical/feasibility-and-site-selection",
+    "https://www.iqvia.com/solutions/technologies/site-suite/feasibility",
+    "https://www.medidata.com/en/study-experience/clinical-trial-analytics/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC6907246/",
+    "https://link.springer.com/article/10.1186/s13063-015-0653-x"
+  ],
+  "stage": "development",
+  "structure": {
+    "commercial_archetype": "Pre-contracted enterprise-sponsored closed evidence cohort",
+    "control_point": "The private, permissioned cohort record and agreed evidence definitions used in repeat feasibility decisions",
+    "critical_dependency": "One buyer must prepay a bounded pilot and participating sites must possess and grant the required sharing rights; neither condition is currently evidenced"
+  },
+  "thesis": "Pre-sell a closed, one-therapeutic-area evidence cohort to one CRO or sponsor before building shared infrastructure. The anchor funds a bounded feasibility pilot and agrees the evidence definitions; invited sites retain disclosure control and contribute only records they have authority to share. The product remains a private evidence packet and recurring cohort workflow, not a public score, open exchange, or claim that an anchor, contribution right, or buyer demand already exists.",
+  "title": "Anchor-Funded TrialSite Evidence Cohort for Poland",
+  "uncertainties": [
+    "Whether one CRO or sponsor will prepay a bounded closed-cohort pilot at the existing proposed range.",
+    "Whether invited sites possess contractual rights to share useful, comparable operating evidence.",
+    "Pilot delivery cost, contribution, decision impact, repeat use, renewal, and the number of anchors attainable without incumbent channel access.",
+    "Whether one anchor's definitions can transfer across therapeutic areas or buyers without recreating the service.",
+    "No anchor commitment, validation, rights confirmation, or improved economics is claimed."
+  ],
+  "version": 4
+}

@@ -1,0 +1,84 @@
+{
+  "judge_id": "c1-dev-working-spend-06",
+  "factors": [
+    {
+      "name": "Core insight",
+      "status": "scored",
+      "score": 6,
+      "rationale": "Duplicate and erroneous payments can survive configured controls, and an outcome-priced recovery audit is a coherent low-friction wedge into a pre-payment exception workflow. The insight is commercially real but established rather than novel, and the redesign has not shown that its partner-operated form changes the underlying opportunity enough to create a uniquely valuable control point."
+    },
+    {
+      "name": "Customer pain and willingness to pay",
+      "status": "scored",
+      "score": 6,
+      "rationale": "Confirmed cash leakage is a concrete CFO pain, while contingent fees make the historical audit easy to justify and published recovery pricing plus public procurements establish willingness to pay in high-volume settings. The decisive uncertainty is whether Polish construction and field-service firms with only several thousand invoices lose and can recover enough money frequently enough to support either meaningful fees or a subsequent monitoring subscription."
+    },
+    {
+      "name": "Business model and economics",
+      "status": "scored",
+      "score": 5,
+      "rationale": "Charging only on recovered cash aligns incentives and limits customer payback risk, and the proposed capital envelope can fund a bounded pilot. However, historical recovery is episodic, documented delivery includes senior human review and recovery work, early gross margin is modeled at only 45-60%, partner compensation and channel CAC are unknown, and the 70-80% monitoring margin is only a target. The stated 150-customer case produces 5.4 million PLN ARR yet still leaves founder equity below the founder's 5 million PLN net-worth objective before substantial non-double-counted distributions, so attractive owner economics require more customers, higher revenue, better margins, or a stronger recurring product than the packet establishes."
+    },
+    {
+      "name": "Market and beachhead",
+      "status": "scored",
+      "score": 5,
+      "rationale": "Construction and field-service groups with multiple entities provide a reasonably specific starting segment, and Poland has a broad pool of 17,601 medium enterprises from which a viable niche could emerge. That denominator is not a serviceable market estimate: invoice volume, AP complexity, recoverable leakage, system fragmentation, and partner reach are unmeasured, so the economically qualified beachhead could be much smaller than the headline pool."
+    },
+    {
+      "name": "Competitive position and domination potential",
+      "status": "scored",
+      "score": 4,
+      "rationale": "A trusted local accounting or ERP partner and a tightly qualified vertical could support a credible niche position, especially among firms poorly served by enterprise tooling. Domination potential is weak today because specialist recovery providers already offer risk-and-reward services, major ERP products already provide configurable matching and anomaly controls, and no exclusive channel, proprietary access, or demonstrated segment-specific superiority is present."
+    },
+    {
+      "name": "Expansion potential",
+      "status": "scored",
+      "score": 6,
+      "rationale": "A successful duplicate-payment audit can plausibly extend into unapplied credits, supplier-master and bank-change controls, contract mismatches, pre-payment monitoring, additional partner portfolios, and adjacent sectors. Those adjacencies share data and workflow primitives, but each adds false-positive, legal, integration, or incumbent-product complexity, so expansion is plausible rather than automatically cheap."
+    },
+    {
+      "name": "Defensibility and durability",
+      "status": "scored",
+      "score": 4,
+      "rationale": "Partner-specific import mappings, ERP configuration knowledge, adjudicated aliases, measured false-positive explanations, and embedded review routines can accumulate into modest switching costs and faster deployments. The core detection methods are reproducible and bundleable, while confidentiality and data-protection limits may prevent cross-client reuse of the most valuable learned data; without contractual channel control or a validated transferable data asset, durability remains limited."
+    },
+    {
+      "name": "Strength of advantage",
+      "status": "scored",
+      "score": 5,
+      "rationale": "No-upfront recovery pricing, read-only deployment, explainable evidence packets, local handling, and retention of supplier authority by the customer's finance team are meaningful trust and convenience advantages over an unsupported internal analysis project. They are not yet a quantified performance, cost, speed, or accuracy advantage over established recovery firms or incumbent ERP controls, and the partner-operated workflow remains a design condition rather than a proven customer benefit."
+    },
+    {
+      "name": "Timing and momentum",
+      "status": "scored",
+      "score": 5,
+      "rationale": "Modern entity-resolution tooling and AI-assisted evidence assembly reduce the cost of analyzing heterogeneous exports, while digitized AP records make a read-only pilot technically accessible. The same technology lowers entry barriers for competitors, incumbent matching capabilities are already mature, and the packet identifies no regulatory deadline, new mandatory control, or other temporary window that creates exceptional urgency."
+    },
+    {
+      "name": "Distribution",
+      "status": "scored",
+      "score": 4,
+      "rationale": "Warm construction and renewable-installation contacts make five discovery audits feasible, and an accounting-firm or ERP-implementer channel is directionally compatible with the founder's limited appetite for continuous selling. No partner has committed, however, and lead volume, end-client qualification, conversion, revenue share, first-line review capacity, onboarding cost, channel concentration, and six-month acquisition payback are all unknown; the proposed scalable route therefore remains the central unproven dependency."
+    },
+    {
+      "name": "Execution and risks",
+      "status": "scored",
+      "score": 6,
+      "rationale": "The founder's data-science skills fit the analytical core, a read-only prototype is feasible within 60,000 PLN, and limiting work to two concurrent audits with customer-controlled recovery makes initial validation compatible with part-time execution. Scaling still requires reliable joins across imperfect exports, security and GDPR controls, careful treatment of disputed or legally unrecoverable claims, bounded human review, customer finance participation, and a capable partner; these are manageable but material operating constraints that AI cannot remove."
+    }
+  ],
+  "interaction_adjustment": 0,
+  "assumptions": [
+    "The opportunity is assessed as the stated v4 partner-operated redesign executed competently from a planning-stage position, not as though the uncommitted partner or recurring conversion already exists.",
+    "Target customers can export sufficiently complete AP, payment, supplier-master, and credit-note data and can lawfully provide it under appropriate confidentiality, processor, and security terms.",
+    "Partner compensation, first-line review labor, onboarding work, and exception adjudication are real delivery costs and are not excluded from gross-margin or CAC measurement.",
+    "The five warm-contact audits are validation opportunities only; they do not establish representative Polish leakage, repeatable demand, or a scalable acquisition channel.",
+    "The 150-customer wealth-path scenario is treated as an illustrative requirement rather than a forecast, and retained earnings are not double-counted as both equity value and founder distributions."
+  ],
+  "main_structural_strength": "The outcome-priced historical audit offers a low-risk entry into a valuable finance workflow, while customer-controlled recovery and partner first-line review are designed to preserve trust and cap founder delivery labor.",
+  "primary_score_limiter": "There is no evidence yet that the qualified Polish mid-market segment produces enough recoverable cash per client, at acceptable review cost and recovery speed, to support attractive contribution economics and then convert into durable recurring monitoring revenue.",
+  "strongest_disconfirming_evidence": "The strongest quantified recovery case required analysis of 645,000 transactions plus a senior recovery auditor, while SAP and Microsoft already provide configurable matching controls; together these facts challenge both the economics at several-thousand-invoice SMEs and the distinctiveness of the core technology.",
+  "highest_value_structural_change": "Make an accounting network or ERP implementer the contracted payer and operator for a minimum-volume multi-client portfolio, with a committed revenue floor, standardized data interfaces, and first-line review obligations, rather than depending on one-by-one SME sales; this would aggregate leakage volume, amortize integrations, and turn the proposed channel into an economically accountable customer relationship.",
+  "evidence_needed_for_higher_score": "Obtain a signed portfolio-partner agreement and results from at least five representative Polish audits showing invoice volume, recoverable cash, recovery time, dispute rate, precision, delivery hours, partner share, onboarding cost, and channel payback, followed by paid audit-to-monitoring conversions at the proposed price with measured prevented loss, review burden, gross margin, and retention."
+}

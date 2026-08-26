@@ -1,0 +1,81 @@
+{
+  "candidate_id": "control-11",
+  "claims": [
+    {
+      "claim_id": "control-11-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://docs.ted.europa.eu/api/latest/search.html"
+      ],
+      "statement": "The official TED Search API provides unauthenticated access to published procurement notices for analysis and reuse, including structured sector and location classifications."
+    },
+    {
+      "claim_id": "control-11-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ezamowienia.gov.pl/pl/integracja/"
+      ],
+      "statement": "Poland's e-Zamówienia platform exposes APIs for domestic notices, statistics, procurement plans, and related procurement data; reading BZP notices does not require the full integration procedure."
+    },
+    {
+      "claim_id": "control-11-c03",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://docs.ted.europa.eu/api/latest/search.html",
+        "https://ezamowienia.gov.pl/pl/integracja/"
+      ],
+      "statement": "Hypothesis: small energy contractors will pay for bid/no-bid decisions and reusable evidence rather than another broad tender alert, especially if the product measures won margin and staff time."
+    }
+  ],
+  "contrary_evidence": [
+    "Notice data is open and reusable, so public-search and alert features alone have little moat.",
+    "Existing procurement platforms already offer filters and subscriptions; differentiation depends on vertical workflow and private outcomes."
+  ],
+  "economics": {
+    "acquisition_route": "Free high-precision digest, installer-wholesaler partnerships, association distribution, and proof of hours saved in a family-company pilot",
+    "capital_required_pln": 35000,
+    "founder_net_worth_path": "Hypothesis: 600 customers at 9,000 PLN average ARR plus selective services creates over 5m PLN revenue; a profitable majority-owned data workflow could support over 5m PLN founder equity in four to seven years",
+    "founder_time": "10-15 hours weekly for a single energy vertical; analyst-assisted services must be capped or delegated",
+    "gross_margin_basis": "Alert and workspace software can exceed 85% gross margin; assisted bid packs may yield 45-65%, producing 65-80% blended margin",
+    "payback": "One avoided unsuitable bid or one additional profitable award can repay a year; target vendor CAC payback within six months",
+    "pricing": "Hypothesis: 700-2,500 PLN monthly per contractor plus 1,500-6,000 PLN for analyst-assisted bid packs",
+    "retention_or_repeat": "Tender calendars repeat and the evidence vault becomes more valuable; retention weakens if a contractor bids only occasionally"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A private graph of requirement patterns, bid decisions, pricing assumptions, clarifications, competitors, awards, and realised margin",
+    "customer": "Small Polish renewable, retrofit, electrical, and energy-audit contractors",
+    "distribution_mechanism": "Free local tender digest, family-business proof case, wholesaler and accountant referrals, and industry association channels",
+    "offer_and_business_model": "Vertical tender feed, qualification extraction, bid/no-bid scoring, reusable evidence vault, and outcome analytics",
+    "payer_and_paid_event": "Contractor pays a monthly workspace subscription and optional fixed fee for a structured bid pack",
+    "problem_trigger": "A relevant tender or procurement plan appears and the contractor must quickly decide whether and how to bid"
+  },
+  "founder_fit": [
+    "The family renewable business can lawfully test relevance, bid triage, and time savings. The founder's data and AI strengths suit document parsing and outcome modelling, while distribution can be product-led and through wholesalers rather than high-energy networking."
+  ],
+  "parent": null,
+  "risks": [
+    "Automated eligibility interpretation can miss a mandatory condition and waste bid effort.",
+    "Low tender frequency could cause weak retention in the initial niche.",
+    "Sensitive bid data requires strict tenant isolation and must never facilitate collusion."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://docs.ted.europa.eu/api/latest/search.html",
+    "https://ezamowienia.gov.pl/pl/integracja/",
+    "https://dane.gov.pl/pl/dataset/1040"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Vertical procurement intelligence and bid-workflow SaaS",
+    "control_point": "The contractor's accumulated bid/no-bid and evidence memory at the moment resources are committed",
+    "critical_dependency": "Customers contributing truthful bid outcomes and the vertical having sufficient tender frequency"
+  },
+  "thesis": "Build a vertical tender intelligence and bid-memory workspace for renewable installers, energy auditors, and retrofit contractors. It detects relevant Polish and EU notices, parses technical eligibility and bill-of-quantity clues, and learns from each user's bid/no-bid, pricing, clarification, and award result. Public alerts are the wedge; the private outcome graph and reusable evidence library become the control point.",
+  "title": "Energy Tender Bid Memory for Small Contractors",
+  "uncertainties": [
+    "How often small energy contractors bid and what they currently spend on preparation.",
+    "Whether award data and tender attachments are consistent enough for reliable margin features.",
+    "Whether contractors will enter sensitive bid prices and outcomes into a third-party system."
+  ],
+  "version": 1
+}

@@ -1,0 +1,120 @@
+{
+  "assumptions": [
+    "The initial product only receives laboratory-approved change events and supports consent, identity mapping, queues, audit, and recontact; it does not classify variants, recommend treatment, or issue diagnoses.",
+    "The laboratory remains the medical decision-maker and controller of the clinical relationship, although the exact GDPR roles and IVDR intended-purpose classification still require specialist confirmation.",
+    "The founder initially has 100000 PLN and at most five hours per day; additional family capital is not assumed, and clinical, privacy, security, and regulatory work must be delegated where necessary.",
+    "There are no committed laboratories, validated eligible-record counts, renewals, or measured integration costs yet; these absences are treated as uncertainty rather than evidence of rejection.",
+    "The proposed annual per-record pricing and 55-75% gross-margin range are hypotheses, and published reanalysis service prices are not treated as proof of software willingness to pay."
+  ],
+  "base_score": 4.5,
+  "candidate_id": "control7-05",
+  "candidate_sha256": "c0edf0d53d4bf78d5ef68f2ee8e0e06b2d5b4a2248e7ea262a346861f947b88a",
+  "candidate_version": 2,
+  "constrained_score": 4.3,
+  "evaluation_type": "working",
+  "evidence_needed_for_higher_score": "A paid laboratory pilot with a signed intended-purpose boundary and data-responsibility allocation; verified eligible-record volume; measured staff time, missed-case, and turnaround improvements; actual implementation, security, support, and acquisition costs; and evidence of annual renewal at a price yielding attractive gross margin and payback.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "Genomic interpretations change after an initial report, while consent continuity, case identity, approved review, audit, and recontact remain longitudinal laboratory workflows. Narrowing the offer to a lab-owned administrative layer is a credible insight, but unsettled recontact responsibility and existing automated-reevaluation products make the gap less singular than the thesis implies.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Professional guidance and the all-nine-laboratory Dutch study support real clinical and operational burden, and Polish providers charging for reanalysis show that some update events carry monetary value. However, laboratories viewed routine periodic reinterpretation as infeasible, and no evidence shows that they want an ongoing third-party workflow or will pay annually for every historical record.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "A recurring record subscription could produce attractive software-like revenue if volumes and retention are high, while clinician-approved reanalysis remains separately billable. Yet the 60-180 PLN annual price, eligible volume, acquisition cost, payback, renewal, and 55-75% gross margin are unvalidated; secure genetic-data handling, identity reconciliation, audits, support, and bespoke integrations could consume much of the margin and available capital. Published 300-2194 PLN clinical service prices do not validate the platform economics, and the path to the founder's wealth objective remains unknown.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "A Polish clinical genetics laboratory with archived WES cases is a concrete and appropriately narrow first segment, and a single installation could test the full workflow. The evidence does not establish the number of eligible records, reachable laboratories, or annual revenue per site, so the beachhead may be too concentrated and small for a meaningful standalone business unless expansion follows quickly.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "Vendor neutrality and a focus on consent, audit, and lab-approved recontact distinguish the offer from a proprietary classifier. Nevertheless, SeqOne already occupies automated historical reevaluation, laboratories retain their own paid reanalysis workflow, and interpretation or laboratory-system incumbents can add the administrative features; no exclusive channel, right, or entrenched control point is established.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "Successful embedding in one laboratory could support more genetics labs, clinics, EU geographies, and additional longitudinal clinical-result workflows using the same consent and audit primitives. Those adjacencies are plausible rather than evidenced, and cross-border privacy, language, responsibility, and system-integration differences mean the first deployment does not automatically unlock them.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Deep laboratory integrations, patient-to-case mappings, consent history, contact continuity, audit records, and embedded operating procedures could accumulate switching costs and trust. The laboratories still own the underlying data and clinical relationship, while established interpretation and laboratory-system vendors can copy or bundle the workflow, so durability depends on execution rather than a protected asset today.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "The proposed layer could be more convenient than spreadsheets or ad hoc reactive handling while preserving clinician authority and complementing free sources such as ClinVar rather than recreating them. No measured reduction in staff time, missed cases, liability, turnaround, or total cost establishes a behavior-changing advantage, and the exact regulatory boundary could erode the simplicity benefit.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "Classification changes and recontact questions make the workflow relevant now, but current evidence supplies no near-term forcing event: responsibility remains unsettled, EHDS genomic milestones are mainly in 2031, and GDPR plus possible IVDR scope add friction. The timing is defensible for a pilot, not unusually favorable for rapid adoption.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "A paid Polish laboratory pilot is a specific validation route, and B2B deployment avoids consumer acquisition and camera-led founder marketing. Distribution still requires trust-heavy clinical sales, data-security review, contracting, and system integration across a small buyer universe; there is no committed design partner, channel partner, or evidence of repeatable CAC and payback.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "The founder's data-science, genetics interest, AI leverage, and preference for systems fit a workflow-only prototype. Production delivery requires clinical governance, privacy and security engineering, consent and identity operations, regulatory counsel, insurance, integrations, and laboratory sales; a diagnostic intended purpose would likely exceed both the part-time constraint and available capital, while even the administrative boundary remains unconfirmed.",
+      "score": 4,
+      "status": "scored"
+    }
+  ],
+  "final_score": 4.3,
+  "highest_value_structural_change": "Deploy inside the laboratory's controlled environment and ingest only laboratory-approved change events, then replace broad per-active-record pricing with an annual site fee plus a fee for completed review or recontact workflows and distribute through a laboratory-information or interpretation-system OEM partner. This would reduce data-custody and regulatory exposure, align payment with a billable event, and turn an incumbent threat into a channel.",
+  "interaction_adjustment": -0.2,
+  "judge_id": "c7-working-control7-05",
+  "main_structural_strength": "The product leaves interpretation and medical judgment with the laboratory while seeking control of the consent, identity, audit, and approved-recontact workflow; if embedded, those integrations and longitudinal records can create genuine switching costs without requiring a new clinical classifier.",
+  "primary_score_limiter": "There is no evidence that laboratories will accept an ongoing third-party recontact workflow and pay recurring per-record fees at volumes and margins sufficient to overcome enterprise sales, integration, genetic-data security, and governance costs.",
+  "qualified": false,
+  "raw_response_path": "artifacts/research/raw-c7-working-control7-05.json",
+  "raw_response_sha256": "d155b282c32fe8ee4cad1164c875ae69da183d15e2f906ddb78db4a122abf43d",
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 2,
+  "strongest_disconfirming_evidence": "The study covering all nine Dutch clinical molecular genetics laboratories found reactive reinterpretation common but active periodic reinterpretation broadly viewed as infeasible, directly challenging the operational appetite on which a recurring longitudinal workflow depends.",
+  "unrounded_score": 4.3
+}

@@ -1,0 +1,83 @@
+{
+  "candidate_id": "bottleneck-08",
+  "claims": [
+    {
+      "claim_id": "bottleneck-08-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.eba.europa.eu/activities/direct-supervision-and-oversight/digital-operational-resilience-act/preparation-dora-application"
+      ],
+      "statement": "DORA became applicable on 17 January 2025, and in-scope financial entities must maintain a comprehensive register of contractual arrangements with ICT third-party providers at applicable entity and group levels."
+    },
+    {
+      "claim_id": "bottleneck-08-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.eba.europa.eu/activities/single-rulebook/regulatory-activities/operational-resilience/implementing-technical-standards-establish-templates-register-information?version=2024"
+      ],
+      "statement": "The register templates are established by adopted implementing technical standards and are used by competent authorities and the European Supervisory Authorities for supervision and critical-provider designation."
+    },
+    {
+      "claim_id": "bottleneck-08-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.eba.europa.eu/publications-and-media/press-releases/european-supervisory-authorities-designate-critical-ict-third-party-providers-under-digital"
+      ],
+      "statement": "The European Supervisory Authorities used data collected from financial entities' Registers of Information to designate critical ICT third-party providers in November 2025."
+    }
+  ],
+  "contrary_evidence": [
+    "DORA has applied since January 2025, so many serious buyers have already completed a first register and may view the acute implementation spend as past.",
+    "Official templates and guidance are available without charge, and low-complexity entities can maintain them manually.",
+    "Enterprise GRC, vendor-risk, and contract-management platforms can add the same exports for existing customers."
+  ],
+  "economics": {
+    "acquisition_route": "Fixed-price register health check, field-level technical content, focused outreach to smaller entities, and boutique-adviser referrals",
+    "capital_required_pln": 90000,
+    "founder_net_worth_path": "Modeled path: 250 customers at 2,000 PLN average monthly recurring revenue equals 6m PLN ARR; a 40% owner-cash margin is 2.4m PLN/year and could exceed 10m PLN over five mature years",
+    "founder_time": "Up to 5 hours/day for one financial sub-sector; security reviews and regulatory advice must be standardized or contracted",
+    "gross_margin_basis": "Modeled 75-88% after secure processing, model inference, support, and regulatory-rule maintenance",
+    "payback": "Target below 8 months with paid onboarding; regulated sales and information-security review remain unvalidated",
+    "pricing": "Modeled 1,000-5,000 PLN/month plus 10,000-40,000 PLN onboarding, based on entity, provider, and contract counts",
+    "retention_or_repeat": "Contract, provider, service, function, and subcontractor changes require continuous register maintenance and recurring supervisory exports"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A correction corpus across contract language, provider hierarchies, identifier failures, critical-function mappings, and official template validation errors",
+    "customer": "Smaller Polish and EU insurers, investment firms, payment institutions, and compliance outsourcers maintaining DORA ICT registers",
+    "distribution_mechanism": "Free register quality checker, exact-field guidance, targeted finance-sector outreach, and partnerships with boutique DORA advisers",
+    "offer_and_business_model": "Contract extraction, entity resolution, function mapping, quality rules, change diffs, approvals, and official-template exports sold as compliance SaaS",
+    "payer_and_paid_event": "The financial entity or its compliance outsourcer pays annual SaaS plus onboarding when it must maintain and export a regulator-ready register",
+    "problem_trigger": "An ICT contract is signed, changed, subcontracted, terminated, or included in a supervisory register request without complete structured fields"
+  },
+  "founder_fit": [
+    "Entity resolution, document extraction, data-quality rules, and finance-domain interest match the founder's analytical profile.",
+    "A template compiler can be piloted asynchronously on redacted contracts and register files without becoming a relationship-heavy consultancy.",
+    "High annual contract value permits a bounded customer base and a bootstrapped path within the founder's capital ceiling."
+  ],
+  "parent": null,
+  "risks": [
+    "A missing provider, subcontractor, or critical-function relationship could cause regulatory reporting failure.",
+    "ICT contracts contain highly sensitive commercial and security information, raising breach impact.",
+    "Long procurement cycles may conflict with a part-time founder's need for fast, testable demand."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.eba.europa.eu/activities/direct-supervision-and-oversight/digital-operational-resilience-act/preparation-dora-application",
+    "https://www.eba.europa.eu/activities/single-rulebook/regulatory-activities/operational-resilience/implementing-technical-standards-establish-templates-register-information?version=2024",
+    "https://www.eba.europa.eu/publications-and-media/press-releases/european-supervisory-authorities-designate-critical-ict-third-party-providers-under-digital"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "RegTech document-to-structured-register SaaS with implementation revenue",
+    "control_point": "The normalized, versioned graph of financial entities, ICT providers, contracts, services, subcontractors, and supported functions from which every official register export is generated",
+    "critical_dependency": "Customer contract inventories must be complete and regulatory interpretations of scope and fields must remain accurately maintained"
+  },
+  "thesis": "Build a compiler for smaller in-scope EU financial entities and outsourced compliance teams that extracts required fields from ICT contracts, resolves provider and group hierarchies, links services to critical functions, flags missing clauses or identifiers, and produces versioned DORA register templates. The payer buys control over the contract-to-register translation layer, where procurement records, service inventories, legal entities, subcontracting chains, and regulator formats drift apart.",
+  "title": "DORA Contract-to-Register Compiler",
+  "uncertainties": [
+    "The number of smaller in-scope entities with persistent register pain but without a capable GRC platform is unknown.",
+    "Contract extraction accuracy and the acceptable human-review burden have not been tested on real multilingual agreements.",
+    "Modeled pricing, security-review duration, sales cycle, churn, and margin require paid pilots."
+  ],
+  "version": 1
+}

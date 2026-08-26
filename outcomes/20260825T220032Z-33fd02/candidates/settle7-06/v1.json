@@ -1,0 +1,84 @@
+{
+  "candidate_id": "settle7-06",
+  "claims": [
+    {
+      "claim_id": "settle7-06-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/attachment/4369df4f-aa6a-43a4-b46d-01689735fb14"
+      ],
+      "statement": "Poland permits several deposit-system operators, and official guidance states that each operator may design detailed operations and settlement methods with participating retailers through contracts."
+    },
+    {
+      "claim_id": "settle7-06-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/klimat/system-kaucyjny-zasady"
+      ],
+      "statement": "The Polish Ministry states that producers finance collection, transport, recordkeeping, and deposit settlement, confirming that money and records move across the system."
+    },
+    {
+      "claim_id": "settle7-06-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/klimat/system-kaucyjny."
+      ],
+      "statement": "By mid-2026 the Ministry reported billions of returned containers and thousands of reverse-vending locations, indicating live transaction volume rather than a future-only regime."
+    }
+  ],
+  "contrary_evidence": [
+    "Operators are responsible for settlement design and may provide adequate retailer portals themselves.",
+    "The official system has scaled rapidly, which may mean core reconciliation infrastructure is already contracted and difficult to displace."
+  ],
+  "economics": {
+    "acquisition_route": "Reconcile a historical month for one retail group, prove variances and labour savings, then distribute through POS and accounting partners",
+    "capital_required_pln": 70000,
+    "founder_net_worth_path": "A plausible 5-6 year path would require about 1,500-2,500 stores at roughly 250 PLN average monthly revenue plus event fees, channel-efficient acquisition, and strong retention while founder equity remains high",
+    "founder_time": "Approximately 12-16 hours per week during the first integrations, with retailer onboarding delegated after templates stabilise",
+    "gross_margin_basis": "Software subscription and event processing less POS, RVM, operator integration, and support costs",
+    "payback": "A multi-store group may recover the fee through finance labour and corrected operator statements; the variance pool must be measured from real exports",
+    "pricing": "About 199-399 PLN per store per month plus 0.005-0.02 PLN per matched return above an included allowance",
+    "retention_or_repeat": "Deposits and reimbursements recur daily and operator rules remain embedded in monthly close"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A multi-operator mapping of identifiers, statement formats, variance causes, and resolution outcomes could lower integration cost and improve expected-cash forecasts",
+    "customer": "Polish independent grocery chains, franchise groups, wholesalers, and hospitality retailers participating in the deposit-return system",
+    "distribution_mechanism": "Sell through retail-accounting firms, POS integrators, franchise associations, and reverse-vending service companies",
+    "offer_and_business_model": "POS, reverse-vending, manual-return, collection, and operator-statement ingestion with variance alerts and audit-ready receipts",
+    "payer_and_paid_event": "The retail group pays monthly per location and a small usage charge when return events are matched and an operator-ready reconciliation statement is closed",
+    "problem_trigger": "A store collects and refunds deposits across products associated with different operators and cannot readily explain a reimbursement or handling-fee variance"
+  },
+  "founder_fit": [
+    "High-volume event matching and anomaly detection suit the founder's analytical skill set",
+    "The product can begin as a bounded reconciliation audit without holding deposits",
+    "A B2B integration model avoids personal-brand dependence"
+  ],
+  "parent": null,
+  "risks": [
+    "Operator or POS formats may change frequently",
+    "Retailers may expect POS vendors to include reconciliation at no extra charge",
+    "Small per-item economics require highly automated support",
+    "Incorrect discrepancy claims could harm operator relationships"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.gov.pl/attachment/4369df4f-aa6a-43a4-b46d-01689735fb14",
+    "https://www.gov.pl/web/klimat/system-kaucyjny-zasady",
+    "https://www.gov.pl/web/klimat/system-kaucyjny."
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Per-location compliance reconciliation SaaS for retailers",
+    "control_point": "The item-level match among deposit-marked barcode, sale, return, collection, operator statement, and store reimbursement",
+    "critical_dependency": "Retailers and multiple scheme operators must expose usable event and statement exports with stable identifiers"
+  },
+  "thesis": "Independent Polish retail groups dealing with several deposit-return operators could buy a neutral per-store reconciliation layer that matches POS deposits, reverse-vending or manual returns, operator reimbursements, handling fees, and physical collection events. It would issue evidence packets for discrepancies while leaving deposit custody and statutory operator duties untouched.",
+  "title": "Deposit Split Ledger Poland",
+  "uncertainties": [
+    "Current frequency and monetary size of store-operator variances",
+    "Export and API availability from each operator and reverse-vending system",
+    "Which party owns reconciliation under typical retailer contracts",
+    "Whether retailer groups prefer a neutral layer to direct bilateral tooling"
+  ],
+  "version": 1
+}

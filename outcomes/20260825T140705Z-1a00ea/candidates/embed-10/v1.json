@@ -1,0 +1,66 @@
+{
+  "candidate_id": "embed-10",
+  "claims": [
+    {
+      "claim_id": "embed-10-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A31991L0676"
+      ],
+      "statement": "Council Directive 91/676/EEC concerns protection of waters against pollution caused by nitrates from agricultural sources."
+    },
+    {
+      "claim_id": "embed-10-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/infrastruktura/program-azotanowy"
+      ],
+      "statement": "Poland's nitrate programme requires annual parcel-level nitrogen plans for specified larger farms and fertilizer-application records for farms at stated lower thresholds."
+    }
+  ],
+  "contrary_evidence": [
+    "Poland already offers the compliant INTER-NAW planning tool, so a generic calculator has little differentiation."
+  ],
+  "economics": {
+    "acquisition_route": "One-to-many distribution through soil laboratories, cooperatives, agronomy advisers, and input distributors.",
+    "capital_required_pln": 25000,
+    "founder_net_worth_path": "Hypothesis: 12 channels each producing 10000 field plans at 60 PLN retained revenue yields 7.2 million PLN annual revenue by year five and can support founder equity above 5 million PLN without double-counting cash.",
+    "founder_time": "Hypothesis: 3-4 founder hours daily on modeling and channels while licensed agronomists own recommendations.",
+    "gross_margin_basis": "Hypothesis: 60-70% gross margin after channel share, weather data, agronomist QA, and support.",
+    "payback": "Hypothesis: a 10000 PLN laboratory onboarding pays back in one season at 200 plans.",
+    "pricing": "Hypothesis, including the capital figure: 149 PLN per field-season plan with 35% paid to the laboratory or cooperative.",
+    "retention_or_repeat": "Every crop year, assay round, field change, and weather-driven amendment creates a paid planning event."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Consented local links among assays, applications, weather, crop, and yield outcomes improve field recommendations",
+    "customer": "Polish arable farms served by soil laboratories and cooperatives",
+    "distribution_mechanism": "Laboratory result portals and cooperative agronomy programs",
+    "offer_and_business_model": "Lab-attached field plan sold per season with a channel revenue share",
+    "payer_and_paid_event": "The farmer pays when a field-season plan and record pack is issued",
+    "problem_trigger": "A seasonal assay arrives or an annual nitrogen plan must be documented"
+  },
+  "founder_fit": [
+    "This is a measurable data flywheel sold through one-to-many channels and can begin with a narrow Polish region."
+  ],
+  "parent": null,
+  "risks": [
+    "Bad plans can reduce yield or pollute water, requiring agronomist approval and clear separation from fertilizer sales incentives."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A31991L0676",
+    "https://www.gov.pl/web/infrastruktura/program-azotanowy"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Seasonal lab-embedded decision service",
+    "control_point": "The conversion of a soil assay into a documented field-level nitrogen plan",
+    "critical_dependency": "Laboratory and cooperative channels plus farmer consent for outcome data"
+  },
+  "thesis": "Let soil laboratories and cooperatives attach a field-specific nitrogen plan to every seasonal assay, charging per field while pooling consented soil, crop, weather, application, and yield-response observations.",
+  "title": "NitraCycle Lab-to-Field Planner",
+  "uncertainties": [
+    "The incremental predictive value of pooled local outcomes over free tools is unknown."
+  ],
+  "version": 1
+}

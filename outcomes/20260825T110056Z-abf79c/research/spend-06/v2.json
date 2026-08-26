@@ -1,0 +1,226 @@
+{
+  "candidate_id": "spend-06",
+  "candidate_sha256": "08fb9753a7682775341fae187b7799b7de226b8960a3e72f1139e4388eaf3571",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "spend-r01",
+      "evidence_refs": [
+        "spend-s01"
+      ],
+      "statement": "Configured exact-match controls do not eliminate all duplicate payments: CBSA found two genuine duplicate pairs in a ten-pair targeted sample despite built-in system prompts."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "spend-r02",
+      "evidence_refs": [
+        "spend-s02"
+      ],
+      "statement": "A high-volume buyer with internal controls purchased an external recovery review; the provider analyzed 645,000 transactions, verified 82 exceptions and recovered a six-figure sum."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "spend-r03",
+      "evidence_refs": [
+        "spend-s02",
+        "spend-s03"
+      ],
+      "statement": "Recovery delivery includes analysis, statement review, human verification and recovery work; it is not merely an automated artifact."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "spend-r04",
+      "evidence_refs": [
+        "spend-s03"
+      ],
+      "statement": "A published commercial benchmark prices end-to-end duplicate-payment recovery at 25% standard and 12.5% minimum of recovered value."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "spend-r05",
+      "evidence_refs": [
+        "spend-s04",
+        "spend-s05"
+      ],
+      "statement": "SAP and Microsoft already provide configurable supplier-invoice similarity and invoice/receipt/price matching, making generic anomaly detection vulnerable to bundling."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "spend-r06",
+      "evidence_refs": [
+        "spend-s06"
+      ],
+      "statement": "Recovery authority remains with the buyer: guidance treats consultants as acting on the retailer's behalf and requires finance-team scrutiny and express settlement agreement."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "spend-r07",
+      "evidence_refs": [
+        "spend-s06"
+      ],
+      "statement": "The contingency model creates a documented incentive risk toward maximizing claim volume or value, making explainability and customer approval necessary controls."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "spend-r08",
+      "evidence_refs": [
+        "spend-s07"
+      ],
+      "statement": "A four-year GBP 141,600 award for software processing about 250,000 invoices annually across several entities establishes budget at high volume but not the proposed Polish SME price."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "spend-r09",
+      "evidence_refs": [
+        "spend-s08"
+      ],
+      "statement": "Poland's 17,601 active medium enterprises are only a broad ceiling; invoice volume, systems complexity and recoverable leakage are absent from the statistic."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "spend-r10",
+      "evidence_refs": [
+        "spend-s09"
+      ],
+      "statement": "Processing invoice data on behalf of a customer requires a documented processor relationship and safeguards wherever personal data is included."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "spend-r11",
+      "evidence_refs": [
+        "spend-s10"
+      ],
+      "statement": "Polish law recognizes claims for undue performance but lists exceptions, so a detected duplicate is not equivalent to immediately recoverable cash."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "spend-r12",
+      "evidence_refs": [],
+      "statement": "The recoverable-error rate and contribution margin for Polish firms with several thousand annual invoices are unknown."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "spend-r13",
+      "evidence_refs": [],
+      "statement": "Accounting-firm and ERP-implementer willingness to resell, channel CAC and audit-to-monitoring conversion are unknown."
+    }
+  ],
+  "contrary_evidence": [
+    "Incumbent ERPs already implement configurable matching and fuzzy duplicate controls.",
+    "The best quantified recovery example is a very high-volume NHS buyer, not a Polish mid-market firm.",
+    "Official guidance documents incentive and supplier-fairness problems in contingency recovery audits.",
+    "The observed monitoring-software award is shared across public entities and does not validate per-SME pricing."
+  ],
+  "schema_version": 2,
+  "sources": [
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2024-11-08",
+      "publisher": "Canada Border Services Agency",
+      "source_id": "spend-s01",
+      "source_type": "official_audit",
+      "stance": "supporting",
+      "title": "Audit of contracting and procurement",
+      "url": "https://www.cbsa-asfc.gc.ca/agency-agence/reports-rapports/ae-ve/cp-ma/menu-eng.html"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2021-06-17",
+      "publisher": "Crown Commercial Service",
+      "source_id": "spend-s02",
+      "source_type": "official_case_study",
+      "stance": "context",
+      "title": "Barts NHS Trust use our Spend Analysis and Recovery Services solution to reclaim £100,000",
+      "url": "https://www.crowncommercial.gov.uk/news/how-barts-nhs-trust-used-sars-to-reclaim-100000"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2024-05-01",
+      "publisher": "Liberata UK Limited / UK Digital Marketplace",
+      "source_id": "spend-s03",
+      "source_type": "published_vendor_pricing",
+      "stance": "supporting",
+      "title": "Duplicate Payment Recovery Service Pricing",
+      "url": "https://assets.applytosupply.digitalmarketplace.service.gov.uk/g-cloud-14/documents/92302/845673780445211-pricing-document-2024-05-04-1159.pdf"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "SAP",
+      "source_id": "spend-s04",
+      "source_type": "incumbent_documentation",
+      "stance": "contradicting",
+      "title": "Duplicate Supplier Invoices",
+      "url": "https://help.sap.com/docs/FINANCIAL_COMPLIANCE_CF/eb2cb166f76248bdba43bf04fccd143e/duplicate-supplier-invoices"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2025-05-15",
+      "publisher": "Microsoft",
+      "source_id": "spend-s05",
+      "source_type": "incumbent_documentation",
+      "stance": "contradicting",
+      "title": "Accounts payable invoice matching overview",
+      "url": "https://learn.microsoft.com/en-us/dynamics365/finance/accounts-payable/accounts-payable-invoice-matching"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2023-02-08",
+      "publisher": "UK Groceries Code Adjudicator",
+      "source_id": "spend-s06",
+      "source_type": "official_guidance",
+      "stance": "contradicting",
+      "title": "Best practice statement: Forensic auditing",
+      "url": "https://www.gov.uk/government/publications/best-practice-statement-forensic-auditing/best-practice-statement-forensic-auditing"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2025-12-12",
+      "publisher": "UK Contracts Finder",
+      "source_id": "spend-s07",
+      "source_type": "official_procurement_award",
+      "stance": "context",
+      "title": "25100 Cambridgeshire County Council Duplicate Payment Software",
+      "url": "https://www.contractsfinder.service.gov.uk/Notice/d2d538f5-2a00-4ca5-b706-5296e9f92e0f"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2025-03-06",
+      "publisher": "Statistics Poland",
+      "source_id": "spend-s08",
+      "source_type": "official_statistics",
+      "stance": "context",
+      "title": "Active enterprises in the fourth quarter of 2024",
+      "url": "https://stat.gov.pl/files/gfx/portalinformacyjny/en/defaultaktualnosci/3317/29/1/1/active_enterprises_in_the_fourth_quarter_of_2024.pdf"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2016-05-04",
+      "publisher": "EUR-Lex",
+      "source_id": "spend-s09",
+      "source_type": "law",
+      "stance": "context",
+      "title": "Regulation (EU) 2016/679 (General Data Protection Regulation)",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2025-08-05",
+      "publisher": "Kancelaria Sejmu / ELI",
+      "source_id": "spend-s10",
+      "source_type": "law",
+      "stance": "context",
+      "title": "Kodeks cywilny, consolidated text",
+      "url": "https://eli.gov.pl/api/acts/DU/2025/1071/text/U/D20251071Lj.pdf"
+    }
+  ],
+  "unknowns": [
+    "Polish target-segment recoverable-error distribution and median cash recovery time",
+    "Minimum viable invoice volume and AP spend",
+    "Supplier confirmation and dispute rates",
+    "Accountant and ERP channel commitment, CAC and revenue share",
+    "Monitoring willingness to pay, conversion and retention",
+    "Transferability of cross-client learned features under privacy and confidentiality terms"
+  ]
+}

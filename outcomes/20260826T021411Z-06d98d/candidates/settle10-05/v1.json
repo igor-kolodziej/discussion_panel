@@ -1,0 +1,73 @@
+{
+  "candidate_id": "settle10-05",
+  "claims": [
+    {
+      "claim_id": "settle10-05-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.allianz-trade.com/en_GB/support/claim.html",
+        "https://www.allianz-trade.com/en_global/discover-allianz-trade/our-strategy/how-our-claims-teams-deliver-for-you.html"
+      ],
+      "statement": "Allianz Trade describes trade-credit cover for unpaid or late invoices and asks customers to collect and promptly send relevant supporting information."
+    },
+    {
+      "claim_id": "settle10-05-c2",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://single-market-economy.ec.europa.eu/smes/challenges-and-resilience/late-payment/eu-payment-observatory_en",
+        "https://www.allianz-trade.com/en_GB/support/claim.html"
+      ],
+      "statement": "Demand hypothesis: embedded deadline and evidence automation will have measurable value because late payments materially affect EU SMEs."
+    }
+  ],
+  "contrary_evidence": [
+    "Insurers already provide customer claim portals and guidance.",
+    "Low-frequency claims may limit direct SME willingness to pay."
+  ],
+  "economics": {
+    "acquisition_route": "A broker, factor, or accounting platform distributes it across an existing insured book.",
+    "capital_required_pln": 40000,
+    "founder_net_worth_path": "Hypothesis: 600 SME accounts at 700 PLN monthly can exceed 5 million PLN ARR and support founder net worth above 5 million PLN in four to six years.",
+    "founder_time": "Three hours daily with specialist review outsourced when needed.",
+    "gross_margin_basis": "Hypothesis: 78-88% margin after exception review and insurer formatting.",
+    "payback": "Hypothesis: 50 SME accounts at 700 PLN monthly cover the build within eighteen months.",
+    "pricing": "Hypothesis: 400-1200 PLN per entity monthly plus 2-5% of recovered indemnity.",
+    "retention_or_repeat": "Receivable monitoring and policy deadlines recur continuously."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Policy-rule mappings and claim outcomes build a proprietary exception and recovery dataset.",
+    "customer": "EU SMEs with trade-credit insurance, factoring, or insured receivables.",
+    "distribution_mechanism": "Accounting software, factors, and trade-credit brokers embed the workflow for their SME portfolios.",
+    "offer_and_business_model": "The agent maps invoice events to policy rules, prompts actions, and exports insurer-ready evidence.",
+    "payer_and_paid_event": "An insurer, factor, accounting platform, or insured SME pays per entity and successful claim pack.",
+    "problem_trigger": "An invoice crosses a policy deadline while collection actions and supporting documents remain fragmented."
+  },
+  "founder_fit": [
+    "Finance interest and data automation align strongly.",
+    "Embedded distribution minimizes high-energy direct selling."
+  ],
+  "parent": null,
+  "risks": [
+    "Policy interpretation could be mistaken for regulated advice.",
+    "Success fees may be restricted by insurer or broker contracts."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.allianz-trade.com/en_GB/support/claim.html",
+    "https://www.allianz-trade.com/en_global/discover-allianz-trade/our-strategy/how-our-claims-teams-deliver-for-you.html",
+    "https://single-market-economy.ec.europa.eu/smes/challenges-and-resilience/late-payment/eu-payment-observatory_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Embedded insured-receivable recovery workflow.",
+    "control_point": "The invoice-to-policy-to-collection evidence timeline.",
+    "critical_dependency": "Accurate policy terms and ERP or bank-feed access."
+  },
+  "thesis": "An ERP-embedded agent can detect insured overdue invoices, preserve policy evidence, and submit a complete trade-credit claim on time.",
+  "title": "Trade Credit Claim Packager",
+  "uncertainties": [
+    "Claim rejection causes and volumes are unknown.",
+    "ERP partners' integration priorities are unverified."
+  ],
+  "version": 1
+}

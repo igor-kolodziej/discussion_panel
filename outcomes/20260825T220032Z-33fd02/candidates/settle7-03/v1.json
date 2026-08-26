@@ -1,0 +1,75 @@
+{
+  "candidate_id": "settle7-03",
+  "claims": [
+    {
+      "claim_id": "settle7-03-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://czystepowietrze.gov.pl/poprzednie-edycje/pytania-i-odpowiedzi/jak-uzyskac-dotacje/umowy-z-prefinansowanie"
+      ],
+      "statement": "The official Clean Air materials state that the remaining prefinanced subsidy is paid after the contracted work is completed and a complete, correct payment application with required documents reaches the regional fund."
+    },
+    {
+      "claim_id": "settle7-03-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/nfosigw/dzialania-na-rzecz-wykonawcow-w-programie-czyste-powietrze"
+      ],
+      "statement": "NFOŚiGW has publicly described actions intended to improve and accelerate handling of contractor-related payment applications, indicating that processing speed has been an operational concern."
+    }
+  ],
+  "contrary_evidence": [
+    "The programme describes a 30-day payment target for a complete and correct application, which may be too short to justify a meaningful discount for many contractors.",
+    "Official prefinancing already sends part of the grant directly to contractors in eligible cases, reducing the addressable cash gap."
+  ],
+  "economics": {
+    "acquisition_route": "Accountant and wholesaler referrals to a tightly screened pilot, followed by integrations with contractor workflow tools",
+    "capital_required_pln": 60000,
+    "founder_net_worth_path": "A plausible 5-7 year path would require approximately 300 million PLN annual verified volume at about 0.8% retained platform revenue, low fraud losses borne under clear contracts, and expansion to adjacent renovation receivables while retaining founder equity",
+    "founder_time": "Approximately 10-15 hours per week if credit policy, collections, and regulated activity remain with partners",
+    "gross_margin_basis": "Origination, verification, and servicing revenue net of document review and fraud controls; funding capital and credit losses remain with a regulated partner",
+    "payback": "The discount is rational only when earlier cash enables profitable additional work or replaces costlier working capital; this needs contractor-level cash-cycle evidence",
+    "pricing": "Target a 2-4% all-in contractor discount for short-duration advances, with 0.5-1.0 percentage point retained by the platform plus a 200-400 PLN verification fee",
+    "retention_or_repeat": "Active contractors submit repeated projects and funders can reuse performance history"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A dataset linking document defects, regional fund processing, contractor behaviour, and payment timing could improve acceptance prediction and funding terms",
+    "customer": "Vetted Polish heat-pump, insulation, window, and other thermomodernisation contractors participating in Clean Air projects",
+    "distribution_mechanism": "Acquire through installer accountants, programme advisers, wholesalers, and a narrow pilot with contractors known to the family renewable business",
+    "offer_and_business_model": "Document completeness checks, fraud flags, receivable status monitoring, and funder origination; earn an origination and servicing share without lending from the founder's balance sheet",
+    "payer_and_paid_event": "The contractor pays a 2-4% discount when the funding partner advances cash against a verified, eligible payment packet",
+    "problem_trigger": "Work and documents are complete but the contractor waits for the remaining programme payment and needs working capital for the next installation"
+  },
+  "founder_fit": [
+    "The founder understands finance and can build document-risk and payment-time models",
+    "The family business can help map the real contractor cash cycle without committing capital",
+    "A partner-funded structure respects the founder's limited capital and part-time constraint"
+  ],
+  "parent": null,
+  "risks": [
+    "Subsidy receivables may be non-assignable or paid only to a specified beneficiary or contractor account",
+    "Incomplete, fraudulent, corrected, or clawed-back applications could create losses and disputes",
+    "Regulated credit intermediation rules may apply even without balance-sheet lending",
+    "Programme changes could abruptly alter volumes and eligibility"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://czystepowietrze.gov.pl/poprzednie-edycje/pytania-i-odpowiedzi/jak-uzyskac-dotacje/umowy-z-prefinansowanie",
+    "https://www.gov.pl/web/nfosigw/dzialania-na-rzecz-wykonawcow-w-programie-czyste-powietrze"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Partner-funded verified-receivables marketplace",
+    "control_point": "The completeness certificate and, where lawful, assignment or controlled payment instruction for a specific accepted subsidy receivable",
+    "critical_dependency": "The programme receivable or payment direction must be legally financeable, and an external funder must accept the verification and counterparty risk"
+  },
+  "thesis": "A partner-funded receivables bridge for vetted Polish thermomodernisation contractors could advance part of an expected Clean Air programme payment only after a completeness engine verifies the acceptance protocol, invoice, beneficiary contribution, and application packet. The founder would operate verification and origination, while a licensed lender or fund bears credit and liquidity risk.",
+  "title": "Clean Air Claim Bridge",
+  "uncertainties": [
+    "Current legal assignability and payment-direction rules for each Clean Air funding path",
+    "Actual distribution of complete-to-payment times after the 2025-2026 programme changes",
+    "Funder appetite and required first-loss protection",
+    "Contractor willingness to pay when official processing works within its stated timetable"
+  ],
+  "version": 1
+}

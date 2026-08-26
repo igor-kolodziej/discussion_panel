@@ -1,0 +1,86 @@
+{
+  "candidate_id": "transition-05",
+  "claims": [
+    {
+      "claim_id": "transition-05-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://digital-strategy.ec.europa.eu/en/policies/cra-reporting"
+      ],
+      "statement": "The Commission says CRA reporting obligations apply from 11 September 2026 and require manufacturers to report actively exploited vulnerabilities and severe incidents affecting products with digital elements."
+    },
+    {
+      "claim_id": "transition-05-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://digital-strategy.ec.europa.eu/en/policies/cra-reporting",
+        "https://digital-strategy.ec.europa.eu/en/policies/cra-summary"
+      ],
+      "statement": "The reporting sequence includes an early warning within 24 hours, a main notification within 72 hours, and later final reports through the CRA Single Reporting Platform."
+    },
+    {
+      "claim_id": "transition-05-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://digital-strategy.ec.europa.eu/en/policies/cra-summary"
+      ],
+      "statement": "The Commission summary says the CRA's main provisions apply from 11 December 2027, while reporting applies earlier and also reaches products made available before that date."
+    }
+  ],
+  "contrary_evidence": [
+    "The Commission summary notes that micro and small manufacturers may not be fined for missing the 24-hour reporting deadline, which can weaken urgency in the initial niche.",
+    "The full product-compliance provisions do not apply until December 2027.",
+    "Existing vulnerability-management, SBOM, and GRC platforms may add CRA templates before a new entrant gains trust."
+  ],
+  "economics": {
+    "acquisition_route": "Testing-lab and MSP resale plus engineering-repository integrations and a fixed-price readiness drill",
+    "capital_required_pln": 70000,
+    "founder_net_worth_path": "Scenario, not evidence: 600 EU manufacturers at PLN 45,000 annual recurring revenue yields PLN 27m revenue; at a 40% operating margin, cumulative founder distributions over four to six mature years could exceed PLN 25m",
+    "founder_time": "Three to four hours per day for product work and scheduled customer review; urgent response remains the customer's or a named MSP's duty",
+    "gross_margin_basis": "A customer-operated workflow can exceed 75% gross margin; bespoke security analysis or live incident response is excluded from the standard plan",
+    "payback": "Target one to three months using the paid drill and setup to cover channel and configuration cost",
+    "pricing": "Assumption: PLN 9,000-25,000 setup, PLN 1,500-5,000 per month by product-family count, and PLN 5,000-15,000 for an annual readiness drill",
+    "retention_or_repeat": "New releases, dependencies, vulnerabilities, support periods, and annual drills create continuous record maintenance"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A de-identified rules corpus mapping vulnerability facts and product-version evidence to report completeness checks and recurring manufacturer decision errors",
+    "customer": "EU small and mid-sized manufacturers or own-brand importers of industrial IoT, building controls, connected energy devices, and embedded software products",
+    "distribution_mechanism": "Security testing labs, embedded-development agencies, and regional MSPs resell the workflow; a repository integration captures inbound demand from engineering teams",
+    "offer_and_business_model": "Secure SaaS or customer-cloud deployment that links products, firmware, components, vulnerabilities, support periods, and incident decisions; it runs deadline timers and produces reporting packages, sold as setup, subscription, and annual drill",
+    "payer_and_paid_event": "The product-security or engineering lead pays when the first product/version inventory and notification drill are completed, then pays per product family for an always-current incident workspace",
+    "problem_trigger": "CRA reporting duties begin on 11 September 2026 with a 24-hour early warning and 72-hour main notification for specified exploited vulnerabilities and severe incidents; the main product requirements apply from 11 December 2027"
+  },
+  "founder_fit": [
+    "Dependency graphs, anomaly matching, and reporting automation fit analytical engineering skills",
+    "The product explicitly avoids promising a founder-run security operations centre or emergency hotline",
+    "A drill-first paid pilot can validate demand before broad product development",
+    "Lab and MSP channels support low-public-persona EU distribution"
+  ],
+  "parent": null,
+  "risks": [
+    "Storing vulnerability and incident details makes the product a high-value attack target.",
+    "A false non-report decision could cause regulatory and reputational harm.",
+    "Customers may expect emergency availability incompatible with the founder's time constraint.",
+    "Standards and guidance may change report fields after engineering investment."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://digital-strategy.ec.europa.eu/en/policies/cra-reporting",
+    "https://digital-strategy.ec.europa.eu/en/policies/cra-summary"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Product-security system of record with deadline workflow subscription",
+    "control_point": "The authoritative affected-product record and report clock between vulnerability awareness and CRA submission",
+    "critical_dependency": "Customer trust in the security boundary and correct interpretation of reportable events and affected product versions"
+  },
+  "thesis": "A product-version security ledger for small industrial-IoT and embedded-device manufacturers can map vulnerabilities and incidents to affected products, start the CRA clock, preserve decisions, and prepare Single Reporting Platform notifications. It should be software for the customer's incident owner, not a founder-operated 24/7 response service, so it remains compatible with a five-hour workday while addressing a sharply timed reporting transition.",
+  "title": "CRA Product-Security Ledger and 24/72 Reporting Workflow",
+  "uncertainties": [
+    "It is unknown whether small manufacturers want a dedicated CRA ledger or a module in an existing security platform.",
+    "The reporting platform's production integration options and national CSIRT workflows need live validation after launch.",
+    "No buyer interviews validate pricing, channel acceptance, or the 600-customer scale scenario.",
+    "The exact boundary between automated completeness checks and legal incident classification requires counsel."
+  ],
+  "version": 1
+}

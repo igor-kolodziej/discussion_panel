@@ -1,0 +1,157 @@
+{
+  "candidate_id": "leverage-12",
+  "claims": [
+    {
+      "claim_id": "leverage-12-r2-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/dir/2023/1791/oj/"
+      ],
+      "statement": "Directive (EU) 2023/1791 requires clear and transparent measurement and verification provisions, quality checks, and guarantees in energy performance contracts and requires public bodies to assess EPC feasibility for certain large non-residential buildings."
+    },
+    {
+      "claim_id": "leverage-12-r2-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/klimat/wytyczne-do-umow-o-poprawe-efektywnosci-energetycznej-epc"
+      ],
+      "statement": "Polish Ministry guidance describes EPC as a multi-year model in which the ESCO guarantees savings and bears material financial risk, but it does not mandate an independent software oracle."
+    },
+    {
+      "claim_id": "leverage-12-r2-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://bip.mos.gov.pl/fileadmin/user_upload/bip/Energetyka/Wytyczne_EPC_dla_sektora_publicznego/Umowa__EPC_Zarzadzanie_Energia_.pdf"
+      ],
+      "statement": "The Polish model energy-management EPC assigns annual savings reporting and correction of justified objections to the ESCO and depends on invoices, meter data, and information about changes in building use supplied within the contract workflow."
+    },
+    {
+      "claim_id": "leverage-12-r2-c4",
+      "confidence": "high for modernization need; unknown conversion to EPC",
+      "evidence_refs": [
+        "https://kape.gov.pl/web/content/77605?download=true&unique=d61166ad3e57e05e9c2fda75e1842a96b1387b56"
+      ],
+      "statement": "KAPE's 2025 market report estimates that more than 125000 Polish public buildings require energy modernization, which supports a large need pool but does not establish the number of EPC contracts or paid M&V sites."
+    },
+    {
+      "claim_id": "leverage-12-r2-c5",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://kape.gov.pl/facylitator-epc"
+      ],
+      "statement": "KAPE and a law firm already offer Poland's first EPC Facilitator service covering project preparation, ESCO selection, technical and legal oversight, contract monitoring, and settlement control, making them a potential channel and a direct service incumbent."
+    },
+    {
+      "claim_id": "leverage-12-r2-c6",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://evo-world.org/images/corporate_documents/NRE-NRA_White_Paper_Final_2701.pdf"
+      ],
+      "statement": "EVO states that advanced M&V cannot be fully automated and usually needs a human in the loop, especially to handle unstable operations and contextualize model outputs."
+    },
+    {
+      "claim_id": "leverage-12-r2-c7",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://evo-world.org/br/general/1898-x-ipmvp-m-v-issues-statutory-review-copy-1/file"
+      ],
+      "statement": "EVO guidance says independent verifiers are typically engineering consultants experienced in energy conservation measures, M&V, and performance contracting, so software auditability does not itself establish professional independence."
+    },
+    {
+      "claim_id": "leverage-12-r2-c8",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://natural-resources.canada.ca/maps-tools-and-publications/tools/modelling-tools/retscreen/retscreen-subscription-order/23599"
+      ],
+      "statement": "Natural Resources Canada offers RETScreen Viewer free and posts CAD 869 per year for Professional mode, including project performance and portfolio functions, creating a low-cost calculation alternative."
+    },
+    {
+      "claim_id": "leverage-12-r2-c9",
+      "confidence": "high for product capabilities and vendor-stated limitations",
+      "evidence_refs": [
+        "https://www.energycap.com/products/energycap-enterprise-features/cost-avoidance",
+        "https://helpcenter.energycap.com/um/cost_avoidance/information/cost_avoidance_limitations"
+      ],
+      "statement": "EnergyCAP markets established whole-facility IPMVP cost-avoidance calculations, while its own documentation says more complex ESCO or multivariable cases need advanced methods and that monthly utility bills can be insufficient."
+    }
+  ],
+  "contrary_evidence": [
+    "Neither EU rules nor the Polish model contract mandates a separate independent software service; the Polish template places reporting with the ESCO and provides an objection-and-correction process.",
+    "Advanced M&V cannot be fully automated, and independent verification ordinarily relies on experienced engineering judgment.",
+    "RETScreen provides free viewing and a CAD 869 annual professional alternative, while EnergyCAP and other mature platforms already implement M&V calculations.",
+    "KAPE's facilitator offering already combines monitoring, technical oversight, legal support, and settlement control in Poland.",
+    "The estimate of more than 125000 buildings needing modernization is not evidence of EPC adoption, software budget, dispute frequency, or addressable small-ESCO sites.",
+    "If one contract party alone pays and controls the service, asserted neutrality may not be credible without dual-party governance and an independent reviewer."
+  ],
+  "economics": {
+    "acquisition_route": "UNVALIDATED HYPOTHESIS — sign 2 auditor or facilitator partners and 5 paid sites in year 1, then 8 partners and 70 active sites by year 3; public procurement cycles and partner willingness are unknown.",
+    "capital_required_pln": 95000,
+    "founder_net_worth_path": "UNVALIDATED SCENARIO — year 1 reaches 5 paid sites and 2 partners; year 3 reaches 70 sites and 8 partners; year 7 reaches 350 sites at 14000 PLN blended annual revenue each, or 4.9 million PLN revenue. At an unvalidated 2.5x revenue value and 70% founder ownership, founder equity would be 8.575 million PLN. This excludes retained cash and distributions, does not double-count earnings, and likely requires expansion beyond the unmeasured Polish public-EPC market.",
+    "founder_time": "UNVALIDATED HYPOTHESIS — 18 founder hours weekly through the first 5 governed sites and 10 hours weekly after a facilitator and qualified reviewer own domain-facing work; non-routine events and procurement demands remain untested.",
+    "gross_margin_basis": "UNVALIDATED HYPOTHESIS — 62% blended gross margin after data connectors, secure storage, facilitator share, and qualified engineering review; review hours and exception rates have not been measured.",
+    "payback": "UNVALIDATED HYPOTHESIS — a buyer should recover cost within one annual reporting cycle through analyst-hour reduction, fewer revision loops, or lower dispute exposure; there is no observed dispute frequency, labor baseline, or willingness-to-pay evidence.",
+    "pricing": "UNVALIDATED HYPOTHESIS — every commercial figure in this economics object, including capital_required_pln=95000, remains unvalidated: 5000 PLN site setup, 700 PLN per active site per month, and separately scoped qualified-review fees. RETScreen's evidence-supported CAD 869 annual professional subscription constrains pure-software pricing, so the premium must come from governance, integrations, and review workflow.",
+    "retention_or_repeat": "EVIDENCE CONTEXT — Polish EPC guidance describes multi-year obligations and recurring reporting. UNVALIDATED HYPOTHESIS — 88% annual site retention once the evidence room is named in the M&V plan; contract duration does not prove software retention."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A permissioned and de-identified library of data-quality failures, adjustment rationales, model diagnostics, and dispute resolutions that improves reviewer throughput without claiming ownership of customer meter data",
+    "customer": "Polish and Central European EPC facilitators, independent M&V or energy-audit firms, and retrofit lenders managing small portfolios; ESCOs and building owners participate as data-providing contract parties",
+    "distribution_mechanism": "White-label partnerships with EPC facilitators, experienced M&V auditors, lenders, and metering platforms, with a family renewable-energy installation used only as an accessible learning or pilot channel where an appropriate contract exists",
+    "offer_and_business_model": "Multi-party data escrow, frozen M&V-plan and baseline versions, meter and invoice ingestion, weather and occupancy adjustments, data-quality flags, uncertainty analysis, non-routine-event workflow, dual-party audit trail, and reviewer-signed calculation packs",
+    "payer_and_paid_event": "A facility owner, lender, or independent facilitator pays per governed site and reporting period; qualified engineering review is separately scoped or passed through",
+    "problem_trigger": "An M&V plan is agreed, a periodic savings report closes, a baseline or non-routine adjustment changes, or a guaranteed-savings calculation is challenged"
+  },
+  "founder_fit": [
+    "Strong analytical fit: baseline modeling, uncertainty, data lineage, anomaly detection, and automated evidence packs match the founder's data-science and finance-oriented skills.",
+    "The founder's Polish location and family renewable-energy access can help with domain learning and bounded pilots, but neither proves access to EPC settlement buyers.",
+    "The workflow can avoid camera-led distribution and use professional channels, yet public-sector procurement and multi-party contracting may demand more meetings and patience than the founder prefers.",
+    "Professional M&V judgment is outside the founder's current credentials but is delegable to an experienced independent reviewer; no direct evidence establishes a non-delegable founder incompatibility.",
+    "The unvalidated 95000 PLN initial-capital hypothesis nearly consumes the founder's stated own-capital envelope and should not be committed before paid-site and expert-partner validation."
+  ],
+  "parent": {
+    "candidate_id": "leverage-12",
+    "version": 1
+  },
+  "risks": [
+    "A software-only product is commoditized by RETScreen, EnergyCAP, DEXMA-like incumbents, spreadsheets, and existing ESCO reporting systems.",
+    "Poor or missing context data can make savings estimates unreliable precisely when a settlement is contested.",
+    "An unqualified or conflicted reviewer can undermine independence and create professional-liability exposure.",
+    "Public-sector procurement and multi-party contract adoption may produce slow, meeting-heavy sales that conflict with founder preferences.",
+    "Confidential meter and contract data may prevent the proposed benchmark moat from compounding across customers.",
+    "KAPE-like facilitators and large ESCOs can bundle the same workflow with advisory relationships the founder does not yet possess.",
+    "The founder lacks direct M&V engineering credentials and must not personally certify outputs without an appropriately experienced reviewer."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/dir/2023/1791/oj/",
+    "https://www.gov.pl/web/klimat/wytyczne-do-umow-o-poprawe-efektywnosci-energetycznej-epc",
+    "https://bip.mos.gov.pl/fileadmin/user_upload/bip/Energetyka/Wytyczne_EPC_dla_sektora_publicznego/Umowa__EPC_Zarzadzanie_Energia_.pdf",
+    "https://kape.gov.pl/web/content/77605?download=true&unique=d61166ad3e57e05e9c2fda75e1842a96b1387b56",
+    "https://kape.gov.pl/facylitator-epc",
+    "https://evo-world.org/images/corporate_documents/NRE-NRA_White_Paper_Final_2701.pdf",
+    "https://www.evo-world.org/en/news-media/evo-news/1406-new-ipmvp-applicatin-guide-m-v-and-energy-performance-contracting-for-facility-owners",
+    "https://evo-world.org/br/general/1898-x-ipmvp-m-v-issues-statutory-review-copy-1/file",
+    "https://natural-resources.canada.ca/maps-tools-and-publications/tools/modelling-tools/retscreen/retscreen-subscription-order/23599",
+    "https://www.energycap.com/products/energycap-enterprise-features/cost-avoidance",
+    "https://helpcenter.energycap.com/um/cost_avoidance/information/cost_avoidance_limitations"
+  ],
+  "stage": "research",
+  "structure": {
+    "commercial_archetype": "auditor-enabled evidence infrastructure sold per governed contract site",
+    "control_point": "the contract-bound, versioned M&V plan, source-data lineage, adjustment approvals, and co-visible calculation record used for a settlement report",
+    "critical_dependency": "reliable meter and context data, contractual adoption by both sides, and available qualified engineering judgment for non-routine events and disputed adjustments"
+  },
+  "thesis": "Do not market an autonomous neutral savings oracle. EU and Polish frameworks require transparent measurement and verification, but established tools already calculate savings and advanced M&V still needs engineering judgment. The narrower product is a multi-party evidence room for EPC facilitators, independent auditors, and lenders: it freezes the agreed M&V plan and baseline, ingests meter and invoice data, versions routine and non-routine adjustments, quantifies uncertainty, and produces signed calculation packs for a qualified reviewer. The service supplies reproducibility and governance; a contracted expert, not the software or founder alone, supplies professional verification.",
+  "title": "Auditor-Governed M&V Evidence Room for EPC Portfolios",
+  "uncertainties": [
+    "Current count and growth of paid EPC sites in Poland and Central Europe, segmented by public versus private buyer and small versus large ESCO.",
+    "Frequency, value, and root causes of savings-report revisions and disputes.",
+    "Whether owners, lenders, facilitators, or ESCOs control the M&V software budget and what each will pay for governance beyond existing tools.",
+    "Availability, format, latency, completeness, and authorization terms for meter, invoice, occupancy, weather, tariff, and intervention data.",
+    "Qualified-review cost per site and whether experienced reviewers will white-label a founder-built platform.",
+    "Public-procurement sales cycle, security requirements, professional liability terms, and insurance cost.",
+    "Whether customer contracts permit de-identified cross-site learning or benchmark reuse.",
+    "Whether a part-time founder can handle non-routine events and multi-party acceptance while retaining a full-time job."
+  ],
+  "version": 2
+}

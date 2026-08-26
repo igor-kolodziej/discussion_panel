@@ -1,0 +1,85 @@
+{
+  "candidate_id": "rights8-07",
+  "claims": [
+    {
+      "claim_id": "rights8-07-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32023R1804"
+      ],
+      "statement": "AFIR distinguishes private points restricted to a limited and determinate group from publicly accessible points, while a point on private property accessible to a general group such as customers can still be publicly accessible."
+    },
+    {
+      "claim_id": "rights8-07-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1804/oj/eng"
+      ],
+      "statement": "AFIR recognizes private depots and logistics centres as important locations for overnight and destination charging of heavy-duty electric vehicles and requires smart, digital capabilities for covered public infrastructure."
+    },
+    {
+      "claim_id": "rights8-07-c3",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://transport.ec.europa.eu/transport-themes/clean-transport/alternative-fuels-sustainable-mobility-europe/alternative-fuels-infrastructure/questions-and-answers-regulation-deployment-alternative-fuels-infrastructure-eu-20231804_en"
+      ],
+      "statement": "Hypothesis: owners will license predictable off-hours slots and fleets will subscribe rather than build capacity; host supply, fleet willingness and unit utilization are unvalidated."
+    }
+  ],
+  "contrary_evidence": [
+    "Public accessibility can bring ad-hoc payment, price, data, uptime and API obligations, reducing the simplicity of the private-host thesis.",
+    "AFIR's recognition of private depots supports the use case but does not show that third-party hosts have spare capacity or lawful resale rights."
+  ],
+  "economics": {
+    "acquisition_route": "Pre-sell 20 fleet slots in one micro-market, then contract five existing chargers within route distance; use manual booking before integrating hardware.",
+    "capital_required_pln": 80000,
+    "founder_net_worth_path": "Unvalidated path: 2,500 subscribed slots at PLN 250 monthly platform revenue after energy pass-through would produce PLN 7.5m annual revenue; at 25% operating profit and a 4x value, a 70% founder stake would be about PLN 5.25m. A 7-9 year route requires multi-city density and low churn, not merely signed hosts.",
+    "founder_time": "12-18 hours per week for site contracting, compliance, scheduling and exception response; a local operator is needed once sessions become daily.",
+    "gross_margin_basis": "Unvalidated estimate: 35-55% after host payments, payment processing, support and light access-control retrofits; electricity is a pass-through and major grid upgrades are excluded.",
+    "payback": "Unvalidated target: 15-24 months at 150-250 reserved vehicle slots, assuming no grid-upgrade funding and positive host-level contribution.",
+    "pricing": "Unvalidated hypothesis: PLN 300-800 per reserved vehicle slot monthly plus a PLN 0.20-0.50/kWh service margin or PLN 12-25 session fee, with transparent host revenue share.",
+    "retention_or_repeat": "Fleets renew while slots are dependable and cheaper than alternative depot capex; hosts renew while utilization revenue exceeds access inconvenience."
+  },
+  "fingerprint": {
+    "compounding_advantage": "dense clusters of exclusive time windows, utilization history and reliable host operations improve route usefulness and raise switching costs for fleets",
+    "customer": "small commercial fleets that need dependable overnight charging without building a depot, with private charger owners as capacity suppliers",
+    "distribution_mechanism": "fleet-leasing firms and local business associations recruit demand while electrical and renewable installers identify technically suitable host sites",
+    "offer_and_business_model": "contracted off-hours access, booking, remote unlock or key control, usage reconciliation and support sold as a recurring capacity subscription",
+    "payer_and_paid_event": "fleets pay a monthly reserved-slot fee plus metered charging/service charges; hosts receive agreed energy reimbursement and revenue share after a completed session",
+    "problem_trigger": "fleet electrification, a depot lease without enough power, charger downtime, or a host seeking revenue from idle equipment"
+  },
+  "founder_fit": [
+    "Renewable-installation relationships can identify charger hosts and technical partners.",
+    "Scheduling, pricing and utilization optimization fit the founder's data background.",
+    "A manual, single-cluster pilot limits capital before hardware integration.",
+    "Partner-led fleet acquisition avoids a consumer influencer model."
+  ],
+  "parent": null,
+  "risks": [
+    "Opening a private-property charger to a broad user group may make it publicly accessible and trigger AFIR payment, data and operational duties.",
+    "Landlord, parking, fire, insurance or electricity-resale constraints may block host contracts.",
+    "Old chargers may lack remote control or reliable metering.",
+    "Low geographic density or unreliable host access can make reserved slots operationally useless."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32023R1804",
+    "https://eur-lex.europa.eu/eli/reg/2023/1804/oj/eng",
+    "https://transport.ec.europa.eu/transport-themes/clean-transport/alternative-fuels-sustainable-mobility-europe/alternative-fuels-infrastructure/questions-and-answers-regulation-deployment-alternative-fuels-infrastructure-eu-20231804_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "time-window infrastructure marketplace",
+    "control_point": "contracted charging, parking and entry slots at private sites during otherwise idle hours, concentrated into fleet-usable geographic clusters",
+    "critical_dependency": "host property and electricity arrangements must permit the service, chargers must interoperate with access and billing, and local fleet demand must produce adequate utilization"
+  },
+  "thesis": "Acquire defined nighttime and weekend operating licences from owners of underused workplace, hotel and commercial EV chargers, then sell reserved charging-and-parking capacity to local delivery, service and taxi fleets. Hosts keep ownership and receive energy reimbursement plus revenue share; the platform controls only contracted time windows, access rules and booking. Validate one dense Warsaw or Wielkopolska corridor before any hardware rollout, and treat a site as publicly accessible only after legal classification and AFIR compliance review.",
+  "title": "Off-Hours Private Charger Capacity Network",
+  "uncertainties": [
+    "How much recurring fleet demand exists in a single reachable micro-market?",
+    "What contractual definition keeps a limited fleet group private, and when is public-access compliance preferable?",
+    "Which installed charger models can support low-cost metering and access control?",
+    "What minimum host payment secures genuinely reserved slots rather than best-effort access?"
+  ],
+  "version": 1
+}

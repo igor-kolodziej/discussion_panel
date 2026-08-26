@@ -1,0 +1,126 @@
+{
+  "candidate_id": "control-09",
+  "claims": [
+    {
+      "claim_id": "control-09-r01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/digital-health-technologies-remote-data-acquisition-clinical-investigations"
+      ],
+      "statement": "FDA guidance for digital health technologies used in clinical investigations calls for fit-for-purpose selection and verification and validation of measurements, creating a real evidence burden for clinical-study sponsors and device teams."
+    },
+    {
+      "claim_id": "control-09-r02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.physionet.org/content/wrist/1.0.0/",
+        "https://www.physionet.org/content/pulse-transit-time-ppg/1.1.0/csv/"
+      ],
+      "statement": "Open PhysioNet PPG resources include simultaneous motion and ECG references and are available under open database licences, so they support a low-cost benchmark pilot but also reduce scarcity for any offer based only on repackaging public data."
+    },
+    {
+      "claim_id": "control-09-r03",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.nature.com/articles/s41746-020-0226-6"
+      ],
+      "statement": "A six-device study of 53 people found significant device and activity-condition differences, with mean absolute heart-rate error during activity about 30% higher than at rest, supporting the need for context-specific testing rather than a single headline accuracy number."
+    },
+    {
+      "claim_id": "control-09-r04",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2016/679/2016-05-04/eng",
+        "https://eur-lex.europa.eu/eli/reg/2017/745/oj/eng"
+      ],
+      "statement": "Health and physiological data can be special-category personal data under GDPR, while EU medical-device rules require documented verification, validation, and clinical evaluation when the customer's intended purpose is medical; public-data engineering tests cannot automatically satisfy those obligations."
+    },
+    {
+      "claim_id": "control-09-r05",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.labfront.com/pricing",
+        "https://www.whaleteq.com/en",
+        "https://www.empatica.com/research/e4/"
+      ],
+      "statement": "Buyer-adjacent incumbents already sell wearable research infrastructure, data audits starting at USD 500, developer access starting at USD 4,000, full-stack sensor platforms, and ECG/PPG validation simulators, so a generic QA report faces both software and laboratory-tool substitutes."
+    },
+    {
+      "claim_id": "control-09-r06",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://www.labfront.com/pricing",
+        "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/digital-health-technologies-remote-data-acquisition-clinical-investigations"
+      ],
+      "statement": "A customer may pay materially more than adjacent software prices for confidential cross-device failure discovery tied to a release decision, but willingness to pay 8,000-20,000 PLN for a first engineering audit is unvalidated and must be tested with paid pilots."
+    }
+  ],
+  "contrary_evidence": [
+    "PhysioNet already provides openly licensed, reference-labelled PPG and ECG datasets; merely standardising those files is reproducible by customers and competitors.",
+    "Labfront advertises a data audit starting at USD 500 and twelve reports, creating a much lower adjacent price anchor than the original 15,000-50,000 PLN study hypothesis.",
+    "WhaleTeq sells dedicated ECG/PPG simulators for validation and compliance workflows, while Empatica bundles sensors and a research data platform, so procurement can favour established tooling rather than an independent benchmark vendor.",
+    "EU regulatory evidence is context-of-use specific. An engineering benchmark can inform, but cannot promise, conformity or clinical validation across intended purposes and target populations."
+  ],
+  "economics": {
+    "acquisition_route": "Publish one narrow open benchmark, approach a bounded list of CEE wearable and biosignal teams with a sample failure report, and require two paid audits before spending materially on proprietary collection. Use regulatory and CRO referrals for higher-assurance work.",
+    "capital_required_pln": 80000,
+    "founder_net_worth_path": "Conservative target case: reach 50 recurring customers averaging 60,000 PLN ARR plus 20-30 audits per year, producing roughly 3.6-4.2m PLN annual revenue and 1.5-2.0m PLN EBITDA. At a 3-4x EBITDA value and about 75% founder ownership, business equity could be 3.4-6.0m PLN; retained cash could take founder net worth beyond 5m PLN in roughly seven to ten years. This requires cross-border sales and proven retention and is not supported by current willingness-to-pay evidence.",
+    "founder_time": "15-20 hours per week for protocol development, analysis, and technical sales; participant operations, data-protection work, and regulatory review must be contracted and capped.",
+    "gross_margin_basis": "A founder-led public/private-data audit may reach 60-75% gross margin after compute, licences, and specialist review; a repeatable software run could reach 75-85%. New participant collection is likely only 25-50% gross margin until recruitment and lab operations are standardised.",
+    "payback": "Collect the pilot fee up front and target acquisition cost below half of pilot gross profit. Customer payback must be documented through an avoided failed study, caught release regression, or reduced internal validation time; it is not yet evidenced.",
+    "pricing": "Test an 8,000-20,000 PLN fixed engineering audit for one device-algorithm pair and a defined protocol; test 1,500-5,000 PLN monthly regression access only after repeat demand. Quote consented collection and regulatory evidence work separately rather than bundling them into the pilot.",
+    "retention_or_repeat": "Firmware and algorithm changes create a plausible repeat trigger, but subscription retention is unknown until at least three customers buy a second audit or integrate automated regression tests."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A contractually rights-cleared held-out edge-case corpus, versioned protocols, customer-derived failure taxonomies, and a reputation for neutral cross-device measurement",
+    "customer": "Small wearable-device companies, biosignal algorithm vendors, digital-health study teams, and specialist CROs that lack an independent validation function",
+    "distribution_mechanism": "An open reference benchmark and reproducible technical reports, followed by targeted outreach to CEE wearable teams and referrals from CROs, regulatory consultants, and sensor-design firms",
+    "offer_and_business_model": "Fixed-scope engineering QA audit first, then licensed held-out benchmark runs and optional continuous regression testing; regulatory-grade work is separately scoped with qualified partners",
+    "payer_and_paid_event": "An engineering or clinical-operations lead pays up front for a defined confidential audit; later, the team may pay for recurring regression runs after each version change",
+    "problem_trigger": "A new sensor, firmware, algorithm, or study protocol must be checked for robustness across motion, device, demographic, and real-world conditions before release or data lock"
+  },
+  "founder_fit": [
+    "Exceptional technical fit with the founder's neuroscience, EEG, biosignal, and data-science background.",
+    "A protocol, code, and report-led service can be built in focused 15-20 hour weeks with little public-camera exposure.",
+    "The founder should avoid personally running recurring participant recruitment and should use an ethics, privacy, and regulatory specialist before handling identifiable health data or making medical-performance claims."
+  ],
+  "parent": {
+    "candidate_id": "control-09",
+    "version": 2
+  },
+  "risks": [
+    "Public datasets and open analysis code make a public-data-only benchmark easy to copy.",
+    "Processing identifiable physiological data without an appropriate legal basis, minimisation, security, and contractual controls creates GDPR exposure.",
+    "Customers may mistake engineering QA for regulatory or clinical certification, creating misrepresentation and liability risk unless scope and disclaimers are strict.",
+    "Device firmware, sensor geometry, and population shifts can stale a benchmark faster than a part-time team can refresh it.",
+    "A proprietary corpus can consume more capital and founder time than the initial service proves able to repay."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/digital-health-technologies-remote-data-acquisition-clinical-investigations",
+    "https://eur-lex.europa.eu/eli/reg/2017/745/oj/eng",
+    "https://eur-lex.europa.eu/eli/reg/2016/679/2016-05-04/eng",
+    "https://www.physionet.org/content/wrist/1.0.0/",
+    "https://www.physionet.org/content/pulse-transit-time-ppg/1.1.0/csv/",
+    "https://www.nature.com/articles/s41746-020-0226-6",
+    "https://www.labfront.com/pricing",
+    "https://www.whaleteq.com/en",
+    "https://www.empatica.com/research/e4/"
+  ],
+  "stage": "development",
+  "structure": {
+    "commercial_archetype": "Engineering benchmark-as-a-service with a licensed technical data asset",
+    "control_point": "The trusted, versioned held-out protocol and report used at a release or study-quality decision",
+    "critical_dependency": "Repeated buyer willingness to pay for neutral private evaluation plus lawful, durable rights to representative held-out data"
+  },
+  "thesis": "Create a neutral engineering-grade robustness benchmark and continuous regression-testing service for wearable ECG, PPG, EDA, and motion algorithms. Start with license-compatible public data, synthetic artefacts, customer-supplied private traces, and reproducible test protocols; sell fixed-scope comparison audits before funding any proprietary participant corpus. The defensible asset would be a versioned held-out protocol, rights-cleared edge-case data, and trusted cross-device reporting, while regulatory-grade validation remains a separately scoped service requiring specialist oversight.",
+  "title": "Wearable Signal QA Benchmark",
+  "uncertainties": [
+    "Whether a wearable startup will pay for a neutral audit before a regulator, CRO, investor, or enterprise customer explicitly requires it.",
+    "Which initial scope has the shortest sales cycle: algorithm regression QA, study data-quality audit, sensor comparison, or pre-submission evidence support.",
+    "Whether customer-supplied private traces can be retained, pooled, or converted into benchmark statistics under contract and GDPR.",
+    "The cost of recruiting and consenting a demographically and behaviourally representative proprietary corpus.",
+    "Repeat frequency after the first audit and whether CI integration is technically and contractually feasible across customers."
+  ],
+  "version": 3
+}

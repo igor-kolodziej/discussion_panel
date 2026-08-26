@@ -1,0 +1,66 @@
+{
+  "candidate_id": "embed-12",
+  "claims": [
+    {
+      "claim_id": "embed-12-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/dir/2019/944/oj/eng"
+      ],
+      "statement": "Directive (EU) 2019/944 requires Member States to allow and foster demand response through aggregation and recognizes incentive-based load changes."
+    },
+    {
+      "claim_id": "embed-12-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.pse.pl/web/pse-eng/areas-of-activity/capacity-market/general-information"
+      ],
+      "statement": "PSE identifies facilitating demand-side-response services as an objective of Poland's capacity-market framework."
+    }
+  ],
+  "contrary_evidence": [
+    "Existing aggregators may recruit assets directly, and residential-device value may be too small to fund installer bounties."
+  ],
+  "economics": {
+    "acquisition_route": "One-to-many distribution through heat-pump and EV installers, wholesalers, and installer quoting software.",
+    "capital_required_pln": 50000,
+    "founder_net_worth_path": "Hypothesis: 30000 activated devices producing 200 PLN retained annual revenue yields 6 million PLN recurring revenue by year six and can support founder equity above 5 million PLN without double-counting distributions.",
+    "founder_time": "Hypothesis: 4 founder hours daily for product and aggregator operations, starting with the family installer as a bounded pilot.",
+    "gross_margin_basis": "Hypothesis: 60-75% gross margin after installer bounty, device connectors, telemetry, settlement support, and consent operations.",
+    "payback": "Hypothesis: a 15000 PLN installer-network integration pays back after 100 activated assets.",
+    "pricing": "Hypothesis, including the capital figure: aggregators pay 250 PLN per activated device plus 1.5% of verified flexibility revenue.",
+    "retention_or_repeat": "Commissioning, annual re-enrollment, dispatch tests, and verified response events each generate revenue."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Device-specific dispatch and reliability histories improve enrollment selection and settlement confidence",
+    "customer": "Flexibility aggregators seeking residential heat-pump and EV-charger capacity",
+    "distribution_mechanism": "Installer commissioning apps, wholesaler programs, and embedded quoting software",
+    "offer_and_business_model": "Consent, enrollment, telemetry, and response-scoring exchange funded by activation bounty and revenue share",
+    "payer_and_paid_event": "The aggregator pays for a verified activation and later performance events",
+    "problem_trigger": "An installer commissions a controllable device and obtains customer consent"
+  },
+  "founder_fit": [
+    "The family installation company offers embedded-distribution access while data scoring and automation match the founder's strengths."
+  ],
+  "parent": null,
+  "risks": [
+    "Consent, cybersecurity, consumer contracts, device control, and settlement accuracy must be explicit before any activation."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/dir/2019/944/oj/eng",
+    "https://www.pse.pl/web/pse-eng/areas-of-activity/capacity-market/general-information"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Two-sided activation and bounty network",
+    "control_point": "Customer consent and device identity captured at installer commissioning",
+    "critical_dependency": "Aggregator contracts, interoperable telemetry, and economics for small aggregated loads"
+  },
+  "thesis": "Turn heat-pump and EV-charger commissioning into an aggregator enrollment event, with aggregators paying for activated assets and verified response while permissioned dispatch histories compound a device-level flexibility score.",
+  "title": "FlexEnroll Installer Activation Exchange",
+  "uncertainties": [
+    "No evidence yet establishes aggregator unit economics or reliable cross-brand device interoperability in Poland."
+  ],
+  "version": 1
+}

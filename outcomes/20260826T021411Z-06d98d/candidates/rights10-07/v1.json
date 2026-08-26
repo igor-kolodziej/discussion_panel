@@ -1,0 +1,85 @@
+{
+  "candidate_id": "rights10-07",
+  "claims": [
+    {
+      "claim_id": "rights10-07-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/dir/2019/944/oj/eng"
+      ],
+      "statement": "EU electricity rules allow final customers to contract for aggregation without their supplier's consent and require access to relevant demand-response data."
+    },
+    {
+      "claim_id": "rights10-07-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://bip.ure.gov.pl/bip/rejestry-i-bazy/wykaz-agregatorow/4713,Wykaz-agregatorow.html"
+      ],
+      "statement": "Poland requires businesses providing aggregation to enter the URE aggregator register, which continues to list new entrants."
+    },
+    {
+      "claim_id": "rights10-07-c3",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://ure.gov.pl/pl/urzad/informacje-ogolne/aktualnosci/12587,Transformacja-energetyczna-nowy-podmiot-wpisany-do-wykazu-agregatorow.html"
+      ],
+      "statement": "Demand hypothesis: aggregators will pay more for consented, meter-ready sites than for unqualified energy leads."
+    }
+  ],
+  "contrary_evidence": [
+    "Aggregation itself is regulated in Poland, so careless contracting could cross the intended referral boundary.",
+    "Many small sites may not generate enough flexibility revenue to justify onboarding."
+  ],
+  "economics": {
+    "acquisition_route": "Demand hypothesis: the family installer and energy auditors can identify owners of controllable heat pumps, PV, batteries, and HVAC loads",
+    "capital_required_pln": 70000,
+    "founder_net_worth_path": "Hypothesis: 5000 active sites yielding 900 PLN annual platform revenue creates 4.5m PLN revenue; 25% EBITDA at a 5x data-network value could exceed 5m PLN in 5-7 years",
+    "founder_time": "15-20 hours weekly; operate as a data and referral layer until regulated scope is confirmed",
+    "gross_margin_basis": "Economics hypothesis: 65-80% after site data validation, with hardware and aggregator operations excluded",
+    "payback": "Economics hypothesis: 100 accepted sites at 900 PLN plus modest recurring shares recover initial capital in 12-18 months",
+    "pricing": "Economics hypothesis: 500-1500 PLN per aggregator-accepted site plus 10-20% of onboarding or recurring gross revenue",
+    "retention_or_repeat": "Availability calendars, re-baselining, new devices, program switching, and recurring activations"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Site response history, baseline quality, owner permissions, and an increasingly valuable map of uncontracted flexible load",
+    "customer": "Commercial properties, cold stores, warehouses, small industry, battery owners, and licensed aggregators",
+    "distribution_mechanism": "Renewable installers, energy auditors, property managers, cold-chain vendors, and aggregator partnerships",
+    "offer_and_business_model": "Owner mandate, device and meter inventory, baseline readiness, availability calendar, program matching, and handoff to registered aggregators",
+    "payer_and_paid_event": "Aggregator pays for an accepted qualified site and shares revenue after activation; owners can use the basic intake free",
+    "problem_trigger": "An aggregator needs qualified flexible capacity, while an owner cannot compare programs or repeatedly package technical and authorization evidence"
+  },
+  "founder_fit": [
+    "Energy and data-science overlap",
+    "Family installer channel",
+    "Asset-light entry",
+    "Algorithmic matching and baselining suit the founder"
+  ],
+  "parent": null,
+  "risks": [
+    "Regulatory perimeter",
+    "Double-selling capacity",
+    "Baseline error",
+    "Aggregator disintermediation"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/dir/2019/944/oj/eng",
+    "https://bip.ure.gov.pl/bip/rejestry-i-bazy/wykaz-agregatorow/4713,Wykaz-agregatorow.html",
+    "https://ure.gov.pl/pl/urzad/informacje-ogolne/aktualnosci/12587,Transformacja-energetyczna-nowy-podmiot-wpisany-do-wykazu-agregatorow.html"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Rights registry and regulated-market lead exchange",
+    "control_point": "Verified owner mandate plus meter-ready forward availability for each site",
+    "critical_dependency": "Licensed aggregators must accept the prequalification packet and provide transparent activation and revenue data"
+  },
+  "thesis": "Commercial building and distributed-energy owners authorize a neutral prequalification layer to map controllable load, meter evidence, operating limits, and forward availability to licensed Polish aggregators. Demand hypothesis: scarce site readiness and clean owner mandates can be monetized without initially becoming the regulated aggregator.",
+  "title": "Commercial Flexibility Rights Registry",
+  "uncertainties": [
+    "Revenue per small site",
+    "Aggregator qualification standards",
+    "Owner conversion",
+    "Meter access cost"
+  ],
+  "version": 1
+}

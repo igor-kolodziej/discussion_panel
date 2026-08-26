@@ -1,0 +1,258 @@
+{
+  "candidate_id": "settle6-06",
+  "candidate_sha256": "4f6c2a15ac2759b7d2e84581fe855c371bcb3de2a320897e4d23b7428e8ee644",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "go-r1",
+      "evidence_refs": [
+        "go-s1",
+        "go-s3",
+        "go-s4"
+      ],
+      "statement": "In Poland, a holder cancels a GO through the TGE registry and TGE confirms cancellation on request; the registry confirmation, not a generic sustainability report, is the appropriate completed event."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "go-r2",
+      "evidence_refs": [
+        "go-s2"
+      ],
+      "statement": "EU rules require electronic, accurate, reliable and fraud-resistant issuance, transfer and cancellation, impose transaction validity and expiry timing, and use cancellation for supplier disclosure."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "go-r3",
+      "evidence_refs": [
+        "go-s3"
+      ],
+      "statement": "TGE's April 2026 release added bulk transactions and a marketplace, reducing the amount of proprietary value available from simple batching or counterparty discovery."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "go-r4",
+      "evidence_refs": [
+        "go-s1",
+        "go-s4"
+      ],
+      "statement": "Polish registry mechanics require an authorized holder or member relationship; bilateral GO contracts and financial settlement are outside TGE, so a non-member operator needs a contractual registry participant."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "go-r5",
+      "evidence_refs": [
+        "go-s5"
+      ],
+      "statement": "A valid Scope 2 proof workflow must preserve unique ownership, cancellation on behalf of the reporting entity, vintage, and applicable market boundaries; a site-period allocation ledger can support but cannot override those rules."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "go-r6",
+      "evidence_refs": [
+        "go-s6"
+      ],
+      "statement": "Certificate-backed renewable-energy claims carry material wording risk: UOKiK specifically warns that presenting certificate coverage as physical renewable supply without clear limitations may mislead consumers."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "go-r7",
+      "evidence_refs": [
+        "go-s7",
+        "go-s8",
+        "go-s9"
+      ],
+      "statement": "Ecohz, Soldera, and Energy Solution already offer substantial portions of the proposed workflow, including procurement, allocation, cancellation, proof storage, multi-entity status, or Polish TGE certificate delivery."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "go-r8",
+      "evidence_refs": [
+        "go-s3",
+        "go-s7",
+        "go-s8",
+        "go-s9"
+      ],
+      "statement": "The candidate's strongest remaining wedge is a narrow Polish white-label exception and evidence layer embedded in brokers' workflows, but broker demand and willingness to delegate are unobserved."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "go-r9",
+      "evidence_refs": [
+        "go-s12"
+      ],
+      "statement": "Europex reports 53.219 TWh of Polish GO volume in 2025; 0.5 TWh is about 0.94% and 4 TWh about 7.5% of that reference volume, so the growth plan requires meaningful market share."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "go-r10",
+      "evidence_refs": [
+        "go-s10"
+      ],
+      "statement": "The current AIB member page did not provide affirmative evidence of Polish Hub connectivity during this review; current cross-border recognition and automation must be confirmed directly rather than assumed."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "go-r11",
+      "evidence_refs": [
+        "go-s11"
+      ],
+      "statement": "Residual-mix accounting exists to prevent double counting of untracked electricity attributes, reinforcing the need for precise consumption-to-certificate allocation and claims wording."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "go-r12",
+      "evidence_refs": [],
+      "statement": "Pricing, channel conversion, exception cost, registry automation access, part-time operating load, and the founder-net-worth path remain unsupported by observed transactions."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "go-r13",
+      "evidence_refs": [],
+      "statement": "No reviewed source proves a fatal condition; authorization can potentially be supplied by a partner, while economics and partner commitment remain uncertain rather than impossible."
+    }
+  ],
+  "contrary_evidence": [
+    "TGE now supplies bulk transactions and a marketplace within RGP.",
+    "Ecohz already aggregates decentralized business-unit purchases, performs cancellation, and stores proof.",
+    "Soldera advertises consumption-file upload, multi-country procurement and cancellation planning, hosted accounts, and retirement dashboards.",
+    "Energy Solution already performs Polish GO purchase, cancellation, and TGE certificate delivery.",
+    "UOKiK enforcement makes claims wording and limitation disclosure a core liability rather than a cosmetic report feature.",
+    "The 4 TWh year-six target represents about 7.5% of the reported 2025 Polish GO volume."
+  ],
+  "schema_version": 2,
+  "sources": [
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2024-05-02; modified 2025-09-30",
+      "publisher": "Energy Regulatory Office, Poland",
+      "source_id": "go-s1",
+      "source_type": "regulator_guidance",
+      "stance": "supporting",
+      "title": "Guarantee of origin for energy from renewable sources",
+      "url": "https://ure.gov.pl/pl/oze/gwarancje-pochodzenia/6816,Gwarancja-pochodzenia-dokument-pochodzenia-energii-wytworzonej-ze-zrodel-odnawia.html"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2024-07-16",
+      "publisher": "European Union / EUR-Lex",
+      "source_id": "go-s2",
+      "source_type": "official_regulation",
+      "stance": "context",
+      "title": "Renewable Energy Directive, consolidated text",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1723191930483&uri=CELEX%3A02018L2001-20240716"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2026-04-29",
+      "publisher": "Towarowa Gielda Energii",
+      "source_id": "go-s3",
+      "source_type": "registry_operator",
+      "stance": "contradicting",
+      "title": "Guarantees of Origin Register home page and April 2026 release notice",
+      "url": "https://rgp.tge.pl/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2021",
+      "publisher": "Office of Competition and Consumer Protection, Poland",
+      "source_id": "go-s4",
+      "source_type": "official_decision",
+      "stance": "context",
+      "title": "UOKiK decision describing Polish GO registry trading mechanics",
+      "url": "https://decyzje.uokik.gov.pl/bp/dec_prez.nsf/43104c28a7a1be23c1257eac006d8dd4/67623fad63fc7ffdc12587df0040c28e/%24FILE/Decyzja%20PGE_TAURON.pdf"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "not stated",
+      "publisher": "GHG Protocol",
+      "source_id": "go-s5",
+      "source_type": "reporting_standard",
+      "stance": "context",
+      "title": "Scope 2 Guidance and quality criteria",
+      "url": "https://ghgprotocol.org/sites/default/files/standards/Scope%202%20Guidance_Final_Sept26.pdf"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2026-01-21",
+      "publisher": "Office of Competition and Consumer Protection, Poland",
+      "source_id": "go-s6",
+      "source_type": "regulator_enforcement_notice",
+      "stance": "context",
+      "title": "Greenwashing allegations involving certificate-backed renewable-energy claims",
+      "url": "https://uokik.gov.pl/en/greenwashing-bolt-tchibo-and-zara-face-allegations-from-the-president-of-uokik"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "not stated",
+      "publisher": "Ecohz",
+      "source_id": "go-s7",
+      "source_type": "incumbent_platform",
+      "stance": "contradicting",
+      "title": "Renewable Energy Procurement Portal for Scope 2",
+      "url": "https://www.ecohz.com/renewable-energy-procurement-portal-for-scope-2"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "not stated",
+      "publisher": "Soldera",
+      "source_id": "go-s8",
+      "source_type": "incumbent_platform",
+      "stance": "contradicting",
+      "title": "Corporate FAQ on Guarantees of Origin",
+      "url": "https://www.soldera.org/corporate/faq"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "not stated",
+      "publisher": "Energy Solution",
+      "source_id": "go-s9",
+      "source_type": "polish_incumbent_service",
+      "stance": "contradicting",
+      "title": "Guarantees of origin trading and cancellation",
+      "url": "https://www.energysolution.pl/efektywnosc-energetyczna/gwarancje-pochodzenia/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "not stated",
+      "publisher": "Association of Issuing Bodies",
+      "source_id": "go-s10",
+      "source_type": "industry_registry_authority",
+      "stance": "context",
+      "title": "AIB member countries and regions",
+      "url": "https://www.aib-net.org/facts/aib-member-countries-regions"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2026-05-28",
+      "publisher": "Association of Issuing Bodies",
+      "source_id": "go-s11",
+      "source_type": "industry_methodology",
+      "stance": "context",
+      "title": "European Residual Mix",
+      "url": "https://www.aib-net.org/facts/european-residual-mix"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "not stated",
+      "publisher": "Europex",
+      "source_id": "go-s12",
+      "source_type": "industry_association_profile",
+      "stance": "context",
+      "title": "TGE member profile and 2025 market volumes",
+      "url": "https://www.europex.org/members/tge/"
+    }
+  ],
+  "unknowns": [
+    "Current TGE API or machine-interface availability and permitted automation methods.",
+    "Exact RGP membership, delegation, user-role, bulk-upload, export, and fee terms.",
+    "A signed authorized-registry-participant or broker partnership.",
+    "Observed number and complexity of multi-site matching exceptions per reporting period.",
+    "Customer and channel willingness to pay onboarding and per-confirmed-cancellation fees.",
+    "Pricing, gross margin, acquisition payback, retention, and founder time under real batches.",
+    "Legal advice on the boundary between administrative orchestration, brokerage, trading, and claims advice.",
+    "Current Polish AIB Hub status and per-country recognition workflow.",
+    "Whether an installer channel reaches the energy procurement and reporting decision maker.",
+    "No paid batch, customer contract, channel commitment, or registry integration test has been observed."
+  ]
+}

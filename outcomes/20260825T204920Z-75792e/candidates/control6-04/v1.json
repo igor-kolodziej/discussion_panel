@@ -1,0 +1,72 @@
+{
+  "candidate_id": "control6-04",
+  "claims": [
+    {
+      "claim_id": "control6-04-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02012L0019-20240408"
+      ],
+      "statement": "The WEEE Directive addresses preparation for re-use, refurbishment, recycling and access to treatment information for electrical and electronic equipment."
+    },
+    {
+      "claim_id": "control6-04-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2024/1103/oj/eng"
+      ],
+      "statement": "EU ecodesign rules for covered local space heaters require availability of specified electronic spare parts and repair information; applicability is product-specific and does not establish equivalent rights for every heat pump or inverter."
+    }
+  ],
+  "contrary_evidence": [
+    "The cited repairability duties are product-specific, while the intended inventory spans products that may lack mandated parts or repair access."
+  ],
+  "economics": {
+    "acquisition_route": "Unvalidated: place take-back bins and exchange ordering in installer service workflows, starting with the family company's supplier network.",
+    "capital_required_pln": 140000,
+    "founder_net_worth_path": "Unvalidated scenario, not a forecast: validate 200 cores in year 1, reach 2.5 million PLN annual gross profit by year 4, build 3 million PLN owner equity and retained cash by year 6, and 5 million PLN founder net worth in years 8-11.",
+    "founder_time": "Unvalidated operating estimate: 2-4 hours per day once physical handling is delegated to a repair and logistics partner.",
+    "gross_margin_basis": "Unvalidated: 35%-60% gross margin after collection, testing, repair, warranty reserve and unusable-core losses.",
+    "payback": "Unvalidated: 12-24 months if enough failures cluster around a manageable set of models.",
+    "pricing": "Unvalidated commercial figures, including capital_required_pln: 400-2,500 PLN gross profit per exchanged module plus 250-600 PLN monthly priority membership.",
+    "retention_or_repeat": "Unvalidated: repeat follows installed-base failures and installer service contracts; failure frequency is unknown."
+  },
+  "fingerprint": {
+    "compounding_advantage": "More cores create deeper inventory; every test and field return improves model-level pricing and quality control",
+    "customer": "Renewable-energy and HVAC service firms needing fast, lower-cost out-of-warranty repair",
+    "distribution_mechanism": "Contractual take-back loop embedded in the same installers that buy replacement modules",
+    "offer_and_business_model": "Advance-exchange inventory backed by managed testing, refurbishment and a limited warranty",
+    "payer_and_paid_event": "The installer pays when a verified exchange unit ships or for priority access",
+    "problem_trigger": "A field diagnosis identifies a failed replaceable electronic module"
+  },
+  "founder_fit": [
+    "Leverages the family installer's service flow.",
+    "Creates a measurable physical-data moat.",
+    "Operations can be delegated while the founder handles analytics and partner design."
+  ],
+  "parent": null,
+  "risks": [
+    "Waste-status mistakes or unsafe repairs create regulatory and product-liability exposure.",
+    "OEM part pairing can prevent reuse.",
+    "Inventory can fragment across too many models."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02012L0019-20240408",
+    "https://eur-lex.europa.eu/eli/reg/2024/1103/oj/eng"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Circular spare-parts exchange with managed refurbishment",
+    "control_point": "Installer take-back and first-refusal contracts over failed modules, plus a serialised test, failure and repair-outcome corpus",
+    "critical_dependency": "Lawful waste handling, qualified repair partners, product safety and access to sufficient model-specific technical information"
+  },
+  "thesis": "Contract renewable and HVAC installers to route failed out-of-warranty inverters, controls and circuit boards into a managed take-back channel; qualified repair partners test or refurbish modules and the network supplies verified advance-exchange parts back to installers. First-refusal supply rights, model-specific failure data and inventory density form the moat.",
+  "title": "Renewable-Electronics Harvest and Exchange Network",
+  "uncertainties": [
+    "Core failure volume by model",
+    "Repair yield and warranty-return rate",
+    "Polish permits and insurance required"
+  ],
+  "version": 1
+}

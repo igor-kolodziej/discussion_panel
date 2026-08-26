@@ -1,0 +1,82 @@
+{
+  "candidate_id": "control10-11",
+  "claims": [
+    {
+      "claim_id": "control10-11-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en"
+      ],
+      "statement": "The definitive CBAM regime applies from 1 January 2026, and importers above a 50-tonne mass threshold must obtain authorised CBAM declarant status."
+    },
+    {
+      "claim_id": "control10-11-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-verification_en"
+      ],
+      "statement": "Accredited verifiers can issue the first verification reports in 2027 and declarants finalise 2026 declarations in September 2027."
+    },
+    {
+      "claim_id": "control10-11-c3",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/news/european-commission-publishes-guidance-cbam-verifiers-and-accreditation-bodies-2026-08-24_en"
+      ],
+      "statement": "Demand hypothesis: mid-market importers will outsource supplier evidence reconciliation because customs records, foreign installation data and verifier requirements meet only at the annual close."
+    }
+  ],
+  "contrary_evidence": [
+    "The 50-tonne threshold removes many small importers from scope.",
+    "Customs, carbon-accounting and ERP incumbents are rapidly adding CBAM modules."
+  ],
+  "economics": {
+    "acquisition_route": "Hypothesis: customs brokers identify threshold-crossing importers and bundle the close workflow",
+    "capital_required_pln": 70000,
+    "founder_net_worth_path": "Hypothesis: 250 importers averaging 50000 PLN annual recurring revenue could exceed 12m PLN ARR; trusted broker and verifier workflows could support founder equity above 5m PLN in 4-6 years",
+    "founder_time": "16-22 hours weekly with emissions-accounting review contracted",
+    "gross_margin_basis": "Economics hypothesis: 65-82% blended margin as complex supplier exceptions require analysts",
+    "payback": "Hypothesis: 9-15 months with twelve recurring importers",
+    "pricing": "Economics hypothesis: 15000-50000 PLN annual subscription plus 10000-40000 PLN per close and supplier fees",
+    "retention_or_repeat": "Monthly imports, new suppliers and mandatory annual declarations and verification"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Permissioned supplier-installation mappings, commodity classifications and prior close lineage reduce repeat reconciliation effort",
+    "customer": "EU mid-market importers of steel, aluminium, cement, fertiliser, electricity or hydrogen above the CBAM threshold",
+    "distribution_mechanism": "Embedded into customs-broker classification and import-account workflows",
+    "offer_and_business_model": "Supplier evidence portal, shipment reconciliation and verifier-ready close workspace sold through customs brokers",
+    "payer_and_paid_event": "Importer pays annual platform fee, supplier onboarding and year-end close fee",
+    "problem_trigger": "Imports cross the threshold or the annual CBAM close approaches with incomplete foreign-supplier emissions data"
+  },
+  "founder_fit": [
+    "Quantitative emissions reconciliation matches data-science and finance interests",
+    "Annual-close automation can be built part-time in one commodity",
+    "Broker-led acquisition reduces continuous social selling"
+  ],
+  "parent": null,
+  "risks": [
+    "Foreign suppliers may not provide verifiable installation data.",
+    "Errors affect certificate costs and regulatory exposure.",
+    "Broker concentration could create channel dependence."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en",
+    "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-verification_en",
+    "https://taxation-customs.ec.europa.eu/news/european-commission-publishes-guidance-cbam-verifiers-and-accreditation-bodies-2026-08-24_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Regulated annual-close infrastructure",
+    "control_point": "The evidence-complete annual dataset released to an accredited verifier and declarant",
+    "critical_dependency": "Foreign supplier cooperation, accurate customs data and accredited verifier acceptance"
+  },
+  "thesis": "A customs-broker-embedded close workflow could collect installation-level emissions evidence, reconcile commodity and shipment data, maintain authorised-declarant readiness and assemble the annual verification packet for importers just above the mass threshold. Accredited verifiers retain verification authority. Demand and economics are hypotheses.",
+  "title": "CBAM Supplier-Evidence Close for Mid-Market Importers",
+  "uncertainties": [
+    "Count of Polish importers just above threshold",
+    "Verifier acceptance of generated evidence packets",
+    "Importer willingness to pay before first close"
+  ],
+  "version": 1
+}

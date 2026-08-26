@@ -1,0 +1,152 @@
+{
+  "candidate_id": "control7-02",
+  "claims": [
+    {
+      "claim_id": "control7-02-r1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/zakres-obowiazkowego-ksef/"
+      ],
+      "statement": "KSeF receipt became mandatory on 1 February 2026, while issuance applied from 1 February or 1 April 2026 depending on taxpayer size, with a temporary 2026 small-sales exception."
+    },
+    {
+      "claim_id": "control7-02-r2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ksef.podatki.gov.pl/wyjasnienia/publikacja-dokumentacji-api-ksef-20-oraz-struktury-logicznej-fa-3-30062025/"
+      ],
+      "statement": "The Ministry provides an OpenAPI contract, SDKs, guides, and environments for third-party KSeF integration."
+    },
+    {
+      "claim_id": "control7-02-r3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ksef.podatki.gov.pl/media/20shej34/aplikacja-podatnika-ksef-20-podrecznik-uzytkownika_01042026.pdf"
+      ],
+      "statement": "The KSeF 2.0 taxpayer-app manual labels invoice bank-account and factor-account sections optional, so invoice data alone cannot guarantee an account is present."
+    },
+    {
+      "claim_id": "control7-02-r4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/kas/api-wykazu-podatnikow-vat"
+      ],
+      "statement": "The government VAT-register API returns NIP/REGON-account matches and confirmation keys, and a daily flat file supports high-volume checks."
+    },
+    {
+      "claim_id": "control7-02-r5",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://wsparcie.symfonia.pl/hc/pl/articles/18350666538130--SeD-Weryfikacja-z-bia%C5%82%C4%85-list%C4%85-podatnik%C3%B3w-VAT",
+        "https://help.comarch.com/standard/20245/?ht_kb=defining-customer-vendor"
+      ],
+      "statement": "Symfonia and Comarch already expose VAT-whitelist account verification inside accounting or vendor workflows."
+    },
+    {
+      "claim_id": "control7-02-r6",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R0886"
+      ],
+      "statement": "EU Regulation 2024/886 requires payee-verification service by PSPs in non-euro Member States by 9 July 2027, further commoditizing account-identity checking."
+    },
+    {
+      "claim_id": "control7-02-r7",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://mazowiecka.policja.gov.pl/ra/aktualnosci/aktualnosci/131942,Falszywe-faktury-z-podmienionym-numerem-konta-Firmy-na-celowniku-cyberprzestepco.html"
+      ],
+      "statement": "A 2026 Polish police case documents compromised business email and a look-alike invoice with a substituted account, and recommends independent verification of changed details."
+    },
+    {
+      "claim_id": "control7-02-r8",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://www.gov.pl/web/kas/api-wykazu-podatnikow-vat",
+        "https://wsparcie.symfonia.pl/hc/pl/articles/18350666538130--SeD-Weryfikacja-z-bia%C5%82%C4%85-list%C4%85-podatnik%C3%B3w-VAT",
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R0886"
+      ],
+      "statement": "The defensible wedge is therefore inferred to be supplier-change governance and audit evidence rather than a registry lookup."
+    }
+  ],
+  "contrary_evidence": [
+    "Government VAT-register infrastructure already supplies free account matching, confirmation keys, and a daily bulk file.",
+    "KSeF bank-account fields are optional, preventing deterministic coverage from the invoice record.",
+    "Established ERP vendors already bundle whitelist verification into vendor, invoice, or payment workflows.",
+    "Mandatory PSP payee verification due in Poland by July 2027 will reduce the standalone value of account-identity matching."
+  ],
+  "economics": {
+    "acquisition_route": "Hypothesis: win one outsourced finance or payment-operations provider as a paid design partner, integrate once into its operating workflow, and let that provider deploy the control to its existing managed-client portfolio. No partner access, commitment, rollout right, or conversion is established.",
+    "capital_required_pln": 45000,
+    "founder_net_worth_path": "Not evidence-backed. Portfolio distribution could aggregate many managed clients behind each provider relationship, but there is no evidence for partner count, paid conversion, revenue per managed client, churn, margin, valuation, or timing; a founder-net-worth path cannot be estimated before a paid partner pilot and retained rollout.",
+    "founder_time": "Hypothesis: one narrow provider pilot remains compatible with about 3 hours/day if security review, enterprise onboarding, legal work, and incident support are contracted. Partner negotiation and integration load are unmeasured and may exceed this.",
+    "gross_margin_basis": "Unknown. A provider-level integration could amortize onboarding across managed clients, but hosting, security, out-of-band confirmation, false-positive escalation, support, and liability costs have not been measured; no margin percentage is assumed.",
+    "payback": "Unknown until the provider sales cycle, integration cost, active-client rollout, support load, and contractual liability allocation are observed in a paid pilot.",
+    "pricing": "Unvalidated: a negotiated provider portfolio license and/or per-active-managed-client charge, with no price assumed until a partner agrees to a paid pilot. Public lookup or per-invoice matching is not the billable value proposition.",
+    "retention_or_repeat": "Hypothesis: retention would come from the provider embedding one policy and evidence record across recurring managed-client payment work; no deployment, renewal, or switching evidence exists."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Provider-specific approval policy, client-isolated approved-change histories, reusable ERP connectors, auditable exception outcomes, and operating-playbook switching costs accumulated across only the client environments the provider is authorized to manage",
+    "customer": "Polish outsourced finance and payment-operations providers that prepare, approve, or administer recurring supplier payments for portfolios of SME clients",
+    "distribution_mechanism": "Acquire one outsourced finance provider as a paid design partner, embed the module into its standard operating procedure, and reach managed SMEs through that provider's existing service relationships; no partner or rollout commitment is assumed",
+    "offer_and_business_model": "White-label supplier-change policy module for a finance-operations provider: one integration combines KSeF and VAT-whitelist evidence with client-isolated supplier history, independent confirmation tasks, human approval, and portfolio-level audit exports, sold as a provider license and/or per active managed client",
+    "payer_and_paid_event": "A contracted outsourced finance or payment-operations provider would pay when the control is deployed as a standard policy across active managed-client accounts, rather than each client buying a per-invoice checker",
+    "problem_trigger": "A KSeF invoice or payment instruction contains an account or supplier detail that differs from the approved supplier master before a payment run"
+  },
+  "founder_fit": [
+    "Direct match for data science, anomaly detection, API automation, and policy-workflow design",
+    "A single-provider software pilot can fit the available capital and part-time schedule if specialist security, legal, onboarding, and incident work is contracted",
+    "Polish regulatory and language context is useful",
+    "Portfolio distribution could concentrate selling into fewer provider relationships, but obtaining the first provider and negotiating liability remain unvalidated, relationship-heavy work"
+  ],
+  "parent": {
+    "candidate_id": "control7-02",
+    "version": 3
+  },
+  "redesign": {
+    "changed_fingerprint_fields": [
+      "customer",
+      "payer_and_paid_event",
+      "offer_and_business_model",
+      "distribution_mechanism",
+      "compounding_advantage"
+    ],
+    "economic_effect": "Evidence: the reviewed sources establish recurring KSeF volume, free public account matching, incumbent ERP bundling, forthcoming PSP verification, and a documented account-substitution fraud pattern; they do not establish partner willingness, price, conversion, rollout rights, loss reduction, margin, or retention. Hypothesis: replacing direct AP sales and per-invoice pricing with one provider-level integration and a portfolio license or per-active-client model could lower direct CAC, concentrate onboarding, and tie payment to a governed supplier-change policy; the effect survives only if a paid partner adopts the gate, controls the relevant workflow with client authorization, and yields favorable integration, support, and liability economics."
+  },
+  "risks": [
+    "No outsourced finance provider has committed to pay, integrate, mandate the gate, or deploy it across clients",
+    "A provider may prepare records without controlling payment release, leaving the proposed control point advisory rather than mandatory",
+    "Financial and invoice data create material security, authorization, and contractual-liability exposure",
+    "False positives, unavailable registries, or unreliable independent contact routes could delay legitimate payments across many managed clients",
+    "ERP vendors, banks, or the provider itself can bundle the workflow, and reliance on a small number of providers creates customer concentration",
+    "The founder-net-worth path lacks paid-pilot, rollout, margin, renewal, and channel-conversion evidence"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/zakres-obowiazkowego-ksef/",
+    "https://ksef.podatki.gov.pl/wyjasnienia/publikacja-dokumentacji-api-ksef-20-oraz-struktury-logicznej-fa-3-30062025/",
+    "https://ksef.podatki.gov.pl/media/20shej34/aplikacja-podatnika-ksef-20-podrecznik-uzytkownika_01042026.pdf",
+    "https://www.gov.pl/web/kas/api-wykazu-podatnikow-vat",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R0886",
+    "https://mazowiecka.policja.gov.pl/ra/aktualnosci/aktualnosci/131942,Falszywe-faktury-z-podmienionym-numerem-konta-Firmy-na-celowniku-cyberprzestepco.html",
+    "https://wsparcie.symfonia.pl/hc/pl/articles/18350666538130--SeD-Weryfikacja-z-bia%C5%82%C4%85-list%C4%85-podatnik%C3%B3w-VAT",
+    "https://help.comarch.com/standard/20245/?ht_kb=defining-customer-vendor"
+  ],
+  "stage": "development",
+  "structure": {
+    "commercial_archetype": "Partner-licensed embedded finance-control workflow priced at the managed-client portfolio layer",
+    "control_point": "The outsourced finance provider's mandatory supplier-change standard operating procedure and audit record before its staff prepare, approve, or administer a changed payment instruction",
+    "critical_dependency": "A provider that already controls the relevant payment workflow must lawfully access client KSeF and ERP data, maintain an independent supplier contact route, obtain client authorization, and contractually adopt the module as a gate; no such partner or right is established"
+  },
+  "thesis": "Replace diffuse direct selling to individual AP teams with a white-label supplier-change policy module for an outsourced finance or payment-operations provider. Integrate once into the provider's standard operating procedure, keep each client's data and approved history isolated, and require independent confirmation plus human approval before the provider handles changed payment details. The reviewed evidence supports the fraud problem and the commoditization of basic checks, not provider demand or economics; the structural bet is that a paid provider can become both payer and portfolio distribution surface.",
+  "title": "Portfolio Supplier-Change Control for Outsourced Finance Providers",
+  "uncertainties": [
+    "Whether an outsourced finance provider with sufficient controlled payment volume will accept a paid pilot and make the control mandatory",
+    "Whether providers have client authorization for the required KSeF, ERP, supplier-contact, and audit-data access",
+    "Willingness to pay for a provider portfolio control beyond bundled ERP and bank checks; no price or conversion is established",
+    "Availability and cost of trustworthy out-of-band supplier contact data",
+    "False-positive, liability, provider sales-cycle, integration, support, gross-margin, and renewal economics",
+    "Whether the provider actually controls payment release and can preserve client-isolated data while building reusable connectors and playbooks"
+  ],
+  "version": 4
+}

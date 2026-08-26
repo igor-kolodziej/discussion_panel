@@ -1,0 +1,230 @@
+{
+  "candidate_id": "bottleneck-07",
+  "candidate_sha256": "f82c393da95eeed14130f250f327f05464bc55c591b9066bd77c275c6f9a46ef",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "bottleneck-r01",
+      "evidence_refs": [
+        "bottleneck-s01"
+      ],
+      "statement": "MDR requires manufacturers to operate a planned, documented and continuous PMS system integrated with the quality system."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "bottleneck-r02",
+      "evidence_refs": [
+        "bottleneck-s01",
+        "bottleneck-s03"
+      ],
+      "statement": "Class IIa/IIb PSURs must summarize PMS analysis, benefit-risk conclusions, preventive and corrective actions and device sales or usage denominators."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "bottleneck-r03",
+      "evidence_refs": [
+        "bottleneck-s02"
+      ],
+      "statement": "Current MDCG guidance explicitly links complaints and service information with exposure, trend thresholds, risk management and CAPA, supporting the proposed lineage job."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "bottleneck-r04",
+      "evidence_refs": [
+        "bottleneck-s03"
+      ],
+      "statement": "MDCG PSUR guidance standardizes report content and cadence, making parts of the artifact reproducible rather than proprietary."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "bottleneck-r05",
+      "evidence_refs": [
+        "bottleneck-s04"
+      ],
+      "statement": "PRRC duties require formal qualifications and reside with qualified persons available to the manufacturer, so vendor software cannot own regulatory compliance authority."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "bottleneck-r06",
+      "evidence_refs": [
+        "bottleneck-s01"
+      ],
+      "statement": "MDR serious-incident reporting deadlines include two, ten and fifteen days depending on urgency and severity."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "bottleneck-r07",
+      "evidence_refs": [
+        "bottleneck-s05"
+      ],
+      "statement": "Four EUDAMED modules became mandatory on 28 May 2026, while PMS and vigilance remained under development, leaving workflow space without creating a private platform gate."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "bottleneck-r08",
+      "evidence_refs": [
+        "bottleneck-s06",
+        "bottleneck-s07"
+      ],
+      "statement": "Complaint data can include special-category health data and requires a lawful basis, minimization, security and defined controller-processor responsibilities."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "bottleneck-r09",
+      "evidence_refs": [
+        "bottleneck-s08",
+        "bottleneck-s09"
+      ],
+      "statement": "MasterControl and Greenlight Guru already sell integrated post-market workflows spanning complaints, risk, CAPA and reporting."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "bottleneck-r10",
+      "evidence_refs": [
+        "bottleneck-s10"
+      ],
+      "statement": "The 38,000-plus European medtech-company count and roughly 90% SME share is a broad sector denominator, not evidence for the reachable Class IIa/IIb target segment."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "bottleneck-r11",
+      "evidence_refs": [
+        "bottleneck-s02",
+        "bottleneck-s08",
+        "bottleneck-s09"
+      ],
+      "statement": "The only plausible distinct control point is validated lineage across complaint, denominator, trend, risk/CAPA and PSUR approval; generic intake or drafting is readily bundled or reproduced."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "bottleneck-r12",
+      "evidence_refs": [],
+      "statement": "Paid willingness to adopt a separate lineage layer, representative evidence gaps and measured review-time or audit-quality improvement are unknown."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "bottleneck-r13",
+      "evidence_refs": [],
+      "statement": "Customer-specific validation cost, consultant channel commitment, CAC, sales cycle, churn and support burden are unknown."
+    }
+  ],
+  "contrary_evidence": [
+    "Qualified PRRC and manufacturer personnel hold the necessary authority.",
+    "MasterControl and Greenlight Guru already bundle much of the proposed workflow.",
+    "MDCG guidance standardizes the required artifact and reduces scarcity.",
+    "EUDAMED's evolving modules may absorb parts of the workflow.",
+    "GDPR and validation duties restrict reuse of sensitive complaint data and increase service burden."
+  ],
+  "schema_version": 2,
+  "sources": [
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2026-01-01",
+      "publisher": "EUR-Lex",
+      "source_id": "bottleneck-s01",
+      "source_type": "binding_regulation",
+      "stance": "supporting",
+      "title": "Regulation (EU) 2017/745 on medical devices — consolidated text",
+      "url": "https://eur-lex.europa.eu/legal-content/en/TXT/?uri=CELEX:02017R0745-20260101"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2025-12-19",
+      "publisher": "European Commission Medical Device Coordination Group",
+      "source_id": "bottleneck-s02",
+      "source_type": "official_guidance",
+      "stance": "supporting",
+      "title": "MDCG 2025-10: Guidance on post-market surveillance of medical devices",
+      "url": "https://health.ec.europa.eu/document/download/a9ad86b7-1b8e-4bae-beb4-48b2b3ed2f05_en?filename=mdcg_2025-10_en.pdf"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2022-12-16",
+      "publisher": "European Commission Medical Device Coordination Group",
+      "source_id": "bottleneck-s03",
+      "source_type": "official_guidance",
+      "stance": "context",
+      "title": "MDCG 2022-21: Guidance on periodic safety update report",
+      "url": "https://health.ec.europa.eu/system/files/2023-01/mdcg_2022-21_en.pdf"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2023-12-19",
+      "publisher": "European Commission Medical Device Coordination Group",
+      "source_id": "bottleneck-s04",
+      "source_type": "official_guidance",
+      "stance": "contradicting",
+      "title": "MDCG 2019-7 Rev.1: Person responsible for regulatory compliance",
+      "url": "https://health.ec.europa.eu/system/files/2023-12/md_mdcg_2019_7_guidance_art15_mdr_ivdr_en.pdf"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2026-06-01",
+      "publisher": "European Commission",
+      "source_id": "bottleneck-s05",
+      "source_type": "official_platform_status",
+      "stance": "contradicting",
+      "title": "European Database on Medical Devices — overview",
+      "url": "https://health.ec.europa.eu/medical-devices-eudamed/overview_en"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2016-05-04",
+      "publisher": "EUR-Lex",
+      "source_id": "bottleneck-s06",
+      "source_type": "binding_regulation",
+      "stance": "context",
+      "title": "Regulation (EU) 2016/679 (General Data Protection Regulation)",
+      "url": "https://eur-lex.europa.eu/eli/reg/2016/679/2016-05-04/eng"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "European Data Protection Board",
+      "source_id": "bottleneck-s07",
+      "source_type": "official_guidance",
+      "stance": "context",
+      "title": "Data controller or data processor",
+      "url": "https://www.edpb.europa.eu/sme/learn-the-basics/data-controller-or-data-processor_en"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "MasterControl",
+      "source_id": "bottleneck-s08",
+      "source_type": "competitor_product_page",
+      "stance": "contradicting",
+      "title": "Postmarket Excellence for Medical Devices",
+      "url": "https://www.mastercontrol.com/postmarket/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "Greenlight Guru",
+      "source_id": "bottleneck-s09",
+      "source_type": "competitor_product_page",
+      "stance": "contradicting",
+      "title": "Post-market medical device software",
+      "url": "https://www.greenlight.guru/post-market-medical-device-software"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2025-09-04",
+      "publisher": "MedTech Europe",
+      "source_id": "bottleneck-s10",
+      "source_type": "industry_statistics",
+      "stance": "context",
+      "title": "MedTech Europe unveils Facts & Figures 2025",
+      "url": "https://www.medtecheurope.org/news-and-events/press-releases/medtech-europe-unveils-facts-figures-2025-a-snapshot-of-innovation-and-impact-in-europe/"
+    }
+  ],
+  "unknowns": [
+    "Paid willingness to buy a separate lineage product",
+    "Representative complaint volumes and source fragmentation",
+    "Measured time savings, missing-link reduction and audit benefit",
+    "Per-customer validation and integration cost",
+    "Qualified consultant distribution commitments and channel economics",
+    "Reachable segment size, sales cycle, retention and support burden"
+  ]
+}

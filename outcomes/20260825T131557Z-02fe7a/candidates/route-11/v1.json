@@ -1,0 +1,73 @@
+{
+  "candidate_id": "route-11",
+  "claims": [
+    {
+      "claim_id": "route-11-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.who.int/tools/quality-management-system-for-non-laboratory-settings/pillar-3--procurement-supply-chain-and-inventory-management"
+      ],
+      "statement": "WHO guidance says effective procurement and inventory management should track stock, expiry dates, and reordering to prevent service interruptions, stockouts, and wastage of testing materials."
+    },
+    {
+      "claim_id": "route-11-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.ema.europa.eu/en/human-regulatory-overview/post-authorisation/medicine-shortages-availability-issues/european-shortages-monitoring-platform-esmp"
+      ],
+      "statement": "EMA's European Shortages Monitoring Platform collects medicine supply, demand, and availability data and supports machine-to-machine submissions from national and industry systems."
+    }
+  ],
+  "contrary_evidence": [
+    "Wholesaler ERP systems already provide basic reorder and expiry functions for larger customers.",
+    "Independent clinics may have insufficient inventory discipline to supply reliable on-hand data."
+  ],
+  "economics": {
+    "acquisition_route": "Select one consumable class, import historical orders and manual stock counts for 10-20 clinics under one wholesaler, and test forecast and expiry precision offline.",
+    "capital_required_pln": 60000,
+    "founder_net_worth_path": "Hypothesis: 3000 clinic sites at 200 PLN monthly net revenue yield 7.2m PLN ARR before shared savings; at 30% EBITDA, 4x EBITDA, and 60% founder ownership, equity is about 5.2m PLN in year 6-9. Retained earnings are not added separately.",
+    "founder_time": "Hypothesis: 12-16 hours weekly, with regulated logistics and quality decisions left to licensed channel partners.",
+    "gross_margin_basis": "Hypothesis: 68-80% after integrations, support, and savings verification, with no inventory on the startup's balance sheet.",
+    "payback": "Hypothesis: 20000-45000 PLN wholesaler onboarding recovered within 8-14 months at 25-50 paid clinic sites.",
+    "pricing": "Hypothesis: 150-300 PLN per clinic monthly plus 10-20% of verified avoided expiry loss; regulated logistics remain with the wholesaler.",
+    "retention_or_repeat": "Every order and stock count refreshes the service; annual retention follows the wholesaler relationship if avoided waste is visible."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Cross-customer demand patterns, lead times, expiry outcomes, and substitute availability improve forecasts and pooling",
+    "customer": "Independent clinics and testing sites buying expiring medical consumables through a wholesaler",
+    "distribution_mechanism": "Medical wholesalers embed the service in the portal used for every repeat order",
+    "offer_and_business_model": "Inventory forecast, expiry alert, compliant return or transfer orchestration, and shared-savings analytics",
+    "payer_and_paid_event": "Wholesaler or clinic pays per site monthly, plus an optional share of independently verified avoided write-offs",
+    "problem_trigger": "Stock approaches expiry, consumption deviates from plan, or a reorder risks either shortage or surplus"
+  },
+  "founder_fit": [
+    "Forecasting and anomaly detection use the founder's data-science strengths.",
+    "Wholesaler distribution reaches many small buyers through an existing ordering habit.",
+    "A software pilot using exports avoids inventory ownership and stays within capital limits."
+  ],
+  "parent": null,
+  "risks": [
+    "Product transfers or returns may violate distribution, traceability, temperature, or reimbursement rules.",
+    "Bad forecasts can create stockouts that interrupt care.",
+    "Lot and expiry data may be unavailable at clinic level."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.who.int/tools/quality-management-system-for-non-laboratory-settings/pillar-3--procurement-supply-chain-and-inventory-management",
+    "https://www.ema.europa.eu/en/human-regulatory-overview/post-authorisation/medicine-shortages-availability-issues/european-shortages-monitoring-platform-esmp"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "wholesaler-embedded shared-savings inventory network",
+    "control_point": "Lot-level demand, expiry, substitute, and compliant disposition workflow across buyers",
+    "critical_dependency": "Accurate lot-level data and a legally compliant wholesaler-managed reverse-logistics path"
+  },
+  "thesis": "Embed demand forecasting, lot-expiry alerts, reorder suggestions, and compliant return-or-transfer workflows into a medical wholesaler's ordering portal for independent clinics and testing sites. The wholesaler repeatedly sees purchasing while customers supply consumption and on-hand data. The service prevents stockouts and expired kits, and can earn a subscription plus a share of independently verified avoided waste; it never enables unlicensed resale or bypasses required cold-chain controls.",
+  "title": "Wholesaler-Coordinated Expiry Exchange for Clinic Supplies",
+  "uncertainties": [
+    "Which diagnostic kits or consumables have enough expiry loss and legal transfer flexibility for a first wedge?",
+    "Can avoided waste be measured against a credible baseline?",
+    "Will the wholesaler prefer higher inventory sales over leaner customer stock?"
+  ],
+  "version": 1
+}

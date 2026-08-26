@@ -1,0 +1,125 @@
+{
+  "candidate_id": "moat-08",
+  "claims": [
+    {
+      "claim_id": "moat08-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.ncbi.nlm.nih.gov/clinvar/docs/access/",
+        "https://www.ncbi.nlm.nih.gov/clinvar/docs/validation/"
+      ],
+      "statement": "ClinVar provides synchronized weekly downloads and APIs, versions assertions, exposes conflicts, and does not adjudicate ordinary submitter disagreements."
+    },
+    {
+      "claim_id": "moat08-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://pubmed.ncbi.nlm.nih.gov/31015575/"
+      ],
+      "statement": "ACMG has published professional points to consider for genomic result reevaluation and reanalysis."
+    },
+    {
+      "claim_id": "moat08-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://pubmed.ncbi.nlm.nih.gov/39504018/"
+      ],
+      "statement": "A large 2015-2023 cohort found 94,453 of 2,051,736 observed variants, 4.60%, were reclassified."
+    },
+    {
+      "claim_id": "moat08-c4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.nature.com/articles/s41431-018-0285-1"
+      ],
+      "statement": "ESHG describes recontacting as potentially desirable but shared, consent-aware, resource-constrained, and lacking settled cost-effectiveness evidence."
+    },
+    {
+      "claim_id": "moat08-c5",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://help.genoox.com/en/articles/8116651-conducting-automated-reanalysis-in-franklin",
+        "https://corporate.qiagen.com/English/newsroom/press-releases/press-release-details/2024/QIAGENs-software-QCI-Interpret-accelerates-clinical-reporting-turnaround-time-for-high-throughput-NGS-testing-labs/default.aspx",
+        "https://fabricgenomics.com/fabric-gem/"
+      ],
+      "statement": "Franklin, QIAGEN, and Fabric already offer monitoring, interpretation, reanalysis, or case-workflow capabilities."
+    },
+    {
+      "claim_id": "moat08-c6",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://health.ec.europa.eu/document/download/b45335c5-1679-4c71-a91c-fc7a4d37f12b_en?filename=mdcg_2019_11_en.pdf",
+        "https://eur-lex.europa.eu/eli/reg/2016/679/2016-05-04/eng"
+      ],
+      "statement": "A storage-transfer registry can sit outside device scope, but patient-specific interpretation or reprioritization may become IVD software; genetic data also receives GDPR Article 9 protection."
+    }
+  ],
+  "contrary_evidence": [
+    "ClinVar's weekly API makes public assertion change detection a commodity input.",
+    "Franklin Community already follows variants and cases for new evidence.",
+    "QIAGEN and Fabric have mature clinical interpretation and workflow products.",
+    "ESHG does not establish a universal recontact duty or proven budget; it emphasizes shared responsibility and sustainability."
+  ],
+  "economics": {
+    "acquisition_route": "Sell a data-minimized operational module through one genetics laboratory or LIMS design partner; direct clinical sales and integrations are unvalidated and incumbent-heavy.",
+    "capital_required_pln": 100000,
+    "founder_net_worth_path": "High-uncertainty path: 90 accounts at 80000 PLN annual revenue equals 7.2 million PLN ARR; 25% EBITDA at 4x and 75% founder ownership implies about 5.4 million PLN founder equity in years 8-10, excluding distributions and retained cash.",
+    "founder_time": "Four to five founder hours daily for product and integrations, with clinical genetics, privacy, and security judgment delegated to qualified advisers and customer professionals.",
+    "gross_margin_basis": "Inference: 60-75% during integration-heavy deployment, potentially 75-85% after reusable LIMS connectors; security and support costs are unmeasured.",
+    "payback": "Unknown. A 60000 PLN annual contract pays back within 12-24 months only if it avoids roughly 300 hours at 200 PLN per hour or equivalent risk; no buyer time study validates this.",
+    "pricing": "Unvalidated: 30000-70000 PLN annual registry fee plus 15000-40000 PLN implementation; avoid autonomous interpretation and per-case pricing until value is proven.",
+    "retention_or_repeat": "Historical case mappings, review decisions, consent state, and audit continuity recur with every public or customer-authored assertion update."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Customer-specific case mappings, adjudication logs, consent records, and recontact outcomes deepen workflow rules and switching cost",
+    "customer": "Genetic laboratories and inherited-disease clinics with longitudinal historical cohorts",
+    "distribution_mechanism": "LIMS integrations and genetics-laboratory design partnerships",
+    "offer_and_business_model": "Clinician-controlled assertion-change registry and consent-aware audit queue sold as annual SaaS plus implementation",
+    "payer_and_paid_event": "The laboratory or clinic pays to maintain monitored case mappings and document each authorized review",
+    "problem_trigger": "A public or customer-authored variant assertion changes relative to a prior patient report"
+  },
+  "founder_fit": [
+    "Genetics interest and data-engineering skills fit identifier normalization, versioning, and audit workflows.",
+    "Clinical interpretation and recontact decisions remain with qualified laboratory professionals, so the founder need not supply non-delegable medical authority.",
+    "A single customer-funded integration can be attempted part-time, but a broad clinical deployment cannot be bootstrapped casually."
+  ],
+  "parent": {
+    "candidate_id": "moat-08",
+    "version": 1
+  },
+  "risks": [
+    "Identifier or transcript mismatches may create missed or noisy case alerts.",
+    "Patient-specific prioritization or interpretation may trigger IVDR obligations.",
+    "Genetic data processing requires strict contracts, security, access controls, and a lawful basis.",
+    "Incumbents may bundle the narrow registry feature into existing interpretation suites.",
+    "Clinics may lack budget because recontact responsibility and practice remain unsettled."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.ncbi.nlm.nih.gov/clinvar/docs/access/",
+    "https://www.ncbi.nlm.nih.gov/clinvar/docs/validation/",
+    "https://pubmed.ncbi.nlm.nih.gov/31015575/",
+    "https://www.nature.com/articles/s41431-018-0285-1",
+    "https://pubmed.ncbi.nlm.nih.gov/39504018/",
+    "https://health.ec.europa.eu/document/download/b45335c5-1679-4c71-a91c-fc7a4d37f12b_en?filename=mdcg_2019_11_en.pdf",
+    "https://eur-lex.europa.eu/eli/reg/2016/679/2016-05-04/eng",
+    "https://help.genoox.com/en/articles/8116651-conducting-automated-reanalysis-in-franklin",
+    "https://corporate.qiagen.com/English/newsroom/press-releases/press-release-details/2024/QIAGENs-software-QCI-Interpret-accelerates-clinical-reporting-turnaround-time-for-high-throughput-NGS-testing-labs/default.aspx",
+    "https://fabricgenomics.com/fabric-gem/"
+  ],
+  "stage": "research",
+  "structure": {
+    "commercial_archetype": "Clinical workflow SaaS",
+    "control_point": "A longitudinal case-to-assertion graph with immutable review, consent, and recontact audit history",
+    "critical_dependency": "Secure LIMS linkage, accurate variant normalization, recorded consent, and a validated non-interpretive intended-use boundary"
+  },
+  "thesis": "Build a data-minimized, clinician-controlled registry that maps public and customer-authored assertion version changes to pseudonymous historical cases and produces an auditable review queue without interpreting or reprioritizing medical significance. The moat is customer workflow history, not free ClinVar data.",
+  "title": "Variant Recall Registry",
+  "uncertainties": [
+    "Laboratory willingness to buy a narrow module rather than use Franklin or an existing interpretation suite is unknown.",
+    "LIMS integration effort, false-alert tolerance, and labor savings are unmeasured.",
+    "National recontact duties, consent practices, and procurement budgets vary.",
+    "The non-device boundary requires intended-use review and may not survive requested prioritization features."
+  ],
+  "version": 2
+}

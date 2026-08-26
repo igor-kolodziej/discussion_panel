@@ -1,0 +1,84 @@
+{
+  "judge_id": "c7-dev-working-control7-02",
+  "factors": [
+    {
+      "name": "Core insight",
+      "status": "scored",
+      "score": 6,
+      "rationale": "The redesign correctly moves the value proposition above commoditized account matching: supplier-change governance, independent confirmation, and an audit record embedded at a portfolio operator can matter even when registry checks are free. Aligning the payer, channel, and operating-policy owner is a credible insight, but it depends on finding a provider that actually controls the relevant payment step rather than merely preparing records."
+    },
+    {
+      "name": "Customer pain and willingness to pay",
+      "status": "scored",
+      "score": 5,
+      "rationale": "Supplier-account substitution is a demonstrated, potentially severe fraud problem, and an outsourced provider may also care about client trust, auditability, and liability. The supplied evidence does not establish incident frequency, expected loss avoided, provider liability, or willingness to pay for the incremental governance layer beyond existing ERP, registry, bank, and manual controls."
+    },
+    {
+      "name": "Business model and economics",
+      "status": "scored",
+      "score": 4,
+      "rationale": "A portfolio license or per-active-client charge could amortize one integration and one sales relationship across many managed SMEs, producing recurring software revenue. However, price, gross margin, sales cycle, CAC, rollout rate, retention, support burden, false-positive handling, security cost, and liability allocation are all unknown; free and bundled substitutes also constrain monetization, and no credible founder-net-worth path can yet be modeled."
+    },
+    {
+      "name": "Market and beachhead",
+      "status": "scored",
+      "score": 5,
+      "rationale": "Polish outsourced finance and payment-operations providers form a reasonably specific initial segment, and each provider could aggregate multiple SME accounts. The evidence does not size the subset with delegated payment control, sufficient supplier-change volume, compatible data rights, or enough budget to support a meaningful standalone business, while a few large relationships would create concentration."
+    },
+    {
+      "name": "Competitive position and domination potential",
+      "status": "scored",
+      "score": 4,
+      "rationale": "Independent confirmation, provider-wide policy enforcement, and audit exports are more differentiated than a whitelist query alone. Even so, ERP vendors and banks already own adjacent workflow surfaces, payee verification is becoming mandatory, and the provider can potentially build or bundle the same process; there is no exclusive distribution right, proprietary source, or established control point from which to dominate."
+    },
+    {
+      "name": "Expansion potential",
+      "status": "scored",
+      "score": 5,
+      "rationale": "If embedded successfully, reusable connectors and policy infrastructure could extend across the provider's client portfolio, to other providers, and into adjacent invoice-fraud, approval, and supplier-master controls. Those adjacencies inherit the same authorization, workflow-control, liability, and incumbent-platform dependencies, and no evidence yet shows that expansion would be easier or separately monetizable."
+    },
+    {
+      "name": "Defensibility and durability",
+      "status": "scored",
+      "score": 4,
+      "rationale": "Provider-specific policies, approved-change histories, connectors, and audit records can create modest workflow switching costs over time. Client-isolated data limits cross-customer learning, the core registries and APIs are public, and incumbents or the provider itself can imitate the governance workflow; no contractual exclusivity, proprietary loss data, or network effect is established."
+    },
+    {
+      "name": "Strength of advantage",
+      "status": "scored",
+      "score": 5,
+      "rationale": "A mandatory change-control gate with independent confirmation and evidence retention could be materially safer and more auditable than a point-in-time account lookup. Its incremental detection rate, loss reduction, response time, and workflow cost versus manual callbacks, existing ERP checks, and forthcoming bank verification are unmeasured, while false positives and missing invoice account fields can add payment friction."
+    },
+    {
+      "name": "Timing and momentum",
+      "status": "scored",
+      "score": 6,
+      "rationale": "KSeF adoption creates a current integration and process-redesign moment with broad recurring structured-invoice flow, and the documented fraud pattern supports timely attention. The same window is partly adverse: mandatory PSP payee verification by July 2027 and existing ERP checks rapidly commoditize account identity, leaving only the harder-to-prove governance layer as durable value."
+    },
+    {
+      "name": "Distribution",
+      "status": "scored",
+      "score": 5,
+      "rationale": "One provider integration could reach many managed clients and reduce the need for diffuse direct SME selling, making the redesign materially more plausible as a channel strategy. Acquiring the first provider is still a relationship-heavy enterprise sale with no demonstrated founder access, commitment, deployment right, or repeatable route, and providers that do not control payment release cannot make the product an effective gate."
+    },
+    {
+      "name": "Execution and risks",
+      "status": "scored",
+      "score": 4,
+      "rationale": "The founder's data, automation, and Polish-context skills fit a narrow technical pilot, and the stated initial capital can plausibly fund an MVP with specialist help. Production execution requires lawful multi-client KSeF and ERP access, client isolation, security review, reliable independent contact data, integrations, legal and liability design, incident support, and a controlling partner; that combination is demanding for a part-time founder and cannot be replaced by AI alone."
+    }
+  ],
+  "interaction_adjustment": -0.2,
+  "assumptions": [
+    "At least some target providers lawfully prepare, approve, or execute enough recurring SME supplier payments to impose a mandatory supplier-change control across multiple client accounts.",
+    "A provider can obtain client-authorized KSeF and ERP access, preserve client isolation, and maintain a trustworthy supplier-contact route for independent confirmation.",
+    "The product can be contracted with bounded liability as a provider portfolio license or per-active-client service, but no favorable price, margin, conversion, or renewal rate is assumed.",
+    "The founder can keep the first implementation to one narrow pilot and purchase specialist security, legal, onboarding, and integration support within the stated capital and part-time constraints.",
+    "The documented fraud case establishes that the failure mode exists, not its frequency, expected loss, or the proposed control's loss-reduction effectiveness."
+  ],
+  "main_structural_strength": "The provider-layer model can make one buyer simultaneously the payer, operating-policy owner, and portfolio distribution surface, so one integration could spread a recurring control across many managed SMEs and accumulate workflow switching costs.",
+  "primary_score_limiter": "The model has not established a provider that both controls payment release and possesses the client authorizations, supplier-contact process, and willingness to pay and mandate the gate; without that combination, the product becomes an advisory feature and the distribution and recurring-economics thesis collapses.",
+  "strongest_disconfirming_evidence": "The core account-matching input is already free public infrastructure, major ERP vendors already embed whitelist checks, mandatory PSP payee verification arrives by July 2027, and KSeF account fields are optional; together these facts materially weaken any claim that invoice-account verification itself can sustain differentiation or pricing.",
+  "evidence_needed_for_higher_score": "A paid pilot with an outsourced provider that has delegated payment authority and documented client data rights, followed by mandatory rollout across a measurable client cohort, would need to show accepted portfolio pricing, provider and client conversion, reliable independent-contact coverage, incremental fraud or error detection versus existing controls, low false-positive and payment-delay rates, bounded liability, implementation and support cost, gross margin, retained usage, and a repeatable route to additional providers.",
+  "highest_value_structural_change": "Narrow the customer to payment BPOs or outsourced finance providers with contractually delegated payment-release authority, and make the module a mandatory, minimum-portfolio control bundled into their managed service with explicit client authorization and bounded risk-sharing; tying the paid event to governed payment volume or demonstrable liability reduction would turn the current optional governance layer into a real control point with measurable economics."
+}

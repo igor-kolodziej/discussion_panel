@@ -1,0 +1,135 @@
+{
+  "candidate_id": "leverage-07",
+  "claims": [
+    {
+      "claim_id": "leverage-07-v2-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554",
+        "https://www.eba.europa.eu/activities/direct-supervision-and-oversight/digital-operational-resilience-act/preparation-dora-application"
+      ],
+      "statement": "DORA applies from 17 January 2025 and requires in-scope financial entities to maintain and update registers of ICT third-party contractual arrangements."
+    },
+    {
+      "claim_id": "leverage-07-v2-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32024R2956"
+      ],
+      "statement": "The adopted ITS defines linked templates for entities, contracts, services, functions, providers, subcontractors, processing locations and other controlled fields."
+    },
+    {
+      "claim_id": "leverage-07-v2-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.eba.europa.eu/publications-and-media/press-releases/esas-dry-run-exercise-shows-goal-reporting-registers-information-under-digital-operational"
+      ],
+      "statement": "Only 6.5% of analysed dry-run registers passed all data-quality checks; half of the remainder failed fewer than 5 of 116 checks."
+    },
+    {
+      "claim_id": "leverage-07-v2-c4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.eba.europa.eu/single-rule-book-qa/qna/view/publicId/2025_7388"
+      ],
+      "statement": "A final Joint ESAs Q&A states that every financial entity subject to DORA must maintain a register, including entities using simplified ICT-risk treatment."
+    },
+    {
+      "claim_id": "leverage-07-v2-c5",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.eiopa.europa.eu/european-supervisory-authorities-designate-critical-ict-third-party-providers-under-digital-2025-11-18_en"
+      ],
+      "statement": "The ESAs used collected registers to designate critical ICT third-party providers in November 2025, showing that reporting is operational rather than hypothetical."
+    },
+    {
+      "claim_id": "leverage-07-v2-c6",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.dora-guard.com/"
+      ],
+      "statement": "DoraGuard publishes EUR 1500 yearly for up to 20 ICT vendors, EUR 4999 for up to 100, and EUR 12500 for groups."
+    },
+    {
+      "claim_id": "leverage-07-v2-c7",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://reportact.com/en/pricing",
+        "https://venvera.com/pricing"
+      ],
+      "statement": "ReportAct publishes EUR 299 monthly per location plus a supplier fee, while Venvera publishes EUR 799 monthly for broader compliance including register export and contract clause checking."
+    }
+  ],
+  "contrary_evidence": [
+    "Multiple products already provide validation and regulator-ready exports at transparent prices.",
+    "Venvera already combines register export with contract-clause checking, directly overlapping the proposed upstream wedge.",
+    "The official dry run found most submissions close to passing even though few passed every check, suggesting remediation may be episodic rather than a large permanent budget.",
+    "Smaller entities have fewer providers and proportionate requirements, limiting revenue per customer.",
+    "The vendor itself becomes an ICT third party requiring security, contractual and register treatment by clients."
+  ],
+  "economics": {
+    "acquisition_route": "UNVALIDATED COMMERCIAL HYPOTHESIS: win 3 paid failed-validation or contract-remediation pilots through Polish DORA advisers, then license a segregated multi-client workspace to partners.",
+    "capital_required_pln": "UNVALIDATED COMMERCIAL HYPOTHESIS: 70000-110000 PLN to a secure audited pilot, with higher capital possible if on-premises deployment or formal certification is required.",
+    "founder_net_worth_path": "UNVALIDATED COMMERCIAL HYPOTHESIS: by year 6, 140 group-equivalent customers at 48000 PLN annual recurring revenue would equal 6.72 million PLN ARR; at 2.5x ARR and 65% ownership, founder equity would be 10.92 million PLN before liabilities, with no double-counted distributions.",
+    "founder_time": "UNVALIDATED COMMERCIAL HYPOTHESIS: 18-22 hours weekly for a narrow pilot; security response, partner enablement and regulatory QA require delegated coverage.",
+    "gross_margin_basis": "UNVALIDATED COMMERCIAL HYPOTHESIS: 65-80% gross margin after secure hosting, extraction, taxonomy updates, specialist quality review and support.",
+    "payback": "UNVALIDATED COMMERCIAL HYPOTHESIS: customer payback inside 12 months if the tool removes 40-100 analyst hours or a resubmission cycle; neither benefit is validated.",
+    "pricing": "UNVALIDATED COMMERCIAL HYPOTHESIS: 8000-20000 PLN onboarding, 1000-2500 PLN monthly for a single entity, and 4000-7000 PLN monthly for a group or partner workspace; published competitors span EUR 1500 yearly to EUR 799 monthly and constrain simple-register pricing.",
+    "retention_or_repeat": "UNVALIDATED COMMERCIAL HYPOTHESIS: 80-92% annual retention from contract and taxonomy changes; low-cost annual or per-report competitors weaken lock-in."
+  },
+  "fingerprint": {
+    "compounding_advantage": "contractually permitted clause-to-cell mappings and recurrent validation-defect patterns, with customer data segregated and public rules treated as non-exclusive",
+    "customer": "small and mid-sized EU payment, e-money, insurance and investment groups plus compliance outsourcers maintaining several DORA registers",
+    "distribution_mechanism": "DORA consultancies, managed-service providers, specialist legal firms and failed-validation remediation engagements",
+    "offer_and_business_model": "secure contract extraction, controlled taxonomy, graph reconciliation, cell-level evidence, human approval, validation-rule checks and xBRL-CSV export",
+    "payer_and_paid_event": "a regulated group or compliance partner pays onboarding and recurring fees per managed register workspace and vendor-contract inventory",
+    "problem_trigger": "a contract, provider, subcontractor, entity, function, processing location or reporting validation changes"
+  },
+  "founder_fit": [
+    "Strong fit for knowledge graphs, document AI, validation and quantitative quality control.",
+    "A Polish payments or insurance partner provides a bounded EU entry without camera-led distribution.",
+    "Financial-sector security, procurement and domain accountability cannot be handled casually alongside a full-time job; specialist review and support must be delegated.",
+    "A remediation pilot on customer-controlled or EU-hosted infrastructure is more founder-compatible than immediate full SaaS."
+  ],
+  "parent": {
+    "candidate_id": "leverage-07",
+    "version": 1
+  },
+  "risks": [
+    "Extraction errors can propagate into regulatory reporting unless every value is human-approved.",
+    "Confidential contracts and provider data create material security and access-control obligations.",
+    "Low-cost competitors can commoditize validation and xBRL-CSV generation.",
+    "Regulated customers remain accountable and may prefer established GRC suites or consultants.",
+    "Financial-sector procurement and incident response may exceed a part-time founder's capacity.",
+    "A public-rule corpus is not a moat; only permissioned defect and mapping data can compound."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554",
+    "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32024R2956",
+    "https://www.eba.europa.eu/activities/direct-supervision-and-oversight/digital-operational-resilience-act/preparation-dora-application",
+    "https://www.eba.europa.eu/publications-and-media/press-releases/esas-dry-run-exercise-shows-goal-reporting-registers-information-under-digital-operational",
+    "https://www.eba.europa.eu/single-rule-book-qa/qna/view/publicId/2025_7388",
+    "https://www.eiopa.europa.eu/european-supervisory-authorities-designate-critical-ict-third-party-providers-under-digital-2025-11-18_en",
+    "https://www.dora-guard.com/",
+    "https://reportact.com/en/pricing",
+    "https://venvera.com/pricing"
+  ],
+  "stage": "research",
+  "structure": {
+    "commercial_archetype": "contract-to-regulatory-register evidence workspace",
+    "control_point": "the human-approved register dataset, validation result and cell-level source provenance before submission",
+    "critical_dependency": "complete contract inventories, secure access, accurate hierarchies and enough upstream automation advantage over inexpensive DORA-native competitors"
+  },
+  "thesis": "Convert ICT contracts, entity perimeters, functions and subcontractor chains into a human-approved DORA Register of Information with cell-level provenance, reconciliation and regulator-format exports. The rule is live and official dry-run evidence shows data-quality difficulty, but many priced products already generate the register. The differentiated wedge is contract ingestion, defect remediation and multi-client compliance-partner workflow, not a standalone spreadsheet formatter.",
+  "title": "DORA Contract-to-Register Provenance Workspace",
+  "uncertainties": [
+    "Paid demand for cell-level contract provenance beyond incumbent validation and export.",
+    "Partner access to confidential contracts and willingness to use a new vendor.",
+    "Actual frequency and cost of register updates and failed submissions.",
+    "Security certification, deployment and procurement requirements by segment.",
+    "Extraction accuracy across languages, amendments, framework contracts and subcontractors.",
+    "Partner channel commitment, support load and achievable retention."
+  ],
+  "version": 2
+}

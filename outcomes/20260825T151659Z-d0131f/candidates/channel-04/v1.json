@@ -1,0 +1,69 @@
+{
+  "candidate_id": "channel-04",
+  "claims": [
+    {
+      "claim_id": "channel-04-claim-01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1542/2025-07-31/eng"
+      ],
+      "statement": "From 18 February 2027, LMT batteries, industrial batteries above the stated capacity and EV batteries require an electronic battery passport accessible through a QR code."
+    },
+    {
+      "claim_id": "channel-04-claim-02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/news/new-law-more-sustainable-circular-and-safe-batteries-enters-force-2023-08-17_en"
+      ],
+      "statement": "The Batteries Regulation takes a lifecycle approach and the passport is intended to provide value-chain information, supporting a lifecycle rather than one-time document product."
+    }
+  ],
+  "contrary_evidence": [
+    "Large OEMs and standards consortia are building passport infrastructure, while compliance alone may become an interoperable commodity."
+  ],
+  "economics": {
+    "acquisition_route": "UNVALIDATED HYPOTHESIS: 4 BMS, leasing or recycler partners each onboard 10000 managed batteries.",
+    "capital_required_pln": 140000,
+    "founder_net_worth_path": "UNVALIDATED HYPOTHESIS: by year 9, PLN 12 million ARR and PLN 3.2 million EBITDA; 65% founder ownership at 4 times EBITDA implies PLN 8.3 million founder equity before liabilities.",
+    "founder_time": "UNVALIDATED HYPOTHESIS: 18 founder hours weekly in the initial standard-and-telemetry build, then 11 with a test-network operator.",
+    "gross_margin_basis": "UNVALIDATED HYPOTHESIS: 72% mature gross margin after secure time-series storage, certificate issuance and test-partner fees.",
+    "payback": "UNVALIDATED HYPOTHESIS: 14-month integration CAC payback.",
+    "pricing": "UNVALIDATED HYPOTHESIS — all commercial figures here, including capital_required_pln=140000, are hypotheses: PLN 18 per new serial annually plus PLN 140 per second-life condition certificate.",
+    "retention_or_repeat": "UNVALIDATED HYPOTHESIS: 95% serial retention through a 6-year managed lifecycle and repeat revenue on transfer or testing."
+  },
+  "fingerprint": {
+    "compounding_advantage": "longitudinal chemistry, duty-cycle, repair and realised resale-value curves",
+    "customer": "industrial battery assemblers, light-mobility fleet lessors and second-life operators",
+    "distribution_mechanism": "BMS vendors, battery leasing platforms and recycler test networks",
+    "offer_and_business_model": "hosted passport registry plus residual-value analytics charged per serial and event",
+    "payer_and_paid_event": "OEM or asset owner pays for an active serial passport and a verified transfer or condition event",
+    "problem_trigger": "a regulated battery is placed on market, serviced, resold or evaluated for second life"
+  },
+  "founder_fit": [
+    "Strong quantified-systems, ML and renewable-adjacent fit; channel integrations reduce personal-brand selling. UNVALIDATED HYPOTHESIS: PLN 140000 funds a software-only pilot using partner-owned testing hardware."
+  ],
+  "parent": null,
+  "risks": [
+    "Telemetry rights and security are difficult.",
+    "Residual-value predictions create reliance and product-liability exposure if presented as guarantees."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2023/1542/2025-07-31/eng",
+    "https://environment.ec.europa.eu/news/new-law-more-sustainable-circular-and-safe-batteries-enters-force-2023-08-17_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "serialised asset provenance and residual-value registry",
+    "control_point": "battery QR-passport issuance and second-life ownership transfer",
+    "critical_dependency": "OEM-authorised BMS telemetry, materials provenance and independent condition-test rights"
+  },
+  "thesis": "Issue standards-aligned battery passports for industrial and light-mobility battery integrators, then preserve consented usage, repair and state-of-health evidence through resale into second life. Passport compliance is the wedge; proprietary degradation-to-resale outcome curves become the durable underwriting asset.",
+  "title": "Battery Passport Residual-Value Registry",
+  "uncertainties": [
+    "Final interoperability practices",
+    "OEM willingness to share field telemetry",
+    "Sufficient second-life transactions for model learning"
+  ],
+  "version": 1
+}

@@ -1,0 +1,67 @@
+{
+  "candidate_id": "moat-07",
+  "claims": [
+    {
+      "claim_id": "moat07-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2024/3110/oj"
+      ],
+      "statement": "Regulation 2024/3110 provides for interoperable construction passports containing performance, conformity, safety, and technical documentation."
+    },
+    {
+      "claim_id": "moat07-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://single-market-economy.ec.europa.eu/news/new-eu-rules-safety-and-sustainability-construction-products-mark-new-step-sectors-competitiveness-2025-01-07_en"
+      ],
+      "statement": "The Commission says construction passports support reliable comparison and whole-building carbon calculations."
+    }
+  ],
+  "contrary_evidence": [
+    "Generic DPP providers may cover construction products cheaply."
+  ],
+  "economics": {
+    "acquisition_route": "Unvalidated hypothesis: CE consultants, testing bodies, and BIM libraries.",
+    "capital_required_pln": 85000,
+    "founder_net_worth_path": "Unvalidated hypothesis: 1000 families at 9000 PLN annually yield 9 million PLN ARR and founder equity above 5 million PLN in five to seven years.",
+    "founder_time": "Unvalidated hypothesis: 12-18 hours weekly with contracted review.",
+    "gross_margin_basis": "Unvalidated hypothesis: 78% after storage and audit support.",
+    "payback": "Unvalidated hypothesis: first onboarding covers acquisition.",
+    "pricing": "Unvalidated hypothesis: 15000-50000 PLN onboarding plus 500-3000 PLN per family annually.",
+    "retention_or_repeat": "Unvalidated hypothesis: long availability, revisions, and embedded links make custody sticky."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Mappings lower onboarding friction while installed identifiers create switching costs",
+    "customer": "Small EU construction-product manufacturers",
+    "distribution_mechanism": "CE-testing and BIM-specification channels",
+    "offer_and_business_model": "Continuity-guaranteed passport vault per product family",
+    "payer_and_paid_event": "The manufacturer pays at onboarding, revision, and annual custody",
+    "problem_trigger": "A product needs a durable interoperable passport"
+  },
+  "founder_fit": [
+    "Structured data automation is part-time compatible when legal expertise is contracted."
+  ],
+  "parent": null,
+  "risks": [
+    "Continuity promises create long obligations.",
+    "Bad access controls could expose technical data."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2024/3110/oj",
+    "https://single-market-economy.ec.europa.eu/news/new-eu-rules-safety-and-sustainability-construction-products-mark-new-step-sectors-competitiveness-2025-01-07_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Long-duration compliance data escrow",
+    "control_point": "A product evidence graph with identifiers, access controls, BIM mappings, and continuity history",
+    "critical_dependency": "Recognition under final construction-passport service rules"
+  },
+  "thesis": "A durable construction-product passport trustee preserves evidence, permissions, BIM links, and continuity for small manufacturers.",
+  "title": "BuildPassport Vault",
+  "uncertainties": [
+    "Final requirements and pre-purchase demand are unknown."
+  ],
+  "version": 1
+}

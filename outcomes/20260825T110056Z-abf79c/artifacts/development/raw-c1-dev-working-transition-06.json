@@ -1,0 +1,83 @@
+{
+  "judge_id": "c1-dev-working-transition-06",
+  "factors": [
+    {
+      "name": "Core insight",
+      "status": "scored",
+      "score": 7,
+      "rationale": "The redesign correctly locates value in the dated product-line release control point—field classification, entitlement, regression tests, access logs, and evidence—rather than in commodity IoT transport. That is a coherent response to the Data Act, but the insight is visible to incumbent integrators and platform vendors and is not proprietary."
+    },
+    {
+      "name": "Customer pain and willingness to pay",
+      "status": "scored",
+      "score": 6,
+      "rationale": "A non-exempt OEM approaching a connected-product release has a credible, budget-worthy need to avoid release delay and ongoing data-request failures. Willingness to pay the proposed fees remains uncertain because the prevalence of the access-surface gap, internal-build alternatives, and procurement authority are unknown, while qualifying micro and small manufacturers are exempt."
+    },
+    {
+      "name": "Business model and economics",
+      "status": "scored",
+      "score": 5,
+      "rationale": "Prepaid implementation, an annual product-line minimum, separately priced revalidation, and customer-hosted commodity transport support cash conversion and potential recurring operating leverage. Initial gross margin is only planned at 35–55%, recurring margin of 70–85% is unproven, and bespoke mappings, security review, support, and the large number of active product lines needed for substantial ARR leave retention and realistic owner earnings uncertain."
+    },
+    {
+      "name": "Market and beachhead",
+      "status": "scored",
+      "score": 5,
+      "rationale": "Non-exempt EU heat-pump and building-control product lines with existing retrievable telemetry form a specific, reachable beachhead. The exemption, the requirement that data already be readily available, and the unknown count of OEMs with a genuine access-layer gap materially narrow it; the evidence supports a pilot niche but not yet an economically large segment."
+    },
+    {
+      "name": "Competitive position and domination potential",
+      "status": "scored",
+      "score": 4,
+      "rationale": "A specialist could become the release-evidence system of record for a narrow equipment vertical, especially if one integrator repeatedly deploys its artifacts. However, the integrator and incumbent IoT platform already control the customer relationship and much of the technical stack, can bundle the missing surface, and have no evidenced exclusivity or dependence on this vendor."
+    },
+    {
+      "name": "Expansion potential",
+      "status": "scored",
+      "score": 6,
+      "rationale": "Winning one building-equipment line can lead to additional releases, sibling product lines, HVAC and building-automation categories, and eventually other connected equipment across the EU. Expansion is plausible but not frictionless because each new vertical can reintroduce semantic mapping, entitlement, security, and product-specific legal review."
+    },
+    {
+      "name": "Defensibility and durability",
+      "status": "scored",
+      "score": 4,
+      "rationale": "Versioned vertical mappings, regression suites, accepted evidence packets, and accumulated release history can create modest reuse and switching costs. The generic interaction layer is standardized, customer-cloud deployment exposes much of the implementation context, and well-positioned integrators or platforms can reproduce the capability before the library becomes deep."
+    },
+    {
+      "name": "Strength of advantage",
+      "status": "scored",
+      "score": 5,
+      "rationale": "A bounded, release-ready module with reusable tests and evidence could be faster and easier to audit than an ad hoc OEM build, while customer-cloud deployment reduces infrastructure objections. No measured internal-build quote, delivery-time advantage, or accepted risk transfer exists, and excluding firmware, legal judgments, and disclosure decisions still leaves the OEM coordinating several parties."
+    },
+    {
+      "name": "Timing and momentum",
+      "status": "scored",
+      "score": 8,
+      "rationale": "The September 2026 access-by-design date creates a concrete near-term release trigger, while contemporaneous Cyber Resilience Act obligations and unfinished interoperability standardization increase demand for documented controls. The same short lead time can favor incumbent vendors and existing integrators, but the regulatory forcing function is unusually clear."
+    },
+    {
+      "name": "Distribution",
+      "status": "scored",
+      "score": 4,
+      "rationale": "Integrator co-selling is substantially more compatible with this founder than direct enterprise selling, and the family energy-equipment adjacency may open initial conversations. Yet no referral or resale commitment, channel incentive, or repeatable acquisition evidence exists; the sole proposed partner is also able to internalize the product, and OEM procurement and security review remain lengthy."
+    },
+    {
+      "name": "Execution and risks",
+      "status": "scored",
+      "score": 5,
+      "rationale": "One tightly bounded customer-cloud implementation fits the founder's data-engineering skills, available capital, and part-time limit if an authorized integrator and qualified legal and security reviewers own their stated responsibilities. Product-security exposure, liability allocation, heterogeneous schemas, enterprise support, and parallel implementations require expertise and capacity that cannot remain a solo side project."
+    }
+  ],
+  "interaction_adjustment": 0.0,
+  "assumptions": [
+    "A sufficient number of non-exempt heat-pump or building-control OEM product lines already retrieve relevant telemetry yet lack a documented user and third-party access surface.",
+    "An OEM can authorize customer-cloud deployment and retain disclosure judgments while an embedded integrator accepts device access, platform integration, and first-line support responsibility.",
+    "The proposed implementation and annual fees can be justified by avoided internal build effort and release delay rather than by fines or commodity hosting cost.",
+    "A second paid product-line release can reuse mappings and tests enough to improve delivery margin without creating unbounded support or incident-response obligations."
+  ],
+  "main_structural_strength": "The redesign attaches payment and recurring use to an OEM's product-line release process—versioned mappings, entitlement tests, logs, and evidence—while keeping commodity transport in the customer cloud and using an integrator for deployment.",
+  "primary_score_limiter": "There is no evidence that a sufficiently large set of non-exempt OEMs both has this unresolved gap and will outsource the release-path component at the proposed price rather than use its incumbent platform or integrator.",
+  "strongest_disconfirming_evidence": "Azure IoT Hub and Cumulocity already provide identity, API, device, and fleet primitives, while W3C standardizes the generic interaction description, so the incumbent integrator or platform can plausibly bundle the remaining access and evidence layer from an advantaged customer position.",
+  "highest_value_structural_change": "Make the embedded integrator the contracted wholesale buyer and first-line operator under a minimum annual product-line commitment, with the venture supplying a standardized vertical release-test and evidence kit; this would align channel incentives, reduce bespoke delivery and support load, and turn a likely bundler into committed distribution.",
+  "evidence_needed_for_higher_score": "A signed integrator resale commitment with minimum volume, one prepaid OEM statement of work at the proposed price, a documented internal-or-incumbent build comparison, and a second paid release showing mapping/test reuse, renewal intent, delivery margin, security-review duration, and bounded support would materially raise the judgment."
+}

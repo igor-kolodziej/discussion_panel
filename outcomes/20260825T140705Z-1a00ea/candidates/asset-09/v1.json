@@ -1,0 +1,70 @@
+{
+  "candidate_id": "asset-09",
+  "claims": [
+    {
+      "claim_id": "asset-09-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.ema.europa.eu/en/human-regulatory-overview/research-development/scientific-advice-protocol-assistance/qualification-novel-methodologies-medicine-development"
+      ],
+      "statement": "EMA provides a qualification process for novel methodologies and digital technology-based measures used in medicine development."
+    },
+    {
+      "claim_id": "asset-09-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/digital-health-technologies-remote-data-acquisition-clinical-investigations"
+      ],
+      "statement": "FDA guidance addresses fit-for-purpose digital technologies used to acquire participant data in clinical investigations."
+    }
+  ],
+  "contrary_evidence": [
+    "Qualification generally needs substantial confirmatory evidence beyond a small consultancy project.",
+    "Sponsors may prefer established CROs with regulatory track records."
+  ],
+  "economics": {
+    "acquisition_route": "Unvalidated hypothesis: partner with neurology CROs, academic labs, and regulatory consultancies.",
+    "capital_required_pln": 60000,
+    "founder_net_worth_path": "Unvalidated hypothesis: ten validated endpoint families licensed to 40 sponsors could support a 5 million PLN founder net-worth path in eight to twelve years.",
+    "founder_time": "Unvalidated hypothesis: one endpoint program at a time fits 20 founder hours weekly with contract biostatistics.",
+    "gross_margin_basis": "Unvalidated hypothesis: reusable analysis assets could reach 60% gross margin, and every commercial number including capital_required_pln is hypothetical.",
+    "payback": "Unvalidated hypothesis: the first two paid validations repay setup cost.",
+    "pricing": "Unvalidated hypothesis: charge 60,000 PLN per validation study plus 20,000 PLN annual protocol licensing.",
+    "retention_or_repeat": "Unvalidated hypothesis: protocol updates, new indications, and sponsor studies generate repeat licensing."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A consented labeled EEG corpus and artifact library improve validation power across studies",
+    "customer": "Neurology and psychiatry biotech sponsors and their CROs",
+    "distribution_mechanism": "CRO and regulatory-consultancy referrals plus scientific publications without founder video",
+    "offer_and_business_model": "Endpoint validation, signal-quality audit, protocol license, and reference-data access",
+    "payer_and_paid_event": "The sponsor pays when a validation package or protocol license is delivered",
+    "problem_trigger": "A clinical program wants an EEG-derived measure but lacks validated context-of-use evidence"
+  },
+  "founder_fit": [
+    "The candidate directly combines neuroscience, EEG, data science, and AI leverage.",
+    "Expert credibility building is required but can rely on papers and partners rather than camera exposure."
+  ],
+  "parent": null,
+  "risks": [
+    "Data rights, ethics approval, and reproducibility may block dataset reuse.",
+    "A technically valid endpoint may still lack clinically meaningful context."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.ema.europa.eu/en/human-regulatory-overview/research-development/scientific-advice-protocol-assistance/qualification-novel-methodologies-medicine-development",
+    "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/digital-health-technologies-remote-data-acquisition-clinical-investigations"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Scientific validation lab and reference-data licensor",
+    "control_point": "Fit-for-purpose endpoint protocol and benchmark dataset used in study design",
+    "critical_dependency": "Ethically usable sponsor data and regulator-credible analytical validation"
+  },
+  "thesis": "Validate narrowly defined EEG endpoints for drug studies and license protocols, quality controls, and reference data to sponsors.",
+  "title": "EEG Digital Endpoint Validation Library",
+  "uncertainties": [
+    "No sponsor has confirmed a budget for an independent EEG endpoint library.",
+    "All commercial numbers including capital_required_pln are unvalidated hypotheses."
+  ],
+  "version": 1
+}

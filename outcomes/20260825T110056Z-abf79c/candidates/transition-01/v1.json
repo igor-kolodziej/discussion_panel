@@ -1,0 +1,87 @@
+{
+  "candidate_id": "transition-01",
+  "claims": [
+    {
+      "claim_id": "transition-01-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/zakres-obowiazkowego-ksef/",
+        "https://ksef.podatki.gov.pl/ksef-news/wystawianie-i-otrzymywanie-faktur/"
+      ],
+      "statement": "Poland's official KSeF guidance states that receipt through KSeF became mandatory on 1 February 2026, issuing became mandatory for most remaining taxpayers on 1 April 2026, and firms at or below PLN 10,000 of monthly invoiced gross sales remain exempt from issuing only through the end of 2026."
+    },
+    {
+      "claim_id": "transition-01-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ksef.podatki.gov.pl/wyjasnienia/1-kwietnia-rusza-ii-etap-wdrozenia-krajowego-systemu-e-faktur/"
+      ],
+      "statement": "The Ministry of Finance says monetary penalties for KSeF usage errors are not imposed for 2026, reducing immediate penalty-led urgency even though the operating transition is live."
+    },
+    {
+      "claim_id": "transition-01-c3",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://ksef.podatki.gov.pl/ksef-news/wystawianie-i-otrzymywanie-faktur/"
+      ],
+      "statement": "Inference: a trade-specific closeout layer may be sellable where free government tools and general accounting products handle the tax document but not the upstream field evidence and milestone workflow."
+    }
+  ],
+  "contrary_evidence": [
+    "The Ministry provides free taxpayer, mobile, and e-microfirm tools, and many accounting vendors already integrate with KSeF.",
+    "The absence of monetary penalties for 2026 may let the smallest firms postpone paid workflow improvements.",
+    "The smallest exempt firms may also have the lowest software budgets and highest churn."
+  ],
+  "economics": {
+    "acquisition_route": "One parent-company design partner, then paid referrals and white-label seats sold through bookkeeping offices and trade wholesalers",
+    "capital_required_pln": 55000,
+    "founder_net_worth_path": "Scenario, not evidence: 4,000 firms at PLN 3,600 annual recurring revenue yields PLN 14.4m revenue; at a 40% operating margin, six years of retained profit and distributions after scale could plausibly build PLN 20m-plus founder net worth without a sale",
+    "founder_time": "Approximately three hours per day for product and exception analysis plus one hour for channel and pilot support until support can be delegated",
+    "gross_margin_basis": "Software validation and monitoring should exceed 80% gross margin after onboarding; founder- or bookkeeper-led setup would initially be materially lower margin",
+    "payback": "Target one to four months because setup revenue is intended to cover configuration and channel commission",
+    "pricing": "Assumption: PLN 900-2,500 onboarding, PLN 149-499 per month, and PLN 1-3 per submitted invoice",
+    "retention_or_repeat": "Monthly invoicing and recurring job templates create habitual use; retention weakens if accounting suites absorb the field-closeout workflow"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A proprietary corpus linking trade-specific job events, contract milestones, VAT treatments, and returned invoice exceptions to reusable closeout templates for each installation trade",
+    "customer": "Polish renewable-energy, HVAC, and electrical contractors with two to twenty field workers, including firms below the temporary PLN 10,000 monthly invoiced-sales exemption and larger firms already issuing through KSeF",
+    "distribution_mechanism": "Pilot in the founder's parents' seven-person renewable installer, then template-led resale through bookkeeping offices, electrical wholesalers, and existing field-service software vendors",
+    "offer_and_business_model": "Vertical workflow SaaS that captures acceptance protocols and milestone evidence, validates required invoice fields, hands an FA(3)-ready payload to an authorised KSeF/accounting connector, and monitors identifiers and offline exceptions; paid onboarding plus subscription and usage",
+    "payer_and_paid_event": "The contractor or its bookkeeping office pays a setup fee when its first job template and KSeF permissions are configured, then a monthly and per-document fee when accepted job closeouts enter the invoice queue",
+    "problem_trigger": "Mandatory KSeF receipt began on 1 February 2026; most issuing began on 1 April 2026; the temporarily exempt smallest firms must issue through KSeF from 1 January 2027, forcing field-service firms to replace informal photo-and-spreadsheet handoffs"
+  },
+  "founder_fit": [
+    "The parents' installer provides a low-cost, high-fidelity pilot without cold outbound",
+    "Schema validation, exception classification, and workflow automation match data-science skills",
+    "A self-serve trade template can be built in bounded daily blocks alongside employment",
+    "Bookkeeping and wholesaler channels reduce dependence on a public persona or constant meetings"
+  ],
+  "parent": null,
+  "risks": [
+    "Mishandled KSeF credentials or permissions could expose sensitive invoice data.",
+    "Tax-rule errors could create customer losses despite positioning the product as workflow software rather than tax advice.",
+    "A Poland-only tax interface creates concentration risk unless the field-closeout asset later supports other mandates.",
+    "High exception volume could turn a bounded SaaS into an unscalable support service."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/zakres-obowiazkowego-ksef/",
+    "https://ksef.podatki.gov.pl/ksef-news/wystawianie-i-otrzymywanie-faktur/",
+    "https://ksef.podatki.gov.pl/wyjasnienia/1-kwietnia-rusza-ii-etap-wdrozenia-krajowego-systemu-e-faktur/"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Vertical field-workflow SaaS with transaction-metered compliance handoff",
+    "control_point": "The signed-job-to-KSeF release gate where operational evidence becomes an invoice payload",
+    "critical_dependency": "Stable KSeF authentication and API behaviour plus permissioned integration with an accountant or invoicing connector"
+  },
+  "thesis": "A narrow job-closeout-to-invoice layer for Polish renewable, HVAC, and electrical contractors can turn signed protocols, site photos, milestone terms, and VAT metadata into validated KSeF-ready invoice payloads and an exception queue. The wedge is the last group of very small firms approaching the 1 January 2027 issuing deadline, while already-covered contractors still need a reliable bridge between field evidence and accounting rather than another general ledger.",
+  "title": "KSeF Field-Service Closeout Ledger for Polish Installation Crews",
+  "uncertainties": [
+    "No evidence yet shows that contractors will pay for field-closeout integration rather than change their bookkeeping process manually.",
+    "The representative frequency of milestone, retention, correction, and offline cases must be measured in the parent-company pilot.",
+    "The 4,000-customer wealth scenario and channel conversion assumptions are unvalidated.",
+    "Whether accountants will resell the tool or view it as added support burden is unknown."
+  ],
+  "version": 1
+}

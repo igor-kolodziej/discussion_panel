@@ -1,0 +1,119 @@
+{
+  "assumptions": [
+    "No customer, partner, manufacturer, or accredited-laboratory commitment exists beyond the evidence in the packet.",
+    "O&M firms and lessors can obtain owner permission to share the contract, serial, maintenance, and telemetry records required for screening.",
+    "Accredited testing, electrical work, and legal review can be procured at pre-agreed prices without the founder implicitly providing regulated engineering or legal assurance.",
+    "The proposed batch deposit and 2,000-6,000 PLN dossier fee are hypotheses to test, not established market prices."
+  ],
+  "base_score": 4.63,
+  "candidate_id": "niche-04",
+  "candidate_sha256": "e3bd75299ae6f07dab81c37877ea6933c17150d2ec0f984d7b5e9e41b37c48d9",
+  "candidate_version": 5,
+  "constrained_score": 4.43,
+  "evaluation_type": "holdout_native",
+  "evidence_needed_for_higher_score": "Paid pilots with several unrelated O&M or lessor partners showing sites submitted per batch, record-complete and contract-eligible pass rates, accredited-test confirmation rates, manufacturer acceptance and recovery outcomes, cycle time, fully loaded contribution margin, repeat batch purchases, and permission to retain anonymized outcome data.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "The opportunity isolates a credible bottleneck: fragmented smaller-system portfolios may need contract and evidence reconstruction before expensive testing or warranty submission. Aggregating cases through portfolio operators and narrowing to one warranty archetype is a coherent insight, although the frequency and economic importance of that bottleneck remain unknown.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Avoiding an ineligible test or recovering a valid warranty claim could be valuable, but the packet establishes neither typical recovery value nor paid conversion. Cheap monitoring and warranty-administration substitutes weaken the basis for a premium dossier fee, especially when many apparent faults will not be recoverable.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Prepaid batches, fixed dossier fees, and separately authorized testing limit working-capital and field-cost exposure. However, pass rates, case throughput, partner share, founder time, insurance and expert costs, repeat purchasing, and owner benefit are all unknown; the proposed fees and 55-70% diagnostic margin are explicitly unvalidated.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Independent Polish O&M firms and lessors with commercial rooftop portfolios form a focused and reachable beachhead within a large national PV base. Yet the relevant market is not installed megawatts but the much smaller intersection of suspected module-performance failures, live enforceable warranties, complete records, and recoveries large enough to justify testing and dossier costs; that count is unknown.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "A protocol-specific white-label workflow could become a recognized specialist position, but the proposed control point is weak before proprietary outcomes accumulate. Existing service firms already handle warranties, and sophisticated O&M firms or lessors can internalize a visible screening checklist or bargain away much of the value.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A successful module-warranty workflow could extend across manufacturers, adjacent PV claim types, larger portfolios, and other EU markets. Each adjacency nevertheless introduces different contracts, failure modes, evidence standards, and professional expertise, so expansion is plausible but not frictionless.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "A permissioned corpus linking screens, tests, manufacturer responses, and outcomes could improve protocols over time. Its defensibility depends on scarce accepted cases, partner data rights, and enough volume to learn; absent those, the workflow, document templates, and public warranty rules are readily copied and vendor procedures can change.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "A disciplined go/no-go decision before accredited testing may be faster and cheaper than ad hoc claim handling and is meaningfully more focused than generic monitoring. No evidence yet shows superior acceptance, recovery, turnaround, or total cost relative to incumbent O&M and warranty services, so the magnitude of advantage is uncertain.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "Poland's large and growing installed PV base creates more assets entering operating and warranty periods, while portfolio fragmentation supports specialized workflows. Curtailment and increasingly varied failure mechanisms also raise diagnostic complexity, but there is no demonstrated regulatory or purchasing shift specifically accelerating paid third-party warranty triage.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "Selling batches through O&M firms and lessors is more scalable than acquiring site owners one by one, and the family network offers a bounded route to initial workflow tests. There are no referral or purchasing commitments, the intermediaries may view the service as competitive or demand most of the fee, and direct partner sales may be slow for a part-time founder.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "The narrow document-first scope, modest stated capital need, automation potential, and pre-priced specialist partners fit the founder better than continuous monitoring or broad claims administration. Execution still requires reliable technical triage, contract screening boundaries, professional-liability controls, secure data handling, and disciplined rejection of bespoke cases across varying manufacturer protocols.",
+      "score": 6,
+      "status": "scored"
+    }
+  ],
+  "final_score": 4.4,
+  "highest_value_structural_change": "Make the primary paid event a recurring or transaction-triggered portfolio warranty-eligibility audit with a minimum committed batch volume and explicit anonymized outcome-data rights, while keeping manufacturer-ready dossiers as a separately priced downstream service. This would reduce dependence on rare self-identified claims and make both repeat economics and the data advantage more plausible.",
+  "interaction_adjustment": -0.2,
+  "judge_id": "c2-holdout-niche04-a",
+  "main_structural_strength": "A tightly gated, prepaid, document-first portfolio screen can reject weak cases before costly accredited testing and avoids competing as another low-price continuous-monitoring service.",
+  "primary_score_limiter": "The density and value of record-complete, contract-eligible module warranty cases inside partner batches are unproven, so case volume, customer benefit, repeat demand, and contribution economics may all be too weak at the same time.",
+  "qualified": false,
+  "raw_response_path": "holdout/jobs/raw-c2-holdout-niche04-a.json",
+  "raw_response_sha256": "84c4e7ac0c0063dd74db4710671f15bfb375b107716dd6ff2762c23404d9de4e",
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 2,
+  "strongest_disconfirming_evidence": "Free manufacturer monitoring and Polish service plans that include warranty handling from 49 PLN net per month show that basic detection and administration are already commoditized, while published one-off service pricing overlaps or undercuts the proposed premium dossier range.",
+  "unrounded_score": 4.43
+}

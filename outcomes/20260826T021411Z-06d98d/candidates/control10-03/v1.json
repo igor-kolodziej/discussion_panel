@@ -1,0 +1,82 @@
+{
+  "candidate_id": "control10-03",
+  "claims": [
+    {
+      "claim_id": "control10-03-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://bdo.mos.gov.pl/wp-content/uploads/2019/11/009414018.pdf"
+      ],
+      "statement": "Official BDO guidance says a waste producer must issue an electronic KPO before transport and that waste will not be collected without the required electronic record."
+    },
+    {
+      "claim_id": "control10-03-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/klimat/rejestr-bdo"
+      ],
+      "statement": "BDO registration applies to specified waste producers and product or packaging introducers, including some small service and retail firms."
+    },
+    {
+      "claim_id": "control10-03-c3",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://bdo.mos.gov.pl/wp-content/uploads/2023/11/BDO_EWI_IS-Karta-przekazania-odpadow-wersja-1.2.pdf"
+      ],
+      "statement": "Demand hypothesis: collectors will pay for a dispatch gate because an invalid manifest creates truck idle time and failed collections."
+    }
+  ],
+  "contrary_evidence": [
+    "BDO already provides the statutory workflow, so this is an orchestration layer rather than a new system of record.",
+    "Some small generators and waste quantities are exempt."
+  ],
+  "economics": {
+    "acquisition_route": "Hypothesis: sell to collectors serving HVAC, solar, automotive and construction networks rather than each waste producer",
+    "capital_required_pln": 45000,
+    "founder_net_worth_path": "Hypothesis: 120 collectors averaging 6000 PLN monthly plus usage could approach 10m PLN ARR, making 5m PLN founder net worth plausible in 4-6 years if retention and authorised integration hold",
+    "founder_time": "10-16 hours weekly for one collector vertical and exception support",
+    "gross_margin_basis": "Economics hypothesis: 80-90% at scale, excluding classification advice",
+    "payback": "Hypothesis: recover setup capital within 8-12 months from five collectors",
+    "pricing": "Economics hypothesis: 3000-9000 PLN monthly per collector plus 2-8 PLN per released pickup",
+    "retention_or_repeat": "Recurring pickups, new sites, new waste types and annual registry changes"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A customer-owned map of site waste codes, counterparties and recurring routes reduces errors at each repeat pickup",
+    "customer": "Waste collectors and distributed service businesses generating regulated waste at many customer sites",
+    "distribution_mechanism": "Embedded into collectors' booking portals and field-service franchise software",
+    "offer_and_business_model": "Booking preflight, role validation and BDO-authorised workflow connector sold as SaaS plus transaction fees",
+    "payer_and_paid_event": "Collector or franchise pays per active site and per released pickup",
+    "problem_trigger": "A technician requests collection but a valid electronic KPO and correctly registered parties are needed before transport"
+  },
+  "founder_fit": [
+    "Can pilot with renewable and installation waste flows",
+    "Rules engine and route-event analytics fit founder skills",
+    "Embedded distribution limits direct SMB selling"
+  ],
+  "parent": null,
+  "risks": [
+    "Waste-code recommendations could create regulatory liability and must remain customer-approved.",
+    "BDO interface changes could break automation.",
+    "Collectors may offer equivalent booking help at no extra charge."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://bdo.mos.gov.pl/wp-content/uploads/2019/11/009414018.pdf",
+    "https://www.gov.pl/web/klimat/rejestr-bdo",
+    "https://bdo.mos.gov.pl/wp-content/uploads/2023/11/BDO_EWI_IS-Karta-przekazania-odpadow-wersja-1.2.pdf"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Mandatory manifest orchestration",
+    "control_point": "Truck-dispatch release after KPO and counterparty checks pass",
+    "critical_dependency": "Stable authorised BDO access and accurate waste classification supplied or approved by the customer"
+  },
+  "thesis": "A waste collector or maintenance-franchise could embed a BDO preflight into pickup booking so waste code, parties, vehicle, timing and KPO confirmation are complete before a truck is dispatched. The product would act only under customer authorisation. Demand and economics are hypotheses.",
+  "title": "BDO Pickup-Release Gate for Service Waste",
+  "uncertainties": [
+    "Current authorised integration methods",
+    "Failed-pickup cost and frequency",
+    "Willingness of collectors to enforce the gate"
+  ],
+  "version": 1
+}

@@ -1,0 +1,73 @@
+{
+  "candidate_id": "settle10-08",
+  "claims": [
+    {
+      "claim_id": "settle10-08-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.iru.org/what-we-do/facilitating-trade-and-transit/cmr",
+        "https://unece.org/trade/documents/2023/10/executive-guide-e-cmr"
+      ],
+      "statement": "CMR governs liability and compensation for loss, damage, or delay, while eCMR supplies electronic proof of pickup and delivery."
+    },
+    {
+      "claim_id": "settle10-08-c2",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://www.zurich.com/en/commercial-insurance/products/marine",
+        "https://www.iru.org/what-we-do/facilitating-trade-and-transit/cmr"
+      ],
+      "statement": "Demand hypothesis: insurers and TMS channels will pay for evidence completeness because cargo policies require loss notification and supporting documentation."
+    }
+  ],
+  "contrary_evidence": [
+    "eCMR platforms may add claim capture natively.",
+    "Cargo claims are infrequent for many fleets."
+  ],
+  "economics": {
+    "acquisition_route": "Partner with one eCMR or TMS vendor and one cargo broker.",
+    "capital_required_pln": 50000,
+    "founder_net_worth_path": "Hypothesis: 250000 monthly shipments across embedded channels can create 6 million PLN annual platform revenue and founder equity above 5 million PLN in five years.",
+    "founder_time": "Four hours daily for integrations and evidence-rule tuning.",
+    "gross_margin_basis": "Hypothesis: 80-90% margin after automated capture and document assembly.",
+    "payback": "Hypothesis: 25000 shipments monthly at 2 PLN cover initial capital within eighteen months.",
+    "pricing": "Hypothesis: 1-4 PLN per shipment plus 100-400 PLN per submitted claim pack.",
+    "retention_or_repeat": "The capture workflow runs on every shipment even when claims are rare."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Lane, carrier, damage-type, and claim-outcome data improve evidence prompts and triage.",
+    "customer": "Road carriers, freight forwarders, cargo owners, and marine or cargo insurers.",
+    "distribution_mechanism": "TMS and eCMR providers embed it at driver handoff and insurer notification.",
+    "offer_and_business_model": "The workflow binds signed eCMR events, photos, reservations, sensor logs, and policy data into FNOL evidence.",
+    "payer_and_paid_event": "A TMS provider, broker, insurer, or carrier pays per shipment and claim pack.",
+    "problem_trigger": "Damage, shortage, loss, or delay is discovered at handoff and proof is scattered across drivers and systems."
+  },
+  "founder_fit": [
+    "Evidence automation fits the founder's data background.",
+    "A software channel avoids camera exposure and manual claims handling."
+  ],
+  "parent": null,
+  "risks": [
+    "Chain-of-custody gaps could weaken evidence.",
+    "Insurer-specific requirements may create costly fragmentation."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.iru.org/what-we-do/facilitating-trade-and-transit/cmr",
+    "https://unece.org/trade/documents/2023/10/executive-guide-e-cmr",
+    "https://www.zurich.com/en/commercial-insurance/products/marine"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Embedded first-notice-of-loss and evidence rail.",
+    "control_point": "The signed chain-of-custody and exception record.",
+    "critical_dependency": "Driver adoption and insurer acceptance of digital evidence."
+  },
+  "thesis": "An eCMR-native relay can preserve pickup, delivery, exception, image, and sensor evidence and submit a clean cargo-loss notification.",
+  "title": "eCMR Cargo Claim Evidence Relay",
+  "uncertainties": [
+    "Per-shipment willingness to pay is untested.",
+    "The best initial payer among TMS, broker, and insurer is unknown."
+  ],
+  "version": 1
+}

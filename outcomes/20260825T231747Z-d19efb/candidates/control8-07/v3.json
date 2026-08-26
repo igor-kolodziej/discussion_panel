@@ -1,0 +1,150 @@
+{
+  "candidate_id": "control8-07",
+  "claims": [
+    {
+      "claim_id": "control8-07-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://poisoncentres.echa.europa.eu/-/poison-centre-notifications-must-be-in-harmonised-format-as-of-1-january-2025"
+      ],
+      "statement": "From 1 January 2025, notifications for in-scope mixtures hazardous for health or physical effects placed on the EU market must use the harmonised Annex VIII format."
+    },
+    {
+      "claim_id": "control8-07-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://poisoncentres.echa.europa.eu/generate-and-apply-the-ufi",
+        "https://poisoncentres.echa.europa.eu/gather-the-required-information"
+      ],
+      "statement": "ECHA states that a UFI is assigned to one mixture composition and that a PCN generally requires the full chemical composition, while qualifying mixture-in-mixture workflows can preserve supplier confidentiality through a referenced UFI."
+    },
+    {
+      "claim_id": "control8-07-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://poisoncentres.echa.europa.eu/keep-the-information-up-to-date"
+      ],
+      "statement": "ECHA requires the notification to reflect the product currently on the market; a significant composition change requires a new UFI and a new linked notification, while classification, market and other product changes can require updates."
+    },
+    {
+      "claim_id": "control8-07-c4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://echa.europa.eu/-/one-in-five-hazardous-mixtures-not-reported-to-poison-centres"
+      ],
+      "statement": "ECHA's 2026 pilot enforcement project found that 19% of 1,597 checked hazardous mixtures across 18 EU/EEA countries had not been notified and reported that inspectors initiated enforcement actions."
+    },
+    {
+      "claim_id": "control8-07-c5",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://poisoncentres.echa.europa.eu/poison-centres-notification-format"
+      ],
+      "statement": "The XML-based PCN format is updated annually; ECHA published version 8 on 27 April 2026 and provides the schemas, data model and validation rules for companies or service providers to build their own tooling."
+    },
+    {
+      "claim_id": "control8-07-c6",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://poisoncentres.echa.europa.eu/get-organised-in-your-supply-chain%C2%A0"
+      ],
+      "statement": "A client can authorize an external consultant as a foreign user in ECHA tools, but contractual task, responsibility and confidentiality boundaries remain necessary and the legal duty holder remains the submitter."
+    },
+    {
+      "claim_id": "control8-07-c7",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2024/2865",
+        "https://eur-lex.europa.eu/eli/reg/2025/2439/oj"
+      ],
+      "statement": "The revised CLP rules add a distributor notification duty for cross-border distribution, rebranding or relabelling when the relevant appointed body has not already received the information; Regulation (EU) 2025/2439 makes that amendment applicable from 1 January 2027."
+    },
+    {
+      "claim_id": "control8-07-c8",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://poisoncentres.echa.europa.eu/prepare-your-submission",
+        "https://help.sap.com/docs/SAP_S4HANA_CLOUD/6540a57e42314b5a8c208bca283e29e6/01d8542272d94c24b1bfb1e43e821eba.html",
+        "https://www.ul.com/services/poison-centres"
+      ],
+      "statement": "ECHA provides free Cloud, desktop, portal and system-to-system preparation routes, while SAP Product Compliance and UL WERCS already document commercial PCN/UFI workflows."
+    }
+  ],
+  "contrary_evidence": [
+    "ECHA provides free dossier preparation, validation, multimarket submission and system-to-system tooling, so generation and submission alone are not a defensible product.",
+    "SAP Product Compliance and UL WERCS already cover UFI/PCN workflows for established chemical-data customers.",
+    "A distributor can avoid its own submission when it can demonstrate that the appointed body already received the same information, narrowing the new 2027 wedge.",
+    "The 19% enforcement gap establishes non-compliance, not budget, portfolio size, willingness to outsource or willingness to entrust formulas to a new vendor.",
+    "The PCN format changes annually, imposing recurring validation and regression work.",
+    "The obligation is limited to mixtures hazardous for health or physical effects within scope; non-hazardous portfolios do not create this release gate."
+  ],
+  "economics": {
+    "acquisition_route": "Partner with two SDS/CLP consultants, pilot in the ECHA test environment on a redacted or synthetic portfolio, and use label-UFI-market preflight as a lead tool; no consultant channel or design partner is committed",
+    "capital_required_pln": 65000,
+    "founder_net_worth_path": "Unvalidated 6-8 year scenario: 120 customers averaging 45,000 PLN annual revenue yields 5.4m PLN; at 35% EBITDA, 4x and 75% ownership, equity value is about 5.67m PLN. This depends on repeatable partner distribution and does not count business cash twice.",
+    "founder_time": "18-24 hours per week, with chemistry and regulatory sign-off from contracted specialists, client-controlled submission identities and security design treated as core deliverables",
+    "gross_margin_basis": "Formula lineage, exception checks and PCN transformations are reusable; expert CLP review, translations, supplier gaps and annual format changes are variable-cost drivers",
+    "payback": "Unvalidated customer hypothesis: avoiding rework across formulas, labels, SDS files, market languages and submissions can justify spend for multi-SKU portfolios, but free ECHA tooling and actual consultant spend must be measured first",
+    "pricing": "Unvalidated hypothesis retained: 5,000-20,000 PLN secure onboarding, 2,000-7,000 PLN per new or materially changed formula and 1,500-5,000 PLN monthly portfolio monitoring; no reviewed source establishes willingness to pay or margin at these levels",
+    "retention_or_repeat": "Every formula, supplier, label, language, product-name and market change touches the governed release record; retention depends on trust and measurable error reduction, not technical lock-in"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A customer-specific formula, supplier, market and label lineage graph plus validated exception history makes later variants faster while keeping each customer's confidential composition isolated",
+    "customer": "Small EU formulators, importers, distributors and private-label operators of hazardous cleaning, coating, adhesive and maintenance mixtures",
+    "distribution_mechanism": "Chemical regulatory consultants, SDS authors, contract manufacturers, packaging/label agencies and private-label trade groups",
+    "offer_and_business_model": "Client-isolated formula vault, UFI/formula mapping, label/SDS/market reconciliation, PCN dataset generation, approval evidence and update alerts; unvalidated 2,000-7,000 PLN per formula plus 1,500-5,000 PLN monthly portfolio fee",
+    "payer_and_paid_event": "Regulatory or product-development lead pays secure onboarding and per-formula release work after a test-environment preflight finds actionable cross-record inconsistencies, then pays for governed updates",
+    "problem_trigger": "New formulation or private-label SKU, composition or supplier change, new member-state market, rebrand or relabel event, classification/label revision, or rejected/warned PCN submission"
+  },
+  "founder_fit": [
+    "Strong data-lineage and validation fit with FMCG familiarity, without assuming any use of employer IP",
+    "Partner-led B2B distribution reduces continuous social selling",
+    "Can begin in the ECHA test environment as a tightly scoped client-authorized workflow before any production submission",
+    "Requires explicit conflict-of-interest review and strict avoidance of Reckitt data, formulations, vendors, work systems and work time"
+  ],
+  "parent": {
+    "candidate_id": "control8-07",
+    "version": 2
+  },
+  "risks": [
+    "A formula breach would be catastrophic; customer-controlled or isolated deployment may be required",
+    "Chemical classification or release errors can harm users and create liability; software cannot replace qualified review",
+    "ECHA's free tools and established product-compliance vendors may be sufficient",
+    "Annual PCN format releases create ongoing maintenance and regression-test cost",
+    "Employer conflict or perceived competitive overlap could make this opportunity unsuitable",
+    "External-user access must be granted by each client and contractually limited; the entrant cannot impersonate the legal submitter"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://poisoncentres.echa.europa.eu/-/poison-centre-notifications-must-be-in-harmonised-format-as-of-1-january-2025",
+    "https://poisoncentres.echa.europa.eu/generate-and-apply-the-ufi",
+    "https://poisoncentres.echa.europa.eu/gather-the-required-information",
+    "https://poisoncentres.echa.europa.eu/keep-the-information-up-to-date",
+    "https://echa.europa.eu/-/one-in-five-hazardous-mixtures-not-reported-to-poison-centres",
+    "https://poisoncentres.echa.europa.eu/poison-centres-notification-format",
+    "https://poisoncentres.echa.europa.eu/prepare-your-submission",
+    "https://poisoncentres.echa.europa.eu/get-organised-in-your-supply-chain%C2%A0",
+    "https://eur-lex.europa.eu/eli/reg/2024/2865",
+    "https://eur-lex.europa.eu/eli/reg/2025/2439/oj",
+    "https://help.sap.com/docs/SAP_S4HANA_CLOUD/6540a57e42314b5a8c208bca283e29e6/01d8542272d94c24b1bfb1e43e821eba.html",
+    "https://www.ul.com/services/poison-centres"
+  ],
+  "stage": "development",
+  "structure": {
+    "commercial_archetype": "Confidential formulation vault with per-formula notification operations and recurring change-control subscription",
+    "control_point": "The approved formula-version release record proving that the UFI and market identifiers on the product correspond to a current PCN",
+    "critical_dependency": "Complete composition or valid MiM/UFI references, client-granted ECHA foreign-user authority, strict trade-secret isolation and exact maintenance of the annual PCN format and target-market rules"
+  },
+  "thesis": "Research-stage hypothesis: offer a client-isolated formula-to-market release workflow for small EU formulators, importers and private-label distributors of hazardous mixtures. It maintains composition or permitted MiM lineage, binds each UFI to the correct formulation, reconciles labels, SDS identifiers, trade names, languages and market coverage, produces current PCN data and records qualified human approval before release. Consultants can lawfully work as client-authorized foreign users rather than submitting under the entrant's identity. The 2027 distributor duty creates a sharper rebrand and cross-border wedge, but free ECHA tools and mature incumbents mean the value must be confidential change control and cross-record error prevention, not UFI generation or portal access.",
+  "title": "UFI Formula-Release Vault for Hazardous Mixtures",
+  "uncertainties": [
+    "Whether small formulators will entrust exact composition data even in a single-tenant or customer-controlled deployment",
+    "Whether consultant channels see the workflow as leverage or competition",
+    "Portfolio size and change frequency at which recurring software beats free tools plus project consulting",
+    "Actual scope created by the 2027 distributor duty after upstream notifications are updated",
+    "Customer willingness to grant foreign-user submission access and accept a young vendor's security controls",
+    "True per-formula expert review, translation and support cost",
+    "Employer conflict-of-interest determination"
+  ],
+  "version": 3
+}

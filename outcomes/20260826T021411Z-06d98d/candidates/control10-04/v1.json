@@ -1,0 +1,81 @@
+{
+  "candidate_id": "control10-04",
+  "claims": [
+    {
+      "claim_id": "control10-04-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1542/2025-07-31/eng/pdf"
+      ],
+      "statement": "From 18 February 2027, industrial batteries above 2 kWh, LMT batteries and EV batteries require an electronic battery passport and QR linkage."
+    },
+    {
+      "claim_id": "control10-04-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1542/oj?locale=en"
+      ],
+      "statement": "The regulation permits authorised operators to store or process passport data but restricts reuse beyond the contracted service, supporting a trustee-shaped role."
+    },
+    {
+      "claim_id": "control10-04-c3",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1542/oj?locale=en"
+      ],
+      "statement": "Demand and economics hypothesis: smaller C&I battery suppliers will outsource passport infrastructure instead of building secure lifecycle data services internally."
+    }
+  ],
+  "contrary_evidence": [
+    "Large OEMs and industry consortia are likely to build or standardise their own passport infrastructure.",
+    "The passport applies only to specified battery categories, narrowing the initial market."
+  ],
+  "economics": {
+    "acquisition_route": "Hypothesis: lab and distributor bundles reach many smaller Asian and Central-European suppliers entering the EU",
+    "capital_required_pln": 85000,
+    "founder_net_worth_path": "Hypothesis: 75 OEMs and 250000 active batteries could produce 8-14m PLN ARR; a trusted EU data utility could put founder equity above 5m PLN in 4-7 years",
+    "founder_time": "18-24 hours weekly for a narrow storage-battery pilot; security work outsourced",
+    "gross_margin_basis": "Economics hypothesis: 75-88% after standard connectors and automated validation",
+    "payback": "Hypothesis: 12-18 months with ten model integrations and 15000 active units",
+    "pricing": "Economics hypothesis: 20000-60000 PLN per model integration plus 8-25 PLN per active battery annually",
+    "retention_or_repeat": "Every new model, serialised unit, ownership change, repair and end-of-life event"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Longitudinal model-to-unit provenance, validated supplier connectors and lifecycle continuity make the trustee costly to replace",
+    "customer": "EU battery OEMs and importers supplying commercial and industrial energy-storage systems",
+    "distribution_mechanism": "Embedded referrals and connectors through accredited test laboratories, BMS vendors and ESS distributors",
+    "offer_and_business_model": "Managed data onboarding, identifier and permissioned passport hosting with usage-based fleet fees",
+    "payer_and_paid_event": "OEM or importer pays per model onboarding, passport issuance and active fleet year",
+    "problem_trigger": "A covered battery model is prepared for EU placement and needs a QR-linked passport with controlled, up-to-date evidence"
+  },
+  "founder_fit": [
+    "Strong data-model and provenance problem",
+    "Energy-storage adjacency to the family renewable business",
+    "Can validate on a few models before substantial capital deployment"
+  ],
+  "parent": null,
+  "risks": [
+    "Security or availability failure would damage a trust-based position.",
+    "Standards and delegated acts may favour incumbent global platforms.",
+    "OEM source data may be incomplete or commercially sensitive."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2023/1542/2025-07-31/eng/pdf",
+    "https://eur-lex.europa.eu/eli/reg/2023/1542/oj?locale=en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Regulated product data infrastructure",
+    "control_point": "The signed passport release and QR identity required before covered batteries enter service",
+    "critical_dependency": "Final implementing specifications, secure source data and continued trust from economic operators"
+  },
+  "thesis": "A neutral data trustee distributed by battery laboratories and commercial-storage distributors could ingest test, bill-of-materials and lifecycle evidence, issue persistent identifiers and host role-based battery passports for industrial batteries above 2 kWh. It would preserve provenance, not certify conformity. Demand and economics are hypotheses.",
+  "title": "Battery-Passport Data Trustee for C&I Storage",
+  "uncertainties": [
+    "Final access-control and interoperability specifications",
+    "Per-unit willingness to pay",
+    "Whether labs will endorse a neutral data provider"
+  ],
+  "version": 1
+}

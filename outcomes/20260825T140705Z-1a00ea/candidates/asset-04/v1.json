@@ -1,0 +1,70 @@
+{
+  "candidate_id": "asset-04",
+  "claims": [
+    {
+      "claim_id": "asset-04-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.knf.gov.pl/dla_rynku/posrednictwo_finansowe/rynek_ubezpieczen/dzialalnosc_agencyjna"
+      ],
+      "statement": "KNF identifies registration and legal requirements for insurance agency activity in Poland."
+    },
+    {
+      "claim_id": "asset-04-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.ure.gov.pl/download/9/16226/SprawozdaniezdzialalnosciPrezesaUREw2025r.pdf"
+      ],
+      "statement": "URE reported more than 1.6 million Polish microinstallations at the end of 2025, nearly all recent growth being prosumer photovoltaics."
+    }
+  ],
+  "contrary_evidence": [
+    "Existing general-liability insurers may see the niche as too small for a dedicated product.",
+    "Manufacturer warranties may absorb many losses before insurance is relevant."
+  ],
+  "economics": {
+    "acquisition_route": "Unvalidated hypothesis: distribute through renewable wholesalers and the parents' contractor network.",
+    "capital_required_pln": 70000,
+    "founder_net_worth_path": "Unvalidated hypothesis: 4,000 insured contractors with proprietary loss data could support a 5 million PLN founder net-worth path in eight to twelve years.",
+    "founder_time": "Unvalidated hypothesis: insurer operations and outsourced claims handling keep founder work below 20 hours weekly during pilot.",
+    "gross_margin_basis": "Unvalidated hypothesis: data-led distribution could reach 60% gross margin, and every commercial number including capital_required_pln is hypothetical.",
+    "payback": "Unvalidated hypothesis: acquisition pays back within one annual policy cycle.",
+    "pricing": "Unvalidated hypothesis: earn 12% policy commission plus 150 PLN per administered claim.",
+    "retention_or_repeat": "Unvalidated hypothesis: annual renewals and expanding insured installation fleets create repeat revenue."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Serial-level installation and loss records improve selection, pricing, and claims triage",
+    "customer": "Small photovoltaic, storage, and heat-pump contractors",
+    "distribution_mechanism": "Equipment wholesalers and installer workflow integrations",
+    "offer_and_business_model": "Embedded specialist cover, evidence capture, and claims administration through a licensed partner",
+    "payer_and_paid_event": "The insurer pays commission when a policy binds and pays administration fees when claims are processed",
+    "problem_trigger": "A contractor renews cover or needs project-specific protection without credible risk differentiation"
+  },
+  "founder_fit": [
+    "The family business can inform fields and failure modes without guaranteeing commercial adoption.",
+    "Quantitative underwriting fits the founder, but regulated partnership work adds social load."
+  ],
+  "parent": null,
+  "risks": [
+    "Insurance conduct rules and insurer approval can lengthen launch time.",
+    "Adverse selection could overwhelm an immature loss model."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.knf.gov.pl/dla_rynku/posrednictwo_finansowe/rynek_ubezpieczen/dzialalnosc_agencyjna",
+    "https://www.ure.gov.pl/download/9/16226/SprawozdaniezdzialalnosciPrezesaUREw2025r.pdf"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Licensed insurance intermediary and delegated claims-data program",
+    "control_point": "Policy quote, bind, and claim-administration flow embedded in installer software",
+    "critical_dependency": "A licensed insurer willing to delegate distribution and use the loss model"
+  },
+  "thesis": "Build a registered insurance-distribution program whose underwriting edge comes from installation and claims records for small renewable contractors.",
+  "title": "Renewable Installer Loss Ledger and Embedded Cover",
+  "uncertainties": [
+    "No insurer commitment or credible loss-ratio dataset has been verified.",
+    "All commercial numbers including capital_required_pln are unvalidated hypotheses."
+  ],
+  "version": 1
+}

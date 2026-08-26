@@ -1,0 +1,73 @@
+{
+  "candidate_id": "gate-03",
+  "claims": [
+    {
+      "claim_id": "gate-03-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://czystepowietrze.gov.pl/wez-dofinansowanie/zloz-wniosek/zloz-wniosek-o-platnosc"
+      ],
+      "statement": "Official program guidance says payment applications follow completed work and gives specific invoice and proof-of-payment content requirements that the relevant regional fund reviews."
+    },
+    {
+      "claim_id": "gate-03-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://czystepowietrze.gov.pl/wez-dofinansowanie/zloz-wniosek"
+      ],
+      "statement": "Current official guidance says an accredited program operator is mandatory for prefinancing and the highest support tier, creating a concentrated institutional distribution surface."
+    }
+  ],
+  "contrary_evidence": [
+    "Program operators offer beneficiaries free support, constraining direct-to-consumer pricing.",
+    "The official GWD workflow and future improvements may absorb basic completeness checks."
+  ],
+  "economics": {
+    "acquisition_route": "Hypothesis: prove reduced clarification cycles for one operator or installer network, then sell through operator training groups.",
+    "capital_required_pln": 60000,
+    "founder_net_worth_path": "Hypothesis: 80 operator organizations plus installer accounts could produce 5 to 7 million PLN ARR; profitable renewal and program-adjacent expansion could support founder net worth above 5 million PLN in years 6 to 9.",
+    "founder_time": "Hypothesis: 20 hours weekly during a single-region pilot, then under 15 hours after reviewer operations are delegated.",
+    "gross_margin_basis": "Hypothesis: 65% initial gross margin with reviewer sampling, improving toward 80% as checks become deterministic.",
+    "payback": "Hypothesis: a 10000 PLN institutional pilot repays within six retained months at 3500 PLN monthly and 60% contribution margin.",
+    "pricing": "Hypothesis: 180 PLN per completed case or 3500 PLN per operator-month.",
+    "retention_or_repeat": "Hypothesis: each beneficiary case repeats, while rule changes reinforce the need for a maintained evidence engine."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A versioned defect library mapping device, invoice, protocol, region, rule version, and clarification outcome",
+    "customer": "Czyste Powietrze operators, municipalities, energy auditors, and installer networks",
+    "distribution_mechanism": "Operator organizations, municipal associations, auditor networks, and installation franchises",
+    "offer_and_business_model": "B2G/B2B disbursement-operations SaaS with per-case verification",
+    "payer_and_paid_event": "An operator organization or installer network pays per payment pack that receives an internal completeness hash",
+    "problem_trigger": "A retrofit is finished and the evidence package must be complete before a payment application is filed"
+  },
+  "founder_fit": [
+    "The family installer can supply a lawful process pilot with consented synthetic or redacted records.",
+    "Document extraction and reconciliation fit the founder's data and AI skills.",
+    "Institutional channels reduce the need for high-energy consumer sales."
+  ],
+  "parent": null,
+  "risks": [
+    "Program rules and budgets can change abruptly.",
+    "Installers could misuse a pass token as a promise of reimbursement.",
+    "Sensitive household documents require strict minimization, access controls, and EU hosting."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://czystepowietrze.gov.pl/wez-dofinansowanie/zloz-wniosek/zloz-wniosek-o-platnosc",
+    "https://czystepowietrze.gov.pl/wez-dofinansowanie/zloz-wniosek"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Public-program disbursement operations platform",
+    "control_point": "Operator-issued completeness hash before payment-application submission",
+    "critical_dependency": "Program continuity and institutional willingness to adopt a third-party evidence layer"
+  },
+  "thesis": "A B2B evidence compiler for Czyste Powietrze operators, municipalities, auditors, and installer networks could bind invoices, payment proofs, device identifiers, energy-audit outputs, acceptance protocols, and site evidence into one versioned payment pack. The operator would issue a completeness hash before the applicant submits to GWD, making payment readiness measurable without charging vulnerable beneficiaries for official help.",
+  "title": "Clean Air Disbursement Pack for Program Operators",
+  "uncertainties": [
+    "Actual resubmission delays and document-defect rates require direct measurement.",
+    "Municipal procurement cycles may be too slow for an initial wedge.",
+    "The 60000 PLN capital figure and all commercial numbers below are hypotheses."
+  ],
+  "version": 1
+}

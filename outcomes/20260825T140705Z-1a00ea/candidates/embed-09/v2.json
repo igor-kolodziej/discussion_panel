@@ -1,0 +1,122 @@
+{
+  "candidate_id": "embed-09",
+  "claims": [
+    {
+      "claim_id": "embed-09-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://pubmed.ncbi.nlm.nih.gov/31239435/"
+      ],
+      "statement": "EEG-BIDS standardizes EEG files and metadata, including channel status, for reusable datasets."
+    },
+    {
+      "claim_id": "embed-09-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://pubmed.ncbi.nlm.nih.gov/41953081/"
+      ],
+      "statement": "A 2026 study achieved strong artifact-specific results on standardized 250 Hz, 22-channel clinical EEG, but did not establish cross-device generalization."
+    },
+    {
+      "claim_id": "embed-09-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://isip.piconepress.com/projects/tuh_eeg/index.shtml"
+      ],
+      "statement": "The TUH EEG program states that its corpus may be used for research and commercialization, so initial training rights are obtainable."
+    },
+    {
+      "claim_id": "embed-09-c4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eeglab.org/tutorials/misc/Quick_Tutorial_on_Rejection.html",
+        "https://mne.tools/stable/auto_tutorials/preprocessing/40_artifact_correction_ica.html",
+        "https://www.persyst.com/technology/artifact-reduction/",
+        "https://pressrelease.brainproducts.com/eeg-artifacts-handling-in-analyzer/"
+      ],
+      "statement": "Free toolchains and established EEG vendors already provide artifact detection or reduction, so generic cleaning is not a defensible paid wedge."
+    },
+    {
+      "claim_id": "embed-09-c5",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://health.ec.europa.eu/document/download/b45335c5-1679-4c71-a91c-fc7a4d37f12b_en?filename=mdcg_2019_11_en.pdf"
+      ],
+      "statement": "EU software qualification follows intended purpose; a medical-purpose or device-influencing module may enter MDR or IVDR scope even if cloud-hosted or embedded."
+    },
+    {
+      "claim_id": "embed-09-c6",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2016/679/2016-05-04/eng"
+      ],
+      "statement": "Identifiable clinical EEG is health data under GDPR and requires an Article 9 condition and safeguards."
+    }
+  ],
+  "contrary_evidence": [
+    "BIDS already has a free validator for structural compliance; it does not create a metadata-validation moat.",
+    "EEGLAB, MNE, BrainVision Analyzer, and Persyst cover substantial artifact workflows already.",
+    "Persyst says its software is integrated with every major EEG manufacturer, raising the OEM distribution barrier."
+  ],
+  "economics": {
+    "acquisition_route": "Start with one neuroscience CRO or research-data platform integration; pursue device OEMs only after external cross-device validation. Incumbent integrations make this unvalidated.",
+    "capital_required_pln": 65000,
+    "founder_net_worth_path": "High-uncertainty path: 70 accounts at 8000 PLN monthly revenue equals 6.72 million PLN ARR; 25% EBITDA at 4x and 80% founder ownership implies about 5.38 million PLN founder equity in years 7-9, excluding distributions and retained cash.",
+    "founder_time": "Three to four founder hours daily for modeling, integrations, and asynchronous technical sales; contract EEG experts for bounded labeling and validation.",
+    "gross_margin_basis": "Inference: 70-85% after inference, storage, expert adjudication batches, security, and integration support; no customer cost data validates this.",
+    "payback": "Unknown. A 30000 PLN integration plus 6000 PLN monthly minimum pays back inside 12 months only if it replaces a recurring QC bottleneck; buyer labor savings are unmeasured.",
+    "pricing": "Unvalidated: 20000-50000 PLN integration, 3000-8000 PLN monthly minimum, and 2-5 PLN per recording; free substitutes constrain pricing.",
+    "retention_or_repeat": "Every new recording and protocol release repeats QC, while accepted human overrides and benchmark history increase switching cost."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Contractually consented expert corrections and benchmark outcomes across hardware, montages, and protocols improve calibration and auditability",
+    "customer": "Neuroscience CROs, high-throughput research laboratories, EEG data platforms, and later EEG device vendors",
+    "distribution_mechanism": "CRO pipeline and research-platform integrations first, followed by validated embedded SDK distribution",
+    "offer_and_business_model": "Research-use-only artifact scoring and provenance API sold through integration fees, platform minimums, and recording usage",
+    "payer_and_paid_event": "The CRO, platform, laboratory, or vendor pays when a recording receives a protocol-bound QC result",
+    "problem_trigger": "A research recording must pass documented quality control before analysis, sponsor delivery, or dataset release"
+  },
+  "founder_fit": [
+    "Directly uses the founder's EEG, neuroscience, data-science, and AI background.",
+    "A bounded RUO pilot fits the founder's capital and part-time schedule better than a clinical device launch.",
+    "Technical integrations and asynchronous evidence-led sales reduce dependence on camera exposure or constant networking."
+  ],
+  "parent": {
+    "candidate_id": "embed-09",
+    "version": 1
+  },
+  "risks": [
+    "Cross-device false negatives or false positives could invalidate the acceptance gate.",
+    "RUO positioning fails if claims or integrations serve a medical purpose under MDR or IVDR.",
+    "Patient EEG and expert corrections require lawful processing, security, and contractual reuse rights.",
+    "Incumbent and open-source substitutes may prevent the assumed price or OEM access."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://pubmed.ncbi.nlm.nih.gov/31239435/",
+    "https://pubmed.ncbi.nlm.nih.gov/41953081/",
+    "https://isip.piconepress.com/projects/tuh_eeg/index.shtml",
+    "https://github.com/bids-standard/bids-validator",
+    "https://eeglab.org/tutorials/misc/Quick_Tutorial_on_Rejection.html",
+    "https://mne.tools/stable/auto_tutorials/preprocessing/40_artifact_correction_ica.html",
+    "https://www.persyst.com/technology/artifact-reduction/",
+    "https://pressrelease.brainproducts.com/eeg-artifacts-handling-in-analyzer/",
+    "https://health.ec.europa.eu/document/download/b45335c5-1679-4c71-a91c-fc7a4d37f12b_en?filename=mdcg_2019_11_en.pdf",
+    "https://eur-lex.europa.eu/eli/reg/2016/679/2016-05-04/eng"
+  ],
+  "stage": "research",
+  "structure": {
+    "commercial_archetype": "Usage-metered scientific quality SDK",
+    "control_point": "The auditable acceptance gate before an EEG recording enters analysis or a released research dataset",
+    "critical_dependency": "Independent cross-device validation plus explicit rights to use customer recordings and expert corrections"
+  },
+  "thesis": "Provide a research-use-only EEG QC and provenance API that standardizes inputs, flags protocol-specific artifact windows, and records human overrides. The paid value must be cross-device benchmarking and auditability, not generic artifact removal already available from free tools and incumbents.",
+  "title": "NeuroQC Recording Gate API",
+  "uncertainties": [
+    "Cross-device and cross-protocol sensitivity, specificity, and calibration are unvalidated.",
+    "No evidence establishes buyer willingness to pay, integration cycle length, or recording volume.",
+    "Rights to reuse customer corrections for model improvement require contract-by-contract proof.",
+    "The RUO boundary needs regulatory review for each intended use and integration."
+  ],
+  "version": 2
+}

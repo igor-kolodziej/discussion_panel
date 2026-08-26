@@ -1,0 +1,71 @@
+{
+  "candidate_id": "leverage-01",
+  "claims": [
+    {
+      "claim_id": "leverage-01-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1542/oj?locale=en"
+      ],
+      "statement": "Regulation (EU) 2023/1542 requires a battery passport from 18 February 2027 for LMT batteries, EV batteries, and industrial batteries above 2 kWh."
+    },
+    {
+      "claim_id": "leverage-01-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1542/oj?locale=en"
+      ],
+      "statement": "The passport must combine model and individual-battery information, use a QR-linked unique identifier, support differentiated access, and remain accurate, complete, and current under the responsible operator."
+    }
+  ],
+  "contrary_evidence": [
+    "The regulation leaves technical detail to standards and implementing acts, so an early implementation can require rework.",
+    "Large manufacturers and ERP vendors may build the passport layer internally."
+  ],
+  "economics": {
+    "acquisition_route": "UNVALIDATED HYPOTHESIS — recruit 3 ERP/conformity partners and convert 6 of 30 targeted independent pack makers in the first year.",
+    "capital_required_pln": 90000,
+    "founder_net_worth_path": "UNVALIDATED HYPOTHESIS — reach 60 customers and 6 million PLN ARR by year 5; at a 4x recurring-revenue value and 70% founder ownership, equity alone would be 16.8 million PLN, with distributions excluded to avoid double counting.",
+    "founder_time": "UNVALIDATED HYPOTHESIS — 18 hours weekly during the first 12 months, declining to 8 after partner-led onboarding.",
+    "gross_margin_basis": "UNVALIDATED HYPOTHESIS — 82% software gross margin after hosting, identity resolution, and bounded compliance review.",
+    "payback": "UNVALIDATED HYPOTHESIS — under 6 months when one avoided launch delay or 0.5 compliance FTE covers the fee.",
+    "pricing": "UNVALIDATED HYPOTHESIS — all commercial numbers in this economics object, including capital_required_pln, are hypotheses: 30000 PLN onboarding, 5000 PLN monthly platform fee, and 1 PLN per activated serial record.",
+    "retention_or_repeat": "UNVALIDATED HYPOTHESIS — 90% annual logo retention because model and serial records must remain accurate through multi-year battery lifecycles."
+  },
+  "fingerprint": {
+    "compounding_advantage": "a growing exception corpus and reusable mappings from messy supplier BOMs to passport fields",
+    "customer": "independent EU industrial-battery and light-mobility battery assemblers",
+    "distribution_mechanism": "embedded referrals and connectors through battery ERP vendors, test laboratories, and conformity advisers",
+    "offer_and_business_model": "managed passport data plane with schema validation, role-based disclosure, immutable change history, and hosted QR resolution",
+    "payer_and_paid_event": "the economic operator pays on onboarding, monthly access, and each serial passport activation",
+    "problem_trigger": "a model, serial unit, component revision, ownership status, or state-of-health datum must enter or update a legally required passport"
+  },
+  "founder_fit": [
+    "Strong fit with data engineering, AI-assisted schema mapping, EU context, and the family renewable-energy channel; it is asynchronous, capital-light, and can begin with one battery category."
+  ],
+  "parent": null,
+  "risks": [
+    "Incorrect passport data could create market-surveillance and contractual liability.",
+    "Supplier confidentiality makes access control and data minimisation essential.",
+    "The product must not represent itself as a notified body or legal certification."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2023/1542/oj?locale=en",
+    "https://eur-lex.europa.eu/eli/reg/2023/1542/2025-07-31/eng/pdf"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "serial-level compliance data-plane SaaS",
+    "control_point": "the validated passport record and QR resolver used before an eligible battery is placed on the EU market",
+    "critical_dependency": "permissioned component, conformity, carbon, and lifecycle data from the maker and its upstream suppliers"
+  },
+  "thesis": "A narrow data plane can turn component, conformity, carbon-footprint, and in-use records into permissioned, updateable battery passports for independent industrial-battery assemblers that cannot justify an internal platform. The recurring trigger is every model release, serialised unit, component change, and state-of-health update; ERP and conformity-assessment partners can distribute it one-to-many.",
+  "title": "Battery Passport Integrity Plane for Independent EU Pack Makers",
+  "uncertainties": [
+    "Whether independent pack makers will buy a standalone layer rather than an ERP module.",
+    "Actual serial volumes and willingness to pay.",
+    "Final interoperability standards and identity architecture."
+  ],
+  "version": 1
+}

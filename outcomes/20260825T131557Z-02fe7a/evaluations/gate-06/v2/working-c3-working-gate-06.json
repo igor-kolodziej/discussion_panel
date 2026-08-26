@@ -1,0 +1,120 @@
+{
+  "assumptions": [
+    "The initial product remains a preflight and observability layer and does not take responsibility for direct filing until roles, conformance, insurance, and on-call operations are proven.",
+    "A pilot can obtain an authorized TMS or structured export feed without prohibitive connector licensing or bespoke integration work.",
+    "Small forwarders handling extra-EU movements experience some recurring preventable ENS data defects, while their frequency and economic value remain unknown.",
+    "Customs interpretation and limited pilot support can be contracted within the founder's capital and part-time constraints; production support feasibility is not assumed.",
+    "Pricing, margin, retention, customer-count, and founder-net-worth scenarios are planning hypotheses rather than validated outcomes."
+  ],
+  "base_score": 5.02,
+  "candidate_id": "gate-06",
+  "candidate_sha256": "7c72a6a2e514cbb70010f126cdbed79e469b3980078167389de150b1ea98445d",
+  "candidate_version": 2,
+  "constrained_score": 5.02,
+  "evaluation_type": "working",
+  "evidence_needed_for_higher_score": "A paid reseller-mediated pilot on representative shipments showing baseline defect frequency, incremental defects caught, avoided delay or rework value, integration and support hours, realized price, and renewal intent across multiple forwarders.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "A filing-neutral release check before dispatch targets a recurring compliance event and can add value whether submission occurs through STP, NCTS, an incumbent, or a later direct connection. The insight is narrower and more credible than replacing official filing, but it still depends on proving that data-quality failures remain unsolved.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Rejected or delayed pre-arrival data can disrupt a time-sensitive shipment, giving the problem a credible economic basis. No evidence quantifies preventable rejection frequency, delay cost, or willingness to pay for a separate layer when free routes and existing customs suites are available.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "A monthly minimum plus usage could create recurring software revenue, and a focused preflight product could have useful operating leverage. Integration, reseller share, customs review, monitoring, liability, and possible 24/7 support may materially reduce the hypothesized margin, while price, CAC, payback, retention, and the 100-customer wealth path are unvalidated.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Small Polish and Central European forwarders with recurring extra-EU road or rail entries form a coherent initial segment, and Poland's freight activity supports discovery. Tonne-kilometres do not establish the count, filing frequency, current tool gaps, or economic size of this narrow beachhead.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "Official submission paths and established vendors already cover filing, connectivity, APIs, and rule updates. A strong niche position is possible only if the product owns an embedded TMS release state and measurably catches recurring errors that incumbent workflows miss; that advantage is not yet evidenced.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A proven correction graph and TMS control point could extend across additional lanes, countries, filing routes, and adjacent customs data checks. Those adjacencies become credible only after one route produces repeatable error-reduction and partner economics.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Lane-, shipper-, schema-, and rejection-specific corrections could compound into a useful proprietary dataset, while workflow embedding can add switching cost. Public rules and better-resourced customs platforms lower the rule barrier, and data rights, volume, and exclusivity through resellers are unknown.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "A versioned ENS-ready state inside the TMS could be faster and more convenient than manual portal checks and could prevent avoidable rework. There is no comparative evidence yet that it catches materially more errors or delivers a large enough improvement over incumbent validation.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "ICS2 and evolving road, rail, and NCTS processes create a timely transition and recurring schema-maintenance need. The same transition has already attracted established vendors and official routes, so timing creates demand but not an exclusive window.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "A TMS reseller or customs-agency channel could aggregate fragmented forwarders and reduce founder-led selling. No partner commitment, API right, commercial term, conversion rate, or proof that the channel will promote an independent preflight layer exists.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "A bounded preflight pilot fits the founder's data and automation skills and can plausibly fit the stated capital. Production filing would add EORI and role setup, certificates, AS4, conformance testing, liability, uptime, and on-call demands that may be incompatible with a part-time founder, so it should not be assumed in the initial model.",
+      "score": 5,
+      "status": "scored"
+    }
+  ],
+  "final_score": 5,
+  "highest_value_structural_change": "Remove direct filing from the initial offer and make an embedded, outcome-priced TMS release gate the whole wedge, leaving submission to existing lawful routes while the correction graph and channel economics are proven.",
+  "interaction_adjustment": 0,
+  "judge_id": "c3-working-gate-06",
+  "main_structural_strength": "A filing-route-neutral TMS release control point can monetize prevention before dispatch while accumulating recurring correction data.",
+  "primary_score_limiter": "There is no measured evidence that the target forwarders suffer economically material errors that existing or free filing routes fail to prevent, so willingness to pay and repeatable economics remain unresolved.",
+  "qualified": false,
+  "raw_response_path": "artifacts/research/raw-c3-working-gate-06.json",
+  "raw_response_sha256": "81a8c01fac121534011cf11bd551ccec985953289620e25ea3393de7a6b8dcd1",
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 2,
+  "strongest_disconfirming_evidence": "The Commission's free Shared Trader Portal and NCTS Phase 6 route coexist with established vendors already offering portals, APIs, connectivity, filing, and automated rule updates.",
+  "unrounded_score": 5.02
+}

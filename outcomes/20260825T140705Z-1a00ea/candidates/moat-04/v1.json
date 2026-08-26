@@ -1,0 +1,67 @@
+{
+  "candidate_id": "moat-04",
+  "claims": [
+    {
+      "claim_id": "moat04-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.irena.org/Publications/2016/Jun/End-of-life-management-Solar-Photovoltaic-Panels"
+      ],
+      "statement": "IRENA and IEA-PVPS project large PV waste volumes and identify reuse, repurposing, and recovery as value opportunities."
+    },
+    {
+      "claim_id": "moat04-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/dir/2024/884/oj"
+      ],
+      "statement": "EU rules assign producers financing responsibility for collection and treatment of qualifying photovoltaic-panel waste."
+    }
+  ],
+  "contrary_evidence": [
+    "Falling new-component prices can make reclaimed repairs unattractive."
+  ],
+  "economics": {
+    "acquisition_route": "Unvalidated hypothesis: seed installers and recyclers, then capture part-number search.",
+    "capital_required_pln": 75000,
+    "founder_net_worth_path": "Unvalidated hypothesis: 50 million PLN GMV at 15% take rate supports founder equity above 5 million PLN in six to eight years.",
+    "founder_time": "Unvalidated hypothesis: 15-20 hours weekly with outsourced testing and warehousing.",
+    "gross_margin_basis": "Unvalidated hypothesis: 45% after inspection and logistics support.",
+    "payback": "Unvalidated hypothesis: four repeat technician orders.",
+    "pricing": "Unvalidated hypothesis: 12-20% take rate plus 100-500 PLN testing fees.",
+    "retention_or_repeat": "Unvalidated hypothesis: rare parts recur as fleets age."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Completed repairs validate fitment edges while liquidity improves availability",
+    "customer": "Solar repair technicians, recyclers, and aging-system owners",
+    "distribution_mechanism": "Long-tail part-number search and technician procurement",
+    "offer_and_business_model": "Fitment-guaranteed exchange earning take rate and testing fees",
+    "payer_and_paid_event": "The repairer pays when a compatible tested component ships",
+    "problem_trigger": "A legacy component fails and no economical new replacement exists"
+  },
+  "founder_fit": [
+    "Family installers can reveal fitment pain and seed transactions while operations are delegated."
+  ],
+  "parent": null,
+  "risks": [
+    "Misidentified components create fire and liability exposure.",
+    "Liquidity may fragment by brand and vintage."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.irena.org/Publications/2016/Jun/End-of-life-management-Solar-Photovoltaic-Panels",
+    "https://eur-lex.europa.eu/eli/dir/2024/884/oj"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Vertical B2B marketplace",
+    "control_point": "A serial-level fitment, test, failure, and successful-repair graph",
+    "critical_dependency": "Qualified supply and conservative safety procedures"
+  },
+  "thesis": "A managed B2B exchange for tested reclaimed photovoltaic components builds a compatibility graph from every quoted and completed repair.",
+  "title": "PV Fitment Exchange",
+  "uncertainties": [
+    "Repair frequency and reclaimable supply quality are unknown."
+  ],
+  "version": 1
+}

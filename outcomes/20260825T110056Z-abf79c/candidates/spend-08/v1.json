@@ -1,0 +1,86 @@
+{
+  "candidate_id": "spend-08",
+  "claims": [
+    {
+      "claim_id": "spend-08-c01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://europa.eu/youreurope/citizens/consumers/shopping/shopping-consumer-rights/index_en.htm"
+      ],
+      "statement": "Current EU consumer guidance says online buyers generally have 14 days to cancel and return an order without giving a reason and that traders must refund standard delivery costs in covered cases."
+    },
+    {
+      "claim_id": "spend-08-c02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ec.europa.eu/eurostat/de/web/interactive-publications/digitalisation-2025"
+      ],
+      "statement": "Eurostat reports that 77% of EU people bought or ordered online in 2024, up from 59% in 2014, confirming a broad transaction base but not merchant return rates."
+    },
+    {
+      "claim_id": "spend-08-c03",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/news/new-eu-rules-stop-destruction-unsold-clothes-and-shoes-2026-02-09_en"
+      ],
+      "statement": "A February 2026 European Commission notice says nearly 20 million returned items are discarded annually in Germany and explicitly encourages better return handling and resale alternatives."
+    }
+  ],
+  "contrary_evidence": [
+    "Consumers often bear return shipping when properly informed, so not every return creates the same merchant logistics cost.",
+    "OMS, WMS and marketplace platforms already expose return reports and basic abuse rules.",
+    "The Commission's discarded-return figure is for Germany and does not establish the Polish merchant loss distribution."
+  ],
+  "economics": {
+    "acquisition_route": "Run a 6-12 month historical SKU/returns analysis for one vertical, recruit two 3PL or platform agencies, then use verified avoided-return and faster-restock case metrics for channel sales.",
+    "capital_required_pln": 90000,
+    "founder_net_worth_path": "Two hundred merchants averaging 4000 PLN monthly would create 9.6m PLN annual recurring revenue before savings fees. At a mature 38% owner-cash margin, around 3.65m PLN annually could generate over 10m PLN in cumulative distributions within four mature years without exit proceeds.",
+    "founder_time": "Launch with batch exports and one merchandise category at 3.5-5 hours/day, leaving customer blocking and refund decisions to merchant staff; remain employed through objective repeatability and runway gates.",
+    "gross_margin_basis": "Connectors, modelling and queues are software; target 70-85% gross margin after data onboarding and quarterly outcome review, with no ownership of returned inventory.",
+    "payback": "Target under 3 months for merchants whose annual return loss materially exceeds the subscription; attribution must separate seasonality, promotions and mix shift.",
+    "pricing": "Assumption to test: 2500-12000 PLN monthly by order volume plus 5-10% of loss reduction measured against a pre-agreed SKU or cohort baseline.",
+    "retention_or_repeat": "Returns recur with every season and product launch, and accumulated intervention history strengthens recommendations; merchant churn or platform data restrictions weaken retention."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A category-specific return-propensity and disposition-yield dataset links interventions to downstream loss, while merchant-specific customer and product data remain isolated.",
+    "customer": "CEE online merchants processing roughly 5000-200000 physical-goods orders per month, with enough returns to employ dedicated operations staff but insufficient internal data science.",
+    "distribution_mechanism": "E-commerce agencies, 3PLs and regional OMS/WMS integrators distribute the tool; a historical returns diagnostic provides a low-meeting paid entry product.",
+    "offer_and_business_model": "Data connector and action queue that estimates fully loaded return cost, ranks SKU/root causes, recommends content or size interventions, flags abuse for human review and routes each returned unit to restock, outlet, repair or liquidation; SaaS plus savings fee.",
+    "payer_and_paid_event": "The e-commerce operations or finance head pays by order volume plus an optional share of verified avoided loss; recurring paid events are refunds, standard-delivery reimbursement, handling, inspection, markdown and disposal.",
+    "problem_trigger": "A weekly return batch shows rising refunds, repeat reason codes, slow restocking or unsellable inventory, but the merchant cannot connect the loss to SKU content, sizing, supplier, carrier or customer behaviour."
+  },
+  "founder_fit": [
+    "Causal measurement, ranking and SKU-level prediction exploit data-science skills.",
+    "CEE localisation provides a regional wedge while the underlying workflow is scalable across the EU.",
+    "Agency and 3PL channels reduce direct merchant-by-merchant networking.",
+    "A fixed historical diagnostic can validate loss and willingness to pay before building live integrations."
+  ],
+  "parent": null,
+  "risks": [
+    "Abuse scores can unfairly penalise legitimate customers and must never auto-deny statutory rights.",
+    "Poor baselines can overstate savings and create contract disputes.",
+    "Platform or 3PL integration changes can raise maintenance cost.",
+    "Customer and order histories require GDPR minimisation and robust segregation."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://europa.eu/youreurope/citizens/consumers/shopping/shopping-consumer-rights/index_en.htm",
+    "https://ec.europa.eu/eurostat/de/web/interactive-publications/digitalisation-2025",
+    "https://environment.ec.europa.eu/news/new-eu-rules-stop-destruction-unsold-clothes-and-shoes-2026-02-09_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Loss-reduction analytics SaaS with optional savings share",
+    "control_point": "The SKU intervention backlog and per-unit disposition decision where refundable stock value is won or lost",
+    "critical_dependency": "Line-level return reasons and condition outcomes must be trustworthy, and merchants must implement recommended content or routing changes"
+  },
+  "thesis": "Sell mid-sized Polish and CEE fashion, footwear and home-goods merchants an analytics layer that joins orders, product attributes, content changes, carrier events and return condition to identify avoidable returns and route returned stock to the highest-value disposition. Merchants already refund orders, reimburse standard delivery where required, pay reverse logistics and lose value on damaged or discarded stock; the offer targets those measured losses rather than generic dashboards.",
+  "title": "Return-Loss Root Cause and Disposition Engine for CEE Merchants",
+  "uncertainties": [
+    "The addressable number of CEE merchants with usable line-level condition data is unknown.",
+    "The proportion of returns preventable through product content, sizing or routing rather than customer preference must be measured.",
+    "It is unknown whether merchants will accept savings-share attribution or prefer fixed subscriptions.",
+    "Pricing, gross margin, customer targets and founder-wealth figures are assumptions."
+  ],
+  "version": 1
+}

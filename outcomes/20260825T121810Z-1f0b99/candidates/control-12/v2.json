@@ -1,0 +1,148 @@
+{
+  "candidate_id": "control-12",
+  "claims": [
+    {
+      "claim_id": "control-12-r01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1542/2023-07-28",
+        "https://unece.org/transport/documents/2022/04/standards/un-gtr-no22-vehicle-battery-durability-electrified-vehicles"
+      ],
+      "statement": "EU battery law requires battery passports for EV batteries placed on the market or put into service from 18 February 2027 and includes battery-specific information, while UN GTR No. 22 standardises in-vehicle durability metrics and a readable health-monitor framework."
+    },
+    {
+      "claim_id": "control-12-r02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32018R0858",
+        "https://eur-lex.europa.eu/eli/reg/2023/2854/oj/eng"
+      ],
+      "statement": "EU rules grant independent operators access to vehicle OBD and repair and maintenance information, and the Data Act expands user access to readily available connected-product data, but neither rule guarantees that every legacy model exposes a comparable, accurate battery-capacity measure."
+    },
+    {
+      "claim_id": "control-12-r03",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.ecutechnik.pl/en/uslugi/certyfikacja-baterii-ev",
+        "https://get-moba.com/en/faqs/",
+        "https://shop.aviloo.com/en/includes-en",
+        "https://www.dekra.com/en/battery-test-for-electric-cars/"
+      ],
+      "statement": "Independent certificates are already commercialised at 400 PLN in Poland, EUR 79 by Moba, and EUR 99 by AVILOO, while DEKRA advertises a validated 15-minute test; the generic certificate layer is therefore an existing category, not an uncontested wedge."
+    },
+    {
+      "claim_id": "control-12-r04",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.recurrentauto.com/questions/how-do-i-prove-my-evs-battery-is-healthy-when-selling"
+      ],
+      "statement": "Recurrent provides owners a free report based on longitudinal connected-car readings and comparison with more than 30,000 connected EVs, creating a zero-price substitute where supported."
+    },
+    {
+      "claim_id": "control-12-r05",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.nature.com/articles/s41467-025-56485-7"
+      ],
+      "statement": "Peer-reviewed work using three years of data from 300 EVs describes limited large-scale high-quality field data and disparities between field and laboratory data, supporting the difficulty of robust cross-model state-of-health estimation."
+    },
+    {
+      "claim_id": "control-12-r06",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://psnm.org/wp-content/uploads/2026/01/PSNM_Year_2025_in_New_Mobility_in_Poland_Report_EN.pdf"
+      ],
+      "statement": "Poland's passenger BEV fleet reached about 121,259 vehicles by December 2025, a growing but still bounded domestic installed base relative to the discovery hypothesis of 30,000 annual tests."
+    },
+    {
+      "claim_id": "control-12-r07",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://www.geotab.com/blog/ev-battery-health/"
+      ],
+      "statement": "Geotab's analysis of more than 22,700 EVs reports average annual degradation of 2.3% and projects average 81.6% state of health after eight years; average robustness can reduce consumer urgency even though model and use-condition variance preserves a need for individual assessment."
+    },
+    {
+      "claim_id": "control-12-r08",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://www.ecutechnik.pl/en/uslugi/certyfikacja-baterii-ev",
+        "https://www.dekra.com/en/battery-test-for-electric-cars/"
+      ],
+      "statement": "A defensible entrant could still win through dealer workflow, wider local coverage, deeper anomaly escalation, and longitudinal outcomes, but no reviewed evidence shows Polish dealers will switch or pay recurring partner fees."
+    }
+  ],
+  "contrary_evidence": [
+    "A Polish workshop already sells a CARA Approved certificate for 400 PLN, directly matching the bottom of the proposed retail range.",
+    "Moba and AVILOO price consumer certificates at EUR 79-99, DEKRA offers a 15-minute independent test, and Recurrent offers supported owners a free longitudinal report.",
+    "Battery passports and connected-product data-access rules will improve baseline data availability for newer vehicles and can commoditise simple provenance or BMS read-outs.",
+    "Geotab's fleet evidence indicates modern batteries are robust on average, reducing urgency for many ordinary transactions.",
+    "The Polish passenger BEV fleet of roughly 121,000 at end-2025 makes 30,000 domestic tests per year an aggressive penetration assumption before used-transaction frequency is measured."
+  ],
+  "economics": {
+    "acquisition_route": "License or validate a protocol for a deliberately narrow vehicle set, run a paid batch with one Warsaw dealer or lease-return operator, and acquire end buyers through the existing transaction rather than broad consumer advertising. Expand only when a partner repeats at least three batches.",
+    "capital_required_pln": 70000,
+    "founder_net_worth_path": "A target case requires CEE expansion: about 25,000 annual tests at 150 PLN platform contribution plus 200 partners averaging 6,000 PLN ARR would produce roughly 4.95m PLN high-margin revenue before other data contracts. At 1.3-1.8m PLN EBITDA, a 4x value and about 70% founder ownership could create 3.6-5.0m PLN founder equity; retained cash could move net worth beyond 5m PLN in seven to ten years. Poland-only scale and current evidence do not yet support this volume.",
+    "founder_time": "15-18 hours per week for protocol, analytics, partner onboarding, and QA; tests and high-voltage work must be executed by trained partners.",
+    "gross_margin_basis": "A partner-delivered basic certificate may yield 55-70% platform gross margin only if device licensing and support stay low; founder- or employee-delivered inspections are likely 35-55%. Software and data products could exceed 75%, but only after model coverage and partner QA are built.",
+    "payback": "A partner's acquisition and onboarding cost should be recovered within 30 completed tests. Buyer value must be measured as reduced discount, faster days-to-sale, avoided bad purchase, or fewer disputes rather than asserted from battery replacement cost alone.",
+    "pricing": "Anchor the basic certificate at 350-500 PLN retail because a direct Polish incumbent charges 400 PLN. Test 120-220 PLN per vehicle for dealer batches and 700-1,200 PLN only for a genuinely deeper dynamic or cell-level assessment. Test partner software at 400-1,000 PLN monthly after volume is established.",
+    "retention_or_repeat": "Dealers and fleets can repeat with inventory; one-off buyers will not. Longitudinal re-tests and partner software are plausible but unvalidated, and battery passports may reduce the need for simple read-outs on newer vehicles."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A trusted transaction certificate and consented longitudinal dataset linking model-specific test signals to later capacity, repairs, disputes, and realised sale outcomes",
+    "customer": "Used-EV dealers, leasing and remarketing fleets, inspection stations, warranty providers, and buyers in Poland and later CEE",
+    "distribution_mechanism": "One Warsaw dealer or inspection-chain pilot, batch testing at lease returns and dealer inventory, listing integrations, and later warranty or finance partnerships",
+    "offer_and_business_model": "Partner-delivered model-aware battery condition test with uncertainty-rated QR certificate, premium anomaly escalation, partner QA software, and opt-in longitudinal follow-up",
+    "payer_and_paid_event": "A dealer, fleet, buyer, or warranty partner pays per signed test; an inspection partner pays a recurring protocol and QA fee only after repeat inventory volume is proven",
+    "problem_trigger": "An EV is acquired, appraised, returned from lease, listed, financed, warranted, or disputed and its traction-battery condition is not trusted"
+  },
+  "founder_fit": [
+    "Strong fit for uncertainty modelling, longitudinal data analysis, and battery-adjacent commercial work in Warsaw and Poland.",
+    "The founder can build protocol software and partner QA without a camera-facing brand, but should not personally perform a national mobile-inspection service.",
+    "Qualified high-voltage technicians, automotive legal review, and insurance input are delegable requirements; no evidence makes them non-delegable founder duties."
+  ],
+  "parent": {
+    "candidate_id": "control-12",
+    "version": 1
+  },
+  "risks": [
+    "A certificate that overstates future condition can create negligence, misrepresentation, and transaction-dispute exposure.",
+    "Established test vendors can out-distribute a new protocol or license their own products to the same inspection partners.",
+    "Manufacturer software and model changes can invalidate parsers and reference models.",
+    "The battery-passport and vehicle-data regimes may improve data access but also lower differentiation for a simple read-out.",
+    "Field operations become labour-heavy and geographically fragmented unless licensed partners deliver and quality-control the tests."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2023/1542/2023-07-28",
+    "https://unece.org/transport/documents/2022/04/standards/un-gtr-no22-vehicle-battery-durability-electrified-vehicles",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32018R0858",
+    "https://eur-lex.europa.eu/eli/reg/2023/2854/oj/eng",
+    "https://www.ecutechnik.pl/en/uslugi/certyfikacja-baterii-ev",
+    "https://get-moba.com/en/faqs/",
+    "https://shop.aviloo.com/en/includes-en",
+    "https://www.dekra.com/en/battery-test-for-electric-cars/",
+    "https://www.recurrentauto.com/questions/how-do-i-prove-my-evs-battery-is-healthy-when-selling",
+    "https://www.nature.com/articles/s41467-025-56485-7",
+    "https://psnm.org/wp-content/uploads/2026/01/PSNM_Year_2025_in_New_Mobility_in_Poland_Report_EN.pdf",
+    "https://www.geotab.com/blog/ev-battery-health/"
+  ],
+  "stage": "research",
+  "structure": {
+    "commercial_archetype": "Licensed inspection protocol, transaction certificate, and residual-risk data network",
+    "control_point": "The trusted battery-condition record accepted in dealer, lease-return, valuation, or warranty workflows",
+    "critical_dependency": "A protocol with predictive value beyond cheap incumbent read-outs and distribution partners willing to attach it to recurring transactions"
+  },
+  "thesis": "Build a model-aware battery-condition certificate for used-EV transactions through existing inspection partners rather than a founder-operated field service. Start with a narrow set of vehicles for which lawful OBD access and a validated protocol are available, distinguish a low-cost BMS read-out from a premium dynamic or longitudinal assessment, and attach uncertainty rather than a guarantee. The long-term asset would be a trusted transaction record and longitudinal link among test signals, resale outcomes, warranty events, and later degradation, but the offer must beat established 400 PLN and EUR 79-99 certificates on distribution or predictive value.",
+  "title": "Used-EV Battery Trust Certificate Network",
+  "uncertainties": [
+    "Model-by-model access to raw signals and whether lawful OBD access includes the variables needed for independent capacity estimation.",
+    "Predictive validity of a short test for later degradation, warranty events, and realised resale value.",
+    "Dealer willingness to display a new badge when recognised incumbent certificates are available.",
+    "Batch-test contribution margin after partner labour, device amortisation, licence fees, failed tests, and support.",
+    "Consent and permissible reuse of VIN-linked and driver-linked longitudinal data under the Data Act and GDPR.",
+    "Used-BEV transaction volume by model and channel in Poland and neighbouring CEE markets."
+  ],
+  "version": 2
+}

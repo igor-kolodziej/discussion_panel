@@ -1,0 +1,168 @@
+{
+  "candidate_id": "control8-07",
+  "claims": [
+    {
+      "claim_id": "control8-07-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://poisoncentres.echa.europa.eu/-/poison-centre-notifications-must-be-in-harmonised-format-as-of-1-january-2025"
+      ],
+      "statement": "From 1 January 2025, notifications for in-scope mixtures hazardous for health or physical effects placed on the EU market must use the harmonised Annex VIII format."
+    },
+    {
+      "claim_id": "control8-07-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://poisoncentres.echa.europa.eu/generate-and-apply-the-ufi",
+        "https://poisoncentres.echa.europa.eu/gather-the-required-information"
+      ],
+      "statement": "ECHA states that a UFI is assigned to one mixture composition and that a PCN generally requires the full chemical composition, while qualifying mixture-in-mixture workflows can preserve supplier confidentiality through a referenced UFI."
+    },
+    {
+      "claim_id": "control8-07-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://poisoncentres.echa.europa.eu/keep-the-information-up-to-date"
+      ],
+      "statement": "ECHA requires the notification to reflect the product currently on the market; a significant composition change requires a new UFI and a new linked notification, while classification, market and other product changes can require updates."
+    },
+    {
+      "claim_id": "control8-07-c4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://echa.europa.eu/-/one-in-five-hazardous-mixtures-not-reported-to-poison-centres"
+      ],
+      "statement": "ECHA's 2026 pilot enforcement project found that 19% of 1,597 checked hazardous mixtures across 18 EU/EEA countries had not been notified and reported that inspectors initiated enforcement actions."
+    },
+    {
+      "claim_id": "control8-07-c5",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://poisoncentres.echa.europa.eu/poison-centres-notification-format"
+      ],
+      "statement": "The XML-based PCN format is updated annually; ECHA published version 8 on 27 April 2026 and provides the schemas, data model and validation rules for companies or service providers to build their own tooling."
+    },
+    {
+      "claim_id": "control8-07-c6",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://poisoncentres.echa.europa.eu/get-organised-in-your-supply-chain%C2%A0"
+      ],
+      "statement": "A client can authorize an external consultant as a foreign user in ECHA tools, but contractual task, responsibility and confidentiality boundaries remain necessary and the legal duty holder remains the submitter."
+    },
+    {
+      "claim_id": "control8-07-c7",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2024/2865",
+        "https://eur-lex.europa.eu/eli/reg/2025/2439/oj"
+      ],
+      "statement": "The revised CLP rules add a distributor notification duty for cross-border distribution, rebranding or relabelling when the relevant appointed body has not already received the information; Regulation (EU) 2025/2439 makes that amendment applicable from 1 January 2027."
+    },
+    {
+      "claim_id": "control8-07-c8",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://poisoncentres.echa.europa.eu/prepare-your-submission",
+        "https://help.sap.com/docs/SAP_S4HANA_CLOUD/6540a57e42314b5a8c208bca283e29e6/01d8542272d94c24b1bfb1e43e821eba.html",
+        "https://www.ul.com/services/poison-centres"
+      ],
+      "statement": "ECHA provides free Cloud, desktop, portal and system-to-system preparation routes, while SAP Product Compliance and UL WERCS already document commercial PCN/UFI workflows."
+    }
+  ],
+  "contrary_evidence": [
+    "ECHA provides free dossier preparation, validation, multimarket submission and system-to-system tooling, so generation and submission alone are not a defensible product.",
+    "SAP Product Compliance and UL WERCS already cover UFI/PCN workflows for established chemical-data customers.",
+    "A distributor can avoid its own submission when it can demonstrate that the appointed body already received the same information, narrowing the new 2027 wedge.",
+    "The 19% enforcement gap establishes non-compliance, not budget, portfolio size, willingness to outsource or willingness to entrust formulas to a new vendor.",
+    "The PCN format changes annually, imposing recurring validation and regression work.",
+    "The obligation is limited to mixtures hazardous for health or physical effects within scope; non-hazardous portfolios do not create this release gate.",
+    "No reviewed source shows that independent SDS/CLP consultants want a white-label engine, will pay the proposed license, or will introduce a young vendor into customer-controlled environments.",
+    "Customer-controlled deployment reduces central custody exposure but can increase integration, security-review, version-support and fragmented-deployment cost.",
+    "Moving expert review and translation to consultants changes who bears the work but does not prove that total delivery economics or end-customer willingness to pay improve."
+  ],
+  "economics": {
+    "acquisition_route": "Unvalidated hypothesis: recruit two independent SDS/CLP consultancies for redacted or synthetic pilots through targeted founder outreach, convert a pilot only after measured reconciliation savings, and let each paying practice deploy into its own client base; no consultant, customer or channel commitment exists",
+    "capital_required_pln": 45000,
+    "founder_net_worth_path": "Unvalidated 7-9 year scenario: 45 consultant practices averaging 90,000 PLN annual license, deployment and usage revenue yield 4.05m PLN; at 55% EBITDA, a 4x multiple and 75% founder ownership imply about 6.68m PLN of founder equity value. It assumes repeatable consultant adoption, customer-controlled deployments and the stated margin, reinvests cash while the founder remains employed, and does not count retained earnings or distributions twice.",
+    "founder_time": "15-20 hours per week during validation, focused on the rule engine, deployment automation and measured pilot delivery; consultants provide qualified chemical-regulatory approval, translation and end-client management, and the founder proceeds only after explicit employer conflict clearance",
+    "gross_margin_basis": "Hypothesis: reusable reconciliation rules, deployment automation and annual compatibility tests support software-like contribution margin, while consultants bear qualified review, translation and end-client servicing. Customer-specific integration, security review, support and annual format regression remain material costs and may erase the expected improvement.",
+    "payback": "Unvalidated consultant hypothesis: a practice recovers the annual license when measured reconciliation hours, preventable rework or additional safely handled release volume exceed implementation and usage fees; free ECHA tooling means the pilot must prove workflow savings rather than submission access",
+    "pricing": "Unvalidated hypothesis: 5,000-12,000 PLN per customer-controlled deployment, 18,000-40,000 PLN annual white-label practice license and 300-800 PLN per released or materially updated formula above an included allowance; no reviewed source validates these prices or margins",
+    "retention_or_repeat": "Hypothesis: the consultant retains the engine because its client-specific mappings, approval history and release templates recur across formula, supplier, label, language and market changes; retention is unproven and depends on measurable workflow value rather than technical lock-in"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Consultant-specific mappings, approved exception history and customer-side release templates accumulate inside each controlled deployment, while a non-confidential annual compatibility and regression-test library improves the engine without pooling customer formulas",
+    "customer": "Independent EU SDS/CLP consultancies and small regulatory-service teams that manage repeated hazardous-mixture releases for multiple SME clients; each end client retains formula custody and remains the legal duty holder",
+    "distribution_mechanism": "Unvalidated direct account-based sale to independent SDS/CLP consultancies using a redacted or synthetic benchmark; a paying consultant then introduces the engine into its own client workflows without any assumed partner commitment",
+    "offer_and_business_model": "Customer-controlled or single-tenant white-label exception engine for consultants: local formula/UFI mapping, label/SDS/market reconciliation, PCN dataset checks, approval evidence and update alerts; hypothesized 5,000-12,000 PLN deployment, 18,000-40,000 PLN annual practice license and 300-800 PLN per release above an included allowance",
+    "payer_and_paid_event": "Unvalidated hypothesis: the consultant practice pays implementation and a white-label platform license after a redacted or synthetic pilot shows actionable cross-record exceptions and a credible reduction in reconciliation work, then pays usage fees as client formulas are released or updated",
+    "problem_trigger": "A consultant receives a new formulation, supplier or composition change, rebrand or relabel request, new member-state market, classification or label revision, or a rejected or warned PCN submission and must reconcile records before approving release"
+  },
+  "founder_fit": [
+    "The customer-controlled exception engine uses the founder's data-lineage, automation and FMCG familiarity without assuming access to employer intellectual property",
+    "Selling to a bounded set of consultant practices may reduce the number of end-customer sales relationships, but this distribution effect is an unvalidated hypothesis",
+    "A redacted or synthetic pilot can start part-time before any production formula access, while qualified consultants retain regulatory judgment",
+    "Requires explicit conflict-of-interest review and strict avoidance of Reckitt data, formulations, vendors, work systems and work time"
+  ],
+  "parent": {
+    "candidate_id": "control8-07",
+    "version": 3
+  },
+  "redesign": {
+    "changed_fingerprint_fields": [
+      "customer",
+      "problem_trigger",
+      "payer_and_paid_event",
+      "offer_and_business_model",
+      "distribution_mechanism",
+      "compounding_advantage"
+    ],
+    "economic_effect": "Changes the hypothesized unit from a direct formula-release service with central vault custody to consultant-paid, customer-controlled software: consultants retain expert review and become multi-client distribution nodes, which could reduce formula-custody exposure, qualified-review variable cost and end-customer acquisition burden while lowering initial capital from 65,000 PLN to 45,000 PLN. The effect is unvalidated and may be offset by integration, fragmented deployment, security review, support and unproven consultant willingness to pay."
+  },
+  "risks": [
+    "A formula breach would be catastrophic; customer-controlled or isolated deployment may be required",
+    "Chemical classification or release errors can harm users and create liability; software cannot replace qualified review",
+    "ECHA's free tools and established product-compliance vendors may be sufficient",
+    "Annual PCN format releases create ongoing maintenance and regression-test cost",
+    "Employer conflict or perceived competitive overlap could make this opportunity unsuitable",
+    "External-user access must be granted by each client and contractually limited; the entrant cannot impersonate the legal submitter",
+    "Consultants may view the engine as margin compression or an enablement tool they can reproduce, preventing the proposed payer-distributor structure.",
+    "A customer-controlled deployment can still expose sensitive data through logs, support access or configuration errors and therefore does not eliminate trade-secret liability.",
+    "Fragmented customer environments may make upgrades and annual PCN-format regression more expensive than the hypothesized software margin supports."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://poisoncentres.echa.europa.eu/-/poison-centre-notifications-must-be-in-harmonised-format-as-of-1-january-2025",
+    "https://poisoncentres.echa.europa.eu/generate-and-apply-the-ufi",
+    "https://poisoncentres.echa.europa.eu/gather-the-required-information",
+    "https://poisoncentres.echa.europa.eu/keep-the-information-up-to-date",
+    "https://echa.europa.eu/-/one-in-five-hazardous-mixtures-not-reported-to-poison-centres",
+    "https://poisoncentres.echa.europa.eu/poison-centres-notification-format",
+    "https://poisoncentres.echa.europa.eu/prepare-your-submission",
+    "https://poisoncentres.echa.europa.eu/get-organised-in-your-supply-chain%C2%A0",
+    "https://eur-lex.europa.eu/eli/reg/2024/2865",
+    "https://eur-lex.europa.eu/eli/reg/2025/2439/oj",
+    "https://help.sap.com/docs/SAP_S4HANA_CLOUD/6540a57e42314b5a8c208bca283e29e6/01d8542272d94c24b1bfb1e43e821eba.html",
+    "https://www.ul.com/services/poison-centres"
+  ],
+  "stage": "development",
+  "structure": {
+    "commercial_archetype": "White-label, customer-controlled compliance exception engine licensed to regulatory consultants through implementation, annual platform and per-release usage fees",
+    "control_point": "The consultant-operated pre-release exception and approval queue where formula, UFI, label, SDS, product-name, language and market records must agree before the customer releases or submits",
+    "critical_dependency": "Consultants must adopt and pay for the engine, end customers must permit a workable controlled deployment and data access, qualified humans must retain approval, and the entrant must maintain exact annual PCN compatibility without taking legal-duty-holder responsibility"
+  },
+  "thesis": "Development-stage structural hypothesis: license a white-label formula-to-market exception engine to independent SDS/CLP consultants, deployed inside each end customer's controlled environment so exact compositions do not enter the entrant's shared vault. The engine reconciles customer-side composition or permitted MiM references, UFI, SDS identifiers, labels, trade names, languages and market coverage, then routes exceptions and evidence to the consultant for qualified approval while the end customer remains the legal duty holder and controls any submission identity. The consultant becomes payer, operator and multi-client distribution node. This attacks custody risk and channel conflict, but no reviewed evidence establishes consultant demand, deployment acceptance, prices, margins or customer access.",
+  "title": "Customer-Controlled PCN Release Engine for CLP Consultants",
+  "uncertainties": [
+    "Number of independent EU consultant practices with enough repeated multi-client releases to support the hypothesized annual license",
+    "Whether consultants will adopt and pay for a white-label exception engine rather than use free tools, spreadsheets or their own checks",
+    "Whether end customers will permit local or single-tenant deployment and provide sufficient data access without central formula custody",
+    "Measured consultant reconciliation time, preventable error rate and incremental release capacity before and after a pilot",
+    "Realized customer-specific integration, security review, annual compatibility, support and insurance costs",
+    "Whether per-release usage fees align with consultant billing and end-customer budgets",
+    "Actual scope created by the 2027 distributor duty after upstream notifications are updated",
+    "Employer conflict-of-interest determination"
+  ],
+  "version": 4
+}

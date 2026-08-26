@@ -1,0 +1,68 @@
+{
+  "candidate_id": "channel-05",
+  "claims": [
+    {
+      "claim_id": "channel-05-claim-01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2024/573/oj/eng"
+      ],
+      "statement": "Regulation (EU) 2024/573 says non-hermetically sealed equipment charged with listed F-gases may be sold to an end user only where evidence shows installation by a certified undertaking."
+    },
+    {
+      "claim_id": "channel-05-claim-02",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2024/573/oj/eng"
+      ],
+      "statement": "Sellers must keep records of the equipment sold and certified undertaking that will install it for at least five years."
+    }
+  ],
+  "contrary_evidence": [
+    "Merchants can perform manual certificate collection, and refrigerant transitions or growth in hermetically sealed products can shrink the gated category."
+  ],
+  "economics": {
+    "acquisition_route": "UNVALIDATED HYPOTHESIS: validate through 1 family-business pilot, then 3 HVAC ERP or distributor-group partners yielding 60 sites.",
+    "capital_required_pln": 45000,
+    "founder_net_worth_path": "UNVALIDATED HYPOTHESIS: year-7 ARR of PLN 7 million, EBITDA of PLN 2.5 million and 80% founder ownership valued at 4 times EBITDA imply PLN 8 million founder equity before liabilities.",
+    "founder_time": "UNVALIDATED HYPOTHESIS: 10 founder hours weekly in pilot and 6 after merchant support is documented.",
+    "gross_margin_basis": "UNVALIDATED HYPOTHESIS: 86% mature gross margin after registry queries, identity checks and evidence retention.",
+    "payback": "UNVALIDATED HYPOTHESIS: 5-month CAC payback with self-serve installer onboarding.",
+    "pricing": "UNVALIDATED HYPOTHESIS — every commercial figure here, including capital_required_pln=45000, is a hypothesis: PLN 900 per merchant site monthly plus PLN 6 per verified order.",
+    "retention_or_repeat": "UNVALIDATED HYPOTHESIS: 95% annual site retention because evidence must be captured on repeat equipment sales."
+  },
+  "fingerprint": {
+    "compounding_advantage": "merchant-consented installer identity graph, expired-certificate history and spoof-resolution patterns",
+    "customer": "HVAC and heat-pump equipment wholesalers selling to installers and end users",
+    "distribution_mechanism": "HVAC wholesaler ERP and ecommerce implementation partners, seeded by a family installer pilot",
+    "offer_and_business_model": "checkout widget, certificate verification and audit record sold per site and verified order",
+    "payer_and_paid_event": "wholesaler pays when checkout verifies and records the certified installer tied to the order",
+    "problem_trigger": "an end user attempts to buy non-hermetically sealed pre-charged equipment"
+  },
+  "founder_fit": [
+    "Unusually strong founder-channel fit through the parents' renewable installer company and a highly asynchronous merchant product. UNVALIDATED HYPOTHESIS: PLN 45000 supports a reversible single-wholesaler validation."
+  ],
+  "parent": null,
+  "risks": [
+    "Registry coverage or certificate revocation latency can yield false approvals.",
+    "The seller remains responsible; the product must not claim regulatory delegation."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2024/573/oj/eng"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "merchant authorisation clearinghouse for regulated equipment sales",
+    "control_point": "wholesale checkout release for non-hermetically sealed pre-charged equipment",
+    "critical_dependency": "authoritative installer-certificate status and legally acceptable seller record capture"
+  },
+  "thesis": "Give HVAC and heat-pump wholesalers an embedded checkout gate that verifies the installer undertaking, binds its certificate evidence to the end-user order and preserves the seller's required record. A certificate-identity and fraud-resolution graph shared across opted-in merchants makes repeat checks faster and harder to spoof.",
+  "title": "F-Gas Certified-Installer Checkout Gate",
+  "uncertainties": [
+    "Machine-readable Polish and cross-border certificate sources",
+    "Order volume in the exact regulated category",
+    "Wholesaler appetite for a shared identity graph"
+  ],
+  "version": 1
+}

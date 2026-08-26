@@ -1,0 +1,73 @@
+{
+  "candidate_id": "gate-10",
+  "claims": [
+    {
+      "claim_id": "gate-10-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/zakres-obowiazkowego-ksef/"
+      ],
+      "statement": "The Ministry of Finance states that receiving invoices through KSeF has been mandatory since 1 February 2026 and that issuance obligations were phased from February and April 2026, with the smallest firms deferred through 2026."
+    },
+    {
+      "claim_id": "gate-10-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/"
+      ],
+      "statement": "Official KSeF guidance identifies structured FA(3), verification QR codes, offline and outage modes, attachments, and KSeF identifiers as distinct operational elements."
+    }
+  ],
+  "contrary_evidence": [
+    "The Ministry and accounting-software vendors provide KSeF tools, making generic e-invoicing highly commoditized.",
+    "Construction buyers may still reject an officially accepted invoice for contract reasons outside KSeF."
+  ],
+  "economics": {
+    "acquisition_route": "Hypothesis: validate inside one installer, then onboard cohorts through construction accounting offices.",
+    "capital_required_pln": 55000,
+    "founder_net_worth_path": "Hypothesis: 1000 firms averaging 500 PLN monthly including usage would produce 6 million PLN ARR; profitable founder ownership could exceed 5 million PLN net worth in years 5 to 8.",
+    "founder_time": "Hypothesis: 15 to 20 hours weekly for one accounting connector and one construction invoice archetype.",
+    "gross_margin_basis": "Hypothesis: 85% gross margin before connector support and partner revenue share.",
+    "payback": "Hypothesis: under six months if one accounting partner produces twenty retained 399 PLN accounts.",
+    "pricing": "Hypothesis: 399 PLN monthly plus 1 PLN per released invoice.",
+    "retention_or_repeat": "Hypothesis: mandatory receipt and repeated milestone billing make the workflow monthly and sticky."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A buyer-specific correction graph linking KSeF schema, contract terms, attachments, and payment acceptance",
+    "customer": "Polish construction subcontractors and renewable installers issuing milestone invoices",
+    "distribution_mechanism": "Construction accounting offices, wholesalers, ERP implementers, and general-contractor supplier programs",
+    "offer_and_business_model": "Vertical invoice-release middleware with accounting and project-system connectors",
+    "payer_and_paid_event": "The issuer pays monthly and per invoice that receives a KSeF identifier linked to a complete commercial pack",
+    "problem_trigger": "A milestone is complete and an invoice must pass KSeF plus the buyer's contractual acceptance checks"
+  },
+  "founder_fit": [
+    "The family installation business provides a realistic construction invoice pilot.",
+    "Schema mapping and contract-document reconciliation fit AI and data skills.",
+    "Accounting-office and wholesaler channels reduce founder-led sales intensity."
+  ],
+  "parent": null,
+  "risks": [
+    "KSeF interface and transition rules may change.",
+    "Handling authorization tokens and invoices creates security obligations.",
+    "ERP vendors can copy vertical fields if the wedge proves valuable."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/zakres-obowiazkowego-ksef/",
+    "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Vertical invoice acceptance middleware",
+    "control_point": "KSeF identifier and contract-completeness record before the buyer payment clock begins",
+    "critical_dependency": "Stable KSeF access and proof that contract-level preflight shortens collection"
+  },
+  "thesis": "A construction-specific KSeF bridge could validate FA structure, contract milestone, retention, split lines, attachment references, buyer job code, and offline-mode evidence before releasing an invoice. It would bind the returned KSeF number to the commercial evidence that the payer needs, turning government acceptance into a clean accounts-receivable handoff rather than merely generating XML.",
+  "title": "KSeF Contract-to-Invoice Release for Construction SMEs",
+  "uncertainties": [
+    "The volume of KSeF-accepted but commercially disputed construction invoices is unknown.",
+    "The smallest attractive segment may already be locked into accounting suites.",
+    "The 55000 PLN capital figure and all commercial figures below are hypotheses."
+  ],
+  "version": 1
+}

@@ -1,0 +1,90 @@
+{
+  "candidate_id": "settle8-01",
+  "claims": [
+    {
+      "claim_id": "settle8-01-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/finanse/publikacja-dokumentacji-api-ksef-20-oraz-struktury-logicznej-fa3",
+        "https://www.gov.pl/web/finanse/udostepnienie-api-ksef-20-do-weryfikacji-systemow-komercyjnych"
+      ],
+      "statement": "Verified fact: the Ministry of Finance publishes KSeF 2.0 API documentation for integration with external financial-accounting systems, and the production API was made available in January 2026."
+    },
+    {
+      "claim_id": "settle8-01-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.podatki.gov.pl/podatki-firmowe/vat/poradniki-i-informatory/mechanizm-podzielonej-platnosci-mpp",
+        "https://www.podatki.gov.pl/narzedzia/white-list"
+      ],
+      "statement": "Verified fact: Polish split payment separates the net and VAT amounts, and the Ministry provides a technical flat-file mechanism for bulk checking VAT-listed accounts."
+    },
+    {
+      "claim_id": "settle8-01-c3",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://www.gov.pl/web/finanse/publikacja-dokumentacji-api-ksef-20-oraz-struktury-logicznej-fa3",
+        "https://www.podatki.gov.pl/podatki-firmowe/vat/poradniki-i-informatory/mechanizm-podzielonej-platnosci-mpp"
+      ],
+      "statement": "Hypothesis (unvalidated): accounting firms will pay for a cross-system exception ledger because invoice availability alone does not complete payment reconciliation or the close."
+    }
+  ],
+  "contrary_evidence": [
+    "The Ministry explicitly supports integration by commercial financial-accounting software, so incumbent suites are the obvious substitute: https://www.gov.pl/web/finanse/publikacja-dokumentacji-api-ksef-20-oraz-struktury-logicznej-fa3",
+    "PSD2 account-information providers are regulated and centrally registered, making an unlicensed direct bank-data strategy unsafe: https://www.eba.europa.eu/risk-and-data-analysis/data/registers/payment-institutions-register"
+  ],
+  "economics": {
+    "acquisition_route": "Founder-led pilots with 2-3 Warsaw or Wielkopolska accounting offices, followed by referrals and implementation-partner revenue share; no camera-led audience required.",
+    "capital_required_pln": 35000,
+    "founder_net_worth_path": "Unvalidated scenario: 15 offices at PLN 3,000 MRR by year 2, 50 at PLN 4,000 MRR by year 4, and 90 at PLN 4,500 MRR by year 6 imply about PLN 4.86m ARR. At 25% owner earnings and a 3-4x ARR valuation, 70% founder ownership could exceed PLN 5m net worth in years 5-7; failure to reach 20 repeat offices by month 30 invalidates this path.",
+    "founder_time": "3-4 hours/day until five pilots; automate onboarding and use a contractor for connector maintenance while retaining the full-time job.",
+    "gross_margin_basis": "Hypothesis: 78-88% software gross margin after KSeF/bank connectors and support; manually investigated exceptions must be separately priced or capped.",
+    "payback": "Unvalidated customer hypothesis: one avoided day of reconciliation work or one prevented payment-control error could repay a PLN 2,000-4,000 monthly fee; measure in a paid four-week pilot.",
+    "pricing": "Unvalidated estimate: PLN 1,500-6,000 per accounting office per month plus PLN 2-8 per exception above an included allowance.",
+    "retention_or_repeat": "Every invoice cycle and statutory close repeats; accumulated matching rules, audit trails, and entity mappings make replacement costly."
+  },
+  "fingerprint": {
+    "compounding_advantage": "a permissioned corpus of labeled Polish payment exceptions improves matching rules and creates workflow switching costs without monetizing raw client data",
+    "customer": "Polish accounting offices serving 30-300 SMEs, and finance teams of Polish multi-entity groups",
+    "distribution_mechanism": "accounting-software implementers, bookkeeping associations, and a low-touch migration offer based on the firm's own exports",
+    "offer_and_business_model": "multi-tenant SaaS with KSeF ingestion, bank-feed matching, White List evidence snapshots, exception queues, and an immutable close packet; subscription plus exception volume",
+    "payer_and_paid_event": "the accounting firm or group finance lead pays a monthly portfolio fee when the close dashboard is delivered, with an optional fee for each exception resolved",
+    "problem_trigger": "a month-end close in which KSeF invoices, partial payments, split payments, credit notes, and approved bank accounts do not reconcile automatically"
+  },
+  "founder_fit": [
+    "Uses data science, entity matching, and AI-assisted exception classification.",
+    "Polish location and finance interest help with KSeF-specific discovery.",
+    "A CSV-first pilot is compatible with a five-hour daily cap and PLN 100,000 capital ceiling.",
+    "Partner-led distribution reduces continuous high-energy selling and personal-brand exposure."
+  ],
+  "parent": null,
+  "risks": [
+    "Handling tax and bank data creates a high security and GDPR burden.",
+    "Offering account-information services directly could require regulated status; the product must remain export-based or partner with a licensed provider.",
+    "Accounting suites may add adequate native matching quickly.",
+    "Incorrect compliance flags could create consequential customer reliance."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.gov.pl/web/finanse/publikacja-dokumentacji-api-ksef-20-oraz-struktury-logicznej-fa3",
+    "https://www.gov.pl/web/finanse/udostepnienie-api-ksef-20-do-weryfikacji-systemow-komercyjnych",
+    "https://www.podatki.gov.pl/podatki-firmowe/vat/poradniki-i-informatory/mechanizm-podzielonej-platnosci-mpp",
+    "https://www.podatki.gov.pl/narzedzia/white-list",
+    "https://www.eba.europa.eu/risk-and-data-analysis/data/registers/payment-institutions-register"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "financial-close exception system of record",
+    "control_point": "canonical matched state between a structured tax invoice and its settlement evidence",
+    "critical_dependency": "delegated KSeF access plus reliable bank data through customer exports or a licensed PSD2 account-information provider"
+  },
+  "thesis": "Build a read-only reconciliation layer for Polish accounting offices and multi-entity SMEs that binds each KSeF invoice to bank receipts, split-payment treatment, VAT-account status, and White List checks, then routes only unresolved exceptions to a human. The paid event is a completed monthly close or a resolved exception, not generic invoice storage. This is an unvalidated commercial hypothesis; the initial product would not initiate payments and would use exports or a licensed account-information partner.",
+  "title": "KSeF-to-Cash Exception Ledger for Polish Accounting Firms",
+  "uncertainties": [
+    "No evidence yet that accounting offices will pay separately rather than demand the feature from their existing suite.",
+    "The true frequency and cost of post-KSeF settlement exceptions is unknown.",
+    "KSeF delegated-access onboarding friction and commercial bank-feed pricing are untested.",
+    "The assumed sales cycle and attainable portfolio price are estimates, not commitments."
+  ],
+  "version": 1
+}

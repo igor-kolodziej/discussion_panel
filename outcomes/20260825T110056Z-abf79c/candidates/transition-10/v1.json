@@ -1,0 +1,87 @@
+{
+  "candidate_id": "transition-10",
+  "claims": [
+    {
+      "claim_id": "transition-10-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://health.ec.europa.eu/latest-updates/eudamed-four-first-modules-will-be-mandatory-use-28-may-2026-2025-11-27_en",
+        "https://health.ec.europa.eu/document/download/bbb5323b-285b-4db6-91fc-a09f1b734eff_en?filename=md_eudamed_factsheet-mandatory-use_en.pdf"
+      ],
+      "statement": "The European Commission announced that mandatory use of EUDAMED's actor registration, UDI/device registration, notified bodies and certificates, and market-surveillance modules began on 28 May 2026."
+    },
+    {
+      "claim_id": "transition-10-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://health.ec.europa.eu/latest-updates/eudamed-four-first-modules-will-be-mandatory-use-28-may-2026-2025-11-27_en"
+      ],
+      "statement": "The Commission explains that the mandatory date was triggered by publication of a functionality notice and followed a six-month transition period."
+    },
+    {
+      "claim_id": "transition-10-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://health.ec.europa.eu/document/download/04ce2012-97df-4dd0-8a39-d4f6993b9e16_de?filename=md_eudamed_roadmap_en.pdf"
+      ],
+      "statement": "The Commission roadmap shows later mandatory rollout for the vigilance and clinical-investigation or performance-study modules, creating possible repeat adaptation work but not a guaranteed subscription need."
+    }
+  ],
+  "contrary_evidence": [
+    "EUDAMED provides its own interface, information centre, and training, so an external tool must prove error reduction or bulk efficiency.",
+    "The initial mandatory migration wave is already under way and may be a temporary services spike.",
+    "Large regulatory-information-management vendors already serve manufacturers with complex catalogues."
+  ],
+  "economics": {
+    "acquisition_route": "Referral fees to medical-device regulatory and identifier advisers plus fixed-price sample audits of a catalogue extract",
+    "capital_required_pln": 50000,
+    "founder_net_worth_path": "Scenario, not evidence: 500 manufacturers averaging PLN 35,000 annual revenue across subscription and repeat projects yields PLN 17.5m revenue; a 40% operating margin could support PLN 20m-plus cumulative founder wealth over six to eight mature years",
+    "founder_time": "Three to four hours per day with catalogue-size caps and consultant-owned regulatory meetings",
+    "gross_margin_basis": "Reusable imports and validation rules can exceed 80% gross margin; nomenclature exceptions and source-data cleanup reduce initial project margin",
+    "payback": "Target immediate payback because migrations are milestone-billed and the first sample is the only unpaid work",
+    "pricing": "Assumption: PLN 8,000-40,000 per catalogue migration plus PLN 800-3,000 per month for validation, change history, and future-module readiness",
+    "retention_or_repeat": "New devices, identifier changes, certificate updates, and later module rollouts create repeat work, but static catalogues may churn after migration"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A validated error corpus across device families, identifier relationships, nomenclature, and record-change patterns that improves pre-submission checks",
+    "customer": "Polish and EU medical-device SMEs with roughly 50 to 5,000 catalogue records, initially dental, rehabilitation, diagnostic-consumable, and low-risk device manufacturers",
+    "distribution_mechanism": "Medical-device regulatory consultants, UDI identifier advisers, and specialist training firms refer catalogue work while retaining formal regulatory responsibility",
+    "offer_and_business_model": "A secure catalogue that imports spreadsheets, normalises identifiers and nomenclature, validates relationships and required fields, flags duplicates and conflicts, and produces upload-ready or guided-entry packages; migration project plus subscription",
+    "payer_and_paid_event": "The regulatory-affairs or quality lead pays per catalogue migration after a sampled acceptance test, then pays monthly for change validation and record history",
+    "problem_trigger": "Mandatory use of EUDAMED's actor, UDI/device, notified-body and certificate, and market-surveillance modules began on 28 May 2026, forcing manufacturers to move product master data into a structured EU system"
+  },
+  "founder_fit": [
+    "Entity resolution, taxonomy mapping, and data-quality validation match the founder's core skills",
+    "The medical-student partner can improve workflow vocabulary without substituting for regulatory expertise",
+    "A fixed-size catalogue migration is testable before any broad SaaS build",
+    "Consultant referral channels reduce cold networking and keep formal advice outside the product"
+  ],
+  "parent": null,
+  "risks": [
+    "A wrong identifier relationship or classification could block or corrupt a regulated device record.",
+    "The service may be perceived as regulatory advice despite contractual boundaries.",
+    "Sensitive technical and certificate data require strong tenant isolation and auditability.",
+    "Manual exception work may prevent scalable margins."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://health.ec.europa.eu/latest-updates/eudamed-four-first-modules-will-be-mandatory-use-28-may-2026-2025-11-27_en",
+    "https://health.ec.europa.eu/document/download/bbb5323b-285b-4db6-91fc-a09f1b734eff_en?filename=md_eudamed_factsheet-mandatory-use_en.pdf",
+    "https://health.ec.europa.eu/document/download/04ce2012-97df-4dd0-8a39-d4f6993b9e16_de?filename=md_eudamed_roadmap_en.pdf"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Managed regulated-master-data service with catalogue SaaS",
+    "control_point": "The canonical device record and deterministic validation step immediately before authorised EUDAMED submission or update",
+    "critical_dependency": "Accurate UDI and device-rule implementation, stable portal or bulk-upload mechanisms, and final review by the manufacturer's authorised regulatory owner"
+  },
+  "thesis": "A managed master-data and validation service can help small medical-device manufacturers clean actor, UDI, device, certificate, and nomenclature records before authorised staff submit or update them in EUDAMED. The product is not regulatory sign-off; it is a canonical catalogue, deterministic validation, and change log that reduces repeated data-entry errors after four modules became mandatory on 28 May 2026.",
+  "title": "EUDAMED UDI Catalogue Operations for Small Device Makers",
+  "uncertainties": [
+    "Current bulk-upload, machine-to-machine, and export capabilities need hands-on verification before product scoping.",
+    "The number and catalogue size of underserved Polish or regional manufacturers are unknown.",
+    "Ongoing change frequency may not support the assumed monthly subscription.",
+    "Pricing and the 500-manufacturer wealth scenario lack buyer validation."
+  ],
+  "version": 1
+}

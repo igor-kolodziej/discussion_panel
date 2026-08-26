@@ -1,0 +1,67 @@
+{
+  "candidate_id": "moat-05",
+  "claims": [
+    {
+      "claim_id": "moat05-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1542/oj?locale=en"
+      ],
+      "statement": "Regulation 2023/1542 requires accurate, complete, current battery-passport information linked through a QR code and identifier."
+    },
+    {
+      "claim_id": "moat05-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://single-market-economy.ec.europa.eu/single-market/digital-product-passport_en"
+      ],
+      "statement": "The Commission states that passports become mandatory for specified EV, light-transport, and industrial batteries on 18 February 2027."
+    }
+  ],
+  "contrary_evidence": [
+    "Enterprise vendors and suppliers may bundle adequate passport tooling."
+  ],
+  "economics": {
+    "acquisition_route": "Unvalidated hypothesis: testing labs and battery integrators.",
+    "capital_required_pln": 90000,
+    "founder_net_worth_path": "Unvalidated hypothesis: 500 models at 18000 PLN recurring annual revenue yield 9 million PLN ARR and founder equity above 5 million PLN in five years.",
+    "founder_time": "Unvalidated hypothesis: 15 hours weekly with retained counsel.",
+    "gross_margin_basis": "Unvalidated hypothesis: 70% after review, storage, and support.",
+    "payback": "Unvalidated hypothesis: onboarding fees cover acquisition before recurring revenue.",
+    "pricing": "Unvalidated hypothesis: 10000-40000 PLN onboarding plus 500-2500 PLN monthly.",
+    "retention_or_repeat": "Unvalidated hypothesis: batches, supplier changes, and long availability duties create switching costs."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Reusable supplier evidence lowers onboarding cost and expands exception knowledge",
+    "customer": "EU battery importers and small assemblers",
+    "distribution_mechanism": "Testing-lab and integrator referrals",
+    "offer_and_business_model": "Managed evidence ingestion and passport hosting",
+    "payer_and_paid_event": "The operator pays at model onboarding, issuance, and updates",
+    "problem_trigger": "A covered battery model must enter the EU market with accurate passport data"
+  },
+  "founder_fit": [
+    "Automation and data governance fit a part-time wedge with bought legal expertise."
+  ],
+  "parent": null,
+  "risks": [
+    "Incorrect records could block market access.",
+    "Delegated acts can force rapid rework."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2023/1542/oj?locale=en",
+    "https://single-market-economy.ec.europa.eu/single-market/digital-product-passport_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Compliance system of record",
+    "control_point": "A supplier-to-model evidence graph with provenance and exception history",
+    "critical_dependency": "Accurate evolving rules and upstream supplier cooperation"
+  },
+  "thesis": "A managed passport system turns fragmented supplier attestations into compliant records and a reusable evidence graph for smaller battery importers and assemblers.",
+  "title": "Battery Passport Foundry",
+  "uncertainties": [
+    "SME counts, integrations, and outsourcing appetite remain unknown."
+  ],
+  "version": 1
+}

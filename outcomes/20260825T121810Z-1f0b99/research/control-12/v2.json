@@ -1,0 +1,218 @@
+{
+  "candidate_id": "control-12",
+  "candidate_sha256": "835f0dd83f27cb5cb269874b2c26c45b3b7653dcdf9a4de6e1daab1b6b725a5c",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "c12-q01",
+      "evidence_refs": [
+        "c12-s01"
+      ],
+      "statement": "The EU battery-passport obligation begins on 18 February 2027 for EV batteries placed on the market or put into service and includes individual-battery information; it does not by itself retroactively furnish every older used EV with a trusted independent assessment."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "c12-q02",
+      "evidence_refs": [
+        "c12-s02"
+      ],
+      "statement": "UN GTR No. 22 creates standardised in-vehicle battery durability metrics and a health-monitor framework, validating the technical category while increasing future standardisation."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "c12-q03",
+      "evidence_refs": [
+        "c12-s03",
+        "c12-s04"
+      ],
+      "statement": "Independent operators have EU rights to standardised, non-discriminatory access to OBD and repair information, and users have Data Act rights to readily available connected-product data, but those rights do not require a vehicle to generate every desired battery variable."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "c12-q04",
+      "evidence_refs": [
+        "c12-s05",
+        "c12-s06",
+        "c12-s07"
+      ],
+      "statement": "The direct Polish market price for a CARA Approved certificate is 400 PLN, while European consumer alternatives advertise EUR 79 and EUR 99 certificates."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "c12-q05",
+      "evidence_refs": [
+        "c12-s08",
+        "c12-s09"
+      ],
+      "statement": "DEKRA already markets an independent 15-minute test, and Recurrent gives supported owners a free longitudinal report using data from more than 30,000 connected EVs."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "c12-q06",
+      "evidence_refs": [
+        "c12-s10"
+      ],
+      "statement": "Robust cross-model state-of-health estimation remains technically difficult because large-scale high-quality field data are limited and field behaviour differs from laboratory data."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "c12-q07",
+      "evidence_refs": [
+        "c12-s11"
+      ],
+      "statement": "Poland had about 121,259 passenger BEVs at the end of 2025, which supports a growing local test market but makes 30,000 annual domestic tests a high penetration assumption."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "c12-q08",
+      "evidence_refs": [
+        "c12-s12"
+      ],
+      "statement": "Geotab's 22,700-vehicle analysis reports modern batteries are robust on average while preserving meaningful model and operating-condition variation; urgency is therefore transaction-specific, not universal."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "c12-q09",
+      "evidence_refs": [],
+      "statement": "No reviewed source establishes dealer conversion, incremental resale value, or lower warranty losses from a new Polish certificate relative to incumbent certificates."
+    }
+  ],
+  "contrary_evidence": [
+    "The category has direct, credible incumbents with recognised methods and published prices at or below the proposed retail range.",
+    "A free longitudinal report is available in supported markets, and built-in or regulatory data availability is improving.",
+    "Average fleet degradation is modest, so many ordinary used EVs may not create enough perceived risk to trigger a paid test.",
+    "The domestic fleet is growing quickly but is still too small to assume 30,000 paid tests annually without unusually high attachment to transactions."
+  ],
+  "schema_version": 2,
+  "sources": [
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2023-07-28",
+      "publisher": "EUR-Lex",
+      "source_id": "c12-s01",
+      "source_type": "law",
+      "stance": "context",
+      "title": "Regulation (EU) 2023/1542 concerning batteries and waste batteries",
+      "url": "https://eur-lex.europa.eu/eli/reg/2023/1542/2023-07-28"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2022-04",
+      "publisher": "United Nations Economic Commission for Europe",
+      "source_id": "c12-s02",
+      "source_type": "technical_regulation",
+      "stance": "supporting",
+      "title": "UN GTR No. 22: In-vehicle Battery Durability for Electrified Vehicles",
+      "url": "https://unece.org/transport/documents/2022/04/standards/un-gtr-no22-vehicle-battery-durability-electrified-vehicles"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2018-06-14",
+      "publisher": "EUR-Lex",
+      "source_id": "c12-s03",
+      "source_type": "law",
+      "stance": "supporting",
+      "title": "Regulation (EU) 2018/858 on motor-vehicle approval and access to OBD and repair information",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32018R0858"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2023-12-22",
+      "publisher": "EUR-Lex",
+      "source_id": "c12-s04",
+      "source_type": "law",
+      "stance": "context",
+      "title": "Regulation (EU) 2023/2854 on harmonised rules on fair access to and use of data",
+      "url": "https://eur-lex.europa.eu/eli/reg/2023/2854/oj/eng"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "ECU Technik",
+      "source_id": "c12-s05",
+      "source_type": "polish_incumbent_pricing",
+      "stance": "contradicting",
+      "title": "EV Battery Certification: CARA Approved SoH test and condition certificate",
+      "url": "https://www.ecutechnik.pl/en/uslugi/certyfikacja-baterii-ev"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "Moba",
+      "source_id": "c12-s06",
+      "source_type": "incumbent_pricing",
+      "stance": "contradicting",
+      "title": "Moba Battery Certificate FAQ",
+      "url": "https://get-moba.com/en/faqs/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "AVILOO",
+      "source_id": "c12-s07",
+      "source_type": "incumbent_pricing",
+      "stance": "contradicting",
+      "title": "AVILOO Battery Certificate shop",
+      "url": "https://shop.aviloo.com/en/includes-en"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "DEKRA",
+      "source_id": "c12-s08",
+      "source_type": "incumbent_product",
+      "stance": "contradicting",
+      "title": "Battery Test for Electric Cars",
+      "url": "https://www.dekra.com/en/battery-test-for-electric-cars/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "Recurrent",
+      "source_id": "c12-s09",
+      "source_type": "incumbent_product",
+      "stance": "contradicting",
+      "title": "How do I prove my EV's battery is healthy when selling?",
+      "url": "https://www.recurrentauto.com/questions/how-do-i-prove-my-evs-battery-is-healthy-when-selling"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2025-01-29",
+      "publisher": "Nature Communications",
+      "source_id": "c12-s10",
+      "source_type": "peer_reviewed_primary_research",
+      "stance": "supporting",
+      "title": "Multi-modal framework for battery state of health evaluation using open-source electric vehicle data",
+      "url": "https://www.nature.com/articles/s41467-025-56485-7"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2026-01",
+      "publisher": "Polish New Mobility Association",
+      "source_id": "c12-s11",
+      "source_type": "industry_market_report",
+      "stance": "context",
+      "title": "The Year 2025 in New Mobility in Poland",
+      "url": "https://psnm.org/wp-content/uploads/2026/01/PSNM_Year_2025_in_New_Mobility_in_Poland_Report_EN.pdf"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2026-04-28",
+      "publisher": "Geotab",
+      "source_id": "c12-s12",
+      "source_type": "company_primary_dataset_analysis",
+      "stance": "contradicting",
+      "title": "How long do electric car batteries last? The updated guide to real-world EV battery health",
+      "url": "https://www.geotab.com/blog/ev-battery-health/"
+    }
+  ],
+  "unknowns": [
+    "Supported vehicle coverage and failure rate under a chosen protocol.",
+    "Independent validation error by model, temperature, state of charge, and software version.",
+    "Used-BEV transaction volume and test attachment rate in Poland.",
+    "Incremental price or days-to-sale benefit of a certificate.",
+    "Partner economics after licensing, hardware, labour, support, and insurance.",
+    "Longitudinal data consent, ownership, and reuse terms."
+  ]
+}

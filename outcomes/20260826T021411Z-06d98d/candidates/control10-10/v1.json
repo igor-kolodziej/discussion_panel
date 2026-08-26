@@ -1,0 +1,82 @@
+{
+  "candidate_id": "control10-10",
+  "claims": [
+    {
+      "claim_id": "control10-10-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/topics/forests/deforestation/regulation-deforestation-free-products_en"
+      ],
+      "statement": "Revised EUDR application begins 30 December 2026 for large and medium operators and 30 June 2027 for most micro and small operators."
+    },
+    {
+      "claim_id": "control10-10-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/topics/forests/deforestation/regulation-deforestation-free-products_en",
+        "https://environment.ec.europa.eu/news/eu-deforestation-regulation-information-system-launches-2024-12-06_en"
+      ],
+      "statement": "Operators placing covered commodities on the EU market must prove they are not linked to recent deforestation, and the Commission operates an information system for due-diligence statements."
+    },
+    {
+      "claim_id": "control10-10-c3",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/topics/forests/deforestation/regulation-deforestation-free-products_en"
+      ],
+      "statement": "Demand hypothesis: first placers will pay for a shipment gate, while simplified downstream obligations make downstream traders a poor initial segment."
+    }
+  ],
+  "contrary_evidence": [
+    "The 2025 simplification reduced duties for downstream operators and traders.",
+    "Large importers and commodity platforms may already have traceability systems."
+  ],
+  "economics": {
+    "acquisition_route": "Hypothesis: customs brokers and trade-finance providers embed the check across portfolios of importers",
+    "capital_required_pln": 80000,
+    "founder_net_worth_path": "Hypothesis: 200 importers averaging 60000 PLN annual revenue could produce 12m PLN ARR; supplier continuity and broker distribution could yield founder equity above 5m PLN in 4-7 years",
+    "founder_time": "18-24 hours weekly with forestry/legal expertise contracted per exception",
+    "gross_margin_basis": "Economics hypothesis: 68-84% because supplier exception handling is initially labour-heavy",
+    "payback": "Hypothesis: 12-18 months with fifteen importers and recurring shipment volume",
+    "pricing": "Economics hypothesis: 15000-50000 PLN onboarding, 2500-9000 PLN monthly and 50-200 PLN per shipment",
+    "retention_or_repeat": "Every shipment, new plot, new supplier and annual risk refresh"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Permissioned supplier-plot continuity, prior reference lineage and risk exceptions reduce marginal work on repeat shipments",
+    "customer": "Polish medium and large first importers of timber, wood components and selected furniture inputs",
+    "distribution_mechanism": "Embedded in customs-broker, freight-forwarder and trade-finance document checklists",
+    "offer_and_business_model": "Supplier evidence collection, geospatial preflight and authorised statement workflow sold as subscription plus shipment fee",
+    "payer_and_paid_event": "Importer pays per supplier onboarding and shipment released; broker may resell the service",
+    "problem_trigger": "A covered purchase order approaches shipment before the first placer has complete geolocation and due-diligence evidence"
+  },
+  "founder_fit": [
+    "Geospatial and supplier-data analysis suit data-science skills",
+    "Rule-based exceptions can be AI-assisted",
+    "Channel distribution avoids broad cold sales"
+  ],
+  "parent": null,
+  "risks": [
+    "Supplier geolocation may be false or unobtainable.",
+    "Another legislative delay or simplification could weaken urgency.",
+    "Geospatial risk output must not be represented as a legal guarantee."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://environment.ec.europa.eu/topics/forests/deforestation/regulation-deforestation-free-products_en",
+    "https://environment.ec.europa.eu/news/eu-deforestation-regulation-information-system-launches-2024-12-06_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Import release compliance gate",
+    "control_point": "Purchase-order or shipment release before the first EU market placement",
+    "critical_dependency": "Accurate upstream geolocation and lawful access to the EUDR Information System"
+  },
+  "thesis": "A customs-broker- or trade-finance-embedded gate for wood and furniture inputs could prevent shipment release until the first EU placer has supplier legality evidence, plot geolocation, risk records and a due-diligence statement reference. The initial niche is Polish importers, not downstream firms relieved by simplification. Demand and economics are hypotheses.",
+  "title": "EUDR First-Placer Purchase-Order Gate",
+  "uncertainties": [
+    "Polish first-placer count in the chosen wood niche",
+    "Average shipments and supplier churn",
+    "Broker readiness to enforce a release gate"
+  ],
+  "version": 1
+}

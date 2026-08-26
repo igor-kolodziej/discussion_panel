@@ -1,0 +1,138 @@
+{
+  "candidate_id": "leverage-07",
+  "claims": [
+    {
+      "claim_id": "leverage-07-v2-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554",
+        "https://www.eba.europa.eu/activities/direct-supervision-and-oversight/digital-operational-resilience-act/preparation-dora-application"
+      ],
+      "statement": "DORA applies from 17 January 2025 and requires in-scope financial entities to maintain and update registers of ICT third-party contractual arrangements."
+    },
+    {
+      "claim_id": "leverage-07-v2-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32024R2956"
+      ],
+      "statement": "The adopted ITS defines linked templates for entities, contracts, services, functions, providers, subcontractors, processing locations and other controlled fields."
+    },
+    {
+      "claim_id": "leverage-07-v2-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.eba.europa.eu/publications-and-media/press-releases/esas-dry-run-exercise-shows-goal-reporting-registers-information-under-digital-operational"
+      ],
+      "statement": "Only 6.5% of analysed dry-run registers passed all data-quality checks; half of the remainder failed fewer than 5 of 116 checks."
+    },
+    {
+      "claim_id": "leverage-07-v2-c4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.eba.europa.eu/single-rule-book-qa/qna/view/publicId/2025_7388"
+      ],
+      "statement": "A final Joint ESAs Q&A states that every financial entity subject to DORA must maintain a register, including entities using simplified ICT-risk treatment."
+    },
+    {
+      "claim_id": "leverage-07-v2-c5",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.eiopa.europa.eu/european-supervisory-authorities-designate-critical-ict-third-party-providers-under-digital-2025-11-18_en"
+      ],
+      "statement": "The ESAs used collected registers to designate critical ICT third-party providers in November 2025, showing that reporting is operational rather than hypothetical."
+    },
+    {
+      "claim_id": "leverage-07-v2-c6",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.dora-guard.com/"
+      ],
+      "statement": "DoraGuard publishes EUR 1500 yearly for up to 20 ICT vendors, EUR 4999 for up to 100, and EUR 12500 for groups."
+    },
+    {
+      "claim_id": "leverage-07-v2-c7",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://reportact.com/en/pricing",
+        "https://venvera.com/pricing"
+      ],
+      "statement": "ReportAct publishes EUR 299 monthly per location plus a supplier fee, while Venvera publishes EUR 799 monthly for broader compliance including register export and contract clause checking."
+    }
+  ],
+  "contrary_evidence": [
+    "Multiple products already provide validation and regulator-ready exports at transparent prices.",
+    "Venvera already combines register export with contract-clause checking, directly overlapping contract analysis.",
+    "The official dry run found most submissions close to passing even though few passed every check, suggesting remediation may be episodic rather than a large permanent budget.",
+    "Smaller entities have fewer providers and proportionate requirements, limiting the number of economically useful downstream deployments.",
+    "Client-tenant deployment does not remove third-party security, contractual, authorization or procurement review.",
+    "No reviewed evidence validates an outsourcer's willingness to buy, its ability to activate several client tenants, or its right to reuse mappings across clients."
+  ],
+  "economics": {
+    "acquisition_route": "UNVALIDATED COMMERCIAL HYPOTHESIS: win one paid in-client-tenant deployment through a Polish DORA compliance outsourcer on an already retained complex-group engagement; expand inside that partner's portfolio only after written client authorization and measured reuse, then add partners. No partner or client commitment exists.",
+    "capital_required_pln": 90000,
+    "founder_net_worth_path": "UNVALIDATED SCENARIO, NOT A FORECAST: by year 6, 20 partners averaging 10 active client tenants at 90000 PLN base annual recurring revenue plus 18000 PLN yearly per tenant would produce 5.4 million PLN ARR; at 2.5x ARR and 70% founder ownership, founder equity would be 9.45 million PLN before liabilities, without double-counting retained earnings or distributions. Partner count, activation, pricing, multiple, ownership and timing are unvalidated.",
+    "founder_time": "UNVALIDATED COMMERCIAL HYPOTHESIS: 15-20 hours weekly during a single-partner pilot; security assurance, connector maintenance, regulatory QA and deployment support must be delegated before parallel rollouts for compatibility with full-time employment.",
+    "gross_margin_basis": "UNVALIDATED COMMERCIAL HYPOTHESIS: 70-85% gross margin if clients fund tenant compute and most connectors and rule packs are reusable, after release engineering, taxonomy updates, specialist QA, partner enablement and support; bespoke integrations could make margins materially lower.",
+    "payback": "UNVALIDATED COMMERCIAL HYPOTHESIS: partner payback inside 12 months only if the engine saves enough delivery or rework across at least 4 active client tenants to exceed its licence and deployment fees; reuse, savings and avoided validation failures are unmeasured.",
+    "pricing": "UNVALIDATED COMMERCIAL HYPOTHESIS: 25000-60000 PLN partner implementation, 60000-120000 PLN annual engine licence, and 12000-24000 PLN yearly per active client tenant. These prices are unvalidated and must compete with low-cost register products while fitting the partner's service economics.",
+    "retention_or_repeat": "UNVALIDATED COMMERCIAL HYPOTHESIS: the annual partner licence and active-tenant fees recur only while contract changes, taxonomy updates and embedded workflows justify continued use; retention is unknown, and partners can insource, switch tools or fail to activate additional tenants."
+  },
+  "fingerprint": {
+    "compounding_advantage": "permissioned reusable connectors, schema mappings and regression test cases embedded in the partner delivery workflow; confidential client content and tenant-local corrections remain segregated unless explicit reuse rights exist",
+    "customer": "DORA compliance outsourcers and specialist advisory firms already retained by multiple complex EU financial groups with material provider and subcontractor chains",
+    "distribution_mechanism": "land one paid client-tenant deployment through an outsourcer's existing regulated-client engagement, then expand through that partner's retained portfolio; no partner commitment or downstream authorization is assumed",
+    "offer_and_business_model": "a deploy-in-client-tenant provenance and reconciliation engine that maps contract evidence, flags graph inconsistencies and returns approved diffs and evidence manifests to incumbent register or GRC systems, licensed to an outsourcer rather than sold as a replacement register",
+    "payer_and_paid_event": "UNVALIDATED COMMERCIAL HYPOTHESIS: the compliance outsourcer pays an implementation fee, annual engine licence and per-active-client-tenant fee when deploying inside an authorised regulated-client environment",
+    "problem_trigger": "a contract, provider, subcontractor, entity, function, processing location or reporting validation changes"
+  },
+  "founder_fit": [
+    "Strong fit for knowledge graphs, document AI, validation, connector engineering and quantitative quality control.",
+    "A small number of outsourcer relationships and client-controlled deployments could reduce continuous direct selling, camera exposure and central hosting of confidential contracts, but this distribution benefit is unvalidated.",
+    "A single paid client-tenant integration is a more bounded part-time test than building a complete replacement register platform.",
+    "Financial-sector procurement, security assurance, regulatory accountability and deployment support still exceed a casual solo side project; specialist review and operational coverage must be delegated before scale."
+  ],
+  "parent": {
+    "candidate_id": "leverage-07",
+    "version": 4
+  },
+  "risks": [
+    "Extraction or reconciliation errors can propagate into regulatory reporting unless every proposed value and graph change is human-approved.",
+    "An outsourcer may lack authority to install the engine or expose contracts; each end client can still impose security and procurement review.",
+    "Custom connectors and client-specific environments can turn the engine into low-margin integration services instead of a repeatable product.",
+    "Incumbent register, GRC and contract-analysis vendors can add comparable provenance and reconciliation features.",
+    "Partner concentration creates channel power, slower sales and revenue loss if an outsourcer insources or changes tooling.",
+    "Financial-sector release support and incident response may exceed a part-time founder's capacity.",
+    "Public rules are not a moat, and confidential tenant data cannot be pooled without explicit rights."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554",
+    "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32024R2956",
+    "https://www.eba.europa.eu/activities/direct-supervision-and-oversight/digital-operational-resilience-act/preparation-dora-application",
+    "https://www.eba.europa.eu/publications-and-media/press-releases/esas-dry-run-exercise-shows-goal-reporting-registers-information-under-digital-operational",
+    "https://www.eba.europa.eu/single-rule-book-qa/qna/view/publicId/2025_7388",
+    "https://www.eiopa.europa.eu/european-supervisory-authorities-designate-critical-ict-third-party-providers-under-digital-2025-11-18_en",
+    "https://www.dora-guard.com/",
+    "https://reportact.com/en/pricing",
+    "https://venvera.com/pricing"
+  ],
+  "stage": "frozen",
+  "structure": {
+    "commercial_archetype": "B2B2B client-tenant engine licence with a partner base fee and per-deployment expansion",
+    "control_point": "the deployable connector-and-reconciliation layer embedded between client-held contracts and the outsourcer's incumbent register or GRC workflow, with auditable tenant-local evidence mappings",
+    "critical_dependency": "an outsourcer must obtain client authorization and repeat the integration across enough complex client portfolios to outweigh onboarding, assurance and support costs"
+  },
+  "thesis": "License a deploy-in-client-tenant provenance and reconciliation engine to DORA compliance outsourcers that already manage complex regulated groups. The engine processes contracts inside each authorised regulated client's environment, maps evidence to controlled templates, reconciles provider and subcontractor hierarchies, and returns human-approved diffs and evidence manifests to the outsourcer's incumbent register or GRC workflow. It does not replace the register or become the system of record. UNVALIDATED COMMERCIAL HYPOTHESIS: one partner sale can activate several client tenants, lower direct acquisition and central data-custody friction, and support partner-level recurring revenue; demand, integration reuse, client authorization and partner economics remain unproven.",
+  "title": "Client-Tenant DORA Reconciliation Engine for Compliance Outsourcers",
+  "uncertainties": [
+    "Paid outsourcer demand for a non-replacement reconciliation engine and a base-plus-active-tenant licence.",
+    "Client authorization for contract access and client-tenant deployment through an outsourcer.",
+    "Repeatability and maintenance cost of connectors across incumbent register, GRC and client environments.",
+    "Extraction and reconciliation accuracy across languages, amendments, framework contracts and subcontractors, including human-review time.",
+    "Security assurance and procurement requirements even when contract content remains in the client tenant.",
+    "Partner portfolio size, activation rate, channel conflict, concentration, support load and retention.",
+    "Actual frequency and cost of contract changes, graph reconciliation and failed submissions."
+  ],
+  "version": 5
+}

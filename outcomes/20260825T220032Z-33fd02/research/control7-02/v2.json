@@ -1,0 +1,180 @@
+{
+  "candidate_id": "control7-02",
+  "candidate_sha256": "84af63c2769d61ca90f480cf761087e477deeb7d893bb6e8bb3647a4910557e5",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "c702-q1",
+      "evidence_refs": [
+        "c702-s1"
+      ],
+      "statement": "KSeF creates broad, recurring structured-invoice receipt volume in Poland from February 2026."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "c702-q2",
+      "evidence_refs": [
+        "c702-s1",
+        "c702-s2"
+      ],
+      "statement": "Official APIs and SDKs make a third-party integration technically possible, subject to customer-granted authorization and production security."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "c702-q3",
+      "evidence_refs": [
+        "c702-s3"
+      ],
+      "statement": "KSeF does not guarantee a bank account in every invoice because the relevant fields are optional."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "c702-q4",
+      "evidence_refs": [
+        "c702-s4"
+      ],
+      "statement": "NIP-account matching is public infrastructure with per-query confirmations and a daily bulk file, so it is not a proprietary data moat."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "c702-q5",
+      "evidence_refs": [
+        "c702-s7",
+        "c702-s8"
+      ],
+      "statement": "Basic whitelist verification is already embedded by major Polish ERP/accounting vendors."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "c702-q6",
+      "evidence_refs": [
+        "c702-s5"
+      ],
+      "statement": "Mandatory PSP payee verification will become another close substitute in non-euro Member States by July 2027."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "c702-q7",
+      "evidence_refs": [
+        "c702-s6"
+      ],
+      "statement": "Supplier account substitution is a demonstrated Polish business-fraud pattern for which independent confirmation is recommended."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "c702-q8",
+      "evidence_refs": [
+        "c702-s3",
+        "c702-s4",
+        "c702-s5",
+        "c702-s6",
+        "c702-s7",
+        "c702-s8"
+      ],
+      "statement": "A supplier-change approval record spanning KSeF, ERP history, and independent confirmation is a more differentiated wedge than account lookup alone."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "c702-q9",
+      "evidence_refs": [],
+      "statement": "No reviewed source establishes paid demand, achievable ARPU, channel commitment, false-positive rates, or retention for the proposed gate."
+    }
+  ],
+  "contrary_evidence": [
+    "c702-s4 supplies the core public account match and bulk data at no license cost.",
+    "c702-s3 shows that the invoice may omit the account needed for a match.",
+    "c702-s7 and c702-s8 show incumbents already control adjacent workflow surfaces.",
+    "c702-s5 creates a bank-provided substitute on a fixed regulatory timetable."
+  ],
+  "schema_version": 2,
+  "sources": [
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2026-02-06 (current revision)",
+      "publisher": "Polish Ministry of Finance",
+      "source_id": "c702-s1",
+      "source_type": "official_guidance",
+      "stance": "supporting",
+      "title": "Zakres obowiązkowego KSeF",
+      "url": "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/zakres-obowiazkowego-ksef/"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2025-06-30",
+      "publisher": "Polish Ministry of Finance",
+      "source_id": "c702-s2",
+      "source_type": "official_technical_documentation",
+      "stance": "supporting",
+      "title": "Publikacja dokumentacji API KSeF 2.0 oraz struktury logicznej FA(3)",
+      "url": "https://ksef.podatki.gov.pl/wyjasnienia/publikacja-dokumentacji-api-ksef-20-oraz-struktury-logicznej-fa-3-30062025/"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2026-04-01",
+      "publisher": "Polish Ministry of Finance",
+      "source_id": "c702-s3",
+      "source_type": "official_user_manual",
+      "stance": "contradicting",
+      "title": "Aplikacja Podatnika KSeF 2.0 — podręcznik użytkownika v2.1",
+      "url": "https://ksef.podatki.gov.pl/media/20shej34/aplikacja-podatnika-ksef-20-podrecznik-uzytkownika_01042026.pdf"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2026-01-22 (current revision)",
+      "publisher": "Polish Ministry of Finance / National Revenue Administration",
+      "source_id": "c702-s4",
+      "source_type": "official_api_documentation",
+      "stance": "contradicting",
+      "title": "API Wykazu podatników VAT",
+      "url": "https://www.gov.pl/web/kas/api-wykazu-podatnikow-vat"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2024-03-13",
+      "publisher": "European Union",
+      "source_id": "c702-s5",
+      "source_type": "regulation",
+      "stance": "contradicting",
+      "title": "Regulation (EU) 2024/886 as regards instant credit transfers in euro",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R0886"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2026-04-16",
+      "publisher": "Mazovian Police",
+      "source_id": "c702-s6",
+      "source_type": "official_incident_notice",
+      "stance": "supporting",
+      "title": "Fałszywe faktury z podmienionym numerem konta! Firmy na celowniku cyberprzestępców",
+      "url": "https://mazowiecka.policja.gov.pl/ra/aktualnosci/aktualnosci/131942,Falszywe-faktury-z-podmienionym-numerem-konta-Firmy-na-celowniku-cyberprzestepco.html"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2025-04-23 (updated)",
+      "publisher": "Symfonia",
+      "source_id": "c702-s7",
+      "source_type": "incumbent_product_documentation",
+      "stance": "contradicting",
+      "title": "Weryfikacja z białą listą podatników VAT",
+      "url": "https://wsparcie.symfonia.pl/hc/pl/articles/18350666538130--SeD-Weryfikacja-z-bia%C5%82%C4%85-list%C4%85-podatnik%C3%B3w-VAT"
+    },
+    {
+      "accessed_at": "2026-08-26",
+      "published_at": "2024-05 product documentation; page undated",
+      "publisher": "Comarch",
+      "source_id": "c702-s8",
+      "source_type": "incumbent_product_documentation",
+      "stance": "contradicting",
+      "title": "Defining customer/vendor — bank account verification",
+      "url": "https://help.comarch.com/standard/20245/?ht_kb=defining-customer-vendor"
+    }
+  ],
+  "unknowns": [
+    "Paid buyer conversion and price for the incremental control",
+    "ERP partnership or integration willingness",
+    "Lawful KSeF permission model and contractual allocation of liability",
+    "Independent supplier-contact availability and verification cost",
+    "Incident loss avoided, false-positive rate, gross margin, churn, and founder-net-worth timing"
+  ]
+}

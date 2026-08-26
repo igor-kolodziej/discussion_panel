@@ -1,0 +1,84 @@
+{
+  "judge_id": "c9-dev-working-settle9-06",
+  "assumptions": [
+    "The initial customer is a transport-invoice factor with authority to buy a backtest, authorize access to historical packets, and contract for processing and security terms.",
+    "The product only supports document-readiness triage; the factor retains authenticity, collectability, credit, liability, legal, and final funding decisions, and the product neither creates an eCMR nor submits information to authorities as an eFTI platform.",
+    "Pre-production work remains bounded to the stated 40000 PLN capital cap and 15-20 founder hours weekly, while production legal, security, integration, and exception capacity is added only after contract revenue supports it.",
+    "No cross-client use of documents, rejection outcomes, cure labels, or other client data occurs without explicit contractual and lawful permission.",
+    "Unknown demand, defect incidence, operational performance, price, renewal, and margin are treated as unresolved uncertainty rather than as evidence of zero demand or impossible economics."
+  ],
+  "factors": [
+    {
+      "name": "Core insight",
+      "score": 6.0,
+      "status": "scored",
+      "rationale": "The candidate identifies a credible operational gate: transport funding and payment can depend on complete CMR/POD evidence, while heterogeneous packets still require reconciliation. Turning the concentrated access dependency into a paid, contract-first pass/fail gate is thoughtful, but evidence does not yet show how much factor queue cost or delay is actually caused by correctable document defects."
+    },
+    {
+      "name": "Customer pain and willingness to pay",
+      "score": 5.0,
+      "status": "scored",
+      "rationale": "Published forwarder and factor terms directly support the importance of complete delivery evidence, so the underlying workflow pain is plausible and recurring. However, no factor-specific evidence quantifies defect incidence, labor cost, funding delay, loss avoidance, or willingness to pay for the backtest, implementation, recurring minimum, or usage charge."
+    },
+    {
+      "name": "Business model and economics",
+      "score": 5.0,
+      "status": "scored",
+      "rationale": "Paid discovery, paid implementation, and a recurring minimum before production cap speculative integration spend and can make customization customer-funded. Attractive margins and owner earnings remain unestablished because price, processed volume, sales cycle, implementation effort, exception labor, reuse, renewal, churn, support burden, and account-level CAC payback are all unknown; bespoke mappings could keep the model service-heavy."
+    },
+    {
+      "name": "Market and beachhead",
+      "score": 5.5,
+      "status": "scored",
+      "rationale": "Regional transport-invoice factors are a narrow, operationally coherent beachhead within Poland's very large recurring road-freight base. Tonne-kilometres do not establish the number of relevant factors, eligible invoice packets, customer concentration, or obtainable spend, so the economic size of this first segment is not yet demonstrated."
+    },
+    {
+      "name": "Competitive position and domination potential",
+      "score": 3.5,
+      "status": "scored",
+      "rationale": "Factor-specific rules and a position at the pre-funding gate could support a focused niche, but the venture currently controls neither source workflow nor unique data rights. Transporeon already offers payment-ready verification and disputes, Dashdoc joins eCMR evidence with invoicing, and a factor can build the rules internally, making a dominant beachhead position difficult without exclusive workflow access or superior measured outcomes."
+    },
+    {
+      "name": "Expansion potential",
+      "score": 5.5,
+      "status": "scored",
+      "rationale": "A reusable transport-document ontology, connector templates, versioned rules, audit tooling, and exception playbooks could extend to other factors, country pairs, and adjacent freight-finance or payment workflows. Expansion is conditional on genuine cross-client reuse; factor-specific rules, source mappings, legal differences, and restrictions on outcome-label use may instead recreate an implementation project for each account."
+    },
+    {
+      "name": "Defensibility and durability",
+      "score": 3.5,
+      "status": "scored",
+      "rationale": "Rule history, evidence trails, integration knowledge, and embedded exception workflows can create moderate switching friction over time. None is established yet, no permissioned data moat is assumed, and incumbents or the factor itself can reproduce the core reconciliation logic while controlling more of the native workflow and data."
+    },
+    {
+      "name": "Strength of advantage",
+      "score": 4.5,
+      "status": "scored",
+      "rationale": "A focused rules-as-code cell could be faster, more auditable, and easier to update than manual packet review, and batch inputs reduce the initial integration burden. There is no baseline or backtest showing clearance rate, error cost, minutes saved, funding acceleration, or ROI, so the magnitude of advantage over internal rules or platform-native alternatives is unknown."
+    },
+    {
+      "name": "Timing and momentum",
+      "score": 6.0,
+      "status": "scored",
+      "rationale": "A large Polish freight base, legally recognized eCMR, and the 2027 eFTI acceptance milestone support continued digitization of freight evidence and make document interoperability timely. The product deliberately remains outside certified regulatory submission, paper remains permitted, and digitization also strengthens incumbent platforms, so timing is helpful rather than uniquely decisive."
+    },
+    {
+      "name": "Distribution",
+      "score": 4.0,
+      "status": "scored",
+      "rationale": "A paid backtest sold to one factor operations and risk sponsor is a concrete, low-capital route that avoids carrier-by-carrier acquisition and filters out partners unwilling to provide access. No reviewed evidence establishes sponsor access, purchase intent, procurement duration, conversion, or a scalable channel, and concentrated enterprise selling is a material founder-fit and CAC risk."
+    },
+    {
+      "name": "Execution and risks",
+      "score": 5.0,
+      "status": "scored",
+      "rationale": "Document extraction, entity matching, rules, and audit analytics fit the founder's technical background and can be prototyped within the stated time and capital bounds with AI leverage. Production requires demanding security, processor terms, legal boundary controls, source mapping, enterprise procurement, and low-labor exception operations; these are obtainable in principle but could exceed part-time capacity unless contract revenue funds specialists and operators."
+    }
+  ],
+  "interaction_adjustment": 0.0,
+  "main_structural_strength": "The contract-first sequence makes the essential factor relationship an explicit paid procurement gate: the same buyer supplies authorized data, funds backtesting and implementation, and commits a recurring minimum before costly production integration, sharply limiting speculative capital exposure.",
+  "primary_score_limiter": "There is no direct evidence that a factor will buy the backtest, grant the required production access, accept a recurring minimum, or renew, and there are no measured account economics or exception-operation results to show that this becomes reusable high-margin software rather than bespoke services.",
+  "strongest_disconfirming_evidence": "Transporeon already provides payment-ready freight-invoice verification and dispute workflow using native transport data, while Dashdoc already connects eCMR evidence and invoicing; these overlaps show that workflow owners can bundle much of the proposed value and possess stronger data and distribution positions.",
+  "evidence_needed_for_higher_score": "A signed paid backtest with a real factor; permissioned packets and baseline data on defect incidence, delay, loss, and manual cost; blinded backtest results for straight-through clearance, false positives, false negatives, and minutes per exception; conversion to paid implementation, authorized production access, and a portfolio minimum; then observed account contribution, implementation payback, renewal, and evidence that reusable mappings and rules improve the second deployment.",
+  "highest_value_structural_change": "Make the first production contract portfolio-wide and prepaid, with a minimum that fully covers dedicated mapping and support plus explicit rights to retain and reuse generic connector, ontology, and rule-engine primitives and, where lawful, de-identified aggregate benchmarks. If the buyer will not permit economically meaningful reuse, operate it only as a priced bespoke service and do not fund a scalable-software build."
+}

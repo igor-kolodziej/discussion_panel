@@ -1,0 +1,85 @@
+{
+  "judge_id": "c1-working-spend-07",
+  "factors": [
+    {
+      "name": "Core insight",
+      "status": "scored",
+      "score": 7,
+      "rationale": "Net-billing creates a genuine timing and self-consumption problem, and the sharper insight is to sell an auditable installer decision artifact around service and retrofit events rather than another generic homeowner optimizer. That reframing is coherent and differentiated in use, although installer adoption of the artifact remains untested."
+    },
+    {
+      "name": "Customer pain and willingness to pay",
+      "status": "scored",
+      "score": 5,
+      "rationale": "Disappointing bills, service-call triage, and retrofit decisions are concrete triggers, and avoided visits or higher retrofit conversion could support payment. However, neither incremental savings over OEM defaults nor installer labor and conversion value has been measured, and the proposed recurring homeowner fee is material relative to the cited average household energy-supply spend."
+    },
+    {
+      "name": "Business model and economics",
+      "status": "scored",
+      "score": 5,
+      "rationale": "Fixed-price diagnostics and low per-site installer SaaS can produce attractive software margins after a stable adapter exists, with a plausible 70-85% mature gross-margin hypothesis. Early integration, bill normalization, API charges, and installer support may push blended gross margin below 60%; CAC, retention, payback, and owner earnings are unvalidated, while the 20000-site wealth path requires substantial scale."
+    },
+    {
+      "name": "Market and beachhead",
+      "status": "scored",
+      "score": 6,
+      "rationale": "Poland's cited 1.63 million prosumer base is large, and the roughly 127000 storage-equipped sites plus other flexible-load homes provide a focused initial segment. Restricting the wedge to supported devices, high-flexibility homes, and concrete installer events improves focus, but the reachable paid subset is unknown and 20000 sites would require high penetration or broader coverage."
+    },
+    {
+      "name": "Competitive position and domination potential",
+      "status": "scored",
+      "score": 4,
+      "rationale": "A vendor-neutral, versioned verification report could occupy a useful installer niche, and the family-company pilot is an entry wedge. SolarEdge already bundles the core optimization loop, Fronius has professional data interfaces, and OEMs control key data and can extend their own workflows; there is no exclusive access, committed channel, or demonstrated basis for segment dominance."
+    },
+    {
+      "name": "Expansion potential",
+      "status": "scored",
+      "score": 6,
+      "rationale": "A proven installer report could extend to additional inverter families, batteries, heat pumps, EV charging, O&M events, retrofit categories, and nearby EU markets. Each adjacency, however, brings new permissions, device edge cases, tariff logic, and support burden, so expansion is plausible but not automatically low-cost."
+    },
+    {
+      "name": "Defensibility and durability",
+      "status": "scored",
+      "score": 4,
+      "rationale": "A permissioned protocol library and longitudinal baseline-to-intervention cases could compound into useful workflow data and faster integrations. The optimizer and reporting methods are reproducible, the necessary APIs are controlled by OEMs, and no switching costs, exclusivity, or installer-contributed data loop has yet been established, leaving the concept exposed to bundling and margin erosion."
+    },
+    {
+      "name": "Strength of advantage",
+      "status": "scored",
+      "score": 5,
+      "rationale": "A cross-vendor, auditable baseline and ROI report could be more decision-useful to an installer than an OEM dashboard, especially when it supports a service or retrofit decision. The magnitude and reliability of that advantage versus bundled scheduling and monitoring are unknown because neither measured savings nor avoided-work outcomes exist yet."
+    },
+    {
+      "name": "Timing and momentum",
+      "status": "scored",
+      "score": 6,
+      "rationale": "Net-billing, hourly-price optimization, a growing installed base, and the EU Data Act all support demand for better use of connected-energy data. The Data Act does not grant control rights or remove GDPR, security, trade-secret, and warranty constraints, while capable OEM offerings show that the same timing also strengthens incumbents."
+    },
+    {
+      "name": "Distribution",
+      "status": "scored",
+      "score": 7,
+      "rationale": "The founder's family installation company offers unusually credible access to 30-50 sites, real workflows, and a low-cost first pilot without relying on a public persona. Selling next to comparable installers is plausible, but no unrelated installer, wholesaler, or buying group has committed, and repeatable acquisition cost and channel scalability remain unknown."
+    },
+    {
+      "name": "Execution and risks",
+      "status": "scored",
+      "score": 6,
+      "rationale": "A read-only adapter for one inverter family fits the founder's data-science skills, available capital, and part-time envelope, particularly if qualified installers retain responsibility for equipment changes. Commercial API terms, consent and data handling, measurement claims, warranty exposure, and multi-vendor support are material risks; expanding before proving one workflow would likely exceed the stated capacity."
+    }
+  ],
+  "interaction_adjustment": -0.2,
+  "assumptions": [
+    "The launch remains read-only, and qualified installers perform every physical or control-setting change.",
+    "The family installation company can provide consented access to 30-50 relevant sites and participate in a bounded pilot.",
+    "The first release supports one inverter family and one pre-specified installer decision workflow.",
+    "No exclusive OEM data right, reseller commitment, or wholesaler commitment exists at the planning stage.",
+    "The cited pricing and gross-margin ranges are hypotheses rather than validated commercial results.",
+    "Reaching wealth-relevant scale would eventually require multiple independent installer customers and likely broader device coverage than the initial pilot."
+  ],
+  "main_structural_strength": "Founder-controlled access through a family installation company creates a credible, low-cost path to test a narrow read-only workflow on real sites, tightly matching the founder's analytical skills and part-time constraints.",
+  "primary_score_limiter": "The concept has not shown that installers will pay repeatedly for the report or that its value exceeds bundled OEM tools, while wealth-relevant scale likely requires the multi-OEM complexity that weakens margins and part-time executability.",
+  "strongest_disconfirming_evidence": "SolarEdge ONE already bundles tariff-, weather-, load-, battery-, and device-aware optimization, while documented SolarEdge and Fronius API constraints show that incumbents can both reproduce the core functionality and control the data access on which a vendor-neutral layer depends.",
+  "highest_value_structural_change": "Make a single-OEM, event-priced diagnostic and verification report the sole initial product, sold around an avoided service visit or quantified retrofit decision; defer recurring monitoring, remote control, and additional OEMs until that paid event demonstrates positive installer economics.",
+  "evidence_needed_for_higher_score": "A pre-specified field pilot comparing recommendations with OEM defaults or simple schedules using a documented measurement boundary and baseline; paid trials from at least three unrelated installers showing avoided truck-roll cost or incremental retrofit gross profit exceeding twelve months of proposed fees; written first-OEM commercial terms covering account permission, data granularity, rate limits, reuse rights, pricing, and warranty treatment; and cohort evidence on renewal, support hours, API and hosting cost, gross margin, CAC payback, and a bottom-up count of reachable supported sites."
+}

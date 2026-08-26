@@ -1,0 +1,73 @@
+{
+  "candidate_id": "route-09",
+  "claims": [
+    {
+      "claim_id": "route-09-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32014H0478"
+      ],
+      "statement": "The European Commission recommendation on online gambling calls for operator policies that enable interaction when player behavior indicates risk and for controls including limits, alerts, time-out, and self-exclusion."
+    },
+    {
+      "claim_id": "route-09-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eli.gov.pl/api/acts/DU/2023/227/text.html"
+      ],
+      "statement": "Polish gambling law requires licensed online operators to implement responsible-gaming rules and sets requirements around player registration, age checks, information, and data archiving."
+    }
+  ],
+  "contrary_evidence": [
+    "Large operators and platform vendors often maintain in-house safer-gambling models.",
+    "Operator incentives may conflict with interventions that reduce short-term wagering."
+  ],
+  "economics": {
+    "acquisition_route": "Build a replayable synthetic-data demonstration, then secure a paid sandbox with one licensed operator through a platform or compliance consultant; no live intervention before approval.",
+    "capital_required_pln": 80000,
+    "founder_net_worth_path": "Hypothesis: 30 EU operators at 25000 PLN monthly net revenue produce 9m PLN ARR; at 30% EBITDA, 4x EBITDA, and 60% founder ownership, equity is about 6.5m PLN in year 6-9, without double-counting retained cash.",
+    "founder_time": "Hypothesis: 12-18 hours weekly, with jurisdictional counsel and an independent safer-gambling specialist paid per deployment.",
+    "gross_margin_basis": "Hypothesis: 72-82% after streaming infrastructure, model monitoring, audit support, and reseller share.",
+    "payback": "Hypothesis: 30000-70000 PLN integration and assurance cost per operator, recovered in 4-8 contracted months.",
+    "pricing": "Hypothesis: 12000-30000 PLN per operator monthly plus event-volume tiers, with a 15-25% reseller share.",
+    "retention_or_repeat": "Compliance operation is continuous and event-based; annual contracts renew if auditability and outcome metrics remain credible."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Jurisdiction-specific intervention outcomes and calibrated behavioral sequences improve policy effectiveness",
+    "customer": "Licensed online betting and gambling operators using a shared platform or payment stack",
+    "distribution_mechanism": "Gaming-platform vendors, aggregators, or payment providers resell the engine to their operator base",
+    "offer_and_business_model": "Configurable risk detection, intervention orchestration, and effectiveness reporting SaaS",
+    "payer_and_paid_event": "Operator pays a recurring license and usage fee for scored events and auditable interventions",
+    "problem_trigger": "A player's time, deposits, losses, behavior changes, or failed controls cross an operator-defined harm threshold"
+  },
+  "founder_fit": [
+    "The founder understands gambling behavior personally while data science supports event-level risk models.",
+    "The mission converts domain interest into harm reduction rather than gambling promotion.",
+    "Platform-led distribution concentrates sales and avoids a public gambling persona."
+  ],
+  "parent": null,
+  "risks": [
+    "False negatives expose players and customers to harm; false positives can unfairly restrict users.",
+    "Behavioral and payment data require strict privacy and security controls.",
+    "Regulatory rules and acceptable interventions vary by jurisdiction."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32014H0478",
+    "https://eli.gov.pl/api/acts/DU/2023/227/text.html"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "platform-distributed compliance decisioning SaaS",
+    "control_point": "Auditable mapping from behavioral risk signal to approved intervention and measured outcome",
+    "critical_dependency": "Licensed operator event access and credible validation that interventions reduce harm"
+  },
+  "thesis": "Sell licensed betting platforms a configurable event-stream service that detects emerging harm indicators, selects a proportionate intervention from operator-approved policy, records what happened, and measures whether risk declined. A platform provider or payments processor can resell it across operators. The company supplies compliance and harm-reduction infrastructure only; it never operates gambling, markets bets, or optimizes player spend.",
+  "title": "Responsible-Gambling Intervention Engine",
+  "uncertainties": [
+    "Which smaller regulated operators lack adequate event-level intervention tooling?",
+    "Can effectiveness be measured without access to sensitive financial or clinical data?",
+    "Will a platform provider resell a third-party policy engine across jurisdictions?"
+  ],
+  "version": 1
+}

@@ -1,0 +1,60 @@
+{
+  "candidate_id": "frontier-02",
+  "claims": [
+    {
+      "claim_id": "frontier-02-claim-01",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2024/573/oj/eng"
+      ],
+      "statement": "Regulation (EU) 2024/573 requires operators of covered equipment to keep specified gas and service records and requires certified persons for defined leak-check and service activities."
+    }
+  ],
+  "contrary_evidence": [
+    "Hermetically sealed and low-charge equipment can be exempt, and natural-refrigerant adoption may shrink the target F-gas asset base."
+  ],
+  "economics": {
+    "acquisition_route": "UNVALIDATED COMMERCIAL HYPOTHESIS: recruit 5 contractor groups through wholesalers and renewable installers, then sell portfolio visibility to facility managers.",
+    "capital_required_pln": 85000,
+    "founder_net_worth_path": "UNVALIDATED COMMERCIAL HYPOTHESIS: 250 contractors by year 3 and 1500 by year 6 at 11 million PLN annual revenue could support founder equity above 5 million PLN.",
+    "founder_time": "UNVALIDATED COMMERCIAL HYPOTHESIS: 2.5 hours per day after a contract administrator handles credential exceptions.",
+    "gross_margin_basis": "UNVALIDATED COMMERCIAL HYPOTHESIS: 72-84% gross margin after identity verification, archive, and support.",
+    "payback": "UNVALIDATED COMMERCIAL HYPOTHESIS: sales payback in 3 months at 40 recorded events per contractor per month.",
+    "pricing": "UNVALIDATED COMMERCIAL HYPOTHESIS: 690 PLN per contractor per month plus 39 PLN per signed service event.",
+    "retention_or_repeat": "UNVALIDATED COMMERCIAL HYPOTHESIS: 5-year asset retention with recurring records at every mandated or warranty service."
+  },
+  "fingerprint": {
+    "compounding_advantage": "the installed-asset graph and credential history reduce fraud and service handoff friction across participating contractors",
+    "customer": "certified commercial heat-pump and refrigeration service contractors plus multi-site equipment owners",
+    "distribution_mechanism": "refrigerant wholesalers, certification trainers, and equipment distributors embed the service rail",
+    "offer_and_business_model": "mobile evidence capture, certificate verification, refrigerant ledger, reminders, and regulator-ready export",
+    "payer_and_paid_event": "the contractor pays when a credentialed service record is signed; the owner can pay for portfolio custody",
+    "problem_trigger": "a regulated asset is installed, leak-checked, repaired, recharged, or decommissioned"
+  },
+  "founder_fit": [
+    "Good renewable-family channel and workflow-automation fit; the product is asynchronous and can be piloted without owning refrigerant or performing regulated work."
+  ],
+  "parent": null,
+  "risks": [
+    "A digital log cannot substitute for legally required certification.",
+    "Contractors may resist transparent credential and refrigerant tracking."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2024/573/oj/eng",
+    "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32024R2215"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "installed-equipment maintenance credential network",
+    "control_point": "credential-verified service record signed at commissioning, leak check, recharge, repair, or decommissioning",
+    "critical_dependency": "participation by certified contractors and acceptance of digital records by asset owners and inspectors"
+  },
+  "thesis": "Give certified heat-pump and refrigeration contractors a durable asset log that verifies technician credentials, refrigerant movements, leak checks, and post-repair checks at the service event. Focus only on equipment actually subject to record-keeping, not exempt small systems. All commercial numbers, including capital_required_pln, are unvalidated hypotheses.",
+  "title": "F-gas Service Evidence Rail for Commercial Heat Pumps",
+  "uncertainties": [
+    "Whether inspectors will prefer this export format is unvalidated.",
+    "Addressable service-event volume by equipment class is unknown."
+  ],
+  "version": 1
+}

@@ -1,0 +1,84 @@
+{
+  "candidate_id": "rights8-04",
+  "claims": [
+    {
+      "claim_id": "rights8-04-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2024/573/oj?eliuri=eli%3Areg%3A2024%3A573%3Aoj&locale=en"
+      ],
+      "statement": "EU Regulation 2024/573 provides certification and training requirements for work on stationary refrigeration, air-conditioning and heat-pump equipment involving fluorinated greenhouse gases or relevant alternatives."
+    },
+    {
+      "claim_id": "rights8-04-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2024/573/oj?eliuri=eli%3Areg%3A2024%3A573%3Aoj&locale=en"
+      ],
+      "statement": "The regulation says non-hermetically sealed equipment charged with covered fluorinated gases may be sold to an end user only where evidence shows installation will be performed by a certified undertaking."
+    },
+    {
+      "claim_id": "rights8-04-c3",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://climate.ec.europa.eu/areas-action/fluorinated-greenhouse-gases/climate-friendly-alternatives-f-gases/air-conditioning_en"
+      ],
+      "statement": "Hypothesis: contracted priority slots are scarce enough that OEMs will pay for an independent dispatch layer; neither technician supply nor OEM willingness has been validated."
+    }
+  ],
+  "contrary_evidence": [
+    "EU rules are phasing down or prohibiting some high-GWP equipment, so the relevant technician and parts mix will change rather than remain permanently scarce in its current form.",
+    "Certification establishes a constraint but does not prove that certified capacity is unavailable in the exact target districts or that OEMs will outsource it."
+  ],
+  "economics": {
+    "acquisition_route": "Map one voivodeship, verify certificates and insurance, reserve 20 weekly slots across five firms, and sell a limited SLA to one installer or importer before expanding territory.",
+    "capital_required_pln": 65000,
+    "founder_net_worth_path": "Unvalidated path: 35 principals plus 1,000 monthly dispatches could produce roughly PLN 7m annual revenue; at 20% operating profit and a 5x value, a 75% founder stake would be about PLN 5.25m. A 7-9 year route depends on multi-region density, signed SLA renewals and no double counting of retained cash.",
+    "founder_time": "12-18 hours per week for network setup, triage design and exception management; appoint an operations coordinator once dispatch volume exceeds roughly ten jobs per week.",
+    "gross_margin_basis": "Unvalidated estimate: 45-65% on administration and software after triage labor and technician-capacity reservation payments; the company avoids owning vans and inventory during validation.",
+    "payback": "Unvalidated target: 12-20 months at five B2B principals and 80-120 completed dispatches per month.",
+    "pricing": "Unvalidated hypothesis: PLN 2,000-8,000 monthly per B2B principal plus PLN 350-800 administration per completed dispatch; repair labor, parts and refrigerant are passed through or contracted separately.",
+    "retention_or_repeat": "Warranty principals renew if completion time, first-visit resolution and claim evidence improve; technicians remain if reserved work raises utilization without payment friction."
+  },
+  "fingerprint": {
+    "compounding_advantage": "dense reserved capacity, failure-code history and demonstrated SLA performance improve routing and make the network harder for a new dispatcher to reproduce",
+    "customer": "heat-pump manufacturers, importers, warranty insurers and installers with geographically fragmented after-sales obligations",
+    "distribution_mechanism": "sign one regional installer consortium first, then pursue OEM and insurer integrations with measured completion and response data rather than broad consumer advertising",
+    "offer_and_business_model": "remote fault intake, credential and parts matching, reserved appointment dispatch, evidence capture and SLA reporting sold as managed network software and administration",
+    "payer_and_paid_event": "the B2B warranty principal pays a monthly network fee and a per-completed-dispatch administration fee; technicians are paid for accepted work under transparent service terms",
+    "problem_trigger": "cold-weather failure, local backlog, missing technician skill or a warranty response-time breach"
+  },
+  "founder_fit": [
+    "Direct operational adjacency to the parents' renewable-installation company.",
+    "Automation, routing and failure-data analysis fit the founder's technical strengths.",
+    "The pilot can avoid owning vehicles, inventory or a large technician payroll.",
+    "B2B channel selling is periodic and measurable rather than dependent on personal media presence."
+  ],
+  "parent": null,
+  "risks": [
+    "A dispatch marketplace can fail during peak weather if reserved capacity is not contractually real.",
+    "Incorrect remote triage can create safety, warranty and liability exposure.",
+    "OEMs may refuse independent warranty authorization or restrict parts and service information.",
+    "F-gas and refrigerant transitions can strand technician skills or require retraining."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2024/573/oj?eliuri=eli%3Areg%3A2024%3A573%3Aoj&locale=en",
+    "https://climate.ec.europa.eu/areas-action/fluorinated-greenhouse-gases/climate-friendly-alternatives-f-gases/air-conditioning_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "reserved-capacity warranty administrator",
+    "control_point": "contracted priority appointment inventory from certified service firms, organized by territory, refrigerant competence and parts access",
+    "critical_dependency": "qualified firms must honor reserved slots and OEMs or insurers must authorize and pay the network for covered repairs"
+  },
+  "thesis": "Contract certified refrigeration and heat-pump service firms for reserved weekly repair slots in underserved Polish districts, then sell manufacturers, importers, insurers and larger installers a triaged warranty-dispatch service with measurable response times. The control asset is priority capacity and parts-routing agreements, not an unearned claim of technician exclusivity. Begin as software, call triage and dispatch; only advertise OEM-authorized warranty work where a signed authorization exists.",
+  "title": "Reserved Heat-Pump Warranty Capacity Network",
+  "uncertainties": [
+    "How many paid warranty jobs are actually delayed by regional capacity rather than parts or approval?",
+    "What reservation payment is enough for certified firms to honor priority slots?",
+    "Which OEMs permit third-party network administration and evidence submission?",
+    "Can remote triage improve first-visit resolution enough to fund the platform fee?"
+  ],
+  "version": 1
+}

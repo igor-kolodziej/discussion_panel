@@ -1,0 +1,87 @@
+{
+  "candidate_id": "transition-06",
+  "claims": [
+    {
+      "claim_id": "transition-06-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/PL-EN/TXT/?uri=CELEX%3A32023R2854"
+      ],
+      "statement": "The Data Act applies from 12 September 2025, and Article 3(1)'s connected-product design obligation applies to products and related services placed on the market after 12 September 2026."
+    },
+    {
+      "claim_id": "transition-06-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/PL-EN/TXT/?uri=CELEX%3A32023R2854"
+      ],
+      "statement": "Article 3 requires product and related-service data, including needed metadata, to be easily and securely accessible to users free of charge in a comprehensive, structured, commonly used, machine-readable format and directly where relevant and technically feasible."
+    },
+    {
+      "claim_id": "transition-06-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://digital-strategy.ec.europa.eu/en/news/eu-data-act-gives-users-control-over-data-connected-devices",
+        "https://digital-strategy.ec.europa.eu/en/factpages/data-act-explained"
+      ],
+      "statement": "The Commission identifies industrial and agricultural machinery among connected-product use cases and frames user access as enabling alternative repair and after-sale services."
+    }
+  ],
+  "contrary_evidence": [
+    "Direct access is required only where relevant and technically feasible, leaving OEM implementation discretion.",
+    "Existing IoT platforms may add compliant export and sharing functions as a bundled feature.",
+    "The law does not require a manufacturer to create data that its product design does not otherwise make retrievable."
+  ],
+  "economics": {
+    "acquisition_route": "Revenue-share bundles with embedded-development and IoT-cloud integrators, initially focused on one equipment category",
+    "capital_required_pln": 100000,
+    "founder_net_worth_path": "Scenario, not evidence: 60 OEMs averaging PLN 300,000 annual platform and usage revenue yields PLN 18m revenue; a 35% operating margin and several years of cash distributions could build PLN 20m-plus founder net worth",
+    "founder_time": "Four hours per day with no more than two pilots and no unsupported firmware customisation",
+    "gross_margin_basis": "Reusable gateway hosting and adapters can reach roughly 70% gross margin; firmware changes and unique identity systems are the main implementation cost",
+    "payback": "Target three to six months because implementation is prepaid and active-device minimums begin at launch",
+    "pricing": "Assumption: PLN 30,000-100,000 per product-line implementation plus PLN 2-8 per active device per month with minimum annual commits",
+    "retention_or_repeat": "The gateway sits in a live product data path and grows with deployed units, creating switching cost if reliability and export continuity are high"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Reusable adapters and semantic mappings across telemetry stacks, device classes, entitlement models, and repair or maintenance data-use cases",
+    "customer": "EU small and mid-sized OEMs of connected heat pumps, building controls, agricultural machines, and industrial equipment launching product lines after 12 September 2026",
+    "distribution_mechanism": "Embedded-development agencies, BMS vendors, and IoT cloud integrators bundle the gateway into product refresh projects",
+    "offer_and_business_model": "An SDK and hosted or customer-cloud gateway for user authentication, entitlements, metadata catalogues, machine-readable export and sharing, request logs, and pre-contract data disclosures; implementation plus active-device usage",
+    "payer_and_paid_event": "The OEM pays an implementation fee when one telemetry stream and user identity flow are connected, then pays per active device or data-export account",
+    "problem_trigger": "The EU Data Act already applies, and its Article 3(1) design obligation applies to connected products and related services placed on the market after 12 September 2026, requiring usable and secure user access to product data and relevant metadata"
+  },
+  "founder_fit": [
+    "Telemetry schemas, metadata, identity, and access analytics are core data-engineering work",
+    "The family renewable business can clarify data expectations for connected heat-pump and energy equipment",
+    "A paid single-stream integration limits capital and protects continued employment",
+    "Integrator channels make EU expansion possible without consumer marketing or a founder persona"
+  ],
+  "parent": null,
+  "risks": [
+    "An access-control flaw could leak personal, operational, or trade-secret data.",
+    "Device-cloud heterogeneity can turn each customer into a custom engineering project.",
+    "OEM sales cycles and security reviews may require more meetings than the founder prefers.",
+    "A large IoT platform can commoditise the gateway before channel distribution is established."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/legal-content/PL-EN/TXT/?uri=CELEX%3A32023R2854",
+    "https://digital-strategy.ec.europa.eu/en/factpages/data-act-explained",
+    "https://digital-strategy.ec.europa.eu/en/news/eu-data-act-gives-users-control-over-data-connected-devices"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Embedded compliance API infrastructure charged by connected unit",
+    "control_point": "The authenticated machine-readable data-egress layer between the OEM's telemetry store and the product user",
+    "critical_dependency": "OEM ability to alter firmware or cloud architecture while reconciling data access with GDPR, trade-secret, safety, and cybersecurity constraints"
+  },
+  "thesis": "A white-label data-access gateway can let small connected-equipment OEMs expose product and related-service data to authenticated users in a structured, machine-readable form without rebuilding their device clouds. The immediate wedge is product lines placed on the EU market after 12 September 2026, especially connected heat pumps, building controls, and agricultural or industrial machines whose manufacturers control usable telemetry but lack a user export surface.",
+  "title": "Data Act Access Gateway for Industrial Equipment OEMs",
+  "uncertainties": [
+    "The proportion of regional OEMs needing an external gateway rather than a cloud-platform setting is unknown.",
+    "Procurement cycle length may be incompatible with a side business even when implementation is bounded.",
+    "No evidence validates per-device pricing or the 60-OEM founder-wealth scenario.",
+    "The practical interaction among Data Act access, personal data, trade secrets, and product safety needs specialist review."
+  ],
+  "version": 1
+}

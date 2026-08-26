@@ -1,0 +1,212 @@
+{
+  "candidate_id": "settle6-08",
+  "candidate_sha256": "7e166591a460d44679b8f5322bb6e440ccbc3436253816e968dae655f4b38e7e",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "r08-c01",
+      "evidence_refs": [
+        "s08-01"
+      ],
+      "statement": "Poland had nearly 1.40 billion courier items in 2025, up 14.3% year over year, so monitoring two million parcels is small relative to total market flow; the report does not identify guaranteed-service or refund-eligible volume."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r08-c02",
+      "evidence_refs": [
+        "s08-02"
+      ],
+      "statement": "UPS Poland offers a refund or credit for late delivery only on certain services and destinations, subject to documentation and exclusions; the request must be made within 15 calendar days and eligible account holders can use an invoice dispute in UPS Billing Centre."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r08-c03",
+      "evidence_refs": [
+        "s08-03"
+      ],
+      "statement": "UPS Billing Centre exposes invoices and provides account roles that can view invoices and resolve claims, giving a feasible account-owner authorization model for a pilot."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r08-c04",
+      "evidence_refs": [
+        "s08-03",
+        "s08-04"
+      ],
+      "statement": "UPS documents OAuth-based third-party applications linked to shipper accounts, but the public API material reviewed describes shipping, rating and tracking rather than an invoice-guarantee claim endpoint; fully automated claim submission therefore remains unproven."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r08-c05",
+      "evidence_refs": [
+        "s08-05",
+        "s08-06"
+      ],
+      "statement": "FedEx Poland reinstated its guarantee on 12 February 2026 for a listed set of intercontinental time-definite services, and provides a form-based route for a late-delivery refund or adjusted invoice."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r08-c06",
+      "evidence_refs": [
+        "s08-07"
+      ],
+      "statement": "DHL's January 2025 terms narrow the refund to the time-definite premium, require notice within 14 days of shipment, and expressly prohibit the customer from permitting another party to notify claims on its behalf."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r08-c07",
+      "evidence_refs": [
+        "s08-08",
+        "s08-09"
+      ],
+      "statement": "The proposed core workflow and contingency pricing already have established competitors: LateShipment.com claims automated refund filing, credit verification, broad carrier coverage and a 35% fee, while Refund Retriever publishes success-only tiers of 45-50% for smaller shipping-spend bands."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r08-c08",
+      "evidence_refs": [
+        "s08-02",
+        "s08-03",
+        "s08-04",
+        "s08-07"
+      ],
+      "statement": "A credible first wedge is narrower than the original multi-carrier proposition: one UPS Poland account cohort using explicitly guaranteed services, account-owner-assigned permissions, invoice data and a human-supervised request step until the carrier confirms scalable automation rights."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r08-c09",
+      "evidence_refs": [],
+      "statement": "No cited source establishes Poland/EU late-delivery refund incidence, average eligible transport charge, denial workload, or the share of the 1.40 billion courier items bought on a guaranteed service."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r08-c10",
+      "evidence_refs": [],
+      "statement": "The 3PL integration payback, two-hour daily founder workload, PLN 60,000 capital sufficiency, 20 million monitored-parcel target and founder-net-worth path are unsupported by operating evidence or partner commitments."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r08-c11",
+      "evidence_refs": [
+        "s08-02",
+        "s08-05",
+        "s08-07",
+        "s08-08",
+        "s08-09"
+      ],
+      "statement": "Incumbent breadth across invoice errors and carriers means a defensible entrant likely needs a Poland/EU rules corpus, embedded local distribution or a materially lower-cost workflow rather than generic late-parcel detection alone."
+    }
+  ],
+  "contrary_evidence": [
+    "UPS limits the guarantee to certain services and destinations, imposes documentation and exclusion tests, and requires action within 15 days.",
+    "FedEx Poland's February 2026 restoration is limited to listed time-definite intercontinental services, leaving the eligible pool materially smaller than total parcel volume.",
+    "DHL's current terms state that the customer may not permit another party to notify claims, directly blocking the assumed outsourced filing model for that carrier unless terms change or DHL grants a separate lawful route.",
+    "LateShipment.com and Refund Retriever already automate eligibility, filing and credit verification on success fees, and LateShipment.com bundles many other invoice-error checks.",
+    "The official UPS developer material reviewed does not establish a public guarantee-refund submission API, so a portal or human-in-the-loop step may remain."
+  ],
+  "schema_version": 2,
+  "sources": [
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2026-05-29",
+      "publisher": "Urząd Komunikacji Elektronicznej",
+      "source_id": "s08-01",
+      "source_type": "official_regulator_report",
+      "stance": "context",
+      "title": "Raport o stanie rynku pocztowego w 2025 r.",
+      "url": "https://bip.uke.gov.pl/raporty/raport-o-stanie-rynku-pocztowego-w-2025-r-,112.html"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "n.d.",
+      "publisher": "UPS Poland",
+      "source_id": "s08-02",
+      "source_type": "official_carrier_terms",
+      "stance": "supporting",
+      "title": "Gwarancja zwrotu pieniędzy",
+      "url": "https://www.ups.com/pl/pl/support/shipping-support/legal-terms-conditions/ups-service-guarantee"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "n.d.",
+      "publisher": "UPS Poland",
+      "source_id": "s08-03",
+      "source_type": "official_carrier_product_documentation",
+      "stance": "supporting",
+      "title": "Centrum rozliczeniowe UPS",
+      "url": "https://www.ups.com/pl/pl/business-solutions/ups-billing"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "n.d.",
+      "publisher": "UPS",
+      "source_id": "s08-04",
+      "source_type": "official_api_documentation",
+      "stance": "context",
+      "title": "Getting Started with UPS APIs",
+      "url": "https://developer.ups.com/get-started"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2026-02-12",
+      "publisher": "FedEx Poland",
+      "source_id": "s08-05",
+      "source_type": "official_carrier_service_notice",
+      "stance": "contradicting",
+      "title": "Wiadomości na temat usług i powiadomienia",
+      "url": "https://www.fedex.com/pl-pl/service-news.html"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "n.d.",
+      "publisher": "FedEx Poland",
+      "source_id": "s08-06",
+      "source_type": "official_carrier_support_documentation",
+      "stance": "supporting",
+      "title": "Can I request a refund if the delivery was late?",
+      "url": "https://www.fedex.com/en-pl/customer-support/faq/complaints-and-refunds/fedex-refund.html"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2025-01",
+      "publisher": "DHL Express",
+      "source_id": "s08-07",
+      "source_type": "official_carrier_terms",
+      "stance": "contradicting",
+      "title": "DHL Express Money-Back Guarantee Terms and Conditions",
+      "url": "https://mrt2.ap.dhl.com/reverse/content/dam/downloads/global/en/mbg/money_back_guarantee_terms_and_conditions_en_jan2025.pdf.coredownload.pdf"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "n.d.",
+      "publisher": "LateShipment.com",
+      "source_id": "s08-08",
+      "source_type": "incumbent_product_and_pricing",
+      "stance": "contradicting",
+      "title": "Shipping Cost Optimization: OneAudit",
+      "url": "https://www.lateshipment.com/platform/oneaudit/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "n.d.",
+      "publisher": "Refund Retriever",
+      "source_id": "s08-09",
+      "source_type": "incumbent_pricing",
+      "stance": "contradicting",
+      "title": "Competitive Pricing - How much does Refund Retriever cost?",
+      "url": "https://www.refundretriever.com/pricing/"
+    }
+  ],
+  "unknowns": [
+    "What percentage of a target UPS Poland or FedEx account's parcels use an explicitly guaranteed service?",
+    "What percentage of those parcels arrive late after carrier-recognized exclusions are applied?",
+    "What is the mean and distribution of eligible transport-charge credits net of excluded taxes, duties, surcharges and service limits?",
+    "Can a merchant authorize the product to submit UPS guarantee requests programmatically or only through a named Billing Centre user and portal workflow?",
+    "What are carrier-specific denial, appeal and reconciliation labor minutes per attempted and successful credit?",
+    "Will a Poland-based 3PL or WMS partner grant shipment and invoice access and accept a revenue share?",
+    "What take rate is acceptable after comparison with incumbent 35-50% contingency pricing?",
+    "Can a single-carrier pilot stay within five founder hours per day while maintaining deadlines and exceptions?",
+    "What retention remains if carriers suspend guarantees, narrow services or automate credits themselves?"
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "candidate_id": "moat-04",
+  "claims": [
+    {
+      "claim_id": "moat04-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/dir/2012/19/2024-04-08/eng",
+        "https://environment.ec.europa.eu/topics/waste-and-recycling/waste-shipments/waste-shipments-correspondents-guidelines_en"
+      ],
+      "statement": "EU WEEE rules require item-level functionality testing, records, direct-reuse documentation, and protective transport evidence to treat shipped reclaimed electrical equipment as used equipment rather than presumptively illegal waste."
+    },
+    {
+      "claim_id": "moat04-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.ure.gov.pl/pl/urzad/informacje-ogolne/aktualnosci/13173%2CRaport-URE-w-Polsce-mamy-juz-ponad-16-mln-mikroinstalacji-OZE.html",
+        "https://iea-pvps.org/wp-content/uploads/2020/01/Report_IEA-PVPS_T13-08_2017_Technical_Assumptions_Used_in_PV_Financial_Models.pdf"
+      ],
+      "statement": "Poland's 1.6 million-plus microinstallations and a documented 10-15-year inverter service life create a real future repair and replacement base, especially for off-warranty electronics."
+    },
+    {
+      "claim_id": "moat04-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://publications.jrc.ec.europa.eu/repository/bitstream/JRC141760/JRC141760_01.pdf"
+      ],
+      "statement": "Module reuse economics are weak today: JRC reports low warranty returns, roughly 30-year module life, and refurbishment costs that can exceed new production costs."
+    },
+    {
+      "claim_id": "moat04-c4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.secondsol.com/en/index.htm"
+      ],
+      "statement": "SecondSol already operates the near-exact European marketplace with more than 60000 users, over 250000 spare parts, used and refurbished components, testing, repair, auctions, logistics, and recycling."
+    },
+    {
+      "claim_id": "moat04-c5",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://www.secondsol.com/en/index.htm",
+        "https://www.sma.de/en/service/device-replacement",
+        "https://iea-pvps.org/wp-content/uploads/2026/02/IEA-PVPS-T13-37-2026-REPORT-Second-Life-PV.pdf"
+      ],
+      "statement": "A viable Polish wedge must focus on documented fitment for obsolete, off-warranty components unavailable from OEM replacement channels, not generic used modules."
+    }
+  ],
+  "contrary_evidence": [
+    "SecondSol already has the same marketplace, testing, repair, auction, logistics, and spare-part scope at European scale.",
+    "SMA sends current-portfolio replacement devices, reducing demand for reclaimed units where OEM substitution is technically feasible.",
+    "JRC finds module return rates low and present refurbishment economics inferior to cheap new modules.",
+    "Second-life PV repair methods and assurance standards remain incompletely standardized."
+  ],
+  "economics": {
+    "acquisition_route": "Seed obsolete part numbers and service histories from the family installer and two to five licensed recycler or repair partners; acquire technicians through exact part-number search and installer procurement workflows.",
+    "capital_required_pln": 75000,
+    "founder_net_worth_path": "An unvalidated path requires about 70 million PLN annual GMV at a 10% blended take rate and roughly 30% EBITDA margin; at a four-times EBITDA value and at least 70% founder ownership, equity could exceed 5 million PLN in seven to ten years.",
+    "founder_time": "About 15-20 hours weekly only if testing, warehousing, electrical work, and waste handling are performed by qualified partners.",
+    "gross_margin_basis": "An inventory-light marketplace can retain software margin, but testing, return, fraud, support, and fitment-guarantee costs make the original 45% gross margin unvalidated.",
+    "payback": "At an unvalidated 150 PLN contribution per completed order, 500 completed orders recover 75000 PLN before founder salary.",
+    "pricing": "Charge an 8-12% take rate plus 100-300 PLN for documented third-party testing; higher fees require demonstrated scarcity or avoided redesign labor.",
+    "retention_or_repeat": "Technicians may repeat across failures, but OEM replacements and SecondSol are substitutes and each part-number market is fragmented."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A Poland-specific graph linking serials, electrical compatibility, test evidence, installation context, and successful repairs",
+    "customer": "Solar repair technicians, licensed recyclers, and owners of aging off-warranty PV systems",
+    "distribution_mechanism": "Long-tail part-number search, installer procurement accounts, and recycler inventory feeds",
+    "offer_and_business_model": "Fitment-guaranteed managed exchange for tested obsolete PV components with take rate and test fees",
+    "payer_and_paid_event": "Repairer pays when a tested compatible component ships and the platform guarantees the documented fitment",
+    "problem_trigger": "An off-warranty legacy inverter, optimizer, or module fails and OEM replacement is unavailable or requires costly redesign"
+  },
+  "founder_fit": [
+    "The family installer can supply early failure cases and verify whether fitment pain is real.",
+    "Data modeling and marketplace automation match the founder's technical strengths.",
+    "Licensed partners must own electrical testing, waste handling, warehousing, and installation so the business remains part-time."
+  ],
+  "parent": {
+    "candidate_id": "moat-04",
+    "version": 2
+  },
+  "risks": [
+    "Untested or poorly documented goods can be treated as WEEE, including illegal-shipment consequences.",
+    "A substantial modification can shift manufacturer-like product liability to the modifier; even ordinary resale carries conformity and defect exposure.",
+    "SecondSol's established liquidity and services make a broad European marketplace non-differentiated.",
+    "OEM current-product replacement can be safer and cheaper than reclaimed fitment.",
+    "Rare-part liquidity fragments by model, voltage, firmware, grid code, and vintage."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/dir/2012/19/2024-04-08/eng",
+    "https://environment.ec.europa.eu/topics/waste-and-recycling/waste-shipments/waste-shipments-correspondents-guidelines_en",
+    "https://eur-lex.europa.eu/eli/dir/2024/2853/oj",
+    "https://publications.jrc.ec.europa.eu/repository/handle/JRC132558",
+    "https://publications.jrc.ec.europa.eu/repository/bitstream/JRC141760/JRC141760_01.pdf",
+    "https://iea-pvps.org/wp-content/uploads/2026/02/IEA-PVPS-T13-37-2026-REPORT-Second-Life-PV.pdf",
+    "https://iea-pvps.org/wp-content/uploads/2020/01/Report_IEA-PVPS_T13-08_2017_Technical_Assumptions_Used_in_PV_Financial_Models.pdf",
+    "https://www.secondsol.com/en/index.htm",
+    "https://www.sma.de/en/service/device-replacement",
+    "https://www.ure.gov.pl/pl/urzad/informacje-ogolne/aktualnosci/13173%2CRaport-URE-w-Polsce-mamy-juz-ponad-16-mln-mikroinstalacji-OZE.html"
+  ],
+  "stage": "development",
+  "structure": {
+    "commercial_archetype": "Vertical B2B marketplace",
+    "control_point": "Documented serial-level fitment, functionality test, and successful-repair record",
+    "critical_dependency": "Qualified non-waste supply, conservative testing and liability rules, and local liquidity not already captured by SecondSol or OEM replacements"
+  },
+  "thesis": "Build a managed Polish exchange for tested, obsolete, off-warranty photovoltaic components, using item-level fitment and successful-repair evidence to guarantee compatibility where OEM replacement would otherwise require costly redesign.",
+  "title": "PV Fitment Exchange",
+  "uncertainties": [
+    "The annual count and avoided cost of Polish legacy-component failures are unknown.",
+    "SecondSol's Polish usage, seller fees, fulfillment performance, and inventory coverage are unknown.",
+    "Testing, return, insurance, warranty, and fitment-guarantee costs have not been quoted.",
+    "It is unknown which reclaimed component classes remain non-waste and safe after recycler intake.",
+    "No evidence yet proves technicians will switch procurement or contribute fitment outcomes."
+  ],
+  "version": 3
+}

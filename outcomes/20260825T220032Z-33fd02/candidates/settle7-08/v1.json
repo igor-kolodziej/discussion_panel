@@ -1,0 +1,84 @@
+{
+  "candidate_id": "settle7-08",
+  "claims": [
+    {
+      "claim_id": "settle7-08-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.ema.europa.eu/en/human-regulatory-overview/research-development/clinical-trials-human-medicines/clinical-trials-information-system"
+      ],
+      "statement": "EMA states that CTIS supports sponsors and authorities through the trial lifecycle and records formal milestones such as the start and end of recruitment, but CTIS is not described as a site-payment ledger."
+    },
+    {
+      "claim_id": "settle7-08-c2",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://www.clinicalresearchnewsonline.com/news/2025/11/05/site-payments--transparency--timeliness--and-trust"
+      ],
+      "statement": "A 2025 industry meeting summary reports persistent site-payment problems and demand for detailed, real-time reconciliation portals and remittance information."
+    },
+    {
+      "claim_id": "settle7-08-c3",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://myscrs.org/resources/streamline-clinical-trial-patient-payments/"
+      ],
+      "statement": "A 2025 Society for Clinical Research Sites resource says sites want participant payments at the visit with later data entry reconciled seamlessly, demonstrating an adjacent event-to-payment workflow need."
+    }
+  ],
+  "contrary_evidence": [
+    "Investigator and participant payment products already exist, so a narrow smaller-sponsor wedge and interoperability advantage must be demonstrated.",
+    "CTIS lifecycle milestones do not by themselves prove that operational visit data can or should trigger payments."
+  ],
+  "economics": {
+    "acquisition_route": "One boutique CRO or specialist site-network design partner, followed by clinical finance consultants and EDC integrators",
+    "capital_required_pln": 100000,
+    "founder_net_worth_path": "A plausible 5-7 year route would require dozens of concurrent studies, several million annual billable events, repeat CRO channels, and high retained software revenue; enterprise validation cycles make timing uncertain",
+    "founder_time": "Approximately 12-18 hours per week, with clinical quality, privacy, and payment compliance owned by experienced contractors and partners",
+    "gross_margin_basis": "Rules software and data integration less validation, security, payment-provider, and clinical finance support costs",
+    "payback": "Sponsor payback could come from fewer finance exceptions and stronger site relationships; quantified delay and reconciliation costs must be proven on a study ledger",
+    "pricing": "Approximately 20,000-50,000 PLN per study setup plus 8-25 PLN per accepted visit or other billable event and optional payment-file fees",
+    "retention_or_repeat": "Each active trial generates recurring events for years and successful sponsors or CROs launch further studies"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A library of protocol-to-budget mappings and exception outcomes could shorten study setup and predict underpayment or accrual errors",
+    "customer": "Small and mid-sized EU biotech sponsors, specialist CROs, and multi-site clinical research networks",
+    "distribution_mechanism": "Partner with boutique CROs, clinical finance consultants, and Polish or Central European specialist site networks",
+    "offer_and_business_model": "Budget digitisation, milestone adapters, exception approval, payment-provider file generation, and site-facing remittance detail",
+    "payer_and_paid_event": "The sponsor pays an implementation fee and usage fees when an accepted clinical event becomes an approved site-payment instruction and receipt",
+    "problem_trigger": "A participant visit or non-visit milestone is accepted but site earnings, invoices, payment schedules, and remittance advice do not reconcile cleanly"
+  },
+  "founder_fit": [
+    "The founder's health, neuroscience, and data background supports clinical workflow comprehension",
+    "Rule mapping and anomaly detection can use AI without making clinical decisions",
+    "A boutique-CRO channel is compatible with a focused technical founder rather than an influencer model"
+  ],
+  "parent": null,
+  "risks": [
+    "Clinical system validation, privacy, and security requirements may exceed a part-time founder's initial capacity",
+    "Incorrect payment instructions could damage site relationships",
+    "Large established site-payment vendors may move downmarket",
+    "Long sponsor procurement cycles could delay revenue"
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.ema.europa.eu/en/human-regulatory-overview/research-development/clinical-trials-human-medicines/clinical-trials-information-system",
+    "https://www.clinicalresearchnewsonline.com/news/2025/11/05/site-payments--transparency--timeliness--and-trust",
+    "https://myscrs.org/resources/streamline-clinical-trial-patient-payments/"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Vertical payment-operations platform with implementation and per-accepted-event fees",
+    "control_point": "The jointly auditable mapping from protocol budget and site contract to accepted participant visit, data milestone, payment instruction, and remittance line",
+    "critical_dependency": "Sponsors must grant secure EDC or CTMS milestone access and authority to generate payment instructions under privacy and clinical-quality controls"
+  },
+  "thesis": "Small EU biotech sponsors and CROs could use a lightweight payment-operations layer that maps negotiated site budgets to pseudonymous accepted visit and data-clean events, generates payment instructions through an existing provider, and returns detailed remittance receipts to both sponsor and site. The wedge is transparent event-to-payment reconciliation for smaller programmes, not a replacement for clinical or banking systems.",
+  "title": "Trial Visit Paymaster Lite",
+  "uncertainties": [
+    "Whether small sponsors experience enough reconciliation pain to buy a separate layer",
+    "Minimum integration scope acceptable to EDC and CTMS vendors",
+    "Whether sponsors will expose pseudonymous event status to a new provider",
+    "Actual implementation effort per unique site budget"
+  ],
+  "version": 1
+}

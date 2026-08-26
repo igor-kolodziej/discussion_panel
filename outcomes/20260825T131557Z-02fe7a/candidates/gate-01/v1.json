@@ -1,0 +1,73 @@
+{
+  "candidate_id": "gate-01",
+  "claims": [
+    {
+      "claim_id": "gate-01-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/klimat/jak-zostac-prosumentem"
+      ],
+      "statement": "Polish government guidance says a microinstallation connection must be reported to the relevant DSO no later than 30 days before planned start-up and points applicants to forms supplied by their own DSO."
+    },
+    {
+      "claim_id": "gate-01-c2",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://mojprad.gov.pl/zloz-wniosek/"
+      ],
+      "statement": "The official Mój Prąd application guidance notes that different DSOs issue different connection-confirmation documents, providing a discovery-grade signal that document normalization is a real workflow problem."
+    }
+  ],
+  "contrary_evidence": [
+    "DSOs already provide their own forms and portals, so submission itself is not a defensible product.",
+    "The cited Mój Prąd intake is closed; it supports document fragmentation, not current subsidy demand."
+  ],
+  "economics": {
+    "acquisition_route": "Hypothesis: founder-led proof inside one installer, followed by low-touch wholesale and training-channel referrals.",
+    "capital_required_pln": 42000,
+    "founder_net_worth_path": "Hypothesis: 350 branches at 1490 PLN monthly would produce about 6.3 million PLN ARR; durable retention and healthy margins could make founder-owned equity exceed 5 million PLN in years 5 to 7 without assuming a sale.",
+    "founder_time": "Hypothesis: 15 to 20 hours weekly for a narrow two-DSO pilot, with legal review outsourced.",
+    "gross_margin_basis": "Hypothesis: 80% software gross margin after templates stabilize, with human review priced separately.",
+    "payback": "Hypothesis: fewer than three paid months if a channel partner yields at least four retained branches per 3000 PLN of enablement cost.",
+    "pricing": "Hypothesis: 249 PLN per dossier or 1490 PLN per branch-month after a free pilot.",
+    "retention_or_repeat": "Hypothesis: recurring because each new installation and every DSO form revision reopens the gate."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A consented rule graph linking DSO, hardware, form version, corrections, and eventual acceptance",
+    "customer": "Polish photovoltaic and battery installers with repeated jobs across one or more DSOs",
+    "distribution_mechanism": "Pilot through the family installer, then distribute through electrical wholesalers, inverter distributors, installer trainers, and trade accountants",
+    "offer_and_business_model": "Vertical compliance SaaS with an optional paid human review and a signed dossier manifest",
+    "payer_and_paid_event": "The installer pays per dossier that passes internal preflight, or per branch-month for unlimited preflight",
+    "problem_trigger": "A completed installation cannot be treated as grid-ready until the correct DSO dossier is complete and submitted"
+  },
+  "founder_fit": [
+    "The founder can test the workflow inside the family renewable-installation company without broad networking.",
+    "Rules extraction, anomaly detection, and evidence lineage use data-science and AI leverage.",
+    "A software-first pilot is compatible with part-time work and controlled capital."
+  ],
+  "parent": null,
+  "risks": [
+    "A false pass could delay energisation and create contractual liability.",
+    "DSO harmonisation could erase much of the normalization wedge.",
+    "Installers may tolerate manual corrections rather than pay."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.gov.pl/web/klimat/jak-zostac-prosumentem",
+    "https://mojprad.gov.pl/zloz-wniosek/"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Vertical compliance workflow SaaS",
+    "control_point": "Installer-issued signed preflight token before DSO submission and internal energisation release",
+    "critical_dependency": "Persistent DSO-specific requirements and lawful access to status or correction feedback"
+  },
+  "thesis": "An installer-side preflight service could validate every grid-connection field and attachment, preserve who approved each datum, and issue an internal release token before a Polish solar or storage job is submitted to its distribution-system operator. The wedge is not another generic project manager: it is an auditable cross-OSD rules layer whose rejection and acceptance graph improves with every consented dossier.",
+  "title": "OSD Commissioning Ledger for Polish Solar Installers",
+  "uncertainties": [
+    "The frequency and cash cost of avoidable DSO rejections are unknown.",
+    "It is unknown which DSOs expose stable machine interfaces versus requiring user-mediated submission.",
+    "The 42000 PLN capital figure and all commercial figures below are bootstrap planning hypotheses, not observed results."
+  ],
+  "version": 1
+}

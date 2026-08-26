@@ -1,0 +1,271 @@
+{
+  "candidate_id": "spend-10",
+  "candidate_sha256": "68b60792ac79012429117d1c6e2a3791f4946b26bb79e751e302f557cb9a10a8",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "spend-10-r01",
+      "evidence_refs": [
+        "spend-10-s01"
+      ],
+      "statement": "Commission remuneration remained prevalent in 24 Member States in 2024, and agents and brokers were the main distribution channel in most Member States."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "spend-10-r02",
+      "evidence_refs": [
+        "spend-10-s02"
+      ],
+      "statement": "Poland had 28,365 registered insurance agents and 1,418 insurance brokers at the end of 2024."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "spend-10-r03",
+      "evidence_refs": [
+        "spend-10-s02",
+        "spend-10-s03"
+      ],
+      "statement": "The registry counts are only an upper bound: KNF's agent definition includes businesses with different carrier relationships, and the sources do not identify active multi-carrier agencies with material reconciliation complexity."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "spend-10-r04",
+      "evidence_refs": [
+        "spend-10-s04"
+      ],
+      "statement": "SuperAgent says an agency can upload original carrier commission files, automate settlement for each insurer, and buy the product from tens of PLN per month."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "spend-10-r05",
+      "evidence_refs": [
+        "spend-10-s05"
+      ],
+      "statement": "SuperBroker already imports commission notes from all insurers, checks carrier-paid commission against internal records, tracks discrepancy explanations, and lists 99-199 PLN monthly pricing."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "spend-10-r06",
+      "evidence_refs": [
+        "spend-10-s06",
+        "spend-10-s07"
+      ],
+      "statement": "Berg System advertises the same month-end insurer-note import, commission reports, and commission-settlement system, while KA System reports meaningful use of commission-processing functionality."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "spend-10-r07",
+      "evidence_refs": [
+        "spend-10-s04",
+        "spend-10-s05",
+        "spend-10-s06",
+        "spend-10-s07"
+      ],
+      "statement": "Because Polish incumbents already own the workflow at low bundled prices, a standalone overlay must prove incremental recovered value or substantially better exception accuracy; generic reconciliation is not a sufficient paid wedge."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "spend-10-r08",
+      "evidence_refs": [
+        "spend-10-s08"
+      ],
+      "statement": "A customer can lawfully appoint an external SaaS provider as a processor when a binding contract, documented instructions, confidentiality, security, and subprocessor controls are in place."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "spend-10-r09",
+      "evidence_refs": [
+        "spend-10-s09"
+      ],
+      "statement": "KNF treats cloud processing of legally protected financial-sector information as a governed outsourcing risk; this raises assurance and onboarding costs but does not show that the required right is unobtainable."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "spend-10-r10",
+      "evidence_refs": [
+        "spend-10-s10"
+      ],
+      "statement": "Applied Systems' 2026 embedded reconciliation product shows that a broker-management incumbent can absorb carrier-statement ingestion and matching into the system of record."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "spend-10-r11",
+      "evidence_refs": [
+        "spend-10-s04",
+        "spend-10-s05",
+        "spend-10-s06",
+        "spend-10-s10"
+      ],
+      "statement": "A broker-software reseller strategy is not presently supported: the identified vendors are potential competitors with overlapping products, and no partner commitment or referral economics are public."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "spend-10-r12",
+      "evidence_refs": [],
+      "statement": "No located public Polish evidence quantifies recurring carrier underpayment, mismatch rates, recovery rates, or administrator hours after use of current agency and broker systems."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "spend-10-r13",
+      "evidence_refs": [],
+      "statement": "It is unknown whether each target customer has contractual permission, complete expected-rate schedules, stable policy identifiers, and export rights sufficient for an independent expected-versus-paid calculation."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "spend-10-r14",
+      "evidence_refs": [
+        "spend-10-s04",
+        "spend-10-s05"
+      ],
+      "statement": "Observed incumbent prices make the original 400-2,500 PLN monthly assumption weak; a 199-499 PLN monthly overlay is a more conservative test range until incremental recovery is demonstrated."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "spend-10-r15",
+      "evidence_refs": [
+        "spend-10-s02",
+        "spend-10-s04",
+        "spend-10-s05"
+      ],
+      "statement": "At 500 accounts paying 250 PLN monthly, ARR would be 1.5m PLN and a 25% owner-cash margin would be 375,000 PLN per mature year; this does not support the original rapid wealth path without higher proven ARPU or expansion."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "spend-10-r16",
+      "evidence_refs": [
+        "spend-10-s08",
+        "spend-10-s09"
+      ],
+      "statement": "A two-format batch pilot appears compatible with the founder's capital and time only if exception handling is tightly capped; actual security, mapping, and support cost remains unknown."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "spend-10-r17",
+      "evidence_refs": [
+        "spend-10-s04",
+        "spend-10-s05",
+        "spend-10-s06",
+        "spend-10-s10"
+      ],
+      "statement": "Generic document parsing is reproducible; defensibility would have to come from a permissioned adjudicated exception corpus and adoption of the audit ledger in the payout workflow, neither of which is currently evidenced."
+    }
+  ],
+  "contrary_evidence": [
+    "Low-priced Polish products already import original insurer commission files and automate settlement.",
+    "Two Polish broker systems explicitly advertise expected-versus-paid verification, commission reports, and discrepancy handling.",
+    "A major global broker-management incumbent has embedded similar reconciliation inside its system of record.",
+    "The public Polish registry denominator does not isolate the economically relevant multi-carrier subset."
+  ],
+  "schema_version": 2,
+  "sources": [
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2026-03-30",
+      "publisher": "European Insurance and Occupational Pensions Authority",
+      "source_id": "spend-10-s01",
+      "source_type": "regulator_report",
+      "stance": "supporting",
+      "title": "Structure of the EU insurance distribution market",
+      "url": "https://www.eiopa.europa.eu/structure-eu-insurance-distribution-market_en"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2025-07-02",
+      "publisher": "Komisja Nadzoru Finansowego",
+      "source_id": "spend-10-s02",
+      "source_type": "regulator_report",
+      "stance": "context",
+      "title": "Sprawozdanie z działalności UKNF oraz KNF w 2024 roku",
+      "url": "https://www.knf.gov.pl/knf/pl/komponenty/img/Sprawozdanie_UKNF_KNF_2024_94423.pdf"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2026-01-23",
+      "publisher": "Komisja Nadzoru Finansowego",
+      "source_id": "spend-10-s03",
+      "source_type": "regulator_guidance",
+      "stance": "context",
+      "title": "Działalność agencyjna",
+      "url": "https://www.knf.gov.pl/dla_rynku/posrednictwo_finansowe/rynek_ubezpieczen/dzialalnosc_agencyjna"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "SuperAgent",
+      "source_id": "spend-10-s04",
+      "source_type": "vendor_product_page",
+      "stance": "contradicting",
+      "title": "SuperAgent — program dla agentów ubezpieczeniowych",
+      "url": "https://super-agent.pl/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "SuperBroker",
+      "source_id": "spend-10-s05",
+      "source_type": "vendor_product_page",
+      "stance": "contradicting",
+      "title": "SuperBroker — program dla brokerów ubezpieczeniowych",
+      "url": "https://super-broker.pl/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "Berg System",
+      "source_id": "spend-10-s06",
+      "source_type": "vendor_product_page",
+      "stance": "contradicting",
+      "title": "Program CRM dla brokera ubezpieczeniowego",
+      "url": "https://bergsystem.pl/branze/ubezpieczenia/broker-ubezpieczeniowy/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "KA System",
+      "source_id": "spend-10-s07",
+      "source_type": "vendor_product_page",
+      "stance": "contradicting",
+      "title": "Program dla agentów i agencji ubezpieczeniowych",
+      "url": "https://crm.ka-system.pl/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "European Commission",
+      "source_id": "spend-10-s08",
+      "source_type": "official_guidance",
+      "stance": "context",
+      "title": "Application of the GDPR: roles of controller and processor",
+      "url": "https://commission.europa.eu/law/law-topic/data-protection/information-business-and-organisations/application-gdpr_en"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2020-01-23",
+      "publisher": "Urząd Komisji Nadzoru Finansowego",
+      "source_id": "spend-10-s09",
+      "source_type": "regulator_guidance",
+      "stance": "context",
+      "title": "Komunikat UKNF dotyczący przetwarzania informacji w chmurze obliczeniowej",
+      "url": "https://www.knf.gov.pl/knf/pl/komponenty/img/Komunikat_UKNF_Chmura_Obliczeniowa_68669.pdf"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2026-04-13",
+      "publisher": "Applied Systems",
+      "source_id": "spend-10-s10",
+      "source_type": "incumbent_product_announcement",
+      "stance": "contradicting",
+      "title": "Why Commission Reconciliation Is Breaking Insurance Agencies (and How to Fix It)",
+      "url": "https://www1.appliedsystems.com/en-us/blog/posts/how-to-fix-reconciliation-applied-recon/"
+    }
+  ],
+  "unknowns": [
+    "Poland-specific recurring commission leakage frequency, value, and recovery rate.",
+    "Customer-by-customer carrier statement rights, expected-rate data, identifier quality, and export completeness.",
+    "Paid conversion at 199-499 PLN monthly after a historical audit.",
+    "Manual exception minutes, parser maintenance load, and true gross margin.",
+    "Accountant referral CAC and any broker-software distribution commitment.",
+    "Churn once incumbent reconciliation is configured correctly."
+  ]
+}

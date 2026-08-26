@@ -1,0 +1,73 @@
+{
+  "candidate_id": "route-08",
+  "claims": [
+    {
+      "claim_id": "route-08-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.ema.europa.eu/en/human-regulatory-overview/research-development/clinical-trials-human-medicines/clinical-trials-information-system"
+      ],
+      "statement": "EMA's Clinical Trials Information System publicly exposes trial details including therapeutic area, sponsor, recruitment dates, and a map that helps patients and clinicians locate recruiting trials."
+    },
+    {
+      "claim_id": "route-08-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.ema.europa.eu/en/human-regulatory-overview/research-development/clinical-trials-human-medicines/clinical-trials-regulation"
+      ],
+      "statement": "The EU Clinical Trials Regulation uses a common system for multinational applications while emphasizing participant safety, transparency, and protection of personal data."
+    }
+  ],
+  "contrary_evidence": [
+    "CTIS already makes trials discoverable, so a simple trial-search interface is not differentiated.",
+    "Laboratory values alone may be insufficient for accurate eligibility screening."
+  ],
+  "economics": {
+    "acquisition_route": "Choose one lab-heavy therapeutic area, obtain ethics and privacy review, then contract a paid sponsor pilot and a single lab site; no patient contact occurs without explicit consent.",
+    "capital_required_pln": 90000,
+    "founder_net_worth_path": "Hypothesis: 2500 enrollments yearly at 3500 PLN net revenue yield 8.75m PLN annual revenue; at 30% EBITDA, 4x EBITDA, and 55% founder ownership, equity is about 5.8m PLN in year 6-9, with retained earnings counted only inside equity.",
+    "founder_time": "Hypothesis: 12-18 hours weekly, with privacy, ethics, and clinical operations specialists contracted against pilot revenue.",
+    "gross_margin_basis": "Hypothesis: 55-70% after laboratory share, privacy operations, and manual eligibility QA.",
+    "payback": "Hypothesis: 30000-70000 PLN per sponsor-and-lab launch, recovered after 12-25 enrolled participants depending on the fee.",
+    "pricing": "Hypothesis: 200-500 PLN per consented verified pre-screen or 3000-8000 PLN per enrolled participant, with 20-35% shared with the lab.",
+    "retention_or_repeat": "Revenue repeats across trials and sites rather than as a patient subscription; sponsors renew only if enrollment quality is demonstrated."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Structured eligibility rules, referral outcomes, and site-specific screen-failure reasons improve matching operations",
+    "customer": "Consenting diagnostic-lab customers who may qualify for recruiting clinical trials",
+    "distribution_mechanism": "Laboratory chains place the opt-in inside result portals repeatedly used by tested patients",
+    "offer_and_business_model": "Consent-gated local matching and referral infrastructure with outcome-based recruitment fees",
+    "payer_and_paid_event": "Sponsor or CRO pays per verified pre-screen or enrolled participant, with a contracted share to the laboratory",
+    "problem_trigger": "A trial opens with eligibility criteria that include recent laboratory or demographic fields"
+  },
+  "founder_fit": [
+    "Connects the founder's data-science, neuroscience, genetics, and health interests.",
+    "Rule-based pre-screening can be built before attempting regulated predictive models.",
+    "Lab distribution supplies repeated patient access without influencer marketing or cold patient outreach."
+  ],
+  "parent": null,
+  "risks": [
+    "Consent, ethics, and health-data governance errors would be severe.",
+    "Biased matching could worsen representation or create inappropriate expectations.",
+    "Sponsor sales cycles and trial starts are irregular."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.ema.europa.eu/en/human-regulatory-overview/research-development/clinical-trials-human-medicines/clinical-trials-information-system",
+    "https://www.ema.europa.eu/en/human-regulatory-overview/research-development/clinical-trials-human-medicines/clinical-trials-regulation"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "laboratory-distributed consented recruitment marketplace",
+    "control_point": "Consent and eligibility translation layer between lab result delivery and trial sites",
+    "critical_dependency": "Ethically approved lab participation and sponsor willingness to pay for attributable enrollment"
+  },
+  "thesis": "Allow diagnostic labs to offer an explicit opt-in when a customer retrieves results. A locally executed rules engine checks only consented fields against publicly recruiting trial criteria, and sends a structured pre-screen to a site only after separate contact consent. Trial sponsors or CROs pay for verified pre-screens or enrollment and share revenue with the lab; the product never sells a patient list or exposes non-consenting records.",
+  "title": "Consent-First Trial Match Rail for Lab Networks",
+  "uncertainties": [
+    "Whether Polish labs and ethics bodies accept a commercial opt-in referral workflow.",
+    "Which therapeutic areas have lab-heavy criteria and costly recruitment gaps.",
+    "How sponsors define and verify a billable pre-screen or enrollment event."
+  ],
+  "version": 1
+}

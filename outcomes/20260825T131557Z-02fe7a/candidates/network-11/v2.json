@@ -1,0 +1,116 @@
+{
+  "candidate_id": "network-11",
+  "claims": [
+    {
+      "claim_id": "network-11-v2-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.ema.europa.eu/en/human-regulatory-overview/research-development/clinical-trials-human-medicines/clinical-trials-information-system",
+        "https://www.ema.europa.eu/system/files/documents/other/cttm22_faqs_en.pdf"
+      ],
+      "statement": "CTIS supplies searchable public trial facts and downloadable search or trial records, which is enough for a public-data prototype but not evidence of site-level startup, recruitment-delivery, query-burden, or closeout performance."
+    },
+    {
+      "claim_id": "network-11-v2-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32014R0536",
+        "https://www.ema.europa.eu/system/files/documents/other/revised_ctis_transparency_rules_en.pdf"
+      ],
+      "statement": "The EU clinical-trial transparency regime expressly protects personal data and commercially confidential information, so non-public operational outcomes require separate authority, contractual permissions, minimisation, and disclosure controls."
+    },
+    {
+      "claim_id": "network-11-v2-c3",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC6907246/",
+        "https://link.springer.com/article/10.1186/s13063-015-0653-x"
+      ],
+      "statement": "Published research supports startup speed, recruitment, patient access, and data quality as relevant site-selection or performance dimensions, but it does not validate one portable score or prove that Polish sites and CROs will share the required data."
+    },
+    {
+      "claim_id": "network-11-v2-c4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.citeline.com/en/solutions/clinical/feasibility-and-site-selection",
+        "https://www.iqvia.com/solutions/technologies/site-suite/feasibility",
+        "https://www.medidata.com/en/study-experience/clinical-trial-analytics/"
+      ],
+      "statement": "Citeline, IQVIA, and Medidata already market sophisticated feasibility, site-selection, site-performance, workflow, and proprietary-data products, making generic site discovery or ranking an unattractive wedge."
+    },
+    {
+      "claim_id": "network-11-v2-c5",
+      "confidence": "low",
+      "evidence_refs": [],
+      "statement": "It remains an unvalidated hypothesis that a site-owned, permissioned operational evidence passport with transparent definitions and appeals will induce contributions and create a buyer willingness to pay distinct from incumbent feasibility suites."
+    }
+  ],
+  "contrary_evidence": [
+    "Major vendors already advertise proprietary site-level performance, enrollment, quality, workflow, and API capabilities.",
+    "CTIS public records do not contain the private operational outcomes that would make a reliability history valuable.",
+    "The published performance literature supports benchmarking but does not establish a fair cross-sponsor attribution method or a commercial exchange.",
+    "Public pricing was not found for the enterprise incumbents, so the proposed price and acquisition assumptions cannot be benchmarked reliably."
+  ],
+  "economics": {
+    "acquisition_route": "Build a CTIS-derived Polish site map and a private, site-controlled evidence-packet workflow; validate with one therapeutic area and seek a paid, bounded feasibility pilot before building shared scoring or integrations.",
+    "capital_required_pln": 90000,
+    "founder_net_worth_path": "Planning hypothesis, not forecast: reaching about 800 paying site-tool accounts at 8000 PLN annual revenue plus 50 buyer accounts at 100000 PLN annual revenue would produce roughly 11.4M PLN ARR. At 22% EBITDA, 4x EBITDA, and 60% founder ownership, equity would be about 6.0M PLN, plausibly in year 7-10 only if contribution and renewal loops are proven. Retained cash is not added again.",
+    "founder_time": "15-20 hours weekly for the public-data prototype and one bounded pilot; security, clinical-operations methodology, and privacy review must be contracted rather than improvised.",
+    "gross_margin_basis": "Planning range of 55-70% during manually verified pilots and 70-80% only after standardised ingestion, sampling, and appeals; no evidence yet supports either range.",
+    "payback": "Unknown until a paid pilot reveals sales-cycle length, security-review cost, and renewal value; cap pre-contract build and selling spend at the stated bootstrap budget.",
+    "pricing": "Test a 10000-25000 PLN scoped feasibility packet, then hypotheses of 300-800 PLN per site per month for workflow tools and 40000-100000 PLN per buyer per year for permissioned intelligence; never sell a higher rank.",
+    "retention_or_repeat": "Potential repeat events are new-study feasibility, annual preferred-site review, and ongoing evidence updates, but neither renewal nor contribution frequency is validated."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Permissioned longitudinal operational evidence owned or attested by sites, with definitions, sample thresholds, provenance, and an appeal trail",
+    "customer": "Independent Polish clinical-trial sites seeking portable evidence and CRO or sponsor feasibility teams that lack trustworthy local operational history",
+    "distribution_mechanism": "CTIS-derived public profiles, self-serve evidence packets, therapeutic-area site associations, and later buyer workflow exports",
+    "offer_and_business_model": "Free public-data site map, paid site evidence workflow, and contributor-gated buyer feasibility packets without public punitive scoring",
+    "payer_and_paid_event": "Site pays for private workflow tools; CRO or sponsor pays for a bounded feasibility packet or annual permissioned access, never for influence over a credential",
+    "problem_trigger": "A site prepares for outreach or a buyer begins country and site feasibility for a new study"
+  },
+  "founder_fit": [
+    "Data provenance, uncertainty, normalization, and auditability fit the founder's data-science skills.",
+    "Neuroscience training and medical adjacency help with terminology while contracted clinical-operations expertise remains necessary.",
+    "A CTIS prototype can be built part-time without patient data or immediate enterprise integration.",
+    "Self-serve evidence packets reduce reliance on public-facing content, although initial enterprise discovery still requires bounded interviews and sales."
+  ],
+  "parent": {
+    "candidate_id": "network-11",
+    "version": 1
+  },
+  "risks": [
+    "Unfair attribution or a thin-sample score could damage a site's reputation; private evidence packets, minimum samples, uncertainty bands, and appeals are essential.",
+    "Sponsors, CROs, and sites may lack the right or incentive to contribute comparable operational data.",
+    "Enterprise incumbents can bundle similar features with broader proprietary datasets and existing procurement relationships.",
+    "Information-security and vendor-assessment cycles may be incompatible with a lightly resourced part-time launch."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://www.ema.europa.eu/en/human-regulatory-overview/research-development/clinical-trials-human-medicines/clinical-trials-information-system",
+    "https://www.ema.europa.eu/system/files/documents/other/cttm22_faqs_en.pdf",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32014R0536",
+    "https://www.ema.europa.eu/system/files/documents/other/revised_ctis_transparency_rules_en.pdf",
+    "https://www.citeline.com/en/solutions/clinical/feasibility-and-site-selection",
+    "https://www.iqvia.com/solutions/technologies/site-suite/feasibility",
+    "https://www.medidata.com/en/study-experience/clinical-trial-analytics/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC6907246/",
+    "https://link.springer.com/article/10.1186/s13063-015-0653-x"
+  ],
+  "stage": "research",
+  "structure": {
+    "commercial_archetype": "site-owned evidence passport and contributor-gated feasibility exchange",
+    "control_point": "Permissioned, portable operational evidence with provenance, normalisation, and appeal rights",
+    "critical_dependency": "Enough sites and buyers must lawfully contribute comparable outcomes and treat the resulting evidence as decision-useful"
+  },
+  "thesis": "Create a Polish clinical-trial site evidence passport: CTIS supplies a public factual profile, while each site privately assembles permissioned, study-normalised evidence on startup, recruitment delivery, data queries, and closeout. Sites choose what to share in a feasibility packet; buyer access is gated and no public or pay-to-rank score is launched until attribution, sample size, and appeals are validated.",
+  "title": "TrialSite Evidence Passport for Poland",
+  "uncertainties": [
+    "Whether sites possess contractual rights to reuse sponsor or CRO operational metrics in a portable packet.",
+    "Whether buyers will accept site-attested data and what independent verification is proportionate.",
+    "The minimum cohort needed for useful normalization by therapeutic area and study complexity.",
+    "Enterprise sales cycle, security requirements, public-data update burden, and public-versus-private data licensing boundaries.",
+    "Willingness to pay, contribution rate, renewal, acquisition cost, and gross margin."
+  ],
+  "version": 2
+}

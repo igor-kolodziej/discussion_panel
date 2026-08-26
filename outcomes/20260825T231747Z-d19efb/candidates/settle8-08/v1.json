@@ -1,0 +1,86 @@
+{
+  "candidate_id": "settle8-08",
+  "claims": [
+    {
+      "claim_id": "settle8-08-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en"
+      ],
+      "statement": "Verified fact: the definitive CBAM regime applies from 1 January 2026; importers above the 50-tonne threshold in covered sectors must become authorized declarants, buy certificates, declare embedded emissions, and surrender corresponding certificates."
+    },
+    {
+      "claim_id": "settle8-08-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-verification_en"
+      ],
+      "statement": "Verified fact: CBAM verification operates at the non-EU installation level and accredited verifiers provide reasonable assurance over embedded-emissions calculations."
+    },
+    {
+      "claim_id": "settle8-08-c3",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-registry_en"
+      ],
+      "statement": "Hypothesis (unvalidated): importers will pay for an internal forecast-to-actual position ledger even though the official Registry provides declarant reconciliation views."
+    }
+  ],
+  "contrary_evidence": [
+    "The official CBAM Registry's DRMC component already shows imported goods, emissions, certificates, and penalties, creating direct functional overlap: https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-registry_en",
+    "Accredited verification and Registry workflows may cause customers to buy bundled services from established customs and assurance firms: https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-verification_en"
+  ],
+  "economics": {
+    "acquisition_route": "Partner with one customs representative or verifier to reconstruct a 2026 portfolio, then convert affected importers to recurring position management.",
+    "capital_required_pln": 65000,
+    "founder_net_worth_path": "Unvalidated scenario: 8 importers at PLN 7,000 MRR in year 2, 30 at PLN 10,000 MRR in year 4, and 50 at PLN 12,000 MRR in year 6 imply PLN 7.2m ARR before line fees. At 25% owner earnings or a 3-4x ARR value and 60% ownership, PLN 5m net worth is plausible in years 5-7; if the official DRMC fully replaces internal reconciliation for pilots, stop.",
+    "founder_time": "4-5 hours/day for one sector and customs format; use accredited partners and remain outside formal verification.",
+    "gross_margin_basis": "Hypothesis: 75-88% for software; emissions consulting and accredited verification are partner services, not included labor.",
+    "payback": "Unvalidated customer hypothesis: improved certificate cash forecasting and fewer unsupported lines repay the annual fee; validate with a shadow liability close.",
+    "pricing": "Unvalidated estimate: PLN 3,000-15,000 monthly per importer plus PLN 5-30 per import line and paid historical reconstruction.",
+    "retention_or_repeat": "Imports, certificate prices, evidence updates, and Registry reconciliation recur; supplier-installation mapping is difficult to recreate."
+  },
+  "fingerprint": {
+    "compounding_advantage": "supplier-installation evidence maps and line-classification history reduce repeated collection work; forecast accuracy improves with each quarter",
+    "customer": "EU midmarket importers and indirect customs representatives handling cement, steel, aluminium, fertilisers, electricity, or hydrogen above the mass threshold",
+    "distribution_mechanism": "customs agencies, ERP trade-compliance partners, accredited verifiers, and a fixed-fee 2026 liability reconstruction",
+    "offer_and_business_model": "customs-line ingestion, supplier evidence requests, emissions and foreign-carbon-price provenance, certificate exposure forecast, Registry reconciliation, and auditor export; subscription plus line volume",
+    "payer_and_paid_event": "importer or customs representative pays per portfolio month and import line when forecast exposure and Registry actuals are reconciled",
+    "problem_trigger": "a shipment, quarter close, certificate purchase, or annual declaration changes the expected carbon liability and finance needs a defensible position"
+  },
+  "founder_fit": [
+    "Carbon-liability modeling and evidence reconciliation align with data science and finance interests.",
+    "A single-sector Polish importer wedge is buildable part-time with partner expertise.",
+    "The service can validate on historical data before major spending.",
+    "Customs and verifier channels reduce dependence on broad networking or a public persona."
+  ],
+  "parent": null,
+  "risks": [
+    "The CBAM Registry already includes a data-reconciliation component.",
+    "Incorrect liability forecasts can have material financial consequences.",
+    "Formal verification is reserved for accredited verifiers; positioning must be precise.",
+    "Regulatory simplification, thresholds, default values, and covered products can change."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en",
+    "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-registry_en",
+    "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-registry-and-reporting_en",
+    "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-verification_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "regulatory certificate-liability position ledger",
+    "control_point": "forecast-to-actual CBAM certificate exposure by import line before purchase, declaration, and surrender",
+    "critical_dependency": "complete customs data and installation-level embedded-emissions evidence that can be linked to accredited verification and Registry records"
+  },
+  "thesis": "For EU importers just above the CBAM threshold, maintain an internal liability position that joins customs lines, supplier installations, embedded-emissions evidence, verified reports, carbon price paid abroad, quarterly certificate prices, registry balances, and annual surrender. The official Registry and accredited verifier remain authoritative. The wedge is treasury-grade forecast-to-actual reconciliation across procurement, customs, sustainability, and finance, paid per portfolio month and import line.",
+  "title": "CBAM Import-Line Liability and Certificate Position Ledger",
+  "uncertainties": [
+    "It is unknown whether midmarket importers need a separate ledger beyond broker, ERP, and Registry tools.",
+    "Access to clean customs and supplier-installation data is untested.",
+    "The most attractive first CBAM sector and buyer are uncertain.",
+    "Certificate-price exposure and willingness to pay have not been quantified per customer."
+  ],
+  "version": 1
+}

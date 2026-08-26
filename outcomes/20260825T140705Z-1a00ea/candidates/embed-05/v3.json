@@ -1,0 +1,123 @@
+{
+  "candidate_id": "embed-05",
+  "claims": [
+    {
+      "claim_id": "embed-05-c1",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2011/1169/oj/eng"
+      ],
+      "statement": "EU food-information law requires listed allergens to be declared and requires upstream businesses supplying non-final food to pass enough information onward for downstream compliance."
+    },
+    {
+      "claim_id": "embed-05-c2",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2002/178/oj/eng"
+      ],
+      "statement": "EU food businesses must maintain traceability procedures and withdraw unsafe food, creating a durable need for controlled change records."
+    },
+    {
+      "claim_id": "embed-05-c3",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=oj%3AJOC_2022_355_R_0001"
+      ],
+      "statement": "The Commission's food-safety-management notice treats allergen control as a food-safety-management requirement, but qualified operators remain responsible for HACCP and release decisions."
+    },
+    {
+      "claim_id": "embed-05-c4",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ec.europa.eu/eurostat/documents/15216629/20555393/KS-01-24-000-EN-N.pdf"
+      ],
+      "statement": "The reachable sector is large but fragmented: Eurostat reports 4.7 million EU food-and-beverage-processing workers and EUR266 billion of value added in 2022."
+    },
+    {
+      "claim_id": "embed-05-c5",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://tracegains.com/product-development/specification-management/",
+        "https://www.specright.com/industry/food-beverage/",
+        "https://www.foodchainid.com/products/recipes-specifications/",
+        "https://www.foodsconnected.com/solutions/food-specifications-npd/"
+      ],
+      "statement": "Incumbents already advertise supplier portals, version control, BOM linkage, allergen propagation and recipe-to-label impact analysis, so a generic specification repository is not differentiated."
+    },
+    {
+      "claim_id": "embed-05-c6",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://www.fooddrinkeurope.eu/policy-area/smes/",
+        "https://tracegains.com/product-development/specification-management/",
+        "https://www.foodchainid.com/products/recipes-specifications/"
+      ],
+      "statement": "A viable wedge is therefore an integration-first SME exception-clearing service distributed by ingredient distributors or auditors, not a replacement PLM; channel willingness and paid demand remain unverified."
+    }
+  ],
+  "contrary_evidence": [
+    "TraceGains, Specright, FoodChain ID and Foods Connected publicly offer most core graph, change-control and allergen-impact functions.",
+    "The public RASFF interface omits commercial identities, limiting its value for supplier-level incident linkage.",
+    "No public evidence establishes distributor feed rights, channel economics or SME willingness to pay per cleared change."
+  ],
+  "economics": {
+    "acquisition_route": "Test one-to-many resale through a regional ingredient distributor or certification auditor; direct SME sales are a fallback only for the first five paid pilots.",
+    "capital_required_pln": 70000,
+    "founder_net_worth_path": "Planning case, not validated: 300 sites at 1800 PLN blended monthly revenue is 6.48 million PLN ARR; at 20% operating margin and retained founder control, several profitable years could support more than 5 million PLN of founder equity and accumulated cash. The site count, price and valuation multiple all require validation.",
+    "founder_time": "About 3 founder hours daily for parsing, graph logic and partner operations; a contracted food-safety professional must review exceptions and release design.",
+    "gross_margin_basis": "Planning range of 65-75% after document processing, human exception review, support and channel share; no observed vendor cost or margin evidence supports it yet.",
+    "payback": "Unknown until a paid pilot measures onboarding effort and partner share; require projected first-year gross profit to exceed acquisition and connector cost before scaling.",
+    "pricing": "Test 10000 PLN onboarding, 1200 PLN per site-month and 300 PLN per human-cleared specification-change report; these are hypotheses, not observed market prices.",
+    "retention_or_repeat": "Supplier, formulation, allergen, packaging or label changes recur, but retention depends on becoming the accepted audit trail rather than a duplicate PLM."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Contractually permissioned change decisions, false-positive resolutions and remediation outcomes improve exception prioritisation without repurposing confidential formulas",
+    "customer": "Small and mid-sized EU food manufacturers lacking an integrated PLM change-control layer",
+    "distribution_mechanism": "Embedded connector and partner-branded alerting through ingredient distributors and certification auditors",
+    "offer_and_business_model": "Ingredient-to-label dependency and exception-clearance layer sold per site, onboarding and cleared change",
+    "payer_and_paid_event": "The manufacturer pays for an active site and when a specification change receives a documented human-cleared impact report",
+    "problem_trigger": "An ingredient supplier changes composition, process, allergen declaration, origin or specification version"
+  },
+  "founder_fit": [
+    "Document parsing, dependency modelling and exception scoring fit the founder's data-science and AI leverage.",
+    "A channel-led product can be operated part-time initially, but food-safety release authority must remain with qualified customer personnel or contracted experts.",
+    "Enterprise integration and partner development add sales load but can be bounded to a few repeatable channels."
+  ],
+  "parent": {
+    "candidate_id": "embed-05",
+    "version": 2
+  },
+  "risks": [
+    "A missed allergen dependency could harm consumers; the product must never auto-release labels and needs immutable audit trails, access control and professional review.",
+    "Incumbent PLM vendors can bundle the functionality or block integrations.",
+    "Supplier specifications and formulas are commercially sensitive; contracts must grant narrowly scoped processing and derived-data rights."
+  ],
+  "schema_version": 2,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2011/1169/oj/eng",
+    "https://eur-lex.europa.eu/eli/reg/2002/178/oj/eng",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=oj%3AJOC_2022_355_R_0001",
+    "https://food.ec.europa.eu/food-safety/rasff_en",
+    "https://ec.europa.eu/eurostat/documents/15216629/20555393/KS-01-24-000-EN-N.pdf",
+    "https://www.fooddrinkeurope.eu/policy-area/smes/",
+    "https://tracegains.com/product-development/specification-management/",
+    "https://www.specright.com/industry/food-beverage/",
+    "https://www.foodchainid.com/products/recipes-specifications/",
+    "https://www.foodsconnected.com/solutions/food-specifications-npd/"
+  ],
+  "stage": "development",
+  "structure": {
+    "commercial_archetype": "Supply-chain change monitor",
+    "control_point": "The approved dependency and exception trail from supplier specification through recipe, label and release decision",
+    "critical_dependency": "Timely structured supplier specifications, integration rights, and qualified human release ownership"
+  },
+  "thesis": "Embed a narrow supplier-specification change and exception-clearance layer with ingredient distributors or food auditors for EU SMEs that lack integrated PLM, charging by site and cleared change while preserving qualified human release approval.",
+  "title": "AllergenChange Supplier Graph",
+  "uncertainties": [
+    "Whether distributors or auditors will provide timely feeds and resale access under reusable rights.",
+    "Whether SMEs will pay separately when incumbent PLM, retailer portals or spreadsheets already cover the workflow.",
+    "Document extraction accuracy and the human-review burden across languages and inconsistent supplier formats.",
+    "Insurance, security and integration costs at regulated production scale."
+  ],
+  "version": 3
+}

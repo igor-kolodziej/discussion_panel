@@ -1,0 +1,209 @@
+{
+  "candidate_id": "transition-06",
+  "candidate_sha256": "3de59a283af2dc9eefba0d6f6b8e570e0fefb9993a82e2af4578a1728f0f015a",
+  "candidate_version": 2,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "transition-06-research-c01",
+      "evidence_refs": [
+        "transition-06-s01",
+        "transition-06-s02"
+      ],
+      "statement": "The access-by-design date is real and near: Article 3(1) applies to products and related services placed on the market after 12 September 2026."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "transition-06-research-c02",
+      "evidence_refs": [
+        "transition-06-s01"
+      ],
+      "statement": "Qualifying micro and small manufacturers are exempt from Chapter II, with specified linked-enterprise and subcontractor exceptions and a temporary newly-medium exception."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "transition-06-research-c03",
+      "evidence_refs": [
+        "transition-06-s01",
+        "transition-06-s03"
+      ],
+      "statement": "The opportunity is bounded to telemetry and metadata already retrieved or readily obtainable without disproportionate effort; the Act does not force creation of new telemetry or disclosure of derived insights."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "transition-06-research-c04",
+      "evidence_refs": [
+        "transition-06-s01",
+        "transition-06-s03"
+      ],
+      "statement": "The gateway must implement OEM decisions on identity, GDPR basis, trade-secret safeguards and safety restrictions rather than independently deciding disclosure rights."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "transition-06-research-c05",
+      "evidence_refs": [
+        "transition-06-s05",
+        "transition-06-s06"
+      ],
+      "statement": "Existing Azure and Cumulocity functions make platform bundling a credible response and weaken a generic API-only product."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "transition-06-research-c06",
+      "evidence_refs": [
+        "transition-06-s04"
+      ],
+      "statement": "AWS's published IoT pricing shows that raw connectivity and messaging are a small fraction of 2-6 PLN per device per month at scale."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "transition-06-research-c07",
+      "evidence_refs": [
+        "transition-06-s01",
+        "transition-06-s04",
+        "transition-06-s05"
+      ],
+      "statement": "A defensible price must therefore attach to field classification, entitlement, adapters, release tests, request logs, support and risk transfer rather than cloud transport."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "transition-06-research-c08",
+      "evidence_refs": [
+        "transition-06-s07",
+        "transition-06-s09"
+      ],
+      "statement": "Open W3C descriptions make the generic schema and interaction layer reproducible, while current EU standardisation work indicates continuing cross-sector semantic and interface gaps."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "transition-06-research-c09",
+      "evidence_refs": [
+        "transition-06-s08"
+      ],
+      "statement": "Cyber Resilience Act timing adds security-reporting and product-security work around the same launch window, raising delivery burden but not making a scoped gateway impossible."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "transition-06-research-c10",
+      "evidence_refs": [],
+      "statement": "The number of non-exempt OEM buyers, their internal-build quotes, procurement cycles and willingness to place an external gateway in the release path are not established."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "transition-06-research-c11",
+      "evidence_refs": [],
+      "statement": "Integrator distribution and a path to 30 recurring OEMs are not established."
+    }
+  ],
+  "contrary_evidence": [
+    "The micro- and small-enterprise exemption materially narrows the stated target market.",
+    "Only readily available product and related-service data are in scope; new telemetry and derived insights are not automatically required.",
+    "Azure and Cumulocity already contain much of the underlying identity, API, data and fleet stack.",
+    "AWS demonstrates that commodity infrastructure cost does not support the proposed per-device price by itself.",
+    "W3C standards make generic Thing metadata and interaction descriptions readily reproducible.",
+    "GDPR, trade secrets, safety and Cyber Resilience Act obligations increase customer-specific review and liability."
+  ],
+  "schema_version": 2,
+  "sources": [
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2023-12-22",
+      "publisher": "European Union",
+      "source_id": "transition-06-s01",
+      "source_type": "regulation",
+      "stance": "context",
+      "title": "Regulation (EU) 2023/2854 on harmonised rules on fair access to and use of data",
+      "url": "https://eur-lex.europa.eu/legal-content/PL-EN/TXT/?uri=CELEX%3A32023R2854"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2024-09-06",
+      "publisher": "European Commission",
+      "source_id": "transition-06-s02",
+      "source_type": "official_guidance",
+      "stance": "context",
+      "title": "Commission publishes Frequently Asked Questions about the Data Act",
+      "url": "https://digital-strategy.ec.europa.eu/en/library/commission-publishes-frequently-asked-questions-about-data-act"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2025-12-15",
+      "publisher": "European Commission",
+      "source_id": "transition-06-s03",
+      "source_type": "official_explainer",
+      "stance": "supporting",
+      "title": "Data Act explained",
+      "url": "https://digital-strategy.ec.europa.eu/en/factpages/data-act-explained"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "Amazon Web Services",
+      "source_id": "transition-06-s04",
+      "source_type": "vendor_pricing",
+      "stance": "contradicting",
+      "title": "AWS IoT Core pricing",
+      "url": "https://aws.amazon.com/iot-core/pricing/?c=iot&p=ft&z=3"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "Microsoft",
+      "source_id": "transition-06-s05",
+      "source_type": "vendor_api_documentation",
+      "stance": "contradicting",
+      "title": "IoT Hub REST",
+      "url": "https://learn.microsoft.com/en-us/rest/api/iothub/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "undated",
+      "publisher": "Cumulocity",
+      "source_id": "transition-06-s06",
+      "source_type": "vendor_product_documentation",
+      "stance": "contradicting",
+      "title": "Cumulocity Device Management introduction",
+      "url": "https://cumulocity.com/docs/device-management-application/device-management-introduction/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2023-12-05",
+      "publisher": "World Wide Web Consortium",
+      "source_id": "transition-06-s07",
+      "source_type": "technical_standard",
+      "stance": "context",
+      "title": "Web of Things Thing Description 1.1",
+      "url": "https://www.w3.org/TR/wot-thing-description/"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2024-11-20",
+      "publisher": "European Union",
+      "source_id": "transition-06-s08",
+      "source_type": "regulation",
+      "stance": "context",
+      "title": "Regulation (EU) 2024/2847 on horizontal cybersecurity requirements for products with digital elements",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng"
+    },
+    {
+      "accessed_at": "2026-08-25",
+      "published_at": "2026-03-01",
+      "publisher": "European Commission",
+      "source_id": "transition-06-s09",
+      "source_type": "official_work_programme",
+      "stance": "context",
+      "title": "2026 annual Union work programme for European standardisation",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ%3AC_202601695"
+    }
+  ],
+  "unknowns": [
+    "Count of non-exempt EU regional OEMs with a genuine access-surface gap",
+    "OEM internal-build and integrator quotes",
+    "Willingness to pay and procurement-cycle length",
+    "OEM authority over firmware, cloud, identity and data-use contracts",
+    "Product-specific field classification and security constraints",
+    "Reusable versus bespoke share of implementation work",
+    "Integrator referral or resale commitments",
+    "Renewal and conservative path to 30 OEMs"
+  ]
+}
