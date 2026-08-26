@@ -1,0 +1,119 @@
+{
+  "assumptions": [
+    "The opportunity is judged at the planning stage, and no customer traction, partner commitment, security approval, or production reliability is inferred beyond the packet.",
+    "Customer-controlled deployment can in principle keep sensitive contract data inside an environment acceptable to the end entity, but the acceptable architecture and review burden remain unknown.",
+    "The advisor or managed-service partner performs regulatory interpretation, client remediation, and client-facing work as proposed; if those duties return to the vendor, the time and margin profile deteriorate materially.",
+    "Register maintenance and contract changes create some recurring work after initial compliance, although the frequency and paid value of that recurrence are not established."
+  ],
+  "base_score": 4.44,
+  "candidate_id": "control8-04",
+  "candidate_sha256": "80330d502ac9422a6891d9bd01f4fbf4555389daf288257f6e9a34f2974ddf56",
+  "candidate_version": 5,
+  "constrained_score": 4.44,
+  "evaluation_type": "holdout_native",
+  "evidence_needed_for_higher_score": "Paid pilots with multiple independent advisors acting as payer and prime contractor, each bringing consenting end clients; documented acceptance of a no-data-egress deployment; measured reductions in expert hours, rework, and submission errors versus the official stack and specialist competitors; and observed deployment/support cost, gross margin, repeat activation, renewal intent, and sales-cycle data.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "The concept connects a real mandated reporting workflow to source-linked contract extraction, deterministic validation, and an advisor-aligned white-label model. That is coherent, but neither the compliance problem nor the software response is novel, and the channel alignment remains hypothetical.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Dry-run failures, Polish resubmissions, and continuing training establish meaningful reporting friction. They do not establish recurring failure volume, budget ownership, or advisor willingness to pay, while free regulator materials and existing paid products constrain the plausible price premium.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Partner and per-entity fees could create operating leverage and the stated pilot capital is manageable. Pricing, activation, retention, acquisition cost, deployment isolation, taxonomy maintenance, support burden, gross margin, and partner payback are all unmeasured, so the long-range revenue and owner-equity scenario is highly assumption-sensitive.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Boutique Polish DORA advisors and managed-service providers serving smaller regulated entities form a precise beachhead with potential one-to-many reach. The packet does not quantify addressable partner portfolios, current tool usage, recurring remediation volume, or spend, leaving the economically attainable beachhead uncertain.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "The entrant faces a free official reporting stack, regulator training, an enterprise incumbent, and a specialist with public pricing. White-label delivery, lineage, and customer control may differentiate the offer, but no exclusive channel, proven performance gap, or switching advantage supports a strong segment position yet.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A common EU regulatory foundation creates plausible expansion across partners, countries, reporting cycles, and adjacent third-party contract workflows. Each national submission path, language, security regime, and taxonomy version adds material implementation and maintenance friction, so expansion is possible but not automatic.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Versioned rule adapters, remediation patterns, and clause mappings could improve with use and become embedded in partner workflows. The governing rules are public, confidential customer data is deliberately not pooled, partner contributions are unverified, and established vendors can reproduce core functions, limiting the moat.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "Clause-to-field provenance, human approvals, deterministic checks, current local export, and customer-controlled deployment could improve trust and rework relative to spreadsheet-led preparation. No comparative test demonstrates a sufficiently large time, accuracy, cost, or security advantage over official tools and existing products.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "DORA reporting is live, documented quality failures occurred, and regulator training continued in 2026, supporting a present need. The largest rejection wave may be a first-cycle effect that declines as firms learn, while competitors and official tooling are already established.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "A small set of advisors carrying the runtime to multiple clients is an efficient, founder-compatible route in principle. No partner has committed, verified portfolio access or lead flow; advisors may prefer incumbents, internal tools, or billable manual work, and each end entity may still require direct vendor review.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "The founder fits the data, automation, validation, and document-AI work, and a synthetic pilot is affordable and part-time compatible. Production-grade regulatory accuracy, security assurance, isolated deployment, frequent version maintenance, procurement, liability, and incident support are demanding and may exceed a solo part-time operating model.",
+      "score": 4,
+      "status": "scored"
+    }
+  ],
+  "final_score": 4.4,
+  "highest_value_structural_change": "Narrow the initial paid offer to a partner-branded, no-data-egress remediation appliance for rejected or imminent submissions, sold per reporting cycle under a minimum-volume advisor commitment; defer the broader annual platform model until repeated paid use and renewal are observed.",
+  "interaction_adjustment": 0,
+  "judge_id": "c8-holdout-control8-04-j2",
+  "main_structural_strength": "The advisor-as-payer and prime-contractor structure can align the product with existing remediation revenue, aggregate distribution across several end entities, and keep the technically matched founder away from continuous direct client delivery.",
+  "primary_score_limiter": "The same unverified advisor relationship must supply willingness to pay, repeat client volume, operational ownership, and permission to use the runtime, while partner intermediation may not remove end-client security and procurement barriers.",
+  "qualified": false,
+  "raw_response_path": "holdout/jobs/raw-c8-holdout-control8-04-j2.json",
+  "raw_response_sha256": "48899fe2bf0bb6b375c13a4865e7b4f54baea0243ab3059de6c938fd8202215b",
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 2,
+  "strongest_disconfirming_evidence": "Entities can remediate with the free official EBA and KNF stack and training, while ServiceNow and a DORA-native specialist already cover register maintenance, validation, and export at public prices; this directly challenges both differentiation and the proposed willingness to pay.",
+  "unrounded_score": 4.44
+}

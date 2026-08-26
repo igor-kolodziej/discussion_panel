@@ -112,5 +112,7 @@ python3 scripts/opportunity.py check
 python3 -m unittest discover -s tests -v
 ```
 
+The repository-level check also verifies every tracked outcome, all report-to-artifact and raw-response hashes, complete campaign metric evidence sets, and any append-only publication-repair boundary.
+
 Raw pre-cleanup evidence remains recoverable from the Git checkpoint recorded in `knowledge/history_index.jsonl`.
 That checkpoint is also the authority for schema-v1 archaeology; the active workflow creates schema-v2 artifacts.

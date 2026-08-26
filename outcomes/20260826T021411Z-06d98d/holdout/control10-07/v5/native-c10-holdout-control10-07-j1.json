@@ -1,0 +1,119 @@
+{
+  "assumptions": [
+    "The opportunity is judged at planning and pre-validation stage, with no inferred customer, partner, or technical-validation traction beyond the packet.",
+    "The base product remains limited to evidence ingestion and version binding; qualified partners retain all machinery-safety judgments, conformity decisions, and related liability.",
+    "At least one candidate PLC or robot-cell stack can export stable identifiers and artefacts, but the repeatability, access terms, and commercial value of mapping them remain unknown.",
+    "The founder continues full-time employment and can devote no more than the stated five hours per day, so partner-owned onboarding and bounded integration work are necessary rather than proven operating conditions."
+  ],
+  "base_score": 4.04,
+  "candidate_id": "control10-07",
+  "candidate_sha256": "7de3302c38fcf70d769a69501f9c1297b357cefe1e1ecd8ef81790063e3c3286",
+  "candidate_version": 5,
+  "constrained_score": 3.84,
+  "evaluation_type": "holdout_native",
+  "evidence_needed_for_higher_score": "A paid pilot or binding design-partner agreement for one named stack showing the current reconciliation workflow, measured error or labor cost, a gap not already covered by incumbent CE or engineering tools, secure artefact access, implementation hours across several releases, accepted annual and per-release pricing, expected activation volume, liability allocation, and repeatable gross margin.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "Version-bound provenance at machine handover is a narrower and more technically coherent wedge than another general CE workspace, and the regulation makes software-related documentation salient. However, the key insight that incumbent tools leave this specific gap is explicitly unestablished, and substantial-modification duties do not attach to every retrofit.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Compliance documentation and expert services demonstrably receive budget, but the packet provides no measured frequency, failure cost, labor burden, or buyer testimony for version reconciliation. Affordable incumbent software and full-service alternatives weaken the basis for assuming separate willingness to pay for this connector.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Annual white-label licensing plus per-release fees could create recurring, software-like revenue with modest stated startup capital. Every material driver—price acceptance, activations, sales cycle, implementation effort, retention, margins, partner share, and payback—is hypothetical, while bespoke mappings and support could keep gross margin low and owner earnings constrained.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "One high-volume stack and a small set of assessors or integrators form a focused, testable beachhead. The packet does not identify the stack, machine category, project volume, number of viable channel buyers, or revenue pool, so it is unknown whether this beachhead is economically meaningful rather than merely narrow.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "Embedding white-label inside a partner workflow could secure a useful niche position, but established CE platforms already cover change histories, documentation, collaboration, and expert support. Engineering suites, consultancies, or the partner itself could add the connector, and no exclusive access or channel commitment supports domination potential.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A proven connector could extend to additional stacks, machine categories, partners, and adjacent release evidence. Expansion may require fresh vendor-specific mappings, security approvals, and domain work each time, so success in one stack may not transfer with strong operating leverage.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Reusable mappings, accumulated release schemas, and workflow integration could create modest switching costs and learning effects. Those assets are presently hypothetical, lack exclusive data or network effects, and appear copyable by incumbents or channel partners with existing customer access.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "Automating version-to-release reconciliation could improve speed and traceability relative to manual work while preserving the partner's trusted tooling. The packet does not demonstrate that the manual baseline is costly, that incumbents cannot do it, or that the connector produces a large enough improvement to change purchasing behavior.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "The January 2027 Machinery Regulation deadline and explicit attention to software, AI safety functions, and cyber-safety create a credible near-term reason to review evidence workflows. The regulation does not itself mandate this connector, and established vendors and consultants are also positioned to capture the same demand.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "A white-label assessor or integrator channel is well matched to a founder who should not sell or opine on safety directly and could place the product within existing engagements. There is no partner commitment, channel economics, acquisition cost, or sales-cycle evidence, and dependence on a few powerful partners creates both access and concentration risk.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "Data lineage and automation fit the founder, the proposed capital need is manageable, and a single-stack prototype is technically bounded. Secure access to sensitive PLC artefacts, machinery-safety expertise, liability boundaries, enterprise security reviews, partner recruitment, and potentially bespoke integrations make part-time execution materially uncertain.",
+      "score": 4,
+      "status": "scored"
+    }
+  ],
+  "final_score": 3.8,
+  "highest_value_structural_change": "Make the first product a paid, co-developed embedded module for one named high-volume stack under a qualified partner agreement that supplies secure artefact access, owns all safety judgments, contributes a reusable approved mapping, and commits to a minimum number of releases; defer any multi-partner or multi-stack platform until that contract proves reuse and economics.",
+  "interaction_adjustment": -0.2,
+  "judge_id": "c10-holdout-control10-07-j1",
+  "main_structural_strength": "The proposal avoids competing as a broad CE suite and instead places a technically specific provenance connector inside an existing qualified partner's handover workflow, aligning the founder's automation skills with a bounded white-label role.",
+  "primary_score_limiter": "The critical commercial premise is unsupported: there is no evidence that one chosen stack has a material, budgeted provenance gap that incumbents do not cover or that a qualified partner will pay for and distribute the module.",
+  "qualified": false,
+  "raw_response_path": "holdout/jobs/c10-raw-holdout-control10-07-j1.json",
+  "raw_response_sha256": "8133498243b0507bf29d9bc875432de72d758995aaec44cf3b1d57eeba9031f6",
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 2,
+  "strongest_disconfirming_evidence": "Safexpert, CEM4, and CEDOC already provide overlapping documentation, change-history, collaboration, risk-assessment, and expert-support capabilities at accessible prices, while Pilz offers end-to-end conformity support; this both constrains pricing and makes the claimed integration gap uncertain.",
+  "unrounded_score": 3.84
+}

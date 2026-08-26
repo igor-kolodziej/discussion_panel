@@ -417,6 +417,27 @@ CAMPAIGN_METRIC_RECEIPT_KEYS = {
     "metrics",
     "evidence_artifacts",
 }
+PUBLISHED_CAMPAIGN_REPAIR_KEYS = {
+    "schema_version",
+    "repair_id",
+    "campaign_id",
+    "repair_type",
+    "reason",
+    "prior_commit",
+    "prior_receipt_sha256",
+    "repaired_receipt_sha256",
+    "prior_events_sha256",
+    "cohorts",
+}
+PUBLISHED_CAMPAIGN_REPAIR_COHORT_KEYS = {
+    "cohort_number",
+    "run_id",
+    "prior_metrics_sha256",
+    "repaired_metrics_sha256",
+    "metrics",
+    "added_artifacts",
+}
+PUBLISHED_CAMPAIGN_REPAIR_ARTIFACT_KEYS = {"path", "sha256"}
 EVENT_KEYS = {"sequence", "at", "event", "run_id", "stage", "job_id", "details"}
 SAFE_ID_RE = re.compile(r"^[a-z0-9][a-z0-9-]{0,63}$")
 SAFE_JOB_RE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]{0,127}$")
@@ -2207,8 +2228,10 @@ def validate_campaign_publication_receipts(
     campaign_dir: Path,
     manifest: Mapping[str, Any],
     state: Mapping[str, Any],
+    *,
+    outcomes_dir: Path | None = None,
 ) -> None:
-    outcomes_dir = campaign_dir.parent.parent / "outcomes"
+    outcomes_dir = outcomes_dir or campaign_dir.parent.parent / "outcomes"
     threshold = as_decimal(manifest["config"]["threshold"], "campaign threshold")
     for cohort in state["cohorts"]:
         report_path = outcomes_dir / cohort["run_id"] / "report.json"
@@ -2293,6 +2316,603 @@ def validate_campaign_publication_receipts(
             )
 
 
+def validate_published_run_outcome(outcome_dir: Path) -> dict[str, Any]:
+    _assert_safe_write_path(
+        outcome_dir.parent, outcome_dir, "published run outcome directory"
+    )
+    report_path = outcome_dir / "report.json"
+    markdown_path = outcome_dir / "report.md"
+    report = expect_object(load_json(report_path), "published run report")
+    if report_path.read_bytes() != canonical_json_bytes(report):
+        raise InputError("published run report is not canonical JSON")
+    run_id = expect_nonempty_string(report.get("run_id"), "published run report.run_id")
+    if run_id != outcome_dir.name or not RUN_ID_RE.fullmatch(run_id):
+        raise InputError("published run report identity differs from its outcome directory")
+    if report.get("schema_version") != 2:
+        raise InputError("published run report must use workflow schema v2")
+    if not markdown_path.is_file() or not markdown_path.read_bytes():
+        raise InputError("published report.md is missing or empty")
+    correction = report.get("correction")
+    if correction is None:
+        if markdown_path.read_bytes() != render_report_markdown(report).encode("utf-8"):
+            raise InputError("published report.md differs from its structured report")
+    else:
+        correction = expect_object(correction, "published outcome correction")
+        markdown_hash = correction.get("report_markdown_sha256")
+        if (
+            not isinstance(markdown_hash, str)
+            or not SHA256_RE.fullmatch(markdown_hash)
+            or sha256_file(markdown_path) != markdown_hash
+        ):
+            raise InputError("published correction report.md is not hash-bound")
+
+    checked: set[str] = {"report.json", "report.md"}
+    for finalist in report.get("candidates", []):
+        candidate_rel, candidate_path = run_relative_path(
+            outcome_dir,
+            finalist["candidate_artifact"],
+            "published finalist candidate",
+        )
+        if sha256_file(candidate_path) != finalist["candidate_sha256"]:
+            raise InputError("published finalist candidate hash differs from report")
+        candidate = expect_object(load_json(candidate_path), "published finalist candidate")
+        if (
+            candidate.get("candidate_id") != finalist["candidate_id"]
+            or candidate.get("version") != finalist["candidate_version"]
+        ):
+            raise InputError("published finalist candidate identity differs from report")
+        checked.add(candidate_rel)
+        export_root = outcome_dir / "exports" / finalist["candidate_id"]
+        for name in ("holdout_packet.md", "response_schema.json"):
+            path = export_root / name
+            _assert_safe_write_path(outcome_dir, path, "published finalist packet")
+            if not path.is_file():
+                raise InputError(
+                    f"published finalist is missing exports/{finalist['candidate_id']}/{name}"
+                )
+            checked.add(path.relative_to(outcome_dir).as_posix())
+        for artifact in finalist["evaluation_artifacts"]:
+            evaluation_rel, evaluation_path = run_relative_path(
+                outcome_dir,
+                artifact["path"],
+                "published finalist evaluation",
+            )
+            if sha256_file(evaluation_path) != artifact["sha256"]:
+                raise InputError("published finalist evaluation hash differs from report")
+            evaluation = expect_object(
+                load_json(evaluation_path), "published finalist evaluation"
+            )
+            if (
+                evaluation.get("candidate_id") != finalist["candidate_id"]
+                or evaluation.get("candidate_version") != finalist["candidate_version"]
+                or evaluation.get("evaluation_type") != artifact["evaluation_type"]
+                or evaluation.get("judge_id") != artifact["judge_id"]
+            ):
+                raise InputError("published finalist evaluation identity differs from report")
+            raw_rel, raw_path = run_relative_path(
+                outcome_dir,
+                evaluation.get("raw_response_path"),
+                "published finalist raw response",
+            )
+            if sha256_file(raw_path) != evaluation.get("raw_response_sha256"):
+                raise InputError("published finalist raw response hash differs from evaluation")
+            checked.update((evaluation_rel, raw_rel))
+
+    coverage = report.get("working_evaluation_coverage")
+    if coverage is not None:
+        coverage = expect_object(coverage, "published working evaluation coverage")
+        for stage in ("research", "development"):
+            stage_coverage = expect_object(
+                coverage.get(stage), f"published working evaluation coverage.{stage}"
+            )
+            records = stage_coverage.get("records")
+            if not isinstance(records, list):
+                raise InputError("published working evaluation coverage records are invalid")
+            for record in records:
+                record = expect_object(record, "published working evaluation coverage record")
+                candidate_relative = candidate_relpath(
+                    record["candidate_id"], record["candidate_version"]
+                )
+                _, candidate_path = run_relative_path(
+                    outcome_dir,
+                    candidate_relative,
+                    "published working-evaluation candidate",
+                )
+                if sha256_file(candidate_path) != record["candidate_sha256"]:
+                    raise InputError(
+                        "published working-evaluation candidate hash differs from coverage"
+                    )
+                candidate = expect_object(
+                    load_json(candidate_path), "published working-evaluation candidate"
+                )
+                if (
+                    candidate.get("candidate_id") != record["candidate_id"]
+                    or candidate.get("version") != record["candidate_version"]
+                    or candidate.get("stage") != record["candidate_stage"]
+                    or candidate.get("stage") != stage
+                ):
+                    raise InputError(
+                        "published working-evaluation candidate identity differs from coverage"
+                    )
+                expected_evaluation = evaluation_relpath(
+                    record["candidate_id"],
+                    record["candidate_version"],
+                    "working",
+                    record["judge_id"],
+                )
+                if record["evaluation_path"] != expected_evaluation:
+                    raise InputError(
+                        "published working evaluation path differs from coverage identity"
+                    )
+                evaluation_rel, evaluation_path = run_relative_path(
+                    outcome_dir,
+                    record["evaluation_path"],
+                    "published working evaluation",
+                )
+                if sha256_file(evaluation_path) != record["evaluation_sha256"]:
+                    raise InputError(
+                        "published working evaluation hash differs from coverage"
+                    )
+                evaluation = expect_object(
+                    load_json(evaluation_path), "published working evaluation"
+                )
+                if (
+                    evaluation.get("candidate_id") != record["candidate_id"]
+                    or evaluation.get("candidate_version") != record["candidate_version"]
+                    or evaluation.get("candidate_sha256") != record["candidate_sha256"]
+                    or evaluation.get("evaluation_type") != "working"
+                    or evaluation.get("judge_id") != record["judge_id"]
+                    or evaluation.get("final_score") != record["final_score"]
+                ):
+                    raise InputError(
+                        "published working evaluation identity differs from coverage"
+                    )
+                raw_rel, raw_path = run_relative_path(
+                    outcome_dir,
+                    evaluation.get("raw_response_path"),
+                    "published working evaluation raw response",
+                )
+                if sha256_file(raw_path) != evaluation.get("raw_response_sha256"):
+                    raise InputError(
+                        "published working evaluation raw response hash differs from evaluation"
+                    )
+                checked.update(
+                    (candidate_relative, evaluation_rel, raw_rel)
+                )
+
+    for strongest in report.get("strongest_candidates", []):
+        if "artifact" not in strongest:
+            continue
+        artifact_rel, artifact_path = run_relative_path(
+            outcome_dir,
+            strongest["artifact"],
+            "published strongest candidate",
+        )
+        if sha256_file(artifact_path) != strongest.get("artifact_sha256"):
+            raise InputError("published strongest candidate hash differs from report")
+        checked.add(artifact_rel)
+
+    raw_portfolio = report.get("portfolio_decision") or {}
+    portfolio = raw_portfolio if isinstance(raw_portfolio, Mapping) else {}
+    for artifact in (
+        portfolio.get("selection_artifact"),
+        *portfolio.get("amendment_artifacts", []),
+        portfolio.get("development_decision_artifact"),
+    ):
+        if not artifact:
+            continue
+        artifact_rel, artifact_path = run_relative_path(
+            outcome_dir, artifact["path"], "published portfolio artifact"
+        )
+        if sha256_file(artifact_path) != artifact["sha256"]:
+            raise InputError("published portfolio artifact hash differs from report")
+        checked.add(artifact_rel)
+    return {"run_id": run_id, "checked_artifacts": sorted(checked)}
+
+
+def _validate_published_campaign_events(
+    campaign_dir: Path,
+    outcomes_dir: Path,
+    receipt: Mapping[str, Any],
+) -> int:
+    events_path = campaign_dir / "events.jsonl"
+    events = load_campaign_events(events_path, receipt["campaign_id"])
+    created = [event for event in events if event["event"] == "campaign_created"]
+    if len(created) != 1 or created[0] is not events[0] or created[0]["details"] != {}:
+        raise InputError("published campaign must begin with campaign_created")
+    repair_events = [
+        event for event in events if event["event"] == "campaign_publication_repaired"
+    ]
+    repair_files = sorted((campaign_dir / "repairs").glob("*.json"))
+    if len(repair_events) != len(repair_files) or len(repair_events) > 1:
+        raise InputError("published campaign repair events and plans do not reconcile")
+    allowed = {
+        "campaign_created",
+        "gap_brief_created",
+        "cohort_attached",
+        "cohort_published",
+        "campaign_finalized",
+        "campaign_publication_repaired",
+    }
+    if any(event["event"] not in allowed for event in events):
+        raise InputError("published campaign contains an unknown event")
+    for event in events:
+        if event["event"] in {
+            "gap_brief_created",
+            "cohort_attached",
+            "cohort_published",
+        }:
+            expect_int(
+                event["details"].get("cohort_number"),
+                f"published {event['event']} cohort_number",
+                minimum=1,
+            )
+    expected_counts = {
+        "campaign_created": 1,
+        "gap_brief_created": max(0, len(receipt["cohorts"]) - 1),
+        "cohort_attached": len(receipt["cohorts"]),
+        "cohort_published": len(receipt["cohorts"]),
+        "campaign_finalized": 1,
+        "campaign_publication_repaired": len(repair_events),
+    }
+    if any(
+        sum(event["event"] == name for event in events) != count
+        for name, count in expected_counts.items()
+    ):
+        raise InputError("published campaign lifecycle event counts are invalid")
+    expected_lifecycle: list[tuple[str, int | None]] = [
+        ("campaign_created", None)
+    ]
+    for cohort in receipt["cohorts"]:
+        number = cohort["cohort_number"]
+        if number > 1:
+            expected_lifecycle.append(("gap_brief_created", number))
+        expected_lifecycle.extend(
+            (("cohort_attached", number), ("cohort_published", number))
+        )
+    expected_lifecycle.append(("campaign_finalized", None))
+    if repair_events:
+        expected_lifecycle.append(("campaign_publication_repaired", None))
+    actual_lifecycle = [
+        (
+            event["event"],
+            event["details"].get("cohort_number")
+            if isinstance(event["details"], Mapping)
+            else None,
+        )
+        for event in events
+    ]
+    if actual_lifecycle != expected_lifecycle:
+        raise InputError("published campaign lifecycle events are out of cohort order")
+
+    prior_receipt_sha = sha256_file(campaign_dir / "receipt.json")
+    prior_metrics: dict[int, str] = {}
+    if repair_events:
+        if repair_events[0] is not events[-1]:
+            raise InputError("campaign publication repair must be the final event")
+        details = expect_object(
+            repair_events[0]["details"],
+            "campaign publication repair event",
+            exact_keys={"repair_id", "repair_path", "repair_sha256"},
+        )
+        _, repair_path = run_relative_path(
+            campaign_dir, details["repair_path"], "campaign publication repair plan"
+        )
+        if repair_path != repair_files[0].resolve():
+            raise InputError("campaign publication repair event names the wrong plan")
+        if sha256_file(repair_path) != details["repair_sha256"]:
+            raise InputError("campaign publication repair plan hash differs from its event")
+        repair = expect_object(
+            load_json(repair_path),
+            "campaign publication repair plan",
+            exact_keys=PUBLISHED_CAMPAIGN_REPAIR_KEYS,
+        )
+        if repair_path.read_bytes() != canonical_json_bytes(repair):
+            raise InputError("campaign publication repair plan is not canonical JSON")
+        if (
+            expect_int(
+                repair["schema_version"],
+                "campaign publication repair schema_version",
+                minimum=1,
+            )
+            != 1
+            or repair["campaign_id"] != receipt["campaign_id"]
+            or repair["repair_type"] != "publication_evidence_completion"
+            or repair["repair_id"] != details["repair_id"]
+        ):
+            raise InputError("campaign publication repair identity is invalid")
+        expect_nonempty_string(repair["reason"], "campaign publication repair.reason")
+        if not re.fullmatch(r"[0-9a-f]{40}", repair["prior_commit"]):
+            raise InputError("campaign publication repair prior_commit is invalid")
+        for key in (
+            "prior_receipt_sha256",
+            "repaired_receipt_sha256",
+            "prior_events_sha256",
+        ):
+            if not isinstance(repair[key], str) or not SHA256_RE.fullmatch(repair[key]):
+                raise InputError(f"campaign publication repair {key} is invalid")
+        payload = {key: value for key, value in repair.items() if key != "repair_id"}
+        if repair["repair_id"] != sha256_bytes(canonical_json_bytes(payload)):
+            raise InputError("campaign publication repair id differs from its payload")
+        if repair["repaired_receipt_sha256"] != prior_receipt_sha:
+            raise InputError("campaign publication repair does not bind the current receipt")
+        if repair["prior_receipt_sha256"] == repair["repaired_receipt_sha256"]:
+            raise InputError("campaign publication repair must change the receipt hash")
+        event_lines = events_path.read_bytes().splitlines(keepends=True)
+        if sha256_bytes(b"".join(event_lines[:-1])) != repair["prior_events_sha256"]:
+            raise InputError("campaign publication repair does not bind the prior event log")
+        prior_receipt_sha = repair["prior_receipt_sha256"]
+        repair_cohorts = repair["cohorts"]
+        if not isinstance(repair_cohorts, list) or len(repair_cohorts) != len(
+            receipt["cohorts"]
+        ):
+            raise InputError("campaign publication repair cohort coverage is incomplete")
+        for expected_number, (cohort, repair_cohort) in enumerate(
+            zip(receipt["cohorts"], repair_cohorts, strict=True), start=1
+        ):
+            repair_cohort = expect_object(
+                repair_cohort,
+                f"campaign publication repair cohort {expected_number}",
+                exact_keys=PUBLISHED_CAMPAIGN_REPAIR_COHORT_KEYS,
+            )
+            if (
+                expect_int(
+                    repair_cohort["cohort_number"],
+                    f"campaign publication repair cohort {expected_number}.cohort_number",
+                    minimum=1,
+                )
+                != expected_number
+                or repair_cohort["run_id"] != cohort["run_id"]
+                or repair_cohort["repaired_metrics_sha256"]
+                != cohort["metrics_sha256"]
+            ):
+                raise InputError("campaign publication repair cohort identity is invalid")
+            prior = repair_cohort["prior_metrics_sha256"]
+            if not isinstance(prior, str) or not SHA256_RE.fullmatch(prior):
+                raise InputError("campaign publication repair prior metric hash is invalid")
+            if prior == repair_cohort["repaired_metrics_sha256"]:
+                raise InputError("campaign publication repair must change each metric hash")
+            prior_metrics[expected_number] = prior
+            repaired_metric_receipt = expect_object(
+                load_json(
+                    outcomes_dir / cohort["run_id"] / "campaign-metrics.json"
+                ),
+                "repaired campaign metric receipt",
+            )
+            preserved_metrics = expect_object(
+                repair_cohort["metrics"],
+                "campaign publication repair preserved metrics",
+                exact_keys=CAMPAIGN_METRIC_KEYS,
+            )
+            if repaired_metric_receipt.get("metrics") != preserved_metrics:
+                raise InputError(
+                    "campaign publication repair changed semantic campaign metrics"
+                )
+            additions = repair_cohort["added_artifacts"]
+            if not isinstance(additions, list) or len(additions) != 6:
+                raise InputError(
+                    "publication evidence repair must name exactly six recovered finalist artifacts"
+                )
+            metric_evidence = {
+                item["path"]: item["sha256"]
+                for item in repaired_metric_receipt["evidence_artifacts"]
+            }
+            seen_additions: set[str] = set()
+            for index, addition in enumerate(additions):
+                addition = expect_object(
+                    addition,
+                    f"campaign publication repair added artifact {index}",
+                    exact_keys=PUBLISHED_CAMPAIGN_REPAIR_ARTIFACT_KEYS,
+                )
+                relative, path = run_relative_path(
+                    outcomes_dir / cohort["run_id"],
+                    addition["path"],
+                    "campaign publication repaired artifact",
+                )
+                if relative in seen_additions:
+                    raise InputError("campaign publication repair repeats an added artifact")
+                seen_additions.add(relative)
+                if (
+                    not isinstance(addition["sha256"], str)
+                    or not SHA256_RE.fullmatch(addition["sha256"])
+                    or not path.is_file()
+                    or sha256_file(path) != addition["sha256"]
+                    or metric_evidence.get(relative) != addition["sha256"]
+                ):
+                    raise InputError("campaign publication repaired artifact is not bound")
+            prior_metric_receipt = {
+                **repaired_metric_receipt,
+                "evidence_artifacts": [
+                    artifact
+                    for artifact in repaired_metric_receipt["evidence_artifacts"]
+                    if artifact["path"] not in seen_additions
+                ],
+            }
+            if (
+                len(prior_metric_receipt["evidence_artifacts"])
+                != len(repaired_metric_receipt["evidence_artifacts"])
+                - len(seen_additions)
+                or sha256_bytes(canonical_json_bytes(prior_metric_receipt)) != prior
+            ):
+                raise InputError(
+                    "campaign publication repair does not reconstruct its prior metric receipt"
+                )
+
+    finalized = [event for event in events if event["event"] == "campaign_finalized"]
+    if len(finalized) != 1 or finalized[0] is not events[-1 - bool(repair_events)]:
+        raise InputError("published campaign has an invalid finalization boundary")
+    if finalized[0]["details"] != {
+        "status": receipt["status"],
+        "receipt_sha256": prior_receipt_sha,
+    }:
+        raise InputError("published campaign finalization event differs from its receipt chain")
+
+    for cohort in receipt["cohorts"]:
+        number = cohort["cohort_number"]
+        attached = [
+            event
+            for event in events
+            if event["event"] == "cohort_attached"
+            and event["details"].get("cohort_number") == number
+        ]
+        published = [
+            event
+            for event in events
+            if event["event"] == "cohort_published"
+            and event["details"].get("cohort_number") == number
+        ]
+        if len(attached) != 1 or len(published) != 1:
+            raise InputError("published campaign cohort lifecycle events are incomplete")
+        if attached[0]["details"] != {
+            "cohort_number": number,
+            "run_id": cohort["run_id"],
+            "gap_brief_sha256": cohort["gap_brief_sha256"],
+        }:
+            raise InputError("published campaign attachment differs from its receipt")
+        if number > 1:
+            gap_events = [
+                event
+                for event in events
+                if event["event"] == "gap_brief_created"
+                and event["details"].get("cohort_number") == number
+            ]
+            if len(gap_events) != 1 or gap_events[0]["details"] != {
+                "cohort_number": number,
+                "gap_brief_sha256": cohort["gap_brief_sha256"],
+            }:
+                raise InputError("published campaign gap-brief event differs from its receipt")
+            if gap_events[0]["sequence"] >= attached[0]["sequence"]:
+                raise InputError("published campaign gap brief must precede attachment")
+        expected_published = {
+            "cohort_number": number,
+            "run_id": cohort["run_id"],
+            "run_status": cohort["run_status"],
+            "report_sha256": cohort["report_sha256"],
+            "metrics_sha256": prior_metrics.get(number, cohort["metrics_sha256"]),
+            "made_progress": cohort["made_progress"],
+            "no_progress_streak": cohort["no_progress_streak"],
+            "campaign_status": (
+                receipt["status"] if number == len(receipt["cohorts"]) else "active"
+            ),
+        }
+        if published[0]["details"] != expected_published:
+            raise InputError("published campaign cohort event differs from its receipt chain")
+        if attached[0]["sequence"] >= published[0]["sequence"]:
+            raise InputError("published campaign cohort event order is invalid")
+    return len(repair_events)
+
+
+def validate_published_campaign(
+    campaign_dir: Path, outcomes_dir: Path
+) -> dict[str, Any]:
+    _assert_safe_write_path(
+        outcomes_dir, campaign_dir, "published campaign outcome directory"
+    )
+    manifest_path = campaign_dir / "manifest.json"
+    receipt_path = campaign_dir / "receipt.json"
+    manifest = validate_campaign_manifest(load_json(manifest_path))
+    receipt = expect_object(
+        load_json(receipt_path),
+        "published campaign receipt",
+        exact_keys=CAMPAIGN_RECEIPT_KEYS,
+    )
+    if (
+        manifest_path.read_bytes() != canonical_json_bytes(manifest)
+        or receipt_path.read_bytes() != canonical_json_bytes(receipt)
+    ):
+        raise InputError("published campaign manifest or receipt is not canonical JSON")
+    if (
+        receipt["schema_version"] != 2
+        or receipt["campaign_id"] != manifest["campaign_id"]
+        or receipt["campaign_id"] != campaign_dir.name
+        or receipt["campaign_manifest_sha256"] != sha256_file(manifest_path)
+        or receipt["cohort_count"] != len(receipt["cohorts"])
+        or receipt["quality_objective_achieved"] != (receipt["status"] == "qualified")
+    ):
+        raise InputError("published campaign receipt identity is invalid")
+    founder_path = campaign_dir / "inputs" / "founder.md"
+    evaluator_path = campaign_dir / "inputs" / "evaluator.txt"
+    if (
+        not founder_path.is_file()
+        or sha256_file(founder_path) != manifest["founder_sha256"]
+        or not evaluator_path.is_file()
+    ):
+        raise InputError("published campaign canonical inputs are missing or changed")
+    factors, evaluator_hash = parse_rubric(evaluator_path)
+    if (
+        evaluator_hash != manifest["rubric"]["sha256"]
+        or [
+            {"name": name, "weight": decimal_json(weight)} for name, weight in factors
+        ]
+        != manifest["rubric"]["factors"]
+    ):
+        raise InputError("published campaign evaluator differs from its manifest")
+    state = {
+        "schema_version": 2,
+        "campaign_id": receipt["campaign_id"],
+        "status": receipt["status"],
+        "created_at": manifest["created_at"],
+        "updated_at": manifest["created_at"],
+        "active_run_id": None,
+        "active_cohort_number": None,
+        "cohorts": receipt["cohorts"],
+        "no_progress_streak": (
+            receipt["cohorts"][-1]["no_progress_streak"] if receipt["cohorts"] else 0
+        ),
+        "best_official_score": receipt["best_official_score"],
+        "best_working_median": receipt["best_working_median"],
+        "best_working_score": receipt["best_working_score"],
+        "seen_archetypes": sorted(
+            {
+                archetype
+                for cohort in receipt["cohorts"]
+                for archetype in cohort["archetype_scores"]
+            }
+        ),
+        "terminal_reason": receipt["terminal_reason"],
+    }
+    validate_campaign_state(state, manifest)
+    validate_campaign_publication_receipts(
+        campaign_dir, manifest, state, outcomes_dir=outcomes_dir
+    )
+    report_path = campaign_dir / "report.md"
+    if not report_path.is_file() or report_path.read_bytes() != render_campaign_report(
+        receipt
+    ).encode("utf-8"):
+        raise InputError("published campaign report differs from its receipt")
+    repair_count = _validate_published_campaign_events(
+        campaign_dir, outcomes_dir, receipt
+    )
+    return {
+        "campaign_id": receipt["campaign_id"],
+        "cohort_count": len(receipt["cohorts"]),
+        "repair_count": repair_count,
+    }
+
+
+def validate_published_outcomes(outcomes_dir: Path) -> dict[str, Any]:
+    run_results = [
+        validate_published_run_outcome(path)
+        for path in sorted(outcomes_dir.iterdir())
+        if path.is_dir() and RUN_ID_RE.fullmatch(path.name)
+    ]
+    campaigns_root = outcomes_dir / "campaigns"
+    campaign_results = (
+        [
+            validate_published_campaign(path, outcomes_dir)
+            for path in sorted(campaigns_root.iterdir())
+            if path.is_dir()
+        ]
+        if campaigns_root.is_dir()
+        else []
+    )
+    return {
+        "run_count": len(run_results),
+        "campaign_count": len(campaign_results),
+        "campaign_repairs": sum(item["repair_count"] for item in campaign_results),
+    }
+
+
 def save_campaign_state(
     campaign_dir: Path, state: dict[str, Any], manifest: Mapping[str, Any]
 ) -> None:
@@ -2319,7 +2939,10 @@ def load_campaign_events(path: Path, campaign_id: str) -> list[dict[str, Any]]:
             f"campaign event {line_number}",
             exact_keys=CAMPAIGN_EVENT_KEYS,
         )
-        if event["sequence"] != line_number:
+        sequence = expect_int(
+            event["sequence"], f"campaign event {line_number}.sequence", minimum=1
+        )
+        if sequence != line_number:
             raise InputError("campaign event sequence is not contiguous")
         expect_nonempty_string(event["at"], f"campaign event {line_number}.at")
         expect_nonempty_string(event["event"], f"campaign event {line_number}.event")
@@ -5783,15 +6406,7 @@ def publish_run(run_dir: Path, outcomes_dir: Path, knowledge_dir: Path) -> dict[
         markdown_path = run_dir / "report.md"
         report = validate_final_report(run_dir, manifest, state, finalized_event)
         import_receipts = validate_external_imports(run_dir, manifest)
-        selected = next(
-            (
-                item
-                for item in report.get("candidates", [])
-                if item.get("candidate_id") == report.get("selected_candidate_id")
-                and item.get("candidate_version") == report.get("selected_candidate_version")
-            ),
-            None,
-        )
+        report_candidates = report.get("candidates", [])
         destination = outcomes_dir / state["run_id"]
         with file_lock(outcomes_dir / ".publish.lock", root=outcomes_dir):
             copied: list[dict[str, str]] = []
@@ -5833,25 +6448,59 @@ def publish_run(run_dir: Path, outcomes_dir: Path, knowledge_dir: Path) -> dict[
                     if result_path.resolve() != expected.resolve():
                         raise InputError("development result stored at noncanonical path")
                     sources.append((result_path, result_path.relative_to(run_dir).as_posix()))
-            if selected is not None:
-                candidate_relative = selected["candidate_artifact"]
-                candidate_path = run_dir / candidate_relative
-                candidate = validate_candidate(load_json(candidate_path), manifest, run_dir)
-                published_candidates.append((candidate_path, candidate))
-                for evaluation in selected["evaluation_artifacts"]:
-                    evaluation_rel, evaluation_path = run_relative_path(
-                        run_dir, evaluation["path"], "published evaluation path"
-                    )
-                    canonical_evaluation = compute_evaluation(
-                        load_json(evaluation_path), manifest, run_dir
-                    )
-                    sources.append((evaluation_path, evaluation_rel))
-                    raw_rel, raw_path = run_relative_path(
+            if report_candidates:
+                for finalist in report_candidates:
+                    candidate_relative, candidate_path = run_relative_path(
                         run_dir,
-                        canonical_evaluation["raw_response_path"],
-                        "published evaluation raw response",
+                        finalist["candidate_artifact"],
+                        "published finalist candidate path",
                     )
-                    sources.append((raw_path, raw_rel))
+                    if sha256_file(candidate_path) != finalist["candidate_sha256"]:
+                        raise InputError(
+                            "published finalist candidate hash differs from final report"
+                        )
+                    candidate = validate_candidate(load_json(candidate_path), manifest, run_dir)
+                    if (
+                        candidate["candidate_id"] != finalist["candidate_id"]
+                        or candidate["version"] != finalist["candidate_version"]
+                    ):
+                        raise InputError(
+                            "published finalist candidate identity differs from final report"
+                        )
+                    # Keep the lexical run-root path for portable relative paths. The
+                    # safety helper resolves symlinks (for example /var -> /private/var),
+                    # which must not leak into the published artifact name.
+                    candidate_path = run_dir / candidate_relative
+                    published_candidates.append((candidate_path, candidate))
+                    for evaluation in finalist["evaluation_artifacts"]:
+                        evaluation_rel, evaluation_path = run_relative_path(
+                            run_dir, evaluation["path"], "published evaluation path"
+                        )
+                        if sha256_file(evaluation_path) != evaluation["sha256"]:
+                            raise InputError(
+                                "published evaluation hash differs from final report"
+                            )
+                        canonical_evaluation = compute_evaluation(
+                            load_json(evaluation_path), manifest, run_dir
+                        )
+                        if (
+                            canonical_evaluation["candidate_id"] != finalist["candidate_id"]
+                            or canonical_evaluation["candidate_version"]
+                            != finalist["candidate_version"]
+                            or canonical_evaluation["evaluation_type"]
+                            != evaluation["evaluation_type"]
+                            or canonical_evaluation["judge_id"] != evaluation["judge_id"]
+                        ):
+                            raise InputError(
+                                "published evaluation identity differs from final report"
+                            )
+                        sources.append((evaluation_path, evaluation_rel))
+                        raw_rel, raw_path = run_relative_path(
+                            run_dir,
+                            canonical_evaluation["raw_response_path"],
+                            "published evaluation raw response",
+                        )
+                        sources.append((raw_path, raw_rel))
             else:
                 for item in report.get("strongest_candidates", []):
                     candidate_path = run_dir / item["artifact"]
@@ -5958,8 +6607,47 @@ def publish_run(run_dir: Path, outcomes_dir: Path, knowledge_dir: Path) -> dict[
                 raise ConflictError("knowledge history contains a conflicting run entry")
             if not existing:
                 entries.append(history_entry)
+                meta_entries = [
+                    entry for entry in entries if entry.get("record_type") == "index_meta"
+                ]
+                if len(meta_entries) > 1:
+                    raise InputError("knowledge history contains multiple index_meta records")
+                if meta_entries:
+                    verification = expect_object(
+                        meta_entries[0].get("verification"),
+                        "knowledge history index_meta.verification",
+                    )
+                    required_counts = {
+                        "total_rows_including_meta",
+                        "non_meta_rows",
+                        "opportunity_outcomes",
+                        "opportunity_outcome_corrections",
+                    }
+                    missing_counts = sorted(required_counts - set(verification))
+                    if missing_counts:
+                        raise InputError(
+                            "knowledge history index_meta.verification is missing "
+                            f"{missing_counts}"
+                        )
+                    verification["total_rows_including_meta"] = len(entries)
+                    verification["non_meta_rows"] = len(entries) - 1
+                    verification["opportunity_outcomes"] = sum(
+                        entry.get("record_type") == "opportunity_outcome_v1"
+                        for entry in entries
+                    )
+                    verification["opportunity_outcome_corrections"] = sum(
+                        entry.get("record_type") == "opportunity_outcome_correction_v2"
+                        for entry in entries
+                    )
                 history_data = "".join(
-                    json.dumps(entry, sort_keys=True, ensure_ascii=False, allow_nan=False) + "\n"
+                    json.dumps(
+                        entry,
+                        sort_keys=True,
+                        ensure_ascii=False,
+                        allow_nan=False,
+                        separators=(",", ":"),
+                    )
+                    + "\n"
                     for entry in entries
                 ).encode("utf-8")
                 atomic_write(history_path, history_data, root=knowledge_dir)
@@ -6736,6 +7424,7 @@ def check_environment(config_path: Path) -> dict[str, Any]:
     missing = [relative for relative in SOURCE_PATHS[:-1] if not (REPO_ROOT / relative).is_file()]
     if missing:
         raise InputError(f"missing source files: {', '.join(missing)}")
+    published = validate_published_outcomes(REPO_ROOT / "outcomes")
     return {
         "valid": True,
         "config": str(config_path),
@@ -6744,6 +7433,7 @@ def check_environment(config_path: Path) -> dict[str, Any]:
         "rubric_sha256": digest,
         "factor_count": len(factors),
         "weight_total": decimal_json(sum((weight for _, weight in factors), Decimal(0))),
+        "published_outcomes": published,
     }
 
 

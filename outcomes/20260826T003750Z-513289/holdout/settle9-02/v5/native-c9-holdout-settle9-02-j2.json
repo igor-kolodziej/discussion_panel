@@ -1,0 +1,119 @@
+{
+  "assumptions": [
+    "The official Polish VAT-list data remains lawfully usable for supplier-account checks and is operationally reliable enough for an embedded control workflow.",
+    "A host platform can insert a freeze, remediation, and approval step at supplier creation or bank-detail change without depending on direct EPC access.",
+    "Bank-provided VoP evidence is optional; no reusable access, storage right, or export right is assumed unless a host contract explicitly grants it.",
+    "A first pilot can be narrowly scoped before enterprise-grade security, liability, and multi-platform integration costs are incurred."
+  ],
+  "base_score": 5.015,
+  "candidate_id": "settle9-02",
+  "candidate_sha256": "afad973c422ddac19b84fdd37e6d0753c23c4ba6303520f986b16718af9aeeb2",
+  "candidate_version": 5,
+  "constrained_score": 4.815,
+  "evaluation_type": "holdout_native",
+  "evidence_needed_for_higher_score": "A paid platform pilot or binding commercial term sheet showing an annual minimum, activation or usage economics, integration scope, sales-cycle burden, revenue share, and explicit data rights, followed by measured activation, supplier completion, false-match, exception-workload, implementation-cost, and renewal-intent results with and without reusable VoP evidence.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "The concept correctly locates value at the supplier-master change and pre-payment control point, where free registry and bank checks can be wrapped in remediation, dual approval, and audit evidence. Combining access and distribution in a host relationship is coherent, although it concentrates risk in that relationship.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Supplier impersonation and fraudulent account changes are documented, material risks, and incumbent paid products show that organizations buy adjacent controls. Willingness to pay from the proposed Polish platform payer for this specific OEM module is wholly unvalidated, while part of the underlying check is legally free.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "An OEM minimum plus portfolio-linked fees could amortize acquisition and integration across many managed entities and create recurring revenue. However, price, activation, contract value, sales cycle, revenue share, support load, churn, liability, and implementation cost are all unknown; bespoke integrations could consume early margin and founder capacity.",
+      "score": 4.5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Polish accounting and AP platforms form a specific, reachable beachhead with portfolio leverage. The packet provides no count of suitable hosts, reachable account volume, event frequency, or revenue pool, so it is unclear whether the narrow Polish segment can support the founder-wealth objective before geographic or product expansion.",
+      "score": 5.5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "A Polish-first embedded module may serve platforms that global products address poorly or expensively, and a successful integration can secure a useful workflow position. Yet platforms can build the workflow, banks can extend payment controls, and SurePay or Trustpair already have relevant integrations and credibility; there is no exclusive channel or access.",
+      "score": 4.5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A won host could support expansion into onboarding, continuous monitoring, other payment controls, additional platforms, and eventually other jurisdictions. Expansion is plausible but requires new registry, legal, integration, and sales work, and no evidence yet shows that the first host or product creates low-cost adjacency entry.",
+      "score": 5.5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Embedded workflow, accumulated resolution history, and host-specific exception rules could create switching costs over time. Those advantages depend on contracts and data rights that do not exist, while the official input data are free and the workflow is replicable by the host or established vendors.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "White-label embedding, Polish registry support, and one auditable remediation packet may be more convenient than disconnected manual checks. The packet does not establish a decisive improvement in loss reduction, implementation speed, price, coverage, or false-positive handling versus incumbent, bank, or in-house alternatives.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "BEC risk and the 2027 Polish VoP timetable create attention and a near-term platform planning window. The same regulation also commoditizes the basic name-account check and may strengthen bank-native solutions, so timing helps the workflow layer but not the underlying verification feature.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "One host integration could reach many managed companies without a high-touch SME sales fleet, which fits the founder. But the entire initial route depends on winning a concentrated enterprise-style design partnership; no host commitment, channel evidence, acquisition cost, sales-cycle evidence, or fallback route is present.",
+      "score": 4.5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "A registry-first prototype matches the founder's data and automation skills and can avoid custody and direct EPC access. Production security, privacy, tenant isolation, contractual data rights, integration, procurement, assurance-label liability, and manual exceptions can exceed the stated part-time and capital envelope before economics are proven.",
+      "score": 5,
+      "status": "scored"
+    }
+  ],
+  "final_score": 4.8,
+  "highest_value_structural_change": "Require the first paid offering to be a standardized, registry-and-remediation-only module with a prepaid platform minimum and a capped integration scope; make VoP evidence an optional host-supplied enhancement. This decouples commercial proof from uncertain bank data rights and prevents bespoke integration work from masking weak unit economics.",
+  "interaction_adjustment": -0.2,
+  "judge_id": "c9-holdout-settle9-02-j2",
+  "main_structural_strength": "The module sits at a high-value supplier-change control point and uses one host integration to combine embedded distribution, portfolio reach, and recurring workflow usage without requiring direct SME selling or direct EPC access.",
+  "primary_score_limiter": "The single proposed platform partner is simultaneously the payer, distribution channel, integration gate, and possible source of VoP rights, yet there is no commitment or evidence that contract value and activation can cover procurement, integration, security, revenue-share, support, and liability costs.",
+  "qualified": false,
+  "raw_response_path": "holdout/jobs/c9-raw-holdout-settle9-02-j2.json",
+  "raw_response_sha256": "5a87c985172929afaf8315dc82862a5bf6539c745c1ec674c1b0d1067481a6c6",
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 2,
+  "strongest_disconfirming_evidence": "The core VoP check must be free to payment-service users and is not generally exposed to independent corporate applications, while established vendors already sell overlapping supplier-validation and approval workflows; this sharply limits standalone verification pricing and leaves the platform able to build, buy from an incumbent, or rely on bank-native controls.",
+  "unrounded_score": 4.815
+}

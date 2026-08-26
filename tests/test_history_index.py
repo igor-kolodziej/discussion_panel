@@ -88,12 +88,19 @@ class HistoryIndexContractTest(unittest.TestCase):
 
     def test_digest_is_compact_canonical_and_complete(self) -> None:
         self.assertLess(INDEX_PATH.stat().st_size, 1_000_000)
-        self.assertEqual(len(self.rows), 224)
         self.assertEqual(len(self.meta), 1)
         self.assertEqual(len(self.run_rows), 6)
         self.assertEqual(len(self.candidates), 215)
-        self.assertEqual(len(self.outcomes), 1)
+        self.assertGreaterEqual(len(self.outcomes), 1)
         self.assertEqual(len(self.corrections), 1)
+        self.assertEqual(
+            len(self.rows),
+            len(self.meta)
+            + len(self.run_rows)
+            + len(self.candidates)
+            + len(self.outcomes)
+            + len(self.corrections),
+        )
         self.assertEqual(
             {row["record_type"] for row in self.rows},
             {
@@ -223,7 +230,11 @@ class HistoryIndexContractTest(unittest.TestCase):
                     self.assertTrue(row[f"{key}_reason"], (identity, key))
 
     def test_native_outcome_correction_supersedes_research_only_publication(self) -> None:
-        row = self.outcomes[0]
+        row = next(
+            item
+            for item in self.outcomes
+            if item["run_id"] == "20260824T205713Z-3dea15"
+        )
         self.assertEqual(set(row), OUTCOME_FIELDS)
         self.assertEqual(row["score_scale"], "/10")
         self.assertEqual(row["run_status"], "no_qualifier")
@@ -251,6 +262,10 @@ class HistoryIndexContractTest(unittest.TestCase):
         self.assertEqual(report["legacy_execution_class"], "research-only")
         self.assertEqual(report["correction"]["superseded_report_sha256"], row["report_sha256"])
         self.assertIn("N/A is not a score of zero", report["correction"]["reason"])
+        self.assertEqual(
+            report["correction"]["report_markdown_sha256"],
+            sha256_file(outcome / "report.md"),
+        )
         candidate = outcome / row["source_candidate_path"]
         self.assertTrue(candidate.is_file())
         self.assertEqual(sha256_file(candidate), row["source_candidate_sha256"])
@@ -323,6 +338,51 @@ class HistoryIndexContractTest(unittest.TestCase):
             self.assertEqual(Decimal(str(evaluation["weighted_base_score"])), base)
             self.assertEqual(Decimal(str(evaluation["final_score"])), final_score)
             self.assertEqual(final_score, expected_scores[candidate_id])
+
+    def test_published_outcomes_are_self_contained_and_repair_is_auditable(self) -> None:
+        result = op.validate_published_outcomes(ROOT / "outcomes")
+        self.assertEqual(result["run_count"], 11)
+        self.assertEqual(result["campaign_count"], 1)
+        self.assertEqual(result["campaign_repairs"], 1)
+        campaign = (
+            ROOT
+            / "outcomes/campaigns/campaign-20260825T110052Z-c143b1"
+        )
+        repair = json.loads(
+            (campaign / "repairs/publication-evidence-v1.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        self.assertEqual(repair["prior_commit"], "8bea11b6b685c12998986eed85b561103a6ef287")
+        self.assertEqual(len(repair["cohorts"]), 10)
+        self.assertEqual(
+            sum(len(cohort["added_artifacts"]) for cohort in repair["cohorts"]),
+            60,
+        )
+        for cohort in repair["cohorts"]:
+            metric_receipt = json.loads(
+                (
+                    ROOT
+                    / "outcomes"
+                    / cohort["run_id"]
+                    / "campaign-metrics.json"
+                ).read_text(encoding="utf-8")
+            )
+            added_paths = {
+                artifact["path"] for artifact in cohort["added_artifacts"]
+            }
+            reconstructed_prior = {
+                **metric_receipt,
+                "evidence_artifacts": [
+                    artifact
+                    for artifact in metric_receipt["evidence_artifacts"]
+                    if artifact["path"] not in added_paths
+                ],
+            }
+            self.assertEqual(
+                op.sha256_bytes(op.canonical_json_bytes(reconstructed_prior)),
+                cohort["prior_metrics_sha256"],
+            )
 
 
 if __name__ == "__main__":

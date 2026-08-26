@@ -1,0 +1,119 @@
+{
+  "assumptions": [
+    "The opportunity is evaluated at the stated planning stage; no customer commitment, traction, price acceptance, export permission, or regulatory clearance is assumed beyond the frozen evidence.",
+    "A distributor can be approached for a tightly scoped pilot, but the existence of a buyer with sufficient incident volume, comparable QC data, centralized support, lawful access, and no adequate incumbent platform remains unproven.",
+    "The initial workflow remains investigational and human reviewed, and it does not issue patient-result, lot-safety, or clinical decisions; this limitation does not itself establish that the product falls outside IVDR scope.",
+    "The stated pricing, margin ranges, capital requirement, and founder-wealth path are hypotheses rather than demonstrated economics."
+  ],
+  "base_score": 3.785,
+  "candidate_id": "route-07",
+  "candidate_sha256": "c2c881b1f14e5ac2684454bec452328e9d8b4974e0180b812f8617ec9b759862",
+  "candidate_version": 5,
+  "constrained_score": 3.585,
+  "evaluation_type": "holdout_native",
+  "evidence_needed_for_higher_score": "A signed, paid pilot with a specifically identified distributor should establish lawful export and processing rights, a qualified written IVDR assessment, baseline multi-site incident volume and handling cost, usable data coverage for one product family, all-in onboarding and specialist cost, measured reduction in support hours or resolution time, and credible renewal pricing with positive contribution margin; evidence that at least several comparable buyers meet the same profile is also needed.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "Moving away from a generic peer-QC product toward the distributor's incident workflow is a coherent response to incumbent strength and creates a concrete operational trigger. However, the packet does not establish that incident assembly and closure are an underserved control point rather than a feature of existing QC, middleware, or ticketing systems.",
+      "score": 5.5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Laboratory QC and reagent-lot investigations are consequential, so delayed or laborious support cases plausibly create pain. The evidence establishes the general quality problem but not the distributor payer's incident frequency, avoidable cost, urgency, budget ownership, or willingness to pay 30000-80000 PLN for this workflow.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "A paid implementation plus annual portfolio licence could produce recurring software revenue and protects against unfunded onboarding. Yet pricing, sales cycle, retention, implementation effort, specialist review, security burden, connector cost, gross margin, and account count are all unmeasured; white-label customization and heterogeneous exports could make this a concentrated services business, while the 7.5M PLN ARR path is unsupported by market or contract evidence.",
+      "score": 3.5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "One mid-sized EU distributor and one product family form a disciplined pilot beachhead. Its economic sufficiency is doubtful because the number of distributors that simultaneously lack a proprietary platform, run centralized support, control usable exports, and face enough comparable incidents is unknown, as is the total annual contract capacity of that segment.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "Embedding in a support desk could create a narrow workflow position, but Bio-Rad, Randox, and Technopath already possess peer networks, connectivity, alerts, and lot reporting and can extend into case orchestration. The proposed company initially controls neither the data rights nor an installed network, so a dominant position is not yet credible.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A successful embedded workflow could expand across the first distributor's product families, installed portfolio, investigation playbooks, and eventually other distributors. Expansion is constrained by buyer concentration, product-specific normalization, fresh data-rights questions, and possible regulatory reassessment for each broader analytical use.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Normalized case history, reusable playbooks, and daily-workflow embedding could create modest switching costs and improve with use. Those assets depend on customer-controlled data, may remain account-specific, and can be replicated or bundled by incumbent QC vendors or the distributor's existing service software, limiting durability.",
+      "score": 3.5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "A single evidence packet, coordinated human review, and preserved disposition could be more convenient than fragmented support work. No baseline or pilot result shows a material improvement in resolution time, cost, quality, or compliance, and the functional distinction from incumbent peer-QC and ordinary case-management tools remains narrow.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "Modern automation can lower the cost of evidence assembly, while persistent quality and traceability obligations support demand for better workflows. These needs are longstanding, mature incumbents are already connected, and IVDR, GDPR, and interface-permission uncertainty add friction rather than providing a clear time-sensitive opening.",
+      "score": 4.5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "Selling one high-value pilot through a distributor concentrates outreach and is more compatible with the founder than lab-by-lab acquisition. There is no identified channel, warm access, committed pilot buyer, or repeatable acquisition motion, and enterprise trust, procurement, security, laboratory participation, and data-rights approval can make even a small account set slow and expensive to win.",
+      "score": 3.5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "The founder's analytics and automation skills fit the product, and a single product-family pilot can in principle be bounded. Delivery still requires integration, laboratory-quality expertise, regulatory analysis, privacy and security controls, enterprise selling, and support within 15-20 weekly hours and 85000 PLN; noncommutable QC also limits what the workflow may safely infer.",
+      "score": 4,
+      "status": "scored"
+    }
+  ],
+  "final_score": 3.6,
+  "highest_value_structural_change": "Make the first product a QC-aware orchestration module delivered through a QC or middleware platform that already holds contractual connectivity and authorized data, rather than independently assembling a new cross-site data surface for a distributor. Keep it limited to evidence provenance, human workflow, and closure, and make a fixed-fee paid discovery phase prove integration rights and support-cost ROI before any custom build; this sacrifices independence but removes the largest access and network-bootstrap dependency.",
+  "interaction_adjustment": -0.2,
+  "judge_id": "c3-holdout-route07-j1",
+  "main_structural_strength": "The design ties a narrow, paid, human-reviewed pilot to a real support-case trigger and seeks control of an embedded operational record rather than competing head-on as another generic peer-QC network.",
+  "primary_score_limiter": "There is no evidence that a sufficiently large set of distributors has the required combination of recurring costly incidents, lawful and technically comparable QC exports, procurement budget, and unmet workflow need, so demand, scalable economics, and the wealth path all rest on the same unproven buyer profile.",
+  "qualified": false,
+  "raw_response_path": "holdout/jobs/raw-c3-holdout-route07-j1.json",
+  "raw_response_sha256": "3babbd339699f114926f893067c807fb36430d4797cba5a4acc1530b7877df6d",
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 2,
+  "strongest_disconfirming_evidence": "Bio-Rad, Randox, and Technopath already offer automated connectivity, interlaboratory peer comparison, alerts, and reagent-lot reporting; their installed data networks directly weaken the proposed differentiation and give them a credible path to bundle incident orchestration before a new entrant establishes data access or workflow control.",
+  "unrounded_score": 3.585
+}

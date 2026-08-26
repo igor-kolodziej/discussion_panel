@@ -843,16 +843,50 @@ class RunAndStateTests(OpportunityTestCase):
         self.assertIn("No candidate reached held-out evaluation", markdown)
         self.assertIn("N/A, not zero", markdown)
         self.assertNotIn("A score-qualified result passed", markdown)
-        first = op.publish_run(self.run_dir, self.root / "outcomes", self.root / "knowledge")
-        second = op.publish_run(self.run_dir, self.root / "outcomes", self.root / "knowledge")
+        knowledge = self.root / "knowledge"
+        knowledge.mkdir()
+        baseline_meta = {
+            "record_type": "index_meta",
+            "verification": {
+                "non_meta_rows": 0,
+                "opportunity_outcome_corrections": 0,
+                "opportunity_outcomes": 0,
+                "total_rows_including_meta": 1,
+            },
+        }
+        (knowledge / "history_index.jsonl").write_text(
+            json.dumps(baseline_meta, sort_keys=True, separators=(",", ":")) + "\n",
+            encoding="utf-8",
+        )
+        first = op.publish_run(self.run_dir, self.root / "outcomes", knowledge)
+        second = op.publish_run(self.run_dir, self.root / "outcomes", knowledge)
         self.assertFalse(first["idempotent"])
         self.assertTrue(second["idempotent"])
         self.assertTrue((self.root / "outcomes" / self.run_id / "report.md").is_file())
         self.assertTrue((self.root / "outcomes" / self.run_id / "candidates/alpha/v2.json").is_file())
         self.assertTrue((self.root / "outcomes" / self.run_id / "research/alpha/v2.json").is_file())
-        history = (self.root / "knowledge/history_index.jsonl").read_text().splitlines()
-        self.assertEqual(len(history), 1)
-        entry = json.loads(history[0])
+        history = (knowledge / "history_index.jsonl").read_text().splitlines()
+        self.assertEqual(len(history), 2)
+        meta = json.loads(history[0])
+        self.assertEqual(
+            meta["verification"],
+            {
+                "non_meta_rows": 1,
+                "opportunity_outcome_corrections": 0,
+                "opportunity_outcomes": 1,
+                "total_rows_including_meta": 2,
+            },
+        )
+        entry = json.loads(history[1])
+        self.assertEqual(
+            history[1],
+            json.dumps(
+                entry,
+                sort_keys=True,
+                ensure_ascii=False,
+                separators=(",", ":"),
+            ),
+        )
         self.assertEqual(entry["record_type"], "opportunity_outcome_v1")
         self.assertEqual(entry["score_scale"], "/10")
         self.assertIsNone(entry["qualification_label"])
@@ -1609,6 +1643,39 @@ class WorkflowV2ContractTests(OpportunityTestCase):
             len(list(published_root.glob("evaluations/*/v*/working-*.json"))),
             12,
         )
+        published_holdouts = []
+        for finalist in report["candidates"]:
+            self.assertTrue(
+                (published_root / finalist["candidate_artifact"]).is_file()
+            )
+            export_root = published_root / "exports" / finalist["candidate_id"]
+            self.assertTrue((export_root / "holdout_packet.md").is_file())
+            self.assertTrue((export_root / "response_schema.json").is_file())
+            for artifact in finalist["evaluation_artifacts"]:
+                evaluation_path = published_root / artifact["path"]
+                self.assertTrue(evaluation_path.is_file())
+                self.assertEqual(op.sha256_file(evaluation_path), artifact["sha256"])
+                evaluation = json.loads(evaluation_path.read_text(encoding="utf-8"))
+                raw_path = published_root / evaluation["raw_response_path"]
+                self.assertTrue(raw_path.is_file())
+                self.assertEqual(
+                    op.sha256_file(raw_path), evaluation["raw_response_sha256"]
+                )
+                published_holdouts.append(evaluation_path)
+        self.assertEqual(len(published_holdouts), 4)
+        validated_publication = op.validate_published_run_outcome(published_root)
+        self.assertEqual(validated_publication["run_id"], self.run_id)
+        working_record = report["working_evaluation_coverage"]["research"]["records"][0]
+        working_evaluation = json.loads(
+            (published_root / working_record["evaluation_path"]).read_text(
+                encoding="utf-8"
+            )
+        )
+        (published_root / working_evaluation["raw_response_path"]).unlink()
+        with self.assertRaisesRegex(
+            op.InputError, "working evaluation raw response"
+        ):
+            op.validate_published_run_outcome(published_root)
 
     def test_direct_evidence_research_closure_is_no_finalist_with_score_coverage(self) -> None:
         self.prepare_fatal_research_closure()
@@ -1760,6 +1827,82 @@ class CampaignContractTests(unittest.TestCase):
         published = self.root / "outcomes" / "campaigns" / self.campaign_id
         self.assertTrue((published / "receipt.json").is_file())
         self.assertTrue((published / "report.md").is_file())
+        validated = op.validate_published_campaign(published, self.outcomes_dir)
+        self.assertEqual(validated["cohort_count"], 4)
+        self.assertEqual(validated["repair_count"], 0)
+
+    def test_published_campaign_rejects_cross_cohort_event_reordering(self) -> None:
+        for cohort_number, score in enumerate((7.2, 6.8, 6.7, 6.6), start=1):
+            self.register_cohort(cohort_number, self.metrics(score))
+        op.finalize_campaign(self.campaign_dir)
+        published = self.outcomes_dir / "campaigns" / self.campaign_id
+        events_path = published / "events.jsonl"
+        events = op.load_campaign_events(events_path, self.campaign_id)
+        created = events[0]
+        finalized = events[-1]
+        cohort_one = [
+            event
+            for event in events
+            if event["details"].get("cohort_number") == 1
+        ]
+        cohort_two = [
+            event
+            for event in events
+            if event["details"].get("cohort_number") == 2
+        ]
+        remaining = [
+            event
+            for event in events
+            if event is not created
+            and event is not finalized
+            and event not in cohort_one
+            and event not in cohort_two
+        ]
+        reordered = [created, *cohort_two, *cohort_one, *remaining, finalized]
+        for sequence, event in enumerate(reordered, start=1):
+            event["sequence"] = sequence
+        events_path.write_text(
+            "".join(
+                json.dumps(event, sort_keys=True, ensure_ascii=False) + "\n"
+                for event in reordered
+            ),
+            encoding="utf-8",
+        )
+        with self.assertRaisesRegex(op.InputError, "out of cohort order"):
+            op.validate_published_campaign(published, self.outcomes_dir)
+
+    def test_published_campaign_rejects_boolean_event_integer_identities(self) -> None:
+        for cohort_number, score in enumerate((7.2, 6.8, 6.7, 6.6), start=1):
+            self.register_cohort(cohort_number, self.metrics(score))
+        op.finalize_campaign(self.campaign_dir)
+        published = self.outcomes_dir / "campaigns" / self.campaign_id
+        events_path = published / "events.jsonl"
+        events = op.load_campaign_events(events_path, self.campaign_id)
+
+        def write_events() -> None:
+            events_path.write_text(
+                "".join(
+                    json.dumps(event, sort_keys=True, ensure_ascii=False) + "\n"
+                    for event in events
+                ),
+                encoding="utf-8",
+            )
+
+        events[0]["sequence"] = True
+        write_events()
+        with self.assertRaisesRegex(op.InputError, "sequence must be an integer"):
+            op.validate_published_campaign(published, self.outcomes_dir)
+
+        events[0]["sequence"] = 1
+        for event in events:
+            if (
+                event["event"] in {"cohort_attached", "cohort_published"}
+                and event["details"].get("cohort_number") == 1
+            ):
+                event["details"]["cohort_number"] = True
+        write_events()
+        with self.assertRaisesRegex(op.InputError, "cohort_number must be an integer"):
+            op.validate_published_campaign(published, self.outcomes_dir)
 
     def test_campaign_progress_resets_on_each_configured_signal(self) -> None:
         state = {
@@ -2355,6 +2498,16 @@ class DedupAndHoldoutTests(OpportunityTestCase):
         self.assertTrue((published / "exports/beta/holdout_packet.md").is_file())
         self.assertTrue((published / "holdout/jobs/native-a-beta.json").is_file())
         self.assertTrue((published / "candidates/alpha/v4.json").is_file())
+        self.assertTrue((published / "exports/alpha/holdout_packet.md").is_file())
+        self.assertTrue((published / "exports/alpha/response_schema.json").is_file())
+        self.assertTrue((published / "holdout/jobs/native-a-alpha.json").is_file())
+        self.assertTrue((published / "holdout/jobs/native-b-alpha.json").is_file())
+        alpha_result = next(
+            item for item in report["candidates"] if item["candidate_id"] == "alpha"
+        )
+        self.assertEqual(len(alpha_result["evaluation_artifacts"]), 2)
+        for artifact in alpha_result["evaluation_artifacts"]:
+            self.assertTrue((published / artifact["path"]).is_file())
         self.assertEqual(publication["run_status"], "qualified")
         history = json.loads((self.root / "knowledge/history_index.jsonl").read_text().strip())
         self.assertEqual(history["score_scale"], "/10")

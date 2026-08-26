@@ -1,0 +1,119 @@
+{
+  "assumptions": [
+    "The service remains inventory-light, and qualified third parties retain responsibility for testing, waste-status assessment, transport, installation, and any repair work.",
+    "The family installer can provide initial cases for validation, but no supplier, installer, tester, or customer commitment is assumed.",
+    "The addressable paid event is limited to failures that are not straightforwardly resolved by an OEM or SecondSol and for which avoided repowering cost is high enough to fund the service fee.",
+    "The 1.6 million-plus Polish microinstallation base does not translate directly into near-term demand because installation age, warranty status, component mix, failure incidence, and incumbent coverage are unknown."
+  ],
+  "base_score": 3.99,
+  "candidate_id": "moat-04",
+  "candidate_sha256": "86778c7bd5f10d7f5d1c14a71734f4361a7a03c392ad40cefb0c61e2d5fdee37",
+  "candidate_version": 5,
+  "constrained_score": 3.79,
+  "evaluation_type": "holdout_native",
+  "evidence_needed_for_higher_score": "A time-bounded case log across a credible cohort of Polish installers should show the total legacy failures submitted, the share still unresolved after documented OEM and SecondSol checks, paid conversion, avoided repowering cost, resolution time, repeat cases per account, and contribution after sourcing, testing, returns, warranty, insurance, support, and fitment costs. Quoted partner terms and several verified installed outcomes would also need to demonstrate lawful, safe supply and bounded liability.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "The redesign identifies a specific residual problem: obsolete off-warranty electronics that cannot be replaced through normal OEM or marketplace routes, where documented fitment may avoid expensive repowering. That is coherent, but the packet does not establish that this residual gap occurs often enough to support a business.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "A failed inverter or optimizer can stop production and make avoided repowering economically valuable, so some cases should carry acute pain. However, no paid cases, fee tests, installer commitments, or quantified avoided costs establish willingness to pay for this intermediary service.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Outcome-contingent fees and an inventory-light start limit downside, but the essential economics are entirely unmeasured. Resolution rate, price, repeat frequency, gross contribution, returns, warranty, insurance, support, partner costs, and payback are unknown, while rare-part work is likely operationally intensive.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Polish installers with obsolete off-warranty inverter and optimizer failures form a precise and accessible beachhead, and the installed base will age. Its economically unresolved subset could nevertheless be very small after warranty, OEM replacement, incumbent marketplace inventory, and technical substitutability are applied.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "Local-language case handling and closed-loop fitment records could create a focused Polish position. Yet SecondSol already operates a scaled near-exact service stack, OEMs control preferred replacements, and the candidate has no exclusive supply, committed demand, proprietary dataset, or demonstrated service advantage.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A proven case graph could support additional legacy component classes, repair routing, warranty intelligence, or adjacent geographies. Expansion is conditional on first finding enough successful residual cases, and moving beyond the narrow wedge would increase competition, compliance burden, and operational complexity.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Serial-level tests and verified fitment outcomes could compound into useful proprietary data and workflow switching costs. Initially those assets do not exist, installers may not contribute outcomes, suppliers remain available to competitors, and the European incumbent begins with far greater inventory and transaction data.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "Cross-source search plus documented compatibility could save an installer time and avoid redesign in exceptional cases. The packet does not show a material advantage over direct OEM support, SecondSol, existing repair partners, or an installer's own sourcing, and reclaimed equipment may be riskier than a supported replacement.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "A large Polish installed base is moving toward the documented inverter replacement window, while circular-economy rules make compliant documentation valuable. The timing is only moderately favorable because the age distribution and near-term off-warranty failure wave are unknown, and OEM and incumbent capabilities are already established.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "The family installer offers a credible low-cost route to seed cases, and recurring installer accounts are a sensible concentrated channel. Beyond that initial access, there is no evidence of installer adoption, repeat demand, scalable acquisition, or willingness to share fitment outcomes.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "The founder's data and automation skills fit intake and routing, the stated capital is affordable, and an inventory-light pilot is compatible with part-time work. Execution still depends on qualified partners, fragmented technical compatibility, lawful non-waste classification, product liability allocation, reliable fulfillment, and service levels the founder does not control.",
+      "score": 4,
+      "status": "scored"
+    }
+  ],
+  "final_score": 3.8,
+  "highest_value_structural_change": "Convert the broad resolution desk into a pre-contracted exchange program for one demonstrably failure-prone legacy inverter or optimizer family: aggregate committed case flow from a small installer cohort, secure a qualified tester-refurbisher and pooled lawful inventory, and offer a pre-priced compatibility and service-level promise. Expand only after that single-cell program proves repeat volume and positive all-in contribution.",
+  "interaction_adjustment": -0.2,
+  "judge_id": "c4-holdout-moat-04-j1",
+  "main_structural_strength": "The candidate is disciplined about serving only high-avoidance unresolved failures, starts with genuine case access through the family installer, and avoids inventory and regulated physical operations until evidence supports them.",
+  "primary_score_limiter": "There is no evidence that enough paid cases remain after OEM and SecondSol resolution to support attractive contribution, repeat account economics, or a plausible path to the founder's wealth objective.",
+  "qualified": false,
+  "raw_response_path": "holdout/jobs/raw-c4-holdout-moat-04-j1.json",
+  "raw_response_sha256": "f37e00532769d9fe0aa520ddeeeb2d228cc41911179e6d397d453b440d4e7a55",
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 2,
+  "strongest_disconfirming_evidence": "SecondSol already combines European-scale spare-parts liquidity, testing, repair, logistics, auctions, and recycling, while OEM replacement programs can resolve valuable failures quickly; together they may leave only a sparse, fragmented, costly residual case pool.",
+  "unrounded_score": 3.79
+}
