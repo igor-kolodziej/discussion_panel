@@ -1,0 +1,86 @@
+{
+  "candidate_id": "ws-05",
+  "claims": [
+    {
+      "claim_id": "ws-05-control",
+      "claim_type": "founder_control_point_path",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://commission.europa.eu/law/law-topic/consumer-protection-law/directive-repair-goods_en"
+      ],
+      "statement": "EU repair rules require accessible repair information and reasonable spare-parts prices for covered goods, while the planned European platform is intended to help consumers find repairers; the founder can obtain a commercial control point by contracting end-of-line inventory from smaller appliance importers, holding pooled stock at a 3PL, and selling a cross-brand parts-availability SLA to repair networks."
+    },
+    {
+      "claim_id": "ws-05-loss",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://commission.europa.eu/news-and-media/news/right-repair-new-consumer-rights-easy-and-attractive-repairs-2026-07-31_en",
+        "https://commission.europa.eu/law/law-topic/consumer-protection-law/directive-repair-goods_en"
+      ],
+      "statement": "Since 31 July 2026 consumers can require manufacturers to repair covered technically repairable goods within a reasonable time and price, and choosing repair extends the legal guarantee by at least 12 months; each unavailable long-tail part can therefore be measured as a missed repair, replacement or refund cost, service delay, and potential non-compliance event."
+    },
+    {
+      "claim_id": "ws-05-payer",
+      "claim_type": "payer_and_budget",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://commission.europa.eu/news-and-media/news/right-repair-new-consumer-rights-easy-and-attractive-repairs-2026-07-31_en"
+      ],
+      "statement": "Manufacturers must provide covered repairs and reasonable access to spare parts, and the Commission expects the rules to generate 4.8 billion euros of EU growth and investment; appliance importers, manufacturers, warranty administrators, retailers, and repair franchises are identifiable payers using existing parts-inventory, warranty, service-level, and replacement budgets when a model approaches end of sale or a repair request arrives."
+    }
+  ],
+  "contrary_evidence": [
+    "The repair obligation covers only product categories already subject to EU reparability requirements, not every appliance, and many original manufacturers already maintain sophisticated parts logistics.",
+    "Manufacturers may satisfy obligations through their own centralized inventory, and a January 2028 European repair platform may reduce the value of a standalone discovery channel."
+  ],
+  "discovery_lane": "weak-signal",
+  "economics": {
+    "acquisition_route": "Target three smaller Polish appliance or electronics importers with discontinued models; take consignment or call options on their end-of-line parts, place them at an existing 3PL, and sell a ninety-day fill-rate guarantee to two independent repair chains.",
+    "capital_required_pln": 100000,
+    "founder_net_worth_path": "A pooled catalogue of 100000 low-volume parts producing an assumed 25 PLN monthly availability fee per active SKU plus parts margin and repair-network SLA fees could become a regional infrastructure layer; the valuable asset is demand and interchangeability data, not a one-off warehouse business.",
+    "founder_time": "Approximately 15-20 founder hours per week for demand forecasting, contracts, and exception pricing; warehouse fulfillment and technical inspection are outsourced.",
+    "gross_margin_basis": "Preliminary 35-55% blended gross margin from availability fees and 25-40% part markups after storage, pick-pack, returns, and obsolescence; initial inventory write-downs could make margin negative.",
+    "payback": "An importer should pay when annual SLA and pool fees are below the expected cost of emergency sourcing, whole-unit replacement, and holding every tail SKU itself; this requires model-level failure and stockout data.",
+    "pricing": "Assumed 10-40 PLN per active SKU per month for reserved availability, 25-40% transaction markup, and 100-500 PLN emergency fulfillment surcharge.",
+    "retention_or_repeat": "Repair networks order across recurring failures, while importers renew availability coverage for several years after each model stops selling; each new model cohort adds a new tail."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A cross-brand graph of model-to-part compatibility, failure timing, stockout frequency, repair conversion, and residual inventory value.",
+    "customer": "Smaller EU appliance and electronics importers, warranty administrators, retailers, and independent repair networks lacking economical long-tail inventory.",
+    "distribution_mechanism": "Repair franchises, warranty administrators, parts distributors, and the future European repair discovery layer surface real demand; importers contribute end-of-line inventory under consignment or options.",
+    "offer_and_business_model": "A pooled long-tail spare-parts reserve with a contractually defined fill-rate and response-time SLA; revenue combines per-SKU availability, transaction margin, and emergency fulfillment.",
+    "payer_and_paid_event": "An importer, warranty administrator, or repair network pays from parts, warranty, or replacement budget when a model leaves active distribution or a covered repair request needs a scarce part.",
+    "problem_trigger": "A low-frequency component for a repairable product is no longer economical for one manufacturer to stock but is needed to meet a time-bounded repair obligation."
+  },
+  "founder_fit": [
+    "Demand forecasting and compatibility inference use the founder's data-science strengths.",
+    "The business can start with consigned inventory and outsourced fulfillment, keeping capital and daily labor bounded.",
+    "Sales can be concentrated through a few importers and repair chains rather than constant consumer-facing interaction."
+  ],
+  "parent": null,
+  "risks": [
+    "Obsolescence, counterfeit parts, safety defects, and product-liability exposure could erase the inventory margin.",
+    "Technical IP or tooling may prevent third-party fabrication and leave the pool dependent on OEM supply.",
+    "Incumbent parts distributors may bundle an SLA once demand becomes visible."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://commission.europa.eu/law/law-topic/consumer-protection-law/directive-repair-goods_en",
+    "https://commission.europa.eu/news-and-media/news/right-repair-new-consumer-rights-easy-and-attractive-repairs-2026-07-31_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Pooled availability reserve",
+    "control_point": "Consignment or call options over end-of-line spare parts combined with a repair-network fill-rate SLA.",
+    "critical_dependency": "Cross-customer demand aggregation must lower inventory cost enough to cover obsolescence and safety liability."
+  },
+  "thesis": "Right-to-repair makes a low-frequency spare part economically important after ordinary distribution has moved on. By pooling end-of-line inventory and demand across smaller brands, a neutral operator can sell availability rather than software, earn on each repair, and learn which parts are interchangeable and when they fail, creating a cross-brand asset OEM silos do not share.",
+  "title": "Long-Tail Spare-Parts Availability Pool",
+  "uncertainties": [
+    "Which covered product categories show the highest whole-unit replacement cost caused specifically by unavailable parts?",
+    "Will importers consign inventory or demand that the pool purchase it outright?",
+    "What fill-rate and retention period will national enforcement treat as a reasonable repair timeframe?"
+  ],
+  "version": 1
+}

@@ -1,0 +1,149 @@
+{
+  "candidate_id": "mf-lab-capacity-router",
+  "claims": [
+    {
+      "claim_id": "mf-lab-capacity-router-c1",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://www.gov.pl/web/zdrowie/diagnostyka-laboratoryjna",
+        "https://eli.gov.pl/eli/DU/2022/2280/ogl"
+      ],
+      "statement": "Polish health authorities define laboratory diagnostics as regulated testing of patient material with quality requirements, making each authorized test an identifiable fulfillment event; public sources cited do not establish marketplace pricing or unused capacity."
+    },
+    {
+      "claim_id": "mf-lab-capacity-router-c2",
+      "claim_type": "payer_and_budget",
+      "confidence": "low",
+      "evidence_refs": [],
+      "statement": "The proposed payer is a clinic operations function or participating laboratory commercial function at order fulfillment; willingness to pay a separate routing fee is unverified."
+    },
+    {
+      "claim_id": "mf-lab-capacity-router-c3",
+      "claim_type": "founder_control_point_path",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eli.gov.pl/eli/DU/2022/2280/ogl"
+      ],
+      "statement": "Control can only be obtained through signed laboratory capacity and processing agreements; there is no current special access, and the founder must not perform or interpret regulated diagnostic work."
+    },
+    {
+      "claim_id": "mf-lab-capacity-router-c4",
+      "claim_type": "other",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://commission.europa.eu/law/law-topic/data-protection/information-individuals_en",
+        "https://commission.europa.eu/law/law-topic/data-protection/information-business-and-organisations/legal-grounds-processing-data_en?prefLang=ro"
+      ],
+      "statement": "Health data receives special GDPR protection, so a routing layer should minimize identifiable results and establish a valid role and legal basis rather than rely on generic consent language."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Clinic operations lead or laboratory commercial director",
+    "bundling_resistance": "True multi-lab resilience, standardized panels, and clinic-owned patient experience must beat a single chain's integrated portal",
+    "customer_relationship_owner": "Clinic retains the patient relationship; founder company owns its B2B clinic and laboratory contracts",
+    "distribution_origin": "Direct B2B clinic outreach and multiple nonexclusive licensed-lab supply contracts",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Founder-led clinic sales and lab business-development cycles; target below six months of gross profit",
+      "cash_conversion": "Clinic prepayment or short invoice terms; avoid funding laboratory receivables during the pilot",
+      "contribution_margin": "Unknown; target 15-25% transaction margin plus high-margin software fees after support",
+      "delivery_and_support_costs": "Panel mapping, integration, consent workflow, rejection handling, and B2B service desk",
+      "overhead_and_compliance": "Health-law counsel, GDPR controls, DPIA where required, security, insurance, and vendor qualification",
+      "revenue_basis": "Hypothesis: 500-1500 PLN monthly clinic fee plus 5-10% contracted take rate on fulfilled panels",
+      "variable_costs": "Laboratory charges if merchant-of-record, collection fees, messaging, payments, and order support"
+    },
+    "likely_incumbent_response": "Large laboratory chains can bundle ordering portals, collection networks, pricing, and results",
+    "paid_event_or_measurable_loss": "Each clinician-authorized laboratory test order is a discrete fulfillment event; rejected specimens, duplicate coordination, and excess turnaround are measurable operating losses",
+    "payer": "Private clinic or contracted laboratory, never the founder acting as a medical provider",
+    "purchase_trigger": "Growing panel volume, multi-city collection needs, turnaround failures, or manual invoice reconciliation",
+    "renewal_event": "Each fulfilled order plus clinic and lab agreement renewal"
+  },
+  "contrary_evidence": [
+    "Large laboratory networks already provide collection, ordering, and results portals.",
+    "Polish laboratory medicine is tightly regulated, reducing the founder's allowable operational scope."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Proposed nonexclusive six-month capacity-reservation and data-processing agreements specifying panels, volumes, turnaround, cancellation, and roles",
+    "acquisition_instrument_type": "capacity_reservation",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Approach other licensed laboratories, narrow the initial panel, or operate as clinic-paid workflow software without reserved capacity",
+    "current_owner": "Each licensed laboratory owns and controls its capacity, methods, results, and clinical obligations",
+    "customer_relationship_control": "contracted",
+    "customer_relationship_owner": "Clinic retains the patient relationship; founder company owns its B2B clinic and laboratory contracts",
+    "duration": "6 months",
+    "exclusivity": "nonexclusive",
+    "founder_access_basis": "none",
+    "founder_access_description": "No laboratory, clinic, patient, or health-data access is currently held. The only path is ordinary open-market contracting with licensed entities and explicit, role-appropriate data authorization.",
+    "launch_controller": "Founder company only after at least two laboratories and one clinic sign compliant agreements",
+    "mechanism_control": "dependent",
+    "renewal": "Mutual six-month renewal after quality review",
+    "replaceability": "replaceable",
+    "revocability": "for_cause",
+    "status": "unknown",
+    "subject": "Named panel-processing slots, service levels, and wholesale schedules from multiple licensed laboratories",
+    "subject_type": "capacity",
+    "transferability": "nontransferable"
+  },
+  "discovery_lane": "mechanism-first",
+  "economics": {
+    "acquisition_route": "Direct clinic contracting and nonexclusive licensed-lab business-development agreements",
+    "capital_required_pln": 90000,
+    "founder_net_worth_path": "Illustrative, not forecast: 200000 annual panels at 60 PLN net platform revenue plus subscriptions imply a low-eight-figure PLN revenue surface; a 5m PLN founder outcome requires regulatory clarity and scalable partner operations",
+    "founder_time": "Maximum five hours daily only with strict B2B scope and partner-owned clinical support; otherwise defer",
+    "gross_margin_basis": "Workflow subscription plus spread or take rate after lab, collection, payment, and support costs",
+    "payback": "Target under six months of account gross profit; long regulated sales cycles may exceed it",
+    "pricing": "Hypothesis: 500-1500 PLN monthly per clinic plus a 5-10% contractually permitted fulfillment fee",
+    "retention_or_repeat": "Recurring with every longitudinal panel if turnaround, rejection rate, and reconciliation improve"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Turnaround, rejection, availability, and panel-mapping data improve routing reliability without pooling identifiable health results",
+    "customer": "Private preventive-medicine clinics and corporate health providers ordering repeat laboratory panels",
+    "distribution_mechanism": "Direct clinic contracting and nonexclusive supply agreements with licensed laboratories and collection networks",
+    "offer_and_business_model": "Multi-lab availability, panel mapping, consented order routing, status tracking, and invoice reconciliation without performing or interpreting tests",
+    "payer_and_paid_event": "Clinic pays a workflow fee or laboratory pays a contracted take rate when an authorized test order is fulfilled",
+    "problem_trigger": "A clinic needs a defined panel, collection geography, turnaround time, and result interface but negotiates and operates across separate laboratories"
+  },
+  "founder_fit": [
+    "Routing and service-level analytics match data-science and operations interests",
+    "Neuroscience background supports domain literacy without implying clinical qualification",
+    "Orders, turnaround, rejections, and unit contribution are measurable",
+    "Software coordination can be part-time only if laboratories and clinics own patient-facing clinical work"
+  ],
+  "parent": null,
+  "risks": [
+    "A routing or identity error could harm a patient",
+    "Health-data breach consequences are severe",
+    "Merchant-of-record structure may create clinical or tax obligations",
+    "Support demands could violate the founder's part-time constraint"
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://www.gov.pl/web/zdrowie/diagnostyka-laboratoryjna",
+    "https://eli.gov.pl/eli/DU/2022/2280/ogl",
+    "https://commission.europa.eu/law/law-topic/data-protection/information-individuals_en",
+    "https://commission.europa.eu/law/law-topic/data-protection/information-business-and-organisations/legal-grounds-processing-data_en?prefLang=ro"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "marketplace",
+    "commercial_model_descriptor": "licensed_lab_capacity_and_panel_routing_marketplace",
+    "control_point_category": "contracted_capacity",
+    "control_point_descriptor": "multi_lab_panel_slots_and_service_levels",
+    "critical_dependency_category": "supply_partner",
+    "critical_dependency_descriptor": "licensed_medical_laboratories_and_collection_networks"
+  },
+  "structure": {
+    "commercial_archetype": "B2B marketplace and workflow layer over contracted laboratory capacity",
+    "control_point": "Reserved test-processing and collection capacity under multi-lab agreements",
+    "critical_dependency": "Licensed laboratories willing to supply capacity, pricing, and compliant interfaces"
+  },
+  "thesis": "Reserve replaceable processing slots and transparent wholesale schedules from multiple licensed medical laboratories, then route standardized clinic-ordered biomarker panels for a platform fee while laboratories retain testing and clinical accountability.",
+  "title": "Clinic-to-Lab Biomarker Capacity Router",
+  "uncertainties": [
+    "Whether laboratories have contractible spare capacity at attractive wholesale rates",
+    "Which party may legally place and route each order",
+    "Whether clinics will avoid a single-chain contract for multi-lab resilience",
+    "Data-controller and processor roles across clinic, platform, laboratory, and collection point"
+  ],
+  "version": 1
+}

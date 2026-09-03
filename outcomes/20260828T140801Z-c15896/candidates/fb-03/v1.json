@@ -1,0 +1,87 @@
+{
+  "candidate_id": "fb-03",
+  "claims": [
+    {
+      "claim_id": "fb-03-control",
+      "claim_type": "founder_control_point_path",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://www.sciencedirect.com/science/article/pii/S0378778825007078"
+      ],
+      "statement": "A founder can first acquire read-only refrigeration telemetry and a safe temperature envelope through a refrigeration contractor, then earn permission to schedule compressors or thermal buffers. A 2025 grocery-store study models joint control of refrigeration and heat pumps, but integration access for Polish equipment is untested."
+    },
+    {
+      "claim_id": "fb-03-loss",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://www.sciencedirect.com/science/article/pii/S0378778825007078",
+        "https://energy-efficient-products.ec.europa.eu/product-list/commercial-refrigerators_en"
+      ],
+      "statement": "The present measurable loss is avoidable refrigeration and heating cost during expensive hours. The cited study estimates annual grocery-store energy-cost savings from coordinated demand response, while the Commission records a large installed base of commercial refrigeration; achievable savings in Polish tariffs must be measured rather than assumed."
+    },
+    {
+      "claim_id": "fb-03-payer",
+      "claim_type": "payer_and_budget",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/2024/1711/oj"
+      ],
+      "statement": "The payer hypothesis is a grocery chain's energy or facilities budget, with a future second revenue stream from an aggregator or supplier for verified flexibility. EU electricity-market rules protect participation in demand response and dynamic contracts, but they do not prove a Polish store can currently monetize this load."
+    }
+  ],
+  "contrary_evidence": [
+    "The 2025 study reports that some cost-saving cases increased total winter electricity consumption, which may weaken environmental or capacity claims.",
+    "Food-safety constraints and conservative facility operators may make the usable flexibility window too small."
+  ],
+  "discovery_lane": "future-backcast",
+  "economics": {
+    "acquisition_route": "Partner with one independent refrigeration contractor, install read-only gateways at three stores, prove tariff savings in shadow mode, and request control only after the store's food-safety owner signs explicit temperature bounds.",
+    "capital_required_pln": 70000,
+    "founder_net_worth_path": "A portfolio of contracted cold-load flexibility could produce recurring shared savings and later grid-service revenue across thousands of stores; meaningful founder equity depends on standardizing heterogeneous controls.",
+    "founder_time": "Roughly 15-20 hours per week during the three-site pilot, declining after contractor-led deployments and automated monitoring.",
+    "gross_margin_basis": "Software and dispatch margin after gateway amortization; contractor callouts, telemetry hardware, and any spoilage indemnity are direct costs.",
+    "payback": "Require gateway and integration payback within 12 months from a conservative share of verified bill savings before adding thermal-storage hardware.",
+    "pricing": "Low setup fee plus 20-30% of verified tariff savings; future aggregator income shared under a separate dispatch contract.",
+    "retention_or_repeat": "Optimization runs daily, and store chains can add sites once safety and savings are proven."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Site-specific thermal response models and auditable safe-dispatch history across refrigeration controllers",
+    "customer": "Polish grocery chains, cold stores, and their refrigeration contractors",
+    "distribution_mechanism": "Channel sales through refrigeration service contractors followed by chain-wide rollout",
+    "offer_and_business_model": "Safety-constrained refrigeration optimization and flexibility aggregation paid from shared energy savings and grid revenue",
+    "payer_and_paid_event": "Facilities or energy manager pays after verified monthly savings; aggregator pays after accepted dispatch",
+    "problem_trigger": "A refrigerated site repeatedly consumes power during high-price or grid-stress periods despite thermal inertia"
+  },
+  "founder_fit": [
+    "Forecasting, constrained optimization, and measurement are closely aligned with the founder's technical strengths.",
+    "The pilot is bounded and can be run part-time with contractor-led physical integration.",
+    "Revenue is linked to measurable savings rather than high-energy brand building."
+  ],
+  "parent": null,
+  "risks": [
+    "A control error could cause food spoilage and severe liability.",
+    "Proprietary controllers may block low-cost integration.",
+    "Polish dynamic tariffs or flexibility markets may not support enough value today."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://www.sciencedirect.com/science/article/pii/S0378778825007078",
+    "https://energy-efficient-products.ec.europa.eu/product-list/commercial-refrigerators_en",
+    "https://eur-lex.europa.eu/eli/2024/1711/oj"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Shared-savings virtual power plant for a thermally buffered commercial load",
+    "control_point": "Authorized controller gateway operating inside a signed food-safety temperature envelope",
+    "critical_dependency": "Interoperable site controls and a tariff or market that pays enough for safe load shifting"
+  },
+  "thesis": "Backcast from a grid in which every controllable load is an energy asset: begin with grocery refrigeration's latent thermal storage, prove bill savings without control, and graduate to a contracted cold-load reserve whose dispatch history compounds.",
+  "title": "Cold-Store Flex Reserve",
+  "uncertainties": [
+    "Actual hourly Polish tariffs, demand charges, and aggregator payments need site-level modeling.",
+    "The minimum multi-site portfolio for market participation is unknown.",
+    "Store operators' insurance and food-safety requirements may prohibit third-party dispatch."
+  ],
+  "version": 1
+}

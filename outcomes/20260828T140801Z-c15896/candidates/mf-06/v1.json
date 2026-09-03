@@ -1,0 +1,90 @@
+{
+  "candidate_id": "mf-06",
+  "claims": [
+    {
+      "claim_id": "mf-06-control",
+      "claim_type": "founder_control_point_path",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://clinicaltrials.gov/data-about-studies/learn-about-api",
+        "https://health.ec.europa.eu/system/files/2019-04/qa_clinicaltrials_gdpr_en_0.pdf"
+      ],
+      "statement": "ClinicalTrials.gov provides a current REST API for recruiting-study metadata, while EU guidance explains that health-data consent used for special-category processing must be explicit; the founder could contract clinics to run eligibility queries inside their environment and contact only consented patients, acquiring a governed matching right rather than exporting raw records."
+    },
+    {
+      "claim_id": "mf-06-loss",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC7342338/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC6092479/"
+      ],
+      "statement": "Recruitment is a documented trial bottleneck: one review reports 11% of sites enroll nobody and 37% under-enroll, while another found only 31% of 114 UK trials met enrollment goals; each delayed or failed enrollment is measurable against a sponsor's target and timeline."
+    },
+    {
+      "claim_id": "mf-06-payer",
+      "claim_type": "payer_and_budget",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC6092479/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC7342338/"
+      ],
+      "statement": "The payer is a sponsor, CRO or trial site's recruitment owner when enrollment falls behind; published evidence says sponsors respond to low enrollment by opening sites or increasing study funds, and recruitment consumes material development time and spending, supporting a per-qualified-referral or per-randomized-patient budget."
+    }
+  ],
+  "contrary_evidence": [
+    "The cost and delay figures in reviews vary widely and are not specific to Poland or the proposed clinic cohort.",
+    "Eligibility is often too nuanced for records alone, and sponsor-funded sites may reject referrals or refuse to share recruitment economics."
+  ],
+  "discovery_lane": "mechanism-first",
+  "economics": {
+    "acquisition_route": "Sign privacy-preserving referral agreements with three Polish private clinic or laboratory groups in one biomarker-rich indication, deploy queries inside their environment, and contract a single CRO or site network before any patient outreach.",
+    "capital_required_pln": 80000,
+    "founder_net_worth_path": "Validate 30 consented qualified referrals in one indication, expand to 50 clinic endpoints and 25 active trials, then deliver 500 randomized participants annually at PLN 10,000 average net revenue for PLN 5m revenue; a trusted multi-indication referral network could support PLN 5m founder net worth in 5-8 years if sponsor contracts and compliance scale.",
+    "founder_time": "Founder allocates 3-5 hours daily to matching, privacy engineering and sponsor analytics; clinical eligibility, consent and trial communication stay with licensed sites and clinicians.",
+    "gross_margin_basis": "Privacy-preserving software matching is high margin, but clinic shares, nurse review and sponsor quality assurance are substantial; preliminary target is 40-60% gross margin.",
+    "payback": "Sponsor pays on a staged outcome: qualified consented referral, successful screen, and randomized participant; clinic setup should recover within the first 5-10 randomized referrals.",
+    "pricing": "Hypothesis: PLN 500-1,500 per consented prequalified referral, PLN 2,000-5,000 per successful screen, and PLN 5,000-20,000 per randomized participant depending on indication, shared with the source clinic.",
+    "retention_or_repeat": "New recruiting protocols continually reuse the governed clinic network; phenotype-to-screen outcome data improves feasibility estimates and reduces future screen failures."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A privacy-preserving network learns which phenotype and protocol criteria predict actual screening success at each clinic without centralizing raw health records.",
+    "customer": "CROs, sponsors and investigator sites recruiting Polish patients for biomarker-defined metabolic, neurological or other hard-to-enroll trials.",
+    "distribution_mechanism": "Clinic and laboratory participation agreements on the supply side, and CRO/site-network business development on the demand side.",
+    "offer_and_business_model": "Governed in-clinic eligibility matching and consented referral, paid in stages through successful screen and randomization.",
+    "payer_and_paid_event": "The sponsor, CRO or trial site pays when a consented clinic patient qualifies, screens successfully or is randomized.",
+    "problem_trigger": "A recruiting study falls behind its site-level enrollment curve or needs a feasibility estimate for a Polish cohort."
+  },
+  "founder_fit": [
+    "The mechanism combines data science, health interest and the founder's neuroscience background.",
+    "The founder's medical-adjacent household can improve workflow understanding while licensed partners retain clinical judgment.",
+    "A narrowly scoped, privacy-preserving pilot can start analytically before major hiring or capital spend."
+  ],
+  "parent": null,
+  "risks": [
+    "Health-data processing, ethics approvals, consent, trial advertising and anti-kickback rules could make the referral model unlawful or slow.",
+    "False matches waste scarce coordinator time and can harm patient trust.",
+    "CRO procurement cycles and clinic integrations may be incompatible with a part-time founder."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://clinicaltrials.gov/data-about-studies/learn-about-api",
+    "https://health.ec.europa.eu/system/files/2019-04/qa_clinicaltrials_gdpr_en_0.pdf",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC7342338/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC6092479/"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Outcome-priced regulated referral network",
+    "control_point": "Clinic-granted privacy-preserving eligibility-query and consented patient-contact rights",
+    "critical_dependency": "Lawful health-data governance and sponsor acceptance of externally sourced referrals"
+  },
+  "thesis": "Acquire governed eligibility-query rights inside private clinics, map local phenotypes to live protocols, and sell sponsors only consented, clinician-reviewed candidates while retaining no central raw-record lake.",
+  "title": "Clinic-Resident Trial Prescreen Network",
+  "uncertainties": [
+    "The lawful controller-processor and recruitment-consent design in Poland is unresolved.",
+    "The number of privately held records with sufficient structured biomarkers is unknown.",
+    "Attainable sponsor payment per referral and clinic revenue share have not been validated."
+  ],
+  "version": 1
+}

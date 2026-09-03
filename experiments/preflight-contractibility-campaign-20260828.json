@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "experiment_id": "preflight-contractibility-campaign-20260828",
+  "campaign_id": "campaign-20260828T140713Z-6832b3",
+  "preregistered_at": "2026-08-28T14:07:19Z",
+  "timing": "Frozen after creation of the empty campaign ledger and before creation of its first cohort or any discovery job.",
+  "objective": "Test whether attempt-neutral role preflight plus stronger core-only control-point acquisition evidence improves mechanical reliability and the chance of surfacing extraordinary founder-fit opportunities without narrowing wildcard variance or changing evaluation standards.",
+  "frozen_implementation": {
+    "scripts/opportunity.py": "f1d51a3bb9438844d3cb9331fd3507b9717d0529e9d1bbfae4a6c15d0fed7438",
+    "config/opportunity-workflow.json": "6da741447eded977867693ca892b2654b3dacdf8ac3ec00e38f0c9329e45ae1c",
+    ".agents/skills/business-opportunity/SKILL.md": "9c83d4c25fb70fd60ec6f682678a5bb2cc224b46d1cdb68457f28a2eb4a4ffa5",
+    ".agents/skills/business-opportunity/references/workflow.md": "7c2a5bb05e90647f3bcc7eac9f1bdb855e3eb949ca7708f6615870afe3c1d6cc",
+    ".agents/skills/business-opportunity/references/artifact-contracts.md": "bc25fd462e6299db9296699fc6ab81d6eb6ad833582f170c4ff84a7bcc1f6315",
+    ".agents/skills/business-opportunity/references/history-and-holdout.md": "fd679a091a4622655b2a8a787512fb609f86964c7af4d947c7cad562371e7601"
+  },
+  "frozen_protocol": {
+    "workflow_policy": "Use the immutable campaign configuration and canonical founder and evaluator snapshots without changing any threshold, weight, budget, cohort rule, lane, or qualification rule.",
+    "shortlist_policy": "Use the configured core and wildcard quotas exactly. Core candidates require credible source-bound acquisition or contractibility records. Wildcards remain eligible when that record is null or under-evidenced and must preserve asymmetric structural variance.",
+    "preflight_policy": "Every structured role receives only its role-specific preflight contract. The first substantive response is preflighted before job start; only schema mechanics may be corrected. The unchanged successful input hash is required at canonical completion.",
+    "blindness": "Fresh scouts receive founder-relevant context and their lane only. They receive no evaluator, qualification rule, history, prior candidates, prior scores, rankings, verdicts, other scout output, or comparison results. Delayed history is introduced only after the fresh pool exists. Candidate researchers, constructors, working evaluators, and holdouts remain context-separated under the canonical skill.",
+    "stopping": "Only the canonical campaign next action may continue or stop the campaign. Do not add cohorts, retries, rescoring, or substitutions for a favorable result.",
+    "external_evaluations": "Do not add an external evaluator unless independently available under the canonical workflow; native holdouts remain mandatory and binding."
+  },
+  "hypotheses": [
+    "Attempt-neutral preflight will prevent schema-only exhaustion without hiding or rewriting malformed semantic work.",
+    "Core-only acquisition evidence will remove candidates that merely name a control point while preserving unusual under-evidenced ideas in wildcard slots.",
+    "The intervention may improve the upper tail, but score movement will be treated as descriptive association rather than causal proof."
+  ],
+  "audit_metrics": {
+    "reliability": [
+      "structured outputs preflighted",
+      "initial preflight failures by role and JSON pointer",
+      "schema-only corrections",
+      "canonical attempts, retries, exhausted jobs, and mechanical failures",
+      "successful preflight hashes matching canonical job inputs"
+    ],
+    "portfolio": [
+      "lane contributions through shortlist, development, and finalists",
+      "core acquisition evidence modes, counterparties, instruments, cited claims, and unresolved preconditions",
+      "wildcard survival and structural non-cosmeticity"
+    ],
+    "evidence": [
+      "source instances, unique URLs, domain variety, contradicting sources, contrary findings, and unknowns",
+      "control-point ownership, payer and budget evidence, distribution, repeat economics, incumbent response, and defensibility"
+    ],
+    "outcomes": [
+      "working and holdout score distributions",
+      "factor-level holdout results",
+      "terminal status, stop reason, qualification result, and canonical official scores",
+      "artifact completeness, lineage, packet binding, publication, and campaign receipt integrity"
+    ]
+  },
+  "forbidden_adaptations": [
+    "No semantic coercion during preflight correction.",
+    "No favorable rerun or score shopping.",
+    "No leakage of prior campaigns or evaluator information into discovery.",
+    "No tightening of wildcard eligibility through the new core evidence requirement.",
+    "No workflow-code changes after the first cohort is created."
+  ]
+}

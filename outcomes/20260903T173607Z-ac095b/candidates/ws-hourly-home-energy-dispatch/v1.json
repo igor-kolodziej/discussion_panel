@@ -1,0 +1,146 @@
+{
+  "candidate_id": "ws-hourly-home-energy-dispatch",
+  "claims": [
+    {
+      "claim_id": "ws-hourly-home-energy-dispatch-c1",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.ure.gov.pl/en/communication/news/399%2CElectricity-bills-starting-from-24-August-households-can-enter-into-contracts-wi.html"
+      ],
+      "statement": "Dynamic contracts available to eligible Polish households and micro-enterprises calculate energy prices at intervals tied to short-term markets, creating a measurable timing exposure on electricity consumption."
+    },
+    {
+      "claim_id": "ws-hourly-home-energy-dispatch-c2",
+      "claim_type": "payer_and_budget",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://www.ure.gov.pl/en/communication/news/399%2CElectricity-bills-starting-from-24-August-households-can-enter-into-contracts-wi.html"
+      ],
+      "statement": "Eligible households and micro-enterprises already own the electricity bill affected by dynamic pricing, but their willingness to pay for independent optimization is not established."
+    },
+    {
+      "claim_id": "ws-hourly-home-energy-dispatch-c3",
+      "claim_type": "founder_control_point_path",
+      "confidence": "low",
+      "evidence_refs": [],
+      "statement": "A plausible control path is direct household authorization plus replaceable vendor integrations, beginning with a read-only planner; no authorization or integration agreement has been obtained."
+    },
+    {
+      "claim_id": "ws-hourly-home-energy-dispatch-c4",
+      "claim_type": "other",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ure.gov.pl/pl/urzad/informacje-ogolne/aktualnosci/12692%2CRaporty-i-analizy-URE-w-ubieglym-roku-135-odbiorcow-skorzystalo-z-umow-z-cena-dy.html"
+      ],
+      "statement": "URE reported only 135 dynamic-price customers in the first measured period, which is evidence of very early adoption rather than mass demand."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Property owner or small-business owner responsible for the electricity bill",
+    "bundling_resistance": "Cross-brand orchestration, transparent realized-savings measurement, and installer-neutral recommendations must outperform free single-vendor controls",
+    "customer_relationship_owner": "Electricity retailers own the supply relationship; the proposed optimization relationship has no current owner",
+    "distribution_origin": "Installer handoff at commissioning, followed by referral and prosumer-community acquisition",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Installer commissions plus content/community acquisition; actual CAC is unknown",
+      "cash_conversion": "Monthly or annual prepayment; integration development and support occur before scale",
+      "contribution_margin": "Potentially software-like after integrations stabilize, but unproven and reduced materially by support-heavy device fragmentation",
+      "delivery_and_support_costs": "Compatibility onboarding, exception handling, safety constraints, and household support",
+      "overhead_and_compliance": "Security, GDPR, product liability review, device-testing bench, accounting, and insurance",
+      "revenue_basis": "Target 29-59 PLN per site per month, with an optional installer revenue share",
+      "variable_costs": "Weather and price feeds, device-cloud calls, notifications, payment fees, and installer referral share"
+    },
+    "likely_incumbent_response": "Utilities and device makers can bundle basic scheduling into supply contracts or proprietary apps",
+    "paid_event_or_measurable_loss": "Subscription activation is the paid event; avoidable loss is the spread between unmanaged and constraint-aware consumption or export under time-varying prices",
+    "payer": "Household prosumer or micro-enterprise",
+    "purchase_trigger": "Enrollment in a dynamic tariff, commissioning of flexible electrical equipment, or an unexpectedly poor first bill",
+    "renewal_event": "Monthly renewal after a savings and comfort report"
+  },
+  "contrary_evidence": [
+    "URE reported just 135 dynamic-price customers in the initial measured period, so the addressable early-adopter pool may be tiny.",
+    "Utilities are free to shape dynamic offers with caps, exclusions, or commercial fees, which can reduce dispatchable savings.",
+    "PV net-billing RCE and retail dynamic-tariff formulas are not necessarily the same price signal."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Proposed customer authorization plus vendor API or local-gateway terms; no agreement is secured",
+    "acquisition_instrument_type": "workflow_integration_agreement",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Launch with price alerts and read-only schedules using user-entered device constraints, then support replaceable local relays where lawful and safe",
+    "current_owner": "The household and its chosen electricity and device vendors",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "Electricity retailers own the supply relationship; the proposed optimization relationship has no current owner",
+    "duration": "Unknown until customer and integration terms are executed",
+    "exclusivity": "nonexclusive",
+    "founder_access_basis": "operating_relationship",
+    "founder_access_description": "The family renewable-energy installer can lawfully introduce a small opt-in test set, but no customer, device, or supplier access is presently contracted",
+    "launch_controller": "Each opt-in household together with relevant integration providers",
+    "mechanism_control": "dependent",
+    "renewal": "Proposed monthly customer renewal; integration renewal is unknown",
+    "replaceability": "replaceable",
+    "revocability": "at_will",
+    "status": "unknown",
+    "subject": "Household device-dispatch workflow and its authorized data connections",
+    "subject_type": "workflow_position",
+    "transferability": "nontransferable"
+  },
+  "discovery_lane": "weak-signal",
+  "economics": {
+    "acquisition_route": "Installer-introduced pilots, prosumer groups, and bill-analysis lead magnets",
+    "capital_required_pln": 60000,
+    "founder_net_worth_path": "Conditional path: 8,000 sites at 45 PLN monthly equals 4.32m PLN ARR; a profitable multi-market software asset could support a value above 5m PLN, but adoption and margin are wholly unvalidated",
+    "founder_time": "Read-only MVP and 10-20 pilots can fit roughly 3-5 hours daily; full device control requires later engineering and support capacity",
+    "gross_margin_basis": "Software revenue less data/API, payments, support, and channel share; no realized margin evidence yet",
+    "payback": "Target customer payback under four months from verified savings; currently unknown",
+    "pricing": "Discovery hypothesis: 29-59 PLN per site monthly or 299-599 PLN annually; validate against verified net savings",
+    "retention_or_repeat": "Monthly use tied to recurring bills, with churn risk if tariffs flatten or automation disappoints"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Consent-based device-response and realized-savings data improve forecasts, compatibility coverage, and household-specific scheduling",
+    "customer": "Polish prosumer households and micro-enterprises with remotely read meters plus at least one flexible load",
+    "distribution_mechanism": "Referral distribution through independent renewable-energy installers, energy-efficiency advisers, and targeted prosumer communities",
+    "offer_and_business_model": "Cross-vendor energy dispatch software sold as a monthly subscription, initially read-only recommendations and later opt-in control",
+    "payer_and_paid_event": "The household or micro-enterprise pays a recurring subscription when automated scheduling is activated for a site",
+    "problem_trigger": "Signing a dynamic-price contract or adding PV, a home battery, heat pump, or EV charger creates repeated decisions about when to consume, store, or export electricity"
+  },
+  "founder_fit": [
+    "Time-series forecasting and optimization match the founder's data-science background",
+    "A lawful installer relationship offers bounded customer discovery and pilot introductions without employer resources",
+    "A read-only MVP can be built alongside employment within the five-hours-per-day constraint",
+    "The model is measurable and can become increasingly automated rather than requiring on-camera selling"
+  ],
+  "parent": null,
+  "risks": [
+    "Unsafe or incorrect dispatch could damage equipment or household trust",
+    "Device vendors can close interfaces or copy the scheduling feature",
+    "Savings claims could become misleading without counterfactual measurement",
+    "Support burden across fragmented devices can erase subscription margin"
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://www.ure.gov.pl/en/communication/news/399%2CElectricity-bills-starting-from-24-August-households-can-enter-into-contracts-wi.html",
+    "https://ure.gov.pl/pl/urzad/informacje-ogolne/aktualnosci/12692%2CRaporty-i-analizy-URE-w-ubieglym-roku-135-odbiorcow-skorzystalo-z-umow-z-cena-dy.html"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "software_subscription",
+    "commercial_model_descriptor": "per site household energy optimization subscription",
+    "control_point_category": "workflow_integration",
+    "control_point_descriptor": "constraint aware dispatch layer across tariff and household devices",
+    "critical_dependency_category": "integration_platform",
+    "critical_dependency_descriptor": "heterogeneous meter and device interfaces with sufficiently reliable data or control"
+  },
+  "structure": {
+    "commercial_archetype": "Direct-to-site optimization software subscription",
+    "control_point": "The recurring household workflow that converts tariff and device data into a dispatch schedule",
+    "critical_dependency": "Reliable access to meter, tariff, inverter, battery, charger, and heat-pump data or control interfaces"
+  },
+  "thesis": "Observed transaction change: large Polish electricity retailers must offer dynamic-price contracts, exposing eligible households and micro-enterprises with remotely read meters to short-interval prices, while reported uptake began at only 135 customers. Sell an independent, cross-brand scheduler that turns tomorrow's prices, household constraints, PV, batteries, heat pumps, and EV charging into an auditable dispatch plan rather than asking users to watch prices manually.",
+  "title": "Household Flex Dispatcher for Polish Dynamic Tariffs",
+  "uncertainties": [
+    "Share of Polish sites with both remote meters and controllable flexible loads",
+    "Actual API access, latency, warranty impact, and safe-control constraints by device brand",
+    "Savings after taxes, distribution charges, comfort constraints, battery degradation, and retailer-specific formulas",
+    "Household willingness to pay before dynamic tariffs become mainstream"
+  ],
+  "version": 1
+}

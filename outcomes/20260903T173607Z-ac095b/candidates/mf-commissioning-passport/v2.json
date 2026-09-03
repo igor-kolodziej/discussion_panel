@@ -1,0 +1,182 @@
+{
+  "candidate_id": "mf-commissioning-passport",
+  "claims": [
+    {
+      "claim_id": "mf-commissioning-passport-c1",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://mojprad.gov.pl/zloz-wniosek/",
+        "https://www.gov.pl/web/nfosigw/moj-prad-60-jak-zlozyc-wniosek-i-uniknac-bledow"
+      ],
+      "statement": "The Mój Prąd application workflow called for multiple electronic documents, and official instructions stated that lack of the OSD connection certificate caused rejection; documentation completeness is tied to a concrete rework or rejection event."
+    },
+    {
+      "claim_id": "mf-commissioning-passport-c2",
+      "claim_type": "payer_and_budget",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://alians-shop.pl/pl/p/Zgloszenie-Mikroinstalacji-do-OSD/608"
+      ],
+      "statement": "The proposed payer is a wholesaler under a white-label agreement or an installer under a direct fallback agreement because the service performs filing work; actual willingness, repeat use, and budget ownership remain unproved."
+    },
+    {
+      "claim_id": "mf-commissioning-passport-c3",
+      "claim_type": "founder_control_point_path",
+      "confidence": "high",
+      "evidence_refs": [],
+      "statement": "The founder can request, but cannot presume, a written installer service and data-processing pilot agreement; refusal can be addressed by recruiting an unrelated installer under the same bounded terms."
+    },
+    {
+      "claim_id": "mf-commissioning-passport-c4",
+      "claim_type": "other",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.ure.gov.pl/pl/urzad/informacje-ogolne/aktualnosci/13173%2CRaport-URE-w-Polsce-mamy-juz-ponad-16-mln-mikroinstalacji-OZE.html"
+      ],
+      "statement": "URE reported more than 1.6 million prosumer microinstallations in Poland at the end of 2025, indicating a large installed base but not proving annual filing volume or demand for this service."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "The wholesaler services lead or installer owner responsible for administrative throughput and returned filings",
+    "bundling_resistance": "Win on cross-brand and multi-DSO coverage, rapid current-form updates, documented submission receipts, exception handling, and service-level performance rather than a standalone checklist or PDF",
+    "customer_relationship_owner": "The wholesaler or installer retains the installer and homeowner relationship; the founder company is a contracted processor and filing provider only.",
+    "distribution_origin": "A separately consented family-installer pilot, followed by a nonexclusive white-label wholesaler agreement; direct unrelated-installer sales remain the fallback",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Founder-led pilot and one channel-development motion; target payback below three months, with direct sales retained as a measurable fallback",
+      "cash_conversion": "Prepaid filing blocks or monthly invoicing under the framework agreement, with cash due at transmission rather than external approval",
+      "contribution_margin": "Target 35-55% after trained administrative delivery and exception automation; unvalidated until labor minutes, returns, channel share, and support load are measured",
+      "delivery_and_support_costs": "Human-in-the-loop packet assembly and transmission, customer authorization checks, returned-filing resolution, scheduled onboarding, and installer support",
+      "overhead_and_compliance": "Polish legal review, controller-processor agreements, secure handling, insurance, audit logs, form and rule monitoring, and operator quality assurance",
+      "revenue_basis": "Test 149 PLN net for a standard OSD submission, close to the observed 145.53 PLN net adjacent offer, and separately validate higher prices for broader multi-institution packets; optional monitoring fees are secondary",
+      "variable_costs": "Secure storage, document parsing, messaging, submission labor, exception handling, and any channel revenue share"
+    },
+    "likely_incumbent_response": "Wholesalers may internalize the desk, filing services may match the workflow, installer platforms may add managed administration, and OEMs may continue bundling their device-specific steps",
+    "paid_event_or_measurable_loss": "Payment is earned when an authorized current-form packet is prepared, transmitted, and documented with a receipt; returned or incomplete filings create measurable rework and delay, but external acceptance is not promised",
+    "payer": "A renewable-equipment wholesaler under a white-label master agreement, or the installer under a direct service agreement",
+    "purchase_trigger": "A returned filing, an administrative backlog, a new program or DSO form change, or a channel decision to offer installers a white-label paperwork service",
+    "renewal_event": "The next paid filing under the framework agreement and annual renewal of the channel or installer account"
+  },
+  "contrary_evidence": [
+    "The Mój Prąd 6.0 intake closed and successor programs changed forms and eligibility, so maintaining current rules is an ongoing operating burden rather than a static software feature.",
+    "Reonic already bundles mobile checklists, photos, signatures, documentation, and PDF handover reports, which undercuts the original standalone passport artifact.",
+    "OEMs control device-specific commissioning and warranty requirements, and DSOs and program administrators retain every acceptance decision.",
+    "A wholesaler already advertises completed OSD filing at 145.53 PLN net, constraining price while its unavailable page and zero displayed reviews do not prove transaction volume.",
+    "No executed pilot, channel agreement, data-processing agreement, job authorization, or willingness-to-pay evidence exists."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Nonexclusive 12-month white-label distribution and workflow agreement with a wholesaler, paired with installer service and data-processing terms and job-specific customer authorization where required",
+    "acquisition_instrument_type": "distribution_agreement",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "If a wholesaler refuses, contract directly with an unrelated installer; if the family installer refuses, recruit an unrelated installer using the same standard agreement and secure upload flow.",
+    "current_owner": "Installers and end customers control job records and submission authority, while each DSO, program administrator, or OEM controls its own acceptance decision",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "The wholesaler or installer retains the installer and homeowner relationship; the founder company is a contracted processor and filing provider only.",
+    "duration": "12 months",
+    "exclusivity": "nonexclusive",
+    "founder_access_basis": "operating_relationship",
+    "founder_access_description": "The parents' independently controlled installer can be asked to execute a limited pilot service and data-processing agreement; no authority, customer rights, or data access is assumed before signature and job-level authorization.",
+    "launch_controller": "The founder company and one willing installer jointly control launch only after signing the framework service and data-processing terms and obtaining any required job-specific customer authorization; the wholesaler is optional for scale, not required for the first pilot.",
+    "mechanism_control": "dependent",
+    "renewal": "Mutual annual renewal after the initial term",
+    "replaceability": "replaceable",
+    "revocability": "for_cause",
+    "status": "unknown",
+    "subject": "Authorized preparation and transmission of current OSD, subsidy, and warranty packets for participating installer jobs",
+    "subject_type": "workflow_position",
+    "transferability": "nontransferable"
+  },
+  "discovery_lane": "mechanism-first",
+  "economics": {
+    "acquisition_route": "One separately contracted operating-relationship pilot, then a nonexclusive wholesaler white-label agreement, with direct unrelated-installer contracting as fallback",
+    "capital_required_pln": 60000,
+    "founder_net_worth_path": "Illustrative, not forecast: 300 active installer accounts averaging eight paid filings monthly at 149 PLN net implies about 4.29m PLN annual revenue. A 35-55% contribution range, controlled overhead, durable contracts, and reinvestment could support retained cash plus service-software equity toward 5m PLN, but account volume, labor economics, retention, and valuation are wholly unvalidated.",
+    "founder_time": "Keep the first pilot within five founder hours per day; the founder owns workflow design, measurement, and exception analysis while routine filing work must move to trained operators before volume scales",
+    "gross_margin_basis": "Human-in-the-loop filing fulfillment with standardized checklists, document parsing, and exception routing; target 35-55% contribution rather than assuming software-like margins",
+    "payback": "Target under three months through prepaid blocks or channel-distributed volume; unvalidated",
+    "pricing": "Initial hypothesis: 149 PLN net for a standard OSD filing, 249 PLN net for a broader eligible multi-document packet, and an optional 399 PLN monthly account fee only if ongoing rule monitoring proves valuable",
+    "retention_or_repeat": "Revenue repeats per authorized installation and the framework renews only if transmission receipts, turnaround time, and returned-filing reduction remain useful"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Maintained multi-DSO and multi-brand operating playbooks, contracted workflow integrations, and measured exception-resolution performance compound; no proprietary data moat is assumed",
+    "customer": "Polish renewable-equipment wholesalers and small renewable installers that outsource recurring grid, subsidy, and warranty filing work",
+    "distribution_mechanism": "Begin with a separately consented family-installer filing pilot, seek a nonexclusive white-label wholesaler distribution agreement, and use direct unrelated-installer agreements if the channel refuses",
+    "offer_and_business_model": "White-label managed filing and exception desk that assembles, checks, and transmits authorized current-form packets, sold per completed submission with optional account-level rule monitoring",
+    "payer_and_paid_event": "A wholesaler under a master service agreement or an installer under a direct fallback agreement pays when an authorized packet is prepared, transmitted, and accompanied by a submission receipt",
+    "problem_trigger": "A completed residential installation needs a current official filing, but missing fields, certificates, protocols, or photos can return or delay the packet"
+  },
+  "founder_fit": [
+    "Rules, document extraction, exception classification, and operating measurement match the founder's data-science and automation strengths",
+    "A separately consented family-installer pilot can test the workflow without assuming control of the family company or its customer data",
+    "Founder work can remain under five hours per day only if routine packet handling is standardized and delegated after the pilot",
+    "The model avoids camera-led distribution and turns each pilot into measurable processing-time, return-rate, and contribution data"
+  ],
+  "parent": {
+    "candidate_id": "mf-commissioning-passport",
+    "version": 1
+  },
+  "redesign": {
+    "changed_fingerprint_fields": [
+      "customer",
+      "problem_trigger",
+      "offer_and_business_model",
+      "payer_and_paid_event",
+      "distribution_mechanism",
+      "compounding_advantage"
+    ],
+    "changed_structural_fields": [
+      "critical_control_point",
+      "commercial_mechanics",
+      "structural_signature"
+    ],
+    "economic_effect": "The venture stops charging for a validation-only passport and instead charges for completed authorized preparation and transmission. Pricing is anchored near a 145.53 PLN net adjacent OSD-filing offer, while the launch margin target falls to 35-55% to include human delivery and exceptions; viability now depends on measured, delegable labor and channel acquisition rather than an assumed 65-80% software margin."
+  },
+  "risks": [
+    "Rule and form changes can create filing errors and liability",
+    "Personal-data, authorization, or cybersecurity failures could create disproportionate harm",
+    "The adjacent price anchor may be too low to cover human review and channel economics",
+    "Wholesalers, incumbent platforms, OEMs, or local filing services can internalize or bundle the workflow",
+    "External institutions can return or reject a correctly transmitted packet for reasons the venture does not control",
+    "A family-installer pilot may not generalize to unrelated installers or a wholesale channel"
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://www.gov.pl/web/nfosigw/moj-prad-60-jak-zlozyc-wniosek-i-uniknac-bledow",
+    "https://mojprad.gov.pl/zloz-wniosek/",
+    "https://przydomowemagazyny.gov.pl/o-programie/",
+    "https://www.tauron-dystrybucja.pl/przylaczenie-do-sieci/przylaczenie/mikroinstalacja",
+    "https://reonic.com/en-gb/product/360h/installation/",
+    "https://www.sma.de/en/products/apps-software/360-app",
+    "https://www.fronius.com/~/downloads/Solar%20Energy/Terms%20of%20Warranties/SE_ToW_EN.pdf",
+    "https://commission.europa.eu/law/law-topic/data-protection/information-business-and-organisations/application-gdpr_en",
+    "https://alians-shop.pl/pl/p/Zgloszenie-Mikroinstalacji-do-OSD/608",
+    "https://www.ure.gov.pl/pl/urzad/informacje-ogolne/aktualnosci/13173%2CRaport-URE-w-Polsce-mamy-juz-ponad-16-mln-mikroinstalacji-OZE.html"
+  ],
+  "stage": "development",
+  "structural_signature": {
+    "commercial_model_category": "productized_service",
+    "commercial_model_descriptor": "per_submission_renewable_filing_desk",
+    "control_point_category": "workflow_integration",
+    "control_point_descriptor": "contracted_packet_preparation_and_transmission_step",
+    "critical_dependency_category": "customer_adoption",
+    "critical_dependency_descriptor": "signed_authority_and_complete_job_inputs"
+  },
+  "structure": {
+    "commercial_archetype": "White-label productized filing service charged per authorized submission with optional recurring rule-monitoring access",
+    "control_point": "The contractually assigned packet-preparation and transmission step between installer job completion and filing through the required official channel",
+    "critical_dependency": "Executed installer or wholesaler agreements, valid job-level authority, current official forms, and delegable processing economics"
+  },
+  "thesis": "Contract with installers or a renewable-equipment wholesaler to prepare and transmit current official OSD, subsidy, and warranty packets for authorized installation jobs, returning a submission receipt and exception record while leaving every approval decision with the relevant institution.",
+  "title": "Wholesaler-Embedded Renewable Filing Desk",
+  "uncertainties": [
+    "Whether any installer will execute the pilot service and data-processing agreement and provide valid job-level authority",
+    "Whether a wholesaler will sign a nonexclusive white-label distribution agreement on economics better than direct installer acquisition",
+    "Who bears the cost of returned filings and whether that party repeatedly pays the proposed price",
+    "Submission labor minutes, document exception frequency, return rate, operator training time, support load, and secure-storage cost",
+    "Fully loaded acquisition cost, channel revenue share, contribution margin, cash collection, account retention, and payback",
+    "Whether broader subsidy or warranty packets can command higher prices without promising approval",
+    "Whether volume can be delegated to operators while the founder remains within five hours per day",
+    "Whether reusable exception playbooks and integrations produce switching costs that incumbents cannot quickly match"
+  ],
+  "version": 2
+}

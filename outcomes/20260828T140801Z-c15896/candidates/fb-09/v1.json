@@ -1,0 +1,86 @@
+{
+  "candidate_id": "fb-09",
+  "claims": [
+    {
+      "claim_id": "fb-09-control",
+      "claim_type": "founder_control_point_path",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://www.ema.europa.eu/en/human-regulatory-overview/post-authorisation/medicine-shortages-availability-issues/european-shortages-monitoring-platform-esmp"
+      ],
+      "statement": "EMA is building interoperable, machine-to-machine shortage reporting for authorities and marketing-authorisation holders, showing that structured supply, demand, and availability feeds are feasible. A founder's narrower route is an internal inventory feed plus pre-authorised branch-transfer rules inside one pharmacy or hospital group; ESMP does not itself grant pharmacy data access."
+    },
+    {
+      "claim_id": "fb-09-loss",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://www.ema.europa.eu/assets/en/annual-report/2025/medicine-shortages/index.html"
+      ],
+      "statement": "The measurable loss is a critical SKU unavailable at one location while substitutable or soon-to-expire stock sits elsewhere, producing missed dispensing, staff search time, and possible expiry. EMA reports 70 critical-shortage notifications discussed in 2025 and six solidarity procedures, but local branch-level mismatch value is not quantified."
+    },
+    {
+      "claim_id": "fb-09-payer",
+      "claim_type": "payer_and_budget",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://health.ec.europa.eu/medicinal-products/critical-medicines-act_en"
+      ],
+      "statement": "The payer hypothesis is a pharmacy group or hospital procurement director using inventory, procurement, and shortage-mitigation budget for internal rebalancing and forecasting. The proposed Critical Medicines Act makes resilient procurement a policy direction, but no Polish buyer has confirmed a software or success-fee budget."
+    }
+  ],
+  "contrary_evidence": [
+    "National shortage systems, wholesalers, and ESMP may absorb much of the forecasting and coordination function.",
+    "Cross-company transfers or brokering of medicines can require wholesale authorisation and may be impermissible, so the initial wedge must stay inside an authorised group and its approved procedures."
+  ],
+  "discovery_lane": "future-backcast",
+  "economics": {
+    "acquisition_route": "Pilot read-only forecasting in a single multi-branch pharmacy or private hospital group, then enable only its compliance-approved internal transfers for a small critical-SKU list; do not intermediate title to medicines.",
+    "capital_required_pln": 35000,
+    "founder_net_worth_path": "A trusted local availability graph could expand from internal rebalancing to supplier risk analytics and authorised procurement coordination across Central Europe; material equity requires integrations that survive public-platform improvements.",
+    "founder_time": "About 12-18 hours per week for data engineering, forecasts, and workflow design; pharmacists and authorised procurement staff approve substitutions and movements.",
+    "gross_margin_basis": "Subscription software margin after integration and support; medicine inventory, credit, and regulated transport remain with customers or wholesalers.",
+    "payback": "Require a 90-day retrospective analysis to identify avoidable stockout or expiry value exceeding annual subscription before building live integrations.",
+    "pricing": "Per-location monthly fee plus an optional capped success fee on documented expiry avoidance or recovered dispensing inside the group.",
+    "retention_or_repeat": "Forecasting and rebalancing run daily; integration into replenishment and approved transfer rules creates renewal value."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Branch-level demand, stock, expiry, transfer, and shortage-response outcomes for critical SKUs",
+    "customer": "Multi-branch pharmacy groups and private hospital procurement networks in Poland",
+    "distribution_mechanism": "Pharmacy-software integrators, procurement advisors, and direct group-level pilots",
+    "offer_and_business_model": "Internal shortage forecasting and compliance-approved stock rebalancing sold per location with optional savings share",
+    "payer_and_paid_event": "Procurement leader pays during recurring shortage and inventory cycles; value is realized on avoided stockout or expiry",
+    "problem_trigger": "A critical medicine becomes unavailable at one branch while the group lacks a reliable view of movable stock elsewhere"
+  },
+  "founder_fit": [
+    "Time-series forecasting and constrained allocation are strong matches for the founder's data-science background.",
+    "The product can be built without public-facing influence or holding regulated inventory.",
+    "A retrospective data pilot can test economic value before material spend."
+  ],
+  "parent": null,
+  "risks": [
+    "Pharmacy inventory data is highly sensitive and legacy systems may not expose usable feeds.",
+    "Optimization recommendations could conflict with patient need, substitution law, or wholesaler allocations.",
+    "The addressable gap may disappear as official systems become more granular and interoperable."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://www.ema.europa.eu/en/human-regulatory-overview/post-authorisation/medicine-shortages-availability-issues/european-shortages-monitoring-platform-esmp",
+    "https://www.ema.europa.eu/assets/en/annual-report/2025/medicine-shortages/index.html",
+    "https://health.ec.europa.eu/medicinal-products/critical-medicines-act_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Federated inventory intelligence and constrained internal exchange network",
+    "control_point": "The live branch inventory feed plus the group's pre-approved transfer and allocation rules",
+    "critical_dependency": "Legal, timely access to inventory and demand data inside an entity allowed to move the medicines"
+  },
+  "thesis": "Backcast from a federated European critical-medicine supply network: start below public reporting with the branch-level allocation decision, proving that one authorised group can rescue stock before a stockout or expiry and letting its response graph compound.",
+  "title": "Shortage Transfer Network",
+  "uncertainties": [
+    "The share of stockouts caused by within-group allocation rather than upstream shortage is unknown.",
+    "A buyer has not confirmed that recovered dispensing or expiry avoidance can be measured credibly.",
+    "Polish rules and wholesaler contracts governing internal transfers need specialist review."
+  ],
+  "version": 1
+}

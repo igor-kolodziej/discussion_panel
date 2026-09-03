@@ -1,0 +1,91 @@
+{
+  "candidate_id": "mf-12",
+  "claims": [
+    {
+      "claim_id": "mf-12-control",
+      "claim_type": "founder_control_point_path",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://www.chubb.com/us-en/agents-brokers/resources/water-coverage.html",
+        "https://www.chubb.com/us-en/business-insurance/iot-solutions-to-prevent-losses-to-your-home-or-business.html"
+      ],
+      "statement": "Chubb describes manager-approved condo sensor installation, automatic shutoff options and third-party alerts for commercial and residential property; the founder can acquire a building-wide monitoring and repair-dispatch agreement from a Polish property manager, using certified white-label devices rather than developing hardware."
+    },
+    {
+      "claim_id": "mf-12-loss",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://www.aviva.com/newsroom/news-and-research-overview/news-releases/2016/10/uk-homeserve-partners-with-aviva-to-offer-smart-water-leak-detector-leakbot-to-customers-17683/",
+        "https://leakbot.io/us/for-insurers/success-stories/"
+      ],
+      "statement": "Aviva said leak damage represented more than one in five of its home claims, and current vendor case studies report reductions in claim frequency and severity from integrated detection and repair; the measurable event is a water-damage claim or emergency repair avoided after a verified leak alert, though the cited savings need independent Polish replication."
+    },
+    {
+      "claim_id": "mf-12-payer",
+      "claim_type": "payer_and_budget",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://leakbot.io/us/",
+        "https://www.aviva.com/newsroom/news-and-research-overview/news-releases/2016/10/uk-homeserve-partners-with-aviva-to-offer-smart-water-leak-detector-leakbot-to-customers-17683/"
+      ],
+      "statement": "The primary payer is a property insurer's loss-prevention or claims budget at policy renewal or after an escape-of-water loss; existing insurer partnerships fund devices and expert repair for policyholders, validating a per-protected-property budget, with a condo association as fallback payer for common-property protection."
+    }
+  ],
+  "contrary_evidence": [
+    "LeakBot, Chubb subsidiaries and other incumbents already provide insurer-funded detection and repair, so the base model is proven but crowded.",
+    "Vendor-reported claim reductions may not transfer to Polish multifamily plumbing, coverage terms or repair behavior."
+  ],
+  "discovery_lane": "mechanism-first",
+  "economics": {
+    "acquisition_route": "Use installer and property-manager relationships to win one building-wide telemetry and plumber-dispatch agreement, run a controlled loss pilot with an insurance broker, then seek a carrier contract only after comparing alerts, repairs and claims with matched buildings.",
+    "capital_required_pln": 100000,
+    "founder_net_worth_path": "Validate 1,000 apartments, then distribute through two insurers and 20 property managers to 50,000 protected units at PLN 10 net monthly revenue per unit for PLN 6m recurring revenue; at 20-30% operating margin after repair-network costs, founder equity and reinvested cash could exceed PLN 5m in 5-7 years.",
+    "founder_time": "Founder spends 2-3 hours daily on anomaly models, experiment design and insurer reporting; device installation, 24-hour triage and plumbing are contracted to regional operators.",
+    "gross_margin_basis": "Telemetry software is high margin, but devices, field repair and call handling dominate; preliminary blended gross margin target is 30-45% if the insurer prepays hardware or amortizes it over contract life.",
+    "payback": "Run a 12-month matched-building pilot and require modeled insurer savings at least twice the annual service fee; avoid founder-funded fleet rollout by using carrier or association hardware prepayment.",
+    "pricing": "PLN 8-20 per protected apartment per month from insurer or association, plus fixed emergency-dispatch fees; optional performance bonus tied to independently agreed claim-frequency or severity reduction.",
+    "retention_or_repeat": "Monitoring renews with the property policy and building contract; installed sensors, repair history and baseline water signatures raise switching cost and improve anomaly detection."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Building-specific baseline flow and repair-to-claim outcomes improve detection, while a dense local plumber network shortens mitigation time and becomes more economical with each protected building.",
+    "customer": "Polish property insurers and multifamily property managers with concentrated escape-of-water exposure in apartment blocks.",
+    "distribution_mechanism": "Insurance brokers and property-manager portfolios roll out a building-wide service rather than selling devices one household at a time.",
+    "offer_and_business_model": "Insurer-funded sensing, alert verification and guaranteed plumber dispatch sold per protected apartment with an optional measured-loss bonus.",
+    "payer_and_paid_event": "The insurer or building association pays at policy or service renewal to prevent claim spend; dispatch fees arise when a verified leak receives a repair visit.",
+    "problem_trigger": "A prior water claim, renewal loss review, building plumbing incident or insurer request to reduce a high-loss property portfolio."
+  },
+  "founder_fit": [
+    "Anomaly detection and matched-cohort claims analysis fit the founder's data-science background.",
+    "The parents' field-service network offers a credible route into property managers and contractor operations.",
+    "Bulk insurer distribution and outsourced plumbing avoid personal-brand dependence and household-by-household selling."
+  ],
+  "parent": null,
+  "risks": [
+    "False negatives can create severe loss and liability; false positives create costly callouts and resident distrust.",
+    "Insurers require long pilots, procurement controls and credible actuarial evidence before a bulk contract.",
+    "Hardware connectivity, battery replacement, tenant consent and access to private units can break building-wide coverage."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://www.chubb.com/us-en/agents-brokers/resources/water-coverage.html",
+    "https://www.chubb.com/us-en/business-insurance/iot-solutions-to-prevent-losses-to-your-home-or-business.html",
+    "https://www.aviva.com/newsroom/news-and-research-overview/news-releases/2016/10/uk-homeserve-partners-with-aviva-to-offer-smart-water-leak-detector-leakbot-to-customers-17683/",
+    "https://leakbot.io/us/for-insurers/success-stories/",
+    "https://leakbot.io/us/"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Insurer-funded managed loss prevention",
+    "control_point": "Building-wide sensor telemetry and exclusive verified-leak repair dispatch under a property-manager agreement",
+    "critical_dependency": "A carrier willing to fund rollout from demonstrable Polish claim reduction"
+  },
+  "thesis": "Acquire building-wide telemetry and repair-dispatch rights through property managers, prove claim reduction in matched Polish apartment cohorts, and sell insurers a per-unit prevention service whose moat is the combined leak-signature, repair and claims outcome loop.",
+  "title": "Apartment Water-Loss Prevention Rail",
+  "uncertainties": [
+    "Polish insurer escape-of-water frequency, severity and budget per policy are not yet sourced.",
+    "It is unknown whether property managers can secure sufficient unit access and resident consent for representative coverage.",
+    "White-label device cost, Polish plumber response economics and attainable carrier contract terms are unvalidated."
+  ],
+  "version": 1
+}

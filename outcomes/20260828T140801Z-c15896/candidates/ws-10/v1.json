@@ -1,0 +1,87 @@
+{
+  "candidate_id": "ws-10",
+  "claims": [
+    {
+      "claim_id": "ws-10-control",
+      "claim_type": "founder_control_point_path",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/dir/2023/970/oj?eliuri=eli%3Adir%3A2023%3A970%3Aoj&locale=en"
+      ],
+      "statement": "The Pay Transparency Directive requires objective gender-neutral job evaluation, worker information, and management-confirmed reporting, while allowing recognition of voluntary transparency; the founder can acquire a defensible control point through reciprocal contributor contracts under which employers supply pseudonymized job and pay records in exchange for a regional benchmark and an independent job-value map."
+    },
+    {
+      "claim_id": "ws-10-loss",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://commission.europa.eu/news-and-media/news/new-eu-rules-pay-transparency-explained-2026-06-05_en",
+        "https://eur-lex.europa.eu/eli/dir/2023/970/oj?eliuri=eli%3Adir%3A2023%3A970%3Aoj&locale=en"
+      ],
+      "statement": "EU pay-transparency rules are taking effect in 2026 and require salary ranges, worker access to comparable pay information, and employer reporting; for reporting employers, an unexplained average gender difference of at least 5% in a worker category that is not corrected within six months triggers a joint pay assessment, making remediation payroll, legal process, and delayed hiring measurable losses."
+    },
+    {
+      "claim_id": "ws-10-payer",
+      "claim_type": "payer_and_budget",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://commission.europa.eu/news-and-media/news/new-eu-rules-pay-transparency-explained-2026-06-05_en",
+        "https://eur-lex.europa.eu/eli/dir/2023/970/oj?eliuri=eli%3Adir%3A2023%3A970%3Aoj&locale=en"
+      ],
+      "statement": "Employers with 250 or more workers must begin annual reporting by 7 June 2027, those with 150-249 workers report every three years from that date, and all employers face applicant and worker information duties; the payer is a mid-market employer's HR, compensation, legal, internal-audit, or payroll function when designing pay ranges, answering a worker request, or preparing reporting."
+    }
+  ],
+  "contrary_evidence": [
+    "Employers with 100-149 workers do not face directive-level reporting until 2031 unless national law accelerates it, and smaller employers may buy only minimal legal templates.",
+    "Established compensation consultancies, payroll processors, and HR platforms can add pay-gap analysis, while employers may refuse to contribute data to a shared benchmark even under strong privacy controls."
+  ],
+  "discovery_lane": "weak-signal",
+  "economics": {
+    "acquisition_route": "Recruit a cohort of ten Polish employers in one data-rich sector through a payroll bureau or employer association; execute a narrow data-contribution agreement, produce a blind task-and-pay benchmark, and run a paid pre-reporting assessment before building software.",
+    "capital_required_pln": 25000,
+    "founder_net_worth_path": "A cooperative serving 1000 Central European employers at an assumed 20000-60000 PLN annual membership could become a profitable regional compensation-data asset; expansion depends on repeatable job normalization and trusted governance rather than bespoke consulting hours.",
+    "founder_time": "Approximately 12-18 founder hours per week for data modeling, governance, and channel partnerships; employment counsel and worker-representation facilitation are contracted.",
+    "gross_margin_basis": "Preliminary 80-90% gross margin for recurring benchmark access after secure ingestion and taxonomy are built, with legal review and bespoke joint assessments priced separately.",
+    "payback": "An employer pays if the membership and assessment cost less than external consulting, reactive legal work, mispriced remediation, or repeated recruiter benchmarking; avoided liabilities are uncertain and should not be promised.",
+    "pricing": "Assumed 20000-60000 PLN annual membership by headcount, 5000-20000 PLN for secure onboarding, and 15000-75000 PLN for a joint-assessment evidence pack with employment counsel excluded or passed through.",
+    "retention_or_repeat": "Pay, headcount, roles, variable compensation, and national rules change each year; worker requests, hiring ranges, and scheduled reporting create ongoing use."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A privacy-governed regional graph linking actual tasks, skills, responsibility, working conditions, pay components, remediation choices, and later outcomes across employers.",
+    "customer": "EU employers with 150-2000 workers, especially Central European firms lacking mature compensation analytics, plus payroll and employment-law partners.",
+    "distribution_mechanism": "Payroll bureaus, employer associations, employment-law firms, auditors, and workers' representative advisers recruit closed cohorts that contribute data under reciprocal rules.",
+    "offer_and_business_model": "A reciprocal benchmark cooperative that normalizes work value, identifies unsupported pay differences, and produces worker-request and reporting evidence; sold as membership plus scoped assessment.",
+    "payer_and_paid_event": "An employer pays from HR, compensation, legal, audit, or payroll budget when setting salary ranges, receiving an information request, finding a 5% category gap, or approaching a reporting date.",
+    "problem_trigger": "An employer must justify pay for work of equal value but lacks a defensible regional task benchmark and cannot rely on job titles alone."
+  },
+  "founder_fit": [
+    "Statistical matching, privacy-preserving aggregation, and bias diagnostics align with the founder's data-science background.",
+    "Channel sales through payroll bureaus and associations reduce repeated cold networking and personal-brand demands.",
+    "A ten-employer cohort can be validated part-time with limited capital and external legal review."
+  ],
+  "parent": null,
+  "risks": [
+    "A re-identification or payroll-data breach would be highly damaging and could trigger GDPR liability.",
+    "A benchmark can document market practice without proving legal equality of work, so overclaiming could harm clients.",
+    "National transposition may diverge enough that one regional methodology is not portable."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://commission.europa.eu/news-and-media/news/new-eu-rules-pay-transparency-explained-2026-06-05_en",
+    "https://eur-lex.europa.eu/eli/dir/2023/970/oj?eliuri=eli%3Adir%3A2023%3A970%3Aoj&locale=en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Reciprocal benchmark data cooperative",
+    "control_point": "Employer contribution agreements and a governed cross-company job-value and pay-component taxonomy.",
+    "critical_dependency": "Enough employers must contribute comparable granular data without creating unacceptable privacy, labor-relations, or antitrust risk."
+  },
+  "thesis": "Pay transparency shifts the hard problem from calculating a gap to defending why different roles are or are not equal in value. A closed employer cooperative can control the scarce regional task and compensation benchmark, giving members auditable comparisons while compounding remediation outcomes that a one-company HR tool or generic salary survey cannot see.",
+  "title": "Pay-Equity Benchmark Cooperative",
+  "uncertainties": [
+    "Will Polish and neighboring employers contribute task-level pay data before their first mandatory reports?",
+    "What minimum cohort size produces a useful benchmark without exposing individuals or employers?",
+    "Can worker representatives and employment counsel accept a shared job-value taxonomy as evidence rather than advocacy?"
+  ],
+  "version": 1
+}

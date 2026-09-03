@@ -1,0 +1,117 @@
+{
+  "assumptions": [
+    "Dynamic-tariff adoption among Polish prosumers and micro-enterprises grows materially from the initial reported base.",
+    "Target households have enough controllable load and price spread to produce savings above the subscription price.",
+    "Necessary tariff, meter, and device data can be accessed reliably and lawfully across a useful set of brands.",
+    "Installer-originated pilots can convert without support costs overwhelming subscription margin."
+  ],
+  "base_score": 4.95,
+  "candidate_id": "ws-hourly-home-energy-dispatch",
+  "candidate_sha256": "d7fe47d77e3be8f0eee841514053e7d7db7b08621446efcfc2b58d8df2b07ffd",
+  "candidate_version": 1,
+  "constrained_score": 4.95,
+  "evaluation_type": "working_screening",
+  "evidence_needed_for_higher_score": "A cohort of authorized pilot homes with interval bills and device telemetry, verified counterfactual net savings after taxes and degradation, paid renewals, support time per site, integration reliability, and installer acquisition economics.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "A constraint-aware, cross-brand layer that converts volatile tariffs and household assets into an auditable schedule addresses fragmentation that single-vendor apps and manual price watching do not fully solve.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Dynamic pricing creates a measurable bill exposure, but only 135 customers in the initial reported period signals an extremely small current pool and no household has demonstrated willingness to buy independent optimization.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Recurring prepaid software can scale with low marginal data cost, yet a 29-59 PLN monthly price may not cover installer commissions, compatibility onboarding, fragmented-device support, security, and ongoing integration maintenance at early volume.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Polish prosumers with remote meters and flexible loads are clearly defined, but the overlap with active dynamic-tariff users is presently tiny and the packet does not quantify near-term eligible adoption.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "Vendor-neutral optimization is differentiated, but utilities and device makers can bundle scheduling for free, interfaces are controlled by third parties, and the venture has no exclusive integration or customer position.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "The same dispatch layer can cover batteries, EV chargers, heat pumps, PV export, micro-enterprises, installer fleets, and additional tariff markets if reliable cross-brand integrations are established.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Realized-savings and device-response data can improve schedules, but vendor APIs can close, integrations are replicable, customer authorization is revocable, and incumbents can access richer native telemetry.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "Time-series and optimization skills match the product, and the family installer relationship offers a credible opt-in pilot route, though no device access, customer authorization, or proven algorithmic edge is held.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "Regulated availability of dynamic contracts and growth in flexible household assets create a favorable direction, but exceptionally low initial tariff uptake may mean the business is early by several adoption cycles.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "Independent installers can reach customers precisely when PV, batteries, heat pumps, or chargers are commissioned, and a family installer can seed tests; channel economics and wider installer adoption remain unknown.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "A read-only planner is feasible part-time and limits safety exposure, while reliable automated dispatch later requires many brittle integrations, counterfactual savings measurement, cybersecurity, device constraints, and substantial support.",
+      "score": 5,
+      "status": "scored"
+    }
+  ],
+  "final_score": 5,
+  "highest_value_structural_change": "Start with one high-value asset combination and a read-only, installer-sold annual plan whose fee is contingent on independently verified net savings, adding device control only after stable local integrations are proven.",
+  "interaction_adjustment": 0,
+  "judge_id": "screen-b04-j01",
+  "main_structural_strength": "The cross-brand layer can own a recurring, measurable decision workflow and demonstrate value through realized savings rather than relying on an opaque energy-management promise.",
+  "primary_score_limiter": "The current addressable user base is extremely small, and neither net savings after all charges nor willingness to pay for an independent scheduler has been validated.",
+  "qualified": false,
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 3,
+  "strongest_disconfirming_evidence": "The regulator reported only 135 dynamic-price customers in the initial measured period, while utilities and equipment vendors can bundle basic scheduling into existing relationships at no separate fee.",
+  "unrounded_score": 4.95
+}

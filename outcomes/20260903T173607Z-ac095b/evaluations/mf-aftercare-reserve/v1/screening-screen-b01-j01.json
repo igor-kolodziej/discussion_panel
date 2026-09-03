@@ -1,0 +1,117 @@
+{
+  "assumptions": [
+    "A narrow service zone produces enough independent overflow incidents to use reserved hours efficiently.",
+    "Qualified technicians will sign enforceable capacity reservations at rates compatible with installer pricing.",
+    "Installers will permit a neutral subcontractor to work without jeopardizing warranties or customer trust.",
+    "Triage and dispatch coverage can be delegated while preserving first-visit quality."
+  ],
+  "base_score": 5.49,
+  "candidate_id": "mf-aftercare-reserve",
+  "candidate_sha256": "cbfbf0be54799a9ed43ba8fbdb65197d4579746697307a1b9e03237d63d74622",
+  "candidate_version": 1,
+  "constrained_score": 5.59,
+  "evaluation_type": "working_screening",
+  "evidence_needed_for_higher_score": "Several paid independent installer pilots with historical incident logs, reservation utilization, travel time, first-visit resolution, warranty acceptance, response-time improvement, churn, and fully loaded contribution margin.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "Pre-reserving replaceable technician capacity before promising an overflow SLA is a concrete control mechanism for a lumpy service problem, not merely a lead marketplace.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Backlogs, absences, callbacks, and resolution delays are measurable installer problems, but neither incident density nor willingness to pay a fixed reservation fee has been demonstrated.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Advance reservation revenue and dispatch spread are understandable, yet utilization, travel, failed visits, correlated peaks, quality credits, and dispatcher cost can quickly erase the proposed margin.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "A large Polish installed base and a defined regional installer segment provide a plausible beachhead, although the relevant overflow incidence and serviceable radius remain unmeasured.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "Local response density and neutral multi-brand service may differentiate the offer, but manufacturers, wholesalers, large installers, and informal subcontractor networks can compete or bundle coverage.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "The model can extend by postcode and from PV into batteries and heat pumps, but each expansion requires local labor, qualification, routing density, and operational supervision.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Dispatch density, failure codes, and first-visit outcomes can improve capacity placement, but technician reservations are short, nonexclusive, and replaceable.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "The founder has relevant analytical skills and a lawful discovery relationship, but no technician capacity, external installer contracts, or demonstrated field-service operating advantage exists yet.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "Poland's very large, aging prosumer installation base should increase aftercare surface area, even though the packet does not establish current overflow growth or fault frequency.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "Public installer registers, wholesalers, technician referrals, and a separately contracted discovery pilot offer concrete low-cost routes, though none has yet produced paid independent demand.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "Safety, warranty authorization, travel, quality control, peak correlation, phone coverage, and dependence on a paid dispatcher create substantial operational risk for a part-time founder.",
+      "score": 4,
+      "status": "scored"
+    }
+  ],
+  "final_score": 5.6,
+  "highest_value_structural_change": "Constrain the launch to one equipment category and compact postcode cluster, reserve only OEM-authorized technician blocks, and sell a prepaid pilot SLA with delegated dispatch and explicit first-visit-quality guarantees.",
+  "interaction_adjustment": 0.1,
+  "judge_id": "screen-b01-j01",
+  "main_structural_strength": "The venture can obtain bounded control of supply through explicit capacity reservations and sell a measurable response commitment to installers while leaving end-customer ownership intact.",
+  "primary_score_limiter": "The economics depend on unmeasured local incident density and utilization, while reliable execution may demand an always-on field operation inconsistent with the founder's available time.",
+  "qualified": false,
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 3,
+  "strongest_disconfirming_evidence": "Installers may reject third-party repair as a quality, warranty, and customer-relationship risk, and public certification alone does not establish technician competence or availability.",
+  "unrounded_score": 5.59
+}

@@ -1,0 +1,90 @@
+{
+  "candidate_id": "ws-08",
+  "claims": [
+    {
+      "claim_id": "ws-08-control",
+      "claim_type": "founder_control_point_path",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://digital-strategy.ec.europa.eu/en/factpages/data-act-explained",
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32023R2854"
+      ],
+      "statement": "The Data Act gives equipment users free access to raw product data and lets them direct data holders to share it with a third party, while EU law explicitly recognizes data intermediaries as a route to commercial relations; the founder can control access through revocable agency agreements with equipment owners, cross-OEM request handling, and a neutral data vault."
+    },
+    {
+      "claim_id": "ws-08-loss",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://digital-strategy.ec.europa.eu/en/news/eu-data-act-gives-users-control-over-data-connected-devices",
+        "https://digital-strategy.ec.europa.eu/en/factpages/data-act-explained"
+      ],
+      "statement": "Since 12 September 2025 users of connected industrial machinery and other devices can access and share raw sensor and performance data, which the Commission says can improve efficiency and enable cheaper maintenance; an OEM refusal, machine failure without accessible telemetry, excess energy use, or unnecessary service call is therefore a measurable operational-loss event."
+    },
+    {
+      "claim_id": "ws-08-payer",
+      "claim_type": "payer_and_budget",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://digital-strategy.ec.europa.eu/en/news/eu-data-act-gives-users-control-over-data-connected-devices",
+        "https://eur-lex.europa.eu/eli/reg/2023/2854/oj/eng"
+      ],
+      "statement": "Business users can direct equipment data to an independent third party, and data holders may charge third-party recipients reasonable non-discriminatory compensation; factories, farms, building owners, maintenance firms, and insurers are identifiable payers using maintenance, energy, downtime, or underwriting budgets when commissioning an asset, disputing access, or investigating a failure."
+    }
+  ],
+  "contrary_evidence": [
+    "Inferred and derived data are outside the Data Act's access scope, trade-secret safeguards can restrict use, and connected products made by qualifying small enterprises are exempt, so valuable telemetry may be narrower than owners expect.",
+    "OEMs can improve export tools or offer their own analytics, and heterogeneous protocols may make each connector expensive despite the legal right."
+  ],
+  "discovery_lane": "weak-signal",
+  "economics": {
+    "acquisition_route": "Use the family renewable installer to enroll ten owners of inverters, heat pumps, batteries, or commercial HVAC assets under a revocable data-agency mandate; request raw data from three OEMs and sell one independent maintenance or energy benchmark before building broad connectors.",
+    "capital_required_pln": 30000,
+    "founder_net_worth_path": "A cross-OEM utility serving 100000 assets at an assumed 20-60 PLN per asset per month, with high-margin benchmarking and insurer or maintainer licenses, could create a durable failure and efficiency dataset while remaining capital-light.",
+    "founder_time": "Approximately 12-18 founder hours per week for owner onboarding, data-rights requests, connectors, and analytic review; maintenance actions are delivered by partners.",
+    "gross_margin_basis": "Preliminary 75-90% software contribution margin after connector maintenance and any lawful data-holder compensation, excluding the potentially high cost of bespoke disputes and cybersecurity controls.",
+    "payback": "Sell only where a baseline shows annual energy waste, repeat truck rolls, warranty leakage, or downtime worth at least three times the annual fee; validate with ten assets before assuming portfolio economics.",
+    "pricing": "Assumed 20-60 PLN per connected asset per month, 2000-10000 PLN for an initial rights-and-connector setup, and a 10-20% share of independently measured maintenance or energy savings.",
+    "retention_or_repeat": "Continuous telemetry, monthly benchmarking, new firmware, maintenance events, and insurer renewals create recurring use; the agency mandate persists while the owner wants neutral cross-brand history."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A permissioned cross-OEM history of raw telemetry, operating context, service interventions, energy performance, failures, and warranty outcomes.",
+    "customer": "EU SMEs owning connected industrial, agricultural, HVAC, renewable-energy, and building equipment plus independent maintainers and equipment insurers.",
+    "distribution_mechanism": "Installers, energy auditors, independent service firms, brokers, and equipment financiers ask owners for a revocable data mandate at commissioning, audit, claim, or maintenance renewal.",
+    "offer_and_business_model": "A data-rights agent that obtains, normalizes, and holds raw equipment data under owner mandate, then supplies cross-brand maintenance, energy, and claims evidence; charged per asset plus setup and optional savings share.",
+    "payer_and_paid_event": "An equipment owner, independent maintainer, or insurer pays from energy, maintenance, downtime, or underwriting budget when an asset is commissioned, access is refused, performance drifts, or failure occurs.",
+    "problem_trigger": "An SME legally controls raw data from a connected asset but cannot practically extract or combine it across OEM portals to choose cheaper service or prove performance."
+  },
+  "founder_fit": [
+    "This is a direct use of the founder's data engineering, modeling, and AI-automation skills.",
+    "The family installation company offers founder-accessible equipment owners and installer distribution.",
+    "A ten-asset rights test is cheap, part-time, measurable, and avoids a public personal brand."
+  ],
+  "parent": null,
+  "risks": [
+    "Cybersecurity, personal-data, trade-secret, and product-safety duties could make the data vault expensive to insure and govern.",
+    "Legal access may still require lengthy OEM disputes and device-specific reverse engineering that cannot be standardized.",
+    "The service must avoid acting on equipment in ways that void warranties or create operational liability."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://digital-strategy.ec.europa.eu/en/news/eu-data-act-gives-users-control-over-data-connected-devices",
+    "https://digital-strategy.ec.europa.eu/en/factpages/data-act-explained",
+    "https://eur-lex.europa.eu/eli/reg/2023/2854/oj/eng",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32023R2854"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "User-mandated data fiduciary",
+    "control_point": "Revocable owner agency agreements and normalized cross-OEM raw telemetry held in a neutral vault.",
+    "critical_dependency": "Raw data obtainable under the Data Act must be rich and timely enough to predict failures or savings without relying on excluded derived data."
+  },
+  "thesis": "The Data Act shifted legal control of connected-product data toward equipment users, but an SME owner still cannot exercise that right across fragmented OEM systems. A neutral rights agent can aggregate owner mandates, turn access requests into a repeatable process, and own the cross-brand operating history needed by independent maintainers and insurers, creating leverage beyond a generic dashboard.",
+  "title": "Connected-Equipment Data Rights Agent",
+  "uncertainties": [
+    "Which target OEMs actually expose useful raw data without litigation or bespoke hardware?",
+    "Will equipment owners sign a durable data mandate and will maintainers or insurers pay for the normalized history?",
+    "How much of the predictive signal sits in excluded inferred data rather than accessible raw sensor values?"
+  ],
+  "version": 1
+}

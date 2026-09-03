@@ -1,0 +1,378 @@
+{
+  "candidate_id": "ws-08",
+  "candidate_sha256": "791a053c1f99052d631f5288d1c59dafc358423f735f4245fd19a39e448ddebe",
+  "candidate_version": 1,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "r01-statutory-third-party-route",
+      "evidence_refs": [
+        "s1-data-act-regulation",
+        "s2-data-act-explained"
+      ],
+      "statement": "The Data Act applies from 12 September 2025 and gives an EU user of a connected product a route to ask the data holder to make in-scope data available to a third party of the user's choice; repair, maintenance and data-based insurance are expressly contemplated aftermarket uses."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r02-scope-and-vintage-limit",
+      "evidence_refs": [
+        "s1-data-act-regulation",
+        "s2-data-act-explained"
+      ],
+      "statement": "The right covers raw and pre-processed data that are readily available to the holder, not inferred or derived insights; the by-design direct-access duty in Article 3(1) applies only to connected products and related services placed on the market after 12 September 2026, so installed equipment is not guaranteed to expose a rich or direct stream."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r03-trade-secret-security-friction",
+      "evidence_refs": [
+        "s1-data-act-regulation",
+        "s2-data-act-explained",
+        "s3-data-act-faq-v1-4"
+      ],
+      "statement": "A data holder can require agreed trade-secret safeguards, suspend or withhold data when those safeguards are not maintained, and in exceptional cases refuse disclosure on demonstrated serious-economic-damage or legally grounded safety/security grounds; disputes may therefore still require a competent authority, court or settlement body."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r04-purpose-and-onward-use-contracts",
+      "evidence_refs": [
+        "s1-data-act-regulation"
+      ],
+      "statement": "A third-party recipient may process data only for purposes and conditions agreed with the user; onward disclosure to a maintainer or insurer requires a user contract and preservation of agreed trade-secret measures, while non-personal retention beyond the service purpose also depends on agreement with the user."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r05-compensation-is-bounded-not-zero",
+      "evidence_refs": [
+        "s1-data-act-regulation",
+        "s2-data-act-explained"
+      ],
+      "statement": "The user receives access free of charge, but a data holder may seek reasonable compensation from a third-party recipient; where the recipient is an SME, compensation is capped at the direct costs of making the data available and must be explained, so access costs are bounded but not necessarily zero."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r06-contracting-tools-exist",
+      "evidence_refs": [
+        "s4-model-contract-terms",
+        "s1-data-act-regulation"
+      ],
+      "statement": "The Commission has published voluntary model terms covering the data-holder/user/data-recipient relationships under Data Act Chapters II and III, lowering drafting friction but not forcing an OEM to provide data outside the Act's scope or removing fact-specific trade-secret and compensation negotiations."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r07-polish-data-act-redress-maturity",
+      "evidence_refs": [],
+      "statement": "The current speed, cost and practical success rate of enforcing a Data Act access request against an unwilling OEM in Poland remain unverified; the latest official Polish material located is still a national implementing bill/project rather than evidence of completed cases or response-time statistics."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r08-dga-structure-fork",
+      "evidence_refs": [
+        "s5-data-governance-act"
+      ],
+      "statement": "If the venture establishes commercial data-sharing relationships between an undetermined set of owners and data users, the Data Governance Act notification, neutrality and separate-legal-person duties can apply and the intermediary cannot use intermediated data for its own analytics product; however, a provider that itself aggregates or enriches data and licenses the resulting value-added product without establishing owner-user commercial relationships is expressly excluded from the DGA intermediation definition."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r09-polish-dga-authority-operational",
+      "evidence_refs": [
+        "s6-polish-dga-authority"
+      ],
+      "statement": "Since 23 July 2026, Poland's UODO is the competent authority for data-intermediation services under the DGA, so the intermediary classification question has an operational Polish regulator rather than being a purely theoretical EU-level obligation."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r10-fronius-access-test",
+      "evidence_refs": [
+        "s8-fronius-data-access"
+      ],
+      "statement": "Fronius documents direct local product-data access through its Solar API or Modbus, which supports a low-cost obtainability test, but it also states that real-time product data generally are not stored on the inverter and longer history depends on an additional digital service such as Solar.web."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r11-oem-api-cost-and-contract",
+      "evidence_refs": [
+        "s9-sma-api-plans"
+      ],
+      "statement": "SMA already offers contracted B2B monitoring, live and control APIs, prices monitoring access by system and capacity, and charges live API packages by call volume; this is evidence that useful access can be bought but also that OEM-specific connector costs and contracts survive the legal access right."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r12-oem-platform-substitute",
+      "evidence_refs": [
+        "s10-solaredge-api"
+      ],
+      "statement": "SolarEdge offers self-serve OAuth access with multiple paid tiers and says API data match its own Monitoring and mySolarEdge platforms; its legacy API is scheduled for deprecation on 1 November 2026, illustrating both an incumbent substitute and ongoing migration work imposed on third-party connectors."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r13-legal-agency-not-exclusive",
+      "evidence_refs": [
+        "s1-data-act-regulation",
+        "s9-sma-api-plans",
+        "s10-solaredge-api"
+      ],
+      "statement": "Because the owner controls the request and may contract with other recipients, while major OEMs already expose their own APIs and portals, a revocable mandate is an acquisition permission rather than an exclusive control point; defensibility must come from workflow integration, normalized history and outcome labels that users continue to authorize."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r14-downtime-urgency-exists",
+      "evidence_refs": [
+        "s11-abb-reliability-survey"
+      ],
+      "statement": "ABB's commissioned survey of 3,215 maintenance decision-makers found that more than two-thirds reported unplanned outages at least monthly, 60% planned to increase reliability and maintenance investment, and nearly nine in ten expressed interest in outcome-based maintenance agreements; this supports urgency in industrial settings but does not establish willingness to pay among the proposed Polish SME wedge."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r15-wtp-renewal-cac-unproven",
+      "evidence_refs": [],
+      "statement": "No signed owner mandate, paid pilot, maintainer or insurer commitment, renewal cohort, channel conversion rate, sales-cycle evidence or customer-acquisition cost was found for the proposed 20-60 PLN per asset monthly fee, 2,000-10,000 PLN setup fee or savings share."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r16-unit-economics-unproven",
+      "evidence_refs": [],
+      "statement": "The claimed 75-90% contribution margin and three-times-value payback rule remain unverified because per-OEM API fees, holder compensation, mandate acquisition, data mapping, security, insurance, dispute handling and field-validation costs have not been measured on a ten-asset cohort."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r17-repeat-use-unproven",
+      "evidence_refs": [],
+      "statement": "Continuous telemetry creates a possible recurring service, but there is no evidence yet that monthly cross-brand benchmarking changes a maintenance, energy, warranty or underwriting decision often enough to drive renewal rather than one-off setup or incident work."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r18-fault-label-cold-start",
+      "evidence_refs": [
+        "s12-fault-data-review"
+      ],
+      "statement": "A 2025 peer-reviewed review identifies scarce fault samples, expensive labels, distribution differences across machines and data islands across users as core machinery-diagnosis problems; normal telemetry from ten heterogeneous assets is therefore not evidence of a transferable predictive-failure model or data moat."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r19-outcome-label-dependency",
+      "evidence_refs": [
+        "s1-data-act-regulation",
+        "s12-fault-data-review"
+      ],
+      "statement": "The Data Act can supply in-scope telemetry but does not itself supply technician diagnoses, replaced parts, warranty decisions, energy baselines or confirmed failure outcomes; the critical predictive mechanism therefore depends on still-unsigned maintainers and owners returning standardized intervention labels."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r20-mechanism-ownership-fork",
+      "evidence_refs": [
+        "s5-data-governance-act",
+        "s6-polish-dga-authority",
+        "s12-fault-data-review"
+      ],
+      "statement": "The venture cannot simultaneously treat neutrality-based intermediation and proprietary reuse of the same intermediated data as the mechanism without resolving the DGA classification: it must either operate a separated neutral intermediary, or be a direct value-added analytics service whose moat is performance and labeled outcomes rather than legal agency status."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r21-insurer-maintainer-wtp-unknown",
+      "evidence_refs": [],
+      "statement": "No direct evidence was found that an equipment insurer or independent maintainer will pay for raw or normalized cross-OEM history before the service proves claim-resolution accuracy, loss reduction or avoided truck rolls on the exact asset classes in the acquisition wedge."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r22-obtainability-is-oem-specific",
+      "evidence_refs": [
+        "s1-data-act-regulation",
+        "s8-fronius-data-access",
+        "s9-sma-api-plans",
+        "s10-solaredge-api"
+      ],
+      "statement": "The documented Fronius, SMA and SolarEdge routes show that obtainability must be falsified OEM by OEM and product vintage by product vintage; a successful connector for one inverter family cannot validate heat pumps, batteries, HVAC or older equipment as a single legal-technical control point."
+    }
+  ],
+  "contrary_evidence": [
+    "The Data Act excludes inferred and derived insights and delays the by-design direct-access duty until products placed on the market after 12 September 2026, leaving installed-base telemetry materially narrower and less standardized than the thesis assumes (s1-data-act-regulation; s2-data-act-explained).",
+    "Trade-secret and safety safeguards can suspend, restrict or exceptionally defeat a request and may require formal redress, so an owner mandate is not equivalent to a working connector (s1-data-act-regulation; s3-data-act-faq-v1-4).",
+    "A true neutral intermediary may not reuse intermediated data for its own analytics and must be structurally separated, while a value-added data product is excluded only by adopting a different commercial role (s5-data-governance-act; s6-polish-dga-authority).",
+    "Fronius, SMA and SolarEdge already expose APIs and OEM monitoring services, with pricing, history limits and deprecation cycles that both substitute for the offer and impose recurring connector costs (s8-fronius-data-access; s9-sma-api-plans; s10-solaredge-api).",
+    "Cross-machine fault diagnosis is constrained by scarce failure labels, domain shift and data islands, so raw multi-OEM telemetry alone does not create a predictive moat (s12-fault-data-review)."
+  ],
+  "falsification": {
+    "cold_start_and_data_moat": [
+      "r18-fault-label-cold-start",
+      "r19-outcome-label-dependency",
+      "r22-obtainability-is-oem-specific"
+    ],
+    "control_point_obtainability": [
+      "r01-statutory-third-party-route",
+      "r02-scope-and-vintage-limit",
+      "r03-trade-secret-security-friction",
+      "r05-compensation-is-bounded-not-zero",
+      "r07-polish-data-act-redress-maturity",
+      "r10-fronius-access-test",
+      "r11-oem-api-cost-and-contract",
+      "r12-oem-platform-substitute",
+      "r22-obtainability-is-oem-specific"
+    ],
+    "critical_mechanism_ownership": [
+      "r04-purpose-and-onward-use-contracts",
+      "r08-dga-structure-fork",
+      "r13-legal-agency-not-exclusive",
+      "r19-outcome-label-dependency",
+      "r20-mechanism-ownership-fork"
+    ],
+    "external_dependencies": [
+      "r03-trade-secret-security-friction",
+      "r04-purpose-and-onward-use-contracts",
+      "r06-contracting-tools-exist",
+      "r07-polish-data-act-redress-maturity",
+      "r08-dga-structure-fork",
+      "r09-polish-dga-authority-operational",
+      "r19-outcome-label-dependency",
+      "r21-insurer-maintainer-wtp-unknown"
+    ],
+    "substitutes_and_incumbent_response": [
+      "r10-fronius-access-test",
+      "r11-oem-api-cost-and-contract",
+      "r12-oem-platform-substitute",
+      "r13-legal-agency-not-exclusive"
+    ],
+    "willingness_urgency_and_repeat_economics": [
+      "r05-compensation-is-bounded-not-zero",
+      "r11-oem-api-cost-and-contract",
+      "r14-downtime-urgency-exists",
+      "r15-wtp-renewal-cac-unproven",
+      "r16-unit-economics-unproven",
+      "r17-repeat-use-unproven",
+      "r21-insurer-maintainer-wtp-unknown"
+    ]
+  },
+  "schema_version": 3,
+  "sources": [
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "2023-12-22",
+      "publisher": "Official Journal of the European Union / EUR-Lex",
+      "source_id": "s1-data-act-regulation",
+      "source_type": "official primary law",
+      "stance": "context",
+      "title": "Regulation (EU) 2023/2854 on harmonised rules on fair access to and use of data (Data Act)",
+      "url": "https://eur-lex.europa.eu/eli/reg/2023/2854/oj/eng"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "last updated 2026-07-02",
+      "publisher": "European Commission, Shaping Europe's digital future",
+      "source_id": "s2-data-act-explained",
+      "source_type": "official guidance",
+      "stance": "supporting",
+      "title": "Data Act explained",
+      "url": "https://digital-strategy.ec.europa.eu/en/factpages/data-act-explained"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "version dated 2026-01-22; page updated 2026-03-03",
+      "publisher": "European Commission, Directorate-General CONNECT",
+      "source_id": "s3-data-act-faq-v1-4",
+      "source_type": "official guidance",
+      "stance": "context",
+      "title": "Frequently Asked Questions about the Data Act, version 1.4",
+      "url": "https://digital-strategy.ec.europa.eu/en/library/commission-publishes-frequently-asked-questions-about-data-act"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "2025-11-19",
+      "publisher": "European Commission, Shaping Europe's digital future",
+      "source_id": "s4-model-contract-terms",
+      "source_type": "official guidance",
+      "stance": "supporting",
+      "title": "Draft Recommendation on non-binding model contractual terms on data access and use",
+      "url": "https://digital-strategy.ec.europa.eu/en/library/draft-recommendation-non-binding-model-contractual-terms-data-access-and-use-and-non-binding"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "2022-06-03",
+      "publisher": "Official Journal of the European Union / EUR-Lex",
+      "source_id": "s5-data-governance-act",
+      "source_type": "official primary law",
+      "stance": "contradicting",
+      "title": "Regulation (EU) 2022/868 on European data governance (Data Governance Act)",
+      "url": "https://eur-lex.europa.eu/eli/reg/2022/868/oj/eng"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "2026-07-23",
+      "publisher": "Polish Personal Data Protection Office (UODO)",
+      "source_id": "s6-polish-dga-authority",
+      "source_type": "official regulator notice",
+      "stance": "context",
+      "title": "Ustawa o zarzadzaniu danymi juz obowiazuje",
+      "url": "https://www.uodo.gov.pl/pl/138/4505"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "2026-02-05",
+      "publisher": "Polish Ministry of Digital Affairs",
+      "source_id": "s7-polish-data-act-bill",
+      "source_type": "official legislative project",
+      "stance": "contradicting",
+      "title": "Ustawa o sprawiedliwym dostepie do danych i ich wykorzystywaniu",
+      "url": "https://www.gov.pl/web/cyfryzacja/ustawa-o-sprawiedliwym-dostepie-do-danych-i-ich-wykorzystywaniu"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "undated live compliance page",
+      "publisher": "Fronius International GmbH",
+      "source_id": "s8-fronius-data-access",
+      "source_type": "primary vendor documentation",
+      "stance": "supporting",
+      "title": "Information Data Act",
+      "url": "https://www.fronius.com/en/information-data-act"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "undated live developer documentation",
+      "publisher": "SMA Solar Technology AG",
+      "source_id": "s9-sma-api-plans",
+      "source_type": "primary vendor documentation",
+      "stance": "contradicting",
+      "title": "SMA API price model principles",
+      "url": "https://developer.sma.de/api-plans"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "undated live developer documentation",
+      "publisher": "SolarEdge Technologies",
+      "source_id": "s10-solaredge-api",
+      "source_type": "primary vendor documentation",
+      "stance": "contradicting",
+      "title": "SolarEdge ONE for Developers API documentation",
+      "url": "https://api-docs.solaredge.com/"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "2023-10-11",
+      "publisher": "ABB",
+      "source_id": "s11-abb-reliability-survey",
+      "source_type": "industry primary survey release",
+      "stance": "supporting",
+      "title": "ABB survey reveals unplanned downtime costs $125,000 per hour",
+      "url": "https://new.abb.com/news/detail/107660/abb-survey-reveals-unplanned-downtime-costs-125-000-per-hour"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "2025-01-15",
+      "publisher": "Mechanical Systems and Signal Processing",
+      "source_id": "s12-fault-data-review",
+      "source_type": "peer-reviewed invited review",
+      "stance": "contradicting",
+      "title": "Federated transfer learning for machinery fault diagnosis: A comprehensive review of technique and application",
+      "url": "https://doi.org/10.1016/j.ymssp.2024.111837"
+    }
+  ],
+  "unknowns": [
+    "Whether ten family-installer customers legally qualify as the Data Act users for every financed, leased or remotely managed asset in the pilot.",
+    "Which exact fields, timestamps, sampling frequencies, retention windows and metadata each target OEM will provide for each product generation.",
+    "Whether the Polish Data Act redress route can resolve an access refusal cheaply and within a customer-acceptable time.",
+    "Whether the intended owner-maintainer-insurer topology is a DGA intermediary, an excluded closed group, or a value-added analytics provider under the final contracts.",
+    "Whether raw and pre-processed telemetry contains enough signal to deliver a paid decision without OEM-derived diagnostics.",
+    "Whether owners will authorize long-term non-personal retention, cross-owner benchmarking and onward sharing after the immediate incident ends.",
+    "Whether maintainers will return standardized intervention and outcome labels, and who owns the resulting enriched labels and models.",
+    "Whether the stated pricing, renewal and savings-share terms survive API, compensation, legal, cybersecurity, insurance and connector-maintenance costs.",
+    "Whether an insurer or maintainer will sign and pay before a statistically credible asset-outcome history exists."
+  ]
+}

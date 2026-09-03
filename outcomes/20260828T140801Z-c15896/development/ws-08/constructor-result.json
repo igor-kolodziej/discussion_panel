@@ -1,0 +1,55 @@
+{
+  "base_candidate_sha256": "791a053c1f99052d631f5288d1c59dafc358423f735f4245fd19a39e448ddebe",
+  "base_candidate_version": 1,
+  "candidate_id": "ws-08",
+  "constructor_id": "constructor-ws08-c1",
+  "falsification": {
+    "cold_start_and_data_moat": [
+      "r18-fault-label-cold-start",
+      "r19-outcome-label-dependency",
+      "r22-obtainability-is-oem-specific"
+    ],
+    "control_point_obtainability": [
+      "r02-scope-and-vintage-limit",
+      "r03-trade-secret-security-friction",
+      "r10-fronius-access-test",
+      "r11-oem-api-cost-and-contract",
+      "r22-obtainability-is-oem-specific"
+    ],
+    "critical_mechanism_ownership": [
+      "r04-purpose-and-onward-use-contracts",
+      "r08-dga-structure-fork",
+      "r13-legal-agency-not-exclusive",
+      "r19-outcome-label-dependency",
+      "r20-mechanism-ownership-fork"
+    ],
+    "external_dependencies": [
+      "r03-trade-secret-security-friction",
+      "r04-purpose-and-onward-use-contracts",
+      "r07-polish-data-act-redress-maturity",
+      "r08-dga-structure-fork",
+      "r19-outcome-label-dependency",
+      "r21-insurer-maintainer-wtp-unknown"
+    ],
+    "substitutes_and_incumbent_response": [
+      "r10-fronius-access-test",
+      "r11-oem-api-cost-and-contract",
+      "r12-oem-platform-substitute",
+      "r13-legal-agency-not-exclusive"
+    ],
+    "willingness_urgency_and_repeat_economics": [
+      "r05-compensation-is-bounded-not-zero",
+      "r11-oem-api-cost-and-contract",
+      "r14-downtime-urgency-exists",
+      "r15-wtp-renewal-cac-unproven",
+      "r16-unit-economics-unproven",
+      "r17-repeat-use-unproven",
+      "r21-insurer-maintainer-wtp-unknown"
+    ]
+  },
+  "final_candidate_sha256": "be840d0921c8615ff7a2726b57be9513045f62ef1cec048bf86b7896d43e3999",
+  "final_candidate_version": 2,
+  "outcome": "redesigned",
+  "rationale": "The admitted v2 makes a structural, not editorial, change. Research shows that a Data Act mandate is non-exclusive, OEM-specific access costs and portal substitutes persist, and a neutral-intermediary role can conflict with proprietary analytics (r08-dga-structure-fork, r11-oem-api-cost-and-contract, r12-oem-platform-substitute, r13-legal-agency-not-exclusive, r20-mechanism-ownership-fork). The redesign therefore narrows the customer, problem, payer, offer, distribution, and compounding mechanism to one founder-accessible installer, one commercial-solar inverter family, and one recurring dispatch-triage decision. It uses documented Fronius local access as the first obtainability test and treats Data Act requests as fallback rather than the moat (r10-fronius-access-test, r22-obtainability-is-oem-specific). It shifts economics from low per-device fees, savings share, and heterogeneous connector work to an OEM-family onboarding fee plus an annual per-site installer contract, with explicit access-cost, contribution-margin, three-times-value, label-return, and renewal gates because willingness to pay, CAC, margins, and repeat use remain unproven (r15-wtp-renewal-cac-unproven, r16-unit-economics-unproven, r17-repeat-use-unproven). Finally, it places the proposed control point in the installer's maintenance workflow and technician close-out records, directly addressing the scarce-label cold start (r18-fault-label-cold-start, r19-outcome-label-dependency), while honestly preserving the unsigned installer agreement, owner permissions, legal classification, and field sufficiency as critical dependencies rather than invented evidence.",
+  "schema_version": 3
+}

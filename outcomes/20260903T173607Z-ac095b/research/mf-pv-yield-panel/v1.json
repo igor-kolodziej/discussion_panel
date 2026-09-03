@@ -1,0 +1,409 @@
+{
+  "candidate_id": "mf-pv-yield-panel",
+  "candidate_sha256": "22102e5e070494cfc1385a281c6b84c67e57623dd565869b5d7cc5803a4819c2",
+  "candidate_version": 1,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "mf-pv-yield-panel-r1",
+      "evidence_refs": [
+        "s1"
+      ],
+      "statement": "At 31 December 2025 Poland's regulated register contained 6,826 photovoltaic installations in the 50 kW to 1 MW small-installation band, with 5,292.946 MW installed; those PV installations generated 4,360,962.184 MWh in 2025. This establishes a sizeable addressable asset base but not the share that is independently owned, poorly monitored, or commercially reachable."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "mf-pv-yield-panel-r2",
+      "evidence_refs": [
+        "s2"
+      ],
+      "statement": "IEA PVPS treats performance indicators, monitoring, forecasting, performance analysis, maintenance services, and advanced inspection as standard components of photovoltaic O&M, so the operational problem is real rather than invented."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "mf-pv-yield-panel-r3",
+      "evidence_refs": [
+        "s3"
+      ],
+      "statement": "A field-validated Sandia-linked decision-support study on a 1.8 MWp Greek plant found that faster corrective response could improve production by up to 2.41%, but for a 1% yield improvement it recommended the system only for plants of at least 250 kWp. This is the closest quantified evidence found and directly weakens assumed economics for smaller sites."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "mf-pv-yield-panel-r4",
+      "evidence_refs": [
+        "s1",
+        "s3"
+      ],
+      "statement": "The Sandia result does not falsify all small-commercial sites, but it implies that value must be segmented by capacity, energy value, fault incidence, and existing monitoring; a flat per-site price is unlikely to fit the whole 50 kW to 1 MW band without evidence."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "mf-pv-yield-panel-r5",
+      "evidence_refs": [
+        "s4"
+      ],
+      "statement": "SolarEdge's own monitoring platform can produce fleet reports of open alerts, compare sites by kWh/kWp, calculate revenue, and compare estimated with actual production, making it a substantial substitute for the proposed reporting and prioritization layer on SolarEdge-only portfolios."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "mf-pv-yield-panel-r6",
+      "evidence_refs": [
+        "s5"
+      ],
+      "statement": "Huawei's FusionSolar management system already offers multi-plant KPI dashboards, module-level monitoring, report subscriptions, real-time alarm push, task management, and intelligent I-V-curve diagnosis, reducing the uncovered problem on Huawei fleets."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "mf-pv-yield-panel-r7",
+      "evidence_refs": [
+        "s6"
+      ],
+      "statement": "meteocontrol VCOM is a direct cross-vendor incumbent: it supports portfolio monitoring, target-versus-actual simulation, satellite irradiance where sensors are absent, configurable fault analysis, tickets, reports, data-loggers from multiple manufacturers, and an external API."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "mf-pv-yield-panel-r8",
+      "evidence_refs": [
+        "s7"
+      ],
+      "statement": "SMA documents an O&M-oriented API authorization flow in which a plant owner consents to access, consent remains valid until the owner revokes it, and access to later-added plants requires renewed scope approval. SMA also documents rate limits, slower data on legacy systems, and incomplete measurements when properties are unavailable."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "mf-pv-yield-panel-r9",
+      "evidence_refs": [
+        "s8"
+      ],
+      "statement": "Fronius explicitly permits its Query API for monitoring, O&M, and asset-reporting applications, but production use requires registration, a contract, an API key, and monthly usage billing. Its published availability list as accessed does not include Poland, so this route cannot presently be assumed for Polish sites."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "mf-pv-yield-panel-r10",
+      "evidence_refs": [
+        "s7",
+        "s8",
+        "s9",
+        "s10",
+        "s12"
+      ],
+      "statement": "The EU Data Act makes user-directed access to readily available connected-product data and sharing with a chosen third party legally plausible, but security and trade-secret safeguards, purpose limitation, possible B2B compensation, personal-data legal bases, and OEM-specific technical availability mean it does not by itself grant durable commercial rights to pool telemetry into a proprietary cross-site benchmark."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "mf-pv-yield-panel-r11",
+      "evidence_refs": [
+        "s10"
+      ],
+      "statement": "NREL's fleet benchmark initiative obtains participant agreements, protects contributed data through confidentiality agreements, and anonymizes public outputs; this is evidence that aggregate PV benchmarking is feasible and that explicit contribution, confidentiality, and output-use rules are core infrastructure rather than paperwork."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "mf-pv-yield-panel-r12",
+      "evidence_refs": [
+        "s12"
+      ],
+      "statement": "SolarEdge's current developer platform uses per-user consent and revocable grants, offers priced usage tiers, and states that its legacy Monitoring API will be deprecated on 1 November 2026. Connector continuity and vendor charges are therefore continuing operating dependencies, not one-time integration work."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "mf-pv-yield-panel-r13",
+      "evidence_refs": [
+        "s11"
+      ],
+      "statement": "A vendor-published customer case shows category-level willingness to use commercial solar asset-performance software: Lodestar Energy reports positive ROI, tens of thousands of dollars saved, and several administrative hours saved per day. Its portfolio exceeds 100 MW across 40 US projects, so extrapolation to unrelated Polish owners of small commercial sites is only an inference."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "mf-pv-yield-panel-r14",
+      "evidence_refs": [],
+      "statement": "Whether any unrelated Polish installer, O&M firm, or small-commercial PV owner will pay 49-149 PLN per site per month or a 1,000 PLN portfolio minimum for this exact vendor-neutral feed, renew after a pilot, and permit disclosure of attributable avoided visits remains unknown."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "mf-pv-yield-panel-r15",
+      "evidence_refs": [],
+      "statement": "Fully loaded unit economics are unknown because there is no measured connector setup time, API charge schedule by actual polling design, weather-data cost, analyst and customer-support time, false-alert handling cost, sales cost, churn, cash collection, or contribution per monitored site."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "mf-pv-yield-panel-r16",
+      "evidence_refs": [],
+      "statement": "No executed agreement establishes this venture's right to ingest telemetry, retain historical copies after revocation, use it commercially, combine sites, create de-identified benchmark features, train models, or keep derived outputs after contract termination."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "mf-pv-yield-panel-r17",
+      "evidence_refs": [
+        "s7"
+      ],
+      "statement": "Owner-by-owner consent makes a lawful pilot technically plausible, but the documented need to identify the true owner and reauthorize added systems implies onboarding friction; no evidence shows that the family-company introduction can become a repeatable unrelated-installer acquisition channel at acceptable CAC."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "mf-pv-yield-panel-r18",
+      "evidence_refs": [],
+      "statement": "The rate at which installers will return verified resolution labels, repair invoices, truck-roll outcomes, and recovered-generation measurements is unknown; without those labels, anomaly triage may not improve and the proposed data moat may not compound."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "mf-pv-yield-panel-r19",
+      "evidence_refs": [],
+      "statement": "No evidence found establishes that the exact v1 panel detects commercially actionable losses earlier or more accurately than OEM portals or VCOM often enough to change maintenance decisions, avoid visits, or increase profit for the target buyer."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "mf-pv-yield-panel-r20",
+      "evidence_refs": [],
+      "statement": "The URE totals do not reveal the inverter-brand mix, existing O&M contracts, telemetry depth, portfolio ownership concentration, or reachable number of the intended small-commercial sites, so they cannot be converted directly into a serviceable obtainable market."
+    }
+  ],
+  "commercial_evidence": {
+    "buyer_or_paid_event": {
+      "claim_ids": [
+        "mf-pv-yield-panel-r13"
+      ],
+      "source_ids": [
+        "s11"
+      ],
+      "status": "inference"
+    },
+    "distribution_and_acquisition": {
+      "claim_ids": [
+        "mf-pv-yield-panel-r17"
+      ],
+      "source_ids": [
+        "s7"
+      ],
+      "status": "inference"
+    },
+    "fully_loaded_unit_economics": {
+      "claim_ids": [
+        "mf-pv-yield-panel-r15"
+      ],
+      "source_ids": [],
+      "status": "unknown"
+    },
+    "rights_control_access_contractibility": {
+      "claim_ids": [
+        "mf-pv-yield-panel-r10"
+      ],
+      "source_ids": [
+        "s7",
+        "s8",
+        "s9",
+        "s10",
+        "s12"
+      ],
+      "status": "inference"
+    }
+  },
+  "contrary_evidence": [
+    "Sandia's quantified field study recommends decision support for a 1% yield gain only at plant sizes of at least 250 kWp, challenging economics for the smaller part of the proposed segment (s3).",
+    "SolarEdge already supplies alert-based maintenance reports, normalized site comparisons, estimated-versus-actual views, and revenue reporting for its installed base (s4).",
+    "Huawei already supplies multi-plant KPIs, alarms, tasks, module-level monitoring, and intelligent fault diagnosis (s5).",
+    "VCOM already offers a cross-vendor portfolio platform with target-versus-actual analysis, satellite inputs, alarms, tickets, reports, and external interfaces, closely matching the claimed vendor-neutral wedge (s6).",
+    "Fronius production API access is contractual and usage-billed, and Poland is absent from the currently published country list (s8).",
+    "SMA consent can be revoked, added systems require scope renewal, legacy data may be delayed, and missing measurements are omitted (s7).",
+    "SolarEdge is replacing its legacy Monitoring API on 1 November 2026 and its successor uses priced tiers and revocable access grants, showing material connector-change risk (s12)."
+  ],
+  "critical_control_point_assessment": {
+    "assessment": "inference",
+    "claim_ids": [
+      "mf-pv-yield-panel-r8",
+      "mf-pv-yield-panel-r9",
+      "mf-pv-yield-panel-r10",
+      "mf-pv-yield-panel-r11",
+      "mf-pv-yield-panel-r12"
+    ],
+    "source_ids": [
+      "s7",
+      "s8",
+      "s9",
+      "s10",
+      "s12"
+    ],
+    "status": "replaceable_access"
+  },
+  "falsification": {
+    "cold_start_and_data_moat": [
+      "mf-pv-yield-panel-r20",
+      "mf-pv-yield-panel-r11",
+      "mf-pv-yield-panel-r18"
+    ],
+    "control_point_obtainability": [
+      "mf-pv-yield-panel-r16",
+      "mf-pv-yield-panel-r10",
+      "mf-pv-yield-panel-r9"
+    ],
+    "critical_mechanism_ownership": [
+      "mf-pv-yield-panel-r16",
+      "mf-pv-yield-panel-r19",
+      "mf-pv-yield-panel-r10"
+    ],
+    "external_dependencies": [
+      "mf-pv-yield-panel-r8",
+      "mf-pv-yield-panel-r12",
+      "mf-pv-yield-panel-r19"
+    ],
+    "substitutes_and_incumbent_response": [
+      "mf-pv-yield-panel-r5",
+      "mf-pv-yield-panel-r6",
+      "mf-pv-yield-panel-r7",
+      "mf-pv-yield-panel-r19"
+    ],
+    "willingness_urgency_and_repeat_economics": [
+      "mf-pv-yield-panel-r14",
+      "mf-pv-yield-panel-r3",
+      "mf-pv-yield-panel-r13",
+      "mf-pv-yield-panel-r15"
+    ]
+  },
+  "schema_version": 3,
+  "sources": [
+    {
+      "accessed_at": "2026-09-03",
+      "evidence_class": "market_context",
+      "published_at": "2026-04",
+      "publisher": "Urzad Regulacji Energetyki",
+      "source_id": "s1",
+      "source_type": "official_statistics_report",
+      "stance": "supporting",
+      "title": "Zbiorczy raport roczny Prezesa URE za rok 2025: wytwarzanie energii elektrycznej w malych instalacjach OZE",
+      "url": "https://bip.ure.gov.pl/download/3/20739/file.file"
+    },
+    {
+      "accessed_at": "2026-09-03",
+      "evidence_class": "market_context",
+      "published_at": "2022-10",
+      "publisher": "IEA Photovoltaic Power Systems Programme",
+      "source_id": "s2",
+      "source_type": "intergovernmental_technical_report",
+      "stance": "supporting",
+      "title": "Guidelines for Operation and Maintenance of Photovoltaic Power Plants in Different Climates",
+      "url": "https://iea-pvps.org/wp-content/uploads/2022/11/IEA-PVPS-Report-T13-25-2022-OandM-Guidelines.pdf"
+    },
+    {
+      "accessed_at": "2026-09-03",
+      "evidence_class": "unit_economics",
+      "published_at": "2021-06-20",
+      "publisher": "Sandia National Laboratories",
+      "source_id": "s3",
+      "source_type": "government_laboratory_publication",
+      "stance": "contradicting",
+      "title": "Decision support system for corrective maintenance in large-scale photovoltaic systems",
+      "url": "https://www.sandia.gov/research/publications/details/decision-support-system-for-corrective-maintenance-in-large-scale-photovolt-2021-06-20/"
+    },
+    {
+      "accessed_at": "2026-09-03",
+      "evidence_class": "incumbent",
+      "published_at": "2024-10",
+      "publisher": "SolarEdge Technologies",
+      "source_id": "s4",
+      "source_type": "manufacturer_user_guide",
+      "stance": "contradicting",
+      "title": "Monitoring Platform Site and Account Reports",
+      "url": "https://knowledge-center.solaredge.com/sites/kc/files/monitoring_portal_reports.pdf"
+    },
+    {
+      "accessed_at": "2026-09-03",
+      "evidence_class": "incumbent",
+      "published_at": "2025-04",
+      "publisher": "Huawei Technologies",
+      "source_id": "s5",
+      "source_type": "manufacturer_product_brochure",
+      "stance": "contradicting",
+      "title": "FusionSolar Smart PV Management System",
+      "url": "https://solar.huawei.com/admin/asset/v1/pro/view/a28b63d6366740f084c22a92e2c84b05.pdf"
+    },
+    {
+      "accessed_at": "2026-09-03",
+      "evidence_class": "incumbent",
+      "published_at": "unknown",
+      "publisher": "meteocontrol GmbH",
+      "source_id": "s6",
+      "source_type": "vendor_product_documentation",
+      "stance": "contradicting",
+      "title": "VCOM Monitoring",
+      "url": "https://www.meteocontrol.com/en/products/cloud/vcom-cloud/vcom-monitoring"
+    },
+    {
+      "accessed_at": "2026-09-03",
+      "evidence_class": "acquisition",
+      "published_at": "unknown",
+      "publisher": "SMA Solar Technology AG",
+      "source_id": "s7",
+      "source_type": "manufacturer_api_documentation",
+      "stance": "context",
+      "title": "FAQ - SMA API Portal",
+      "url": "https://developer.sma.de/faq"
+    },
+    {
+      "accessed_at": "2026-09-03",
+      "evidence_class": "rights_control_access",
+      "published_at": "unknown",
+      "publisher": "Fronius International GmbH",
+      "source_id": "s8",
+      "source_type": "manufacturer_api_commercial_terms",
+      "stance": "contradicting",
+      "title": "Fronius Solar.web Query API",
+      "url": "https://www.fronius.com/en/solar-energy/solar-solutions/energy-management/solarweb-query-api"
+    },
+    {
+      "accessed_at": "2026-09-03",
+      "evidence_class": "regulatory",
+      "published_at": "2023-12-13",
+      "publisher": "European Union",
+      "source_id": "s9",
+      "source_type": "regulation",
+      "stance": "supporting",
+      "title": "Regulation (EU) 2023/2854 on harmonised rules on fair access to and use of data",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R2854"
+    },
+    {
+      "accessed_at": "2026-09-03",
+      "evidence_class": "rights_control_access",
+      "published_at": "unknown",
+      "publisher": "National Renewable Energy Laboratory",
+      "source_id": "s10",
+      "source_type": "government_research_program",
+      "stance": "context",
+      "title": "PV Fleet Performance Data Initiative",
+      "url": "https://www.nrel.gov/pv/fleet-performance-data-initiative.html"
+    },
+    {
+      "accessed_at": "2026-09-03",
+      "evidence_class": "direct_buyer",
+      "published_at": "2023-07-03",
+      "publisher": "Power Factors",
+      "source_id": "s11",
+      "source_type": "vendor_customer_case_study",
+      "stance": "supporting",
+      "title": "Lodestar Energy uses Power Factors' commercial asset management solutions to scale its portfolio and optimize O&M",
+      "url": "https://www.powerfactors.com/customer-stories/lodestar-energy-uses-power-factors-commercial-asset-management-solutions-to-scale-its-portfolio"
+    },
+    {
+      "accessed_at": "2026-09-03",
+      "evidence_class": "rights_control_access",
+      "published_at": "unknown",
+      "publisher": "SolarEdge Technologies",
+      "source_id": "s12",
+      "source_type": "manufacturer_api_documentation",
+      "stance": "context",
+      "title": "SolarEdge for Developers",
+      "url": "https://api-docs.solaredge.com/"
+    }
+  ],
+  "unknowns": [
+    "Number and capacity distribution of reachable Polish commercial sites whose current OEM tools leave a valuable diagnostic gap.",
+    "Paid conversion and renewal from unrelated installers or O&M firms at the proposed price and minimum portfolio commitment.",
+    "Incremental alert precision, recall, lead time, and prioritization quality versus SolarEdge, Huawei, SMA, Fronius, and VCOM outputs.",
+    "Observed actionable incident density per site-year, separated from communication noise, curtailment, snow, shading, and planned downtime.",
+    "Avoided truck rolls, recovered kWh, incremental gross profit, and time-to-resolution attributable to the panel rather than normal O&M.",
+    "Exact current commercial-use, retention, derived-feature, benchmarking, model-training, audit, termination, and deletion rights for every OEM connector.",
+    "Actual connector build and maintenance hours, API fees, weather-data expense, alert-review labor, customer support, insurance, security, and CAC.",
+    "Rate at which installers return repair outcomes and ground-truth labels with consistent taxonomies.",
+    "Minimum number of comparable site-months and metadata completeness needed for a credible Polish peer benchmark.",
+    "Whether a 12-month nonexclusive data-rights contract remains usable after an owner changes installer, equipment, portal, or consent.",
+    "Competitive price and switching friction versus VCOM or simply improving use of bundled OEM portals."
+  ]
+}

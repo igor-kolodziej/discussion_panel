@@ -1,0 +1,117 @@
+{
+  "assumptions": [
+    "Polish legal and clinical review permits the proposed clinic-supervised operating structure.",
+    "A licensed medical partner will contract for ordering, oversight, interpretation, and escalation at a sustainable per-study cost.",
+    "Clinic referral density can keep a small device fleet sufficiently utilized.",
+    "Adequate-study and repeat rates support the wholesale price after all logistics and support costs."
+  ],
+  "base_score": 3.81,
+  "candidate_id": "ws-home-sleep-device-pool",
+  "candidate_sha256": "c2c23946f520199419516a50be9a88f1bef963bd2221c89265b37366610827b3",
+  "candidate_version": 1,
+  "constrained_score": 3.61,
+  "evaluation_type": "working_screening",
+  "evidence_needed_for_higher_score": "Applicable Polish regulatory guidance, device lease and maintenance quotes, physician cost, clinic minimum-volume commitments, observed utilization and failed-study rates, end-to-end turnaround, and per-study contribution after acquisition and compliance overhead.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "Pooling devices, logistics, technical-quality checks, and contracted interpretation can remove clinic capex and scheduling friction, but it is a conventional capacity-service model without evidence of a uniquely underserved constraint.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Published prices prove that patients buy home sleep studies, but they do not establish clinic demand for outsourced wholesale capacity, referral density, waitlist pain, or a margin-preserving willingness to pay.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "The 300-450 PLN wholesale hypothesis must absorb interpretation, courier, consumables, cleaning, support, failed repeats, acquisition, depreciation, compliance, and idle time, leaving economics highly exposed to utilization.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Small private clinics lacking their own device workflow form a legible regional beachhead and sleep testing is an established paid event, but the number of suitable clinics and unmet referral volume are unknown.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "Hospitals, private chains, CPAP vendors, telemedicine providers, and clinics can own or source the same devices and interpretation, while the venture controls neither referrals nor a scarce asset.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A dense local operation could add devices, clinics, cities, CPAP monitoring, and adjacent home diagnostics, but growth remains constrained by regulated labor, logistics, referral density, and equipment utilization.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Operational data may reduce failed studies and improve routing, but devices and clinical partners are replaceable, clinics own the patient relationship, and no exclusive referral or medical-services contract exists.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "Data skills fit utilization and quality analysis, but the founder lacks medical credentials, clinic access, devices, referral rights, and a contracted physician, leaving the core operating advantages hypothetical.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "Existing paid home-testing offers validate acceptance of the modality, yet the packet provides no evidence of a new capacity shortage, reimbursement change, or demand acceleration favoring a standalone pool now.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "Clinic contracts, physician referrals, and CPAP partnerships are sensible concentrated routes, but all require trust and clinical alignment and none is currently secured.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "A small fleet fits the capital envelope, but patient safety, health data, device compliance, failed recordings, licensed interpretation, courier coordination, and part-time oversight make reliable delivery difficult.",
+      "score": 3,
+      "status": "scored"
+    }
+  ],
+  "final_score": 3.6,
+  "highest_value_structural_change": "Secure a minimum-volume clinic capacity contract and lease devices only against that committed demand, with the clinic retaining all medical ordering and interpretation and the venture paid for technically adequate turnaround.",
+  "interaction_adjustment": -0.2,
+  "judge_id": "screen-b04-j01",
+  "main_structural_strength": "A clinic-facing capacity service can combine a proven paid diagnostic event with asset sharing, sparing small clinics from buying and operating their own device fleet.",
+  "primary_score_limiter": "The proposed wholesale price has no demonstrated room for specialist, logistics, failure, compliance, acquisition, and idle-capacity costs, and no clinic demand is evidenced.",
+  "qualified": false,
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 3,
+  "strongest_disconfirming_evidence": "Published consumer prices are already low while clinics and existing providers can add the same devices directly, undermining both contribution margin and differentiation.",
+  "unrounded_score": 3.61
+}

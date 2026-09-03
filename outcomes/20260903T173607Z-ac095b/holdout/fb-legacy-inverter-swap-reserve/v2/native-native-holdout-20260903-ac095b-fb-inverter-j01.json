@@ -1,0 +1,117 @@
+{
+  "assumptions": [
+    "A suitably qualified electrical engineer can be contracted on a variable-cost basis and remains responsible for site-specific technical approval.",
+    "The family installation business can provide consent-based pilot introductions, but it provides neither exclusive distribution nor ownership of customer relationships or data.",
+    "Some post-warranty commercial fleets have unresolved multi-vendor or unsupported-equipment complexity for which a vendor-neutral decision dossier has incremental value beyond ordinary O&M; this remains unproven.",
+    "Pricing, contribution margin, acquisition cost, renewal, and licensing scalability are unknown and are not inferred from the existence of maintenance and modernization budgets."
+  ],
+  "base_score": 4.385,
+  "candidate_id": "fb-legacy-inverter-swap-reserve",
+  "candidate_sha256": "82c4fcc9046ce7f04f872a58544ff6166140a53ba617eedb0d298644f6ef243d",
+  "candidate_version": 2,
+  "constrained_score": 4.385,
+  "evaluation_type": "holdout_native",
+  "evidence_needed_for_higher_score": "Paid pilots in a precisely defined unsupported commercial cohort showing conversion at tested prices, fully loaded contribution margin and payback after engineering and sales costs, repeat or portfolio-refresh purchases, measurable decision-time or downtime improvement versus incumbent O&M/OEM routes, a credible reachable-account denominator, and signed scalable channel or workflow-integration agreements with usable derived-data rights.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "Aging and unsupported inverters create real downtime and repowering decisions, and fragmented site constraints make advance planning useful. The insight is credible but not novel, because established O&M, engineering, installer, and OEM workflows already address much of it.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Downtime, diagnostics, and modernization are funded problems, especially for operationally important commercial sites. There is no evidence that buyers will separately prepay for this independent readiness dossier rather than rely on an incumbent or wait for a failure event.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Prepayment, customer-direct hardware, and the removal of speculative inventory materially improve capital efficiency and cash conversion. However, price, CAC, labor per dossier, engineer-review cost, contribution margin, retention, and project-conversion revenue are all unknown, while customized delivery limits operating leverage.",
+      "score": 4.5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Polish post-warranty commercial PV fleets form a coherent initial segment with identifiable operational triggers. The broad installed-base count is not a usable market estimate, and the reachable number of sites with unsupported equipment, material downtime exposure, and an unserved budget owner is not established.",
+      "score": 4.5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "Vendor neutrality and a portable evidence pack could differentiate the service in mixed fleets, but OEMs, installers, engineering firms, and O&M providers already own trusted relationships and can bundle the same work. No exclusive channel, standard, or supply advantage supports a dominant position.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A successful fleet workflow could extend to additional inverter brands, portfolios, CEE markets, periodic compliance refreshes, and broader repowering coordination. Those adjacencies depend on proving standardization and recurring demand rather than remaining bespoke engineering support.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Owned software and permitted derived records are legitimate assets, but the workflow is reproducible and the proposed data advantage is hypothetical, contract-dependent, sparse, and fragmented by site-specific engineering. Incumbents can copy or bundle the service before a meaningful dataset compounds.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "A vendor-neutral comparison and preassembled decision record may reduce ambiguity, rework, and procurement delay. No evidence yet shows a sufficiently large improvement in speed, cost, risk, or outcomes to change buying behavior against rapid OEM replacement and incumbent repowering options.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "The installed PV base is aging, modernization spending exists, and stricter certification increases the value of documented compliant decisions. The same forces also favor current-model OEM repowering and established service channels, so timing is supportive rather than uniquely favorable.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "The family installer relationship gives a realistic route to a small consenting pilot, and installer/O&M referrals are plausible. Those channels are nonexclusive, no acquisition economics or signed access exists, and direct portfolio sales may be relationship-intensive for a part-time founder.",
+      "score": 4.5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "A bounded pilot is low-capital and fits the founder's data and automation skills, while field work can be delegated. Execution still requires reliable site data, qualified engineering, current regulatory knowledge, careful liability boundaries, partner coordination, and B2B selling within a five-hour daily limit.",
+      "score": 5,
+      "status": "scored"
+    }
+  ],
+  "final_score": 4.4,
+  "highest_value_structural_change": "Secure a multi-year portfolio agreement or embedded workflow integration with an independent O&M provider, asset manager, or insurer that makes the service a recurring vendor-neutral readiness layer, supplies consented fleet data and trigger events, and grants durable derived-data rights; this would replace optional one-off acquisition with controlled distribution, renewal, and compounding evidence.",
+  "interaction_adjustment": 0,
+  "judge_id": "native-holdout-20260903-ac095b-fb-inverter-j01",
+  "main_structural_strength": "The redesign converts a capital-intensive inventory bet into a prepaid, bounded, vendor-neutral analytical and coordination service that can be piloted cheaply through founder-relevant industry access.",
+  "primary_score_limiter": "The offer is currently an unvalidated, service-heavy layer inside a workflow that trusted OEM, installer, engineering, and O&M incumbents can already bundle, leaving both scalable economics and a durable control point unproven.",
+  "qualified": false,
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 3,
+  "strongest_disconfirming_evidence": "SolarEdge and SMA describe rapid supported-equipment replacement pathways, paid warranty protection, and current-model or cross-brand repowering through established channels, while ordinary O&M contracts can include diagnostics and spare planning; this directly weakens the claim that customers need a separate independent readiness desk.",
+  "unrounded_score": 4.385
+}

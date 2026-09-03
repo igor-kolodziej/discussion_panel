@@ -1,0 +1,148 @@
+{
+  "candidate_id": "ws-home-sleep-device-pool",
+  "claims": [
+    {
+      "claim_id": "ws-home-sleep-device-pool-c1",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://csk.umed.pl/cenniki-2/poradnia-pulmonologiczna/",
+        "https://luxmedlublin.pl/en/domowy-test-bezdechu/"
+      ],
+      "statement": "Polish providers publicly list paid home sleep-apnea services, including 200 PLN screening, 400 PLN type-III home polygraphy, and a separate 500 PLN home test offer."
+    },
+    {
+      "claim_id": "ws-home-sleep-device-pool-c2",
+      "claim_type": "payer_and_budget",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://csk.umed.pl/cenniki-2/poradnia-pulmonologiczna/",
+        "https://luxmedlublin.pl/en/domowy-test-bezdechu/"
+      ],
+      "statement": "Self-paying patients demonstrably face a priced diagnostic event; the willingness of clinics to substitute a wholesale external capacity service is not evidenced."
+    },
+    {
+      "claim_id": "ws-home-sleep-device-pool-c3",
+      "claim_type": "founder_control_point_path",
+      "confidence": "low",
+      "evidence_refs": [],
+      "statement": "A plausible control path is purchased or leased device capacity plus a formal medical-services agreement and clinic contracts; none has been obtained and the founder cannot supply clinical judgment."
+    },
+    {
+      "claim_id": "ws-home-sleep-device-pool-c4",
+      "claim_type": "other",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://csk.umed.pl/cenniki-2/poradnia-pulmonologiczna/"
+      ],
+      "statement": "A clinic's separate monthly CPAP-monitoring price suggests a possible downstream recurring workflow, but it does not prove demand for outsourced monitoring."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Clinic owner or diagnostic-service lead; patient for direct-pay arrangements",
+    "bundling_resistance": "Faster local turnaround, low failure rates, transparent service levels, and no clinic capex must offset limited clinical control",
+    "customer_relationship_owner": "Clinics own their patient relationships; the proposed capacity contract does not yet exist",
+    "distribution_origin": "Direct clinic contract, physician referral, or CPAP provider partnership",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Clinic sales, medical partner onboarding, and referral fees where lawful",
+      "cash_conversion": "Patient prepayment or monthly clinic invoicing while equipment capital is paid upfront",
+      "contribution_margin": "Depends primarily on device utilization, failure rate, and specialist cost; no unit economics are established",
+      "delivery_and_support_costs": "Patient instruction, device handoff, technical review, scheduling, and clinic support",
+      "overhead_and_compliance": "Device maintenance, medical and product liability, GDPR health-data controls, clinical governance, and insurance",
+      "revenue_basis": "Target 300-450 PLN wholesale or 450-650 PLN retail per adequate interpreted study",
+      "variable_costs": "Physician interpretation, courier, consumables, cleaning, payment fees, and failed-study repeats"
+    },
+    "likely_incumbent_response": "Hospitals, private chains, CPAP vendors, telemedicine providers, and clinics can own devices or contract existing diagnostic labs",
+    "paid_event_or_measurable_loss": "A technically adequate, physician-reviewed home study is paid; measurable losses are idle devices, failed recordings, repeated visits, and delayed report turnaround",
+    "payer": "Private clinic under wholesale capacity terms or self-paying patient under a clinic-supervised pathway",
+    "purchase_trigger": "Clinic waitlist, device failure, seasonal demand spike, new sleep-service launch, or patient preference for home testing",
+    "renewal_event": "Each completed referral, with quarterly or annual clinic capacity renewal"
+  },
+  "contrary_evidence": [
+    "Existing clinics already own or access home-test workflows and can add devices directly.",
+    "Published consumer prices are low relative to courier, specialist, support, cleaning, repeat-test, and acquisition costs.",
+    "A device pool without referral density suffers poor utilization."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Proposed purchase invoices or equipment lease and separate medical-services agreement",
+    "acquisition_instrument_type": "purchase",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Lease replaceable devices from another compliant supplier and provide logistics only to clinics retaining interpretation",
+    "current_owner": "Unselected medical-device distributors, lessors, or clinics",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "Clinics own their patient relationships; the proposed capacity contract does not yet exist",
+    "duration": "Asset useful life after purchase; no asset has been acquired",
+    "exclusivity": "not_applicable",
+    "founder_access_basis": "none",
+    "founder_access_description": "The founder has relevant analytical interest but no medical license, clinic contract, device ownership, or right to rely on a medical-student relationship for clinical work",
+    "launch_controller": "Device owner plus contracted medical partner; neither is secured",
+    "mechanism_control": "dependent",
+    "renewal": "Device maintenance and medical-services terms require recurring renewal",
+    "replaceability": "replaceable",
+    "revocability": "not_applicable",
+    "status": "unknown",
+    "subject": "Fleet of compliant home sleep-study devices and booking slots",
+    "subject_type": "asset",
+    "transferability": "transferable"
+  },
+  "discovery_lane": "weak-signal",
+  "economics": {
+    "acquisition_route": "Contracts with small private clinics and CPAP or dental-sleep referral partners",
+    "capital_required_pln": 90000,
+    "founder_net_worth_path": "Conditional path: a dense multi-city network completing 2,000 studies monthly at 100 PLN contribution yields 2.4m PLN annual contribution before overhead; a defensible clinic network might exceed 5m PLN in value, but regulation, utilization, and margins are unknown",
+    "founder_time": "A five-to-ten-device pilot could fit 3-5 hours daily only with outsourced courier and licensed interpretation",
+    "gross_margin_basis": "Per-study price less interpretation, delivery, consumables, cleaning, failed-study repeats, support, and device depreciation",
+    "payback": "Target device payback within 80-150 completed studies depending on acquisition and specialist costs; wholly unvalidated",
+    "pricing": "Discovery hypothesis: 300-450 PLN wholesale or 450-650 PLN retail per adequate physician-reviewed study",
+    "retention_or_repeat": "Repeat comes from clinic referral volume, not usually the same patient; capacity contracts may renew quarterly"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Device utilization, repeat-failure, patient-instruction, and turnaround data improve routing and reduce unusable studies",
+    "customer": "Small private pulmonology, ENT, cardiology, obesity, and dental-sleep clinics in Poland",
+    "distribution_mechanism": "Clinic contracts and referral pathways rather than consumer influencer marketing",
+    "offer_and_business_model": "Owned or leased diagnostic-device capacity, patient logistics, quality control, and specialist-report coordination sold per completed study",
+    "payer_and_paid_event": "The clinic or patient pays when a technically adequate study and physician-reviewed report are completed",
+    "problem_trigger": "A clinician wants a home sleep study but lacks an available device, trained handoff workflow, or reliable patient-return logistics"
+  },
+  "founder_fit": [
+    "Sleep and physiological time-series quality control align with neuroscience and quantified-self interests",
+    "Device-utilization and failure-rate optimization fit data-science skills",
+    "Clinic-channel distribution avoids an on-camera consumer-health brand",
+    "A bounded device pool can test operations within roughly 100k PLN, although clinical work must remain with licensed professionals"
+  ],
+  "parent": null,
+  "risks": [
+    "False negatives, poor recordings, or delayed escalation can harm patients",
+    "Health-data handling raises severe privacy and security requirements",
+    "Medical labor or device downtime can destroy unit economics",
+    "The founder's lack of clinical credentials prevents independent operation of the medical pathway"
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://csk.umed.pl/cenniki-2/poradnia-pulmonologiczna/",
+    "https://luxmedlublin.pl/en/domowy-test-bezdechu/"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "capacity_or_asset_operator",
+    "commercial_model_descriptor": "per study utilization of a pooled home diagnostic device fleet",
+    "control_point_category": "owned_asset",
+    "control_point_descriptor": "proposed owned or leased home sleep study device capacity",
+    "critical_dependency_category": "specialist_labor",
+    "critical_dependency_descriptor": "licensed physician oversight and interpretation plus trained quality review"
+  },
+  "structure": {
+    "commercial_archetype": "Diagnostic asset-pool operator paid per completed study",
+    "control_point": "The proposed owned or leased fleet and booking capacity",
+    "critical_dependency": "Licensed clinicians and compliant devices for ordering, interpretation, and medical accountability"
+  },
+  "thesis": "Observed purchasing and pricing signal: Polish providers publicly charge roughly 200-500 PLN for home sleep-apnea screening or type-III polygraphy, and one clinic separately prices monthly CPAP monitoring. Operate a small pool of compliant home-test devices, courier logistics, patient instructions, data-quality checks, and contracted physician interpretation for clinics that want test capacity without buying and scheduling their own fleet.",
+  "title": "Home Sleep-Diagnostic Device Pool for Private Clinics",
+  "uncertainties": [
+    "Applicable Polish medical-device, healthcare-entity, ordering, and telemedicine requirements",
+    "Device purchase or lease price, useful life, cleaning protocol, and consumable cost",
+    "Share of studies requiring repeats and physician-review cost",
+    "Clinic willingness to outsource capacity while retaining medical responsibility"
+  ],
+  "version": 1
+}

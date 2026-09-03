@@ -1,0 +1,117 @@
+{
+  "assumptions": [
+    "A sponsor or CRO has an approved neurology protocol whose local endpoint operations are not adequately served.",
+    "A qualified clinic and investigators will enter the proposed master-services and study work-order structure.",
+    "The targeted signals can be collected at home with an acceptance rate that supports the pricing.",
+    "All clinical judgment, safety decisions, and regulated roles remain with appropriately qualified study personnel."
+  ],
+  "base_score": 4.11,
+  "candidate_id": "fb-neuro-dct-signal-ops",
+  "candidate_sha256": "f235ccb437920b323f69c9efc3a0b3a02cc385f2db89bf2f3521ca370f47923d",
+  "candidate_version": 1,
+  "constrained_score": 3.91,
+  "evaluation_type": "working_screening",
+  "evidence_needed_for_higher_score": "A named protocol pipeline, sponsor or CRO budget-owner interviews, an executed clinic-investigator agreement, documented regulatory roles, pilot acceptance and repeat rates, and fully loaded economics across qualification, labor, support, devices, insurance, and payment timing.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "Treating local participant operations and signal-quality custody as a sponsor-accepted deliverable identifies a real missing layer between decentralised-trial software and protocol-grade neurological endpoints.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Missing or rejected endpoints can delay expensive studies, so the pain can be severe, but no sponsor interview, active protocol, rejection baseline, budget, or willingness to buy a Poland-focused node is evidenced.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Setup fees plus accepted participant-week pricing align revenue with usable output, yet qualified labor, devices, travel, privacy, validation, insurance, support, and long acceptance cycles could absorb the proposed margin.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Neurology studies needing home endpoints in Central Europe form a clear niche, but the addressable study pipeline, endpoint mix, participant density, and sponsor demand are entirely unquantified.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "Global CROs, eClinical specialists, device vendors, and established investigator networks already bundle qualification, logistics, and sponsor access; the candidate has no exclusive clinic network or validated endpoint advantage.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A successful protocol-grade node could extend to additional neurological signals, studies, sponsors, cohorts, and nearby countries, though each extension may require fresh validation and oversight.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Accepted-data histories, operating procedures, and investigator relationships could compound, but the proposed contracts are nonexclusive, the relationships are not yet held, and sponsors can switch to larger qualified vendors.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "Neuroscience and data-science skills fit endpoint QA, but the founder lacks clinical authority, participant access, sponsor relationships, study appointments, and evidence of a proprietary technical capability.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "Regulatory recognition of decentralised trial elements supports the direction, while continuing sponsor, investigator, consent, and clinical-oversight duties prevent an easy software-only adoption wave.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "CRO vendor qualification and sponsor study planning are concentrated routes to meaningful contracts, but they are slow, trust-intensive, and inaccessible here without a secured investigator or clinic partnership.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "Clinical quality, sensitive data, protocol deviations, device calibration, insurance, participant support, and qualified staffing make this difficult to launch part-time, and multiple independent gatekeepers control every study.",
+      "score": 3,
+      "status": "scored"
+    }
+  ],
+  "final_score": 3.9,
+  "highest_value_structural_change": "Narrow the offer to one sponsor-specified, non-diagnostic endpoint and secure a clinic-led paid pilot in which the sponsor supplies the protocol and devices and the venture is accountable only for pre-defined operational QA milestones.",
+  "interaction_adjustment": -0.2,
+  "judge_id": "screen-b04-j01",
+  "main_structural_strength": "Pricing against accepted endpoint output aligns the service with a costly sponsor outcome and could turn operational signal quality into a measurable learning loop.",
+  "primary_score_limiter": "The business has no evidenced study pipeline or contracted clinical access and must clear sponsor qualification, investigator, ethics, privacy, and staffing gates before it can deliver anything.",
+  "qualified": false,
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 3,
+  "strongest_disconfirming_evidence": "Established CROs and decentralised-trial vendors already possess sponsor qualification systems and global device logistics, while some neurological endpoints cannot validly move into the home.",
+  "unrounded_score": 3.91
+}

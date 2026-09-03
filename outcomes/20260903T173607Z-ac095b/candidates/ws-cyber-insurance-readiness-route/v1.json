@@ -1,0 +1,148 @@
+{
+  "candidate_id": "ws-cyber-insurance-readiness-route",
+  "claims": [
+    {
+      "claim_id": "ws-cyber-insurance-readiness-route-c1",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://webcdn.cfc.com/media/4556/cyber_combined_application_us_v25.pdf",
+        "https://affinity.marsh.com/cyber-accelerate/application-requirements.html"
+      ],
+      "statement": "Current insurance applications request detailed evidence about EDR, MFA, backups, vulnerability testing, and related controls, making missing-control remediation and application completion observable work."
+    },
+    {
+      "claim_id": "ws-cyber-insurance-readiness-route-c2",
+      "claim_type": "payer_and_budget",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://www.marsh.com/ca/services/cyber-risk/insights/cyber-resilience-twelve-key-controls-to-strengthen-your-security.html"
+      ],
+      "statement": "Organizations purchasing cyber insurance allocate IT and risk labor to these controls, and Marsh says some controls are minimum insurer requirements; willingness of Polish SMEs to pay a separate readiness fee is unknown."
+    },
+    {
+      "claim_id": "ws-cyber-insurance-readiness-route-c3",
+      "claim_type": "founder_control_point_path",
+      "confidence": "low",
+      "evidence_refs": [],
+      "statement": "A plausible control path is a nonexclusive agreement with a licensed broker that accepts standardized evidence, with an insurer-neutral standalone pack as fallback; no agreement is secured."
+    },
+    {
+      "claim_id": "ws-cyber-insurance-readiness-route-c4",
+      "claim_type": "other",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://affinity.marsh.com/cyber-accelerate/application-requirements.html"
+      ],
+      "statement": "The broker application-preparation page explicitly advises involving IT expertise and lists security-control information needed for quotation, supporting a serviceable coordination gap."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Owner, CFO, IT manager, risk lead, or insurance buyer",
+    "bundling_resistance": "Vendor-neutral evidence reuse, fixed scope, Polish-language remediation, and multi-broker portability must beat free pre-quote scans",
+    "customer_relationship_owner": "The broker owns insurance placement; the venture would own only its readiness-service relationship if contracted",
+    "distribution_origin": "Licensed insurance broker, MSP, accountant, lender, or contract-compliance adviser",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Channel revenue share, MSP enablement, and targeted SME outreach",
+      "cash_conversion": "Deposit or full prepayment for readiness; referral revenue arrives only after licensed placement",
+      "contribution_margin": "Service-like until collection and checks are automated; remediation scope creep can erase margin",
+      "delivery_and_support_costs": "Customer interviews, control verification, exception management, and broker handoff",
+      "overhead_and_compliance": "Security, professional liability, regulatory advice on insurance distribution, GDPR, and quality assurance",
+      "revenue_basis": "Target 2,500-7,500 PLN per readiness sprint plus 500-2,000 PLN annual refresh; any referral compensation only where lawful",
+      "variable_costs": "External scans, evidence collection, remediation subcontractors, report review, and payment fees"
+    },
+    "likely_incumbent_response": "Brokers, insurers, MSPs, security vendors, and risk-scanning platforms can bundle readiness and active monitoring",
+    "paid_event_or_measurable_loss": "A verified readiness pack is paid; measurable loss is remediation labor, delayed or declined quotation, adverse terms, and uncovered cyber loss exposure",
+    "payer": "SME purchasing readiness work; possibly licensed broker or insurer for a compliant referral after placement",
+    "purchase_trigger": "New policy application, renewal questionnaire, customer cyber clause, lender request, or broker-identified control gap",
+    "renewal_event": "Annual policy renewal and evidence refresh after material IT changes"
+  },
+  "contrary_evidence": [
+    "Insurers and brokers increasingly bundle scans, control guidance, and proactive services with insurance.",
+    "The cited underwriting forms are international, not proof of identical Polish underwriting criteria.",
+    "An MSP already managing the customer's stack may produce the evidence more cheaply."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Proposed nonexclusive broker distribution and referral agreement with explicit regulatory boundaries; none secured",
+    "acquisition_instrument_type": "distribution_agreement",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Sell a standalone control-evidence pack through MSPs and let customers choose any licensed broker",
+    "current_owner": "Licensed insurance brokers and insurers",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "The broker owns insurance placement; the venture would own only its readiness-service relationship if contracted",
+    "duration": "Unknown until negotiated",
+    "exclusivity": "nonexclusive",
+    "founder_access_basis": "other_legally_usable_access",
+    "founder_access_description": "Public underwriting forms and lawful outreach to SMEs, MSPs, and licensed brokers are available; no distribution appointment, client evidence, or insurer data is held",
+    "launch_controller": "A licensed Polish broker or insurer; none selected",
+    "mechanism_control": "dependent",
+    "renewal": "Proposed annual partner renewal tied to policy cycles",
+    "replaceability": "replaceable",
+    "revocability": "unknown",
+    "status": "unknown",
+    "subject": "Cyber-insurance quotation and policy-placement relationship",
+    "subject_type": "relationship",
+    "transferability": "nontransferable"
+  },
+  "discovery_lane": "weak-signal",
+  "economics": {
+    "acquisition_route": "Licensed brokers, MSPs, accountants, lenders, and contractual cyber-compliance referrals",
+    "capital_required_pln": 40000,
+    "founder_net_worth_path": "Conditional path: 1,000 annual sprints and refreshes at a 3,500 PLN blend equals 3.5m PLN revenue; software-assisted delivery and broker distribution could create value above 5m PLN, but regulatory access and demand are unproven",
+    "founder_time": "A standardized ten-client pilot can fit 3-5 hours daily if remediation is referred out",
+    "gross_margin_basis": "Service fee less scanning, reviewer labor, remediation partner cost, acquisition share, insurance, and compliance",
+    "payback": "Could pay back through faster quotation or avoided duplicated consulting, but premium or coverage improvement is not established",
+    "pricing": "Discovery hypothesis: 2,500-7,500 PLN readiness sprint, 500-2,000 PLN annual refresh, and only legally permitted channel compensation",
+    "retention_or_repeat": "Annual refresh around renewals plus material IT changes"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Permissioned mapping of evidence gaps to underwriting questions, remediation time, and quote outcomes improves triage",
+    "customer": "Polish SMEs seeking first-time or renewed cyber insurance without an internal security team",
+    "distribution_mechanism": "Nonexclusive broker, MSP, accountant, and lender referrals",
+    "offer_and_business_model": "Fixed-price control verification and remediation coordination linked to licensed broker quotation, without carrying insurance risk",
+    "payer_and_paid_event": "The SME pays for a completed readiness evidence pack; a licensed channel may separately pay a lawful referral or distribution fee after policy placement",
+    "problem_trigger": "A broker questionnaire, renewal, customer-contract requirement, lender condition, or rejected cyber-insurance submission"
+  },
+  "founder_fit": [
+    "Evidence scoring, questionnaire normalization, and quote-outcome analysis fit data-science and finance interests",
+    "A fixed-scope asynchronous sprint can operate alongside employment",
+    "Broker and MSP channels reduce dependence on continuous founder networking or video content",
+    "The founder need not carry insurance risk and can measure gap closure, turnaround, and placement outcomes"
+  ],
+  "parent": null,
+  "risks": [
+    "Accidentally conducting regulated insurance intermediation without authorization",
+    "Security evidence itself is sensitive and attractive to attackers",
+    "Clients may misconstrue readiness as a guarantee of coverage or security",
+    "Channel partners can internalize the workflow after learning it"
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://webcdn.cfc.com/media/4556/cyber_combined_application_us_v25.pdf",
+    "https://affinity.marsh.com/cyber-accelerate/application-requirements.html",
+    "https://www.marsh.com/ca/services/cyber-risk/insights/cyber-resilience-twelve-key-controls-to-strengthen-your-security.html"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "risk_transfer_or_financing",
+    "commercial_model_descriptor": "fee based risk readiness service linked to licensed cyber insurance placement",
+    "control_point_category": "distribution_access",
+    "control_point_descriptor": "pre underwriting evidence handoff into a broker or insurer quotation route",
+    "critical_dependency_category": "capital_provider",
+    "critical_dependency_descriptor": "insurer risk capacity and licensed broker willingness to quote and bind qualifying smes"
+  },
+  "structure": {
+    "commercial_archetype": "Risk-transfer enablement service with licensed insurance distribution partner",
+    "control_point": "Broker or insurer distribution access at pre-underwriting readiness",
+    "critical_dependency": "Licensed brokers and insurers willing to accept the evidence pack and quote qualifying SMEs"
+  },
+  "thesis": "Observed underwriting-workflow signal: current cyber-insurance application forms ask detailed questions about MFA, EDR, backups, restoration tests, patching, and incident response, while brokers say some controls have become minimum insurability requirements. Sell Polish SMEs a fixed-scope evidence sprint that verifies answers, closes bounded gaps through partners, and hands a reusable evidence pack to a licensed insurance broker for quotation.",
+  "title": "Controls-to-Cyber-Insurance Readiness Route",
+  "uncertainties": [
+    "Polish insurance-distribution licensing boundary for referrals, quotation assistance, and compensation",
+    "Broker willingness to accept third-party evidence and share outcome data",
+    "SME readiness budget and remediation conversion rate",
+    "Liability when a verified control later fails"
+  ],
+  "version": 1
+}

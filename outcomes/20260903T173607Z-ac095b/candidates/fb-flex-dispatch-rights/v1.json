@@ -1,0 +1,144 @@
+{
+  "candidate_id": "fb-flex-dispatch-rights",
+  "claims": [
+    {
+      "claim_id": "fb-flex-dispatch-rights-c1",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/dir/2019/944/oj/eng"
+      ],
+      "statement": "EU electricity rules define demand response as changing load for market signals or incentive payments and require participation through aggregation, supporting settlement for verified flexibility as the proposed paid event."
+    },
+    {
+      "claim_id": "fb-flex-dispatch-rights-c2",
+      "claim_type": "payer_and_budget",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/dir/2019/944/oj/eng"
+      ],
+      "statement": "Transmission and distribution operators may procure ancillary services from aggregation participants, but the exact Polish payer, tariff, minimum bid, and margin for this small-site portfolio remain unverified."
+    },
+    {
+      "claim_id": "fb-flex-dispatch-rights-c3",
+      "claim_type": "founder_control_point_path",
+      "confidence": "low",
+      "evidence_refs": [],
+      "statement": "The proposed control path is to sign meter-bound customer dispatch contracts and a replaceable market-access agreement; none is currently owned or contracted."
+    },
+    {
+      "claim_id": "fb-flex-dispatch-rights-c4",
+      "claim_type": "other",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/dir/2019/944/oj/eng"
+      ],
+      "statement": "EU rules expressly contemplate independent aggregators and customer aggregation contracts, while leaving technical qualification and imbalance responsibility to applicable market arrangements."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Portfolio trading, balancing, or flexibility-procurement lead",
+    "bundling_resistance": "Remain vendor-neutral, give installers and asset owners transparent settlement splits, and support device mixes that single-vendor fleets ignore",
+    "customer_relationship_owner": "The installer or energy supplier until the asset owner signs a direct enrollment contract",
+    "distribution_origin": "Opt-in referrals from solar, storage, heat-pump, and charger installers",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Installer revenue share and integration labor; hypothesis below 250 PLN per activated site",
+      "cash_conversion": "Monthly or quarterly after market settlement; working capital is needed if customers are credited before partner remittance",
+      "contribution_margin": "Unvalidated target of 45-65% after site incentives, market-access share, telemetry, and support",
+      "delivery_and_support_costs": "Remote onboarding with occasional electrician intervention; target fewer than 45 minutes of human work per activated site per year",
+      "overhead_and_compliance": "Energy-market counsel, cyber controls, liability cover, audit logs, billing, and partner certification",
+      "revenue_basis": "Hypothesis: 10-20% of verified gross flexibility receipts, or a 20-50 PLN per-site monthly availability administration fee",
+      "variable_costs": "Telemetry/API charges, settlement share, customer incentive, metering exceptions, and device support"
+    },
+    "likely_incumbent_response": "Retailers, inverter vendors, and established aggregators can bundle enrollment into energy contracts or device apps",
+    "paid_event_or_measurable_loss": "Paid event is an accepted availability reservation or metered dispatch credited in a flexibility settlement; measurable loss is foregone settlement when a site cannot be qualified or verified",
+    "payer": "Licensed aggregator, balance-responsible party, retailer, or other flexibility buyer",
+    "purchase_trigger": "The partner has more subscale devices than its existing onboarding and verification process can economically absorb",
+    "renewal_event": "Portfolio contract renews after demonstrated availability, dispatch success, and low exception cost"
+  },
+  "contrary_evidence": [
+    "The right to aggregate does not prove that Polish small-site spreads cover telemetry, imbalance, support, and customer incentive costs.",
+    "Device makers and incumbent retailers may already control sufficient telemetry and distribution to bundle this function cheaply."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Proposed 36-month customer aggregation contract for specified assets and event windows, paired with a separate settlement-integration agreement",
+    "acquisition_instrument_type": "long_term_contract",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Route a consenting site through another licensed market-access partner, or exclude the unsupported device while retaining monitoring-only service",
+    "current_owner": "Each asset owner; no founder ownership or executed right is evidenced",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "The installer or energy supplier until the asset owner signs a direct enrollment contract",
+    "duration": "Proposed 36 months; not negotiated or signed",
+    "exclusivity": "nonexclusive",
+    "founder_access_basis": "operating_relationship",
+    "founder_access_description": "The parents' small renewable-installation firm could lawfully introduce a narrowly scoped pilot to consenting customers; it confers no current customer, dispatch, market, or data rights.",
+    "launch_controller": "Asset owner together with a licensed aggregator or balance-responsible party",
+    "mechanism_control": "dependent",
+    "renewal": "Proposed annual renewal after the initial term, subject to performance and customer consent",
+    "replaceability": "replaceable",
+    "revocability": "for_cause",
+    "status": "unknown",
+    "subject": "Dispatch and telemetry rights for each enrolled battery, heat pump, or EV charger",
+    "subject_type": "right",
+    "transferability": "nontransferable"
+  },
+  "discovery_lane": "future-backcast",
+  "economics": {
+    "acquisition_route": "One installer integration can expose many consenting sites; start with a lawful pilot through the family firm's ordinary commercial channel",
+    "capital_required_pln": 80000,
+    "founder_net_worth_path": "A large portfolio could compound recurring settlement share; reaching 5m PLN requires thousands of profitable sites or a strategic sale, with initial traction targeted in 12-18 months and scale evidence in 3-5 years",
+    "founder_time": "Up to five hours per day through a small pilot, automation-first monitoring, and outsourced electrical field work",
+    "gross_margin_basis": "Settlement share less customer incentive, market-access fee, telemetry, cloud, and exception support",
+    "payback": "Target under nine months on integration and site-onboarding cost; not yet evidenced",
+    "pricing": "Hypothesis: 10-20% of verified settlement or 20-50 PLN per enrolled site per month",
+    "retention_or_repeat": "Recurring while assets remain enrolled and portfolio performance clears market thresholds"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A longitudinal response dataset by device, tariff, weather, and site improves qualification, bidding, and exception handling as the portfolio grows",
+    "customer": "Licensed aggregators, balance-responsible parties, and energy retailers serving Polish small businesses",
+    "distribution_mechanism": "Renewable-energy installers embed a voluntary enrollment offer into commissioning and service visits",
+    "offer_and_business_model": "Contract asset-level dispatch permissions, validate telemetry, route events, and split proceeds for a percentage of cleared flexibility revenue",
+    "payer_and_paid_event": "A market-access partner pays a platform share when enrolled capacity earns an availability or verified dispatch settlement",
+    "problem_trigger": "A growing installed base of controllable behind-the-meter assets remains too fragmented to qualify, dispatch, verify, and settle one site at a time"
+  },
+  "founder_fit": [
+    "Data-science skills map to baselines, response prediction, anomaly detection, and portfolio economics",
+    "A lawful installer relationship offers a small opt-in field test without claiming ownership of customers or data",
+    "Most operation can become event-driven software with exception-based support rather than constant networking",
+    "A pilot can be constrained to five hours per day and expanded only after positive per-site contribution"
+  ],
+  "parent": null,
+  "risks": [
+    "Regulatory or contractual classification could require authorisation or a licensed principal",
+    "Failed dispatch can create imbalance charges, customer harm, or equipment warranty disputes",
+    "Installer referrals may not convert into durable direct customer contracts",
+    "A large aggregator could replicate the onboarding layer and compress the fee"
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/dir/2019/944/oj/eng"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "transaction_intermediation",
+    "commercial_model_descriptor": "percentage fee on verified flexibility settlement",
+    "control_point_category": "contracted_capacity",
+    "control_point_descriptor": "time bounded customer grants to dispatch and settle named assets",
+    "critical_dependency_category": "regulatory_approval",
+    "critical_dependency_descriptor": "qualification and market participation through a licensed aggregator or balance responsible party"
+  },
+  "structure": {
+    "commercial_archetype": "distributed-energy flexibility settlement intermediary",
+    "control_point": "contracted dispatch windows and settlement instructions for enrolled assets",
+    "critical_dependency": "licensed market access plus accepted telemetry and baseline rules"
+  },
+  "thesis": "Future operating state (2032): Polish small businesses automatically monetize controllable batteries, heat pumps, and EV chargers in flexibility markets. Missing contractual and coordination mechanism: meter-bound dispatch rights, telemetry validation, and settlement routing that a licensed aggregator or balance-responsible party can accept for many subscale sites.",
+  "title": "Dispatch-Rights Rail for Small Energy Fleets",
+  "uncertainties": [
+    "Polish market qualification, baseline, metering, and minimum portfolio requirements for each asset class",
+    "Actual controllable capacity and opt-in rate among small-business installer customers",
+    "Net settlement value after customer share, imbalance exposure, and market-access fees",
+    "Whether mixed-vendor APIs permit reliable dispatch without site hardware"
+  ],
+  "version": 1
+}

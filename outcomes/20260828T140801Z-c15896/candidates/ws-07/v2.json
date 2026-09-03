@@ -1,0 +1,127 @@
+{
+  "candidate_id": "ws-07",
+  "claims": [
+    {
+      "claim_id": "ws-07-v2-control",
+      "claim_type": "founder_control_point_path",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2025/40/oj/eng"
+      ],
+      "statement": "The PPWR permits reusable-packaging users to appoint a third party for mutualised reuse systems and requires system governance, allocation of costs and benefits, collection, reverse logistics, reconditioning, and participant duties. The redesign therefore treats an executed lane agreement covering those duties—not tote ownership by itself—as the control point; no such agreement is claimed to exist yet."
+    },
+    {
+      "claim_id": "ws-07-v2-loss",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2025/40/oj/eng",
+        "https://pure.qub.ac.uk/en/publications/life-cycle-economic-impacts-of-reusable-plastic-crate/",
+        "https://www.frontiersin.org/journals/sustainability/articles/10.3389/frsus.2022.910215/full"
+      ],
+      "statement": "For an in-scope recurring lane, disposable-packaging purchases and future reuse compliance are measurable, while a reusable alternative has measurable return-transport, cleaning, repair, dwell-time, damage, and loss costs. The redesign requires these route costs to be quoted and allocated before launch instead of assuming reusable packaging is automatically cheaper."
+    },
+    {
+      "claim_id": "ws-07-v2-payer",
+      "claim_type": "payer_and_budget",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2025/40/oj/eng",
+        "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:52026XC03084"
+      ],
+      "statement": "An economic operator responsible for packaging used on a recurring lane is the proposed anchor payer from its packaging and logistics budget. The redesigned paid event is a contractually reserved minimum number of monthly turns plus completed turns and allocated loss or damage, rather than an unvalidated standalone reporting subscription."
+    },
+    {
+      "claim_id": "ws-07-v2-competition",
+      "claim_type": "other",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://www.2return.pl/uslugi/Pooling-opakowan/",
+        "https://www.brambles.com/Content/cms/news/2026/Brambles_1H26_Result_ASX_and_Media_Release.pdf",
+        "https://www.gs1.org/standards/epcis"
+      ],
+      "statement": "Pooling, recovery, cleaning, repair, tracking, and circulation analytics already exist at incumbent scale, and EPCIS standardises core event data. The redesign makes an incumbent quote or documented service refusal part of lane qualification and claims no generic tracking-data moat."
+    }
+  ],
+  "contrary_evidence": [
+    "2Return already offers owned-pool delivery, recovery, cleaning, repair, and recirculation in Poland, so a lane must show a specific quoted cost or service gap rather than presumed incumbent neglect.",
+    "Brambles operates a 348-million-asset network with more than 750 service centres and still reports material European asset losses, showing that contractual safeguards cannot eliminate leakage risk.",
+    "Reusable-crate economics remain conditional on circulation frequency, reverse-logistics design, distance, fold ratio, lifetime, damage, and loss; no supplier or lane cost stack has been obtained for this founder.",
+    "The main regulatory target begins in 2030, the calculation methodology was still pending in the research record, and exemptions have already narrowed some formats, so current urgency and reporting value remain uncertain."
+  ],
+  "discovery_lane": "weak-signal",
+  "economics": {
+    "acquisition_route": "Qualify one recurring Polish non-food lane only after obtaining a self-owned and incumbent-pool benchmark, then ask one anchor shipper to coordinate named recipients. A launch requires a signed conditional agreement with a take-or-pay turn floor, loss and damage allocation, depot return rights, and carrier or reverse-haul service levels; tote leasing or purchase occurs only after those conditions and supplier quotes are in place.",
+    "capital_required_pln": 30000,
+    "founder_net_worth_path": "Milestone 1 is one signed lane and a measured positive-contribution pilot within 12 months; milestone 2 is 5-10 profitable lanes with delegated operations in years 2-3; milestone 3 is 30-50 contracted lanes using repeatable underwriting and operating templates in years 4-7. A path to at least 5 million PLN of founder net worth exists only if those lanes support at least roughly 1 million PLN of sustainable annual EBITDA and retained founder equity; without that replication, this remains a small managed service.",
+    "founder_time": "Target 10-15 founder hours per week for lane underwriting, contracting, and KPI review, with a temporary ceiling of 20 hours during launch; depot work, transport, cleaning, repair, scanning support, and routine exceptions are subcontracted and the pilot does not proceed if this delegation cannot be contracted.",
+    "gross_margin_basis": "No percentage margin is assumed. Launch only if the take-or-pay minimum covers quoted tote lease or depreciation, depot and cleaning charges, insurance and administration, expected loss and damage reserve, and fixed reverse-haul capacity; completed-turn charges must then contribute positively after variable handling and transport.",
+    "payback": "Cap pre-contract spending at the stated validation budget and do not acquire a production fleet before customer and operator conditions are signed. The implementation payment and take-or-pay floor must recover non-reusable setup cost and committed fixed lane cost within the initial contract term; otherwise the lane is rejected.",
+    "pricing": "Proposed quote-derived structure: a paid route-design and implementation fee credited at launch, a monthly take-or-pay minimum sized to reserved fleet and subcontractor fixed costs, a variable fee per completed turn, and contractually allocated loss or damage charges. No separate compliance subscription is sold unless a competent buyer accepts the records and pays for it.",
+    "retention_or_repeat": "Revenue repeats under the lane's take-or-pay commitment and completed turns. Renewal depends on measured total cost, availability, loss, dwell time, and compliance usefulness beating the customer's benchmark; the service does not rely on generic scan-data lock-in."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A growing library of measured lane cost distributions, qualification rules, contract clauses, and proven subcontractor service levels can reduce underwriting time and failed launches on similar routes; no proprietary advantage is claimed from standard EPCIS scan events alone.",
+    "customer": "One anchor industrial shipper and its named recurring recipients on a single Polish non-food route with predictable weekly volume and a documented gap versus self-owned or incumbent pooling options.",
+    "distribution_mechanism": "Sell one anchor-led lane agreement after a paid route assessment; the anchor coordinates recipient participation while the founder contracts depot and carrier obligations, avoiding an open multi-shipper network launch.",
+    "offer_and_business_model": "A ring-fenced closed-loop tote service for one contracted route, launched only after minimum turns, loss allocation, return rights, and reverse-haul duties are signed; charged through implementation, take-or-pay capacity, completed-turn, and allocated loss or damage fees.",
+    "payer_and_paid_event": "The anchor shipper pays from packaging and logistics budget for implementation, reserved monthly turn capacity, and completed circulations; counterparties bear agreed loss or damage charges, while reporting remains bundled until separately validated.",
+    "problem_trigger": "A specific recurring lane has measurable disposable-packaging and return costs but fails a pre-launch benchmark for self-ownership or incumbent pooling, and its parties will commit enough volume and duties to underwrite a closed loop."
+  },
+  "founder_fit": [
+    "The founder's data-science skills fit lane-level cost, loss, dwell-time, and sensitivity underwriting before capital is committed.",
+    "The contract-first sequence caps speculative spend and keeps the initial validation within the founder's available capital rather than consuming the full 100,000 PLN on inventory.",
+    "A single-lane scope and subcontracted physical operations can fit the founder's part-time limit if the delegation requirement is actually secured.",
+    "The parents' installation business can provide a small observational supplier-and-equipment-return workflow without being represented as a committed customer or distribution partner."
+  ],
+  "parent": {
+    "candidate_id": "ws-07",
+    "version": 1
+  },
+  "redesign": {
+    "changed_fingerprint_fields": [
+      "customer",
+      "problem_trigger",
+      "payer_and_paid_event",
+      "offer_and_business_model",
+      "distribution_mechanism",
+      "compounding_advantage"
+    ],
+    "economic_effect": "The redesign reduces pre-commitment capital at risk from a proposed 100,000 PLN pool to a 30,000 PLN validation cap, replaces unsupported per-turn margin and reporting-subscription assumptions with quote-derived take-or-pay coverage of fixed costs, and confines loss and reverse-logistics exposure to one ring-fenced lane. These are designed effects, not validated results; the lane is abandoned if the required contracts and cost stack do not support them."
+  },
+  "risks": [
+    "The anchor shipper, recipients, depot, and carrier may not accept a single enforceable operating and loss-allocation package, leaving the redesigned control point unobtained.",
+    "No route may show enough take-or-pay volume or incumbent service gap to cover fixed reverse-logistics and asset costs.",
+    "Loss, dwell-time, damage, and exception handling can exceed the contracted reserve and consume founder time even on a ring-fenced lane.",
+    "The in-scope format, 2030 urgency, or evidentiary value of pool records may weaken through methodology or exemption changes.",
+    "The business may remain an imitable managed service if underwriting and subcontractor terms do not transfer efficiently across lanes."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2025/40/oj/eng",
+    "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:52026XC03084",
+    "https://www.2return.pl/uslugi/Pooling-opakowan/",
+    "https://www.brambles.com/Content/cms/news/2026/Brambles_1H26_Result_ASX_and_Media_Release.pdf",
+    "https://www.gs1.org/standards/epcis",
+    "https://pure.qub.ac.uk/en/publications/life-cycle-economic-impacts-of-reusable-plastic-crate/",
+    "https://www.frontiersin.org/journals/sustainability/articles/10.3389/frsus.2022.910215/full"
+  ],
+  "stage": "development",
+  "structure": {
+    "commercial_archetype": "Take-or-pay dedicated closed-loop route service",
+    "control_point": "An executed anchor-led lane agreement binding minimum paid turns, participant loss allocation, depot return rights, and carrier or reverse-haul duties before the ring-fenced tote fleet is acquired.",
+    "critical_dependency": "One qualified lane must sign enough take-or-pay volume and operational duties for quoted revenue to cover fleet, loss reserve, handling, and reverse-logistics costs without non-delegable founder operations."
+  },
+  "thesis": "A small entrant should not build a general reusable-packaging network against scaled incumbents. It can instead underwrite one non-food route and launch a ring-fenced tote service only when an anchor shipper, recipients, depot, and carrier jointly bind minimum turns, loss allocation, return rights, and reverse-haul duties. This converts speculative inventory exposure into a conditional, take-or-pay managed lane while preserving the wildcard's physical-and-contractual asymmetry.",
+  "title": "Contract-First Single-Lane Reusable Tote Service",
+  "uncertainties": [
+    "Which specific Polish non-food route has predictable volume and a documented price or service gap versus self-owned packaging and 2Return or another incumbent?",
+    "Will an anchor shipper pay for route design and accept a take-or-pay floor before the founder commits a production fleet?",
+    "Can recipients, a depot, and a carrier accept enforceable scan, return, loss, damage, and exception service levels in one conditional launch package?",
+    "Do actual tote, insurance, depot, cleaning, repair, and reverse-haul quotes keep the lane within the validation cap and support positive contribution?",
+    "Can routine exceptions and disputes be delegated while founder work remains below five hours per day?",
+    "Will competent buyers accept the resulting circulation records for future PPWR reporting, and will they pay separately for that value?",
+    "Can the lane-underwriting and contract playbook transfer to enough routes to create the stated founder-net-worth path?"
+  ],
+  "version": 2
+}

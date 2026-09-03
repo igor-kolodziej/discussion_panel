@@ -1,0 +1,149 @@
+{
+  "candidate_id": "ws-battery-passport-evidence-graph",
+  "claims": [
+    {
+      "claim_id": "ws-battery-passport-evidence-graph-c1",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://single-market-economy.ec.europa.eu/news/guidance-support-preparations-digital-batteries-passport-2026-08-21_en",
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1694013980794&uri=CELEX%3A32023R1542"
+      ],
+      "statement": "From 18 February 2027, covered LMT, EV, and industrial batteries over 2 kWh require an electronic passport, and the Commission's August 2026 guidance maps 71 data points, creating model onboarding and unit-record work."
+    },
+    {
+      "claim_id": "ws-battery-passport-evidence-graph-c2",
+      "claim_type": "payer_and_budget",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://single-market-economy.ec.europa.eu/single-market/digital-product-passport/batteries_en"
+      ],
+      "statement": "The Commission states that the economic operator placing the finished battery on the market is responsible for creating and maintaining the passport, identifying the likely budget owner but not proving willingness to outsource."
+    },
+    {
+      "claim_id": "ws-battery-passport-evidence-graph-c3",
+      "claim_type": "founder_control_point_path",
+      "confidence": "low",
+      "evidence_refs": [],
+      "statement": "A plausible control path is a limited data-processing agreement integrated into the operator's supplier workflow, with customer-hosted export fallback; no data right, registry authorization, or contract is secured."
+    },
+    {
+      "claim_id": "ws-battery-passport-evidence-graph-c4",
+      "claim_type": "other",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1542/2025-07-31/eng/pdf"
+      ],
+      "statement": "EU rules allow an authorized service operator to store or process passport data but prohibit selling, reusing, or processing it beyond the necessary service, sharply limiting any secondary-data business model."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Compliance, product, quality, operations, or managing director",
+    "bundling_resistance": "Fast onboarding for smaller operators, supplier-level exception handling, portability, and narrow battery expertise must beat generic DPP suites",
+    "customer_relationship_owner": "The economic operator owns supplier and market relationships; no venture relationship or data right currently exists",
+    "distribution_origin": "Testing laboratory, certifier, import adviser, ERP integrator, component supplier, or industry association",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Certifier and integrator share, technical workshops, and targeted account sales",
+      "cash_conversion": "Onboarding deposit and annual hosting prepayment; migration and durable-availability reserves remain necessary",
+      "contribution_margin": "Potentially high after model mappings stabilize, but supplier exceptions and longevity obligations may create substantial service cost",
+      "delivery_and_support_costs": "Supplier chasing, role mapping, exception review, access configuration, migration, and incident response",
+      "overhead_and_compliance": "Security, privacy, legal updates, professional liability, durable-hosting obligations, and external audits",
+      "revenue_basis": "Target 10,000-30,000 PLN per model onboarding plus 1-5 PLN per unit-year or a minimum annual platform fee",
+      "variable_costs": "Document extraction, validation calls, identifiers, registry interactions, storage, signing, backup, and support"
+    },
+    "likely_incumbent_response": "Global DPP platforms, ERP vendors, certification bodies, battery OEMs, and large consultancies can bundle the workflow",
+    "paid_event_or_measurable_loss": "A validated model onboarding and live unit passport are paid; measurable loss is manual evidence chasing, delayed market placement, rework, and nonconforming or unavailable passport records",
+    "payer": "Economic operator responsible for placing the finished covered battery on the EU market",
+    "purchase_trigger": "A covered 2027 product launch, importer-role determination, customer assurance request, supplier-data gap, or failed passport readiness review",
+    "renewal_event": "Annual platform renewal plus every new model, production batch, lifecycle update, or supplier change"
+  },
+  "contrary_evidence": [
+    "Responsibility stays with the economic operator, so outsourcing does not remove the customer's compliance burden.",
+    "Authorized service providers cannot monetize passport data beyond the necessary storage or processing service.",
+    "The DPP registry and standard ecosystem are already operating, favoring established ERP and DPP vendors."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Proposed nonexclusive data-rights and processing agreement limited to passport provision; none secured",
+    "acquisition_instrument_type": "data_rights_agreement",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Provide an exportable validation workbook and customer-hosted deployment while the operator gathers data directly from suppliers",
+    "current_owner": "Responsible economic operator and its upstream suppliers retain the underlying information and legal duties",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "The economic operator owns supplier and market relationships; no venture relationship or data right currently exists",
+    "duration": "Unknown until customer and supplier terms are executed",
+    "exclusivity": "nonexclusive",
+    "founder_access_basis": "other_legally_usable_access",
+    "founder_access_description": "Public regulation, Commission guidance, and standards resources are available; no battery-company data, supplier rights, registry authorization, or customer contract is controlled",
+    "launch_controller": "The responsible economic operator placing the finished battery on the market",
+    "mechanism_control": "dependent",
+    "renewal": "Proposed annual service renewal with durable-access and transition provisions",
+    "replaceability": "replaceable",
+    "revocability": "unknown",
+    "status": "unknown",
+    "subject": "Supplier evidence and unit-level data required for a covered battery passport",
+    "subject_type": "dataset",
+    "transferability": "consent_required"
+  },
+  "discovery_lane": "weak-signal",
+  "economics": {
+    "acquisition_route": "Battery testing labs, certifiers, import advisers, component distributors, ERP partners, and direct outreach to smaller operators",
+    "capital_required_pln": 60000,
+    "founder_net_worth_path": "Conditional path: 150 operators at 50,000 PLN blended annual revenue equals 7.5m PLN ARR; a trusted battery-specific data workflow could exceed 5m PLN in value, but customer count, service burden, and platform control are unknown",
+    "founder_time": "A readiness assessment and one-model prototype can fit 3-5 hours daily; production hosting and supplier support require later operational capacity",
+    "gross_margin_basis": "Onboarding and hosting revenue less supplier exception labor, registry and identifier operations, storage, support, audits, channel share, and longevity reserve",
+    "payback": "Customer payback is avoided delay and internal compliance labor before a hard market-access date; no quantified benchmark exists",
+    "pricing": "Discovery hypothesis: 10,000-30,000 PLN per model onboarding plus 1-5 PLN per unit-year or a negotiated annual minimum",
+    "retention_or_repeat": "Multi-year hosting, lifecycle updates, new models, batches, and supplier changes"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Permissioned field-level defect patterns, supplier response mappings, and audit trails reduce future onboarding effort without reselling customer data",
+    "customer": "Smaller EU economic operators placing e-bike, e-scooter, home-storage, EV, or industrial batteries above applicable thresholds on the market",
+    "distribution_mechanism": "Battery certifiers, testing labs, import advisers, component distributors, ERP partners, and industry associations",
+    "offer_and_business_model": "Data lineage intake, validation, access control, passport generation, registry handoff, and compliant managed hosting",
+    "payer_and_paid_event": "Responsible economic operator pays for each battery-model onboarding and recurring unit-level passport hosting or update volume",
+    "problem_trigger": "A covered battery model is planned for sale after 18 February 2027 but supplier and unit data remain scattered across documents and systems"
+  },
+  "founder_fit": [
+    "Schema mapping, data lineage, anomaly detection, and evidence validation match the founder's data-science background",
+    "Battery, energy, and industrial customers align with renewable-energy and analytical interests",
+    "A fixed-scope readiness service can precede software and fit alongside employment",
+    "Channel-led technical sales and measurable completeness metrics reduce dependence on an on-camera founder brand"
+  ],
+  "parent": null,
+  "risks": [
+    "Incomplete supplier data can make delivery impossible despite customer payment",
+    "Security or integrity failure can affect regulated product records",
+    "Large platforms can bundle battery templates into broader DPP contracts",
+    "Long-lived availability and migration commitments can create hidden liabilities"
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://single-market-economy.ec.europa.eu/single-market/digital-product-passport/batteries_en",
+    "https://single-market-economy.ec.europa.eu/news/guidance-support-preparations-digital-batteries-passport-2026-08-21_en",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1694013980794&uri=CELEX%3A32023R1542",
+    "https://eur-lex.europa.eu/eli/reg/2023/1542/2025-07-31/eng/pdf"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "data_or_intelligence",
+    "commercial_model_descriptor": "per model compliance data onboarding plus unit level passport service",
+    "control_point_category": "workflow_integration",
+    "control_point_descriptor": "lineage preserving handoff from supplier evidence into maintained passport records",
+    "critical_dependency_category": "data_provider",
+    "critical_dependency_descriptor": "upstream suppliers and the responsible operator must provide authentic complete battery data"
+  },
+  "structure": {
+    "commercial_archetype": "Compliance data and intelligence service priced by model and unit volume",
+    "control_point": "Workflow integration connecting supplier evidence to the economic operator's maintained passport",
+    "critical_dependency": "Upstream data providers supplying authentic, complete, and updateable model and battery-specific information"
+  },
+  "thesis": "Observed compliance and systems-work signal: the European Commission opened the DPP registry in July 2026, published a 71-data-point battery guidance update in August, and requires passports for covered batteries from 18 February 2027. Sell smaller importers, assemblers, home-storage brands, and light-mobility battery operators a supplier-evidence intake, validation, role-based passport build, registry handoff, and durable hosting service while leaving legal responsibility and data ownership with the economic operator.",
+  "title": "Battery Passport Evidence Graph for Small Economic Operators",
+  "uncertainties": [
+    "Number of smaller Polish or regional responsible economic operators lacking an existing DPP vendor",
+    "Supplier willingness and ability to provide authentic required fields",
+    "Final access-right implementation, registry integration details, and acceptable hosting architecture",
+    "Liability and migration cost over the legally required passport lifetime"
+  ],
+  "version": 1
+}

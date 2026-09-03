@@ -1,0 +1,130 @@
+{
+  "candidate_id": "mf-11",
+  "claims": [
+    {
+      "claim_id": "mf-11-v2-control",
+      "claim_type": "founder_control_point_path",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://eli.gov.pl/api/acts/DU/2024/1289/text.html",
+        "https://eli.gov.pl/api/acts/DU/2020/532/text.html",
+        "https://www.udt.gov.pl/images/biuro-prasowe/files/pdf/INSPEKTOR_4_2023_Infrastruktura-Ladowania-WCAG.pdf"
+      ],
+      "statement": "The statutory building approval and qualified-expert interfaces provide a route to propose a non-exclusive portfolio screening and asset-hosting service, but control would exist only after a property manager, the required building authority, and a counsel-reviewed agreement permit a ring-fenced vehicle to own and service the financed common equipment while residents retain their individual statutory route; no such executed agreement is evidenced."
+    },
+    {
+      "claim_id": "mf-11-v2-loss",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://eli.gov.pl/api/acts/DU/2024/1289/text.html",
+        "https://eviacharge.pl/blog/wallbox-wspolnota-mieszkaniowa-moc-przylaczeniowa"
+      ],
+      "statement": "A qualifying legacy-building installation can require an expert report, connection changes, or electrical rebuilding paid by the applicant, and one current installer benchmark places a complete point in an unprepared block around PLN 15,000 net; the redesign therefore screens out buildings without report-confirmed headroom rather than treating dynamic load management as a substitute for an upgrade."
+    },
+    {
+      "claim_id": "mf-11-v2-payer",
+      "claim_type": "payer_and_budget",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://eli.gov.pl/api/acts/DU/2024/1289/text.html",
+        "https://eviacharge.pl/blog/wallbox-wspolnota-mieszkaniowa-moc-przylaczeniowa"
+      ],
+      "statement": "Polish law can assign necessary installation and upgrade costs to the resident applicant, making deposit-ready residents the proposed activation payers; the deposit threshold is a go/no-go validation mechanism, not evidence that residents will accept the eventual financed price or recurring fee."
+    },
+    {
+      "claim_id": "mf-11-v2-incumbents",
+      "claim_type": "other",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://www.chargewise.pl/rozwiazania/dla-spoldzielni-i-wspolnot.html",
+        "https://wallboxpolska.pl/system-ladowania-ev/",
+        "https://www.chargewise.pl/"
+      ],
+      "statement": "Existing Polish vendors already offer installation, dynamic load management, access, billing, monitoring, and OCPP-compatible operation, so the redesign does not claim a proprietary charger, allocator, billing platform, or session-data moat."
+    }
+  ],
+  "contrary_evidence": [
+    "Residents retain a statutory individual application and dedicated-meter route, so neither the property-manager agreement nor SPV asset ownership can lawfully become a monopoly over charging access.",
+    "ChargeWise and Wallbox Polska already provide the core technical and operating bundle, and OCPP interoperability permits switching rather than technical lock-in.",
+    "No reviewed evidence proves that a property manager can deliver portfolio-wide building approvals, that a lawful asset-hosting term will survive board changes, or that an infrastructure finance counterparty will fund the proposed vehicle.",
+    "No reviewed evidence validates deposit conversion, financed willingness to pay, activation density, fully loaded contribution margin, or renewal."
+  ],
+  "discovery_lane": "mechanism-first",
+  "economics": {
+    "acquisition_route": "Seek one non-exclusive portfolio screening agreement with a professional property manager, then survey only buildings with at least three residents willing to place refundable deposits. Commit no equipment capital unless a qualified report confirms usable headroom, the building approves counsel-reviewed asset-hosting and servicing terms, and a third-party financing term sheet is executed; none of those contracts is assumed to exist.",
+    "capital_required_pln": 30000,
+    "founder_net_worth_path": "Use a capped PLN 30,000 validation budget for legal structure, portfolio screening, and deposit-gated reports rather than hardware. A staged path would require three financed buildings in year one, 20 by year two, and then several hundred manager-sourced buildings; for illustration, 500 buildings with 20 active ports and PLN 40 monthly net service revenue would produce PLN 4.8m annual recurring revenue before origination fees. Whether that can support at least PLN 5m of founder-owned equity and cash within 6-8 years remains contingent on signed contracts, activation, contribution margin, financing capacity, and retention and is not established by current evidence.",
+    "founder_time": "Founder builds the scoring, deposit, quote, and portfolio reporting workflow and limits direct sales to property-manager accounts within five hours daily; qualified designers, installers, the finance vehicle, and field-service providers carry regulated and physical delivery under written scopes.",
+    "gross_margin_basis": "Remove hardware resale margin from the core model. Intended gross profit comes from a disclosed origination fee and recurring asset-administration and software-service fees after CSMS, payments, support, warranty coordination, insurance, UDT, and bad debt; the fully loaded margin is unknown and must be measured in pilots.",
+    "payback": "The founder does not deploy shared-infrastructure capex, so deployment payback is not booked to the founder. A building advances only when deposits, the engineering quote, and executed financing terms cover the ring-fenced asset; resident and finance-vehicle payback remains an explicit validation question rather than the prior unsupported 24-36 month claim.",
+    "pricing": "Refundable resident deposits first cover the building-specific study and contracting work; after the gates pass, residents accept the quoted all-in financed installation obligation plus a disclosed origination fee and a recurring asset-administration and CSMS fee. The prior hardware markup is removed, and no exact financed price is claimed before quotes and a finance term sheet exist.",
+    "retention_or_repeat": "Repeat comes from screening additional buildings under the same manager account and servicing each ring-fenced asset through its finance term. OCPP software can be replaced and residents retain statutory alternatives, so retention must come from asset servicing and portfolio execution rather than technical or data lock-in."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A signed manager portfolio pipeline and servicing rights over a growing set of ring-fenced financed assets can lower screening and origination cost; no proprietary charging-data advantage is assumed.",
+    "customer": "Professional Polish multifamily property managers with legacy buildings that have at least three deposit-ready EV residents and report-confirmed electrical headroom.",
+    "distribution_mechanism": "A non-exclusive master screening relationship with one property manager supplies multiple buildings; refundable resident deposits and the qualified expert report gate each building before financing or installation.",
+    "offer_and_business_model": "Originate and administer ring-fenced, third-party-financed shared charging infrastructure: standardize demand collection and engineering, arrange a counsel-approved asset-hosting structure, and earn origination and recurring asset-servicing fees while commodity OCPP vendors provide charging software and hardware.",
+    "payer_and_paid_event": "Deposit-ready residents pay when a building clears the legal, demand, headroom, and financing gates, then meet the quoted financed installation obligation and recurring service charge; the property manager supplies portfolio access but is not assumed to fund the asset.",
+    "problem_trigger": "A property-manager portfolio reveals a legacy building with at least three deposit-ready charger applicants and a qualified report confirms that a standardized shared asset can be installed without an unfinanced grid upgrade."
+  },
+  "founder_fit": [
+    "The parents' installation company provides a bounded route to qualified surveys and delivery without making the founder the field operator.",
+    "Portfolio screening, deposit gating, quoting, and asset reporting use the founder's analytics and automation strengths.",
+    "The no-capex-before-contract gates cap the validation budget within the founder's available capital and allow continued full-time employment.",
+    "Concentrating sales on a small number of property-manager accounts reduces, but does not eliminate, the founder's relationship burden."
+  ],
+  "parent": {
+    "candidate_id": "mf-11",
+    "version": 1
+  },
+  "redesign": {
+    "changed_fingerprint_fields": [
+      "customer",
+      "problem_trigger",
+      "payer_and_paid_event",
+      "offer_and_business_model",
+      "distribution_mechanism",
+      "compounding_advantage"
+    ],
+    "economic_effect": "The redesign removes the founder-funded shared hardware and 15-25% hardware markup, replaces building-by-building concession selling with portfolio screening, and conditions every deployment on resident deposits, confirmed headroom, building approval, and executed third-party finance. It cuts the founder's proposed initial capital from PLN 60,000 to a PLN 30,000 validation cap and shifts revenue to origination and recurring asset servicing, but it also makes financing availability, lawful asset title, deposit conversion, and fully loaded service margin binding gates rather than assumed economics."
+  },
+  "risks": [
+    "Counsel may find that the building cannot grant sufficiently durable asset-hosting and servicing rights while preserving resident statutory alternatives.",
+    "A finance counterparty may decline the asset, require guarantees beyond the founder's means, or price it above resident willingness to pay.",
+    "Property-manager master screening may not shorten building-level resolutions, procurement, or political sales cycles.",
+    "Buildings with confirmed headroom and at least three deposit-ready residents may be too rare for efficient portfolio economics.",
+    "Incumbent turnkey vendors can copy the deposit gate, partner with the same managers, or undercut asset-servicing fees.",
+    "Qualified design, OSD changes, UDT, energy procurement, safety, maintenance, billing, consumer issues, and payment disputes remain external and regulated dependencies.",
+    "OCPP interoperability and uncertain data ownership prevent technical lock-in or a proven data moat."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://eli.gov.pl/api/acts/DU/2024/1289/text.html",
+    "https://eli.gov.pl/api/acts/DU/2020/532/text.html",
+    "https://www.udt.gov.pl/images/biuro-prasowe/files/pdf/INSPEKTOR_4_2023_Infrastruktura-Ladowania-WCAG.pdf",
+    "https://www.chargewise.pl/rozwiazania/dla-spoldzielni-i-wspolnot.html",
+    "https://wallboxpolska.pl/system-ladowania-ev/",
+    "https://www.chargewise.pl/",
+    "https://eviacharge.pl/blog/wallbox-wspolnota-mieszkaniowa-moc-przylaczeniowa"
+  ],
+  "stage": "development",
+  "structure": {
+    "commercial_archetype": "Deposit-gated infrastructure-finance originator and asset servicer",
+    "control_point": "Contracted title and servicing rights over ring-fenced financed shared infrastructure plus non-exclusive property-manager portfolio origination access",
+    "critical_dependency": "Counsel-approved building asset-hosting rights and an executed third-party finance facility after resident-deposit and electrical-headroom gates"
+  },
+  "thesis": "Do not seek a quasi-exclusive charging concession. Use a property-manager portfolio to find only legacy buildings with three deposit-ready residents and confirmed headroom, then place the shared infrastructure in a ring-fenced financed vehicle and retain contractual origination and asset-servicing rights while residents keep their statutory alternatives.",
+  "title": "Deposit-Gated Condo Charging Asset Finance",
+  "uncertainties": [
+    "Whether Polish counsel can produce a durable asset-hosting and servicing form compatible with condominium governance, board changes, common-property rules, and each resident's statutory charging route.",
+    "Whether any property manager will execute a non-exclusive portfolio screening agreement and whether it materially reduces acquisition time and founder hours.",
+    "Whether a finance counterparty will fund ring-fenced common infrastructure without founder guarantees or capital outside the stated validation budget.",
+    "The number of buildings with report-confirmed headroom and at least three residents willing to place deposits and accept the quoted financed obligation.",
+    "Fully loaded origination and servicing economics after regulated design, installation, CSMS, connectivity, UDT, maintenance, warranty, payments, billing, insurance, support, and bad debt.",
+    "Who legally owns the riser, charger, meters, session data, and derived records during and after the finance term and what remains portable if the CSMS vendor changes.",
+    "Whether several hundred buildings can be reached in 6-8 years through concentrated manager accounts without exceeding the founder's five-hour daily limit."
+  ],
+  "version": 2
+}

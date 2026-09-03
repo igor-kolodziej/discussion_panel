@@ -1,0 +1,85 @@
+{
+  "candidate_id": "fb-02",
+  "claims": [
+    {
+      "claim_id": "fb-02-control",
+      "claim_type": "founder_control_point_path",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://energy.ec.europa.eu/topics/energy-efficiency/energy-performance-buildings/energy-performance-buildings-directive/energy-renovation-buildings_en"
+      ],
+      "statement": "A renewable installer can plausibly secure pre/post meter consent, commissioning data, and a remediation protocol at the moment a heat-pump or PV retrofit is sold. The Commission explicitly includes digital controls among renovation measures, but neither exclusive data rights nor customer acceptance of an escrow product is yet evidenced."
+    },
+    {
+      "claim_id": "fb-02-loss",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://energy.ec.europa.eu/topics/energy-efficiency/energy-performance-buildings/energy-performance-buildings-directive/energy-renovation-buildings_en"
+      ],
+      "statement": "The measurable loss is the weather-normalized gap between promised and observed post-retrofit energy cost or consumption. The Commission reports roughly 75% of EU buildings have poor energy performance and that deep renovation can materially reduce consumption, creating a large outcome to verify, while actual Polish performance-gap incidence remains unknown."
+    },
+    {
+      "claim_id": "fb-02-payer",
+      "claim_type": "payer_and_budget",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://energy.ec.europa.eu/topics/energy-efficiency/energy-performance-buildings/energy-performance-buildings-directive/zero-emission-buildings_en"
+      ],
+      "statement": "The first payer hypothesis is the installer or property owner using warranty, commissioning, or energy-service budget at retrofit acceptance; later payers could be lenders or insurers that need performance evidence. EU zero-emission-building policy supports the direction and bill-savings value, not the existence of a Polish underwriting budget."
+    }
+  ],
+  "contrary_evidence": [
+    "The recast directive does not require existing buildings to be renovated to zero-emission level, so demand timing can remain slow.",
+    "Weather, occupancy, tariffs, and behavior make a simple savings guarantee easy to dispute."
+  ],
+  "discovery_lane": "future-backcast",
+  "economics": {
+    "acquisition_route": "Attach a read-only 12-month measurement-and-verification addendum to 10 new family-business installations, then ask one insurer or lender to review the evidence packet before offering any financial guarantee.",
+    "capital_required_pln": 50000,
+    "founder_net_worth_path": "Verified multi-brand performance data could become a scalable underwriting and financing layer sold through installers across Central Europe; reaching the founder objective requires recurring portfolio fees rather than one-off audits.",
+    "founder_time": "About 10-15 hours per week for analytics, customer reporting, and partner design; installation and remedial visits stay with contractors.",
+    "gross_margin_basis": "Software measurement is high-margin after data ingestion, but any remediation reserve is a direct loss cost and must be separately priced and capped.",
+    "payback": "The pilot should recover sensor and onboarding cost within the first annual service fee; underwriting capital is deferred until a claims distribution exists.",
+    "pricing": "Fixed commissioning evidence fee plus monthly monitoring; optional capped performance protection priced as a percentage of installation value after loss data exists.",
+    "retention_or_repeat": "Monitoring renews annually and can extend to maintenance, tariff optimization, equipment replacement, and lender reporting."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Weather-normalized outcome and remediation data across installer brands, building types, and equipment",
+    "customer": "Polish residential and small-commercial retrofit installers, property owners, and eventually lenders or insurers",
+    "distribution_mechanism": "Embedded add-on at the installer quote and commissioning handoff",
+    "offer_and_business_model": "Independent measurement, evidence escrow, and later capped performance protection sold per retrofit and per monitored year",
+    "payer_and_paid_event": "Installer or owner pays when a retrofit is commissioned; a protection payout is triggered by a defined verified shortfall",
+    "problem_trigger": "A costly energy retrofit is sold on savings that neither party can cleanly verify after installation"
+  },
+  "founder_fit": [
+    "The family company can supply a real installation cohort and commissioning workflow for a low-cost pilot.",
+    "Weather normalization, causal baselining, and anomaly detection fit the founder's data-science strengths.",
+    "The business can begin as evidence software without taking uncapped insurance risk."
+  ],
+  "parent": null,
+  "risks": [
+    "Offering a guarantee could constitute regulated insurance or create uncapped contractual exposure.",
+    "Meter access and clean pre-installation baselines may be unavailable.",
+    "Installers may resist independent evidence that can attribute underperformance to their work."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://energy.ec.europa.eu/topics/energy-efficiency/energy-performance-buildings/energy-performance-buildings-directive/energy-renovation-buildings_en",
+    "https://energy.ec.europa.eu/topics/energy-efficiency/energy-performance-buildings/energy-performance-buildings-directive/zero-emission-buildings_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Performance evidence and underwriting infrastructure",
+    "control_point": "The signed commissioning baseline, meter consent, and definition of a compensable shortfall",
+    "critical_dependency": "Reliable normalization plus a legally permissible risk-transfer partner for any guarantee"
+  },
+  "thesis": "Backcast from a building market where finance follows measured operating performance rather than equipment labels: capture trusted baseline and commissioning evidence now through a local installer channel, then compound outcome data into underwriting power.",
+  "title": "Retrofit Performance Escrow",
+  "uncertainties": [
+    "Observed shortfall frequency and remediation cost across Polish heat-pump and PV installs are unknown.",
+    "It is unclear whether customers value neutral verification enough to pay separately.",
+    "A lender or insurer has not confirmed that this evidence changes approval, pricing, or claims handling."
+  ],
+  "version": 1
+}

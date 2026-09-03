@@ -1,0 +1,86 @@
+{
+  "candidate_id": "fb-10",
+  "claims": [
+    {
+      "claim_id": "fb-10-control",
+      "claim_type": "founder_control_point_path",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://www.eea.europa.eu/en/analysis/publications/water-savings-for-a-water-resilient-europe"
+      ],
+      "statement": "EEA identifies water audits, leak repair, efficient devices, reuse, digital modelling, and smart controls as savings routes. A founder can enter through installer-placed submeters and a signed share-of-savings baseline, but control of a customer's water data and remediation work has not been secured."
+    },
+    {
+      "claim_id": "fb-10-loss",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://www.eea.europa.eu/en/analysis/publications/water-savings-for-a-water-resilient-europe"
+      ],
+      "statement": "The measurable loss is paid water and associated energy consumed above a weather-, occupancy-, or production-normalized baseline, plus downtime during scarcity. EEA says about 30% of EU land experiences seasonal scarcity and estimates meaningful savings potential in tourism and industry; a Polish target site's actual avoidable bill must be metered."
+    },
+    {
+      "claim_id": "fb-10-payer",
+      "claim_type": "payer_and_budget",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/publications/european-water-resilience-strategy_en",
+        "https://www.eea.europa.eu/en/analysis/publications/water-savings-for-a-water-resilient-europe"
+      ],
+      "statement": "The first payer hypothesis is a hotel, food processor, car wash, or other water-using SME funding the service from utilities and facility budgets through shared savings. EU strategy sets a 2030 efficiency direction, but low Polish water prices may leave no adequate budget at many sites."
+    }
+  ],
+  "contrary_evidence": [
+    "Water scarcity is uneven across Europe, and a 10% EU-wide efficiency ambition does not create an immediate Polish purchase mandate.",
+    "Utilities, plumbers, equipment suppliers, and energy-service firms can bundle audits and leak detection."
+  ],
+  "discovery_lane": "future-backcast",
+  "economics": {
+    "acquisition_route": "Use energy-installation partners to identify 20 SMEs with accessible meters, run bill-data screens, and finance submetering only at two sites where a conservative audit shows a short payback and the customer signs a 24-month savings-share contract.",
+    "capital_required_pln": 70000,
+    "founder_net_worth_path": "A portfolio of standardized water-performance contracts can compound into a financing and underwriting platform for efficiency retrofits; reaching the founder objective requires repeatable vertical playbooks and third-party hardware capital.",
+    "founder_time": "About 12-18 hours per week for analysis, contracts, and partner coordination; plumbers and equipment firms execute remedial work.",
+    "gross_margin_basis": "Share of verified savings less sensors, financing cost, installer work, and measurement disputes; software-only monitoring has better margin after the first retrofit.",
+    "payback": "Fund only measures with modeled hardware payback under 18 months and contract duration long enough to recover acquisition and monitoring cost.",
+    "pricing": "No- or low-upfront audit followed by 25-40% of weather/production-normalized savings for 24-36 months; monitoring subscription after the savings term.",
+    "retention_or_repeat": "Savings share recurs monthly, monitoring persists, and multi-site operators can roll out the same intervention across locations."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Vertical-specific baselines, verified intervention savings, and financing-performance history",
+    "customer": "Polish hotels, food and beverage SMEs, car washes, and other measurable water-intensive facilities",
+    "distribution_mechanism": "Energy installers, plumbers, equipment dealers, and multi-site owner referrals",
+    "offer_and_business_model": "Metered water-efficiency retrofit financed from a multi-year share of verified savings",
+    "payer_and_paid_event": "Facility pays from monthly avoided utility cost once an installed intervention produces verified savings",
+    "problem_trigger": "A facility's water and related energy use rises above a defensible operational baseline or threatens continuity"
+  },
+  "founder_fit": [
+    "The family installation channel offers access to SMEs already buying efficiency equipment.",
+    "Baseline construction, anomaly detection, and savings verification fit the founder's data-science strengths.",
+    "Projects can be screened before capital is committed, limiting downside."
+  ],
+  "parent": null,
+  "risks": [
+    "Savings may be too small relative to sensor, plumbing, financing, and sales costs.",
+    "Production and occupancy changes can make baseline disputes difficult.",
+    "A financed physical portfolio can consume more capital and operational attention than the founder can spare."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://www.eea.europa.eu/en/analysis/publications/water-savings-for-a-water-resilient-europe",
+    "https://environment.ec.europa.eu/publications/european-water-resilience-strategy_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Financed outcome contract for resource efficiency",
+    "control_point": "Installed submeter, agreed normalized baseline, and exclusive share-of-savings remediation contract",
+    "critical_dependency": "Sufficient avoidable spend and a baseline robust enough for both sides to accept monthly savings"
+  },
+  "thesis": "Backcast from water efficiency becoming a financed resilience asset: acquire the measurement-and-savings contract now at small commercial sites, then let verified intervention data unlock cheaper capital and vertical playbooks.",
+  "title": "Water Savings Covenant",
+  "uncertainties": [
+    "Which Polish SME vertical has the best combination of avoidable water cost, repeatability, and short sales cycles is unknown.",
+    "Customer credit quality and willingness to sign multi-year savings shares need testing.",
+    "No insurer or funder has confirmed that verified data lowers financing cost."
+  ],
+  "version": 1
+}

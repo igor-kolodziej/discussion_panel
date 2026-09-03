@@ -1,0 +1,117 @@
+{
+  "assumptions": [
+    "The initial beachhead is limited to commercial PV sites where the existing OEM, warranty, installer, or O&M replacement route is unavailable, demonstrably slow, or economically inferior; supported systems with rapid OEM replacement are not treated as target accounts.",
+    "Qualified engineers can be contracted case by case at predictable cost and will retain responsibility for site-specific technical and compliance approval, while the operating company maintains a legally clear analytical and project-management boundary.",
+    "Customers prepay the bounded dossier and fund equipment and installation directly or through pass-through milestones; no renewal, derived-data right, conversion to a project, or recurring revenue is assumed without evidence.",
+    "The family installation company can provide lawful pilot introductions but does not confer customer ownership, exclusivity, or proven demand."
+  ],
+  "base_score": 4.25,
+  "candidate_id": "fb-legacy-inverter-swap-reserve",
+  "candidate_sha256": "82c4fcc9046ce7f04f872a58544ff6166140a53ba617eedb0d298644f6ef243d",
+  "candidate_version": 2,
+  "constrained_score": 4.25,
+  "evaluation_type": "holdout_native",
+  "evidence_needed_for_higher_score": "Paid pilots across several named unsupported or post-warranty inverter cohorts should establish the reachable account count, accepted price, conversion by trigger, acquisition cost, founder and engineer hours, rework and liability cost, fully loaded contribution margin, cash payback, measured decision-time or downtime improvement versus incumbent routes, project conversion, repeat purchases, referrals, signed channel access, and usable derived-data rights.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "Precomputing a compliant repair-or-repowering route before a legacy inverter failure addresses a real coordination gap between fragmented site records, discontinued equipment, current certification, and urgent sourcing. The insight is useful but not clearly proprietary because OEMs, installers, engineers, and O&M providers already perform adjacent diagnosis and repowering work.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Inverter downtime and funded maintenance or modernization are evidenced pains with identifiable budget owners. However, no customer has paid for this independent readiness dossier, proactive purchase may be less urgent than failure response, and rapid OEM replacement or ordinary O&M planning materially reduces the pain for supported equipment.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Prepayment, customer-direct hardware, and a modest validation budget create favorable cash discipline and remove inventory obsolescence risk. Pricing, acquisition cost, delivery effort, engineer-review expense, insurance, contribution margin, project conversion, retention, and repeat demand are all unknown, while site-specific service work may limit operating leverage and owner earnings.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Poland has a large PV stock and the proposed post-warranty, unsupported, operationally important commercial segment is logically focused. The evidence does not quantify the reachable qualifying denominator after model, age, support, lead-time, and downtime-value filters, so neither beachhead size nor economic sufficiency is established.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "Vendor-neutral analysis and a portable evidence pack may be attractive where an owner distrusts a single supplier. Nevertheless, OEMs, authorized distributors, installers, engineering firms, and O&M providers have existing relationships and can bundle substantially the same diagnosis, procurement, and repowering work; no exclusive channel or uniquely controlled input supports beachhead domination.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A successful workflow could extend from single-site dossiers to portfolio refreshes, procurement coordination, additional inverter cohorts, adjacent components, and other CEE markets. Those adjacencies depend on proving standardization, repeat usage, and data portability; today the route risks remaining a local bespoke consultancy.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Owned software, normalized schemas, and permitted outcome records could accumulate into a useful operational asset. The workflow is readily reproducible, customer data rights are optional, site data may be sparse and heterogeneous, and there is no evidence that the derived dataset improves decisions or switching costs enough to resist incumbent copying.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "Advance preparation, vendor neutrality, and competitive options could shorten a difficult replacement decision for genuinely unsupported configurations. No comparative result yet shows a material improvement in cost, speed, accuracy, or downtime, while incumbents advertise rapid replacement and cross-brand repowering for many systems.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "An aging installed base, eventual support expiry, increasing repowering needs, and tightening Polish certification procedures create a plausible timing tailwind. The supplied evidence does not establish that a large reachable cohort currently faces unacceptable delays, and stricter requirements also increase delivery complexity.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "The family installer offers a credible, low-cost route to a bounded pilot, and installer or O&M referrals fit how owners already obtain service. Beyond that entry point, there is no signed channel, controlled customer relationship, conversion evidence, or CAC data, and direct portfolio selling may demand substantial trust-building and founder time.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "The asset-light analytical workflow fits the founder's data skills, capital limit, and part-time schedule better than inventory ownership, and field work can be delegated. Execution still depends on complete customer records, qualified engineering, current certification, supplier quotes, careful liability boundaries, insurance, and service partners, with sales and project coordination potentially exceeding the proposed time envelope.",
+      "score": 5,
+      "status": "scored"
+    }
+  ],
+  "final_score": 4.3,
+  "highest_value_structural_change": "Embed the workflow under a paid multi-site contract with an O&M provider, portfolio owner, or insurer for one precisely documented unsupported cohort, making standardized asset-data intake, periodic readiness updates, competitive tendering, and outcome-data rights part of an ongoing operational process rather than relying on one-off owner dossiers and nonexclusive referrals.",
+  "interaction_adjustment": 0,
+  "judge_id": "native-holdout-20260903-ac095b-fb-inverter-j02",
+  "main_structural_strength": "The redesign removes speculative inventory and converts the opportunity into a prepaid, low-capital, founder-controlled analytical workflow that can be piloted through a relevant family-business relationship while reserving regulated technical approval and field execution for qualified providers.",
+  "primary_score_limiter": "There is no evidence that asset owners will buy an independent readiness dossier at a fully loaded profitable price through a repeatable channel, or that enough repeat and project revenue can overcome a service-heavy model and reach the founder's wealth objective.",
+  "qualified": false,
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 3,
+  "strongest_disconfirming_evidence": "SolarEdge and SMA already provide rapid replacement pathways and engineered repowering options, while ordinary owner, installer, and O&M contracts can internalize spare planning and diagnostics; these substitutes directly undermine the claimed need for a separate readiness intermediary across much of the installed base.",
+  "unrounded_score": 4.25
+}

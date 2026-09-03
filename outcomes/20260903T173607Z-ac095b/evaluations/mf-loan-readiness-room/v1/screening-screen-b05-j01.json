@@ -1,0 +1,117 @@
+{
+  "assumptions": [
+    "The venture only prepares and reconciles evidence and does not promise approval, arrange credit, or make lender decisions.",
+    "A narrow SME segment has sufficiently repeatable source records and lender request lists for a fixed scope.",
+    "SMEs and referring advisers provide explicit permission before any financial records are processed.",
+    "Deposits and change-order rules can be enforced when source accounts require work beyond the standardized package."
+  ],
+  "base_score": 5.33,
+  "candidate_id": "mf-loan-readiness-room",
+  "candidate_sha256": "a92370f21e1750d4abb68ac79c1098916f0511dd3eaa4587bd782a10754ba7df",
+  "candidate_version": 1,
+  "constrained_score": 5.43,
+  "evaluation_type": "working_screening",
+  "evidence_needed_for_higher_score": "Retrospective data linking missing-document patterns to lender queries or delay, at least three paid engagements near the proposed price, a signed referral agreement, measured analyst hours and contribution margin, and proof of secure repeatable delivery are needed.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "The accountant-to-client handoff at the start of financing is a concrete, contractible moment to turn messy records into a source-linked lender room without brokering credit. The workflow is sensible but resembles work already performed by accountants, brokers, and fractional CFOs, so the insight depends on superior standardization.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Financing applications are discrete, high-stakes events where missing or inconsistent records plausibly cause rework and delay. The SME controls the decision and can fund a fixed fee, but neither the causal delay reduction nor willingness to pay 6000-18000 PLN has been measured.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "A 50% deposit, high fixed project fee, refresh revenue, and template reuse can produce sound cash conversion and margin without tying fees to approval. The 45-65% contribution target is plausible only if intake gates prevent bespoke bookkeeping and forecast cleanup from consuming delivery hours.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Owner-managed Polish SMEs seeking loans or refinancing form an identifiable event-driven market, and a sector-plus-facility beachhead can be reached through advisers. Current scope still covers many lender requirements and client record qualities, with no quantified serviceable segment or transaction frequency.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "Lender-neutral portability, source-linked reconciliation, and rapid delivery could differentiate a specialist service. Accountants, brokers, lenders, and virtual-CFO firms already sit in the workflow and can bundle packaging, limiting domination unless one narrow application class is served markedly better.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "Templates can extend across sectors, facility types, refinancing, annual reviews, and later refreshes, with a possible progression from service to software-enabled workflow. Lender-specific requirements and local accounting variation may fragment rather than compound the expansion.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Permissioned patterns of missing documents and lender queries can improve templates and delivery estimates. Those patterns are unlikely to be exclusive, engagements are episodic, and established advisers can learn or reproduce the process, so durable protection is modest.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "Financial normalization, data-quality work, and bounded analytical delivery fit the founder's skills and capital constraints. The founder owns no adviser channel, SME relationship, lender integration, or proprietary application corpus, so the advantage is presently capability rather than an asset.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "Robust creditworthiness documentation is an enduring lender requirement and firms continue to seek credit. The evidence supports a continuing workflow rather than a new forcing event, and does not show a temporary window in which this specialist can establish control.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "Accountants and fractional CFOs encounter the financing trigger and can refer high-intent SMEs under explicit, nonexclusive agreements. No channel partner is signed, referral economics and conflicts are unknown, and the adviser may prefer to keep the work and revenue.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "The initial service is low-capital, contractible, and can use strict scope gates, but sensitive-record security, professional boundaries, lender variation, client-data quality, and approval-expectation management are material. Scaling to the illustrative volume requires delegated analysts and quality control beyond the founder's daily limit.",
+      "score": 5,
+      "status": "scored"
+    }
+  ],
+  "final_score": 5.4,
+  "highest_value_structural_change": "Start with one sector and one facility type as a white-label, eligibility-gated workflow embedded in a contracted accounting channel, with standardized source integrations, fixed exclusions, and per-delivered-room pricing.",
+  "interaction_adjustment": 0.1,
+  "judge_id": "screen-b05-j01",
+  "main_structural_strength": "A high-stakes financing event creates a clear payer, trigger, bounded deliverable, and contractible adviser handoff without requiring ownership of credit decisions.",
+  "primary_score_limiter": "The claimed price and operational benefit are unvalidated, while accountants and brokers already occupy the handoff and can bundle the same preparation work.",
+  "qualified": false,
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 3,
+  "strongest_disconfirming_evidence": "Existing accountants and finance brokers commonly package application records, and lender documentation rules establish lender needs but do not establish incremental SME demand for a separate readiness provider.",
+  "unrounded_score": 5.43
+}

@@ -1,0 +1,499 @@
+{
+  "candidate_id": "mf-chargeback-evidence-router",
+  "candidate_sha256": "2a3169818b7aba25f99548ac73458388de7f4da7d13a9e27129e8c0e55be495e",
+  "candidate_version": 1,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "mf-chargeback-evidence-router-r1",
+      "evidence_refs": [
+        "s1-stripe-dispute-lifecycle",
+        "s2-stripe-poland-pricing"
+      ],
+      "statement": "A card dispute is an observable merchant loss event: Stripe says the disputed amount and a dispute fee are debited when the dispute begins, while its current Polish standard pricing lists a 90 PLN dispute-received fee and a further 90 PLN fee for a manually countered dispute, with only the latter returned after a win."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "mf-chargeback-evidence-router-r2",
+      "evidence_refs": [
+        "s1-stripe-dispute-lifecycle"
+      ],
+      "statement": "The evidence tool does not control adjudication: Stripe states that the issuer decides after reviewing evidence, that some disputes are unchallengeable, and that an ordinary lifecycle can take two to three months."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "mf-chargeback-evidence-router-r3",
+      "evidence_refs": [
+        "s2-stripe-poland-pricing",
+        "s3-stripe-smart-disputes"
+      ],
+      "statement": "Stripe already bundles AI evidence collection, compilation, and submission with no additional integration for eligible Stripe disputes; its Polish price is 30% of the disputed amount only when Smart Disputes wins."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "mf-chargeback-evidence-router-r4",
+      "evidence_refs": [
+        "s7-shopify-chargeback-admin"
+      ],
+      "statement": "Shopify already collects and submits chargeback evidence on the due date and includes AI-generated insights for product-not-received disputes, reducing the incremental value of a separate evidence assembler for Shopify-native cases."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "mf-chargeback-evidence-router-r5",
+      "evidence_refs": [
+        "s8-chargeflow-pricing",
+        "s9-shopify-chargeflow-listing"
+      ],
+      "statement": "Chargeflow publicly offers the candidate's commercial core now: cross-processor data collection, AI-built evidence, direct submission, a unified dashboard, more than 100 integrations, and performance pricing of 25% of recovered chargebacks."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "mf-chargeback-evidence-router-r6",
+      "evidence_refs": [
+        "s9-shopify-chargeflow-listing"
+      ],
+      "statement": "The Shopify App Store displayed Chargeflow at 4.8 from 360 reviews and also displayed a June 2026 one-star merchant complaint about alert fees and control; this is directional buyer evidence for both demand and fee-sensitivity, not audited retention or outcome data."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "mf-chargeback-evidence-router-r7",
+      "evidence_refs": [
+        "s11-visa-2026-dispute-tools"
+      ],
+      "statement": "Visa reported 106 million disputes in 2025, up 35% from 2019, but it is also introducing an AI Dispute Recovery Manager, issuer document analysis, and a case manager intended to unify workflows across multiple card networks."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "mf-chargeback-evidence-router-r8",
+      "evidence_refs": [
+        "s4-stripe-connect-oauth",
+        "s5-adyen-disputes-api",
+        "s6-paypal-disputes-api"
+      ],
+      "statement": "Processor documentation shows technically obtainable but gated access: Stripe Connect authorizes account access and provides a revocation path, Adyen requires a credential carrying a dispute-management role that may require support, and PayPal requires merchant consent for third-party calls and withholds some fields in third-party access."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "mf-chargeback-evidence-router-r9",
+      "evidence_refs": [
+        "s12-eu-gdpr"
+      ],
+      "statement": "For EU personal data processed on a merchant's behalf, GDPR Article 28 requires a binding processor contract, documented instructions, and sufficient technical and organisational guarantees; a merchant login alone is not the complete rights-and-compliance instrument."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "mf-chargeback-evidence-router-r10",
+      "evidence_refs": [
+        "s4-stripe-connect-oauth",
+        "s5-adyen-disputes-api",
+        "s6-paypal-disputes-api"
+      ],
+      "statement": "The likely launch path is nonexclusive, revocable, processor-by-processor merchant authorization rather than ownership of the submission rail, so access is replaceable and can be withdrawn or constrained by the PSP."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "mf-chargeback-evidence-router-r11",
+      "evidence_refs": [],
+      "statement": "No signed merchant workflow agreement, data-processing agreement, PSP authorization, app-marketplace approval, or processor partnership for this candidate was provided."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "mf-chargeback-evidence-router-r12",
+      "evidence_refs": [
+        "s10-visa-ce3-readiness"
+      ],
+      "statement": "Visa CE3.0 is rule-bound rather than generic: it requires qualifying prior transactions and matching identifiers, depends on acquirer setup, and permits only one submission attempt for the relevant pre-arbitration response."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "mf-chargeback-evidence-router-r13",
+      "evidence_refs": [
+        "s3-stripe-smart-disputes",
+        "s8-chargeflow-pricing",
+        "s9-shopify-chargeflow-listing",
+        "s11-visa-2026-dispute-tools"
+      ],
+      "statement": "A new entrant begins with a data disadvantage: Stripe can use its internal transaction and cardholder data, Chargeflow claims a 20,000-merchant network and more than 100 integrations, and Visa controls network-level dispute data and tools."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "mf-chargeback-evidence-router-r14",
+      "evidence_refs": [],
+      "statement": "The candidate's incremental win-rate, net recovery, and handling-time improvement over Stripe Smart Disputes, Shopify's native workflow, and Chargeflow for the exact Polish/EU multi-PSP cohort are unverified."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "mf-chargeback-evidence-router-r15",
+      "evidence_refs": [],
+      "statement": "Recoverable dispute count, average disputed value, reason-code mix, PSP mix, and defendable share among Polish and EU mid-market multi-PSP merchants are unverified."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "mf-chargeback-evidence-router-r16",
+      "evidence_refs": [],
+      "statement": "Fully loaded per-case economics are unverified, including CAC, onboarding and connector maintenance, human review and exception work, support, security and insurance, failed-case costs, tax, churn, and bad-debt or collection costs."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "mf-chargeback-evidence-router-r17",
+      "evidence_refs": [
+        "s2-stripe-poland-pricing",
+        "s8-chargeflow-pricing"
+      ],
+      "statement": "The proposed 60-180 PLN per-submission fee can stack on top of Stripe's 90 PLN dispute-received fee and 90 PLN manual-counter fee in losing cases, while established automated alternatives advertise payment only on wins; low-value and low-probability cases therefore create an adverse-case pricing risk."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "mf-chargeback-evidence-router-r18",
+      "evidence_refs": [],
+      "statement": "Target merchants' willingness to pay both 60-180 PLN per submitted case and a 5-10% recovery share, rather than native tools or a win-only percentage, is unverified."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "mf-chargeback-evidence-router-r19",
+      "evidence_refs": [
+        "s2-stripe-poland-pricing",
+        "s8-chargeflow-pricing",
+        "s9-shopify-chargeflow-listing"
+      ],
+      "statement": "Published incumbent pricing and merchant reviews establish a paid category and a measurable recovery event, but they do not establish purchase willingness for this entrant or its proposed mixed fee structure."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "mf-chargeback-evidence-router-r20",
+      "evidence_refs": [
+        "s9-shopify-chargeflow-listing"
+      ],
+      "statement": "A commerce app marketplace is a demonstrated discovery and installation channel for the category because Shopify lists Chargeflow with an install flow, pricing, compatibility, and reviews."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "mf-chargeback-evidence-router-r21",
+      "evidence_refs": [],
+      "statement": "Conversion rate, CAC, sales cycle, payback, retention, and referral yield for merchant outbound, e-commerce agencies, accountants, or fractional-CFO channels in Poland and the EU are unverified."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "mf-chargeback-evidence-router-r22",
+      "evidence_refs": [
+        "s5-adyen-disputes-api",
+        "s6-paypal-disputes-api",
+        "s10-visa-ce3-readiness",
+        "s12-eu-gdpr"
+      ],
+      "statement": "The founder's five-hour daily limit is exposed to unquantified operating load because each PSP has distinct credentials, dispute states, document constraints, rule changes, and exception paths, while EU processing adds contractual and security work."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "mf-chargeback-evidence-router-r23",
+      "evidence_refs": [],
+      "statement": "The one-time security, legal, data-residency, insurance, and integration cost, plus the ongoing human-review and rule-maintenance load required to operate safely within the founder's capital and time limits, is unverified."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "mf-chargeback-evidence-router-r24",
+      "evidence_refs": [
+        "s1-stripe-dispute-lifecycle",
+        "s8-chargeflow-pricing"
+      ],
+      "statement": "Outcome-linked revenue has a working-capital lag: Stripe says dispute decisions commonly take two to three months, while Chargeflow's advertised recovery fee is payable only after a win."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "mf-chargeback-evidence-router-r25",
+      "evidence_refs": [],
+      "statement": "Merchant authorization to process evidence for a case does not by itself establish rights to retain cross-merchant outcome data or train a reusable model; the necessary purpose language, retention terms, subprocessor permissions, and model-training rights are unverified."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "mf-chargeback-evidence-router-r26",
+      "evidence_refs": [
+        "s3-stripe-smart-disputes",
+        "s7-shopify-chargeback-admin",
+        "s8-chargeflow-pricing",
+        "s11-visa-2026-dispute-tools"
+      ],
+      "statement": "The claimed bundling resistance is weak on public evidence because a cross-processor specialist already offers the same workflow and Stripe, Shopify, and Visa are each embedding overlapping automation closer to payment, commerce, or network data."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "mf-chargeback-evidence-router-r27",
+      "evidence_refs": [
+        "s1-stripe-dispute-lifecycle",
+        "s5-adyen-disputes-api"
+      ],
+      "statement": "The addressable pool is narrower than total disputes because Stripe describes unchallengeable cases and Adyen states that not all dispute types can be defended."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "mf-chargeback-evidence-router-r28",
+      "evidence_refs": [],
+      "statement": "The exact read/write and submission permissions available to this entrant across target Stripe account types, Adyen merchant configurations, PayPal partner status, and other PSPs have not been demonstrated in production."
+    }
+  ],
+  "commercial_evidence": {
+    "buyer_or_paid_event": {
+      "claim_ids": [
+        "mf-chargeback-evidence-router-r1",
+        "mf-chargeback-evidence-router-r6",
+        "mf-chargeback-evidence-router-r18",
+        "mf-chargeback-evidence-router-r19"
+      ],
+      "source_ids": [
+        "s1-stripe-dispute-lifecycle",
+        "s2-stripe-poland-pricing",
+        "s8-chargeflow-pricing",
+        "s9-shopify-chargeflow-listing"
+      ],
+      "status": "inference"
+    },
+    "distribution_and_acquisition": {
+      "claim_ids": [
+        "mf-chargeback-evidence-router-r20",
+        "mf-chargeback-evidence-router-r21"
+      ],
+      "source_ids": [
+        "s9-shopify-chargeflow-listing"
+      ],
+      "status": "evidence"
+    },
+    "fully_loaded_unit_economics": {
+      "claim_ids": [
+        "mf-chargeback-evidence-router-r16",
+        "mf-chargeback-evidence-router-r23"
+      ],
+      "source_ids": [],
+      "status": "unknown"
+    },
+    "rights_control_access_contractibility": {
+      "claim_ids": [
+        "mf-chargeback-evidence-router-r8",
+        "mf-chargeback-evidence-router-r9",
+        "mf-chargeback-evidence-router-r10",
+        "mf-chargeback-evidence-router-r11",
+        "mf-chargeback-evidence-router-r25",
+        "mf-chargeback-evidence-router-r28"
+      ],
+      "source_ids": [
+        "s4-stripe-connect-oauth",
+        "s5-adyen-disputes-api",
+        "s6-paypal-disputes-api",
+        "s12-eu-gdpr"
+      ],
+      "status": "inference"
+    }
+  },
+  "contrary_evidence": [
+    "Chargeflow already markets the exact cross-processor evidence-collection, packet-building, submission, and outcome-tracking wedge with more than 100 integrations and win-only pricing (s8-chargeflow-pricing, s9-shopify-chargeflow-listing).",
+    "Stripe and Shopify provide native evidence assembly and submission, with Stripe's Smart Disputes using processor-internal data and requiring no extra integration (s3-stripe-smart-disputes, s7-shopify-chargeback-admin).",
+    "Visa is moving AI representment, issuer document analysis, and cross-network case management into the network layer, increasing the likelihood that rail owners bundle the workflow (s11-visa-2026-dispute-tools).",
+    "Issuers or other financial institutions retain outcome authority, some disputes cannot be defended, and network rules constrain evidence and sometimes permit only one attempt (s1-stripe-dispute-lifecycle, s5-adyen-disputes-api, s10-visa-ce3-readiness).",
+    "A per-submission fee exposes merchants to cost on lost cases while incumbent recovery products advertise payment only after a win, creating adverse selection and low-AOV resistance (s2-stripe-poland-pricing, s8-chargeflow-pricing)."
+  ],
+  "critical_control_point_assessment": {
+    "assessment": "inference",
+    "claim_ids": [
+      "mf-chargeback-evidence-router-r8",
+      "mf-chargeback-evidence-router-r9",
+      "mf-chargeback-evidence-router-r10",
+      "mf-chargeback-evidence-router-r11",
+      "mf-chargeback-evidence-router-r28"
+    ],
+    "source_ids": [
+      "s4-stripe-connect-oauth",
+      "s5-adyen-disputes-api",
+      "s6-paypal-disputes-api",
+      "s12-eu-gdpr"
+    ],
+    "status": "replaceable_access"
+  },
+  "falsification": {
+    "cold_start_and_data_moat": [
+      "mf-chargeback-evidence-router-r13",
+      "mf-chargeback-evidence-router-r14",
+      "mf-chargeback-evidence-router-r15",
+      "mf-chargeback-evidence-router-r25"
+    ],
+    "control_point_obtainability": [
+      "mf-chargeback-evidence-router-r8",
+      "mf-chargeback-evidence-router-r10",
+      "mf-chargeback-evidence-router-r11",
+      "mf-chargeback-evidence-router-r28"
+    ],
+    "critical_mechanism_ownership": [
+      "mf-chargeback-evidence-router-r2",
+      "mf-chargeback-evidence-router-r10",
+      "mf-chargeback-evidence-router-r11",
+      "mf-chargeback-evidence-router-r12",
+      "mf-chargeback-evidence-router-r27"
+    ],
+    "external_dependencies": [
+      "mf-chargeback-evidence-router-r2",
+      "mf-chargeback-evidence-router-r9",
+      "mf-chargeback-evidence-router-r12",
+      "mf-chargeback-evidence-router-r22",
+      "mf-chargeback-evidence-router-r27"
+    ],
+    "substitutes_and_incumbent_response": [
+      "mf-chargeback-evidence-router-r3",
+      "mf-chargeback-evidence-router-r4",
+      "mf-chargeback-evidence-router-r5",
+      "mf-chargeback-evidence-router-r7",
+      "mf-chargeback-evidence-router-r26"
+    ],
+    "willingness_urgency_and_repeat_economics": [
+      "mf-chargeback-evidence-router-r1",
+      "mf-chargeback-evidence-router-r6",
+      "mf-chargeback-evidence-router-r16",
+      "mf-chargeback-evidence-router-r17",
+      "mf-chargeback-evidence-router-r18",
+      "mf-chargeback-evidence-router-r19",
+      "mf-chargeback-evidence-router-r24"
+    ]
+  },
+  "schema_version": 3,
+  "sources": [
+    {
+      "accessed_at": "2026-09-03T18:00:00Z",
+      "evidence_class": "paid_event",
+      "published_at": "unknown",
+      "publisher": "Stripe",
+      "source_id": "s1-stripe-dispute-lifecycle",
+      "source_type": "official_documentation",
+      "stance": "supporting",
+      "title": "How disputes work",
+      "url": "https://docs.stripe.com/disputes/how-disputes-work?locale=en-GB"
+    },
+    {
+      "accessed_at": "2026-09-03T18:00:00Z",
+      "evidence_class": "unit_economics",
+      "published_at": "unknown",
+      "publisher": "Stripe",
+      "source_id": "s2-stripe-poland-pricing",
+      "source_type": "official_pricing",
+      "stance": "context",
+      "title": "Pricing & Fees — Poland",
+      "url": "https://stripe.com/en-pl/pricing"
+    },
+    {
+      "accessed_at": "2026-09-03T18:00:00Z",
+      "evidence_class": "incumbent",
+      "published_at": "unknown",
+      "publisher": "Stripe",
+      "source_id": "s3-stripe-smart-disputes",
+      "source_type": "official_documentation",
+      "stance": "contradicting",
+      "title": "Smart Disputes",
+      "url": "https://docs.stripe.com/disputes/smart-disputes?locale=en-GB"
+    },
+    {
+      "accessed_at": "2026-09-03T18:00:00Z",
+      "evidence_class": "rights_control_access",
+      "published_at": "unknown",
+      "publisher": "Stripe",
+      "source_id": "s4-stripe-connect-oauth",
+      "source_type": "official_documentation",
+      "stance": "context",
+      "title": "Connect OAuth reference",
+      "url": "https://docs.stripe.com/connect/oauth-reference"
+    },
+    {
+      "accessed_at": "2026-09-03T18:00:00Z",
+      "evidence_class": "rights_control_access",
+      "published_at": "unknown",
+      "publisher": "Adyen",
+      "source_id": "s5-adyen-disputes-api",
+      "source_type": "official_documentation",
+      "stance": "context",
+      "title": "Manage disputes with the Disputes API",
+      "url": "https://docs.adyen.com/risk-management/disputes-api/"
+    },
+    {
+      "accessed_at": "2026-09-03T18:00:00Z",
+      "evidence_class": "rights_control_access",
+      "published_at": "2026-08-11",
+      "publisher": "PayPal",
+      "source_id": "s6-paypal-disputes-api",
+      "source_type": "official_documentation",
+      "stance": "context",
+      "title": "Integrate Disputes APIs",
+      "url": "https://developer.paypal.com/platforms/disputes/integrate-disputes/"
+    },
+    {
+      "accessed_at": "2026-09-03T18:00:00Z",
+      "evidence_class": "incumbent",
+      "published_at": "unknown",
+      "publisher": "Shopify",
+      "source_id": "s7-shopify-chargeback-admin",
+      "source_type": "official_help_center",
+      "stance": "contradicting",
+      "title": "Managing chargebacks in the Shopify admin",
+      "url": "https://help.shopify.com/en/manual/payments/chargebacks/chargebacks-in-admin"
+    },
+    {
+      "accessed_at": "2026-09-03T18:00:00Z",
+      "evidence_class": "incumbent",
+      "published_at": "unknown",
+      "publisher": "Chargeflow, Inc.",
+      "source_id": "s8-chargeflow-pricing",
+      "source_type": "vendor_pricing",
+      "stance": "contradicting",
+      "title": "Chargeflow Pricing with 4x ROI Guarantee",
+      "url": "https://www.chargeflow.io/pricing"
+    },
+    {
+      "accessed_at": "2026-09-03T18:00:00Z",
+      "evidence_class": "distribution",
+      "published_at": "2021-06-14",
+      "publisher": "Shopify App Store",
+      "source_id": "s9-shopify-chargeflow-listing",
+      "source_type": "app_marketplace_listing",
+      "stance": "context",
+      "title": "Chargeflow Prevent Chargebacks",
+      "url": "https://apps.shopify.com/chargeflow"
+    },
+    {
+      "accessed_at": "2026-09-03T18:00:00Z",
+      "evidence_class": "rights_control_access",
+      "published_at": "2023-03-16",
+      "publisher": "Visa",
+      "source_id": "s10-visa-ce3-readiness",
+      "source_type": "network_guidance",
+      "stance": "context",
+      "title": "Compelling Evidence 3.0 Merchant Readiness",
+      "url": "https://usa.visa.com/content/dam/VCOM/regional/na/us/support-legal/documents/compelling-evidence-3.0-merchant-readiness-mar2023.pdf"
+    },
+    {
+      "accessed_at": "2026-09-03T18:00:00Z",
+      "evidence_class": "incumbent",
+      "published_at": "2026-04-01",
+      "publisher": "Visa",
+      "source_id": "s11-visa-2026-dispute-tools",
+      "source_type": "press_release",
+      "stance": "contradicting",
+      "title": "Visa Unveils New Services to Modernize Dispute Resolution Process",
+      "url": "https://usa.visa.com/about-visa/newsroom/press-releases.releaseId.22261.html"
+    },
+    {
+      "accessed_at": "2026-09-03T18:00:00Z",
+      "evidence_class": "regulatory",
+      "published_at": "2016-04-27",
+      "publisher": "European Union",
+      "source_id": "s12-eu-gdpr",
+      "source_type": "regulation",
+      "stance": "context",
+      "title": "Regulation (EU) 2016/679 (General Data Protection Regulation)",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679"
+    }
+  ],
+  "unknowns": [
+    "Whether this candidate can obtain signed merchant agreements, DPAs, production PSP permissions, and any required marketplace or partner approvals across the intended PSP set.",
+    "The defendable monthly case volume, average disputed value, reason-code distribution, PSP mix, and native-tool penetration in the Polish/EU target cohort.",
+    "Incremental win rate and net recovery versus Stripe Smart Disputes, Shopify native submission, Chargeflow, and manual operations on a prospectively defined holdout cohort.",
+    "CAC, sales cycle, conversion, payback, churn, and referral yield for outbound, agency, accountant, fractional-CFO, and app-marketplace acquisition.",
+    "Fully loaded good-case and adverse-case contribution economics, including review labor, API and storage costs, support, failed submissions, security, tax, insurance, and delayed collections.",
+    "Merchant willingness to pay the proposed per-submission fee plus recovery share rather than a native or win-only alternative.",
+    "Whether merchant contracts can lawfully grant the retention and model-training rights needed for a cross-merchant outcome-data moat.",
+    "Whether integration maintenance, rule updates, security work, and exception handling can be operated within a five-hour-per-day founder constraint before staffing is affordable."
+  ]
+}

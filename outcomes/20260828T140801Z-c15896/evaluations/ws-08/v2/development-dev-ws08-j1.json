@@ -1,0 +1,117 @@
+{
+  "assumptions": [
+    "The founder-accessible installer can identify 10-20 small commercial sites in one Fronius product family whose owners can lawfully authorize the required telemetry access and retention.",
+    "The initial remote-dispatch decision can be made from accessible raw or pre-processed fields without relying on proprietary OEM-derived diagnostics.",
+    "The proposed annual site fee can be economically justified by avoided truck rolls or faster fault isolation, but the frequency and value of those events in the exact Polish commercial-solar wedge are not yet established.",
+    "The venture can obtain contract rights to retain and enrich technician outcome labels for product improvement without triggering a prohibitive regulatory, warranty, or trade-secret burden."
+  ],
+  "base_score": 5.06,
+  "candidate_id": "ws-08",
+  "candidate_sha256": "be840d0921c8615ff7a2726b57be9513045f62ef1cec048bf86b7896d43e3999",
+  "candidate_version": 2,
+  "constrained_score": 5.06,
+  "evaluation_type": "working_development",
+  "evidence_needed_for_higher_score": "A signed paid anchor-installer agreement should bind a defined site cohort, minimum portfolio revenue, owner enrollment, mandatory technician close-out, and lawful reuse of de-identified outcome labels. The pilot then needs to show accessible decision-useful fields, actual API and support cost, anomaly and dispatch frequency, avoided-trip or outage value exceeding three times the fee, technician label compliance, at least 65% contribution margin including human review and security, renewal intent, and one non-family installer willing to adopt the same operating contract.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "The redesign correctly shifts the opportunity from a non-exclusive legal data mandate to an installer-embedded remote-triage decision with closed-loop technician outcomes. That is a coherent and testable control-point thesis, although the triage need itself is not novel and the workflow position is still only proposed.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Avoiding unnecessary truck rolls and shortening fault isolation are credible pains, and recurring maintenance provides a plausible budget. The available downtime evidence is from broad industrial maintenance rather than Polish small commercial solar, while no installer has accepted the pilot price or shown that qualifying anomalies occur often enough to sustain annual per-site payment.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Annual installer-paid site fees, a bounded onboarding charge, explicit cost gates, and no premature savings share make the model cleaner and capital-light. However, contribution margin, renewal, alert-review labor, API cost, support burden, and sales economics are all unmeasured, and the leap from a 10-20-site pilot to 5,000 retained sites and 1.5-3 million PLN operating profit has no evidenced intermediate milestones.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "One installer, one inverter family, and small commercial sites form a suitably narrow beachhead that the founder can reach. The packet does not quantify the number of eligible maintained sites, anomaly incidence, maintenance-plan penetration, or the revenue pool within this wedge, so it is demonstrably useful for validation but not yet demonstrably large enough to support the founder objective.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "Embedding the service in an installer's renewal workflow could create a strong local operating position, but that position is neither signed nor exclusive. OEM portals already expose monitoring and APIs, can bundle triage, and control interface changes; absent superior dispatch outcomes or durable workflow rights, the offer is vulnerable to both OEM and fleet-monitoring substitutes.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A proven installer playbook could extend to additional installers, inverter families, storage, or adjacent renewable assets. Yet each OEM family introduces new access contracts, fields, migration work, support economics, and domain-specific labels, so success in one cohort does not automatically lower the cost or uncertainty of the next one.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "A retained history of telemetry joined to technician-confirmed actions could compound into useful proprietary triage benchmarks. Research directly shows that fault labels are scarce, expensive, and subject to domain shift, while neither mandatory label return nor cross-customer reuse rights are secured; until those rights and behaviors exist, the proposed data advantage is a hypothesis rather than a moat.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "A white-label recommendation about remote resolution versus dispatch can be more actionable for an installer than a raw OEM alert and may simplify portfolio operations. No evidence yet shows better accuracy, faster resolution, lower total cost, or a sufficiently material convenience gain versus OEM portals plus the installer's existing judgment.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "The Data Act, documented local access, commercial APIs, and maintenance-cost pressure make a low-cost test timely. The regulation does not create exclusivity, by-design access applies prospectively, and incumbent OEM platforms are also improving, so timing opens an experiment more clearly than it creates a durable market window.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "The family installer is an unusually credible route to the first portfolio, and embedding enrollment at commissioning or renewal can keep initial acquisition cost low and fit the founder's social constraints. A single related-party channel does not establish that independent installers will sign the same workflow obligations, pay the same price, or accept a new monitoring layer, so scalable distribution remains unproven.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "The single-family pilot fits the founder's data skills, part-time capacity, capital ceiling, and access advantages, and its staged gates limit downside. Reliable field triage still requires solar domain knowledge, technician compliance, security and legal controls, and ongoing OEM connector maintenance; expansion could quickly outgrow the assumed 10-15 founder hours per week.",
+      "score": 6,
+      "status": "scored"
+    }
+  ],
+  "final_score": 5.1,
+  "highest_value_structural_change": "Convert the proposed workflow position into a portfolio-level anchor contract: require a minimum annual installer commitment for a defined fleet, make owner enrollment and technician close-out default service steps, and secure lawful rights to retain and reuse de-identified decision-and-outcome labels. That structure would fund fixed connector costs and turn a cooperative pilot into an actually controlled feedback loop before adding another OEM family.",
+  "interaction_adjustment": 0,
+  "judge_id": "dev-ws08-j1",
+  "main_structural_strength": "The redesigned single-installer, single-inverter-family wedge links a recurring maintenance payment to a concrete dispatch decision and conditions expansion on measured access cost, outcome value, label return, margin, and renewal, making it unusually cheap and founder-fit to falsify.",
+  "primary_score_limiter": "The asserted control point is still a contractual aspiration: no installer has committed to paid portfolio volume, mandatory owner enrollment, technician close-out, or reusable label rights, and no evidence shows that the exact wedge produces enough high-value triage events to support the proposed annual fee and 5,000-site scale path.",
+  "qualified": false,
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 3,
+  "strongest_disconfirming_evidence": "Fronius local access lacks retained history, other OEMs impose paid and changing APIs, and OEM portals already provide monitoring, while peer-reviewed fault-diagnosis research shows scarce labels and domain shift. Together this indicates that a narrow connector may remain support-heavy and substitutable without producing the proprietary outcome advantage claimed by the redesign.",
+  "unrounded_score": 5.06
+}

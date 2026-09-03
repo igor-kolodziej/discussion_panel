@@ -1,0 +1,89 @@
+{
+  "candidate_id": "fb-11",
+  "claims": [
+    {
+      "claim_id": "fb-11-control",
+      "claim_type": "founder_control_point_path",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://iea-pvps.org/wp-content/uploads/2020/01/Report_IEA-PVPS_T13-08_2017_Technical_Assumptions_Used_in_PV_Financial_Models.pdf",
+        "https://iea-pvps.org/wp-content/uploads/2026/02/IEA-PVPS-T13-34-2026-REPORT-Digitalisation-Twins.pdf"
+      ],
+      "statement": "IEA PVPS describes inverter failures as a major source of revenue loss and shows how historical failure analysis can identify component and environmental causes. An installer-led exchange can plausibly control the failed-unit intake, fault record, and replacement decision, but access to firmware, components, and qualified repair capacity is not proved."
+    },
+    {
+      "claim_id": "fb-11-loss",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://iea-pvps.org/wp-content/uploads/2020/01/Report_IEA-PVPS_T13-08_2017_Technical_Assumptions_Used_in_PV_Financial_Models.pdf"
+      ],
+      "statement": "The present measurable loss is generation revenue forgone while a failed inverter is diagnosed and replaced, plus the price of a new unit. IEA PVPS calls the inverter a major cause of lost revenue and cites high shares of reported troubles, though the report is older and Polish residential outage economics need current measurement."
+    },
+    {
+      "claim_id": "fb-11-payer",
+      "claim_type": "payer_and_budget",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://iea-pvps.org/key-topics/t13-performance-2nd-life-modules-2026/",
+        "https://eur-lex.europa.eu/eli/dir/2024/1799/oj"
+      ],
+      "statement": "The payer hypothesis is the installer or asset owner using O&M and replacement budget at equipment failure for a guaranteed-turnaround repair or tested exchange. IEA PVPS finds repair and reuse technically feasible but often labor-intensive and costly; EU right-to-repair rules show policy direction, but direct applicability to PV inverters is unconfirmed."
+    }
+  ],
+  "contrary_evidence": [
+    "The 2026 IEA PVPS report warns that repair can remain labor-intensive, costly, and difficult to scale.",
+    "OEM warranties, locked firmware, unavailable components, and rapidly falling new-equipment prices can make independent repair uneconomic."
+  ],
+  "discovery_lane": "future-backcast",
+  "economics": {
+    "acquisition_route": "Collect 30-50 failed inverters or control boards from the family business and partner installers, classify faults before buying repair equipment, and contract an electronics lab for fixed-price repairs with a limited exchange warranty.",
+    "capital_required_pln": 55000,
+    "founder_net_worth_path": "A regional reverse-logistics exchange could expand into multi-brand spare-parts inventory, repair routing, and predictive failure data for aging distributed-energy assets; the founder objective requires high repair yield and installer-network scale.",
+    "founder_time": "About 12-18 hours per week for triage data, partner management, and marketplace operations; certified technicians and repair labs handle electrical work.",
+    "gross_margin_basis": "Exchange price less repair-lab fee, shipping, failed-repair rate, test time, and warranty reserve; data subscription is possible only after enough installed-base history exists.",
+    "payback": "Require each repair batch to turn inventory within 60 days and recover acquisition, test, and warranty reserve before expanding model coverage.",
+    "pricing": "Fixed tested-exchange price below new replacement cost, refundable core deposit, and optional installer membership for priority turnaround.",
+    "retention_or_repeat": "Installers repeatedly encounter failures across their installed base; core returns and compatibility history reinforce the exchange."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Multi-brand fault taxonomy, repair-yield history, compatible spare inventory, and dense installer reverse logistics",
+    "customer": "Regional PV and heat-pump installers plus owners of out-of-warranty distributed-energy assets",
+    "distribution_mechanism": "Installer membership and core-return logistics initiated at field diagnosis",
+    "offer_and_business_model": "Tested repair/exchange with core deposit and limited warranty, later augmented by failure intelligence",
+    "payer_and_paid_event": "Installer or owner pays when a failed inverter or control board stops an asset and replacement is authorized",
+    "problem_trigger": "An out-of-warranty renewable-energy controller fails and a new OEM replacement is slow or expensive"
+  },
+  "founder_fit": [
+    "The family company can provide authentic failure cases and installer distribution from day one.",
+    "Failure classification, parts forecasting, and repair-yield prediction use the founder's data skills.",
+    "Repair work and warranty testing can be outsourced, keeping founder effort focused on the system."
+  ],
+  "parent": null,
+  "risks": [
+    "Electrical safety and warranty liability can be severe if a refurbished unit fails.",
+    "A small and fragmented model inventory may tie up capital without finding matching demand.",
+    "Manufacturer parts, schematics, and firmware may remain inaccessible despite broader repair policy."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://iea-pvps.org/wp-content/uploads/2020/01/Report_IEA-PVPS_T13-08_2017_Technical_Assumptions_Used_in_PV_Financial_Models.pdf",
+    "https://iea-pvps.org/wp-content/uploads/2026/02/IEA-PVPS-T13-34-2026-REPORT-Digitalisation-Twins.pdf",
+    "https://iea-pvps.org/key-topics/t13-performance-2nd-life-modules-2026/",
+    "https://eur-lex.europa.eu/eli/dir/2024/1799/oj"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Managed reverse-logistics exchange and repair network",
+    "control_point": "Installer-controlled failed-unit intake, diagnostic record, and core-return decision",
+    "critical_dependency": "Repeatable repair yield with safe testing, accessible parts, and warranty economics below new replacement"
+  },
+  "thesis": "Backcast from an aging distributed-energy fleet where repairability and parts intelligence are strategic: capture failed hardware at the installer visit now, turn cores into guaranteed exchanges, and let fault and compatibility data compound faster than any local repair shop.",
+  "title": "Renewable Repair Exchange",
+  "uncertainties": [
+    "The current volume and model concentration of failed inverters and heat-pump boards in the reachable installer base are unknown.",
+    "Repair success, turnaround, and warranty-return distributions need a physical batch test.",
+    "Direct scope of EU repair rules for the target equipment requires legal verification."
+  ],
+  "version": 1
+}

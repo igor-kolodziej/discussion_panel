@@ -1,0 +1,119 @@
+{
+  "assumptions": [
+    "The family installer is used only as an opt-in discovery or pilot counterparty and provides no captive demand, confidential data, technician rights, or preferential warranty access.",
+    "The initial offer is restricted to one service zone and only those job classes for which all electrical, F-gas, OEM, insurance, data-processing, and portal-access requirements can be contractually satisfied.",
+    "Missing customer, supplier, acquisition, and operating validation is treated as uncertainty rather than evidence that counterparties will refuse.",
+    "A dispatcher or qualified operations partner is added before contractual coverage would require the founder to provide continuous live service beyond five hours per day.",
+    "Reservation and dispatch prices are hypotheses and are not assumed to be achievable merely because adjacent retail service prices exist.",
+    "Regional fault peaks may coincide with technician scarcity; this cross-factor coupling can simultaneously impair SLA fulfillment and raise capacity cost."
+  ],
+  "base_score": 4.54,
+  "candidate_id": "mf-aftercare-reserve",
+  "candidate_sha256": "cbfbf0be54799a9ed43ba8fbdb65197d4579746697307a1b9e03237d63d74622",
+  "candidate_version": 1,
+  "constrained_score": 4.34,
+  "evaluation_type": "working_research",
+  "evidence_needed_for_higher_score": "A bounded one-zone pilot should pair take-or-pay commitments from several unrelated installers with signed, qualification- and OEM-specific technician capacity terms, then report dispatches per 100 systems, remote-resolution share, response and first-visit-resolution rates, kilometers and labor per job, failed visits and rework, fully loaded contribution margin, acquisition cost, reservation renewal, and founder/dispatcher hours.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "The idea addresses a real mismatch: installers bear episodic callback obligations but cannot economically staff every regional peak, while contractible response times make reserved capacity potentially valuable. The insight is useful but not unique, because a close Polish provider already coordinates outsourced aftercare and local technicians, and the frequency of field-worthy overflow remains unknown.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Consumer-remedy costs, OEM service deadlines, accreditation consequences, and scarce qualified labor support meaningful installer pain and occasional urgency. Evidence of paid service and competing aftercare offers supports a plausible budget, but nothing in the packet establishes willingness to pay this specific 900-2500 PLN reservation plus dispatch markup rather than use an OEM network, spot subcontractor, or owner-facing service plan.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Advance reservation fees could improve cash conversion and recurring revenue, while dispatch fees add usage-linked income. However, the model bears standby-utilization, travel, rework, liability, credits, and peak-capacity risks; cited retail service rates leave uncertain room for the proposed routing margin, and no observed incident rate, supplier reservation price, CAC, retention, or fully loaded contribution model supports the projected scale or owner earnings.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Poland's roughly 1.54 million renewable microinstallations and concentration within major distribution territories create a substantial service surface, and a geofenced installer cohort can be a coherent initial segment. The economically addressable beachhead is nevertheless unquantified because installed base does not establish postcode-level incident density, route density, installer portfolio concentration, or overflow frequency.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "CS-OZE already addresses the same installer aftercare problem while preserving the installer's customer relationship, and its nonexclusive technician network avoids the buyer's need to underwrite standby capacity. OEMs and authorized service centers also control important warranty work, so the proposed company lacks an uncontested control point; dominance would require demonstrably superior SLA reliability in a tightly bounded credential-and-brand niche.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A functioning regional service pod could expand into adjacent postcodes, inspections, monitoring, batteries, heat pumps, parts coordination, and additional installer portfolios. Expansion is credible in concept but not frictionless because each new product, OEM, and job class can introduce different authorization, qualification, data-access, and technician-supply requirements.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Route density, triage records, failure codes, and resolution-time data could improve placement and first-visit completion as volume grows. Yet technician reservations are nonexclusive and replaceable, access to telemetry and service histories is unproven, existing networks and OEMs may hold better data, and neither customer nor supply-side switching costs are established.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "Guaranteed local response windows backed by genuinely reserved capacity could be faster and more dependable than ad hoc subcontracting. The packet does not show that this promise improves resolution outcomes or economics enough to change installer behavior, especially when a close substitute already offers nearby certified partners and owner-facing plans resolve many incidents remotely.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "A large installed base, formal callback duties, and a documented shortage of electricians and energy workers create current pressure for aftercare capacity. The same labor shortage raises acquisition and reservation costs, while the packet does not establish a time-limited regulatory or technological window that uniquely favors this model now.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "The founder has a lawful opt-in route to learn from one family installer, and public registries, wholesalers, technician referrals, and direct regional outreach offer practical ways to find prospects. These are leads rather than repeatable distribution advantages: unrelated-installer conversion, CAC, onboarding burden, payback, renewal, and channel cooperation are all unknown, and fragmented B2B selling may be demanding for a part-time founder.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "The proposed 75000 PLN launch capital is within the founder's means, and quantitative routing and demand forecasting fit his skills. Execution remains difficult because every dispatch must match electrical, F-gas, and OEM rights; live triage, scheduling, customer data, insurance, quality control, parts, and escalations create physical operational and liability exposure that is not yet shown to fit a five-hour daily limit alongside full-time work.",
+      "score": 3,
+      "status": "scored"
+    }
+  ],
+  "final_score": 4.3,
+  "highest_value_structural_change": "Replace broad speculative six-month capacity purchases with zone-and-OEM-specific service pods that are activated only after a cohort of unrelated installers signs minimum-volume or take-or-pay commitments. Match each pod to technicians with the exact qualifications, portal rights, and job scope, make travel a transparent pass-through, and reserve capacity only for standardized high-frequency job classes.",
+  "interaction_adjustment": -0.2,
+  "judge_id": "research-mf-aftercare-j01",
+  "main_structural_strength": "The business can convert volatile installer callback demand into recurring B2B revenue while using explicit capacity contracts to make response availability measurable and allowing each installer to retain the end-customer relationship.",
+  "primary_score_limiter": "The central reservation economics are unproven: neither installer prepayment nor credential-specific technician capacity is evidenced at compatible prices, and public service pricing provides no clear headroom after travel, triage, rework, liability, and correlated peak demand.",
+  "qualified": false,
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 3,
+  "strongest_disconfirming_evidence": "CS-OZE already sells Polish installers a close outsourced-aftercare substitute that preserves their customer relationship and uses a nonexclusive, technician-choice network. That directly challenges both differentiation and the premise that prepaid six-month technician blocks are necessary, while no evidence shows that reservation improves SLA performance enough to offset standby risk.",
+  "unrounded_score": 4.34
+}

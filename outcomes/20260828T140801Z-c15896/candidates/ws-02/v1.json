@@ -1,0 +1,86 @@
+{
+  "candidate_id": "ws-02",
+  "claims": [
+    {
+      "claim_id": "ws-02-control",
+      "claim_type": "founder_control_point_path",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02024R0573-20240220"
+      ],
+      "statement": "The F-gas regime requires certified natural persons and legal persons for relevant recovery, installation, servicing, and leak-check activities; the founder can obtain a bounded control route by contracting with or taking a minority position in an existing certified Polish HVAC undertaking and owning the aggregation, purity-test, cylinder-custody, and resale protocol rather than performing regulated handling personally."
+    },
+    {
+      "claim_id": "ws-02-loss",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02024R0573-20240220",
+        "https://climate.ec.europa.eu/system/files/2022-04/f-gas_evaluation_report_en.pdf"
+      ],
+      "statement": "From 1 January 2026, high-GWP F-gases generally cannot be used to service air-conditioning equipment and heat pumps, with a temporary exception through 2032 for properly labelled reclaimed gas and tightly limited recycled gas; recovered cylinders that are too small, mixed, undocumented, or untested therefore represent measurable lost resale value, while the Commission's evaluation found historically low reclamation shares for some important refrigerants."
+    },
+    {
+      "claim_id": "ws-02-payer",
+      "claim_type": "payer_and_budget",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02024R0573-20240220"
+      ],
+      "statement": "Equipment operators must fund leak checks and prompt repair, certified service firms must recover gases, and Member States must extend financing for recovery, recycling, reclamation, or destruction by the end of 2027; certified HVAC firms, wholesalers, and producer-responsibility schemes therefore have existing gas-procurement, waste-handling, service, and compliance budgets triggered by each recovery or service job."
+    }
+  ],
+  "contrary_evidence": [
+    "A Commission-supported evaluation reported that reclaimed R410A represented only about 5-10% of that refrigerant handled by surveyed reclaiming distributors, partly because residential AC quantities were too small for economical collection; this could make route density uneconomic rather than create a profitable shortage.",
+    "The phase-down toward lower-GWP and natural refrigerants may shrink the lifetime value of a bank specializing in legacy high-GWP gases."
+  ],
+  "discovery_lane": "weak-signal",
+  "economics": {
+    "acquisition_route": "Run a ninety-day pilot with one certified HVAC company and one refrigerant laboratory or wholesaler; place serialized return cylinders at 20 service vans and aggregate only pre-specified gases with pre-agreed purchase prices.",
+    "capital_required_pln": 90000,
+    "founder_net_worth_path": "If a dense multi-city network reaches 150 certified firms, turns 10000 cylinders per year, and earns an assumed 250-600 PLN gross profit per accepted cylinder plus custody subscriptions, it could compound into a regional refrigerant bank and compliance-data asset without owning a full reclamation plant initially.",
+    "founder_time": "Approximately 15-20 founder hours per week for routing economics, partner contracting, and exception review; certified recovery, transport, and testing remain outsourced.",
+    "gross_margin_basis": "Preliminary 25-45% gross margin on accepted gas plus higher-margin custody fees, net of cylinder logistics, assay, rejected batches, and certified handling; actual wholesale spreads must be quoted.",
+    "payback": "A service firm is paid for a cylinder that otherwise incurs storage or disposal cost and receives a documented source for allowable reclaimed gas; route-level payback depends on kilograms recovered per pickup.",
+    "pricing": "Offer a posted per-kilogram buy price after assay, retain the spread to a contracted reclaimer or wholesaler, and charge 150-400 PLN per technician per month for cylinders, custody records, and scheduled pickup.",
+    "retention_or_repeat": "Every decommissioning, leak repair, retrofit, and recovered cylinder is a repeat transaction; custody subscriptions persist across the installed base while legacy refrigerants remain in service."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A route-density, purity-yield, equipment-type, technician, and realized-price dataset that improves acceptance prices and pickup scheduling.",
+    "customer": "Certified HVAC and heat-pump service firms, refrigerant wholesalers, reclaimers, and producer-responsibility organizations in Poland and nearby EU markets.",
+    "distribution_mechanism": "HVAC wholesalers, certification schools, heat-pump distributors, and renewable installers place serialized cylinders and enroll technicians at existing procurement touchpoints.",
+    "offer_and_business_model": "A physical cylinder-return and purity-clearing network that buys recoverable gas conditionally, supplies custody evidence, and resells pooled homogeneous lots; revenue is spread plus subscription.",
+    "payer_and_paid_event": "Certified service firms or producer-responsibility schemes pay or surrender margin when refrigerant is recovered during repair or decommissioning and needs lawful custody, testing, reclamation, or destruction.",
+    "problem_trigger": "The 2026 servicing restriction makes documented reclaimed legacy gas temporarily valuable while many small recovered quantities remain economically stranded."
+  },
+  "founder_fit": [
+    "The parents' renewable-installation company can introduce heat-pump installers and expose actual cylinder-return friction.",
+    "The founder's analytics background fits route optimization, purity-yield pricing, and exception detection.",
+    "A partner-first pilot avoids a reclamation plant and stays within part-time and capital constraints."
+  ],
+  "parent": null,
+  "risks": [
+    "Hazardous-goods transport, waste status, cylinder ownership, certification, and environmental liability could make the proposed custody model impractical.",
+    "Contamination or mislabelling could destroy an aggregated batch and create safety or regulatory liability.",
+    "Wholesalers and major reclaimers may respond by placing their own free return cylinders and bundling pickups."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02024R0573-20240220",
+    "https://climate.ec.europa.eu/system/files/2022-04/f-gas_evaluation_report_en.pdf"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Regulated waste-to-inventory clearing network",
+    "control_point": "Serialized cylinders, conditional title transfer after purity assay, and contracted access to certified recovery and reclamation capacity.",
+    "critical_dependency": "Sufficient same-gas recovery density for assay and transport costs to remain below the reclaimed-gas resale spread."
+  },
+  "thesis": "The F-gas transition creates a temporary mismatch: documented reclaimed legacy refrigerant retains legal service value while small certified installers recover quantities too fragmented to monetize. A neutral custody and purity bank could control aggregation at the cylinder, share value with installers, and sell tested lots to reclaimers or wholesalers before the legacy window closes.",
+  "title": "Reclaimed Refrigerant Purity Bank",
+  "uncertainties": [
+    "Actual kilograms, contamination rates, and disposal costs per Polish service firm are unknown.",
+    "It is unclear whether conditional title transfer avoids waste-broker licensing or instead triggers additional permits.",
+    "The duration and price premium of reclaimed gas may be shorter than the regulatory exception window."
+  ],
+  "version": 1
+}

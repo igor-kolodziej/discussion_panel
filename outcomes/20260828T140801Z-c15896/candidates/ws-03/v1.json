@@ -1,0 +1,88 @@
+{
+  "candidate_id": "ws-03",
+  "claims": [
+    {
+      "claim_id": "ws-03-control",
+      "claim_type": "founder_control_point_path",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-registry_en",
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-verification_en"
+      ],
+      "statement": "The CBAM Registry lets third-country installation operators upload emissions data that declarants can use, while annual declarations can rely on actual verified data; the founder can contract a shared supplier for permissioned measurement, buy verifier capacity in bulk, and license the same verified installation record to several non-competing EU importers rather than merely selling reporting software."
+    },
+    {
+      "claim_id": "ws-03-loss",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en",
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-verification_en"
+      ],
+      "statement": "The definitive CBAM regime has applied since 1 January 2026 and covered importers must surrender certificates whose price follows EU ETS allowances; each tonne imported with an avoidably high default value or each supplier lacking verified actual emissions can therefore create a measurable certificate cost or shipment-compliance delay."
+    },
+    {
+      "claim_id": "ws-03-payer",
+      "claim_type": "payer_and_budget",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en"
+      ],
+      "statement": "EU importers or their indirect customs representatives above the current 50-tonne threshold must become authorized declarants and buy CBAM certificates; the payer is therefore an importer, buying group, or customs representative using carbon-certificate, customs-compliance, and supplier-quality budget when onboarding a plant or preparing its annual declaration."
+    }
+  ],
+  "contrary_evidence": [
+    "Importers may use default emissions values, so actual measurement only pays where the verified value is sufficiently lower after verification and supplier-coordination costs.",
+    "Large importers, customs brokers, and assurance firms may already have supplier programs and could internalize any reusable plant record."
+  ],
+  "discovery_lane": "weak-signal",
+  "economics": {
+    "acquisition_route": "Recruit a Polish metal, aluminium, cement, or fertilizer import association and cluster members by shared non-EU production installation; pre-sell one pooled measurement campaign before contracting a verifier or local engineering partner.",
+    "capital_required_pln": 45000,
+    "founder_net_worth_path": "A rights-cleared library covering 1000 recurring production installations at an assumed 12000 PLN annual license per installation, shared across multiple importers, could become a capital-light European evidence utility with attractive strategic value to customs, trade-finance, or assurance firms.",
+    "founder_time": "Approximately 15 founder hours per week for data modeling, plant clustering, and partner management; local measurements and formal verification are contracted.",
+    "gross_margin_basis": "Preliminary 60-75% contribution margin once one plant record is licensed to multiple importers, after verifier, engineering, translation, and supplier-onboarding costs; first-plant margins may be negative.",
+    "payback": "Charge only when the modeled reduction in certificate exposure versus permitted defaults exceeds three times the campaign fee, or fall back to a fixed compliance-data fee; actual default-to-actual spreads require shipment-level calculation.",
+    "pricing": "Assumed 12000-30000 PLN per production-installation campaign plus 5-10% of independently calculated first-year certificate savings and a lower annual refresh license.",
+    "retention_or_repeat": "Emissions data, production routes, electricity mixes, and verification must be refreshed across annual declarations and supplier changes; a shared plant serves multiple importers repeatedly."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A permissioned graph of EU importers to non-EU installations, verified process emissions, calculation boundaries, verifier outcomes, and default-value deltas.",
+    "customer": "Mid-market EU importers and indirect customs representatives handling CBAM goods from shared third-country production installations.",
+    "distribution_mechanism": "Customs brokers, trade associations, trade-finance providers, and commodity buying groups reveal clusters of importers buying from the same plants and co-fund measurement.",
+    "offer_and_business_model": "A buyer cooperative that procures and rights-clears plant-level emissions measurement and verification once, then licenses the admissible record to participating importers; revenue is campaign fee, refresh license, and bounded savings share.",
+    "payer_and_paid_event": "An authorized declarant pays from carbon-certificate and customs-compliance budget when onboarding a supplier, importing covered tonnage, or preparing the annual CBAM declaration.",
+    "problem_trigger": "A shared overseas plant has no usable verified actual-emissions record, forcing several EU buyers to coordinate separately or accept potentially expensive defaults."
+  },
+  "founder_fit": [
+    "The work is data-intensive and benefits from the founder's analytics, finance, and business-analysis background.",
+    "A pooled digital evidence model can be tested part-time without inventory or public-facing personal branding.",
+    "Poland's industrial import base offers a local entry point before expanding to neighboring EU markets."
+  ],
+  "parent": null,
+  "risks": [
+    "Supplier data rights may be non-transferable or a verifier may require a new engagement for each declarant.",
+    "Actual emissions may exceed defaults, eliminating savings and making measurement commercially unattractive.",
+    "Competition or confidentiality concerns may prevent importers sharing the identity of common suppliers."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en",
+    "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-verification_en",
+    "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-registry_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Shared upstream evidence procurement cooperative",
+    "control_point": "Contractual reuse rights over verified installation-level emissions records and bulk access to measurement and verifier capacity.",
+    "critical_dependency": "The verified actual-emissions advantage over defaults must exceed coordination and verification cost, and the record must be reusable across declarants."
+  },
+  "thesis": "CBAM turns an overseas plant's emissions record into a recurring financial input, yet many mid-market importers buy from the same installation and duplicate supplier chasing. A cooperative that controls permissioned measurement and verifier procurement upstream can spread the fixed cost across buyers and compound a plant-level evidence graph instead of competing as another report-filling tool.",
+  "title": "CBAM Supplier Measurement Cooperative",
+  "uncertainties": [
+    "How often do Polish importers share the same non-EU plant without knowing it?",
+    "What contractual wording allows one verified record to be used by multiple declarants?",
+    "How large is the certificate delta between actual and default values for the first target sectors?"
+  ],
+  "version": 1
+}

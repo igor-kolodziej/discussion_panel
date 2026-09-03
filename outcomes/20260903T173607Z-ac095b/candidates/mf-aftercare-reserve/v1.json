@@ -1,0 +1,146 @@
+{
+  "candidate_id": "mf-aftercare-reserve",
+  "claims": [
+    {
+      "claim_id": "mf-aftercare-reserve-c1",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://iea-pvps.org/key-topics/guidelines-for-operation-and-maintenance-of-photovoltaic-power-plants-in-different-climates/"
+      ],
+      "statement": "PV operation and maintenance includes monitoring, analysis, maintenance services, reliability, and safety work, so a fault-resolution visit is a discrete operational event; the frequency and price for small Polish installers remain unverified."
+    },
+    {
+      "claim_id": "mf-aftercare-reserve-c2",
+      "claim_type": "payer_and_budget",
+      "confidence": "low",
+      "evidence_refs": [],
+      "statement": "The intended payer is the installer service function that already bears callback labor, travel, and customer-remedy costs; reservation-budget availability has not been demonstrated."
+    },
+    {
+      "claim_id": "mf-aftercare-reserve-c3",
+      "claim_type": "founder_control_point_path",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://www.udt.gov.pl/wykazy/rejestr-certyfikowanych-instalatorow-oze.html"
+      ],
+      "statement": "A founder entity can obtain bounded control by signing several six-month capacity reservations; UDT's public register supplies a lawful prospecting source but no right to any technician's time."
+    },
+    {
+      "claim_id": "mf-aftercare-reserve-c4",
+      "claim_type": "other",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.ure.gov.pl/pl/urzad/informacje-ogolne/aktualnosci/13173%2CRaport-URE-w-Polsce-mamy-juz-ponad-16-mln-mikroinstalacji-OZE.html"
+      ],
+      "statement": "Poland's large reported prosumer microinstallation base supports the existence of an aftercare surface but does not establish an addressable overflow market."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Service manager or owner responsible for warranty and field operations",
+    "bundling_resistance": "Neutral multi-brand coverage and guaranteed local windows must outperform manufacturer-specific networks without requiring exclusivity",
+    "customer_relationship_owner": "Founder company owns the installer contract; each installer retains the end-customer relationship",
+    "distribution_origin": "Installer referrals, public installer registries, wholesalers, and direct outreach after one separately contracted pilot",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Direct regional sales and reciprocal technician referrals; target recovery within two reservation months, unvalidated",
+      "cash_conversion": "Reservation billed in advance; dispatches settled monthly after installer acceptance",
+      "contribution_margin": "Target 20-35% on dispatches plus higher-margin reservation revenue; utilization and travel can materially erode it",
+      "delivery_and_support_costs": "Central triage and quality review; phone coverage must be delegated rather than founder-on-call",
+      "overhead_and_compliance": "Contracting, liability insurance, qualification checks, health and safety procedures, and tax/accounting",
+      "revenue_basis": "Hypothesis: 900-2500 PLN monthly reservation per installer plus 250-600 PLN routing margin per completed visit",
+      "variable_costs": "Technician payments, travel, consumables pass-through, scheduling software, and failed-visit credits"
+    },
+    "likely_incumbent_response": "Manufacturers, wholesalers, or large installers could expand authorized service networks or bundle overflow coverage",
+    "paid_event_or_measurable_loss": "Each overflow incident is a dispatchable paid service event; delay can also be measured as days to resolution, repeat visits, refunds, or retained installer labor",
+    "payer": "Renewable installer",
+    "purchase_trigger": "Seasonal backlog, technician absence, geographic expansion, or repeated SLA misses",
+    "renewal_event": "Monthly reservation renewal and each completed dispatch"
+  },
+  "contrary_evidence": [
+    "Installers may view third-party field work as a threat to quality, warranty status, or their customer relationship.",
+    "Public certification does not prove current competence, availability, insurance, or willingness to subcontract."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Nonexclusive six-month capacity-reservation agreements specifying hours, postcodes, response windows, rates, and for-cause termination",
+    "acquisition_instrument_type": "capacity_reservation",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Reserve smaller blocks from multiple unrelated technicians and narrow the initial service radius",
+    "current_owner": "Independent technicians and service firms control their calendars and qualifications",
+    "customer_relationship_control": "contracted",
+    "customer_relationship_owner": "Founder company owns the installer contract; each installer retains the end-customer relationship",
+    "duration": "6 months",
+    "exclusivity": "nonexclusive",
+    "founder_access_basis": "operating_relationship",
+    "founder_access_description": "The parents' installer can be asked about lawful aftercare workflow and may independently buy a pilot, but it supplies no automatic customer, job, technician, contract, or confidential-data rights.",
+    "launch_controller": "Founder company after counterparties sign scoped capacity-reservation contracts",
+    "mechanism_control": "dependent",
+    "renewal": "Rolling three-month renewal by mutual agreement",
+    "replaceability": "replaceable",
+    "revocability": "for_cause",
+    "status": "replaceable_access",
+    "subject": "Monthly blocks of renewable-system diagnostic and repair capacity in named postcodes",
+    "subject_type": "capacity",
+    "transferability": "nontransferable"
+  },
+  "discovery_lane": "mechanism-first",
+  "economics": {
+    "acquisition_route": "One opt-in family-firm discovery pilot, then direct installer sales, technician referrals, and wholesalers",
+    "capital_required_pln": 75000,
+    "founder_net_worth_path": "Illustrative, not forecast: 600 installer subscriptions at 1600 PLN monthly plus dispatch margin could exceed 12m PLN annual revenue; regional replication and delegated operations would be required for a plausible 5m PLN founder equity outcome",
+    "founder_time": "Founder designs routing and sells accounts within five hours daily; a paid dispatcher must cover operating windows before scale",
+    "gross_margin_basis": "Spread between contracted technician cost and dispatch price plus unused but prudently sized reservation revenue",
+    "payback": "Target under two months of reservation gross profit; unvalidated",
+    "pricing": "Hypothesis: 900-2500 PLN monthly reservation plus a 250-600 PLN margin per completed dispatch",
+    "retention_or_repeat": "Annual relationship if response time, resolution rate, and cost beat ad hoc subcontracting"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Dispatch-density, failure-code, route, and resolution-time data improve capacity placement and first-visit completion",
+    "customer": "Small and midsize photovoltaic, battery, and heat-pump installers in western and central Poland",
+    "distribution_mechanism": "Validate incident types through a voluntary family-installer relationship, then recruit unrelated installers and certified technicians from public registries and trade channels",
+    "offer_and_business_model": "Geofenced overflow service using pre-reserved independent technician slots, standardized triage, and fixed dispatch pricing",
+    "payer_and_paid_event": "Installer pays a monthly capacity reservation and a fee when a technician is dispatched",
+    "problem_trigger": "A cluster of faults, inspections, or warranty callbacks exceeds the installer's available field-service capacity"
+  },
+  "founder_fit": [
+    "Routing, demand forecasting, and fault-code analysis use quantitative skills",
+    "The family operating relationship permits lawful workflow discovery without implying ownership",
+    "A dispatcher and standardized triage can cap founder involvement below five hours daily",
+    "Reservation utilization and response time are directly measurable"
+  ],
+  "parent": null,
+  "risks": [
+    "Low utilization turns reserved hours into cash losses",
+    "A poor repair creates safety and warranty liability",
+    "Peak faults may correlate regionally, exhausting all reserved capacity",
+    "The model can become a labor-heavy dispatcher incompatible with part-time operation"
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://www.udt.gov.pl/wykazy/rejestr-certyfikowanych-instalatorow-oze.html",
+    "https://iea-pvps.org/key-topics/guidelines-for-operation-and-maintenance-of-photovoltaic-power-plants-in-different-climates/",
+    "https://www.ure.gov.pl/pl/urzad/informacje-ogolne/aktualnosci/13173%2CRaport-URE-w-Polsce-mamy-juz-ponad-16-mln-mikroinstalacji-OZE.html"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "capacity_or_asset_operator",
+    "commercial_model_descriptor": "reserved_regional_renewable_service_capacity",
+    "control_point_category": "contracted_capacity",
+    "control_point_descriptor": "technician_hours_by_zone_and_response_window",
+    "critical_dependency_category": "specialist_labor",
+    "critical_dependency_descriptor": "qualified_replaceable_field_technicians"
+  },
+  "structure": {
+    "commercial_archetype": "Contracted field-capacity operator earning reservation and dispatch fees",
+    "control_point": "Pre-reserved technician hours within defined service zones and response windows",
+    "critical_dependency": "A dependable replaceable pool of qualified independent technicians"
+  },
+  "thesis": "Contract replaceable blocks of certified technician capacity before selling a monthly overflow guarantee and per-dispatch service to small renewable installers that cannot economically staff for peak fault demand.",
+  "title": "Regional Renewable Aftercare Capacity Reserve",
+  "uncertainties": [
+    "Incident density sufficient to keep reserved capacity economic",
+    "Acceptable response radius and travel reimbursement",
+    "Manufacturer authorization requirements by device category",
+    "Installer appetite for a fixed reservation fee"
+  ],
+  "version": 1
+}

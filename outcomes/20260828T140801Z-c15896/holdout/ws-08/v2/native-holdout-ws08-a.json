@@ -1,0 +1,118 @@
+{
+  "assumptions": [
+    "The founder can obtain a good-faith pilot discussion with the family renewable installer, but no paid pilot, workflow mandate, owner permission, or technician close-out obligation is assumed to exist until signed.",
+    "Continuous use of the Fronius Solar API will require a secure same-network collector or another permitted remote-access arrangement because the documented local interface is not itself a remote historical feed.",
+    "The first cohort contains compatible small-commercial Fronius inverters, but the available fields, fault-event frequency, owner status, and decision usefulness remain unknown until tested by exact product generation.",
+    "OEM monitoring portals remain available substitutes, and no exclusive installer position or proprietary right to telemetry, labels, or derived models is assumed.",
+    "The stated pricing, contribution margin, site count, renewal, and founder-net-worth path are planning assumptions rather than observed economics."
+  ],
+  "base_score": 4.38,
+  "candidate_id": "ws-08",
+  "candidate_sha256": "be840d0921c8615ff7a2726b57be9513045f62ef1cec048bf86b7896d43e3999",
+  "candidate_version": 2,
+  "constrained_score": 4.38,
+  "evaluation_type": "holdout_native",
+  "evidence_needed_for_higher_score": "A signed and paid 12-month pilot on a sufficiently event-dense homogeneous fleet, with verified remote collection for exact inverter generations, owner permissions, mandatory technician close-out, logged baseline-versus-product dispatch decisions, avoided-truck-roll or outage-value evidence, measured access/security/review/support costs, at least 65% contribution margin, and a contingent renewal or expansion commitment at the proposed price.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "The redesign correctly identifies that statutory access is only permission and that an installer workflow plus technician-confirmed outcomes is the more valuable control point. Narrowing to one installer and one inverter family makes that insight testable, but the workflow position is unsigned and outcome-linked triage is not yet shown to outperform ordinary OEM monitoring.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Avoiding unnecessary truck rolls and shortening commercial-site outages is a credible paid problem. The packet's downtime survey concerns much larger industrial settings, however, and there is no wedge-specific evidence on alert frequency, loss per incident, installer budget, paid pilot acceptance, or annual renewal at 900-2400 PLN per site.",
+      "score": 4.5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Annual site pricing, OEM-family onboarding, explicit cost gates, and installer-led acquisition are more coherent than a low per-device agency fee. Economics remain fragile: the 10-20-site pilot may produce too few incidents, founder review time is substantial relative to pilot revenue, remote collection and support are not costed, and the 65-80% margin, retention, 5000-site scale, and owner-earnings path are wholly unmeasured.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "A founder-accessible Polish installer and one documented inverter family form a disciplined beachhead. The packet does not establish how many compatible commercial sites that installer or the reachable Polish channel controls, how many generate recurring triage events, or whether the segment can support thousands of retained sites without widening into materially different OEM and installer cohorts.",
+      "score": 4.5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "Embedding in commissioning and maintenance renewal could create a strong position inside one installer if contracted. Today the OEMs already supply monitoring platforms and APIs, the installer can continue manual triage, and no exclusive workflow right, superior decision accuracy, switching cost, or route to dominate a broader installer segment has been demonstrated.",
+      "score": 3.5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A proven same-OEM installer playbook could expand to other installers, adjacent inverter families, batteries, or maintenance workflows. Each step reopens field availability, integration, permissions, support cost, label taxonomy, and domain-shift risk, so the first cohort does not yet create a low-friction expansion engine.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Contracted workflow placement and a growing history of telemetry-to-technician outcomes could compound into switching costs and better benchmarks. The required contract and label return are absent, fault labels are scarce, a small single-family dataset may be non-transferable, and an OEM or established O&M platform can copy triage once value is visible.",
+      "score": 3.5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "A white-label dispatch recommendation could be more convenient than inspecting raw portals and could save a visit when accurate. No evidence yet quantifies accuracy, response speed, avoided cost, workflow effort, or a material improvement over Solar.web, other OEM tools, and experienced technician judgment, so behavior-changing advantage remains speculative.",
+      "score": 3.5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "The Data Act is applicable, official guidance supports connected-product aftermarket services, Fronius documents local interfaces, and maintenance reliability is an active budget theme. Yet the redesign mainly relies on existing local access, Polish enforcement is immature, and the legal opening does not itself create decision quality or prevent OEMs from improving their own portals.",
+      "score": 5.5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "The founder's family-installer access is a concrete and low-social-energy route to a bounded first cohort, while enrollment through maintenance renewal could yield low-CAC distribution. It remains a single related-party route with no signed conversion, and the packet supplies no evidence that unaffiliated installers will adopt the workflow, enforce labels, or accept the pricing repeatedly.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "The founder has relevant data skills, the pilot fits the capital and part-time constraints, and the one-family scope limits initial complexity. Execution still requires secure on-site collection, product-generation mapping, permissions, cybersecurity, alert liability, technician compliance, legal classification, and operational support; several of these depend on installer behavior or specialist review that AI cannot replace.",
+      "score": 5,
+      "status": "scored"
+    }
+  ],
+  "final_score": 4.4,
+  "highest_value_structural_change": "Make the first customer a commercial-solar O&M operator or installer with contractual authority over a concentrated, event-dense portfolio of at least roughly 100 compatible same-generation sites, and bundle a secure edge collector plus mandatory dispatch close-out into its maintenance contract; this would replace the 10-20-site cold start with enough events, permissions, and workflow control to test renewal and build outcome data before adding an OEM.",
+  "interaction_adjustment": 0,
+  "judge_id": "holdout-ws08-a",
+  "main_structural_strength": "A founder-accessible installer channel and one OEM family with documented local data access permit a bounded, low-capital test of an installer-controlled triage workflow that could generate proprietary decision-and-outcome records if the contract is secured.",
+  "primary_score_limiter": "There is no evidence that the available telemetry can produce materially better dispatch decisions than OEM portals and technician judgment often enough to justify the annual site fee, renewal, and label-return burden; the small pilot may not generate enough anomalies to resolve that uncertainty.",
+  "qualified": false,
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 3,
+  "strongest_disconfirming_evidence": "Fronius documents that Solar API access is on the same network and that real-time inverter data are generally not retained locally, while its Solar.web service already stores, monitors, and analyzes production data. Thus the proposed remote recurring service needs additional secure collection and must prove decision superiority over an incumbent platform; raw access alone does not deliver the product or its moat.",
+  "unrounded_score": 4.38
+}

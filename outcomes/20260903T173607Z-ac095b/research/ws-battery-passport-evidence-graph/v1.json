@@ -1,0 +1,445 @@
+{
+  "candidate_id": "ws-battery-passport-evidence-graph",
+  "candidate_sha256": "2c303e46ddc73103e109c14cdb312cdebacac06d61eb41227a54585f6e1d64fa",
+  "candidate_version": 1,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "r01-deadline-scope",
+      "evidence_refs": [
+        "s01-eu-batteries-regulation",
+        "s02-commission-batteries-page",
+        "s03-commission-data-guidance"
+      ],
+      "statement": "From 18 February 2027, every EV battery, LMT battery, and industrial battery above 2 kWh placed on the EU market or put into service must have a battery passport; this establishes a real compliance trigger for covered operators."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r02-data-scope-moving",
+      "evidence_refs": [
+        "s03-commission-data-guidance"
+      ],
+      "statement": "The Commission's August 2026 guidance maps 71 data points whose applicability varies by battery category, but the Commission expressly says the guidance is not an authoritative interpretation and may be developed further."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r03-operator-duty-and-authorization",
+      "evidence_refs": [
+        "s01-eu-batteries-regulation",
+        "s02-commission-batteries-page"
+      ],
+      "statement": "The economic operator placing the finished battery on the market must ensure passport information is accurate, complete, and up to date; it may authorize another operator in writing, but delegation does not transfer the statutory responsibility."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r04-supplier-duty-limited",
+      "evidence_refs": [
+        "s01-eu-batteries-regulation"
+      ],
+      "statement": "Article 39 requires suppliers of battery cells and modules to give a manufacturer the information and documentation necessary for compliance free of charge, but this does not itself give a third-party passport vendor direct rights against suppliers or establish complete access across every upstream actor, field, and lifecycle update."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r05-service-data-reuse-restricted",
+      "evidence_refs": [
+        "s01-eu-batteries-regulation"
+      ],
+      "statement": "An operator authorized to store or process battery-passport data may not sell, reuse, or process those data beyond what is necessary to provide the storage or processing service, constraining a cross-customer secondary-data moat."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r06-control-is-portable-and-operator-owned",
+      "evidence_refs": [
+        "s01-eu-batteries-regulation",
+        "s04-commission-registry-guide",
+        "s10-eu-ecodesign-regulation"
+      ],
+      "statement": "Battery-passport data must use open standards, be interoperable and transferable without vendor lock-in; the Commission guide says the economic operator has full control and responsibility, and only verified economic operators register DPPs. The proposed workflow integration is therefore replaceable access, not an owned approval or data control point."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r07-battery-registry-not-yet-ready",
+      "evidence_refs": [
+        "s04-commission-registry-guide"
+      ],
+      "statement": "The Commission registry guide published 24 August 2026 says successful DPP registration for batteries is not currently available because the battery semantic catalogue has not yet been defined."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r08-registry-is-free-index",
+      "evidence_refs": [
+        "s04-commission-registry-guide"
+      ],
+      "statement": "The DPP Registry stores identifiers and links rather than the complete passport, and the Commission guide says no registry subscription fee is expected; paid value must therefore come from data work, validation, hosting, and operations rather than privileged registry access."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r09-no-proprietary-approval-gate",
+      "evidence_refs": [
+        "s04-commission-registry-guide"
+      ],
+      "statement": "Registry handoff is not a proprietary approval gate controlled by this candidate: the public infrastructure is controlled by the Commission, while the verified economic operator controls its DPP and registration."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r10-sme-implementation-pain",
+      "evidence_refs": [
+        "s05-batterypass-ready-test"
+      ],
+      "statement": "A German federally funded consortium identifies adaptation of data management and technical infrastructure as a particular challenge for SMEs and provides an eleven-scenario test environment for completeness, format, access-right, and interoperability checks."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r11-public-resources-weaken-schema-moat",
+      "evidence_refs": [
+        "s03-commission-data-guidance",
+        "s05-batterypass-ready-test"
+      ],
+      "statement": "Commission guidance plus a publicly funded test environment, templates, and validation scenarios lower the scarcity of basic schema mapping and completeness checking, so a durable moat would need proprietary workflow access or superior execution rather than the data model alone."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r12-siemens-overlap",
+      "evidence_refs": [
+        "s06-siemens-product-manual"
+      ],
+      "statement": "Siemens already documents a Battery Passport product supporting individual and template passports, Excel upload or manual entry, mandatory-attribute completeness checks, and regulated battery data sections; this overlaps materially with model onboarding, passport creation, and validation in the proposed v1."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r13-minespider-overlap-and-price",
+      "evidence_refs": [
+        "s07-minespider-pricing"
+      ],
+      "statement": "Minespider publicly lists a EUR 11,900 fixed annual small-team plan with unlimited passports and models, manual/Copilot/CSV/API onboarding, schema management, evidence storage, access controls, audit trail, registry integration, backup, and a readiness checker; higher tiers add guided onboarding and managed integration."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r14-large-buyer-adoption",
+      "evidence_refs": [
+        "s08-powin-circulor-deployment"
+      ],
+      "statement": "Powin publicly announced a Circulor implementation covering upstream material traceability and digital passports for all Powin battery packs for European markets, demonstrating real category adoption by a large BESS integrator but not a paid contract value."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r15-small-buyer-payment-unknown",
+      "evidence_refs": [],
+      "statement": "No primary evidence found establishes that a smaller Polish or regional economic operator in the proposed target segment has paid, budgeted, or signed to outsource this exact evidence-intake and managed-passport offer."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r16-certifier-platform-channel",
+      "evidence_refs": [
+        "s09-bureau-veritas-circulor"
+      ],
+      "statement": "Bureau Veritas and Circulor announced a joint offer combining testing, inspection, certification, verification, traceability, completeness checks, and battery-passport implementation support, showing that a certifier-led distribution route is viable but already occupied by scaled partners."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r17-acquisition-economics-unknown",
+      "evidence_refs": [],
+      "statement": "No primary evidence found establishes partner willingness to refer this new entrant, lead volume, conversion rate, sales-cycle length, revenue share, or fully loaded customer-acquisition cost for the proposed certifier, laboratory, adviser, ERP, supplier, or association channels."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r18-fully-loaded-economics-unknown",
+      "evidence_refs": [],
+      "statement": "The candidate has no primary evidence for realized price, supplier-chasing hours, implementation labor, support load, hosting and backup cost, identifier and signing cost, audit and insurance cost, migration reserve, bad debt, contribution margin, or payback; competitor list pricing does not establish this candidate's fully loaded unit economics."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r19-service-access-contractible",
+      "evidence_refs": [
+        "s01-eu-batteries-regulation"
+      ],
+      "statement": "The legal framework permits the responsible economic operator to authorize another operator in writing and permits passport data to be stored or processed by authorized operators, so a bounded service relationship is legally contractible even though no such contract is held by this candidate."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r20-no-controlled-rights-or-customer",
+      "evidence_refs": [],
+      "statement": "No customer authorization, supplier data agreement, registry permission, exclusive distribution agreement, or customer relationship is presently evidenced for this candidate."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r21-security-integrity-longevity-burden",
+      "evidence_refs": [
+        "s01-eu-batteries-regulation",
+        "s10-eu-ecodesign-regulation"
+      ],
+      "statement": "The governing rules require authentication, reliability, integrity, high security and privacy, and continuing passport availability even after the responsible operator ceases activity; these are real delivery and liability obligations rather than optional product features."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r22-maintenance-does-not-prove-renewal",
+      "evidence_refs": [
+        "s01-eu-batteries-regulation",
+        "s02-commission-batteries-page"
+      ],
+      "statement": "The obligation to keep passport information accurate and up to date creates recurring work when products or lifecycle data change, but it does not by itself prove annual vendor renewal, a per-unit fee, or durable customer retention."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r23-repeat-economics-unknown",
+      "evidence_refs": [],
+      "statement": "No primary evidence found establishes update frequency, model and unit volumes, renewal rate, churn, expansion revenue, or willingness to pay per unit-year among the proposed smaller operators."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r24-founder-part-time-delivery-unknown",
+      "evidence_refs": [],
+      "statement": "No evidence establishes that supplier exception handling, customer onboarding, security incidents, legal updates, and long-lived hosting can be delivered within the founder's five-hour daily limit before a staffed operating layer exists."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r25-founder-wealth-path-unknown",
+      "evidence_refs": [],
+      "statement": "The number of reachable unserved smaller operators, attainable annual contract value, service margin, retention, and acquisition efficiency are unproven, so the proposed path to at least 5 million PLN of founder net worth cannot yet be evidenced."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r26-incumbents-solve-upstream-work",
+      "evidence_refs": [
+        "s07-minespider-pricing",
+        "s08-powin-circulor-deployment"
+      ],
+      "statement": "The Powin-Circulor deployment traces multiple raw materials and embedded carbon before issuing passports, while Minespider sells evidence storage, chain-of-custody, audit, and integration features; established specialists already address the upstream evidence workflow, not merely QR-code generation."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r27-input-completeness-unknown",
+      "evidence_refs": [],
+      "statement": "No evidence establishes that the intended customers can obtain authentic, complete, timely, and updateable values for every applicable passport field from their suppliers, despite the narrower statutory duty on cell and module suppliers to manufacturers."
+    }
+  ],
+  "commercial_evidence": {
+    "buyer_or_paid_event": {
+      "claim_ids": [
+        "r15-small-buyer-payment-unknown"
+      ],
+      "source_ids": [],
+      "status": "unknown"
+    },
+    "distribution_and_acquisition": {
+      "claim_ids": [
+        "r16-certifier-platform-channel"
+      ],
+      "source_ids": [
+        "s09-bureau-veritas-circulor"
+      ],
+      "status": "evidence"
+    },
+    "fully_loaded_unit_economics": {
+      "claim_ids": [
+        "r18-fully-loaded-economics-unknown"
+      ],
+      "source_ids": [],
+      "status": "unknown"
+    },
+    "rights_control_access_contractibility": {
+      "claim_ids": [
+        "r19-service-access-contractible"
+      ],
+      "source_ids": [
+        "s01-eu-batteries-regulation"
+      ],
+      "status": "evidence"
+    }
+  },
+  "contrary_evidence": [
+    "The responsible economic operator retains statutory responsibility and full control of passport data; outsourcing the task does not transfer approval power or liability to the service.",
+    "Only verified economic operators register DPPs, and the Commission controls the registry infrastructure; the candidate does not control a regulatory gate.",
+    "As of the Commission's 24 August 2026 user guide, successful battery DPP registration was still unavailable because the semantic catalogue had not been defined.",
+    "Authorized storage and processing providers may not sell, reuse, or process passport data beyond the necessary service, limiting a cross-customer secondary-data business.",
+    "Open standards, portability without vendor lock-in, Commission guidance, and a publicly funded test environment reduce defensibility from schema mapping or validation alone.",
+    "Siemens already provides battery-passport creation and validation workflows, while Minespider advertises evidence storage, audit trail, registry integration, backup, readiness checks, and unlimited passports for a fixed annual price aimed at small teams.",
+    "A Bureau Veritas-Circulor joint offer bundles verification, traceability, data-completeness checks, and passport implementation, showing that the proposed channel can be captured by established alliances.",
+    "No primary evidence proves a paying smaller target operator, acquisition economics, fully loaded delivery margin, recurring willingness to pay, or current data and customer rights for this candidate."
+  ],
+  "critical_control_point_assessment": {
+    "assessment": "evidence",
+    "claim_ids": [
+      "r03-operator-duty-and-authorization",
+      "r06-control-is-portable-and-operator-owned",
+      "r19-service-access-contractible"
+    ],
+    "source_ids": [
+      "s01-eu-batteries-regulation",
+      "s04-commission-registry-guide",
+      "s10-eu-ecodesign-regulation"
+    ],
+    "status": "replaceable_access"
+  },
+  "falsification": {
+    "cold_start_and_data_moat": [
+      "r05-service-data-reuse-restricted",
+      "r06-control-is-portable-and-operator-owned",
+      "r10-sme-implementation-pain",
+      "r11-public-resources-weaken-schema-moat"
+    ],
+    "control_point_obtainability": [
+      "r03-operator-duty-and-authorization",
+      "r04-supplier-duty-limited",
+      "r19-service-access-contractible",
+      "r20-no-controlled-rights-or-customer",
+      "r27-input-completeness-unknown"
+    ],
+    "critical_mechanism_ownership": [
+      "r03-operator-duty-and-authorization",
+      "r06-control-is-portable-and-operator-owned",
+      "r07-battery-registry-not-yet-ready",
+      "r09-no-proprietary-approval-gate",
+      "r20-no-controlled-rights-or-customer"
+    ],
+    "external_dependencies": [
+      "r02-data-scope-moving",
+      "r04-supplier-duty-limited",
+      "r07-battery-registry-not-yet-ready",
+      "r21-security-integrity-longevity-burden",
+      "r24-founder-part-time-delivery-unknown",
+      "r27-input-completeness-unknown"
+    ],
+    "substitutes_and_incumbent_response": [
+      "r11-public-resources-weaken-schema-moat",
+      "r12-siemens-overlap",
+      "r13-minespider-overlap-and-price",
+      "r16-certifier-platform-channel",
+      "r26-incumbents-solve-upstream-work"
+    ],
+    "willingness_urgency_and_repeat_economics": [
+      "r01-deadline-scope",
+      "r14-large-buyer-adoption",
+      "r15-small-buyer-payment-unknown",
+      "r18-fully-loaded-economics-unknown",
+      "r22-maintenance-does-not-prove-renewal",
+      "r23-repeat-economics-unknown",
+      "r25-founder-wealth-path-unknown"
+    ]
+  },
+  "schema_version": 3,
+  "sources": [
+    {
+      "accessed_at": "2026-09-03",
+      "evidence_class": "rights_control_access",
+      "published_at": "2025-07-31",
+      "publisher": "Official Journal of the European Union / EUR-Lex",
+      "source_id": "s01-eu-batteries-regulation",
+      "source_type": "regulation",
+      "stance": "context",
+      "title": "Consolidated text: Regulation (EU) 2023/1542 concerning batteries and waste batteries",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A02023R1542-20250731"
+    },
+    {
+      "accessed_at": "2026-09-03",
+      "evidence_class": "regulatory",
+      "published_at": "unknown",
+      "publisher": "European Commission, Directorate-General for Internal Market, Industry, Entrepreneurship and SMEs",
+      "source_id": "s02-commission-batteries-page",
+      "source_type": "official_web_page",
+      "stance": "supporting",
+      "title": "Digital Product Passport for Batteries (Battery Passport)",
+      "url": "https://single-market-economy.ec.europa.eu/single-market/digital-product-passport/batteries_en"
+    },
+    {
+      "accessed_at": "2026-09-03",
+      "evidence_class": "regulatory",
+      "published_at": "2026-08-21",
+      "publisher": "European Commission, Directorate-General for Internal Market, Industry, Entrepreneurship and SMEs",
+      "source_id": "s03-commission-data-guidance",
+      "source_type": "official_guidance_announcement",
+      "stance": "supporting",
+      "title": "Guidance to support preparations for the Digital Batteries Passport",
+      "url": "https://single-market-economy.ec.europa.eu/news/guidance-support-preparations-digital-batteries-passport-2026-08-21_en"
+    },
+    {
+      "accessed_at": "2026-09-03",
+      "evidence_class": "rights_control_access",
+      "published_at": "2026-08-24",
+      "publisher": "European Commission, DG GROW Digital Solutions",
+      "source_id": "s04-commission-registry-guide",
+      "source_type": "official_user_guide",
+      "stance": "contradicting",
+      "title": "DPP Registry User Guide for Economic Operators, version 1.02",
+      "url": "https://single-market-economy.ec.europa.eu/document/download/079a45e2-469f-4eec-b1e5-32e8e05d1357_en?filename=dpp_registry_user_guide_for_economic_operators.pdf"
+    },
+    {
+      "accessed_at": "2026-09-03",
+      "evidence_class": "market_context",
+      "published_at": "2026-06-24",
+      "publisher": "BatteryPass-Ready consortium",
+      "source_id": "s05-batterypass-ready-test",
+      "source_type": "project_press_release",
+      "stance": "context",
+      "title": "BatteryPass-Ready Launches Test Environment for Digital Battery Passport",
+      "url": "https://thebatterypass.eu/press-release/batterypass-ready-launches-test-environment-for-digital-battery-passport/"
+    },
+    {
+      "accessed_at": "2026-09-03",
+      "evidence_class": "incumbent",
+      "published_at": "unknown",
+      "publisher": "Siemens AG",
+      "source_id": "s06-siemens-product-manual",
+      "source_type": "product_manual",
+      "stance": "contradicting",
+      "title": "Siemens Product Passport: Battery Passport operating manual",
+      "url": "https://cache.industry.siemens.com/dl/files/385/110000385/att_1358130/v1/battery_passport_operating_manual_en-US_en-US.pdf"
+    },
+    {
+      "accessed_at": "2026-09-03",
+      "evidence_class": "unit_economics",
+      "published_at": "unknown",
+      "publisher": "Minespider GmbH",
+      "source_id": "s07-minespider-pricing",
+      "source_type": "vendor_pricing_page",
+      "stance": "contradicting",
+      "title": "Battery Passport Pricing: Plans from EUR 11,900",
+      "url": "https://www.minespider.com/battery-passport-pricing"
+    },
+    {
+      "accessed_at": "2026-09-03",
+      "evidence_class": "direct_buyer",
+      "published_at": "2025-04-09",
+      "publisher": "Circulor and Powin",
+      "source_id": "s08-powin-circulor-deployment",
+      "source_type": "vendor_customer_announcement",
+      "stance": "supporting",
+      "title": "Powin and Circulor partner to advance Battery Passports for Utility-Scale Energy Storage Systems",
+      "url": "https://circulor.com/articles/powin-and-circulor-partner-to-advance-battery-passports-for-utility-scale-energy-storage-systems"
+    },
+    {
+      "accessed_at": "2026-09-03",
+      "evidence_class": "distribution",
+      "published_at": "2026-06-23",
+      "publisher": "Circulor and Bureau Veritas",
+      "source_id": "s09-bureau-veritas-circulor",
+      "source_type": "partnership_announcement",
+      "stance": "context",
+      "title": "Bureau Veritas and Circulor Partner to Support Battery Passport and Supply Chain Traceability Compliance",
+      "url": "https://circulor.com/articles/bureau-veritas-partners-with-circulor"
+    },
+    {
+      "accessed_at": "2026-09-03",
+      "evidence_class": "regulatory",
+      "published_at": "2024-06-28",
+      "publisher": "Official Journal of the European Union / EUR-Lex",
+      "source_id": "s10-eu-ecodesign-regulation",
+      "source_type": "regulation",
+      "stance": "context",
+      "title": "Regulation (EU) 2024/1781 establishing a framework for the setting of ecodesign requirements for sustainable products",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A32024R1781"
+    }
+  ],
+  "unknowns": [
+    "How many smaller Polish or regional economic operators place covered finished batteries on the EU market and are not already served by an OEM, ERP, DPP platform, consultant, or certification partner?",
+    "Will any target operator pay this new entrant for the exact v1 offer, at what contract value, and before what procurement lead time?",
+    "Can each target operator obtain authentic, complete, timely, and updateable values for every applicable field, including data beyond the cell-and-module supplier duty in Article 39?",
+    "Can the candidate secure written operator authorization, registry-operating permissions, supplier data-processing terms, and sufficient rights for ongoing updates?",
+    "What are referral acceptance, lead volume, conversion, sales-cycle, and channel-share economics for laboratories, certifiers, advisers, ERP integrators, suppliers, and associations?",
+    "What are realized onboarding hours, exception rates, hosting and backup costs, signing and identifier costs, support load, insurance, audit costs, migration reserve, contribution margin, and cash conversion?",
+    "What service-provider certification, security, professional-liability, and longevity requirements will apply in practice by launch?",
+    "What are model and unit volumes, update frequencies, renewal rates, churn, and expansion behavior among smaller operators?",
+    "Can the operation meet the founder's five-hour daily ceiling until objective traction and a staffed delivery layer exist?",
+    "Can reachable contracts and contribution economics support a credible, timed path to at least 5 million PLN of founder net worth?"
+  ]
+}

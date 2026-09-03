@@ -1,0 +1,145 @@
+{
+  "candidate_id": "mf-pv-yield-panel",
+  "claims": [
+    {
+      "claim_id": "mf-pv-yield-panel-c1",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://iea-pvps.org/key-topics/guidelines-for-operation-and-maintenance-of-photovoltaic-power-plants-in-different-climates/",
+        "https://iea-pvps.org/key-topics/soiling-losses-impact-on-the-performance-of-photovoltaic-power-plants/"
+      ],
+      "statement": "PV loss can be expressed in reduced energy production, and IEA PVPS describes monitoring, forecasting, analysis, and performance indicators as O&M functions; applicability and loss magnitude for small Polish commercial sites require measurement."
+    },
+    {
+      "claim_id": "mf-pv-yield-panel-c2",
+      "claim_type": "payer_and_budget",
+      "confidence": "low",
+      "evidence_refs": [],
+      "statement": "The intended budget owner is the party already accountable for generation or O&M performance, but a distinct monitoring budget and the proposed price are unverified."
+    },
+    {
+      "claim_id": "mf-pv-yield-panel-c3",
+      "claim_type": "founder_control_point_path",
+      "confidence": "high",
+      "evidence_refs": [],
+      "statement": "Control is obtainable only through explicit data-rights agreements; the family operating relationship can introduce the request but creates no telemetry entitlement."
+    },
+    {
+      "claim_id": "mf-pv-yield-panel-c4",
+      "claim_type": "other",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.ure.gov.pl/pl/urzad/informacje-ogolne/aktualnosci/13173%2CRaport-URE-w-Polsce-mamy-juz-ponad-16-mln-mikroinstalacji-OZE.html"
+      ],
+      "statement": "URE's reported installed base confirms many potential monitored assets but does not identify commercial sites, telemetry availability, or willingness to pay."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Asset manager, facilities lead, or O&M service owner",
+    "bundling_resistance": "Neutral cross-vendor normalization and portfolio-level loss prioritization must justify paying alongside bundled monitoring",
+    "customer_relationship_owner": "Each installer or O&M firm retains its asset-owner relationship; founder company owns direct monitoring contracts it signs",
+    "distribution_origin": "Separately authorized pilot request through the operating relationship, followed by O&M partnerships and direct commercial-owner sales",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Founder-led O&M partnerships and portfolio-owner outbound; target CAC recovery within six months, unvalidated",
+      "cash_conversion": "Monthly advance billing or annual prepayment; enterprise procurement may extend collection",
+      "contribution_margin": "Target 75-90% at stable connectors; unvalidated and sensitive to integration support",
+      "delivery_and_support_costs": "Connector setup, data-quality exceptions, alert calibration, and monthly reports",
+      "overhead_and_compliance": "Data-rights contracts, security, hosting, professional liability, and vendor API maintenance",
+      "revenue_basis": "Hypothesis: 49-149 PLN per site per month with a 1000 PLN portfolio minimum",
+      "variable_costs": "Telemetry ingestion, weather data, compute, notifications, and limited analyst review"
+    },
+    "likely_incumbent_response": "Inverter OEMs and monitoring portals can add richer alerts or cross-sell service contracts",
+    "paid_event_or_measurable_loss": "Underperformance is measurable as weather- and system-adjusted lost kilowatt-hours and can trigger an O&M investigation or service visit",
+    "payer": "Commercial PV owner or contracted O&M provider",
+    "purchase_trigger": "Unexplained bill or yield variance, missed inverter alarms, or a portfolio crossing a manual-monitoring threshold",
+    "renewal_event": "Monthly or annual monitoring renewal per connected site"
+  },
+  "contrary_evidence": [
+    "Most inverter platforms already include alerts and dashboards in the equipment price.",
+    "The IEA PVPS soiling-loss figures are global and strongly weighted toward larger or different-climate systems, not proof of Polish small-site loss."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Nonexclusive 12-month data-rights and processing agreement allowing site monitoring and de-identified aggregate feature creation",
+    "acquisition_instrument_type": "data_rights_agreement",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Use unrelated owners, inverter exports, and public weather inputs; exclude any site without proven authorization",
+    "current_owner": "Each asset owner or its monitoring provider owns or controls source telemetry; no family-firm data is presumed",
+    "customer_relationship_control": "contracted",
+    "customer_relationship_owner": "Each installer or O&M firm retains its asset-owner relationship; founder company owns direct monitoring contracts it signs",
+    "duration": "12 months",
+    "exclusivity": "nonexclusive",
+    "founder_access_basis": "operating_relationship",
+    "founder_access_description": "The parents' firm provides only a lawful route to ask for a pilot. Telemetry, customer identities, sites, and contracts remain unavailable unless the independent firm and relevant asset owners expressly authorize them.",
+    "launch_controller": "Founder company only after each owner or authorized operator signs and supplies credentials or exports",
+    "mechanism_control": "dependent",
+    "renewal": "Annual opt-in renewal with deletion and export terms",
+    "replaceability": "replaceable",
+    "revocability": "for_cause",
+    "status": "replaceable_access",
+    "subject": "Permissioned multi-vendor PV telemetry panel and derived de-identified benchmark features",
+    "subject_type": "dataset",
+    "transferability": "consent_required"
+  },
+  "discovery_lane": "mechanism-first",
+  "economics": {
+    "acquisition_route": "Authorized operating-relationship pilot request, then O&M channel agreements and direct portfolio sales",
+    "capital_required_pln": 60000,
+    "founder_net_worth_path": "Illustrative, not forecast: 15000 sites at an 80 PLN blended monthly fee imply 14.4m PLN annual recurring revenue; a defensible benchmark dataset and low churn would still be necessary for a 5m PLN founder outcome",
+    "founder_time": "Up to five hours daily during connector build and pilots, falling with automated data QA and scheduled support",
+    "gross_margin_basis": "Automated ingestion and anomaly scoring with analyst review only for high-value exceptions",
+    "payback": "Target under six months of gross profit per account; unvalidated",
+    "pricing": "Hypothesis: 49-149 PLN per site monthly, subject to a 1000 PLN portfolio minimum",
+    "retention_or_repeat": "Recurring while connectors remain reliable and documented recoverable yield exceeds subscription cost"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A permissioned cross-vendor panel improves expected-yield curves and failure triage as site-months accumulate",
+    "customer": "Independent PV operations firms and owners of small commercial photovoltaic portfolios",
+    "distribution_mechanism": "Request a rights-limited pilot through the family installer relationship, then acquire separate data-rights agreements from unrelated owners and O&M firms",
+    "offer_and_business_model": "Vendor-neutral yield normalization, loss estimates, prioritized alerts, and monthly O&M evidence sold as recurring data intelligence",
+    "payer_and_paid_event": "Portfolio owner or O&M provider pays per monitored site each month after connecting consented telemetry",
+    "problem_trigger": "Actual generation diverges from weather-adjusted expectations without a clear alert or cross-vendor benchmark"
+  },
+  "founder_fit": [
+    "Time-series anomaly detection and causal triage align with the founder's data-science background",
+    "The system has measurable outputs in lost kilowatt-hours, alert precision, and resolution time",
+    "A relationship-based pilot can be requested lawfully without assuming any customer or data ownership",
+    "Automated monitoring can fit a sub-five-hour daily founder schedule"
+  ],
+  "parent": null,
+  "risks": [
+    "False alerts can generate unnecessary truck rolls and erode trust",
+    "Vendor API withdrawal could strand connectors",
+    "Rights to derived benchmarks may be contested without precise contracts",
+    "Early portfolios may be too heterogeneous for useful comparison"
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://iea-pvps.org/key-topics/guidelines-for-operation-and-maintenance-of-photovoltaic-power-plants-in-different-climates/",
+    "https://iea-pvps.org/key-topics/soiling-losses-impact-on-the-performance-of-photovoltaic-power-plants/",
+    "https://www.ure.gov.pl/pl/urzad/informacje-ogolne/aktualnosci/13173%2CRaport-URE-w-Polsce-mamy-juz-ponad-16-mln-mikroinstalacji-OZE.html"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "data_or_intelligence",
+    "commercial_model_descriptor": "authorized_cross_vendor_pv_performance_benchmark",
+    "control_point_category": "proprietary_dataset",
+    "control_point_descriptor": "contracted_site_telemetry_and_derived_benchmark_panel",
+    "critical_dependency_category": "data_provider",
+    "critical_dependency_descriptor": "asset_owner_and_inverter_telemetry_continuity"
+  },
+  "structure": {
+    "commercial_archetype": "Recurring performance-intelligence subscription per authorized site",
+    "control_point": "Contractual rights to normalize and compare telemetry from a replaceable multi-owner site panel",
+    "critical_dependency": "Continued owner-authorized telemetry access of adequate quality"
+  },
+  "thesis": "Secure owner-authorized, vendor-neutral telemetry rights for a replaceable portfolio of small commercial PV sites and sell installers an anomaly and peer-benchmark feed tied to measurable lost kilowatt-hours.",
+  "title": "Consent-Based PV Yield Anomaly Panel",
+  "uncertainties": [
+    "Accessible telemetry depth and connector stability across inverter brands",
+    "Minimum site count needed for a credible local benchmark",
+    "Ability to distinguish curtailment, weather, shading, and hardware faults",
+    "Who pays when owner and O&M incentives differ"
+  ],
+  "version": 1
+}

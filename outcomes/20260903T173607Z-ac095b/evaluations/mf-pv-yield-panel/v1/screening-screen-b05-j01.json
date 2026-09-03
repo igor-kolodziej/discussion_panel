@@ -1,0 +1,117 @@
+{
+  "assumptions": [
+    "Every site owner or authorized operator explicitly grants telemetry and processing rights before ingestion.",
+    "A meaningful share of small commercial underperformance is detectable and economically recoverable rather than caused by unavoidable weather or curtailment.",
+    "The initial portfolio includes enough comparable sites and stable telemetry to estimate useful baselines.",
+    "Contracts expressly address retention, deletion, export, and permitted use of de-identified derived benchmark features."
+  ],
+  "base_score": 5.57,
+  "candidate_id": "mf-pv-yield-panel",
+  "candidate_sha256": "22102e5e070494cfc1385a281c6b84c67e57623dd565869b5d7cc5803a4819c2",
+  "candidate_version": 1,
+  "constrained_score": 5.77,
+  "evaluation_type": "working_screening",
+  "evidence_needed_for_higher_score": "A rights-cleared multi-vendor pilot with enough site-months to measure precision, false-alert cost, detected loss, realized energy recovery, connector support hours, and paid O&M renewal would materially strengthen the case.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "A permissioned cross-vendor telemetry panel that expresses anomalies as recoverable kilowatt-hours turns fragmented monitoring into an economically legible O&M work queue. The mechanism is concrete, although the incremental signal beyond existing inverter alerts still requires field proof.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Underproduction is objectively measurable and can justify investigation when recovered yield exceeds intervention cost. The frequency and magnitude of recoverable losses for small Polish commercial sites, the responsible budget owner, and willingness to pay 49-149 PLN per site remain unverified.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Recurring advance billing, automated ingestion, and a portfolio minimum can support strong software-like contribution margins. Connector setup, false-alert review, weather data, integration support, and enterprise collection may materially reduce the untested 75-90% target.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "A large installed PV base makes ongoing performance monitoring relevant, and independent O&M firms with heterogeneous commercial portfolios provide a coherent initial segment. The cited installed-base figure does not isolate commercial sites, accessible telemetry, portfolio size, or losses large enough to fund the service.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "Vendor-neutral normalization and loss prioritization can outperform equipment-specific dashboards for mixed fleets. Inverter OEMs already bundle monitoring and can enhance alerts, while established O&M software can target the same portfolios, leaving no demonstrated wedge to dominate even a local niche.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "Once connectors and expected-yield models work, the service can extend across brands, portfolios, fault classes, service dispatch, reporting, and adjacent distributed-energy assets. Expansion depends on maintaining data rights and enough comparable site density for every new equipment and climate segment.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "A growing, contractually permissioned multi-owner panel can improve local expected-yield curves and failure triage, creating a genuine data feedback loop. Rights are nonexclusive, telemetry is revocable, derived-data terms may be disputed, and API withdrawal could interrupt that compounding asset.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "Time-series analysis and causal triage fit the founder's background, and a lawful operating relationship offers a practical route to request an initial pilot. That relationship is not telemetry entitlement, and there is not yet a proprietary panel, connector library, benchmark, or paying O&M relationship.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "The expanding and aging installed base should increase mixed-fleet monitoring needs, while normalized data tooling is becoming easier to build. Bundled OEM dashboards mature at the same time, so market growth alone does not guarantee an opening for an independent layer.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "O&M firms and portfolio owners aggregate many sites and can make a per-site product economical; the family-firm route can lawfully initiate a pilot request. No data-rights, O&M channel, or direct monitoring contract exists, and owner/operator incentive splits may lengthen sales.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "The capital and founder-time requirements are manageable for a narrow pilot, and outputs can be audited against production and interventions. Multi-brand connector stability, weather normalization, fault attribution, false truck rolls, security, and rights to derived benchmarks remain material technical and contractual risks.",
+      "score": 5,
+      "status": "scored"
+    }
+  ],
+  "final_score": 5.8,
+  "highest_value_structural_change": "Embed the product with independent O&M firms managing heterogeneous commercial fleets and charge for a verified recoverable-kilowatt-hour work queue or documented intervention outcome, rather than for another generic monitoring dashboard.",
+  "interaction_adjustment": 0.2,
+  "judge_id": "screen-b05-j01",
+  "main_structural_strength": "The model ties a permissioned, cross-vendor data asset to measurable lost energy and can improve anomaly triage as authorized site-months accumulate.",
+  "primary_score_limiter": "There is no evidence that recoverable yield on the intended small-site segment exceeds subscription and intervention costs, and no telemetry-rights or paying channel agreement has been secured.",
+  "qualified": false,
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 3,
+  "strongest_disconfirming_evidence": "Most inverter platforms already include alerts and dashboards, while global loss studies do not establish material, recoverable underperformance for small Polish commercial systems.",
+  "unrounded_score": 5.77
+}

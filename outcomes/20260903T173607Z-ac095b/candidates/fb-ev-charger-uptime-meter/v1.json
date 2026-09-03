@@ -1,0 +1,144 @@
+{
+  "candidate_id": "fb-ev-charger-uptime-meter",
+  "claims": [
+    {
+      "claim_id": "fb-ev-charger-uptime-meter-c1",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "low",
+      "evidence_refs": [],
+      "statement": "The proposed paid unit is a monitored connector-month or accepted incident packet, with failed sessions and unavailable time as measurable losses; no customer price or SLA-loss data is yet evidenced."
+    },
+    {
+      "claim_id": "fb-ev-charger-uptime-meter-c2",
+      "claim_type": "payer_and_budget",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1804/oj/eng"
+      ],
+      "statement": "Operators, site owners, fleets, lenders, insurers, municipalities, and O&M providers are plausible reliability-budget holders, but no procurement commitment has been established."
+    },
+    {
+      "claim_id": "fb-ev-charger-uptime-meter-c3",
+      "claim_type": "founder_control_point_path",
+      "confidence": "low",
+      "evidence_refs": [],
+      "statement": "The founder could purchase independent probes, but meaningful control also requires signed site and interface access; neither the hardware nor those permissions are currently evidenced."
+    },
+    {
+      "claim_id": "fb-ev-charger-uptime-meter-c4",
+      "claim_type": "other",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://transport.ec.europa.eu/news-events/news/commission-enhances-interoperability-and-transparency-alternative-fuels-infrastructure-data-2025-04-11_en",
+        "https://eur-lex.europa.eu/eli/reg/2023/1804/oj/eng"
+      ],
+      "statement": "AFIR and its implementing data rules establish a policy context for interoperable and real-time charging-infrastructure information, but public data alone does not prove physical session success or demand for independent meters."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Asset operations, fleet, credit-risk, insurance engineering, concession, or maintenance lead",
+    "bundling_resistance": "Stay independent of the operator, preserve signed raw evidence, test the physical session rather than only backend status, and serve multi-vendor portfolios",
+    "customer_relationship_owner": "Charging operator, installer, O&M provider, lender, or municipality before a direct monitoring contract",
+    "distribution_origin": "Installer, O&M, lender, insurer, and municipal infrastructure channels",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Channel commission and technical proof-of-concept; target recovery within 25-50 monitored connectors",
+      "cash_conversion": "Monthly or annual subscription collected in advance; hardware and installation cash precede revenue",
+      "contribution_margin": "Unvalidated target 50-70% at dense installed sites and 25-45% for travel-heavy portable audits",
+      "delivery_and_support_costs": "Automated active checks and alerting with field visits only for installation, calibration, or disputed evidence",
+      "overhead_and_compliance": "Electrical safety, payment security, cyber controls, equipment certification, professional liability, contracts, and data protection",
+      "revenue_basis": "Hypothesis: 20-60 PLN per connector per month, 500-2000 PLN per portable audit, and separately priced incident forensics",
+      "variable_costs": "Probe amortization, test energy and payment transactions, connectivity, site visits, certificate signing, cloud, support, and replacement"
+    },
+    "likely_incumbent_response": "Charging-network software, charger OEMs, roaming platforms, and O&M firms can publish uptime and add active tests",
+    "paid_event_or_measurable_loss": "Paid event is a monitored connector-month or accepted incident evidence packet; measurable loss is unavailable connector time, failed sessions, SLA credits, stranded fleet time, or foregone charging revenue",
+    "payer": "Charging-site owner, fleet operator, lender, insurer, municipality, or O&M contractor",
+    "purchase_trigger": "A portfolio enters financing, concession renewal, maintenance tender, insurance review, or repeated reliability dispute",
+    "renewal_event": "Annual monitoring contract renewal based on evidence coverage, detected incidents, and reduced dispute time"
+  },
+  "contrary_evidence": [
+    "AFIR data standards and existing operator platforms may make independent monitoring redundant for many customers.",
+    "A true end-to-end test can require payment credentials, vehicle emulation, site access, and electrical certification that make low-cost probes impractical."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Planned purchase of replaceable test hardware paired with site-access and API credential agreements",
+    "acquisition_instrument_type": "purchase",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Use a different compliant probe supplier, perform scheduled portable tests instead of installed monitoring, or limit the report to public real-time data with a stated evidence gap",
+    "current_owner": "No probe fleet is evidenced; components and test equipment are currently controlled by suppliers",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "Charging operator, installer, O&M provider, lender, or municipality before a direct monitoring contract",
+    "duration": "Hardware ownership would persist after purchase; site and interface access follow separate customer terms",
+    "exclusivity": "not_applicable",
+    "founder_access_basis": "none",
+    "founder_access_description": "The founder has analytics capability but no evidenced charger hardware, site permission, payment credential, operator API, or monitoring customer.",
+    "launch_controller": "The founder can purchase or commission hardware, while each site owner controls physical access and each interface provider controls credentials",
+    "mechanism_control": "unknown",
+    "renewal": "Hardware is replaced or recalibrated as needed; monitoring contracts renew annually",
+    "replaceability": "replaceable",
+    "revocability": "not_applicable",
+    "status": "unknown",
+    "subject": "Independent charger-session test probe, secure identity, and evidence-signing hardware",
+    "subject_type": "asset",
+    "transferability": "transferable"
+  },
+  "discovery_lane": "future-backcast",
+  "economics": {
+    "acquisition_route": "O&M, installer, lender, insurer, fleet, and municipal partners with multi-connector portfolios",
+    "capital_required_pln": 80000,
+    "founder_net_worth_path": "Independent evidence across multi-vendor portfolios could support national recurring revenue or strategic acquisition; 5m PLN likely requires tens of thousands of monitored connectors over 5-8 years",
+    "founder_time": "Up to five hours per day with automated tests and qualified contractors for electrical field work",
+    "gross_margin_basis": "Revenue less probe amortization, installation, connectivity, test energy and payments, site work, support, security, and channel share",
+    "payback": "Target probe and installation payback within 12-18 months at 25-50 monitored connectors per channel deployment",
+    "pricing": "Hypothesis: 20-60 PLN per connector per month, 500-2000 PLN per audit, plus incident forensics",
+    "retention_or_repeat": "Recurring connector monitoring and annual SLA evidence renewals"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Cross-operator failure signatures, recovery times, firmware patterns, and field conditions improve diagnosis and contract benchmarking",
+    "customer": "Charging-site owners, lenders, insurers, fleet operators, municipalities, and operations contractors",
+    "distribution_mechanism": "Bundle through charger installers, O&M providers, asset financiers, insurers, and municipal concession advisers",
+    "offer_and_business_model": "Portable or installed test hardware plus independent active checks, signed logs, alerts, and SLA-ready reports",
+    "payer_and_paid_event": "Asset owner, lender, insurer, or maintenance principal pays per monitored connector-month and for a verified incident report",
+    "problem_trigger": "A charger portfolio has a financing, concession, insurance, maintenance, or revenue-share SLA that requires independent availability evidence"
+  },
+  "founder_fit": [
+    "Data-science skills fit anomaly detection, availability measurement, and root-cause clustering",
+    "The product is measurable and automation-heavy after physical installation",
+    "A small multi-vendor probe fleet can be piloted below 100k PLN",
+    "Field installation and electrical safety work can be delegated to qualified contractors"
+  ],
+  "parent": null,
+  "risks": [
+    "Unsafe or malformed tests could damage equipment or interrupt real drivers",
+    "Payment credentials and charger interfaces create cyber and fraud exposure",
+    "Travel and hardware maintenance can overwhelm subscription margin",
+    "OEMs or operators can block tests or bundle their own signed telemetry"
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://transport.ec.europa.eu/news-events/news/commission-enhances-interoperability-and-transparency-alternative-fuels-infrastructure-data-2025-04-11_en",
+    "https://eur-lex.europa.eu/eli/reg/2023/1804/oj/eng"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "usage_based_service",
+    "commercial_model_descriptor": "per connector month independent active testing and incident evidence",
+    "control_point_category": "owned_asset",
+    "control_point_descriptor": "portable or installed physical probes with independent evidence signing",
+    "critical_dependency_category": "integration_platform",
+    "critical_dependency_descriptor": "charger payment roaming and operator interfaces needed to exercise a real session"
+  },
+  "structure": {
+    "commercial_archetype": "independent infrastructure-availability metering service",
+    "control_point": "owned test probes and evidence signing at the physical connector",
+    "critical_dependency": "interoperable charger, payment, and operational interfaces plus lawful site access"
+  },
+  "thesis": "Future operating state (2030): public and fleet chargers are financed, insured, and maintained against connector-level availability and successful-session service levels. Missing physical and contractual mechanism: an independent edge probe and signed evidence stream that tests discovery, authentication or payment, session start, energy flow, and fault recovery without relying only on the operator's own dashboard.",
+  "title": "Independent EV-Charger Uptime Meter",
+  "uncertainties": [
+    "Which connector and payment standards can be exercised safely by unattended probes",
+    "Buyer acceptance of independent evidence in Polish finance, insurance, O&M, and concession contracts",
+    "Achievable hardware cost, calibration interval, false-alert rate, and site density",
+    "Whether public-interface terms permit automated active testing"
+  ],
+  "version": 1
+}

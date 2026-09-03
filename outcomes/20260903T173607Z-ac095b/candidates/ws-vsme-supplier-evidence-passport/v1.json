@@ -1,0 +1,148 @@
+{
+  "candidate_id": "ws-vsme-supplier-evidence-passport",
+  "claims": [
+    {
+      "claim_id": "ws-vsme-supplier-evidence-passport-c1",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://finance.ec.europa.eu/publications/commission-presents-voluntary-sustainability-reporting-standard-ease-burden-smes_en",
+        "https://finance.ec.europa.eu/document/download/99e7ff59-ff8a-445b-8f48-eb7648941712_en?filename=250730-recommendation-vsme-questions-answers_en.pdf"
+      ],
+      "statement": "The Commission states that large companies and financial institutions request sustainability information from SMEs and that VSME is intended to reduce the resulting administrative burden and repeated requests."
+    },
+    {
+      "claim_id": "ws-vsme-supplier-evidence-passport-c2",
+      "claim_type": "payer_and_budget",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://finance.ec.europa.eu/publications/commission-presents-voluntary-sustainability-reporting-standard-ease-burden-smes_en"
+      ],
+      "statement": "SMEs bear the internal reporting burden and may benefit through supply-chain participation or finance access, but evidence that Polish SMEs will pay the proposed price is absent."
+    },
+    {
+      "claim_id": "ws-vsme-supplier-evidence-passport-c3",
+      "claim_type": "founder_control_point_path",
+      "confidence": "low",
+      "evidence_refs": [],
+      "statement": "A plausible control path is an annual direct service and data-processing contract that makes the venture the reusable evidence source while leaving the SME in control of disclosures; no contract is secured."
+    },
+    {
+      "claim_id": "ws-vsme-supplier-evidence-passport-c4",
+      "claim_type": "other",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ec.europa.eu/finance/docs/law/250730-recommendation-vsme_en.pdf"
+      ],
+      "statement": "The Commission explicitly encourages digital tools and is exploring e-invoicing extraction for VSME reporting, validating automation as a direction but also signaling likely public or incumbent alternatives."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Owner, CFO, finance lead, tender manager, or quality/compliance lead",
+    "bundling_resistance": "The offer must be cheaper and faster than consulting while retaining auditable evidence and portability across requesters",
+    "customer_relationship_owner": "The SME owns its buyer and lender relationships; the proposed reporting-service relationship does not yet exist",
+    "distribution_origin": "Accounting office or procurement adviser already trusted with company records",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Accounting-partner enablement and targeted outreach to supplier clusters",
+      "cash_conversion": "Deposit at kickoff and balance on delivery; annual renewals can be prepaid",
+      "contribution_margin": "Moderate initially and potentially high after repeatable templates, but evidence chasing can dominate delivery cost",
+      "delivery_and_support_costs": "Evidence chasing, classification, exception review, and customer education",
+      "overhead_and_compliance": "GDPR, security, professional liability, methodology updates, and quality review",
+      "revenue_basis": "Target 2,500-8,000 PLN for first-year passport, 1,500-4,000 PLN refresh, and 300-1,000 PLN per bespoke mapping",
+      "variable_costs": "Document extraction, secure storage, e-signing, reviewer time, and channel commission"
+    },
+    "likely_incumbent_response": "Accounting firms, ESG consultancies, banks, and procurement platforms can offer templates or bundle reporting",
+    "paid_event_or_measurable_loss": "Annual passport completion or a mapped questionnaire response is paid; measurable loss is staff and adviser time repeatedly collecting the same sustainability evidence",
+    "payer": "SME supplier",
+    "purchase_trigger": "First material buyer questionnaire, tender requirement, lender request, or fear of losing preferred-supplier status",
+    "renewal_event": "Annual evidence refresh or a material change in facilities, workforce, energy, or financing"
+  },
+  "contrary_evidence": [
+    "VSME is voluntary, so many SMEs can decline until a powerful counterparty asks.",
+    "The Commission and EFRAG already provide a digital template and support materials, limiting willingness to pay for basic form filling.",
+    "Omnibus simplification may reduce or standardize downstream requests enough that only a small service layer remains."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Proposed 12-month nonexclusive service agreement with data-processing terms; none secured",
+    "acquisition_instrument_type": "long_term_contract",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Offer a one-time evidence inventory and exportable VSME workbook without retaining the relationship",
+    "current_owner": "The SME and the organizations requesting its information",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "The SME owns its buyer and lender relationships; the proposed reporting-service relationship does not yet exist",
+    "duration": "Proposed 12 months; not yet agreed",
+    "exclusivity": "nonexclusive",
+    "founder_access_basis": "other_legally_usable_access",
+    "founder_access_description": "Public VSME materials and lawful outreach to SMEs and accounting offices are available; no customer data or channel commitment is secured",
+    "launch_controller": "Each SME customer",
+    "mechanism_control": "dependent",
+    "renewal": "Proposed annual refresh before buyer or lender reporting cycles",
+    "replaceability": "replaceable",
+    "revocability": "unknown",
+    "status": "unknown",
+    "subject": "Annual SME sustainability evidence and response relationship",
+    "subject_type": "relationship",
+    "transferability": "consent_required"
+  },
+  "discovery_lane": "weak-signal",
+  "economics": {
+    "acquisition_route": "Accounting offices, lender advisers, procurement consultants, and targeted supplier clusters",
+    "capital_required_pln": 25000,
+    "founder_net_worth_path": "Conditional path: 1,000 annual clients at a 4,000 PLN blended fee equals 4m PLN revenue before channel and delivery costs; software-assisted margins and repeatability could create a value above 5m PLN, but neither is proven",
+    "founder_time": "A templated five-client pilot can fit 3-5 hours daily; evidence chasing must be bounded before adding volume",
+    "gross_margin_basis": "Fixed fee less reviewer labor, document tooling, secure storage, and partner commission",
+    "payback": "Target within one material questionnaire or tender cycle versus internal and adviser time; unvalidated",
+    "pricing": "Discovery hypothesis: 2,500-8,000 PLN first-year pack, 1,500-4,000 PLN annual refresh, plus bounded response fees",
+    "retention_or_repeat": "Annual refresh plus episodic requester mappings; retention depends on recurring external requests"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A permissioned mapping library from recurring source documents to VSME fields and buyer question variants reduces production time",
+    "customer": "Polish SMEs supplying large companies or seeking bank and sustainable-finance relationships",
+    "distribution_mechanism": "White-label or referral distribution through accounting offices, SME lenders, procurement advisers, and industry clusters",
+    "offer_and_business_model": "Productized VSME data collection, evidence vault, signed annual report, and questionnaire mapping",
+    "payer_and_paid_event": "The SME pays for an annual evidence passport and optionally for each mapped buyer or lender response",
+    "problem_trigger": "A buyer, tender, lender, or corporate customer sends a sustainability questionnaire or asks for standardized evidence"
+  },
+  "founder_fit": [
+    "Data normalization and evidence-quality checks fit business-analysis and data-science skills",
+    "The work can begin as a tightly scoped asynchronous service alongside employment",
+    "Accounting-channel distribution reduces dependence on constant networking or personal-brand content",
+    "Each engagement produces measurable turnaround, reuse, and labor-savings data"
+  ],
+  "parent": null,
+  "risks": [
+    "Clients may treat the service as legal assurance beyond its scope",
+    "Incorrect or unsupported disclosures could harm tenders or financing",
+    "Free templates and accountant bundles can commoditize the offer",
+    "Manual evidence collection can cap scale"
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://finance.ec.europa.eu/publications/commission-presents-voluntary-sustainability-reporting-standard-ease-burden-smes_en",
+    "https://finance.ec.europa.eu/document/download/99e7ff59-ff8a-445b-8f48-eb7648941712_en?filename=250730-recommendation-vsme-questions-answers_en.pdf",
+    "https://ec.europa.eu/finance/docs/law/250730-recommendation-vsme_en.pdf"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "productized_service",
+    "commercial_model_descriptor": "fixed scope annual vsme passport and requester mapping service",
+    "control_point_category": "customer_relationship",
+    "control_point_descriptor": "recurring source of truth relationship for an sme s sustainability evidence",
+    "critical_dependency_category": "customer_adoption",
+    "critical_dependency_descriptor": "smes must gather underlying evidence and counterparties must accept standardized responses"
+  },
+  "structure": {
+    "commercial_archetype": "Annual productized reporting service with optional response packs",
+    "control_point": "The SME's reusable source-of-truth relationship for sustainability evidence",
+    "critical_dependency": "SME willingness to gather evidence and downstream requesters' acceptance of VSME-based responses"
+  },
+  "thesis": "Observed labor-allocation change: the European Commission says SMEs are receiving sustainability-information requests from large companies and financial institutions, and it recommended VSME to replace a substantial portion of those questionnaires. Sell small Polish suppliers a reusable, evidence-backed annual passport plus bounded response service, distributed through accounting firms that already assemble financial records.",
+  "title": "VSME Supplier Evidence Passport",
+  "uncertainties": [
+    "Frequency and commercial consequence of VSME-aligned requests among Polish supplier SMEs",
+    "Acceptance of a reusable passport across different buyers and banks",
+    "Document availability and evidence quality at very small firms",
+    "Channel appetite among accounting offices and the support load per client"
+  ],
+  "version": 1
+}

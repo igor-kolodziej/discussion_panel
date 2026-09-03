@@ -17,7 +17,24 @@ class OpportunityTestCase(unittest.TestCase):
         self.temporary = tempfile.TemporaryDirectory()
         self.root = Path(self.temporary.name)
         self.runs_dir = self.root / "runs"
-        created = op.make_run(op.DEFAULT_CONFIG, self.runs_dir)
+        legacy_config = op.load_json(op.DEFAULT_CONFIG)
+        legacy_config.pop("screening_batches")
+        for key in (
+            op.CONTROL_CONTRACT_CONFIG_KEYS
+            | op.PREFLIGHT_ATTESTATION_CONFIG_KEYS
+        ):
+            legacy_config.pop(key)
+        legacy_config.update(
+            {
+                "unique_min": 24,
+                "shortlist_max": 8,
+                "core_shortlist_slots": 6,
+                "wildcard_shortlist_slots": 2,
+            }
+        )
+        self.config_path = self.root / "legacy-opportunity-workflow.json"
+        self.config_path.write_bytes(op.canonical_json_bytes(legacy_config))
+        created = op.make_run(self.config_path, self.runs_dir)
         self.run_id = created["run_id"]
         self.run_dir = Path(created["run_dir"])
 
@@ -26,6 +43,15 @@ class OpportunityTestCase(unittest.TestCase):
 
     def load(self):
         return op.load_run(self.run_dir)
+
+    def run_cli(self, argv: list[str]) -> tuple[int, dict, dict]:
+        stdout = io.StringIO()
+        stderr = io.StringIO()
+        with contextlib.redirect_stdout(stdout), contextlib.redirect_stderr(stderr):
+            code = op.main(argv)
+        output = json.loads(stdout.getvalue()) if stdout.getvalue().strip() else {}
+        error = json.loads(stderr.getvalue()) if stderr.getvalue().strip() else {}
+        return code, output, error
 
     def set_stage(self, stage: str) -> None:
         manifest, state = self.load()
@@ -53,18 +79,24 @@ class OpportunityTestCase(unittest.TestCase):
         parent: dict | None = None,
         fingerprint_seed: str | None = None,
         capital: object = 100000,
+        discovery_lane: str = "mechanism-first",
     ) -> dict:
         seed = fingerprint_seed or candidate_id
-        schema_version = json.loads(op.DEFAULT_CONFIG.read_text(encoding="utf-8"))["schema_version"]
-        sources = [] if stage == "discovery" else [f"source-{index}" for index in range(6)]
-        return {
+        schema_version = json.loads(self.config_path.read_text(encoding="utf-8"))["schema_version"]
+        sources = [
+            f"https://example.com/{candidate_id}/loss",
+            f"https://example.com/{candidate_id}/budget",
+            f"https://example.com/{candidate_id}/control",
+        ]
+        candidate = {
             "schema_version": schema_version,
             "candidate_id": candidate_id,
             "version": version,
             "parent": parent,
             "stage": stage,
-            "title": f"Opportunity {candidate_id} v{version}",
-            "thesis": f"A specific structural thesis for {candidate_id} version {version}.",
+            "discovery_lane": discovery_lane,
+            "title": f"Opportunity {candidate_id}",
+            "thesis": f"A specific structural thesis for {candidate_id}.",
             "fingerprint": {
                 "customer": f"industrial buyer {seed}",
                 "problem_trigger": f"mandatory failure event {seed}",
@@ -92,9 +124,24 @@ class OpportunityTestCase(unittest.TestCase):
             },
             "claims": [
                 {
-                    "claim_id": "claim-1",
+                    "claim_id": "claim-loss",
+                    "claim_type": "paid_event_or_measurable_loss",
                     "statement": "The triggering workflow is costly and recurring.",
-                    "evidence_refs": sources[:1],
+                    "evidence_refs": [sources[0]],
+                    "confidence": "medium",
+                },
+                {
+                    "claim_id": "claim-budget",
+                    "claim_type": "payer_and_budget",
+                    "statement": "An operating budget owner pays after the trigger.",
+                    "evidence_refs": [sources[1]],
+                    "confidence": "medium",
+                },
+                {
+                    "claim_id": "claim-control",
+                    "claim_type": "founder_control_point_path",
+                    "statement": "The founder can contract for the proposed control point.",
+                    "evidence_refs": [sources[2]],
                     "confidence": "medium",
                 }
             ],
@@ -102,6 +149,77 @@ class OpportunityTestCase(unittest.TestCase):
             "uncertainties": ["Referral conversion remains untested."],
             "risks": ["A platform could narrow the workflow gap."],
         }
+        if op.control_contract_enabled(op.load_json(self.config_path)):
+            customer_owner = f"business {candidate_id}"
+            candidate.update(
+                {
+                    "critical_control_point": {
+                        "subject_type": "workflow_position",
+                        "subject": f"accepted incident evidence workflow {seed}",
+                        "current_owner": customer_owner,
+                        "launch_controller": customer_owner,
+                        "acquisition_instrument_type": "ownership",
+                        "acquisition_instrument": "Founder-built and business-owned operating workflow.",
+                        "exclusivity": "not_applicable",
+                        "duration": "Indefinite while the business operates.",
+                        "revocability": "not_applicable",
+                        "transferability": "transferable",
+                        "renewal": "No counterparty renewal is required.",
+                        "counterparty_refusal_fallback": "Sell directly through another specialist channel.",
+                        "replaceability": "replaceable",
+                        "customer_relationship_owner": customer_owner,
+                        "customer_relationship_control": "owned",
+                        "mechanism_control": "owned",
+                        "status": "owned",
+                        "founder_access_basis": "owned_or_controlled_asset",
+                        "founder_access_description": "The founder can lawfully build and own the bounded workflow.",
+                        "confidential_employer_resource_dependency": "none",
+                    },
+                    "commercial_mechanics": {
+                        "paid_event_or_measurable_loss": f"Recurring incident remediation spend {seed}",
+                        "payer": f"Industrial operator {seed}",
+                        "budget_owner": "Operations director",
+                        "purchase_trigger": "A documented incident or annual assurance renewal.",
+                        "renewal_event": "Annual operating assurance renewal.",
+                        "distribution_origin": f"Specialist broker referral {seed}",
+                        "customer_relationship_owner": customer_owner,
+                        "fully_loaded_economics": {
+                            "revenue_basis": "120000 PLN annual contract",
+                            "variable_costs": "Specialist review per incident",
+                            "delivery_and_support_costs": "Named implementation and support labor",
+                            "acquisition_cost": "Broker referral fee and founder sales time",
+                            "overhead_and_compliance": "Insurance, software, and compliance review",
+                            "contribution_margin": "Positive after all listed delivery costs",
+                            "cash_conversion": "Annual prepayment with monthly delivery",
+                        },
+                        "likely_incumbent_response": "Bundle a narrower assurance feature.",
+                        "bundling_resistance": "Independent evidence acceptance and cross-platform workflow depth.",
+                    },
+                    "structural_signature": {
+                        "commercial_model_category": "other",
+                        "commercial_model_descriptor": f"specialist workflow assurance {seed}",
+                        "control_point_category": "other",
+                        "control_point_descriptor": f"accepted incident evidence {seed}",
+                        "critical_dependency_category": "other",
+                        "critical_dependency_descriptor": f"broker access agreement {seed}",
+                    },
+                }
+            )
+        if version == 2 and stage == "development":
+            candidate["fingerprint"]["offer_and_business_model"] += " redesigned"
+            candidate["economics"]["pricing"] = "150000 PLN annual redesigned contract"
+            candidate["redesign"] = {
+                "changed_fingerprint_fields": ["offer_and_business_model"],
+                "economic_effect": "Raises contract value while preserving the controlled workflow.",
+            }
+            if "commercial_mechanics" in candidate:
+                candidate["commercial_mechanics"]["fully_loaded_economics"][
+                    "revenue_basis"
+                ] = "150000 PLN annual redesigned contract"
+                candidate["redesign"]["changed_structural_fields"] = [
+                    "commercial_mechanics"
+                ]
+        return candidate
 
     def store_candidate(self, candidate: dict) -> tuple[Path, dict]:
         manifest, _ = self.load()
@@ -122,10 +240,24 @@ class OpportunityTestCase(unittest.TestCase):
                 "accessed_at": "2026-08-24",
                 "source_type": "primary",
                 "stance": "contradicting" if index == 5 else "supporting",
+                **(
+                    {
+                        "evidence_class": (
+                            "direct_buyer",
+                            "distribution",
+                            "unit_economics",
+                            "rights_control_access",
+                            "market_context",
+                            "incumbent",
+                        )[index]
+                    }
+                    if op.control_contract_enabled(self.load()[0]["config"])
+                    else {}
+                ),
             }
             for index in range(6)
         ]
-        return {
+        result = {
             "schema_version": candidate["schema_version"],
             "candidate_id": candidate["candidate_id"],
             "candidate_version": candidate["version"],
@@ -133,15 +265,54 @@ class OpportunityTestCase(unittest.TestCase):
             "sources": sources,
             "claims": [
                 {
-                    "claim_id": "research-claim-1",
-                    "statement": "Primary sources support a recurring paid event.",
-                    "assessment": "evidence",
-                    "evidence_refs": ["source-0", "source-1"],
+                    "claim_id": f"research-claim-{index + 1}",
+                    "statement": f"Research addresses falsification category {index + 1}.",
+                    "assessment": "evidence" if index < 4 or index == 5 else "inference",
+                    "evidence_refs": [f"source-{index}"],
                 }
+                for index in range(6)
             ],
             "contrary_evidence": ["One source describes an internal substitute."],
             "unknowns": ["Observed conversion is not yet available."],
+            "falsification": {
+                key: [f"research-claim-{index + 1}"]
+                for index, key in enumerate(sorted(op.FALSIFICATION_KEYS))
+            },
         }
+        if op.control_contract_enabled(self.load()[0]["config"]):
+            result.update(
+                {
+                    "commercial_evidence": {
+                        "buyer_or_paid_event": {
+                            "status": "evidence",
+                            "claim_ids": ["research-claim-1"],
+                            "source_ids": ["source-0"],
+                        },
+                        "distribution_and_acquisition": {
+                            "status": "evidence",
+                            "claim_ids": ["research-claim-2"],
+                            "source_ids": ["source-1"],
+                        },
+                        "fully_loaded_unit_economics": {
+                            "status": "evidence",
+                            "claim_ids": ["research-claim-3"],
+                            "source_ids": ["source-2"],
+                        },
+                        "rights_control_access_contractibility": {
+                            "status": "evidence",
+                            "claim_ids": ["research-claim-4"],
+                            "source_ids": ["source-3"],
+                        },
+                    },
+                    "critical_control_point_assessment": {
+                        "status": candidate["critical_control_point"]["status"],
+                        "assessment": "evidence",
+                        "claim_ids": ["research-claim-4"],
+                        "source_ids": ["source-3"],
+                    },
+                }
+            )
+        return result
 
     def store_research(self, research: dict) -> Path:
         manifest, _ = self.load()
@@ -158,6 +329,26 @@ class OpportunityTestCase(unittest.TestCase):
             "candidate_sha256": op.sha256_file(path),
         }
 
+    def control_point_acquisition_evidence(
+        self,
+        candidate: dict,
+        *,
+        assessment: str = "credible_preliminary",
+    ) -> dict:
+        return {
+            "assessment": assessment,
+            "acquisition_mode": "commercial_contract",
+            "counterparty_or_source": "A named workflow operator with authority to contract.",
+            "instrument_or_transaction": "A bounded paid workflow-access agreement.",
+            "founder_access_path": "Direct outreach through the documented specialist channel.",
+            "claim_ids": ["claim-control"] if assessment == "credible_preliminary" else [],
+            "evidence_refs": [candidate["source_refs"][2]]
+            if assessment == "credible_preliminary"
+            else [],
+            "unresolved_preconditions": ["Counterparty signature remains untested."],
+            "credibility_rationale": "The cited route identifies the counterparty, instrument, and bounded founder access path.",
+        }
+
     def complete_json_job(
         self,
         job_id: str,
@@ -170,14 +361,95 @@ class OpportunityTestCase(unittest.TestCase):
             self.set_stage(stage)
         path = self.root / f"{job_id}.json"
         path.write_text(json.dumps(payload), encoding="utf-8")
+        preflight_sha256 = None
+        preflight_receipt_sha256 = None
+        if op.preflight_attestation_enabled(self.load()[0]["config"]):
+            report, valid = op.preflight_artifact(
+                self.run_dir,
+                kind,
+                path,
+                job_id,
+            )
+            if not valid:
+                raise AssertionError(report["validation"]["errors"])
+            preflight_sha256 = report["validation"]["input_sha256"]
+            preflight_receipt_sha256 = report["validation"][
+                "preflight_receipt"
+            ]["receipt_sha256"]
         op.start_job(self.run_dir, job_id, stage)
-        return op.complete_job(self.run_dir, job_id, path, kind)
+        return op.complete_job(
+            self.run_dir,
+            job_id,
+            path,
+            kind,
+            preflight_sha256,
+            preflight_receipt_sha256,
+        )
 
-    def store_portfolio_selection(self, candidates: list[dict]) -> dict:
+    def store_portfolio_selection(
+        self,
+        candidates: list[dict],
+        *,
+        calibration_overrides: dict[str, dict[str, object]] | None = None,
+        wildcard_ids: set[str] | None = None,
+    ) -> dict:
+        manifest, _ = self.load()
+        overrides = calibration_overrides or {}
+        discoveries = [
+            candidate
+            for _, candidate in op.latest_candidates_for_stage(
+                self.run_dir, manifest, "discovery"
+            )
+        ]
+        if wildcard_ids is None:
+            wildcard_ids = (
+                {
+                    candidate["candidate_id"]
+                    for candidate in candidates[
+                        -manifest["config"]["wildcard_shortlist_slots"] :
+                    ]
+                }
+                if len(candidates) == manifest["config"]["shortlist_max"]
+                else set()
+            )
         payload = {
-            "schema_version": 2,
+            "schema_version": op.ACTIVE_SCHEMA_VERSION,
             "selection_version": 1,
+            "calibration": [
+                {
+                    "candidate_ref": self.candidate_ref(candidate),
+                    "commercial_archetype": overrides.get(
+                        candidate["candidate_id"], {}
+                    ).get(
+                        "commercial_archetype",
+                        candidate["structure"]["commercial_archetype"],
+                    ),
+                    "control_point": overrides.get(
+                        candidate["candidate_id"], {}
+                    ).get(
+                        "control_point", candidate["structure"]["control_point"]
+                    ),
+                    "critical_dependency": overrides.get(
+                        candidate["candidate_id"], {}
+                    ).get(
+                        "critical_dependency",
+                        candidate["structure"]["critical_dependency"],
+                    ),
+                    "control_point_acquisition_evidence": overrides.get(
+                        candidate["candidate_id"], {}
+                    ).get(
+                        "control_point_acquisition_evidence",
+                        self.control_point_acquisition_evidence(candidate),
+                    ),
+                }
+                for candidate in discoveries
+            ],
             "candidate_refs": [self.candidate_ref(candidate) for candidate in candidates],
+            "wildcard_candidate_refs": [
+                self.candidate_ref(candidate)
+                for candidate in candidates
+                if candidate["candidate_id"] in wildcard_ids
+            ],
             "missing_archetypes": [],
             "rationale": "A bounded shortlist spanning materially different commercial structures.",
         }
@@ -190,7 +462,7 @@ class OpportunityTestCase(unittest.TestCase):
 
     def portfolio_decision(self, candidates: list[dict], develop_ids: set[str]) -> dict:
         return {
-            "schema_version": 2,
+            "schema_version": op.ACTIVE_SCHEMA_VERSION,
             "candidate_decisions": [
                 {
                     "candidate_id": candidate["candidate_id"],
@@ -215,43 +487,66 @@ class OpportunityTestCase(unittest.TestCase):
         outcome: str = "no_valid_redesign",
         base_candidate: dict | None = None,
     ) -> dict:
-        base = base_candidate or candidate
-        return {
-            "schema_version": 2,
+        result = {
+            "schema_version": op.ACTIVE_SCHEMA_VERSION,
             "candidate_id": candidate["candidate_id"],
-            "base_candidate_version": base["version"],
-            "base_candidate_sha256": self.candidate_ref(base)["candidate_sha256"],
             "outcome": outcome,
-            "final_candidate_version": candidate["version"],
-            "final_candidate_sha256": self.candidate_ref(candidate)["candidate_sha256"],
             "constructor_id": constructor_id,
             "rationale": "One bounded constructor pass found no defensible structural redesign."
             if outcome == "no_valid_redesign"
             else "One bounded constructor pass produced the recorded structural redesign.",
+            "falsification": {
+                key: [f"research-claim-{index + 1}"]
+                for index, key in enumerate(sorted(op.FALSIFICATION_KEYS))
+            },
         }
+        if op.control_contract_enabled(self.load()[0]["config"]):
+            result["structural_change"] = (
+                {
+                    "dependency_change": "Replaces the unbounded dependency with the recorded business-controlled workflow.",
+                    "resulting_control_point_status": candidate[
+                        "critical_control_point"
+                    ]["status"],
+                    "control_instrument": candidate["critical_control_point"][
+                        "acquisition_instrument"
+                    ],
+                    "distribution_instrument": candidate["commercial_mechanics"][
+                        "distribution_origin"
+                    ],
+                    "customer_relationship_owner": candidate[
+                        "commercial_mechanics"
+                    ]["customer_relationship_owner"],
+                    "customer_relationship_control": candidate[
+                        "critical_control_point"
+                    ]["customer_relationship_control"],
+                    "fully_loaded_economic_effects": candidate[
+                        "commercial_mechanics"
+                    ]["fully_loaded_economics"]["revenue_basis"],
+                    "incumbent_response_defensibility": candidate[
+                        "commercial_mechanics"
+                    ]["bundling_resistance"],
+                    "supporting_research_claim_ids": ["research-claim-4"],
+                }
+                if outcome == "redesigned"
+                else None
+            )
+        return result
 
     def prepare_fatal_research_closure(self, candidate_id: str = "alpha") -> dict:
         discovery = self.candidate(candidate_id)
         self.store_candidate(discovery)
         self.store_portfolio_selection([discovery])
         self.set_stage("research")
-        researched = self.candidate(
-            candidate_id,
-            version=2,
-            stage="research",
-            parent={"candidate_id": candidate_id, "version": 1},
-        )
-        self.store_candidate(researched)
-        self.store_research(self.research(researched))
+        self.store_research(self.research(discovery))
         self.store_evaluation(
             self.evaluation_input(
-                researched,
+                discovery,
                 f"research-judge-{candidate_id}",
                 score=6.5,
-                evaluation_type="working",
+                evaluation_type="working_research",
             )
         )
-        decision = self.portfolio_decision([researched], set())
+        decision = self.portfolio_decision([discovery], set())
         decision["candidate_decisions"][0].update(
             {
                 "disposition": "fatal",
@@ -261,7 +556,7 @@ class OpportunityTestCase(unittest.TestCase):
             }
         )
         self.complete_json_job("portfolio-decision", "portfolio-decision", decision)
-        return researched
+        return discovery
 
     def evaluation_input(
         self,
@@ -276,6 +571,17 @@ class OpportunityTestCase(unittest.TestCase):
     ) -> dict:
         manifest, _ = self.load()
         candidate_path = self.run_dir / op.candidate_relpath(candidate["candidate_id"], candidate["version"])
+        if evaluation_type == "working":
+            evaluation_type = (
+                "working_development"
+                if (
+                    self.run_dir
+                    / "development"
+                    / candidate["candidate_id"]
+                    / "constructor-result.json"
+                ).is_file()
+                else "working_research"
+            )
         overrides = factor_overrides or {}
         excluded_names = excluded or set()
         factors = []
@@ -291,14 +597,9 @@ class OpportunityTestCase(unittest.TestCase):
                 }
             )
         evaluation = {
-            "schema_version": candidate["schema_version"],
             "candidate_id": candidate["candidate_id"],
             "candidate_version": candidate["version"],
-            "candidate_sha256": op.sha256_file(candidate_path),
-            "rubric_id": manifest["rubric"]["rubric_id"],
-            "rubric_sha256": manifest["rubric"]["sha256"],
             "judge_id": judge_id,
-            "evaluation_type": evaluation_type,
             "factors": factors,
             "interaction_adjustment": adjustment,
             "assumptions": ["Competent execution from the planning stage."],
@@ -307,44 +608,17 @@ class OpportunityTestCase(unittest.TestCase):
             "strongest_disconfirming_evidence": f"Disconfirming evidence identified by {judge_id}.",
             "highest_value_structural_change": f"Structural change proposed by {judge_id}.",
             "evidence_needed_for_higher_score": f"Evidence request from {judge_id}.",
+            "_test_evaluation_type": evaluation_type,
         }
-        if evaluation_type == "holdout_native":
-            raw_rel = f"holdout/jobs/{judge_id}.json"
-        elif evaluation_type == "holdout_external":
-            raw_rel = f"holdout/{candidate['candidate_id']}/v{candidate['version']}/raw/{judge_id}.json"
-        else:
-            raw_rel = f"evaluations/{candidate['candidate_id']}/v{candidate['version']}/raw/{judge_id}.txt"
-        raw_path = self.run_dir / raw_rel
-        if evaluation_type.startswith("holdout"):
-            response = {key: evaluation[key] for key in op.EXTERNAL_RESPONSE_KEYS}
-            raw = op.canonical_json_bytes(response)
-        else:
-            raw = f"raw independent response from {judge_id}\n".encode()
-        op.write_immutable(raw_path, raw, root=self.run_dir)
-        evaluation["raw_response_path"] = raw_rel
-        evaluation["raw_response_sha256"] = op.sha256_bytes(raw)
-        if evaluation_type == "holdout_native":
-            manifest, state = self.load()
-            if state["stage"] == "holdout":
-                op.start_job(self.run_dir, judge_id, "holdout")
-                op.complete_job(self.run_dir, judge_id, raw_path, "generic")
-            else:
-                # Isolated schema/scoring tests do not exercise run integrity.
-                state["jobs"]["holdout"][judge_id] = {
-                    "status": "completed",
-                    "attempts": 1,
-                    "max_attempts": manifest["config"]["mechanical_attempts"],
-                    "artifact": raw_rel,
-                    "artifact_sha256": op.sha256_bytes(raw),
-                    "error": None,
-                    "updated_at": op.utc_now(),
-                }
-                op.save_state(self.run_dir, state, manifest)
         return evaluation
 
     def store_evaluation(self, evaluation_input: dict) -> tuple[Path, dict]:
         manifest, _ = self.load()
-        canonical = op.compute_evaluation(evaluation_input, manifest, self.run_dir)
+        response = copy.deepcopy(evaluation_input)
+        evaluation_type = response.pop("_test_evaluation_type")
+        canonical = op.canonicalize_evaluator_response(
+            response, manifest, self.run_dir, evaluation_type
+        )
         path = self.run_dir / op.evaluation_relpath(
             canonical["candidate_id"],
             canonical["candidate_version"],
@@ -352,8 +626,6 @@ class OpportunityTestCase(unittest.TestCase):
             canonical["judge_id"],
         )
         op.write_immutable(path, op.canonical_json_bytes(canonical))
-        if canonical["evaluation_type"] == "holdout_native" and manifest["config"]["schema_version"] == 2:
-            self.ensure_direct_portfolio_contracts()
         return path, canonical
 
     def ensure_direct_portfolio_contracts(self) -> None:
@@ -362,9 +634,29 @@ class OpportunityTestCase(unittest.TestCase):
         discoveries = [candidate for _, candidate in op.latest_candidates_for_stage(self.run_dir, manifest, "discovery")]
         if not selection_path.exists():
             selection = {
-                "schema_version": 2,
+                "schema_version": op.ACTIVE_SCHEMA_VERSION,
                 "selection_version": 1,
+                "calibration": [
+                    {
+                        "candidate_ref": self.candidate_ref(candidate),
+                        "commercial_archetype": candidate["structure"]["commercial_archetype"],
+                        "control_point": candidate["structure"]["control_point"],
+                        "critical_dependency": candidate["structure"]["critical_dependency"],
+                        "control_point_acquisition_evidence": self.control_point_acquisition_evidence(
+                            candidate
+                        ),
+                    }
+                    for candidate in discoveries
+                ],
                 "candidate_refs": [self.candidate_ref(candidate) for candidate in discoveries],
+                "wildcard_candidate_refs": [
+                    self.candidate_ref(candidate)
+                    for candidate in discoveries[
+                        -manifest["config"]["wildcard_shortlist_slots"] :
+                    ]
+                ]
+                if len(discoveries) == manifest["config"]["shortlist_max"]
+                else [],
                 "missing_archetypes": [],
                 "rationale": "Canonical test shortlist covering every direct-lineage fixture candidate.",
             }
@@ -372,7 +664,19 @@ class OpportunityTestCase(unittest.TestCase):
             op.write_immutable(selection_path, op.canonical_json_bytes(canonical_selection))
         decision_path = self.run_dir / "portfolio/development-decision.json"
         if not decision_path.exists():
-            researched = [candidate for _, candidate in op.latest_candidates_for_stage(self.run_dir, manifest, "research")]
+            researched = [
+                op.validate_candidate(
+                    op.load_json(
+                        self.run_dir
+                        / op.candidate_relpath(
+                            research["candidate_id"], research["candidate_version"]
+                        )
+                    ),
+                    manifest,
+                    self.run_dir,
+                )
+                for _, research in op.iter_research(self.run_dir, manifest)
+            ]
             develop_ids = {candidate["candidate_id"] for candidate in researched}
             decision = self.portfolio_decision(researched, develop_ids)
             canonical_decision = op.validate_portfolio_decision(decision, manifest, self.run_dir)
@@ -386,60 +690,81 @@ class OpportunityTestCase(unittest.TestCase):
     ) -> dict:
         discovery = self.candidate(candidate_id, stage="discovery", version=1, capital=capital)
         self.store_candidate(discovery)
-        researched = self.candidate(
-            candidate_id,
-            stage="research",
-            version=2,
-            parent={"candidate_id": candidate_id, "version": 1},
-            capital=capital,
+        manifest, _ = self.load()
+        selection = {
+            "schema_version": op.ACTIVE_SCHEMA_VERSION,
+            "selection_version": 1,
+            "calibration": [
+                {
+                    "candidate_ref": self.candidate_ref(discovery),
+                    "commercial_archetype": discovery["structure"]["commercial_archetype"],
+                    "control_point": discovery["structure"]["control_point"],
+                    "critical_dependency": discovery["structure"]["critical_dependency"],
+                    "control_point_acquisition_evidence": self.control_point_acquisition_evidence(
+                        discovery
+                    ),
+                }
+            ],
+            "candidate_refs": [self.candidate_ref(discovery)],
+            "wildcard_candidate_refs": [],
+            "missing_archetypes": [],
+            "rationale": "One exact candidate for a complete lineage fixture.",
+        }
+        canonical_selection = op.validate_portfolio_selection(
+            selection, manifest, self.run_dir
         )
-        self.store_candidate(researched)
-        self.store_research(self.research(researched))
+        op.write_immutable(
+            self.run_dir / "portfolio/selection.json",
+            op.canonical_json_bytes(canonical_selection),
+        )
+        self.store_research(self.research(discovery))
         self.store_evaluation(
             self.evaluation_input(
-                researched,
+                discovery,
                 f"working-research-{candidate_id}",
                 score=7.8,
-                evaluation_type="working",
+                evaluation_type="working_research",
             )
         )
-        developed = self.candidate(
-            candidate_id,
-            stage="development",
-            version=3,
-            parent={"candidate_id": candidate_id, "version": 2},
-            capital=capital,
+        decision = self.portfolio_decision([discovery], {candidate_id})
+        canonical_decision = op.validate_portfolio_decision(
+            decision, manifest, self.run_dir
         )
-        self.store_candidate(developed)
-        self.store_evaluation(
-            self.evaluation_input(
-                developed,
-                f"working-{candidate_id}",
-                score=8,
-                evaluation_type="working",
-            )
+        op.write_immutable(
+            self.run_dir / "portfolio/development-decision.json",
+            op.canonical_json_bytes(canonical_decision),
         )
         result = self.development_result(
-            developed,
+            discovery,
             constructor_id=f"constructor-{candidate_id}",
         )
-        canonical_result = op.validate_development_result(result, self.load()[0], self.run_dir)
+        canonical_result = op.canonicalize_development_response(
+            result, manifest, self.run_dir
+        )
         op.write_immutable(
             self.run_dir / f"development/{candidate_id}/constructor-result.json",
             op.canonical_json_bytes(canonical_result),
         )
-        frozen = self.candidate(
-            candidate_id,
-            stage="frozen",
-            version=4,
-            parent={"candidate_id": candidate_id, "version": 3},
-            capital=capital,
+        self.store_evaluation(
+            self.evaluation_input(
+                discovery,
+                f"working-{candidate_id}",
+                score=8,
+                evaluation_type="working_development",
+            )
         )
-        self.store_candidate(frozen)
-        return frozen
+        finalists = op.build_finalist_selection(self.run_dir, manifest)
+        op.write_immutable(
+            self.run_dir / "portfolio/finalists.json",
+            op.canonical_json_bytes(finalists),
+        )
+        return discovery
 
     def external_response(self, manifest: dict, *, judge_id: str, score: float) -> dict:
+        _, candidate = op.finalist_candidates(self.run_dir, manifest)[0]
         return {
+            "candidate_id": candidate["candidate_id"],
+            "candidate_version": candidate["version"],
             "judge_id": judge_id,
             "factors": [
                 {
@@ -470,11 +795,31 @@ class RunAndStateTests(OpportunityTestCase):
         )
         self.assertEqual((self.run_dir / "inputs/founder.md").read_bytes(), (op.REPO_ROOT / "PERSONALITY_SITUATION.md").read_bytes())
         self.assertEqual((self.run_dir / "inputs/evaluator.txt").read_bytes(), (op.REPO_ROOT / "Personalities/ZeroToOne.txt").read_bytes())
-        self.assertEqual((self.run_dir / "inputs/config.json").read_bytes(), op.DEFAULT_CONFIG.read_bytes())
+        self.assertEqual(
+            (self.run_dir / "inputs/config.json").read_bytes(),
+            op.canonical_json_bytes(op.validate_config(op.load_json(self.config_path))),
+        )
         self.assertEqual(sum(row["weight"] for row in manifest["rubric"]["factors"]), 100)
         events = op.load_events(self.run_dir / "events.jsonl", self.run_id)
         self.assertEqual([event["event"] for event in events], ["run_created"])
-        self.assertTrue(op.check_run(self.run_dir, op.DEFAULT_CONFIG)["valid"])
+        self.assertTrue(op.check_run(self.run_dir, self.config_path)["valid"])
+
+    def test_config_source_drift_uses_canonical_json_semantics(self) -> None:
+        config = op.validate_config(op.load_json(self.config_path))
+        reordered = {key: config[key] for key in reversed(list(config))}
+        reordered_path = self.root / "reordered-config.json"
+        reordered_path.write_text(
+            json.dumps(reordered, separators=(",", ":")), encoding="utf-8"
+        )
+        checked = op.check_run(self.run_dir, reordered_path)
+        self.assertNotIn("config/opportunity-workflow.json", checked["source_drift"])
+
+        changed = copy.deepcopy(reordered)
+        changed["seeds_per_scout"] += 1
+        changed_path = self.root / "changed-config.json"
+        changed_path.write_text(json.dumps(changed), encoding="utf-8")
+        drifted = op.check_run(self.run_dir, changed_path)
+        self.assertIn("config/opportunity-workflow.json", drifted["source_drift"])
 
     def test_resume_retries_and_exhausted_failure_no_longer_blocks(self) -> None:
         op.advance_run(self.run_dir)
@@ -501,14 +846,14 @@ class RunAndStateTests(OpportunityTestCase):
             with self.assertRaisesRegex(OSError, "start event failed"):
                 op.start_job(self.run_dir, "atomic", None)
         self.assertNotIn("atomic", self.load()[1]["jobs"]["discovery"])
-        self.assertTrue(op.check_run(self.run_dir, op.DEFAULT_CONFIG)["valid"])
+        self.assertTrue(op.check_run(self.run_dir, self.config_path)["valid"])
 
         op.start_job(self.run_dir, "atomic", None)
         with mock.patch.object(op, "append_event", side_effect=OSError("fail event failed")):
             with self.assertRaisesRegex(OSError, "fail event failed"):
                 op.fail_job(self.run_dir, "atomic", "mechanical failure")
         self.assertEqual(self.load()[1]["jobs"]["discovery"]["atomic"]["status"], "running")
-        self.assertTrue(op.check_run(self.run_dir, op.DEFAULT_CONFIG)["valid"])
+        self.assertTrue(op.check_run(self.run_dir, self.config_path)["valid"])
         op.fail_job(self.run_dir, "atomic", "mechanical failure")
 
         op.start_job(self.run_dir, "resume-atomic", None)
@@ -519,7 +864,7 @@ class RunAndStateTests(OpportunityTestCase):
             self.load()[1]["jobs"]["discovery"]["resume-atomic"]["status"],
             "running",
         )
-        self.assertTrue(op.check_run(self.run_dir, op.DEFAULT_CONFIG)["valid"])
+        self.assertTrue(op.check_run(self.run_dir, self.config_path)["valid"])
         resumed = op.resume_run(self.run_dir)
         self.assertEqual(
             resumed["interrupted"],
@@ -533,7 +878,7 @@ class RunAndStateTests(OpportunityTestCase):
                 op.start_job(self.run_dir, "recover-start", None)
         self.assertNotIn("recover-start", self.load()[1]["jobs"]["discovery"])
         with self.assertRaisesRegex(op.InputError, "job lifecycle disagrees"):
-            op.check_run(self.run_dir, op.DEFAULT_CONFIG)
+            op.check_run(self.run_dir, self.config_path)
         recovered_start = op.start_job(self.run_dir, "recover-start", None)
         self.assertTrue(recovered_start["idempotent"])
         self.assertEqual(recovered_start["attempts"], 1)
@@ -543,7 +888,7 @@ class RunAndStateTests(OpportunityTestCase):
                 op.fail_job(self.run_dir, "recover-start", "bounded failure")
         self.assertEqual(self.load()[1]["jobs"]["discovery"]["recover-start"]["status"], "running")
         with self.assertRaisesRegex(op.InputError, "job lifecycle disagrees"):
-            op.check_run(self.run_dir, op.DEFAULT_CONFIG)
+            op.check_run(self.run_dir, self.config_path)
         recovered_fail = op.fail_job(self.run_dir, "recover-start", "bounded failure")
         self.assertTrue(recovered_fail["idempotent"])
         self.assertEqual(recovered_fail["status"], "failed")
@@ -568,7 +913,7 @@ class RunAndStateTests(OpportunityTestCase):
             len([item for item in events if item["event"] == "job_failed" and item["job_id"] == "recover-start"]),
             1,
         )
-        self.assertTrue(op.check_run(self.run_dir, op.DEFAULT_CONFIG)["valid"])
+        self.assertTrue(op.check_run(self.run_dir, self.config_path)["valid"])
 
     def test_job_commands_reconcile_when_append_raises_after_durable_write(self) -> None:
         op.advance_run(self.run_dir)
@@ -601,7 +946,7 @@ class RunAndStateTests(OpportunityTestCase):
             recovered["interrupted"],
             [{"stage": "discovery", "job_id": "durable-resume"}],
         )
-        self.assertTrue(op.check_run(self.run_dir, op.DEFAULT_CONFIG)["valid"])
+        self.assertTrue(op.check_run(self.run_dir, self.config_path)["valid"])
 
     def test_check_detects_missing_and_tampered_job_events(self) -> None:
         op.advance_run(self.run_dir)
@@ -614,7 +959,7 @@ class RunAndStateTests(OpportunityTestCase):
         records = events_path.read_text(encoding="utf-8").splitlines()
         events_path.write_text("\n".join(records[:-1]) + "\n", encoding="utf-8")
         with self.assertRaisesRegex(op.InputError, "job lifecycle disagrees"):
-            op.check_run(self.run_dir, op.DEFAULT_CONFIG)
+            op.check_run(self.run_dir, self.config_path)
         events_path.write_bytes(original)
 
         records = [json.loads(line) for line in events_path.read_text(encoding="utf-8").splitlines()]
@@ -625,7 +970,7 @@ class RunAndStateTests(OpportunityTestCase):
             encoding="utf-8",
         )
         with self.assertRaisesRegex(op.InputError, "attempt is not consecutive"):
-            op.check_run(self.run_dir, op.DEFAULT_CONFIG)
+            op.check_run(self.run_dir, self.config_path)
 
     def test_candidate_job_completion_is_canonical_and_idempotent(self) -> None:
         op.advance_run(self.run_dir)
@@ -718,7 +1063,7 @@ class RunAndStateTests(OpportunityTestCase):
             with self.assertRaisesRegex(OSError, "simulated event failure"):
                 op.advance_run(self.run_dir)
         self.assertEqual(self.load()[1]["stage"], "initialized")
-        self.assertTrue(op.check_run(self.run_dir, op.DEFAULT_CONFIG)["valid"])
+        self.assertTrue(op.check_run(self.run_dir, self.config_path)["valid"])
         replay = op.advance_run(self.run_dir)
         self.assertEqual(replay["stage"], "discovery")
         events = op.load_events(self.run_dir / "events.jsonl", self.run_id)
@@ -730,11 +1075,11 @@ class RunAndStateTests(OpportunityTestCase):
                 op.advance_run(self.run_dir)
         self.assertEqual(self.load()[1]["stage"], "initialized")
         with self.assertRaisesRegex(op.InputError, "lifecycle disagrees"):
-            op.check_run(self.run_dir, op.DEFAULT_CONFIG)
+            op.check_run(self.run_dir, self.config_path)
         recovered = op.advance_run(self.run_dir)
         self.assertTrue(recovered["idempotent"])
         self.assertEqual(recovered["stage"], "discovery")
-        self.assertTrue(op.check_run(self.run_dir, op.DEFAULT_CONFIG)["valid"])
+        self.assertTrue(op.check_run(self.run_dir, self.config_path)["valid"])
 
     def test_finalize_event_failure_leaves_visible_recoverable_artifacts(self) -> None:
         self.prepare_fatal_research_closure()
@@ -744,11 +1089,11 @@ class RunAndStateTests(OpportunityTestCase):
         self.assertEqual(self.load()[1]["stage"], "research")
         self.assertTrue((self.run_dir / "final/report.json").is_file())
         with self.assertRaisesRegex(op.InputError, "unreconciled finalization artifacts"):
-            op.check_run(self.run_dir, op.DEFAULT_CONFIG)
+            op.check_run(self.run_dir, self.config_path)
         report, code = op.finalize_run(self.run_dir, "No viable researched candidate remained")
         self.assertTrue(report["idempotent"] is False)
         self.assertEqual(code, 4)
-        self.assertTrue(op.check_run(self.run_dir, op.DEFAULT_CONFIG)["valid"])
+        self.assertTrue(op.check_run(self.run_dir, self.config_path)["valid"])
 
     def test_finalize_state_failure_after_event_is_reconciled(self) -> None:
         self.prepare_fatal_research_closure()
@@ -758,14 +1103,14 @@ class RunAndStateTests(OpportunityTestCase):
                 op.finalize_run(self.run_dir, "No viable researched candidate remained")
         self.assertEqual(self.load()[1]["stage"], "research")
         with self.assertRaisesRegex(op.InputError, "lifecycle disagrees"):
-            op.check_run(self.run_dir, op.DEFAULT_CONFIG)
+            op.check_run(self.run_dir, self.config_path)
         with mock.patch.object(op, "save_state", wraps=original_save_state):
             report, code = op.finalize_run(
                 self.run_dir, "No viable researched candidate remained"
             )
         self.assertTrue(report["idempotent"])
         self.assertEqual(code, 4)
-        self.assertTrue(op.check_run(self.run_dir, op.DEFAULT_CONFIG)["valid"])
+        self.assertTrue(op.check_run(self.run_dir, self.config_path)["valid"])
 
     def test_candidate_completion_rejects_symlinked_artifact_parent(self) -> None:
         op.advance_run(self.run_dir)
@@ -781,35 +1126,40 @@ class RunAndStateTests(OpportunityTestCase):
         self.assertFalse((outside / "v1.json").exists())
 
     def test_exhausted_failure_does_not_block_independent_completed_work(self) -> None:
-        discovery = self.candidate(stage="discovery")
+        discovery = self.candidate()
         self.store_candidate(discovery)
         self.store_portfolio_selection([discovery])
         self.set_stage("research")
-        researched = self.candidate(version=2, stage="research", parent={"candidate_id": "alpha", "version": 1})
-        self.store_candidate(researched)
-        self.store_research(self.research(researched))
+        self.store_research(self.research(discovery))
         self.store_evaluation(
-            self.evaluation_input(researched, "research-judge-alpha", score=8, evaluation_type="working")
+            self.evaluation_input(
+                discovery,
+                "research-judge-alpha",
+                score=8,
+                evaluation_type="working_research",
+            )
         )
         self.complete_json_job(
             "portfolio-decision",
             "portfolio-decision",
-            self.portfolio_decision([researched], {"alpha"}),
+            self.portfolio_decision([discovery], {"alpha"}),
         )
         op.advance_run(self.run_dir)
-        developed = self.candidate(
-            version=3,
-            stage="development",
-            parent={"candidate_id": "alpha", "version": 2},
-        )
-        self.complete_json_job("develop-alpha", "candidate", developed)
-        self.store_evaluation(
-            self.evaluation_input(developed, "development-judge-alpha", score=8, evaluation_type="working")
-        )
         self.complete_json_job(
             "constructor-alpha",
             "development-result",
-            self.development_result(developed, constructor_id="constructor-agent-alpha"),
+            self.development_result(
+                discovery,
+                constructor_id="constructor-agent-alpha",
+            ),
+        )
+        self.store_evaluation(
+            self.evaluation_input(
+                discovery,
+                "development-judge-alpha",
+                score=8,
+                evaluation_type="working_development",
+            )
         )
         good = self.root / "good.md"
         good.write_text("independent completed evidence", encoding="utf-8")
@@ -829,7 +1179,7 @@ class RunAndStateTests(OpportunityTestCase):
         self.assertEqual(report["run_status"], "no_finalist")
         self.assertEqual(report["strongest_candidates"][0]["candidate_id"], "alpha")
         self.assertEqual(report["selected_candidate_id"], "alpha")
-        self.assertEqual(report["selected_candidate_version"], 2)
+        self.assertEqual(report["selected_candidate_version"], 1)
         self.assertEqual(
             report["binding_limiters"][0],
             "Bounded discovery produced no viable shortlist",
@@ -851,6 +1201,7 @@ class RunAndStateTests(OpportunityTestCase):
                 "non_meta_rows": 0,
                 "opportunity_outcome_corrections": 0,
                 "opportunity_outcomes": 0,
+                "opportunity_outcome_quarantines": 0,
                 "total_rows_including_meta": 1,
             },
         }
@@ -863,8 +1214,10 @@ class RunAndStateTests(OpportunityTestCase):
         self.assertFalse(first["idempotent"])
         self.assertTrue(second["idempotent"])
         self.assertTrue((self.root / "outcomes" / self.run_id / "report.md").is_file())
-        self.assertTrue((self.root / "outcomes" / self.run_id / "candidates/alpha/v2.json").is_file())
-        self.assertTrue((self.root / "outcomes" / self.run_id / "research/alpha/v2.json").is_file())
+        outcome_dir = self.root / "outcomes" / self.run_id
+        self.assertTrue((outcome_dir / "candidates/alpha/v1.json").is_file())
+        self.assertTrue((outcome_dir / "research/alpha/v1.json").is_file())
+        self.assertTrue((outcome_dir / "learning-digest.jsonl").is_file())
         history = (knowledge / "history_index.jsonl").read_text().splitlines()
         self.assertEqual(len(history), 2)
         meta = json.loads(history[0])
@@ -874,6 +1227,7 @@ class RunAndStateTests(OpportunityTestCase):
                 "non_meta_rows": 1,
                 "opportunity_outcome_corrections": 0,
                 "opportunity_outcomes": 1,
+                "opportunity_outcome_quarantines": 0,
                 "total_rows_including_meta": 2,
             },
         )
@@ -887,15 +1241,116 @@ class RunAndStateTests(OpportunityTestCase):
                 separators=(",", ":"),
             ),
         )
-        self.assertEqual(entry["record_type"], "opportunity_outcome_v1")
+        self.assertEqual(entry["record_type"], "opportunity_outcome_v2")
         self.assertEqual(entry["score_scale"], "/10")
         self.assertIsNone(entry["qualification_label"])
         self.assertEqual(entry["selected_candidate_id"], "alpha")
         self.assertEqual(entry["selected_title"], candidate["title"])
         self.assertEqual(entry["selected_fingerprint"], candidate["fingerprint"])
-        self.assertEqual(entry["source_candidate_path"], "candidates/alpha/v2.json")
+        self.assertEqual(entry["source_candidate_path"], "candidates/alpha/v1.json")
         self.assertEqual(entry["terminal_objection"], "Bounded discovery produced no viable shortlist")
         self.assertIn("Reopen only with new evidence", entry["reopen_condition"])
+        learning_rows = [
+            json.loads(line)
+            for line in (outcome_dir / "learning-digest.jsonl").read_text(encoding="utf-8").splitlines()
+        ]
+        self.assertEqual(len(learning_rows), 1)
+        self.assertEqual(learning_rows[0]["candidate_id"], "alpha")
+        self.assertEqual(entry["learning_row_count"], 1)
+        self.assertEqual(entry["learning_digest_path"], f"outcomes/{self.run_id}/learning-digest.jsonl")
+        self.assertEqual(entry["learning_digest_sha256"], op.sha256_file(outcome_dir / "learning-digest.jsonl"))
+
+    def test_published_outcome_quarantine_is_immutable_auditable_and_idempotent(self) -> None:
+        self.prepare_fatal_research_closure()
+        report, code = op.finalize_run(
+            self.run_dir, "Bounded discovery produced no viable shortlist"
+        )
+        self.assertEqual(code, 4)
+        self.assertEqual(report["run_status"], "no_finalist")
+        knowledge = self.root / "knowledge"
+        knowledge.mkdir()
+        baseline_meta = {
+            "record_type": "index_meta",
+            "verification": {
+                "non_meta_rows": 0,
+                "opportunity_outcome_corrections": 0,
+                "opportunity_outcome_quarantines": 0,
+                "opportunity_outcomes": 0,
+                "total_rows_including_meta": 1,
+            },
+        }
+        history_path = knowledge / "history_index.jsonl"
+        history_path.write_text(
+            json.dumps(baseline_meta, sort_keys=True, separators=(",", ":")) + "\n",
+            encoding="utf-8",
+        )
+        outcomes = self.root / "outcomes"
+        op.publish_run(self.run_dir, outcomes, knowledge)
+        outcome_dir = outcomes / self.run_id
+        original_report = (outcome_dir / "report.json").read_bytes()
+        original_history_row = history_path.read_text(encoding="utf-8").splitlines()[1]
+        reason = (
+            "A required evaluator context boundary was violated; retain this run only "
+            "as workflow acceptance evidence."
+        )
+
+        cli_args = [
+            "--runs-dir",
+            str(self.runs_dir),
+            "quarantine-outcome",
+            self.run_id,
+            "--reason-code",
+            "procedural_context_violation",
+            "--reason",
+            reason,
+        ]
+        first_code, first, first_error = self.run_cli(cli_args)
+        self.assertEqual((first_code, first_error), (0, {}))
+        self.assertFalse(first["idempotent"])
+        second_code, second, second_error = self.run_cli(cli_args)
+        self.assertEqual((second_code, second_error), (0, {}))
+        self.assertTrue(second["idempotent"])
+        self.assertEqual(first["quarantine_sha256"], second["quarantine_sha256"])
+
+        sidecar_path = outcome_dir / "quarantine.json"
+        sidecar_bytes = sidecar_path.read_bytes()
+        sidecar = json.loads(sidecar_bytes)
+        self.assertEqual(sidecar_bytes, op.canonical_json_bytes(sidecar))
+        self.assertFalse(sidecar["business_decision_eligible"])
+        self.assertEqual(sidecar["permitted_use"], "workflow_test_evidence_only")
+        self.assertEqual(sidecar["report_sha256"], op.sha256_file(outcome_dir / "report.json"))
+        history_rows = [
+            json.loads(line)
+            for line in history_path.read_text(encoding="utf-8").splitlines()
+        ]
+        quarantines = [
+            row
+            for row in history_rows
+            if row.get("record_type") == "opportunity_outcome_quarantine_v1"
+        ]
+        self.assertEqual(len(quarantines), 1)
+        self.assertEqual(quarantines[0]["quarantine_sha256"], op.sha256_file(sidecar_path))
+        self.assertEqual(history_rows[0]["verification"]["opportunity_outcome_quarantines"], 1)
+        self.assertEqual(history_rows[1], json.loads(original_history_row))
+        self.assertEqual((outcome_dir / "report.json").read_bytes(), original_report)
+        validated = op.validate_published_outcomes(outcomes, history_path)
+        self.assertEqual(validated["quarantined_run_count"], 1)
+
+        with self.assertRaisesRegex(op.ConflictError, "different reason"):
+            op.quarantine_published_outcome(
+                self.run_id,
+                outcomes,
+                knowledge,
+                "acceptance_test_only",
+                "Different reason.",
+            )
+        tampered = {**sidecar, "reason": "Tampered reason."}
+        sidecar_path.write_bytes(op.canonical_json_bytes(tampered))
+        try:
+            with self.assertRaisesRegex(op.InputError, "differs from its history"):
+                op.validate_published_outcomes(outcomes, history_path)
+        finally:
+            sidecar_path.write_bytes(sidecar_bytes)
 
     def test_no_finalist_best_candidate_is_deterministic_for_multiple_candidates(self) -> None:
         discoveries = [self.candidate("alpha"), self.candidate("beta")]
@@ -905,20 +1360,14 @@ class RunAndStateTests(OpportunityTestCase):
         self.set_stage("research")
         researched = []
         for discovery, score in zip(discoveries, (7.0, 8.0), strict=True):
-            candidate = self.candidate(
-                discovery["candidate_id"],
-                version=2,
-                stage="research",
-                parent={"candidate_id": discovery["candidate_id"], "version": 1},
-            )
-            self.store_candidate(candidate)
+            candidate = discovery
             self.store_research(self.research(candidate))
             self.store_evaluation(
                 self.evaluation_input(
                     candidate,
                     f"research-judge-{candidate['candidate_id']}",
                     score=score,
-                    evaluation_type="working",
+                    evaluation_type="working_research",
                 )
             )
             researched.append(candidate)
@@ -953,391 +1402,583 @@ class ValidationAndScoringTests(OpportunityTestCase):
         with self.assertRaisesRegex(op.InputError, "sum to 100"):
             op.parse_rubric(wrong_total)
 
-    def test_candidate_exact_shape_and_researched_source_minimum(self) -> None:
-        manifest, _ = self.load()
-        self.store_candidate(self.candidate(stage="discovery"))
-        invalid = self.candidate(
-            version=2,
-            stage="research",
-            parent={"candidate_id": "alpha", "version": 1},
+    def _canonical_response(
+        self,
+        candidate: dict,
+        judge_id: str,
+        *,
+        score: float = 9.0,
+        evaluation_type: str = "working_research",
+        excluded: set[str] | None = None,
+        adjustment: float = 0,
+    ) -> dict:
+        response = self.evaluation_input(
+            candidate,
+            judge_id,
+            score=score,
+            evaluation_type=evaluation_type,
+            excluded=excluded,
+            adjustment=adjustment,
         )
-        invalid["source_refs"] = ["only-one"]
-        with self.assertRaisesRegex(op.InputError, "at least 6 sources"):
-            op.validate_candidate(invalid, manifest, self.run_dir)
-        extra = self.candidate()
-        extra["unexpected"] = True
-        with self.assertRaisesRegex(op.InputError, "keys differ"):
-            op.validate_candidate(extra, manifest, self.run_dir)
-        dangling = self.candidate()
-        dangling["claims"][0]["evidence_refs"] = ["not-in-source-refs"]
-        with self.assertRaisesRegex(op.InputError, "unknown source_refs"):
-            op.validate_candidate(dangling, manifest, self.run_dir)
+        response.pop("_test_evaluation_type")
+        return op.canonicalize_evaluator_response(
+            response,
+            self.load()[0],
+            self.run_dir,
+            evaluation_type,
+        )
 
-    def test_identity_whitespace_and_frozen_capital_are_unambiguous(self) -> None:
+    def test_candidate_and_research_shapes_are_strict(self) -> None:
         manifest, _ = self.load()
-        whitespace = self.candidate()
-        whitespace["candidate_id"] = " alpha "
-        with self.assertRaisesRegex(op.InputError, "surrounding whitespace"):
-            op.validate_candidate(whitespace, manifest, self.run_dir)
-        early_string = self.candidate(capital="50,000 PLN")
-        self.assertEqual(
-            op.validate_candidate(early_string, manifest, self.run_dir)["economics"]["capital_required_pln"],
-            "50,000 PLN",
-        )
-        frozen_string = copy.deepcopy(self.store_complete_lineage())
-        frozen_string["economics"]["capital_required_pln"] = "50,000 PLN"
-        with self.assertRaisesRegex(op.InputError, "must be a JSON number"):
-            op.validate_candidate(frozen_string, manifest, self.run_dir)
-        frozen_negative = copy.deepcopy(frozen_string)
-        frozen_negative["economics"]["capital_required_pln"] = -1
-        with self.assertRaisesRegex(op.InputError, "must be nonnegative"):
-            op.validate_candidate(frozen_negative, manifest, self.run_dir)
-
-    def test_research_contract_hash_references_and_canonical_job_path(self) -> None:
-        self.set_stage("research")
-        self.store_candidate(self.candidate(stage="discovery"))
-        candidate = self.candidate(
-            version=2,
-            stage="research",
-            parent={"candidate_id": "alpha", "version": 1},
-        )
+        candidate = self.candidate()
         self.store_candidate(candidate)
+
+        extra = copy.deepcopy(candidate)
+        extra["unexpected"] = True
+        with self.assertRaisesRegex(op.InputError, "candidate keys differ"):
+            op.validate_candidate(extra, manifest, self.run_dir)
+
+        nonnumeric_capital = copy.deepcopy(candidate)
+        nonnumeric_capital["economics"]["capital_required_pln"] = "50,000 PLN"
+        with self.assertRaisesRegex(op.InputError, "must be a JSON number"):
+            op.validate_candidate(nonnumeric_capital, manifest, self.run_dir)
+
         research = self.research(candidate)
-        input_path = self.root / "research.json"
-        input_path.write_text(json.dumps(research), encoding="utf-8")
-        op.start_job(self.run_dir, "research-alpha", None)
-        completed = op.complete_job(self.run_dir, "research-alpha", input_path, "research")
-        self.assertEqual(completed["artifact"], "research/alpha/v2.json")
-        invalid = copy.deepcopy(research)
-        invalid["claims"][0]["evidence_refs"] = ["missing-source"]
-        with self.assertRaisesRegex(op.InputError, "unknown sources"):
-            op.validate_research(invalid, self.load()[0], self.run_dir)
+        research["sources"] = research["sources"][:1]
+        with self.assertRaisesRegex(op.InputError, "sources count must be between"):
+            op.validate_research(research, manifest, self.run_dir)
 
-    def test_decimal_half_up_strict_threshold_exclusion_and_clamp(self) -> None:
-        candidate = self.store_complete_lineage()
+    def test_scalar_founder_fit_is_a_visible_retryable_candidate_failure(self) -> None:
+        op.advance_run(self.run_dir)
+        candidate = self.candidate()
+        candidate["founder_fit"] = "AI-assisted research"
+        path = self.root / "scalar-founder-fit.json"
+        path.write_text(json.dumps(candidate), encoding="utf-8")
+        op.start_job(self.run_dir, "scout-alpha", "discovery")
+        with self.assertRaisesRegex(op.InputError, "candidate.founder_fit must be a list"):
+            op.complete_job(self.run_dir, "scout-alpha", path, "candidate")
+        failed = self.load()[1]["jobs"]["discovery"]["scout-alpha"]
+        self.assertEqual(failed["status"], "failed")
+        self.assertTrue(op.job_is_retryable(failed))
+        self.assertIn("mechanical candidate output failure", failed["error"])
+
+        candidate["founder_fit"] = ["AI-assisted research"]
+        path.write_text(json.dumps(candidate), encoding="utf-8")
+        self.assertEqual(
+            op.start_job(self.run_dir, "scout-alpha", "discovery")["attempts"],
+            2,
+        )
+        completed = op.complete_job(
+            self.run_dir, "scout-alpha", path, "candidate"
+        )
+        self.assertEqual(completed["status"], "completed")
+
+    def test_core_readiness_and_asymmetric_wildcard_quota_are_enforced(self) -> None:
+        count = self.load()[0]["config"]["shortlist_max"]
+        candidates = [self.candidate(f"candidate-{index + 1}") for index in range(count)]
+        candidates[0]["claims"][2]["evidence_refs"] = []
+        for candidate in candidates:
+            self.store_candidate(candidate)
+
+        calibration_overrides = {
+            candidates[0]["candidate_id"]: {
+                "control_point_acquisition_evidence": None,
+            }
+        }
+
+        with self.assertRaisesRegex(op.InputError, "not ready for a core shortlist slot"):
+            self.store_portfolio_selection(
+                candidates, calibration_overrides=calibration_overrides
+            )
+        op.fail_job(
+            self.run_dir,
+            "portfolio-selection",
+            "under-evidenced candidate was correctly rejected from a core slot",
+        )
+        wildcard_ids = {
+            candidates[0]["candidate_id"],
+            candidates[-1]["candidate_id"],
+        }
+        self.store_portfolio_selection(
+            candidates,
+            wildcard_ids=wildcard_ids,
+            calibration_overrides=calibration_overrides,
+        )
+        report = op._portfolio_report(self.run_dir, self.load()[0])
+        self.assertIsNotNone(report)
+        slots = report["shortlist_slots"]
+        self.assertEqual(
+            sum(slot["slot_type"] == "core" for slot in slots),
+            self.load()[0]["config"]["core_shortlist_slots"],
+        )
+        self.assertEqual(
+            sum(slot["slot_type"] == "wildcard" for slot in slots),
+            self.load()[0]["config"]["wildcard_shortlist_slots"],
+        )
+        stored = op.load_json(self.run_dir / "portfolio/selection.json")
+        under_evidenced = next(
+            row
+            for row in stored["calibration"]
+            if row["candidate_ref"]["candidate_id"] == candidates[0]["candidate_id"]
+        )
+        self.assertIsNone(under_evidenced["control_point_acquisition_evidence"])
+
+    def test_core_control_point_evidence_is_bound_to_candidate_claims_and_sources(self) -> None:
+        candidate = self.candidate("contractible-core")
+        self.store_candidate(candidate)
+        bad_evidence = self.control_point_acquisition_evidence(candidate)
+        bad_evidence["claim_ids"] = ["claim-budget"]
+        bad_evidence["evidence_refs"] = [candidate["source_refs"][1]]
+        with self.assertRaisesRegex(
+            op.InputError, "must cite a founder_control_point_path claim"
+        ):
+            self.store_portfolio_selection(
+                [candidate],
+                calibration_overrides={
+                    candidate["candidate_id"]: {
+                        "control_point_acquisition_evidence": bad_evidence,
+                    }
+                },
+            )
+
+        op.fail_job(
+            self.run_dir,
+            "portfolio-selection",
+            "calibration evidence cited the wrong claim type",
+        )
+        invalid_source = self.control_point_acquisition_evidence(candidate)
+        invalid_source["evidence_refs"] = [candidate["source_refs"][0]]
+        with self.assertRaisesRegex(op.InputError, "must be cited by its claim_ids"):
+            self.store_portfolio_selection(
+                [candidate],
+                calibration_overrides={
+                    candidate["candidate_id"]: {
+                        "control_point_acquisition_evidence": invalid_source,
+                    }
+                },
+            )
+
+    def test_candidate_scoped_status_does_not_leak_portfolio_or_scores(self) -> None:
+        alpha = self.candidate("alpha")
+        beta = self.candidate("beta")
+        self.store_candidate(alpha)
+        self.store_candidate(beta)
+        self.store_portfolio_selection([alpha, beta])
+        context = op.candidate_research_context(self.run_dir, "alpha")
+        serialized = json.dumps(context, sort_keys=True)
+        self.assertEqual(context["scope"], "candidate_research")
+        self.assertEqual(context["candidate_ref"]["candidate_id"], "alpha")
+        self.assertNotIn("beta", serialized)
+        self.assertNotIn("portfolio_decision", context)
+        self.assertNotIn("highest_working_score", context)
+        self.assertNotIn("working_evaluation_coverage", context)
+
+    def test_research_cannot_alter_selected_candidate_commercial_core(self) -> None:
+        candidate = self.candidate()
+        candidate_path, _ = self.store_candidate(candidate)
+        original_bytes = candidate_path.read_bytes()
+        self.store_portfolio_selection([candidate])
+        self.set_stage("research")
+
+        disguised_rewrite = self.research(candidate)
+        disguised_rewrite["title"] = "Silently rewritten opportunity"
+        with self.assertRaisesRegex(op.InputError, "research keys differ"):
+            op.validate_research(disguised_rewrite, self.load()[0], self.run_dir)
+
+        research_path = self.root / "research-alpha.json"
+        research_path.write_text(json.dumps(self.research(candidate)), encoding="utf-8")
+        op.start_job(self.run_dir, "research-alpha", "research")
+        completed = op.complete_job(
+            self.run_dir, "research-alpha", research_path, "research"
+        )
+        self.assertEqual(completed["artifact"], "research/alpha/v1.json")
+        self.assertEqual(candidate_path.read_bytes(), original_bytes)
+        self.assertFalse((self.run_dir / "candidates/alpha/v2.json").exists())
+
+    def test_single_response_has_one_canonical_score(self) -> None:
+        candidate = self.candidate()
+        self.store_candidate(candidate)
+        response = self.evaluation_input(
+            candidate,
+            "deterministic-judge",
+            score=8.55,
+            evaluation_type="working_research",
+        )
+        response.pop("_test_evaluation_type")
         manifest, _ = self.load()
-
-        rounded = op.compute_evaluation(
-            self.evaluation_input(candidate, "rounding", score=8.55), manifest, self.run_dir
+        first = op.canonicalize_evaluator_response(
+            copy.deepcopy(response), manifest, self.run_dir, "working_research"
         )
-        self.assertEqual(rounded["final_score"], 8.6)
-        self.assertTrue(rounded["qualified"])
-
-        boundary = op.compute_evaluation(
-            self.evaluation_input(candidate, "boundary", score=8.5), manifest, self.run_dir
+        second = op.canonicalize_evaluator_response(
+            copy.deepcopy(response), manifest, self.run_dir, "working_research"
         )
+        self.assertEqual(first, second)
+        self.assertEqual(first["final_score"], 8.6)
+        forged = copy.deepcopy(first)
+        forged["final_score"] = 9.9
+        with self.assertRaisesRegex(op.InputError, "single response or deterministic score"):
+            op.validate_canonical_evaluation(forged, manifest, self.run_dir)
+
+    def test_deterministic_scoring_handles_threshold_exclusion_and_clamp(self) -> None:
+        candidate = self.candidate()
+        self.store_candidate(candidate)
+        boundary = self._canonical_response(candidate, "boundary", score=8.5)
         self.assertEqual(boundary["final_score"], 8.5)
         self.assertFalse(boundary["qualified"])
 
-        excluded = op.compute_evaluation(
-            self.evaluation_input(candidate, "excluded", score=9, excluded={"Core insight"}),
-            manifest,
-            self.run_dir,
+        excluded = self._canonical_response(
+            candidate,
+            "excluded",
+            score=9,
+            excluded={"Core insight"},
         )
-        self.assertEqual(excluded["base_score"], 9)
         core = next(item for item in excluded["factors"] if item["name"] == "Core insight")
-        economics = next(item for item in excluded["factors"] if item["name"] == "Business model and economics")
+        economics = next(
+            item
+            for item in excluded["factors"]
+            if item["name"] == "Business model and economics"
+        )
         self.assertEqual(core["effective_weight"], 0)
         self.assertEqual(economics["effective_weight"], 22.44898)
 
-        clamped_input = self.evaluation_input(candidate, "clamped", score=10, adjustment=0.5)
-        clamped = op.compute_evaluation(clamped_input, manifest, self.run_dir)
+        clamped = self._canonical_response(
+            candidate, "clamped", score=10, adjustment=0.5
+        )
         self.assertEqual(clamped["unrounded_score"], 10.5)
         self.assertEqual(clamped["constrained_score"], 10)
         self.assertEqual(clamped["final_score"], 10)
 
-    def test_model_supplied_wrong_arithmetic_is_rejected(self) -> None:
-        candidate = self.store_complete_lineage()
+    def test_strict_evaluator_response_rejects_malformed_or_extra_fields(self) -> None:
+        candidate = self.candidate()
+        self.store_candidate(candidate)
         manifest, _ = self.load()
-        evaluation = self.evaluation_input(candidate, "bad-math", score=9)
-        evaluation["base_score"] = 9.1
-        with self.assertRaisesRegex(op.InputError, "does not match deterministic scoring"):
-            op.compute_evaluation(evaluation, manifest, self.run_dir)
+        response = self.evaluation_input(candidate, "invalid-response")
+        response.pop("_test_evaluation_type")
+        self.set_stage("research")
+        response_path = self.root / "strict-response.json"
+        response_path.write_text(json.dumps(response), encoding="utf-8")
+        validated = op.validate_artifact(
+            self.run_dir, response_path, "evaluation"
+        )
+        self.assertEqual(validated["final_score"], 9)
+        self.assertTrue(validated["qualified"])
 
-    def test_evaluation_rejects_missing_invalid_ambiguous_and_unbound_inputs(self) -> None:
-        candidate = self.store_complete_lineage()
-        manifest, _ = self.load()
-
-        missing_factor = self.evaluation_input(candidate, "missing-factor")
-        missing_factor["factors"].pop()
+        missing = copy.deepcopy(response)
+        missing["factors"].pop()
         with self.assertRaisesRegex(op.InputError, "factors differ from rubric"):
-            op.compute_evaluation(missing_factor, manifest, self.run_dir)
+            op.canonicalize_evaluator_response(
+                missing, manifest, self.run_dir, "working_research"
+            )
 
-        invalid_exclusion = self.evaluation_input(candidate, "invalid-exclusion")
-        invalid_exclusion["factors"][0].update({"status": "excluded", "score": 7})
-        with self.assertRaisesRegex(op.InputError, "must have null score"):
-            op.compute_evaluation(invalid_exclusion, manifest, self.run_dir)
+        extra = copy.deepcopy(response)
+        extra["final_score"] = 10
+        with self.assertRaisesRegex(op.InputError, "evaluator response keys differ"):
+            op.canonicalize_evaluator_response(
+                extra, manifest, self.run_dir, "working_research"
+            )
 
-        out_of_range = self.evaluation_input(candidate, "scale-85")
-        out_of_range["factors"][0]["score"] = 85
-        with self.assertRaisesRegex(op.InputError, r"must be in \[1, 10\]"):
-            op.compute_evaluation(out_of_range, manifest, self.run_dir)
-
-        ambiguous = self.evaluation_input(candidate, "ambiguous")
-        ambiguous["factors"][0]["score"] = "9"
-        with self.assertRaisesRegex(op.InputError, "must be a JSON number"):
-            op.compute_evaluation(ambiguous, manifest, self.run_dir)
-
-        wrong_hash = self.evaluation_input(candidate, "wrong-hash")
-        wrong_hash["candidate_sha256"] = "0" * 64
-        with self.assertRaisesRegex(op.InputError, "does not match the immutable candidate"):
-            op.compute_evaluation(wrong_hash, manifest, self.run_dir)
-
-        wrong_version = self.evaluation_input(candidate, "wrong-version")
+        wrong_version = copy.deepcopy(response)
         wrong_version["candidate_version"] = 99
         with self.assertRaisesRegex(op.InputError, "candidate artifact does not exist"):
-            op.compute_evaluation(wrong_version, manifest, self.run_dir)
-
-        missing_raw = self.evaluation_input(candidate, "missing-raw")
-        del missing_raw["raw_response_path"]
-        with self.assertRaisesRegex(op.InputError, "missing=.*raw_response_path"):
-            op.compute_evaluation(missing_raw, manifest, self.run_dir)
-
-        malformed = self.root / "malformed.json"
-        malformed.write_text('{"score": 9,,}', encoding="utf-8")
-        with self.assertRaisesRegex(op.InputError, "invalid JSON"):
-            op.load_json(malformed)
-
-    def test_stage_and_lineage_bindings_reject_contamination(self) -> None:
-        manifest, _ = self.load()
-        discovery = self.candidate(stage="discovery")
-        self.store_candidate(discovery)
-        bad_parent = self.candidate(
-            "beta",
-            version=2,
-            stage="research",
-            parent={"candidate_id": "alpha", "version": 1},
-        )
-        with self.assertRaisesRegex(op.InputError, "same candidate_id"):
-            op.validate_candidate(bad_parent, manifest, self.run_dir)
-        skipped = self.candidate(
-            version=3,
-            stage="research",
-            parent={"candidate_id": "alpha", "version": 1},
-        )
-        with self.assertRaisesRegex(op.InputError, "version N-1"):
-            op.validate_candidate(skipped, manifest, self.run_dir)
-
-        wrong_research = self.research(discovery)
-        with self.assertRaisesRegex(op.InputError, "research-stage candidate"):
-            op.validate_research(wrong_research, manifest, self.run_dir)
-
-        researched = self.candidate(
-            version=2,
-            stage="research",
-            parent={"candidate_id": "alpha", "version": 1},
-        )
-        self.store_candidate(researched)
-        research_working = self.evaluation_input(
-            researched,
-            "working-research",
-            evaluation_type="working",
-        )
-        computed = op.compute_evaluation(research_working, manifest, self.run_dir)
-        self.assertEqual(computed["evaluation_type"], "working")
-        self.assertEqual(computed["candidate_version"], 2)
-
-        wrong_working = self.evaluation_input(discovery, "working-wrong", evaluation_type="working")
-        with self.assertRaisesRegex(op.InputError, "development or research-stage candidate"):
-            op.compute_evaluation(wrong_working, manifest, self.run_dir)
-
-        wrong_holdout = self.evaluation_input(researched, "holdout-wrong")
-        with self.assertRaisesRegex(op.InputError, "frozen-stage candidate"):
-            op.compute_evaluation(wrong_holdout, manifest, self.run_dir)
-
-    def test_finalist_requires_monotonic_full_lineage_and_own_working_evaluation(self) -> None:
-        manifest, _ = self.load()
-        alpha_discovery = self.candidate("alpha", stage="discovery", version=1)
-        self.store_candidate(alpha_discovery)
-        skipped = self.candidate(
-            "alpha",
-            stage="development",
-            version=2,
-            parent={"candidate_id": "alpha", "version": 1},
-        )
-        with self.assertRaisesRegex(op.InputError, "without skipping"):
-            op.validate_candidate(skipped, manifest, self.run_dir)
-        alpha_research = self.candidate(
-            "alpha",
-            stage="research",
-            version=2,
-            parent={"candidate_id": "alpha", "version": 1},
-        )
-        self.store_candidate(alpha_research)
-        self.store_research(self.research(alpha_research))
-        backwards = self.candidate(
-            "alpha",
-            stage="discovery",
-            version=3,
-            parent={"candidate_id": "alpha", "version": 2},
-        )
-        with self.assertRaisesRegex(op.InputError, "monotonically"):
-            op.validate_candidate(backwards, manifest, self.run_dir)
-        repeated_research = self.candidate(
-            "alpha",
-            stage="research",
-            version=3,
-            parent={"candidate_id": "alpha", "version": 2},
-        )
-        with self.assertRaisesRegex(op.InputError, "only development"):
-            op.validate_candidate(repeated_research, manifest, self.run_dir)
-        alpha_development = self.candidate(
-            "alpha",
-            stage="development",
-            version=3,
-            parent={"candidate_id": "alpha", "version": 2},
-        )
-        self.store_candidate(alpha_development)
-
-        beta_discovery = self.candidate("beta", stage="discovery", version=1)
-        self.store_candidate(beta_discovery)
-        beta_research = self.candidate(
-            "beta",
-            stage="research",
-            version=2,
-            parent={"candidate_id": "beta", "version": 1},
-        )
-        self.store_candidate(beta_research)
-        beta_development = self.candidate(
-            "beta",
-            stage="development",
-            version=3,
-            parent={"candidate_id": "beta", "version": 2},
-        )
-        self.store_candidate(beta_development)
-        self.store_evaluation(
-            self.evaluation_input(
-                beta_development,
-                "working-beta",
-                evaluation_type="working",
+            op.canonicalize_evaluator_response(
+                wrong_version, manifest, self.run_dir, "working_research"
             )
-        )
 
-        alpha_frozen = self.candidate(
-            "alpha",
-            stage="frozen",
-            version=4,
-            parent={"candidate_id": "alpha", "version": 3},
-        )
-        candidate_input = self.root / "alpha-frozen.json"
-        candidate_input.write_text(json.dumps(alpha_frozen), encoding="utf-8")
-        self.set_stage("frozen")
-        op.start_job(self.run_dir, "freeze-alpha", "frozen")
-        with self.assertRaisesRegex(op.InputError, "requires exactly 1 working evaluation.*v3"):
-            op.complete_job(self.run_dir, "freeze-alpha", candidate_input, "candidate")
-        self.store_evaluation(
-            self.evaluation_input(
-                alpha_development,
-                "working-alpha",
-                evaluation_type="working",
-            )
-        )
-        development_result = self.development_result(
-            alpha_development,
-            constructor_id="constructor-alpha",
-        )
-        canonical_result = op.validate_development_result(
-            development_result,
-            self.load()[0],
-            self.run_dir,
-        )
-        op.write_immutable(
-            self.run_dir / "development/alpha/constructor-result.json",
-            op.canonical_json_bytes(canonical_result),
-        )
-        completed = op.complete_job(self.run_dir, "freeze-alpha", candidate_input, "candidate")
-        self.assertEqual(completed["artifact"], "candidates/alpha/v4.json")
-        exported = op.export_external(self.run_dir, "alpha")
-        self.assertEqual(exported["candidate_version"], 4)
-
-    def test_development_allows_two_versions_not_three(self) -> None:
-        discovery = self.candidate(stage="discovery")
-        self.store_candidate(discovery)
-        self.store_portfolio_selection([discovery])
+    def test_authorized_amendment_and_development_redesign_follow_lineage(self) -> None:
+        alpha = self.candidate("alpha")
+        beta = self.candidate("beta")
+        self.store_candidate(alpha)
+        self.store_candidate(beta)
+        self.store_portfolio_selection([alpha])
         self.set_stage("research")
-        v1 = self.candidate(
-            version=2,
-            stage="research",
-            parent={"candidate_id": "alpha", "version": 1},
+
+        selection_path = self.run_dir / "portfolio/selection.json"
+        amendment = {
+            "schema_version": op.ACTIVE_SCHEMA_VERSION,
+            "amendment_version": 1,
+            "base_selection_sha256": op.sha256_file(selection_path),
+            "remove_candidate_ref": self.candidate_ref(alpha),
+            "add_candidate_ref": self.candidate_ref(beta),
+            "reason": "The calibrated beta candidate is the explicit replacement.",
+        }
+        self.complete_json_job(
+            "portfolio-amendment-v1", "portfolio-amendment", amendment
         )
-        self.store_candidate(v1)
-        self.store_research(self.research(v1))
+        effective = op.effective_portfolio_selection(self.run_dir, self.load()[0])
+        self.assertEqual(
+            [(row["candidate_id"], row["version"]) for row in effective["candidate_refs"]],
+            [("beta", 1)],
+        )
+
+        self.store_research(self.research(beta))
         self.store_evaluation(
-            self.evaluation_input(v1, "research-judge-alpha", score=8, evaluation_type="working")
+            self.evaluation_input(
+                beta,
+                "research-judge-beta",
+                score=8,
+                evaluation_type="working_research",
+            )
         )
         self.complete_json_job(
             "portfolio-decision",
             "portfolio-decision",
-            self.portfolio_decision([v1], {"alpha"}),
+            self.portfolio_decision([beta], {"beta"}),
         )
         op.advance_run(self.run_dir)
-        v2 = self.candidate(version=3, stage="development", parent={"candidate_id": "alpha", "version": 2})
-        p2 = self.root / "v2.json"
-        p2.write_text(json.dumps(v2), encoding="utf-8")
-        op.start_job(self.run_dir, "develop-v2", None)
-        op.complete_job(self.run_dir, "develop-v2", p2, "candidate")
-        v3 = self.candidate(version=4, stage="development", parent={"candidate_id": "alpha", "version": 3})
-        with self.assertRaisesRegex(op.InputError, "requires candidate.redesign"):
-            op.validate_candidate(v3, self.load()[0], self.run_dir)
-        v3["fingerprint"]["customer"] = "A structurally narrower customer with a different purchasing authority"
-        v3["economics"]["pricing"] = "Outcome-linked pricing tied to the redesigned paid event"
-        v3["redesign"] = {
-            "changed_fingerprint_fields": ["customer"],
-            "economic_effect": "The narrower authority shortens approval time and supports outcome-linked pricing.",
-        }
-        p3 = self.root / "v3.json"
-        p3.write_text(json.dumps(v3), encoding="utf-8")
-        op.start_job(self.run_dir, "develop-v3", None)
-        op.complete_job(self.run_dir, "develop-v3", p3, "candidate")
-        v4 = self.candidate(version=5, stage="development", parent={"candidate_id": "alpha", "version": 4})
-        v4["redesign"] = {
-            "changed_fingerprint_fields": ["customer"],
-            "economic_effect": "This forbidden second redesign would restore the original customer and economics.",
-        }
-        p4 = self.root / "v4.json"
-        p4.write_text(json.dumps(v4), encoding="utf-8")
-        op.start_job(self.run_dir, "develop-v4", None)
-        with self.assertRaisesRegex(op.ConflictError, "at most two"):
-            op.complete_job(self.run_dir, "develop-v4", p4, "candidate")
-        self.assertEqual(op._stage_candidate_count(self.run_dir, self.load()[0], "development"), 1)
 
-    def test_development_redesign_requires_fingerprint_change_and_economic_effect(self) -> None:
-        discovery = self.candidate(stage="discovery")
-        self.store_candidate(discovery)
-        researched = self.candidate(
+        redesign = self.candidate(
+            "beta",
             version=2,
-            stage="research",
+            stage="development",
+            parent={"candidate_id": "beta", "version": 1},
+        )
+        self.complete_json_job("develop-beta", "candidate", redesign)
+        result = self.development_result(
+            redesign,
+            constructor_id="constructor-beta",
+            outcome="redesigned",
+            base_candidate=beta,
+        )
+        self.complete_json_job("constructor-beta", "development-result", result)
+        self.store_evaluation(
+            self.evaluation_input(
+                redesign,
+                "development-judge-beta",
+                score=8.2,
+                evaluation_type="working_development",
+            )
+        )
+        advanced = op.advance_run(self.run_dir)
+        self.assertEqual(advanced["stage"], "frozen")
+        finalists = op.load_finalist_selection(self.run_dir, self.load()[0])
+        self.assertEqual(finalists["candidate_refs"], [self.candidate_ref(redesign)])
+        self.assertEqual(redesign["parent"], {"candidate_id": "beta", "version": 1})
+
+        third = copy.deepcopy(redesign)
+        third["version"] = 3
+        third["parent"] = {"candidate_id": "beta", "version": 2}
+        with self.assertRaisesRegex(op.InputError, "only one admitted development redesign"):
+            op.validate_candidate(third, self.load()[0], self.run_dir)
+
+    def test_constructor_binding_is_derived_after_candidate_normalization(self) -> None:
+        base = self.candidate("alpha")
+        self.store_candidate(base)
+        self.store_portfolio_selection([base])
+        self.set_stage("research")
+        self.store_research(self.research(base))
+        self.store_evaluation(
+            self.evaluation_input(
+                base,
+                "research-judge-alpha",
+                score=8,
+                evaluation_type="working_research",
+            )
+        )
+        self.complete_json_job(
+            "portfolio-decision",
+            "portfolio-decision",
+            self.portfolio_decision([base], {"alpha"}),
+        )
+        op.advance_run(self.run_dir)
+
+        redesign = self.candidate(
+            "alpha",
+            version=2,
+            stage="development",
             parent={"candidate_id": "alpha", "version": 1},
         )
-        self.store_candidate(researched)
-        developed = self.candidate(
-            version=3,
-            stage="development",
-            parent={"candidate_id": "alpha", "version": 2},
+        raw_path = self.root / "noncanonical-redesign.json"
+        raw_path.write_text(json.dumps(redesign, separators=(",", ":")), encoding="utf-8")
+        raw_hash = op.sha256_file(raw_path)
+        op.start_job(self.run_dir, "develop-alpha", "development")
+        completed_candidate = op.complete_job(
+            self.run_dir, "develop-alpha", raw_path, "candidate"
         )
-        self.store_candidate(developed)
-        revision = self.candidate(
-            version=4,
-            stage="development",
-            parent={"candidate_id": "alpha", "version": 3},
+        self.assertNotEqual(raw_hash, completed_candidate["artifact_sha256"])
+
+        completed_result = self.complete_json_job(
+            "constructor-alpha",
+            "development-result",
+            self.development_result(
+                redesign,
+                constructor_id="constructor-alpha",
+                outcome="redesigned",
+                base_candidate=base,
+            ),
         )
-        revision["redesign"] = {
-            "changed_fingerprint_fields": ["customer"],
-            "economic_effect": "A claimed effect without an actual structural change.",
-        }
-        with self.assertRaisesRegex(op.InputError, "exactly match normalized fingerprint changes"):
-            op.validate_candidate(revision, self.load()[0], self.run_dir)
+        canonical_result = op.load_json(self.run_dir / completed_result["artifact"])
+        self.assertEqual(
+            canonical_result["final_candidate_sha256"],
+            completed_candidate["artifact_sha256"],
+        )
+        self.assertEqual(
+            canonical_result["base_candidate_sha256"],
+            self.candidate_ref(base)["candidate_sha256"],
+        )
 
-        revision["fingerprint"]["customer"] = "A materially different buyer with its own budget"
-        with self.assertRaisesRegex(op.InputError, "update at least one economics field"):
-            op.validate_candidate(revision, self.load()[0], self.run_dir)
+    def test_malformed_output_retries_successfully_and_exhaustion_is_visible(self) -> None:
+        candidate = self.candidate()
+        self.store_candidate(candidate)
+        self.store_portfolio_selection([candidate])
+        self.set_stage("research")
+        self.store_research(self.research(candidate))
+        malformed = self.root / "malformed-evaluation.json"
+        malformed.write_text('{"candidate_id":"alpha",,}', encoding="utf-8")
 
-        revision["economics"]["pricing"] = "A documented annual contract funded by that buyer"
-        canonical = op.validate_candidate(revision, self.load()[0], self.run_dir)
-        self.assertEqual(canonical["redesign"]["changed_fingerprint_fields"], ["customer"])
+        op.start_job(self.run_dir, "evaluation-retry", "research")
+        with self.assertRaisesRegex(op.InputError, "invalid JSON"):
+            op.complete_job(
+                self.run_dir, "evaluation-retry", malformed, "evaluation"
+            )
+        first_job = self.load()[1]["jobs"]["research"]["evaluation-retry"]
+        self.assertEqual(first_job["status"], "failed")
+        self.assertTrue(op.job_is_retryable(first_job))
+
+        valid = self.evaluation_input(
+            candidate,
+            "retry-judge",
+            score=7.5,
+            evaluation_type="working_research",
+        )
+        valid.pop("_test_evaluation_type")
+        valid_path = self.root / "valid-evaluation.json"
+        valid_path.write_text(json.dumps(valid), encoding="utf-8")
+        self.assertEqual(
+            op.start_job(self.run_dir, "evaluation-retry", "research")["attempts"],
+            2,
+        )
+        completed = op.complete_job(
+            self.run_dir, "evaluation-retry", valid_path, "evaluation"
+        )
+        self.assertEqual(completed["status"], "completed")
+
+        for attempt in range(2):
+            op.start_job(self.run_dir, "evaluation-exhausted", "research")
+            with self.assertRaisesRegex(op.InputError, "invalid JSON"):
+                op.complete_job(
+                    self.run_dir,
+                    "evaluation-exhausted",
+                    malformed,
+                    "evaluation",
+                )
+        exhausted = self.load()[1]["jobs"]["research"]["evaluation-exhausted"]
+        self.assertTrue(op.job_is_exhausted(exhausted))
+        resumed = op.resume_run(self.run_dir)
+        self.assertIn(
+            "evaluation-exhausted",
+            [row["job_id"] for row in resumed["exhausted_jobs"]],
+        )
+
+    def test_valid_adverse_evaluation_is_never_retried(self) -> None:
+        candidate = self.candidate()
+        self.store_candidate(candidate)
+        self.store_portfolio_selection([candidate])
+        self.set_stage("research")
+        self.store_research(self.research(candidate))
+        response = self.evaluation_input(
+            candidate,
+            "adverse-judge",
+            score=2,
+            evaluation_type="working_research",
+        )
+        response.pop("_test_evaluation_type")
+        response_path = self.root / "adverse.json"
+        response_path.write_text(json.dumps(response), encoding="utf-8")
+        op.start_job(self.run_dir, "adverse-evaluation", "research")
+        completed = op.complete_job(
+            self.run_dir, "adverse-evaluation", response_path, "evaluation"
+        )
+        self.assertEqual(completed["status"], "completed")
+        canonical = op.load_json(self.run_dir / completed["artifact"])
+        self.assertFalse(canonical["qualified"])
+        self.assertEqual(canonical["final_score"], 2)
+        with self.assertRaisesRegex(op.ConflictError, "job is terminal"):
+            op.start_job(self.run_dir, "adverse-evaluation", "research")
+
+    def test_evaluator_failure_event_recovers_after_state_write_interruption(self) -> None:
+        candidate = self.candidate()
+        self.store_candidate(candidate)
+        self.store_portfolio_selection([candidate])
+        self.set_stage("research")
+        self.store_research(self.research(candidate))
+        malformed = self.root / "interrupted-malformed.json"
+        malformed.write_text('{"candidate_id":"alpha",,}', encoding="utf-8")
+        op.start_job(self.run_dir, "interrupted-evaluator", "research")
+
+        with mock.patch.object(
+            op, "save_state", side_effect=OSError("simulated evaluator state failure")
+        ):
+            with self.assertRaisesRegex(OSError, "simulated evaluator state failure"):
+                op.complete_job(
+                    self.run_dir,
+                    "interrupted-evaluator",
+                    malformed,
+                    "evaluation",
+                )
+        self.assertEqual(
+            self.load()[1]["jobs"]["research"]["interrupted-evaluator"]["status"],
+            "running",
+        )
+        with self.assertRaisesRegex(op.ConflictError, "is failed"):
+            op.complete_job(
+                self.run_dir,
+                "interrupted-evaluator",
+                malformed,
+                "evaluation",
+            )
+        failed_events = [
+            event
+            for event in op.load_events(self.run_dir / "events.jsonl", self.run_id)
+            if event["event"] == "job_failed"
+            and event["job_id"] == "interrupted-evaluator"
+        ]
+        self.assertEqual(len(failed_events), 1)
+        reconciled = self.load()[1]["jobs"]["research"]["interrupted-evaluator"]
+        self.assertEqual(reconciled["status"], "failed")
+        self.assertTrue(op.job_is_retryable(reconciled))
+
+        response = self.evaluation_input(
+            candidate,
+            "recovered-judge",
+            score=7,
+            evaluation_type="working_research",
+        )
+        response.pop("_test_evaluation_type")
+        valid = self.root / "recovered-evaluation.json"
+        valid.write_text(json.dumps(response), encoding="utf-8")
+        self.assertEqual(
+            op.start_job(
+                self.run_dir, "interrupted-evaluator", "research"
+            )["attempts"],
+            2,
+        )
+        completed = op.complete_job(
+            self.run_dir, "interrupted-evaluator", valid, "evaluation"
+        )
+        self.assertEqual(completed["status"], "completed")
+        self.assertTrue(op.check_run(self.run_dir, self.config_path)["valid"])
 
 
-class WorkflowV2ContractTests(OpportunityTestCase):
+class WorkflowContractTests(OpportunityTestCase):
+    def test_active_skill_requires_scoped_evaluators_to_load_bound_snapshots(self) -> None:
+        skill = (
+            op.REPO_ROOT / ".agents/skills/business-opportunity/SKILL.md"
+        ).read_text(encoding="utf-8")
+        workflow = (
+            op.REPO_ROOT
+            / ".agents/skills/business-opportunity/references/workflow.md"
+        ).read_text(encoding="utf-8")
+        contracts = (
+            op.REPO_ROOT
+            / ".agents/skills/business-opportunity/references/artifact-contracts.md"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn("must read the founder and evaluator snapshot paths", skill)
+        self.assertIn("verify each file against its returned SHA-256", skill)
+        self.assertIn("a prompt must never prohibit them", skill)
+        self.assertIn("both reads are mandatory", workflow)
+        self.assertIn("verify both hashes", contracts)
+
     def researched_pool(
         self,
         count: int,
@@ -1352,20 +1993,14 @@ class WorkflowV2ContractTests(OpportunityTestCase):
         self.set_stage("research")
         researched: list[dict] = []
         for discovery, score in zip(discoveries, values, strict=True):
-            candidate = self.candidate(
-                discovery["candidate_id"],
-                version=2,
-                stage="research",
-                parent={"candidate_id": discovery["candidate_id"], "version": 1},
-            )
-            self.store_candidate(candidate)
+            candidate = discovery
             self.store_research(self.research(candidate))
             self.store_evaluation(
                 self.evaluation_input(
                     candidate,
                     f"research-judge-{candidate['candidate_id']}",
                     score=score,
-                    evaluation_type="working",
+                    evaluation_type="working_research",
                 )
             )
             researched.append(candidate)
@@ -1376,13 +2011,7 @@ class WorkflowV2ContractTests(OpportunityTestCase):
         self.store_candidate(discovery)
         self.store_portfolio_selection([discovery])
         self.set_stage("research")
-        researched = self.candidate(
-            "alpha",
-            version=2,
-            stage="research",
-            parent={"candidate_id": "alpha", "version": 1},
-        )
-        self.store_candidate(researched)
+        researched = discovery
         self.store_research(self.research(researched))
 
         with self.assertRaisesRegex(op.ConflictError, "exactly one working evaluation"):
@@ -1395,7 +2024,7 @@ class WorkflowV2ContractTests(OpportunityTestCase):
                 researched,
                 "research-judge-alpha",
                 score=7.4,
-                evaluation_type="working",
+                evaluation_type="working_research",
             )
         )
         coverage = op.working_evaluation_coverage(self.run_dir, self.load()[0], "research")
@@ -1407,13 +2036,13 @@ class WorkflowV2ContractTests(OpportunityTestCase):
                 researched,
                 "research-judge-alpha-duplicate",
                 score=7.5,
-                evaluation_type="working",
+                evaluation_type="working_research",
             )
         )
         coverage = op.working_evaluation_coverage(self.run_dir, self.load()[0], "research")
         self.assertFalse(coverage["complete"])
-        self.assertEqual(coverage["duplicates"], ["alpha v2"])
-        with self.assertRaisesRegex(op.ConflictError, "duplicate alpha v2"):
+        self.assertEqual(coverage["duplicates"], ["alpha v1"])
+        with self.assertRaisesRegex(op.ConflictError, "duplicate alpha v1"):
             op.advance_run(self.run_dir)
 
     def test_research_candidate_substitution_requires_versioned_amendment(self) -> None:
@@ -1423,22 +2052,17 @@ class WorkflowV2ContractTests(OpportunityTestCase):
         self.store_candidate(beta)
         self.store_portfolio_selection([alpha])
         self.set_stage("research")
-        researched_beta = self.candidate(
-            "beta",
-            version=2,
-            stage="research",
-            parent={"candidate_id": "beta", "version": 1},
-        )
+        researched_beta = self.research(beta)
         path = self.root / "unamended-beta.json"
         path.write_text(json.dumps(researched_beta), encoding="utf-8")
         op.start_job(self.run_dir, "unamended-beta", "research")
-        with self.assertRaisesRegex(op.ConflictError, "versioned amendment before substitution"):
-            op.complete_job(self.run_dir, "unamended-beta", path, "candidate")
+        with self.assertRaisesRegex(op.ConflictError, "versioned portfolio amendment"):
+            op.complete_job(self.run_dir, "unamended-beta", path, "research")
         op.fail_job(self.run_dir, "unamended-beta", "shortlist binding correctly rejected substitution")
 
         selection_path = self.run_dir / "portfolio/selection.json"
         amendment = {
-            "schema_version": 2,
+            "schema_version": op.ACTIVE_SCHEMA_VERSION,
             "amendment_version": 1,
             "base_selection_sha256": op.sha256_file(selection_path),
             "remove_candidate_ref": self.candidate_ref(alpha),
@@ -1453,10 +2077,10 @@ class WorkflowV2ContractTests(OpportunityTestCase):
         self.assertEqual(completed["artifact"], "portfolio/amendments/v1.json")
         accepted = self.complete_json_job(
             "amended-beta",
-            "candidate",
+            "research",
             researched_beta,
         )
-        self.assertEqual(accepted["artifact"], "candidates/beta/v2.json")
+        self.assertEqual(accepted["artifact"], "research/beta/v1.json")
 
     def test_unknown_or_inferential_claim_cannot_be_a_fatal_stop(self) -> None:
         _, researched = self.researched_pool(1, scores=[7.8])
@@ -1488,47 +2112,111 @@ class WorkflowV2ContractTests(OpportunityTestCase):
         research_candidate = researched[0]
         developed = self.candidate(
             research_candidate["candidate_id"],
-            version=3,
+            version=2,
             stage="development",
-            parent={"candidate_id": research_candidate["candidate_id"], "version": 2},
+            parent={"candidate_id": research_candidate["candidate_id"], "version": 1},
         )
         self.complete_json_job("develop-alpha", "candidate", developed)
         self.complete_json_job(
             "constructor-alpha",
             "development-result",
-            self.development_result(developed, constructor_id="same-agent"),
+            self.development_result(
+                developed,
+                constructor_id="same-agent",
+                outcome="redesigned",
+                base_candidate=research_candidate,
+            ),
         )
 
-        with self.assertRaisesRegex(op.ConflictError, "missing candidate-1 v3"):
+        with self.assertRaisesRegex(op.ConflictError, "missing candidate-1 v2"):
             op.advance_run(self.run_dir)
         self.store_evaluation(
             self.evaluation_input(
                 developed,
                 "same-agent",
                 score=8.2,
-                evaluation_type="working",
+                evaluation_type="working_development",
             )
         )
         with self.assertRaisesRegex(op.ConflictError, "constructor and working evaluator roles must be independent"):
             op.advance_run(self.run_dir)
+
+    def test_multiple_development_redesigns_can_be_admitted_sequentially(self) -> None:
+        _, researched = self.researched_pool(2, scores=[8.1, 8.0])
+        developed_ids = {candidate["candidate_id"] for candidate in researched}
+        self.complete_json_job(
+            "portfolio-decision",
+            "portfolio-decision",
+            self.portfolio_decision(researched, developed_ids),
+        )
+        self.assertEqual(op.advance_run(self.run_dir)["stage"], "development")
+
+        admitted = []
+        for research_candidate in researched:
+            developed = self.candidate(
+                research_candidate["candidate_id"],
+                version=2,
+                stage="development",
+                parent={
+                    "candidate_id": research_candidate["candidate_id"],
+                    "version": 1,
+                },
+            )
+            completed = self.complete_json_job(
+                f"develop-{research_candidate['candidate_id']}",
+                "candidate",
+                developed,
+            )
+            admitted.append(completed["artifact"])
+
+        self.assertEqual(
+            admitted,
+            [
+                "candidates/candidate-1/v2.json",
+                "candidates/candidate-2/v2.json",
+            ],
+        )
 
     def test_native_holdout_judge_cannot_reuse_a_development_role(self) -> None:
         frozen = self.store_complete_lineage("alpha")
         self.set_stage("holdout")
         op.export_external(self.run_dir, "alpha")
         reused = self.evaluation_input(frozen, "working-alpha", score=8.8)
-        input_path = self.root / "reused-native-wrapper.json"
+        reused.pop("_test_evaluation_type")
+        input_path = self.root / "reused-native-response.json"
         input_path.write_text(json.dumps(reused), encoding="utf-8")
-        op.start_job(self.run_dir, "reused-native-wrapper", "holdout")
+        op.start_job(self.run_dir, "reused-native-response", "holdout")
         with self.assertRaisesRegex(
             op.ConflictError,
             "native holdout judge must be fresh and independent",
         ):
             op.complete_job(
                 self.run_dir,
-                "reused-native-wrapper",
+                "reused-native-response",
                 input_path,
                 "evaluation",
+            )
+
+    def test_constructor_cannot_reuse_any_working_evaluator_role(self) -> None:
+        _, researched = self.researched_pool(1, scores=[7.0])
+        candidate = researched[0]
+        self.complete_json_job(
+            "portfolio-decision",
+            "portfolio-decision",
+            self.portfolio_decision(researched, {candidate["candidate_id"]}),
+        )
+        self.assertEqual(op.advance_run(self.run_dir)["stage"], "development")
+        with self.assertRaisesRegex(
+            op.ConflictError,
+            "constructor and working evaluator roles must be independent",
+        ):
+            self.complete_json_job(
+                "constructor-role-reuse",
+                "development-result",
+                self.development_result(
+                    candidate,
+                    constructor_id=f"research-judge-{candidate['candidate_id']}",
+                ),
             )
 
     def test_complete_eight_four_two_four_scored_fixture(self) -> None:
@@ -1545,21 +2233,7 @@ class WorkflowV2ContractTests(OpportunityTestCase):
         developed: list[dict] = []
         for index, research_candidate in enumerate(researched[:4]):
             candidate_id = research_candidate["candidate_id"]
-            candidate = self.candidate(
-                candidate_id,
-                version=3,
-                stage="development",
-                parent={"candidate_id": candidate_id, "version": 2},
-            )
-            self.complete_json_job(f"develop-{candidate_id}", "candidate", candidate)
-            self.store_evaluation(
-                self.evaluation_input(
-                    candidate,
-                    f"development-judge-{candidate_id}",
-                    score=8.4 - index / 10,
-                    evaluation_type="working",
-                )
-            )
+            candidate = research_candidate
             self.complete_json_job(
                 f"constructor-{candidate_id}",
                 "development-result",
@@ -1568,21 +2242,21 @@ class WorkflowV2ContractTests(OpportunityTestCase):
                     constructor_id=f"constructor-agent-{candidate_id}",
                 ),
             )
+            self.store_evaluation(
+                self.evaluation_input(
+                    candidate,
+                    f"development-judge-{candidate_id}",
+                    score=8.4 - index / 10,
+                    evaluation_type="working_development",
+                )
+            )
             developed.append(candidate)
 
         self.assertEqual(op.advance_run(self.run_dir)["stage"], "frozen")
-        frozen: list[dict] = []
-        for developed_candidate in developed[:2]:
-            candidate_id = developed_candidate["candidate_id"]
-            candidate = self.candidate(
-                candidate_id,
-                version=4,
-                stage="frozen",
-                parent={"candidate_id": candidate_id, "version": 3},
-            )
-            self.complete_json_job(f"freeze-{candidate_id}", "candidate", candidate)
+        frozen = developed[:2]
+        for candidate in frozen:
+            candidate_id = candidate["candidate_id"]
             op.export_external(self.run_dir, candidate_id)
-            frozen.append(candidate)
 
         self.assertEqual(op.advance_run(self.run_dir)["stage"], "holdout")
         holdout_scores = ((8.4, 8.3), (8.3, 8.2))
@@ -1622,11 +2296,11 @@ class WorkflowV2ContractTests(OpportunityTestCase):
             manifest,
             report,
         )
-        self.assertEqual(campaign_metrics["best_working_score"], 8.4)
         self.assertEqual(campaign_metrics["top_four_working_median"], 8.3)
-        self.assertEqual(len(campaign_metrics["archetype_scores"]), 8)
         self.assertTrue(campaign_metrics["deficient_factors"])
-        self.assertTrue(op.check_run(self.run_dir, op.DEFAULT_CONFIG)["valid"])
+        self.assertNotIn("best_working_score", campaign_metrics)
+        self.assertNotIn("archetype_scores", campaign_metrics)
+        self.assertTrue(op.check_run(self.run_dir, self.config_path)["valid"])
         published = op.publish_run(
             self.run_dir,
             self.root / "outcomes",
@@ -1640,7 +2314,7 @@ class WorkflowV2ContractTests(OpportunityTestCase):
             (published_root / "portfolio/development-decision.json").is_file()
         )
         self.assertEqual(
-            len(list(published_root.glob("evaluations/*/v*/working-*.json"))),
+            len(list(published_root.glob("evaluations/*/v*/*.json"))),
             12,
         )
         published_holdouts = []
@@ -1655,26 +2329,16 @@ class WorkflowV2ContractTests(OpportunityTestCase):
                 evaluation_path = published_root / artifact["path"]
                 self.assertTrue(evaluation_path.is_file())
                 self.assertEqual(op.sha256_file(evaluation_path), artifact["sha256"])
-                evaluation = json.loads(evaluation_path.read_text(encoding="utf-8"))
-                raw_path = published_root / evaluation["raw_response_path"]
-                self.assertTrue(raw_path.is_file())
-                self.assertEqual(
-                    op.sha256_file(raw_path), evaluation["raw_response_sha256"]
-                )
                 published_holdouts.append(evaluation_path)
         self.assertEqual(len(published_holdouts), 4)
         validated_publication = op.validate_published_run_outcome(published_root)
         self.assertEqual(validated_publication["run_id"], self.run_id)
         working_record = report["working_evaluation_coverage"]["research"]["records"][0]
-        working_evaluation = json.loads(
-            (published_root / working_record["evaluation_path"]).read_text(
-                encoding="utf-8"
-            )
-        )
-        (published_root / working_evaluation["raw_response_path"]).unlink()
-        with self.assertRaisesRegex(
-            op.InputError, "working evaluation raw response"
-        ):
+        working_path = published_root / working_record["evaluation_path"]
+        working_evaluation = json.loads(working_path.read_text(encoding="utf-8"))
+        working_evaluation["final_score"] = 10
+        working_path.write_text(json.dumps(working_evaluation), encoding="utf-8")
+        with self.assertRaises(op.InputError):
             op.validate_published_run_outcome(published_root)
 
     def test_direct_evidence_research_closure_is_no_finalist_with_score_coverage(self) -> None:
@@ -1698,16 +2362,941 @@ class WorkflowV2ContractTests(OpportunityTestCase):
         )
 
 
+class ScoreBracketWorkflowTests(OpportunityTestCase):
+    def setUp(self) -> None:
+        self.temporary = tempfile.TemporaryDirectory()
+        self.root = Path(self.temporary.name)
+        self.runs_dir = self.root / "runs"
+        self.config_path = op.DEFAULT_CONFIG
+        created = op.make_run(self.config_path, self.runs_dir)
+        self.run_id = created["run_id"]
+        self.run_dir = Path(created["run_dir"])
+
+    def complete_evaluation_job(
+        self, job_id: str, candidate: dict, judge_id: str, score: float, phase: str
+    ) -> None:
+        payload = self.evaluation_input(
+            candidate,
+            judge_id,
+            score=score,
+            evaluation_type=phase,
+        )
+        if phase == "working_screening" and job_id.endswith("-01"):
+            payload.pop("_test_evaluation_type")
+            self.complete_json_job(job_id, "evaluation", payload)
+        else:
+            self.store_evaluation(payload)
+
+    def test_control_commercial_signature_and_explicit_unknown_contracts(self) -> None:
+        candidate = self.candidate(
+            "control-contract", discovery_lane="weak-signal"
+        )
+        _, canonical = self.store_candidate(candidate)
+        self.assertEqual(canonical["critical_control_point"]["status"], "owned")
+        self.assertEqual(
+            canonical["commercial_mechanics"]["customer_relationship_owner"],
+            canonical["critical_control_point"]["customer_relationship_owner"],
+        )
+
+        missing_mechanic = copy.deepcopy(candidate)
+        missing_mechanic["commercial_mechanics"].pop("purchase_trigger")
+        with self.assertRaisesRegex(op.InputError, "commercial_mechanics"):
+            op.validate_candidate(missing_mechanic, self.load()[0], self.run_dir)
+
+        externally_controlled = self.candidate(
+            "external-mechanism", discovery_lane="mechanism-first"
+        )
+        externally_controlled["critical_control_point"].update(
+            {
+                "status": "externally_controlled",
+                "mechanism_control": "dependent",
+                "current_owner": "Incumbent platform",
+                "launch_controller": "Incumbent platform",
+            }
+        )
+        with self.assertRaisesRegex(
+            op.InputError, "obtainable control point"
+        ):
+            op.validate_candidate(
+                externally_controlled, self.load()[0], self.run_dir
+            )
+
+        left = self.candidate("signature-left", discovery_lane="weak-signal")
+        right = self.candidate("signature-right", discovery_lane="future-backcast")
+        for item in (left, right):
+            item["structural_signature"].update(
+                {
+                    "commercial_model_category": "managed_service",
+                    "control_point_category": "workflow_integration",
+                    "critical_dependency_category": "distribution_channel",
+                }
+            )
+        left["structural_signature"]["commercial_model_descriptor"] = (
+            "EU factory incident service"
+        )
+        right["structural_signature"]["commercial_model_descriptor"] = (
+            "Asian hospital workflow operator"
+        )
+        left_canonical = op.validate_candidate(left, self.load()[0], self.run_dir)
+        right_canonical = op.validate_candidate(right, self.load()[0], self.run_dir)
+        self.assertEqual(
+            op.structural_signature_key(left_canonical),
+            op.structural_signature_key(right_canonical),
+        )
+
+        research = self.research(canonical)
+        research["claims"].append(
+            {
+                "claim_id": "research-unknown-private-proof",
+                "statement": "Direct private validation is not available.",
+                "assessment": "unknown",
+                "evidence_refs": [],
+            }
+        )
+        research["commercial_evidence"]["buyer_or_paid_event"] = {
+            "status": "unknown",
+            "claim_ids": ["research-unknown-private-proof"],
+            "source_ids": [],
+        }
+        research["critical_control_point_assessment"] = {
+            "status": "unknown",
+            "assessment": "unknown",
+            "claim_ids": ["research-unknown-private-proof"],
+            "source_ids": [],
+        }
+        validated_research = op.validate_research(
+            research, self.load()[0], self.run_dir
+        )
+        self.assertEqual(
+            validated_research["commercial_evidence"]["buyer_or_paid_event"][
+                "status"
+            ],
+            "unknown",
+        )
+        uncontrolled_label = copy.deepcopy(research)
+        uncontrolled_label["sources"][0]["evidence_class"] = "buyer_quote"
+        with self.assertRaisesRegex(op.InputError, "evidence_class"):
+            op.validate_research(
+                uncontrolled_label, self.load()[0], self.run_dir
+            )
+
+    def test_control_status_requires_coherent_acquisition_terms(self) -> None:
+        self.set_stage("discovery")
+        manifest, state = self.load()
+        contract = op.preflight_contract(manifest, state, "candidate")
+        self.assertIn(
+            "critical_control_status_consistency",
+            contract["constraints"],
+        )
+
+        unknown_owned_control = self.candidate(
+            "unknown-owned-control", discovery_lane="weak-signal"
+        )
+        unknown_owned_control["critical_control_point"].update(
+            {
+                "acquisition_instrument_type": "unknown",
+                "acquisition_instrument": "unknown",
+            }
+        )
+        with self.assertRaisesRegex(
+            op.InputError, "owned status requires ownership or purchase"
+        ):
+            op.validate_candidate(unknown_owned_control, manifest, self.run_dir)
+
+        contracted_owned_control = self.candidate(
+            "contracted-owned-control", discovery_lane="weak-signal"
+        )
+        contracted_owned_control["critical_control_point"].update(
+            {
+                "acquisition_instrument_type": "long_term_contract",
+                "acquisition_instrument": "A proposed long-term access contract.",
+            }
+        )
+        with self.assertRaisesRegex(
+            op.InputError, "owned status requires ownership or purchase"
+        ):
+            op.validate_candidate(contracted_owned_control, manifest, self.run_dir)
+
+        nonexclusive_control = self.candidate(
+            "nonexclusive-control", discovery_lane="weak-signal"
+        )
+        nonexclusive_control["critical_control_point"].update(
+            {
+                "status": "exclusively_contracted",
+                "mechanism_control": "dependent",
+                "acquisition_instrument_type": "exclusive_contract",
+                "acquisition_instrument": "A proposed exclusive control contract.",
+                "exclusivity": "nonexclusive",
+            }
+        )
+        with self.assertRaisesRegex(
+            op.InputError, "exclusively_contracted status requires exclusive terms"
+        ):
+            op.validate_candidate(nonexclusive_control, manifest, self.run_dir)
+
+        unknown_contract = copy.deepcopy(nonexclusive_control)
+        unknown_contract["candidate_id"] = "unknown-exclusive-contract"
+        unknown_contract["critical_control_point"].update(
+            {
+                "exclusivity": "exclusive",
+                "acquisition_instrument": "unknown",
+            }
+        )
+        with self.assertRaisesRegex(
+            op.InputError, "affirmative control status requires a stated acquisition instrument"
+        ):
+            op.validate_candidate(unknown_contract, manifest, self.run_dir)
+
+        durable_at_will = self.candidate(
+            "durable-at-will", discovery_lane="weak-signal"
+        )
+        durable_at_will["critical_control_point"].update(
+            {
+                "status": "durably_contracted",
+                "mechanism_control": "dependent",
+                "acquisition_instrument_type": "long_term_contract",
+                "acquisition_instrument": "A proposed long-term control contract.",
+                "duration": "unknown",
+                "revocability": "at_will",
+            }
+        )
+        with self.assertRaisesRegex(
+            op.InputError, "durably_contracted status requires a known duration"
+        ):
+            op.validate_candidate(durable_at_will, manifest, self.run_dir)
+        durable_at_will["critical_control_point"]["duration"] = "Five years"
+        with self.assertRaisesRegex(
+            op.InputError, "durably_contracted status cannot be at_will or unknown"
+        ):
+            op.validate_candidate(durable_at_will, manifest, self.run_dir)
+
+        irreplaceable_access = self.candidate(
+            "irreplaceable-access", discovery_lane="weak-signal"
+        )
+        irreplaceable_access["critical_control_point"].update(
+            {
+                "status": "replaceable_access",
+                "mechanism_control": "dependent",
+                "acquisition_instrument_type": "long_term_contract",
+                "acquisition_instrument": "A proposed access contract.",
+                "replaceability": "not_replaceable",
+            }
+        )
+        with self.assertRaisesRegex(
+            op.InputError, "replaceable_access status requires replaceable terms"
+        ):
+            op.validate_candidate(irreplaceable_access, manifest, self.run_dir)
+
+        unknown_replaceable_access = self.candidate(
+            "unknown-replaceable-access", discovery_lane="weak-signal"
+        )
+        unknown_replaceable_access["critical_control_point"].update(
+            {
+                "status": "replaceable_access",
+                "mechanism_control": "dependent",
+                "acquisition_instrument_type": "unknown",
+                "acquisition_instrument": "unknown",
+                "replaceability": "replaceable",
+            }
+        )
+        with self.assertRaisesRegex(
+            op.InputError, "replaceable_access status requires a concrete acquisition instrument"
+        ):
+            op.validate_candidate(
+                unknown_replaceable_access, manifest, self.run_dir
+            )
+
+        owned_replaceable_access = copy.deepcopy(unknown_replaceable_access)
+        owned_replaceable_access["candidate_id"] = "owned-replaceable-access"
+        owned_replaceable_access["critical_control_point"].update(
+            {
+                "acquisition_instrument_type": "ownership",
+                "acquisition_instrument": "Ownership of the critical mechanism.",
+            }
+        )
+        with self.assertRaisesRegex(
+            op.InputError, "replaceable_access status cannot use ownership"
+        ):
+            op.validate_candidate(
+                owned_replaceable_access, manifest, self.run_dir
+            )
+
+    def test_research_control_status_cannot_overstate_unknown_assessment(self) -> None:
+        candidate = self.candidate(
+            "unknown-control-assessment", discovery_lane="weak-signal"
+        )
+        _, canonical = self.store_candidate(candidate)
+        research = self.research(canonical)
+        research["claims"].append(
+            {
+                "claim_id": "unknown-control-proof",
+                "statement": "Control-point ownership could not be established.",
+                "assessment": "unknown",
+                "evidence_refs": [],
+            }
+        )
+        research["critical_control_point_assessment"] = {
+            "status": "owned",
+            "assessment": "unknown",
+            "claim_ids": ["unknown-control-proof"],
+            "source_ids": [],
+        }
+        with self.assertRaisesRegex(
+            op.InputError, "explicit unknown assessment requires status unknown"
+        ):
+            op.validate_research(research, self.load()[0], self.run_dir)
+
+    def test_malformed_research_preflight_is_attempt_neutral(self) -> None:
+        self.set_stage("research")
+        malformed = self.root / "malformed-research.json"
+        malformed.write_text("{", encoding="utf-8")
+        state_before = (self.run_dir / "state.json").read_bytes()
+        events_before = (self.run_dir / "events.jsonl").read_bytes()
+        report, valid = op.preflight_artifact(
+            self.run_dir,
+            "research",
+            malformed,
+            "research-malformed",
+        )
+        self.assertFalse(valid)
+        self.assertIn(
+            "invalid JSON",
+            report["validation"]["errors"][0]["message"],
+        )
+        self.assertEqual((self.run_dir / "state.json").read_bytes(), state_before)
+        self.assertEqual((self.run_dir / "events.jsonl").read_bytes(), events_before)
+
+    def test_preflight_receipt_is_required_persisted_and_checked(self) -> None:
+        op.advance_run(self.run_dir)
+        candidate = self.candidate("receipt-bound")
+        path = self.root / "receipt-bound.json"
+        path.write_bytes(op.canonical_json_bytes(candidate))
+
+        missing_identity, valid = op.preflight_artifact(
+            self.run_dir,
+            "candidate",
+            path,
+        )
+        self.assertFalse(valid)
+        self.assertEqual(
+            missing_identity["validation"]["errors"][0]["code"],
+            "job_id_required",
+        )
+
+        report, valid = op.preflight_artifact(
+            self.run_dir,
+            "candidate",
+            path,
+            "receipt-bound",
+        )
+        self.assertTrue(valid)
+        receipt = report["validation"]["preflight_receipt"]
+        self.assertEqual(receipt["input_sha256"], op.sha256_file(path))
+
+        op.start_job(self.run_dir, "receipt-bound", "discovery")
+        with self.assertRaisesRegex(
+            op.InputError,
+            "structured job completion requires",
+        ):
+            op.complete_job(
+                self.run_dir,
+                "receipt-bound",
+                path,
+                "candidate",
+            )
+        self.assertEqual(
+            self.load()[1]["jobs"]["discovery"]["receipt-bound"]["status"],
+            "running",
+        )
+        with self.assertRaisesRegex(op.ConflictError, "receipt differs"):
+            op.complete_job(
+                self.run_dir,
+                "receipt-bound",
+                path,
+                "candidate",
+                receipt["input_sha256"],
+                "0" * 64,
+            )
+
+        code, completed, error = self.run_cli(
+            [
+                "--runs-dir",
+                str(self.runs_dir),
+                "job",
+                self.run_id,
+                "receipt-bound",
+                "complete",
+                "--input",
+                str(path),
+                "--kind",
+                "candidate",
+                "--preflight-sha256",
+                receipt["input_sha256"],
+                "--preflight-receipt-sha256",
+                receipt["receipt_sha256"],
+            ]
+        )
+        self.assertEqual(code, 0, error)
+        self.assertEqual(
+            receipt["canonical_artifact_sha256"],
+            completed["artifact_sha256"],
+        )
+        events_path = self.run_dir / "events.jsonl"
+        events = op.load_events(events_path, self.run_id)
+        completion = next(
+            event
+            for event in events
+            if event["event"] == "job_completed"
+            and event["job_id"] == "receipt-bound"
+        )
+        self.assertEqual(completion["details"]["preflight_receipt"], receipt)
+        self.assertTrue(op.check_run(self.run_dir, self.config_path)["valid"])
+
+        completion["details"]["preflight_receipt"]["input_sha256"] = "f" * 64
+        events_path.write_text(
+            "".join(
+                json.dumps(event, sort_keys=True) + "\n" for event in events
+            ),
+            encoding="utf-8",
+        )
+        with self.assertRaisesRegex(
+            op.InputError,
+            "preflight receipt differs from its immutable context",
+        ):
+            op.check_run(self.run_dir, self.config_path)
+
+    def test_lane_balanced_score_bracket_and_strict_version_competition(self) -> None:
+        self.assertEqual(op.advance_run(self.run_dir)["stage"], "discovery")
+        config = self.load()[0]["config"]
+        candidates: dict[str, dict] = {}
+        for lane in config["discovery_lanes"]:
+            for index in range(config["seeds_per_scout"]):
+                candidate_id = f"{lane}-{index:02d}"
+                candidate = self.candidate(
+                    candidate_id,
+                    discovery_lane=lane,
+                )
+                candidates[candidate_id] = candidate
+
+        # The pool dedup is fingerprint-based.  This later structural duplicate
+        # exercises winner dedup plus same-batch score backfill.
+        candidates["future-backcast-02"]["structural_signature"] = copy.deepcopy(
+            candidates["future-backcast-00"]["structural_signature"]
+        )
+        for candidate in candidates.values():
+            self.store_candidate(candidate)
+
+        dedup = op.dedup_run(self.run_dir)
+        self.assertEqual(dedup["exact_fingerprint_unique_count"], 36)
+        self.assertEqual(dedup["semantic_signature_unique_count"], 35)
+        self.assertIn(
+            [
+                {"candidate_id": "future-backcast-00", "version": 1},
+                {"candidate_id": "future-backcast-02", "version": 1},
+            ],
+            dedup["semantic_collision_groups"],
+        )
+        self.assertEqual(dedup["mechanism_first_founder_access_count"], 12)
+        self.assertEqual(
+            dedup["unique_lane_counts"],
+            {lane: 12 for lane in config["discovery_lanes"]},
+        )
+        self.assertEqual(op.advance_run(self.run_dir)["stage"], "calibration")
+
+        manifest, _ = self.load()
+        batches = op.load_screening_batches(self.run_dir, manifest)
+        self.assertEqual(len(batches["batches"]), 6)
+        for batch in batches["batches"]:
+            lane_counts = {lane: 0 for lane in config["discovery_lanes"]}
+            for ref in batch["candidate_refs"]:
+                lane_counts[candidates[ref["candidate_id"]]["discovery_lane"]] += 1
+            self.assertEqual(set(lane_counts.values()), {2})
+
+        context = op.screening_batch_context(self.run_dir, "batch-01")
+        context_text = json.dumps(context, sort_keys=True)
+        self.assertEqual(len(context["candidates"]), 6)
+        self.assertNotIn("future-backcast-02", context_text)
+        self.assertNotIn("final_score", context_text)
+        self.assertNotIn("ranking", context_text)
+        stdout = io.StringIO()
+        with contextlib.redirect_stdout(stdout):
+            code = op.main(
+                [
+                    "--runs-dir",
+                    str(self.runs_dir),
+                    "status",
+                    self.run_id,
+                    "--batch",
+                    "batch-01",
+                ]
+            )
+        self.assertEqual(code, 0)
+        self.assertEqual(json.loads(stdout.getvalue())["batch_id"], "batch-01")
+
+        for batch_index, batch in enumerate(batches["batches"]):
+            for rank_index, ref in enumerate(batch["candidate_refs"]):
+                self.complete_evaluation_job(
+                    f"screen-{batch_index + 1:02d}-{rank_index + 1:02d}",
+                    candidates[ref["candidate_id"]],
+                    f"screening-judge-{batch_index + 1:02d}",
+                    9.0 - rank_index * 0.2 - batch_index * 0.01,
+                    "working_screening",
+                )
+        screening = op.working_evaluation_coverage(
+            self.run_dir, manifest, "screening"
+        )
+        self.assertTrue(screening["complete"])
+        self.assertEqual(screening["candidate_count"], 36)
+        self.assertEqual(len({row["judge_id"] for row in screening["batches"]}), 6)
+
+        secondary_required = op.advance_run(self.run_dir)
+        self.assertEqual(secondary_required["stage"], "calibration")
+        self.assertTrue(secondary_required["secondary_screening_required"])
+        resumed_secondary = op.advance_run(self.run_dir)
+        self.assertTrue(resumed_secondary["idempotent"])
+        self.assertEqual(
+            sum(
+                event["event"] == "secondary_screening_planned"
+                for event in op.load_events(
+                    self.run_dir / "events.jsonl", self.run_id
+                )
+            ),
+            1,
+        )
+        plan = op.load_secondary_screening_plan(self.run_dir, manifest)
+        self.assertTrue(plan["batches"])
+        secondary_context = op.secondary_screening_batch_context(
+            self.run_dir, plan["batches"][0]["secondary_batch_id"]
+        )
+        secondary_context_text = json.dumps(secondary_context, sort_keys=True)
+        for forbidden in (
+            "primary_inputs",
+            "primary_score",
+            "cutoff_margin",
+            "rank",
+            "rationale",
+        ):
+            self.assertNotIn(forbidden, secondary_context_text)
+        first_secondary_ref = plan["batches"][0]["candidate_refs"][0]
+        primary_evaluation = op.load_json(
+            self.run_dir
+            / plan["batches"][0]["primary_inputs"][0]["evaluation_path"]
+        )
+        reused_response = self.evaluation_input(
+            candidates[first_secondary_ref["candidate_id"]],
+            primary_evaluation["judge_id"],
+            score=primary_evaluation["final_score"],
+            evaluation_type="working_screening_secondary",
+        )
+        reused_response.pop("_test_evaluation_type")
+        reused_path = self.root / "secondary-reused-primary.json"
+        reused_path.write_text(json.dumps(reused_response), encoding="utf-8")
+        with self.assertRaisesRegex(
+            op.ConflictError, "fresh from primary screening"
+        ):
+            op._artifact_for_input(
+                self.run_dir,
+                manifest,
+                self.load()[1],
+                "secondary-reused-primary",
+                reused_path,
+                "secondary-evaluation",
+            )
+        for batch_index, batch in enumerate(plan["batches"], start=1):
+            primary_scores = {
+                item["candidate_ref"]["candidate_id"]: item["final_score"]
+                for item in batch["primary_inputs"]
+            }
+            for ref in batch["candidate_refs"]:
+                self.complete_evaluation_job(
+                    f"secondary-{batch_index:02d}-{ref['candidate_id']}",
+                    candidates[ref["candidate_id"]],
+                    f"secondary-judge-{batch_index:02d}",
+                    primary_scores[ref["candidate_id"]],
+                    "working_screening_secondary",
+                )
+        secondary = op.working_evaluation_coverage(
+            self.run_dir, manifest, "screening_secondary"
+        )
+        self.assertTrue(secondary["complete"])
+        real_write_immutable = op.write_immutable
+        failed_selection_write = False
+
+        def fail_selection_once(path, data, **kwargs):
+            nonlocal failed_selection_write
+            if (
+                Path(path) == self.run_dir / "portfolio" / "selection.json"
+                and not failed_selection_write
+            ):
+                failed_selection_write = True
+                raise OSError("simulated selection write interruption")
+            return real_write_immutable(path, data, **kwargs)
+
+        with mock.patch.object(
+            op, "write_immutable", side_effect=fail_selection_once
+        ):
+            with self.assertRaisesRegex(
+                OSError, "simulated selection write interruption"
+            ):
+                op.advance_run(self.run_dir)
+        self.assertEqual(self.load()[1]["stage"], "calibration")
+        self.assertEqual(
+            sum(
+                event["event"] == "screening_aggregation_completed"
+                for event in op.load_events(
+                    self.run_dir / "events.jsonl", self.run_id
+                )
+            ),
+            1,
+        )
+        self.assertEqual(op.advance_run(self.run_dir)["stage"], "research")
+        self.assertEqual(
+            sum(
+                event["event"] == "screening_aggregation_completed"
+                for event in op.load_events(
+                    self.run_dir / "events.jsonl", self.run_id
+                )
+            ),
+            1,
+        )
+        aggregation = op.load_screening_aggregation(self.run_dir, manifest)
+        self.assertEqual(aggregation["rule"], "mean")
+        for row in aggregation["candidates"]:
+            if row["secondary_score"] is not None:
+                self.assertEqual(row["canonical_score"], row["primary_score"])
+        selection = op.effective_portfolio_selection(self.run_dir, manifest)
+        selected_ids = [ref["candidate_id"] for ref in selection["candidate_refs"]]
+        self.assertEqual(len(selected_ids), 12)
+        self.assertNotIn("future-backcast-02", selected_ids)
+        self.assertIn("mechanism-first-02", selected_ids)
+        self.assertEqual(selection["wildcard_candidate_refs"], [])
+
+        ordered_selected = sorted(selected_ids)
+        externally_controlled_id = ordered_selected[1]
+        for candidate_id in ordered_selected:
+            candidate = candidates[candidate_id]
+            research = self.research(candidate)
+            if candidate_id == externally_controlled_id:
+                research["critical_control_point_assessment"]["status"] = (
+                    "externally_controlled"
+                )
+            self.store_research(research)
+        research_scores = {
+            candidate_id: (
+                8.0
+                if index < 3
+                else 7.5
+                if index < 5
+                else 6.0 - index * 0.01
+            )
+            for index, candidate_id in enumerate(ordered_selected)
+        }
+        for index, candidate_id in enumerate(ordered_selected):
+            self.complete_evaluation_job(
+                f"research-{index + 1:02d}",
+                candidates[candidate_id],
+                f"research-judge-{index + 1:02d}",
+                research_scores[candidate_id],
+                "working_research",
+            )
+        expected_develop = set(ordered_selected[:4])
+        decision = self.portfolio_decision(
+            [candidates[candidate_id] for candidate_id in ordered_selected],
+            expected_develop,
+        )
+        self.complete_json_job("portfolio-decision", "portfolio-decision", decision)
+        self.assertEqual(op.advance_run(self.run_dir)["stage"], "development")
+
+        developed_ids = sorted(expected_develop)
+        paired_scores = [
+            ((8.0, 8.1), (7.0, 7.1)),
+            ((7.5, 7.6), (8.2, 8.2)),
+            ((7.8, 7.9), (7.8, 8.0)),
+            ((7.0, 7.2), None),
+        ]
+        for index, (candidate_id, scores) in enumerate(
+            zip(developed_ids, paired_scores, strict=True), start=1
+        ):
+            base = candidates[candidate_id]
+            if index == 1:
+                constructor_context = op.constructor_context(
+                    self.run_dir, candidate_id
+                )
+                constructor_text = json.dumps(
+                    constructor_context, sort_keys=True
+                )
+                self.assertEqual(
+                    set(constructor_context),
+                    {
+                        "scope",
+                        "candidate",
+                        "research",
+                        "founder_snapshot",
+                        "response_kind",
+                    },
+                )
+                for forbidden in (
+                    "final_score",
+                    "ranking",
+                    "threshold",
+                    "rubric",
+                    "qualification",
+                ):
+                    self.assertNotIn(forbidden, constructor_text)
+            if scores[1] is None:
+                self.complete_json_job(
+                    f"constructor-{index:02d}",
+                    "development-result",
+                    self.development_result(
+                        base,
+                        constructor_id=f"constructor-agent-{index:02d}",
+                        outcome="no_valid_redesign",
+                        base_candidate=base,
+                    ),
+                )
+                for judge_offset, judge_suffix in enumerate(("a", "b")):
+                    self.complete_evaluation_job(
+                        f"development-base-{index:02d}-{judge_suffix}",
+                        base,
+                        f"development-judge-{index:02d}-{judge_suffix}",
+                        scores[0][judge_offset],
+                        "working_development",
+                    )
+                continue
+            redesign = copy.deepcopy(base)
+            redesign.update(
+                {
+                    "version": 2,
+                    "parent": {"candidate_id": candidate_id, "version": 1},
+                    "stage": "development",
+                    "redesign": {
+                        "changed_fingerprint_fields": ["offer_and_business_model"],
+                        "economic_effect": "Changes the recorded repeat economics.",
+                    },
+                }
+            )
+            redesign["fingerprint"]["offer_and_business_model"] += " redesigned"
+            redesign["economics"]["pricing"] = "150000 PLN redesigned contract"
+            redesign["commercial_mechanics"]["fully_loaded_economics"][
+                "revenue_basis"
+            ] = "150000 PLN redesigned contract"
+            redesign["redesign"]["changed_structural_fields"] = [
+                "commercial_mechanics"
+            ]
+            if candidate_id == externally_controlled_id:
+                redesign["critical_control_point"].update(
+                    {
+                        "status": "externally_controlled",
+                        "mechanism_control": "dependent",
+                        "current_owner": "Independent counterparty",
+                        "launch_controller": "Independent counterparty",
+                        "acquisition_instrument_type": "long_term_contract",
+                        "acquisition_instrument": "A signed launch-time control agreement.",
+                        "counterparty_refusal_fallback": "Use a replaceable qualified counterparty.",
+                    }
+                )
+                redesign["redesign"]["changed_structural_fields"].append(
+                    "critical_control_point"
+                )
+                blocked_path = self.root / "externally-controlled-redesign.json"
+                blocked_path.write_text(json.dumps(redesign), encoding="utf-8")
+                blocked, valid = op.preflight_artifact(
+                    self.run_dir,
+                    "candidate",
+                    blocked_path,
+                    f"redesign-{index:02d}",
+                )
+                self.assertFalse(valid)
+                self.assertEqual(blocked["attempts_consumed"], 0)
+                self.assertIn(
+                    "must change from externally_controlled",
+                    blocked["validation"]["errors"][0]["message"],
+                )
+                self.assertFalse(
+                    (
+                        self.run_dir
+                        / op.candidate_relpath(candidate_id, redesign["version"])
+                    ).exists()
+                )
+
+                redesign["critical_control_point"].update(
+                    {
+                        "status": "unknown",
+                        "launch_controller": "unknown",
+                        "acquisition_instrument_type": "unknown",
+                        "acquisition_instrument": "unknown",
+                    }
+                )
+                blocked_path.write_text(json.dumps(redesign), encoding="utf-8")
+                blocked, valid = op.preflight_artifact(
+                    self.run_dir,
+                    "candidate",
+                    blocked_path,
+                    f"redesign-{index:02d}",
+                )
+                self.assertFalse(valid)
+                self.assertEqual(blocked["attempts_consumed"], 0)
+                self.assertIn(
+                    "acquisition_instrument_type",
+                    blocked["validation"]["errors"][0]["message"],
+                )
+
+                redesign["critical_control_point"].update(
+                    {
+                        "launch_controller": "The business after the agreement is signed.",
+                        "acquisition_instrument_type": "long_term_contract",
+                        "acquisition_instrument": "A signed launch-time control agreement.",
+                    }
+                )
+            self.complete_json_job(f"redesign-{index:02d}", "candidate", redesign)
+            self.complete_json_job(
+                f"constructor-{index:02d}",
+                "development-result",
+                self.development_result(
+                    redesign,
+                    constructor_id=f"constructor-agent-{index:02d}",
+                    outcome="redesigned",
+                    base_candidate=base,
+                ),
+            )
+            if index == 1:
+                lineage_context = op.development_lineage_context(
+                    self.run_dir, candidate_id
+                )
+                self.assertEqual(len(lineage_context["candidates"]), 2)
+                self.assertEqual(
+                    lineage_context["required_independent_evaluators"], 2
+                )
+                lineage_text = json.dumps(lineage_context, sort_keys=True)
+                for forbidden in ("final_score", "ranking", "threshold"):
+                    self.assertNotIn(forbidden, lineage_text)
+            for judge_offset, judge_suffix in enumerate(("a", "b")):
+                judge_id = f"development-judge-{index:02d}-{judge_suffix}"
+                self.complete_evaluation_job(
+                    f"development-base-{index:02d}-{judge_suffix}",
+                    base,
+                    judge_id,
+                    scores[0][judge_offset],
+                    "working_development",
+                )
+                self.complete_evaluation_job(
+                    f"development-redesign-{index:02d}-{judge_suffix}",
+                    redesign,
+                    judge_id,
+                    scores[1][judge_offset],
+                    "working_development",
+                )
+
+        self.assertEqual(op.advance_run(self.run_dir)["stage"], "frozen")
+        version_selection = op.load_version_selection(self.run_dir, manifest)
+        rows = {row["candidate_id"]: row for row in version_selection["lineages"]}
+        self.assertEqual(
+            rows[developed_ids[0]]["selection_reason"],
+            "redesign_score_equal_or_lower",
+        )
+        self.assertEqual(rows[developed_ids[0]]["selected_candidate_ref"]["version"], 1)
+        self.assertEqual(
+            rows[developed_ids[1]]["selection_reason"],
+            "redesign_score_strictly_higher",
+        )
+        self.assertEqual(rows[developed_ids[1]]["selected_candidate_ref"]["version"], 2)
+        self.assertEqual(rows[developed_ids[2]]["selected_candidate_ref"]["version"], 1)
+        self.assertEqual(
+            rows[developed_ids[2]]["base_conservative_score"], 7.8
+        )
+        self.assertEqual(
+            rows[developed_ids[2]]["redesign_conservative_score"], 7.8
+        )
+        self.assertEqual(
+            rows[developed_ids[3]]["selection_reason"], "no_valid_redesign"
+        )
+
+        finalists = op.load_finalist_selection(self.run_dir, manifest)
+        finalist_versions = {
+            ref["candidate_id"]: ref["version"] for ref in finalists["candidate_refs"]
+        }
+        self.assertEqual(
+            finalist_versions,
+            {developed_ids[0]: 1, developed_ids[1]: 2},
+        )
+        self.assertTrue(op.check_run(self.run_dir, self.config_path)["valid"])
+
+        frozen = op.finalist_candidates(self.run_dir, manifest)
+        for _, candidate in frozen:
+            op.export_external(self.run_dir, candidate["candidate_id"])
+        assignment_destination = self.root / "holdout-response.json"
+        assignment = op.native_holdout_assignment(
+            self.run_dir,
+            frozen[0][1]["candidate_id"],
+            assignment_destination,
+        )
+        self.assertEqual(
+            set(assignment),
+            {
+                "immutable_finalist_packet",
+                "strict_response_contract",
+                "temporary_response_destination",
+            },
+        )
+        self.assertEqual(
+            assignment["temporary_response_destination"],
+            str(assignment_destination),
+        )
+        self.assertFalse(assignment_destination.exists())
+        self.assertEqual(
+            set(assignment["immutable_finalist_packet"]),
+            {"sha256", "content"},
+        )
+        for forbidden in (
+            "workflow_context",
+            "preflight_output",
+            "prior_evaluations",
+            "rankings",
+            "competing_candidates",
+            "other_judge_output",
+            "qualification_rule",
+        ):
+            self.assertNotIn(forbidden, assignment)
+        self.assertEqual(op.advance_run(self.run_dir)["stage"], "holdout")
+        for _, candidate in frozen:
+            for judge_index in range(2):
+                self.store_evaluation(
+                    self.evaluation_input(
+                        candidate,
+                        f"native-{candidate['candidate_id']}-{judge_index + 1}",
+                        score=1.0,
+                    )
+                )
+        report, _ = op.finalize_run(self.run_dir)
+        self.assertEqual(report["highest_working_score"], 8.2)
+        op.publish_run(
+            self.run_dir,
+            self.root / "outcomes",
+            self.root / "knowledge",
+        )
+        published_root = self.root / "outcomes" / self.run_id
+        self.assertTrue((published_root / "dedup/report.json").is_file())
+        validated = op.validate_published_run_outcome(published_root)
+        self.assertIn("dedup/report.json", validated["checked_artifacts"])
+        for artifact in (
+            "portfolio/secondary-screening.json",
+            "portfolio/screening-aggregation.json",
+            "portfolio/version-selection.json",
+        ):
+            self.assertIn(artifact, validated["checked_artifacts"])
+
+
 class CampaignContractTests(unittest.TestCase):
     def setUp(self) -> None:
         self.temporary = tempfile.TemporaryDirectory()
         self.root = Path(self.temporary.name)
         self.campaigns_dir = self.root / "campaigns"
         self.outcomes_dir = self.root / "outcomes"
-        created = op.new_campaign(op.DEFAULT_CONFIG, self.campaigns_dir)
+        self.config_path = op.DEFAULT_CONFIG
+        created = op.new_campaign(self.config_path, self.campaigns_dir)
         self.campaign_id = created["campaign_id"]
         self.campaign_dir = Path(created["campaign_dir"])
-        self.config = json.loads(op.DEFAULT_CONFIG.read_text(encoding="utf-8"))
+        self.config = json.loads(self.config_path.read_text(encoding="utf-8"))
 
     def tearDown(self) -> None:
         self.temporary.cleanup()
@@ -1716,22 +3305,14 @@ class CampaignContractTests(unittest.TestCase):
         self,
         score: float,
         *,
-        archetype: str = "baseline archetype",
         median: float | None = None,
-        best: float | None = None,
+        missing_archetypes: list[str] | None = None,
     ) -> dict:
         return {
             "official_score": score,
             "top_four_working_median": score if median is None else median,
-            "best_working_score": score if best is None else best,
-            "archetype_scores": {archetype: score if best is None else best},
             "deficient_factors": ["Distribution", "Business model and economics"],
-            "missing_archetypes": ["asset aggregation"],
-            "dominant_patterns": {
-                "commercial_archetype": "managed workflow",
-                "control_point": "case evidence",
-                "critical_dependency": "referral access",
-            },
+            "missing_archetypes": missing_archetypes or ["asset aggregation"],
         }
 
     def register_cohort(
@@ -1748,7 +3329,7 @@ class CampaignContractTests(unittest.TestCase):
         if cohort_number > 1:
             gap_path = f"briefs/cohort-{cohort_number}.json"
             brief = {
-                "schema_version": 2,
+                "schema_version": op.ACTIVE_SCHEMA_VERSION,
                 "campaign_id": self.campaign_id,
                 "cohort_number": cohort_number,
                 "deficient_factors": state["cohorts"][-1]["deficient_factors"],
@@ -1783,7 +3364,7 @@ class CampaignContractTests(unittest.TestCase):
         state["active_cohort_number"] = cohort_number
         op.save_campaign_state(self.campaign_dir, state, campaign_manifest)
         report = {
-            "schema_version": 2,
+            "schema_version": op.ACTIVE_SCHEMA_VERSION,
             "run_id": run_id,
             "run_status": run_status,
             "campaign": binding,
@@ -1909,21 +3490,15 @@ class CampaignContractTests(unittest.TestCase):
             "cohorts": [{}],
             "best_official_score": 7.2,
             "best_working_median": 7.0,
-            "best_working_score": 7.5,
-            "seen_archetypes": ["baseline archetype"],
         }
         cases = (
             (
-                self.metrics(7.3, median=7.0, best=7.5),
+                self.metrics(7.3, median=7.0),
                 "official_score",
             ),
             (
-                self.metrics(7.2, median=7.2, best=7.5),
+                self.metrics(7.2, median=7.2),
                 "working_median",
-            ),
-            (
-                self.metrics(7.2, archetype="novel archetype", median=7.0, best=7.0),
-                "novel_archetype",
             ),
         )
         for metrics, expected_signal in cases:
@@ -1932,12 +3507,34 @@ class CampaignContractTests(unittest.TestCase):
                 self.assertTrue(signals[expected_signal])
                 self.assertEqual(sum(signals.values()), 1)
 
+    def test_reworded_or_industry_swapped_archetypes_do_not_reset_campaign_patience(self) -> None:
+        receipts = []
+        labels = [
+            ["industrial evidence exchange"],
+            ["healthcare compliance network"],
+            ["energy asset orchestration"],
+            ["logistics rights marketplace"],
+        ]
+        for number, (score, missing) in enumerate(
+            zip((7.2, 6.9, 6.8, 6.7), labels, strict=True), start=1
+        ):
+            receipts.append(
+                self.register_cohort(
+                    number,
+                    self.metrics(score, missing_archetypes=missing),
+                )
+            )
+        self.assertEqual(
+            [row["no_progress_streak"] for row in receipts], [0, 1, 2, 3]
+        )
+        self.assertEqual(receipts[-1]["campaign_status"], "plateau")
+
     def test_campaign_gap_brief_is_sanitized_and_cohort_binding_is_immutable(self) -> None:
         first = op.campaign_next(self.campaign_dir)
         self.assertEqual(first["cohort_number"], 1)
         runs_dir = self.root / "runs"
         created = op.make_run(
-            op.DEFAULT_CONFIG,
+            self.config_path,
             runs_dir,
             campaign_id=self.campaign_id,
             campaigns_dir=self.campaigns_dir,
@@ -1960,13 +3557,13 @@ class CampaignContractTests(unittest.TestCase):
         )
         with self.assertRaisesRegex(op.ConflictError, "already has active run"):
             op.make_run(
-                op.DEFAULT_CONFIG,
+                self.config_path,
                 runs_dir,
                 campaign_id=self.campaign_id,
                 campaigns_dir=self.campaigns_dir,
             )
 
-        replacement = op.new_campaign(op.DEFAULT_CONFIG, self.campaigns_dir)
+        replacement = op.new_campaign(self.config_path, self.campaigns_dir)
         self.campaign_id = replacement["campaign_id"]
         self.campaign_dir = Path(replacement["campaign_dir"])
         self.register_cohort(1, self.metrics(7.2))
@@ -2068,12 +3665,7 @@ class CampaignContractTests(unittest.TestCase):
 
         metric_forgery = copy.deepcopy(state)
         metric_forgery["cohorts"][0]["top_four_working_median"] = 9.9
-        metric_forgery["cohorts"][0]["best_working_score"] = 9.9
-        metric_forgery["cohorts"][0]["archetype_scores"] = {
-            "baseline archetype": 9.9
-        }
         metric_forgery["best_working_median"] = 9.9
-        metric_forgery["best_working_score"] = 9.9
         op.atomic_write(
             self.campaign_dir / "state.json",
             op.canonical_json_bytes(metric_forgery),
@@ -2100,7 +3692,7 @@ class CampaignContractTests(unittest.TestCase):
 
     def test_campaign_rejects_extra_events_and_nondeterministic_reason(self) -> None:
         future_brief = {
-            "schema_version": 2,
+            "schema_version": op.ACTIVE_SCHEMA_VERSION,
             "campaign_id": self.campaign_id,
             "cohort_number": 99,
             "deficient_factors": ["Distribution"],
@@ -2124,7 +3716,7 @@ class CampaignContractTests(unittest.TestCase):
 
         clean_root = self.root / "terminal-reason"
         clean_campaigns = clean_root / "campaigns"
-        created = op.new_campaign(op.DEFAULT_CONFIG, clean_campaigns)
+        created = op.new_campaign(self.config_path, clean_campaigns)
         old = (self.root, self.campaign_id, self.campaign_dir, self.outcomes_dir)
         self.root = clean_root
         self.campaign_id = created["campaign_id"]
@@ -2168,7 +3760,7 @@ class CampaignContractTests(unittest.TestCase):
         other_root = self.root / "maximum"
         other_campaigns = other_root / "campaigns"
         other_outcomes = other_root / "outcomes"
-        created = op.new_campaign(op.DEFAULT_CONFIG, other_campaigns)
+        created = op.new_campaign(self.config_path, other_campaigns)
         old = (self.root, self.campaign_id, self.campaign_dir, self.outcomes_dir)
         self.root = other_root
         self.campaign_id = created["campaign_id"]
@@ -2189,16 +3781,40 @@ class CampaignContractTests(unittest.TestCase):
 class DedupAndHoldoutTests(OpportunityTestCase):
     def test_dedup_exact_similarity_and_one_bounded_gap_scout(self) -> None:
         self.set_stage("discovery")
-        alpha = self.candidate("alpha", fingerprint_seed="shared stable structure")
-        beta = self.candidate("beta", fingerprint_seed="shared stable structures")
-        duplicate = self.candidate("gamma", fingerprint_seed="shared stable structure")
-        for candidate in (alpha, beta, duplicate):
+        lanes = self.load()[0]["config"]["discovery_lanes"]
+        candidates = []
+        for lane_index, lane in enumerate(lanes):
+            for seed_index in range(self.load()[0]["config"]["seeds_per_scout"]):
+                candidate_id = f"lane-{lane_index + 1}-candidate-{seed_index + 1}"
+                fingerprint_seed = (
+                    "shared stable structures"
+                    if lane_index == 0 and seed_index == 1
+                    else "shared stable structure"
+                )
+                candidates.append(
+                    self.candidate(
+                        candidate_id,
+                        fingerprint_seed=fingerprint_seed,
+                        discovery_lane=lane,
+                    )
+                )
+        for candidate in candidates:
             self.store_candidate(candidate)
         first = op.dedup_run(self.run_dir)
-        self.assertEqual(first["candidate_count"], 3)
+        self.assertEqual(
+            first["candidate_count"],
+            len(lanes) * self.load()[0]["config"]["seeds_per_scout"],
+        )
         self.assertEqual(first["exact_fingerprint_unique_count"], 2)
         self.assertEqual(len(first["duplicate_groups"]), 1)
         self.assertTrue(first["similarity_flags"])
+        self.assertEqual(
+            first["lane_counts"],
+            {
+                lane: self.load()[0]["config"]["seeds_per_scout"]
+                for lane in lanes
+            },
+        )
         self.assertEqual(first["gap_scout_job"]["status"], "pending")
         second = op.dedup_run(self.run_dir)
         self.assertEqual(second["gap_scout_job"]["job_id"], "gap-scout")
@@ -2213,22 +3829,66 @@ class DedupAndHoldoutTests(OpportunityTestCase):
         advanced = op.advance_run(self.run_dir)
         self.assertEqual(advanced["stage"], "calibration")
 
-    def test_dominant_structure_groups_payer_and_business_model_not_distribution(self) -> None:
-        self.set_stage("discovery")
-        alpha = self.candidate("alpha", fingerprint_seed="alpha")
-        beta = self.candidate("beta", fingerprint_seed="beta")
-        gamma = self.candidate("gamma", fingerprint_seed="gamma")
-        beta["fingerprint"]["payer_and_paid_event"] = alpha["fingerprint"]["payer_and_paid_event"]
-        beta["fingerprint"]["offer_and_business_model"] = alpha["fingerprint"]["offer_and_business_model"]
-        beta["fingerprint"]["distribution_mechanism"] = "a deliberately different direct channel"
-        for candidate in (alpha, beta, gamma):
-            self.store_candidate(candidate)
-        report = op.build_dedup_report(self.run_dir, self.load()[0])
-        self.assertEqual(report["dominant_structure"]["count"], 2)
-        self.assertNotIn("distribution_mechanism", report["dominant_structure"])
-
     def _store_lineage_with_research(self, candidate_id: str = "alpha", *, capital: object = 100000) -> dict:
         return self.store_complete_lineage(candidate_id, capital=capital)
+
+    def _store_lineages(self, specs: list[tuple[str, object]]) -> dict[str, dict]:
+        candidates = {
+            candidate_id: self.candidate(candidate_id, capital=capital)
+            for candidate_id, capital in specs
+        }
+        for candidate in candidates.values():
+            self.store_candidate(candidate)
+        calibration = {
+            candidate_id: {
+                "commercial_archetype": f"calibrated archetype {candidate_id}",
+                "control_point": f"calibrated control point {candidate_id}",
+                "critical_dependency": f"calibrated dependency {candidate_id}",
+            }
+            for candidate_id in candidates
+        }
+        self.store_portfolio_selection(
+            list(candidates.values()), calibration_overrides=calibration
+        )
+        self.set_stage("research")
+        for candidate in candidates.values():
+            self.store_research(self.research(candidate))
+            self.store_evaluation(
+                self.evaluation_input(
+                    candidate,
+                    f"working-research-{candidate['candidate_id']}",
+                    score=8,
+                    evaluation_type="working_research",
+                )
+            )
+        self.complete_json_job(
+            "portfolio-decision",
+            "portfolio-decision",
+            self.portfolio_decision(
+                list(candidates.values()), set(candidates)
+            ),
+        )
+        op.advance_run(self.run_dir)
+        for candidate in candidates.values():
+            candidate_id = candidate["candidate_id"]
+            self.complete_json_job(
+                f"constructor-{candidate_id}",
+                "development-result",
+                self.development_result(
+                    candidate,
+                    constructor_id=f"constructor-{candidate_id}",
+                ),
+            )
+            self.store_evaluation(
+                self.evaluation_input(
+                    candidate,
+                    f"working-{candidate_id}",
+                    score=8,
+                    evaluation_type="working_development",
+                )
+            )
+        op.advance_run(self.run_dir)
+        return candidates
 
     def test_external_packet_import_rejection_preservation_and_binding(self) -> None:
         frozen = self._store_lineage_with_research()
@@ -2237,7 +3897,7 @@ class DedupAndHoldoutTests(OpportunityTestCase):
         packet = (self.run_dir / exported["packet"]).read_text(encoding="utf-8")
         self.assertIn((self.run_dir / "inputs/founder.md").read_text().strip(), packet)
         self.assertIn((self.run_dir / "inputs/evaluator.txt").read_text().strip(), packet)
-        self.assertIn("research/alpha/v2.json", packet)
+        self.assertIn("research/alpha/v1.json", packet)
         self.assertEqual(
             sorted(path.name for path in (self.run_dir / "exports/alpha").iterdir()),
             ["holdout_packet.md", "response_schema.json"],
@@ -2249,10 +3909,10 @@ class DedupAndHoldoutTests(OpportunityTestCase):
             op.import_external(self.run_dir, "alpha", malformed)
         malformed_digest = op.sha256_file(malformed)
         self.assertTrue(
-            (self.run_dir / f"holdout/alpha/v4/raw/external-{malformed_digest}.txt").is_file()
+            (self.run_dir / f"holdout/alpha/v1/raw/external-{malformed_digest}.txt").is_file()
         )
         rejected = op.load_json(
-            self.run_dir / f"holdout/alpha/v4/imports/external-{malformed_digest}.json"
+            self.run_dir / f"holdout/alpha/v1/imports/external-{malformed_digest}.json"
         )
         self.assertEqual(rejected["status"], "rejected")
 
@@ -2327,13 +3987,13 @@ class DedupAndHoldoutTests(OpportunityTestCase):
         evaluation_bytes = evaluation_path.read_bytes()
         receipt_path = (
             self.run_dir
-            / f"holdout/alpha/v4/imports/external-{imported['raw_response_sha256']}.json"
+            / f"holdout/alpha/v1/imports/external-{imported['raw_response_sha256']}.json"
         )
         receipt_bytes = receipt_path.read_bytes()
 
         evaluation_path.unlink()
         with self.assertRaisesRegex(op.InputError, "external import evaluation.*does not exist"):
-            op.check_run(self.run_dir, op.DEFAULT_CONFIG)
+            op.check_run(self.run_dir, self.config_path)
         with self.assertRaises(op.InputError):
             op.finalize_run(self.run_dir)
         evaluation_path.write_bytes(evaluation_bytes)
@@ -2347,7 +4007,7 @@ class DedupAndHoldoutTests(OpportunityTestCase):
 
         receipt_path.unlink()
         with self.assertRaisesRegex(op.InputError, "no accepted import receipt"):
-            op.check_run(self.run_dir, op.DEFAULT_CONFIG)
+            op.check_run(self.run_dir, self.config_path)
         recovered = op.import_external(self.run_dir, "alpha", response_path)
         self.assertTrue(recovered["idempotent"])
         accepted_events = [
@@ -2359,7 +4019,7 @@ class DedupAndHoldoutTests(OpportunityTestCase):
         evaluation_path.unlink()
         receipt_path.unlink()
         with self.assertRaisesRegex(op.InputError, "events and receipts do not reconcile"):
-            op.check_run(self.run_dir, op.DEFAULT_CONFIG)
+            op.check_run(self.run_dir, self.config_path)
 
         evaluation_path.write_bytes(evaluation_bytes)
         receipt_path.write_bytes(receipt_bytes)
@@ -2369,41 +4029,29 @@ class DedupAndHoldoutTests(OpportunityTestCase):
         self.assertEqual(code, 4)
         self.assertEqual(report["run_status"], "contested")
 
-    def test_native_holdout_raw_body_job_and_wrapper_are_strictly_bound(self) -> None:
-        frozen = self._store_lineage_with_research()
+    def test_native_holdout_job_accepts_one_strict_response(self) -> None:
+        finalist = self._store_lineage_with_research()
         self.set_stage("holdout")
         op.export_external(self.run_dir, "alpha")
-        manifest, state = self.load()
-
-        arbitrary = self.evaluation_input(frozen, "native-arbitrary", score=9)
-        arbitrary_path = self.run_dir / arbitrary["raw_response_path"]
-        original_arbitrary_bytes = arbitrary_path.read_bytes()
-        arbitrary_bytes = b"not JSON and not an evaluation\n"
-        arbitrary_path.write_bytes(arbitrary_bytes)
-        arbitrary["raw_response_sha256"] = op.sha256_bytes(arbitrary_bytes)
-        state = self.load()[1]
-        state["jobs"]["holdout"]["native-arbitrary"]["artifact_sha256"] = arbitrary["raw_response_sha256"]
-        op.save_state(self.run_dir, state, manifest)
-        with self.assertRaisesRegex(op.InputError, "invalid JSON"):
-            op.compute_evaluation(arbitrary, manifest, self.run_dir)
-        arbitrary_path.write_bytes(original_arbitrary_bytes)
-        state = self.load()[1]
-        state["jobs"]["holdout"]["native-arbitrary"]["artifact_sha256"] = op.sha256_bytes(
-            original_arbitrary_bytes
+        response = self.evaluation_input(
+            finalist,
+            "native-strict",
+            score=8.7,
+            evaluation_type="holdout_native",
         )
-        op.save_state(self.run_dir, state, manifest)
-
-        mismatch = self.evaluation_input(frozen, "native-mismatch", score=9)
-        mismatch["primary_score_limiter"] = "A wrapper-only substituted limiter."
-        with self.assertRaisesRegex(op.InputError, "primary_score_limiter differs"):
-            op.compute_evaluation(mismatch, manifest, self.run_dir)
-
-        unbound = self.evaluation_input(frozen, "native-unbound", score=9)
-        state = self.load()[1]
-        del state["jobs"]["holdout"]["native-unbound"]
-        op.save_state(self.run_dir, state, manifest)
-        with self.assertRaisesRegex(op.InputError, "not bound to exactly one completed holdout job"):
-            op.compute_evaluation(unbound, manifest, self.run_dir)
+        response.pop("_test_evaluation_type")
+        response_path = self.root / "native-strict.json"
+        response_path.write_text(json.dumps(response), encoding="utf-8")
+        op.start_job(self.run_dir, "native-strict", "holdout")
+        completed = op.complete_job(
+            self.run_dir, "native-strict", response_path, "evaluation"
+        )
+        canonical = op.load_json(self.run_dir / completed["artifact"])
+        self.assertEqual(canonical["evaluation_type"], "holdout_native")
+        self.assertEqual(canonical["candidate_version"], 1)
+        self.assertEqual(canonical["final_score"], 8.7)
+        self.assertNotIn("raw_response_path", canonical)
+        self.assertNotIn("raw_response_sha256", canonical)
 
     def test_frozen_cannot_advance_or_close_without_matching_packet(self) -> None:
         frozen = self._store_lineage_with_research()
@@ -2419,48 +4067,27 @@ class DedupAndHoldoutTests(OpportunityTestCase):
         packet_path.write_bytes(packet_bytes)
         advanced = op.advance_run(self.run_dir)
         self.assertEqual(advanced["stage"], "holdout")
+        packet_path.unlink()
+        with self.assertRaisesRegex(op.InputError, "external packet"):
+            op.check_run(self.run_dir, self.config_path)
+        packet_path.write_bytes(packet_bytes)
 
         other = OpportunityTestCase(methodName="runTest")
         other.setUp()
         try:
-            discovery = other.candidate()
-            other.store_candidate(discovery)
-            researched = other.candidate(
-                version=2,
-                stage="research",
-                parent={"candidate_id": "alpha", "version": 1},
-            )
-            other.store_candidate(researched)
-            other.store_research(other.research(researched))
-            developed = other.candidate(
-                version=3,
-                stage="development",
-                parent={"candidate_id": "alpha", "version": 2},
-            )
-            other.store_candidate(developed)
-            other.store_evaluation(
-                other.evaluation_input(
-                    developed,
-                    "working-alpha",
-                    score=8,
-                    evaluation_type="working",
-                )
-            )
-            frozen_without_packet = other.candidate(
-                version=4,
-                stage="frozen",
-                parent={"candidate_id": "alpha", "version": 3},
-            )
-            other.store_candidate(frozen_without_packet)
+            other.store_complete_lineage()
             other.set_stage("frozen")
             with self.assertRaisesRegex(op.ConflictError, "must continue to holdout"):
                 op.finalize_run(other.run_dir, "Holdout packet could not be completed")
         finally:
             other.tearDown()
 
-    def test_final_tie_break_report_and_qualified_publication(self) -> None:
-        alpha = self._store_lineage_with_research("alpha", capital=50000)
-        beta = self._store_lineage_with_research("beta", capital=200000)
+    def test_every_researched_candidate_appears_in_published_learning_digest(self) -> None:
+        lineages = self._store_lineages(
+            [("alpha", 50000), ("beta", 200000)]
+        )
+        alpha = lineages["alpha"]
+        beta = lineages["beta"]
         self.set_stage("holdout")
         op.export_external(self.run_dir, "alpha")
         op.export_external(self.run_dir, "beta")
@@ -2493,15 +4120,15 @@ class DedupAndHoldoutTests(OpportunityTestCase):
         self.assertNotIn("produced no score-qualified candidate", markdown)
         publication = op.publish_run(self.run_dir, self.root / "outcomes", self.root / "knowledge")
         published = self.root / "outcomes" / self.run_id
-        self.assertTrue((published / "candidates/beta/v4.json").is_file())
-        self.assertTrue((published / "research/beta/v2.json").is_file())
+        self.assertTrue((published / "candidates/beta/v1.json").is_file())
+        self.assertTrue((published / "research/beta/v1.json").is_file())
         self.assertTrue((published / "exports/beta/holdout_packet.md").is_file())
-        self.assertTrue((published / "holdout/jobs/native-a-beta.json").is_file())
-        self.assertTrue((published / "candidates/alpha/v4.json").is_file())
+        self.assertTrue((published / "holdout/beta/v1/native-native-a-beta.json").is_file())
+        self.assertTrue((published / "candidates/alpha/v1.json").is_file())
         self.assertTrue((published / "exports/alpha/holdout_packet.md").is_file())
         self.assertTrue((published / "exports/alpha/response_schema.json").is_file())
-        self.assertTrue((published / "holdout/jobs/native-a-alpha.json").is_file())
-        self.assertTrue((published / "holdout/jobs/native-b-alpha.json").is_file())
+        self.assertTrue((published / "holdout/alpha/v1/native-native-a-alpha.json").is_file())
+        self.assertTrue((published / "holdout/alpha/v1/native-native-b-alpha.json").is_file())
         alpha_result = next(
             item for item in report["candidates"] if item["candidate_id"] == "alpha"
         )
@@ -2514,6 +4141,41 @@ class DedupAndHoldoutTests(OpportunityTestCase):
         self.assertEqual(history["rubric_id"], "holistic-11-v1")
         self.assertEqual(history["selected_title"], beta["title"])
         self.assertEqual(history["selected_fingerprint"], beta["fingerprint"])
+        learning_rows = [
+            json.loads(line)
+            for line in (published / "learning-digest.jsonl")
+            .read_text(encoding="utf-8")
+            .splitlines()
+        ]
+        self.assertEqual(
+            {row["candidate_id"] for row in learning_rows}, {"alpha", "beta"}
+        )
+        for row in learning_rows:
+            candidate_id = row["candidate_id"]
+            self.assertEqual(
+                row["structure"],
+                {
+                    "commercial_archetype": f"calibrated archetype {candidate_id}",
+                    "control_point": f"calibrated control point {candidate_id}",
+                    "critical_dependency": f"calibrated dependency {candidate_id}",
+                },
+            )
+        self.assertEqual(history["learning_row_count"], 2)
+        self.assertEqual(
+            op.validate_published_run_outcome(published)["run_id"], self.run_id
+        )
+        published_report_path = published / "report.json"
+        forged = op.load_json(published_report_path)
+        forged["official_score"] = 9.9
+        forged["binding_score_floor"] = 9.9
+        published_report_path.write_bytes(op.canonical_json_bytes(forged))
+        (published / "report.md").write_text(
+            op.render_report_markdown(forged), encoding="utf-8"
+        )
+        with self.assertRaisesRegex(
+            op.InputError, "deterministically rederived outcome"
+        ):
+            op.validate_published_run_outcome(published)
 
     def test_ranking_cascade_and_passing_external_does_not_reorder_native_scores(self) -> None:
         base = {
@@ -2534,8 +4196,9 @@ class DedupAndHoldoutTests(OpportunityTestCase):
             with self.subTest(challenger=challenger["candidate_id"]):
                 self.assertEqual(min([base, challenger], key=op._selection_key)["candidate_id"], expected)
 
-        alpha = self._store_lineage_with_research("alpha")
-        beta = self._store_lineage_with_research("beta")
+        lineages = self._store_lineages([("alpha", 100000), ("beta", 100000)])
+        alpha = lineages["alpha"]
+        beta = lineages["beta"]
         self.set_stage("holdout")
         op.export_external(self.run_dir, "alpha")
         op.export_external(self.run_dir, "beta")
@@ -2548,8 +4211,13 @@ class DedupAndHoldoutTests(OpportunityTestCase):
             ("beta", "external-beta", 9.5),
         ):
             response_path = self.root / f"{judge_id}.json"
+            response = self.external_response(
+                manifest, judge_id=judge_id, score=score
+            )
+            response["candidate_id"] = candidate_id
+            response["candidate_version"] = 1
             response_path.write_text(
-                json.dumps(self.external_response(manifest, judge_id=judge_id, score=score)),
+                json.dumps(response),
                 encoding="utf-8",
             )
             op.import_external(self.run_dir, candidate_id, response_path)
@@ -2561,9 +4229,9 @@ class DedupAndHoldoutTests(OpportunityTestCase):
         op.publish_run(self.run_dir, self.root / "outcomes", self.root / "knowledge")
         published = self.root / "outcomes" / self.run_id
         self.assertTrue((published / "exports/alpha/holdout_packet.md").is_file())
-        self.assertTrue((published / "holdout/jobs/native-a-alpha.json").is_file())
-        alpha_receipts = list((published / "holdout/alpha/v4/imports").glob("external-*.json"))
-        alpha_raw = list((published / "holdout/alpha/v4/raw").glob("external-*.txt"))
+        self.assertTrue((published / "holdout/alpha/v1/native-native-a-alpha.json").is_file())
+        alpha_receipts = list((published / "holdout/alpha/v1/imports").glob("external-*.json"))
+        alpha_raw = list((published / "holdout/alpha/v1/raw").glob("external-*.txt"))
         self.assertEqual(len(alpha_receipts), 1)
         self.assertEqual(len(alpha_raw), 1)
 
@@ -2580,7 +4248,7 @@ class DedupAndHoldoutTests(OpportunityTestCase):
         report_path.write_bytes(op.canonical_json_bytes(forged))
         (self.run_dir / "report.md").write_text(op.render_report_markdown(forged), encoding="utf-8")
         with self.assertRaisesRegex(op.InputError, "deterministically derived outcome"):
-            op.check_run(self.run_dir, op.DEFAULT_CONFIG)
+            op.check_run(self.run_dir, self.config_path)
         with self.assertRaisesRegex(op.InputError, "deterministically derived outcome"):
             op.publish_run(self.run_dir, self.root / "outcomes", self.root / "knowledge")
 
@@ -2593,24 +4261,17 @@ class DedupAndHoldoutTests(OpportunityTestCase):
         report_path.write_bytes(op.canonical_json_bytes(forged))
         (self.run_dir / "report.md").write_text(op.render_report_markdown(forged), encoding="utf-8")
         with self.assertRaisesRegex(op.InputError, "deterministically derived outcome"):
-            op.check_run(self.run_dir, op.DEFAULT_CONFIG)
+            op.check_run(self.run_dir, self.config_path)
 
 
 class IntegrityAndExitCodeTests(OpportunityTestCase):
-    def run_cli(self, argv: list[str]) -> tuple[int, dict, dict]:
-        stdout = io.StringIO()
-        stderr = io.StringIO()
-        with contextlib.redirect_stdout(stdout), contextlib.redirect_stderr(stderr):
-            code = op.main(argv)
-        output = json.loads(stdout.getvalue()) if stdout.getvalue().strip() else {}
-        error = json.loads(stderr.getvalue()) if stderr.getvalue().strip() else {}
-        return code, output, error
-
     def test_check_detects_snapshot_and_event_corruption(self) -> None:
         originals = {
             "inputs/founder.md": (op.REPO_ROOT / "PERSONALITY_SITUATION.md").read_bytes(),
             "inputs/evaluator.txt": (op.REPO_ROOT / "Personalities/ZeroToOne.txt").read_bytes(),
-            "inputs/config.json": op.DEFAULT_CONFIG.read_bytes(),
+            "inputs/config.json": op.canonical_json_bytes(
+                op.validate_config(op.load_json(self.config_path))
+            ),
         }
         for relative, original in originals.items():
             with self.subTest(snapshot=relative):
@@ -2624,7 +4285,232 @@ class IntegrityAndExitCodeTests(OpportunityTestCase):
         record["sequence"] = 2
         events.write_text(json.dumps(record) + "\n", encoding="utf-8")
         with self.assertRaisesRegex(op.InputError, "not contiguous"):
-            op.check_run(self.run_dir, op.DEFAULT_CONFIG)
+            op.check_run(self.run_dir, self.config_path)
+
+    def test_cli_candidate_validation_and_scoped_status(self) -> None:
+        alpha = self.candidate("alpha")
+        beta = self.candidate("beta")
+        alpha_input = self.root / "alpha-input.json"
+        alpha_input.write_text(json.dumps(alpha, separators=(",", ":")), encoding="utf-8")
+        code, validated, error = self.run_cli(
+            [
+                "--runs-dir",
+                str(self.runs_dir),
+                "validate",
+                self.run_id,
+                "--input",
+                str(alpha_input),
+                "--kind",
+                "candidate",
+            ]
+        )
+        self.assertEqual(code, 0, error)
+        self.assertRegex(validated["canonical_sha256"], r"^[0-9a-f]{64}$")
+
+        self.store_candidate(alpha)
+        self.store_candidate(beta)
+        self.store_portfolio_selection([alpha, beta])
+        code, scoped, error = self.run_cli(
+            [
+                "--runs-dir",
+                str(self.runs_dir),
+                "status",
+                self.run_id,
+                "--candidate",
+                "alpha",
+            ]
+        )
+        self.assertEqual(code, 0, error)
+        self.assertEqual(scoped["scope"], "candidate_research")
+        self.assertNotIn("beta", json.dumps(scoped, sort_keys=True))
+        self.assertNotIn("portfolio_decision", scoped)
+
+    def test_preflight_is_attempt_neutral_and_hash_binds_job_completion(self) -> None:
+        op.advance_run(self.run_dir)
+        candidate = self.candidate("preflight-candidate")
+        candidate["founder_fit"] = "scalar founder fit"
+        candidate_input = self.root / "preflight-candidate.json"
+        candidate_input.write_bytes(op.canonical_json_bytes(candidate))
+        state_before = (self.run_dir / "state.json").read_bytes()
+        events_before = (self.run_dir / "events.jsonl").read_bytes()
+
+        code, report, error = self.run_cli(
+            [
+                "--runs-dir",
+                str(self.runs_dir),
+                "preflight",
+                self.run_id,
+                "--kind",
+                "candidate",
+                "--job-id",
+                "scout-preflight",
+                "--input",
+                str(candidate_input),
+            ]
+        )
+        self.assertEqual(code, op.InputError.exit_code, error)
+        self.assertFalse(report["validation"]["valid"])
+        self.assertIn(
+            "/founder_fit",
+            {row["pointer"] for row in report["validation"]["errors"]},
+        )
+        self.assertEqual(report["attempts_consumed"], 0)
+        self.assertEqual((self.run_dir / "state.json").read_bytes(), state_before)
+        self.assertEqual((self.run_dir / "events.jsonl").read_bytes(), events_before)
+
+        candidate["founder_fit"] = ["AI-assisted research"]
+        candidate_input.write_bytes(op.canonical_json_bytes(candidate))
+        accepted_bytes = candidate_input.read_bytes()
+        code, report, error = self.run_cli(
+            [
+                "--runs-dir",
+                str(self.runs_dir),
+                "preflight",
+                self.run_id,
+                "--kind",
+                "candidate",
+                "--job-id",
+                "scout-preflight",
+                "--input",
+                str(candidate_input),
+            ]
+        )
+        self.assertEqual(code, 0, error)
+        self.assertTrue(report["validation"]["valid"])
+        digest = report["validation"]["input_sha256"]
+        self.assertRegex(digest, r"^[0-9a-f]{64}$")
+        self.assertEqual((self.run_dir / "state.json").read_bytes(), state_before)
+        self.assertEqual((self.run_dir / "events.jsonl").read_bytes(), events_before)
+
+        op.start_job(self.run_dir, "scout-preflight", "discovery")
+        candidate["title"] = "Changed after preflight"
+        candidate_input.write_bytes(op.canonical_json_bytes(candidate))
+        with self.assertRaisesRegex(op.ConflictError, "differ from the successful preflight"):
+            op.complete_job(
+                self.run_dir,
+                "scout-preflight",
+                candidate_input,
+                "candidate",
+                digest,
+            )
+        self.assertEqual(
+            self.load()[1]["jobs"]["discovery"]["scout-preflight"]["status"],
+            "running",
+        )
+        candidate_input.write_bytes(accepted_bytes)
+        completed = op.complete_job(
+            self.run_dir,
+            "scout-preflight",
+            candidate_input,
+            "candidate",
+            digest,
+        )
+        self.assertEqual(completed["status"], "completed")
+        self.assertEqual(completed["attempts"], 1)
+
+    def test_evaluator_preflight_emits_exact_factors_enums_and_pointer_errors(self) -> None:
+        candidate = self.candidate("preflight-evaluation")
+        self.store_candidate(candidate)
+        self.store_portfolio_selection([candidate])
+        self.set_stage("research")
+        self.store_research(self.research(candidate))
+        state_before = (self.run_dir / "state.json").read_bytes()
+        events_before = (self.run_dir / "events.jsonl").read_bytes()
+        code, contract, error = self.run_cli(
+            [
+                "--runs-dir",
+                str(self.runs_dir),
+                "preflight",
+                self.run_id,
+                "--kind",
+                "evaluation",
+                "--job-id",
+                "working-preflight",
+            ]
+        )
+        self.assertEqual(code, 0, error)
+        expected_names = [row["name"] for row in self.load()[0]["rubric"]["factors"]]
+        self.assertEqual(contract["canonical_factor_names"], expected_names)
+        self.assertEqual(
+            [row["name"] for row in contract["template"]["factors"]],
+            expected_names,
+        )
+        self.assertEqual(
+            contract["enums"]["/factors/*/status"], ["scored", "excluded"]
+        )
+
+        malformed = copy.deepcopy(contract["template"])
+        malformed["candidate_id"] = candidate["candidate_id"]
+        malformed["candidate_version"] = candidate["version"]
+        malformed["evidence_needed_for_higher_score"] = ["wrong type"]
+        malformed_path = self.root / "malformed-evaluation.json"
+        malformed_path.write_bytes(op.canonical_json_bytes(malformed))
+        code, report, error = self.run_cli(
+            [
+                "--runs-dir",
+                str(self.runs_dir),
+                "preflight",
+                self.run_id,
+                "--kind",
+                "evaluation",
+                "--job-id",
+                "working-preflight",
+                "--input",
+                str(malformed_path),
+            ]
+        )
+        self.assertEqual(code, op.InputError.exit_code, error)
+        errors = {(row["pointer"], row["code"]) for row in report["validation"]["errors"]}
+        self.assertEqual(
+            errors,
+            {("/evidence_needed_for_higher_score", "canonical_validation")},
+        )
+        self.assertTrue(report["validation"]["schema_retry_required"])
+
+        malformed["evidence_needed_for_higher_score"] = "string"
+        malformed["factors"][0]["name"] = "core_insight"
+        malformed_path.write_bytes(op.canonical_json_bytes(malformed))
+        _, factor_report, _ = self.run_cli(
+            [
+                "--runs-dir",
+                str(self.runs_dir),
+                "preflight",
+                self.run_id,
+                "--kind",
+                "evaluation",
+                "--job-id",
+                "working-preflight",
+                "--input",
+                str(malformed_path),
+            ]
+        )
+        self.assertEqual(
+            factor_report["validation"]["errors"][0]["pointer"], "/factors"
+        )
+
+        malformed["factors"][0]["name"] = expected_names[0]
+        malformed["factors"][0]["status"] = "score"
+        malformed_path.write_bytes(op.canonical_json_bytes(malformed))
+        _, status_report, _ = self.run_cli(
+            [
+                "--runs-dir",
+                str(self.runs_dir),
+                "preflight",
+                self.run_id,
+                "--kind",
+                "evaluation",
+                "--job-id",
+                "working-preflight",
+                "--input",
+                str(malformed_path),
+            ]
+        )
+        self.assertEqual(
+            status_report["validation"]["errors"][0]["pointer"],
+            "/factors/0/status",
+        )
+        self.assertEqual((self.run_dir / "state.json").read_bytes(), state_before)
+        self.assertEqual((self.run_dir / "events.jsonl").read_bytes(), events_before)
 
     def test_resume_reports_corrupt_state_clearly(self) -> None:
         (self.run_dir / "state.json").write_text('{"stage":', encoding="utf-8")
@@ -2671,35 +4557,29 @@ class IntegrityAndExitCodeTests(OpportunityTestCase):
             op.validate_candidate(bad_candidate, manifest, self.run_dir)
         discovery = self.candidate()
         self.store_candidate(discovery)
-        researched = self.candidate(
-            version=2,
-            stage="research",
-            parent={"candidate_id": "alpha", "version": 1},
-        )
-        self.store_candidate(researched)
-        bad_research = self.research(researched)
+        bad_research = self.research(discovery)
         bad_research["schema_version"] = True
         with self.assertRaisesRegex(op.InputError, "must be an integer"):
             op.validate_research(bad_research, manifest, self.run_dir)
 
-        developed = self.candidate(
-            version=3,
-            stage="development",
-            parent={"candidate_id": "alpha", "version": 2},
-        )
-        self.store_candidate(developed)
-        bad_evaluation = self.evaluation_input(
-            developed,
+        response = self.evaluation_input(
+            discovery,
             "working-bool-schema",
-            evaluation_type="working",
+            evaluation_type="working_research",
+        )
+        response.pop("_test_evaluation_type")
+        bad_evaluation = op.canonicalize_evaluator_response(
+            response, manifest, self.run_dir, "working_research"
         )
         bad_evaluation["schema_version"] = True
         with self.assertRaisesRegex(op.InputError, "must be an integer"):
-            op.compute_evaluation(bad_evaluation, manifest, self.run_dir)
+            op.validate_canonical_evaluation(
+                bad_evaluation, manifest, self.run_dir
+            )
 
         raw = b"{}\n"
         raw_digest = op.sha256_bytes(raw)
-        raw_rel = f"holdout/alpha/v4/raw/external-{raw_digest}.txt"
+        raw_rel = f"holdout/alpha/v1/raw/external-{raw_digest}.txt"
         op.write_immutable(self.run_dir / raw_rel, raw, root=self.run_dir)
         receipt = {
             "schema_version": True,
@@ -2712,7 +4592,7 @@ class IntegrityAndExitCodeTests(OpportunityTestCase):
         }
         receipt_path = (
             self.run_dir
-            / f"holdout/alpha/v4/imports/external-{raw_digest}.json"
+            / f"holdout/alpha/v1/imports/external-{raw_digest}.json"
         )
         op.write_immutable(receipt_path, op.canonical_json_bytes(receipt), root=self.run_dir)
         with self.assertRaisesRegex(op.InputError, "must be an integer"):
@@ -2726,85 +4606,6 @@ class IntegrityAndExitCodeTests(OpportunityTestCase):
         with self.assertRaisesRegex(op.InputError, "must be an integer"):
             op.load_events(event_path, self.run_id)
         event_path.write_bytes(original_events)
-
-    def test_schema_v1_runs_are_readable_but_all_active_mutations_are_rejected(self) -> None:
-        run_id = "20260820T000000Z-abc123"
-        run_dir = self.root / "legacy-runs" / run_id
-        run_dir.mkdir(parents=True)
-        config = json.loads(op.DEFAULT_CONFIG.read_text(encoding="utf-8"))
-        config["schema_version"] = 1
-        for key in op.CONFIG_V2_EXTRA_KEYS:
-            config.pop(key)
-        config_bytes = op.canonical_json_bytes(config)
-        founder_bytes = (op.REPO_ROOT / "PERSONALITY_SITUATION.md").read_bytes()
-        evaluator_path = op.REPO_ROOT / "Personalities" / "ZeroToOne.txt"
-        evaluator_bytes = evaluator_path.read_bytes()
-        factors, rubric_digest = op.parse_rubric(evaluator_path)
-        source_hashes = {
-            "PERSONALITY_SITUATION.md": op.sha256_bytes(founder_bytes),
-            "Personalities/ZeroToOne.txt": op.sha256_bytes(evaluator_bytes),
-            "config/opportunity-workflow.json": op.sha256_bytes(config_bytes),
-        }
-        created_at = op.utc_now()
-        manifest = {
-            "schema_version": 1,
-            "run_id": run_id,
-            "created_at": created_at,
-            "config": config,
-            "source_hashes": source_hashes,
-            "rubric": {
-                "rubric_id": config["rubric_id"],
-                "sha256": rubric_digest,
-                "factors": [
-                    {"name": name, "weight": op.decimal_json(weight)}
-                    for name, weight in factors
-                ],
-            },
-        }
-        state = {
-            "schema_version": 1,
-            "run_id": run_id,
-            "stage": "initialized",
-            "run_status": "active",
-            "updated_at": created_at,
-            "jobs": {stage: {} for stage in op.STAGES},
-        }
-        for relative, data in (
-            ("inputs/founder.md", founder_bytes),
-            ("inputs/evaluator.txt", evaluator_bytes),
-            ("inputs/config.json", config_bytes),
-            ("manifest.json", op.canonical_json_bytes(manifest)),
-            ("state.json", op.canonical_json_bytes(state)),
-        ):
-            op.write_immutable(run_dir / relative, data, root=run_dir)
-        op.append_event(
-            run_dir,
-            state,
-            "run_created",
-            details={"source_hashes": source_hashes},
-        )
-        self.assertEqual(op.status_run(run_dir, False)["stage"], "initialized")
-        self.assertEqual(op.check_run(run_dir)["valid"], True)
-        raw = self.root / "legacy-import.json"
-        raw.write_text("{}", encoding="utf-8")
-        mutation_calls = (
-            lambda: op.resume_run(run_dir),
-            lambda: op.start_job(run_dir, "legacy", None),
-            lambda: op.fail_job(run_dir, "legacy", "failure"),
-            lambda: op.complete_job(run_dir, "legacy", raw, "generic"),
-            lambda: op.dedup_run(run_dir),
-            lambda: op.advance_run(run_dir),
-            lambda: op.export_external(run_dir, "alpha"),
-            lambda: op.import_external(run_dir, "alpha", raw),
-            lambda: op.finalize_run(run_dir, "legacy closure"),
-            lambda: op.publish_run(
-                run_dir, self.root / "legacy-outcomes", self.root / "legacy-knowledge"
-            ),
-        )
-        for mutation in mutation_calls:
-            with self.subTest(mutation=mutation):
-                with self.assertRaisesRegex(op.ConflictError, "schema-v1 runs are read-only"):
-                    mutation()
 
     def test_cli_exit_codes_for_input_and_premature_finalization_conflicts(self) -> None:
         stdout = io.StringIO()

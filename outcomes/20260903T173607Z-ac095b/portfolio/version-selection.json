@@ -1,0 +1,188 @@
+{
+  "lineages": [
+    {
+      "base_candidate_ref": {
+        "candidate_id": "fb-legacy-inverter-swap-reserve",
+        "candidate_sha256": "76d073efb22cc752b726f732f614b82066658f2f2b2218f83b0c0927205d110d",
+        "version": 1
+      },
+      "base_conservative_score": 3.4,
+      "base_evaluations": [
+        {
+          "final_score": 3.4,
+          "judge_id": "development-fb-inverter-j01",
+          "path": "evaluations/fb-legacy-inverter-swap-reserve/v1/development-development-fb-inverter-j01.json",
+          "sha256": "4c183279b46c6fc938b974061bb74b79745484bdb8de680207d4cc37eae3ed1c"
+        },
+        {
+          "final_score": 3.8,
+          "judge_id": "development-fb-inverter-j02",
+          "path": "evaluations/fb-legacy-inverter-swap-reserve/v1/development-development-fb-inverter-j02.json",
+          "sha256": "cb51a05aa2aedc43115ad6679c1c25e8ff31e6d4ef3951a8219c3d98914761f7"
+        }
+      ],
+      "candidate_id": "fb-legacy-inverter-swap-reserve",
+      "redesign_candidate_ref": {
+        "candidate_id": "fb-legacy-inverter-swap-reserve",
+        "candidate_sha256": "82c4fcc9046ce7f04f872a58544ff6166140a53ba617eedb0d298644f6ef243d",
+        "version": 2
+      },
+      "redesign_conservative_score": 4.4,
+      "redesign_evaluations": [
+        {
+          "final_score": 4.4,
+          "judge_id": "development-fb-inverter-j01",
+          "path": "evaluations/fb-legacy-inverter-swap-reserve/v2/development-development-fb-inverter-j01.json",
+          "sha256": "862600fb2a7d275d64b4a44cb8c6345efd40f1184a2bd48609ec1716aba7491c"
+        },
+        {
+          "final_score": 4.6,
+          "judge_id": "development-fb-inverter-j02",
+          "path": "evaluations/fb-legacy-inverter-swap-reserve/v2/development-development-fb-inverter-j02.json",
+          "sha256": "5034d1cde364fcb11108c1578f3ce2dfe00ca9b53fc0fa0fdd763eb8e67d261f"
+        }
+      ],
+      "selected_candidate_ref": {
+        "candidate_id": "fb-legacy-inverter-swap-reserve",
+        "candidate_sha256": "82c4fcc9046ce7f04f872a58544ff6166140a53ba617eedb0d298644f6ef243d",
+        "version": 2
+      },
+      "selected_conservative_score": 4.4,
+      "selection_reason": "redesign_score_strictly_higher"
+    },
+    {
+      "base_candidate_ref": {
+        "candidate_id": "mf-aftercare-reserve",
+        "candidate_sha256": "cbfbf0be54799a9ed43ba8fbdb65197d4579746697307a1b9e03237d63d74622",
+        "version": 1
+      },
+      "base_conservative_score": 3.4,
+      "base_evaluations": [
+        {
+          "final_score": 3.4,
+          "judge_id": "development-mf-aftercare-j01",
+          "path": "evaluations/mf-aftercare-reserve/v1/development-development-mf-aftercare-j01.json",
+          "sha256": "4cee21036090bf66ccbb7b40fd8458292034a2495f497a2f335c23ec041b5c2e"
+        },
+        {
+          "final_score": 3.4,
+          "judge_id": "development-mf-aftercare-j02",
+          "path": "evaluations/mf-aftercare-reserve/v1/development-development-mf-aftercare-j02.json",
+          "sha256": "9a7247464f771f42798c45eb721f5e2e03b2f1ebb48b1ebee1cdf880b2ba94d5"
+        }
+      ],
+      "candidate_id": "mf-aftercare-reserve",
+      "redesign_candidate_ref": null,
+      "redesign_conservative_score": null,
+      "redesign_evaluations": null,
+      "selected_candidate_ref": {
+        "candidate_id": "mf-aftercare-reserve",
+        "candidate_sha256": "cbfbf0be54799a9ed43ba8fbdb65197d4579746697307a1b9e03237d63d74622",
+        "version": 1
+      },
+      "selected_conservative_score": 3.4,
+      "selection_reason": "no_valid_redesign"
+    },
+    {
+      "base_candidate_ref": {
+        "candidate_id": "mf-commissioning-passport",
+        "candidate_sha256": "950e26fd33debe16a20fc42240097e5ed95d4450db8f017a6d1324b117121993",
+        "version": 1
+      },
+      "base_conservative_score": 4,
+      "base_evaluations": [
+        {
+          "final_score": 4,
+          "judge_id": "development-mf-commissioning-j01",
+          "path": "evaluations/mf-commissioning-passport/v1/development-development-mf-commissioning-j01.json",
+          "sha256": "4b3473447e94f6e4c08bc18af33d26a387fd10b8d7075509c734624add6963ec"
+        },
+        {
+          "final_score": 4,
+          "judge_id": "development-mf-commissioning-j02",
+          "path": "evaluations/mf-commissioning-passport/v1/development-development-mf-commissioning-j02.json",
+          "sha256": "73a545bee931d16e28d464bc2b5b76929cdebcb57b8265e5c69fecc2eb34dc3f"
+        }
+      ],
+      "candidate_id": "mf-commissioning-passport",
+      "redesign_candidate_ref": {
+        "candidate_id": "mf-commissioning-passport",
+        "candidate_sha256": "450dfbe975355790ba82d5b719cfa51ddc19d8a83a336d106d26f92331f5c03b",
+        "version": 2
+      },
+      "redesign_conservative_score": 4.2,
+      "redesign_evaluations": [
+        {
+          "final_score": 4.2,
+          "judge_id": "development-mf-commissioning-j01",
+          "path": "evaluations/mf-commissioning-passport/v2/development-development-mf-commissioning-j01.json",
+          "sha256": "8d07ac6f37359bdf466a6cf0f9ba4bebc3cf7458de17d3b1b9a2ba94f1f7e556"
+        },
+        {
+          "final_score": 4.9,
+          "judge_id": "development-mf-commissioning-j02",
+          "path": "evaluations/mf-commissioning-passport/v2/development-development-mf-commissioning-j02.json",
+          "sha256": "e3fc11642fc5d7be81d5681025d0fe4b8d0547d560a9b0f3fe7401ee5c75bb20"
+        }
+      ],
+      "selected_candidate_ref": {
+        "candidate_id": "mf-commissioning-passport",
+        "candidate_sha256": "450dfbe975355790ba82d5b719cfa51ddc19d8a83a336d106d26f92331f5c03b",
+        "version": 2
+      },
+      "selected_conservative_score": 4.2,
+      "selection_reason": "redesign_score_strictly_higher"
+    },
+    {
+      "base_candidate_ref": {
+        "candidate_id": "ws-battery-passport-evidence-graph",
+        "candidate_sha256": "2c303e46ddc73103e109c14cdb312cdebacac06d61eb41227a54585f6e1d64fa",
+        "version": 1
+      },
+      "base_conservative_score": 4.1,
+      "base_evaluations": [
+        {
+          "final_score": 4.1,
+          "judge_id": "development-ws-battery-passport-j01",
+          "path": "evaluations/ws-battery-passport-evidence-graph/v1/development-development-ws-battery-passport-j01.json",
+          "sha256": "0fa35d0c6024776aaec410b5260f3092121d0c85ce3028c37b32cf7361191fdc"
+        },
+        {
+          "final_score": 4.3,
+          "judge_id": "development-ws-battery-passport-j02",
+          "path": "evaluations/ws-battery-passport-evidence-graph/v1/development-development-ws-battery-passport-j02.json",
+          "sha256": "1e4709e3f0436d9e1c87d7191af8b5c9d1c4535eca873179f999f9253f9b6b01"
+        }
+      ],
+      "candidate_id": "ws-battery-passport-evidence-graph",
+      "redesign_candidate_ref": {
+        "candidate_id": "ws-battery-passport-evidence-graph",
+        "candidate_sha256": "ebb33e21b1768a8687aa5060342b3575cc6519e5f51f23a806163eb0f4326aab",
+        "version": 2
+      },
+      "redesign_conservative_score": 4.8,
+      "redesign_evaluations": [
+        {
+          "final_score": 4.8,
+          "judge_id": "development-ws-battery-passport-j01",
+          "path": "evaluations/ws-battery-passport-evidence-graph/v2/development-development-ws-battery-passport-j01.json",
+          "sha256": "5ac96e7abe80072dc075f56ff12cc12dc15790ba83e4e4e0e8f597b4c61a3067"
+        },
+        {
+          "final_score": 5,
+          "judge_id": "development-ws-battery-passport-j02",
+          "path": "evaluations/ws-battery-passport-evidence-graph/v2/development-development-ws-battery-passport-j02.json",
+          "sha256": "779742c91d5283c7774a104d30eede870994bb882d075b0331273e9f7de323a9"
+        }
+      ],
+      "selected_candidate_ref": {
+        "candidate_id": "ws-battery-passport-evidence-graph",
+        "candidate_sha256": "ebb33e21b1768a8687aa5060342b3575cc6519e5f51f23a806163eb0f4326aab",
+        "version": 2
+      },
+      "selected_conservative_score": 4.8,
+      "selection_reason": "redesign_score_strictly_higher"
+    }
+  ],
+  "schema_version": 3
+}

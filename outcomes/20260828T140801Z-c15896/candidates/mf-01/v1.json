@@ -1,0 +1,90 @@
+{
+  "candidate_id": "mf-01",
+  "claims": [
+    {
+      "claim_id": "mf-01-control",
+      "claim_type": "founder_control_point_path",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/dir/2019/944/oj/eng",
+        "https://eur-lex.europa.eu/legal-content/en/ALL/?uri=CELEX%3A02019R0943-20240716"
+      ],
+      "statement": "EU law defines an aggregation contract that customers may enter without their electricity supplier's consent, and permits consented dedicated-meter data for settlement of flexibility services; this creates a contractible route to dispatch rights over heat pumps, batteries and EV chargers, although Polish implementation and market access still need verification."
+    },
+    {
+      "claim_id": "mf-01-loss",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://www.ure.gov.pl/en/communication/news/399%2CElectricity-bills-starting-from-24-August-households-can-enter-into-contracts-wi.html",
+        "https://www.ure.gov.pl/en/communication/news/528%2COver-4800-households-are-already-on-dynamic-pricing-contracts.html"
+      ],
+      "statement": "Polish dynamic tariffs expose eligible customers to 15-minute wholesale-linked price variation, while URE says shifting consumption is intended to reduce emergency renewable shutdowns; only 4,836 households used dynamic contracts by end-2025, so the loss is real price volatility and unmonetised flexible load, but adoption remains very early."
+    },
+    {
+      "claim_id": "mf-01-payer",
+      "claim_type": "payer_and_budget",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://www.ure.gov.pl/pl/urzad/informacje-ogolne/aktualnosci/12692%2CRaporty-i-analizy-URE-w-ubieglym-roku-135-odbiorcow-skorzystalo-z-umow-z-cena-dy.html"
+      ],
+      "statement": "The immediate payer is a heat-pump, battery or EV-owning household or microenterprise, with the electricity bill as budget and tariff sign-up or a large bill swing as trigger; URE found dynamic offers already carry wholesale markups of PLN 0.0999-0.149 per kWh and monthly fees up to PLN 49.90, showing an existing paid retail-service layer."
+    }
+  ],
+  "contrary_evidence": [
+    "URE reported only 4,836 Polish household dynamic-tariff customers at end-2025 despite much broader smart-meter availability, so customer willingness may be weak.",
+    "Suppliers may exclude negative wholesale prices, add caps or fees, and Polish rules may not yet make independent small-load aggregation economically accessible."
+  ],
+  "discovery_lane": "mechanism-first",
+  "economics": {
+    "acquisition_route": "Use the founder's parents' renewable installer as the first channel: add an opt-in aggregation and device-control agreement to heat-pump, battery and EV-charger installations, then recruit other regional installers under revenue share.",
+    "capital_required_pln": 80000,
+    "founder_net_worth_path": "Validate with 50 controllable homes, reach 2,000 devices and roughly PLN 1.2m annual recurring revenue, then expand through installer channels to 20,000 devices; at PLN 6m-9m recurring revenue and positive margins, retained founder equity plus accumulated cash could plausibly exceed PLN 5m in 5-7 years without assuming a sale.",
+    "founder_time": "Part-time founder builds forecasting, dispatch and settlement logic for 3-4 hours daily; certified electrical work and customer support are handled by installer partners, with a market-access specialist contracted before any live aggregation.",
+    "gross_margin_basis": "Software orchestration and settlement should be high margin after device/API and market-access fees; preliminary target is 55-70% gross margin, unproven until a Polish balance-responsible partner quotes terms.",
+    "payback": "Charge no hardware subsidy initially; customer payback is targeted below 12 months from verified bill savings, while acquisition spend should recover within 6-9 subscription months.",
+    "pricing": "Hypothesis: PLN 39-79 per connected premise per month plus 15-25% of verified flexibility or bill savings; alternatively wholesale the fleet to an energy retailer for a per-device availability fee.",
+    "retention_or_repeat": "Monthly service persists while the controlled asset and tariff remain active; accumulated device response curves, comfort constraints and settlement history improve dispatch and retailer bargaining power."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A proprietary response-and-comfort dataset across heterogeneous devices improves dispatch accuracy, while a larger fleet earns better market-access terms and attracts more installers.",
+    "customer": "Polish households and microenterprises with heat pumps, batteries or EV chargers, initially installed by regional renewable-energy contractors.",
+    "distribution_mechanism": "Installer-embedded opt-in at equipment sale and service visits, followed by energy-retailer white-label distribution.",
+    "offer_and_business_model": "Automated flexible-load dispatch sold as a subscription plus savings share, with optional wholesale capacity payments from a licensed market-access partner.",
+    "payer_and_paid_event": "The asset owner pays when dynamic-tariff volatility or inflexible consumption raises the bill; later a retailer or aggregator partner pays for dependable pooled flexibility.",
+    "problem_trigger": "Installation of a controllable electric asset, adoption of a dynamic tariff, or an unexpectedly high electricity bill."
+  },
+  "founder_fit": [
+    "The parents' renewable-energy installation company supplies an unusually direct pilot channel and trusted field-service capacity.",
+    "Forecasting, optimisation and device telemetry use the founder's data-science strengths and can be developed part-time.",
+    "The model is system-led and partner-distributed rather than dependent on a personal brand or continuous founder selling."
+  ],
+  "parent": null,
+  "risks": [
+    "Polish licensing, balancing responsibility, telemetry and minimum-bid requirements could make direct market participation unobtainable for a small entrant.",
+    "Device manufacturers can restrict APIs, and bad dispatch could damage equipment, comfort or trust.",
+    "Retail price protections or supplier formulas can eliminate the savings pool."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/dir/2019/944/oj/eng",
+    "https://eur-lex.europa.eu/legal-content/en/ALL/?uri=CELEX%3A02019R0943-20240716",
+    "https://www.ure.gov.pl/en/communication/news/399%2CElectricity-bills-starting-from-24-August-households-can-enter-into-contracts-wi.html",
+    "https://www.ure.gov.pl/en/communication/news/528%2COver-4800-households-are-already-on-dynamic-pricing-contracts.html",
+    "https://www.ure.gov.pl/pl/urzad/informacje-ogolne/aktualnosci/12692%2CRaporty-i-analizy-URE-w-ubieglym-roku-135-odbiorcow-skorzystalo-z-umow-z-cena-dy.html"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Distributed flexibility aggregator",
+    "control_point": "Consent-backed dispatch and settlement rights over installed flexible electrical loads",
+    "critical_dependency": "A lawful Polish market-access and balance-settlement partner with usable device telemetry"
+  },
+  "thesis": "Acquire contractual dispatch rights at the moment a regional installer commissions a heat pump, battery or charger, pool those assets, and sell owners automated bill optimisation before monetising the same fleet as verified flexibility through a market-access partner.",
+  "title": "Installer-Locked Flexible Load Fleet",
+  "uncertainties": [
+    "Exact Polish independent-aggregator registration, minimum bid size and settlement economics are not yet verified.",
+    "Actual savings after distribution charges, taxes, comfort limits and supplier markups are unknown.",
+    "It is unknown whether installer customers will grant durable remote-control rights."
+  ],
+  "version": 1
+}

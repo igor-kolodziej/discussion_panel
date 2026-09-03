@@ -1,0 +1,147 @@
+{
+  "candidate_id": "fb-07",
+  "claims": [
+    {
+      "claim_id": "fb-07-control",
+      "claim_type": "founder_control_point_path",
+      "confidence": "preliminary inference from public regulator criteria",
+      "evidence_refs": [
+        "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/digital-health-technologies-remote-data-acquisition-clinical-investigations",
+        "https://www.ema.europa.eu/en/documents/other/questions-and-answers-qualification-digital-technology-based-methodologies-support-approval-medicinal-products_en.pdf"
+      ],
+      "statement": "FDA and EMA materials expose a public fit-for-purpose assessment frame that can seed a versioned, vendor-neutral review workflow. The founder could own its implementation and decision rubric without collecting participant data, but no evidence shows that sponsors will accept this founder as an independent reviewer."
+    },
+    {
+      "claim_id": "fb-07-loss",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "evidence for the decision requirements; preliminary for this offer",
+      "evidence_refs": [
+        "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/digital-health-technologies-remote-data-acquisition-clinical-investigations",
+        "https://www.ema.europa.eu/en/documents/other/questions-and-answers-qualification-digital-technology-based-methodologies-support-approval-medicinal-products_en.pdf"
+      ],
+      "statement": "A sponsor choosing a wearable-derived trial measure must address verification, validation, usability, participant suitability, data integrity, and meaningful interpretation. The proposed paid event is the go-no-go decision before protocol lock, but the cost and deadline of that decision remain sponsor-specific."
+    },
+    {
+      "claim_id": "fb-07-payer",
+      "claim_type": "payer_and_budget",
+      "confidence": "category evidence with candidate-specific procurement unknown",
+      "evidence_refs": [
+        "https://ascpt.onlinelibrary.wiley.com/doi/10.1111/cts.13902"
+      ],
+      "statement": "Peer-reviewed category economics show that useful digital endpoints can create material sponsor value and that established digital-measure agreements can command substantial budgets. This supports a sponsor budget class but does not establish a diligence fee, procurement access, or willingness to buy from a new Warsaw operator."
+    },
+    {
+      "claim_id": "fb-07-competition",
+      "claim_type": "other",
+      "confidence": "evidence for substitutes; differentiation is an unvalidated hypothesis",
+      "evidence_refs": [
+        "https://clario.com/",
+        "https://www.koneksahealth.com/koneksa-platform/",
+        "https://news.samsung.com/uk/samsung-partners-with-alcedis-to-advance-clinical-research-using-wearable-based-endpoints"
+      ],
+      "statement": "Clario and Koneksa already combine endpoint science, validated measures, regulatory-grade infrastructure, analytics, and sponsor relationships, while Samsung and Alcedis show device-maker and CRO bundling. The redesign differentiates through buyer-side vendor neutrality, but public evidence does not establish that this positioning is protected or preferred."
+    },
+    {
+      "claim_id": "fb-07-adoption",
+      "claim_type": "other",
+      "confidence": "evidence against assuming broad urgency",
+      "evidence_refs": [
+        "https://pubmed.ncbi.nlm.nih.gov/38308421/"
+      ],
+      "statement": "Observed uptake of newer digital health technologies in sponsored trials has been tepid and biased toward conventional devices, so regulator-defined diligence need does not imply broad urgency or repeat demand for this assurance offer."
+    },
+    {
+      "claim_id": "fb-07-capital",
+      "claim_type": "other",
+      "confidence": "evidence for avoided study burden; economics remain a hypothesis",
+      "evidence_refs": [
+        "https://www.nature.com/articles/s41746-025-01513-5",
+        "https://ascpt.onlinelibrary.wiley.com/doi/10.1111/cts.13902"
+      ],
+      "statement": "Novel endpoint validation can be costly, multidisciplinary, and require multiple prospective studies. Restricting the offer to pre-study evidence diligence avoids self-funding those studies, but the resulting delivery cost, expert-review burden, liability, and gross margin have not been validated."
+    }
+  ],
+  "contrary_evidence": [
+    "Clario and Koneksa already sell overlapping endpoint science, validated measures, platforms, and regulatory-grade services with established sponsor relationships.",
+    "Samsung's partnership with Alcedis shows device makers and CROs can bundle wearable hardware, biomarker expertise, and clinical-research infrastructure around the same decision problem.",
+    "A 2024 sponsored-trial analysis found tepid adoption of newer digital health technologies, weakening any assumption of broad or urgent demand.",
+    "No evidence establishes that sponsors will pay a separate independent adviser rather than use internal experts, a CRO, the device vendor, or an established endpoint platform.",
+    "A public-criteria review workflow is more obtainable than a consented cohort but may also be easier for incumbents and other consultants to copy."
+  ],
+  "discovery_lane": "future-backcast",
+  "economics": {
+    "acquisition_route": "Choose one disease-specific exploratory or secondary endpoint decision, seek a prepaid design-partner audit through independent biostatistician, regulatory-adviser, and investigator referrals, and do not hire or build a platform before a buyer exposes a real dossier, deadline, and budget.",
+    "capital_required_pln": 12000,
+    "founder_net_worth_path": "A base case of bespoke diligence may remain a small consultancy and may not meet the founder objective. A credible path requires repeated sponsor programs, hired reviewers, and a subscription workflow that standardizes evidence intake, change-control monitoring, and portfolio review without claiming client-confidential data as a moat; none of that repeat demand is yet proven.",
+    "founder_time": "Target 10-15 founder hours per week for evidence mapping, quantitative analysis, and client decisions, with qualified specialist review contracted per engagement; this workload assumption requires a paid-pilot time log.",
+    "gross_margin_basis": "Revenue is the fixed diligence fee; direct costs are contracted regulatory, clinical, or biostatistical review, professional insurance allocated to the engagement, and software. Margin must be measured from a paid pilot rather than inferred from established-vendor contract values.",
+    "payback": "Require an upfront milestone that covers all subcontracted specialist review; recover the reusable rubric and workflow setup within the first two paid sprints only if actual delivery hours and expert costs support it.",
+    "pricing": "Unvalidated pilot hypothesis: a fixed fee for one endpoint go-no-go sprint with explicit scope and a paid change order for additional vendor or protocol analysis; offer a portfolio retainer only after a client demonstrates repeat protocol-review demand.",
+    "retention_or_repeat": "Repeat is tied to each new protocol, endpoint, device, vendor, population, or material algorithm change; a retainer is justified only if one sponsor has a recurring program rather than a single decision."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A versioned sponsor-side evidence rubric, cross-vendor change-control checklist, reusable quantitative review software, and non-confidential failure-mode library rather than participant-data ownership",
+    "customer": "Small and mid-sized biotech clinical-development teams considering a wearable-derived secondary or exploratory endpoint without a dedicated internal digital-measures group",
+    "distribution_mechanism": "Targeted referrals from independent biostatisticians, regulatory advisers, and disease-specific investigators plus trigger-based outreach around announced trial planning; the first credible procurement route remains unvalidated",
+    "offer_and_business_model": "A two-to-four-week fixed-scope independent endpoint assurance sprint, followed only after demonstrated repeat demand by a portfolio retainer for recurring protocol and vendor reviews; the company does not operate participant studies or license cohort data",
+    "payer_and_paid_event": "A clinical-development, biomarker, or digital-health lead pays a fixed diligence fee at the endpoint go-no-go and vendor-selection decision before participant recruitment",
+    "problem_trigger": "Before protocol lock, a team must decide whether a proposed device and measure are fit for the intended context or should be rejected, renegotiated, or given a narrower validation plan before expensive study commitments"
+  },
+  "founder_fit": [
+    "The founder's neuroscience, biosignal, statistics, data-science, and AI experience fits evidence mapping, quantitative review, and workflow automation.",
+    "Removing participant recruitment and study operations makes a tightly scoped prepaid sprint more compatible with the founder's five-hour-per-day ceiling and preference for analytical, low-camera work.",
+    "Contracting specialist regulatory or clinical review per engagement keeps fixed capital below the original study-operator model, while preserving a test-before-scale path."
+  ],
+  "parent": {
+    "candidate_id": "fb-07",
+    "version": 1
+  },
+  "redesign": {
+    "changed_fingerprint_fields": [
+      "customer",
+      "problem_trigger",
+      "payer_and_paid_event",
+      "offer_and_business_model",
+      "distribution_mechanism",
+      "compounding_advantage"
+    ],
+    "economic_effect": "The redesign removes cohort recruitment, participant compensation, ethics and physician-led study operations, consent and recontact governance, and cross-sponsor data-licensing rights from the initial offer. It lowers modeled starting capital from 40000 PLN to 12000 PLN, replaces study fees plus pass-through costs and speculative dataset licensing with fixed-scope diligence and only evidence-triggered retainers, and reduces founder operations toward analysis. It gives up the presumed cohort-data moat and leaves sponsor access, credibility, specialist-review cost, liability, pricing, and repeat demand explicitly unproven."
+  },
+  "risks": [
+    "Sponsors may prefer an incumbent platform, CRO, device vendor, or internal digital-measures team and decline a separate buyer-side assurance purchase.",
+    "Incomplete or vendor-controlled evidence can make a fixed-scope review inconclusive and expose the business to scope, liability, and reputation risk.",
+    "The workflow and public evidence base may be copied unless repeated engagements produce genuinely better non-confidential decision tooling.",
+    "Portfolio-retainer and software leverage may not emerge, leaving a specialist consultancy with an uncertain path to the founder's net-worth objective."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/digital-health-technologies-remote-data-acquisition-clinical-investigations",
+    "https://www.ema.europa.eu/en/human-regulatory-overview/research-development/scientific-advice-protocol-assistance/qualification-novel-methodologies-medicine-development",
+    "https://health.ec.europa.eu/ehealth-digital-health-and-care/european-health-data-space-regulation-ehds_en",
+    "https://www.ema.europa.eu/en/documents/other/questions-and-answers-qualification-digital-technology-based-methodologies-support-approval-medicinal-products_en.pdf",
+    "https://www.nature.com/articles/s41746-025-01513-5",
+    "https://ascpt.onlinelibrary.wiley.com/doi/10.1111/cts.13902",
+    "https://pubmed.ncbi.nlm.nih.gov/38308421/",
+    "https://clario.com/",
+    "https://www.koneksahealth.com/koneksa-platform/",
+    "https://news.samsung.com/uk/samsung-partners-with-alcedis-to-advance-clinical-research-using-wearable-based-endpoints"
+  ],
+  "stage": "development",
+  "structure": {
+    "commercial_archetype": "Productized buyer-side technical and regulatory diligence with a possible portfolio-retainer extension",
+    "control_point": "The vendor-neutral evidence decision workflow and sponsor-facing go-no-go dossier used before protocol lock",
+    "critical_dependency": "Access to adequate sponsor and vendor evidence dossiers plus buyer willingness to procure independent assurance before protocol lock"
+  },
+  "thesis": "Replace the capital- and rights-intensive micro-study foundry with a sponsor-side, vendor-neutral endpoint go/no-go assurance sprint before protocol lock. The business uses public regulator criteria and buyer- or vendor-furnished evidence to produce a context-of-use definition, evidence-gap map, quantitative validation plan, device change-control requirements, total-cost scenarios, and procurement acceptance criteria. It owns the review workflow and decision deliverable rather than participants, devices, clinical infrastructure, or cross-sponsor health data.",
+  "title": "Independent Digital Endpoint Assurance",
+  "uncertainties": [
+    "Which single disease, endpoint concept, sponsor decision deadline, and endpoint hierarchy produce an urgent first assurance engagement.",
+    "Whether a sponsor will share adequate device, algorithm, validation, and protocol materials with a new independent reviewer before procurement.",
+    "Acceptable vendor credentials, sponsor procurement cycle, first-engagement price, sales conversion, CAC, and whether independent review is a line item or must be embedded in a broader CRO contract.",
+    "The legal and professional boundary between evidence diligence and regulated medical, statistical, or regulatory advice, including insurance and specialist sign-off requirements.",
+    "Delivery hours, subcontracted expert cost, achievable gross margin, repeat frequency across sponsor programs, and willingness to buy a portfolio retainer.",
+    "Whether non-confidential decision patterns and review software compound enough to create durability without cross-sponsor participant data or exclusive vendor evidence.",
+    "Whether the founder can build sponsor trust and manage diligence engagements within five hours per day while retaining full-time employment."
+  ],
+  "version": 2
+}

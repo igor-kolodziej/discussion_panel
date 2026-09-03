@@ -1,0 +1,330 @@
+{
+  "candidate_id": "mf-11",
+  "candidate_sha256": "e1f6f6e813532280bcc82965ffe317004b783de12f76069bd81e46e4d7dd9219",
+  "candidate_version": 1,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "mf11-r01-statutory-access-gate",
+      "evidence_refs": [
+        "s1-polish-electromobility-act",
+        "s4-udt-multifamily-guide"
+      ],
+      "statement": "In Polish residential buildings with more than three apartments, a resident holding title to a unit and exclusive use of a parking space applies to the community, cooperative, or property manager for installation consent; below 11 kW, consent by a condominium community is an act of ordinary management. The statute therefore creates a real building-level approval interface that an operator can help administer."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "mf11-r02-control-is-nonexclusive",
+      "evidence_refs": [
+        "s1-polish-electromobility-act",
+        "s4-udt-multifamily-guide"
+      ],
+      "statement": "That approval interface is not an exclusive commercial control point: statutory refusal is tied to enumerated feasibility, title, owner-consent, and applicant-cost conditions; where no expert report is required and the applicant bears all costs, the applicant may proceed after the 30-day decision period expires; after installation, the DSO can install a dedicated settlement meter following an energy contract."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "mf11-r03-building-vote-friction",
+      "evidence_refs": [
+        "s2-ownership-of-premises-act"
+      ],
+      "statement": "A multi-year agreement that changes or commits common electrical infrastructure, common-property use, or shared cost allocation is likely to require an owners' resolution and authority for the board rather than only a manager signature; resolutions ordinarily pass by majority of ownership shares. Exact classification depends on the agreement terms."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "mf11-r04-operating-right-contractibility",
+      "evidence_refs": [
+        "s1-polish-electromobility-act",
+        "s2-ownership-of-premises-act"
+      ],
+      "statement": "No reviewed statute or authoritative decision establishes that a condominium or cooperative can grant the proposed 7-10 year operating right on terms that are durable through board changes, compatible with each resident's statutory application route, and sufficiently preferential to protect the operator's investment. A reviewed contract form and Polish counsel opinion are still required."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "mf11-r05-individual-installation-substitute",
+      "evidence_refs": [
+        "s1-polish-electromobility-act",
+        "s4-udt-multifamily-guide"
+      ],
+      "statement": "A resident-owned charger used only for that resident's vehicle is a direct substitute for joining a shared operator pool; UDT states that this arrangement is a charging point rather than a station and does not require UDT technical acceptance, while the statute provides an individual consent and metering route."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "mf11-r06-incumbent-turnkey-offers",
+      "evidence_refs": [
+        "s5-chargewise-condominiums",
+        "s6-wallbox-poland-system"
+      ],
+      "statement": "Polish-market vendors already advertise the essential bundle: condominium user access, remote management, tariffs, automated billing, full-service operation, maintenance of the connection, dynamic load management, installation, and post-sale support. The offer is therefore entering an active incumbent category, not creating a vacant category."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "mf11-r07-open-system-switching",
+      "evidence_refs": [
+        "s5-chargewise-condominiums",
+        "s11-chargewise-ocpp-platform"
+      ],
+      "statement": "ChargeWise advertises support for popular OCPP 1.6-J stations and a cancellable trial while providing the same access, tariff, billing, and monitoring functions. Hardware interoperability lowers technical lock-in and makes the building contract and service quality, rather than proprietary charging data, the likely retention mechanism."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "mf11-r08-qualified-expert-dependency",
+      "evidence_refs": [
+        "s1-polish-electromobility-act",
+        "s4-udt-multifamily-guide"
+      ],
+      "statement": "Unless the building already has a designed and installed EV supply installation, the managing entity must commission a feasibility expert report; the report must be prepared by a person with unrestricted electrical and power-system design qualifications and determines usable power, connection locations, technical design, operating safety, and fire-safety requirements."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "mf11-r09-grid-and-upgrade-dependency",
+      "evidence_refs": [
+        "s1-polish-electromobility-act",
+        "s8-evia-dlm-costs"
+      ],
+      "statement": "Dynamic load management only allocates existing spare capacity; it does not increase contracted connection power. If the expert report requires a connection-contract change or electrical rebuilding, the resident applicant must commit to all such costs, and if spare capacity is exhausted an OSD process and physical upgrade may be needed."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "mf11-r10-shared-service-compliance",
+      "evidence_refs": [
+        "s4-udt-multifamily-guide",
+        "s7-chargewise-platform-and-terms"
+      ],
+      "statement": "UDT states that a greater-than-3.7 kW device owned by the community or one resident and used to provide charging to other residents is a non-public charging station subject to UDT technical inspection even when the service is free. A current platform contract also assigns the operator responsibility for legal title, energy procurement, safety, maintenance, tariffs, technical compliance, consumer issues, payment disputes, and session-data accuracy."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "mf11-r11-new-building-wedge-shrinks",
+      "evidence_refs": [
+        "s1-polish-electromobility-act",
+        "s3-eu-buildings-directive"
+      ],
+      "statement": "Polish law already requires new residential buildings with more than ten parking spaces to provide cable conduits enabling a charger at every space, subject to the statutory location conditions. The recast EU buildings directive also requires substantial pre-cabling and ducting for new or deeply renovated residential parking. This reduces the proprietary-riser wedge in compliant new stock and concentrates the opportunity in older, constrained buildings."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "mf11-r12-installation-cost-benchmark",
+      "evidence_refs": [
+        "s8-evia-dlm-costs"
+      ],
+      "statement": "One current Warsaw-area installer quotes about PLN 7,950 net for a new-building charging option on a prepared 40 m route and about PLN 15,000 net for a complete point in an unprepared existing block; it quotes PLN 1,599 net to activate DLM for a garage plus PLN 150 net per added point. These vendor benchmarks show that the candidate's PLN 2,000-5,000 connection fee is not an all-in resident price and that capex allocation is central to adoption."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "mf11-r13-demand-signal-is-mixed",
+      "evidence_refs": [
+        "s9-pzpm-july-2026-fleet",
+        "s10-pzpm-july-2026-registrations"
+      ],
+      "statement": "Poland's BEV fleet is growing, but near-term purchase momentum is not uniformly strong: PZPM/PSNM reported 158,365 passenger and commercial BEVs at July 2026, while PZPM separately reported July passenger-BEV registrations down 41% year on year, a 4% monthly share, and a 5.3% year-to-date share that ranked Poland next-to-last in Europe. Fleet growth supports eventual demand but does not establish dense multi-request buildings now."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "mf11-r14-wtp-payback-and-repeat",
+      "evidence_refs": [
+        "s5-chargewise-condominiums",
+        "s8-evia-dlm-costs",
+        "s9-pzpm-july-2026-fleet",
+        "s10-pzpm-july-2026-registrations"
+      ],
+      "statement": "No reviewed source validates resident willingness to pay PLN 2,000-5,000 upfront plus hardware markup and PLN 30-60 monthly, a 24-36 month building payback, 40 active ports per building, or renewal after the initial operating term. These require priced pilot offers, signed deposits, cohort activation, usage, collection, churn, and fully loaded contribution-margin evidence."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "mf11-r15-no-data-cold-start-requirement",
+      "evidence_refs": [
+        "s6-wallbox-poland-system",
+        "s7-chargewise-platform-and-terms",
+        "s8-evia-dlm-costs"
+      ],
+      "statement": "The initial product can operate without a historical cross-building dataset: incumbent systems already allocate live available power and perform metering and billing, and DLM is described as real-time allocation of the building's current reserve. Historical portfolio data may improve planning, but the critical mechanism does not appear to have a data cold start."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "mf11-r16-data-moat-formation",
+      "evidence_refs": [
+        "s7-chargewise-platform-and-terms"
+      ],
+      "statement": "No reviewed evidence establishes that the founder, rather than the charger/CSMS vendor or building, would own portable session data, derived load-allocation models, or exclusive cross-building learning rights. The OCPP platform terms make station data operationally important but do not prove a founder-owned proprietary dataset or measurable performance advantage from scale."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "mf11-r17-critical-mechanism-not-owned",
+      "evidence_refs": [
+        "s5-chargewise-condominiums",
+        "s6-wallbox-poland-system",
+        "s7-chargewise-platform-and-terms",
+        "s8-evia-dlm-costs"
+      ],
+      "statement": "On the evidence reviewed, the founder would assemble third-party electrical design and installation, commodity/OCPP-compatible chargers, vendor load management, and vendor billing. Without a separately proven proprietary allocator, financing facility, or unusually durable building right, the founder does not yet own the critical technical mechanism; the defensible asset would have to be contracted distribution and execution."
+    }
+  ],
+  "contrary_evidence": [
+    "Polish law gives qualifying residents a direct individual-application route, tightly specifies refusal grounds, permits a dedicated DSO meter, and can allow installation after management silence where no expert report is required; this prevents the proposed building agreement from functioning as a statutory monopoly over resident charging.",
+    "ChargeWise and Wallbox Polska already sell the condominium-facing billing, user access, remote management, dynamic load allocation, installation, support, and even full-operator bundle, so incumbents can bundle or undercut the proposed offer immediately.",
+    "Existing Polish requirements and the recast EU buildings directive make newer residential parking increasingly cable-ready, reducing the value of controlling a newly built common riser and leaving a harder legacy-building segment with more technical and financing friction.",
+    "A current installer benchmark puts a complete point in an unprepared existing block around PLN 15,000 net and makes clear that DLM cannot create electrical headroom; this challenges low-friction adoption and resident-funded payback where building upgrades are needed.",
+    "PZPM reported July 2026 passenger-BEV registrations down 41% year on year and only 4% monthly share, so aggregate fleet growth does not establish immediate multi-resident density or urgency in target buildings."
+  ],
+  "falsification": {
+    "cold_start_and_data_moat": [
+      "mf11-r07-open-system-switching",
+      "mf11-r15-no-data-cold-start-requirement",
+      "mf11-r16-data-moat-formation"
+    ],
+    "control_point_obtainability": [
+      "mf11-r01-statutory-access-gate",
+      "mf11-r02-control-is-nonexclusive",
+      "mf11-r03-building-vote-friction",
+      "mf11-r04-operating-right-contractibility"
+    ],
+    "critical_mechanism_ownership": [
+      "mf11-r07-open-system-switching",
+      "mf11-r16-data-moat-formation",
+      "mf11-r17-critical-mechanism-not-owned"
+    ],
+    "external_dependencies": [
+      "mf11-r03-building-vote-friction",
+      "mf11-r08-qualified-expert-dependency",
+      "mf11-r09-grid-and-upgrade-dependency",
+      "mf11-r10-shared-service-compliance"
+    ],
+    "substitutes_and_incumbent_response": [
+      "mf11-r05-individual-installation-substitute",
+      "mf11-r06-incumbent-turnkey-offers",
+      "mf11-r07-open-system-switching",
+      "mf11-r11-new-building-wedge-shrinks"
+    ],
+    "willingness_urgency_and_repeat_economics": [
+      "mf11-r09-grid-and-upgrade-dependency",
+      "mf11-r12-installation-cost-benchmark",
+      "mf11-r13-demand-signal-is-mixed",
+      "mf11-r14-wtp-payback-and-repeat"
+    ]
+  },
+  "schema_version": 3,
+  "sources": [
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "2024-08-19",
+      "publisher": "Internetowy System Aktow Prawnych / Sejm RP",
+      "source_id": "s1-polish-electromobility-act",
+      "source_type": "official",
+      "stance": "context",
+      "title": "Consolidated Act on Electromobility and Alternative Fuels",
+      "url": "https://eli.gov.pl/api/acts/DU/2024/1289/text.html"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "2020-03-03",
+      "publisher": "Internetowy System Aktow Prawnych / Sejm RP",
+      "source_id": "s2-ownership-of-premises-act",
+      "source_type": "official",
+      "stance": "context",
+      "title": "Consolidated Act on Ownership of Premises",
+      "url": "https://eli.gov.pl/api/acts/DU/2020/532/text.html"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "2024-04-24",
+      "publisher": "European Parliament and Council of the European Union",
+      "source_id": "s3-eu-buildings-directive",
+      "source_type": "official",
+      "stance": "contradicting",
+      "title": "Directive (EU) 2024/1275 on the energy performance of buildings (recast)",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024L1275"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "Issue 4/2023",
+      "publisher": "Urzad Dozoru Technicznego",
+      "source_id": "s4-udt-multifamily-guide",
+      "source_type": "official",
+      "stance": "context",
+      "title": "Infrastruktura ladowania pojazdow elektrycznych w budynkach mieszkalnych wielorodzinnych",
+      "url": "https://www.udt.gov.pl/images/biuro-prasowe/files/pdf/INSPEKTOR_4_2023_Infrastruktura-Ladowania-WCAG.pdf"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "undated live product page",
+      "publisher": "ChargeWise / KreoLabs Sp. z o.o.",
+      "source_id": "s5-chargewise-condominiums",
+      "source_type": "primary",
+      "stance": "contradicting",
+      "title": "Solutions for housing cooperatives and condominium communities",
+      "url": "https://www.chargewise.pl/rozwiazania/dla-spoldzielni-i-wspolnot.html"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "undated live product page",
+      "publisher": "Wallbox Polska",
+      "source_id": "s6-wallbox-poland-system",
+      "source_type": "primary",
+      "stance": "contradicting",
+      "title": "Complete EV charging systems",
+      "url": "https://wallboxpolska.pl/system-ladowania-ev/"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "2026-05-14",
+      "publisher": "ChargeWise / KreoLabs Sp. z o.o.",
+      "source_id": "s7-chargewise-platform-and-terms",
+      "source_type": "primary",
+      "stance": "contradicting",
+      "title": "ChargeWise CSMS/EMSP service terms",
+      "url": "https://www.chargewise.pl/regulamin-csms.html"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "2026-03-30",
+      "publisher": "EVia Charge",
+      "source_id": "s8-evia-dlm-costs",
+      "source_type": "industry",
+      "stance": "context",
+      "title": "How many chargers can a building support? Connection capacity and DLM for property managers and developers",
+      "url": "https://eviacharge.pl/blog/wallbox-wspolnota-mieszkaniowa-moc-przylaczeniowa"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "2026-08-21",
+      "publisher": "Polski Zwiazek Przemyslu Motoryzacyjnego / Polskie Stowarzyszenie Nowej Mobilnosci",
+      "source_id": "s9-pzpm-july-2026-fleet",
+      "source_type": "industry",
+      "stance": "supporting",
+      "title": "E-Mobility Index, July 2026",
+      "url": "https://www.pzpm.org.pl/en/Electromobility/E-Mobility-Index/Year-2026"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "2026-08-07",
+      "publisher": "Polski Zwiazek Przemyslu Motoryzacyjnego",
+      "source_id": "s10-pzpm-july-2026-registrations",
+      "source_type": "industry",
+      "stance": "contradicting",
+      "title": "eRegistrations, July 2026",
+      "url": "https://www.pzpm.org.pl/pl/Elektromobilnosc/eRejestracje/LIPIEC-2026"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "undated live product page",
+      "publisher": "ChargeWise / KreoLabs Sp. z o.o.",
+      "source_id": "s11-chargewise-ocpp-platform",
+      "source_type": "primary",
+      "stance": "contradicting",
+      "title": "ChargeWise station management platform",
+      "url": "https://www.chargewise.pl/"
+    }
+  ],
+  "unknowns": [
+    "Whether a reviewed Polish-law contract can give the operator a durable 7-10 year right over common charging infrastructure without restricting any resident's statutory application rights.",
+    "The resolution approval rate, elapsed sales cycle, procurement requirements, termination rights, and board-change risk for condominium communities, cooperatives, and professional property managers.",
+    "The distribution of existing spare electrical capacity and upgrade cost across the actual target stock, rather than installer examples or statutory possibilities.",
+    "How many target buildings currently have at least two or three ready-to-pay EV residents, and how many will reach 40 active ports within the proposed economics period.",
+    "Resident willingness to sign deposits, pay the proposed setup amount and hardware markup, and sustain PLN 30-60 monthly fees when an individually metered charger is available.",
+    "Property-manager and installer referral conversion, acquisition cost, founder sales hours per signed building, and whether a low-social-energy founder can keep the channel within five hours daily.",
+    "Fully loaded gross margin after installer margin, hardware warranty, field service, CSMS licence, SIM/connectivity, payment processing, chargebacks, billing/KSeF, insurance, UDT, support, and bad debt.",
+    "Who owns the riser, chargers, metering records, session data, and derived models; whether data are portable at termination; and whether cross-building data measurably improves allocation or upgrade timing.",
+    "The exact regulatory, tax, consumer, metering, and UDT treatment of each proposed private, shared, guest-access, and paid-service configuration.",
+    "Whether deposits or third-party building finance are actually available on terms that keep three pilots within PLN 60,000 and avoid the founder carrying common-infrastructure capex."
+  ]
+}

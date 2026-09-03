@@ -1,0 +1,48 @@
+{
+  "base_candidate_sha256": "4b80b564609e56a6b1644fad317019769de6859ee9c4b8b3409214e280b78959",
+  "base_candidate_version": 1,
+  "candidate_id": "ws-07",
+  "constructor_id": "constructor-ws07-c1",
+  "falsification": {
+    "cold_start_and_data_moat": [
+      "r-ws07-09-incumbent-network-scale",
+      "r-ws07-11-data-moat-limited-by-standards",
+      "r-ws07-12-cold-start-is-contractual-and-physical"
+    ],
+    "control_point_obtainability": [
+      "r-ws07-07-assets-and-services-obtainable",
+      "r-ws07-08-founder-acquisition-unproven",
+      "r-ws07-17-critical-mechanism-ownership"
+    ],
+    "critical_mechanism_ownership": [
+      "r-ws07-03-system-obligations",
+      "r-ws07-04-third-party-operator-permitted",
+      "r-ws07-17-critical-mechanism-ownership",
+      "r-ws07-18-founder-feasibility-unknown"
+    ],
+    "external_dependencies": [
+      "r-ws07-03-system-obligations",
+      "r-ws07-05-reporting-opportunity-and-gap",
+      "r-ws07-12-cold-start-is-contractual-and-physical",
+      "r-ws07-17-critical-mechanism-ownership"
+    ],
+    "substitutes_and_incumbent_response": [
+      "r-ws07-06-exemption-risk",
+      "r-ws07-09-incumbent-network-scale",
+      "r-ws07-10-local-direct-substitute"
+    ],
+    "willingness_urgency_and_repeat_economics": [
+      "r-ws07-01-current-law-tailwind",
+      "r-ws07-02-target-scope",
+      "r-ws07-13-cost-drivers",
+      "r-ws07-14-loss-and-backhaul-sensitivity",
+      "r-ws07-15-candidate-economics-unvalidated",
+      "r-ws07-16-willingness-and-urgency-unvalidated"
+    ]
+  },
+  "final_candidate_sha256": "61f21e13d6712a116290b9d53880d174de2b4623b85c682f80b6a89cd6998223",
+  "final_candidate_version": 2,
+  "outcome": "redesigned",
+  "rationale": "The admitted v2 converts the broad reusable-packaging clearing ring into a contract-first, ring-fenced single-lane service. Commercial assets and outsourced services exist, and the PPWR permits third-party system operation, but founder-specific quotes and contracts remain unproven; accordingly, the redesigned control point is an executed anchor-led agreement binding minimum paid turns, recipient duties, loss allocation, depot return rights, and reverse-haul service levels before any production fleet is acquired. Direct substitutes and incumbent scale are addressed by requiring a documented self-owned or incumbent benchmark gap rather than assuming an underserved lane. Unsigned shipper, recipient, depot, and carrier dependencies become explicit launch conditions, not claimed commitments. Unvalidated prices, margins, reporting subscriptions, and willingness to pay are replaced by quote-derived take-or-pay coverage, a 30,000 PLN pre-contract validation cap, and a reject-the-lane payback rule. The cold start is narrowed to one anchor-coordinated loop, and the redesign claims no moat from standard EPCIS scan events. It therefore owns the critical mechanism only if contractual operating duties are executed and routine operations can be delegated within the founder's time limit. These changes materially alter the fingerprint and economics while preserving uncertainty and the wildcard's physical-and-contractual asymmetry.",
+  "schema_version": 3
+}

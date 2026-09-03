@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from collections import Counter
-from decimal import Decimal, ROUND_HALF_UP
 import hashlib
 import json
 from pathlib import Path
@@ -52,6 +51,25 @@ OUTCOME_FIELDS = {
     "terminal_objection",
     "reopen_condition",
 }
+OUTCOME_V2_FIELDS = OUTCOME_FIELDS | {
+    "learning_digest_path",
+    "learning_digest_sha256",
+    "learning_row_count",
+}
+OUTCOME_QUARANTINE_FIELDS = {
+    "schema_version",
+    "record_type",
+    "run_id",
+    "outcome_path",
+    "report_sha256",
+    "quarantined_at",
+    "reason_code",
+    "reason",
+    "business_decision_eligible",
+    "permitted_use",
+    "quarantine_path",
+    "quarantine_sha256",
+}
 
 
 def sha256_file(path: Path) -> str:
@@ -78,12 +96,20 @@ class HistoryIndexContractTest(unittest.TestCase):
             row for row in cls.rows if row.get("record_type") == "legacy_candidate_v1"
         ]
         cls.outcomes = [
-            row for row in cls.rows if row.get("record_type") == "opportunity_outcome_v1"
+            row
+            for row in cls.rows
+            if row.get("record_type")
+            in {"opportunity_outcome_v1", "opportunity_outcome_v2"}
         ]
         cls.corrections = [
             row
             for row in cls.rows
             if row.get("record_type") == "opportunity_outcome_correction_v2"
+        ]
+        cls.quarantines = [
+            row
+            for row in cls.rows
+            if row.get("record_type") == "opportunity_outcome_quarantine_v1"
         ]
 
     def test_digest_is_compact_canonical_and_complete(self) -> None:
@@ -93,13 +119,15 @@ class HistoryIndexContractTest(unittest.TestCase):
         self.assertEqual(len(self.candidates), 215)
         self.assertGreaterEqual(len(self.outcomes), 1)
         self.assertEqual(len(self.corrections), 1)
+        self.assertEqual(len(self.quarantines), 1)
         self.assertEqual(
             len(self.rows),
             len(self.meta)
             + len(self.run_rows)
             + len(self.candidates)
             + len(self.outcomes)
-            + len(self.corrections),
+            + len(self.corrections)
+            + len(self.quarantines),
         )
         self.assertEqual(
             {row["record_type"] for row in self.rows},
@@ -109,13 +137,31 @@ class HistoryIndexContractTest(unittest.TestCase):
                 "legacy_candidate_v1",
                 "opportunity_outcome_v1",
                 "opportunity_outcome_correction_v2",
-            },
+                "opportunity_outcome_quarantine_v1",
+            }
+            | (
+                {"opportunity_outcome_v2"}
+                if any(
+                    row.get("record_type") == "opportunity_outcome_v2"
+                    for row in self.rows
+                )
+                else set()
+            ),
         )
         for line, row in zip(self.lines, self.rows, strict=True):
             self.assertEqual(
                 line,
                 json.dumps(row, sort_keys=True, ensure_ascii=False, separators=(",", ":")),
             )
+        for outcome in self.outcomes:
+            expected = (
+                OUTCOME_V2_FIELDS
+                if outcome["record_type"] == "opportunity_outcome_v2"
+                else OUTCOME_FIELDS
+            )
+            self.assertEqual(set(outcome), expected)
+        for quarantine in self.quarantines:
+            self.assertEqual(set(quarantine), OUTCOME_QUARANTINE_FIELDS)
 
     def test_meta_binds_retention_and_recovery(self) -> None:
         meta = self.meta[0]
@@ -134,6 +180,9 @@ class HistoryIndexContractTest(unittest.TestCase):
         self.assertEqual(verification["opportunity_outcomes"], len(self.outcomes))
         self.assertEqual(
             verification["opportunity_outcome_corrections"], len(self.corrections)
+        )
+        self.assertEqual(
+            verification["opportunity_outcome_quarantines"], len(self.quarantines)
         )
         self.assertEqual(verification["candidate_counts_by_run"], EXPECTED_CANDIDATES)
         self.assertEqual(verification["checkpoint_run_trees_verified"], 6)
@@ -280,6 +329,32 @@ class HistoryIndexContractTest(unittest.TestCase):
         for row in self.rows:
             self.assertFalse(re.search(r'/(Users|home)/', json.dumps(row)))
 
+    def test_acceptance_outcome_is_quarantined_from_business_decisions(self) -> None:
+        quarantine = self.quarantines[0]
+        self.assertEqual(quarantine["run_id"], "20260903T173607Z-ac095b")
+        self.assertEqual(
+            quarantine["reason_code"], "procedural_context_violation"
+        )
+        self.assertFalse(quarantine["business_decision_eligible"])
+        self.assertEqual(
+            quarantine["permitted_use"], "workflow_test_evidence_only"
+        )
+        self.assertIn("evaluator snapshot", quarantine["reason"])
+        outcome = ROOT / quarantine["outcome_path"]
+        sidecar = ROOT / quarantine["quarantine_path"]
+        self.assertTrue(sidecar.is_file())
+        self.assertEqual(sha256_file(sidecar), quarantine["quarantine_sha256"])
+        self.assertEqual(
+            sha256_file(outcome / "report.json"), quarantine["report_sha256"]
+        )
+        original = [
+            row
+            for row in self.outcomes
+            if row["run_id"] == quarantine["run_id"]
+        ]
+        self.assertEqual(len(original), 1)
+        self.assertEqual(original[0]["report_sha256"], quarantine["report_sha256"])
+
     def test_promoleak_dependency_is_preserved_outside_discovery_history(self) -> None:
         dossier = ROOT / "ideas/CONFIRMED_IDEA_20260511_113716.md"
         self.assertTrue(dossier.is_file())
@@ -295,55 +370,27 @@ class HistoryIndexContractTest(unittest.TestCase):
             )
         )
 
-    def test_legacy_research_diagnostic_scores_are_bound_and_nonqualifying(self) -> None:
-        path = ROOT / "benchmarks/legacy-20260824-working-evaluations.json"
-        benchmark = json.loads(path.read_text(encoding="utf-8"))
-        self.assertFalse(benchmark["qualification_eligible"])
-        self.assertEqual(benchmark["evaluation_type"], "diagnostic_working")
-        self.assertIn("cannot qualify", benchmark["qualification_note"])
-        self.assertEqual(
-            benchmark["rubric_sha256"],
-            sha256_file(ROOT / "Personalities/ZeroToOne.txt"),
-        )
-        self.assertEqual(
-            benchmark["founder_sha256"],
-            sha256_file(ROOT / "PERSONALITY_SITUATION.md"),
-        )
-        weights, _ = op.parse_rubric(ROOT / "Personalities/ZeroToOne.txt")
-        expected_scores = {
-            "spend-02": Decimal("4.5"),
-            "spend-03": Decimal("3.8"),
-            "spend-06": Decimal("4.1"),
-            "spend-08": Decimal("4.1"),
-        }
-        self.assertEqual(
-            {item["candidate_id"] for item in benchmark["evaluations"]},
-            set(expected_scores),
-        )
-        for evaluation in benchmark["evaluations"]:
-            candidate_id = evaluation["candidate_id"]
-            for source_key in ("source_candidate", "source_research"):
-                source = evaluation[source_key]
-                self.assertEqual(sha256_file(ROOT / source["path"]), source["sha256"])
-            factors = {item["name"]: item for item in evaluation["factors"]}
-            self.assertEqual(set(factors), {name for name, _ in weights})
-            self.assertTrue(all(item["status"] == "scored" for item in factors.values()))
-            base = sum(
-                Decimal(str(factors[name]["score"])) * weight
-                for name, weight in weights
-            ) / Decimal(100)
-            adjusted = base + Decimal(str(evaluation["interaction_adjustment"]))
-            constrained = min(Decimal(10), max(Decimal(1), adjusted))
-            final_score = constrained.quantize(Decimal("0.1"), rounding=ROUND_HALF_UP)
-            self.assertEqual(Decimal(str(evaluation["weighted_base_score"])), base)
-            self.assertEqual(Decimal(str(evaluation["final_score"])), final_score)
-            self.assertEqual(final_score, expected_scores[candidate_id])
-
     def test_published_outcomes_are_self_contained_and_repair_is_auditable(self) -> None:
         result = op.validate_published_outcomes(ROOT / "outcomes")
-        self.assertEqual(result["run_count"], 11)
-        self.assertEqual(result["campaign_count"], 1)
-        self.assertEqual(result["campaign_repairs"], 1)
+        indexed_run_ids = {row["run_id"] for row in self.outcomes}
+        published_run_ids = {
+            path.name
+            for path in (ROOT / "outcomes").iterdir()
+            if path.is_dir() and path.name != "campaigns"
+        }
+        self.assertEqual(published_run_ids, indexed_run_ids)
+        self.assertEqual(result["run_count"], len(indexed_run_ids))
+        published_campaigns = [
+            path for path in (ROOT / "outcomes/campaigns").iterdir() if path.is_dir()
+        ]
+        self.assertEqual(result["campaign_count"], len(published_campaigns))
+        repair_count = sum(
+            len(list((path / "repairs").glob("*.json")))
+            for path in published_campaigns
+            if (path / "repairs").is_dir()
+        )
+        self.assertEqual(result["campaign_repairs"], repair_count)
+        self.assertEqual(result["quarantined_run_count"], len(self.quarantines))
         campaign = (
             ROOT
             / "outcomes/campaigns/campaign-20260825T110052Z-c143b1"

@@ -1,0 +1,149 @@
+{
+  "candidate_id": "mf-tender-bid-gate",
+  "claims": [
+    {
+      "claim_id": "mf-tender-bid-gate-c1",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://docs.ted.europa.eu/api/latest/search.html",
+        "https://edu.ezamowienia.gov.pl/pl/integracja/"
+      ],
+      "statement": "Official BZP and TED feeds expose published notices and deadlines, creating a recurring observable decision event; the actual labor loss per bad bid is not established by these sources."
+    },
+    {
+      "claim_id": "mf-tender-bid-gate-c2",
+      "claim_type": "payer_and_budget",
+      "confidence": "low",
+      "evidence_refs": [],
+      "statement": "The proposed payer is the SME sales owner who allocates bid labor; willingness to pay 499-1499 PLN monthly instead of using portals or consultants is unverified."
+    },
+    {
+      "claim_id": "mf-tender-bid-gate-c3",
+      "claim_type": "founder_control_point_path",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://docs.ted.europa.eu/api/latest/search.html",
+        "https://edu.ezamowienia.gov.pl/pl/integracja/"
+      ],
+      "statement": "TED says its search API permits anonymous retrieval for reuse, and Poland's BZP integration page says notice reading does not require an integration procedure; the founder can own the independently written scoring layer while keeping source rights separate."
+    },
+    {
+      "claim_id": "mf-tender-bid-gate-c4",
+      "claim_type": "other",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ezamowienia.gov.pl/pl/regulamin/"
+      ],
+      "statement": "Official data access is nonexclusive and can change under published terms, so defensibility must come from workflow fit and consented outcome labels rather than raw notice access."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Owner, sales director, or bid manager",
+    "bundling_resistance": "A decision log tied to client eligibility, margin, and historical outcomes must outperform generic notice alerts",
+    "customer_relationship_owner": "Founder company owns direct SME subscriptions",
+    "distribution_origin": "Narrow-sector outbound, procurement consultants, trade groups, and accountants",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Founder-led demonstrations and partner referral fees; target under four months of gross profit",
+      "cash_conversion": "Monthly advance subscription or discounted annual prepayment",
+      "contribution_margin": "Target 75-90% after a vertical template stabilizes; unvalidated",
+      "delivery_and_support_costs": "Vertical rule calibration, source-link QA, onboarding, and user support",
+      "overhead_and_compliance": "Terms monitoring, security, professional disclaimers, and procurement-law review",
+      "revenue_basis": "Hypothesis: 499-1499 PLN per month by monitored categories and users, plus onboarding",
+      "variable_costs": "Notice ingestion, OCR, model calls, alerts, and document storage"
+    },
+    "likely_incumbent_response": "Tender portals and procurement consultancies can add AI summaries, scoring, or bundled alert services",
+    "paid_event_or_measurable_loss": "Every published matching notice triggers a go/no-go decision; loss is bid-preparation labor spent on ineligible or low-fit tenders and opportunity cost from missed viable notices",
+    "payer": "Bidding SME",
+    "purchase_trigger": "Tender volume exceeds manual scanning capacity, a bid is disqualified on a detectable requirement, or a deadline is missed",
+    "renewal_event": "Monthly or annual monitored-category subscription"
+  },
+  "contrary_evidence": [
+    "TED explicitly describes commercial organisations integrating its data into added-value platforms, signaling low raw-data scarcity.",
+    "Public portals already provide search and filtering, and consultants may bundle bid selection with preparation."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Independent creation with copyright ownership and trade-secret protection for code and derived nonpublic features",
+    "acquisition_instrument_type": "ownership",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Use the alternate official notice API and client-uploaded tender documents; never represent public data as exclusive",
+    "current_owner": "Founder company owns independently created code and derived rules; public authorities retain source notices",
+    "customer_relationship_control": "owned",
+    "customer_relationship_owner": "Founder company owns direct SME subscriptions",
+    "duration": "Indefinite while maintained; public input rights remain governed separately",
+    "exclusivity": "exclusive",
+    "founder_access_basis": "owned_or_controlled_asset",
+    "founder_access_description": "The founder can independently create and own the scoring software; TED and BZP offer published access paths to notices, but neither public dataset becomes founder-owned.",
+    "launch_controller": "Founder company",
+    "mechanism_control": "owned",
+    "renewal": "not applicable to owned code; API and client agreements reviewed annually",
+    "replaceability": "not_replaceable",
+    "revocability": "irrevocable",
+    "status": "owned",
+    "subject": "Independently created bid-fit model, rule library, and decision-log software",
+    "subject_type": "asset",
+    "transferability": "transferable"
+  },
+  "discovery_lane": "mechanism-first",
+  "economics": {
+    "acquisition_route": "Narrow vertical outbound, consultant referrals, associations, and outcome-tracked trials",
+    "capital_required_pln": 30000,
+    "founder_net_worth_path": "Illustrative, not forecast: 1500 customers at 850 PLN monthly imply 15.3m PLN annual recurring revenue; low churn and repeatable vertical expansion would be required for a 5m PLN founder outcome",
+    "founder_time": "Up to five hours daily for one vertical; avoid bespoke bid writing that would turn it into an agency",
+    "gross_margin_basis": "Automated official-feed ingestion and scoring reused across customers in one vertical",
+    "payback": "Target under four months of account gross profit; unvalidated",
+    "pricing": "Hypothesis: 499-1499 PLN monthly plus 500-2000 PLN vertical onboarding",
+    "retention_or_repeat": "Renews while relevant tenders recur and the decision log saves demonstrable bid hours or finds wins"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Client-consented bid/no-bid decisions and outcomes improve vertical-specific fit features and calibration",
+    "customer": "Polish SMEs that repeatedly bid for public-sector contracts in a narrow technical category",
+    "distribution_mechanism": "Direct vertical outreach and nonexclusive referrals from procurement consultants, accountants, and trade associations",
+    "offer_and_business_model": "Specialist bid-fit scoring, cited requirement extraction, decision log, and outcome learning; final legal and commercial judgment remains human",
+    "payer_and_paid_event": "Sales owner pays a monthly subscription for monitored categories, decision briefs, and deadline alerts",
+    "problem_trigger": "A new notice appears and a small team must rapidly decide whether qualification, geography, margin, and deadline justify bid work"
+  },
+  "founder_fit": [
+    "Natural-language extraction, scoring calibration, and outcome analysis match data-science skills",
+    "The product serves a measurable recurring decision rather than requiring public audience building",
+    "Official APIs allow inexpensive asynchronous prototyping",
+    "Vertical templates and self-service onboarding can constrain founder time below five hours daily"
+  ],
+  "parent": null,
+  "risks": [
+    "A bad no-go recommendation can cost a customer a material opportunity",
+    "Source schema or access terms can change",
+    "Users may mistake extracted requirements for legal advice",
+    "Generic AI features could commoditize summaries quickly"
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://docs.ted.europa.eu/api/latest/search.html",
+    "https://ted.europa.eu/en/simap/developers-corner-for-reusers",
+    "https://edu.ezamowienia.gov.pl/pl/integracja/",
+    "https://ezamowienia.gov.pl/pl/regulamin/"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "software_subscription",
+    "commercial_model_descriptor": "vertical_public_tender_go_no_go_subscription",
+    "control_point_category": "owned_asset",
+    "control_point_descriptor": "proprietary_bid_fit_scoring_and_decision_log",
+    "critical_dependency_category": "data_provider",
+    "critical_dependency_descriptor": "official_bzp_and_ted_notice_feeds"
+  },
+  "structure": {
+    "commercial_archetype": "Vertical software subscription for pre-bid decisions",
+    "control_point": "Founder-owned scoring code and decision record at the point before bid resources are committed",
+    "critical_dependency": "Continuing lawful access to complete public-notice data and client feedback"
+  },
+  "thesis": "Own a Polish-language bid-fit scoring and evidence engine built on openly reusable BZP and TED notices, then sell specialized SMEs a daily go/no-go checkpoint before expensive bid preparation begins.",
+  "title": "Public-Tender Bid-Cost Gate",
+  "uncertainties": [
+    "Which vertical has enough tender frequency and bid cost",
+    "Availability of award and participation outcomes needed for calibration",
+    "False-negative tolerance for missed tenders",
+    "Whether procurement documents can be reliably parsed across formats and languages"
+  ],
+  "version": 1
+}

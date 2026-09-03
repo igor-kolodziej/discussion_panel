@@ -1,0 +1,118 @@
+{
+  "assumptions": [
+    "The initial market is Polish commercial PV rather than the much larger but lower-value residential microinstallation base.",
+    "The stated 300-1200 PLN reservation is an annual per-system payment collected before inventory is purchased, with dispatch hardware and logistics billed separately.",
+    "The family renewable-installation company provides only lawful, consenting pilot introductions and no automatic ownership of customer data or relationships.",
+    "Qualified electricians, testing providers, logistics providers, and compliant used-unit supply can be contracted, but none is treated as committed or exclusive.",
+    "No favorable failure-rate, compatibility, renewal, or inventory-yield assumption is made beyond the evidence in the scoped packet."
+  ],
+  "base_score": 3.61,
+  "candidate_id": "fb-legacy-inverter-swap-reserve",
+  "candidate_sha256": "76d073efb22cc752b726f732f614b82066658f2f2b2218f83b0c0927205d110d",
+  "candidate_version": 1,
+  "constrained_score": 3.41,
+  "evaluation_type": "working_development",
+  "evidence_needed_for_higher_score": "For at least one exact model and site cohort: a verified installed-base census; documented stockouts, repair refusals, lead times, and downtime losses; paid annual reservations or binding commitments; tested compatibility and provenance; protected supply terms; and a cohort P&L including acquisition, testing, storage, financing, channel share, returns, write-downs, disposal, renewal, and replenishment.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "Unsupported or slow-to-source inverter failures can turn a small component problem into costly production loss, and pooling a precisely selected reserve could address that gap. The insight is plausible but not yet specific to a named cohort, while planned O&M spares and current-model repowering are already established responses.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "The packet establishes that inverter downtime can be economically material and that buyers already fund maintenance, diagnostics, parts, and modernization. It does not establish recurring willingness to pay for a third-party reservation, and observed replacement incidence plus rapid OEM replacement routes suggest urgency will be concentrated in a narrower subset than the stated market.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Prepaid reservations could improve cash conversion, but the proposed annual fee must cover acquisition, test yield, storage, financing, channel share, support, returns, obsolescence, and disposal across fragmented cohorts. No cohort-level contribution margin, acquisition cost, renewal rate, inventory turns, or owner-earnings case supports the stated 5 million PLN founder-net-worth path.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Poland has a large PV installed base, yet the economically relevant beachhead is the intersection of commercial ownership, unsupported exact models, meaningful downtime value, poor OEM alternatives, and safe interchangeability. The packet does not quantify that denominator or identify a first cohort dense enough to support a reserve.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "Possession of the right tested unit at the moment of failure could create a strong local service position, but no protected inventory or supply access is owned. OEMs, distributors, refurbishers, installers, and O&M firms can provide replacement pools, planned spares, or repowering and already control many customer relationships.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A validated cohort could extend to adjacent inverter families, boards, adapters, installers, and regions. Each extension, however, introduces new inventory, firmware, certification, provenance, and demand-risk pools, so expansion is not naturally low-cost until the data and compatibility mechanism are proven.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Failure histories, interchangeability maps, and salvage outcomes could improve purchasing over time, but access to longitudinal data and decision improvement are unproven. Inventory ownership is replicable, supply is replaceable rather than protected, and OEM service recovery or newer repowering products can erode the scarcity window.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "Immediate access to a validated spare could be substantially faster and cheaper than emergency redesign for truly unsupported high-loss sites. The advantage is not demonstrated for any cohort, and published OEM programs offering replacement in roughly 48 hours materially narrow it for supported equipment.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "A growing installed base is entering later lifecycle stages, creating more support-expiry and repowering decisions. At the same time, modern replacement pathways and tightening certification requirements can shorten the useful life and compatibility of stocked legacy equipment, leaving timing mixed rather than clearly exceptional.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "The family installer relationship offers a credible consenting pilot route, and installers or O&M firms aggregate relevant fleets. Those channels currently own the relationships, can bundle the same service, and have no evidenced agreement, conversion rate, acquisition cost, or incentive to sell the reserve.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "The founder's analytics skills fit cohort selection, and field work could be delegated, but the model consumes the stated ordinary capital ceiling and requires reliable provenance, electrical testing, storage, logistics, liability allocation, grid compliance, and accurate diagnosis. These physical and regulated operations are difficult to manage within a five-hour daily limit before partner commitments are secured.",
+      "score": 3,
+      "status": "scored"
+    }
+  ],
+  "final_score": 3.4,
+  "highest_value_structural_change": "Replace speculative pooled inventory with a prepaid, vendor-neutral readiness and procurement service, and acquire physical stock only for named cohorts after customer commitments cover the cohort's full lifecycle cost and compliance burden.",
+  "interaction_adjustment": -0.2,
+  "judge_id": "development-fb-inverter-j01",
+  "main_structural_strength": "If narrowly validated before purchase, owned and tested physical stock can create a concrete availability control point and a response-time benefit that software-only competitors cannot deliver at the failure event.",
+  "primary_score_limiter": "No named, reachable equipment cohort is shown to combine repeated supply failure, sufficiently costly downtime, safe pooling compatibility, prepaid reservation demand, and fully loaded economics that cover slow-moving inventory.",
+  "qualified": false,
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 3,
+  "strongest_disconfirming_evidence": "OEMs already offer rapid replacement and cross-brand repowering pathways, ordinary O&M contracts can internalize spare stocking, and the cited international commercial-inverter sample showed replacement incidence falling below 1% annually by year five; together these facts weaken both scarcity differentiation and reserve utilization.",
+  "unrounded_score": 3.41
+}

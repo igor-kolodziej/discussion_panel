@@ -1,0 +1,88 @@
+{
+  "candidate_id": "ws-07",
+  "claims": [
+    {
+      "claim_id": "ws-07-control",
+      "claim_type": "founder_control_point_path",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32025R0040"
+      ],
+      "statement": "The PPWR requires reusable packaging to operate within reuse systems, annual unit calculations and reporting, and convenient returns; the founder can acquire a physical control point by owning or leasing a standardized small pool of serial-numbered transport totes and contracting shared return depots and 3PL lanes, with software serving the pool rather than being the product."
+    },
+    {
+      "claim_id": "ws-07-loss",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/news/new-eu-packaging-rules-start-to-apply-including-restrictions-on-pfas-in-food-contact-packaging-2026-08-11_en",
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32025R0040"
+      ],
+      "statement": "The PPWR has applied generally since 12 August 2026 and phases in 2030 reuse, recyclability, and empty-space obligations; economic operators must count reusable and non-reusable units and report achievement, so every disposable shipment, lost reusable container, empty return leg, or uncounted circulation is a measurable packaging and compliance cost."
+    },
+    {
+      "claim_id": "ws-07-payer",
+      "claim_type": "payer_and_budget",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/topics/waste-and-recycling/packaging-waste_en?prefLang=pt",
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32025R0040"
+      ],
+      "statement": "The rules apply across the packaging life cycle and place reuse calculations on economic operators using specified formats, while extended-producer-responsibility and deposit systems must fund prevention actions; regional manufacturers, e-commerce operators, 3PLs, and producer schemes are identifiable payers using packaging-procurement, loss, freight, and EPR budgets when opening a lane or preparing annual reports."
+    }
+  ],
+  "contrary_evidence": [
+    "Most reuse targets apply from 2030 and the Commission has already created at least one exemption for some pallet wrappings and straps, so urgency and exact addressable formats may move with secondary legislation.",
+    "Large pooling incumbents already serve pallets and crates; a small entrant may inherit the highest-loss routes and fail to reach return density."
+  ],
+  "discovery_lane": "weak-signal",
+  "economics": {
+    "acquisition_route": "Use one Polish industrial park or two recurring supplier-customer lanes to pre-sell 500 tote circulations per month; lease standard containers, contract existing depots, and require participating shippers and carriers to sign loss and scan rules before purchasing a larger pool.",
+    "capital_required_pln": 100000,
+    "founder_net_worth_path": "A network reaching 2 million annual container turns at an assumed 3-6 PLN net contribution per turn plus reporting subscriptions could become a profitable regional pool; the lane and return-density data can support expansion into packaging finance, insurance, and interoperable clearing.",
+    "founder_time": "Approximately 15-20 founder hours per week for route economics and partner contracts; depots, washing, repairs, and transport are outsourced to 3PL partners.",
+    "gross_margin_basis": "Preliminary 30-50% contribution margin per completed circulation after depreciation, depot handling, washing, repair, repositioning, and loss; route density is likely the dominant variable.",
+    "payback": "A shipper adopts only where per-turn lease, return, and loss costs beat disposable packaging plus EPR and handling cost over an agreed route; a closed-loop pilot can measure this within three months.",
+    "pricing": "Assumed 6-15 PLN per tote circulation, lane-specific return fee, replacement charge for loss, and 1000-5000 PLN monthly compliance and reconciliation subscription per participant.",
+    "retention_or_repeat": "Revenue repeats every shipment turn; participants remain while return density, container availability, and accepted reporting evidence outperform unilateral packaging ownership."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Lane-level return time, loss, damage, cleaning, counterparty reliability, and repositioning-cost data plus a contracted depot graph.",
+    "customer": "Mid-market manufacturers, wholesalers, e-commerce shippers, and 3PLs on dense Central European lanes that are too small for dedicated packaging pools.",
+    "distribution_mechanism": "Industrial parks, 3PLs, packaging distributors, and carrier networks enroll several counterparties on a lane together instead of selling one shipper a standalone tool.",
+    "offer_and_business_model": "A neutral owned-or-leased pool of standardized reusable transport packaging with depot return rights, serial tracking, loss clearing, and PPWR-ready circulation evidence; charged per turn plus subscription.",
+    "payer_and_paid_event": "A shipper or 3PL pays from packaging and freight budget on every dispatched unit and from compliance budget for annual reuse evidence.",
+    "problem_trigger": "A recurring multi-party lane must reduce disposable packaging but no single participant can justify owning, retrieving, and reconciling the shared container fleet."
+  },
+  "founder_fit": [
+    "The founder can model route density, loss probability, and optimal pool size with data-science methods.",
+    "The parents' installation business offers a small real-world supplier and equipment-return loop for observing packaging friction.",
+    "A pre-sold single-lane pilot can stay below available capital and delegate physical work to 3PLs."
+  ],
+  "parent": null,
+  "risks": [
+    "Containers can disappear across counterparties, turning working capital and replacement cost into an existential risk.",
+    "Food-contact or hazardous-goods routes add cleaning, safety, and certification requirements beyond a simple industrial pilot.",
+    "The model may involve regulated deposits, VAT complexity, or balance-sheet liabilities in some countries."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://environment.ec.europa.eu/news/new-eu-packaging-rules-start-to-apply-including-restrictions-on-pfas-in-food-contact-packaging-2026-08-11_en",
+    "https://environment.ec.europa.eu/topics/waste-and-recycling/packaging-waste_en?prefLang=pt",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32025R0040"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Shared physical asset clearing ring",
+    "control_point": "Ownership or long lease of standardized containers plus contracted return depots and lane-level clearing rules.",
+    "critical_dependency": "Closed-loop return density and loss rates must remain low enough for reusable-unit economics to beat disposable packaging."
+  },
+  "thesis": "PPWR makes reuse a measured operating requirement, but the hard problem for smaller shippers is recovering shared containers across company boundaries. A neutral clearing ring that controls the physical pool and return rights can charge per circulation, issue countable evidence, and compound lane-level loss data that neither a packaging vendor nor generic tracker owns.",
+  "title": "Reusable Transport-Packaging Clearing Ring",
+  "uncertainties": [
+    "Which Polish or cross-border packaging formats and operators will face binding 2030 reuse targets after exemptions?",
+    "Can two or three lanes achieve enough monthly turns without expensive empty repositioning?",
+    "Will annual reporting accept neutral pool records and how will reusable units be allocated among participants?"
+  ],
+  "version": 1
+}

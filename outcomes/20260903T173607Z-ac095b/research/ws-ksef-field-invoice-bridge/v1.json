@@ -1,0 +1,377 @@
+{
+  "candidate_id": "ws-ksef-field-invoice-bridge",
+  "candidate_sha256": "25bd9a0891083aa097dc742618dc78d3aaca278a8fc44e026e538ab86b1bf10d",
+  "candidate_version": 1,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "r01",
+      "evidence_refs": [
+        "s01"
+      ],
+      "statement": "KSeF was mandatory from 1 February 2026 for the largest businesses and from 1 April 2026 for most others, while firms at or below 10,000 PLN of monthly invoiced sales remain outside mandatory issuance until 2027; the government's 30 June status says production had operated stably without disruptions."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r02",
+      "evidence_refs": [
+        "s02"
+      ],
+      "statement": "The Ministry of Finance provides a free iOS and Android KSeF mobile app that can issue invoices and corrections from any location, save drafts, and manage buyers."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r03",
+      "evidence_refs": [
+        "s03"
+      ],
+      "statement": "inFakt advertises an invoicing plan at 4.99 PLN net per month with annual billing, unlimited documents, KSeF sending and retrieval, coworker access, technical support, integrations, and an API."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r04",
+      "evidence_refs": [
+        "s04"
+      ],
+      "statement": "Comarch Mobile already supports both online KSeF issuance and offline issuance for lost connectivity or KSeF unavailability, including an offline certificate, QR evidence, ERP synchronization, and later statutory submission."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r05",
+      "evidence_refs": [
+        "s05"
+      ],
+      "statement": "The official KSeF permission model allows a taxpayer to grant InvoiceRead or InvoiceWrite access to people or entities and supports indirect delegation, while warning that broad general permissions require caution."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r06",
+      "evidence_refs": [
+        "s06"
+      ],
+      "statement": "KSeF authentication succeeds only while the authenticating party has an active permission in the chosen taxpayer context, and access tokens are automatically invalidated when that permission is lost."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r07",
+      "evidence_refs": [
+        "s07"
+      ],
+      "statement": "Official offline24 rules let a taxpayer choose offline issuance but require transmission by the next business day after issuance; official KSeF-unavailability mode requires transmission by the next business day after the outage ends."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r08",
+      "evidence_refs": [
+        "s05",
+        "s06"
+      ],
+      "statement": "A third-party bridge can technically receive invoice permissions, but its operational access would remain nonexclusive and revocable by the taxpayer; whether target firms will grant and maintain that access contractually is not established."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r09",
+      "evidence_refs": [
+        "s02",
+        "s03",
+        "s04"
+      ],
+      "statement": "The proposed field-to-KSeF handoff is replaceable rather than proprietary: the free Ministry app overlaps mobile issuance, inFakt supplies very low-priced KSeF plumbing, and Comarch Mobile already combines mobile offline issuance with ERP synchronization; any superior trade-specific job-evidence or cross-accounting reconciliation gap remains unproved."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r10",
+      "evidence_refs": [
+        "s09"
+      ],
+      "statement": "Before the April rollout, KAS reported more than 345,000 issuing entities and 87 million invoices in two months, alongside nearly 180,000 phone conversations and more than 70,000 emails about KSeF; the same announcement describes free 24-hour KAS support and tax-office assistance."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r11",
+      "evidence_refs": [
+        "s10"
+      ],
+      "statement": "No KSeF-use error sanctions apply for 2026; the official FAQ says monetary penalties can apply only to violations from 1 January 2027, reducing immediate compliance urgency during the validation year without removing the later obligation."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r12",
+      "evidence_refs": [
+        "s08"
+      ],
+      "statement": "The production integration surface continued changing after launch: the official changelog records tightened XML validation, authentication and token changes, key rotation support, bug fixes, and new warning and export behavior through mid-2026, implying ongoing maintenance and regression-support work for any bridge."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r13",
+      "evidence_refs": [],
+      "statement": "No observed target-customer data quantifies the post-rollout frequency, staff time, cash-delay cost, or error cost of field rekeying, rejected invoices, reconciliation failures, or missed offline deadlines in Polish installation and mobile-service firms."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r14",
+      "evidence_refs": [],
+      "statement": "No signed letter of intent, preorder, paid pilot, or revealed-preference test establishes willingness to pay 149-699 PLN monthly or 2-5 PLN per reconciled invoice against free and low-priced substitutes."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r15",
+      "evidence_refs": [],
+      "statement": "No executed accounting-office referral agreement, field-service software integration agreement, channel revenue share, customer-acquisition cost, sales-cycle, or close-rate evidence was available."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r16",
+      "evidence_refs": [],
+      "statement": "Fully loaded contribution is unknown because there is no measured onboarding, mapping, failed-submission support, security, GDPR, tax-counsel, insurance, partner-share, storage, notification, or continuing schema-maintenance cost per customer or invoice."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r17",
+      "evidence_refs": [],
+      "statement": "No cohort or renewal evidence shows that field firms will keep using a separate bridge after KSeF onboarding stabilizes and accounting or field-service suites reach feature parity."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r18",
+      "evidence_refs": [],
+      "statement": "No taxpayer mandate, production credential, data-processing agreement, or integration right has been presented for the venture; a family-company testing relationship alone does not establish KSeF access."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r19",
+      "evidence_refs": [],
+      "statement": "No evidence shows that invoice failures can be lawfully pooled across customers into an anonymized proprietary corpus or that such a corpus would create a durable prediction advantage over official validation rules and incumbent telemetry."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r20",
+      "evidence_refs": [],
+      "statement": "It is untested whether tax-deadline support, credential incidents, and multiple accounting-package integrations can be operated within the founder's five-hours-per-day limit while retaining full-time employment."
+    }
+  ],
+  "commercial_evidence": {
+    "buyer_or_paid_event": {
+      "claim_ids": [
+        "r13",
+        "r14"
+      ],
+      "source_ids": [],
+      "status": "unknown"
+    },
+    "distribution_and_acquisition": {
+      "claim_ids": [
+        "r15"
+      ],
+      "source_ids": [],
+      "status": "unknown"
+    },
+    "fully_loaded_unit_economics": {
+      "claim_ids": [
+        "r16",
+        "r20"
+      ],
+      "source_ids": [],
+      "status": "unknown"
+    },
+    "rights_control_access_contractibility": {
+      "claim_ids": [
+        "r08"
+      ],
+      "source_ids": [
+        "s05",
+        "s06"
+      ],
+      "status": "inference"
+    }
+  },
+  "contrary_evidence": [
+    "The government reported stable production operation through 30 June 2026, so system instability is not evidenced as a persistent post-rollout problem.",
+    "The Ministry of Finance already offers a free mobile invoicing app, inFakt advertises broad KSeF handling for 4.99 PLN net per month, and Comarch Mobile already supports offline issuance plus ERP synchronization.",
+    "The taxpayer retains revocable permission control, so the proposed handoff is neither owned nor exclusive and can be reassigned to an incumbent.",
+    "The 2026 sanction holiday reduces the immediate compliance trigger during the period in which demand would need to be validated."
+  ],
+  "critical_control_point_assessment": {
+    "assessment": "inference",
+    "claim_ids": [
+      "r05",
+      "r06",
+      "r08",
+      "r09",
+      "r18"
+    ],
+    "source_ids": [
+      "s02",
+      "s03",
+      "s04",
+      "s05",
+      "s06"
+    ],
+    "status": "replaceable_access"
+  },
+  "falsification": {
+    "cold_start_and_data_moat": [
+      "r15",
+      "r18",
+      "r19"
+    ],
+    "control_point_obtainability": [
+      "r05",
+      "r06",
+      "r08",
+      "r18"
+    ],
+    "critical_mechanism_ownership": [
+      "r05",
+      "r06",
+      "r08",
+      "r09",
+      "r18"
+    ],
+    "external_dependencies": [
+      "r01",
+      "r06",
+      "r07",
+      "r11",
+      "r12",
+      "r20"
+    ],
+    "substitutes_and_incumbent_response": [
+      "r02",
+      "r03",
+      "r04",
+      "r09",
+      "r17"
+    ],
+    "willingness_urgency_and_repeat_economics": [
+      "r10",
+      "r11",
+      "r13",
+      "r14",
+      "r16",
+      "r17"
+    ]
+  },
+  "schema_version": 3,
+  "sources": [
+    {
+      "accessed_at": "2026-09-03",
+      "evidence_class": "regulatory",
+      "published_at": "unknown",
+      "publisher": "Kancelaria Prezesa Rady Ministrow",
+      "source_id": "s01",
+      "source_type": "official_government_status_page",
+      "stance": "contradicting",
+      "title": "P35 - Krajowy System e-Faktur (KSeF)",
+      "url": "https://www.gov.pl/web/priorytety/p35"
+    },
+    {
+      "accessed_at": "2026-09-03",
+      "evidence_class": "incumbent",
+      "published_at": "2024-01-22",
+      "publisher": "Ministerstwo Finansow",
+      "source_id": "s02",
+      "source_type": "official_government_product_page",
+      "stance": "contradicting",
+      "title": "Aplikacja mobilna KSeF 2.0",
+      "url": "https://ksef.podatki.gov.pl/aplikacja-podatnika-ksef-i-inne-narzedzia/aplikacja-mobilna-ksef/"
+    },
+    {
+      "accessed_at": "2026-09-03",
+      "evidence_class": "incumbent",
+      "published_at": "unknown",
+      "publisher": "inFakt",
+      "source_id": "s03",
+      "source_type": "vendor_product_and_pricing_page",
+      "stance": "contradicting",
+      "title": "Aplikacja inFakt",
+      "url": "https://www.infakt.pl/aplikacja-infakt/"
+    },
+    {
+      "accessed_at": "2026-09-03",
+      "evidence_class": "incumbent",
+      "published_at": "2026-03-06",
+      "publisher": "Comarch",
+      "source_id": "s04",
+      "source_type": "vendor_technical_documentation",
+      "stance": "contradicting",
+      "title": "Integracja Comarch Mobile z KSeF",
+      "url": "https://pomoc.comarch.pl/mobile/pl/optima/20261/knowledge-base/integracja-comarch-mobile-z-ksef-2/"
+    },
+    {
+      "accessed_at": "2026-09-03",
+      "evidence_class": "rights_control_access",
+      "published_at": "2025-07-10",
+      "publisher": "Centrum Informatyki Resortu Finansow",
+      "source_id": "s05",
+      "source_type": "official_api_documentation",
+      "stance": "supporting",
+      "title": "KSeF API 2.0 - Uprawnienia",
+      "url": "https://github.com/CIRFMF/ksef-api/blob/main/uprawnienia.md"
+    },
+    {
+      "accessed_at": "2026-09-03",
+      "evidence_class": "rights_control_access",
+      "published_at": "2025-07-10",
+      "publisher": "Centrum Informatyki Resortu Finansow",
+      "source_id": "s06",
+      "source_type": "official_api_documentation",
+      "stance": "context",
+      "title": "KSeF API 2.0 - Uwierzytelnianie",
+      "url": "https://github.com/CIRFMF/ksef-api/blob/main/uwierzytelnianie.md"
+    },
+    {
+      "accessed_at": "2026-09-03",
+      "evidence_class": "regulatory",
+      "published_at": "2025-07-10",
+      "publisher": "Centrum Informatyki Resortu Finansow",
+      "source_id": "s07",
+      "source_type": "official_api_documentation",
+      "stance": "supporting",
+      "title": "KSeF API 2.0 - Tryby offline",
+      "url": "https://github.com/CIRFMF/ksef-api/blob/main/tryby-offline.md"
+    },
+    {
+      "accessed_at": "2026-09-03",
+      "evidence_class": "other",
+      "published_at": "unknown",
+      "publisher": "Centrum Informatyki Resortu Finansow",
+      "source_id": "s08",
+      "source_type": "official_api_changelog",
+      "stance": "supporting",
+      "title": "KSeF API 2.0 - Changelog",
+      "url": "https://github.com/CIRFMF/ksef-api/blob/main/api-changelog.md"
+    },
+    {
+      "accessed_at": "2026-09-03",
+      "evidence_class": "market_context",
+      "published_at": "2026-03-30",
+      "publisher": "Ministerstwo Finansow i Krajowa Administracja Skarbowa",
+      "source_id": "s09",
+      "source_type": "official_government_announcement",
+      "stance": "context",
+      "title": "1 kwietnia rusza II etap wdrozenia Krajowego Systemu e-Faktur",
+      "url": "https://ksef.podatki.gov.pl/wyjasnienia/1-kwietnia-rusza-ii-etap-wdrozenia-krajowego-systemu-e-faktur/"
+    },
+    {
+      "accessed_at": "2026-09-03",
+      "evidence_class": "regulatory",
+      "published_at": "2026-04-15",
+      "publisher": "Ministerstwo Finansow",
+      "source_id": "s10",
+      "source_type": "official_government_faq",
+      "stance": "contradicting",
+      "title": "Najczestsze pytania dotyczace funkcjonowania KSeF",
+      "url": "https://ksef.podatki.gov.pl/ksef-news/najczestsze-pytania/"
+    }
+  ],
+  "unknowns": [
+    "Post-rollout frequency and financial cost of field rekeying, rejection, reconciliation, and missed deadlines in the exact target trades.",
+    "Revealed willingness to pay the proposed price against free and low-priced substitutes.",
+    "A signed taxpayer mandate, production credential, data-processing agreement, accounting-office referral agreement, or field-service integration contract.",
+    "Customer-acquisition cost, sales cycle, close rate, retention, and fully loaded contribution after support, compliance, insurance, and integration maintenance.",
+    "Whether a cross-customer failure corpus is lawful to assemble and produces an advantage incumbents cannot reproduce.",
+    "Whether deadline support and multiple integration surfaces remain operable within the founder's five-hours-per-day limit."
+  ]
+}

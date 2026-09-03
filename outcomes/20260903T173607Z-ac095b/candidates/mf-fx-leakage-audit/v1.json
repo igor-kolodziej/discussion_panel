@@ -1,0 +1,147 @@
+{
+  "candidate_id": "mf-fx-leakage-audit",
+  "claims": [
+    {
+      "claim_id": "mf-fx-leakage-audit-c1",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.ecb.europa.eu/ecb-and-you/explainers/tell-me-more/html/role_of_exchange_rates.tr.html",
+        "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html"
+      ],
+      "statement": "The ECB explains that its reference rates are informational averages and may differ from actual transaction rates; realized client rate, explicit fees, and executable alternatives can therefore be reconciled, but savings cannot be inferred from the ECB rate alone."
+    },
+    {
+      "claim_id": "mf-fx-leakage-audit-c2",
+      "claim_type": "payer_and_budget",
+      "confidence": "low",
+      "evidence_refs": [],
+      "statement": "The intended payer is the SME finance owner whose budget bears bank charges and conversion costs; the minimum recoverable volume and willingness to share savings remain unverified."
+    },
+    {
+      "claim_id": "mf-fx-leakage-audit-c3",
+      "claim_type": "founder_control_point_path",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.eba.europa.eu/single-rule-book-qa/qna/view/publicId/2018_4309",
+        "https://finance.ec.europa.eu/consumer-finance-and-payments/payment-services/payment-services_en"
+      ],
+      "statement": "Client CSV exports are the simplest control path; if account-information access is used, EBA guidance says explicit payment-service-user consent is required, so the founder must work through a properly authorized access provider rather than collect bank credentials."
+    },
+    {
+      "claim_id": "mf-fx-leakage-audit-c4",
+      "claim_type": "other",
+      "confidence": "medium",
+      "evidence_refs": [],
+      "statement": "The proposed service deliberately excludes payment initiation, custody, and execution; whether its recommendations constitute regulated investment or payment advice in Poland needs legal confirmation."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Owner, CFO, controller, or head accountant",
+    "bundling_resistance": "Independence, multi-provider comparison, transparent savings attribution, and no custody must justify a separate fee",
+    "customer_relationship_owner": "Founder company owns its direct client relationship",
+    "distribution_origin": "Accountants and fractional CFOs with nonexclusive referrals plus direct outreach to import-heavy firms",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Referral fee or founder-led outreach; target covered by the fixed diagnostic charge",
+      "cash_conversion": "Diagnostic paid upfront; savings fee paid only after client-approved evidence and implementation",
+      "contribution_margin": "Target 55-75% after analyst time; small or messy ledgers may be uneconomic",
+      "delivery_and_support_costs": "Client onboarding, reconciliation, implementation tracking, and quarterly reports",
+      "overhead_and_compliance": "Legal boundary review, GDPR/security controls, professional insurance, and licensed AISP cost if used",
+      "revenue_basis": "Hypothesis: 4000-12000 PLN diagnostic plus 15-25% of first-year independently verified savings",
+      "variable_costs": "Data normalization, quote collection, secure storage, and senior review"
+    },
+    "likely_incumbent_response": "Banks, payment fintechs, treasury advisers, and accountants may provide free audits tied to switching or execution revenue",
+    "paid_event_or_measurable_loss": "For each historical conversion, the difference between the client's all-in realized cost and a documented contemporaneous executable alternative is a measurable leakage hypothesis",
+    "payer": "Importing SME",
+    "purchase_trigger": "Large currency volume, provider price change, budget variance, refinancing, or a new finance leader",
+    "renewal_event": "Quarterly audit and annual provider tender or policy refresh"
+  },
+  "contrary_evidence": [
+    "ECB reference rates are explicitly not intended for transaction use, so a naive spread calculation would be misleading.",
+    "Payment providers can subsidize free audits with execution revenue and may undercut an independent service."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Nonexclusive 12-month data-rights and workflow-review agreement using exports or a licensed AISP partner with explicit client consent",
+    "acquisition_instrument_type": "data_rights_agreement",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Accept client-generated CSV and invoice exports; never access an account or initiate a payment without the required authorization and regulated partner",
+    "current_owner": "The client owns its records and retains every payment and provider decision",
+    "customer_relationship_control": "owned",
+    "customer_relationship_owner": "Founder company owns its direct client relationship",
+    "duration": "12 months",
+    "exclusivity": "nonexclusive",
+    "founder_access_basis": "other_legally_usable_access",
+    "founder_access_description": "Client-supplied exports, explicit-consent data access through a properly authorized provider, and public informational rates are lawful acquisition paths subject to contract and regulatory review.",
+    "launch_controller": "Founder company after the client signs a data-rights and advisory-scope agreement",
+    "mechanism_control": "dependent",
+    "renewal": "Quarterly monitoring opt-in with annual contract renewal",
+    "replaceability": "replaceable",
+    "revocability": "at_will",
+    "status": "replaceable_access",
+    "subject": "Client-authorized FX transaction ledger and quarterly provider-review checkpoint",
+    "subject_type": "workflow_position",
+    "transferability": "nontransferable"
+  },
+  "discovery_lane": "mechanism-first",
+  "economics": {
+    "acquisition_route": "Accountants, fractional CFOs, import associations, and targeted outbound",
+    "capital_required_pln": 35000,
+    "founder_net_worth_path": "Illustrative, not forecast: 800 clients averaging 18000 PLN annual fees imply 14.4m PLN revenue; recurring monitoring, delegated analysts, and credible independent savings measurement would be needed for a 5m PLN founder outcome",
+    "founder_time": "Three to five hours daily during early audits, with intake and reconciliation automation required before volume",
+    "gross_margin_basis": "Reusable ingestion and comparison logic with analyst review concentrated on reconciliation and quote validity",
+    "payback": "Fixed diagnostic should cover CAC and initial delivery; not yet validated",
+    "pricing": "Hypothesis: 4000-12000 PLN upfront diagnostic plus 15-25% of agreed first-year savings",
+    "retention_or_repeat": "Quarterly monitoring, annual tenders, and new-currency or new-supplier events"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Permissioned, anonymized observations of fee structures and realized implementation outcomes improve peer baselines",
+    "customer": "Polish SMEs with recurring supplier payments or card spend in foreign currencies",
+    "distribution_mechanism": "Accountants, fractional CFOs, import associations, and direct data-led outreach",
+    "offer_and_business_model": "Managed data audit, quote comparison, control recommendations, and quarterly leakage monitoring; no custody or payment execution",
+    "payer_and_paid_event": "Finance owner pays a fixed diagnostic fee and a percentage after verified implementation savings",
+    "problem_trigger": "A monthly close reveals opaque spreads, fees, or inconsistent conversion routes across accounts and suppliers"
+  },
+  "founder_fit": [
+    "Transaction normalization and counterfactual analysis align with data science and finance interests",
+    "Savings attribution is quantitative and auditable",
+    "The service can start with secure exports and scheduled work alongside employment",
+    "Referral distribution avoids constant public content or on-camera selling"
+  ],
+  "parent": null,
+  "risks": [
+    "Bad counterfactuals could overstate savings and create disputes",
+    "Sensitive financial-data handling raises security obligations",
+    "One-off audits may not retain after a provider switch",
+    "Clients may act on recommendations that expose them to currency risk"
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://www.ecb.europa.eu/ecb-and-you/explainers/tell-me-more/html/role_of_exchange_rates.tr.html",
+    "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html",
+    "https://www.eba.europa.eu/single-rule-book-qa/qna/view/publicId/2018_4309",
+    "https://finance.ec.europa.eu/consumer-finance-and-payments/payment-services/payment-services_en"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "managed_service",
+    "commercial_model_descriptor": "fixed_fee_plus_verified_fx_savings_share",
+    "control_point_category": "transaction_rail",
+    "control_point_descriptor": "client_contracted_recurring_fx_route_review",
+    "critical_dependency_category": "data_provider",
+    "critical_dependency_descriptor": "complete_client_ledgers_and_executable_provider_quotes"
+  },
+  "structure": {
+    "commercial_archetype": "Contingency-oriented managed financial-operations audit",
+    "control_point": "The client-contracted recurring review checkpoint before FX provider and routing decisions",
+    "critical_dependency": "Complete client transaction data and independently obtainable executable comparison quotes"
+  },
+  "thesis": "Contract a recurring approval checkpoint over an importer's own bank, card, and invoice exports, quantify all-in foreign-exchange leakage against contemporaneous executable alternatives, and charge a share of independently verified savings without executing trades.",
+  "title": "Client-Authorized FX Leakage Recovery Audit",
+  "uncertainties": [
+    "Distribution of annual FX volume and spread among target SMEs",
+    "Availability of timestamped executable comparison quotes",
+    "Contractually acceptable savings-baseline methodology",
+    "Polish regulatory perimeter for treasury recommendations and referral compensation"
+  ],
+  "version": 1
+}

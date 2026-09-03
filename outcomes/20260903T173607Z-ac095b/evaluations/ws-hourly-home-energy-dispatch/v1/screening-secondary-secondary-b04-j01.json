@@ -1,0 +1,117 @@
+{
+  "assumptions": [
+    "The initial payer is a Polish household or micro-enterprise with a remotely read meter, a dynamic retail contract, and at least one materially flexible load.",
+    "The stated 29-59 PLN monthly fee is paid in addition to electricity and equipment costs rather than subsidized by a retailer, installer, or flexibility-market payment.",
+    "A read-only recommendation product can launch first, but durable customer value and retention ultimately require safe automated control.",
+    "No exclusive device API, retailer data agreement, installer channel, or verified savings advantage over existing HEMS products can be assumed."
+  ],
+  "base_score": 4.13,
+  "candidate_id": "ws-hourly-home-energy-dispatch",
+  "candidate_sha256": "d7fe47d77e3be8f0eee841514053e7d7db7b08621446efcfc2b58d8df2b07ffd",
+  "candidate_version": 1,
+  "constrained_score": 3.93,
+  "evaluation_type": "working_screening_secondary",
+  "evidence_needed_for_higher_score": "Backtest actual 15-minute meter data from at least 30-50 target sites against each retailer's complete formula, network charges, taxes, comfort constraints, and battery degradation; then run controlled paid pilots showing incremental net savings, conversion at the proposed fee, support hours, reliability, churn intent, and CAC, alongside a signed installer channel and verified access for the chosen device stack.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "Dynamic tariffs and flexible household devices create a recurring optimization problem, and a cross-vendor, constraint-aware controller is more useful than asking users to monitor prices manually. The insight is already visible in multiple Polish and international HEMS offerings, including a Polish product publicly describing nearly the same tariff, forecast, battery, EV, and cross-vendor control layer.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Timing consumption can reduce an eligible site's bill and comfort-preserving automation is convenient, but the pain is discretionary for most households and savings vary with load flexibility, retailer formula, taxes, network charges, battery wear, and price protection. URE reported only 4,836 household dynamic-price contracts at end-2025, and no evidence shows that typical incremental savings comfortably exceed a 29-59 PLN monthly software fee.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Recurring software revenue and annual prepayment could become attractive once integrations stabilize, but the proposed path requires roughly 8,000 sites at 45 PLN per month while the entire Polish household dynamic-contract base was only 4,836 at end-2025. Unknown CAC, installer commission, device onboarding, exception support, API maintenance, security, liability, and churn can erase software margins, and pricing is not anchored to verified net savings.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Homes or micro-enterprises with a smart meter, dynamic contract, and a battery, EV, or heat pump are a precise, measurable beachhead; URE also reported 27,000 small and micro-business dynamic contracts at end-2025. Household adoption nevertheless represented only 0.03% of customers despite 48% smart-meter penetration, and the packet does not size the overlap with controllable high-load devices or identify one standard device stack.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "Installer neutrality and transparent realized-savings measurement could support a specialist niche, but direct Polish competitors already market multi-brand HEMS, RCE or dynamic-tariff optimization, local gateways, batteries, EVs, heat pumps, and hundreds of deployments. Utilities, inverter and battery vendors, Home Assistant integrations, and energy retailers have stronger installed bases or can bundle basic scheduling, making domination unlikely without a proprietary channel or performance edge.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A proven dispatch layer can expand from one device stack into C&I sites, demand response, flexibility aggregation, retailer or installer white-label distribution, additional devices, and other European tariff markets. Each geography and hardware family adds tariff, protocol, safety, support, and regulatory work, so expansion is meaningful but operationally nontrivial.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Consent-based response and savings data could improve forecasts and device-specific policies over time. The optimization methods and price and weather feeds are accessible, device vendors control key interfaces, customers can switch software, and existing platforms already support open protocols and broad device lists, so the proposed data advantage is neither exclusive nor proven to compound faster than incumbents.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "A genuinely cross-brand system that incorporates comfort, battery degradation, and auditable counterfactual savings could outperform simple timers and single-vendor apps. Existing Polish offerings publicly claim cross-brand integration and automatic tariff optimization already, and the candidate supplies no measured savings, reliability, compatibility, or user-experience result demonstrating a behavior-changing advantage.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "The regulatory direction is favorable: large suppliers must offer dynamic contracts, prices can settle at 15-minute intervals, smart-meter penetration reached 48% of households by end-2025, and adoption grew rapidly from a tiny base. At the same time, household participation remains negligible and the 2025 price cap reduced urgency because customers had to waive protection to choose dynamic pricing.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "Installer handoff at commissioning is a sensible acquisition moment, and the family company can provide a low-cost pilot route compatible with the founder's preferences. One small regional installer is not a scalable channel, there is no signed distribution agreement, and installers, retailers, and device vendors may favor their own bundled systems; direct household acquisition at this price could have unattractive CAC.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "A read-only planner for one tariff and one device stack is feasible part-time with the founder's data-science and AI leverage and within the stated capital. The valuable automated version requires reliable local or cloud control across fragmented hardware, safe fallback behavior, warranty analysis, cybersecurity, GDPR compliance, counterfactual savings measurement, and support during household exceptions; those obligations are difficult to operate part-time at scale.",
+      "score": 5,
+      "status": "scored"
+    }
+  ],
+  "final_score": 3.9,
+  "highest_value_structural_change": "Move the first beachhead from general households to small and micro-business portfolios with large flexible loads and one certified hardware stack, sold B2B2C through installers or energy advisers on an outcome-linked fee based on independently verified savings; this raises absolute customer value while reducing integration breadth and consumer CAC.",
+  "interaction_adjustment": -0.2,
+  "judge_id": "secondary-b04-j01",
+  "main_structural_strength": "The product can tie a recurring, measurable electricity-cost decision to an automated workflow and learn from device response and realized savings, with a founder-accessible pilot channel and favorable smart-meter and tariff infrastructure growth.",
+  "primary_score_limiter": "The available household market and per-site net savings are too uncertain to support the proposed subscription economics after customer acquisition, device-fragmentation support, and competition from free or bundled controls.",
+  "qualified": false,
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 3,
+  "strongest_disconfirming_evidence": "URE's full-year 2025 data show that only 4,836 households, at most 0.03% of the segment, used dynamic-price contracts despite 48% smart-meter penetration, while current Polish products publicly offer cross-vendor tariff-aware control for PV, batteries, EVs, heat pumps, and other loads; this directly challenges both near-term market size and differentiation.",
+  "unrounded_score": 3.93
+}

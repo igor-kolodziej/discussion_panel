@@ -1,0 +1,88 @@
+{
+  "candidate_id": "mf-02",
+  "claims": [
+    {
+      "claim_id": "mf-02-control",
+      "claim_type": "founder_control_point_path",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://www.fmc.gov/articles/fmc-publishes-final-rule-on-detention-and-demurrage-billing-practices/"
+      ],
+      "statement": "The FMC's 2024 rule gives billed parties at least 30 days to request mitigation, refund or waiver and requires carriers to provide a dispute process; a Polish exporter or importer on a US trade lane can therefore contractually mandate an agent to audit invoices and submit evidence-bound requests, subject to counsel confirming agency and jurisdiction."
+    },
+    {
+      "claim_id": "mf-02-loss",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://www.fmc.gov/articles/commissioner-dye-releases-final-report-for-fact-finding-no-29/",
+        "https://www.fmc.gov/articles/fmc-publishes-final-rule-on-detention-and-demurrage-billing-practices/"
+      ],
+      "statement": "Detention and demurrage are discrete invoices triggered by late container pickup or equipment return; FMC fact-finding recorded importer and exporter concern about excessive charges, and a non-compliant invoice can eliminate the billed party's obligation to pay, creating an auditable recovery event."
+    },
+    {
+      "claim_id": "mf-02-payer",
+      "claim_type": "payer_and_budget",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://www.fmc.gov/articles/final-rule-on-demurrage-detention-cleared-to-take-full-effect-may-28/",
+        "https://www.fmc.gov/articles/fmc-publishes-final-rule-on-detention-and-demurrage-billing-practices/"
+      ],
+      "statement": "The payer is the shipper's CFO or logistics director from the avoided or refunded invoice, with an invoice receipt starting the 30-day action window as purchase trigger; the rule expressly identifies contracted transport customers and consignees as billable parties and makes compliant charges payable."
+    }
+  ],
+  "contrary_evidence": [
+    "The cited FMC rights govern US-regulated ocean transport, so many Polish/EU port charges and forwarder pass-through invoices may fall outside the rule.",
+    "Carriers can issue fully compliant invoices for legitimate delays, leaving no recovery pool."
+  ],
+  "discovery_lane": "mechanism-first",
+  "economics": {
+    "acquisition_route": "Partner with Polish customs brokers and freight forwarders serving US routes; obtain read-only invoice and shipment-timestamp access plus a narrowly drafted dispute mandate from each shipper.",
+    "capital_required_pln": 25000,
+    "founder_net_worth_path": "Prove recovery on 100 invoices, then distribute through 20 freight partners to audit PLN 100m of annual charges; a 20% success fee on 8% recoveries would yield PLN 1.6m revenue, with expansion across Central Europe and carrier-specific rule data supporting PLN 5m founder net worth in roughly 5-7 years if recovery rates persist.",
+    "founder_time": "Initially 2-3 hours daily for data ingestion, exception scoring and partner management; licensed maritime counsel reviews templates and only escalated cases receive human attention.",
+    "gross_margin_basis": "Automated invoice checks are low marginal cost, but counsel and evidence gathering are variable; preliminary gross-margin target is 50-65% of success fees.",
+    "payback": "No recovery, no fee; channel acquisition should repay from the first two successful disputes per broker, and the client sees immediate positive payback because fees come from recovered cash.",
+    "pricing": "15-25% of waived or refunded charges, with an optional PLN 1,000-3,000 monthly monitoring minimum for high-volume shippers.",
+    "retention_or_repeat": "Every container movement can generate a new invoice; recurring audits, carrier rule libraries and timestamp evidence make the service habitual for active shippers."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A carrier-, terminal- and lane-specific corpus of invoice defects, event timestamps and dispute outcomes raises recovery precision and channel trust.",
+    "customer": "Polish and Central European manufacturers, importers and exporters moving containers on FMC-regulated US trade lanes.",
+    "distribution_mechanism": "Revenue-share referrals embedded in customs brokers, freight forwarders and trade-finance accountants.",
+    "offer_and_business_model": "Continuous invoice audit and evidence-pack generation paid as a share of waived or recovered detention and demurrage charges.",
+    "payer_and_paid_event": "The shipper's finance or logistics budget pays only when a carrier waives, credits or refunds a disputed fee.",
+    "problem_trigger": "Receipt of a detention or demurrage invoice starts a short dispute deadline."
+  },
+  "founder_fit": [
+    "The work is document-, rule- and timestamp-heavy, suiting data extraction and anomaly-detection skills.",
+    "A contingency model is cheap to validate alongside employment and avoids high-energy direct selling through broker channels.",
+    "The service can become a repeatable rules engine and proprietary outcomes dataset rather than a manual consultancy."
+  ],
+  "parent": null,
+  "risks": [
+    "Unauthorized-practice, agency, debt-collection or litigation rules may limit what a non-law firm may do.",
+    "Forwarders may lack complete timestamps or have contract clauses that pass through valid fees.",
+    "Carriers can improve invoices or automate defenses, compressing recovery rates."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://www.fmc.gov/articles/fmc-publishes-final-rule-on-detention-and-demurrage-billing-practices/",
+    "https://www.fmc.gov/articles/final-rule-on-demurrage-detention-cleared-to-take-full-effect-may-28/",
+    "https://www.fmc.gov/articles/commissioner-dye-releases-final-report-for-fact-finding-no-29/"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Contingency claims-recovery administrator",
+    "control_point": "Time-limited shipper mandate plus access to invoices, contracts and container event timestamps",
+    "critical_dependency": "FMC applicability and complete evidence for each billed movement"
+  },
+  "thesis": "Acquire a narrow dispute mandate and shipment evidence feed from European shippers on US lanes, detect detention and demurrage invoices that violate FMC requirements or fail the incentive principle, and take a percentage only when the charge is waived or refunded.",
+  "title": "Container Fee Recovery Mandate",
+  "uncertainties": [
+    "The addressable volume of FMC-governed invoices among Polish shippers is unknown.",
+    "Actual recovery rates and average invoice values have not been measured in this channel.",
+    "Counsel must determine which dispute actions require legal representation."
+  ],
+  "version": 1
+}

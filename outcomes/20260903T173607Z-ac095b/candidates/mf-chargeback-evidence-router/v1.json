@@ -1,0 +1,148 @@
+{
+  "candidate_id": "mf-chargeback-evidence-router",
+  "claims": [
+    {
+      "claim_id": "mf-chargeback-evidence-router-c1",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://docs.stripe.com/disputes"
+      ],
+      "statement": "Stripe documents that a formal dispute immediately reverses the payment and debits the transaction amount plus a dispute fee, yielding an observable loss event."
+    },
+    {
+      "claim_id": "mf-chargeback-evidence-router-c2",
+      "claim_type": "payer_and_budget",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://docs.stripe.com/disputes"
+      ],
+      "statement": "The merchant is the proposed payer because its balance and operations absorb the dispute, but willingness to buy an independent cross-PSP tool is unverified."
+    },
+    {
+      "claim_id": "mf-chargeback-evidence-router-c3",
+      "claim_type": "founder_control_point_path",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://docs.stripe.com/disputes/visual-evidence"
+      ],
+      "statement": "A merchant can contractually authorize a provider to collect evidence and prepare submissions; PSP-specific API permissions and merchant approval must be verified before any automated submission."
+    },
+    {
+      "claim_id": "mf-chargeback-evidence-router-c4",
+      "claim_type": "other",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://docs.stripe.com/disputes"
+      ],
+      "statement": "Stripe already advertises automated evidence collection for eligible disputes, which is evidence of both technical feasibility and direct incumbent pressure."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Finance, payments, fraud, or e-commerce operations lead",
+    "bundling_resistance": "The product must win on multi-PSP evidence reuse, transparent case economics, and outcome portability rather than generic automation",
+    "customer_relationship_owner": "Founder company owns its direct merchant contract",
+    "distribution_origin": "Merchant outbound, agency referrals, app listings where permitted, and accountant or fractional-CFO channels",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Performance-based pilot plus agency referrals; target recovery after 20-40 processed disputes, unvalidated",
+      "cash_conversion": "Per-case fees billed monthly; recovery share collected only after PSP resolution",
+      "contribution_margin": "Target 60-80% after review labor; case heterogeneity may reduce it",
+      "delivery_and_support_costs": "Connector onboarding, exception handling, evidence approval support, and rule updates",
+      "overhead_and_compliance": "Security testing, GDPR contracts, cyber insurance, card-data scope controls, and legal review",
+      "revenue_basis": "Hypothesis: 60-180 PLN per submitted case plus 5-10% of recovered amount, or a monthly volume plan",
+      "variable_costs": "Model/API use, document storage, PSP calls, payment processing, and human quality review"
+    },
+    "likely_incumbent_response": "PSPs already provide guided evidence tools and some offer automated dispute products inside their platforms",
+    "paid_event_or_measurable_loss": "A dispute immediately reverses the transaction amount and can add a dispute fee; recovery or loss is measured at case resolution",
+    "payer": "Online merchant",
+    "purchase_trigger": "Rising dispute volume, a missed evidence deadline, or staff time spent collecting proof across systems",
+    "renewal_event": "Each submitted dispute and monthly platform continuation"
+  },
+  "contrary_evidence": [
+    "Stripe already offers Smart Disputes and guided evidence, reducing value for single-PSP merchants.",
+    "The issuer, not the evidence tool, decides outcomes; stronger packets cannot guarantee recovery."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Nonexclusive 12-month workflow-integration and data-processing agreement with revocable scoped credentials",
+    "acquisition_instrument_type": "workflow_integration_agreement",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Offer secure manual upload and support alternative PSPs; never use merchant data without authorization",
+    "current_owner": "Merchant controls business evidence; PSP and card network control the dispute interface and decision",
+    "customer_relationship_control": "owned",
+    "customer_relationship_owner": "Founder company owns its direct merchant contract",
+    "duration": "12 months",
+    "exclusivity": "nonexclusive",
+    "founder_access_basis": "other_legally_usable_access",
+    "founder_access_description": "The path uses ordinary merchant contracts, scoped API credentials, and processor terms available to any qualified vendor; no privileged employer or family data is required.",
+    "launch_controller": "Founder company after a merchant signs a processing agreement and grants scoped API or export access",
+    "mechanism_control": "dependent",
+    "renewal": "Monthly service renewal under an annual data-processing framework",
+    "replaceability": "replaceable",
+    "revocability": "at_will",
+    "status": "replaceable_access",
+    "subject": "Authorized evidence-assembly and submission checkpoint for each merchant dispute",
+    "subject_type": "workflow_position",
+    "transferability": "nontransferable"
+  },
+  "discovery_lane": "mechanism-first",
+  "economics": {
+    "acquisition_route": "Outcome-tracked pilots, e-commerce agencies, fractional CFOs, and permitted app ecosystems",
+    "capital_required_pln": 50000,
+    "founder_net_worth_path": "Illustrative, not forecast: 250000 annual cases at 70 PLN blended net revenue imply 17.5m PLN revenue; a 5m PLN founder outcome requires multi-PSP distribution, strong contribution margins, and retained merchant contracts",
+    "founder_time": "Four to five hours daily for product and scheduled reviews; customer approval and support need asynchronous design",
+    "gross_margin_basis": "Automated evidence joins and templating with human review only before high-value or ambiguous submissions",
+    "payback": "Target CAC recovery after 20-40 paid cases; unvalidated",
+    "pricing": "Hypothesis: 60-180 PLN per submitted dispute plus 5-10% of recovered value or a volume subscription",
+    "retention_or_repeat": "Repeat follows ongoing dispute volume and demonstrable net recovery versus native PSP tools"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Permissioned outcome labels by reason code, evidence mix, vertical, and PSP improve packet prioritization",
+    "customer": "EU online merchants using more than one payment service provider or storefront",
+    "distribution_mechanism": "Direct outreach to merchants and nonexclusive integrations or referral agreements with e-commerce agencies and accounting firms",
+    "offer_and_business_model": "Reason-code-specific evidence assembly, human approval, submission routing, and outcome tracking priced per case or recovery",
+    "payer_and_paid_event": "Merchant pays when a dispute packet is submitted, with an optional percentage of recovered funds",
+    "problem_trigger": "A cardholder dispute reverses a payment and starts an evidence deadline while relevant proof is split across systems"
+  },
+  "founder_fit": [
+    "Classification, document extraction, and outcome learning match data-science strengths",
+    "Case value, recovery, handling time, and deadline compliance are measurable",
+    "The workflow can be automated and scheduled around full-time employment",
+    "Finance interest aligns with payment-loss analysis without requiring on-camera distribution"
+  ],
+  "parent": null,
+  "risks": [
+    "Handling payment and identity evidence creates security and privacy exposure",
+    "A bad submission may consume the merchant's only evidence round",
+    "PSP terms may restrict automation or third-party access",
+    "Network-rule changes require continuous maintenance"
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://docs.stripe.com/disputes",
+    "https://docs.stripe.com/disputes/visual-evidence",
+    "https://docs.stripe.com/disputes/best-practices?locale=en-GB"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "usage_based_service",
+    "commercial_model_descriptor": "per_dispute_evidence_submission_and_recovery_fee",
+    "control_point_category": "workflow_integration",
+    "control_point_descriptor": "merchant_authorized_pre_submission_evidence_checkpoint",
+    "critical_dependency_category": "integration_platform",
+    "critical_dependency_descriptor": "payment_provider_and_storefront_api_continuity"
+  },
+  "structure": {
+    "commercial_archetype": "Usage-priced dispute operations software with optional recovery fee",
+    "control_point": "Merchant-authorized workflow integration between dispute notice and evidence submission",
+    "critical_dependency": "Stable PSP and commerce-platform integrations plus merchant approval before submission"
+  },
+  "thesis": "Obtain merchant-authorized access to the dispute, order, delivery, refund, and communication workflow, then charge per submitted evidence packet and share in recoveries across payment providers.",
+  "title": "Cross-PSP Chargeback Evidence Router",
+  "uncertainties": [
+    "Recoverable dispute volume among Polish and EU mid-market merchants",
+    "API coverage for evidence submission across PSPs",
+    "Incremental win-rate improvement over native tools",
+    "Merchant tolerance for a recovery share in addition to PSP fees"
+  ],
+  "version": 1
+}

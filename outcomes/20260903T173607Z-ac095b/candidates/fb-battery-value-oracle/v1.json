@@ -1,0 +1,146 @@
+{
+  "candidate_id": "fb-battery-value-oracle",
+  "claims": [
+    {
+      "claim_id": "fb-battery-value-oracle-c1",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1542/oj/eng"
+      ],
+      "statement": "EU battery-passport rules identify state of health, use history, and residual value or further-use decisions as relevant data, but no willingness to pay for this proposed certificate has been proven."
+    },
+    {
+      "claim_id": "fb-battery-value-oracle-c2",
+      "claim_type": "payer_and_budget",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1542/oj/eng"
+      ],
+      "statement": "Marketplaces, lessors, buyers, repurposers, insurers, and financiers are plausible payers when residual condition changes transaction value, but their budgets and acceptance criteria are unknown."
+    },
+    {
+      "claim_id": "fb-battery-value-oracle-c3",
+      "claim_type": "founder_control_point_path",
+      "confidence": "low",
+      "evidence_refs": [],
+      "statement": "Control would require signed platform integrations, user authority, and data-processing rights for each score; the founder currently controls none of these inputs or workflow positions."
+    },
+    {
+      "claim_id": "fb-battery-value-oracle-c4",
+      "claim_type": "other",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1542/oj/eng",
+        "https://eur-lex.europa.eu/eli/reg/2023/2854/oj/eng"
+      ],
+      "statement": "The Battery Regulation requires interoperable passports with access controls and integrity, while the Data Act creates access principles for connected-product data; exact applicability to each battery and actor requires legal verification."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Remarketing, residual-value risk, underwriting, procurement, or quality lead",
+    "bundling_resistance": "Make evidence provenance and uncertainty portable across brands, combine independent tests with authorized records, and remain neutral between reuse, repurposing, and recycling outcomes",
+    "customer_relationship_owner": "Marketplace, lessor, fleet, or repurposer until a direct scoring agreement is signed",
+    "distribution_origin": "Embedded integration into existing battery and vehicle transaction workflows",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Enterprise integration and validation study; target recovery within the first 500-1000 scored batteries per partner",
+      "cash_conversion": "Monthly platform minimum plus per-score invoicing; enterprise validation and payment cycles may require six months of runway",
+      "contribution_margin": "Unvalidated target 60-80% for API-only scores and 35-55% when an independent physical test is included",
+      "delivery_and_support_costs": "Automated scoring for complete records; technician or analyst escalation for missing, conflicting, or suspicious evidence",
+      "overhead_and_compliance": "Data governance, cyber security, model validation, professional liability, contracts, and potential conformity or accreditation work",
+      "revenue_basis": "Hypothesis: 80-250 PLN per certificate or tiered API pricing from 5000 PLN per month for batch portfolios",
+      "variable_costs": "Data access, identity verification, diagnostic test, partner revenue share, compute, certificate support, and dispute review"
+    },
+    "likely_incumbent_response": "OEMs, battery analytics vendors, auction platforms, and testing-equipment makers can expose their own health scores and restrict raw data",
+    "paid_event_or_measurable_loss": "Paid event is issuance of a certificate or API score accepted in a sale, return, finance, insurance, repurposing, or recycling decision; measurable loss is mispricing or misrouting caused by unknown residual condition",
+    "payer": "Marketplace, fleet lessor, battery buyer, repurposer, insurer, or asset financier",
+    "purchase_trigger": "A battery reaches lease return, auction, collateral review, repurposing intake, insurance renewal, or recycling triage",
+    "renewal_event": "Platform/API contract renews as long as scored transaction volume and post-transaction calibration improve decisions"
+  },
+  "contrary_evidence": [
+    "Battery passports may make core information directly available at no charge to entitled actors, reducing the value of a separate certificate.",
+    "OEM proprietary models or a physical capacity test may outperform a cross-brand statistical score."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Proposed nonexclusive workflow-integration and data-processing agreement, with owner authorization and battery-identity verification for each scored transaction",
+    "acquisition_instrument_type": "workflow_integration_agreement",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Score only owner-exported passport fields and an independent bench test, disclose the missing telemetry, or integrate another marketplace or test provider",
+    "current_owner": "Economic operator, battery or vehicle owner, and other data holders under applicable access rights; no founder access is evidenced",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "Marketplace, lessor, fleet, or repurposer until a direct scoring agreement is signed",
+    "duration": "Proposed 24-month platform term plus transaction-specific owner authorization",
+    "exclusivity": "nonexclusive",
+    "founder_access_basis": "none",
+    "founder_access_description": "The founder has relevant modeling skills but no evidenced battery dataset, OEM API, testing facility, transaction distribution, or passport access right.",
+    "launch_controller": "Battery owner or user, relevant data holder, and the transaction platform accepting the certificate",
+    "mechanism_control": "dependent",
+    "renewal": "Annual renewal after the initial platform term; each new transaction requires a valid authority chain",
+    "replaceability": "unknown",
+    "revocability": "for_cause",
+    "status": "unknown",
+    "subject": "Authenticated battery passport, use-history, adverse-event, and diagnostic data tied to a specific physical battery",
+    "subject_type": "dataset",
+    "transferability": "consent_required"
+  },
+  "discovery_lane": "future-backcast",
+  "economics": {
+    "acquisition_route": "One integration into an auction, fleet, lessor, repurposer, or financier workflow rather than direct consumer acquisition",
+    "capital_required_pln": 90000,
+    "founder_net_worth_path": "Cross-border scoring volume and proprietary calibration data could support a valuable API business; reaching 5m PLN would likely require multi-platform adoption or acquisition over 4-7 years",
+    "founder_time": "Up to five hours per day if bench testing and enterprise implementation are partner-delivered",
+    "gross_margin_basis": "Certificate revenue less data, test, partner, compute, support, validation, and liability costs",
+    "payback": "Target partner-integration payback within 500-1000 scores or twelve months; not evidenced",
+    "pricing": "Hypothesis: 80-250 PLN per certificate or API contracts starting near 5000 PLN per month",
+    "retention_or_repeat": "Usage recurs with each battery transaction and annual platform renewal"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Observed resale prices, subsequent failures, and repeated tests calibrate residual-value curves by chemistry, use pattern, and test method",
+    "customer": "Used-EV marketplaces, fleet lessors, battery repurposers, recyclers, insurers, and asset financiers",
+    "distribution_mechanism": "Embed the certificate into auction, lease-return, repurposing-intake, and credit-underwriting workflows",
+    "offer_and_business_model": "Per-certificate scoring and batch API that fuses authorized passport, telemetry, test, and provenance evidence with explicit uncertainty",
+    "payer_and_paid_event": "Marketplace, lessor, buyer, or financier pays when an authenticated health certificate or API score is issued for a named battery transaction",
+    "problem_trigger": "A battery changes owner, lease status, insurance status, or intended use and counterparties disagree about remaining capability and value"
+  },
+  "founder_fit": [
+    "Strong match to data fusion, uncertainty modeling, and commercial decision analysis",
+    "Software-heavy delivery can be automated and operated without constant public-facing work",
+    "A narrow certificate pilot can fit within 100k PLN if physical testing is partnered rather than owned",
+    "The model has cross-border scale potential if a trusted acceptance standard is earned"
+  ],
+  "parent": null,
+  "risks": [
+    "A wrong score can cause material loss, safety incidents, or recycling misclassification",
+    "OEM or marketplace denial of data access can leave the score too weak to trust",
+    "Battery identity or telemetry can be tampered with",
+    "Enterprise integrations can exceed the founder's time and runway before transaction volume arrives"
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2023/1542/oj/eng",
+    "https://eur-lex.europa.eu/eli/reg/2023/2854/oj/eng"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "data_or_intelligence",
+    "commercial_model_descriptor": "per asset residual health certificate and batch scoring api",
+    "control_point_category": "workflow_integration",
+    "control_point_descriptor": "embedded condition score at battery sale return finance insurance or routing decisions",
+    "critical_dependency_category": "data_provider",
+    "critical_dependency_descriptor": "authorized passport operational adverse event and diagnostic evidence tied to battery identity"
+  },
+  "structure": {
+    "commercial_archetype": "transaction-bound battery health intelligence",
+    "control_point": "workflow integration where battery condition becomes a price, credit, or routing decision",
+    "critical_dependency": "lawful access to passport, telemetry, and test data with reliable battery identity"
+  },
+  "thesis": "Future operating state (2030): used EV and industrial batteries are routinely financed, insured, repurposed, and traded against machine-readable battery passports. Missing data and coordination mechanism: an authenticated, transaction-specific residual-health score that reconciles passport fields, owner-authorized operational data, bench tests, adverse events, and uncertainty into a certificate accepted by both sides of a transaction.",
+  "title": "Battery Residual-Value Oracle",
+  "uncertainties": [
+    "Which Polish and EU transactions will require or accept third-party battery health evidence",
+    "Actual data fields, access roles, interoperability, and API availability under implementing standards",
+    "Ground-truth outcome data needed to calibrate residual value",
+    "Whether certification, laboratory accreditation, or regulated appraisal status is required"
+  ],
+  "version": 1
+}

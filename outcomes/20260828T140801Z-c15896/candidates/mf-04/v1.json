@@ -1,0 +1,90 @@
+{
+  "candidate_id": "mf-04",
+  "claims": [
+    {
+      "claim_id": "mf-04-control",
+      "claim_type": "founder_control_point_path",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/EN/legal-content/summary/general-product-safety-regulation-2023.html",
+        "https://eur-lex.europa.eu/eli/reg/2023/988/oj/eng"
+      ],
+      "statement": "GPSR requires a responsible EU economic operator for covered products, which may be an authorised representative, and assigns document, traceability and corrective-action tasks; a Warsaw entity can acquire this control point through a narrowly scoped written mandate and custody of each product's technical file, after product-liability counsel defines accepted categories."
+    },
+    {
+      "claim_id": "mf-04-loss",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://www.ebay.com/sellercenter/resources/general-product-safety-regulation",
+        "https://eur-lex.europa.eu/EN/legal-content/summary/general-product-safety-regulation-2023.html"
+      ],
+      "statement": "A non-EU seller without responsible-person and safety information can lose EU listing visibility or market access; eBay says it may hide non-compliant listings, while the regulation requires responsible-operator, product and warning information in distance-sale offers, creating a measurable lost-sales and remediation event."
+    },
+    {
+      "claim_id": "mf-04-payer",
+      "claim_type": "payer_and_budget",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://www.ebay.com/sellercenter/resources/general-product-safety-regulation",
+        "https://commission.europa.eu/document/download/a281b150-19fd-44f9-bef8-c6018f9c4792_en?filename=factsheet+GPSR+final.pdf"
+      ],
+      "statement": "The payer is a UK, US or Asian marketplace brand's compliance or EU sales owner, using compliance/customer-acquisition budget when a marketplace warns or hides a listing; the Commission notes penalties must be dissuasive and eBay directs sellers to obtain EU Responsible Person details, indicating a mandatory gate rather than optional software."
+    }
+  ],
+  "contrary_evidence": [
+    "EU importers and fulfilment providers can already serve as the responsible economic operator, so many sellers will not need a standalone representative.",
+    "Acting as authorised representative creates real safety, recall and authority-cooperation obligations that software alone cannot satisfy."
+  ],
+  "discovery_lane": "mechanism-first",
+  "economics": {
+    "acquisition_route": "Target low-risk non-electrical categories sold by UK marketplace agencies, sign category-limited authorised-representative mandates, and require a complete risk assessment and technical file before the service activates.",
+    "capital_required_pln": 75000,
+    "founder_net_worth_path": "Pilot 100 SKUs across 10 sellers, reach 500 brands averaging PLN 12,000 annual fees for PLN 6m recurring revenue, and reinvest into compliance staff and insurer-backed processes; a 25-35% operating margin could support PLN 5m founder net worth in 5-7 years, but liability may cap bootstrapped scale.",
+    "founder_time": "Founder builds document intake, listing checks and incident triage for 3 hours daily; a product-safety professional and counsel approve categories and handle regulator-facing decisions.",
+    "gross_margin_basis": "Document automation is high margin, but professional review, insurance and incident response are meaningful; preliminary blended gross margin target is 45-60%.",
+    "payback": "Seller payback comes from preserving EU listing revenue; require annual prepayment so initial legal review and insurance are recovered before representation begins.",
+    "pricing": "PLN 2,000-5,000 onboarding per product family plus PLN 500-2,000 monthly base and PLN 20-80 per active SKU; recalls and laboratory work priced separately.",
+    "retention_or_repeat": "The EU address, technical-file custody and incident history persist for every active SKU; annual reviews and new-SKU additions create repeat revenue and high switching friction."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Category-specific technical-file templates, marketplace error data and incident history improve acceptance screening and price risk more accurately than generic address-rental services.",
+    "customer": "Non-EU small and mid-sized marketplace brands selling low-risk consumer products into the EU without their own EU entity or importer.",
+    "distribution_mechanism": "UK and US marketplace agencies, fulfilment advisers and product-testing laboratories refer sellers at listing launch.",
+    "offer_and_business_model": "Category-limited EU authorised representation bundled with technical-file escrow, listing-data validation and incident workflow for recurring per-SKU fees.",
+    "payer_and_paid_event": "The seller's compliance or EU sales budget pays to keep a product legally offerable and prevent marketplace hiding or enforcement interruption.",
+    "problem_trigger": "Launching an EU listing, receiving a GPSR marketplace warning, or losing the current EU responsible operator."
+  },
+  "founder_fit": [
+    "The founder is EU-based and can automate document validation and multilingual evidence handling from Poland.",
+    "Agency and laboratory channels reduce the need for continuous high-energy founder sales.",
+    "The operation can start with a tightly bounded, low-risk category and scale as a process and data asset."
+  ],
+  "parent": null,
+  "risks": [
+    "A dangerous product could create recall costs, regulator action or liability beyond fee income.",
+    "Professional indemnity or product-liability insurance may be unavailable or uneconomic for a startup.",
+    "Low-cost address-only incumbents can undercut pricing, while marketplaces may internalize the role."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://eur-lex.europa.eu/EN/legal-content/summary/general-product-safety-regulation-2023.html",
+    "https://eur-lex.europa.eu/eli/reg/2023/988/oj/eng",
+    "https://www.ebay.com/sellercenter/resources/general-product-safety-regulation",
+    "https://commission.europa.eu/document/download/a281b150-19fd-44f9-bef8-c6018f9c4792_en?filename=factsheet+GPSR+final.pdf"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Regulated representation and evidence escrow",
+    "control_point": "Category-limited EU authorised-representative mandate and custody of the SKU technical file",
+    "critical_dependency": "Affordable liability coverage and the ability to reject unsafe or under-documented products"
+  },
+  "thesis": "Do not sell a nominal EU address: acquire a product-family mandate only after machine-assisted technical-file screening, then remain the retained responsible-person workflow that keeps listings complete and coordinates incidents, recalls and authority requests.",
+  "title": "GPSR Technical-File Gatekeeper",
+  "uncertainties": [
+    "Counsel must determine the exact liabilities and duties accepted under each mandate.",
+    "Demand and attainable pricing among non-EU marketplace sellers are unmeasured.",
+    "The safest initial product categories and insurer exclusions remain unknown."
+  ],
+  "version": 1
+}

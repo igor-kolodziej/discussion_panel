@@ -1,0 +1,117 @@
+{
+  "assumptions": [
+    "Independent licensed laboratories have spare capacity they will reserve at useful wholesale rates.",
+    "Clinics value multi-lab resilience enough to add a new workflow intermediary.",
+    "The venture can route orders and reconcile payments without assuming prohibited clinical responsibilities.",
+    "Data-controller, processor, and merchant-of-record roles can be contracted with acceptable liability and cost."
+  ],
+  "base_score": 3.94,
+  "candidate_id": "mf-lab-capacity-router",
+  "candidate_sha256": "ff6db7dbc700ecba117b559eeef2edba6592b6c96cfbadc8ca7365a8ea200b97",
+  "candidate_version": 1,
+  "constrained_score": 3.74,
+  "evaluation_type": "working_screening",
+  "evidence_needed_for_higher_score": "Executed pilot terms from at least one clinic and two licensed labs, panel-level wholesale and retail economics, measured turnaround and rejection pain, legal opinions on ordering and data roles, and proof that multi-lab routing improves service enough to retain paying clinics.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "Contracting replaceable laboratory capacity while leaving testing and clinical accountability with licensed labs is structurally coherent, but multi-lab ordering and reconciliation are recognizable workflow problems rather than a demonstrated breakthrough.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Turnaround, specimen rejection, geographic coverage, and reconciliation can burden clinics, yet there is no quantified loss, clinic interview, capacity shortfall, or evidence that either side will pay an extra subscription or take rate.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "A clinic subscription plus fulfillment fee can recur, but margins may be thin after laboratory charges, collection, integration, support, compliance, and sales cycles, and the merchant-of-record boundary is unresolved.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Private preventive and corporate-health clinics ordering repeat panels define a plausible beachhead, although the packet does not size this segment or show that multi-lab resilience outweighs a simpler single-chain contract.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "Large laboratory chains already combine collection, ordering, results, and pricing, while nonexclusive partner labs can replicate or bypass the router; no controlled demand or supply position exists.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A functioning routing layer can add panels, clinics, collection points, laboratories, cities, and administrative software, with service-level data improving allocation across the network.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Panel mappings, integration work, service-level history, and multi-lab contracts create switching friction, but six-month nonexclusive capacity is replaceable and incumbents control the essential testing assets and results.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "The founder's analytics and operations skills fit routing optimization, but there is no existing clinic or laboratory access, regulated qualification, proprietary data, or unusual distribution advantage.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "The packet establishes a regulated recurring testing workflow but does not show a recent capacity, reimbursement, digitization, or buyer-behavior shift that makes an independent router newly compelling.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "Direct clinic sales and lab business-development agreements are identifiable channels, but both sides must be won before launch and no warm channel, signed participant, or low-cost acquisition mechanism is evidenced.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "The model requires at least two labs and one clinic, correct order and identity handling, health-data governance, integration, insurance, and careful legal scoping, all of which strain a part-time founder before product-market evidence.",
+      "score": 3,
+      "status": "scored"
+    }
+  ],
+  "final_score": 3.7,
+  "highest_value_structural_change": "Begin as clinic-paid, software-only reconciliation and exception management for one standardized recurring panel, adding reserved multi-lab capacity only after transaction data proves recurring shortages or service failures.",
+  "interaction_adjustment": -0.2,
+  "judge_id": "screen-b04-j01",
+  "main_structural_strength": "The design keeps regulated testing and interpretation with licensed laboratories while attempting to control a measurable B2B ordering and capacity workflow through contracts.",
+  "primary_score_limiter": "Neither contractible spare laboratory capacity nor clinic willingness to pay for multi-lab routing has been demonstrated, so both sides of the proposed marketplace remain hypothetical.",
+  "qualified": false,
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 3,
+  "strongest_disconfirming_evidence": "Integrated laboratory chains already provide collection, ordering, results, and pricing, allowing clinics to avoid the added coordination, data, and liability surface of an intermediary.",
+  "unrounded_score": 3.74
+}

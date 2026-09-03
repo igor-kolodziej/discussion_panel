@@ -1,0 +1,117 @@
+{
+  "assumptions": [
+    "Unattended or scheduled active testing can be performed lawfully and safely without obstructing public charging.",
+    "A probe can verify meaningful session success across a commercially useful set of connector and payment standards.",
+    "Qualified contractors would perform electrical installation and field work.",
+    "No operator API access, site agreement, accepted evidence clause, probe fleet, or paying monitoring customer currently exists."
+  ],
+  "base_score": 4.81,
+  "candidate_id": "fb-ev-charger-uptime-meter",
+  "candidate_sha256": "7cf683f30ebb186f5998ff2d481bbc92b79dc1a95c08cf8877a5c0684caf14ff",
+  "candidate_version": 1,
+  "constrained_score": 4.71,
+  "evaluation_type": "working_screening",
+  "evidence_needed_for_higher_score": "A paid portfolio pilot, written acceptance of the evidence in an SLA or financing workflow, successful safe tests across representative chargers and payment paths, measured false-alert rates, and fully loaded connector-level contribution economics.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "Independent physical-session evidence addresses a real gap between a charger reporting itself online and a user successfully discovering, authenticating, paying, starting energy flow, and recovering from faults.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Failed sessions can create lost revenue, stranded fleet time, and SLA disputes, but no asset owner, lender, insurer, municipality, or O&M provider has confirmed a budget for independent testing.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Recurring connector-month revenue and incident forensics are coherent, yet hardware amortization, installation, travel, calibration, credentials, test transactions, replacement, and support could overwhelm the proposed low per-connector price outside dense deployments.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Charging infrastructure is a growing asset base with several reliability-sensitive stakeholders, but the initial buyer and contract type are diffuse and no compact geographic or contractual beachhead is established.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "Operator independence and cross-vendor physical checks are differentiating, but charger OEMs, networks, roaming platforms, and O&M firms already occupy the workflow and can add active tests or restrict access.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A working probe and accepted evidence standard could expand across operators, fleets, financing portfolios, concessions, insurance, maintenance benchmarking, and incident diagnosis.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Cross-operator failure signatures could accumulate into useful diagnostic data, but the hardware is replaceable and continuing access depends on sites, payment rails, roaming systems, and operator interfaces controlled by others.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "Signed evidence from an independent physical endpoint is more credible than self-reported uptime for some disputes, but neither buyer acceptance nor a safe, economical unattended probe has been demonstrated.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "AFIR-era interoperability and real-time data requirements, continued charger deployment, and increasing contractual scrutiny create a favorable window for independent reliability evidence.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "Installers, O&M providers, financiers, insurers, fleets, and municipalities offer portfolio-level channels, but no partner is secured and incumbent channels may resist an independent audit layer.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "The pilot fits the capital envelope and analytics can automate monitoring, but electrical safety, vehicle or protocol emulation, payments, cyber exposure, certification, field maintenance, and site permission are material execution gates.",
+      "score": 4,
+      "status": "scored"
+    }
+  ],
+  "final_score": 4.7,
+  "highest_value_structural_change": "Start with one portfolio owner or lender whose contract explicitly accepts a narrow portable-test protocol and price the pilot per audit until safe cross-vendor automation and site-density economics are proven.",
+  "interaction_adjustment": -0.1,
+  "judge_id": "screen-b02-j01",
+  "main_structural_strength": "The service measures the user-visible physical transaction independently of the operator whose SLA performance is being assessed.",
+  "primary_score_limiter": "The critical site, payment, roaming, and charger interfaces are externally controlled, and buyer acceptance plus unit economics remain untested.",
+  "qualified": false,
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 3,
+  "strongest_disconfirming_evidence": "AFIR data standards and operator platforms may satisfy many reporting needs, while a true end-to-end test may require costly credentials, emulation, certification, and physical access.",
+  "unrounded_score": 4.71
+}

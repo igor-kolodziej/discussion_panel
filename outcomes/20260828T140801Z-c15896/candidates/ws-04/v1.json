@@ -1,0 +1,86 @@
+{
+  "candidate_id": "ws-04",
+  "claims": [
+    {
+      "claim_id": "ws-04-control",
+      "claim_type": "founder_control_point_path",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/news/ban-destruction-unsold-clothes-and-shoes-enters-application-2026-07-17_en"
+      ],
+      "statement": "The Commission identifies sale, donation, repair, refurbishment, and remanufacturing as permitted alternatives and requires proof for destruction exemptions plus five-year records; the founder can control a disposition event through exclusive short-dated lot options, pre-contracted recovery buyers, and signed downstream receipt evidence without owning textile factories or warehouses."
+    },
+    {
+      "claim_id": "ws-04-loss",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/news/new-eu-rules-stop-destruction-unsold-clothes-and-shoes-2026-02-09_en",
+        "https://environment.ec.europa.eu/news/ban-destruction-unsold-clothes-and-shoes-enters-application-2026-07-17_en"
+      ],
+      "statement": "Since 19 July 2026 large EU companies may not destroy usable unsold apparel and footwear, and standardized disclosure begins in February 2027; the Commission estimates 4-9% of textile products placed on the European market have historically been destroyed before use, creating a visible inventory-value, handling-cost, and compliance-evidence loss at each unsold lot."
+    },
+    {
+      "claim_id": "ws-04-payer",
+      "claim_type": "payer_and_budget",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/news/ban-destruction-unsold-clothes-and-shoes-enters-application-2026-07-17_en"
+      ],
+      "statement": "Large apparel and footwear businesses must prioritize keeping usable products in use, publish annual discard information, retain records, and face national enforcement and fines; the payer is a brand, marketplace, importer, or 3PL using reverse-logistics, markdown, waste, and compliance budgets when a returned or unsold lot reaches its disposition deadline."
+    }
+  ],
+  "contrary_evidence": [
+    "The rule includes exemptions for unsafe, damaged, counterfeit, IP-infringing, or rejected goods, so the truly addressable usable inventory may be smaller than historical destruction estimates.",
+    "Brands already use outlet, off-price, donation, and liquidation channels and may resist a neutral exchange because uncontrolled resale can dilute price and brand positioning."
+  ],
+  "discovery_lane": "weak-signal",
+  "economics": {
+    "acquisition_route": "Pre-contract five Polish and Baltic secondary buyers, repairers, recyclers, or social enterprises by category and capacity, then sell one large brand or 3PL a paid lot-routing pilot with a seven-day disposition SLA and signed receipts.",
+    "capital_required_pln": 35000,
+    "founder_net_worth_path": "At 500 million PLN of annual gross lot value routed across Europe, an assumed blended 3% transaction take plus recurring evidence subscriptions could support a scalable marketplace; defensibility comes from recovery pricing and reliable buyer capacity rather than manual consulting.",
+    "founder_time": "Approximately 15 founder hours per week for buyer-network design and exception review; inspection, transport, repair, and warehousing are paid directly or passed through to partners.",
+    "gross_margin_basis": "Preliminary 65-80% gross margin on software-like evidence fees and success commission when physical handling is pass-through; bad lots, disputes, and inspection can materially reduce this.",
+    "payback": "A seller pays only from recovered value or documented avoided disposal and storage cost, with a minimum fee for evidence; a pilot should compare net recovery against its incumbent disposition channel.",
+    "pricing": "Assumed 4-12% of net recovered lot value, a 1000-5000 PLN minimum evidence fee per lot, and 3000-15000 PLN monthly for capacity reservation and audit exports.",
+    "retention_or_repeat": "Every return season, collection change, cancelled order, and end-of-season residual creates new lots; capacity subscriptions renew when sellers need guaranteed disposition windows."
+  },
+  "fingerprint": {
+    "compounding_advantage": "SKU-category recovery curves, regional buyer capacity, exemption evidence outcomes, transport costs, and counterparty reliability at lot level.",
+    "customer": "Large EU apparel and footwear brands, importers, marketplaces, department stores, and their reverse-logistics providers.",
+    "distribution_mechanism": "Reverse-logistics 3PLs, inventory auditors, insolvency advisers, and ERP or warehouse integrators refer lots at the point they become aged or unreturnable.",
+    "offer_and_business_model": "A time-bounded disposition exchange that reserves downstream reuse, repair, donation, or remanufacturing capacity and returns a signed chain-of-custody evidence packet; revenue is success fee plus reserved-capacity subscription.",
+    "payer_and_paid_event": "The inventory owner or 3PL pays from markdown, reverse-logistics, waste, and compliance budget when an unsold or returned lot reaches a disposition deadline.",
+    "problem_trigger": "A usable apparel or footwear lot can no longer be destroyed, must be routed quickly without uncontrolled brand leakage, and needs auditable disposition records."
+  },
+  "founder_fit": [
+    "Marketplace routing and recovery-price modeling suit the founder's analytical and AI-automation strengths.",
+    "The founder can operate without camera exposure and outsource physical inspection and transport.",
+    "A single-lot pilot is cheap, measurable, and executable alongside a full-time job."
+  ],
+  "parent": null,
+  "risks": [
+    "The exchange could be treated as a waste broker for damaged goods and require permits or financial guarantees.",
+    "Counterfeit leakage, sanctions, product-safety obligations, VAT, and cross-border title transfer can make lots legally complex.",
+    "Incumbent liquidators or large 3PLs can add compliance receipts and lock up the best inventory."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://environment.ec.europa.eu/news/new-eu-rules-stop-destruction-unsold-clothes-and-shoes-2026-02-09_en",
+    "https://environment.ec.europa.eu/news/ban-destruction-unsold-clothes-and-shoes-enters-application-2026-07-17_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Perishable-capacity recovery exchange",
+    "control_point": "Short-dated exclusive lot options matched to pre-contracted downstream disposition capacity and signed receipt evidence.",
+    "critical_dependency": "Enough compliant downstream demand exists to absorb brand-constrained lots before storage and handling costs erase recovery value."
+  },
+  "thesis": "The live destruction ban converts unsold fashion from an optional liquidation problem into a timed routing obligation. A neutral operator can control scarce downstream disposition capacity and the proof packet at the lot boundary, earning only when it recovers value or provides defensible evidence while learning which channels clear each product class without damaging the brand.",
+  "title": "Verified Unsold-Textile Disposition Exchange",
+  "uncertainties": [
+    "What share of large-company inventory lacks an acceptable existing disposition channel after the July 2026 start?",
+    "Will brands grant short exclusivity and disclose floor prices or require the operator to take title?",
+    "Which receipt and inspection evidence will national authorities treat as sufficient?"
+  ],
+  "version": 1
+}

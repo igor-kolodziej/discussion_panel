@@ -1,0 +1,88 @@
+{
+  "candidate_id": "mf-05",
+  "claims": [
+    {
+      "claim_id": "mf-05-control",
+      "claim_type": "founder_control_point_path",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://pubmed.ncbi.nlm.nih.gov/42492053/"
+      ],
+      "statement": "A 2026 multisite evaluation found health systems already integrate automated waitlists into scheduling and fill a median 38.8% of offered appointments; a founder can seek a clinic service contract granting real-time access to released slots and the exclusive right to message an opt-in waitlist, though Polish system APIs and privacy roles are unverified."
+    },
+    {
+      "claim_id": "mf-05-loss",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://www.england.nhs.uk/2026/03/nhs-urges-tap-the-app-as-1-in-4-miss-appointments/",
+        "https://pubmed.ncbi.nlm.nih.gov/42492053/"
+      ],
+      "statement": "An appointment cancelled late or missed is perishable inventory: NHS England reported 16 million missed GP appointments in 2025, while automated-waitlist appointments in the multisite study had a 3.1% missed rate versus 6.6% overall, supporting both the loss and a measurable fill intervention, albeit outside Poland."
+    },
+    {
+      "claim_id": "mf-05-payer",
+      "claim_type": "payer_and_budget",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://www.cepelek.pl/dla-pacjentow/cennik-uslug",
+        "https://pubmed.ncbi.nlm.nih.gov/42492053/"
+      ],
+      "statement": "The payer is a private clinic owner or operations manager from recovered visit revenue, triggered when a slot opens inside 72 hours; a current Warsaw clinic price list shows common specialist consultations at PLN 230-250, giving a visible revenue pool against which a per-filled-slot fee can be paid."
+    }
+  ],
+  "contrary_evidence": [
+    "The strongest fill-rate evidence is from US health systems and the loss statistic is from England, not Polish private clinics.",
+    "Large clinic groups and scheduling vendors can add waitlist automation directly, and patients may already use broad physician marketplaces."
+  ],
+  "discovery_lane": "mechanism-first",
+  "economics": {
+    "acquisition_route": "Recruit five independent Warsaw specialist clinics through the founder's medical-adjacent network, sign a data-processing and recovered-revenue agreement, and connect first by calendar export before funding custom integrations.",
+    "capital_required_pln": 35000,
+    "founder_net_worth_path": "Prove 300 incremental visits, then reach 500 clinics filling 40 slots monthly at PLN 35 net revenue per fill for PLN 8.4m annual revenue; if clinic acquisition and messaging costs allow a 25-35% operating margin, retained founder equity and cash could exceed PLN 5m in 5-7 years.",
+    "founder_time": "Founder spends 2-3 hours daily on prediction, matching and integration; clinic staff retain clinical triage and a contracted support operator handles patient exceptions.",
+    "gross_margin_basis": "Automated messaging and matching have low marginal cost, but integration and support are material; preliminary gross-margin target is 60-75% after message fees and clinic support.",
+    "payback": "The clinic pays only from attended recovered visits, so unit payback is immediate; integration cost should recover after roughly 30-60 additional attended consultations per clinic.",
+    "pricing": "PLN 25-50 per attended slot recovered or 12-20% of collected visit revenue, with no charge for an unfilled or no-show replacement.",
+    "retention_or_repeat": "Every cancellation and no-show replenishes inventory; waitlist response and attendance history improve matching, while clinic calendar integrations make monthly use habitual."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Cross-clinic data on response latency, specialty, distance and attendance predicts which patient will actually accept and show, increasing recovered revenue per alert.",
+    "customer": "Independent Polish private specialist clinics with meaningful self-pay calendars and recurrent late cancellations.",
+    "distribution_mechanism": "Clinic-management accountants, medical practice software consultants and physician referrals, starting with a Warsaw medical network.",
+    "offer_and_business_model": "Real-time cancellation inventory matching to opt-in patients, priced only on attended recovered appointments.",
+    "payer_and_paid_event": "The clinic owner pays a recovery fee when a previously empty appointment is filled and the patient attends and pays.",
+    "problem_trigger": "A cancellation, reschedule or predicted high-risk no-show inside the clinic's chosen release window."
+  },
+  "founder_fit": [
+    "Prediction, scheduling and measurable incremental revenue align with the founder's data-science and automation strengths.",
+    "The founder's girlfriend's medical training may provide grounded workflow discovery and warm introductions without making her a required operator.",
+    "Outcome pricing and calendar-led automation allow a low-capital part-time pilot without founder camera exposure."
+  ],
+  "parent": null,
+  "risks": [
+    "Patient messaging and scheduling data can expose health information, requiring precise GDPR roles, minimisation and security.",
+    "Overbooking or poor matching can harm care continuity and clinic reputation.",
+    "Incrementality is difficult to prove if clinic staff or existing software would have filled the slot anyway."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://pubmed.ncbi.nlm.nih.gov/42492053/",
+    "https://www.england.nhs.uk/2026/03/nhs-urges-tap-the-app-as-1-in-4-miss-appointments/",
+    "https://www.cepelek.pl/dla-pacjentow/cennik-uslug"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Perishable inventory recovery exchange",
+    "control_point": "Clinic-granted real-time right to release cancelled slots to an opt-in waitlist",
+    "critical_dependency": "Reliable calendar access and consented patient messaging with provable incremental attendance"
+  },
+  "thesis": "Acquire the right to market each clinic's expiring appointment inventory, predict the patients most likely to accept and attend on short notice, and charge only when a slot that would have expired empty becomes collected visit revenue.",
+  "title": "Private Clinic Slot Salvage Exchange",
+  "uncertainties": [
+    "Polish private-clinic no-show and late-cancellation rates are not yet measured.",
+    "Availability and cost of integrations with the dominant Polish clinic systems are unknown.",
+    "Patients' willingness to join cross-clinic or clinic-specific rapid waitlists is untested."
+  ],
+  "version": 1
+}

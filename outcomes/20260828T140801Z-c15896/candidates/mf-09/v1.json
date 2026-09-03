@@ -1,0 +1,89 @@
+{
+  "candidate_id": "mf-09",
+  "claims": [
+    {
+      "claim_id": "mf-09-control",
+      "claim_type": "founder_control_point_path",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://poweru.pl/poweru-en/",
+        "https://www.parp.gov.pl/component/content/article/75011%3Aumowa-zakupu-energii-elektrycznej-od-wytworcy-energii-ze-zrodel-odnawialnych"
+      ],
+      "statement": "A Polish operator publicly describes leasing industrial and commercial roofs and funding design, permits and connection, while PARP describes onsite PPAs located where energy is consumed; the founder can acquire an exclusive, time-limited roof-and-load development option from the building owner and sell a verified site package to a capital provider."
+    },
+    {
+      "claim_id": "mf-09-loss",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://ure.gov.pl/en/communication/news/436%2Cdok.html",
+        "https://www.parp.gov.pl/component/content/article/75011%3Aumowa-zakupu-energii-elektrycznej-od-wytworcy-energii-ze-zrodel-odnawialnych"
+      ],
+      "statement": "URE reported 6,259 renewable connection-condition refusals totaling about 42.4 GW in 2024, so developers lose time and study spend on sites that cannot export; a prequalified roof with matched onsite demand can reduce this dependence, while the building's current electricity purchase is the measurable cost displaced by an onsite PPA."
+    },
+    {
+      "claim_id": "mf-09-payer",
+      "claim_type": "payer_and_budget",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://poweru.pl/poweru-en/",
+        "https://www.parp.gov.pl/component/content/article/75011%3Aumowa-zakupu-energii-elektrycznej-od-wytworcy-energii-ze-zrodel-odnawialnych"
+      ],
+      "statement": "The payer is a rooftop-PV developer or infrastructure fund's origination budget when it exercises a de-risked option, with a second budget in the building's electricity bill under the eventual PPA; existing Polish models already have the developer fund design, permitting and installation on a leased roof."
+    }
+  ],
+  "contrary_evidence": [
+    "A behind-the-meter project still may need grid approval, and daytime load may be too low or the roof structurally unsuitable.",
+    "Established developers already originate roof leases directly and may refuse to pay a separate intermediary."
+  ],
+  "discovery_lane": "mechanism-first",
+  "economics": {
+    "acquisition_route": "Offer the parents' commercial installation customers a free roof, load and title screen in exchange for a 9-12 month exclusive development option that specifies owner economics and is assignable only to a qualified project company.",
+    "capital_required_pln": 50000,
+    "founder_net_worth_path": "Screen 100 local buildings, secure 20 options and exercise or assign five; scale through installer partners to 30 exercised sites annually at PLN 75,000 average fee plus retained revenue interests for PLN 2.25m fee revenue before royalties, supporting a plausible PLN 5m founder net worth in 5-8 years if conversion is repeatable.",
+    "founder_time": "Founder spends 2-3 hours daily on load analysis, geospatial screening and developer packaging; engineers, lawyers and capital partners perform structural studies, permits and buildout.",
+    "gross_margin_basis": "Site-screen and assignment fees should have 50-70% gross margin after outsourced engineering, while retained project royalties have little marginal cost but arrive slowly.",
+    "payback": "Cap preliminary diligence per roof below PLN 5,000 and seek developer reimbursement at exclusivity transfer; one exercised option should repay 10-15 failed screens.",
+    "pricing": "PLN 30,000-150,000 option assignment or development success fee per site, plus 1-3% of project revenue or a small carried SPV interest where financeable.",
+    "retention_or_repeat": "Each installer relationship continuously produces new roofs; exercised projects create 10-20 year lease or PPA-linked revenue interests."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Exclusive owner options block rival origination during diligence, while a dataset linking roof geometry, interval load, grid response and developer conversion improves selection.",
+    "customer": "C&I rooftop solar and storage developers seeking financeable Polish sites with cooperative owners and strong behind-meter daytime load.",
+    "distribution_mechanism": "Renewable installers, electrical contractors and commercial property accountants source building owners before developers see them.",
+    "offer_and_business_model": "Acquire and prequalify assignable roof-and-load options, then charge developers on option exercise and retain a small long-term project interest.",
+    "payer_and_paid_event": "The developer pays when it exercises or acquires a verified site option; the building later pays for electricity under the onsite PPA rather than upfront equipment.",
+    "problem_trigger": "A developer needs viable pipeline despite grid refusals, or a building owner wants cheaper solar power without capital expenditure."
+  },
+  "founder_fit": [
+    "The parents' installer business offers unusually credible access to local commercial roofs and energy bills.",
+    "Interval-load scoring and site triage use the founder's analytical skills while engineering is delegated.",
+    "Optioning limits capital exposure and permits part-time origination before any construction commitment."
+  ],
+  "parent": null,
+  "risks": [
+    "An option can be unenforceable or nonassignable if title, lender, tenant or co-owner consents are missed.",
+    "Structural reinforcement, fire rules and distribution constraints can invalidate a screened site.",
+    "Developer payment cycles are lumpy and option holders can be bypassed if contracts are weak."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://poweru.pl/poweru-en/",
+    "https://www.parp.gov.pl/component/content/article/75011%3Aumowa-zakupu-energii-elektrycznej-od-wytworcy-energii-ze-zrodel-odnawialnych",
+    "https://ure.gov.pl/en/communication/news/436%2Cdok.html"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Shovel-ready site-rights originator",
+    "control_point": "Assignable exclusive option over a qualified roof, its interval load data and owner consent",
+    "critical_dependency": "A financeable behind-the-meter load and a developer willing to buy originated sites"
+  },
+  "thesis": "Use installer trust to option commercial roofs before developers do, bind the owner's load data and consent, cheaply kill weak sites, and sell only de-risked behind-the-meter opportunities that reduce exposure to Poland's congested export queue.",
+  "title": "Behind-the-Meter Roof Option Book",
+  "uncertainties": [
+    "Local building owners' willingness to sign assignable exclusivity before seeing final PPA pricing is unknown.",
+    "Developer acquisition fees and minimum attractive project size have not been validated.",
+    "The conversion advantage of behind-the-meter load versus ordinary grid-connected projects is unmeasured."
+  ],
+  "version": 1
+}

@@ -1,0 +1,87 @@
+{
+  "candidate_id": "ws-12",
+  "claims": [
+    {
+      "claim_id": "ws-12-control",
+      "claim_type": "founder_control_point_path",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://www.pse.pl/redysponowanie-nierynkowe"
+      ],
+      "statement": "PSE's current redispatch rules distinguish renewable sources equipped with active-power control and describe reduction objects by location, technology, power, and control mode; the founder can obtain a founder-accessible control route by installing a cross-brand gateway on commercial PV sites, contracting dispatch and measurement rights, and controlling eligible flexible on-site loads such as EV charging, hot water, refrigeration, or storage through the family installer channel."
+    },
+    {
+      "claim_id": "ws-12-loss",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://www.pse.pl/redysponowanie-nierynkowe",
+        "https://www.pse.pl/-/komunikat-dotyczacy-prawa-do-rekompensaty-za-redysponowanie-nierynkowe-instalacji-fotowoltaicznych-w-dniach-28-29-i-30-czerwca-oraz-1-lipca-2025-r-"
+      ],
+      "statement": "PSE states that non-market redispatch reduces renewable generation when surplus remains after market balancing and reports 26020 MW of Polish PV installed by 1 February 2026; it has issued multi-day PV reduction orders with a right to compensation for energy that would otherwise have been produced, making curtailed kilowatt-hours, claim leakage, and unused on-site flexibility observable losses."
+    },
+    {
+      "claim_id": "ws-12-payer",
+      "claim_type": "payer_and_budget",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://www.pse.pl/redysponowanie-nierynkowe",
+        "https://www.pse.pl/-/komunikat-dotyczacy-prawa-do-rekompensaty-za-redysponowanie-nierynkowe-instalacji-fotowoltaicznych-w-dniach-28-29-i-30-czerwca-oraz-1-lipca-2025-r-"
+      ],
+      "statement": "Commercial PV owners and portfolio managers bear production and claim-reconciliation losses during ordered reductions and already spend on O&M, metering, batteries, energy management, and compensation preparation; the payer is the site or portfolio owner when a curtailment-prone installation can redirect energy lawfully behind the meter or improve evidence for a compensation claim."
+    }
+  ],
+  "contrary_evidence": [
+    "PSE provides a compensation route for eligible non-market redispatch, which can reduce the owner's incentive to buy avoidance technology and may make claim assistance more valuable than physical load shifting.",
+    "A reduction order may require lower generation rather than merely lower grid export; redirecting energy behind the meter might not be permitted or credited, and this must be resolved before any dispatch pilot."
+  ],
+  "discovery_lane": "weak-signal",
+  "economics": {
+    "acquisition_route": "Use the family installer to screen 30 commercial PV owners for ordered reductions, interval meters, and flexible loads; pre-sell five measurement-only gateways and run shadow dispatch plus compensation reconciliation before enabling automatic control.",
+    "capital_required_pln": 70000,
+    "founder_net_worth_path": "A cross-brand fleet of 20000 commercial sites at an assumed 300-600 PLN monthly platform fee plus hardware margin and a bounded share of verified recovered value could become a Polish flexibility and performance-data asset, with later revenue from aggregators or energy-service partners if regulation permits.",
+    "founder_time": "Approximately 12-18 founder hours per week for dispatch modeling, device integrations, and channel management; installation, electrical work, and site service are delegated.",
+    "gross_margin_basis": "Preliminary 65-80% contribution margin on subscription and savings share after gateway support and data costs, with 15-30% hardware margin; field-service frequency could reduce this materially.",
+    "payback": "Offer automatic control only when a shadow season shows that lawful self-consumption, better claim evidence, or avoided peak-energy purchases can repay hardware and fees within 24 months; high-value sites may qualify while most do not.",
+    "pricing": "Assumed 3000-8000 PLN installed gateway, 250-700 PLN per site per month, and 10-20% of independently measured recovered energy value or additional compensation.",
+    "retention_or_repeat": "Forecasting, monitoring, dispatch readiness, and claim evidence recur every month and on every redispatch interval; the contracted device fleet remains useful across changing tariffs and flexibility markets."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Site-level curtailment exposure, counterfactual production, flexible-load response, inverter behavior, claim acceptance, and local grid-event patterns across brands.",
+    "customer": "Polish commercial and small utility-scale PV owners with controllable on-site loads, batteries, or recurring redispatch exposure.",
+    "distribution_mechanism": "Renewable installers, O&M firms, energy auditors, battery integrators, and claim advisers screen their installed base and bundle the gateway during service or retrofit visits.",
+    "offer_and_business_model": "A cross-brand gateway and contracted control fleet that first measures curtailment exposure, then lawfully schedules on-site flexible demand and produces counterfactual claim evidence; revenue is hardware, subscription, and recovered-value share.",
+    "payer_and_paid_event": "A PV owner pays from O&M, energy-management, storage, or recovered-generation budget when PSE orders reduction or forecasts reveal repeated surplus periods.",
+    "problem_trigger": "A PV site receives or is exposed to non-market redispatch while flexible consumption, storage, and compensation evidence remain uncoordinated across separate vendor systems."
+  },
+  "founder_fit": [
+    "The parents' renewable company offers unusually direct distribution, installation capacity, and real operating sites.",
+    "Counterfactual generation, event forecasting, and device optimization use the founder's data-science skills.",
+    "A measurement-only five-site pilot is part-time, reversible, and below available capital before any automated dispatch or market commitment."
+  ],
+  "parent": null,
+  "risks": [
+    "Dispatching electrical loads or generation without clear grid and safety authorization could create serious regulatory and equipment liability.",
+    "Cross-brand device integration and field support may turn into low-margin custom installation work.",
+    "Inverter OEMs, retailers, battery vendors, and licensed aggregators can bundle the same controls and use existing customer fleets."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://www.pse.pl/redysponowanie-nierynkowe",
+    "https://www.pse.pl/-/komunikat-dotyczacy-prawa-do-rekompensaty-za-redysponowanie-nierynkowe-instalacji-fotowoltaicznych-w-dniach-28-29-i-30-czerwca-oraz-1-lipca-2025-r-"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Contracted behind-the-meter control fleet",
+    "control_point": "Installed cross-brand gateways plus contractual dispatch, measurement, and counterfactual-data rights at PV sites.",
+    "critical_dependency": "Grid rules must permit valuable behind-the-meter response during curtailment, or compensation-evidence uplift alone must justify the gateway."
+  },
+  "thesis": "Polish PV curtailment has become an observable operating event rather than a theoretical grid risk. A founder-accessible installer channel can place cross-brand gateways at affected commercial sites, control the measurement and dispatch contract, and coordinate flexible on-site demand with claim evidence; the fleet's response data can compound into a flexibility asset even if hardware vendors commoditize individual controllers.",
+  "title": "PV Curtailment-Recovery Control Fleet",
+  "uncertainties": [
+    "Does Polish redispatch treatment permit or reward behind-the-meter load shifting during an ordered reduction?",
+    "How many family-channel and adjacent commercial sites have enough curtailment exposure and flexible load for sub-two-year payback?",
+    "Can counterfactual production and compensation uplift be measured independently enough to support a savings share?"
+  ],
+  "version": 1
+}

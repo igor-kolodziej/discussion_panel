@@ -1,0 +1,117 @@
+{
+  "assumptions": [
+    "Only clinician-defined or otherwise lawful and clinically appropriate panels are offered.",
+    "Accredited laboratories can expose genuinely underused slots at prices that leave positive contribution after no-shows and channel costs.",
+    "Qualified providers, rather than the venture, own medical ordering, interpretation, and abnormal-result decisions.",
+    "No laboratory capacity or employer distribution is treated as available before execution of explicit agreements."
+  ],
+  "base_score": 3.17,
+  "candidate_id": "fb-preventive-lab-capacity-club",
+  "candidate_sha256": "76a7eb1dcbfab54a570d4b16d79707310e8b4d47f8b93ab51fe9a6a98d0b87c9",
+  "candidate_version": 1,
+  "constrained_score": 2.77,
+  "evaluation_type": "working_screening",
+  "evidence_needed_for_higher_score": "A signed laboratory rate and service-level offer, a qualified ordering and escalation pathway, cohort-specific wait-time and no-show data, paid payer pilots, and realized per-slot contribution after all clinical and channel costs are required.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "Combining off-peak laboratory capacity with scheduled, longitudinal result delivery is a coherent coordination mechanism and avoids owning laboratory assets. It is not yet clear that unused capacity and patient demand coincide for clinically appropriate panels or that the coordination layer is missing from existing laboratory offerings.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Predictable scheduling and longitudinal monitoring can matter for clinician-defined cohorts, but the proposal supplies no wait-time, no-show, or delayed-monitoring data and no committed payer. Broad preventive testing may create false positives rather than valuable relief, weakening willingness to pay for an undifferentiated membership.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Advance membership cash is attractive, yet reserved-slot minimums, utilization variability, laboratory charges, qualified clinical routing, partner shares, and no-shows constrain the proposed 20-40% contribution margin. Neither price nor positive contribution within an annual cycle has been tested.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Laboratory testing is an established spending category and employer or clinician-defined monitoring could provide group demand. The stated audience mixes employers, brokers, clinics, and households, and no narrow cohort with a common panel, cadence, geography, and budget has been established.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "Large laboratory chains and clinic networks already own accredited capacity, ordering pathways, consumer trust, portals, and corporate distribution. Nonexclusive capacity reservations and standardized exports offer little protection if an incumbent elects to package the same service.",
+      "score": 2,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A validated model could add cities, laboratory partners, clinically defined panels, and employer cohorts while reusing scheduling and result schemas. Expansion multiplies clinical-governance, contracting, quality, and utilization-management complexity and may not preserve economics.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Utilization histories and longitudinal schemas may improve forecasting, but the underlying laboratories own the capacity and can terminate or copy the arrangement. The proposed reservations are nonexclusive and replaceable, and no proprietary patient or employer relationship exists.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "Data-science capability is relevant to utilization forecasting and scheduling, and the model can be asset-light. The founder has no laboratory access, clinical authority, employer-benefit distribution, patient relationship, or demonstrated cost advantage.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "Digital-health portability and standardized laboratory data support longitudinal workflows, while laboratories remain a recognized care input. The cited developments do not create an immediate obligation or unique window for a capacity membership, and clinical appropriateness remains a gating issue.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "Benefits brokers, employers, and clinics could aggregate enrollment and lower acquisition cost, but every proposed channel is hypothetical and initially owns the member relationship. The offer also requires simultaneous supply, clinical pathway, and payer coordination.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "The asset-light structure limits capital expenditure, but safe ordering, eligibility, consent, preparation, abnormal-result escalation, no-show management, quality assurance, and reserved-capacity exposure are substantial. These responsibilities are difficult to bound within a part-time founder model before qualified partners are secured.",
+      "score": 2,
+      "status": "scored"
+    }
+  ],
+  "final_score": 2.8,
+  "highest_value_structural_change": "Narrow the offer to a single clinician-defined repeat-monitoring cohort and sell a per-fulfilled-slot overflow service to a clinic or benefits operator under a cancellable capacity option, eliminating broad consumer screening claims and most prepaid idle-capacity exposure.",
+  "interaction_adjustment": -0.4,
+  "judge_id": "screen-b05-j01",
+  "main_structural_strength": "The venture can contract rather than own diagnostic capacity, potentially converting fragmented off-peak supply into a predictable scheduled service for a defined cohort.",
+  "primary_score_limiter": "Neither side of the market is controlled or validated: there is no capacity agreement, no clinically coherent beachhead, and no evidence that a payer values the coordination layer enough to absorb utilization risk.",
+  "qualified": false,
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 3,
+  "strongest_disconfirming_evidence": "Laboratory chains already sell direct panels, portals, home collection, and corporate packages, while indiscriminate recurring screening can create overtesting and low medical value.",
+  "unrounded_score": 2.77
+}

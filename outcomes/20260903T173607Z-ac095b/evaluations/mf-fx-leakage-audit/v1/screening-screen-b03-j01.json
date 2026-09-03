@@ -1,0 +1,117 @@
+{
+  "assumptions": [
+    "The initial work is lawful cost and process analysis and excludes payment initiation, custody, trade execution, unauthorized account access, and regulated individualized investment advice.",
+    "Clients can provide complete transaction, fee, invoice, timing, and settlement records through exports or explicit-consent access via an authorized provider.",
+    "Comparison providers will supply timestamped quotes genuinely executable for the client's amount, currency, timing, funding, and settlement conditions.",
+    "The savings baseline accounts for service levels, settlement timing, hedging choices, credit terms, and implementation costs rather than treating the ECB reference rate as executable."
+  ],
+  "base_score": 6.01,
+  "candidate_id": "mf-fx-leakage-audit",
+  "candidate_sha256": "b6ae2e01fefe4a05776b8db7308ac19122404d1a23741469eb531b47f8ae93ad",
+  "candidate_version": 1,
+  "constrained_score": 6.01,
+  "evaluation_type": "working_screening",
+  "evidence_needed_for_higher_score": "A lawful-scope opinion; transaction-level audits from at least twenty target SMEs; a volume and leakage distribution; archived executable comparison quotes; paid diagnostic conversion; independently accepted and collected savings fees; measured CAC, delivery hours, gross margin, implementation rate, disputes, quarterly retention, and referral-partner terms.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "SME finance teams can observe booked FX charges yet lack an independent transaction-level view of spreads, explicit fees, and alternative routing. Reconciling realized cost against contemporaneous executable alternatives and then measuring implemented savings is materially stronger than comparing transactions with an indicative central-bank rate, although preserving a valid counterfactual for every trade is difficult.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Recurring currency conversion can create direct recoverable expense owned by a CFO, controller, or business owner, and a savings-linked fee aligns payment with value. The minimum annual FX volume, current spread distribution, recoverable savings after switching costs, and willingness to pay an upfront diagnostic plus a savings share are not established.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "An upfront 4,000-12,000 PLN diagnostic can cover acquisition and initial delivery, while 15-25% of verified savings adds upside and quarterly monitoring offers repeat revenue. Strong margins are plausible with reusable ingestion, but messy ledgers, senior review, quote collection, baseline disputes, security, professional insurance, and weak post-switch retention can materially reduce LTV and operating leverage.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Polish SMEs with recurring foreign-currency supplier payments or card spend form a recognizable market with an identifiable finance owner. The segment remains broad: the candidate does not define a first industry, currency pair, transaction pattern, annual-volume floor, provider mix, or number of firms whose expected leakage exceeds the fully loaded audit cost.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "Independence, multi-provider comparison, transparent attribution, and no custody distinguish the service from a provider's switching pitch. Banks, FX fintechs, treasury advisers, and accountants can offer free audits subsidized by execution revenue, possess stronger trust or transaction access, and act immediately on recommendations, leaving no protected beachhead yet.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A trusted FX review can extend into quarterly monitoring, annual provider tenders, new currencies and suppliers, card and payment-route controls, budget variance, and broader treasury policy across Poland or CEE. Expansion into execution, hedging, or individualized investment advice would cross more demanding regulatory and expertise boundaries.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "A direct client relationship, recurring approval checkpoint, normalized ledger integrations, and permissioned peer observations of fees and implementation outcomes could improve benchmarks over time. Data access is nonexclusive and revocable, providers can withhold quotes, transaction patterns are portable, and execution-funded competitors can reproduce or underprice the analysis.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "A rigorous audit can be more trustworthy than a bank or fintech comparison because it is provider-neutral, uses all-in realized costs, archives executable alternatives, and charges on agreed savings without holding funds. That advantage disappears if quotes are not truly executable and comparable or if clients value bundled convenience more than the savings.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "Client-authorized exports and regulated account-information providers make analysis possible without collecting bank credentials, while multiple digital FX providers create alternatives worth comparing. FX cost optimization is established rather than new, and no temporary regulatory, pricing, or behavioral shift makes an independent audit unusually advantaged now.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "Accountants, fractional CFOs, importer associations, and targeted outreach reach firms near monthly close, provider changes, refinancing, or new finance leadership. These are credible trust channels, but none is contracted, referral economics are unknown, financial-data sharing creates friction, and incumbent advisers may favor their own or execution-linked services.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "A first audit can use client-generated exports with no custody or payment initiation, and ingestion plus reconciliation fit the founder's data and finance skills. Reliable delivery still requires secure handling, accounting normalization, timestamped executable quotes, senior review, contractual baselines, legal perimeter analysis, and separation between lowering conversion cost and advising clients to assume currency risk.",
+      "score": 6,
+      "status": "scored"
+    }
+  ],
+  "final_score": 6,
+  "highest_value_structural_change": "Build the audit around a blinded multi-provider request-for-quote step that archives actual executable offers before the client decides, with a preregistered savings baseline and accountant-signed implementation evidence, while the venture remains outside custody and execution.",
+  "interaction_adjustment": 0,
+  "judge_id": "screen-b03-j01",
+  "main_structural_strength": "The offer ties a finance owner's recurring approval workflow to a measurable all-in cost and can monetize independently verified savings without custody or execution conflicts.",
+  "primary_score_limiter": "The business has no evidence that enough target SMEs have recoverable leakage after valid like-for-like comparison, will share the necessary financial data, or will pay enough to support secure expert review and referral acquisition.",
+  "qualified": false,
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 3,
+  "strongest_disconfirming_evidence": "The ECB explicitly discourages using its informational reference rates for transactions, so a naive benchmark cannot prove savings; obtaining contemporaneous executable alternatives for the same amount, timing, funding, and settlement terms may be costly or impossible, while providers can subsidize competing audits with execution revenue.",
+  "unrounded_score": 6.01
+}

@@ -1,0 +1,145 @@
+{
+  "candidate_id": "mf-cold-chain-sensor-pool",
+  "claims": [
+    {
+      "claim_id": "mf-cold-chain-sensor-pool-c1",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://health.ec.europa.eu/document/download/9f28179a-a6f8-418a-a5fc-ecfbb3ae3ba8_en?filename=mallet_dr_en.pdf"
+      ],
+      "statement": "EU GDP guidance calls for appropriate validated temperature-control systems and says customers should receive temperature data on request, making each sensitive shipment a concrete evidence event and excursions an observable exception."
+    },
+    {
+      "claim_id": "mf-cold-chain-sensor-pool-c2",
+      "claim_type": "payer_and_budget",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://health.ec.europa.eu/medicinal-products/good-manufacturing-and-distribution-practices_en"
+      ],
+      "statement": "The intended payer is the shipping or quality function already responsible for compliant distribution; willingness to use a small external sensor pool is unverified."
+    },
+    {
+      "claim_id": "mf-cold-chain-sensor-pool-c3",
+      "claim_type": "founder_control_point_path",
+      "confidence": "high",
+      "evidence_refs": [],
+      "statement": "The founder can directly purchase and own reusable logger assets, but customer quality qualification and calibration acceptance are separate gates and cannot be inferred from ownership."
+    },
+    {
+      "claim_id": "mf-cold-chain-sensor-pool-c4",
+      "claim_type": "other",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://health.ec.europa.eu/medicinal-products/good-manufacturing-and-distribution-practices_en"
+      ],
+      "statement": "The monitoring service must not make regulated medicinal-product release decisions; those remain with the customer's authorized quality system."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Quality, logistics, supply-chain, or clinical-operations lead",
+    "bundling_resistance": "Independent cross-carrier records, rapid local reuse, retrieval discipline, and claim-ready evidence must beat bundled offerings",
+    "customer_relationship_owner": "Founder company owns direct B2B monitoring contracts",
+    "distribution_origin": "Direct quality-team sales, validated courier partnerships, and packaging-provider referrals",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Direct regulated-account sales and channel commissions; target recovery after 30-60 shipments per account",
+      "cash_conversion": "Prepaid shipment packs or monthly billing; device deposits reduce working-capital loss",
+      "contribution_margin": "Target 35-60% after device utilization and loss; route density is decisive",
+      "delivery_and_support_costs": "Device provisioning, chain-of-custody review, retrieval, exception reporting, and quality documentation",
+      "overhead_and_compliance": "Quality system, validation, calibration control, insurance, data security, and specialist regulatory review",
+      "revenue_basis": "Hypothesis: 120-350 PLN per shipment plus 300-1200 PLN for an exception or claim packet",
+      "variable_costs": "Two-way courier, packaging, device loss, cleaning, calibration allocation, connectivity, and support"
+    },
+    "likely_incumbent_response": "Couriers, packaging vendors, and logger manufacturers can bundle devices, dashboards, validation, and reports",
+    "paid_event_or_measurable_loss": "Every qualifying shipment is a billable monitoring event; an excursion can create quarantine, write-off, investigation, reshipment, or carrier-claim cost",
+    "payer": "Regulated shipper or its contracted logistics provider",
+    "purchase_trigger": "A new sensitive lane, audit observation, missing temperature proof, or unrecovered excursion loss",
+    "renewal_event": "Each shipment and annual quality-vendor qualification"
+  },
+  "contrary_evidence": [
+    "GDP-focused couriers and packaging vendors already bundle validated temperature monitoring.",
+    "Reusable-device retrieval can cost more than disposable loggers on dispersed lanes."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Outright purchase of commercially available calibrated logger kits with assignable device title and vendor calibration documentation",
+    "acquisition_instrument_type": "purchase",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Buy an equivalent logger model from another qualified supplier and maintain interoperable evidence exports",
+    "current_owner": "Founder company after off-the-shelf purchase; customers retain product and release authority",
+    "customer_relationship_control": "owned",
+    "customer_relationship_owner": "Founder company owns direct B2B monitoring contracts",
+    "duration": "Useful device life subject to calibration and battery limits",
+    "exclusivity": "not_applicable",
+    "founder_access_basis": "owned_or_controlled_asset",
+    "founder_access_description": "The control point is obtainable by purchasing ordinary equipment and building the evidence workflow; no access to patient records, medicines, or employer assets is assumed.",
+    "launch_controller": "Founder company for the device pool; each regulated customer controls shipment use and product disposition",
+    "mechanism_control": "owned",
+    "renewal": "Calibration and device replacement on the quality schedule",
+    "replaceability": "replaceable",
+    "revocability": "not_applicable",
+    "status": "owned",
+    "subject": "Serialized reusable temperature loggers and their cryptographically bound evidence records",
+    "subject_type": "asset",
+    "transferability": "transferable"
+  },
+  "discovery_lane": "mechanism-first",
+  "economics": {
+    "acquisition_route": "Direct regulated-shipper sales and nonexclusive courier or packaging partnerships",
+    "capital_required_pln": 80000,
+    "founder_net_worth_path": "Illustrative, not forecast: 100000 annual shipments at 180 PLN blended revenue imply 18m PLN revenue; dense asset turns, delegated quality operations, and low device loss would be necessary for a 5m PLN founder outcome",
+    "founder_time": "Maximum five hours daily if couriers manage physical movement and exception review is scheduled; otherwise do not scale",
+    "gross_margin_basis": "High device reuse and dense return logistics after courier, loss, calibration, and support costs",
+    "payback": "Target recovery of each logger kit within 20-35 paid uses and account CAC within 60 shipments; unvalidated",
+    "pricing": "Hypothesis: 120-350 PLN per monitored shipment plus 300-1200 PLN per exception packet",
+    "retention_or_repeat": "Repeats by shipping lane and renews through annual quality-vendor qualification"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Lane-level excursion, packaging, season, and carrier outcomes improve risk routing and sensor allocation",
+    "customer": "Small pharmaceutical wholesalers, specialty clinics, clinical-research sites, and validated logistics providers",
+    "distribution_mechanism": "Direct contracts with small regulated shippers and nonexclusive partnerships with validated couriers and packaging vendors",
+    "offer_and_business_model": "Rental rotation of calibrated loggers, chain-of-custody capture, alerting, sealed report, and nonclinical claim documentation",
+    "payer_and_paid_event": "Shipping or quality owner pays per monitored shipment and optionally per completed claim-evidence packet",
+    "problem_trigger": "A temperature-sensitive shipment leaves a controlled site and needs proof of conditions or produces an excursion requiring quarantine and claim review"
+  },
+  "founder_fit": [
+    "Sensor time series, anomaly rules, and lane risk models match quantitative skills",
+    "Per-shipment contribution, device utilization, excursion rate, and claim recovery are measurable",
+    "Initial equipment fits within the stated capital envelope",
+    "Courier retrieval and quality review can be systematized rather than founder-delivered"
+  ],
+  "parent": null,
+  "risks": [
+    "A logger failure could create or obscure a high-value product loss",
+    "Quality-system demands may exceed part-time capacity",
+    "Device retrieval and cleaning can become logistics-heavy",
+    "Customer qualification cycles may be long"
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://health.ec.europa.eu/medicinal-products/good-manufacturing-and-distribution-practices_en",
+    "https://health.ec.europa.eu/document/download/9f28179a-a6f8-418a-a5fc-ecfbb3ae3ba8_en?filename=mallet_dr_en.pdf"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "capacity_or_asset_operator",
+    "commercial_model_descriptor": "reusable_calibrated_logger_pool_per_shipment",
+    "control_point_category": "owned_asset",
+    "control_point_descriptor": "serialized_temperature_sensor_inventory_and_evidence_chain",
+    "critical_dependency_category": "supply_partner",
+    "critical_dependency_descriptor": "qualified_logger_calibration_and_reverse_logistics_providers"
+  },
+  "structure": {
+    "commercial_archetype": "Reusable measurement-asset operator paid per shipment",
+    "control_point": "Founder-owned calibrated logger inventory and evidence-generation workflow",
+    "critical_dependency": "Reliable calibrated-device supply, retrieval logistics, and customer quality acceptance"
+  },
+  "thesis": "Purchase and control a small pool of calibrated reusable temperature loggers, then charge per temperature-sensitive shipment for sealed evidence, exception alerts, and carrier-claim packets while regulated distributors retain product-release decisions.",
+  "title": "Reusable Cold-Chain Evidence Sensor Pool",
+  "uncertainties": [
+    "Customer-specific validation and calibration requirements",
+    "Loss and return rate of reusable devices",
+    "Shipment density around Warsaw and western Poland",
+    "Admissibility and practical value of the report in carrier claims"
+  ],
+  "version": 1
+}

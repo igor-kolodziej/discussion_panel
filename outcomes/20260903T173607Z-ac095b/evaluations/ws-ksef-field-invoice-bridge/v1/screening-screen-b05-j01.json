@@ -1,0 +1,117 @@
+{
+  "assumptions": [
+    "The cited KSeF issuance and offline-submission requirements apply to the targeted customers and transactions.",
+    "Field-originated invoice preparation remains materially inefficient after customers adopt their primary accounting systems.",
+    "Every taxpayer grants the required authorization, and export-only operation is used until transmission authority and liability are confirmed.",
+    "A single trade and a small number of accounting integrations are sufficient for the initial product."
+  ],
+  "base_score": 5.83,
+  "candidate_id": "ws-ksef-field-invoice-bridge",
+  "candidate_sha256": "25bd9a0891083aa097dc742618dc78d3aaca278a8fc44e026e538ab86b1bf10d",
+  "candidate_version": 1,
+  "constrained_score": 5.93,
+  "evaluation_type": "working_screening",
+  "evidence_needed_for_higher_score": "Observed invoice cohorts across several field-service firms, measured rekeying and rejection costs, paid pilots with recurring use, a signed accounting channel, proven export or authorization flows, and support-adjusted contribution margins after stabilization are needed.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "The field-completion moment is a specific operational gap where final quantities, buyer data, connectivity, and tax credentials can prevent a job from becoming a compliant invoice. Treating that handoff as the product is sharper than offering generic invoicing, though incumbents can recognize the same gap.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "KSeF creates a mandatory, repeated transaction with measurable rekeying, rejection, billing-delay, and offline-queue failure costs borne by the service company. The operational burden is well grounded, but the frequency of failures after rollout stabilizes and willingness to buy a specialized bridge are untested.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Monthly or per-reconciled-invoice pricing matches a high-frequency workflow, and advance billing with low raw processing cost can scale. Trade-specific onboarding, accounting-package mappings, failed submissions, support, security, tax counsel, and liability could erode the unvalidated margin and payback assumptions.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Polish installation and mobile-service firms are a concrete beachhead with repeated field-originated invoices and an immediate compliance trigger. The number of firms with pain not already solved by their accounting stack, their invoice volumes, and the delayed inclusion of some smallest firms are not quantified.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "Technician usability, job-evidence capture, offline queueing, and cross-system reconciliation offer a vertical wedge. Accounting suites, KSeF-native apps, and field-service vendors have installed bases and can add the feature at low incremental price, sharply limiting a standalone domination path.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A successful installation-trade workflow can expand to maintenance, construction, and other mobile services and upstream into job-to-cash evidence and reconciliation. The core compliance product is Poland-specific, and supporting many accounting packages and trades risks service-heavy fragmentation.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Anonymized error patterns and trade templates can reduce rejection and support rates with use, and a place in the field-to-office workflow can become sticky. Customer mandates are revocable and nonexclusive, the tax rail is government controlled, and generic vendors can copy the visible feature set.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "The founder's data and automation skills fit validation and error-pattern work, and a family installation firm offers a lawful route to observe the problem if it opts in. No taxpayer mandate, integration, customer data, or exclusive channel is currently owned.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "A mandatory 2026 transition creates a strong near-term trigger, active workflow change, and measurable consequences for queue and reconciliation failures. The window may narrow quickly as official tooling and incumbent accounting products mature, so speed matters but does not itself create durability.",
+      "score": 8,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "Accounting offices and vertical field-service vendors repeatedly encounter the affected workflow and could distribute to many service firms, while one installation company can support a lawful pilot request. No partner is signed and incumbents may prefer their own solution, but the proposed channels are specific and economically aligned.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "An export-first single-trade MVP can fit the stated time and capital constraints and avoids immediate dependence on direct submission. Authentication, invoice-data security, schema and API changes, deadline liability, and high-touch integration support make a broader transaction service materially harder.",
+      "score": 5,
+      "status": "scored"
+    }
+  ],
+  "final_score": 5.9,
+  "highest_value_structural_change": "Own the pre-invoice job-completion evidence workflow for one trade and deliver validated FA payloads through contracted accounting-office integrations, keeping direct KSeF transmission optional rather than making regulatory middleware the whole product.",
+  "interaction_adjustment": 0.1,
+  "judge_id": "screen-b05-j01",
+  "main_structural_strength": "The offer sits at a mandatory, high-frequency job-to-invoice handoff where errors, rekeying time, and billing delay can be measured on every transaction.",
+  "primary_score_limiter": "The differentiation may collapse into an easily bundled accounting or field-service feature, and no evidence yet shows persistent paid pain after the KSeF rollout stabilizes.",
+  "qualified": false,
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 3,
+  "strongest_disconfirming_evidence": "Official client and offline tooling already provide a workable fallback, while accounting vendors have the installed base and incentive to add mobile field capture at negligible incremental price.",
+  "unrounded_score": 5.93
+}

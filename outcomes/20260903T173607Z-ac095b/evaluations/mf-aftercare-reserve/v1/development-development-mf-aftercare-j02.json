@@ -1,0 +1,117 @@
+{
+  "assumptions": [
+    "The opportunity is judged at planning stage, so missing validation is treated as material uncertainty rather than automatic proof of failure.",
+    "The family installer may participate only through a separately agreed opt-in pilot and contributes no automatic customer, technician, data, contract, or warranty rights.",
+    "All electrical, F-gas, OEM, insurance, data-processing, portal, and warranty permissions required for each dispatched job must be obtained rather than inferred from generic OZE certification.",
+    "The proposed prices and scale case are hypotheses because the packet contains no signed commercial terms or observed fully loaded operating results."
+  ],
+  "base_score": 3.66,
+  "candidate_id": "mf-aftercare-reserve",
+  "candidate_sha256": "cbfbf0be54799a9ed43ba8fbdb65197d4579746697307a1b9e03237d63d74622",
+  "candidate_version": 1,
+  "constrained_score": 3.36,
+  "evaluation_type": "working_development",
+  "evidence_needed_for_higher_score": "Obtain unrelated-installer prepayments or binding letters of intent and matching signed technician capacity terms, then run a zone-level pilot that records incident frequency, remote-resolution share, travel, first-visit resolution, rework, peak concurrency, response compliance, fully loaded contribution margin, CAC, onboarding effort, renewal intent, and manufacturer-specific authorization acceptance.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "Installer callback obligations and episodic field-capacity shortages create a real coordination problem, and reserving technician time before promising response windows is coherent. The insight is weakened by the absence of evidence that prepaid blocks are the right mechanism and by a close Polish operator already coordinating installer aftercare through a less committed technician network.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Consumer-remedy costs and Panasonic's time-bound warranty duties show that delayed service can impose urgent, measurable costs on installers. However, no unrelated installer has prepaid, signed, or otherwise demonstrated willingness to pay both the proposed monthly reservation and dispatch markup, and remote-resolution alternatives may reduce paid field events.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Advance billing could aid cash conversion and a reservation-plus-dispatch model can produce recurring revenue, but the defining unit economics are unevidenced. Public service prices do not establish room for a 250-600 PLN routing margin after technician pay, travel, standby loss, failed visits, rework, triage, insurance, credits, parts coordination, and correlated peaks; the 600-subscriber wealth case is therefore speculative.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Poland's roughly 1.5 million prosumer renewable microinstallations and concentration across major distribution networks imply a substantial service surface, while a geofenced installer segment is reasonably narrow. Installed base is not the addressable market, though: postcode-level portfolio density, field-worthy incident frequency, and the number of installers with economical overflow demand are unknown.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "CS-OZE already offers Polish installers outsourced monitoring, inspections, fault handling, customer contact, local certified technicians, and preservation of the installer's commercial relationship. OEM service networks and direct-to-owner plans add substitutes, while the proposed nonexclusive capacity contracts do not establish a control point capable of supporting local domination.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A successful dense-zone operation could extend across nearby regions and from PV into batteries or heat pumps. Yet each product family and geography can introduce different OEM authority, portal, parts, electrical-qualification, F-gas, routing, and training requirements, so the initial operating playbook may not transfer cheaply.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "The capacity is nonexclusive and explicitly replaceable, technicians control acceptance and qualifications, and manufacturers or established service networks can bundle comparable coverage. Dispatch data could improve routing, but there is no evidence that the required data is permissioned, proprietary, sufficiently voluminous, or superior to data held by OEMs and incumbent networks.",
+      "score": 2,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "Guaranteed local response windows could outperform ad hoc subcontracting if reserved capacity materially improves reliability. That performance advantage is not demonstrated, and the buyer must accept reservation cost despite remote fixes, variable incident demand, incumbent overflow service, and potential OEM restrictions.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "A large installed base, enforceable callback obligations, and a recognized shortage of electricians and energy workers make aftercare capacity relevant now. Scarcity is double-edged because it raises the cost and reduces the availability of the very standby supply needed for the promise, and no evidence establishes a uniquely favorable current window.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "Public installer registries, trade channels, technician referrals, and one opt-in family-firm pilot provide plausible initial access without a public-facing founder brand. They do not establish cold conversion, CAC, onboarding effort, renewal, or scalable acquisition among unrelated installers, while trust, customer-relationship, and warranty concerns can lengthen sales.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "The proposed 75,000 PLN launch capital is within the founder's stated resources and analytics can help triage and routing. Execution remains physically and contractually demanding: every job must match electrical, F-gas, OEM, insurance, data, and warranty requirements, while live dispatch, escalation, quality control, and peak coverage must be delegated to remain compatible with a full-time job and five-hour daily cap.",
+      "score": 3,
+      "status": "scored"
+    }
+  ],
+  "final_score": 3.4,
+  "highest_value_structural_change": "No valid redesign is established in the bound evidence. The most valuable structure to test would narrow the offer to one OEM-compatible device category and one dense service zone, secure authorization, portal and parts access plus enforceable technician capacity, and sell an outcome-based resolution SLA only after the resulting observed costs support it.",
+  "interaction_adjustment": -0.3,
+  "judge_id": "development-mf-aftercare-j02",
+  "main_structural_strength": "The concept links a documented, time-sensitive installer liability to advance-billed recurring revenue and a measurable service outcome, with a lawful route to an initial workflow pilot and a contractible concept for supply capacity.",
+  "primary_score_limiter": "The v1 promise depends on externally controlled, scarce, qualification-fragmented technician and OEM access while neither reservation acquisition nor fully loaded dispatch margin is evidenced; this prevents the proposed capacity block from functioning as a durable commercial control point.",
+  "qualified": false,
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 3,
+  "strongest_disconfirming_evidence": "CS-OZE already markets a close Polish substitute to the same installer buyer, preserves the installer's customer relationship, and recruits nearby certified technicians nonexclusively while allowing them to choose job volume, directly challenging both differentiation and the need for prepaid six-month capacity.",
+  "unrounded_score": 3.36
+}

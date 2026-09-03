@@ -1,0 +1,119 @@
+{
+  "assumptions": [
+    "Missing merchant, permission, and economics validation is treated as uncertainty rather than proof that the opportunity is infeasible.",
+    "The founder can avoid employer conflicts and use no confidential employer resources while testing the business.",
+    "At least one merchant can lawfully grant scoped evidence-processing access under a compliant data-processing agreement, although production access across the intended PSP set is not yet established.",
+    "The first version retains human approval before submission and does not assume the system controls issuer adjudication.",
+    "Cross-merchant retention or model-training rights are not assumed unless explicitly obtained by contract.",
+    "The stated 50,000 PLN launch estimate is provisional because security, legal, insurance, integration, and exception-handling costs have not been measured."
+  ],
+  "base_score": 3.89,
+  "candidate_id": "mf-chargeback-evidence-router",
+  "candidate_sha256": "2a3169818b7aba25f99548ac73458388de7f4da7d13a9e27129e8c0e55be495e",
+  "candidate_version": 1,
+  "constrained_score": 3.89,
+  "evaluation_type": "working_research",
+  "evidence_needed_for_higher_score": "A prospective paid pilot in a tightly specified Polish or EU multi-PSP cohort should demonstrate production permissions, merchant willingness to pay, statistically credible incremental net recovery and handling-time gains versus native tools and Chargeflow, repeatable CAC and sales cycle, retention, and fully loaded contribution margin under both won and lost cases.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "The idea targets a concrete workflow gap: evidence is fragmented across merchant systems while disputes create hard deadlines and measurable losses. However, the insight is not meaningfully differentiated on the bound evidence because Chargeflow already markets cross-processor collection, packet building, submission, and outcome tracking, while native providers automate overlapping steps.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "The pain is urgent and financially legible because the disputed amount and fees are debited, and incumbent pricing plus marketplace adoption show that merchants pay for recovery help. Willingness to buy this entrant's mixed per-submission and recovery-share offer is uncertain, especially when losing cases already carry processor fees and established alternatives advertise win-only pricing.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Per-case usage can align revenue with repeat dispute volume, automation could support attractive software-like margins, and direct merchant contracts preserve the customer relationship. The proposed fee can worsen adverse-case economics, outcome-linked cash may lag two to three months, and CAC, review labor, connector upkeep, support, security, insurance, churn, collections, and realistic owner earnings remain unquantified.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "The global dispute pool is large and growing, and multi-PSP EU merchants form a coherent operational segment. The economically defendable Polish or EU beachhead is not yet demonstrated: case volume, average value, reason-code mix, PSP mix, native-tool penetration, and the share of disputes that can actually be defended are unknown.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "A specialist incumbent already claims the same cross-processor wedge, more than 100 integrations, a large merchant network, and performance pricing. Stripe, Shopify, and Visa also control closer workflow positions and richer proprietary data, leaving no evidenced narrow segment in which this entrant has a credible path to dominance.",
+      "score": 2,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A successful evidence-routing foothold could extend across PSPs, storefronts, EU geographies, dispute reason codes, prevention, and broader payment-loss analytics. Each extension also adds permissions, rule maintenance, integrations, and incumbent overlap, so expansion is plausible but not yet especially advantaged.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "The proposed learning loop from permissioned outcome labels could compound, but rights to retain and train on cross-merchant data are unverified and the entrant starts behind processor-, network-, and incumbent-held datasets. Access is nonexclusive, replaceable, revocable, and dependent on PSP interfaces, so the current structure offers weak protection from copying, bundling, or margin pressure.",
+      "score": 2,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "Cross-PSP convenience and transparent case economics could matter to merchants with fragmented stacks, but neither superior recovery nor lower handling cost has been shown. The claimed core benefit is already offered by Chargeflow, while native tools can avoid extra integration and use privileged transaction data.",
+      "score": 2,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "Rising dispute volume and improving AI document workflows support demand and technical feasibility. The same forces are accelerating bundled products from Stripe, Shopify, Visa, and established specialists, so current momentum benefits the category more clearly than it benefits this entrant.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "Marketplace installation is proven for the category, and agency, accounting, fractional-CFO, and direct merchant channels are plausible without founder-led camera distribution. No app approval, partner commitment, conversion, CAC, sales-cycle, payback, retention, or referral-yield evidence establishes that acquisition can be repeatable or economical against entrenched alternatives.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "The founder's data-science and automation strengths fit evidence classification and outcome analysis, and an initial manual-approval product appears technically buildable within the stated capital. Safe operation requires processor-specific permissions, GDPR contracts, security controls, continuous rule and connector maintenance, and careful handling of one-shot submissions; the operating load may conflict with a five-hour daily limit.",
+      "score": 4,
+      "status": "scored"
+    }
+  ],
+  "final_score": 3.9,
+  "highest_value_structural_change": "Replace the generic horizontal router and mixed fee with a narrowly defined EU cohort or dispute class that incumbent workflows demonstrably handle poorly, price on incremental net recovery, and secure standardized two-PSP production permissions plus explicit outcome-data retention rights before broad connector expansion.",
+  "interaction_adjustment": 0,
+  "judge_id": "research-mf-chargeback-j01",
+  "main_structural_strength": "The business attaches to a recurring, measurable merchant loss event and can own a direct merchant relationship through ordinary contracts and scoped authorizations, creating auditable per-case value and repeat usage if it can outperform existing tools.",
+  "primary_score_limiter": "There is no evidenced advantage or protected beachhead that can overcome an exact specialist incumbent plus vertically integrated PSP, commerce-platform, and card-network alternatives.",
+  "qualified": false,
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 3,
+  "strongest_disconfirming_evidence": "Chargeflow already markets the candidate's full cross-processor workflow with more than 100 integrations, a claimed 20,000-merchant data network, direct submission, outcome tracking, and win-only pricing, while Stripe, Shopify, and Visa are embedding overlapping automation nearer the underlying data and decision rails.",
+  "unrounded_score": 3.89
+}

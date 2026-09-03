@@ -1,0 +1,117 @@
+{
+  "assumptions": [
+    "Users can lawfully obtain and authorize processing of enough source records to create a materially more complete bundle than existing portals provide.",
+    "The initial product remains administrative and evidentiary and does not make diagnostic or treatment claims.",
+    "A sufficiently narrow source set can be normalized with bounded human exception handling.",
+    "No clinic, laboratory, employer, or platform relationship is treated as controlled until a contract is signed."
+  ],
+  "base_score": 3.98,
+  "candidate_id": "fb-personal-health-portability-vault",
+  "candidate_sha256": "ae9b0e8649b355b8641b2e84553921dc49f896c68fdad57bfc8886a403cd4b50",
+  "candidate_version": 1,
+  "constrained_score": 3.78,
+  "evaluation_type": "working_screening",
+  "evidence_needed_for_higher_score": "Paid transition pilots showing time or duplicate-test savings, twelve-month retention or repeat-use data, signed channel and data-access agreements, measured import exception rates, and an independent security and regulatory assessment would support a higher score.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "A neutral, user-controlled provenance and consent layer addresses real fragmentation that source-specific portals do not naturally solve, and future personal agents make portable evidence more useful. The insight is credible but still broad and does not establish that portability alone is a product rather than an expected platform feature.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Reconstructing records during a provider, country, device, or care transition can cost time and cause duplicated testing, but those triggers are episodic. No price test, paid pilot, or evidence shows that Polish consumers will pay 29-69 PLN every month between transitions.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Advance-paid software subscriptions could support attractive gross margins, but the stated 65-80% target omits validated support incidence, connector maintenance, security, insurance, and partner acquisition costs. Recurring revenue is especially fragile if users value the vault mainly at infrequent switching events.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Fragmented records affect mobile professionals, quantified-self users, chronic-care households, and family caregivers, so a substantial need pool is plausible. The proposed beachhead spans several distinct jobs and channels, with no quantified reachable segment or proof that one group has frequent enough urgency.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "Source neutrality and portable provenance are useful positioning, but national portals, mobile operating systems, EHR vendors, wearable platforms, and insurers already control distribution and primary data interfaces. Nonexclusive user mandates do not create a clear path to dominate a narrow market.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "If trusted, the normalization layer could expand across providers, laboratories, wearables, countries, family accounts, benefits programs, and agent workflows. Each expansion adds regulatory, localization, and connector burdens, but the underlying portability architecture is broadly reusable.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Connector coverage, schema mappings, provenance rules, and user corrections could accumulate into a useful operational asset. Access is nonexclusive and revocable, source platforms can restrict interfaces, and ecosystem owners can reproduce aggregation, leaving durability unproven.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "The founder's data-engineering and quantified-self fit supports building a careful normalization product, and a local-first posture may improve trust. There is presently no proprietary access, customer relationship, clinical channel, or demonstrably superior dataset.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "EHDS, connected-product data rights, and growing use of personal AI agents all move toward user-authorized portability and provenance. Implementation timing and source-specific interfaces remain uncertain, so regulatory direction has not yet become a reliable go-to-market window.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "Clinics, laboratories, benefits brokers, coaches, and communities are plausible referral sources at relevant trigger moments. None is contracted, they retain their customer relationships, and a privacy-sensitive consumer product may face high trust-building and acquisition costs.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "A narrow local-first pilot fits the capital and time envelope, but health-data security, identity matching, multilingual document parsing, normalization liability, connector churn, and exception support create a demanding operating surface. A single serious provenance or security failure could destroy trust.",
+      "score": 3,
+      "status": "scored"
+    }
+  ],
+  "final_score": 3.8,
+  "highest_value_structural_change": "Recast the beachhead as an embedded, per-completed-handoff portability service for one high-friction cross-border or chronic-care transition, sold through a contracted care or benefits channel with an explicit user mandate, rather than as a broad always-on consumer vault.",
+  "interaction_adjustment": -0.2,
+  "judge_id": "screen-b05-j01",
+  "main_structural_strength": "A source-neutral, user-mandated provenance layer could occupy the cross-platform handoff that individual record systems have little incentive to own.",
+  "primary_score_limiter": "There is no evidence of recurring consumer willingness to pay and no controlled source or distribution relationship, while trusted incumbents can bundle much of the visible functionality.",
+  "qualified": false,
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 3,
+  "strongest_disconfirming_evidence": "Users may reasonably expect record access and export from national health portals, EHR providers, or mobile operating systems at no incremental price, making a standalone vault difficult to retain.",
+  "unrounded_score": 3.78
+}

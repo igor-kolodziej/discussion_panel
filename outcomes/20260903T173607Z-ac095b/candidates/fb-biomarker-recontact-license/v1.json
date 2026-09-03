@@ -1,0 +1,145 @@
+{
+  "candidate_id": "fb-biomarker-recontact-license",
+  "claims": [
+    {
+      "claim_id": "fb-biomarker-recontact-license-c1",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "low",
+      "evidence_refs": [],
+      "statement": "The proposed paid unit is a permitted cohort-access or derived-data license tied to a validation milestone; no price, cycle time, or developer loss estimate is yet evidenced."
+    },
+    {
+      "claim_id": "fb-biomarker-recontact-license-c2",
+      "claim_type": "payer_and_budget",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2017/746/oj/eng"
+      ],
+      "statement": "IVD and health-technology developers must generate performance evidence and are plausible validation-budget payers, but no target customer commitment exists."
+    },
+    {
+      "claim_id": "fb-biomarker-recontact-license-c3",
+      "claim_type": "founder_control_point_path",
+      "confidence": "low",
+      "evidence_refs": [],
+      "statement": "The founder can control only a prospectively contracted, consent-governed panel and compliant processing workflow; no participant, specimen, clinic, or health-data right exists today."
+    },
+    {
+      "claim_id": "fb-biomarker-recontact-license-c4",
+      "claim_type": "other",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://health.ec.europa.eu/ehealth-digital-health-and-care/european-health-data-space-regulation-ehds_en",
+        "https://eur-lex.europa.eu/eli/reg/2017/746/oj/eng"
+      ],
+      "statement": "EHDS creates structured secondary-use access with permits and secure environments, while IVDR requires scientific validity and analytical and clinical performance evidence; exact commercial use and national implementation remain case-specific."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Clinical validation, biomarker, data science, regulatory, or research-program lead",
+    "bundling_resistance": "Specialize in fast recontact and prospective measurement for narrowly defined phenotypes that static retrospective datasets cannot answer",
+    "customer_relationship_owner": "Unknown until direct participant and institutional agreements exist; no present panel is controlled",
+    "distribution_origin": "CRO, laboratory, research-institution, and regulatory-consultant referrals",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Participant recruitment and B2B study acquisition; both are likely material before reuse emerges",
+      "cash_conversion": "Study deposit before recruitment, milestone billing, and final acceptance; restricted study funds are not general operating cash",
+      "contribution_margin": "Unvalidated target 35-60% after participant, laboratory, secure-environment, governance, and channel costs",
+      "delivery_and_support_costs": "Cohort operations, consent support, data curation, query handling, and audit-ready provenance",
+      "overhead_and_compliance": "Data protection, ethics, security, legal governance, insurance, scientific oversight, and potential health-data permit fees",
+      "revenue_basis": "Hypothesis: 30000-150000 PLN per protocol-specific cohort access or derived-data license, plus per-participant collection costs",
+      "variable_costs": "Participant compensation, clinical or lab collection, specimen shipping and storage, secure processing, ethics administration, and customer-specific analysis"
+    },
+    "likely_incumbent_response": "CROs, biobanks, hospitals, laboratories, and EHDS data-access bodies can offer larger cohorts and established governance",
+    "paid_event_or_measurable_loss": "Paid event is an executed, lawful research-access or derived-data license plus delivery of a cohort milestone; measurable loss is validation delay or a failed study caused by inadequate cohort fit or data provenance",
+    "payer": "IVD manufacturer, pharmaceutical or biotechnology sponsor, digital-health company, or health-AI developer",
+    "purchase_trigger": "A model, assay, or biomarker reaches an external-validation, subgroup, post-market, or protocol-amendment gate",
+    "renewal_event": "New model version, biomarker panel, indication, subgroup, follow-up interval, or protocol creates another licensed use"
+  },
+  "contrary_evidence": [
+    "EHDS and established biobanks may make much larger governed datasets available without a small private panel.",
+    "Consent withdrawal, rare phenotypes, and protocol changes may prevent reusable licensing economics."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Proposed versioned consent and data-rights agreement paired with protocol, ethics, processor, and secure-environment terms for each use",
+    "acquisition_instrument_type": "data_rights_agreement",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Recruit a different consenting cohort, use anonymous or permitted public data, or decline the study rather than stretch a prior consent",
+    "current_owner": "Participants retain applicable rights; clinics, laboratories, and institutions may control source records or specimens",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "Unknown until direct participant and institutional agreements exist; no present panel is controlled",
+    "duration": "Consent-governed and protocol-specific; withdrawal and statutory retention rules supersede any commercial duration",
+    "exclusivity": "nonexclusive",
+    "founder_access_basis": "none",
+    "founder_access_description": "Neuroscience and data-science expertise do not confer participant, clinical, laboratory, specimen, ethics, or health-data access rights.",
+    "launch_controller": "Each participant plus clinics, laboratories, ethics bodies, health-data access bodies, or sponsors as applicable",
+    "mechanism_control": "dependent",
+    "renewal": "New purpose or protocol requires fresh authority or confirmation under applicable governance",
+    "replaceability": "replaceable",
+    "revocability": "at_will",
+    "status": "unknown",
+    "subject": "Participant relationship and protocol-specific rights to recontact, collect, process, and permit secure research use",
+    "subject_type": "right",
+    "transferability": "nontransferable"
+  },
+  "discovery_lane": "future-backcast",
+  "economics": {
+    "acquisition_route": "CRO, laboratory, research-institution, and regulatory-consultant channels at a concrete validation gate",
+    "capital_required_pln": 100000,
+    "founder_net_worth_path": "A uniquely recontactable, well-governed cohort could support repeat licenses or acquisition; reaching 5m PLN likely requires several high-value panels and multi-customer reuse over 5-8 years",
+    "founder_time": "Up to five hours per day only with qualified clinical, laboratory, and governance partners handling regulated work",
+    "gross_margin_basis": "License and study fees less recruitment, participant, clinic, lab, secure-processing, governance, analysis, and channel costs",
+    "payback": "Target positive contribution on the first funded protocol and reuse only with lawful fresh authority; not evidenced",
+    "pricing": "Hypothesis: 30000-150000 PLN per protocol-specific access or derived-data license plus pass-through collection costs",
+    "retention_or_repeat": "Repeat from follow-up intervals, new model versions, biomarkers, indications, and customer protocols"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Longitudinal recontact, consent provenance, phenotype consistency, and completed-study metadata improve cohort discoverability and reduce setup time",
+    "customer": "IVD, digital-health, pharmaceutical, and health-AI developers needing external biomarker or model validation",
+    "distribution_mechanism": "Partner with CROs, accredited laboratories, research institutions, and regulatory consultants that encounter validation gaps",
+    "offer_and_business_model": "Governed participant panel with protocol-specific recruitment, secure access, and license fees for non-identifying derived datasets or permitted analyses",
+    "payer_and_paid_event": "Developer pays when a permitted research-access, recontact, or derived-data license is executed and the contracted cohort milestone is delivered",
+    "problem_trigger": "A developer needs a defined phenotype cohort, additional measurements, or recontact for validation under a new protocol"
+  },
+  "founder_fit": [
+    "Neuroscience and data-science background support phenotype design, provenance, and analysis-quality systems",
+    "A structured platform can reduce repeated manual study setup once governance and panel operations are established",
+    "The founder can begin with a narrow non-clinical feasibility panel and external qualified partners",
+    "B2B licensing offers scale potential without an on-camera consumer brand"
+  ],
+  "parent": null,
+  "risks": [
+    "Sensitive health-data or specimen mishandling can cause severe participant and regulatory harm",
+    "A small cohort can be biased, underpowered, or scientifically unsuitable",
+    "Long study-sales and approval cycles can consume runway",
+    "The business cannot treat consent as irrevocable property or sell identifiable health data"
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://health.ec.europa.eu/ehealth-digital-health-and-care/european-health-data-space-regulation-ehds_en",
+    "https://eur-lex.europa.eu/eli/reg/2017/746/oj/eng",
+    "https://eur-lex.europa.eu/eli/reg/2014/536/oj/eng"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "licensing_or_royalty",
+    "commercial_model_descriptor": "protocol specific license for secure cohort access recontact or non identifying derived data",
+    "control_point_category": "customer_relationship",
+    "control_point_descriptor": "versioned consent governed engagement with a recontactable participant panel",
+    "critical_dependency_category": "rights_holder",
+    "critical_dependency_descriptor": "participant and institutional authority for each data specimen and recontact purpose"
+  },
+  "structure": {
+    "commercial_archetype": "governed cohort-access licensing network",
+    "control_point": "direct, consent-governed relationship with a recontactable participant panel",
+    "critical_dependency": "participants and data or specimen rights holders granting lawful protocol-specific use"
+  },
+  "thesis": "Future operating state (2031): diagnostic and health-AI developers run rapid external validation against precisely phenotyped, recontactable cohorts rather than assembling a new study for every model update. Missing rights and coordination mechanism: ethically governed consent versioning, durable participant engagement, phenotype normalization, specimen logistics, and permitted secure research access without selling identifiable health data.",
+  "title": "Recontactable Biomarker Validation Panel",
+  "uncertainties": [
+    "Lawful basis, ethics route, permit needs, and secure-environment requirements for each use",
+    "Recruitment cost and retention for a sufficiently differentiated phenotype",
+    "Whether customers value recontact speed enough to pay above existing CRO or biobank options",
+    "Which outputs can be licensed without creating regulated diagnostic or medical-device claims"
+  ],
+  "version": 1
+}

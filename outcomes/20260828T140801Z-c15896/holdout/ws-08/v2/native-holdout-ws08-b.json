@@ -1,0 +1,116 @@
+{
+  "assumptions": [
+    "The first pilot is limited to Fronius inverter generations for which the installer can obtain valid owner authorization and documented local data access; no contested Data Act enforcement is required for the pilot.",
+    "The opportunity is assessed at the planning stage, so no paid pilot, renewal, technician-label compliance, triage accuracy, contribution margin, or multi-installer demand is assumed to exist.",
+    "The founder can sustain the stated 10-15 hours per week and can use paid legal, cybersecurity, or domain specialists within the proposed capital budget when those capabilities cannot be supplied by AI tools."
+  ],
+  "base_score": 5.43,
+  "candidate_id": "ws-08",
+  "candidate_sha256": "be840d0921c8615ff7a2726b57be9513045f62ef1cec048bf86b7896d43e3999",
+  "candidate_version": 2,
+  "constrained_score": 5.43,
+  "evaluation_type": "holdout_native",
+  "evidence_needed_for_higher_score": "A signed annual pilot that makes triage the default pre-dispatch step and grants valid telemetry-retention and outcome-label rights, followed by cohort evidence that supported Fronius fields improve decisions versus the OEM portal, produce avoided-cost value of at least three times the fee, achieve high technician close-out compliance, and leave at least 65% contribution margin after access, storage, review, support, security, and legal costs; renewal and replication with a second unrelated installer would materially strengthen the case.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "The redesign correctly moves the proposed control point from a non-exclusive statutory data-access mandate to the installer's recurring dispatch workflow, where decision records and technician outcomes can actually be created. Starting with one accessible inverter family also makes the central hypothesis falsifiable, although workflow ownership and a differentiated decision product remain propositions rather than established advantages.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "An alert-or-complaint decision about remote resolution versus a truck roll is concrete and can carry measurable service and downtime cost. The packet shows broad maintenance urgency and existing spend on monitoring infrastructure, but it does not establish event frequency, avoided cost, urgency, or willingness to pay 900-2400 PLN per year among Polish small-commercial solar installers, so the exact pain-to-budget link is still uncertain.",
+      "score": 5.5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Annual per-site pricing, an onboarding fee, a minimum value gate, installer-led acquisition, and refusal of bespoke access disputes create a plausible recurring and capital-light model. However, low anomaly density at a small fleet, OEM access or storage fees, human alert review, support, security, legal work, and connector maintenance could consume the proposed margin, and neither the 65% floor nor the 5000-site founder-wealth path has measured support.",
+      "score": 5.5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "One installer and one homogeneous commercial-solar inverter family is narrow enough for a decisive pilot and is unusually accessible to this founder. The packet provides no count of eligible sites, maintenance-plan penetration, fleet concentration, or installer budgets, so it is unclear whether the first beachhead or the reachable Polish segment can support enough recurring revenue without expanding into integrations that weaken the wedge.",
+      "score": 5.5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "Default placement in an installer's workflow and a proprietary decision-and-outcome history could support a strong local position. Yet Fronius, SMA, and SolarEdge already provide monitoring or APIs, the owner-controlled access route is non-exclusive, and OEMs can improve or bundle triage using richer diagnostics; the proposed workflow contract is unsigned and is reproducible by other service vendors.",
+      "score": 4.5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A proven dispatch product could expand to additional installer portfolios, inverter families, and adjacent maintenance decisions. Expansion is not frictionless: every OEM and product vintage introduces new fields, contracts, costs, domain shift, and performance validation, while broader asset classes would dilute the homogeneous data advantage and may require a substantially different product.",
+      "score": 5.5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Longitudinal outcome labels embedded in a required maintenance workflow could compound into switching cost and better fleet-specific triage. At present the data and permissions are revocable or contractual, normal telemetry without scarce fault labels is not a predictive moat, the initial dataset is small, and OEMs retain superior fleet scale and derived diagnostics, leaving durability speculative.",
+      "score": 4.5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "The offer aspires to reduce truck rolls and speed fault isolation through installer-specific evidence rather than merely displaying telemetry. No comparison yet shows that the available raw and pre-processed fields support materially better dispatch decisions than OEM portals or technician judgment, and excluded OEM-derived diagnostics may constrain performance, so behavior-changing superiority is unproven.",
+      "score": 4.5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "The Data Act is in force, documented Fronius local interfaces permit an inexpensive test, and vendors already support paid API ecosystems, making this a practical time to test owner-authorized aftermarket services. The same vendor maturity strengthens incumbent substitutes, and the richer by-design access duty applies only to later product vintages, so regulation is an enabling tailwind rather than a transient proprietary opening.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "The family renewable installer provides a credible, low-CAC route to a first fleet and an existing commissioning and renewal workflow, a meaningful advantage for this founder's constraints. The route is relationship-specific: repeatable acquisition beyond that installer, owner enrollment rates, procurement cycles, and the willingness of independent installers to make an outside product the default dispatch gate are all unknown.",
+      "score": 6.5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "A 10-20-site, single-family pilot is technically aligned with the founder, fits the stated time and 25000 PLN budget, and can be stopped at explicit gates. Reliable maintenance advice still requires field validation, permissions, cybersecurity, warranty and safety discipline, workflow compliance, and ongoing human support; legal classification and part-time scaling add real but potentially contractible risk.",
+      "score": 6,
+      "status": "scored"
+    }
+  ],
+  "final_score": 5.4,
+  "highest_value_structural_change": "Replace an optional per-site monitoring add-on with a multi-year, minimum-volume installer portfolio contract that makes the service the default pre-dispatch gate, includes owner authorization and telemetry-retention language, and contractually requires technician close-out records. This would turn the current relationship advantage into controlled workflow, guaranteed data density, and a revenue floor while keeping expansion contingent on measured OEM-family economics.",
+  "interaction_adjustment": 0,
+  "judge_id": "holdout-ws08-b",
+  "main_structural_strength": "A bounded, founder-accessible one-installer and one-OEM-family wedge ties a paid maintenance decision to the workflow that can generate verified outcomes, avoiding dependence on a broad non-exclusive legal-data agency and permitting capital-light falsification before expansion.",
+  "primary_score_limiter": "The critical mechanism is not yet owned: no installer has signed the default-workflow, owner-permission, retention, or technician-close-out obligations, and there is no evidence that available telemetry yields enough valuable dispatch decisions, renewals, or contribution margin to support the proposed economics.",
+  "qualified": false,
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 3,
+  "strongest_disconfirming_evidence": "Fronius documents that inverter live data are generally not stored locally and richer history depends on an additional service, while SMA and SolarEdge already sell monitoring or API access and operate incumbent platforms; coupled with peer-reviewed evidence that scarce fault labels and domain shift impede transferable diagnosis, this directly weakens both the promised triage advantage and the claimed data moat.",
+  "unrounded_score": 5.43
+}

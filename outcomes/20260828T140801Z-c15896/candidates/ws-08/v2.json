@@ -1,0 +1,119 @@
+{
+  "candidate_id": "ws-08",
+  "claims": [
+    {
+      "claim_id": "ws-08-v2-control",
+      "claim_type": "founder_control_point_path",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://www.fronius.com/en/information-data-act"
+      ],
+      "statement": "Fronius documents direct local product-data access through Solar API or Modbus, so the founder can test one homogeneous inverter family through the founder-accessible family installer before depending on contested Data Act enforcement; the proposed installer workflow contract and technician close-out requirement remain to be secured and are not treated as existing evidence."
+    },
+    {
+      "claim_id": "ws-08-v2-loss",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://new.abb.com/news/detail/107660/abb-survey-reveals-unplanned-downtime-costs-125-000-per-hour"
+      ],
+      "statement": "Maintenance decision-makers report recurring unplanned outages and increased reliability investment, supporting remote triage before a truck roll as a measurable-loss event, although the evidence does not establish the frequency or value of that event in the proposed Polish commercial-solar wedge."
+    },
+    {
+      "claim_id": "ws-08-v2-payer",
+      "claim_type": "payer_and_budget",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://developer.sma.de/api-plans",
+        "https://api-docs.solaredge.com/"
+      ],
+      "statement": "SMA sells B2B monitoring and live or control API access by system, capacity, and call volume, while SolarEdge offers paid API tiers; this demonstrates current spend around monitoring infrastructure and supports an installer maintenance budget as the proposed payer, but it does not prove willingness to pay the redesigned service's pilot price."
+    },
+    {
+      "claim_id": "ws-08-v2-role",
+      "claim_type": "other",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2022/868/oj/eng",
+        "https://eur-lex.europa.eu/eli/reg/2023/2854/oj/eng"
+      ],
+      "statement": "The redesigned venture is intended as a direct value-added monitoring and triage provider to one installer rather than a neutral marketplace between an undetermined set of owners and data users; final contracts still require legal review because Data Governance Act classification, user-purpose limits, retention, onward use, and trade-secret safeguards depend on the actual operating arrangement."
+    }
+  ],
+  "contrary_evidence": [
+    "Fronius local access does not guarantee retained history, and SMA and SolarEdge impose OEM-specific prices, contracts, tiers, and migration work, so even a one-segment connector base may remain costly.",
+    "OEM portals already provide monitoring and can improve or bundle their own triage, leaving the redesigned product to prove better dispatch decisions rather than merely aggregate telemetry.",
+    "Raw and pre-processed telemetry excludes inferred OEM diagnostics, while scarce technician-confirmed fault labels and domain shift prevent a small normal-operation dataset from becoming a predictive moat.",
+    "The proposed installer workflow placement, owner permissions, label-return obligation, pilot price, and renewal behavior have not been signed or validated."
+  ],
+  "discovery_lane": "weak-signal",
+  "economics": {
+    "acquisition_route": "Offer the family renewable installer a bounded paid pilot on 10-20 small commercial solar sites from one inverter family, starting with sites where documented local access is available. Enroll owners through the installer's existing maintenance-renewal workflow, and do not add another OEM family until connector cost, one paid triage decision, and technician close-out compliance are measured.",
+    "capital_required_pln": 25000,
+    "founder_net_worth_path": "At the unvalidated target price of 900-2400 PLN per site per year, 5000 retained commercial sites would produce approximately 4.5-12 million PLN of recurring annual revenue. If measured gross margin reaches at least 65%, customer acquisition remains installer-led, operating profit reaches roughly 1.5-3 million PLN, and the founder retains control while reinvesting cash, accumulated profit plus business equity could plausibly exceed 5 million PLN; none of those scale assumptions is yet evidenced.",
+    "founder_time": "Approximately 10-15 founder hours per week during the single-installer pilot for access setup, normalization, alert review, and weekly label reconciliation; add paid technical or legal capacity before supporting more installers or OEM families.",
+    "gross_margin_basis": "Target 65-80% contribution margin only after measuring OEM access charges, security, connector maintenance, alert-review time, and installer support. Admit an OEM cohort only if annual access and human-review cost stays below 35% of collected site revenue; bespoke access disputes remain out of scope and separately quoted or declined.",
+    "payback": "Use a paid annual contract rather than a savings share. Renew only when logged triage decisions show avoided truck rolls, faster fault isolation, or reduced outage time worth at least three times the annual site fee; the first pilot must measure this rather than assume it.",
+    "pricing": "Unvalidated pilot ask of 3000-8000 PLN for one installer and one supported inverter family, plus 900-2400 PLN per accepted commercial site per year for monitoring and dispatch triage; no low per-device fee, insurer license, or savings share until repeat value is observed.",
+    "retention_or_repeat": "The installer renews each enrolled site annually with the maintenance plan, while each anomaly creates a dispatch-or-remote-resolution decision. A required close-out step returns the technician's diagnosis, action, and outcome for product improvement; renewal and label compliance remain unproven and must be contractual pilot gates."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Owner-authorized telemetry for one inverter family linked inside the installer workflow to required technician close-out labels, producing a homogeneous decision-and-outcome history that improves triage benchmarks and lowers support cost per retained site.",
+    "customer": "Polish renewable-energy installers maintaining portfolios of small commercial solar sites on a validated inverter family, starting with the founder-accessible family installer.",
+    "distribution_mechanism": "Embed owner enrollment and the triage service in an installer's commissioning and annual maintenance-renewal workflow; expand installer by installer only after the first cohort proves paid repeat use and label return.",
+    "offer_and_business_model": "A white-label, value-added inverter monitoring and dispatch-triage product sold to the installer for an OEM-family onboarding fee plus an annual fee per accepted commercial site; Data Act requests are a fallback access tool rather than a fiduciary marketplace or moat.",
+    "payer_and_paid_event": "The renewable installer pays from its monitoring and maintenance budget at the annual service renewal for each enrolled site, then uses the service whenever an anomaly requires a remote-resolution-versus-truck-roll decision.",
+    "problem_trigger": "A renewable installer receives an inverter alert or customer performance complaint but lacks a normalized, evidence-backed way to decide remotely whether a commercial solar site needs a technician dispatch."
+  },
+  "founder_fit": [
+    "The founder's data engineering and AI skills directly fit telemetry normalization, rules, anomaly triage, and decision logging.",
+    "The family renewable installer supplies a bounded, founder-accessible route to one equipment class and an existing maintenance workflow without requiring broad outbound networking.",
+    "The single-installer, single-OEM-family pilot fits the founder's part-time limit and 100000 PLN capital ceiling while forcing paid evidence before expansion."
+  ],
+  "parent": {
+    "candidate_id": "ws-08",
+    "version": 1
+  },
+  "redesign": {
+    "changed_fingerprint_fields": [
+      "customer",
+      "problem_trigger",
+      "payer_and_paid_event",
+      "offer_and_business_model",
+      "distribution_mechanism",
+      "compounding_advantage"
+    ],
+    "economic_effect": "The redesign replaces a broad 20-60 PLN per-asset data-agency subscription, setup work, and savings share with a single-payer installer contract, a paid OEM-family onboarding, and 900-2400 PLN annual revenue per accepted commercial site. It narrows connector and support variance, excludes bespoke disputes, ties renewal to logged dispatch value, and makes technician label return part of the operating workflow, which can improve repeat economics and mechanism ownership if the unvalidated contract gates are secured."
+  },
+  "risks": [
+    "The family installer or later installers may not sign the workflow, data-retention, and technician close-out terms, leaving the critical mechanism unowned.",
+    "Accessible fields may be insufficient for reliable triage, or OEM API costs and migration work may breach the 35% cost gate.",
+    "An OEM can bundle equivalent triage into its portal, and the narrow wedge may not support enough sites or annual revenue to reach the founder objective.",
+    "Cybersecurity, warranty, product-safety, trade-secret, privacy, and DGA classification obligations may add cost or constrain the intended data use."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://www.fronius.com/en/information-data-act",
+    "https://developer.sma.de/api-plans",
+    "https://api-docs.solaredge.com/",
+    "https://new.abb.com/news/detail/107660/abb-survey-reveals-unplanned-downtime-costs-125-000-per-hour",
+    "https://eur-lex.europa.eu/eli/reg/2022/868/oj/eng",
+    "https://eur-lex.europa.eu/eli/reg/2023/2854/oj/eng"
+  ],
+  "stage": "development",
+  "structure": {
+    "commercial_archetype": "Installer-embedded performance-assurance subscription",
+    "control_point": "A contracted default position in each participating installer's commissioning and annual maintenance workflow, with owner-authorized telemetry retention and a required technician close-out record for every escalated event.",
+    "critical_dependency": "A participating installer must sign and operationally enforce owner enrollment and technician close-out, while one selected inverter family must expose decision-useful fields at a cost that passes the pilot margin gate."
+  },
+  "thesis": "A broad Data Act agency does not own the predictive mechanism, but an installer-embedded triage product can use the legal right only as a fallback while controlling the recurring maintenance workflow that creates paid decisions and technician-confirmed outcomes. Starting with one commercial-solar inverter family through the founder-accessible installer converts heterogeneous telemetry into a bounded dispatch product, and expansion is earned only when each OEM cohort passes access-cost, triage-value, label-return, and renewal gates.",
+  "title": "Installer-Embedded Solar Inverter Triage",
+  "uncertainties": [
+    "Will the family installer sign a paid pilot and make technician close-out completion operationally mandatory without harming its service workflow?",
+    "Which exact Fronius product generations and fields permit decision-useful monitoring and retained history, and what owner permissions are required?",
+    "Will 10-20 commercial sites generate enough paid anomaly decisions within one renewal cycle to demonstrate three-times-fee value?",
+    "Can the service lawfully retain and enrich the intended telemetry and outcome labels as a direct value-added provider rather than a regulated neutral intermediary?",
+    "Do measured access, security, review, and support costs permit at least 65% contribution margin and repeatable installer-led acquisition?"
+  ],
+  "version": 2
+}

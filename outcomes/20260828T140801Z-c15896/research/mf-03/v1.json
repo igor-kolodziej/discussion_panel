@@ -1,0 +1,393 @@
+{
+  "candidate_id": "mf-03",
+  "candidate_sha256": "8c0421062d33234fec8bf761d36720892a971c02c634d48baf8215653911db46",
+  "candidate_version": 1,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "r-control-delegable-liability-retained",
+      "evidence_refs": [
+        "s-eu-amending-regulation"
+      ],
+      "statement": "Regulation (EU) 2025/2083 permits an authorised CBAM declarant to delegate submission to a person acting in its name, but expressly leaves the declarant responsible for compliance. A startup can therefore contract for workflow execution, but cannot acquire the customer's statutory responsibility as its control point."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r-control-official-share-once",
+      "evidence_refs": [
+        "s-eu-registry"
+      ],
+      "statement": "The Commission's O3CI registry already lets a non-EU installation operator upload and share installation and emissions data with declarants once rather than submit it separately to each declarant; the registry preserves confidentiality and can auto-populate declarant reports. This directly duplicates the candidate's claimed reusable supplier-evidence network function."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r-control-permission-gated",
+      "evidence_refs": [
+        "s-eu-registry"
+      ],
+      "statement": "Registry reuse is permission-gated: the declarant must share its EORI number with the non-EU supplier, and the operator registers and provides the installation data. A third-party custodian does not receive independent access merely by building software."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r-control-exclusive-rights-unknown",
+      "evidence_refs": [],
+      "statement": "No reviewed evidence establishes an exclusive importer, broker, supplier, registry-integration or verifier-acceptance contract for this founder, nor a right to reuse one supplier's confidential evidence across unrelated importer customers."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r-substitute-sap-bundle",
+      "evidence_refs": [
+        "s-sap-end-to-end"
+      ],
+      "statement": "SAP announced an integrated CBAM stack that centralises ERP, trade and supplier data, interprets supplier files, calculates emissions, certificates and costs, supports audit-ready reporting, and connects to financial-liability management. This is an incumbent bundle inside systems already used by industrial importers."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r-substitute-pwc-bundle",
+      "evidence_refs": [
+        "s-pwc-carbon-border-manager"
+      ],
+      "statement": "PwC's Carbon Border Manager on SAP advertises supplier outreach, guided collection, validation, actual-versus-default tracking, cost forecasts, audit-proof records and EU-compliant XML reporting as a SaaS product. Its described scope substantially overlaps the proposed offer."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r-substitute-specialist-present",
+      "evidence_refs": [
+        "s-cbamboo-platform"
+      ],
+      "statement": "CBAMBOO already markets a two-sided specialist platform for importers and non-EU installations covering supplier engagement, monitoring plans, verification-grade evidence, cost forecasting and verifier hand-off, and publicly names importer and supplier customers. The candidate is entering an occupied specialist category, not creating it."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r-substitute-channel-response-unknown",
+      "evidence_refs": [],
+      "statement": "No reviewed evidence measures how Polish customs brokers, trade accountants, accredited verifiers, ERP implementers or consultancies price or bundle CBAM work, or shows a signed reseller willing to prefer this product over existing tools."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r-dependency-verifier-mandatory",
+      "evidence_refs": [
+        "s-eu-verification",
+        "s-eu-amending-regulation"
+      ],
+      "statement": "Where actual emissions are used, an independent verifier accredited by an EU national accreditation body must verify them. The official implementation timeline places the first verification reports in January 2027, so the product cannot independently produce the legally sufficient actual-emissions result."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r-dependency-supplier-and-verifier",
+      "evidence_refs": [
+        "s-eu-registry",
+        "s-eu-verification"
+      ],
+      "statement": "Because the non-EU operator must monitor, calculate and disclose its installation data and an accredited verifier must independently review it, missing supplier cooperation or verifier capacity cannot be repaired by the custodian's software. These are unsigned external dependencies central to every actual-data evidence pack."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r-dependency-capacity-unknown",
+      "evidence_refs": [],
+      "statement": "Current verifier availability, lead time, sector and country coverage, site-visit cost, professional-liability allocation and willingness to work with a new evidence processor were not established for the candidate's target supplier base."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r-econ-obligation-and-price",
+      "evidence_refs": [
+        "s-eu-definitive-regime",
+        "s-eu-certificate-price"
+      ],
+      "statement": "The definitive regime creates a real budget event for importers above 50 tonnes: annual declaration and certificate surrender, with 2026 quarterly certificate prices published at EUR 75.36/tCO2 for Q1 and EUR 75.28/tCO2 for Q2. Liability size is measurable from import volume and embedded emissions."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r-econ-deadline-shaped-urgency",
+      "evidence_refs": [
+        "s-eu-amending-regulation",
+        "s-eu-verification",
+        "s-eu-certificate-price"
+      ],
+      "statement": "For 2026 imports, certificates become purchasable from February 2027 and the first annual declaration and surrender deadline is 30 September 2027. This supports a real implementation project but makes cash settlement and filing urgency deadline-shaped rather than proving willingness to pay a recurring fee before every shipment."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r-econ-threshold-shrinks-segment",
+      "evidence_refs": [
+        "s-eu-simplification",
+        "s-pl-importer-count"
+      ],
+      "statement": "The adopted 50-tonne exemption was designed to remove about 182,000, or 90%, of importers from CBAM obligations. A Polish government workload analysis identified 1,589 importers that exceeded 50 tonnes in 2024, versus 4,300 that had filed transitional reports, materially narrowing the candidate's initial SME market."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r-econ-penetration-burden",
+      "evidence_refs": [
+        "s-pl-importer-count",
+        "s-eu-registry",
+        "s-sap-end-to-end",
+        "s-pwc-carbon-border-manager"
+      ],
+      "statement": "The candidate's stated 150-importer milestone equals about 9.4% of the 1,589 Polish importers above the 2024 threshold. Central Europe enlarges the denominator, but a Poland-led wedge would still require unusually high penetration before accounting for in-house, registry, ERP, broker and consultant substitutes."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r-econ-repeat-cycle",
+      "evidence_refs": [
+        "s-eu-amending-regulation",
+        "s-eu-definitive-regime",
+        "s-eu-legislation-guidance"
+      ],
+      "statement": "Annual declarations, certificate management, continuing imports, four-year record retention and rule-data updates create recurring compliance work. The Commission was still correcting legally binding default values and republishing the information file in August 2026, which supports renewal need but also imposes ongoing maintenance and support cost on vendors."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r-econ-commercial-proof-unknown",
+      "evidence_refs": [],
+      "statement": "No reviewed independent evidence validates the proposed PLN 1,500-5,000 monthly price, supplier-pack fee, sales conversion, renewal, churn, broker commission, CAC, payback period, 45-80% gross-margin range or client savings from actual values versus defaults for the target segment."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r-econ-service-load-unknown",
+      "evidence_refs": [],
+      "statement": "The hours and cost required for multilingual supplier chasing, installation-boundary remediation, methodology changes, verifier questions, data corrections, security review and professional-liability insurance are unknown, so the managed-service margin and part-time operating model remain unproven."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r-cold-start-preexisting-data",
+      "evidence_refs": [
+        "s-eu-application-review"
+      ],
+      "statement": "The Commission reported that 95% of importers above 50 tonnes were already reporting actual embedded emissions in Q3 2025, up from 11% in Q3 2023. Transitional data were not equivalent to 2026 verified reports, but this is direct evidence that most target importers had already established some supplier-data flow before this entrant's launch."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r-cold-start-official-network",
+      "evidence_refs": [
+        "s-eu-registry",
+        "s-eu-application-review",
+        "s-sap-end-to-end",
+        "s-cbamboo-platform"
+      ],
+      "statement": "The Commission's share-once registry, high existing actual-data reporting rate, SAP supplier-data tooling and specialist platforms reduce the amount of uniquely capturable data left for a new entrant. A defensible moat would need proprietary permissions, anomaly outcomes or workflow distribution beyond merely storing the same installation record."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r-cold-start-reuse-rights-unknown",
+      "evidence_refs": [],
+      "statement": "No evidence establishes consent to pool supplier records across importers, sufficient repeated installations for anomaly learning, a lawful derived-data right, superior error labels, or a measured accuracy advantage that would turn customer files into a compounding data moat."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r-mechanism-statutory-role-split",
+      "evidence_refs": [
+        "s-eu-amending-regulation",
+        "s-eu-registry",
+        "s-eu-verification"
+      ],
+      "statement": "The official mechanism assigns primary data creation to the third-country operator, verification to an accredited verifier, legal compliance to the authorised declarant, and cross-declarant transmission and record functions to the Commission registry. The proposed startup is not the owner of any of those statutory roles."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r-mechanism-workflow-layer",
+      "evidence_refs": [
+        "s-eu-registry",
+        "s-eu-verification",
+        "s-sap-end-to-end",
+        "s-pwc-carbon-border-manager",
+        "s-cbamboo-platform"
+      ],
+      "statement": "The startup can own its user experience, mapping logic, exception rules, customer integrations and authorised copies, but without exclusive contracts or superior validated outcomes those assets form a replaceable workflow layer around a government registry and accredited-professional process already served by SAP, PwC and specialists."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r-mechanism-ownable-wedge-unknown",
+      "evidence_refs": [],
+      "statement": "It remains unknown whether a narrow Central-European broker channel, a verifier-approved evidence control standard, or exclusive supplier remediation service can create an ownable mechanism that the official registry and incumbent suites do not provide."
+    }
+  ],
+  "contrary_evidence": [
+    "The Commission's O3CI registry already performs the thesis's central upload-once, share-with-many-declarants function, preserves business-data confidentiality and can auto-populate reports (s-eu-registry).",
+    "Delegating CBAM filing is permitted, but the authorised declarant remains legally responsible; the startup cannot take over the statutory liability that might otherwise lock in control (s-eu-amending-regulation).",
+    "The 50-tonne simplification removed about 182,000 or 90% of importers from obligations, and the Polish government counted only 1,589 importers above the threshold in 2024 (s-eu-simplification; s-pl-importer-count).",
+    "The Commission reported that 95% of above-threshold importers were already submitting actual embedded-emissions data by Q3 2025, indicating pre-existing supplier-data processes before this product's launch (s-eu-application-review).",
+    "SAP announced an end-to-end CBAM solution tying supplier, trade, ERP, certificate, audit and finance workflows together inside an incumbent stack (s-sap-end-to-end).",
+    "PwC's SAP-listed Carbon Border Manager advertises nearly the same supplier collection, validation, audit-trail, cost-modelling and reporting bundle as the candidate (s-pwc-carbon-border-manager).",
+    "CBAMBOO already markets a two-sided import-and-installation evidence platform and publicly names customers, demonstrating an occupied specialist category (s-cbamboo-platform).",
+    "Actual emissions require an independent accredited verifier and supplier-originated installation data; software alone cannot make an incomplete or uncooperative supplier chain legally sufficient (s-eu-verification; s-eu-registry).",
+    "The first annual filing and surrender for 2026 imports is due in September 2027, so the regulation proves a deadline event but not a per-shipment recurring buying cadence at the proposed fee (s-eu-amending-regulation; s-eu-verification)."
+  ],
+  "falsification": {
+    "cold_start_and_data_moat": [
+      "r-cold-start-preexisting-data",
+      "r-cold-start-official-network",
+      "r-cold-start-reuse-rights-unknown"
+    ],
+    "control_point_obtainability": [
+      "r-control-delegable-liability-retained",
+      "r-control-official-share-once",
+      "r-control-permission-gated",
+      "r-control-exclusive-rights-unknown"
+    ],
+    "critical_mechanism_ownership": [
+      "r-mechanism-statutory-role-split",
+      "r-mechanism-workflow-layer",
+      "r-mechanism-ownable-wedge-unknown"
+    ],
+    "external_dependencies": [
+      "r-dependency-verifier-mandatory",
+      "r-dependency-supplier-and-verifier",
+      "r-dependency-capacity-unknown"
+    ],
+    "substitutes_and_incumbent_response": [
+      "r-control-official-share-once",
+      "r-substitute-sap-bundle",
+      "r-substitute-pwc-bundle",
+      "r-substitute-specialist-present",
+      "r-substitute-channel-response-unknown"
+    ],
+    "willingness_urgency_and_repeat_economics": [
+      "r-econ-obligation-and-price",
+      "r-econ-deadline-shaped-urgency",
+      "r-econ-threshold-shrinks-segment",
+      "r-econ-penetration-burden",
+      "r-econ-repeat-cycle",
+      "r-econ-commercial-proof-unknown",
+      "r-econ-service-load-unknown"
+    ]
+  },
+  "schema_version": 3,
+  "sources": [
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "2025-10-17",
+      "publisher": "Official Journal of the European Union / EUR-Lex",
+      "source_id": "s-eu-amending-regulation",
+      "source_type": "official regulation",
+      "stance": "supporting",
+      "title": "Regulation (EU) 2025/2083 simplifying and strengthening CBAM",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A32025R2083"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "Current page with operator and declarant manuals updated through 2026-08-27",
+      "publisher": "European Commission, DG TAXUD",
+      "source_id": "s-eu-registry",
+      "source_type": "official EU implementation page",
+      "stance": "contradicting",
+      "title": "CBAM Registry",
+      "url": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-registry_en"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "Current page with guidance dated 2026-08-24",
+      "publisher": "European Commission, DG TAXUD",
+      "source_id": "s-eu-verification",
+      "source_type": "official EU implementation page",
+      "stance": "context",
+      "title": "Verification of CBAM emissions",
+      "url": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-verification_en"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "Current definitive-regime page accessed 2026-08-28",
+      "publisher": "European Commission, DG TAXUD",
+      "source_id": "s-eu-definitive-regime",
+      "source_type": "official EU implementation page",
+      "stance": "supporting",
+      "title": "CBAM definitive regime",
+      "url": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "2026-07-06 (latest populated quarterly price)",
+      "publisher": "European Commission, DG TAXUD",
+      "source_id": "s-eu-certificate-price",
+      "source_type": "official EU price publication",
+      "stance": "supporting",
+      "title": "Price of CBAM certificates",
+      "url": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/price-cbam-certificates_en"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "Current page; Regulation (EU) 2025/2083 adopted 2025-10-08",
+      "publisher": "European Commission",
+      "source_id": "s-eu-simplification",
+      "source_type": "official EU policy page",
+      "stance": "contradicting",
+      "title": "Simplification: CBAM simplification",
+      "url": "https://commission.europa.eu/law/law-making-process/better-regulation/simplification-implementation-and-enforcement/simplification_en"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "2025-08-20",
+      "publisher": "Government of Poland / Ministry of Finance",
+      "source_id": "s-pl-importer-count",
+      "source_type": "official national-government analysis",
+      "stance": "contradicting",
+      "title": "Ministry of Finance workload analysis for the Polish CBAM authorised-declarant unit",
+      "url": "https://www.gov.pl/attachment/fa46a446-99d9-4a10-82db-fa6fb56748c6"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "2025-12-16",
+      "publisher": "European Commission / EUR-Lex",
+      "source_id": "s-eu-application-review",
+      "source_type": "official Commission report",
+      "stance": "contradicting",
+      "title": "Report on the application of the Regulation on the Carbon Border Adjustment Mechanism, COM(2025) 783 final",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A52025DC0783"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "2026-06-25",
+      "publisher": "SAP",
+      "source_id": "s-sap-end-to-end",
+      "source_type": "vendor primary",
+      "stance": "contradicting",
+      "title": "SAP Introduces End-to-End Solution for CBAM Declarants",
+      "url": "https://news.sap.com/2026/06/sap-introduces-cbam-declarants-solution/"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "Current commercial listing accessed 2026-08-28",
+      "publisher": "SAP Store / PwC Solutions GmbH",
+      "source_id": "s-pwc-carbon-border-manager",
+      "source_type": "vendor primary",
+      "stance": "contradicting",
+      "title": "PwC Solutions GmbH Carbon Border Manager on SAP",
+      "url": "https://www.sap.com/products/scm/partners/pwc-solutions-gmbh-carbon-border-manager-check-your-value-chains-cbam-module.html"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "Current commercial page accessed 2026-08-28",
+      "publisher": "CBAMBOO Ltd",
+      "source_id": "s-cbamboo-platform",
+      "source_type": "vendor primary",
+      "stance": "contradicting",
+      "title": "CBAMBOO platform for importers and non-EU operators",
+      "url": "https://www.cbamboo.com/"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "Current page; corrected default-value file published 2026-08-10",
+      "publisher": "European Commission, DG TAXUD",
+      "source_id": "s-eu-legislation-guidance",
+      "source_type": "official EU legislation index",
+      "stance": "context",
+      "title": "CBAM legislation and guidance",
+      "url": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-legislation-and-guidance_en"
+    }
+  ],
+  "unknowns": [
+    "How many of Poland's 1,589 above-threshold 2024 importers are genuinely mid-market, lack an incumbent solution and match the four named industrial sectors.",
+    "The corresponding reachable importer count in the rest of Central Europe and overlap of suppliers across those importers.",
+    "Signed willingness of Polish customs brokers or trade accountants to resell the product, including commission, exclusivity, lead volume and support obligations.",
+    "Importer willingness to pay, budget owner, sales-cycle length, conversion rate, CAC and renewal at the proposed price.",
+    "Client-specific certificate savings from verified actual values versus defaults after benchmarks, phase-in, carbon prices paid abroad and verifier fees.",
+    "Supplier response, consent and completion rates across languages and countries, including rights to reuse confidential data for multiple importers.",
+    "Accredited-verifier capacity, geographic and sector coverage, lead time, fee schedules and acceptance of a startup's controls and evidence format.",
+    "Whether brokers, ERP vendors, verifiers or consultancies will bundle the workflow at a lower marginal price or refuse integration.",
+    "Support and remediation hours per importer and supplier, which determine gross margin and founder-time feasibility.",
+    "Professional-liability, cyber-security, data-processing and insurance terms demanded by industrial importers and verifiers.",
+    "Whether customer integrations, anomaly labels or derived rights produce a proprietary data asset rather than non-exclusive copies of registry-bound evidence.",
+    "Churn and switching behaviour after the first 2027 annual declaration, including whether four-year retention creates vendor lock-in or merely an exportable record-keeping duty.",
+    "A concrete part-time operating plan that fits the founder's five-hour daily ceiling while handling supplier exceptions, broker enablement and verifier escalations."
+  ]
+}

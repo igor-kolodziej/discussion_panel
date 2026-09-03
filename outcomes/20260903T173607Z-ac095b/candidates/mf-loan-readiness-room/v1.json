@@ -1,0 +1,145 @@
+{
+  "candidate_id": "mf-loan-readiness-room",
+  "claims": [
+    {
+      "claim_id": "mf-loan-readiness-room-c1",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eba.europa.eu/activities/single-rulebook/regulatory-activities/credit-risk/guidelines-loan-origination-and-monitoring",
+        "https://www.ecb.europa.eu/stats/ecb_surveys/safe/html/ecb.safe202607.en.html"
+      ],
+      "statement": "EBA loan-origination guidelines require robust creditworthiness assessment and lifecycle documentation, while ECB survey results show firms continue to apply for bank loans; this supports a recurring application event but not the claimed cost of poor preparation."
+    },
+    {
+      "claim_id": "mf-loan-readiness-room-c2",
+      "claim_type": "payer_and_budget",
+      "confidence": "low",
+      "evidence_refs": [],
+      "statement": "The proposed payer is the borrowing SME because it controls the application and experiences preparation delay; a 6000-18000 PLN readiness budget in Poland is unverified."
+    },
+    {
+      "claim_id": "mf-loan-readiness-room-c3",
+      "claim_type": "founder_control_point_path",
+      "confidence": "medium",
+      "evidence_refs": [],
+      "statement": "A nonexclusive accountant referral agreement plus direct SME opt-in can contract the application handoff without assuming ownership of adviser relationships, client lists, lender decisions, or financial records."
+    },
+    {
+      "claim_id": "mf-loan-readiness-room-c4",
+      "claim_type": "other",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eba.europa.eu/activities/single-rulebook/regulatory-activities/credit-risk/guidelines-loan-origination-and-monitoring"
+      ],
+      "statement": "The product should prepare and reconcile evidence but must not promise approval or replace lender credit assessment."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Owner, CFO, or finance manager",
+    "bundling_resistance": "Source-linked reconciliation, fast delivery, lender-neutral portability, and a reusable annual room must outperform a one-off spreadsheet bundle",
+    "customer_relationship_owner": "Referral partner owns its advisory relationship; founder company owns the separately opted-in readiness engagement",
+    "distribution_origin": "Accountants, fractional CFOs, finance advisers, and direct application-readiness content",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Partner referral fee or founder-led outbound; target covered within the fixed project fee",
+      "cash_conversion": "Fifty percent upfront and balance on delivery; no success fee tied to lender approval during initial model",
+      "contribution_margin": "Target 45-65% after a sector template stabilizes; bespoke cleanup can erase margin",
+      "delivery_and_support_costs": "Record reconciliation, client interviews, forecast normalization, query tracking, and handoff",
+      "overhead_and_compliance": "GDPR/security, professional insurance, AML boundary review, contracts, and secure deletion",
+      "revenue_basis": "Hypothesis: 6000-18000 PLN per readiness room plus 500-1500 PLN for later refreshes",
+      "variable_costs": "Secure storage, extraction, model use, e-signature, and specialist review"
+    },
+    "likely_incumbent_response": "Accountants, brokers, lenders, and virtual-CFO firms can bundle application packaging with existing services",
+    "paid_event_or_measurable_loss": "A loan application or refinancing is a discrete financing event; incomplete or inconsistent records can create rework, delay, or rejection, though causality must be measured",
+    "payer": "Borrowing SME",
+    "purchase_trigger": "Planned borrowing, lender request list, covenant reset, refinancing deadline, or prior application friction",
+    "renewal_event": "Each new facility, refinancing, material expansion, or annual lender review"
+  },
+  "contrary_evidence": [
+    "Accountants and finance brokers already package records and may bundle the work into broader fees.",
+    "EBA guidance governs lenders and does not prove SMEs will pay a third party for readiness."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Nonexclusive 12-month referral and workflow-integration agreement plus a direct scoped service and data-processing contract with each SME",
+    "acquisition_instrument_type": "distribution_agreement",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Recruit other accountants or sell direct to SMEs; never use adviser client lists or records without permission",
+    "current_owner": "Each accounting or advisory firm owns its client relationship; the SME owns its records and financing decision",
+    "customer_relationship_control": "contracted",
+    "customer_relationship_owner": "Referral partner owns its advisory relationship; founder company owns the separately opted-in readiness engagement",
+    "duration": "12 months",
+    "exclusivity": "nonexclusive",
+    "founder_access_basis": "none",
+    "founder_access_description": "No accountant, lender, or SME relationship is currently controlled. Access must be earned through ordinary partner and direct-client contracts with explicit record permissions.",
+    "launch_controller": "Referring firm and SME must each opt in before the founder company receives records or begins work",
+    "mechanism_control": "dependent",
+    "renewal": "Annual partner renewal; each SME engagement ends after delivery and retention period",
+    "replaceability": "replaceable",
+    "revocability": "at_will",
+    "status": "replaceable_access",
+    "subject": "Referral and workflow handoff when an accounting client begins a financing application",
+    "subject_type": "relationship",
+    "transferability": "nontransferable"
+  },
+  "discovery_lane": "mechanism-first",
+  "economics": {
+    "acquisition_route": "Nonexclusive accountant and fractional-CFO referrals plus direct SME outreach",
+    "capital_required_pln": 35000,
+    "founder_net_worth_path": "Illustrative, not forecast: 1200 rooms annually at a 10000 PLN blended fee imply 12m PLN revenue; a 5m PLN founder outcome requires channel replication, standardized delivery, and delegated analysts",
+    "founder_time": "Maximum five hours daily with strict intake gates and no bespoke bookkeeping or loan brokerage",
+    "gross_margin_basis": "Standardized extraction, reconciliation, and source-linked templates with bounded expert review",
+    "payback": "Upfront deposit should cover CAC and intake; unvalidated",
+    "pricing": "Hypothesis: 6000-18000 PLN per readiness room plus 500-1500 PLN per refresh",
+    "retention_or_repeat": "New facilities, refinancing, covenant resets, and annual lender reviews"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Permissioned, de-identified missing-document and lender-query patterns improve templates by sector and facility type",
+    "customer": "Polish owner-managed SMEs applying for or refinancing bank and nonbank credit",
+    "distribution_mechanism": "Nonexclusive referral and workflow agreements with accountants, fractional CFOs, and finance advisers, followed by direct SME opt-in",
+    "offer_and_business_model": "Source-linked normalization, document checklist, reconciled forecast pack, lender-question tracker, and permissioned data room sold per financing event",
+    "payer_and_paid_event": "The SME pays a fixed fee when a standardized lender-readiness room is delivered",
+    "problem_trigger": "An SME decides to seek financing and must assemble reliable financial, ownership, debt, forecast, and supporting records for lender assessment"
+  },
+  "founder_fit": [
+    "Financial normalization and data-quality checks match business-analysis and data-science skills",
+    "The deliverable has bounded scope and a clear transaction trigger",
+    "Partner-led distribution avoids constant public promotion",
+    "Template reuse and secure automation can keep delivery within a five-hour daily founder limit"
+  ],
+  "parent": null,
+  "risks": [
+    "Clients may interpret preparation as an approval guarantee",
+    "Sensitive financial records create security exposure",
+    "Messy source accounts can turn a fixed-scope product into consulting",
+    "Lender-specific requirements can limit reuse"
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://eba.europa.eu/activities/single-rulebook/regulatory-activities/credit-risk/guidelines-loan-origination-and-monitoring",
+    "https://single-market-economy.ec.europa.eu/access-finance/data-and-surveys-safe_en",
+    "https://www.ecb.europa.eu/stats/ecb_surveys/safe/html/ecb.safe202607.en.html"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "productized_service",
+    "commercial_model_descriptor": "fixed_fee_lender_readiness_data_room",
+    "control_point_category": "customer_relationship",
+    "control_point_descriptor": "accountant_triggered_financing_application_handoff",
+    "critical_dependency_category": "distribution_channel",
+    "critical_dependency_descriptor": "trusted_accountant_and_fractional_cfo_referrals"
+  },
+  "structure": {
+    "commercial_archetype": "Fixed-scope productized finance-readiness engagement",
+    "control_point": "Contractible accountant-to-client handoff at the start of a financing application",
+    "critical_dependency": "Trusted referring advisers and timely, accurate client records"
+  },
+  "thesis": "Contract a referral and workflow handoff with accounting firms at the moment a client plans borrowing, then sell the SME a fixed-scope, lender-ready financial data room and query log without brokering or deciding credit.",
+  "title": "Accountant-Triggered SME Loan Readiness Room",
+  "uncertainties": [
+    "Most common lender requests by Polish SME segment and facility type",
+    "Incremental approval speed or query reduction from standardized preparation",
+    "Accountant referral economics and conflict concerns",
+    "Level of bespoke forecast work needed per client"
+  ],
+  "version": 1
+}

@@ -1,0 +1,148 @@
+{
+  "candidate_id": "ws-clean-air-receivable-router",
+  "claims": [
+    {
+      "claim_id": "ws-clean-air-receivable-router-c1",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://czystepowietrze.gov.pl/wez-dofinansowanie/zloz-wniosek/dotacja-z-prefinansowaniem",
+        "https://czystepowietrze.gov.pl/wez-dofinansowanie/pytania-i-odpowiedzi/nowy-program-czyste-powietrze-obowiazujacy-od-31-marca-2025/16"
+      ],
+      "statement": "The current program caps prefinancing at 35%, routes it through an operator, and pays the remaining portion after work and payment documentation, creating a visible staged-cash-flow transaction rather than an assumed generic financing need."
+    },
+    {
+      "claim_id": "ws-clean-air-receivable-router-c2",
+      "claim_type": "payer_and_budget",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://czystepowietrze.gov.pl/wez-dofinansowanie/zloz-wniosek/dotacja-z-prefinansowaniem"
+      ],
+      "statement": "Program rules allow the advance to be paid to the contractor and the remaining subsidy to the contractor or beneficiary depending on payment, but no evidence yet shows installers will pay the proposed origination fee or that funders will finance these receivables."
+    },
+    {
+      "claim_id": "ws-clean-air-receivable-router-c3",
+      "claim_type": "founder_control_point_path",
+      "confidence": "low",
+      "evidence_refs": [],
+      "statement": "A plausible control path is an exclusive right over one identified origination packet plus nonexclusive licensed funding partners, with document-readiness fallback; no such right or partner is secured."
+    },
+    {
+      "claim_id": "ws-clean-air-receivable-router-c4",
+      "claim_type": "other",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://czystepowietrze.gov.pl/do-pobrania/poradniki-dla-beneficjenta/podrecznik-nowego-programu-czyste-powietrze-obowiazujacego-od-31-marca-2025-r/czesc-1"
+      ],
+      "statement": "From July 2026, beneficiaries using prefinancing received up to 180 days to complete work covered by the advance, lengthening the observable operating window but not proving the duration of a lender's exposure."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Installer owner or finance lead; credit or partnership lead at the funding provider",
+    "bundling_resistance": "Fast evidence normalization, multi-funder routing, and transparent status must reduce approval cost without pretending to control subsidy payment",
+    "customer_relationship_owner": "Installer owns the beneficiary project relationship; licensed funder owns financing after placement",
+    "distribution_origin": "Accounting office, equipment distributor, contractor association, or licensed finance partner",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Distributor, accountant, or association referral share and installer outreach",
+      "cash_conversion": "Verification deposit may be upfront; success fee arrives only after external funding and must not require founder principal",
+      "contribution_margin": "Potentially attractive as a software-assisted broker but highly sensitive to rejection, manual review, fraud, and regulatory cost",
+      "delivery_and_support_costs": "Installer onboarding, beneficiary consent, missing-document chasing, lender data-room support, and status updates",
+      "overhead_and_compliance": "Legal analysis, financial-intermediation boundaries, AML and fraud processes where applicable, GDPR, insurance, and audits",
+      "revenue_basis": "Target 1.5-3.5% of funded receivable or a 750-2,500 PLN verification fee, subject to legal review and lender terms",
+      "variable_costs": "Identity, fraud, document, registry, payment-status, and manual exception checks plus partner fees"
+    },
+    "likely_incumbent_response": "Banks, factors, distributors, program operators, and vertical finance brokers can build their own program-specific intake",
+    "paid_event_or_measurable_loss": "Funding of a verified receivable is paid; measurable loss is contractor capital tied up between material and payroll outflow and final subsidy or customer payment",
+    "payer": "Installer through a disclosed fee or licensed funding partner through an origination fee where lawful",
+    "purchase_trigger": "Signed Clean Air contract with insufficient advance, distributor payment deadline, payroll date, or growing project backlog",
+    "renewal_event": "Each qualifying receivable, plus annual renewal of installer and funding-partner master agreements"
+  },
+  "contrary_evidence": [
+    "The program already provides up to 35% prefinancing for eligible higher-support cases, reducing but not necessarily eliminating the gap.",
+    "Operators provide beneficiaries free end-to-end program support, so documentation assistance alone may not command a fee.",
+    "Subsidy eligibility and documentation do not make a receivable assignable or acceptable collateral."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Proposed exclusive, transaction-specific origination and data authorization covering one identified receivable; none secured",
+    "acquisition_instrument_type": "exclusive_contract",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Sell a nonexclusive document-readiness and payment-status service while the installer approaches any lawful finance provider directly",
+    "current_owner": "The installer and beneficiary hold underlying contractual and payment rights subject to program and fund rules",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "Installer owns the beneficiary project relationship; licensed funder owns financing after placement",
+    "duration": "Proposed from submission through funding, repayment, rejection, or agreed expiry for one receivable",
+    "exclusivity": "exclusive",
+    "founder_access_basis": "operating_relationship",
+    "founder_access_description": "The family installation firm offers a lawful setting to map the document and cash-flow workflow if it opts in, but no receivable, beneficiary consent, operator access, or lender commitment is controlled",
+    "launch_controller": "Installer, beneficiary where consent is needed, program operator, and funding partner",
+    "mechanism_control": "dependent",
+    "renewal": "No automatic renewal for a receivable; a master installer agreement could be renewed annually",
+    "replaceability": "replaceable",
+    "revocability": "unknown",
+    "status": "unknown",
+    "subject": "Origination right for an identified installer receivable and its verification packet",
+    "subject_type": "right",
+    "transferability": "consent_required"
+  },
+  "discovery_lane": "weak-signal",
+  "economics": {
+    "acquisition_route": "Equipment distributors, accountants, installer groups, program-adjacent advisers, and licensed funders",
+    "capital_required_pln": 30000,
+    "founder_net_worth_path": "Conditional path: 100m PLN annual externally funded volume at a 2% fee equals 2m PLN revenue before costs; a trusted multi-funder origination rail could exceed 5m PLN in value, but legal structure and funding demand are unknown",
+    "founder_time": "A document-readiness pilot with one installer and one prospective funder can fit 3-5 hours daily; founder-funded lending cannot",
+    "gross_margin_basis": "Fee less document and fraud review, partner and acquisition share, customer support, compliance, and insurance",
+    "payback": "Installer payback depends on avoiding delayed jobs, supplier penalties, or idle crews; no quantified evidence yet",
+    "pricing": "Discovery hypothesis: 1.5-3.5% of externally funded receivable or 750-2,500 PLN verification fee, only under a lawful structure",
+    "retention_or_repeat": "Repeat by installer project flow; each receivable requires fresh verification"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Permissioned exception, document-defect, completion-time, and repayment-outcome data improve eligibility triage",
+    "customer": "Small Polish thermal-modernization and renewable-installation contractors performing Clean Air projects",
+    "distribution_mechanism": "Installer-accounting partners, program operators where permitted, distributors, and nonexclusive licensed finance providers",
+    "offer_and_business_model": "Program-specific document verification, milestone tracking, fraud flags, and lender routing for a per-funded-receivable fee",
+    "payer_and_paid_event": "Installer or funding partner pays an origination and verification fee when a specific eligible receivable is funded",
+    "problem_trigger": "A contractor receives only a partial advance and must fund materials and labor until completion evidence and the remaining subsidy are processed"
+  },
+  "founder_fit": [
+    "Document-risk scoring and cash-flow analysis fit data-science, finance, and business-analysis skills",
+    "The family firm can provide a lawful, bounded workflow test without implying access to customer or program data",
+    "An origination model avoids committing the founder's roughly 100k PLN as a loan book",
+    "Verification turnaround, approval, exception, and loss outcomes are measurable and increasingly automatable"
+  ],
+  "parent": null,
+  "risks": [
+    "Fraudulent or defective project evidence can cause funder losses and liability",
+    "Program rule changes can strand a specialized workflow",
+    "Pressure to use founder capital would violate the intended capital-light model",
+    "A lender, distributor, or program operator can internalize origination"
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://czystepowietrze.gov.pl/wez-dofinansowanie/zloz-wniosek/dotacja-z-prefinansowaniem",
+    "https://czystepowietrze.gov.pl/wez-dofinansowanie/pytania-i-odpowiedzi/nowy-program-czyste-powietrze-obowiazujacy-od-31-marca-2025/16",
+    "https://czystepowietrze.gov.pl/do-pobrania/poradniki-dla-beneficjenta/podrecznik-nowego-programu-czyste-powietrze-obowiazujacego-od-31-marca-2025-r/czesc-1"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "other",
+    "commercial_model_descriptor": "receivables verification and origination",
+    "control_point_category": "exclusive_right",
+    "control_point_descriptor": "transaction specific right to originate one verified installer receivable",
+    "critical_dependency_category": "capital_provider",
+    "critical_dependency_descriptor": "licensed external funders willing to advance against eligible project receivables"
+  },
+  "structure": {
+    "commercial_archetype": "Receivables verification and origination without principal lending",
+    "control_point": "A proposed transaction-specific right to originate a verified installer receivable",
+    "critical_dependency": "Licensed capital providers that accept the program-specific evidence and fund on viable terms"
+  },
+  "thesis": "Observed financing-transaction change: under the current Clean Air program, prefinancing is capped at 35%, limited to higher support levels, and available only through an operator, while the remaining subsidy follows completed work and a payment application. Create a verification and origination service that packages a specific installer's signed contract, advance, invoices, operator checklist, completion evidence, and payment status for licensed funding partners, earning a transaction fee without lending the founder's balance sheet.",
+  "title": "Clean Air Installer Receivable Router",
+  "uncertainties": [
+    "Legal assignability and fundability of each payment stream and required beneficiary or operator consents",
+    "Polish licensing, credit-intermediation, AML, and consumer-credit boundaries",
+    "Observed installer cash-conversion delay, rejection rate, fraud rate, and desired advance size",
+    "Funding-partner appetite, advance rate, recourse, price, and data requirements"
+  ],
+  "version": 1
+}

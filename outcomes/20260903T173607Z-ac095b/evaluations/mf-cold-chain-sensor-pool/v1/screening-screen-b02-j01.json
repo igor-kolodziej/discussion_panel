@@ -1,0 +1,117 @@
+{
+  "assumptions": [
+    "Commercially available logger kits can satisfy the calibration and validation requirements of at least one target customer segment.",
+    "Customers retain all medicinal-product disposition and release decisions.",
+    "Courier handling and device return can be contractually delegated without losing reliable chain of custody.",
+    "No quality qualification, customer contract, courier partnership, route-density proof, or claim acceptance is currently secured."
+  ],
+  "base_score": 4.77,
+  "candidate_id": "mf-cold-chain-sensor-pool",
+  "candidate_sha256": "b54f4a789134e6c7f6b96a209a9a41270dc64daa1f4c6bf3d37c8f02747be21d",
+  "candidate_version": 1,
+  "constrained_score": 4.67,
+  "evaluation_type": "working_screening",
+  "evidence_needed_for_higher_score": "A customer-approved validation package, paid recurring lane, measured round-trip logistics and loss rates, logger utilization and calibration costs, fully loaded per-shipment margin, and evidence that reports improve claim recovery or audit outcomes.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "Owning a reusable logger pool and binding each device to a chain-of-custody evidence record creates a concrete service unit, but temperature logging and shipment reporting are mature, readily bundled functions.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Sensitive shipments require temperature evidence, and an excursion can trigger quarantine, investigation, write-off, reshipment, or a carrier claim; willingness to pay this independent provider rather than an incumbent bundle is unverified.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Per-shipment and exception-packet fees are legible and deposits can protect working capital, but two-way logistics, utilization, loss, cleaning, calibration, support, and low route density can consume the proposed margin.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Small regulated shippers and clinical sites in a dense region are identifiable users, but shipment density, unmet monitoring demand, annual volume, and customer-specific qualification requirements are unknown.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "GDP-focused couriers, packaging suppliers, and logger manufacturers can bundle validated devices, dashboards, reports, and logistics, leaving little demonstrated basis for a new pool to dominate a niche.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "The service can add lanes, device types, packaging analytics, claim support, and adjacent regulated goods, but every geographic expansion increases physical reverse-logistics and quality-system complexity.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Customer qualification and lane-level outcome history can create retention, yet off-the-shelf devices are replaceable, contracts are nonexclusive, and couriers or packaging vendors control key logistics relationships.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "Independent cross-carrier evidence and local reusable inventory may improve responsiveness, but the core asset is purchasable by competitors and the claimed cryptographic evidence advantage has no acceptance proof.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "Stable GDP obligations support recurring need, but the evidence shows an established compliance requirement rather than a new market shift that uniquely favors an entrant.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "Direct quality-team selling and courier or packaging referrals are credible routes, but qualification cycles are long and prospective channel partners already have incentives to bundle their own monitoring.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "The initial hardware fits the capital limit and release decisions remain with customers, but validation, calibration control, device failure, quality documentation, exception response, retrieval, and part-time operational capacity remain substantial risks.",
+      "score": 4,
+      "status": "scored"
+    }
+  ],
+  "final_score": 4.7,
+  "highest_value_structural_change": "Secure a dense recurring lane with one qualified customer and courier under a prepaid shipment-pack contract, using interoperable logger exports and explicit device-return accountability before investing in a wider pool.",
+  "interaction_adjustment": -0.1,
+  "judge_id": "screen-b02-j01",
+  "main_structural_strength": "The founder can directly acquire the core measurement assets, and every monitored shipment produces a discrete paid event with auditable evidence.",
+  "primary_score_limiter": "The service is operationally intensive and easily bundled by established couriers, packaging vendors, and logger manufacturers that already control shipment workflows.",
+  "qualified": false,
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 3,
+  "strongest_disconfirming_evidence": "Validated cold-chain providers already bundle temperature monitoring, while reusable-device retrieval can cost more than disposable logging on dispersed routes.",
+  "unrounded_score": 4.67
+}

@@ -1,0 +1,187 @@
+{
+  "candidate_id": "fb-legacy-inverter-swap-reserve",
+  "claims": [
+    {
+      "claim_id": "fb-legacy-inverter-swap-reserve-c1",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://www.nrel.gov/docs/fy24osti/90315.pdf",
+        "https://bazakonkurencyjnosci.funduszeeuropejskie.gov.pl/api/files/2030326",
+        "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08de3d81-28d6-a91f-d6d3-f50001e78703"
+      ],
+      "statement": "Inverter downtime, paid diagnostics, parts obligations, and funded modernization are evidenced events, so a readiness dossier can be tested at warranty expiry, support withdrawal, failure, or a planned repowering decision; no willingness to buy this exact independent dossier is established."
+    },
+    {
+      "claim_id": "fb-legacy-inverter-swap-reserve-c2",
+      "claim_type": "payer_and_budget",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://bazakonkurencyjnosci.funduszeeuropejskie.gov.pl/api/files/2030326",
+        "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08de3d81-28d6-a91f-d6d3-f50001e78703"
+      ],
+      "statement": "Commercial PV owners and O&M budget owners demonstrably fund maintenance, diagnostics, parts, and modernization, but no price test, conversion rate, repeat purchase, or annual-refresh commitment exists for the redesigned offer."
+    },
+    {
+      "claim_id": "fb-legacy-inverter-swap-reserve-c3",
+      "claim_type": "founder_control_point_path",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://www.nrel.gov/pv/fleet-performance-data-initiative.html",
+        "https://www.nrel.gov/docs/fy24osti/90315.pdf"
+      ],
+      "statement": "The founder can own the authored workflow, schema, and software and can retain only contractually permitted non-identifying derived records; no evidence yet shows that a derived dataset improves replacement decisions or produces repeat revenue."
+    },
+    {
+      "claim_id": "fb-legacy-inverter-swap-reserve-c4",
+      "claim_type": "other",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://files.sma.de/downloads/REPOWERCOMPAT-KDE2136-en-10.pdf",
+        "https://ptpiree.pl/en/actions-network-codes/conditions-and-procedures/"
+      ],
+      "statement": "Replacement decisions require site-specific electrical, topology, firmware, transformer, certification, and local-requirement checks, so the deliverable must be qualified-engineer reviewed and cannot be represented as a model-label compatibility lookup."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Asset manager, facilities or energy manager, business owner, or contracted O&M service lead",
+    "bundling_resistance": "Remain vendor-neutral, give the owner a portable evidence pack and competitive options, separate engineering review from equipment resale, and measure decision time and avoided rework rather than asserting scarcity",
+    "customer_relationship_owner": "The founder-controlled operating company for directly contracted readiness and project-management accounts; referring installers keep their independent customer relationships",
+    "distribution_origin": "Direct contracts with asset owners, supported by nonexclusive installer/O&M referrals and workflow-integration agreements; the family installer can supply a bounded consenting pilot cohort",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Installer/O&M referral share plus direct account outreach and proposal work; require each channel and cohort to recover its acquisition cost from paid work rather than forecast renewals",
+      "cash_conversion": "Customer prepays the defined dossier and pays project milestones before supplier commitments; no speculative hardware, long-lived reserve stock, refurbishment exposure, or obsolescence write-down is carried",
+      "contribution_margin": "Unknown until paid dossiers measure labor, engineer review, channel share, revisions, support, insurance allocation, and conversion to executed projects; the offer must pass on hardware and installation rather than warehouse them",
+      "delivery_and_support_costs": "Founder-operated analytical workflow with bounded engineer review and delegated installation; each dossier requires an auditable assumptions, compatibility, certification, and decision record",
+      "overhead_and_compliance": "Professional and product-adjacent liability cover, legal and data-rights terms, cybersecurity, software, accounting, current technical requirements, document retention, and contractor governance",
+      "revenue_basis": "Hypothesis to test: a prepaid fleet-onboarding or site-readiness fee, a separately scoped qualified-engineering fee, and an optional project-management fee on an executed repair or repowering project; no annual fee is counted before a paid refresh",
+      "variable_costs": "Site-data collection and cleaning, document normalization, qualified engineer review, supplier quotation work, travel where unavoidable, payment fees, customer support, and project-specific subcontractors"
+    },
+    "likely_incumbent_response": "OEMs, distributors, installers, engineering firms, and O&M providers can bundle the same diagnosis, compatibility work, and replacement procurement into existing service contracts",
+    "paid_event_or_measurable_loss": "Paid event is a commissioned site/fleet readiness dossier or an authorized repair/repowering project; measurable loss is non-production, emergency engineering and sourcing cost, or a delayed modernization decision",
+    "payer": "Commercial PV asset owner or the O&M party holding an authorized maintenance or modernization budget",
+    "purchase_trigger": "Warranty or OEM support expiry, a recorded fault, an unacceptable current lead time, an insurer or O&M readiness requirement, or a planned repowering budget cycle",
+    "renewal_event": "A separately purchased annual portfolio refresh, a material site/configuration change, a new equipment cohort, or a later repair/repowering project; recurring demand is not assumed"
+  },
+  "contrary_evidence": [
+    "SolarEdge and SMA offer rapid replacement pathways for eligible equipment, limiting the redesigned service to gaps where the OEM route is unavailable, unsuitable, or economically inferior.",
+    "Ordinary owner, EPC, installer, and O&M contracts can internalize spare planning, diagnostics, and repowering, so incumbents can bundle the redesigned workflow.",
+    "Supplier selection may prioritize performance and cost over lead time, weakening a readiness-led sales message.",
+    "Current technical and certification requirements plus site-level electrical constraints prevent a generic compatibility lookup from replacing qualified engineering.",
+    "No paid dossier, data-rights agreement, channel agreement, repeat order, or demonstrated decision improvement exists."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Company ownership and IP assignment for all founder-authored workflow code and schemas, with a mandatory customer data-rights agreement granting indefinite ownership of specifically defined non-identifying derived records while excluding ownership of raw customer data",
+    "acquisition_instrument_type": "ownership",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "If a customer refuses derived-data rights, deliver a paid isolated dossier without retaining its records; if an installer, engineer, or supplier refuses, use another qualified provider or return a bounded no-recommendation result rather than claiming compatibility",
+    "current_owner": "The founder-controlled company owns authored code, schemas, and workflow under IP assignment; customers retain raw site records, and the company owns only derived records expressly permitted by each signed data-rights clause",
+    "customer_relationship_control": "contracted",
+    "customer_relationship_owner": "The founder-controlled operating company for directly contracted readiness and project-management accounts; referring installers keep their independent customer relationships",
+    "duration": "Indefinite for company-owned IP and for only those non-identifying derived records whose signed data-rights grant expressly survives service termination",
+    "exclusivity": "not_applicable",
+    "founder_access_basis": "owned_or_controlled_asset",
+    "founder_access_description": "The founder can create and assign the analytical workflow and software to the operating company; the family renewable-installation relationship offers a lawful pilot introduction but conveys no customer data or rights without consent",
+    "launch_controller": "The founder controls authorship, IP assignment, schema, software, and whether to accept an account; each customer controls raw-data disclosure, and a qualified engineer controls approval of site-specific recommendations",
+    "mechanism_control": "owned",
+    "renewal": "Core IP ownership does not renew; customer monitoring, new raw-data access, and service rights require the applicable paid contract or renewal",
+    "replaceability": "not_replaceable",
+    "revocability": "irrevocable",
+    "status": "owned",
+    "subject": "Founder-authored repowering-readiness workflow software, normalized asset schema, and contractually permitted non-identifying derived compatibility and outcome records",
+    "subject_type": "dataset",
+    "transferability": "transferable"
+  },
+  "discovery_lane": "future-backcast",
+  "economics": {
+    "acquisition_route": "Prepaid readiness engagements sold directly to asset owners through a bounded family-installer pilot, then repeatable nonexclusive installer/O&M referrals and direct portfolio sales",
+    "capital_required_pln": 20000,
+    "founder_net_worth_path": "A 5 million PLN founder-net-worth path exists only if paid dossiers become a repeatable multi-region workflow license or high-margin portfolio service with retained customer contracts and useful derived outcomes; a local one-off consultancy is insufficient, and current evidence does not establish the required conversion, margin, repeat rate, or defensibility",
+    "founder_time": "No more than five hours per day alongside employment, focused on data normalization, decision workflow, and account acceptance; qualified engineering, installation, and field work are contracted",
+    "gross_margin_basis": "Paid readiness and project-management revenue less referral share, founder delivery time, data normalization, engineering review, travel, software, insurance allocation, rework, and support; hardware and installation are pass-through or customer-direct",
+    "payback": "No inventory is funded; require each prepaid dossier to cover its acquisition, analytical, engineer-review, compliance, and support cost within that engagement before expanding the cohort",
+    "pricing": "Unvalidated hypothesis: fixed fleet onboarding and per-site readiness fees, qualified-engineering work passed through or separately itemized, and a milestone-based project-management fee for executed repair or repowering",
+    "retention_or_repeat": "Paid refreshes after configuration or regulatory changes, new portfolio sites, and later repair or repowering projects; neither renewal nor repeat purchase is evidenced"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Company-owned workflow software and legally retained non-identifying configuration, quote, decision, and outcome records may improve future triage and procurement, but that improvement and its revenue effect remain unproven",
+    "customer": "Polish commercial PV owners and O&M budget owners responsible for post-warranty, discontinued, or operationally critical inverter fleets",
+    "distribution_mechanism": "Direct owner contracts introduced through nonexclusive installer and O&M referrals or workflow integrations, starting with consenting customers reachable through the family renewable-installation relationship",
+    "offer_and_business_model": "Fixed-fee site or fleet repowering-readiness dossier plus optional paid procurement and project coordination for the selected repair or current-model replacement; no inventory reservation",
+    "payer_and_paid_event": "The asset owner or O&M budget owner pays when commissioning a readiness review, responding to a failure, or authorizing a replacement project; any annual refresh must be separately validated",
+    "problem_trigger": "An inverter approaches warranty or support expiry, fails, or enters a planned modernization cycle without a documented compliant repair-versus-repowering route"
+  },
+  "founder_fit": [
+    "The core workflow uses data normalization, decision analysis, and AI-assisted document handling rather than speculative hardware purchasing",
+    "A consenting pilot can begin through the family renewable-installation relationship without treating that relationship as customer ownership or exclusive distribution",
+    "Qualified engineers and installers can own field approval and execution while the founder stays within a five-hour daily limit",
+    "Prepaid bounded dossiers preserve capital and make contribution economics measurable before expansion"
+  ],
+  "parent": {
+    "candidate_id": "fb-legacy-inverter-swap-reserve",
+    "version": 1
+  },
+  "redesign": {
+    "changed_fingerprint_fields": [
+      "customer",
+      "problem_trigger",
+      "offer_and_business_model",
+      "distribution_mechanism",
+      "payer_and_paid_event",
+      "compounding_advantage"
+    ],
+    "changed_structural_fields": [
+      "critical_control_point",
+      "commercial_mechanics",
+      "structural_signature"
+    ],
+    "economic_effect": "Replaces up to 100,000 PLN of speculative, slow-turning reserve inventory and its testing, storage, refurbishment, warranty, disposal, and write-down exposure with a 20,000 PLN capped software, legal, insurance, and contractor-validation budget. Customer prepayment funds bounded analysis and engineering review, while hardware remains customer-direct or pass-through; the change improves cash conversion but does not establish demand, contribution margin, repeat revenue, or scalable defensibility."
+  },
+  "risks": [
+    "Owners may buy engineering or repowering directly from OEMs, installers, or incumbent O&M providers",
+    "Customer documents may be incomplete and site-specific validation may prevent reusable automation",
+    "The company may incur professional liability if a dossier is mistaken for engineering approval or a compliance guarantee",
+    "No evidence yet shows that customers will pay for readiness before failure or purchase annual refreshes",
+    "Derived records may remain too sparse, restricted, or heterogeneous to create a useful data advantage",
+    "A service-heavy local model may fit the founder operationally but fail to compound toward the stated wealth objective"
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://iea-pvps.org/key-topics/degradation-failure-modes-new-cell-module-technologies/",
+    "https://iea-pvps.org/key-topics/service-life-estimation-for-photovoltaic-modules/",
+    "https://energy.ec.europa.eu/topics/energy-efficiency/energy-performance-buildings/energy-performance-buildings-directive/solar-energy-buildings_en",
+    "https://www.nrel.gov/docs/fy24osti/90315.pdf",
+    "https://www.nrel.gov/pv/fleet-performance-data-initiative.html",
+    "https://files.sma.de/downloads/REPOWERCOMPAT-KDE2136-en-10.pdf",
+    "https://ptpiree.pl/en/actions-network-codes/conditions-and-procedures/",
+    "https://bazakonkurencyjnosci.funduszeeuropejskie.gov.pl/api/files/2030326",
+    "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08de3d81-28d6-a91f-d6d3-f50001e78703"
+  ],
+  "stage": "development",
+  "structural_signature": {
+    "commercial_model_category": "other",
+    "commercial_model_descriptor": "fixed fee engineering readiness dossier with optional repowering procurement and project coordination",
+    "control_point_category": "owned_asset",
+    "control_point_descriptor": "company owned workflow software normalized schema and contractually permitted non identifying derived outcome records",
+    "critical_dependency_category": "supply_partner",
+    "critical_dependency_descriptor": "qualified engineering review and compliant current equipment from replaceable authorized channels"
+  },
+  "structure": {
+    "commercial_archetype": "paid diagnostic and repowering-procurement workflow",
+    "control_point": "company-owned readiness workflow IP and contractually permitted non-identifying derived decision records",
+    "critical_dependency": "customer-authorized site records, qualified engineering approval, current certification, and competitively available compliant equipment"
+  },
+  "thesis": "Future operating state (2034): owners of aging distributed PV fleets have a documented, engineering-ready route from each legacy inverter configuration to a currently compliant repair or repowering decision before a failure becomes an open-ended sourcing emergency. The business sells customer-authorized readiness dossiers and manages competitive execution; it does not speculate on legacy inventory or promise pooled swap stock.",
+  "title": "Legacy Inverter Repowering Readiness Desk",
+  "uncertainties": [
+    "Reachable count of post-warranty or unsupported commercial sites with a budget owner and a costly unresolved replacement decision",
+    "Willingness to prepay for a readiness dossier before failure and willingness to buy a later refresh",
+    "Fully loaded labor, engineering-review, insurance, channel, rework, support, and acquisition cost per paid dossier",
+    "Whether customers will grant usable derived-data rights while preserving confidentiality and raw-data ownership",
+    "Whether normalized outcomes improve decision time or accuracy beyond OEM, installer, engineering, and O&M offerings",
+    "A legally safe boundary between analytical workflow, engineering approval, equipment supply, and installation responsibility",
+    "Repeatable access to qualified engineers and compliant current-model supply without one irreplaceable partner",
+    "Whether the product can standardize and license enough workflow to escape a low-multiple local consultancy model"
+  ],
+  "version": 2
+}

@@ -1,0 +1,421 @@
+{
+  "candidate_id": "mf-tender-bid-gate",
+  "candidate_sha256": "ed2476f70aad8c9e4176e53ff120b3ec0abe93a432d5f3f5b16ffd58dee8c284",
+  "candidate_version": 1,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "research-c1",
+      "evidence_refs": [
+        "src-01"
+      ],
+      "statement": "Polish public procurement creates a large recurring notice stream: the UZP report records about 153,000 contracts awarded under the procurement law in 2024, 130,002 BZP contract or competition notices, and 31,940 Polish contract or competition notices in TED."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "research-c2",
+      "evidence_refs": [
+        "src-01"
+      ],
+      "statement": "SMEs are active participants rather than a merely theoretical customer class: UZP reports that SMEs submitted about 88% of offers below EU thresholds and won about 67% of those procurements in 2024; these aggregates do not identify repeat-bidding SMEs in any particular narrow vertical."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "research-c3",
+      "evidence_refs": [
+        "src-02",
+        "src-04"
+      ],
+      "statement": "Initial feed access is technically obtainable without a bilateral data deal: TED's search API is anonymous and intended for reuse, while e-Zamowienia says reading BZP notices and statistics does not require its integration procedure."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "research-c4",
+      "evidence_refs": [
+        "src-03"
+      ],
+      "statement": "TED states that procurement notices may generally be reused freely for commercial or noncommercial purposes unless stated otherwise, while attribution and possible third-party or personal-data rights still need to be handled."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "research-c5",
+      "evidence_refs": [
+        "src-02",
+        "src-06"
+      ],
+      "statement": "The official TED materials establish that this access is nonexclusive: the API documentation explicitly names commercial added-value platforms as users, and the 2025 TED Q&A says many companies already reuse TED data and a private portal may use data identical to TED's."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "research-c6",
+      "evidence_refs": [
+        "src-05"
+      ],
+      "statement": "The official Polish platform is already a free substitute for the lowest-value part of the offer: its terms provide free BZP use, search for proceedings, and daily notice subscriptions."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "research-c7",
+      "evidence_refs": [
+        "src-09",
+        "src-10",
+        "src-11"
+      ],
+      "statement": "Direct feature substitutes already exist in Poland: Procuro advertises BZP/TED AI matching and semantic scoring at 110 or 208 PLN per month on annual terms; Och! Przetargi advertises AI SWZ analysis, risk and chance assessment at 150 or 300 PLN per user per month; and PrzetargPro advertises STARTUJ/ROZWAZ/POMIN verdicts and SWZ analysis at 69, 299, or 599 PLN per month. Much of this public pricing is below v1's proposed 499-1,499 PLN monthly range."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "research-c8",
+      "evidence_refs": [
+        "src-10",
+        "src-11",
+        "src-12"
+      ],
+      "statement": "Public subscription prices and vendor-hosted customer references support only an inference that organizations pay for tender monitoring and selected-information services; they do not establish that narrow-vertical Polish SMEs will pay 499-1,499 PLN per month for this particular pre-bid gate or renew because of measured bid-cost savings."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "research-c9",
+      "evidence_refs": [
+        "src-09",
+        "src-10"
+      ],
+      "statement": "Competitors' self-serve, no-card trials and immediate-access sign-up demonstrate a plausible low-friction distribution pattern for tender software, but provide no evidence for v1's own lead cost, trial conversion, sales cycle, partner referral economics, or four-month payback."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "research-c10",
+      "evidence_refs": [],
+      "statement": "No public or candidate-specific evidence establishes fully loaded unit economics for v1, including CAC, trial-to-paid conversion, churn, gross retention, inference and OCR cost per account, document-QA labor, onboarding effort, support burden, professional-liability exposure, contribution margin, or payback."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "research-c11",
+      "evidence_refs": [
+        "src-08"
+      ],
+      "statement": "Bid-preparation cost is real rather than invented: PARP explains that Polish law and case law recognize actually incurred, necessary offer-preparation costs, potentially including documents, bid guarantees, and travel. That source also says the amount depends on the proceeding and must be proved; it does not quantify SME labor wasted on low-fit bids."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "research-c12",
+      "evidence_refs": [],
+      "statement": "There is no candidate-specific evidence that an SME decision owner will trust and act on an automated no-go recommendation, what false-negative rate is tolerable, or whether cited extraction measurably reduces bid labor, missed deadlines, disqualifications, or foregone wins."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "research-c13",
+      "evidence_refs": [
+        "src-06",
+        "src-07"
+      ],
+      "statement": "Official TED Q&A exposes material data limitations for a reliable gate: unsuccessful tenderers can be omitted, buyer-entered content can contain wrong or missing fields, older and newer formats differ, some procurement documents remain behind practical access restrictions, and some framework or second-stage outcomes lack structured information."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "research-c14",
+      "evidence_refs": [
+        "src-02",
+        "src-03",
+        "src-04",
+        "src-06",
+        "src-07"
+      ],
+      "statement": "Public-notice reuse is contractible, but the proposed compounding asset is only partially under founder control: public notices and awards do not by themselves contain a client's no-bid decisions, internal margin, preparation effort, or reasons. Those outcome labels could become proprietary only through explicit customer agreements and repeated collection."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "research-c15",
+      "evidence_refs": [],
+      "statement": "No evidence establishes signed customer consent, data-processing and reuse terms, portability and retention rights, a reliable outcome-labeling workflow, or enough recurring paid accounts to create the claimed permissioned outcome dataset."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "research-c16",
+      "evidence_refs": [
+        "src-02",
+        "src-03",
+        "src-04",
+        "src-05",
+        "src-06",
+        "src-09",
+        "src-10",
+        "src-11"
+      ],
+      "statement": "Although the founder can own independently written code and direct subscriptions, v1's presently evidenced mechanism is replaceable rather than a durable control point: official inputs are open to competitors, free official search and alerts exist, and multiple vendors already market overlapping scoring and go/no-go features. A defensible permissioned outcome asset is not yet contracted or demonstrated."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "research-c17",
+      "evidence_refs": [],
+      "statement": "The founder's family-business access may make a renewable-installation pilot reachable, but there is no evidence that this company repeatedly bids, suffers the claimed avoidable bid loss, will adopt a machine recommendation, or grants reusable outcome-data rights."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "research-c18",
+      "evidence_refs": [],
+      "statement": "The national aggregates do not establish the minimum viable vertical: no selected CPV niche has evidence here for qualified-notice frequency, addressable repeat bidders, average preparation hours, disqualification or abandonment rate, recoverable loss per decision, or willingness to pay."
+    }
+  ],
+  "commercial_evidence": {
+    "buyer_or_paid_event": {
+      "claim_ids": [
+        "research-c8"
+      ],
+      "source_ids": [
+        "src-10",
+        "src-11",
+        "src-12"
+      ],
+      "status": "inference"
+    },
+    "distribution_and_acquisition": {
+      "claim_ids": [
+        "research-c9"
+      ],
+      "source_ids": [
+        "src-09"
+      ],
+      "status": "inference"
+    },
+    "fully_loaded_unit_economics": {
+      "claim_ids": [
+        "research-c10"
+      ],
+      "source_ids": [],
+      "status": "unknown"
+    },
+    "rights_control_access_contractibility": {
+      "claim_ids": [
+        "research-c14"
+      ],
+      "source_ids": [
+        "src-02",
+        "src-03",
+        "src-04"
+      ],
+      "status": "inference"
+    }
+  },
+  "contrary_evidence": [
+    "Official e-Zamowienia search and daily subscriptions are free, so basic discovery and alerting cannot justify the proposed price.",
+    "At least three current Polish products publicly advertise overlapping AI matching, SWZ analysis, risk assessment, or explicit go/no-go verdicts, commonly at prices below v1's hypothesis.",
+    "TED explicitly permits commercial reuse and says many companies already do it; an entrant can use data identical to TED's, so public-feed access is not scarce.",
+    "Official TED workshops document missing outcome fields, optional unsuccessful-bidder data, buyer-entered errors, schema evolution, and practical document-access restrictions that can break confident automation.",
+    "The research found no direct proof of v1 paid adoption, decision use, recurring retention, CAC/payback, or a contracted permissioned outcome-data asset."
+  ],
+  "critical_control_point_assessment": {
+    "assessment": "inference",
+    "claim_ids": [
+      "research-c3",
+      "research-c4",
+      "research-c5",
+      "research-c6",
+      "research-c7",
+      "research-c13",
+      "research-c14",
+      "research-c15",
+      "research-c16"
+    ],
+    "source_ids": [
+      "src-02",
+      "src-03",
+      "src-04",
+      "src-05",
+      "src-06",
+      "src-07",
+      "src-09",
+      "src-10",
+      "src-11"
+    ],
+    "status": "replaceable_access"
+  },
+  "falsification": {
+    "cold_start_and_data_moat": [
+      "research-c13",
+      "research-c14",
+      "research-c15"
+    ],
+    "control_point_obtainability": [
+      "research-c3",
+      "research-c4",
+      "research-c14",
+      "research-c15",
+      "research-c16"
+    ],
+    "critical_mechanism_ownership": [
+      "research-c4",
+      "research-c5",
+      "research-c14",
+      "research-c15",
+      "research-c16"
+    ],
+    "external_dependencies": [
+      "research-c3",
+      "research-c13",
+      "research-c15"
+    ],
+    "substitutes_and_incumbent_response": [
+      "research-c5",
+      "research-c6",
+      "research-c7",
+      "research-c16"
+    ],
+    "willingness_urgency_and_repeat_economics": [
+      "research-c1",
+      "research-c2",
+      "research-c8",
+      "research-c10",
+      "research-c11",
+      "research-c12",
+      "research-c18"
+    ]
+  },
+  "schema_version": 3,
+  "sources": [
+    {
+      "accessed_at": "2026-09-03",
+      "evidence_class": "market_context",
+      "published_at": "2025-09-03",
+      "publisher": "Urzad Zamowien Publicznych",
+      "source_id": "src-01",
+      "source_type": "official_market_report",
+      "stance": "supporting",
+      "title": "Sprawozdanie Prezesa Urzedu Zamowien Publicznych z funkcjonowania systemu zamowien publicznych w 2024 r.",
+      "url": "https://www.gov.pl/attachment/b61cce3a-f71c-4271-be11-d7eaa1a03f76"
+    },
+    {
+      "accessed_at": "2026-09-03",
+      "evidence_class": "rights_control_access",
+      "published_at": "unknown",
+      "publisher": "Publications Office of the European Union",
+      "source_id": "src-02",
+      "source_type": "official_api_documentation",
+      "stance": "context",
+      "title": "Search API",
+      "url": "https://docs.ted.europa.eu/api/latest/search.html"
+    },
+    {
+      "accessed_at": "2026-09-03",
+      "evidence_class": "rights_control_access",
+      "published_at": "unknown",
+      "publisher": "Publications Office of the European Union",
+      "source_id": "src-03",
+      "source_type": "official_legal_notice",
+      "stance": "supporting",
+      "title": "Legal notice of TED website and SIMAP system",
+      "url": "https://ted.europa.eu/en/legal-notice"
+    },
+    {
+      "accessed_at": "2026-09-03",
+      "evidence_class": "rights_control_access",
+      "published_at": "unknown",
+      "publisher": "Urzad Zamowien Publicznych and Ministerstwo Cyfryzacji",
+      "source_id": "src-04",
+      "source_type": "official_api_documentation",
+      "stance": "supporting",
+      "title": "Materialy dotyczace integracji z Platforma e-Zamowienia",
+      "url": "https://edu.ezamowienia.gov.pl/pl/integracja/"
+    },
+    {
+      "accessed_at": "2026-09-03",
+      "evidence_class": "incumbent",
+      "published_at": "unknown",
+      "publisher": "Urzad Zamowien Publicznych",
+      "source_id": "src-05",
+      "source_type": "official_service_terms",
+      "stance": "contradicting",
+      "title": "Regulamin Platformy e-Zamowienia",
+      "url": "https://ezamowienia.gov.pl/pl/regulamin/"
+    },
+    {
+      "accessed_at": "2026-09-03",
+      "evidence_class": "incumbent",
+      "published_at": "2025-11-28",
+      "publisher": "Publications Office of the European Union",
+      "source_id": "src-06",
+      "source_type": "official_workshop_questions_and_answers",
+      "stance": "contradicting",
+      "title": "Questions and Answers from TED-together 2025",
+      "url": "https://op.europa.eu/en/web/ted-together/questions-and-answers_2025"
+    },
+    {
+      "accessed_at": "2026-09-03",
+      "evidence_class": "other",
+      "published_at": "2024-04-17",
+      "publisher": "Publications Office of the European Union",
+      "source_id": "src-07",
+      "source_type": "official_workshop_questions_and_answers",
+      "stance": "contradicting",
+      "title": "Questions and Answers - Workshop for reusers of TED data",
+      "url": "https://op.europa.eu/en/web/ted-reusers-workshops/questions_and_answers_2024_04_17"
+    },
+    {
+      "accessed_at": "2026-09-03",
+      "evidence_class": "unit_economics",
+      "published_at": "2024-11-18",
+      "publisher": "Polska Agencja Rozwoju Przedsiebiorczosci",
+      "source_id": "src-08",
+      "source_type": "official_explanatory_article",
+      "stance": "supporting",
+      "title": "Zwrot kosztow przygotowania oferty - kiedy przedsiebiorca moze sie o to ubiegac?",
+      "url": "https://bip.parp.gov.pl/component/content/article/87576:zwrot-kosztow-przygotowania-oferty-kiedy-przedsiebiorca-moze-sie-o-to-ubiegac"
+    },
+    {
+      "accessed_at": "2026-09-03",
+      "evidence_class": "distribution",
+      "published_at": "unknown",
+      "publisher": "CoreThree Digital",
+      "source_id": "src-09",
+      "source_type": "competitor_pricing_page",
+      "stance": "contradicting",
+      "title": "Cennik Procuro - plany i ceny platformy do przetargow",
+      "url": "https://www.platformaprocuro.pl/pricing.html"
+    },
+    {
+      "accessed_at": "2026-09-03",
+      "evidence_class": "paid_event",
+      "published_at": "unknown",
+      "publisher": "Och! Przetargi",
+      "source_id": "src-10",
+      "source_type": "competitor_pricing_page",
+      "stance": "contradicting",
+      "title": "Cennik monitoringu przetargow",
+      "url": "https://ochprzetargi.pl/cennik/"
+    },
+    {
+      "accessed_at": "2026-09-03",
+      "evidence_class": "incumbent",
+      "published_at": "unknown",
+      "publisher": "PrzetargPro",
+      "source_id": "src-11",
+      "source_type": "competitor_pricing_page",
+      "stance": "contradicting",
+      "title": "PrzetargPro pricing",
+      "url": "https://przetargpro.pl/pricing"
+    },
+    {
+      "accessed_at": "2026-09-03",
+      "evidence_class": "direct_buyer",
+      "published_at": "unknown",
+      "publisher": "Pressinfo / Grupa Marketingowa TAI",
+      "source_id": "src-12",
+      "source_type": "vendor_product_and_reference_page",
+      "stance": "supporting",
+      "title": "Biezacy monitoring przetargow and customer references",
+      "url": "https://www.pressinfo.pl/shop/"
+    }
+  ],
+  "unknowns": [
+    "Which narrow technical vertical has enough qualified notices and repeat-bidding SMEs to support recurring paid volume.",
+    "The actual fully loaded labor and external cost of a bid, the fraction wasted on detectably bad-fit tenders, and the recoverable loss per screened decision.",
+    "Whether the target sales owner will pay 499-1,499 PLN monthly after comparing free official tools and lower-priced AI competitors.",
+    "Paid-pilot conversion, monthly and annual renewal, churn, expansion, CAC, sales-cycle length, partner commission, contribution margin, and cash payback.",
+    "The acceptable false-negative rate and whether users will follow a no-go recommendation when a missed public contract has material upside.",
+    "The accuracy and reviewer time required to extract eligibility, geography, deadline, margin inputs, and contractual risk across Polish and EU document formats.",
+    "The customer contract and consent language needed to retain, aggregate, derive features from, and reuse bid/no-bid, effort, margin, submission, and outcome labels.",
+    "The number and duration of paid accounts required before outcome labels improve vertical calibration beyond what an incumbent or frontier model can reproduce.",
+    "Whether the founder's family renewable-energy company is a frequent bidder, has the claimed loss, and is willing to serve as a permissioned design partner.",
+    "The support, procurement-law review, security, incident-response, and professional-liability burden compatible with a five-hour-per-day founder limit."
+  ]
+}

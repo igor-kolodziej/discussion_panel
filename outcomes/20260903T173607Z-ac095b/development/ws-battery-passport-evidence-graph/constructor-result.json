@@ -1,0 +1,82 @@
+{
+  "base_candidate_sha256": "2c303e46ddc73103e109c14cdb312cdebacac06d61eb41227a54585f6e1d64fa",
+  "base_candidate_version": 1,
+  "candidate_id": "ws-battery-passport-evidence-graph",
+  "constructor_id": "constructor-ws-battery-passport-j01",
+  "falsification": {
+    "cold_start_and_data_moat": [
+      "r05-service-data-reuse-restricted",
+      "r06-control-is-portable-and-operator-owned",
+      "r10-sme-implementation-pain",
+      "r11-public-resources-weaken-schema-moat"
+    ],
+    "control_point_obtainability": [
+      "r03-operator-duty-and-authorization",
+      "r04-supplier-duty-limited",
+      "r19-service-access-contractible",
+      "r20-no-controlled-rights-or-customer",
+      "r27-input-completeness-unknown"
+    ],
+    "critical_mechanism_ownership": [
+      "r03-operator-duty-and-authorization",
+      "r06-control-is-portable-and-operator-owned",
+      "r07-battery-registry-not-yet-ready",
+      "r09-no-proprietary-approval-gate",
+      "r20-no-controlled-rights-or-customer"
+    ],
+    "external_dependencies": [
+      "r02-data-scope-moving",
+      "r04-supplier-duty-limited",
+      "r07-battery-registry-not-yet-ready",
+      "r21-security-integrity-longevity-burden",
+      "r24-founder-part-time-delivery-unknown",
+      "r27-input-completeness-unknown"
+    ],
+    "substitutes_and_incumbent_response": [
+      "r11-public-resources-weaken-schema-moat",
+      "r12-siemens-overlap",
+      "r13-minespider-overlap-and-price",
+      "r16-certifier-platform-channel",
+      "r26-incumbents-solve-upstream-work"
+    ],
+    "willingness_urgency_and_repeat_economics": [
+      "r01-deadline-scope",
+      "r14-large-buyer-adoption",
+      "r15-small-buyer-payment-unknown",
+      "r18-fully-loaded-economics-unknown",
+      "r22-maintenance-does-not-prove-renewal",
+      "r23-repeat-economics-unknown",
+      "r25-founder-wealth-path-unknown"
+    ]
+  },
+  "final_candidate_sha256": "ebb33e21b1768a8687aa5060342b3575cc6519e5f51f23a806163eb0f4326aab",
+  "final_candidate_version": 2,
+  "outcome": "redesigned",
+  "rationale": "Replace the v1 hosted passport generator with a fixed-scope, customer-hosted supplier-evidence acceptance gate used before a supplier or battery model is approved. This is a structural change: the paid event moves from passport creation and unit hosting to a procurement-stage acceptance sprint; the operator uses its own supplier approval process to request the evidence; the deliverable is portable to any passport platform; and the venture avoids registry operation, per-unit hosting, and long-lived availability obligations. The research supports a real deadline, SME implementation pain, and legal contractibility for a bounded authorized service, but does not prove a signed workflow position, buyer payment, partner distribution, repeat usage, or margins. Control therefore remains unknown until an operator signs the proposed agreement, and the redesign makes no claim of an owned moat.",
+  "schema_version": 3,
+  "structural_change": {
+    "control_instrument": "A proposed 12-month, nonexclusive workflow-integration agreement authorizing validation inside a customer-controlled workspace, defining a supplier/model evidence acceptance checklist, and requiring portable exports. No agreement or customer authorization is presently secured.",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "The economic operator owns the supplier and market relationships; the venture would own only the delivery relationship granted by a signed engagement, and none is currently secured",
+    "dependency_change": "Move evidence collection ahead of passport production and make a supplier/model evidence schedule part of the economic operator's own approval workflow. The operator, rather than the venture, applies purchasing leverage; the venture validates customer-supplied materials in a customer-controlled workspace and stops at a portable evidence bundle. This removes dependency on an operational battery registry and continuous third-party passport hosting, although authentic supplier inputs and operator enforcement remain essential.",
+    "distribution_instrument": "A proposed nonexclusive referral or co-delivery agreement with an independent testing laboratory or import adviser, backed by targeted technical outreach until a partner is secured; no referral commitment or acquisition economics are evidenced.",
+    "fully_loaded_economic_effects": "The redesign replaces per-unit hosting revenue and its registry, signing, storage, migration-reserve, incident-response, and long-lived availability costs with deposit-funded, fixed-fee supplier/model acceptance sprints and optional annual workflow support. Delivery remains exposed to document extraction, schema updates, exception cycles, supplier chasing, security, insurance, channel share, and analyst time. Capital and open-ended liability should fall, while automatic recurring revenue also falls; price, hours, contribution margin, renewal, and acquisition cost remain unproven.",
+    "incumbent_response_defensibility": "Platform-neutral evidence packs, customer-hosted workspaces, and a procurement-stage acceptance event reduce direct overlap with full DPP hosting products, but Siemens, Minespider, certifier-platform alliances, and public validation resources can copy or bundle the workflow. Defensibility would have to come from contracted workflow embedding and accumulated customer-specific exception playbooks; neither is currently controlled, and cross-customer data reuse is restricted.",
+    "resulting_control_point_status": "unknown",
+    "supporting_research_claim_ids": [
+      "r01-deadline-scope",
+      "r03-operator-duty-and-authorization",
+      "r04-supplier-duty-limited",
+      "r05-service-data-reuse-restricted",
+      "r06-control-is-portable-and-operator-owned",
+      "r07-battery-registry-not-yet-ready",
+      "r10-sme-implementation-pain",
+      "r11-public-resources-weaken-schema-moat",
+      "r12-siemens-overlap",
+      "r13-minespider-overlap-and-price",
+      "r19-service-access-contractible",
+      "r21-security-integrity-longevity-burden",
+      "r27-input-completeness-unknown"
+    ]
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "candidate_id": "fb-08",
+  "claims": [
+    {
+      "claim_id": "fb-08-control",
+      "claim_type": "founder_control_point_path",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://www.who.int/news/item/01-12-2025-who-issues-global-guideline-on-the-use-of-glp-1-medicines-in-treating-obesity",
+        "https://www.ema.europa.eu/en/medicines/human/EPAR/wegovy"
+      ],
+      "statement": "WHO frames GLP-1 treatment as long-term, comprehensive care with structured diet and physical activity, and EMA describes prescription, weekly use, dose escalation, and weight-management context. A private clinic can therefore be asked to embed baseline and monthly strength/function measurements at initiation; workflow access is not yet secured."
+    },
+    {
+      "claim_id": "fb-08-loss",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://pubmed.ncbi.nlm.nih.gov/39996356/"
+      ],
+      "statement": "The measurable risk is deterioration in lean mass or function during rapid pharmacologic weight loss. In the SURMOUNT-1 DXA substudy, about one quarter of lost weight was lean mass, but that does not establish clinically harmful muscle loss for every patient and must not be turned into a diagnostic claim."
+    },
+    {
+      "claim_id": "fb-08-payer",
+      "claim_type": "payer_and_budget",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://www.who.int/news/item/01-12-2025-who-issues-global-guideline-on-the-use-of-glp-1-medicines-in-treating-obesity",
+        "https://www.nice.org.uk/guidance/TA875/chapter/committee-discussion"
+      ],
+      "statement": "The payer hypothesis is a private obesity clinic funding per-patient monitoring from its multidisciplinary program revenue at drug initiation and follow-up, or passing the fee to a self-pay patient. WHO and NICE support comprehensive specialist care, but neither source proves a Polish clinic budget for this specific module."
+    }
+  ],
+  "contrary_evidence": [
+    "The prospective SEMALEAN study reported initially reduced then stabilized lean mass and improved handgrip strength, so universal deterioration is contradicted.",
+    "Clinics may view simple strength and body-composition measures as undifferentiated services they can perform themselves."
+  ],
+  "discovery_lane": "future-backcast",
+  "economics": {
+    "acquisition_route": "Co-design a non-diagnostic monitoring protocol with one obesity physician and physiotherapist, enroll 20 clinic patients at initiation, and test whether functional feedback improves adherence or clinic retention before building software.",
+    "capital_required_pln": 30000,
+    "founder_net_worth_path": "If clinics adopt a standardized function-preservation outcome bundle, longitudinal response data and remote coaching can support a scalable clinic network product; the founder objective requires B2B distribution beyond direct coaching hours.",
+    "founder_time": "About 10-15 hours per week for product, analysis, and partner coordination; clinicians supervise treatment and contracted coaches deliver patient contact.",
+    "gross_margin_basis": "Software, protocol, and group coaching margin after devices, clinician review, and coach time; no drug margin or medical treatment revenue is assumed.",
+    "payback": "Recover devices and protocol setup within the first 20-30 paid patient episodes, with no custom app until renewal is demonstrated.",
+    "pricing": "Clinic license plus per-patient 6- or 12-month monitoring episode; optional patient-paid premium tier with supervised exercise partner.",
+    "retention_or_repeat": "Patients are monitored monthly over long treatment; clinics renew as new cohorts start and aggregate outcomes become useful."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Longitudinal clinic-linked treatment, strength, composition, adherence, and functional-outcome data",
+    "customer": "Private obesity and metabolic clinics managing adults on GLP-1 therapies",
+    "distribution_mechanism": "Physician, dietitian, and physiotherapy clinic partnerships at prescription initiation",
+    "offer_and_business_model": "Non-diagnostic functional monitoring protocol and remote support licensed to clinics per enrolled patient",
+    "payer_and_paid_event": "Clinic or self-pay patient pays when GLP-1 therapy begins and renews during long-term follow-up",
+    "problem_trigger": "A patient begins substantial medication-assisted weight loss without a tracked baseline for function and lean tissue"
+  },
+  "founder_fit": [
+    "The opportunity combines quantified-self interest, fitness familiarity, health data, and analytical product design.",
+    "Medical decisions remain with physician partners, while the founder focuses on measurement and systems.",
+    "A small clinic pilot can validate demand without a personal influencer brand or heavy capital."
+  ],
+  "parent": null,
+  "risks": [
+    "Poor messaging could medicalize normal body-composition change or create unsupported health claims.",
+    "Clinic workflows and patient adherence may make monthly data incomplete.",
+    "Body-composition devices can be noisy, and DXA is too expensive for frequent routine use."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://www.who.int/news/item/01-12-2025-who-issues-global-guideline-on-the-use-of-glp-1-medicines-in-treating-obesity",
+    "https://www.ema.europa.eu/en/medicines/human/EPAR/wegovy",
+    "https://pubmed.ncbi.nlm.nih.gov/39996356/",
+    "https://www.nice.org.uk/guidance/TA875/chapter/committee-discussion",
+    "https://pubmed.ncbi.nlm.nih.gov/41068996/"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Clinic-embedded longitudinal outcome program",
+    "control_point": "The baseline and recurring functional measurement protocol embedded at prescription initiation",
+    "critical_dependency": "A physician-approved, affordable measurement bundle that changes clinic or patient decisions without making unsupported claims"
+  },
+  "thesis": "Backcast from obesity care being judged on durable function rather than kilograms alone: win the treatment-initiation measurement moment now, then compound clinic-linked response data into the functional outcome layer for long-term GLP-1 care.",
+  "title": "GLP-1 Functional Reserve",
+  "uncertainties": [
+    "The prevalence of clinically meaningful functional decline in the intended patient segment is uncertain and may be low.",
+    "No Polish clinic has confirmed willingness to pay or pass through the fee.",
+    "It is unknown whether tracked function improves adherence, outcomes, or clinic retention enough to justify the program."
+  ],
+  "version": 1
+}

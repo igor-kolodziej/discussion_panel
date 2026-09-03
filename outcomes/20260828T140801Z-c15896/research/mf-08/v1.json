@@ -1,0 +1,344 @@
+{
+  "candidate_id": "mf-08",
+  "candidate_sha256": "cf2935eba7102debb22dd8c6f4f5c820889db04176ed66ead6a0f409bc1e377a",
+  "candidate_version": 1,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "r-mf08-01-legal-access",
+      "evidence_refs": [
+        "s-eu-battery-regulation",
+        "s-eu-data-act"
+      ],
+      "statement": "EU Battery Regulation Article 14 requires non-discriminatory read-only access to specified battery-management-system state-of-health data for a legal purchaser, an independent operator, or a third party acting on that purchaser's behalf for residual-value evaluation. The Data Act separately requires user-requested access to readily available connected-product data. These rules support the basic ability to test or request data after the dealer owns the vehicle or has the user's mandate, but they create access for eligible parties rather than an exclusive dealer gate."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r-mf08-02-use-and-consent-limits",
+      "evidence_refs": [
+        "s-eu-data-act"
+      ],
+      "statement": "Under Data Act Articles 5 and 6, a third party may process shared data only for purposes and under conditions agreed with the user, must have a valid GDPR legal basis where personal data are involved, and normally must erase data when no longer necessary. A dealer or service contract can authorize a defined use, but it does not by itself create an unrestricted or irrevocable right to retain and commercialize every vehicle-linked data field."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r-mf08-03-standard-license-conflict",
+      "evidence_refs": [
+        "s-aviloo-eu-license"
+      ],
+      "statement": "AVILOO's current EU standard partner terms grant only a non-transferable, non-exclusive license; AVILOO may sell tests in the same territory, alone evaluates the test, reserves rights in software, hardware, tests and derived test data, and permits partner databases only for vehicle resale marketing or customer battery information. The terms prohibit exploiting test-result databases or using them contrary to AVILOO's business interests, backed by a EUR 100,000 contractual penalty. A standard reseller license therefore does not convey the proposed proprietary test-data analytics moat."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r-mf08-04-incumbent-warranty-bundle",
+      "evidence_refs": [
+        "s-aviloo-warranty"
+      ],
+      "statement": "AVILOO now automatically includes, at no additional cost for eligible vehicles, a one-year/20,000-km battery warranty paying EUR 3,000 if the vehicle-specific state-of-health threshold is breached. The warranty is delivered through AVILOO Connect, is based on AVILOO's own forecast and database, and was being rolled out across Europe in stages. This is a direct incumbent bundle against a separate warranty-distribution commission wedge."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r-mf08-05-established-substitutes",
+      "evidence_refs": [
+        "s-dekra-test",
+        "s-aviloo-remarketing-study"
+      ],
+      "statement": "DEKRA already sells an independent multi-brand test for used-EV transactions, producing a certificate in about 15 minutes using a patented algorithm and its own database. AVILOO already supplies dealer, fleet, leasing and auction workflows. The diagnostic certificate is therefore an obtainable input but a crowded, vendor-owned commodity rather than a novel mechanism."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r-mf08-06-bms-data-reliability",
+      "evidence_refs": [
+        "s-bms-validation-2026"
+      ],
+      "statement": "A March 2026 primary study of 1,114 EVs from five manufacturers reports that onboard BMS state-of-health values correlated weakly or inconsistently with measured capacity, while 384 vehicles exposed no SOH at all; real within-model capacity differences were 12-25%. The finding is preprint evidence, not a final standard, but it directly falsifies the assumption that legally accessible BMS SOH alone is a reliable cross-brand valuation signal."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r-mf08-07-certificate-warranty-limit",
+      "evidence_refs": [
+        "s-adac-test-method"
+      ],
+      "statement": "ADAC states that an independent AVILOO result may indicate whether a warranty complaint is worth pursuing, but the dealer or manufacturer decides the actual manufacturer-warranty case using the manufacturer's own test method. An independent certificate therefore does not compel OEM reimbursement and cannot by itself eliminate post-sale battery-claim risk."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r-mf08-08-international-wtp",
+      "evidence_refs": [
+        "s-aviloo-remarketing-study"
+      ],
+      "statement": "AVILOO's vendor-published 2024 online survey of 913 respondents in seven non-Polish European markets reports EUR 550-1,100 stated price premiums for certified vehicles, 75% expecting a certificate, and a 36% higher likelihood of sale; a Manheim Express case in the same paper reports 29.3% more bids, 22.4% more bidders and a 33.4% higher sales rate after integration. This supports buyer urgency and transaction lift in some markets, but the source is vendor-authored and provides no Polish result or causal margin-after-cost estimate."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r-mf08-09-polish-demand-constraint",
+      "evidence_refs": [
+        "s-psnm-barometer-2026"
+      ],
+      "statement": "PSNM's 2026 Polish barometer reports that only 3.7% of used-car intenders considered a BEV, down from 4.4%, and that 70% of prospective used-BEV buyers budgeted no more than PLN 80,000. It attributes the secondary-market gap principally to price, real range, charging speed, long warranty expectations and safety concerns; battery-data transparency helps, but a certificate alone does not repair the current product-price mismatch."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r-mf08-10-local-market-scale",
+      "evidence_refs": [
+        "s-psnm-pevo-index"
+      ],
+      "statement": "In June 2025 OTOMOTO carried 4,343 used-BEV listings, only 1.1% of all used-vehicle listings, and those listings drew 1.1% of views. This confirms a real but still narrow Polish inventory pool; listing stock does not establish 15,000 annual paid tests, 100 suitable dealer accounts, or the assumed per-dealer throughput."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r-mf08-11-low-defect-frequency",
+      "evidence_refs": [
+        "s-arval-longevity-2026"
+      ],
+      "statement": "Arval's 2026 analysis of 30,000 certificates across 11 European markets reports average SOH of about 93% after 70,000 km and still above 90% after 160,000 km or six years, with average decline around 1% per 25,000 km. High typical health can reduce the frequency of severe hidden-battery losses and warranty events that must fund the candidate's avoided-loss and commission economics, even though certificates may still reassure buyers."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r-mf08-12-price-and-cost-anchor",
+      "evidence_refs": [
+        "s-adac-price",
+        "s-aviloo-eu-license"
+      ],
+      "statement": "ADAC Hessen-Thueringen lists a current consumer-facing AVILOO Flash Test at EUR 79 including a digital certificate and about 20 minutes of service. AVILOO's EU terms separately require an annual license fee and a per-completed-test fee whose amounts are private and index-linked. The public evidence supplies a retail reference but is insufficient to validate PLN 250-450 pricing, a dealer share, or 40-55% gross margin in Poland."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r-mf08-13-workflow-adoption-proof",
+      "evidence_refs": [
+        "s-aviloo-remarketing-study",
+        "s-aviloo-warranty"
+      ],
+      "statement": "Manheim Express integrated AVILOO into auction intake and reported higher bidding participation and sales rate after nine months, while AVILOO's warranty is explicitly designed for dealers, platforms, wholesalers and fleet operators. This is evidence that the workflow can be adopted by established operators, but it also shows that the diagnostic vendor and large remarketers can integrate the entire gate without an independent Polish intermediary."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r-mf08-14-repeat-economics",
+      "evidence_refs": [],
+      "statement": "No public evidence found establishes Polish dealer renewal, test penetration on every acquired or sold EV, acquisition cost per dealer, sales-cycle length, support cost, warranty take rate, or one avoided mispricing/claim per 20-40 vehicles. Consequently CAC, payback, repeat rate and contribution margin remain unvalidated."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r-mf08-15-cold-start-disadvantage",
+      "evidence_refs": [
+        "s-aviloo-warranty",
+        "s-arval-longevity-2026",
+        "s-aviloo-eu-license"
+      ],
+      "statement": "The startup begins without a cross-brand degradation corpus while AVILOO prices its warranty from what it describes as the world's largest battery database and Arval has already accumulated 30,000 certificates. Combined with the standard license restriction on exploiting AVILOO test-result databases, this creates a severe cold start that dealer transaction outcomes alone do not automatically overcome."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r-mf08-16-outcome-data-rights",
+      "evidence_refs": [],
+      "statement": "No reviewed source establishes that Polish dealers, vehicle owners and diagnostic providers will grant this startup durable rights to combine SOH/test outputs with purchase price, time-to-sale, resale price and warranty-claim outcomes for model training and portfolio analytics after the transaction. A bespoke provider license and a defined Data Act/GDPR governance design are unresolved preconditions."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r-mf08-17-exclusive-intake-contracts",
+      "evidence_refs": [],
+      "statement": "No signed or otherwise direct evidence shows that an independent Polish dealer group will bind every used EV to this startup's test workflow, grant exclusivity, meet a minimum vehicle volume, or refrain from contracting AVILOO, DEKRA, an OEM program or another provider directly."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r-mf08-18-insurer-dependency",
+      "evidence_refs": [],
+      "statement": "No Polish insurer, warranty administrator or licensed intermediary commitment, eligibility schedule, loss-cost quote, commission schedule or regulatory distribution design was found. Because AVILOO now bundles its own free limited warranty and OEM claims remain governed by OEM tests, the proposed separate insurer-backed warranty remains an unsigned critical dependency rather than proven recurring revenue."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r-mf08-19-mechanism-ownership-and-founder-fit",
+      "evidence_refs": [
+        "s-aviloo-eu-license",
+        "s-aviloo-warranty"
+      ],
+      "statement": "Under the evidenced standard structure, the startup could own dealer service relationships and independently collected transaction outcomes, but the diagnostic algorithm, derived test data, certificate and bundled warranty mechanism remain vendor-controlled. The stated PLN 90,000 capital is within the founder's normal capital envelope, while winning and supporting 100 dealer workflows alongside full-time employment would require delegable sales and operations capacity not costed in the candidate economics; this is a fit uncertainty, not direct evidence of non-delegable incompatibility."
+    }
+  ],
+  "contrary_evidence": [
+    "s-aviloo-eu-license: AVILOO's EU standard license is non-exclusive, reserves the diagnostic and derived-test-data rights, and prohibits database exploitation or competitive use of test results under a EUR 100,000 penalty.",
+    "s-aviloo-warranty: AVILOO now bundles an automatic free one-year/20,000-km, EUR 3,000 warranty with eligible FLASH Tests, directly compressing the candidate's separate warranty-commission wedge.",
+    "s-psnm-barometer-2026: only 3.7% of Polish used-car intenders considered a BEV, and current demand is constrained primarily by vehicle price, range, charging and warranty expectations rather than certificate availability alone.",
+    "s-arval-longevity-2026: 30,000 European certificates show typical battery health remains above 90% even around 160,000 km or six years, reducing the frequency of catastrophic hidden degradation needed to fund avoided-loss economics.",
+    "s-bms-validation-2026: cross-manufacturer BMS SOH was absent on many vehicles and did not consistently track measured capacity, so statutory BMS-data access does not itself yield a reliable valuation model.",
+    "s-adac-test-method: an independent certificate does not determine an OEM warranty claim; the manufacturer or dealer applies its own method.",
+    "s-dekra-test and s-aviloo-remarketing-study: established vendors and large remarketing operators already provide or directly integrate the same certification-at-intake workflow."
+  ],
+  "falsification": {
+    "cold_start_and_data_moat": [
+      "r-mf08-03-standard-license-conflict",
+      "r-mf08-15-cold-start-disadvantage",
+      "r-mf08-16-outcome-data-rights"
+    ],
+    "control_point_obtainability": [
+      "r-mf08-01-legal-access",
+      "r-mf08-02-use-and-consent-limits",
+      "r-mf08-03-standard-license-conflict",
+      "r-mf08-16-outcome-data-rights",
+      "r-mf08-17-exclusive-intake-contracts"
+    ],
+    "critical_mechanism_ownership": [
+      "r-mf08-03-standard-license-conflict",
+      "r-mf08-04-incumbent-warranty-bundle",
+      "r-mf08-18-insurer-dependency",
+      "r-mf08-19-mechanism-ownership-and-founder-fit"
+    ],
+    "external_dependencies": [
+      "r-mf08-03-standard-license-conflict",
+      "r-mf08-06-bms-data-reliability",
+      "r-mf08-07-certificate-warranty-limit",
+      "r-mf08-18-insurer-dependency"
+    ],
+    "substitutes_and_incumbent_response": [
+      "r-mf08-04-incumbent-warranty-bundle",
+      "r-mf08-05-established-substitutes",
+      "r-mf08-13-workflow-adoption-proof"
+    ],
+    "willingness_urgency_and_repeat_economics": [
+      "r-mf08-08-international-wtp",
+      "r-mf08-09-polish-demand-constraint",
+      "r-mf08-10-local-market-scale",
+      "r-mf08-11-low-defect-frequency",
+      "r-mf08-12-price-and-cost-anchor",
+      "r-mf08-14-repeat-economics"
+    ]
+  },
+  "schema_version": 3,
+  "sources": [
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "2023-07-28",
+      "publisher": "EUR-Lex / European Union",
+      "source_id": "s-eu-battery-regulation",
+      "source_type": "official",
+      "stance": "supporting",
+      "title": "Regulation (EU) 2023/1542 concerning batteries and waste batteries",
+      "url": "https://eur-lex.europa.eu/eli/reg/2023/1542/oj"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "2023-12-22",
+      "publisher": "EUR-Lex / European Union",
+      "source_id": "s-eu-data-act",
+      "source_type": "official",
+      "stance": "context",
+      "title": "Regulation (EU) 2023/2854 on harmonised rules on fair access to and use of data",
+      "url": "https://eur-lex.europa.eu/eli/reg/2023/2854/oj"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "2025-02-27",
+      "publisher": "AVILOO GmbH",
+      "source_id": "s-aviloo-eu-license",
+      "source_type": "primary",
+      "stance": "contradicting",
+      "title": "General License Terms - AVILOO Battery Software - V 2_25",
+      "url": "https://shop.aviloo.com/files/webshop_b2b/ENG_General%20License%20Terms%20Standard%20V2_25%20%281%29.pdf"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "Current 2026 product page; no publication day shown",
+      "publisher": "AVILOO GmbH",
+      "source_id": "s-aviloo-warranty",
+      "source_type": "primary",
+      "stance": "contradicting",
+      "title": "The AVILOO Battery Warranty",
+      "url": "https://aviloo.com/en/aviloo-warranty"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "2025 (publication PDF; no day shown)",
+      "publisher": "AVILOO GmbH",
+      "source_id": "s-aviloo-remarketing-study",
+      "source_type": "industry",
+      "stance": "supporting",
+      "title": "Used EV Remarketing: Can independent battery certification drive faster sales and higher resale values?",
+      "url": "https://aviloo.com/files/Aviloo/pdf/Whitepaper/2503_WPRem_EN.pdf"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "Current product page; no publication date shown",
+      "publisher": "DEKRA",
+      "source_id": "s-dekra-test",
+      "source_type": "primary",
+      "stance": "contradicting",
+      "title": "Battery Test for Electric Cars",
+      "url": "https://www.dekra.com/en/battery-test-for-electric-cars/"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "2026-06-24",
+      "publisher": "ADAC",
+      "source_id": "s-adac-test-method",
+      "source_type": "official",
+      "stance": "contradicting",
+      "title": "Batteriecheck Elektroauto: So kann man den Akku testen",
+      "url": "https://www.adac.de/rund-ums-fahrzeug/elektromobilitaet/elektroauto/batteriecheck-elektroauto/"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "2026-03-31",
+      "publisher": "ADAC Hessen-Thueringen",
+      "source_id": "s-adac-price",
+      "source_type": "official",
+      "stance": "context",
+      "title": "AVILOO Flash Test: Der Batterie-Check fuer Ihr E-Auto",
+      "url": "https://www.adac.de/der-adac/regionalclubs/hessen-thueringen/produkte-services/batterie-check/"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "2026-01 (report edition; no day shown)",
+      "publisher": "Polskie Stowarzyszenie Nowej Mobilnosci",
+      "source_id": "s-psnm-barometer-2026",
+      "source_type": "industry",
+      "stance": "contradicting",
+      "title": "Barometr Nowej Mobilnosci 2026 Powered by OTOMOTO",
+      "url": "https://psnm.org/wp-content/uploads/2026/01/PSNM_Barometr_Nowej_Mobilnosci_2026_Raport.pdf"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "2025-07 (June 2025 market data; no day shown)",
+      "publisher": "Polskie Stowarzyszenie Nowej Mobilnosci",
+      "source_id": "s-psnm-pevo-index",
+      "source_type": "industry",
+      "stance": "context",
+      "title": "PEVO Index: Prawie 8-procentowy udzial samochodow elektrycznych na polskim rynku",
+      "url": "https://psnm.org/2025/informacja/pevo-index-prawie-8-procentowy-udzial-samochodow-elektrycznych-na-polskim-rynku/"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "2026-03-17",
+      "publisher": "Arval Poland",
+      "source_id": "s-arval-longevity-2026",
+      "source_type": "primary",
+      "stance": "contradicting",
+      "title": "Arval: Zywotnosc baterii do elektrykow znacznie wyzsza, niz powszechnie sie uwaza",
+      "url": "https://www.arval.pl/o-arval/arval-zywotnosc-baterii-do-elektrykow-znacznie-wyzsza-niz-powszechnie-sie-uwaza"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "2026-03-23",
+      "publisher": "arXiv",
+      "source_id": "s-bms-validation-2026",
+      "source_type": "primary",
+      "stance": "contradicting",
+      "title": "Battery health reporting fails independent validation across manufacturers",
+      "url": "https://arxiv.org/abs/2603.21592"
+    }
+  ],
+  "unknowns": [
+    "Whether AVILOO, DEKRA or another diagnostic provider will sign a bespoke Polish agreement granting the startup commercial model-training and analytics rights to test outputs.",
+    "Whether dealer-granted access and vehicle-owner mandates can be structured to retain and reuse linked VIN, transaction and claim data after the vehicle is sold or an authorization ends.",
+    "The number and identity of Polish independent dealer groups with enough used-BEV intake to support a 500-vehicle pilot and later 15,000 annual tests.",
+    "Polish dealer willingness to sign an exclusive every-EV intake obligation, minimum-volume commitment, and multi-year renewal.",
+    "The causal effect of a certificate on Polish trade-in bid accuracy, retail price, time-to-sale and post-sale claims, controlling for vehicle age, model, mileage and dealer quality.",
+    "AVILOO or alternative-vendor annual license fee, per-test cost, required minimums, dealer revenue share, support burden and applicable Polish VAT treatment.",
+    "Dealer CAC, sales-cycle duration, onboarding cost, churn and the staffing required to service 100 accounts.",
+    "A Polish insurer or warranty administrator's eligibility, loss-cost, commission, claim-handling and regulatory terms.",
+    "The share of Polish used-BEV inventory that can be tested reliably across models, software versions, imports, damage histories and unavailable BMS fields.",
+    "Whether dealer-owned purchase-price and resale outcomes, without rights to exploit vendor test results, are sufficient to form a defensible valuation moat.",
+    "The realized take rate and incremental willingness to pay for a separate warranty after AVILOO's free warranty and remaining OEM battery coverage.",
+    "Whether a part-time founder can delegate dealer sales, field onboarding, consent operations and account support within the PLN 90,000 initial-capital estimate.",
+    "No direct evidence reviewed establishes illegality, an categorically unobtainable essential right, mathematically impossible conservative economics, or a non-delegable founder incompatibility; the adverse findings above therefore remain non-fatal uncertainty under the research rule."
+  ]
+}

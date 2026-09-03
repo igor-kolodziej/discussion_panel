@@ -1,0 +1,117 @@
+{
+  "assumptions": [
+    "At least one credible independent diagnostic provider supports enough Polish vehicle models and permits lawful local resale or white-label fulfillment.",
+    "The venture does not represent that it owns or independently validates the supplier's diagnostic algorithm.",
+    "Dealer-batch fulfillment replaces per-vehicle shipping wherever possible.",
+    "Certificates can be linked to vehicle identity and displayed in listings with customer and platform consent."
+  ],
+  "base_score": 4.3,
+  "candidate_id": "ws-used-ev-battery-checkout",
+  "candidate_sha256": "1e3144e2699fa4dd4ee17fe0d46e07d52c30febbcbd85a759adc91c168d1028d",
+  "candidate_version": 1,
+  "constrained_score": 4.1,
+  "evaluation_type": "working_screening",
+  "evidence_needed_for_higher_score": "Signed supplier pricing and coverage, paid dealer pilots, vehicles tested per visit, completion and failure rates, fully loaded contribution per certificate, and credible evidence that certificates improve sale speed, realized price, financing acceptance, or dispute incidence are required.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "Attaching an independent, VIN-linked battery certificate to appraisal, listing, or reservation addresses a specific information asymmetry in used-EV transactions. The Polish ordering and logistics layer is useful localization, but the core diagnostic and certificate already exist and are owned elsewhere.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "A visible EUR 99 consumer offer and a dealer-oriented certificate demonstrate an actual paid artifact rather than inferred interest, while battery uncertainty can affect price, speed, and disputes. The payer split and realized transaction benefit in Poland are not yet established.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Prepayment and dealer repeat volume are attractive, but a EUR 99 reference price leaves limited room for a third-party test fee, device or inspector logistics, failed tests, support, payments, insurance, and channel share. The proposed 699-999 PLN package and 180 PLN illustrative contribution have no supplier terms or completed transactions behind them.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Used-EV dealers and fleet remarketers offer concentrated repeat demand and a clear transaction beachhead. Compatible Polish transaction volume, vehicle-model coverage, local density, and dealer willingness to attach a third-party certificate remain unknown.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "Polish-language coordination, VIN verification, and multi-vendor routing could improve convenience, but the diagnostic vendor sells directly and dealer groups, marketplaces, inspection chains, and OEM networks can embed certificates themselves. The proposed intermediary controls neither supply nor shopper access.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A successful dealer workflow could expand to fleets, auctions, finance, insurance, more cities, multiple diagnostic suppliers, and adjacent vehicle-condition evidence. Expansion increases value only if the venture first obtains wholesale access and dense fulfillment economics.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Permissioned completion, compatibility, cancellation, and transaction-outcome data may improve routing, but the decisive diagnostic algorithm and certificate brand belong to suppliers. Nonexclusive channel agreements and straightforward logistics software provide limited protection from bypass.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "The founder's data and transaction-analysis skills fit measurement and routing, and a concierge pilot is accessible. There is no owned diagnostic technology, device fleet, supplier agreement, dealer relationship, certification authority, or marketplace placement.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "As more EVs enter used-car and lease-return channels, battery health becomes an increasingly salient and testable transaction variable. A mature third-party certificate format and rapid business test indicate enabling supply, though Polish availability is still unknown.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "Dealer intake and listing creation are high-quality repeat distribution moments, with marketplaces, appraisers, finance, and insurance as later channels. Those parties currently own the customer relationship, and the venture has no embedded checkout or dealer agreement.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "A single-city outsourced pilot is feasible, but vehicle compatibility checks, scheduling, device recovery or inspector travel, failed tests, fraud and VIN matching, consumer rights, and false-assurance liability create substantial operational burden. Dependence on an external algorithm adds supply risk.",
+      "score": 4,
+      "status": "scored"
+    }
+  ],
+  "final_score": 4.1,
+  "highest_value_structural_change": "Secure a white-label wholesale diagnostic agreement and an anchor dealer group with minimum monthly volume, then perform onsite batch testing inside dealer intake so the venture controls a recurring workflow and avoids one-off device logistics.",
+  "interaction_adjustment": -0.2,
+  "judge_id": "screen-b06-j01",
+  "main_structural_strength": "The paid artifact and dealer workflow already exist in the market, so the offer targets a concrete transaction trigger with observable completion rather than asking customers to adopt an entirely new diagnostic behavior.",
+  "primary_score_limiter": "The venture owns neither the diagnostic supply nor the dealer or marketplace channel, and the visible EUR 99 price anchor may not leave enough margin for an intermediary after fulfillment and acquisition costs.",
+  "qualified": false,
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 3,
+  "strongest_disconfirming_evidence": "The core vendor already sells directly to consumers and businesses, OEM dealers can expose battery-management readings cheaply, and the existing price anchor leaves little economic room for shipping, inspection, support, and channel share.",
+  "unrounded_score": 4.1
+}

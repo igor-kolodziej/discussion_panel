@@ -1,0 +1,88 @@
+{
+  "candidate_id": "fb-07",
+  "claims": [
+    {
+      "claim_id": "fb-07-control",
+      "claim_type": "founder_control_point_path",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://www.ema.europa.eu/en/human-regulatory-overview/research-development/scientific-advice-protocol-assistance/qualification-novel-methodologies-medicine-development",
+        "https://health.ec.europa.eu/ehealth-digital-health-and-care/european-health-data-space-regulation-ehds_en"
+      ],
+      "statement": "EMA's qualification pathway is evidence-based and explicitly covers novel biomarkers and digital methodologies, while EHDS will phase in governed reuse of health data. A founder can start with an ethically consented, recontactable Polish cohort and reusable reference-test protocol, but proprietary reuse rights and regulatory acceptability require confirmation."
+    },
+    {
+      "claim_id": "fb-07-loss",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/digital-health-technologies-remote-data-acquisition-clinical-investigations"
+      ],
+      "statement": "The paid event is a sponsor choosing a wearable-derived endpoint or digital measure for a trial and needing evidence that the technology is fit for purpose. FDA guidance makes verification, validation, participant suitability, and data integrity concrete requirements; the cost of a failed endpoint decision is sponsor-specific."
+    },
+    {
+      "claim_id": "fb-07-payer",
+      "claim_type": "payer_and_budget",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/digital-health-technologies-remote-data-acquisition-clinical-investigations",
+        "https://www.ema.europa.eu/en/human-regulatory-overview/research-development/scientific-advice-protocol-assistance/qualification-novel-methodologies-medicine-development"
+      ],
+      "statement": "The payer hypothesis is a biotech sponsor, wearable maker, or specialist CRO using clinical-development or validation budget before protocol lock. Regulators describe the required evidence pathway, but a small Warsaw-based study operator has not demonstrated procurement access or price."
+    }
+  ],
+  "contrary_evidence": [
+    "Large CROs, academic sites, and wearable manufacturers already run validation studies and hold sponsor relationships.",
+    "EHDS may improve broad access to governed health data, reducing the scarcity value of a small proprietary cohort while imposing strict controls."
+  ],
+  "discovery_lane": "future-backcast",
+  "economics": {
+    "acquisition_route": "Design one narrow fatigue or cognitive-function validation protocol with an ethics and clinical partner, pre-sell it to a wearable company, and recruit 30-100 participants only after the sponsor funds study operations.",
+    "capital_required_pln": 40000,
+    "founder_net_worth_path": "Reusable endpoint protocols, normative datasets, and a recontactable cohort can shift revenue from one-off studies toward benchmark licensing and multi-sponsor trials; reaching the founder objective requires repeat sponsor demand and defensible consented reuse.",
+    "founder_time": "Roughly 15-20 hours per week during study setup and analysis, with participant operations, medical oversight, and ethics handled by contracted partners.",
+    "gross_margin_basis": "Analysis and protocol reuse are high-margin; participant compensation, reference tests, ethics, devices, and clinical partner fees are direct study costs.",
+    "payback": "Do not recruit before a sponsor milestone covers variable costs; recover protocol-development cost within the first two studies.",
+    "pricing": "Fixed protocol and study fee with participant costs passed through, followed by annual benchmark or reference-data licenses where consent permits.",
+    "retention_or_repeat": "Sponsors repeat by population and endpoint; recontactable participants and harmonized methods reduce subsequent study time."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Consented longitudinal neurocognitive reference data, participant recontact rights, and regulator-aware reusable validation protocols",
+    "customer": "Wearable manufacturers, digital-health developers, biotech trial sponsors, and specialist CROs",
+    "distribution_mechanism": "Partner referrals from CROs and academic investigators plus direct outreach at protocol-design stage",
+    "offer_and_business_model": "Sponsor-funded remote validation studies plus licensing of consented benchmark datasets and protocols",
+    "payer_and_paid_event": "Clinical-development team pays before protocol lock when a digital measure needs fit-for-purpose evidence",
+    "problem_trigger": "A sponsor wants continuous wearable data but lacks population-specific evidence linking it to a credible reference measure"
+  },
+  "founder_fit": [
+    "The founder combines neuroscience, biosignal experience, statistics, and AI-enabled study analysis.",
+    "A Poland-based remote cohort can be operated without a camera-led personal brand.",
+    "Sponsor prepayment can cap capital exposure and keep the work compatible with part-time execution."
+  ],
+  "parent": null,
+  "risks": [
+    "Human-subject research, GDPR, medical-device, and clinical-trial rules may make the wedge slower and more expensive than assumed.",
+    "Consent language may not permit the desired cross-sponsor data reuse.",
+    "A small cohort may not satisfy endpoint validation or qualification requirements."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://www.ema.europa.eu/en/human-regulatory-overview/research-development/scientific-advice-protocol-assistance/qualification-novel-methodologies-medicine-development",
+    "https://health.ec.europa.eu/ehealth-digital-health-and-care/european-health-data-space-regulation-ehds_en",
+    "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/digital-health-technologies-remote-data-acquisition-clinical-investigations"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Contract research wedge compounding into a consented benchmark-data asset",
+    "control_point": "Reusable protocol plus participant consent, reference-linked data, and recontact rights",
+    "critical_dependency": "Ethically and legally reusable data that sponsors regard as fit-for-purpose evidence"
+  },
+  "thesis": "Backcast from trials where continuous digital endpoints are routine: own the expensive bridge between raw wearable signals and credible reference outcomes now, using sponsor-funded micro-studies to build a reusable European neurocognitive benchmark asset.",
+  "title": "Wearable Endpoint Foundry",
+  "uncertainties": [
+    "Which single endpoint has urgent sponsor demand and an affordable reference standard is unresolved.",
+    "Sponsor procurement cycles and acceptable Polish site credentials are unknown.",
+    "It is unproven that benchmark licensing can be separated from custom study work."
+  ],
+  "version": 1
+}

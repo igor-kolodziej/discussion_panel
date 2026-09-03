@@ -1,0 +1,117 @@
+{
+  "assumptions": [
+    "No current customer, paid route assessment, executed lane agreement, supplier quote, reserved depot or carrier capacity, or measured lane cost stack exists unless the packet explicitly states otherwise.",
+    "The 2030 reuse obligations remain a directionally relevant purchase trigger, but exact methodology, evidentiary acceptance, format scope, further exemptions, and present buyer urgency remain uncertain.",
+    "The founder may use AI and contractors extensively, but signed counterparty duties, physical reverse logistics, asset-loss control, and exception handling cannot be assumed away or automated completely.",
+    "Planning-stage evidence gaps are treated as uncertainty rather than proof of failure; the directly comparable incumbent offer and documented loss and backhaul sensitivity are treated as negative evidence."
+  ],
+  "base_score": 4.115,
+  "candidate_id": "ws-07",
+  "candidate_sha256": "61f21e13d6712a116290b9d53880d174de2b4623b85c682f80b6a89cd6998223",
+  "candidate_version": 2,
+  "constrained_score": 3.815,
+  "evaluation_type": "holdout_native",
+  "evidence_needed_for_higher_score": "A materially higher score requires a paid route assessment and signed conditional take-or-pay lane agreement binding the anchor, recipients, depot, and carrier; binding tote, insurance, cleaning, repair, and reverse-haul quotes that show positive contribution and payback under stressed loss, damage, dwell-time, and backhaul cases; a documented reason the customer chooses this offer over 2Return, self-ownership, or another pooler; measured renewal evidence from the first lane; and replication on at least a second lane without materially worse CAC, founder hours, or unit economics.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "The redesign correctly identifies the executed multi-party lane agreement, rather than tote ownership or generic tracking, as the operative control point. Contracting minimum turns and return duties before fleet commitment is a coherent way to reduce cold-start and inventory risk, although it is disciplined project design rather than a clearly proprietary insight.",
+      "score": 6.5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Packaging spend, asset loss, reverse-logistics cost, and future reuse compliance are measurable problems with a plausible logistics-budget payer. However, the main reuse target begins in 2030, no buyer has paid for route design or accepted take-or-pay and replacement terms, and an existing pooler already offers to remove much of the same operational burden. Current urgency, switching motive, and willingness to pay this entrant remain unresolved.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Implementation fees, take-or-pay capacity, completed-turn charges, and allocated loss costs are a more credible structure than unsupported per-turn margin or reporting-subscription assumptions. Yet no quote-derived revenue or cost stack, fleet utilization, loss reserve, CAC, sales-cycle, renewal, cash-conversion, or owner-earnings evidence exists. Research also shows that distance, circulation count, reverse logistics, loss, and backhaul can reverse reusable-crate economics, while the path to roughly 1 million PLN EBITDA requires many operationally distinct lanes.",
+      "score": 4.5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "One predictable Polish non-food lane is narrow enough for a controlled pilot and potentially meaningful to one anchor. The proposal has not identified the actual lane, format, vertical, volume, incumbent service gap, or economically reachable pool of similar lanes; future methodology and exemptions may also narrow the regulatory subset. The beachhead is therefore a qualification template, not yet a demonstrated segment.",
+      "score": 4.5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "2Return already markets owned packaging, collection, repair, cleaning, tracking, and European recirculation in Poland, while Brambles has network density, hundreds of millions of assets, service centers, customer contracts, and asset analytics. A bespoke lane contract can ring-fence one account but does not establish a reason this entrant can win or dominate a segment that incumbents value.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "Measured cost distributions, contract clauses, lane qualification rules, and subcontractor benchmarks could shorten later underwriting and support expansion across similar Polish or CEE routes. That transfer is unproven, each lane may require fresh multi-party negotiation and physical design, and expansion can increase rather than reduce exception load unless routes share counterparties and service density.",
+      "score": 4.5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "The proposed learning library may improve execution, but standard EPCIS events are not proprietary, contract templates and route models are reproducible, suppliers and counterparties are not exclusive, and scaled incumbents possess stronger network and operating data. No compounding lock-in, privileged supply, regulatory right, or distribution asset is yet established.",
+      "score": 2.5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "The offer is prudently conditional and tailored, but those features mainly protect the provider from bad lanes. No quoted price, service level, compliance acceptance, recovery rate, implementation speed, or total-cost improvement shows a customer-facing advantage over self-ownership or incumbent pooling; take-or-pay and allocated loss charges may instead make adoption harder.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "The PPWR is now applying in phases and 2030 reuse targets create a genuine preparation window for affected operators. The same runway weakens immediate urgency, calculation and reporting details remain unfinished, and a 2026 exemption demonstrates that scope can narrow. Timing is supportive but not yet a sharp entrant-specific window.",
+      "score": 5.5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "Selling through one anchor that coordinates named recipients is simpler than launching an open two-sided network, and a paid assessment is a reasonable first transaction. There is nevertheless no named anchor, repeatable lead source, access advantage, expected CAC, sales cycle, or evidence that a shipper will coordinate several counterparties for an unproven entrant. Direct incumbent availability further raises the proof burden.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "The 30,000 PLN validation cap, no-fleet-before-contract rule, narrow pilot, and founder's analytical skills reduce avoidable downside. Execution still requires coordinated legal, procurement, depot, carrier, insurance, tracking, audit, loss-dispute, and exception-management capability, and no evidence shows these duties can be subcontracted within the founder's part-time limit. AI can assist underwriting and administration but not replace physical service reliability or counterparty commitment.",
+      "score": 4,
+      "status": "scored"
+    }
+  ],
+  "final_score": 3.8,
+  "highest_value_structural_change": "Become an asset-light vertical lane underwriter rather than another small pool owner: secure an exclusive framework agreement with one OEM, 3PL, or industry network covering several homologous lanes, procure the physical pool from incumbent-grade operators, and earn implementation plus savings or performance fees. Aggregated access and route density would improve distribution and economics before fleet risk; without a multi-lane exclusive control point, the business remains a copyable sequence of bespoke projects.",
+  "interaction_adjustment": -0.3,
+  "judge_id": "holdout-ws07-b",
+  "main_structural_strength": "The contract-first freeze converts a capital-heavy network cold start into a bounded lane underwriting decision: no production fleet is acquired until minimum paid turns, participant duties, loss allocation, return rights, and outsourced service levels are contractually bound.",
+  "primary_score_limiter": "The candidate has no demonstrated customer-facing advantage or repeatable control point beyond disciplined contracting. More importantly, requiring a documented gap versus capable incumbent poolers may negatively select the entrant into low-density, exception-heavy, or otherwise uneconomic lanes, reinforcing weak distribution, fragile unit economics, and operational load.",
+  "qualified": false,
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 3,
+  "strongest_disconfirming_evidence": "2Return already offers in Poland the owned-pool delivery, recovery, cleaning, repair, tracking, and recirculation service that this candidate proposes, using a Europe-wide service network. Brambles' much larger network still reported increased European asset losses and write-offs, further undermining any assumption that a small ring-fenced pool will achieve easy loss control or attractive margins.",
+  "unrounded_score": 3.815
+}

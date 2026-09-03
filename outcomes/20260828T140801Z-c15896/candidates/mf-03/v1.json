@@ -1,0 +1,90 @@
+{
+  "candidate_id": "mf-03",
+  "claims": [
+    {
+      "claim_id": "mf-03-control",
+      "claim_type": "founder_control_point_path",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/956/oj",
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-verification_en"
+      ],
+      "statement": "CBAM declarants must retain detailed embedded-emissions records and verification reports for four years, while non-EU operators transmit calculations and verification through the registry; a founder can contract for recurring custody, normalization and verifier-ready evidence from importer-supplier pairs without claiming to be the accredited verifier."
+    },
+    {
+      "claim_id": "mf-03-loss",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en",
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/price-cbam-certificates_en"
+      ],
+      "statement": "From 2026, covered importers above the stated mass threshold must declare embedded emissions and surrender certificates priced from EU ETS auctions; missing supplier-specific evidence can force reliance on defaults or expose a declaration to correction and penalties, making certificate spend and compliance rework measurable."
+    },
+    {
+      "claim_id": "mf-03-payer",
+      "claim_type": "payer_and_budget",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en",
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-verification_en"
+      ],
+      "statement": "The payer is an EU steel, aluminium, cement or fertiliser importer's customs, tax or sustainability budget owner, triggered before a shipment or annual declaration; the Commission says authorised declarants buy certificates and must use independently accredited verification for actual emissions, establishing both a cash liability and a professional-services budget."
+    }
+  ],
+  "contrary_evidence": [
+    "The 50-tonne threshold removes many small importers from direct obligations, shrinking the SME segment.",
+    "Customs brokers, ERP vendors, accredited verifiers and large consultancies may bundle the same evidence workflow, and the declarant remains legally responsible."
+  ],
+  "discovery_lane": "mechanism-first",
+  "economics": {
+    "acquisition_route": "Recruit Polish customs brokers as resellers, then sign importer data-processing agreements and supplier evidence requests that make the platform the system of record before the first covered shipment.",
+    "capital_required_pln": 40000,
+    "founder_net_worth_path": "Start with 10 importers and 50 suppliers, reach 150 importers at an average PLN 30,000 annual contract for PLN 4.5m recurring revenue, then expand the supplier evidence graph across Central Europe; at 25-35% operating margin, retained founder equity and reinvested cash could plausibly reach PLN 5m in 4-6 years.",
+    "founder_time": "Founder spends 3-4 hours daily on data schemas, exception detection and broker partnerships; carbon-accounting methodology and verification are contracted to qualified specialists.",
+    "gross_margin_basis": "Recurring evidence software and standardized supplier outreach should support 65-80% software gross margin, reduced to 45-60% if substantial expert remediation is bundled.",
+    "payback": "Pilot against one supplier chain before annual filing; target client payback within the first declaration through reduced consultant hours and lower avoidable default-value certificate exposure, which remains unproven.",
+    "pricing": "PLN 1,500-5,000 per month per importer plus PLN 300-1,000 per active supplier-installation evidence pack; verifier fees remain pass-through.",
+    "retention_or_repeat": "Every shipment and annual declaration refreshes quantities, supplier methods, verification and certificate exposure; four-year record retention raises switching costs."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Reusable supplier-installation evidence and anomaly history reduce duplicate requests across multiple importers while a verified emissions graph becomes harder to replace.",
+    "customer": "Mid-market EU importers of CBAM-covered steel, aluminium, cement and fertiliser with fragmented non-EU suppliers.",
+    "distribution_mechanism": "Customs-broker and trade-accountant channels, followed by supplier invitations from each onboarded importer.",
+    "offer_and_business_model": "Verifier-ready supplier evidence custody, calculation normalization and declaration exception workflow sold as annual SaaS plus managed-service fees.",
+    "payer_and_paid_event": "The importer's customs, tax or sustainability owner pays ahead of covered shipments and annual certificate surrender.",
+    "problem_trigger": "A first post-2026 covered import, an incomplete supplier emissions file, or preparation for the annual CBAM declaration."
+  },
+  "founder_fit": [
+    "The product is a structured data, anomaly detection and audit-trail problem aligned with the founder's data-science background.",
+    "Poland is a practical base for serving Central European industrial importers without requiring a public-facing founder brand.",
+    "A broker-led distribution model and bounded expert network can operate alongside full-time employment."
+  ],
+  "parent": null,
+  "risks": [
+    "Incorrect calculations could create material certificate or penalty exposure despite contractual disclaimers.",
+    "Supplier confidentiality and low cooperation may prevent actual-emissions evidence collection.",
+    "Regulatory simplification, default-value changes or broker bundling could compress willingness to pay."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2023/956/oj",
+    "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en",
+    "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-verification_en",
+    "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/price-cbam-certificates_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Regulatory evidence network",
+    "control_point": "Importer-authorized custody of recurring supplier-installation emissions evidence and its audit trail",
+    "critical_dependency": "Cooperative non-EU suppliers and access to accredited CBAM verifiers"
+  },
+  "thesis": "Become the retained evidence layer between Central European importers, their non-EU plants and accredited verifiers, so the same installation data can be collected once, checked continuously and reused defensibly across shipments and declarants.",
+  "title": "CBAM Supplier Evidence Custodian",
+  "uncertainties": [
+    "The number and spend profile of Polish importers above the current threshold is not yet measured.",
+    "It is unknown how much certificate liability supplier-specific actual data will save versus defaults.",
+    "Verifier willingness to accept a startup's evidence format and controls is untested."
+  ],
+  "version": 1
+}

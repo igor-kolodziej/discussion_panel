@@ -1,0 +1,86 @@
+{
+  "candidate_id": "ws-01",
+  "claims": [
+    {
+      "claim_id": "ws-01-control",
+      "claim_type": "founder_control_point_path",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1542/oj?eliuri=eli%3Areg%3A2023%3A1542%3Aoj&locale=en",
+        "https://eur-lex.europa.eu/eli/reg/2023/1542/2025-07-31/eng/pdf"
+      ],
+      "statement": "The Batteries Regulation expressly contemplates legitimate passport access for second-life operators and permits an economic operator to authorize a service provider to store or process passport data, creating a contractible entry route for a neutral field-testing and attestation operator; the founder could enter through Polish storage installers and a partnered battery test laboratory rather than manufacturing batteries."
+    },
+    {
+      "claim_id": "ws-01-loss",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1542/oj?eliuri=eli%3Areg%3A2023%3A1542%3Aoj&locale=en"
+      ],
+      "statement": "From 18 February 2027, EV batteries and industrial batteries above 2 kWh placed on the market or put into service require an electronic battery passport containing model-specific and individual-use information; each transfer, repurposing, or recommissioning therefore creates a time-bounded evidence event, while incomplete state-of-health history can also surface as warranty loss or rejected inventory."
+    },
+    {
+      "claim_id": "ws-01-payer",
+      "claim_type": "payer_and_budget",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1542/oj?eliuri=eli%3Areg%3A2023%3A1542%3Aoj&locale=en"
+      ],
+      "statement": "The responsible economic operator must ensure the passport exists and remains accurate, while purchasers, remanufacturers, second-life operators, and recyclers require parts of the record for their economic activities; the initial payer is therefore a repurposer, storage integrator, fleet seller, or warranty provider using its compliance, incoming-inspection, and warranty-reserve budget at asset transfer."
+    }
+  ],
+  "contrary_evidence": [
+    "The same regulation restricts an authorized passport processor from selling or reusing passport data beyond the contracted service, so any compounding dataset would require separate, explicit rights or sufficiently aggregated non-passport observations.",
+    "OEMs and large recyclers may provide their own passports and diagnostic certificates, leaving a neutral operator mainly the fragmented cross-brand and orphan-asset segment."
+  ],
+  "discovery_lane": "weak-signal",
+  "economics": {
+    "acquisition_route": "Recruit three Polish storage repurposers or fleet sellers through battery recyclers, renewable installers, and the founder's family-business network; offer a paid ten-pack pilot using a contracted laboratory and portable test equipment before buying equipment.",
+    "capital_required_pln": 75000,
+    "founder_net_worth_path": "A Poland-first attestation service can become a cross-border data utility: 100 organizational subscriptions at an assumed 4000 PLN per month plus 4000 annual transfer tests at an assumed 1200 PLN each would support a high-margin recurring business and a valuable licensed failure-curve asset, if explicit data rights are secured.",
+    "founder_time": "Approximately 12-18 founder hours per week for integrations, quality review, and partner sales; field sampling and laboratory work are delegated to trained contractors.",
+    "gross_margin_basis": "Preliminary 60-75% contribution margin after laboratory and technician pass-through costs because the reusable components are protocol, data normalization, and signed attestation; this has not been supplier-quoted.",
+    "payback": "A buyer could recover a 1200-2500 PLN test fee if it prevents one rejected transfer, warranty dispute, or avoidable pack replacement; actual failure incidence and avoided-loss value remain unmeasured.",
+    "pricing": "Assumed 900-2500 PLN per pack test and signed write-back, plus 3000-6000 PLN per month for organization-level custody, APIs, and audit support.",
+    "retention_or_repeat": "Revenue repeats at every acquisition, resale, repurposing, material repair, and scheduled state-of-health retest; organizational customers renew while they hold or transfer battery fleets."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A rights-cleared cross-brand map linking chemistry, prior duty cycle, measured state of health, later failures, and realized resale value.",
+    "customer": "EU battery repurposers, stationary-storage integrators, fleet remarketers, recyclers, and warranty or financing providers handling batteries above 2 kWh.",
+    "distribution_mechanism": "Battery recyclers, renewable-energy installers, equipment financiers, insurer loss-control teams, and test laboratories refer assets at the moment of transfer or recommissioning.",
+    "offer_and_business_model": "Independent field measurement, identity binding, signed battery-health attestation, and authorized passport write-back sold per asset plus an organization subscription.",
+    "payer_and_paid_event": "A repurposer, integrator, seller, or warranty provider pays from inspection/compliance budget when a battery changes owner, use, or service status.",
+    "problem_trigger": "The February 2027 passport obligation and a used pack whose fragmented operating history prevents confident pricing, warranty, or reuse."
+  },
+  "founder_fit": [
+    "Combines the founder's data-science skills with a technically bounded physical measurement protocol.",
+    "The family renewable-installation company offers a low-social-energy route to initial storage installers and asset owners.",
+    "The pilot can be run part-time with a laboratory partner and below the founder's available capital rather than building a battery facility."
+  ],
+  "parent": null,
+  "risks": [
+    "Passport implementation standards or API access may arrive late or favor OEM-controlled systems.",
+    "Measurement error could create material warranty liability and require accreditation, insurance, and strict scope limitations.",
+    "Explicit consent and database rights are needed before secondary learning from passport-linked observations."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2023/1542/oj?eliuri=eli%3Areg%3A2023%3A1542%3Aoj&locale=en",
+    "https://eur-lex.europa.eu/eli/reg/2023/1542/2025-07-31/eng/pdf"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Asset-transfer attestation network",
+    "control_point": "Signed cross-brand state-of-health measurement bound to battery identity and authorized passport write-back at transfer.",
+    "critical_dependency": "Legally sufficient access to battery telemetry and reliable field tests that predict usable life without OEM cooperation."
+  },
+  "thesis": "The 2027 battery-passport boundary turns previously informal second-life battery transfers into recurring evidence events; a neutral operator that controls the field measurement and signed transfer attestation can earn per-asset fees while building rights-cleared cross-brand failure and resale curves that OEM-specific passport software does not possess.",
+  "title": "Second-Life Battery Transfer Attestation Exchange",
+  "uncertainties": [
+    "How many Polish and neighboring-market transfers above 2 kWh lack trustworthy OEM telemetry?",
+    "Which passport fields can a third-party attestor write and which accreditation or notified-body status will buyers demand?",
+    "Will warranty and finance providers pay for neutral tests or accept only OEM certificates?"
+  ],
+  "version": 1
+}

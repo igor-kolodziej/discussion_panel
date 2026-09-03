@@ -1,0 +1,91 @@
+{
+  "candidate_id": "mf-08",
+  "claims": [
+    {
+      "claim_id": "mf-08-control",
+      "claim_type": "founder_control_point_path",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/eli/reg/2023/1542/oj",
+        "https://www.dekra.com/en/battery-test-for-electric-cars/"
+      ],
+      "statement": "The EU Battery Regulation provides read-only state-of-health data access to a legal purchaser or a third party acting on its behalf for residual-value evaluation, and DEKRA demonstrates a 15-minute independent test; a founder can contract dealers for point-of-intake test rights and data consent while licensing rather than inventing diagnostic hardware."
+    },
+    {
+      "claim_id": "mf-08-loss",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://www.adac.de/der-adac/regionalclubs/wuerttemberg/elektromobilitaet/aviloo/",
+        "https://www.adac.de/rund-ums-fahrzeug/elektromobilitaet/elektroauto/batteriecheck-elektroauto/"
+      ],
+      "statement": "Battery condition creates transaction uncertainty because ADAC says the pack can represent 50% of vehicle value and a certificate can raise resale value and reveal a possible warranty case; the measurable event is a dealer's purchase-price haircut, sale delay or post-sale battery claim tied to tested state of health."
+    },
+    {
+      "claim_id": "mf-08-payer",
+      "claim_type": "payer_and_budget",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://www.adac.de/der-adac/regionalclubs/hessen-thueringen/produkte-services/batterie-check/",
+        "https://www.dekra.com/en/battery-test-for-electric-cars/"
+      ],
+      "statement": "The payer is a used-EV dealer, leasing return manager or buyer at vehicle intake or sale; ADAC currently lists EUR 79 including a digital certificate, and DEKRA explicitly markets neutral test results for buying and selling used EVs, proving a live per-vehicle budget before any warranty upsell."
+    }
+  ],
+  "contrary_evidence": [
+    "ADAC, AVILOO, DEKRA and manufacturer diagnostics already provide credible certificates, so the test itself is not novel.",
+    "ADAC notes that manufacturers decide warranty claims using their own test methods, so an independent result may not compel reimbursement."
+  ],
+  "discovery_lane": "mechanism-first",
+  "economics": {
+    "acquisition_route": "Partner with an established diagnostic vendor, sign exclusive workflow agreements with independent Polish dealer groups, and test every EV at intake in exchange for faster pricing and an optional insurer-backed battery warranty.",
+    "capital_required_pln": 90000,
+    "founder_net_worth_path": "Pilot 500 vehicles, reach 15,000 tests annually through 100 dealers at PLN 220 blended net revenue per test and warranty commission for PLN 3.3m revenue, then add lease returns and fleet residual-value analytics; a 25-35% operating margin and proprietary transaction dataset could support PLN 5m founder net worth in 5-7 years.",
+    "founder_time": "Founder builds valuation and risk models for 3 hours daily; dealer staff run standardized tests, while a licensed insurer or warranty administrator carries claim risk.",
+    "gross_margin_basis": "Per-test hardware or license costs and dealer shares reduce margins; preliminary blended gross margin target is 40-55%, with higher-margin portfolio analytics added later.",
+    "payback": "Dealer pilot compares days-to-sale and gross profit on tested versus untested inventory; target payback from one avoided mispricing or warranty claim per 20-40 vehicles.",
+    "pricing": "PLN 250-450 per certified test, PLN 50-150 warranty distribution commission, and later PLN 2,000-10,000 monthly dealer portfolio analytics.",
+    "retention_or_repeat": "Every acquired or sold EV is a new paid test; retained battery, sale and claim outcomes improve model calibration and insurer terms."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Linked test, purchase price, resale speed and warranty-claim outcomes form a Polish multi-brand residual-value dataset that improves dealer bids and warranty selection.",
+    "customer": "Independent used-EV dealers, leasing-return operators and fleet remarketers in Poland and nearby Central European markets.",
+    "distribution_mechanism": "Exclusive dealer intake workflow, diagnostic-vendor channel partnership and insurer-backed warranty bundling.",
+    "offer_and_business_model": "Independent battery certificate plus data-driven trade-in valuation and optional third-party warranty, monetized per vehicle and by portfolio subscription.",
+    "payer_and_paid_event": "The dealer or buyer pays when an EV enters inventory or is sold; a warranty partner pays commission when a tested vehicle receives coverage.",
+    "problem_trigger": "A used EV is appraised, returned from lease, listed for sale or questioned for abnormal battery degradation."
+  },
+  "founder_fit": [
+    "Battery degradation and residual-value modeling are quantitative problems suited to the founder's data-science skills.",
+    "Dealer-embedded testing produces repeat transactions without requiring a public-facing personal brand.",
+    "The founder can cap risk by partnering with an insurer and diagnostic vendor instead of manufacturing hardware or underwriting personally."
+  ],
+  "parent": null,
+  "risks": [
+    "Diagnostic coverage and accuracy vary by vehicle model and onboard data quality.",
+    "Dealers may resist a result that lowers inventory value or adds intake friction.",
+    "Insurance distribution, warranty regulation and adverse selection require licensed partners and may erase commission economics."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://eur-lex.europa.eu/eli/reg/2023/1542/oj",
+    "https://www.dekra.com/en/battery-test-for-electric-cars/",
+    "https://www.adac.de/der-adac/regionalclubs/wuerttemberg/elektromobilitaet/aviloo/",
+    "https://www.adac.de/rund-ums-fahrzeug/elektromobilitaet/elektroauto/batteriecheck-elektroauto/",
+    "https://www.adac.de/der-adac/regionalclubs/hessen-thueringen/produkte-services/batterie-check/"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Certification-gated transaction and warranty distributor",
+    "control_point": "Dealer-contracted right to test every used EV at inventory intake and retain consented outcome data",
+    "critical_dependency": "Reliable multi-brand diagnostics and an insurer willing to price coverage from independent tests"
+  },
+  "thesis": "Own the dealer intake gate, not the diagnostic invention: certify each used EV battery with a licensed tool, convert the result into a trade-in price and insurer-backed warranty decision, and compound the resulting test-to-sale-to-claim dataset.",
+  "title": "Used-EV Battery Truth Gate",
+  "uncertainties": [
+    "Polish dealer test volume and willingness to grant an exclusive intake workflow are unknown.",
+    "The incremental sale-price or days-to-sale benefit of certification has not been measured locally.",
+    "Insurer pricing and regulatory requirements for the warranty layer are unresolved."
+  ],
+  "version": 1
+}

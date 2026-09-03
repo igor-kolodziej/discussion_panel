@@ -1,0 +1,118 @@
+{
+  "assumptions": [
+    "The founder can seek a voluntary family-installer pilot but has no pre-existing authority over its workflow, customers, or data.",
+    "Current Polish grid, subsidy, and warranty workflows continue to require document-heavy submissions even as individual programs and templates change.",
+    "Unknown pilot adoption, willingness to pay, and economics are treated as material uncertainty rather than proof of failure.",
+    "State-of-the-art AI can accelerate document parsing and rule maintenance but cannot confer institutional recognition, customer consent, or dependable crew compliance.",
+    "The venture remains operated alongside full-time employment and therefore must fit within five founder hours per day."
+  ],
+  "base_score": 4.17,
+  "candidate_id": "mf-commissioning-passport",
+  "candidate_sha256": "950e26fd33debe16a20fc42240097e5ed95d4450db8f017a6d1324b117121993",
+  "candidate_version": 1,
+  "constrained_score": 3.97,
+  "evaluation_type": "working_development",
+  "evidence_needed_for_higher_score": "A paid pilot across at least several unrelated installers showing baseline versus passport return rates, installer-borne rework cost, crew completion, manual-review minutes, repeated purchase at the proposed price, fully loaded contribution margin, CAC/payback, and a signed workflow agreement that makes the checkpoint operationally consequential.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "The concept targets a genuine coordination failure: renewable installations generate numerous current-form, device, grid, subsidy, and warranty records, and documented correction rates show that completeness errors are common. A cross-brand checkpoint before handover is coherent, but the insight is not proprietary and overlaps existing installer software and filing services.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Returned or rejected packets create real delay and rework, and missing mandatory documents can cause outright rejection. However, the packet does not establish how much of that cost falls on the installer, how frequently it affects the proposed beachhead, or whether installers will repeatedly pay the proposed per-passport and account fees for validation rather than submission.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Per-install charging creates a repeatable revenue event and a software-led workflow could eventually have operating leverage. The 120-250 PLN price, 300-900 PLN monthly fee, 65-80% contribution target, CAC payback, support burden, manual-review rate, retention, and cash collection are all unmeasured; moreover, an adjacent provider advertises actual OSD filing near the proposed passport price, constraining the economics of validation alone.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Small Polish renewable installers form a recognizable and reachable first segment, while continued subsidy and grid paperwork supports recurring events. The large installed base does not quantify current addressable commissioning volume, annual microinstallation growth has slowed, and no evidence sizes the number or throughput of installers with pain severe enough to buy.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "The venture controls neither institutional acceptance nor the installer relationship by default. Reonic already offers closely overlapping mobile checklists, evidence capture, signatures, and handover PDFs; OEM apps cover device commissioning, and filing providers can deliver a more complete administrative outcome, leaving little demonstrated basis for dominance.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A successful cross-brand evidence layer could expand across batteries, heat pumps, warranty packets, DSOs, insurers, lenders, and adjacent EU jurisdictions. Expansion would still require institution-specific rule maintenance and does not inherit contractual recognition automatically, so each adjacency may resemble a new operational market.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Public rules, replicable checklists, nonexclusive workflow agreements, and replaceable access provide weak protection. The proposed exception-data advantage is plausible only after lawful retention, sufficient volume, and demonstrably better predictions, none of which is established; incumbents already possess workflow data and distribution.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "Neutral cross-brand validation and a consolidated audit trail could improve convenience, but no evidence shows a material reduction in returns, crew time, or liability. The passport supplements rather than replaces official records or approval, while an incumbent platform can bundle much of the same capture workflow and a similarly priced service can submit filings.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "Changing Polish subsidy programs and documentation requirements sustain demand for current information and make automated checks useful. The same churn raises maintenance risk, the cited flagship intake is closed, and slowing microinstallation growth prevents a strong timing tailwind.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "A separately consented family-installer pilot offers an unusually practical first learning channel, with unrelated installers and distributors as fallbacks. There is no signed pilot, integration, referral, or channel commitment, and selling a new workflow to fragmented installers may require more founder-led outreach and behavior change than is compatible with the intended operating model.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "A narrow validation product is technically buildable within the founder's capital and aligns well with data science, document extraction, automation, and part-time experimentation. Execution remains exposed to crew compliance, rule freshness, data-processing obligations, security, integrations, and scheduled support, but these are testable rather than inherently unobtainable.",
+      "score": 6,
+      "status": "scored"
+    }
+  ],
+  "final_score": 4,
+  "highest_value_structural_change": "Move from selling an unrecognized validation artifact to contractually performing a bounded, authorized preparation-and-submission outcome, with payment tied to transmission receipt and exception handling rather than passport generation.",
+  "interaction_adjustment": -0.2,
+  "judge_id": "development-mf-commissioning-j02",
+  "main_structural_strength": "It is a low-capital, measurable, per-install workflow wedge with strong founder-skill fit and a lawful route to an initial pilot without assuming rights to the family company or its customers.",
+  "primary_score_limiter": "The product does not control or satisfy any external acceptance gate and has no demonstrated advantage strong enough to make installers pay repeatedly instead of using bundled software, OEM tools, manual templates, or a filing service.",
+  "qualified": false,
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 3,
+  "strongest_disconfirming_evidence": "Reonic already bundles mobile and offline checklists, photo capture, signatures, documentation, and PDF handover reports, while an adjacent wholesaler advertises actual OSD filing at 145.53 PLN net; this challenges both differentiation and the proposed validation-only price.",
+  "unrounded_score": 3.97
+}

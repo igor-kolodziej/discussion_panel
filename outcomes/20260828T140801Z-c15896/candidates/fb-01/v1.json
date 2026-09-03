@@ -1,0 +1,85 @@
+{
+  "candidate_id": "fb-01",
+  "claims": [
+    {
+      "claim_id": "fb-01-control",
+      "claim_type": "founder_control_point_path",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/en/ALL/?uri=CELEX%3A32024R0573"
+      ],
+      "statement": "A founder can approach the control point through certified HVAC and heat-pump installers: EU rules assign recovery to certified persons and require operator records identifying service and recovery actors, making an installer-led pickup mandate and cylinder chain-of-custody a plausible contractual wedge. Access to enough certified partners is not yet proven."
+    },
+    {
+      "claim_id": "fb-01-loss",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/en/ALL/?uri=CELEX%3A32024R0573"
+      ],
+      "statement": "Decommissioning or servicing F-gas equipment creates a present, auditable event: gas must be recovered and then recycled, reclaimed, or destroyed; mishandled or unassayed material loses potential resale value and still incurs handling effort. The frequency and recoverable yield in a Polish regional route remain unknown."
+    },
+    {
+      "claim_id": "fb-01-payer",
+      "claim_type": "payer_and_budget",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://climate.ec.europa.eu/news-other-reads/news/f-gases-new-rules-labelling-reporting-certification-and-f-gas-portal-2024-09-20_en"
+      ],
+      "statement": "The initial payer hypothesis is a dual-sided one: equipment operators or installers fund compliant pickup from service and waste-handling budgets, while reclaimers or gas wholesalers pay for accepted recovered lots from procurement budgets. The cited implementing-rule update confirms labeling, reporting, and certification activity but does not establish willingness to pay this intermediary."
+    }
+  ],
+  "contrary_evidence": [
+    "The same regulation accelerates adoption of low-GWP and natural refrigerants, so the addressable bank of valuable high-GWP gas should eventually shrink.",
+    "Large refrigerant wholesalers can add take-back programs and may already control reclamation economics."
+  ],
+  "discovery_lane": "future-backcast",
+  "economics": {
+    "acquisition_route": "Use the family renewable installer as a nonexclusive design partner, recruit 5-10 certified regional HVAC firms with consignment pickup agreements, and place recovered cylinders with one licensed reclaimer before buying assay equipment.",
+    "capital_required_pln": 60000,
+    "founder_net_worth_path": "A dense Polish collection network could expand into multi-country refrigerant inventory and provenance infrastructure, producing transaction margin plus recurring chain-of-custody software revenue; the volume required to reach the founder objective is unvalidated.",
+    "founder_time": "Pilot can be coordinated in roughly 12-18 hours per week, with hazardous-material transport and field handling outsourced to qualified partners.",
+    "gross_margin_basis": "Target margin is the spread between pickup/assay/transport cost and reclaimer purchase price plus a service fee; no spread is assumed until two counterparties quote the same test lot.",
+    "payback": "Seek payback on cylinders, logistics, and sampling within two collection turns, otherwise remain a broker rather than an inventory owner.",
+    "pricing": "Per-kilogram accepted-lot spread plus a fixed pickup and documentation fee; future software priced per certified technician or depot.",
+    "retention_or_repeat": "Recovery repeats at service, leak repair, retrofit, and decommissioning events; route density and accepted-quality history should improve repeat economics."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Installer pickup density, assayed yield history, and trusted provenance for each refrigerant lot",
+    "customer": "Certified HVAC and heat-pump installers, equipment operators, and licensed refrigerant reclaimers in Poland",
+    "distribution_mechanism": "Regional installer partnerships and scheduled cylinder backhaul embedded in service routes",
+    "offer_and_business_model": "Managed recovery aggregation and provenance service earning pickup fees, reclaimed-gas spread, and later ledger subscriptions",
+    "payer_and_paid_event": "Operator or installer pays at service/decommissioning; reclaimer pays when an assayed lot is accepted",
+    "problem_trigger": "A service or decommissioning job yields refrigerant that must be recovered, documented, and routed"
+  },
+  "founder_fit": [
+    "The parents' installation company offers a credible first channel into adjacent certified trades without requiring a public persona.",
+    "The founder can build forecasting, routing, lot-quality, and provenance systems while outsourcing regulated physical handling.",
+    "The wedge can be validated with small consignments before material inventory capital is committed."
+  ],
+  "parent": null,
+  "risks": [
+    "Polish waste, dangerous-goods transport, and F-gas trading rules may require licenses or exclude the proposed intermediary role.",
+    "Contamination or mislabeling could destroy a lot's value or create liability.",
+    "Low regional recovery volumes may never support economical route density."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://eur-lex.europa.eu/legal-content/en/ALL/?uri=CELEX%3A32024R0573",
+    "https://climate.ec.europa.eu/news-other-reads/news/f-gases-new-rules-labelling-reporting-certification-and-f-gas-portal-2024-09-20_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Circular commodity aggregation with traceability and reverse logistics",
+    "control_point": "Contracted custody of recovered refrigerant at the installer pickup moment and its accepted provenance record",
+    "critical_dependency": "Legal ability to aggregate material and a reclaimer willing to buy economically sized, assayed lots"
+  },
+  "thesis": "Backcast from a 2032 market in which restricted virgin F-gases make traceable reclaimed material strategically valuable: win the present installer recovery handoff, aggregate compliant lots, and let route density plus assay history become the defensible bank.",
+  "title": "Refrigerant Recovery Bank",
+  "uncertainties": [
+    "Kilograms and quality grades recoverable per regional installer per quarter are unknown.",
+    "The price spread between recovered, reclaimed, and virgin gases in Poland needs live quotes.",
+    "Whether installers will grant exclusive pickup rights rather than use wholesaler take-back is unresolved."
+  ],
+  "version": 1
+}

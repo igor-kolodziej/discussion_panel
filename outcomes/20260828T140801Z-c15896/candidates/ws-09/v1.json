@@ -1,0 +1,89 @@
+{
+  "candidate_id": "ws-09",
+  "claims": [
+    {
+      "claim_id": "ws-09-control",
+      "claim_type": "founder_control_point_path",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32023R1115",
+        "https://environment.ec.europa.eu/news/commission-updates-product-scope-and-tools-support-eudr-2026-07-13_en"
+      ],
+      "statement": "EUDR due diligence requires plot geolocation and the Commission's 2026 implementation package centers submission through an Information System; the founder can obtain a control route by contracting a source-country cooperative or exporter for reusable permission to maintain farm polygons and evidence, then supplying that same upstream record to several EU buyers while leaving formal operator responsibility with each buyer."
+    },
+    {
+      "claim_id": "ws-09-loss",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/topics/forests/deforestation/regulation-deforestation-free-products_en",
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32023R1115"
+      ],
+      "statement": "From 30 December 2026 large and medium operators must prove covered products are legal and deforestation-free, and the regulation requires geolocation for every plot contributing to a relevant product; a missing or suspect polygon can automatically disqualify a lot, making rejected inventory, delayed shipment, emergency resourcing, and duplicated mapping directly measurable losses."
+    },
+    {
+      "claim_id": "ws-09-payer",
+      "claim_type": "payer_and_budget",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/news/commission-updates-product-scope-and-tools-support-eudr-2026-07-13_en",
+        "https://environment.ec.europa.eu/topics/forests/deforestation/regulation-deforestation-free-products_en"
+      ],
+      "statement": "Operators placing cattle, cocoa, coffee, palm oil, rubber, soy, wood, and covered derived products on the EU market or exporting them must demonstrate compliance, with micro and small operators following by 30 June 2027; EU importers, roasters, manufacturers, traders, and their upstream exporters are identifiable payers using procurement, supplier-quality, customs, and due-diligence budgets before a contract season or shipment."
+    }
+  ],
+  "contrary_evidence": [
+    "The EU amended the regulation in both 2024 and 2025 to postpone and simplify implementation, showing that dates and burdens can change again.",
+    "Country-risk classification and simplified downstream references may reduce willingness to pay for independent field mapping, while large commodity traders already operate proprietary traceability systems."
+  ],
+  "discovery_lane": "weak-signal",
+  "economics": {
+    "acquisition_route": "Choose one corridor such as specialty coffee or cocoa, recruit a Polish importer and its upstream exporter, and pay a local cooperative or enumerator for 100 farm polygons only after the importer signs a one-season data license and validation protocol.",
+    "capital_required_pln": 70000,
+    "founder_net_worth_path": "A permissioned evidence cooperative maintaining 200000 plots at an assumed 20-60 PLN per plot annually plus lot-level refresh and buyer licenses could become a recurring EU-facing traceability utility; value compounds when one upstream record serves many downstream buyers.",
+    "founder_time": "Approximately 15-20 founder hours per week for geospatial validation, buyer contracts, and source-country partner management; field collection is performed by local partners.",
+    "gross_margin_basis": "Preliminary 60-80% gross margin after a polygon is reused across buyers and seasons, net of enumerator, satellite, translation, and audit costs; first-season collection may have low or negative margin.",
+    "payback": "An importer pays when the annual evidence fee per supplier is lower than duplicate field collection, delayed-lot carrying cost, or lost gross margin from a rejected shipment; corridor-specific loss incidence is unknown.",
+    "pricing": "Assumed 20-60 PLN per maintained plot per year, 2000-10000 PLN per supplier onboarding, and 500-2000 PLN per buyer-facing lot evidence packet.",
+    "retention_or_repeat": "Farm boundaries, suppliers, legal documents, risk signals, and crop lots change; maintenance renews each season and each downstream buyer references the shared upstream evidence repeatedly."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A permissioned plot-to-producer-to-exporter-to-lot graph with field provenance, change monitoring, buyer acceptance, and correction history.",
+    "customer": "EU mid-market importers, roasters, food or rubber manufacturers, wood traders, and source-country exporters serving shared smallholder networks.",
+    "distribution_mechanism": "EU import associations and customs advisers recruit buyers, while source-country cooperatives and exporters recruit farms; one upstream mapping campaign is licensed downstream many times.",
+    "offer_and_business_model": "A cooperative that funds, validates, and maintains smallholder plot evidence under reusable permissions and licenses buyer-specific due-diligence packets per season and lot.",
+    "payer_and_paid_event": "An EU operator or exporter pays from procurement and due-diligence budget before supplier renewal, harvest contracting, or shipment of a covered product.",
+    "problem_trigger": "A covered lot contains commodities from fragmented plots whose complete geolocation and legal provenance are not available in a buyer-usable form before the December 2026 boundary."
+  },
+  "founder_fit": [
+    "Geospatial validation, anomaly detection, and evidence normalization align with the founder's data-science skills.",
+    "The founder can sell through import associations and upstream partners rather than maintaining a high-volume consumer sales motion.",
+    "A 100-farm paid corridor pilot is bounded, measurable, and possible within available capital while field work is delegated."
+  ],
+  "parent": null,
+  "risks": [
+    "Incorrect polygons or legal documents could cause shipment rejection and create substantial professional liability.",
+    "Source-country cooperatives may not have authority to grant reusable rights, and farm data can be politically and commercially sensitive.",
+    "Further simplification, low-risk treatment, or incumbent traceability platforms could eliminate the shared-evidence margin."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://environment.ec.europa.eu/topics/forests/deforestation/regulation-deforestation-free-products_en",
+    "https://environment.ec.europa.eu/news/commission-updates-product-scope-and-tools-support-eudr-2026-07-13_en",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32023R1115"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Upstream provenance-rights cooperative",
+    "control_point": "Reusable contractual rights to maintain source-level farm polygons and bind them to suppliers and lots before buyer submission.",
+    "critical_dependency": "Upstream evidence permissions and quality must be reusable across buyers without displacing each operator's non-delegable compliance responsibility."
+  },
+  "thesis": "EUDR makes a small farm polygon a gating commercial asset, yet each EU buyer chasing the same fragmented source separately multiplies cost and errors. A neutral cooperative can finance field collection upstream in exchange for reusable evidence rights, then license maintained lot-level records downstream, compounding a source graph rather than selling another buyer-side checklist.",
+  "title": "EUDR Smallholder Evidence Cooperative",
+  "uncertainties": [
+    "Which commodity corridor has repeated downstream buyers, fragmented farms, and the highest verified evidence gap?",
+    "Will operators accept shared upstream evidence despite retaining legal responsibility?",
+    "How often must polygons and legality documents be refreshed to remain useful under the final 2026 rules?"
+  ],
+  "version": 1
+}

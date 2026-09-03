@@ -1,0 +1,148 @@
+{
+  "candidate_id": "ws-compressed-air-savings-share",
+  "claims": [
+    {
+      "claim_id": "ws-compressed-air-savings-share-c1",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www1.eere.energy.gov/manufacturing/tech_assistance/pdfs/compressed_air3.pdf",
+        "https://us.kaeser.com/services/leak-detection/"
+      ],
+      "statement": "DOE guidance says compressed-air leaks often waste 20-30% of compressor output, and an established vendor actively offers leak-detection audit programs, grounding both the loss and purchased workaround."
+    },
+    {
+      "claim_id": "ws-compressed-air-savings-share-c2",
+      "claim_type": "payer_and_budget",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A02023L1791-20260805"
+      ],
+      "statement": "Enterprises above the specified energy-consumption threshold must undergo an audit absent an energy-management system, placing a near-term compliance and efficiency budget with management; no evidence shows they prefer a shared-savings specialist."
+    },
+    {
+      "claim_id": "ws-compressed-air-savings-share-c3",
+      "claim_type": "founder_control_point_path",
+      "confidence": "low",
+      "evidence_refs": [],
+      "statement": "A plausible control path is a 12-24 month baseline and verification contract with an accredited-auditor or field-service partner, but no plant, auditor, or data agreement is secured."
+    },
+    {
+      "claim_id": "ws-compressed-air-savings-share-c4",
+      "claim_type": "other",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A02023L1791-20260805"
+      ],
+      "statement": "The current consolidated EU directive sets 11 October 2026 as the first-audit deadline for covered enterprises, creating a time-bounded labor allocation signal."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Plant manager, operations director, energy manager, maintenance lead, or CFO",
+    "bundling_resistance": "Vendor-neutral measurement, repair persistence, transparent baseline rules, and payment tied to verified savings must beat equipment-led audits",
+    "customer_relationship_owner": "Plant owns operations and vendor relationships; no venture contract or data right exists",
+    "distribution_origin": "Accredited energy auditor, compressor service company, industrial equipment distributor, or direct account-based outreach",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Auditor or service-partner share, industrial sales cycles, and site qualification",
+      "cash_conversion": "Survey deposit upfront; performance fee arrives after repair and a measurement period",
+      "contribution_margin": "Potentially high on large verified leaks but dependent on customer repairs, baseline stability, site travel, and collection",
+      "delivery_and_support_costs": "Baseline design, leak tagging, work-order coordination, remeasurement, and management reporting",
+      "overhead_and_compliance": "Safety training, site insurance, equipment calibration, legal drafting, data security, and accounting",
+      "revenue_basis": "Target 12,000-25,000 PLN initial survey plus 20-30% of independently verified first-year savings",
+      "variable_costs": "Qualified field survey labor, travel, temporary meters, calibration, data processing, and independent verification"
+    },
+    "likely_incumbent_response": "Compressor OEMs, energy service companies, accredited auditors, and maintenance contractors already offer audits and can add monitoring",
+    "paid_event_or_measurable_loss": "Initial survey and verified post-repair kWh savings are paid; measurable loss is compressor output and electricity consumed by leaks plus capacity and maintenance effects",
+    "payer": "Manufacturing enterprise",
+    "purchase_trigger": "Mandatory or voluntary energy audit, compressor-capacity expansion proposal, high energy bill, pressure complaint, or sustainability action plan",
+    "renewal_event": "Quarterly re-survey and annual baseline or savings-contract renewal"
+  },
+  "contrary_evidence": [
+    "Compressor vendors already sell leak audits and may be trusted incumbents with repair capability.",
+    "The DOE loss range is a general benchmark, not evidence that any target Polish plant has a profitable leak backlog.",
+    "Formal energy audits may need registered or accredited experts, a status the founder does not hold."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Proposed 12-24 month measurement-and-savings agreement with baseline, repair responsibilities, and data rights; none secured",
+    "acquisition_instrument_type": "long_term_contract",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Sell a fixed-price tagged leak survey and exportable action list through an accredited auditor or compressor service partner",
+    "current_owner": "The manufacturing plant and its existing compressor or energy-service providers",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "Plant owns operations and vendor relationships; no venture contract or data right exists",
+    "duration": "Proposed 12-24 months; not agreed",
+    "exclusivity": "nonexclusive",
+    "founder_access_basis": "other_legally_usable_access",
+    "founder_access_description": "Public energy-audit rules and industrial leak guidance are available for lawful prospecting; no plant access, meter data, accredited-auditor role, or savings contract is held",
+    "launch_controller": "Plant operations and energy management",
+    "mechanism_control": "dependent",
+    "renewal": "Proposed annual renewal after baseline reconciliation",
+    "replaceability": "replaceable",
+    "revocability": "for_cause",
+    "status": "unknown",
+    "subject": "Compressed-air baseline, tagged repair backlog, and savings-verification workflow",
+    "subject_type": "workflow_position",
+    "transferability": "consent_required"
+  },
+  "discovery_lane": "weak-signal",
+  "economics": {
+    "acquisition_route": "Accredited energy auditors, compressor service firms, equipment distributors, and account-based outreach to qualifying plants",
+    "capital_required_pln": 80000,
+    "founder_net_worth_path": "Conditional path: 80 plants producing 100,000 PLN average annual revenue equals 8m PLN revenue; a repeatable measurement platform and channel could exceed 5m PLN in value, but sales cycles and savings attribution are unknown",
+    "founder_time": "Two or three concurrent sites can fit 3-5 hours daily if field surveys and repairs are performed by partners",
+    "gross_margin_basis": "Survey and performance fees less field labor, meters, travel, verification, partner share, acquisition, safety, and insurance",
+    "payback": "Target customer payback inside 12 months after repair; plant-specific evidence is absent",
+    "pricing": "Discovery hypothesis: 12,000-25,000 PLN survey plus 20-30% of independently verified first-year savings",
+    "retention_or_repeat": "Quarterly or annual re-survey and expansion to additional lines or plants"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Leak signature, repair cost, persistence, operating schedule, and verified savings data improve prioritization and baseline accuracy",
+    "customer": "Polish manufacturing plants with material compressed-air systems and limited in-house energy analytics",
+    "distribution_mechanism": "Accredited energy auditors, compressor service firms, industrial insurers, equipment distributors, and factory associations",
+    "offer_and_business_model": "Sensor-assisted compressed-air leak survey, repair work-order coordination, measurement and verification, and shared-savings reporting",
+    "payer_and_paid_event": "Plant pays an initial survey and then a contracted share when independently measured energy savings persist after repairs",
+    "problem_trigger": "Energy-audit deadline, high compressor load, unexplained pressure loss, capacity constraint, or management demand for a quantified action plan"
+  },
+  "founder_fit": [
+    "Time-series baselining, anomaly detection, and measurement uncertainty fit data-science skills",
+    "Savings and repair persistence create objective commercial outcomes",
+    "Auditor and service channels can provide field labor while the founder builds analysis and workflow automation",
+    "A few high-value industrial contracts may fit the employment constraint better than a large consumer support load"
+  ],
+  "parent": null,
+  "risks": [
+    "Industrial site safety and liability exceed a software-only project",
+    "Customer production changes can make savings attribution contentious",
+    "Plants may take the survey and defer repairs, preventing performance revenue",
+    "Incumbent OEMs can bundle audits with service contracts"
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A02023L1791-20260805",
+    "https://www1.eere.energy.gov/manufacturing/tech_assistance/pdfs/compressed_air3.pdf",
+    "https://us.kaeser.com/services/leak-detection/"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "other",
+    "commercial_model_descriptor": "shared savings industrial efficiency service",
+    "control_point_category": "operating_relationship",
+    "control_point_descriptor": "contracted baseline repair backlog and repeat verification loop inside plant operations",
+    "critical_dependency_category": "customer_adoption",
+    "critical_dependency_descriptor": "plant must permit measurement execute repairs and accept a savings baseline"
+  },
+  "structure": {
+    "commercial_archetype": "Shared-savings industrial efficiency service",
+    "control_point": "Contracted operating relationship around the plant's metering baseline and repair-verification loop",
+    "critical_dependency": "Plant adoption of metering and repairs plus credible independent measurement and verification"
+  },
+  "thesis": "Observed labor and purchasing change: EU rules require enterprises above the 10 TJ threshold without an energy-management system to receive a first energy audit by 11 October 2026, while established compressor vendors sell leak-audit programs and the U.S. Department of Energy documents leakage commonly wasting 20-30% of compressor output. Sell mid-sized factories a bounded compressed-air baseline, tagged leak survey, repair verification, and ongoing metering service, charging a fixed audit fee plus a share of independently measured savings.",
+  "title": "Metered Compressed-Air Savings Share",
+  "uncertainties": [
+    "Number and accessibility of Polish plants above the audit threshold with material compressed-air loads",
+    "Accredited-auditor and field-partner cost and willingness to share customer relationships",
+    "Baseline stability across production changes and customer acceptance of measurement rules",
+    "Repair execution rate, savings persistence, and sales-cycle duration"
+  ],
+  "version": 1
+}

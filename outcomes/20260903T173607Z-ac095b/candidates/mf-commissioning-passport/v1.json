@@ -1,0 +1,145 @@
+{
+  "candidate_id": "mf-commissioning-passport",
+  "claims": [
+    {
+      "claim_id": "mf-commissioning-passport-c1",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://mojprad.gov.pl/zloz-wniosek/",
+        "https://www.gov.pl/web/nfosigw/moj-prad-60-jak-zlozyc-wniosek-i-uniknac-bledow"
+      ],
+      "statement": "The Mój Prąd application workflow calls for multiple electronic documents, and the official instructions state that lack of the OSD connection certificate causes rejection; documentation completeness is therefore tied to a concrete loss event."
+    },
+    {
+      "claim_id": "mf-commissioning-passport-c2",
+      "claim_type": "payer_and_budget",
+      "confidence": "low",
+      "evidence_refs": [],
+      "statement": "The proposed payer is the installer operations owner because the service is intended to reduce commissioning rework and protect collection or after-sales economics; actual willingness to pay is not yet evidenced."
+    },
+    {
+      "claim_id": "mf-commissioning-passport-c3",
+      "claim_type": "founder_control_point_path",
+      "confidence": "high",
+      "evidence_refs": [],
+      "statement": "The founder can request, but cannot presume, a written nonexclusive pilot workflow agreement from the parents' installer and can replace a refusal by recruiting an unrelated installer."
+    },
+    {
+      "claim_id": "mf-commissioning-passport-c4",
+      "claim_type": "other",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.ure.gov.pl/pl/urzad/informacje-ogolne/aktualnosci/13173%2CRaport-URE-w-Polsce-mamy-juz-ponad-16-mln-mikroinstalacji-OZE.html"
+      ],
+      "statement": "URE reported more than 1.6 million prosumer microinstallations in Poland at the end of 2025, indicating a large installed base but not proving demand for this product."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Owner or operations manager responsible for commissioning quality and callbacks",
+    "bundling_resistance": "Cross-brand rules, neutral audit trails, and portability across installers must be materially better than a bundled vendor checklist",
+    "customer_relationship_owner": "The installer retains its homeowner relationship; the founder company contracts directly only with the installer",
+    "distribution_origin": "A separately consented family-firm pilot, followed by unrelated installers, wholesalers, and trade-software partners",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Founder-led outbound and distributor referrals; target CAC below three months of gross profit, unvalidated",
+      "cash_conversion": "Prepaid passport bundles or monthly card/invoice billing; target cash before or within 14 days of delivery",
+      "contribution_margin": "Target 65-80% after automation; unvalidated until manual-review rates are observed",
+      "delivery_and_support_costs": "Remote onboarding, checklist updates, and installer support; no field installation labor",
+      "overhead_and_compliance": "Legal review, processor agreements, security controls, insurance, and rule-update monitoring",
+      "revenue_basis": "Hypothesis: 120-250 PLN per completed passport plus 300-900 PLN monthly account fee",
+      "variable_costs": "Document storage, OCR, messaging, and occasional manual exception review"
+    },
+    "likely_incumbent_response": "Installer CRMs, equipment vendors, or subsidy consultants could add document checklists and bundle them cheaply",
+    "paid_event_or_measurable_loss": "A completed installation creates a concrete documentation event; missing required evidence can cause application rejection, rework, delayed payment, or a harder warranty defense",
+    "payer": "Installer",
+    "purchase_trigger": "First rejected or incomplete subsidy/grid packet, repeated handover rework, or a distributor requiring standardized commissioning evidence",
+    "renewal_event": "Monthly platform renewal or purchase of the next block of commissioning passports"
+  },
+  "contrary_evidence": [
+    "Installers may already use adequate CRM templates, shared drives, or manufacturer apps at near-zero marginal cost.",
+    "The cited Mój Prąd intake had closed, so its precise document set cannot be treated as a permanent demand source."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Nonexclusive 12-month workflow-integration and data-processing agreement limited to opted-in installations",
+    "acquisition_instrument_type": "workflow_integration_agreement",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Pilot with any unrelated installer using the same standalone mobile handover flow",
+    "current_owner": "Each independent installer controls its own workflow and customer records",
+    "customer_relationship_control": "externally_owned",
+    "customer_relationship_owner": "The installer retains its homeowner relationship; the founder company contracts directly only with the installer",
+    "duration": "12 months",
+    "exclusivity": "nonexclusive",
+    "founder_access_basis": "operating_relationship",
+    "founder_access_description": "The parents' approximately seven-person renewable installer can be approached for a lawful voluntary pilot, but the founder has no assumed ownership, customer rights, data rights, or contracting authority and must obtain written consent.",
+    "launch_controller": "A willing installer and the founder company jointly after written opt-in; the family firm remains independently controlled",
+    "mechanism_control": "dependent",
+    "renewal": "Mutual annual renewal",
+    "replaceability": "replaceable",
+    "revocability": "at_will",
+    "status": "replaceable_access",
+    "subject": "Opt-in digital checkpoint in the installer's commissioning and handover workflow",
+    "subject_type": "workflow_position",
+    "transferability": "nontransferable"
+  },
+  "discovery_lane": "mechanism-first",
+  "economics": {
+    "acquisition_route": "One opt-in operating-relationship pilot, then direct sales and nonexclusive distributor referrals",
+    "capital_required_pln": 45000,
+    "founder_net_worth_path": "Illustrative, not forecast: 400 installers averaging 12 passports monthly at 170 PLN implies about 9.8m PLN annual revenue; durable margins and a saleable software asset would still need proof to support a 5m PLN founder outcome",
+    "founder_time": "Initial build and five pilots within five hours per day alongside employment; support must be scheduled, not on-call",
+    "gross_margin_basis": "Software-led document validation with manual work restricted to exceptions",
+    "payback": "Target under three months on installer CAC; not yet validated",
+    "pricing": "Hypothesis: 120-250 PLN per installation plus 300-900 PLN per installer per month",
+    "retention_or_repeat": "Repeats with every installation and renews if rules, records, and warranty evidence stay useful"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Consented, de-identified exception patterns improve document checks by device, grid operator, and program version",
+    "customer": "Small Polish photovoltaic, battery, and heat-pump installers",
+    "distribution_mechanism": "Begin with a voluntarily contracted pilot at the parents' independently owned installer, then sell the same workflow to unrelated installers and equipment distributors",
+    "offer_and_business_model": "White-label mobile evidence capture, rules-based completeness checks, and an immutable customer handover pack sold per installation plus a small platform fee",
+    "payer_and_paid_event": "The installer pays when a commissioning passport is completed and optionally renews a portfolio subscription",
+    "problem_trigger": "A residential installation reaches commissioning but its acceptance, device, payment, grid, or subsidy evidence is incomplete or scattered"
+  },
+  "founder_fit": [
+    "Rules, document extraction, and anomaly detection match data-science strengths",
+    "A narrow automated workflow can be operated in under five founder hours per day after onboarding",
+    "The lawful family operating relationship permits fast problem discovery without assuming rights to the firm or its customers",
+    "Per-install usage and rejection rates are measurable"
+  ],
+  "parent": null,
+  "risks": [
+    "Changing subsidy and grid rules can make checks stale",
+    "Personal-data or cybersecurity failures could create disproportionate liability",
+    "Crew noncompliance could erase the benefit",
+    "A pilot at the family firm may not generalize to unrelated installers"
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://mojprad.gov.pl/zloz-wniosek/",
+    "https://www.gov.pl/web/nfosigw/moj-prad-60-jak-zlozyc-wniosek-i-uniknac-bledow",
+    "https://www.ure.gov.pl/pl/urzad/informacje-ogolne/aktualnosci/13173%2CRaport-URE-w-Polsce-mamy-juz-ponad-16-mln-mikroinstalacji-OZE.html"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "productized_service",
+    "commercial_model_descriptor": "per_install_commissioning_evidence_passport",
+    "control_point_category": "workflow_integration",
+    "control_point_descriptor": "installer_handover_signoff_checkpoint",
+    "critical_dependency_category": "customer_adoption",
+    "critical_dependency_descriptor": "installer_crew_capture_compliance"
+  },
+  "structure": {
+    "commercial_archetype": "Per-commissioning productized evidence service with optional recurring portfolio access",
+    "control_point": "The documented sign-off checkpoint immediately before installer-to-customer handover",
+    "critical_dependency": "Installer adoption of the capture workflow and accurate maintenance of changing document rules"
+  },
+  "thesis": "Acquire an opt-in position in an installer's commissioning workflow and sell a per-install digital evidence passport that validates required handover, subsidy, grid, and warranty documents before the crew closes the job.",
+  "title": "Commissioning Passport Rail for Small Renewable Installers",
+  "uncertainties": [
+    "Frequency and cost of document-driven rework across small installers",
+    "Whether homeowners will consent to an additional processor holding installation records",
+    "Which installer system integrations are necessary for repeated use",
+    "Achievable price before installers revert to manual checklists"
+  ],
+  "version": 1
+}

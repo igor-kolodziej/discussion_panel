@@ -1,0 +1,147 @@
+{
+  "candidate_id": "mf-late-payment-mandate",
+  "claims": [
+    {
+      "claim_id": "mf-late-payment-mandate-c1",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://single-market-economy.ec.europa.eu/smes/challenges-and-resilience/late-payment_en",
+        "https://eur-lex.europa.eu/eli/dir/2011/7/oj/eng",
+        "https://eli.gov.pl/api/acts/DU/2023/1790/text.html"
+      ],
+      "statement": "EU and Polish rules provide late-payment interest and recovery-cost rights for qualifying commercial transactions, so an overdue invoice can be tied to a calculable claim event; applicability depends on the contract and facts."
+    },
+    {
+      "claim_id": "mf-late-payment-mandate-c2",
+      "claim_type": "payer_and_budget",
+      "confidence": "low",
+      "evidence_refs": [],
+      "statement": "The creditor is the proposed payer from recovered cash, eliminating an upfront budget request; acceptable contingency percentages and collectible volume remain unverified."
+    },
+    {
+      "claim_id": "mf-late-payment-mandate-c3",
+      "claim_type": "founder_control_point_path",
+      "confidence": "medium",
+      "evidence_refs": [],
+      "statement": "A written 12-month portfolio mandate can create durable workflow control while leaving claim ownership with the creditor; Polish legal review is required before debtor contact, fee setting, or escalation."
+    },
+    {
+      "claim_id": "mf-late-payment-mandate-c4",
+      "claim_type": "other",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://monitorpolski.gov.pl/MP/2026/642"
+      ],
+      "statement": "The official Polish late-payment rate is periodically announced, so calculations must be versioned by date rather than hard-coded."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Owner, CFO, controller, or accounts-receivable lead",
+    "bundling_resistance": "Transparent statutory calculations, accountant-native onboarding, evidence quality, and measured recovery uplift must beat bundled dunning",
+    "customer_relationship_owner": "Founder company owns the creditor service relationship; creditor retains its debtor commercial relationship",
+    "distribution_origin": "Bookkeepers, accountants, trade-credit specialists, and targeted sector outreach",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Accountant referral share and founder outbound; cash CAC recovered only on successful collections",
+      "cash_conversion": "Contingency fee deducted or invoiced only after cleared recovery; long collection tails create delayed cash",
+      "contribution_margin": "Unknown; target positive expected margin per claim after dispute and escalation probability",
+      "delivery_and_support_costs": "Onboarding, evidence exceptions, debtor disputes, reconciliation, and creditor reporting",
+      "overhead_and_compliance": "Debt-collection and legal-services review, GDPR/security, complaints process, insurance, and partner diligence",
+      "revenue_basis": "Hypothesis: 10-20% of collected statutory interest and compensation plus 2-8% of principal where lawful and agreed",
+      "variable_costs": "Messaging, payment processing, data checks, partner collection fees, and licensed legal escalation"
+    },
+    "likely_incumbent_response": "Accounting software, collection agencies, law firms, and invoice-finance providers can bundle reminders or recovery",
+    "paid_event_or_measurable_loss": "An unpaid invoice after the applicable due date is a measurable cash-flow loss and may create statutory interest and recovery-cost entitlements",
+    "payer": "Creditor SME from collected proceeds",
+    "purchase_trigger": "Growing overdue ledger, repeated manual reminders, cash squeeze, or unclaimed interest and recovery compensation",
+    "renewal_event": "Each successful collection and annual portfolio-mandate renewal"
+  },
+  "contrary_evidence": [
+    "Creditors may intentionally avoid claiming interest to preserve important customer relationships.",
+    "Existing accounting tools, collection agencies, and law firms already serve the reminder and recovery workflow."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Twelve-month exclusive servicing contract for defined receivables, terminable for material breach and requiring consent for any assignment or legal escalation",
+    "acquisition_instrument_type": "exclusive_contract",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Offer a nonexclusive self-service ledger or recruit other creditors; never contact debtors without documented authority",
+    "current_owner": "Each creditor retains ownership of its claims and grants only the contracted administration authority",
+    "customer_relationship_control": "contracted",
+    "customer_relationship_owner": "Founder company owns the creditor service relationship; creditor retains its debtor commercial relationship",
+    "duration": "12 months for the defined portfolio",
+    "exclusivity": "exclusive",
+    "founder_access_basis": "other_legally_usable_access",
+    "founder_access_description": "The mandate is obtainable only through an ordinary written client contract; it does not assign claim ownership and relies on external licensed providers for activities reserved by law.",
+    "launch_controller": "Founder company after the creditor signs the mandate and supplies verified invoice and performance evidence",
+    "mechanism_control": "dependent",
+    "renewal": "Annual mutual renewal; individual claims close on settlement or documented withdrawal",
+    "replaceability": "replaceable",
+    "revocability": "for_cause",
+    "status": "durably_contracted",
+    "subject": "Exclusive servicing mandate for a named creditor's defined overdue B2B invoice portfolio",
+    "subject_type": "right",
+    "transferability": "consent_required"
+  },
+  "discovery_lane": "mechanism-first",
+  "economics": {
+    "acquisition_route": "Accountants, bookkeepers, trade-credit specialists, and targeted invoice-heavy sectors",
+    "capital_required_pln": 25000,
+    "founder_net_worth_path": "Illustrative, not forecast: administering 500m PLN annual overdue principal at a 1.5% blended realized fee implies 7.5m PLN revenue; a 5m PLN founder outcome requires high automation, lawful contracting, and low dispute labor",
+    "founder_time": "Three to five hours daily if disputes and legal work are routed to partners; no founder courtroom or call-center dependency",
+    "gross_margin_basis": "Automated triage and communications with paid external escalation only for positive-expected-value claims",
+    "payback": "Cohort payback only after collections clear; target under six months, unvalidated",
+    "pricing": "Hypothesis: 10-20% of collected statutory amounts and 2-8% of principal where lawful and contracted",
+    "retention_or_repeat": "Continuous feed of new overdue invoices under annual servicing mandates"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Consented payment-delay, contact, evidence, and resolution patterns improve prioritization and intervention timing",
+    "customer": "Polish SMEs with recurring undisputed B2B invoice delays and limited internal collection capacity",
+    "distribution_mechanism": "Accountants, bookkeeping firms, trade-credit brokers, and direct outreach to invoice-heavy sectors",
+    "offer_and_business_model": "Consent-based receivables ledger, evidence completeness, compliant reminder sequencing, statutory calculations, settlement tracking, and licensed escalation",
+    "payer_and_paid_event": "Creditor pays an agreed percentage when principal, late-payment interest, or recovery compensation is actually collected",
+    "problem_trigger": "An invoice passes its contractual due date without payment after the supplier has performed"
+  },
+  "founder_fit": [
+    "Receivables scoring, workflow timing, and cash forecasting align with finance and analytics interests",
+    "Recovered amount, cycle time, dispute rate, and expected value are measurable",
+    "Accountant channels reduce dependence on constant networking or public promotion",
+    "Automation and licensed escalation can keep the founder out of labor-intensive legal work"
+  ],
+  "parent": null,
+  "risks": [
+    "Unauthorized or incorrect demands could create legal and reputational liability",
+    "Long recovery cycles strain cash conversion",
+    "Disputed performance evidence can require intensive human work",
+    "The service can become a low-margin collection agency rather than scalable software"
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://single-market-economy.ec.europa.eu/smes/challenges-and-resilience/late-payment_en",
+    "https://eur-lex.europa.eu/eli/dir/2011/7/oj/eng",
+    "https://eli.gov.pl/api/acts/DU/2023/1790/text.html",
+    "https://monitorpolski.gov.pl/MP/2026/642"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "other",
+    "commercial_model_descriptor": "contingency_fee_late_payment_claim_administration",
+    "control_point_category": "exclusive_right",
+    "control_point_descriptor": "twelve_month_defined_receivables_servicing_mandate",
+    "critical_dependency_category": "rights_holder",
+    "critical_dependency_descriptor": "creditor_authority_and_valid_claim_evidence"
+  },
+  "structure": {
+    "commercial_archetype": "Contingency-fee claim administration under portfolio-specific exclusive mandates",
+    "control_point": "Durable contractual mandate to administer a defined client's overdue receivables workflow",
+    "critical_dependency": "Creditor authority, valid claim evidence, and licensed escalation where required"
+  },
+  "thesis": "Acquire a 12-month exclusive servicing mandate over a client's identified overdue B2B invoices, automate evidence and statutory-interest calculations, and earn a contingency fee while licensed counsel or collection partners perform any reserved legal work.",
+  "title": "Exclusive Late-Payment Recovery Mandate Ledger",
+  "uncertainties": [
+    "Polish regulatory boundary for automated debt administration and contingency fees",
+    "Share of overdue invoices that are undisputed and collectible",
+    "Creditor willingness to grant a 12-month exclusive mandate",
+    "Debtor relationship damage and churn caused by standardized reminders"
+  ],
+  "version": 1
+}

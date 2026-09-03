@@ -1,0 +1,144 @@
+{
+  "candidate_id": "fb-heatpump-outcome-cover",
+  "claims": [
+    {
+      "claim_id": "fb-heatpump-outcome-cover-c1",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "low",
+      "evidence_refs": [],
+      "statement": "The proposed paid event is a recurring cover fee and the defined loss event is a weather-adjusted efficiency or comfort miss; neither customer willingness nor loss frequency is yet evidenced."
+    },
+    {
+      "claim_id": "fb-heatpump-outcome-cover-c2",
+      "claim_type": "payer_and_budget",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://energy.ec.europa.eu/topics/energy-efficiency/heat-pumps_en"
+      ],
+      "statement": "Installers or property owners are the hypothesised payers because heat pumps are installed and maintained as building systems, but no budget interviews or purchase commitments exist."
+    },
+    {
+      "claim_id": "fb-heatpump-outcome-cover-c3",
+      "claim_type": "founder_control_point_path",
+      "confidence": "low",
+      "evidence_refs": [],
+      "statement": "The only plausible founder control path is explicit site data consent plus an installer service contract and a separate risk-capital agreement; none is currently executed."
+    },
+    {
+      "claim_id": "fb-heatpump-outcome-cover-c4",
+      "claim_type": "other",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://energy.ec.europa.eu/topics/energy-efficiency/heat-pumps_en",
+        "https://eur-lex.europa.eu/eli/dir/2024/1275/oj/eng"
+      ],
+      "statement": "The European Commission describes heat pumps as mature, efficient building technology and EU building policy creates a long-run renovation context, but that does not validate a warranty business."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Installer owner or service director, building owner, or portfolio asset manager",
+    "bundling_resistance": "Offer vendor-neutral measurement, separate diagnosis from remediation, and publish auditable contract thresholds that survive installer or OEM changes",
+    "customer_relationship_owner": "The installer before a direct site agreement is executed",
+    "distribution_origin": "Heat-pump installation and annual-service workflows",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Installer onboarding and sales share; target below 400 PLN per activated site",
+      "cash_conversion": "Fees collected monthly or annually in advance; claim reserves or carrier remittance constrain usable cash",
+      "contribution_margin": "Monitoring-only target 55-75%; risk-bearing margin cannot be estimated before loss-frequency data and carrier terms",
+      "delivery_and_support_costs": "Remote monitoring plus exception-driven diagnosis; field remediation remains with contracted installers",
+      "overhead_and_compliance": "Contract design, consumer law, data protection, cyber security, insurance-regulatory advice, accounting, and liability cover",
+      "revenue_basis": "Hypothesis: 25-60 PLN per site per month for measurement and administration plus an actuarially priced risk premium retained by a carrier",
+      "variable_costs": "Gateway/API fees, weather data, inspections, service credits, carrier share, payment fees, and support"
+    },
+    "likely_incumbent_response": "OEMs and large installers can extend warranties, expose proprietary diagnostics, or bundle monitoring into maintenance plans",
+    "paid_event_or_measurable_loss": "Recurring administration premium is paid per covered system; the measurable loss is a contractually specified service credit, remediation cost, or excess energy cost after a weather-adjusted performance miss",
+    "payer": "Installer, property owner, housing manager, or authorised risk carrier",
+    "purchase_trigger": "An installer needs to reduce sales friction and post-install disputes, or an owner wants a measurable outcome rather than an equipment-only warranty",
+    "renewal_event": "Cover renews after a season of adequate telemetry and acceptable claims experience"
+  },
+  "contrary_evidence": [
+    "Modern heat pumps already carry equipment warranties, and some installers may view independent measurement as a source of disputes rather than a sales aid.",
+    "Building-envelope quality and occupant behaviour may make a simple performance promise too noisy to price economically."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Proposed site-specific data-rights consent plus installer service agreement and, for insured risk, a carrier or coverholder agreement",
+    "acquisition_instrument_type": "data_rights_agreement",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Sell monitoring and root-cause reporting without risk transfer, accept customer-exported meter data, or integrate another compatible device vendor",
+    "current_owner": "Homeowner controls consent; installers and device vendors may separately control portions of the source data",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "The installer before a direct site agreement is executed",
+    "duration": "Proposed 24-month cover term; source-data availability and consent duration are unverified",
+    "exclusivity": "nonexclusive",
+    "founder_access_basis": "operating_relationship",
+    "founder_access_description": "The parents' renewable-installation firm could lawfully test measurement and reporting with consenting customers, but it supplies no present data rights, insurance authority, or exclusive distribution.",
+    "launch_controller": "Homeowner, installer, relevant device data holder, and any regulated risk carrier",
+    "mechanism_control": "dependent",
+    "renewal": "Annual renewal after claims and telemetry review",
+    "replaceability": "unknown",
+    "revocability": "unknown",
+    "status": "unknown",
+    "subject": "Right to ingest and use installation, indoor-temperature, energy, weather, and service-event data for a covered site",
+    "subject_type": "dataset",
+    "transferability": "nontransferable"
+  },
+  "discovery_lane": "future-backcast",
+  "economics": {
+    "acquisition_route": "Installer-attached opt-in at quotation or annual service, beginning with a small lawful family-firm pilot",
+    "capital_required_pln": 90000,
+    "founder_net_worth_path": "Recurring cover administration across installer portfolios could reach strategic scale; a 5m PLN outcome would require carrier-backed expansion and tens of thousands of covered systems over roughly 4-7 years",
+    "founder_time": "Up to five hours per day with automated monitoring and installer-delivered field remediation",
+    "gross_margin_basis": "Monitoring fee less telemetry, support, inspections, installer share, carrier share, and expected service-credit cost",
+    "payback": "Target under twelve months on installer integration and site hardware; not evidenced",
+    "pricing": "Hypothesis: 25-60 PLN per site per month for monitoring and administration; risk premium quoted separately by an authorised partner",
+    "retention_or_repeat": "Annual renewal if the site keeps compatible telemetry and values dispute prevention or outcome assurance"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A consented dataset linking system design, weather, controls, service actions, and outcomes improves pricing and root-cause triage",
+    "customer": "Heat-pump installers and small portfolios of building owners that need outcome assurance",
+    "distribution_mechanism": "Installers attach the offer at quotation, commissioning, or annual service",
+    "offer_and_business_model": "Telemetry-backed performance administration with optional carrier-backed warranty cover, priced per installed system",
+    "payer_and_paid_event": "Installer or building owner pays a recurring cover and monitoring fee; a defined service credit is triggered by verified seasonal underperformance",
+    "problem_trigger": "A buyer cannot distinguish equipment defects from sizing, commissioning, control, weather, or building-envelope causes when bills or comfort disappoint"
+  },
+  "founder_fit": [
+    "Combines statistical baselining, anomaly detection, energy systems, and commercial contract analysis",
+    "A family installer relationship permits a lawful measurement pilot without implying access to customers or private data",
+    "Monitoring and claim triage can be automated and operated alongside employment before risk is assumed",
+    "Capital exposure can remain below the founder limit by starting as monitoring software and using a licensed carrier"
+  ],
+  "parent": null,
+  "risks": [
+    "Mispriced outcome cover could exceed the founder's capital rapidly",
+    "Consent withdrawal or OEM API closure could break measurement continuity",
+    "Incorrect diagnosis could create consumer, safety, and installer-liability exposure",
+    "Incumbent OEMs may bundle superior device telemetry with extended warranties"
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://energy.ec.europa.eu/topics/energy-efficiency/heat-pumps_en",
+    "https://eur-lex.europa.eu/eli/dir/2024/1275/oj/eng"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "risk_transfer_or_financing",
+    "commercial_model_descriptor": "performance cover administration with optional carrier backed service credits",
+    "control_point_category": "proprietary_dataset",
+    "control_point_descriptor": "consented weather normalized heat pump performance and claims history",
+    "critical_dependency_category": "capital_provider",
+    "critical_dependency_descriptor": "licensed carrier warranty obligor or ring fenced reserve for promised payouts"
+  },
+  "structure": {
+    "commercial_archetype": "telemetry-backed outcome warranty administrator",
+    "control_point": "consented longitudinal commissioning and performance dataset",
+    "critical_dependency": "risk-bearing capital or an authorised carrier willing to bind the defined cover"
+  },
+  "thesis": "Future operating state (2031): heat-pump retrofits are sold with a seasonal comfort-and-efficiency outcome rather than only an equipment warranty. Missing financial and data mechanism: a defensible weather-adjusted baseline, consented telemetry, claims rules, and a reserve or authorised risk carrier that can fund service credits when the promised outcome is missed.",
+  "title": "Measured Heat-Pump Outcome Cover",
+  "uncertainties": [
+    "Whether the product is legally an insurance contract, warranty, service guarantee, or unregulated monitoring service in Poland",
+    "Minimum sensor set and baseline period needed for a fair seasonal outcome",
+    "Loss frequency, severity, adverse selection, and carrier appetite",
+    "Installer and homeowner willingness to grant reliable telemetry access"
+  ],
+  "version": 1
+}

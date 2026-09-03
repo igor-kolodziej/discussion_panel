@@ -1,0 +1,143 @@
+{
+  "candidate_id": "fb-personal-health-portability-vault",
+  "claims": [
+    {
+      "claim_id": "fb-personal-health-portability-vault-c1",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "low",
+      "evidence_refs": [],
+      "statement": "The proposed paid event is a portability subscription and the hypothesised loss is reconstruction time, duplication, or missing context; consumer willingness to pay is not evidenced."
+    },
+    {
+      "claim_id": "fb-personal-health-portability-vault-c2",
+      "claim_type": "payer_and_budget",
+      "confidence": "low",
+      "evidence_refs": [],
+      "statement": "Individuals and voluntary employer-benefit programs are hypothesised payers, but no Polish price test, benefit budget, or signed distribution partner exists."
+    },
+    {
+      "claim_id": "fb-personal-health-portability-vault-c3",
+      "claim_type": "founder_control_point_path",
+      "confidence": "low",
+      "evidence_refs": [],
+      "statement": "The control path is explicit user mandate plus replaceable source integrations and portable exports; the founder currently controls no health-data source or subscriber relationship."
+    },
+    {
+      "claim_id": "fb-personal-health-portability-vault-c4",
+      "claim_type": "other",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://health.ec.europa.eu/ehealth-digital-health-and-care/european-health-data-space-regulation-ehds_en",
+        "https://eur-lex.europa.eu/eli/reg/2023/2854/oj/eng"
+      ],
+      "statement": "EHDS is designed to strengthen individual access, control, and sharing of electronic health data, while the Data Act addresses user access to connected-product data; implementation timing and source-specific interfaces remain material unknowns."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Consumer household budget, people-benefits lead, or broker administering a voluntary benefit",
+    "bundling_resistance": "Remain source-neutral, emphasize verifiable provenance and consent history, support cross-platform exit, and avoid monetizing health data",
+    "customer_relationship_owner": "Unknown until a direct subscriber relationship is acquired; channel partners retain their own relationships",
+    "distribution_origin": "Clinic, laboratory, benefits, coach, and quantified-self partner referrals",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Partner share or content/community acquisition; target below six months of gross profit",
+      "cash_conversion": "Subscription collected in advance; annual plans improve runway but increase refund and trust obligations",
+      "contribution_margin": "Unvalidated target 65-80% after storage, connectors, parsing, support, and partner share",
+      "delivery_and_support_costs": "Self-serve onboarding with exception queues for failed imports, identity mismatches, and schema ambiguity",
+      "overhead_and_compliance": "Privacy and health-data counsel, security testing, incident response, cyber insurance, vendor audits, and support governance",
+      "revenue_basis": "Hypothesis: 29-69 PLN per consumer per month or 12-30 PLN per eligible employee per month",
+      "variable_costs": "Connector calls, storage, encryption and key operations, document parsing, support, payment fees, and breach-risk cover"
+    },
+    "likely_incumbent_response": "Mobile operating systems, EHR vendors, national health portals, wearable platforms, and insurers can bundle record aggregation and export",
+    "paid_event_or_measurable_loss": "Paid event is a monthly or annual portability subscription; measurable loss is time, duplicated testing, or lost context when a user cannot assemble a complete, provenance-linked record",
+    "payer": "Individual subscriber or employer benefits program",
+    "purchase_trigger": "Provider switch, international move, new wearable or lab, chronic-care handoff, family-care coordination, or AI-coach onboarding",
+    "renewal_event": "Continued connector synchronization, provenance monitoring, new-source ingestion, and export availability"
+  },
+  "contrary_evidence": [
+    "Users may expect portability from national health portals, EHR providers, or mobile operating systems at no extra cost.",
+    "A vault without diagnostic advice may feel less valuable than an integrated care or coaching product."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Proposed user data-rights mandate and processing agreement, supplemented by nonexclusive API or workflow integrations where available",
+    "acquisition_instrument_type": "data_rights_agreement",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Accept standards-based or human-readable user exports, support local-only storage, or omit the source with an explicit completeness warning",
+    "current_owner": "The individual controls applicable rights while providers and device platforms control source systems and interfaces",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "Unknown until a direct subscriber relationship is acquired; channel partners retain their own relationships",
+    "duration": "Subscription duration plus lawful retention and user-directed deletion periods",
+    "exclusivity": "nonexclusive",
+    "founder_access_basis": "none",
+    "founder_access_description": "Personal interest in quantified self and data science does not create user, clinic, laboratory, wearable-platform, or health-record access rights.",
+    "launch_controller": "Each user and every source platform or provider needed for automated access",
+    "mechanism_control": "dependent",
+    "renewal": "Monthly or annual user renewal with per-connector reauthorisation as required",
+    "replaceability": "replaceable",
+    "revocability": "at_will",
+    "status": "unknown",
+    "subject": "User-authorized workflow for importing, normalizing, recording provenance, and exporting personal health and wellness data",
+    "subject_type": "workflow_position",
+    "transferability": "nontransferable"
+  },
+  "discovery_lane": "future-backcast",
+  "economics": {
+    "acquisition_route": "Referrals from private clinics, labs, benefits brokers, coaches, and quantified-self communities",
+    "capital_required_pln": 80000,
+    "founder_net_worth_path": "A trusted cross-source subscription could scale internationally or sell to a benefits or health-platform buyer; 5m PLN likely requires tens of thousands of retained subscribers over 4-7 years",
+    "founder_time": "Up to five hours per day with self-service onboarding, automated normalization, and strict exception queues",
+    "gross_margin_basis": "Subscription less storage, security, connector, parsing, payment, support, insurance, and channel cost",
+    "payback": "Target below six months of gross profit per acquired subscriber; not evidenced",
+    "pricing": "Hypothesis: 29-69 PLN per consumer per month or 12-30 PLN per eligible employee per month",
+    "retention_or_repeat": "Monthly or annual while synchronized provenance and portable exports remain valuable"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Connector coverage, schema mappings, provenance rules, and user-corrected normalization improve while underlying health rights remain with each user",
+    "customer": "Privacy-conscious quantified-self users, mobile professionals, and families managing fragmented health records",
+    "distribution_mechanism": "Partner with private clinics, labs, benefits brokers, coaches, and wearable communities at an onboarding or provider-switch event",
+    "offer_and_business_model": "Encrypted personal vault, connector library, normalization, consent ledger, change detection, and one-click evidence exports",
+    "payer_and_paid_event": "Individual or employer benefit plan pays a recurring subscription for maintained portability, provenance, and export readiness",
+    "problem_trigger": "A user changes provider, device, country, coach, or health application and must reconstruct a trusted longitudinal record"
+  },
+  "founder_fit": [
+    "Direct match to quantified-self interest, data engineering, provenance, and AI-assisted normalization",
+    "Software subscription delivery is measurable, automatable, and compatible with limited daily hours",
+    "A local-first narrow-source pilot can stay well below 100k PLN",
+    "The product can scale across markets without constant founder visibility if trust and channels are earned"
+  ],
+  "parent": null,
+  "risks": [
+    "A breach or account takeover would expose highly sensitive data",
+    "Platform API changes can break automated imports",
+    "Normalization errors could mislead users or downstream clinicians even without explicit advice",
+    "Large ecosystem owners can bundle the core features and underprice a standalone service"
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://health.ec.europa.eu/ehealth-digital-health-and-care/european-health-data-space-regulation-ehds_en",
+    "https://eur-lex.europa.eu/eli/reg/2023/2854/oj/eng",
+    "https://eur-lex.europa.eu/eli/reg/2024/1183/oj/eng"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "software_subscription",
+    "commercial_model_descriptor": "monthly personal data portability provenance and export readiness subscription",
+    "control_point_category": "workflow_integration",
+    "control_point_descriptor": "recurring user authorized import normalization consent and export layer",
+    "critical_dependency_category": "integration_platform",
+    "critical_dependency_descriptor": "clinical laboratory and wearable interfaces or reliable user export formats"
+  },
+  "structure": {
+    "commercial_archetype": "consumer health-data portability subscription",
+    "control_point": "the user's recurring import, normalization, consent, and export workflow",
+    "critical_dependency": "stable interfaces or lawful user exports from clinical, lab, and wearable data providers"
+  },
+  "thesis": "Future operating state (2031): individuals routinely delegate record retrieval, longitudinal tracking, and administrative preparation to personal health agents while keeping authority over their data. Missing data and coordination mechanism: a user-controlled vault that normalizes clinical exports, labs, wearables, consent receipts, provenance, and revocations into a portable evidence bundle without making diagnostic or treatment claims.",
+  "title": "Personal Health Portability Vault",
+  "uncertainties": [
+    "Consumer willingness to pay for portability before an urgent switching event",
+    "Available Polish clinical, laboratory, and wearable export or API formats",
+    "Whether employer distribution creates additional health-data and discrimination risk",
+    "Support burden from low-quality PDFs, duplicates, identity matching, and multilingual records"
+  ],
+  "version": 1
+}

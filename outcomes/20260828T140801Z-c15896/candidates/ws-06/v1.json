@@ -1,0 +1,87 @@
+{
+  "candidate_id": "ws-06",
+  "claims": [
+    {
+      "claim_id": "ws-06-control",
+      "claim_type": "founder_control_point_path",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32024L3019"
+      ],
+      "statement": "The wastewater directive makes both quaternary-treatment and micropollutant-monitoring costs part of producer responsibility, creating an auditable allocation problem; the founder can control a product-to-compound evidence layer by licensing sales and ingredient data from producer groups, contracting accredited laboratories, and owning the transparent allocation model used in scheme invoices or challenges."
+    },
+    {
+      "claim_id": "ws-06-loss",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/news/new-rules-urban-wastewater-management-set-enter-force-2024-12-20_en",
+        "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32024L3019"
+      ],
+      "statement": "The recast directive requires advanced removal of micropollutants and systematic monitoring, while Member States must make covered producers finance at least 80% of full quaternary-treatment and monitoring costs by 31 December 2028; each national fee allocation, product reformulation, or disputed pollutant contribution is a measurable liability event."
+    },
+    {
+      "claim_id": "ws-06-payer",
+      "claim_type": "payer_and_budget",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/news/new-rules-urban-wastewater-management-set-enter-force-2024-12-20_en",
+        "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32024L3019"
+      ],
+      "statement": "Pharmaceutical and cosmetics producers placing covered products on the market must join extended-producer-responsibility financing that includes capital, operations, and monitoring; manufacturers, importers, and their producer-responsibility organizations are therefore named payers with environmental-fee, regulatory, product-stewardship, and reformulation budgets."
+    }
+  ],
+  "contrary_evidence": [
+    "Member States may adopt standardized levies or entrust one producer-responsibility organization with allocation, leaving little room for an independent data utility.",
+    "The directive identifies pharmaceutical and cosmetics sectors broadly, but national methodologies, exemptions, compound weights, and causal attribution remain unsettled and may be politically rather than analytically determined."
+  ],
+  "discovery_lane": "weak-signal",
+  "economics": {
+    "acquisition_route": "Form a five-producer Polish working group through pharmaceutical and cosmetics associations; model one wastewater catchment using public treatment data, confidential SKU volumes, and a contracted laboratory, then sell an auditable shadow invoice before official fees arrive.",
+    "capital_required_pln": 60000,
+    "founder_net_worth_path": "If producer organizations in ten EU markets license a common product-compound and treatment-cost model for an assumed 0.5-2 million PLN annually per market, the resulting evidence standard and longitudinal dataset could become essential infrastructure for fee allocation and lower-impact formulation decisions.",
+    "founder_time": "Approximately 15-20 founder hours per week for model design, evidence governance, and association sales; laboratory work and environmental legal review are contracted.",
+    "gross_margin_basis": "Preliminary 70-85% gross margin on annual model and data licenses after the initial lab dataset exists, with testing, legal, and expert-review projects priced separately.",
+    "payback": "A producer pays if the shadow allocation identifies defensible fee reductions, avoids an erroneous invoice, or prioritizes a reformulation whose expected fee reduction exceeds the annual license; none of those savings is yet demonstrated.",
+    "pricing": "Assumed 30000-150000 PLN per producer per year or 0.5-2 million PLN per national producer organization, plus pass-through sampling and expert costs.",
+    "retention_or_repeat": "Fees, sales volumes, product formulations, treatment plants, removal efficiencies, and national rules change annually; producers need repeated forecasting, reconciliation, and challenge support."
+  },
+  "fingerprint": {
+    "compounding_advantage": "A governed SKU-to-active-compound-to-wastewater-load-to-treatment-cost graph with observed removal efficiencies and accepted fee precedents.",
+    "customer": "EU pharmaceutical and cosmetics manufacturers, importers, trade associations, and extended-producer-responsibility organizations.",
+    "distribution_mechanism": "Trade associations and producer-responsibility bodies aggregate mandatory payers; accredited laboratories and wastewater utilities supply measurements and refer disputed allocations.",
+    "offer_and_business_model": "An independent evidence utility that forecasts, reconciles, and challenges micropollutant EPR allocation using governed sales, composition, monitoring, and treatment-cost data; sold as annual license plus testing.",
+    "payer_and_paid_event": "A producer or producer-responsibility organization pays from environmental-fee and product-stewardship budget when forecasting or allocating annual treatment and monitoring contributions.",
+    "problem_trigger": "National EPR implementation converts diffuse pharmaceutical and cosmetic residues into a large recurring bill that must be attributed across products and producers."
+  },
+  "founder_fit": [
+    "Causal allocation, uncertain evidence, and sensitive-data governance align with the founder's data-science and business-analysis skills.",
+    "The founder's health and medicine interest supports technical learning without requiring clinical practice.",
+    "A shadow-invoice pilot is capital-light, measurable, and can be delivered with laboratories and legal experts while the founder remains employed."
+  ],
+  "parent": null,
+  "risks": [
+    "An allocation model could be rejected by regulators or challenged as scientifically invalid, creating professional-liability exposure.",
+    "Producer sales and formulation data are highly sensitive and may be unavailable without association sponsorship.",
+    "Large consultancies, laboratory networks, or the statutory producer organization may own the standard before a startup gains access."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://environment.ec.europa.eu/news/new-rules-urban-wastewater-management-set-enter-force-2024-12-20_en",
+    "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32024L3019"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Shared regulatory-liability attribution utility",
+    "control_point": "A governed product-to-compound evidence graph and allocation methodology licensed to producer groups before official EPR invoices are finalized.",
+    "critical_dependency": "National schemes must allow evidence-based differentiation among producer contributions rather than a fixed sales-only levy."
+  },
+  "thesis": "The new wastewater EPR rule turns invisible product residues into a recurring industry-funded infrastructure bill. The non-obvious control point is not treatment equipment but the evidence standard that maps products and volumes to pollutant load and cost; whoever earns acceptance for that model can become the neutral calculator used by producer organizations, manufacturers, and fee challengers across countries.",
+  "title": "Micropollutant EPR Attribution Utility",
+  "uncertainties": [
+    "How will Poland and early-moving Member States define producer categories, exemptions, and fee modulation?",
+    "Can product-level pollutant contribution be estimated robustly enough to affect statutory invoices?",
+    "Will a producer organization procure an independent model or build it with a large consultancy and laboratory incumbent?"
+  ],
+  "version": 1
+}

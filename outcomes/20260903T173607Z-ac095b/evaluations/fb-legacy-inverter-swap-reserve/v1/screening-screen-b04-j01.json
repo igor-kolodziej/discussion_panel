@@ -1,0 +1,117 @@
+{
+  "assumptions": [
+    "At least one regional inverter family has enough installed units, failures, and sourcing delays to support pooled coverage.",
+    "Installers or asset owners will prepay for availability before the reserve inventory is purchased.",
+    "Authentic compatible units can be acquired, tested, stored, and dispatched lawfully at the modeled cost.",
+    "Qualified electricians retain diagnosis and installation responsibility."
+  ],
+  "base_score": 4.93,
+  "candidate_id": "fb-legacy-inverter-swap-reserve",
+  "candidate_sha256": "76d073efb22cc752b726f732f614b82066658f2f2b2218f83b0c0927205d110d",
+  "candidate_version": 1,
+  "constrained_score": 5.03,
+  "evaluation_type": "working_screening",
+  "evidence_needed_for_higher_score": "A serial-numbered installed-base census, verified failure and lead-time history, compatible-replacement evidence, supplier quotes and testing yields, plus paid reservations showing cohort-level contribution after storage, warranty, and disposal costs.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "Demand-synchronizing scarce legacy inverter inventory through paid availability reservations is a coherent improvement over speculative stocking and addresses a real lifecycle mismatch between durable PV assets and shorter electronics support cycles.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "PV downtime and premature system replacement can be costly, but the packet does not establish model-specific stockouts, failure frequency, downtime value, or any customer's willingness to prepay for a reserve.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Annual prepayment could finance inventory and align incentives, yet contribution depends on uncertain failures, testing yield, storage, warranty returns, write-downs, and cohort concentration; every stated margin and payback figure remains a hypothesis.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "A regional portfolio of aging commercial PV systems is a sensible narrow beachhead, but no installed-base census demonstrates enough exposure to any specific unsupported inverter family to sustain a reserve.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "A multi-brand reserve may serve small installers overlooked by OEMs, but distributors, refurbishers, large O&M firms, adapters, and full-system replacement are strong substitutes, and no exclusive supply or customer control exists.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "If one cohort works, the model can extend across inverter families, control boards, adjacent components, insurers, and regions, with accumulated compatibility and failure data guiding capital allocation.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Owned scarce inventory plus compatibility, failure, and salvage data can create a useful lead, but inventory is purchasable by rivals, contracts are not yet present, and scarcity may vanish when supply or replacement options improve.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "The founder's analytics capability and lawful access to an installer pilot route are relevant advantages, though they confer neither current inventory nor proprietary fleet data, supply rights, or signed demand.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "A growing, long-lived PV stock makes electronics obsolescence increasingly plausible, but the packet does not show that target models have reached a scarcity window in which reservation economics work today.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "Installer and O&M portfolios offer concentrated fleet access and the family relationship can seed a lawful pilot, although wider channel participation and portfolio enrollment remain untested.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "A single paid cohort can be piloted within the stated capital and time envelope using qualified electricians, but provenance, electrical safety, diagnosis, firmware compatibility, storage, and trapped working capital create meaningful operating risk.",
+      "score": 5,
+      "status": "scored"
+    }
+  ],
+  "final_score": 5,
+  "highest_value_structural_change": "Restrict the offer to one documented high-downtime cohort and require signed, prepaid fleet-level reservations that fully cover acquisition and expected write-down cost before buying inventory.",
+  "interaction_adjustment": 0.1,
+  "judge_id": "screen-b04-j01",
+  "main_structural_strength": "The reservation-first design can convert uncertain spare demand into contracted fleet coverage before capital is committed to a narrowly defined inventory cohort.",
+  "primary_score_limiter": "There is no evidence yet that any named equipment cohort combines material failure incidence, persistent scarcity, costly downtime, and sufficient reservation willingness.",
+  "qualified": false,
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 3,
+  "strongest_disconfirming_evidence": "Adapters or complete current-model replacement may be cheaper and safer than keeping model-specific legacy stock, while failures may be too infrequent to fund the reserve.",
+  "unrounded_score": 5.03
+}

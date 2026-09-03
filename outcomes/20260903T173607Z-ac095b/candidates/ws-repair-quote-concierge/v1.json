@@ -1,0 +1,147 @@
+{
+  "candidate_id": "ws-repair-quote-concierge",
+  "claims": [
+    {
+      "claim_id": "ws-repair-quote-concierge-c1",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://commission.europa.eu/law/law-topic/consumer-protection-law/directive-repair-goods_en"
+      ],
+      "statement": "From 31 July 2026, covered manufacturers must repair qualifying products within a reasonable time and at a reasonable price, publish repair-service information, and expose indicative prices, creating a changed repair transaction workflow."
+    },
+    {
+      "claim_id": "ws-repair-quote-concierge-c2",
+      "claim_type": "payer_and_budget",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://commission.europa.eu/news-and-media/news/right-repair-new-consumer-rights-easy-and-attractive-repairs-2026-07-31_en"
+      ],
+      "statement": "Consumers choose and fund repair or replacement, while repairers can fund acquisition from completed-job revenue; willingness to pay a concierge or commission at Polish ticket sizes is unknown."
+    },
+    {
+      "claim_id": "ws-repair-quote-concierge-c3",
+      "claim_type": "founder_control_point_path",
+      "confidence": "low",
+      "evidence_refs": [],
+      "statement": "A plausible control path is direct consumer intake and nonexclusive completion agreements with several repairers, but no consumer relationship or shop contract is secured."
+    },
+    {
+      "claim_id": "ws-repair-quote-concierge-c4",
+      "claim_type": "other",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://commission.europa.eu/law/law-topic/consumer-protection-law/directive-repair-goods_en"
+      ],
+      "statement": "The Commission plans a public European repair platform, currently foreseen to become operational in January 2028, creating both validation of discovery friction and a future substitute."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Consumer or property manager",
+    "bundling_resistance": "Structured remote intake, comparable all-in quotes, collection, and completion guarantees must add value beyond a free directory",
+    "customer_relationship_owner": "No venture relationship exists; manufacturers, retailers, and repairers currently reach consumers directly",
+    "distribution_origin": "Failure-intent search, retailer or insurer referral, landlord portfolio, and repairer inventory gaps",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Failure-intent search, retailer or landlord partner share, and repairer onboarding",
+      "cash_conversion": "Consumer preauthorization with repairer settlement after completion; refunds and disputes create reserve needs",
+      "contribution_margin": "Potentially thin on low-ticket repairs and strongly dependent on logistics density and dispute rate",
+      "delivery_and_support_costs": "Quote normalization, parts matching, dispute handling, status chasing, and rework",
+      "overhead_and_compliance": "Consumer-law compliance, insurance, privacy, payment reconciliation, and quality governance",
+      "revenue_basis": "Target 10-18% completed-job commission plus 49-99 PLN optional diagnostic or collection fee",
+      "variable_costs": "Payments, pickup and return, customer support, refunds, fraud, and partner quality checks"
+    },
+    "likely_incumbent_response": "Manufacturers, retailers, classifieds, local directories, insurers, and the planned European repair platform can connect consumers to repairers",
+    "paid_event_or_measurable_loss": "A completed repair is the primary paid event; measurable loss is excess replacement spend, search time, failed diagnosis, repeat repair, or device downtime",
+    "payer": "Repairer through a completed-job commission and consumer through an optional fixed logistics or diagnostic fee",
+    "purchase_trigger": "Product failure outside or inside guarantee, an unattractive manufacturer quote, or desire to extend product life",
+    "renewal_event": "Each future failure for consumers and continued monthly job flow for repairers"
+  },
+  "contrary_evidence": [
+    "A Commission-run European repair platform is planned, so a pure directory has little durable value.",
+    "Manufacturers now have stronger incentives and obligations to publish repair offers directly.",
+    "Low-value appliances may still be economically irrational to collect and repair."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Proposed nonexclusive repairer distribution agreement plus consumer service terms; none secured",
+    "acquisition_instrument_type": "distribution_agreement",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Provide a consumer-paid quote and collection concierge using replaceable shops without marketplace exclusivity",
+    "current_owner": "Consumer, manufacturer, retailer, and local repairers each control parts of the journey",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "No venture relationship exists; manufacturers, retailers, and repairers currently reach consumers directly",
+    "duration": "Unknown until partner and consumer terms are executed",
+    "exclusivity": "nonexclusive",
+    "founder_access_basis": "other_legally_usable_access",
+    "founder_access_description": "Public repair rules, published service information, and lawful outreach to consumers and repairers are available; no repair network or consumer demand is owned",
+    "launch_controller": "The consumer and participating repair businesses",
+    "mechanism_control": "dependent",
+    "renewal": "Repairer relationship proposed to renew annually; consumer transactions are episodic",
+    "replaceability": "replaceable",
+    "revocability": "at_will",
+    "status": "unknown",
+    "subject": "Consumer repair request and quote-comparison relationship",
+    "subject_type": "relationship",
+    "transferability": "nontransferable"
+  },
+  "discovery_lane": "weak-signal",
+  "economics": {
+    "acquisition_route": "Failure-intent search, retailers, insurers, landlords, repair shops, and local category pilots",
+    "capital_required_pln": 50000,
+    "founder_net_worth_path": "Conditional path: 8,000 monthly repairs at 60 PLN net revenue equals 5.76m PLN annual net revenue before overhead; marketplace value above 5m PLN requires dense repeatable supply and low disputes, none yet proven",
+    "founder_time": "One product category and one metro can fit 3-5 hours daily if couriers and repairs are outsourced",
+    "gross_margin_basis": "Commission and fees less acquisition, logistics subsidy, support, refunds, disputes, payments, and partner QA",
+    "payback": "Transaction-level payback must be immediate; repeat-customer CAC payback is uncertain because failures are episodic",
+    "pricing": "Discovery hypothesis: 10-18% completed-job commission plus 49-99 PLN optional collection or diagnostic fee",
+    "retention_or_repeat": "Repairer repeat can be high; consumer repeat is low-frequency but multi-category"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Model-symptom, quoted-price, parts, completion, repeat-failure, and turnaround data improve routing and quote confidence",
+    "customer": "Polish consumers and small landlords with broken covered appliances, phones, tablets, or other repairable goods",
+    "distribution_mechanism": "Search at the failure moment, retailer post-warranty referrals, landlord portfolios, insurers, and qualified repair shops",
+    "offer_and_business_model": "Structured repair intake, parts and price comparison, pickup, status tracking, and payment marketplace",
+    "payer_and_paid_event": "Repairer pays a commission on a completed job while the consumer can pay a fixed collection or diagnostic fee",
+    "problem_trigger": "A covered product fails and the owner must decide quickly between manufacturer repair, independent repair, and replacement"
+  },
+  "founder_fit": [
+    "Routing, quote normalization, failure classification, and fraud detection fit data-science skills",
+    "A single category and city can be tested within the founder's time and capital constraints",
+    "Completed jobs, turnaround, first-time-fix rate, and repeat failures are measurable",
+    "Partner distribution and workflow automation can reduce reliance on founder-led public content"
+  ],
+  "parent": null,
+  "risks": [
+    "Disputes over diagnosis, hidden damage, data loss, and repair quality",
+    "Pickup and return costs can exceed marketplace revenue",
+    "The public platform or retailers can commoditize matching",
+    "Handling personal devices creates privacy and custody exposure"
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://commission.europa.eu/news-and-media/news/right-repair-new-consumer-rights-easy-and-attractive-repairs-2026-07-31_en",
+    "https://commission.europa.eu/law/law-topic/consumer-protection-law/directive-repair-goods_en",
+    "https://eur-lex.europa.eu/legal-content/EN/LSU/?uri=OJ%3AL_202401799"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "marketplace",
+    "commercial_model_descriptor": "commission marketplace for completed repairs with optional logistics",
+    "control_point_category": "customer_relationship",
+    "control_point_descriptor": "structured consumer intake and quote comparison at the failure moment",
+    "critical_dependency_category": "specialist_labor",
+    "critical_dependency_descriptor": "qualified repair shops with model coverage parts access and dependable turnaround"
+  },
+  "structure": {
+    "commercial_archetype": "Completed-repair marketplace with optional logistics fee",
+    "control_point": "The consumer relationship at structured diagnosis and quote comparison",
+    "critical_dependency": "Dense, trustworthy specialist repair labor with access to parts and manufacturer information"
+  },
+  "thesis": "Observed transaction change: EU repair rules started applying on 31 July 2026, obliging covered manufacturers to offer repair on reasonable terms, publish repair-service information, and expose indicative prices for typical repairs. Build a Polish repair-request concierge that converts a photo, model number, and symptom into comparable offers, parts availability, collection, and a completed repair transaction before the planned European platform becomes operational.",
+  "title": "Repair Quote and Parts Concierge",
+  "uncertainties": [
+    "Polish transposition details, enforcement, and covered-product scope",
+    "Repairer willingness to quote remotely and pay commission",
+    "Ticket size, parts availability, repeat-failure rate, and logistics density by category",
+    "Consumer trust in prepaying through an intermediary"
+  ],
+  "version": 1
+}

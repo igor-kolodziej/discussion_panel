@@ -1,0 +1,148 @@
+{
+  "candidate_id": "ws-used-ev-battery-checkout",
+  "claims": [
+    {
+      "claim_id": "ws-used-ev-battery-checkout-c1",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://shop.aviloo.com/en/includes-en"
+      ],
+      "statement": "An independent battery certificate is visibly sold for EUR 99, establishing a real paid event around battery-health uncertainty rather than merely inferred interest."
+    },
+    {
+      "claim_id": "ws-used-ev-battery-checkout-c2",
+      "claim_type": "payer_and_budget",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://aviloo.com/en-us/aviloo-certified",
+        "https://eic.ec.europa.eu/impact/aviloo_en"
+      ],
+      "statement": "The vendor explicitly targets dealers and used-car transactions, while the European Innovation Council describes buyers and sellers as beneficiaries; the best Polish payer split is not established."
+    },
+    {
+      "claim_id": "ws-used-ev-battery-checkout-c3",
+      "claim_type": "founder_control_point_path",
+      "confidence": "low",
+      "evidence_refs": [],
+      "statement": "A plausible path is a nonexclusive diagnostic distribution agreement plus embedded dealer checkout, with direct-buyer and multi-supplier fallback; none of those agreements exists."
+    },
+    {
+      "claim_id": "ws-used-ev-battery-checkout-c4",
+      "claim_type": "other",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://aviloo.com/en-us/aviloo-certified"
+      ],
+      "statement": "A three-minute business test and QR-verifiable digital certificate demonstrate a workflow suitable for dealer inventory, but availability and model coverage in Poland are unknown."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Dealer used-car manager, remarketing lead, fleet disposal manager, or buyer",
+    "bundling_resistance": "Polish-language coordination, multi-vendor routing, VIN-linked verification, and dense local logistics must justify the intermediary margin",
+    "customer_relationship_owner": "Dealer or marketplace owns the vehicle shopper relationship; the venture's test-order relationship is not yet contracted",
+    "distribution_origin": "Dealer-management workflow, marketplace listing enhancement, inspection referral, or buyer search",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Dealer setup, marketplace integration, referral share, and buyer search acquisition",
+      "cash_conversion": "Customer prepays; diagnostic and logistics providers are paid at or after completion",
+      "contribution_margin": "Likely modest per transaction unless dealer density reduces logistics and wholesale diagnostic pricing is available",
+      "delivery_and_support_costs": "Vehicle compatibility checks, scheduling, failed tests, device recovery, and transaction support",
+      "overhead_and_compliance": "Terms, insurance, consumer rights, data protection, fraud controls, and partner quality audits",
+      "revenue_basis": "Target 699-999 PLN retail package or negotiated dealer volume price per completed vehicle",
+      "variable_costs": "Third-party test fee, device shipping, inspector travel, payment processing, and certificate verification"
+    },
+    "likely_incumbent_response": "Diagnostic vendors, inspection chains, dealer groups, marketplaces, and OEM dealers can sell or embed certificates directly",
+    "paid_event_or_measurable_loss": "A completed certificate tied to a VIN and listing is paid; the measurable loss is transaction discount, delay, or post-sale dispute caused by opaque battery condition",
+    "payer": "Used-EV dealer, fleet seller, or retail buyer",
+    "purchase_trigger": "Vehicle intake, listing creation, buyer reservation, lease return, warranty expiry, or financing appraisal",
+    "renewal_event": "Each newly listed EV for business customers; episodic one-time purchase for consumers"
+  },
+  "contrary_evidence": [
+    "The core diagnostic vendor already markets directly to businesses and consumers, limiting intermediary control.",
+    "Some OEM dealers expose battery-management-system readings at low incremental cost.",
+    "A EUR 99 anchor leaves little room for shipping, inspection, support, and acquisition unless wholesale terms or dealer density improve economics."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Proposed nonexclusive distribution and fulfillment agreement; no dealer, marketplace, or diagnostic agreement is secured",
+    "acquisition_instrument_type": "distribution_agreement",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Sell direct to buyers and route tests through multiple replaceable diagnostic or inspection suppliers",
+    "current_owner": "The dealer, auction, listing marketplace, or buyer controls this ordering moment",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "Dealer or marketplace owns the vehicle shopper relationship; the venture's test-order relationship is not yet contracted",
+    "duration": "Unknown until negotiated",
+    "exclusivity": "nonexclusive",
+    "founder_access_basis": "other_legally_usable_access",
+    "founder_access_description": "Public diagnostic offers and lawful outreach to Polish dealers are available; no certification technology, device fleet, or channel access is owned",
+    "launch_controller": "A willing dealer or marketplace plus an independent diagnostic provider",
+    "mechanism_control": "dependent",
+    "renewal": "Proposed annual partner renewal with per-vehicle ordering",
+    "replaceability": "replaceable",
+    "revocability": "unknown",
+    "status": "unknown",
+    "subject": "Battery-test ordering position inside a dealer or marketplace transaction",
+    "subject_type": "workflow_position",
+    "transferability": "consent_required"
+  },
+  "discovery_lane": "weak-signal",
+  "economics": {
+    "acquisition_route": "Dealer pilots, appraisal partners, used-EV marketplaces, finance and insurance referrals, and buyer search",
+    "capital_required_pln": 55000,
+    "founder_net_worth_path": "Conditional path: 1,500 certificates monthly at 180 PLN contribution equals 3.24m PLN annual contribution before overhead; multi-market channel value could exceed 5m PLN, but supply terms and volume are unknown",
+    "founder_time": "A single-city concierge pilot can fit 3-5 hours daily if inspections are outsourced; founder-run logistics cannot scale",
+    "gross_margin_basis": "Selling price less diagnostic wholesale fee, device or inspector logistics, support, payment fees, and channel share",
+    "payback": "Per-transaction value must be proven through faster sale, lower discount, or fewer disputes; no payback evidence yet",
+    "pricing": "Discovery hypothesis: 699-999 PLN retail or lower dealer-volume price per completed certificate",
+    "retention_or_repeat": "High repeat potential at dealers and fleets; consumers are mostly one-off"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Permissioned local completion, cancellation, model-coverage, and transaction-outcome data improve routing and dealer workflow",
+    "customer": "Polish used-EV dealers, auction operators, leasing-return sellers, and high-intent retail buyers",
+    "distribution_mechanism": "Embedded dealer and marketplace checkout, appraisal partners, insurers, finance brokers, and EV-owner communities",
+    "offer_and_business_model": "Battery-test ordering, device or inspector logistics, identity matching, certificate verification, and listing attachment for a per-vehicle fee",
+    "payer_and_paid_event": "Dealer or buyer pays when a test is completed and a transaction-linked certificate is delivered",
+    "problem_trigger": "A used EV is listed, appraised, financed, or reserved without independent evidence of traction-battery health"
+  },
+  "founder_fit": [
+    "Battery-data interpretation and transaction analytics fit data-science and finance interests",
+    "The venture can start as logistics and verification software without inventing a medical or automotive diagnostic model",
+    "Dealer throughput, completion rate, certificate attachment, and price effects are measurable",
+    "A partner-led workflow can become automated and avoids reliance on an on-camera founder brand"
+  ],
+  "parent": null,
+  "risks": [
+    "Dependence on a third-party algorithm and certification brand",
+    "A false assurance or VIN mismatch can create costly disputes",
+    "Low local volume can make logistics uneconomic",
+    "Marketplaces or inspection chains can bypass the venture"
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://shop.aviloo.com/en/includes-en",
+    "https://aviloo.com/en-us/aviloo-certified",
+    "https://eic.ec.europa.eu/impact/aviloo_en"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "transaction_intermediation",
+    "commercial_model_descriptor": "per completed used ev battery certificate checkout",
+    "control_point_category": "distribution_access",
+    "control_point_descriptor": "embedded test order at appraisal listing or buyer reservation",
+    "critical_dependency_category": "supply_partner",
+    "critical_dependency_descriptor": "independent battery diagnostic technology and inspection fulfillment"
+  },
+  "structure": {
+    "commercial_archetype": "Per-vehicle diagnostic transaction intermediary",
+    "control_point": "Distribution access at the vehicle appraisal, listing, or reservation step",
+    "critical_dependency": "Independent diagnostic vendors or qualified inspection partners that support the relevant vehicle models"
+  },
+  "thesis": "Observed transaction and pricing signal: independent used-EV battery certificates are sold for about EUR 99, and a major diagnostic provider now offers a three-minute business test designed for dealer inventory and online used-car listings. Build the Polish ordering, device logistics, inspection-partner, and listing-verification layer so a buyer or dealer can attach a verifiable battery certificate to a specific transaction without the venture claiming to own the diagnostic algorithm.",
+  "title": "Independent Battery Certificate Checkout for Used EVs",
+  "uncertainties": [
+    "Number and geographic density of Polish used-EV transactions compatible with independent tests",
+    "Dealer willingness to pay versus passing the cost to buyers",
+    "Diagnostic supplier terms, device availability, and local-language support",
+    "Causal effect of a certificate on sale price, speed, financing, or dispute rates"
+  ],
+  "version": 1
+}

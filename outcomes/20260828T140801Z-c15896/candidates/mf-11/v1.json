@@ -1,0 +1,89 @@
+{
+  "candidate_id": "mf-11",
+  "claims": [
+    {
+      "claim_id": "mf-11-control",
+      "claim_type": "founder_control_point_path",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://eli.gov.pl/api/acts/DU/2024/1289/text.html",
+        "https://www.gov.pl/web/rozwoj-technologia/Rozwoj-infrastruktury-do-ladowania-pojazdow-elektrycznych-zwiazanej-z-budynkami"
+      ],
+      "statement": "Polish law places approval and building-electrical documentation with the condominium, cooperative or property manager and provides for a qualified electrical expert report; the founder can seek an association-approved concession to build and operate the shared charging riser and capacity allocator, although the concession cannot unlawfully block residents' statutory application rights."
+    },
+    {
+      "claim_id": "mf-11-loss",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://eli.gov.pl/api/acts/DU/2024/1289/text.html",
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A32024L1275"
+      ],
+      "statement": "When expert analysis finds a charger requires a changed connection agreement or rebuilt electrical installation, Polish law makes the applicant cover those costs; meanwhile the recast buildings directive requires substantial pre-cabling in new or deeply renovated residential parking, so duplicated one-off applications and unmanaged capacity are a current, measurable capital and delay problem."
+    },
+    {
+      "claim_id": "mf-11-payer",
+      "claim_type": "payer_and_budget",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://eli.gov.pl/api/acts/DU/2024/1289/text.html",
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A32024L1275"
+      ],
+      "statement": "The immediate payer is the resident requesting a charger, because statute can assign necessary upgrade costs to that applicant; the association or developer is the budget owner for common riser and pre-cabling at renovation, triggered by several requests or new-building obligations."
+    }
+  ],
+  "contrary_evidence": [
+    "For sub-11 kW requests Polish rules may treat approval as ordinary management, so residents may install independently instead of joining one concession.",
+    "Newer buildings may already be pre-cabled, reducing the infrastructure-control wedge to software billing and load balancing."
+  ],
+  "discovery_lane": "mechanism-first",
+  "economics": {
+    "acquisition_route": "Through electrical installers and property managers, fund one building-wide expert study and resident demand survey, then propose an association vote granting a 7-10 year non-exclusive operating agreement for the shared riser, load controller and billing layer.",
+    "capital_required_pln": 60000,
+    "founder_net_worth_path": "Pilot three buildings, grow through property managers to 400 buildings averaging 40 active ports at PLN 35 monthly net service revenue for PLN 6.72m recurring revenue, plus installation margin; if hardware is resident- or lender-funded, retained equity and cash could plausibly exceed PLN 5m in 6-8 years.",
+    "founder_time": "Founder spends 2-3 hours daily on demand scoring, load allocation and property-manager channels; the parents' or partner electricians perform design, inspection and installation.",
+    "gross_margin_basis": "Recurring billing and load-management software can exceed 70% gross margin, while installation is lower; blended preliminary target is 40-55% without carrying building hardware on the balance sheet.",
+    "payback": "Use resident deposits or building finance for equipment; target resident all-in cost below a bespoke one-off installation and building-level infrastructure payback within 24-36 months from setup and monthly fees.",
+    "pricing": "PLN 2,000-5,000 connection fee per parking space, hardware at cost plus 15-25%, and PLN 30-60 per month per active charger for metering, billing and capacity allocation.",
+    "retention_or_repeat": "The operating agreement and shared electrical infrastructure persist for years; each new EV-owning resident joins the same managed capacity pool."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Building-level operating agreements secure local distribution, and charging/load histories improve safe capacity allocation and upgrade timing across a property-manager portfolio.",
+    "customer": "Polish condominium associations, housing cooperatives and multifamily property managers receiving multiple resident EV-charger requests.",
+    "distribution_mechanism": "Property-manager portfolios and electrical installers bring the first request; an association-wide expert study converts a one-off inquiry into a building system.",
+    "offer_and_business_model": "Shared electrical riser, dynamic load allocation and resident billing under a multi-year building operating agreement, funded by setup and monthly port fees.",
+    "payer_and_paid_event": "Residents pay when connecting a parking space and monthly while charging; the association pays only for optional common upgrades or study work.",
+    "problem_trigger": "The second or third charger request, a major renovation, or an expert finding that one-off connections require common electrical upgrades."
+  },
+  "founder_fit": [
+    "The parents' installation company provides field capability and local property-manager credibility.",
+    "Load allocation, billing analytics and portfolio rollout use the founder's data and automation strengths.",
+    "Resident deposits and contracted electricians can keep capital within the founder's means and the founder out of daily installation work."
+  ],
+  "parent": null,
+  "risks": [
+    "Association voting and procurement can be slow, political and relationship-intensive.",
+    "An exclusive or discriminatory agreement could conflict with resident charging rights or competition law.",
+    "Fire-safety, metering, energy resale and connection rules may require approvals or licensed partners."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://eli.gov.pl/api/acts/DU/2024/1289/text.html",
+    "https://www.gov.pl/web/rozwoj-technologia/Rozwoj-infrastruktury-do-ladowania-pojazdow-elektrycznych-zwiazanej-z-budynkami",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A32024L1275"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Building micro-concession operator",
+    "control_point": "Association-approved operating rights over the shared charging riser, load allocator and resident billing layer",
+    "critical_dependency": "A lawful building agreement and sufficient electrical headroom or financeable upgrade"
+  },
+  "thesis": "Convert fragmented resident charger requests into one building-wide capacity system: trade an expert study and financed riser plan for multi-year operating rights, then allocate scarce connection capacity and bill each joining parking space.",
+  "title": "Condo Charging Micro-Concessions",
+  "uncertainties": [
+    "Counsel must test whether the proposed operating term and pricing preserve all statutory resident rights.",
+    "Resident density, willingness to prepay and property-manager sales-cycle length are unknown.",
+    "The boundary between private charging service, electricity resale and regulated metering needs verification."
+  ],
+  "version": 1
+}

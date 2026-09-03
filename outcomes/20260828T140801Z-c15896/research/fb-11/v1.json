@@ -1,0 +1,327 @@
+{
+  "candidate_id": "fb-11",
+  "candidate_sha256": "f576cbedc8fc96af84620996e16477090fc05056cb55fe4259ea09f6f451b29b",
+  "candidate_version": 1,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "fb11-r-01",
+      "evidence_refs": [
+        "src-eu-repair-directive"
+      ],
+      "statement": "Directive (EU) 2024/1799 makes its manufacturer repair duty and anti-obstruction rules product-specific through Annex II. The listed categories do not include PV inverters, so this directive does not presently compel inverter OEMs to supply this exchange with parts, repair information, firmware, or tools."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "fb11-r-02",
+      "evidence_refs": [
+        "src-sma-warranty"
+      ],
+      "statement": "SMA's warranty process captures the failed core in covered cases: SMA can provide a replacement or repair through itself or an appointed partner, requires return of the defective device or assembly when requested, retains ownership of the replacement until return, and excludes damage associated with non-authorized attempted repairs. Poland is included in its Comfort support geography."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "fb11-r-03",
+      "evidence_refs": [
+        "src-sma-replacement"
+      ],
+      "statement": "SMA directly bundles the proposed rapid-exchange response: its current device-replacement page says replacement devices are normally dispatched within 48 hours, owners contact their installer, installers use SMA's service portal, SMA offers latest-portfolio repowering, and installers can receive a service rebate for warranty replacements."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "fb11-r-04",
+      "evidence_refs": [
+        "src-ure-fleet",
+        "src-jrc-repairability",
+        "src-sma-warranty"
+      ],
+      "statement": "The reachable independent residential core pool is likely materially smaller than Poland's headline PV fleet in the near term. URE reports that prosumer installations rose from about 51,000 in 2018 to more than 1.213 million in 2022, while the technical review describes 10-year string-inverter warranties as standard and SMA offers 5- or registered 10-year coverage on named residential products. Brand, commissioning year, warranty status, and failure incidence must therefore be measured before using fleet size as repeat-demand evidence."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "fb11-r-05",
+      "evidence_refs": [
+        "src-rgb-competitor"
+      ],
+      "statement": "The independent-repair substitute already exists at national scale: RGB Elektronika advertises multi-brand PV inverter repair, free collection across Poland, functional and load testing, expedited diagnosis, and up to 24 months of warranty, with service for Polish and international customers."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "fb11-r-06",
+      "evidence_refs": [
+        "src-new-huawei-price",
+        "src-repair-cost"
+      ],
+      "statement": "Common residential units leave a narrow repair-and-exchange margin envelope. A live Polish listing prices a new Huawei 5 kW hybrid inverter at PLN 3,865 gross, while a Polish electronics-repair provider quotes indicative repairs from PLN 1,200-3,000 for internal supplies, PLN 1,800-4,500 for IGBT modules, and PLN 2,500-7,000 for full regeneration. After two-way logistics, diagnostics, no-fault cases, failed repairs, test labor, core financing, and warranty reserve, only selected models and fault classes can plausibly undercut a new device."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "fb11-r-07",
+      "evidence_refs": [
+        "src-om-tickets"
+      ],
+      "statement": "An inverter alert is not equivalent to a repairable failed core. In a study of 37,328 O&M tickets from 103 PV systems, 43% of field issues in the top three event categories were traced to software or data-connection problems that often could be handled remotely and were not necessarily long-lasting."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "fb11-r-08",
+      "evidence_refs": [
+        "src-jrc-repairability"
+      ],
+      "statement": "A technically repairable segment does exist. The JRC review identifies AC contactors, fuses, and fans as components that favor repair, says repair cost can be low relative to output loss, and notes that modular on-site repair is common for larger central inverters. The same review cautions that inverter failures do not necessarily require replacement and that older failure statistics may not represent newer designs."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "fb11-r-09",
+      "evidence_refs": [
+        "src-pl-qualifications"
+      ],
+      "statement": "Qualified technical capacity is a binding dependency in Poland. The 2022 regulation places maintenance, overhaul or repair, assembly or disassembly, and control-and-measurement work within positions requiring the relevant qualification certificate for covered electrical equipment, installations, and networks; a general exemption for simple operation of some low-voltage equipment does not remove the repair qualification requirement."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "fb11-r-10",
+      "evidence_refs": [
+        "src-eu-product-liability"
+      ],
+      "statement": "The exchange must distinguish ordinary repair from a substantial modification and document safety testing. Directive (EU) 2024/2853 says an economic operator making a substantial modification and then making the product available can be treated as the manufacturer of the modified product, while repairs that do not involve a substantial modification are not subject to that directive's operator-liability rule. This is a compliance and insurance design problem, not direct proof that repair is unlawful."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "fb11-r-11",
+      "evidence_refs": [],
+      "statement": "No source establishes board-level repair yield, parts availability, firmware recoverability, full-load test pass rate, post-repair field failure rate, turnaround distribution, or warranty reserve by the exact inverter models reachable through the family and partner network."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "fb11-r-12",
+      "evidence_refs": [],
+      "statement": "The count of failed units that reachable installers may legally sell or assign as cores, separated by model, commissioning year, warranty status, OEM RMA eligibility, failure code, owner consent, and season, has not been measured."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "fb11-r-13",
+      "evidence_refs": [
+        "src-iea-data"
+      ],
+      "statement": "The proposed data advantage has a high cold-start requirement. IEA PVPS says data-driven models learn from large amounts of data, reports that project data are often difficult to access and not FAIR, and describes a peer-PV method tested on more than 12,000 systems with up to seven years of data per system. A few dozen repair tickets can create useful operations knowledge but do not establish a predictive data moat."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "fb11-r-14",
+      "evidence_refs": [
+        "src-sma-warranty",
+        "src-rgb-competitor",
+        "src-iea-data"
+      ],
+      "statement": "The venture can own its contractually acquired cores, intake records, lab outcomes, warranty outcomes, and model-specific inventory decisions, but it does not own OEM replacement rights, firmware, installed-fleet telemetry, or competitors' repair histories. The critical mechanism is therefore a contracted out-of-warranty sourcing and quality-assurance system, not installer access alone."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "fb11-r-15",
+      "evidence_refs": [],
+      "statement": "There is no direct evidence of installer or owner willingness to pay for the proposed guaranteed exchange, no signed volume or price commitment, and no observed renewal, CAC, 60-day inventory turn, gross margin, warranty-return, or payback distribution."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "fb11-r-16",
+      "evidence_refs": [],
+      "statement": "The heat-pump control-board extension is unvalidated: no evidence shows that its parts access, firmware, safety tests, failure taxonomy, payer behavior, or exchange economics are shared with PV inverters, so it cannot be counted as immediate scale for the same operating system."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "fb11-r-17",
+      "evidence_refs": [
+        "src-sma-warranty",
+        "src-sma-replacement"
+      ],
+      "statement": "Installer-controlled intake is contractibly obtainable only for a narrower set of owner-authorized, non-RMA or out-of-warranty units. In covered SMA cases the installer initiates an OEM case and the defective unit is part of the manufacturer's return loop; outside that loop, the venture still needs an explicit core-sale or assignment instrument with the owner and a rule preventing diversion of warranty-eligible units."
+    }
+  ],
+  "contrary_evidence": [
+    "Directive (EU) 2024/1799 does not list PV inverters in Annex II, so its repair duty and anti-obstruction provisions do not force inverter OEMs to provide independent repairers with parts, firmware, tools, or repair information.",
+    "SMA's current warranty terms require return of covered defective devices or assemblies, reserve repair to SMA or appointed partners, and exclude non-authorized attempted repairs, removing many young-fleet cores from an independent exchange.",
+    "SMA's own program normally dispatches a replacement within 48 hours, includes installer workflow and rebates, and offers repowering to a current model, directly bundling the turnaround promise.",
+    "Poland's prosumer fleet expanded overwhelmingly in 2020-2022, while string-inverter warranties are commonly around 10 years; headline installed-base counts therefore overstate the currently addressable out-of-warranty pool.",
+    "RGB Elektronika already offers nationwide multi-brand inverter pickup, testing, repair, and up to a 24-month warranty, so local failed-unit intake does not by itself create exclusive supply or a unique customer proposition.",
+    "A new 5 kW Huawei inverter was listed at PLN 3,865 gross while indicative board-level and full-regeneration repair ranges reach PLN 1,200-7,000 before exchange logistics and warranty reserve, compressing conservative margins for common residential units.",
+    "A 37,328-ticket study found that 43% of leading field issues were software or data-connection problems often handled remotely, so alarms and service visits substantially overcount physical cores.",
+    "The proposed data moat starts behind OEM telemetry and established repairers and requires standardized, longitudinal data at a scale not demonstrated by the planned first batch."
+  ],
+  "falsification": {
+    "cold_start_and_data_moat": [
+      "fb11-r-11",
+      "fb11-r-12",
+      "fb11-r-13",
+      "fb11-r-14"
+    ],
+    "control_point_obtainability": [
+      "fb11-r-01",
+      "fb11-r-02",
+      "fb11-r-03",
+      "fb11-r-12",
+      "fb11-r-17"
+    ],
+    "critical_mechanism_ownership": [
+      "fb11-r-02",
+      "fb11-r-05",
+      "fb11-r-13",
+      "fb11-r-14",
+      "fb11-r-17"
+    ],
+    "external_dependencies": [
+      "fb11-r-01",
+      "fb11-r-09",
+      "fb11-r-10",
+      "fb11-r-11",
+      "fb11-r-16"
+    ],
+    "substitutes_and_incumbent_response": [
+      "fb11-r-03",
+      "fb11-r-05",
+      "fb11-r-06"
+    ],
+    "willingness_urgency_and_repeat_economics": [
+      "fb11-r-04",
+      "fb11-r-06",
+      "fb11-r-07",
+      "fb11-r-08",
+      "fb11-r-15"
+    ]
+  },
+  "schema_version": 3,
+  "sources": [
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "2024-07-10",
+      "publisher": "Official Journal of the European Union",
+      "source_id": "src-eu-repair-directive",
+      "source_type": "official",
+      "stance": "contradicting",
+      "title": "Directive (EU) 2024/1799 on common rules promoting the repair of goods",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32024L1799"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "2024-11-18",
+      "publisher": "Official Journal of the European Union",
+      "source_id": "src-eu-product-liability",
+      "source_type": "official",
+      "stance": "context",
+      "title": "Directive (EU) 2024/2853 on liability for defective products",
+      "url": "https://eur-lex.europa.eu/eli/dir/2024/2853/oj"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "2022-07-01",
+      "publisher": "Dziennik Ustaw Rzeczypospolitej Polskiej / ELI",
+      "source_id": "src-pl-qualifications",
+      "source_type": "official",
+      "stance": "contradicting",
+      "title": "Rozporzadzenie Ministra Klimatu i Srodowiska z dnia 1 lipca 2022 r. w sprawie szczegolowych zasad stwierdzania posiadania kwalifikacji przez osoby zajmujace sie eksploatacja urzadzen, instalacji i sieci",
+      "url": "https://eli.gov.pl/api/acts/DU/2022/1392/text.html"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "Effective 2025-05-01",
+      "publisher": "SMA Solar Technology AG",
+      "source_id": "src-sma-warranty",
+      "source_type": "primary",
+      "stance": "contradicting",
+      "title": "SMA Limited Factory Warranty - Home & Business",
+      "url": "https://files.sma.de/downloads/COM-RES-GB-en-84.pdf"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "Undated current service page",
+      "publisher": "SMA Solar Technology AG",
+      "source_id": "src-sma-replacement",
+      "source_type": "primary",
+      "stance": "contradicting",
+      "title": "Device Replacement",
+      "url": "https://www.sma.de/en/service/device-replacement"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "2023-07",
+      "publisher": "Urzad Regulacji Energetyki",
+      "source_id": "src-ure-fleet",
+      "source_type": "official",
+      "stance": "context",
+      "title": "Raport Krajowy Prezesa URE 2023",
+      "url": "https://www.ure.gov.pl/download/9/14027/Raport2023.pdf"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "Undated current service page",
+      "publisher": "RGB Elektronika",
+      "source_id": "src-rgb-competitor",
+      "source_type": "industry",
+      "stance": "contradicting",
+      "title": "Naprawa falownikow fotowoltaicznych",
+      "url": "https://rgbelektronika.pl/naprawa-falownikow-fotowoltaicznych/"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "Live listing accessed 2026-08-28",
+      "publisher": "Solvolte",
+      "source_id": "src-new-huawei-price",
+      "source_type": "commercial",
+      "stance": "contradicting",
+      "title": "Huawei SUN2000-5KTL-M1 HC - Falownik hybrydowy 5 kW wysokopradowy",
+      "url": "https://solvolte-sklep.pl/falowniki/hybrydowe/huawei/falownik-hybrydowy-huawei-sun2000-5ktl-m1-wysokopradowy"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "2026 current service article",
+      "publisher": "Acore Serwis Elektroniki",
+      "source_id": "src-repair-cost",
+      "source_type": "industry",
+      "stance": "contradicting",
+      "title": "Naprawa Falownika - Serwis VFD, Przemienniki Czestotliwosci",
+      "url": "https://acore.pl/blog/naprawa-falownika"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "2022-10-18",
+      "publisher": "Progress in Photovoltaics: Research and Applications",
+      "source_id": "src-om-tickets",
+      "source_type": "primary research",
+      "stance": "contradicting",
+      "title": "Towards the development of an optimized Decision Support System for the PV industry: A comprehensive statistical and economical assessment of over 35,000 O&M tickets",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/pip.3637"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "2026-02",
+      "publisher": "IEA Photovoltaic Power Systems Programme Task 13",
+      "source_id": "src-iea-data",
+      "source_type": "industry",
+      "stance": "context",
+      "title": "Digitalisation and Digital Twins in Photovoltaic Systems",
+      "url": "https://iea-pvps.org/wp-content/uploads/2026/02/IEA-PVPS-T13-34-2026-REPORT-Digitalisation-Twins.pdf"
+    },
+    {
+      "accessed_at": "2026-08-28",
+      "published_at": "2019",
+      "publisher": "European Commission Joint Research Centre",
+      "source_id": "src-jrc-repairability",
+      "source_type": "official technical research",
+      "stance": "supporting",
+      "title": "Preparatory study for solar photovoltaic modules, inverters and systems - Draft Report Task 4: Technical analysis including end-of-life",
+      "url": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/contentype/product_group_documents/1581689975/Draft_Report_Task4%20Master%20REV%20-%20to%20publish.pdf"
+    }
+  ],
+  "unknowns": [
+    "Reachable failed-core volume by exact model, installation year, warranty status, and month.",
+    "Written ownership or assignment terms for cores removed at installer visits.",
+    "Repair yield and no-fault-found rate by model and fault code.",
+    "Access to OEM parts, schematics, firmware, reset tools, and serial-number commissioning for each target model.",
+    "Full-load safety-test protocol, evidence of conformity, insurance terms, and boundary between ordinary repair and substantial modification.",
+    "Customer willingness to pay and urgency by residential, commercial, and utility asset class.",
+    "Realized gross margin after laboratory fees, shipping, diagnosis, failed repairs, inventory financing, installation labor, and warranty reserve.",
+    "Repeat purchase and membership renewal rate per installer, plus CAC outside the family company's network.",
+    "Whether inventory can turn within 60 days without excessive model fragmentation or cannibalization by new compatible replacements.",
+    "Whether heat-pump control boards form a contractible and technically shared category rather than a separate repair business."
+  ]
+}

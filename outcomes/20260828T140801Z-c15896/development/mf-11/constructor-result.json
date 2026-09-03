@@ -1,0 +1,47 @@
+{
+  "base_candidate_sha256": "e1f6f6e813532280bcc82965ffe317004b783de12f76069bd81e46e4d7dd9219",
+  "base_candidate_version": 1,
+  "candidate_id": "mf-11",
+  "constructor_id": "constructor-mf11-c1",
+  "falsification": {
+    "cold_start_and_data_moat": [
+      "mf11-r07-open-system-switching",
+      "mf11-r15-no-data-cold-start-requirement",
+      "mf11-r16-data-moat-formation"
+    ],
+    "control_point_obtainability": [
+      "mf11-r01-statutory-access-gate",
+      "mf11-r02-control-is-nonexclusive",
+      "mf11-r03-building-vote-friction",
+      "mf11-r04-operating-right-contractibility"
+    ],
+    "critical_mechanism_ownership": [
+      "mf11-r07-open-system-switching",
+      "mf11-r16-data-moat-formation",
+      "mf11-r17-critical-mechanism-not-owned"
+    ],
+    "external_dependencies": [
+      "mf11-r03-building-vote-friction",
+      "mf11-r08-qualified-expert-dependency",
+      "mf11-r09-grid-and-upgrade-dependency",
+      "mf11-r10-shared-service-compliance"
+    ],
+    "substitutes_and_incumbent_response": [
+      "mf11-r05-individual-installation-substitute",
+      "mf11-r06-incumbent-turnkey-offers",
+      "mf11-r07-open-system-switching",
+      "mf11-r11-new-building-wedge-shrinks"
+    ],
+    "willingness_urgency_and_repeat_economics": [
+      "mf11-r09-grid-and-upgrade-dependency",
+      "mf11-r12-installation-cost-benchmark",
+      "mf11-r13-demand-signal-is-mixed",
+      "mf11-r14-wtp-payback-and-repeat"
+    ]
+  },
+  "final_candidate_sha256": "81d5be999f25606698574b9d60826d037584143c00bba46505f9e23a535d027c",
+  "final_candidate_version": 2,
+  "outcome": "redesigned",
+  "rationale": "The admitted v2 makes a structural rather than rhetorical change: it abandons the proposed quasi-exclusive building concession and does not claim proprietary charging software or data. The new mechanism uses a non-exclusive property-manager portfolio relationship to screen buildings, requires at least three refundable resident deposits and a qualified report confirming usable headroom, and permits deployment only after building approval, counsel-reviewed asset-hosting terms, and executed third-party finance. A ring-fenced vehicle would then hold the financed shared asset while the operator earns origination and recurring asset-servicing fees. This changes the economics by removing founder-funded hardware and hardware markup, capping pre-deployment validation capital, and making demand, legal rights, electrical feasibility, and finance explicit go/no-go gates. The redesign does not assume that any manager agreement, asset-hosting right, resident deposits, or financing facility already exists; their obtainability remains unresolved and must be validated before deployment. Incumbent copying, OCPP switching, regulated delivery dependencies, uncertain willingness to pay, and the absence of a proven data moat remain material risks, but they no longer contradict a thesis based on statutory exclusivity or proprietary technology.",
+  "schema_version": 3
+}

@@ -1,0 +1,86 @@
+{
+  "candidate_id": "fb-06",
+  "claims": [
+    {
+      "claim_id": "fb-06-control",
+      "claim_type": "founder_control_point_path",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://www.ema.europa.eu/en/human-regulatory-overview/post-authorisation/compliance-post-authorisation/good-distribution-practice",
+        "https://www.ema.europa.eu/en/human-regulatory-overview/research-development/compliance-research-development/good-manufacturing-practice/guidance-good-manufacturing-practice-good-distribution-practice-questions-answers"
+      ],
+      "statement": "EMA GDP requires correct storage during transport, tracing, and recall capability, while its Q&A says transport conditions should be validated or monitored with suitable temperature devices. A founder can seek SOP-level acceptance of a sensor-linked shipment record from a wholesaler's responsible quality person; that acceptance is not yet obtained."
+    },
+    {
+      "claim_id": "fb-06-loss",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://www.ema.europa.eu/en/human-regulatory-overview/research-development/compliance-research-development/good-manufacturing-practice/guidance-good-manufacturing-practice-good-distribution-practice-questions-answers"
+      ],
+      "statement": "A temperature fluctuation during storage or transport is an auditable event that can force quality review, delay release, or leave stock unusable if stability cannot be supported. EMA explicitly requires monitoring; the incidence and write-off value of excursions in Polish specialty delivery are not public."
+    },
+    {
+      "claim_id": "fb-06-payer",
+      "claim_type": "payer_and_budget",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://www.ema.europa.eu/en/human-regulatory-overview/post-authorisation/compliance-post-authorisation/good-distribution-practice"
+      ],
+      "statement": "The payer hypothesis is an authorised wholesaler, specialty pharmacy, clinic, or courier using GDP quality and logistics budget per temperature-sensitive shipment. GDP clearly assigns distribution controls, but it does not show a buyer will replace existing loggers with a cross-party claims rail."
+    }
+  ],
+  "contrary_evidence": [
+    "Existing cold-chain couriers and data-logger vendors already provide validated sensors and portals.",
+    "A sensor trace alone may not determine product usability; product-specific stability data and a qualified person's judgment remain necessary."
+  ],
+  "discovery_lane": "future-backcast",
+  "economics": {
+    "acquisition_route": "Recruit one GDP consultant and one specialty pharmacy for a 100-shipment shadow pilot using rented tags; map every excursion to the existing deviation SOP before attempting automated release or insurance claims.",
+    "capital_required_pln": 45000,
+    "founder_net_worth_path": "A device-neutral custody and excursion-decision rail could expand from Poland into high-value home biologic distribution, earning per-shipment and insurer integration revenue; scale depends on becoming accepted evidence rather than another dashboard.",
+    "founder_time": "About 10-15 hours per week for analytics and integrations; qualified quality personnel retain disposition decisions and couriers perform physical handling.",
+    "gross_margin_basis": "Per-shipment software margin after reusable tag depreciation, connectivity, and support; no margin assumes ownership of medicine inventory.",
+    "payback": "Target tag payback within 20-30 shipments and customer acquisition payback within a six-month logistics contract.",
+    "pricing": "Per monitored shipment plus a fixed monthly quality dashboard fee; later charge per accepted automated claim or insurer integration.",
+    "retention_or_repeat": "Every shipment generates a trace, and embedded SOP plus historical lane-risk data create recurring use."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Lane-, packaging-, season-, and product-specific excursion outcomes accepted by quality and claims counterparties",
+    "customer": "Specialty pharmacies, authorised medicine wholesalers, clinics, and GDP couriers",
+    "distribution_mechanism": "GDP consultants, courier partnerships, and pharmacy wholesaler integrations",
+    "offer_and_business_model": "Device-neutral temperature custody record and deviation packet sold per shipment and by subscription",
+    "payer_and_paid_event": "Quality or logistics team pays when a temperature-sensitive shipment is dispatched; claim workflow activates on an excursion",
+    "problem_trigger": "A high-value medicine changes custody and its acceptable temperature history must remain provable"
+  },
+  "founder_fit": [
+    "Anomaly detection, sensor data, and probabilistic lane scoring match the founder's data-science skills.",
+    "The founder's medical adjacency can help interpret workflows while regulated judgments remain with qualified professionals.",
+    "Reusable tags allow a small, measurable pilot without pharmaceutical inventory risk."
+  ],
+  "parent": null,
+  "risks": [
+    "Incorrect assurance could expose patients and create serious product-liability risk.",
+    "GDP validation requirements may make third-party sensors or software costly to qualify.",
+    "Incumbent couriers may refuse to share custody events or may bundle equivalent evidence."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://www.ema.europa.eu/en/human-regulatory-overview/post-authorisation/compliance-post-authorisation/good-distribution-practice",
+    "https://www.ema.europa.eu/en/human-regulatory-overview/research-development/compliance-research-development/good-manufacturing-practice/guidance-good-manufacturing-practice-good-distribution-practice-questions-answers"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Per-shipment evidence rail for regulated custody and claims",
+    "control_point": "The SOP-accepted serialized link between sensor trace, custody events, and quality disposition",
+    "critical_dependency": "Acceptance by a responsible quality person and validated interoperability across couriers and logger hardware"
+  },
+  "thesis": "Backcast from widespread home delivery of personalized biologics: secure the trusted custody record now, beginning with a device-neutral temperature deviation packet that quality teams and eventually insurers can act on.",
+  "title": "Pharma Temperature Claims Rail",
+  "uncertainties": [
+    "Excursion frequency, average quarantined value, and existing logger cost per Polish shipment are unknown.",
+    "A quality team has not confirmed that a standardized packet shortens disposition time.",
+    "It is unclear whether insurers will recognize the record for automated claims."
+  ],
+  "version": 1
+}

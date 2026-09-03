@@ -1,0 +1,123 @@
+{
+  "batches": [
+    {
+      "candidate_refs": [
+        {
+          "candidate_id": "mf-aftercare-reserve",
+          "candidate_sha256": "cbfbf0be54799a9ed43ba8fbdb65197d4579746697307a1b9e03237d63d74622",
+          "version": 1
+        },
+        {
+          "candidate_id": "mf-ai-evidence-license",
+          "candidate_sha256": "0256ef5ce8f57d590d6bf1b5adde5dde6a39dd4b2a3203df5fa7b3e7854804a4",
+          "version": 1
+        }
+      ],
+      "cutoff_margin": 0.1,
+      "primary_batch_id": "batch-01",
+      "primary_inputs": [
+        {
+          "candidate_ref": {
+            "candidate_id": "mf-aftercare-reserve",
+            "candidate_sha256": "cbfbf0be54799a9ed43ba8fbdb65197d4579746697307a1b9e03237d63d74622",
+            "version": 1
+          },
+          "evaluation_path": "evaluations/mf-aftercare-reserve/v1/screening-screen-b01-j01.json",
+          "evaluation_sha256": "c5a080e32d41e19a6b1989dbe0c3e5352ce4041f1e3cd4cdf6ec387a45344186",
+          "final_score": 5.6
+        },
+        {
+          "candidate_ref": {
+            "candidate_id": "mf-ai-evidence-license",
+            "candidate_sha256": "0256ef5ce8f57d590d6bf1b5adde5dde6a39dd4b2a3203df5fa7b3e7854804a4",
+            "version": 1
+          },
+          "evaluation_path": "evaluations/mf-ai-evidence-license/v1/screening-screen-b01-j01.json",
+          "evaluation_sha256": "17cc85f0ead14d687ca46c1d9fc3496ff155f3f67a4e221b57cef0b142b197b6",
+          "final_score": 5.5
+        }
+      ],
+      "secondary_batch_id": "secondary-batch-01"
+    },
+    {
+      "candidate_refs": [
+        {
+          "candidate_id": "ws-clean-air-receivable-router",
+          "candidate_sha256": "511832d4fa54b130325661ec86d5c3ebbd621f79cea860c55ac58edbb8a5cf6b",
+          "version": 1
+        },
+        {
+          "candidate_id": "ws-compressed-air-savings-share",
+          "candidate_sha256": "e316a7cae6cbfdce62471604862a4536a70f6c4d663e1a94cf8a41f1a5d6730b",
+          "version": 1
+        }
+      ],
+      "cutoff_margin": 0.2,
+      "primary_batch_id": "batch-02",
+      "primary_inputs": [
+        {
+          "candidate_ref": {
+            "candidate_id": "ws-clean-air-receivable-router",
+            "candidate_sha256": "511832d4fa54b130325661ec86d5c3ebbd621f79cea860c55ac58edbb8a5cf6b",
+            "version": 1
+          },
+          "evaluation_path": "evaluations/ws-clean-air-receivable-router/v1/screening-screen-b02-j01.json",
+          "evaluation_sha256": "048a0cafa7024ea9a0aaa0a1b67bc6c80bcaa5f0afd93c89e3e3b8fc3095014c",
+          "final_score": 5
+        },
+        {
+          "candidate_ref": {
+            "candidate_id": "ws-compressed-air-savings-share",
+            "candidate_sha256": "e316a7cae6cbfdce62471604862a4536a70f6c4d663e1a94cf8a41f1a5d6730b",
+            "version": 1
+          },
+          "evaluation_path": "evaluations/ws-compressed-air-savings-share/v1/screening-screen-b02-j01.json",
+          "evaluation_sha256": "c91635e576b472db0f0692d106c65d38cf310d60866fdf05c2cf97487d13045b",
+          "final_score": 5.2
+        }
+      ],
+      "secondary_batch_id": "secondary-batch-02"
+    },
+    {
+      "candidate_refs": [
+        {
+          "candidate_id": "fb-legacy-inverter-swap-reserve",
+          "candidate_sha256": "76d073efb22cc752b726f732f614b82066658f2f2b2218f83b0c0927205d110d",
+          "version": 1
+        },
+        {
+          "candidate_id": "ws-hourly-home-energy-dispatch",
+          "candidate_sha256": "d7fe47d77e3be8f0eee841514053e7d7db7b08621446efcfc2b58d8df2b07ffd",
+          "version": 1
+        }
+      ],
+      "cutoff_margin": 0,
+      "primary_batch_id": "batch-04",
+      "primary_inputs": [
+        {
+          "candidate_ref": {
+            "candidate_id": "fb-legacy-inverter-swap-reserve",
+            "candidate_sha256": "76d073efb22cc752b726f732f614b82066658f2f2b2218f83b0c0927205d110d",
+            "version": 1
+          },
+          "evaluation_path": "evaluations/fb-legacy-inverter-swap-reserve/v1/screening-screen-b04-j01.json",
+          "evaluation_sha256": "7792238015e26de9895f3a0066525daf7cc5d042c693badbc53718954b329d4e",
+          "final_score": 5
+        },
+        {
+          "candidate_ref": {
+            "candidate_id": "ws-hourly-home-energy-dispatch",
+            "candidate_sha256": "d7fe47d77e3be8f0eee841514053e7d7db7b08621446efcfc2b58d8df2b07ffd",
+            "version": 1
+          },
+          "evaluation_path": "evaluations/ws-hourly-home-energy-dispatch/v1/screening-screen-b04-j01.json",
+          "evaluation_sha256": "ffa830edecac44a60ace9955f349ae0d2be0fb06143e64f24e6dd302291b6ce9",
+          "final_score": 5
+        }
+      ],
+      "secondary_batch_id": "secondary-batch-04"
+    }
+  ],
+  "schema_version": 3,
+  "screening_batches_sha256": "8c8ffba33b0fefb6fb3c3c6b36edbb2bf0b10bb40f320f7a5802944b3554818a"
+}

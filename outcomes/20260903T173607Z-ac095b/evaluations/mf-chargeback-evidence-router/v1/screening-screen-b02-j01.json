@@ -1,0 +1,117 @@
+{
+  "assumptions": [
+    "Target merchants use multiple PSPs or commerce systems and therefore experience evidence fragmentation not solved by one native tool.",
+    "Merchants can lawfully grant scoped access and approve each high-risk submission before it is sent.",
+    "The service avoids unnecessary card-data scope and can meet merchant security and GDPR requirements.",
+    "No recovery improvement, paid customer, privileged dataset, or platform distribution agreement has yet been demonstrated."
+  ],
+  "base_score": 5.6,
+  "candidate_id": "mf-chargeback-evidence-router",
+  "candidate_sha256": "2a3169818b7aba25f99548ac73458388de7f4da7d13a9e27129e8c0e55be495e",
+  "candidate_version": 1,
+  "constrained_score": 5.7,
+  "evaluation_type": "working_screening",
+  "evidence_needed_for_higher_score": "Paid multi-PSP pilots showing eligible dispute volume, reliable evidence ingestion and submission, lower handling time, statistically credible incremental net recovery after fees, acceptable security review, and repeatable customer acquisition.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "A merchant-authorized checkpoint that joins evidence across payment providers, storefronts, fulfillment, refunds, and communications addresses fragmentation that any single PSP sees only partially, though dispute automation is an established category.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "A dispute immediately reverses revenue, adds fees, consumes staff time, and imposes a deadline, creating an observable loss and a clear budget owner; incremental willingness to pay beyond native PSP tooling is not yet evidenced.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Per-case, subscription, and recovery-linked pricing align revenue with a measurable event and require modest capital, but integration maintenance, security, human review, collection timing, and heterogeneous cases leave contribution margin and CAC payback hypothetical.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "EU merchants using multiple PSPs form a coherent beachhead with repeated cases, but reachable merchant count, recoverable case volume, vertical concentration, and dissatisfaction with native tools are unquantified.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "Cross-PSP portability is useful, but PSPs already provide guided or automated evidence and specialized dispute-management vendors can pursue the same merchants; the venture lacks an exclusive channel or workflow position.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A trusted payment-evidence layer could expand across PSPs, storefronts, vertical templates, prevention, refund operations, and other transaction exceptions once merchant integrations are established.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Permissioned outcome labels can improve packet prioritization, but access is revocable, integrations are nonexclusive, network rules change, and the merchant or PSP retains the underlying data and decision interface.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "The cross-system evidence join, human approval gate, and outcome tracking offer a concrete advantage for multi-PSP merchants, and the work fits the founder's classification and document-extraction skills.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "Continued e-commerce volume and better document automation help adoption, but PSP automation is advancing simultaneously and no specific regulatory or platform change creates a protected entry window.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "Performance-tracked pilots, agencies, fractional CFOs, accountants, and permitted app ecosystems are plausible channels, but no channel access, conversion rate, or acquisition cost has been validated.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "A manual-first product is feasible within the capital and time constraints, but privacy, security, PSP terms, changing network rules, and the risk of consuming a merchant's only evidence round demand strong controls.",
+      "score": 6,
+      "status": "scored"
+    }
+  ],
+  "final_score": 5.7,
+  "highest_value_structural_change": "Concentrate on one evidence-heavy merchant vertical using at least two PSPs, require merchant approval, and price against measured net incremental recovery and handling-time reduction versus each PSP's native workflow.",
+  "interaction_adjustment": 0.1,
+  "judge_id": "screen-b02-j01",
+  "main_structural_strength": "The paid event, loss, deadline, responsible buyer, and outcome are directly measurable, enabling a low-capital, feedback-rich service workflow.",
+  "primary_score_limiter": "Native PSP automation and existing dispute vendors compress differentiation, while cross-platform API coverage and incremental recovery remain unproven.",
+  "qualified": false,
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 3,
+  "strongest_disconfirming_evidence": "Stripe already offers guided and automated evidence tooling, and the issuer rather than the evidence provider controls the final outcome.",
+  "unrounded_score": 5.7
+}

@@ -1,0 +1,147 @@
+{
+  "candidate_id": "fb-legacy-inverter-swap-reserve",
+  "claims": [
+    {
+      "claim_id": "fb-legacy-inverter-swap-reserve-c1",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://iea-pvps.org/key-topics/degradation-failure-modes-new-cell-module-technologies/",
+        "https://iea-pvps.org/key-topics/service-life-estimation-for-photovoltaic-modules/"
+      ],
+      "statement": "PV component degradation and failure can reduce lifetime energy yield, supporting downtime as a measurable loss, but neither spare scarcity nor reservation willingness is quantified for the proposed cohorts."
+    },
+    {
+      "claim_id": "fb-legacy-inverter-swap-reserve-c2",
+      "claim_type": "payer_and_budget",
+      "confidence": "low",
+      "evidence_refs": [],
+      "statement": "Installers, O&M firms, owners, and insurers are plausible payers for reduced downtime, but no fleet census, stockout record, price test, or reservation commitment exists."
+    },
+    {
+      "claim_id": "fb-legacy-inverter-swap-reserve-c3",
+      "claim_type": "founder_control_point_path",
+      "confidence": "low",
+      "evidence_refs": [],
+      "statement": "The founder can own the control point only by purchasing and testing specific inventory after paid fleet demand is evidenced; no reserve or exclusive supply is currently owned."
+    },
+    {
+      "claim_id": "fb-legacy-inverter-swap-reserve-c4",
+      "claim_type": "other",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://iea-pvps.org/key-topics/degradation-failure-modes-new-cell-module-technologies/",
+        "https://iea-pvps.org/key-topics/service-life-estimation-for-photovoltaic-modules/",
+        "https://energy.ec.europa.eu/topics/energy-efficiency/energy-performance-buildings/energy-performance-buildings-directive/solar-energy-buildings_en"
+      ],
+      "statement": "IEA PVPS documents diverse PV failure modes and the importance of component life to lifetime yield, while EU policy supports a growing long-lived solar stock; this does not establish which inverter models will become scarce."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Service operations lead, asset manager, business owner, or claims manager",
+    "bundling_resistance": "Aggregate demand across small installers, stay multi-brand, disclose test provenance, and reserve only equipment cohorts supported by paid fleet census data",
+    "customer_relationship_owner": "Installer or O&M provider until a fleet reservation agreement is signed",
+    "distribution_origin": "Installer and O&M service portfolios, beginning with a regional fleet census",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Fleet census and installer revenue share; target below one annual portfolio contribution",
+      "cash_conversion": "Annual reservations precede service, but inventory cash can remain tied up for years and requires cohort-level limits",
+      "contribution_margin": "Unvalidated target 35-55% on reservations and 15-30% on dispatched hardware after failures and write-downs",
+      "delivery_and_support_costs": "Central testing and cataloging with qualified electricians performing diagnosis and installation",
+      "overhead_and_compliance": "Safe storage, product and professional liability, electrical testing, provenance records, waste handling, contracts, and accounting",
+      "revenue_basis": "Hypothesis: 300-1200 PLN annual reservation per covered commercial system plus 15-30% gross markup and logistics on a dispatched unit",
+      "variable_costs": "Inventory purchase, testing, refurbishment, packaging, shipping, payment fees, warranty returns, and disposal"
+    },
+    "likely_incumbent_response": "OEMs, distributors, refurbishers, insurers, and large O&M firms can create their own regional spares pools or force full-system replacement",
+    "paid_event_or_measurable_loss": "Paid event is an annual part-availability reservation and, when needed, a tested spare or loaner dispatch; measurable loss is PV downtime, emergency sourcing cost, or premature full-system replacement",
+    "payer": "Solar installer, O&M provider, commercial PV owner, or insurer",
+    "purchase_trigger": "Installed fleet census shows material exposure to an unsupported or long-lead-time model and the customer needs a response-time commitment",
+    "renewal_event": "Annual fleet coverage review, new equipment cohort enrollment, or inventory dispatch and replenishment"
+  },
+  "contrary_evidence": [
+    "Rapid electronics change may make adapters or full replacement cheaper and safer than stocking legacy units.",
+    "True failures may be too infrequent and model-specific to support paid pooled reservations."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Planned purchase of serial-numbered, provenance-checked units and parts under supplier warranties where available",
+    "acquisition_instrument_type": "purchase",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Source from another vetted seller, use a certified adapter or current-model system replacement, issue a loaner, or refund the unavailable reservation",
+    "current_owner": "Distributors, installers, asset owners, liquidators, refurbishers, and recyclers; the founder owns no evidenced reserve",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "Installer or O&M provider until a fleet reservation agreement is signed",
+    "duration": "Ownership would persist after completed purchase, subject to safe storage, testing validity, and obsolescence",
+    "exclusivity": "not_applicable",
+    "founder_access_basis": "operating_relationship",
+    "founder_access_description": "The parents' renewable-installation firm can lawfully help identify common field equipment and test a paid reservation with consenting customers, but provides no current inventory, exclusive supply, or customer ownership.",
+    "launch_controller": "The founder can purchase inventory after due diligence, while suppliers and qualified electricians control sourcing and safe installation",
+    "mechanism_control": "unknown",
+    "renewal": "Replenish inventory when dispatches and fleet forecasts reduce coverage below a defined service level",
+    "replaceability": "unknown",
+    "revocability": "not_applicable",
+    "status": "unknown",
+    "subject": "Tested inventory of named legacy inverters, control boards, adapters, and loaner units",
+    "subject_type": "asset",
+    "transferability": "transferable"
+  },
+  "discovery_lane": "future-backcast",
+  "economics": {
+    "acquisition_route": "Paid installed-fleet census and reservation sold through regional installers and O&M providers",
+    "capital_required_pln": 100000,
+    "founder_net_worth_path": "Replicated regional reserves and proprietary failure forecasting could attract an O&M or distributor buyer; 5m PLN likely requires multi-region portfolio contracts over 4-7 years",
+    "founder_time": "Up to five hours per day with electricians handling field diagnosis and a logistics partner handling fulfillment",
+    "gross_margin_basis": "Reservation and dispatch revenue less inventory, testing, storage, write-downs, warranty, shipping, disposal, support, and channel share",
+    "payback": "Target each inventory cohort to be covered by prepaid reservations within twelve months; not evidenced",
+    "pricing": "Hypothesis: 300-1200 PLN annual reservation per covered commercial system plus hardware and logistics at dispatch",
+    "retention_or_repeat": "Annual fleet reservations, replenishment after dispatch, and additional equipment cohorts"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Fleet census, observed failure rates, repair outcomes, interchangeability maps, and salvage yields improve which scarce parts deserve working capital",
+    "customer": "Regional solar installers, O&M firms, commercial PV owners, and insurers responsible for aging distributed systems",
+    "distribution_mechanism": "Installers and O&M providers enroll installed fleets and identify model, firmware, topology, and criticality",
+    "offer_and_business_model": "Inventory-backed SLA for a narrowly selected equipment cohort, with tested swaps, optional buyback, and compatibility evidence",
+    "payer_and_paid_event": "Installer or asset owner pays an annual availability reservation and a dispatch fee when a tested compatible spare or loaner is shipped",
+    "problem_trigger": "An unsupported or slow-to-source inverter or control board fails and replacement lead time creates costly downtime or a full-system redesign"
+  },
+  "founder_fit": [
+    "Data analysis can turn an installed-base census into disciplined inventory and failure forecasts",
+    "The family renewable-installation relationship offers a lawful regional equipment sample and pilot route",
+    "Customer operations are SLA-driven and can be delegated rather than founder-personality driven",
+    "A narrow reserve can fit the ordinary capital ceiling if inventory is purchased only after paid enrollment"
+  ],
+  "parent": null,
+  "risks": [
+    "Inventory may become obsolete, counterfeit, unsafe, or legally unsellable",
+    "Misdiagnosis can dispatch the wrong expensive part and extend downtime",
+    "Working capital can become trapped in slow-moving units",
+    "OEM or distributor supply recovery can erase scarcity premiums"
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://iea-pvps.org/key-topics/degradation-failure-modes-new-cell-module-technologies/",
+    "https://iea-pvps.org/key-topics/service-life-estimation-for-photovoltaic-modules/",
+    "https://energy.ec.europa.eu/topics/energy-efficiency/energy-performance-buildings/energy-performance-buildings-directive/solar-energy-buildings_en"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "other",
+    "commercial_model_descriptor": "inventory backed availability sla with reservation and dispatch fees",
+    "control_point_category": "owned_asset",
+    "control_point_descriptor": "purchased tested serial numbered reserve inventory for selected legacy equipment cohorts",
+    "critical_dependency_category": "supply_partner",
+    "critical_dependency_descriptor": "authentic used refurbished or compatible equipment with verifiable provenance"
+  },
+  "structure": {
+    "commercial_archetype": "inventory-backed availability contract",
+    "control_point": "owned and tested reserve inventory for selected legacy inverter families",
+    "critical_dependency": "reliable supply of authentic used, refurbished, or compatible replacement units and parts"
+  },
+  "thesis": "Future operating state (2034): distributed PV fleets stay productive beyond original electronics support cycles through rapid, compatibility-safe swaps. Missing physical and financial mechanism: a data-selected pool of tested legacy inverters, boards, adapters, and loaner units reserved against site-level service promises rather than accumulated as speculative spare stock.",
+  "title": "Legacy Inverter Swap Reserve",
+  "uncertainties": [
+    "Regional installed-base distribution, failure frequency, and actual lead times by model",
+    "Safe interchangeability, firmware, grid-code, and warranty constraints",
+    "Authentic supply and refurbishment yield for selected equipment",
+    "Reservation price that covers write-downs while remaining cheaper than customer alternatives"
+  ],
+  "version": 1
+}

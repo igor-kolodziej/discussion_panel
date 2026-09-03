@@ -1,0 +1,117 @@
+{
+  "assumptions": [
+    "The product provides evidence capture and completeness support, not a guarantee that a subsidy, grid, or warranty counterparty will accept an application.",
+    "The family installer participates only through a written voluntary agreement and explicit homeowner data consent, with no presumed ownership or authority.",
+    "Enduring commissioning, grid, payment, handover, and warranty evidence creates recurring value even when a specific subsidy intake is closed.",
+    "Rule changes can be monitored and released promptly enough to avoid systematically certifying obsolete document sets."
+  ],
+  "base_score": 6.06,
+  "candidate_id": "mf-commissioning-passport",
+  "candidate_sha256": "950e26fd33debe16a20fc42240097e5ed95d4450db8f017a6d1324b117121993",
+  "candidate_version": 1,
+  "constrained_score": 6.06,
+  "evaluation_type": "working_screening",
+  "evidence_needed_for_higher_score": "Job-level observation across at least five installers, including unrelated firms; measured missing-document frequency, correction hours, collection delay, rejection and warranty cost; paid pilots with crew completion and exception rates; actual review cost and gross margin; repeat purchase; and written downstream acceptance.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "A renewable installation creates a repeated, document-heavy handover where omissions can cause correction, payment delay, subsidy rejection, or weak warranty evidence. Official Mój Prąd guidance reports that more than 40% of reviewed applications required correction or supplementation and that a missing OSD certificate causes rejection, supporting a genuine completeness problem even though not every error originates with the installer.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Callbacks, delayed collection, rejected packets, and later warranty disputes consume scarce owner and crew time, giving installers a credible reason to pay at job completion. Rework frequency, preventable cost, and willingness to pay 120-250 PLN per passport plus an account fee are unknown, and small installers may accept manual friction rather than add software.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Per-install pricing follows customer activity, the account fee adds recurring revenue, prepayment supports cash conversion, and automated checks can create strong operating leverage when manual review is limited to exceptions. Attractive margins depend on low support and exception rates, cheap acquisition, accurate rule maintenance, and pricing that withstands near-free CRM templates; none is measured yet.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Small Polish photovoltaic, battery, and heat-pump installers are a coherent beachhead, and more than 1.6 million Polish microinstallations demonstrate a substantial underlying asset base. Installed base is not annual passport demand, installer job volumes are not quantified, and the cited Mój Prąd intake is closed, so enduring grid, handover, payment, and warranty workflows must sustain the segment.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "A cross-brand, rule-aware sign-off checkpoint with an immutable customer pack can outperform scattered generic storage for small installers underserved by enterprise systems. Installer CRMs, OEM apps, subsidy consultants, distributors, or larger installers can add validation features, while the proposed agreement is nonexclusive, at-will, and does not control the homeowner relationship.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "Winning commissioning sign-off can lead into grid and subsidy packets, warranty records, service history, financing release, distributor compliance, additional equipment categories, and other CEE rule sets. Each regime adds maintenance and liability, but the same captured evidence and installer workflow make those extensions easier.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Embedded crew habits, accumulated records, and de-identified exception patterns by device, grid operator, and rule version can improve checks and create switching friction. The integration is replaceable and revocable, rules are public, customers remain with installers, and vertical-software or equipment vendors can copy the feature unless downstream parties accept the passport.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "Mobile evidence capture before crew departure, automatic completeness checks, and a portable audit trail could reduce rework compared with ad hoc folders and after-the-fact chasing. Time saved, rejection reduction, faster collection, and superior warranty outcomes are not quantified, so the advantage is plausible but not yet shown to change behavior.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "Poland has a large recent microinstallation base, and batteries and heat pumps add cross-device documentation complexity. Subsidy windows and document sets change, and the cited Mój Prąd intake ended in 2025, making continuous rule maintenance necessary and preventing one temporary program from carrying the timing thesis.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "A separately consented family-firm pilot gives rapid access to real workflow learning, and installers, wholesalers, and trade-software partners offer concentrated routes to later accounts. The pilot may not generalize, small installers are fragmented and price sensitive, and no unrelated installer or distributor commitment demonstrates repeatable CAC.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "A narrow mobile capture and rules engine with scheduled support is technically achievable with modest capital and extensive automation, while the founder's data skills fit extraction and anomaly detection. Crew noncompliance, stale requirements, sensitive homeowner data, false completeness assurances, and exception support remain material but can be bounded in a limited pilot without field labor.",
+      "score": 7,
+      "status": "scored"
+    }
+  ],
+  "final_score": 6.1,
+  "highest_value_structural_change": "Make the passport an accepted release artifact for one downstream counterparty such as a distributor, financing provider, warranty administrator, or subsidy specialist, so complete sign-off unlocks payment or service instead of remaining an optional checklist.",
+  "interaction_adjustment": 0,
+  "judge_id": "screen-b03-j01",
+  "main_structural_strength": "The product can occupy a repeated, time-sensitive sign-off checkpoint before the crew leaves, turning scattered evidence into a complete handover artifact connected to rejection, rework, collections, and warranty defense.",
+  "primary_score_limiter": "It is not yet shown that small installers suffer enough preventable document cost to pay the proposed per-job and account fees instead of using CRM templates, shared drives, OEM apps, or manual checklists.",
+  "qualified": false,
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 3,
+  "strongest_disconfirming_evidence": "The cited Mój Prąd intake is closed and its document set is not permanent, while installers may already manage adequate records at near-zero marginal cost; the official rejection evidence therefore does not by itself establish a durable paid installer product.",
+  "unrounded_score": 6.06
+}

@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "assumptions": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "candidate_id": {
+      "const": "fb-legacy-inverter-swap-reserve"
+    },
+    "candidate_version": {
+      "const": 2
+    },
+    "evidence_needed_for_higher_score": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "factors": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "enum": [
+              "Core insight",
+              "Customer pain and willingness to pay",
+              "Business model and economics",
+              "Market and beachhead",
+              "Competitive position and domination potential",
+              "Expansion potential",
+              "Defensibility and durability",
+              "Strength of advantage",
+              "Timing and momentum",
+              "Distribution",
+              "Execution and risks"
+            ]
+          },
+          "rationale": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "score": {
+            "maximum": 10,
+            "minimum": 1,
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "status": {
+            "enum": [
+              "scored",
+              "excluded"
+            ]
+          }
+        },
+        "required": [
+          "name",
+          "rationale",
+          "score",
+          "status"
+        ],
+        "type": "object"
+      },
+      "maxItems": 11,
+      "minItems": 11,
+      "type": "array"
+    },
+    "highest_value_structural_change": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "interaction_adjustment": {
+      "maximum": 0.5,
+      "minimum": -0.5,
+      "type": "number"
+    },
+    "judge_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "main_structural_strength": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "primary_score_limiter": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "strongest_disconfirming_evidence": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "assumptions",
+    "candidate_id",
+    "candidate_version",
+    "evidence_needed_for_higher_score",
+    "factors",
+    "highest_value_structural_change",
+    "interaction_adjustment",
+    "judge_id",
+    "main_structural_strength",
+    "primary_score_limiter",
+    "strongest_disconfirming_evidence"
+  ],
+  "title": "External opportunity holdout response",
+  "type": "object"
+}

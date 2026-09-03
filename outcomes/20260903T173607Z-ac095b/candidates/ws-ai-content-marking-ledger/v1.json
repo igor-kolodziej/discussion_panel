@@ -1,0 +1,148 @@
+{
+  "candidate_id": "ws-ai-content-marking-ledger",
+  "claims": [
+    {
+      "claim_id": "ws-ai-content-marking-ledger-c1",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://digital-strategy.ec.europa.eu/en/policies/guidelines-ai-transparency-obligations",
+        "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august"
+      ],
+      "statement": "Article 50 applies from 2 August 2026 and includes machine-readable marking or disclosure duties for specified AI-generated, manipulated, or interactive content, creating an auditable per-asset workflow event."
+    },
+    {
+      "claim_id": "ws-ai-content-marking-ledger-c2",
+      "claim_type": "payer_and_budget",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://digital-strategy.ec.europa.eu/en/policies/guidelines-ai-transparency-obligations"
+      ],
+      "statement": "Agencies and deployers that publish covered material must allocate production or compliance labor to transparency, but their willingness to license a separate evidence tool is unknown."
+    },
+    {
+      "claim_id": "ws-ai-content-marking-ledger-c3",
+      "claim_type": "founder_control_point_path",
+      "confidence": "low",
+      "evidence_refs": [],
+      "statement": "A plausible control path is a customer-authorized evidence ledger embedded at final approval, with local-export fallback; no agency data rights or production integration is secured."
+    },
+    {
+      "claim_id": "ws-ai-content-marking-ledger-c4",
+      "claim_type": "other",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august"
+      ],
+      "statement": "The Commission reported more than 180 organizations signed the transparency code before enforcement, indicating active workflow change but not demand for this particular product."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Agency operations, legal/compliance lead, production director, or client account owner",
+    "bundling_resistance": "Vendor neutrality, preservation checks across tool handoffs, and client-ready evidence must be valuable beyond native platform labels",
+    "customer_relationship_owner": "The agency owns its client relationship; the proposed compliance-tool relationship does not yet exist",
+    "distribution_origin": "Integration or referral from asset-management, legal, insurance, and agency production partners",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Compliance-partner share, integration partnerships, and targeted agency outreach",
+      "cash_conversion": "Annual or monthly advance license; integration costs are front-loaded",
+      "contribution_margin": "Potentially high for metadata-only processing, but creative-tool churn and legal support may be expensive",
+      "delivery_and_support_costs": "Tool-chain mapping, policy configuration, evidence exceptions, and agency onboarding",
+      "overhead_and_compliance": "Security, GDPR, legal interpretation boundaries, professional liability, and rule updates",
+      "revenue_basis": "Target 600-3,000 PLN per agency workspace monthly plus volume above included asset records",
+      "variable_costs": "Asset inspection compute, hashes and timestamps, storage, signing, notifications, and usage support"
+    },
+    "likely_incumbent_response": "Generative platforms, Adobe-like creative suites, asset-management systems, and publishers can embed compliant marking and logs",
+    "paid_event_or_measurable_loss": "A sealed compliance evidence record is paid; measurable losses include manual legal review, rework after metadata stripping, and inability to demonstrate the chosen marking or disclosure process",
+    "payer": "Creative or marketing agency",
+    "purchase_trigger": "First covered AI-content campaign after 2 August 2026, a client assurance request, or a failed platform or legal review",
+    "renewal_event": "Annual license renewal and continued per-asset evidence creation"
+  },
+  "contrary_evidence": [
+    "The code is voluntary and firms can demonstrate equivalent compliance by other means.",
+    "Large generation and creative platforms are natural owners of provenance features and can bundle them.",
+    "Not every AI-assisted marketing asset is covered by the same Article 50 duty."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Proposed nonexclusive data-processing and workflow agreement covering customer-authorized asset evidence; none secured",
+    "acquisition_instrument_type": "data_rights_agreement",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Provide a local command-line or desktop preflight that exports evidence to the agency's own storage without retaining assets",
+    "current_owner": "Agencies and clients own their source assets; no venture ledger exists",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "The agency owns its client relationship; the proposed compliance-tool relationship does not yet exist",
+    "duration": "Unknown until an agency agreement is executed",
+    "exclusivity": "nonexclusive",
+    "founder_access_basis": "other_legally_usable_access",
+    "founder_access_description": "Public EU guidance, open metadata standards, and lawful agency outreach are available; no private asset corpus or integration rights are held",
+    "launch_controller": "Each agency customer together with its creative and publishing platforms",
+    "mechanism_control": "dependent",
+    "renewal": "Proposed annual workspace license with customer-controlled evidence retention",
+    "replaceability": "replaceable",
+    "revocability": "unknown",
+    "status": "unknown",
+    "subject": "Asset-level provenance, disclosure, and pre-publication evidence dataset",
+    "subject_type": "dataset",
+    "transferability": "consent_required"
+  },
+  "discovery_lane": "weak-signal",
+  "economics": {
+    "acquisition_route": "Compliance advisers, agency operations communities, asset-management integrations, and direct design-partner outreach",
+    "capital_required_pln": 50000,
+    "founder_net_worth_path": "Conditional path: 400 agencies at a 1,500 PLN monthly blended license equals 7.2m PLN ARR; a defensible compliance workflow could exceed 5m PLN in value, but control and willingness to pay are unproven",
+    "founder_time": "A metadata-only preflight and three design partners fit 3-5 hours daily; deep integrations require later staffing",
+    "gross_margin_basis": "License revenue less compute, evidence storage, support, integration, channel share, and legal maintenance",
+    "payback": "Target within one or two avoided manual review cycles per month; unmeasured",
+    "pricing": "Discovery hypothesis: 600-3,000 PLN per workspace monthly with included volume and metered overage",
+    "retention_or_repeat": "Recurring with asset volume and annual policies, but vulnerable to platform bundling"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A permissioned corpus of tool-chain failure modes and destination-specific marking retention improves preflight rules",
+    "customer": "EU advertising, social-content, localization, and production agencies using generative AI across multiple tools",
+    "distribution_mechanism": "Agency production-tool integrations, compliance advisers, insurer referrals, and white-label client approval portals",
+    "offer_and_business_model": "Licensed asset-preflight workflow, machine-readable-mark check, disclosure rules, and immutable evidence export",
+    "payer_and_paid_event": "The agency pays a workspace license plus metered fees when an asset evidence record is sealed or exported",
+    "problem_trigger": "A covered AI-assisted asset is approved for client publication after passing through generators, editors, and export tools that may strip metadata"
+  },
+  "founder_fit": [
+    "Automated classification, anomaly detection, and evidence lineage fit data-science skills",
+    "The work can start as a narrow preflight tool without constant public-facing content creation",
+    "Per-asset outcomes and failure modes are measurable",
+    "A software-first license can scale beyond Warsaw if platform access proves durable"
+  ],
+  "parent": null,
+  "risks": [
+    "Overstating legal compliance could create professional liability",
+    "Metadata standards and Commission guidance can change",
+    "Sensitive unreleased campaign assets create severe security obligations",
+    "Platform-native tooling can erase the standalone market"
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://digital-strategy.ec.europa.eu/en/policies/guidelines-ai-transparency-obligations",
+    "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august",
+    "https://digital-strategy.ec.europa.eu/en/policies/enforcement-ai-act"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "licensing_or_royalty",
+    "commercial_model_descriptor": "agency workspace license plus asset level compliance evidence usage",
+    "control_point_category": "proprietary_dataset",
+    "control_point_descriptor": "permissioned ledger of asset origin marking checks disclosures and approvals",
+    "critical_dependency_category": "integration_platform",
+    "critical_dependency_descriptor": "creative and publication tools must expose or preserve enough provenance and metadata for reliable checks"
+  },
+  "structure": {
+    "commercial_archetype": "Agency workspace license with per-asset evidence events",
+    "control_point": "The evidence dataset assembled at final creative approval",
+    "critical_dependency": "Reliable metadata inspection and integration across generation, editing, asset-management, and publication platforms"
+  },
+  "thesis": "Observed compliance-workflow change: EU AI Act Article 50 transparency duties began applying on 2 August 2026, including machine-readable marking and disclosure duties for covered generated or manipulated content, and more than 180 organizations had already signed the related code. License agencies a vendor-neutral preflight and evidence ledger that checks each asset's declared origin, marking, disclosure copy, publication destination, and retained proof before release.",
+  "title": "AI Content Marking Evidence Ledger for Agencies",
+  "uncertainties": [
+    "Exact agency segments and asset types with repeatable Article 50 exposure",
+    "Whether metadata survives real production and publication chains",
+    "Legal sufficiency of machine-generated evidence exports",
+    "Agency willingness to expose client assets to a new vendor"
+  ],
+  "version": 1
+}

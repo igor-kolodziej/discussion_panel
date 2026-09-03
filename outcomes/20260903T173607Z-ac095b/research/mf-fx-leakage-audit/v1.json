@@ -1,0 +1,548 @@
+{
+  "candidate_id": "mf-fx-leakage-audit",
+  "candidate_sha256": "b6ae2e01fefe4a05776b8db7308ac19122404d1a23741469eb531b47f8ae93ad",
+  "candidate_version": 1,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "mf-fx-research-c01",
+      "evidence_refs": [
+        "s1-ecb-reference-rates"
+      ],
+      "statement": "ECB reference rates are daily averages of buying and selling rates, are published for information only, and need not equal rates at which market transactions occurred; an ECB-only counterfactual therefore cannot establish recoverable client savings."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "mf-fx-research-c02",
+      "evidence_refs": [
+        "s1-ecb-reference-rates",
+        "s2-eu-conversion-transparency"
+      ],
+      "statement": "EU rules require an online credit-transfer provider to disclose estimated conversion charges and total amounts before initiation, while the explicit percentage markup over the ECB rate is specified for card-based transactions; these disclosures can document charged cost but do not prove that another provider would have executed the same transaction at the ECB rate."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "mf-fx-research-c03",
+      "evidence_refs": [
+        "s5-bis-fx-tca"
+      ],
+      "statement": "The BIS describes transaction-cost analysis as comparison of the executed price with a relevant benchmark, but says that accessing and processing required data and choosing an adequate benchmark can be difficult because FX lacks a complete consolidated tape."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "mf-fx-research-c04",
+      "evidence_refs": [
+        "s6-redbridge-gerflor"
+      ],
+      "statement": "A vendor-published case study names Gerflor as a buyer of a multi-bank FX-cost review that used transaction timestamps and a proprietary market database, reports a 40% reduction in FX-related costs, and describes formal bank pricing schedules plus subsequent monthly monitoring."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "mf-fx-research-c05",
+      "evidence_refs": [
+        "s6-redbridge-gerflor"
+      ],
+      "statement": "The Gerflor engagement supports the existence of a useful benchmarking-and-negotiation mechanism, but extrapolating it to Polish SMEs, the proposed 4,000-12,000 PLN diagnostic, or a 15-25% savings share is an inference because the source concerns a global manufacturer and discloses no engagement price."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "mf-fx-research-c06",
+      "evidence_refs": [
+        "s7-moneycorp-partners"
+      ],
+      "statement": "Moneycorp publicly offers business partners a free client FX audit and consultation, a dedicated relationship manager, partner tools, and monthly referral reporting."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "mf-fx-research-c07",
+      "evidence_refs": [
+        "s7-moneycorp-partners"
+      ],
+      "statement": "Accountants and fractional-CFO networks are plausible referral channels, but the same channel is contested by execution providers able to subsidize the audit; a nonexclusive referral plan therefore does not establish lead volume, CAC, conversion, or durable ownership of the relationship."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "mf-fx-research-c08",
+      "evidence_refs": [
+        "s8-revolut-business-pl"
+      ],
+      "statement": "Revolut Business in Poland publicly lists plans at 50, 175, and 625 PLN per month, interbank-rate exchange allowances up to 265,000 PLN on listed plans, a 0.6% fee above allowance, and bundled approvals, accounting integrations, analytics, multi-currency payments, and FX forwards."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "mf-fx-research-c09",
+      "evidence_refs": [
+        "s8-revolut-business-pl"
+      ],
+      "statement": "For SMEs whose leakage is mainly an expensive conversion route rather than complex multi-bank execution, a transparent low-cost provider can make the remediation cheaper and more self-serve than the proposed diagnostic fee."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "mf-fx-research-c10",
+      "evidence_refs": [
+        "s9-kantox-platform"
+      ],
+      "statement": "Kantox markets an end-to-end corporate FX system covering live-rate pricing, exposure collection, trading-platform execution, swaps, reporting, and hedge accounting, including ERP and treasury-system data capture."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "mf-fx-research-c11",
+      "evidence_refs": [
+        "s7-moneycorp-partners",
+        "s8-revolut-business-pl",
+        "s9-kantox-platform"
+      ],
+      "statement": "Banks, payment fintechs, and treasury platforms have a credible response path from free audit or low-cost exchange into integrated data, approval, execution, and reporting workflows; an audit-only layer has no demonstrated technical barrier to replication."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "mf-fx-research-c12",
+      "evidence_refs": [
+        "s3-knf-aisp-registration"
+      ],
+      "statement": "KNF states that acting as an AISP in Poland is regulated activity requiring entry in the KNF register and an application supported by, among other things, a three-year activity and financial plan plus risk-management arrangements."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "mf-fx-research-c13",
+      "evidence_refs": [
+        "s4-knf-aisp-obligations"
+      ],
+      "statement": "KNF states that an AISP must act on unambiguous user consent, may access only designated online payment accounts and their transactions, must use secure communication, may not use or store data for purposes outside the contracted account-information service, and must maintain liability insurance or equivalent security."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "mf-fx-research-c14",
+      "evidence_refs": [
+        "s3-knf-aisp-registration",
+        "s4-knf-aisp-obligations"
+      ],
+      "statement": "Using a registered AISP partner can avoid the founder directly operating the regulated access service, but makes recurring ingestion dependent on that partner's contract, permitted purpose, coverage, and security process; using client-generated CSV exports avoids that integration but remains manual, revocable, and vulnerable to missing records."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "mf-fx-research-c15",
+      "evidence_refs": [
+        "s3-knf-aisp-registration",
+        "s4-knf-aisp-obligations",
+        "s7-moneycorp-partners",
+        "s8-revolut-business-pl",
+        "s9-kantox-platform"
+      ],
+      "statement": "The v1 control point is replaceable access rather than owned or durable control: the client retains its records and provider decision, the proposed agreement is nonexclusive and revocable, and both the audit and downstream workflow can be supplied by regulated data partners or incumbent finance platforms."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "mf-fx-research-c16",
+      "evidence_refs": [
+        "s10-statistics-poland-trade-2025"
+      ],
+      "statement": "Statistics Poland reports final 2025 Polish goods exports of 1,563.6 billion PLN and imports of 1,594.5 billion PLN, establishing a large national trade-flow context but not the portion converted by target SMEs or available as leakage."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "mf-fx-research-c17",
+      "evidence_refs": [
+        "s11-eurostat-enterprise-size"
+      ],
+      "statement": "Eurostat reports that SMEs were 98.9% of EU goods-importing enterprises in 2022 but only 45% of import value, while micro firms alone were 77.6% of intra-EU importers and only 10.8% of value; firm count therefore materially overstates the high-volume economic target."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "mf-fx-research-c18",
+      "evidence_refs": [
+        "s10-statistics-poland-trade-2025",
+        "s11-eurostat-enterprise-size"
+      ],
+      "statement": "Neither aggregate Polish trade nor the high SME share by enterprise count establishes the candidate's addressable denominator; qualification requires the number of Polish SMEs with recurring non-PLN conversion, their annual converted volume, current all-in spreads, and reachable savings after switching costs."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "mf-fx-research-c19",
+      "evidence_refs": [
+        "s8-revolut-business-pl"
+      ],
+      "statement": "Using Revolut's listed 0.6% fee above plan allowance only as an illustrative comparison point, a 4,000-12,000 PLN diagnostic equals 0.6% of approximately 667,000-2,000,000 PLN of affected volume before any success share or delivery cost; this arithmetic is not evidence that 0.6% is recoverable for a target client."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "mf-fx-research-c20",
+      "evidence_refs": [],
+      "statement": "No public evidence located establishes fully loaded hours per audit, data-cleaning failure rate, senior-review time, quote-data cost, insurance and security overhead, referral compensation, dispute handling, or a 55-75% contribution margin for this v1 service."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "mf-fx-research-c21",
+      "evidence_refs": [],
+      "statement": "No direct evidence located shows a Polish SME finance owner paying 4,000-12,000 PLN upfront plus 15-25% of first-year savings, or identifies the minimum loss and urgency required for that budget decision."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "mf-fx-research-c22",
+      "evidence_refs": [],
+      "statement": "The availability, retention period, licensing price, and client-size comparability of timestamped executable alternative quotes for the target Polish currency pairs and historical transaction sizes remain unverified."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "mf-fx-research-c23",
+      "evidence_refs": [],
+      "statement": "No signed evidence establishes that clients or data partners will grant a 12-month quarterly review checkpoint, provide complete bank-card-invoice coverage, or permit cross-client anonymized observations to be retained and reused as a benchmark asset."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "mf-fx-research-c24",
+      "evidence_refs": [
+        "s12-eu-spot-fx-perimeter"
+      ],
+      "statement": "EU delegated rules exclude spot FX contracts and certain physically settled means-of-payment currency contracts from the relevant MiFID II financial-instrument category; that exclusion does not establish that advice involving forwards, swaps, options, or compensated referrals is outside all regulation."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "mf-fx-research-c25",
+      "evidence_refs": [],
+      "statement": "The Polish regulatory perimeter for a paid, personalized recommendation to change FX provider or route, any discussion of hedging instruments, the proposed success fee, and referral compensation remains unverified and requires scoped Polish legal advice before sale."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "mf-fx-research-c26",
+      "evidence_refs": [
+        "s5-bis-fx-tca",
+        "s6-redbridge-gerflor",
+        "s9-kantox-platform"
+      ],
+      "statement": "A defensible data moat would require lawful access to high-quality execution records and comparable market data before enough client observations accumulate; the BIS data-access problem and Redbridge's reliance on proprietary benchmarks indicate that generic reconciliation logic alone is unlikely to be the critical asset."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "mf-fx-research-c27",
+      "evidence_refs": [],
+      "statement": "No evidence located establishes a buyer-accepted savings baseline that separates provider markup from timing, market movement, credit, settlement, forward points, liquidity, transaction size, and service differences or defines how disputes and negative savings are handled."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "mf-fx-research-c28",
+      "evidence_refs": [],
+      "statement": "No evidence located supports the illustrative path to 800 clients at an 18,000 PLN average annual fee, the analyst capacity and automation needed to serve them alongside the founder's job, or a valuation and ownership path sufficient for the stated founder-wealth outcome."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "mf-fx-research-c29",
+      "evidence_refs": [
+        "s6-redbridge-gerflor",
+        "s7-moneycorp-partners",
+        "s8-revolut-business-pl",
+        "s9-kantox-platform"
+      ],
+      "statement": "Evidence supports an initial one-off diagnostic and negotiation wedge, but repeat revenue is not established: incumbents bundle ongoing controls, and the only cited monitoring example follows formal bank pricing agreements at a large corporate rather than proving quarterly SME willingness to renew."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "mf-fx-research-c30",
+      "evidence_refs": [
+        "s3-knf-aisp-registration",
+        "s4-knf-aisp-obligations"
+      ],
+      "statement": "Automated account access adds registration or partner cost, consent and purpose limitations, secure-communication work, reporting, and insurance obligations; treating AISP access as a simple feature would understate delivery and compliance economics."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "mf-fx-research-c31",
+      "evidence_refs": [
+        "s3-knf-aisp-registration",
+        "s4-knf-aisp-obligations",
+        "s12-eu-spot-fx-perimeter"
+      ],
+      "statement": "The reviewed sources do not establish illegality or unobtainable access for a CSV-only audit limited to historical spot-FX cost analysis; they establish material boundaries and dependencies, so the missing contracts and validation remain uncertainty rather than direct fatal evidence."
+    }
+  ],
+  "commercial_evidence": {
+    "buyer_or_paid_event": {
+      "claim_ids": [
+        "mf-fx-research-c04",
+        "mf-fx-research-c05",
+        "mf-fx-research-c21",
+        "mf-fx-research-c27"
+      ],
+      "source_ids": [
+        "s6-redbridge-gerflor"
+      ],
+      "status": "inference"
+    },
+    "distribution_and_acquisition": {
+      "claim_ids": [
+        "mf-fx-research-c06",
+        "mf-fx-research-c07",
+        "mf-fx-research-c21"
+      ],
+      "source_ids": [
+        "s7-moneycorp-partners"
+      ],
+      "status": "inference"
+    },
+    "fully_loaded_unit_economics": {
+      "claim_ids": [
+        "mf-fx-research-c19",
+        "mf-fx-research-c20",
+        "mf-fx-research-c28",
+        "mf-fx-research-c30"
+      ],
+      "source_ids": [
+        "s3-knf-aisp-registration",
+        "s4-knf-aisp-obligations",
+        "s8-revolut-business-pl"
+      ],
+      "status": "inference"
+    },
+    "rights_control_access_contractibility": {
+      "claim_ids": [
+        "mf-fx-research-c12",
+        "mf-fx-research-c13",
+        "mf-fx-research-c14",
+        "mf-fx-research-c15",
+        "mf-fx-research-c22",
+        "mf-fx-research-c23"
+      ],
+      "source_ids": [
+        "s3-knf-aisp-registration",
+        "s4-knf-aisp-obligations"
+      ],
+      "status": "inference"
+    }
+  },
+  "contrary_evidence": [
+    "ECB reference rates are informational averages and are explicitly discouraged for transaction use, so they cannot serve as the sole executable savings baseline.",
+    "The BIS reports that meaningful FX transaction-cost analysis is constrained by benchmark choice, data access, processing requirements, and the absence of a complete consolidated tape.",
+    "Moneycorp already offers free client FX audits through a partner channel with dedicated relationship management and referral reporting, directly contesting the proposed accountant and fractional-CFO route.",
+    "Revolut Business offers Polish firms transparent monthly pricing, interbank-rate allowances, a 0.6% over-allowance fee, multi-currency payments, approvals, accounting integrations, analytics, and forwards in one product.",
+    "Kantox markets end-to-end FX data capture, execution, monitoring, reporting, and hedge-accounting automation, showing that an audit-only deliverable can be absorbed into a broader treasury workflow.",
+    "KNF treats AISP activity as regulated and imposes registration, consent, purpose, security, reporting, and insurance constraints, so automated bank-data access is not an unencumbered founder-controlled input.",
+    "The only named supporting engagement relied on proprietary benchmark data, transaction timestamps, formal bank pricing agreements, and a large multinational buyer rather than the v1's unproven Polish-SME access and price model.",
+    "Eurostat's high SME share by trader count is paired with much lower SME trade-value share, weakening any addressable-market estimate based on firm counts alone.",
+    "EU payment rules already require some conversion-cost disclosure, reducing information asymmetry for covered transactions while still not supplying an executable alternative quote."
+  ],
+  "critical_control_point_assessment": {
+    "assessment": "inference",
+    "claim_ids": [
+      "mf-fx-research-c13",
+      "mf-fx-research-c14",
+      "mf-fx-research-c15",
+      "mf-fx-research-c22",
+      "mf-fx-research-c23",
+      "mf-fx-research-c26"
+    ],
+    "source_ids": [
+      "s3-knf-aisp-registration",
+      "s4-knf-aisp-obligations",
+      "s5-bis-fx-tca",
+      "s6-redbridge-gerflor",
+      "s7-moneycorp-partners",
+      "s8-revolut-business-pl",
+      "s9-kantox-platform"
+    ],
+    "status": "replaceable_access"
+  },
+  "falsification": {
+    "cold_start_and_data_moat": [
+      "mf-fx-research-c03",
+      "mf-fx-research-c15",
+      "mf-fx-research-c22",
+      "mf-fx-research-c23",
+      "mf-fx-research-c26",
+      "mf-fx-research-c28"
+    ],
+    "control_point_obtainability": [
+      "mf-fx-research-c12",
+      "mf-fx-research-c13",
+      "mf-fx-research-c14",
+      "mf-fx-research-c15",
+      "mf-fx-research-c22",
+      "mf-fx-research-c23",
+      "mf-fx-research-c31"
+    ],
+    "critical_mechanism_ownership": [
+      "mf-fx-research-c01",
+      "mf-fx-research-c03",
+      "mf-fx-research-c14",
+      "mf-fx-research-c15",
+      "mf-fx-research-c22",
+      "mf-fx-research-c23",
+      "mf-fx-research-c26"
+    ],
+    "external_dependencies": [
+      "mf-fx-research-c03",
+      "mf-fx-research-c12",
+      "mf-fx-research-c13",
+      "mf-fx-research-c14",
+      "mf-fx-research-c22",
+      "mf-fx-research-c25",
+      "mf-fx-research-c30"
+    ],
+    "substitutes_and_incumbent_response": [
+      "mf-fx-research-c06",
+      "mf-fx-research-c08",
+      "mf-fx-research-c09",
+      "mf-fx-research-c10",
+      "mf-fx-research-c11",
+      "mf-fx-research-c29"
+    ],
+    "willingness_urgency_and_repeat_economics": [
+      "mf-fx-research-c04",
+      "mf-fx-research-c05",
+      "mf-fx-research-c19",
+      "mf-fx-research-c20",
+      "mf-fx-research-c21",
+      "mf-fx-research-c27",
+      "mf-fx-research-c28",
+      "mf-fx-research-c29"
+    ]
+  },
+  "schema_version": 3,
+  "sources": [
+    {
+      "accessed_at": "2026-09-03T18:42:14Z",
+      "evidence_class": "market_context",
+      "published_at": "unknown",
+      "publisher": "European Central Bank",
+      "source_id": "s1-ecb-reference-rates",
+      "source_type": "central_bank_reference_data",
+      "stance": "contradicting",
+      "title": "Euro foreign exchange reference rates",
+      "url": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html"
+    },
+    {
+      "accessed_at": "2026-09-03T18:42:14Z",
+      "evidence_class": "regulatory",
+      "published_at": "2019-03-29",
+      "publisher": "EUR-Lex",
+      "source_id": "s2-eu-conversion-transparency",
+      "source_type": "eu_regulation",
+      "stance": "context",
+      "title": "Regulation (EU) 2019/518 on cross-border payments and currency conversion charges",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32019R0518"
+    },
+    {
+      "accessed_at": "2026-09-03T18:42:14Z",
+      "evidence_class": "regulatory",
+      "published_at": "2026-05-25",
+      "publisher": "Komisja Nadzoru Finansowego",
+      "source_id": "s3-knf-aisp-registration",
+      "source_type": "national_regulator_guidance",
+      "stance": "contradicting",
+      "title": "Rejestracja AISP",
+      "url": "https://www.knf.gov.pl/dla_rynku/procesy_licencyjne/platniczy/AISP/Rejestracja_AISP?articleId=63092&p_id=18"
+    },
+    {
+      "accessed_at": "2026-09-03T18:42:14Z",
+      "evidence_class": "rights_control_access",
+      "published_at": "2023-11-07",
+      "publisher": "Komisja Nadzoru Finansowego",
+      "source_id": "s4-knf-aisp-obligations",
+      "source_type": "national_regulator_guidance",
+      "stance": "contradicting",
+      "title": "Podstawowe obowiązki AISP",
+      "url": "https://www.knf.gov.pl/dla_rynku/procesy_licencyjne/platniczy/AISP/Podstawowe_obowiazki_AISP"
+    },
+    {
+      "accessed_at": "2026-09-03T18:42:14Z",
+      "evidence_class": "rights_control_access",
+      "published_at": "2020-10-30",
+      "publisher": "Bank for International Settlements",
+      "source_id": "s5-bis-fx-tca",
+      "source_type": "central_bank_research",
+      "stance": "contradicting",
+      "title": "FX execution algorithms and market functioning",
+      "url": "https://www.bis.org/publ/mktc13.htm"
+    },
+    {
+      "accessed_at": "2026-09-03T18:42:14Z",
+      "evidence_class": "direct_buyer",
+      "published_at": "unknown",
+      "publisher": "Redbridge Debt & Treasury Advisory",
+      "source_id": "s6-redbridge-gerflor",
+      "source_type": "vendor_case_study",
+      "stance": "supporting",
+      "title": "Gerflor Optimizes FX Pricing Transparency Across Global Banking Relationships",
+      "url": "https://www.redbridgedta.com/us/case-studies/gerflor/"
+    },
+    {
+      "accessed_at": "2026-09-03T18:42:14Z",
+      "evidence_class": "distribution",
+      "published_at": "unknown",
+      "publisher": "Moneycorp",
+      "source_id": "s7-moneycorp-partners",
+      "source_type": "incumbent_partner_program",
+      "stance": "contradicting",
+      "title": "Business partners",
+      "url": "https://www.moneycorp.com/en-gb/partnerships/business-partners/"
+    },
+    {
+      "accessed_at": "2026-09-03T18:42:14Z",
+      "evidence_class": "unit_economics",
+      "published_at": "unknown",
+      "publisher": "Revolut Business",
+      "source_id": "s8-revolut-business-pl",
+      "source_type": "incumbent_pricing_page",
+      "stance": "contradicting",
+      "title": "Business Account Pricing",
+      "url": "https://www.revolut.com/en-PL/business/business-account-plans/"
+    },
+    {
+      "accessed_at": "2026-09-03T18:42:14Z",
+      "evidence_class": "incumbent",
+      "published_at": "unknown",
+      "publisher": "Kantox",
+      "source_id": "s9-kantox-platform",
+      "source_type": "incumbent_product_page",
+      "stance": "contradicting",
+      "title": "FX Risk Management Software",
+      "url": "https://www.kantox.com/"
+    },
+    {
+      "accessed_at": "2026-09-03T18:42:14Z",
+      "evidence_class": "market_context",
+      "published_at": "2026-07-30",
+      "publisher": "Statistics Poland",
+      "source_id": "s10-statistics-poland-trade-2025",
+      "source_type": "official_statistics",
+      "stance": "context",
+      "title": "Foreign trade turnover of goods in total and by countries in 2025",
+      "url": "https://stat.gov.pl/en/topics/prices-trade/trade/foreign-trade-turnover-of-goods-in-total-and-by-countries-in-2025,2,18.html"
+    },
+    {
+      "accessed_at": "2026-09-03T18:42:14Z",
+      "evidence_class": "market_context",
+      "published_at": "unknown",
+      "publisher": "Eurostat",
+      "source_id": "s11-eurostat-enterprise-size",
+      "source_type": "official_statistics",
+      "stance": "context",
+      "title": "International trade in goods by enterprise size",
+      "url": "https://ec.europa.eu/eurostat/statistics-explained/SEPDF/cache/6587.pdf"
+    },
+    {
+      "accessed_at": "2026-09-03T18:42:14Z",
+      "evidence_class": "regulatory",
+      "published_at": "2017-03-31",
+      "publisher": "EUR-Lex",
+      "source_id": "s12-eu-spot-fx-perimeter",
+      "source_type": "eu_regulation",
+      "stance": "context",
+      "title": "Commission Delegated Regulation (EU) 2017/565, Article 10",
+      "url": "https://eur-lex.europa.eu/eli/reg_del/2017/565/2021-03-29/eng"
+    }
+  ],
+  "unknowns": [
+    "A paid Polish-SME pilot at the exact v1 fixed-fee-plus-savings-share terms.",
+    "Distribution of target firms by annual non-PLN conversion volume, provider markup, currency pair, transaction size, and recoverable leakage.",
+    "Licensed, timestamped, executable quote coverage and cost for historical Polish-SME transactions.",
+    "A counterfactual and verification protocol accepted by the buyer, incumbent provider, and insurer for success-fee calculation.",
+    "Actual intake, normalization, review, negotiation, implementation-tracking, support, and dispute hours per client.",
+    "Referral partner commitment, exclusivity, economics, lead volume, conversion rate, and resulting CAC in Poland.",
+    "Quarterly renewal and annual-tender retention after the first provider switch or pricing negotiation.",
+    "Scoped Polish legal treatment of personalized provider, routing, and hedging recommendations plus referral and success-fee compensation.",
+    "AISP partner terms and whether account data obtained for AIS may be used within the proposed audit and benchmark workflow.",
+    "Client permission and legal basis to retain and reuse anonymized cross-client fee and implementation observations.",
+    "Fully loaded security, privacy, professional-liability, AISP-partner, quote-data, and senior-review costs.",
+    "A credible operating and acquisition system capable of reaching and serving the illustrative 800-client wealth-scale case."
+  ]
+}

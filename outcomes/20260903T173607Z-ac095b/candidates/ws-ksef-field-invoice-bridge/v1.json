@@ -1,0 +1,148 @@
+{
+  "candidate_id": "ws-ksef-field-invoice-bridge",
+  "claims": [
+    {
+      "claim_id": "ws-ksef-field-invoice-bridge-c1",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/tryb-offline-niedostepnosc-ksef/"
+      ],
+      "statement": "Official KSeF offline procedures require the invoice to use the current structured format and normally be submitted no later than the next business day after the announced unavailability ends, making queue and reconciliation failures measurable."
+    },
+    {
+      "claim_id": "ws-ksef-field-invoice-bridge-c2",
+      "claim_type": "payer_and_budget",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ksef.podatki.gov.pl/etapy-wdrozenia-ksef/",
+        "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/zakres-obowiazkowego-ksef/"
+      ],
+      "statement": "Most Polish enterprises entered mandatory KSeF issuance from 1 April 2026, placing the operational cost with the taxpayer and its finance function; willingness to buy a specialized field bridge remains unproven."
+    },
+    {
+      "claim_id": "ws-ksef-field-invoice-bridge-c3",
+      "claim_type": "founder_control_point_path",
+      "confidence": "low",
+      "evidence_refs": [],
+      "statement": "The proposed control path is a revocable taxpayer mandate over the field-to-KSeF handoff, with export-only fallback; no mandate or accounting integration has been acquired."
+    },
+    {
+      "claim_id": "ws-ksef-field-invoice-bridge-c4",
+      "claim_type": "other",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/zakres-obowiazkowego-ksef/"
+      ],
+      "statement": "KSeF allows authorized third parties such as accounting offices to act for a taxpayer, showing that delegated workflows exist, though the exact authorization needed for this offer requires legal and technical confirmation."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Owner, finance manager, or accounting lead",
+    "bundling_resistance": "Win only where trade-specific job evidence, technician usability, and cross-accounting-system reconciliation are materially better than generic invoicing",
+    "customer_relationship_owner": "The proposed venture would contract with the service company; no relationship is currently owned",
+    "distribution_origin": "Accounting offices and vertical field-service vendors that repeatedly see reconciliation problems",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Accounting-firm revenue share, integration work, and trade-specific outbound sales",
+      "cash_conversion": "Monthly prepayment while integration and compliance maintenance are paid continuously",
+      "contribution_margin": "Could exceed service margins after templates stabilize, but error handling and liability may keep costs material",
+      "delivery_and_support_costs": "Tax-workflow onboarding, mapping to accounting packages, failed-submission handling, and user support",
+      "overhead_and_compliance": "Security, GDPR, tax counsel, professional liability cover, audit logs, and schema maintenance",
+      "revenue_basis": "Target 149-699 PLN monthly by invoice and technician tier, or 2-5 PLN per completed field invoice",
+      "variable_costs": "KSeF connectivity, OCR, document storage, signatures, notifications, and payment processing"
+    },
+    "likely_incumbent_response": "Accounting suites and KSeF-native invoicing apps can add mobile or offline field capture",
+    "paid_event_or_measurable_loss": "A successfully validated and reconciled invoice is the paid event; measurable losses are office rekeying time, delayed billing, rejection correction, and missed offline submission windows",
+    "payer": "Field-service company",
+    "purchase_trigger": "KSeF obligation, first invoice rejection, growing technician count, or accounting overtime caused by field paperwork",
+    "renewal_event": "Monthly renewal based on invoice volume and error-rate reporting"
+  },
+  "contrary_evidence": [
+    "Generic accounting and invoicing vendors have a natural installed-base advantage and can add the same workflow.",
+    "KSeF provides official client tooling and documented offline modes, so many firms may accept a manual workaround.",
+    "The smallest firms below the temporary monthly invoiced-sales threshold remain exempt from issuance until 2027, delaying part of the market."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Proposed taxpayer mandate and KSeF-compatible workflow integration agreement; none secured",
+    "acquisition_instrument_type": "workflow_integration_agreement",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Export validated FA(3) payloads and evidence packs for submission by the customer's existing accounting system rather than transmitting directly",
+    "current_owner": "The taxpayer controls authorization; the Ministry of Finance controls KSeF",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "The proposed venture would contract with the service company; no relationship is currently owned",
+    "duration": "Unknown until customer authorization terms are agreed",
+    "exclusivity": "nonexclusive",
+    "founder_access_basis": "operating_relationship",
+    "founder_access_description": "The family installation firm offers a lawful setting for workflow observation if it opts in, but no KSeF authorization or customer data is currently available",
+    "launch_controller": "Each subscribing taxpayer and the KSeF platform",
+    "mechanism_control": "dependent",
+    "renewal": "Proposed monthly subscription with continuously valid taxpayer authorization",
+    "replaceability": "replaceable",
+    "revocability": "at_will",
+    "status": "unknown",
+    "subject": "Authorized creation and submission of a customer's KSeF invoice transaction",
+    "subject_type": "transaction",
+    "transferability": "nontransferable"
+  },
+  "discovery_lane": "weak-signal",
+  "economics": {
+    "acquisition_route": "Accounting-office referrals, field-service integrations, and direct pilots with installation contractors",
+    "capital_required_pln": 45000,
+    "founder_net_worth_path": "Conditional path: 1,200 firms at 399 PLN monthly equals about 5.75m PLN ARR; durable margin and low churn could support a value above 5m PLN, but no demand or CAC evidence exists",
+    "founder_time": "One narrow trade and export-first integration can fit 3-5 hours daily; multi-package support cannot without help",
+    "gross_margin_basis": "Subscription or usage revenue less OCR, storage, transmission, support, partner share, and compliance maintenance",
+    "payback": "Target under three months if the tool removes recurring office rekeying and shortens days-to-invoice; unmeasured",
+    "pricing": "Discovery hypothesis: 149-699 PLN monthly by technician and invoice volume, with a metered option at 2-5 PLN per invoice",
+    "retention_or_repeat": "Every invoice repeats the workflow, but retention collapses if accounting suites solve it natively"
+  },
+  "fingerprint": {
+    "compounding_advantage": "A library of anonymized validation failures, correction patterns, and trade-specific field templates reduces rejection and support rates",
+    "customer": "Polish installation, maintenance, construction, and mobile-service firms whose invoices originate at customer sites",
+    "distribution_mechanism": "Accounting-office referrals, trade associations, and integrations with field-service software used by small contractors",
+    "offer_and_business_model": "Mobile-first invoice evidence capture, offline queue, FA(3) validation, KSeF submission, and accounting reconciliation sold on usage tiers",
+    "payer_and_paid_event": "The service company pays per successfully reconciled invoice or for a monthly bundle of field-originated invoices",
+    "problem_trigger": "A field worker finishes a job where connectivity, KSeF credentials, final quantities, or buyer details are not cleanly available"
+  },
+  "founder_fit": [
+    "The founder can map error patterns and automate validation with data-science methods",
+    "A lawful family-firm test relationship can expose real field-to-office friction without using employer resources",
+    "A narrow mobile capture MVP is compatible with an employed founder's time limit",
+    "The product has measurable throughput and error outcomes and can scale through accounting partners"
+  ],
+  "parent": null,
+  "risks": [
+    "Tax or API changes can invalidate workflows quickly",
+    "A credential or invoice-data breach would be severe",
+    "Accounting incumbents can bundle the feature at negligible incremental price",
+    "High-touch onboarding may overwhelm a part-time founder"
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://ksef.podatki.gov.pl/etapy-wdrozenia-ksef/",
+    "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/zakres-obowiazkowego-ksef/",
+    "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/tryb-offline-niedostepnosc-ksef/"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "usage_based_service",
+    "commercial_model_descriptor": "per technician or per reconciled invoice field compliance service",
+    "control_point_category": "transaction_rail",
+    "control_point_descriptor": "authorized conversion of onsite job completion into a ksef transaction",
+    "critical_dependency_category": "regulatory_approval",
+    "critical_dependency_descriptor": "continued conformance with ksef authorization fa schema and offline submission rules"
+  },
+  "structure": {
+    "commercial_archetype": "Usage-priced transaction bridge between field completion and statutory e-invoice submission",
+    "control_point": "The handoff at which job evidence becomes the canonical invoice record",
+    "critical_dependency": "Continuing lawful KSeF authentication, schema, offline, and API compatibility"
+  },
+  "thesis": "Observed workflow change: KSeF 2.0 became mandatory for most Polish enterprises in 2026, while official offline procedures still require structured electronic invoices and later submission within prescribed windows. Sell field-service contractors a mobile capture, authorization, queueing, and reconciliation layer that lets a technician finish the commercial handoff onsite without rekeying it later in the office.",
+  "title": "KSeF Field-Invoice Offline Bridge",
+  "uncertainties": [
+    "Frequency and cost of field-originated KSeF errors after the initial rollout stabilizes",
+    "Whether customers will authorize a small vendor to transmit tax documents",
+    "Integration scope and rate limits of accounting packages and KSeF interfaces",
+    "Extent of professional liability for missed deadlines or malformed invoices"
+  ],
+  "version": 1
+}

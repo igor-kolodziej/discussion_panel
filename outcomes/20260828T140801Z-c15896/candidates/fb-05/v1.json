@@ -1,0 +1,86 @@
+{
+  "candidate_id": "fb-05",
+  "claims": [
+    {
+      "claim_id": "fb-05-control",
+      "claim_type": "founder_control_point_path",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://energy.ec.europa.eu/news/renewable-energy-directive-commission-guidance-battery-related-data-sharing-2025-07-25_en"
+      ],
+      "statement": "EU guidance calls for real-time, cost-free sharing of EV state-of-charge, state-of-health, and location data with users and authorised third parties. A founder can therefore seek fleet authorisation plus charger API access and make the battery-health covenant the control point, although OEM implementation and Polish access are not verified."
+    },
+    {
+      "claim_id": "fb-05-loss",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://www.nrel.gov/docs/fy20osti/74187.pdf"
+      ],
+      "statement": "The present measurable loss is the fleet depot's avoidable electricity-bill increase from unmanaged charging, balanced against battery degradation risk. NREL modelling found optimized smart and bidirectional school-bus operation could mitigate utility-bill increases while retaining acceptable battery life; Polish fleet economics may differ."
+    },
+    {
+      "claim_id": "fb-05-payer",
+      "claim_type": "payer_and_budget",
+      "confidence": "preliminary",
+      "evidence_refs": [
+        "https://energy.ec.europa.eu/topics/energy-efficiency/energy-performance-buildings/energy-performance-buildings-directive/sustainable-mobility-and-buildings_en"
+      ],
+      "statement": "The first payer hypothesis is a depot fleet operator using charging-energy and operations budget for smart charging; later an aggregator or supplier can share flexibility revenue. The Commission describes smart charging as responding to cost and renewable availability, but no Polish fleet has confirmed budget or V2G revenue."
+    }
+  ],
+  "contrary_evidence": [
+    "The Commission notes that bidirectional technology is still developing, so broad charger and vehicle compatibility cannot be assumed.",
+    "OEMs, charger platforms, lessors, and energy suppliers can bundle optimization and retain the data interface."
+  ],
+  "discovery_lane": "future-backcast",
+  "economics": {
+    "acquisition_route": "Start with read-only battery and charger data for one 20-50 vehicle depot, prove scheduled-charging savings, and negotiate an explicit degradation budget with the fleet or lessor before enabling any discharge.",
+    "capital_required_pln": 65000,
+    "founder_net_worth_path": "A trusted dispatch layer spanning mixed vehicle and charger brands could earn recurring fleet fees and a share of flexibility value; substantial equity requires thousands of contracted batteries and durable third-party data access.",
+    "founder_time": "Approximately 12-18 hours per week for data integration and dispatch modelling, with charger electricians and energy-market partners handling field and market operations.",
+    "gross_margin_basis": "Software fees and revenue share less API, telemetry, and aggregator costs; hardware replacement and battery warranty exposure remain excluded.",
+    "payback": "Require integration payback within one fleet contract year from smart-charging savings before investing in bidirectional hardware.",
+    "pricing": "Per-vehicle monthly fee plus 20-30% of verified energy savings; future V2G revenue shared after degradation reserve and aggregator fees.",
+    "retention_or_repeat": "Charging is optimized daily, fleets renew annually, and battery-history continuity raises switching cost."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Cross-OEM degradation-response history and contract-grade records tying each dispatch to a battery-health budget",
+    "customer": "Commercial EV fleets, depot operators, vehicle lessors, and flexibility aggregators",
+    "distribution_mechanism": "Charger installers and leasing partners introduce depots at electrification or fleet-renewal events",
+    "offer_and_business_model": "Battery-health-covenanted smart charging and later bidirectional aggregation on subscription plus shared savings",
+    "payer_and_paid_event": "Fleet pays monthly after verified charging savings; aggregator pays for accepted flexibility dispatch",
+    "problem_trigger": "A depot electrifies enough vehicles that unmanaged charging raises bills or connection pressure"
+  },
+  "founder_fit": [
+    "Optimization, forecasting, and battery-health modelling fit the founder's quantitative background.",
+    "Renewable installer adjacency offers a potential charger-installation channel without requiring the founder to perform field work.",
+    "A read-only pilot avoids capital-heavy V2G infrastructure and can run alongside employment."
+  ],
+  "parent": null,
+  "risks": [
+    "Battery data may be technically available but contractually restricted or inconsistent by OEM.",
+    "Incorrect dispatch could strand vehicles or create warranty disputes.",
+    "Polish flexibility compensation may be too small or inaccessible to a small portfolio."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://energy.ec.europa.eu/news/renewable-energy-directive-commission-guidance-battery-related-data-sharing-2025-07-25_en",
+    "https://www.nrel.gov/docs/fy20osti/74187.pdf",
+    "https://energy.ec.europa.eu/topics/energy-efficiency/energy-performance-buildings/energy-performance-buildings-directive/sustainable-mobility-and-buildings_en"
+  ],
+  "stage": "discovery",
+  "structure": {
+    "commercial_archetype": "Degradation-aware distributed-energy aggregator",
+    "control_point": "Fleet-granted battery data access, charger dispatch authority, and a signed degradation covenant",
+    "critical_dependency": "Reliable cross-OEM data and market access that rewards flexibility without voiding warranties"
+  },
+  "thesis": "Backcast from fleets functioning as grid storage: earn the right to dispatch by first proving low-risk smart-charging savings, then make a transparent battery-health covenant the trust layer that OEM-specific aggregators lack.",
+  "title": "V2G Battery Covenant",
+  "uncertainties": [
+    "Which fleet segments in Poland have enough parked dwell time and controllable load is unknown.",
+    "Real API access, charger compatibility, and lessor consent need live tests.",
+    "No evidence yet shows fleets will pay separately for an independent degradation ledger."
+  ],
+  "version": 1
+}

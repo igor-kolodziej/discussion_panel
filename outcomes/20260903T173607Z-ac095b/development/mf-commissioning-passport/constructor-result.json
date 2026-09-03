@@ -1,0 +1,74 @@
+{
+  "base_candidate_sha256": "950e26fd33debe16a20fc42240097e5ed95d4450db8f017a6d1324b117121993",
+  "base_candidate_version": 1,
+  "candidate_id": "mf-commissioning-passport",
+  "constructor_id": "constructor-mf-commissioning-j01",
+  "falsification": {
+    "cold_start_and_data_moat": [
+      "mf-commissioning-passport-r7",
+      "mf-commissioning-passport-r12",
+      "mf-commissioning-passport-r13",
+      "mf-commissioning-passport-r19"
+    ],
+    "control_point_obtainability": [
+      "mf-commissioning-passport-r10",
+      "mf-commissioning-passport-r14",
+      "mf-commissioning-passport-r17"
+    ],
+    "critical_mechanism_ownership": [
+      "mf-commissioning-passport-r6",
+      "mf-commissioning-passport-r9",
+      "mf-commissioning-passport-r17",
+      "mf-commissioning-passport-r20"
+    ],
+    "external_dependencies": [
+      "mf-commissioning-passport-r2",
+      "mf-commissioning-passport-r3",
+      "mf-commissioning-passport-r4",
+      "mf-commissioning-passport-r5",
+      "mf-commissioning-passport-r6",
+      "mf-commissioning-passport-r9"
+    ],
+    "substitutes_and_incumbent_response": [
+      "mf-commissioning-passport-r7",
+      "mf-commissioning-passport-r8",
+      "mf-commissioning-passport-r11",
+      "mf-commissioning-passport-r21",
+      "mf-commissioning-passport-r22"
+    ],
+    "willingness_urgency_and_repeat_economics": [
+      "mf-commissioning-passport-r1",
+      "mf-commissioning-passport-r11",
+      "mf-commissioning-passport-r15",
+      "mf-commissioning-passport-r16",
+      "mf-commissioning-passport-r22"
+    ]
+  },
+  "final_candidate_sha256": "450dfbe975355790ba82d5b719cfa51ddc19d8a83a336d106d26f92331f5c03b",
+  "final_candidate_version": 2,
+  "outcome": "redesigned",
+  "rationale": "The original validation passport remains subordinate to official forms and external approval, overlaps an existing installer platform, and has no evidence of contractual recognition or repeat willingness to pay. A genuine structural change is available: replace the validation-only artifact with a contracted, white-label filing desk that prepares and transmits current OSD, subsidy, and warranty packets under installer authority, returning a submission receipt and exception record while making no promise of external approval. This moves the paid event from production of a passport to performance of administrative work for which an adjacent Polish offer provides a price anchor, and it moves distribution toward a wholesaler framework agreement with a direct-installer fallback. The redesign still requires executed agreements, measured labor economics, and demand validation; its control-point status is therefore unknown rather than presumed.",
+  "schema_version": 3,
+  "structural_change": {
+    "control_instrument": "A proposed 12-month installer framework service and workflow-integration agreement, controller-processor terms, and job-specific customer authorization where required. These instruments would assign the venture responsibility for packet preparation and transmission but would not confer control over DSO, subsidy-program, or OEM decisions; none is evidenced as executed.",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "The wholesaler or installer retains the installer and homeowner relationship; the founder company is a contracted processor and filing provider only.",
+    "dependency_change": "Replace reliance on authorities, DSOs, or OEMs recognizing a new passport with a narrower dependency on obtaining installer authority to perform existing filing work using the current official forms. External institutions still control acceptance, and each channel or installer relationship still requires a signed service, data-processing, and where necessary job-specific authorization instrument.",
+    "distribution_instrument": "A proposed nonexclusive 12-month white-label distribution agreement with a renewable-equipment wholesaler, with a separately consented family-installer pilot and direct agreements with unrelated installers as the refusal fallback.",
+    "fully_loaded_economic_effects": "The redesign exchanges the original 65-80% automation-led margin target for lower-margin human-in-the-loop fulfillment. A standard OSD filing can be tested near the observed 145.53 PLN net adjacent offer, with higher pricing only for demonstrably broader packets. Manual minutes, exception frequency, legal and security overhead, channel share, acquisition cost, support burden, contribution margin, churn, and cash conversion are all unmeasured. Charging for completed preparation and transmission improves alignment with a concrete paid service, but the model is viable only if standardized labor can be delegated and channel acquisition keeps payback short.",
+    "incumbent_response_defensibility": "The redesign competes on cross-brand, multi-DSO execution, current-form maintenance, auditable submission receipts, and a wholesaler-embedded service layer rather than on a PDF or checklist. Reonic, OEMs, wholesalers, and filing services can reproduce pieces or internalize the service, so defensibility is initially modest and must come from contracted distribution, reliable service-level performance, reusable exception playbooks, and switching costs demonstrated in live accounts rather than an assumed data moat.",
+    "resulting_control_point_status": "unknown",
+    "supporting_research_claim_ids": [
+      "mf-commissioning-passport-r1",
+      "mf-commissioning-passport-r2",
+      "mf-commissioning-passport-r4",
+      "mf-commissioning-passport-r5",
+      "mf-commissioning-passport-r6",
+      "mf-commissioning-passport-r10",
+      "mf-commissioning-passport-r11",
+      "mf-commissioning-passport-r20",
+      "mf-commissioning-passport-r21",
+      "mf-commissioning-passport-r22"
+    ]
+  }
+}

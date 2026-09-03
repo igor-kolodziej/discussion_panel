@@ -1,0 +1,117 @@
+{
+  "assumptions": [
+    "The cited repair rules and information obligations apply to the initial product category in the intended market.",
+    "Participating repairers can quote from structured remote intake often enough to avoid costly physical diagnosis before commitment.",
+    "The venture uses explicit consumer and repairer terms and does not claim manufacturer authorization it lacks.",
+    "The initial category has ticket values high enough to cover acquisition, support, disputes, and any logistics subsidy."
+  ],
+  "base_score": 4.67,
+  "candidate_id": "ws-repair-quote-concierge",
+  "candidate_sha256": "b39b65b45fd75d3734539a65e922a1ac5ede24c50f5f9afc0ad9969f72fb00aa",
+  "candidate_version": 1,
+  "constrained_score": 4.47,
+  "evaluation_type": "working_screening",
+  "evidence_needed_for_higher_score": "Category-specific completed-job data covering quote accuracy, ticket size, parts availability, first-time-fix rate, turnaround, disputes, logistics cost, repairer take-rate acceptance, channel CAC, and paid repeat volume is required.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "New repair-service and indicative-price obligations can make model-specific intake and quote comparison more tractable, while completed repair is a cleaner outcome than directory traffic. The concept remains a familiar marketplace unless structured diagnosis and completion reliability materially outperform direct manufacturer and local-shop routes.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "A broken product creates immediate search cost, downtime, diagnosis uncertainty, and a repair-versus-replace decision. Consumers already pay for repair, but willingness to add a 49-99 PLN fee and repairer willingness to surrender 10-18% are unknown, especially for low-ticket goods.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "A completed-job commission aligns revenue with value and limits payment for failed leads. Low repair tickets, episodic consumer demand, pickup and return, refunds, disputes, parts matching, support, and quality failures can consume the entire take rate; no contribution evidence is supplied.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Consumer goods failures create a broad addressable event pool, and one higher-value category in one metro offers a testable starting point. The current audience spans appliances, phones, tablets, and landlords with very different logistics, privacy, parts, and repair economics.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "Comparable all-in quotes and completion guarantees could be useful, but manufacturers, retailers, insurers, classifieds, directories, local shops, and a planned public European platform all reach the same transaction. Nonexclusive repairers and public service information offer little initial control.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A dense successful category could expand across product types, cities, landlord portfolios, retailers, and insurers, while outcome data improves routing. Each category adds distinct parts, technician, custody, transport, diagnostic, and warranty requirements, reducing straightforward replication.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Model-symptom, quote, parts, completion, repeat-failure, and turnaround data could improve matching and price confidence as transaction density grows. Supply is nonexclusive and replaceable, demand is episodic, and public or incumbent platforms can subsidize matching, so the data loop is not yet protected.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "Classification, routing, quote normalization, and fraud detection fit the founder's analytical skills, and a narrow pilot is affordable. The founder has no repair network, parts access, consumer relationship, retailer channel, logistics density, or demonstrated quality-control capability.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "Repair rules applying from July 2026 improve information availability and public awareness, creating a timely discovery window before the planned 2028 platform. The same policy strengthens direct manufacturer offers and creates a future public substitute, so timing cuts both ways.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "Failure-intent search can reach consumers at the exact trigger, and retailer, landlord, insurer, or repairer referrals could lower acquisition cost. None is contracted, search can be expensive, and low consumer repeat makes paid acquisition difficult to amortize.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "A single-category city pilot is possible within the stated capital limit, but this remains a two-sided operational marketplace involving remote diagnosis, parts uncertainty, custody, personal-device privacy, logistics, refunds, rework, and quality disputes. These risks are labor intensive and can compound before density is achieved.",
+      "score": 3,
+      "status": "scored"
+    }
+  ],
+  "final_score": 4.5,
+  "highest_value_structural_change": "Focus on a recurring B2B buyer such as small-landlord appliance portfolios in one city, contract repairer service levels, and charge a dispatch or portfolio fee without subsidizing consumer pickup, converting episodic consumer acquisition into repeat account demand.",
+  "interaction_adjustment": -0.2,
+  "judge_id": "screen-b05-j01",
+  "main_structural_strength": "Revenue is tied to a completed repair, and standardized intake at the failure moment can turn fragmented price, parts, and service information into an auditable transaction.",
+  "primary_score_limiter": "The proposal lacks proof that low-frequency demand, marketplace acquisition, logistics, and dispute costs leave positive contribution, while neither consumer demand nor repair supply is controlled.",
+  "qualified": false,
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 3,
+  "strongest_disconfirming_evidence": "A public European repair platform is planned and manufacturers must expose repair offers directly, while low-value goods can remain cheaper to replace than collect, diagnose, and repair.",
+  "unrounded_score": 4.47
+}
