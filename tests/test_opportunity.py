@@ -3029,6 +3029,7 @@ class ScoreBracketWorkflowTests(OpportunityTestCase):
         changed("removed refs", lambda v: v["commercial_evidence"]["distribution_and_acquisition"].update(
             claim_ids=["new-channel-finding"], source_ids=["new-distribution"]))
         changed("duplicate URL", lambda v: v["sources"][-1].update(url=original["sources"][0]["url"] + "#different"))
+        changed("malformed URL", lambda v: v["sources"][-1].update(url="https://[invalid#fragment"))
         changed("duplicate source ID", lambda v: v["sources"][-1].update(source_id="source-0"))
         changed("duplicate claim ID", lambda v: v["claims"][-1].update(claim_id="research-claim-1"))
         changed("no new evidence for claim", lambda v: v["claims"][-1].update(evidence_refs=["source-1"]))

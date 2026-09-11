@@ -11965,12 +11965,15 @@ def validate_research_supplement(
         additions[field] = new[len(old):]
         unchanged[field] = old
     new_source_ids = {item["source_id"] for item in additions["sources"]}
-    urls = {urldefrag(item["url"])[0].rstrip("/") for item in before["sources"]}
-    for item in additions["sources"]:
-        url = urldefrag(item["url"])[0].rstrip("/")
-        if url in urls:
-            raise InputError("research supplement sources must use new, distinct URLs")
-        urls.add(url)
+    try:
+        urls = {urldefrag(item["url"])[0].rstrip("/") for item in before["sources"]}
+        for item in additions["sources"]:
+            url = urldefrag(item["url"])[0].rstrip("/")
+            if url in urls:
+                raise InputError("research supplement sources must use new, distinct URLs")
+            urls.add(url)
+    except ValueError as exc:
+        raise InputError("research supplement source URL is malformed") from exc
     for claim in additions["claims"]:
         if not new_source_ids.intersection(claim["evidence_refs"]):
             raise InputError("each research supplement claim must cite a new source")
