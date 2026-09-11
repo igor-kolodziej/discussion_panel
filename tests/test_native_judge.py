@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import importlib.util
+import hashlib
 import json
 from pathlib import Path
 import subprocess
@@ -15,9 +16,47 @@ SPEC = importlib.util.spec_from_file_location(
 )
 native = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(native)
+BOUNDED_SPEC = importlib.util.spec_from_file_location(
+    "bounded_role", ROOT / ".agents/skills/business-opportunity/scripts/launch-bounded-role.py",
+)
+bounded = importlib.util.module_from_spec(BOUNDED_SPEC)
+BOUNDED_SPEC.loader.exec_module(bounded)
 
 
 class NativeJudgeBoundaryTests(unittest.TestCase):
+    @unittest.skipUnless(sys.platform == "darwin", "macOS launcher boundary")
+    def test_bounded_role_can_read_only_its_hash_bound_exception(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory).resolve()
+            workspace = root / "role"
+            workspace.mkdir()
+            bound = root / "founder.txt"
+            excluded = root / "other-role.json"
+            bound.write_text("bounded fixture")
+            excluded.write_text("excluded fixture")
+            bindings = [{"path": str(bound), "sha256": hashlib.sha256(bound.read_bytes()).hexdigest()}]
+            profile = workspace / "sandbox.sb"
+            profile.write_text(bounded.bounded_profile(workspace, ROOT, Path.home() / ".codex", bindings))
+            script = """from pathlib import Path
+import sys
+assert Path(sys.argv[1]).read_text() == 'bounded fixture'
+for name in sys.argv[2:]:
+    try: Path(name).read_bytes()
+    except PermissionError: pass
+    else: raise AssertionError('excluded read succeeded')
+try: Path(sys.argv[1]).write_text('forbidden')
+except PermissionError: pass
+else: raise AssertionError('bound input write succeeded')
+"""
+            result = subprocess.run([
+                "/usr/bin/sandbox-exec", "-f", str(profile), sys.executable, "-c", script,
+                str(bound), str(excluded), str(excluded).replace("/private/var/", "/var/"), str(ROOT / "AGENTS.md"),
+            ], cwd=workspace, capture_output=True, text=True)
+            self.assertEqual(result.returncode, 0, result.stderr)
+            bound.write_text("changed fixture")
+            with self.assertRaisesRegex(ValueError, "binding hash mismatch"):
+                bounded.bounded_profile(workspace, ROOT, Path.home() / ".codex", bindings)
+
     @unittest.skipUnless(sys.platform == "darwin", "macOS launcher boundary")
     def test_os_boundary_allows_workspace_and_denies_other_judge_aliases(self) -> None:
         with tempfile.TemporaryDirectory() as directory:

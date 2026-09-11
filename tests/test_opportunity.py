@@ -2363,6 +2363,48 @@ class WorkflowContractTests(OpportunityTestCase):
 
 
 class ScoreBracketWorkflowTests(OpportunityTestCase):
+    def test_scout_contract_is_scoped_complete_and_nonmutating(self) -> None:
+        op.advance_run(self.run_dir)
+        before = {name: (self.run_dir / name).read_bytes() for name in ("state.json", "events.jsonl")}
+        manifest, _ = self.load()
+        for lane in manifest["config"]["discovery_lanes"]:
+            code, contract, error = self.run_cli([
+                "--runs-dir", str(self.runs_dir), "scout-contract", self.run_id, "--lane", lane,
+            ])
+            self.assertEqual(code, 0, error)
+            self.assertEqual(contract["candidate_count"], manifest["config"]["seeds_per_scout"])
+            schema = contract["strict_response_contract"]
+            progress, completed = schema["properties"]["response"]["anyOf"]
+            self.assertEqual(set(progress["properties"]), {"type", "message"})
+            self.assertEqual(progress["properties"]["type"]["enum"], ["progress"])
+            self.assertEqual(completed["properties"]["type"]["enum"], ["candidates"])
+            array = completed["properties"]["candidates"]
+            self.assertEqual(array["minItems"], contract["candidate_count"])
+            self.assertEqual(array["maxItems"], contract["candidate_count"])
+            item = array["items"]
+            self.assertFalse(item["additionalProperties"])
+            self.assertEqual(set(item["required"]), set(contract["candidate_contract"]["template"]))
+            props = item["properties"]
+            self.assertEqual(props["discovery_lane"]["enum"], [lane])
+            self.assertEqual(props["parent"]["type"], "null")
+            self.assertEqual(props["version"]["type"], "integer")
+            self.assertIn("subject_type", props["critical_control_point"]["required"])
+            self.assertIn("bundling_resistance", props["commercial_mechanics"]["required"])
+            self.assertEqual(props["founder_fit"]["type"], "array")
+            self.assertEqual(props["claims"]["items"]["properties"]["claim_type"]["enum"], sorted(op.CLAIM_TYPES))
+            self.assertEqual(contract["candidate_contract"]["template"]["critical_control_point"]["status"], "unknown")
+            binding = contract["founder_snapshot"]
+            self.assertEqual(op.sha256_file(self.run_dir / binding["path"]), binding["sha256"])
+            for forbidden in ("threshold", "rubric", "ranking", "evaluator_snapshot", "history", "score"):
+                self.assertNotIn(forbidden, json.dumps(contract))
+        for name, content in before.items():
+            self.assertEqual((self.run_dir / name).read_bytes(), content)
+        with self.assertRaisesRegex(op.InputError, "configured discovery lane"):
+            op.scout_contract(self.run_dir, "invented")
+        self.set_stage("research")
+        with self.assertRaisesRegex(op.ConflictError, "only during discovery"):
+            op.scout_contract(self.run_dir, "mechanism-first")
+
     def setUp(self) -> None:
         self.temporary = tempfile.TemporaryDirectory()
         self.root = Path(self.temporary.name)
@@ -3496,6 +3538,11 @@ class ScoreBracketWorkflowTests(OpportunityTestCase):
             redesign["redesign"]["changed_structural_fields"] = [
                 "commercial_mechanics"
             ]
+            if index == 1:
+                # This redesign loses: its weaker control status must not leak
+                # into the final report for the selected original version.
+                redesign["critical_control_point"]["status"] = "unknown"
+                redesign["redesign"]["changed_structural_fields"].append("critical_control_point")
             if candidate_id == externally_controlled_id:
                 redesign["critical_control_point"].update(
                     {
@@ -3695,6 +3742,12 @@ class ScoreBracketWorkflowTests(OpportunityTestCase):
                 )
         report, _ = op.finalize_run(self.run_dir)
         self.assertEqual(report["highest_working_score"], 8.2)
+        control_rows = {
+            row["candidate_id"]: row
+            for row in report["portfolio_decision"]["research_contracts"]
+        }
+        self.assertEqual(control_rows[developed_ids[0]]["final_control_point_status"], "owned")
+        self.assertEqual(control_rows[developed_ids[1]]["final_control_point_status"], "unknown")
         op.publish_run(
             self.run_dir,
             self.root / "outcomes",

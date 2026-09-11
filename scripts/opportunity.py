@@ -9973,6 +9973,10 @@ def _portfolio_report(
             row["candidate_id"]: row
             for row in decisions
         }
+        selected_versions = {
+            row["candidate_id"]: row["selected_candidate_ref"]["version"]
+            for row in result.get("version_selection", [])
+        }
         for _, research in iter_research(run_dir, manifest):
             candidate_path = run_dir / candidate_relpath(
                 research["candidate_id"], research["candidate_version"]
@@ -9993,7 +9997,10 @@ def _portfolio_report(
                     _, construction = _development_result_for_candidate(
                         run_dir, manifest, research["candidate_id"]
                     )
-                    if construction["outcome"] == "redesigned":
+                    if construction["outcome"] == "redesigned" and (
+                        not score_bracket_enabled(manifest["config"])
+                        or selected_versions.get(research["candidate_id"]) == 2
+                    ):
                         final_status = construction[DEVELOPMENT_CONTROL_KEY][
                             "resulting_control_point_status"
                         ]
@@ -11193,7 +11200,7 @@ def _preflight_critical_control_point_template() -> dict[str, Any]:
         "customer_relationship_owner": "the prospective business, counterparty, or unknown",
         "customer_relationship_control": "owned",
         "mechanism_control": "dependent",
-        "status": "durably_contracted",
+        "status": "unknown",
         "founder_access_basis": "none",
         "founder_access_description": "string or unknown",
         "confidential_employer_resource_dependency": "none",
@@ -11746,6 +11753,90 @@ def preflight_contract(
 
 def _json_pointer_escape(value: str) -> str:
     return value.replace("~", "~0").replace("/", "~1")
+
+
+def _scout_output_schema(
+    value: Any, enums: Mapping[str, list[Any]], pointer: str = ""
+) -> dict[str, Any]:
+    """Derive transport shape from the canonical discovery template, not a second validator."""
+    if isinstance(value, dict):
+        return {
+            "type": "object",
+            "properties": {
+                key: _scout_output_schema(item, enums, pointer + "/" + _json_pointer_escape(key))
+                for key, item in value.items()
+            },
+            "required": list(value),
+            "additionalProperties": False,
+        }
+    if isinstance(value, list):
+        return {"type": "array", "items": _scout_output_schema(value[0], enums, pointer + "/*")}
+    schema: dict[str, Any] = {
+        "type": "null" if value is None else "number" if isinstance(value, (int, float)) else "string"
+    }
+    if pointer in enums:
+        schema["enum"] = enums[pointer]
+    elif pointer in {"/schema_version", "/version"}:
+        schema["type"] = "integer"
+        schema["enum"] = [value]
+    return schema
+
+
+def scout_contract(run_dir: Path, lane: str) -> dict[str, Any]:
+    """Return only discovery-safe inputs and an exact-size structured response schema."""
+    manifest, state = load_run(run_dir)
+    if state["stage"] != "discovery":
+        raise ConflictError("scout contract is available only during discovery")
+    if lane not in manifest["config"]["discovery_lanes"]:
+        raise InputError("scout lane must be a configured discovery lane")
+    contract = preflight_contract(manifest, state, "candidate")
+    contract["template"]["discovery_lane"] = lane
+    contract["enums"]["/discovery_lane"] = [lane]
+    count = manifest["config"]["seeds_per_scout"]
+    return {
+        "scope": "discovery_scout",
+        "discovery_lane": lane,
+        "candidate_count": count,
+        "founder_snapshot": {
+            "path": "inputs/founder.md",
+            "sha256": manifest["source_hashes"]["PERSONALITY_SITUATION.md"],
+        },
+        "candidate_contract": contract,
+        "strict_response_contract": {
+            "type": "object",
+            "properties": {
+                "response": {
+                    "anyOf": [
+                        {
+                            "type": "object",
+                            "properties": {
+                                "type": {"type": "string", "enum": ["progress"]},
+                                "message": {"type": "string"},
+                            },
+                            "required": ["type", "message"],
+                            "additionalProperties": False,
+                        },
+                        {
+                            "type": "object",
+                            "properties": {
+                                "type": {"type": "string", "enum": ["candidates"]},
+                                "candidates": {
+                                    "type": "array",
+                                    "minItems": count,
+                                    "maxItems": count,
+                                    "items": _scout_output_schema(contract["template"], contract["enums"]),
+                                },
+                            },
+                            "required": ["type", "candidates"],
+                            "additionalProperties": False,
+                        },
+                    ],
+                },
+            },
+            "required": ["response"],
+            "additionalProperties": False,
+        },
+    }
 
 
 def _append_preflight_error(
@@ -13102,6 +13193,10 @@ def build_parser() -> argparse.ArgumentParser:
     preflight.add_argument("--original-input", type=Path, help="Preserved first response for content-preserving correction checks")
     preflight.add_argument("--job-id")
 
+    scout = subparsers.add_parser("scout-contract", help="emit discovery-safe context and an exact-size output schema")
+    scout.add_argument("run")
+    scout.add_argument("--lane", required=True)
+
     validate = subparsers.add_parser("validate", help="validate an artifact without storing it")
     validate.add_argument("run")
     validate.add_argument("--input", type=Path, required=True)
@@ -13236,6 +13331,9 @@ def dispatch(args: argparse.Namespace) -> int:
         )
         emit(result)
         return 0 if valid else InputError.exit_code
+    if args.command == "scout-contract":
+        emit(scout_contract(run_dir, args.lane))
+        return 0
     if args.command == "job":
         if args.action == "start":
             if (

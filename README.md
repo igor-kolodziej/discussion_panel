@@ -109,6 +109,8 @@ python3 scripts/opportunity.py publish <run-id>
 python3 scripts/opportunity.py quarantine-outcome <run-id> --reason-code <code> --reason "<evidence>"
 ```
 
+For each initial scout, `python3 scripts/opportunity.py scout-contract <run-id> --lane <lane>` returns only its discovery contract, founder binding and an exact-size JSON output schema generated from canonical configuration and the candidate template. Supply that schema to the transport before generation, preserve its first complete response, and preflight each extracted candidate unchanged. The skill includes a macOS bounded-role launcher for this transport; required fields and counts are constrained before submission, while the CLI remains the admission validator. Proposed control rights remain unproven until supported by evidence.
+
 Use `--help` before non-default inputs. Global options precede the subcommand.
 For both cohort and campaign finalization, exit code `4` denotes a validated terminal result without a qualifier; it is not an integrity failure. Inspect and publish the emitted result. Input and state conflicts use different exit codes.
 
