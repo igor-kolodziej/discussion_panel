@@ -71,6 +71,7 @@ def launch(workspace: Path, repo: Path) -> dict:
     workspace.chmod(0o700)
     runtime = workspace / "codex-home"
     runtime.mkdir(mode=0o700)
+    shell_options = native.tool_shell_options(workspace)
     profile = workspace / "sandbox.sb"
     profile.write_text(profile_text)
     schema = workspace / "response_schema.json"
@@ -78,6 +79,7 @@ def launch(workspace: Path, repo: Path) -> dict:
         "/usr/bin/sandbox-exec", "-f", str(profile), codex, "--search", "exec",
         "--ephemeral", "--ignore-user-config", "--skip-git-repo-check", "-C", str(workspace),
         "-c", "project_doc_max_bytes=0", "-c", "features.memories=false",
+        *shell_options,
         "-c", 'approval_policy="never"', "--sandbox", "danger-full-access",
         *(["--output-schema", str(schema)] if schema.is_file() else []),
         "--json", "--color", "never", "--output-last-message", str(workspace / "response.json"), "-",
@@ -91,7 +93,6 @@ def launch(workspace: Path, repo: Path) -> dict:
     env = os.environ.copy()
     env["CODEX_HOME"] = str(runtime)
     env["PWD"] = str(workspace)
-    env["TMPDIR"] = str(workspace)
     (runtime / "auth.json").symlink_to(auth)
     try:
         with (workspace / "events.jsonl").open("wb") as out, (workspace / "stderr.txt").open("wb") as err:

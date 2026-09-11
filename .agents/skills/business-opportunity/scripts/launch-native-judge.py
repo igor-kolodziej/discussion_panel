@@ -59,6 +59,17 @@ def sandbox_profile(workspace: Path, repo: Path, codex_home: Path) -> str:
     return "\n".join(lines) + "\n"
 
 
+def tool_shell_options(workspace: Path) -> list[str]:
+    """Keep Python tempfiles and zsh heredocs inside the enforced write boundary."""
+    tool_tmp = workspace / "tool-tmp"
+    tool_tmp.mkdir(mode=0o700)
+    return [
+        "-c", "features.shell_snapshot=false", "-c", "allow_login_shell=false",
+        "-c", "shell_environment_policy.set.TMPDIR=" + json.dumps(str(tool_tmp)),
+        "-c", "shell_environment_policy.set.TMPPREFIX=" + json.dumps(str(tool_tmp / "zsh")),
+    ]
+
+
 def launch(assignment_path: Path, repo: Path) -> dict:
     if sys.platform != "darwin":
         raise ValueError("this launcher requires macOS sandbox-exec; use a separately verified host boundary")
@@ -82,6 +93,7 @@ def launch(assignment_path: Path, repo: Path) -> dict:
     runtime_names = {
         "codex-home", "sandbox.sb", "response_schema.json", "events.jsonl",
         "stderr.txt", "transport-final.json", "launch.json",
+        "tool-tmp",
     }
     if destination.name in runtime_names or any((workspace / name).exists() for name in runtime_names):
         raise ValueError("judge workspace already contains launcher state; use a fresh directory")
@@ -95,6 +107,7 @@ def launch(assignment_path: Path, repo: Path) -> dict:
     workspace.chmod(0o700)
     runtime_home = workspace / "codex-home"
     runtime_home.mkdir(mode=0o700)
+    shell_options = tool_shell_options(workspace)
     profile = workspace / "sandbox.sb"
     profile.write_text(sandbox_profile(workspace, repo, user_codex_home))
     schema = workspace / "response_schema.json"
@@ -105,6 +118,7 @@ def launch(assignment_path: Path, repo: Path) -> dict:
         "/usr/bin/sandbox-exec", "-f", str(profile), codex, "exec", "--ephemeral",
         "--ignore-user-config", "--skip-git-repo-check", "-C", str(workspace),
         "-c", "project_doc_max_bytes=0", "-c", "features.memories=false",
+        *shell_options,
         "-c", 'approval_policy="never"', "--sandbox", "danger-full-access",
         "--output-schema", str(schema), "--json", "--color", "never",
         "--output-last-message", str(workspace / "transport-final.json"), "-",

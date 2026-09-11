@@ -3,6 +3,7 @@ from __future__ import annotations
 import importlib.util
 import hashlib
 import json
+import os
 from pathlib import Path
 import subprocess
 import sys
@@ -24,6 +25,35 @@ BOUNDED_SPEC.loader.exec_module(bounded)
 
 
 class NativeJudgeBoundaryTests(unittest.TestCase):
+    @unittest.skipUnless(sys.platform == "darwin", "macOS launcher boundary")
+    def test_tool_shell_options_allow_zsh_heredocs_and_private_tempfiles(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            workspace = Path(directory).resolve()
+            options = native.tool_shell_options(workspace)
+            env = os.environ.copy()
+            for argument in options:
+                if argument.startswith("shell_environment_policy.set."):
+                    key, value = argument.removeprefix("shell_environment_policy.set.").split("=", 1)
+                    env[key] = json.loads(value)
+            profile = workspace / "sandbox.sb"
+            profile.write_text(native.sandbox_profile(workspace, ROOT, Path.home() / ".codex"))
+            command = """python3 - <<'PY'
+import tempfile
+from pathlib import Path
+with tempfile.NamedTemporaryFile() as file:
+    path = Path(file.name)
+    assert path.parent == Path.cwd() / 'tool-tmp', path
+    path.write_text('temporary fixture')
+    assert path.read_text() == 'temporary fixture'
+print('private tempfile and zsh heredoc passed')
+PY
+"""
+            result = subprocess.run([
+                "/usr/bin/sandbox-exec", "-f", str(profile), "/bin/zsh", "-c", command,
+            ], cwd=workspace, env=env, capture_output=True, text=True)
+            self.assertEqual(result.returncode, 0, result.stderr)
+            self.assertIn("private tempfile and zsh heredoc passed", result.stdout)
+
     @unittest.skipUnless(sys.platform == "darwin", "macOS launcher boundary")
     def test_bounded_role_can_read_only_its_hash_bound_exception(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
