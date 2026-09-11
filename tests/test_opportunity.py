@@ -2372,6 +2372,135 @@ class ScoreBracketWorkflowTests(OpportunityTestCase):
         self.run_id = created["run_id"]
         self.run_dir = Path(created["run_dir"])
 
+    def test_unhashable_role_enums_return_diagnostics_and_record_failures(self) -> None:
+        candidate = self.candidate("enum-probe")
+        self.set_stage("discovery")
+        for stage, kind, field_paths in (
+            ("discovery", "candidate", [("claims", 0, "claim_type")]),
+            ("research", "research", [("sources", 0, "stance"), ("claims", 0, "assessment")]),
+            ("development", "development-result", [("outcome",)]),
+        ):
+            self.set_stage(stage)
+            if kind == "candidate":
+                response = candidate
+            elif kind == "research":
+                self.store_candidate(candidate)
+                response = self.research(candidate)
+            else:
+                response = op.preflight_artifact(self.run_dir, kind)[0]["template"]
+                response["candidate_id"] = candidate["candidate_id"]
+            for field_index, fields in enumerate(field_paths):
+                for value_index, malformed in enumerate(([], {})):
+                    with self.subTest(kind=kind, fields=fields, malformed=malformed):
+                        value = copy.deepcopy(response)
+                        parent = value
+                        for field in fields[:-1]:
+                            parent = parent[field]
+                        parent[fields[-1]] = malformed
+                        path = self.root / "malformed-enum.json"
+                        path.write_bytes(op.canonical_json_bytes(value))
+                        job_id = f"enum-{kind}-{field_index}-{value_index}"
+                        before = {name: (self.run_dir / name).read_bytes() for name in ("state.json", "events.jsonl")}
+                        code, report, error = self.run_cli([
+                            "--runs-dir", str(self.runs_dir), "preflight", self.run_id,
+                            "--kind", kind, "--job-id", job_id,
+                            "--input", str(path), "--original-input", str(path),
+                        ])
+                        self.assertEqual(code, 2, error)
+                        self.assertEqual(report["validation"]["errors"][0]["pointer"], "/" + "/".join(map(str, fields)))
+                        self.assertNotIn("preflight_receipt", report["validation"])
+                        for name, raw in before.items():
+                            self.assertEqual((self.run_dir / name).read_bytes(), raw)
+
+                        # A malformed response reaching completion must still become
+                        # a visible schema failure before receipt verification.
+                        op.start_job(self.run_dir, job_id, stage)
+                        code, _, error = self.run_cli([
+                            "--runs-dir", str(self.runs_dir), "job", self.run_id,
+                            job_id, "complete", "--kind", kind, "--input", str(path),
+                            "--preflight-sha256", op.sha256_file(path),
+                            "--preflight-receipt-sha256", "0" * 64,
+                        ])
+                        self.assertEqual(code, 2)
+                        self.assertEqual(error["error_type"], "InputError")
+                        manifest, state = self.load()
+                        self.assertEqual(state["jobs"][stage][job_id]["status"], "failed")
+                        self.assertEqual(state["jobs"][stage][job_id]["attempts"], 1)
+                        op.require_job_event_state_match(
+                            op.load_events(self.run_dir / "events.jsonl", self.run_id), state, manifest,
+                        )
+
+    def test_unhashable_portfolio_enums_are_input_errors(self) -> None:
+        candidate = self.candidate("portfolio-enum-probe")
+        self.store_candidate(candidate)
+        self.store_research(self.research(candidate))
+        self.set_stage("research")
+        selection = {"candidate_refs": [self.candidate_ref(candidate)]}
+        with mock.patch.object(op, "effective_portfolio_selection", return_value=selection), mock.patch.object(
+            op, "_require_working_evaluation_coverage", return_value={},
+        ):
+            for field in ("disposition", "fatal_reason"):
+                for malformed in ([], {}):
+                    with self.subTest(field=field, malformed=malformed):
+                        decision = self.portfolio_decision([candidate], {candidate["candidate_id"]})
+                        row = decision["candidate_decisions"][0]
+                        if field == "fatal_reason":
+                            row["disposition"] = "fatal"
+                        row[field] = malformed
+                        path = self.root / "malformed-portfolio.json"
+                        path.write_bytes(op.canonical_json_bytes(decision))
+                        code, report, error = self.run_cli([
+                            "--runs-dir", str(self.runs_dir), "preflight", self.run_id,
+                            "--kind", "portfolio-decision", "--job-id", "portfolio-enum",
+                            "--input", str(path), "--original-input", str(path),
+                        ])
+                        self.assertEqual(code, 2, error)
+                        self.assertIn(field, report["validation"]["errors"][0]["message"])
+                        self.assertNotIn("preflight_receipt", report["validation"])
+        self.assertEqual(self.load()[1]["jobs"]["research"], {})
+
+    def test_preflight_allows_only_trimming_string_boundary_whitespace(self) -> None:
+        self.set_stage("discovery")
+        candidate = self.candidate("whitespace-probe")
+        original = copy.deepcopy(candidate)
+        original["commercial_mechanics"]["fully_loaded_economics"]["revenue_basis"] += " \n"
+        first = self.root / "original.json"
+        corrected = self.root / "corrected.json"
+        first.write_bytes(op.canonical_json_bytes(original))
+        corrected.write_bytes(op.canonical_json_bytes(candidate))
+        before = {name: (self.run_dir / name).read_bytes() for name in ("state.json", "events.jsonl")}
+        report, valid = op.preflight_artifact(self.run_dir, "candidate", first, "trim-probe", first)
+        self.assertFalse(valid)
+        self.assertTrue(report["validation"]["schema_retry_required"])
+        report, valid = op.preflight_artifact(self.run_dir, "candidate", corrected, "trim-probe", first)
+        self.assertTrue(valid, report["validation"]["errors"])
+        self.assertTrue(report["validation"]["correction_content_preserved"])
+        self.assertEqual(report["validation"]["original_input_sha256"], op.sha256_file(first))
+        self.assertIn("preflight_receipt", report["validation"])
+        for name, raw in before.items():
+            self.assertEqual((self.run_dir / name).read_bytes(), raw)
+        for old, new in (("paid event", "paidevent"), ("unknown", "evidence"), ("five", "six"), (4, 5), ("claim", " claim ")):
+            self.assertTrue(op.correction_content_differences({"value": old}, {"value": new}, "evaluation"))
+
+    def test_report_coverage_units_and_exact_legacy_rendering(self) -> None:
+        config = self.load()[0]["config"]
+        report = {
+            "run_id": self.run_id, "run_status": "no_finalist",
+            "rubric_id": config["rubric_id"], "threshold": config["threshold"],
+            "comparison": config["comparison"], "highest_working_score": 5,
+            "working_evaluation_coverage": {
+                "total_completed": 64, "total_candidate_versions": 59,
+            },
+        }
+        current = op.render_report_markdown(report).encode()
+        legacy = op.render_report_markdown(report, legacy_coverage_label=True).encode()
+        self.assertIn(b"`64` judgments across `59` phase-specific candidate versions", current)
+        self.assertIn(b"`64/59` candidate versions", legacy)
+        self.assertTrue(op.report_markdown_matches(report, current))
+        self.assertTrue(op.report_markdown_matches(report, legacy))
+        self.assertFalse(op.report_markdown_matches(report, legacy.replace(b"64/59", b"63/59")))
+        self.assertFalse(op.report_markdown_matches(report, current + b"Forged conclusion"))
+
     def complete_evaluation_job(
         self, job_id: str, candidate: dict, judge_id: str, score: float, phase: str
     ) -> None:
@@ -2645,6 +2774,283 @@ class ScoreBracketWorkflowTests(OpportunityTestCase):
             op.InputError, "explicit unknown assessment requires status unknown"
         ):
             op.validate_research(research, self.load()[0], self.run_dir)
+
+    def test_scout_contract_exposes_rejected_lane_and_owner_combinations(self) -> None:
+        op.advance_run(self.run_dir)
+        contract, valid = op.preflight_artifact(self.run_dir, "candidate")
+        self.assertTrue(valid)
+        constraints = contract["constraints"]
+        lane_rule = constraints["mechanism_first_contract"]
+        for required in (
+            "externally_controlled",
+            "paid_event_or_measurable_loss unknown",
+            "confidential_employer_resource_dependency present",
+            "Never relabel",
+        ):
+            self.assertIn(required, lane_rule)
+        owner_rule = constraints["customer_relationship_owner_agreement"]
+        self.assertIn("critical_control_point.customer_relationship_owner", owner_rule)
+        self.assertIn("commercial_mechanics.customer_relationship_owner", owner_rule)
+
+        candidate = self.candidate("scout-contract")
+        path = self.root / "scout-response.json"
+        variants = []
+        external = copy.deepcopy(candidate)
+        external["critical_control_point"].update(
+            status="externally_controlled", mechanism_control="dependent"
+        )
+        variants.append((external, "externally controlled mechanism"))
+        no_event = copy.deepcopy(candidate)
+        no_event["commercial_mechanics"]["paid_event_or_measurable_loss"] = "unknown"
+        variants.append((no_event, "existing paid event"))
+        employer = copy.deepcopy(candidate)
+        employer["critical_control_point"]["confidential_employer_resource_dependency"] = "present"
+        variants.append((employer, "confidential employer resources"))
+        mismatched_owner = copy.deepcopy(candidate)
+        mismatched_owner["commercial_mechanics"]["customer_relationship_owner"] = "unrelated owner"
+        variants.append((mismatched_owner, "customer_relationship_owner must agree"))
+        for response, expected in variants:
+            with self.subTest(expected=expected):
+                path.write_bytes(op.canonical_json_bytes(response))
+                report, valid = op.preflight_artifact(
+                    self.run_dir, "candidate", path, "discover-contract"
+                )
+                self.assertFalse(valid)
+                self.assertIn(expected, report["validation"]["errors"][0]["message"])
+
+        uncertain = copy.deepcopy(candidate)
+        uncertain["critical_control_point"].update(
+            status="unknown", mechanism_control="unknown",
+            acquisition_instrument_type="unknown",
+        )
+        path.write_bytes(op.canonical_json_bytes(uncertain))
+        report, valid = op.preflight_artifact(
+            self.run_dir, "candidate", path, "discover-contract"
+        )
+        self.assertTrue(valid, report["validation"]["errors"])
+        self.assertEqual(self.load()[1]["jobs"]["discovery"], {})
+
+    def test_research_contract_exposes_validator_source_classes(self) -> None:
+        self.set_stage("research")
+        candidate = self.candidate("research-contract")
+        self.store_candidate(candidate)
+        research = self.research(candidate)
+        contract, valid = op.preflight_artifact(self.run_dir, "research")
+        self.assertTrue(valid)
+        mapping = contract["constraints"]["commercial_evidence_source_classes"]
+        self.assertEqual(set(mapping), set(research["commercial_evidence"]))
+        self.assertIn("same assessment", contract["constraints"]["claim_source_coverage"])
+        for category, classes in mapping.items():
+            source_id = research["commercial_evidence"][category]["source_ids"][0]
+            for evidence_class in classes:
+                with self.subTest(category=category, evidence_class=evidence_class):
+                    response = copy.deepcopy(research)
+                    next(s for s in response["sources"] if s["source_id"] == source_id)["evidence_class"] = evidence_class
+                    op.validate_research(response, self.load()[0], self.run_dir)
+            response = copy.deepcopy(research)
+            next(s for s in response["sources"] if s["source_id"] == source_id)["evidence_class"] = "market_context"
+            with self.assertRaisesRegex(op.InputError, "matching bounded evidence_class"):
+                op.validate_research(response, self.load()[0], self.run_dir)
+
+    def test_preflight_correction_blocks_changed_judgments_without_attempt(self) -> None:
+        self.set_stage("research")
+        candidate = self.candidate("correction-guard")
+        self.store_candidate(candidate)
+        research = self.research(candidate)
+        research["claims"].append({
+            "claim_id": "unknown-buyer", "statement": "No exact-offer buyer validation.",
+            "assessment": "unknown", "evidence_refs": [],
+        })
+        first = self.root / "first-response.json"
+        corrected = self.root / "corrected.json"
+        first.write_bytes(op.canonical_json_bytes(research))
+        before_state = (self.run_dir / "state.json").read_bytes()
+        before_events = (self.run_dir / "events.jsonl").read_bytes()
+        selection = {"candidate_refs": [{
+            "candidate_id": candidate["candidate_id"], "version": 1,
+            "candidate_sha256": research["candidate_sha256"],
+        }]}
+        changed = copy.deepcopy(research)
+        changed["commercial_evidence"]["buyer_or_paid_event"] = {
+            "status": "unknown", "claim_ids": ["unknown-buyer"], "source_ids": [],
+        }
+        corrected.write_bytes(op.canonical_json_bytes(changed))
+        with mock.patch.object(op, "effective_portfolio_selection", return_value=selection):
+            # The altered research is canonically valid, but not a permitted correction.
+            self.assertTrue(op.preflight_artifact(
+                self.run_dir, "research", corrected, "research-guard",
+            )[1])
+            code, report, error = self.run_cli([
+                "--runs-dir", str(self.runs_dir), "preflight", self.run_id,
+                "--kind", "research", "--job-id", "research-guard",
+                "--input", str(corrected), "--original-input", str(first),
+            ])
+            self.assertEqual(code, 2, error)
+            validation = report["validation"]
+            self.assertFalse(validation["schema_retry_required"])
+            self.assertNotIn("preflight_receipt", validation)
+            self.assertEqual(validation["errors"][0]["code"], "semantic_correction_forbidden")
+            self.assertEqual(validation["errors"][0]["pointer"], "/commercial_evidence/buyer_or_paid_event/status")
+
+            # A wrong reference can be repaired without changing the evidence judgment.
+            original = copy.deepcopy(research)
+            original["commercial_evidence"]["buyer_or_paid_event"]["claim_ids"] = ["research-claim-2"]
+            first.write_bytes(op.canonical_json_bytes(original))
+            corrected.write_text(json.dumps(research, indent=4), encoding="utf-8")
+            report, valid = op.preflight_artifact(
+                self.run_dir, "research", corrected, "research-guard", first,
+            )
+            self.assertTrue(valid, report["validation"]["errors"])
+            self.assertTrue(report["validation"]["correction_content_preserved"])
+            self.assertEqual(report["validation"]["original_input_sha256"], op.sha256_file(first))
+            self.assertIn("preflight_receipt", report["validation"])
+        self.assertEqual((self.run_dir / "state.json").read_bytes(), before_state)
+        self.assertEqual((self.run_dir / "events.jsonl").read_bytes(), before_events)
+        for key, value in [("assessment", "inference"), ("statement", "Changed finding")]:
+            changed = copy.deepcopy(research)
+            changed["claims"][0][key] = value
+            self.assertTrue(op.correction_content_differences(research, changed, "research"))
+        changed = copy.deepcopy(research)
+        changed["sources"][0]["evidence_class"] = "other"
+        self.assertTrue(op.correction_content_differences(research, changed, "research"))
+        self.assertTrue(op.correction_content_differences({"score": 4}, {"score": 5}, "evaluation"))
+
+    def test_redesign_research_fragments_bind_listed_parent_research(self) -> None:
+        self.set_stage("development")
+        base = self.candidate("research-fragments")
+        base_path, _ = self.store_candidate(base)
+        research = self.research(base)
+        research_path = self.store_research(research)
+        candidate = self.candidate(
+            base["candidate_id"], version=2, stage="development",
+            parent={"candidate_id": base["candidate_id"], "version": 1},
+        )
+        source = f"runs/{self.run_id}/{research_path.relative_to(self.run_dir).as_posix()}"
+        reference = f"{source}#{research['claims'][0]['claim_id']}"
+        candidate["source_refs"].append(source)
+        candidate["claims"][0]["evidence_refs"] = [reference]
+        original = self.root / "research-fragment-original.json"
+        original.write_bytes(op.canonical_json_bytes(candidate))
+        before_state = (self.run_dir / "state.json").read_bytes()
+        before_events = (self.run_dir / "events.jsonl").read_bytes()
+        decision = {"candidate_decisions": [{
+            "candidate_id": base["candidate_id"], "candidate_version": 1,
+            "candidate_sha256": op.sha256_file(base_path), "disposition": "develop",
+        }]}
+        with mock.patch.object(op, "_load_portfolio_decision", return_value=decision), mock.patch.object(
+            op, "_working_evaluations_for_candidate", return_value=[{}],
+        ):
+            report, valid = op.preflight_artifact(
+                self.run_dir, "candidate", original, "research-fragment", original,
+            )
+        self.assertTrue(valid, report["validation"]["errors"])
+        self.assertTrue(report["validation"]["correction_content_preserved"])
+        self.assertEqual(report["validation"]["input_sha256"], op.sha256_file(original))
+        manifest, _ = self.load()
+        canonical = op.validate_candidate(candidate, manifest, self.run_dir)
+        self.assertEqual(canonical["claims"], candidate["claims"])
+        self.assertEqual(canonical["source_refs"], candidate["source_refs"])
+        invalid = [
+            (source, f"{source}#missing-claim"),
+            (source, f"{source}#"),
+            (source.replace(self.run_id, "another-run"), reference.replace(self.run_id, "another-run")),
+            (source.replace("research-fragments", "another-candidate"), reference.replace("research-fragments", "another-candidate")),
+            (source.replace("v1.json", "v2.json"), reference.replace("v1.json", "v2.json")),
+            ("https://example.com/report", "https://example.com/report#research-claim-1"),
+        ]
+        for listed, cited in invalid:
+            with self.subTest(cited=cited):
+                changed = copy.deepcopy(candidate)
+                changed["source_refs"][-1] = listed
+                changed["claims"][0]["evidence_refs"] = [cited]
+                with self.assertRaisesRegex(op.InputError, "unknown source_refs"):
+                    op.validate_candidate(changed, manifest, self.run_dir)
+        unlisted = copy.deepcopy(candidate)
+        unlisted["source_refs"].remove(source)
+        with self.assertRaisesRegex(op.InputError, "unknown source_refs"):
+            op.validate_candidate(unlisted, manifest, self.run_dir)
+        tampered = copy.deepcopy(research)
+        tampered["candidate_sha256"] = "0" * 64
+        research_path.write_bytes(op.canonical_json_bytes(tampered))
+        with self.assertRaisesRegex(op.InputError, "immutable candidate"):
+            op.validate_candidate(candidate, manifest, self.run_dir)
+        research_path.write_bytes(op.canonical_json_bytes(research))
+        self.assertEqual((self.run_dir / "state.json").read_bytes(), before_state)
+        self.assertEqual((self.run_dir / "events.jsonl").read_bytes(), before_events)
+
+    def test_redesign_contract_and_derived_declaration_repair(self) -> None:
+        self.set_stage("development")
+        base = self.candidate("declaration-repair")
+        base_path, _ = self.store_candidate(base)
+        self.store_research(self.research(base))
+        candidate = self.candidate(
+            "declaration-repair", version=2, stage="development",
+            parent={"candidate_id": "declaration-repair", "version": 1},
+        )
+        contract, _ = op.preflight_artifact(self.run_dir, "candidate")
+        self.assertEqual(
+            set(contract["enums"]["/redesign/changed_structural_fields/*"]),
+            op.STRUCTURAL_CHANGE_FIELDS,
+        )
+        self.assertEqual(
+            set(contract["enums"]["/redesign/changed_fingerprint_fields/*"]),
+            op.FINGERPRINT_KEYS,
+        )
+        self.assertIn("immutable parent", contract["constraints"]["redesign_change_declarations"])
+        original = copy.deepcopy(candidate)
+        original["redesign"]["changed_structural_fields"] = ["commercial_archetype"]
+        original["redesign"]["changed_fingerprint_fields"] = ["thesis"]
+        first = self.root / "first-redesign.json"
+        corrected = self.root / "corrected-redesign.json"
+        first.write_bytes(op.canonical_json_bytes(original))
+        corrected.write_bytes(op.canonical_json_bytes(candidate))
+        before_state = (self.run_dir / "state.json").read_bytes()
+        before_events = (self.run_dir / "events.jsonl").read_bytes()
+        decision = {"candidate_decisions": [{
+            "candidate_id": base["candidate_id"], "candidate_version": 1,
+            "candidate_sha256": op.sha256_file(base_path), "disposition": "develop",
+        }]}
+        with mock.patch.object(op, "_load_portfolio_decision", return_value=decision), mock.patch.object(
+            op, "_working_evaluations_for_candidate", return_value=[{}],
+        ):
+            rejected, valid = op.preflight_artifact(
+                self.run_dir, "candidate", first, "redesign-declarations", first,
+            )
+            self.assertFalse(valid)
+            self.assertEqual(rejected["validation"]["errors"][0]["code"], "canonical_validation")
+            report, valid = op.preflight_artifact(
+                self.run_dir, "candidate", corrected, "redesign-declarations", first,
+            )
+            self.assertTrue(valid, report["validation"]["errors"])
+            self.assertTrue(report["validation"]["correction_content_preserved"])
+            self.assertIn("preflight_receipt", report["validation"])
+
+            # An allowed field name still fails if it does not describe actual changes.
+            wrong = copy.deepcopy(candidate)
+            wrong["redesign"]["changed_structural_fields"] = ["critical_control_point"]
+            corrected.write_bytes(op.canonical_json_bytes(wrong))
+            report, valid = op.preflight_artifact(
+                self.run_dir, "candidate", corrected, "redesign-declarations", first,
+            )
+            self.assertFalse(valid)
+            self.assertIn("exactly match", report["validation"]["errors"][0]["message"])
+            self.assertNotIn("preflight_receipt", report["validation"])
+
+            # Canonically valid substantive changes cannot accompany a declaration repair.
+            changed = copy.deepcopy(candidate)
+            changed["economics"]["pricing"] = "Unsupported improved pricing"
+            corrected.write_bytes(op.canonical_json_bytes(changed))
+            self.assertTrue(op.preflight_artifact(
+                self.run_dir, "candidate", corrected, "redesign-declarations",
+            )[1])
+            report, valid = op.preflight_artifact(
+                self.run_dir, "candidate", corrected, "redesign-declarations", first,
+            )
+            self.assertFalse(valid)
+            self.assertIn("semantic_correction_forbidden", [e["code"] for e in report["validation"]["errors"]])
+            self.assertNotIn("preflight_receipt", report["validation"])
+        self.assertEqual((self.run_dir / "state.json").read_bytes(), before_state)
+        self.assertEqual((self.run_dir / "events.jsonl").read_bytes(), before_events)
 
     def test_malformed_research_preflight_is_attempt_neutral(self) -> None:
         self.set_stage("research")
@@ -3030,11 +3436,18 @@ class ScoreBracketWorkflowTests(OpportunityTestCase):
                     {
                         "scope",
                         "candidate",
+                        "candidate_artifact",
                         "research",
+                        "research_artifact",
                         "founder_snapshot",
                         "response_kind",
                     },
                 )
+                for field in ("candidate", "research"):
+                    binding = constructor_context[f"{field}_artifact"]
+                    bound_path = self.run_dir / binding["path"]
+                    self.assertEqual(op.sha256_file(bound_path), binding["sha256"])
+                    self.assertEqual(op.load_json(bound_path), constructor_context[field])
                 for forbidden in (
                     "final_score",
                     "ranking",
@@ -3164,6 +3577,19 @@ class ScoreBracketWorkflowTests(OpportunityTestCase):
                     self.run_dir, candidate_id
                 )
                 self.assertEqual(len(lineage_context["candidates"]), 2)
+                self.assertEqual(len(lineage_context["candidate_artifacts"]), 2)
+                for candidate, binding in zip(
+                    lineage_context["candidates"],
+                    lineage_context["candidate_artifacts"],
+                    strict=True,
+                ):
+                    bound_path = self.run_dir / binding["path"]
+                    self.assertEqual(op.sha256_file(bound_path), binding["sha256"])
+                    self.assertEqual(op.load_json(bound_path), candidate)
+                research_binding = lineage_context["research_artifact"]
+                research_path = self.run_dir / research_binding["path"]
+                self.assertEqual(op.sha256_file(research_path), research_binding["sha256"])
+                self.assertEqual(op.load_json(research_path), lineage_context["research"])
                 self.assertEqual(
                     lineage_context["required_independent_evaluators"], 2
                 )
@@ -3779,6 +4205,88 @@ class CampaignContractTests(unittest.TestCase):
 
 
 class DedupAndHoldoutTests(OpportunityTestCase):
+    def test_native_schema_has_explicit_types_without_rewriting_exports(self) -> None:
+        self.store_complete_lineage()
+        self.set_stage("frozen")
+        op.export_external(self.run_dir, "alpha")
+        schema_path = self.run_dir / "exports/alpha/response_schema.json"
+        packet_path = self.run_dir / "exports/alpha/holdout_packet.md"
+        before = {path: path.read_bytes() for path in (
+            schema_path, packet_path, self.run_dir / "state.json", self.run_dir / "events.jsonl",
+        )}
+        assignment = op.native_holdout_assignment(
+            self.run_dir, "alpha", self.root / "typed-response.json",
+        )
+        schema = assignment["strict_response_contract"]
+        def assert_typed(node):
+            self.assertIn("type", node)
+            for child in node.get("properties", {}).values():
+                assert_typed(child)
+            if "items" in node:
+                assert_typed(node["items"])
+        assert_typed(schema)
+        self.assertEqual(schema["properties"]["candidate_id"]["type"], "string")
+        self.assertEqual(schema["properties"]["candidate_version"]["type"], "integer")
+        # Remove transport types, the write instruction, and the identity binding before
+        # comparing with the immutable exported schema.
+        comparable = copy.deepcopy(schema)
+        self.assertIn("temporary_response_destination", comparable.pop("description"))
+        del comparable["properties"]["candidate_id"]["type"]
+        del comparable["properties"]["candidate_version"]["type"]
+        judge_id = comparable["properties"]["judge_id"].pop("const")
+        self.assertRegex(judge_id, r"^native-[0-9a-f]{24}$")
+        other = op.native_holdout_assignment(
+            self.run_dir, "alpha", self.root / "other-typed-response.json",
+        )
+        self.assertNotEqual(judge_id, other["strict_response_contract"]["properties"]["judge_id"]["const"])
+        repeated = op.native_holdout_assignment(
+            self.run_dir, "alpha", self.root / "typed-response.json",
+        )
+        self.assertEqual(judge_id, repeated["strict_response_contract"]["properties"]["judge_id"]["const"])
+        factor_properties = comparable["properties"]["factors"]["items"]["properties"]
+        del factor_properties["name"]["type"]
+        del factor_properties["status"]["type"]
+        self.assertEqual(comparable, json.loads(before[schema_path]))
+        self.assertEqual(assignment["immutable_finalist_packet"]["sha256"], op.sha256_file(packet_path))
+        for path, raw in before.items():
+            self.assertEqual(path.read_bytes(), raw)
+
+    def test_holdout_assignment_rejects_managed_destination_aliases(self) -> None:
+        self.store_complete_lineage()
+        self.set_stage("frozen")
+        op.export_external(self.run_dir, "alpha")
+        alias = self.root / "run-alias"
+        alias.symlink_to(self.run_dir, target_is_directory=True)
+        destinations = [
+            self.run_dir / "response.json",
+            self.run_dir.resolve() / "response.json",
+            alias / "response.json",
+        ]
+        case_alias = self.run_dir.with_name(self.run_dir.name.swapcase())
+        if case_alias.is_dir():
+            destinations.append(case_alias / "response.json")
+        for destination in destinations:
+            with self.subTest(destination=str(destination)):
+                code, _, error = self.run_cli([
+                    "--runs-dir", str(self.runs_dir), "holdout-assignment",
+                    self.run_id, "alpha", "--response-destination", str(destination),
+                ])
+                self.assertEqual(code, 2)
+                self.assertIn("outside CLI-managed run state", error["error"])
+                self.assertFalse(destination.exists())
+
+        outside = self.root / "outside-response.json"
+        assignment = op.native_holdout_assignment(self.run_dir, "alpha", outside)
+        self.assertEqual(assignment["temporary_response_destination"], str(outside))
+        self.assertFalse(outside.exists())
+        outside.write_text("{}", encoding="utf-8")
+        with self.assertRaisesRegex(op.ConflictError, "already exists"):
+            op.native_holdout_assignment(self.run_dir, "alpha", outside)
+        dangling = self.root / "dangling-response.json"
+        dangling.symlink_to(self.root / "missing-response.json")
+        with self.assertRaisesRegex(op.ConflictError, "already exists"):
+            op.native_holdout_assignment(self.run_dir, "alpha", dangling)
+
     def test_dedup_exact_similarity_and_one_bounded_gap_scout(self) -> None:
         self.set_stage("discovery")
         lanes = self.load()[0]["config"]["discovery_lanes"]

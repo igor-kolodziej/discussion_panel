@@ -459,12 +459,17 @@ RESEARCH_SOURCE_KEYS = {
 LEGACY_RESEARCH_SOURCE_KEYS = RESEARCH_SOURCE_KEYS - {"evidence_class"}
 RESEARCH_CLAIM_KEYS = {"claim_id", "statement", "assessment", "evidence_refs"}
 RESEARCH_CONTROL_KEYS = {"commercial_evidence", "critical_control_point_assessment"}
-COMMERCIAL_EVIDENCE_KEYS = {
-    "buyer_or_paid_event",
-    "distribution_and_acquisition",
-    "fully_loaded_unit_economics",
-    "rights_control_access_contractibility",
+COMMERCIAL_EVIDENCE_SOURCE_CLASSES = {
+    "buyer_or_paid_event": {"direct_buyer", "paid_event", "other"},
+    "distribution_and_acquisition": {"distribution", "acquisition", "other"},
+    "fully_loaded_unit_economics": {"unit_economics", "other"},
+    "rights_control_access_contractibility": {
+        "rights_control_access",
+        "contracting",
+        "other",
+    },
 }
+COMMERCIAL_EVIDENCE_KEYS = set(COMMERCIAL_EVIDENCE_SOURCE_CLASSES)
 COMMERCIAL_EVIDENCE_ITEM_KEYS = {"status", "claim_ids", "source_ids"}
 COMMERCIAL_EVIDENCE_STATUSES = {"evidence", "inference", "unknown"}
 EVIDENCE_CLASSES = {
@@ -2478,6 +2483,29 @@ def validate_candidate(
     claims = candidate["claims"]
     if not isinstance(claims, list):
         raise InputError("candidate.claims must be a list")
+    claim_source_refs = set(source_refs)
+    if redesign_parent is not None:
+        parent_research_relative = research_relpath(candidate_id, 1)
+        parent_research_source = f"runs/{manifest['run_id']}/{parent_research_relative}"
+        if parent_research_source in claim_source_refs:
+            parent_research_path = run_dir / parent_research_relative
+            _assert_safe_write_path(
+                run_dir, parent_research_path, "candidate parent research artifact path"
+            )
+            if parent_research_path.is_file():
+                parent_research = validate_research(
+                    load_json(parent_research_path), manifest, run_dir
+                )
+                if (
+                    parent_research["candidate_id"] != candidate_id
+                    or parent_research["candidate_version"] != 1
+                    or parent_research_path.read_bytes() != canonical_json_bytes(parent_research)
+                ):
+                    raise InputError("candidate parent research differs from its canonical binding")
+                claim_source_refs.update(
+                    f"{parent_research_source}#{claim['claim_id']}"
+                    for claim in parent_research["claims"]
+                )
     claim_ids: set[str] = set()
     for index, raw_claim in enumerate(claims):
         claim = expect_object(raw_claim, f"candidate.claims[{index}]", exact_keys=CLAIM_KEYS)
@@ -2486,12 +2514,12 @@ def validate_candidate(
             raise InputError(f"duplicate claim id: {claim_id}")
         claim_ids.add(claim_id)
         expect_nonempty_string(claim["statement"], f"candidate.claims[{index}].statement")
-        if claim["claim_type"] not in CLAIM_TYPES:
+        if not isinstance(claim["claim_type"], str) or claim["claim_type"] not in CLAIM_TYPES:
             raise InputError(f"candidate.claims[{index}].claim_type is invalid")
         evidence_refs = expect_string_list(
             claim["evidence_refs"], f"candidate.claims[{index}].evidence_refs", unique=True
         )
-        missing_evidence = sorted(set(evidence_refs) - set(source_refs))
+        missing_evidence = sorted(set(evidence_refs) - claim_source_refs)
         if missing_evidence:
             raise InputError(f"candidate claim {claim_id} references unknown source_refs: {missing_evidence}")
         confidence = claim["confidence"]
@@ -2598,16 +2626,6 @@ def validate_commercial_evidence(
     label: str = "research.commercial_evidence",
 ) -> dict[str, Any]:
     evidence = expect_object(value, label, exact_keys=COMMERCIAL_EVIDENCE_KEYS)
-    expected_classes = {
-        "buyer_or_paid_event": {"direct_buyer", "paid_event", "other"},
-        "distribution_and_acquisition": {"distribution", "acquisition", "other"},
-        "fully_loaded_unit_economics": {"unit_economics", "other"},
-        "rights_control_access_contractibility": {
-            "rights_control_access",
-            "contracting",
-            "other",
-        },
-    }
     canonical: dict[str, Any] = {}
     for key in sorted(COMMERCIAL_EVIDENCE_KEYS):
         item = _validate_claim_source_coverage(
@@ -2617,7 +2635,7 @@ def validate_commercial_evidence(
             set(sources_by_id),
         )
         if item["status"] != "unknown" and not any(
-            sources_by_id[source_id]["evidence_class"] in expected_classes[key]
+            sources_by_id[source_id]["evidence_class"] in COMMERCIAL_EVIDENCE_SOURCE_CLASSES[key]
             for source_id in item["source_ids"]
         ):
             raise InputError(
@@ -2672,7 +2690,7 @@ def validate_research(value: Any, manifest: Mapping[str, Any], run_dir: Path) ->
         if source_id in source_ids:
             raise InputError(f"duplicate research source id: {source_id}")
         source_ids.add(source_id)
-        if source["stance"] not in {"supporting", "contradicting", "context"}:
+        if not isinstance(source["stance"], str) or source["stance"] not in {"supporting", "contradicting", "context"}:
             raise InputError(f"research.sources[{index}].stance is invalid")
         if uses_control_contract:
             _validated_enum(
@@ -2693,7 +2711,7 @@ def validate_research(value: Any, manifest: Mapping[str, Any], run_dir: Path) ->
             raise InputError(f"duplicate research claim id: {claim_id}")
         claim_ids.add(claim_id)
         expect_nonempty_string(claim["statement"], f"research.claims[{index}].statement")
-        if claim["assessment"] not in {"evidence", "inference", "unknown"}:
+        if not isinstance(claim["assessment"], str) or claim["assessment"] not in {"evidence", "inference", "unknown"}:
             raise InputError(f"research.claims[{index}].assessment is invalid")
         refs = expect_string_list(
             claim["evidence_refs"], f"research.claims[{index}].evidence_refs", unique=True
@@ -3676,7 +3694,7 @@ def _validate_legacy_published_run_outcome(outcome_dir: Path) -> dict[str, Any]:
         raise InputError("published report.md is missing or empty")
     correction = report.get("correction")
     if correction is None:
-        if markdown_path.read_bytes() != render_report_markdown(report).encode("utf-8"):
+        if not report_markdown_matches(report, markdown_path.read_bytes()):
             raise InputError("published report.md differs from its structured report")
     else:
         correction = expect_object(correction, "published outcome correction")
@@ -3870,7 +3888,7 @@ def validate_published_run_outcome(outcome_dir: Path) -> dict[str, Any]:
     markdown_path = outcome_dir / "report.md"
     if (
         not markdown_path.is_file()
-        or markdown_path.read_bytes() != render_report_markdown(report).encode("utf-8")
+        or not report_markdown_matches(report, markdown_path.read_bytes())
     ):
         raise InputError("published report.md differs from its structured report")
     manifest_path = outcome_dir / "manifest.json"
@@ -7598,11 +7616,14 @@ def native_holdout_assignment(
     if not SAFE_ID_RE.fullmatch(candidate_id):
         raise InputError("CANDIDATE_ID must be a lowercase slug")
     destination = Path(os.path.abspath(response_destination))
-    try:
-        destination.relative_to(run_dir.resolve())
-    except ValueError:
-        pass
-    else:
+    # Resolve symlinks, then also compare directory identities: on a
+    # case-insensitive filesystem realpath can preserve an alternate spelling.
+    resolved_destination = destination.resolve()
+    run_root = run_dir.resolve()
+    if resolved_destination.is_relative_to(run_root) or any(
+        parent.exists() and parent.samefile(run_root)
+        for parent in resolved_destination.parents
+    ):
         raise InputError(
             "native holdout response destination must be outside CLI-managed run state"
         )
@@ -7610,7 +7631,7 @@ def native_holdout_assignment(
         raise InputError("native holdout response destination must end in .json")
     if not destination.parent.is_dir():
         raise InputError("native holdout response destination parent does not exist")
-    if destination.exists():
+    if destination.exists() or destination.is_symlink():
         raise ConflictError(
             "native holdout response destination already exists; use a fresh temporary path"
         )
@@ -7624,12 +7645,34 @@ def native_holdout_assignment(
     )
     packet_path = run_dir / "exports" / candidate_id / "holdout_packet.md"
     schema_path = run_dir / "exports" / candidate_id / "response_schema.json"
+    response_schema = load_json(schema_path)
+    # Structured-output transports require explicit types even where const/enum
+    # already imply them. Keep immutable exported schemas byte-stable.
+    response_schema["properties"]["candidate_id"]["type"] = "string"
+    response_schema["properties"]["candidate_version"]["type"] = "integer"
+    response_schema["description"] = (
+        "Write the complete response JSON yourself to temporary_response_destination "
+        "from this assignment, then return that same JSON. A final chat response alone "
+        "does not satisfy this contract. Use only the supplied immutable finalist packet; "
+        "do not load repository instructions, workflow skills, history, other candidates, "
+        "prior evaluations, or another judge's response."
+    )
+    response_schema["properties"]["judge_id"]["const"] = "native-" + sha256_bytes(
+        canonical_json_bytes({
+            "run_id": manifest["run_id"],
+            "candidate_id": candidate_id,
+            "destination": str(resolved_destination),
+        })
+    )[:24]
+    factor_properties = response_schema["properties"]["factors"]["items"]["properties"]
+    factor_properties["name"]["type"] = "string"
+    factor_properties["status"]["type"] = "string"
     return {
         "immutable_finalist_packet": {
             "sha256": sha256_file(packet_path),
             "content": packet_path.read_text(encoding="utf-8"),
         },
-        "strict_response_contract": load_json(schema_path),
+        "strict_response_contract": response_schema,
         "temporary_response_destination": str(destination),
     }
 
@@ -9131,12 +9174,12 @@ def validate_portfolio_decision(
         candidate_path, _ = expected[identity]
         if row["candidate_sha256"] != sha256_file(candidate_path):
             raise InputError("portfolio decision candidate_sha256 does not match the exact candidate version")
-        if row["disposition"] not in {"develop", "not_selected", "fatal"}:
+        if not isinstance(row["disposition"], str) or row["disposition"] not in {"develop", "not_selected", "fatal"}:
             raise InputError("portfolio decision disposition is invalid")
         rationale = expect_nonempty_string(row["rationale"], f"portfolio decision.candidate_decisions[{index}].rationale")
         claim_ids = expect_string_list(row["fatal_claim_ids"], f"portfolio decision.candidate_decisions[{index}].fatal_claim_ids", unique=True)
         if row["disposition"] == "fatal":
-            if row["fatal_reason"] not in FATAL_RESEARCH_REASONS:
+            if not isinstance(row["fatal_reason"], str) or row["fatal_reason"] not in FATAL_RESEARCH_REASONS:
                 raise InputError("fatal research disposition requires a permitted direct-evidence fatal_reason")
             if not claim_ids:
                 raise InputError("fatal research disposition requires evidence-backed fatal_claim_ids")
@@ -9208,7 +9251,7 @@ def canonicalize_development_response(
     )
     if not SAFE_ID_RE.fullmatch(candidate_id):
         raise InputError("development response.candidate_id must be a lowercase slug")
-    if response["outcome"] not in {"redesigned", "no_valid_redesign"}:
+    if not isinstance(response["outcome"], str) or response["outcome"] not in {"redesigned", "no_valid_redesign"}:
         raise InputError(
             "development response.outcome must be redesigned or no_valid_redesign"
         )
@@ -10400,7 +10443,9 @@ def build_no_finalist_report(
     }
 
 
-def render_report_markdown(report: Mapping[str, Any]) -> str:
+def render_report_markdown(
+    report: Mapping[str, Any], *, legacy_coverage_label: bool = False,
+) -> str:
     lines = [
         "# Opportunity Workflow Outcome",
         "",
@@ -10431,10 +10476,16 @@ def render_report_markdown(report: Mapping[str, Any]) -> str:
         value = report.get("highest_working_score")
         lines.append(f"- Highest working score: `{value if value is not None else 'N/A'}`")
         coverage = report.get("working_evaluation_coverage", {})
-        lines.append(
-            f"- Working evaluation coverage: `{coverage.get('total_completed', 0)}/"
-            f"{coverage.get('total_candidate_versions', 0)}` candidate versions"
-        )
+        if legacy_coverage_label:
+            lines.append(
+                f"- Working evaluation coverage: `{coverage.get('total_completed', 0)}/"
+                f"{coverage.get('total_candidate_versions', 0)}` candidate versions"
+            )
+        else:
+            lines.append(
+                f"- Working evaluations: `{coverage.get('total_completed', 0)}` judgments across "
+                f"`{coverage.get('total_candidate_versions', 0)}` phase-specific candidate versions"
+            )
     lines.extend(["", "## Candidate decisions", ""])
     candidates = report.get("candidates", [])
     if not candidates:
@@ -10514,6 +10565,15 @@ def render_report_markdown(report: Mapping[str, Any]) -> str:
     return "\n".join(lines)
 
 
+def report_markdown_matches(report: Mapping[str, Any], actual: bytes) -> bool:
+    # Published reports are immutable. Accept only the two exact deterministic
+    # renderings; the legacy presentation changes no scores or coverage data.
+    return actual in {
+        render_report_markdown(report).encode("utf-8"),
+        render_report_markdown(report, legacy_coverage_label=True).encode("utf-8"),
+    }
+
+
 def _derive_and_validate_final_report(
     run_dir: Path,
     manifest: Mapping[str, Any],
@@ -10547,8 +10607,7 @@ def _derive_and_validate_final_report(
     expected_bytes = canonical_json_bytes(expected)
     if report_path.read_bytes() != expected_bytes:
         raise InputError("final/report.json differs from the deterministically derived outcome")
-    expected_markdown = render_report_markdown(expected).encode("utf-8")
-    if markdown_path.read_bytes() != expected_markdown:
+    if not report_markdown_matches(expected, markdown_path.read_bytes()):
         raise InputError("report.md differs from the deterministically derived outcome")
     return expected, sha256_bytes(expected_bytes)
 
@@ -11276,6 +11335,9 @@ def preflight_contract(
                     else {}
                 ),
             }
+            enums["/redesign/changed_fingerprint_fields/*"] = sorted(FINGERPRINT_KEYS)
+            if control_contract_enabled(manifest["config"]):
+                enums["/redesign/changed_structural_fields/*"] = sorted(STRUCTURAL_CHANGE_FIELDS)
         nullable_paths.append("/parent")
         enums.update(
             {
@@ -11334,6 +11396,14 @@ def preflight_contract(
         )
         constraints = {
             "source_refs_max": manifest["config"]["sources_max"],
+            "claim_evidence_refs": (
+                "Each evidence reference must appear in source_refs. A development v2 may "
+                "also cite #claim_id fragments of an explicitly listed "
+                "runs/<run-id>/research/<candidate-id>/v1.json source, but only when that "
+                "exact current-run parent research is canonical, bound to the immutable "
+                "parent candidate hash, and contains the cited claim ID. This does not "
+                "resolve arbitrary URL fragments or change any claim or evidence status."
+            ),
             "founder_fit": "nonempty array of distinct strings",
             **(
                 {
@@ -11341,7 +11411,21 @@ def preflight_contract(
                         "config"
                     ]["mechanism_first_founder_access_reserve"],
                     "mechanism_first_contract": (
-                        "starts from realistically obtainable control and a current paid event; unknown proof remains allowed"
+                        "starts from realistically obtainable control and a current paid event; "
+                        "discovery rejects critical_control_point.status externally_controlled, "
+                        "paid_event_or_measurable_loss unknown, and "
+                        "confidential_employer_resource_dependency present. "
+                        "Unknown proof remains allowed: distinguish an unverified acquisition "
+                        "path from an established externally controlled mechanism. Describe "
+                        "present ownership and proposed launch control separately; unsigned "
+                        "agreements are not acquired rights. Never relabel an externally "
+                        "controlled mechanism as unknown merely to pass validation."
+                    ),
+                    "customer_relationship_owner_agreement": (
+                        "critical_control_point.customer_relationship_owner and "
+                        "commercial_mechanics.customer_relationship_owner must agree after "
+                        "fingerprint normalization; use the same description in both fields, "
+                        "including any present uncertainty and proposed future ownership"
                     ),
                     "critical_control_status_consistency": (
                         "every affirmative control status requires a stated acquisition "
@@ -11363,6 +11447,15 @@ def preflight_contract(
                 else {}
             ),
         }
+        if development:
+            constraints["redesign_change_declarations"] = (
+                "The changed_fingerprint_fields list must exactly name normalized fingerprint "
+                "changes against the immutable parent. The changed_structural_fields list, "
+                "when required, must exactly name changed top-level commercial structure "
+                "containers from its enum, not descriptive fields inside structure. "
+                "These two lists are derived declarations; correcting them cannot change "
+                "the candidate, economics, evidence, or economic_effect rationale."
+            )
         if development and control_contract_enabled(manifest["config"]):
             constraints["externally_controlled_research_resolution"] = (
                 "v2 must change the critical-control structure and cannot remain "
@@ -11457,6 +11550,19 @@ def preflight_contract(
                     ),
                     "explicit_unknown": (
                         "use an unknown claim with no source_ids; absence of private validation is not fatal"
+                    ),
+                    "commercial_evidence_source_classes": {
+                        key: sorted(classes)
+                        for key, classes in sorted(COMMERCIAL_EVIDENCE_SOURCE_CLASSES.items())
+                    },
+                    "claim_source_coverage": (
+                        "Each category and critical-control assessment requires nonempty claim_ids. "
+                        "All source_ids must occur in those claims' evidence_refs. Evidence and "
+                        "inference require a cited source and a claim with the same assessment. "
+                        "Unknown requires only unknown claims and no source_ids. Commercial "
+                        "evidence or inference also requires a source in the category's allowed "
+                        "evidence classes. Choose honest classifications in the first response; "
+                        "do not change a judgment or source class after rejection to make it fit."
                     ),
                 }
                 if control_contract_enabled(manifest["config"])
@@ -11623,6 +11729,11 @@ def preflight_contract(
             ),
         }
 
+    constraints["string_whitespace"] = (
+        "String fields must not contain surrounding whitespace. A same-author "
+        "correction may trim only surrounding string whitespace; internal "
+        "content, judgments, numbers, and structure must remain unchanged."
+    )
     return {
         "role": _preflight_role(kind, stage),
         "template": template,
@@ -11674,12 +11785,62 @@ def _pointer_from_validation_message(message: str) -> str:
     return ""
 
 
+def correction_content_differences(
+    original: Any, corrected: Any, kind: str, pointer: str = "",
+) -> list[str]:
+    """Compare authored content, except canonically checked references/declarations."""
+    # The candidate validator recomputes these declarations against the immutable
+    # parent. Repairing them cannot change the underlying candidate content.
+    if kind == "candidate" and pointer in {
+        "/redesign/changed_fingerprint_fields",
+        "/redesign/changed_structural_fields",
+    }:
+        return []
+    reference_parents = {
+        "/commercial_evidence/" + key for key in COMMERCIAL_EVIDENCE_KEYS
+    } | {"/critical_control_point_assessment"}
+    parent, _, field = pointer.rpartition("/")
+    if kind == "research" and parent in reference_parents and field in {"claim_ids", "source_ids"}:
+        return []
+    if type(original) is not type(corrected):
+        return [pointer]
+    if isinstance(original, str):
+        # Canonical string fields reject surrounding whitespace. Removing only
+        # that boundary whitespace changes no authored words or classifications.
+        return [] if original == corrected or original.strip() == corrected else [pointer]
+    if isinstance(original, dict):
+        differences = []
+        for key in sorted(original.keys() | corrected.keys()):
+            child = pointer + "/" + _json_pointer_escape(key)
+            if key not in original or key not in corrected:
+                differences.append(child)
+            else:
+                differences.extend(correction_content_differences(
+                    original[key], corrected[key], kind, child,
+                ))
+        return differences
+    if isinstance(original, list):
+        if len(original) != len(corrected):
+            return [pointer]
+        return [
+            changed
+            for index, (before, after) in enumerate(zip(original, corrected))
+            for changed in correction_content_differences(
+                before, after, kind, pointer + "/" + str(index),
+            )
+        ]
+    return [] if original == corrected else [pointer]
+
+
 def preflight_artifact(
     run_dir: Path,
     kind: str,
     input_path: Path | None = None,
     job_id: str | None = None,
+    original_input_path: Path | None = None,
 ) -> tuple[dict[str, Any], bool]:
+    if original_input_path is not None and input_path is None:
+        raise InputError("--original-input requires --input")
     manifest, state = load_run(run_dir)
     contract = preflight_contract(manifest, state, kind)
     attestation_required = preflight_attestation_enabled(manifest["config"])
@@ -11732,6 +11893,23 @@ def preflight_artifact(
             "invalid_json" if message.startswith("invalid JSON") else "canonical_validation",
             message,
         )
+    original_digest = None
+    correction_blocked = False
+    if original_input_path is not None:
+        try:
+            original_digest = sha256_file(original_input_path)
+            differences = correction_content_differences(
+                load_json(original_input_path), load_json(input_path), kind,
+            )
+            for pointer in differences:
+                correction_blocked = True
+                _append_preflight_error(
+                    errors, pointer, "semantic_correction_forbidden",
+                    "correction changes authored content; preserve the first response and do not admit it",
+                )
+        except WorkflowError as exc:
+            correction_blocked = True
+            _append_preflight_error(errors, "", "correction_unverifiable", str(exc))
     if attestation_required and job_id is None:
         _append_preflight_error(
             errors,
@@ -11746,9 +11924,12 @@ def preflight_artifact(
         "input_path": str(input_path),
         "input_sha256": digest,
         "canonical_artifact_sha256": canonical_digest,
-        "schema_retry_required": not valid,
+        "schema_retry_required": not valid and not correction_blocked,
         "errors": errors,
     }
+    if original_input_path is not None:
+        result["validation"]["original_input_sha256"] = original_digest
+        result["validation"]["correction_content_preserved"] = not correction_blocked
     if (
         valid
         and attestation_required
@@ -11939,9 +12120,17 @@ def constructor_context(run_dir: Path, candidate_id: str) -> dict[str, Any]:
         "candidate": validate_candidate(
             load_json(candidate_path), manifest, run_dir
         ),
+        "candidate_artifact": {
+            "path": candidate_path.relative_to(run_dir).as_posix(),
+            "sha256": sha256_file(candidate_path),
+        },
         "research": validate_research(
             load_json(research_path), manifest, run_dir
         ),
+        "research_artifact": {
+            "path": research_path.relative_to(run_dir).as_posix(),
+            "sha256": sha256_file(research_path),
+        },
         "founder_snapshot": {
             "path": "inputs/founder.md",
             "sha256": manifest["source_hashes"]["PERSONALITY_SITUATION.md"],
@@ -11974,18 +12163,29 @@ def development_lineage_context(
         )
         for version in dict.fromkeys(versions)
     ]
+    research_path = run_dir / research_relpath(
+        candidate_id, result["base_candidate_version"]
+    )
     research = validate_research(
-        load_json(
-            run_dir
-            / research_relpath(candidate_id, result["base_candidate_version"])
-        ),
-        manifest,
-        run_dir,
+        load_json(research_path), manifest, run_dir
     )
     return {
         "scope": "development_lineage_evaluation",
         "candidates": candidates,
+        "candidate_artifacts": [
+            {
+                "path": candidate_relpath(candidate_id, candidate["version"]),
+                "sha256": sha256_file(
+                    run_dir / candidate_relpath(candidate_id, candidate["version"])
+                ),
+            }
+            for candidate in candidates
+        ],
         "research": research,
+        "research_artifact": {
+            "path": research_path.relative_to(run_dir).as_posix(),
+            "sha256": sha256_file(research_path),
+        },
         "founder_snapshot": {
             "path": "inputs/founder.md",
             "sha256": manifest["source_hashes"]["PERSONALITY_SITUATION.md"],
@@ -12899,6 +13099,7 @@ def build_parser() -> argparse.ArgumentParser:
     preflight.add_argument("run")
     preflight.add_argument("--kind", choices=tuple(sorted(PREFLIGHT_ARTIFACT_KINDS)), required=True)
     preflight.add_argument("--input", type=Path)
+    preflight.add_argument("--original-input", type=Path, help="Preserved first response for content-preserving correction checks")
     preflight.add_argument("--job-id")
 
     validate = subparsers.add_parser("validate", help="validate an artifact without storing it")
@@ -13031,6 +13232,7 @@ def dispatch(args: argparse.Namespace) -> int:
             args.kind,
             args.input.resolve() if args.input is not None else None,
             args.job_id,
+            args.original_input.resolve() if args.original_input is not None else None,
         )
         emit(result)
         return 0 if valid else InputError.exit_code

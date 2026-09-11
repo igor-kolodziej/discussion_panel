@@ -56,12 +56,12 @@ Before starting any structured-output job, obtain its role-specific contract and
 
 ```text
 python3 scripts/opportunity.py preflight <run-id> --kind <kind>
-python3 scripts/opportunity.py preflight <run-id> --kind <kind> --job-id <job-id> --input <file>
+python3 scripts/opportunity.py preflight <run-id> --kind <kind> --job-id <job-id> --input <file> --original-input <preserved-first-response>
 python3 scripts/opportunity.py job <run-id> <job-id> start --stage <stage>
 python3 scripts/opportunity.py job <run-id> <job-id> complete --kind <kind> --input <file> --preflight-sha256 <digest> --preflight-receipt-sha256 <receipt-digest>
 ```
 
-Preflight returns the exact JSON skeleton, enums, role-relevant constraints, canonical evaluator factor names where applicable, and the first RFC 6901 pointer error from the same canonical validator used at completion. It never writes run state or consumes an attempt. Schema corrections must leave claims, scores, rationales, evidence assessments, and other semantic content unchanged. A successful input preflight with the intended job ID returns both the raw input digest and a contextual receipt digest. Structured completion requires both; the full receipt is preserved in its lifecycle event and checked against the immutable run, stage, job, kind, input digest, and canonical artifact digest.
+Preflight returns the exact JSON skeleton, enums, role-relevant constraints, canonical evaluator factor names where applicable, and the first RFC 6901 pointer error from the same canonical validator used at completion. It never writes run state or consumes an attempt. Preserve the first substantive response outside managed state and supply it through `--original-input` on every input preflight, including after correction; retain the comparison result with that response. Schema corrections must leave claims, scores, rationales, evidence assessments, and other semantic content unchanged. The original author may trim surrounding whitespace from a string; internal content and structure must remain unchanged. A successful input preflight with the intended job ID returns both the raw input digest and a contextual receipt digest. Structured completion requires both; the full receipt is preserved in its lifecycle event and checked against the immutable run, stage, job, kind, input digest, and canonical artifact digest.
 
 Screening evaluators use a role-safe batch view:
 
@@ -69,7 +69,7 @@ Screening evaluators use a role-safe batch view:
 python3 scripts/opportunity.py status <run-id> --batch <batch-id>
 ```
 
-It returns only that lane-balanced batch plus immutable founder and evaluator bindings. It omits other batches, scores, rankings, portfolio state, unrelated jobs, campaign state, and history.
+It returns only that lane-balanced batch plus immutable founder and evaluator bindings. It omits other batches, scores, rankings, portfolio state, unrelated jobs, campaign state, and history. Returned artifact and snapshot paths are relative to the run directory. Include that directory in each scoped assignment, and require the role to read and hash-verify each returned snapshot.
 
 When the configured primary cutoff is close, `advance` writes the deterministic secondary plan and remains in calibration. Assign every listed set to a fresh evaluator through the candidate-only view and the `secondary-evaluation` artifact kind:
 
