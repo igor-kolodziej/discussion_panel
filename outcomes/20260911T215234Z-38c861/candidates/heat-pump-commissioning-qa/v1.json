@@ -1,0 +1,134 @@
+{
+  "candidate_id": "heat-pump-commissioning-qa",
+  "claims": [
+    {
+      "claim_id": "hp-signal",
+      "claim_type": "other",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/nfosigw/nowe-zasady-na-liscie-zum-wiekszy-wybor-urzadzen-z-troska-o-beneficjentow"
+      ],
+      "statement": "From 29 April 2025, updated ZUM rules require each submitted heating device to be registered in EPREL, signaling tighter documented product-quality purchasing in subsidized installations."
+    },
+    {
+      "claim_id": "hp-paid-event",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://www.gov.pl/web/nfosigw/nowe-zasady-na-liscie-zum-wiekszy-wybor-urzadzen-z-troska-o-beneficjentow"
+      ],
+      "statement": "Installers and homeowners currently pay for commissioning, service callbacks, and evidence needed for eligible high-quality installations; actual callback losses are unknown."
+    },
+    {
+      "claim_id": "hp-control",
+      "claim_type": "founder_control_point_path",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://www.gov.pl/web/nfosigw/nowe-zasady-na-liscie-zum-wiekszy-wybor-urzadzen-z-troska-o-beneficjentow"
+      ],
+      "statement": "A family-company operating relationship could support a consented pilot, but no customer files, equipment telemetry, or exclusive channel rights are currently granted."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Heat-pump installer owner or service manager",
+    "bundling_resistance": "Manufacturers provide commissioning apps; independent cross-brand callback analytics and installer proof packs are the wedge",
+    "customer_relationship_owner": "Unknown today; proposed installer contracts with homeowner consent",
+    "distribution_origin": "Heat-pump installers and wholesalers, beginning with an arm's-length family-company pilot only if formally approved",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Assumption: 2,000-7,000 PLN per installer",
+      "cash_conversion": "Onboarding upfront and per-installation credits prepaid",
+      "contribution_margin": "Assumption: 55-75% after sensors and remote specialist review",
+      "delivery_and_support_costs": "Assumption: 1-2 hours remote review per installation plus installer field labor",
+      "overhead_and_compliance": "Electrical/HVAC scope review, device certification, GDPR, and professional liability",
+      "revenue_basis": "Per commissioned system plus monitoring subscription",
+      "variable_costs": "Optional sensors, connectivity, telemetry storage, and specialist escalation"
+    },
+    "likely_incumbent_response": "Heat-pump OEMs expand native commissioning and remote diagnostics",
+    "paid_event_or_measurable_loss": "Current installer labor and travel for commissioning documentation, misconfiguration diagnosis, and avoidable callback visits",
+    "payer": "Regional heat-pump installation company",
+    "purchase_trigger": "Repeated callbacks, subsidy documentation requirements, or expansion across multiple equipment brands",
+    "renewal_event": "Each new installation and annual fleet monitoring"
+  },
+  "contrary_evidence": [
+    "EPREL registration concerns product eligibility, not proof that commissioning defects are widespread.",
+    "OEM tools may already satisfy installers using one brand."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Proposed workflow-integration agreement for installer checklists and consented device telemetry; unsigned",
+    "acquisition_instrument_type": "workflow_integration_agreement",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Sell a standalone commissioning checklist and uploaded-log review without integrations",
+    "current_owner": "Installers and homeowners control commissioning records and telemetry; manufacturers control device APIs",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "Unknown today; proposed installer contracts with homeowner consent",
+    "duration": "Unknown until signed",
+    "exclusivity": "nonexclusive",
+    "founder_access_basis": "operating_relationship",
+    "founder_access_description": "The founder may request an arm's-length pilot through the family renewable business, but no data, staff time, customers, or rights are assumed",
+    "launch_controller": "Prospective business for QA scoring after consent; installer remains accountable for physical work",
+    "mechanism_control": "unknown",
+    "renewal": "Proposed annual installer agreement; unsigned",
+    "replaceability": "replaceable",
+    "revocability": "unknown",
+    "status": "unknown",
+    "subject": "Installer commissioning record and consented telemetry workflow",
+    "subject_type": "workflow_position",
+    "transferability": "consent_required"
+  },
+  "discovery_lane": "weak-signal",
+  "economics": {
+    "acquisition_route": "Interview installers, measure callback cost, run 20 checklist-only commissions, then add telemetry for one brand",
+    "capital_required_pln": 40000,
+    "founder_net_worth_path": "Assumption: 20,000 annual commissions at 250 PLN plus monitoring produces over 5m PLN revenue; with 20% owner earnings and retained product equity, 5m PLN net worth is plausible in 6-10 years. Installation volume and savings proof are unknown.",
+    "founder_time": "15-25 hours weekly; physical commissioning stays with licensed installers",
+    "gross_margin_basis": "Per-job and monitoring revenue less sensor, connectivity, specialist review, and support",
+    "payback": "Assumption: under 6 months if the product prevents one 800-1,500 PLN callback per several installations",
+    "pricing": "Assumption: 150-400 PLN per commission plus 20-50 PLN per system monthly monitoring",
+    "retention_or_repeat": "Repeated on every installation and through service life"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Cross-brand commissioning benchmarks tied to callbacks and seasonal performance",
+    "customer": "Regional Polish heat-pump installers",
+    "distribution_mechanism": "Wholesaler and installer referrals",
+    "offer_and_business_model": "Per-installation QA proof pack and remote monitoring",
+    "payer_and_paid_event": "Installer pays to reduce commissioning documentation labor and callbacks",
+    "problem_trigger": "Subsidized-device purchasing now uses tighter product-registration rules"
+  },
+  "founder_fit": [
+    "Family renewable-energy adjacency can enable a lawful test without assuming access.",
+    "Sensor analytics match the founder's data-science interests.",
+    "Installer-led fieldwork keeps the founder out of constant onsite service."
+  ],
+  "parent": null,
+  "risks": [
+    "Weak evidence that ZUM changes translate into QA demand.",
+    "Hardware integrations may be fragmented.",
+    "Advice errors could affect heating performance and warranties."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://www.gov.pl/web/nfosigw/nowe-zasady-na-liscie-zum-wiekszy-wybor-urzadzen-z-troska-o-beneficjentow"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "usage_based_service",
+    "commercial_model_descriptor": "per installation commissioning verification",
+    "control_point_category": "operating_relationship",
+    "control_point_descriptor": "installer side proof and callback feedback loop",
+    "critical_dependency_category": "supply_partner",
+    "critical_dependency_descriptor": "installer participation and device telemetry access"
+  },
+  "structure": {
+    "commercial_archetype": "Per-installation verification service",
+    "control_point": "Commissioning evidence and callback dataset",
+    "critical_dependency": "Installer adoption and OEM connectivity"
+  },
+  "thesis": "Tighter eligible-device purchasing can support a cross-brand commissioning proof layer if installers confirm callbacks are a costly unresolved loss.",
+  "title": "Heat-Pump Commissioning QA Loop",
+  "uncertainties": [
+    "Callback incidence and preventability are unknown.",
+    "Installer willingness to share outcomes is unknown.",
+    "Required certifications for remote recommendations are unknown."
+  ],
+  "version": 1
+}

@@ -1,0 +1,116 @@
+{
+  "assumptions": [
+    "The prospective business does not itself perform regulated market functions without the required authorization or licensed partner.",
+    "Installer relationships and customer data are available only through explicit consent-based contracts.",
+    "The initial 80,000 PLN funds analytics and a narrow integration pilot rather than battery assets."
+  ],
+  "base_score": 5,
+  "candidate_id": "sme-battery-flexibility-pool",
+  "candidate_sha256": "c5d7d1ea1996dd50c750fd43228d8df4a8bbd9c38cfe0542213e41b308889bcd",
+  "candidate_version": 1,
+  "constrained_score": 4.6,
+  "evaluation_type": "working_screening",
+  "evidence_needed_for_higher_score": "A signed aggregator sandbox, verified Polish revenue stack and minimum portfolio size, capacity reservations from 20-50 compatible sites, measured net revenue per site, dispatch reliability, override behavior, settlement timing, and conservative unit economics.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "Small flexible assets require contractual aggregation, verified baselines, and settlement access before their fragmented capacity can be monetized.",
+      "score": 8,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Lower bills and flexibility revenue are measurable outcomes, but Polish revenue stacks, site-level value, and SME willingness to surrender dispatch rights are unknown.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Recurring platform and performance revenue could scale, but partner shares, telemetry, integrations, settlement lag, field support, and 24-36 month payback make economics fragile.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Compatible SMEs recruited through installers are a coherent beachhead, but the available near-term Polish portfolio and minimum viable aggregation scale are not established.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "A vendor-neutral pool could occupy a niche, yet licensed aggregators, utilities, and OEMs control settlement, supply relationships, or hardware and can disintermediate it.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A functioning pool can extend across batteries, EV chargers, controllable loads, installers, regions, and additional energy-market revenue streams.",
+      "score": 8,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Contracted capacity and dispatch-response history can compound, but no capacity rights exist and customer overrides or partner dependence can weaken the moat.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "Vendor-neutral orchestration may unlock otherwise inaccessible value, but the incremental economics versus OEM or utility offerings are unproven.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "EU policy favors storage, demand response, and active participation, although Polish implementation and monetization readiness remain uncertain.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "Installers offer a plausible enrollment channel, but no consented customer access, signed distribution, aggregator relationship, or site CAC is available.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "The concept requires device integrations, reliable baselines, cybersecurity, customer contracts, and licensed market access, exceeding what AI alone or a part-time founder can solve.",
+      "score": 3,
+      "status": "scored"
+    }
+  ],
+  "final_score": 4.6,
+  "highest_value_structural_change": "Obtain a contractual white-label role with a licensed aggregator that fixes market access, settlement economics, customer ownership boundaries, and protection against disintermediation.",
+  "interaction_adjustment": -0.4,
+  "judge_id": "judge-screening-batch-05-gdxvxpjx",
+  "main_structural_strength": "If contractual capacity is secured, recurring dispatch data and portfolio density can create a scalable coordination asset with broad expansion options.",
+  "primary_score_limiter": "The business lacks control of every essential rail—devices, dispatch rights, customer relationships, metering, market access, and settlement.",
+  "qualified": false,
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 3,
+  "strongest_disconfirming_evidence": "Polish market-access rules may not support small portfolios, while hardware fragmentation and customer overrides can destroy the dispatch reliability required for revenue.",
+  "unrounded_score": 4.6
+}

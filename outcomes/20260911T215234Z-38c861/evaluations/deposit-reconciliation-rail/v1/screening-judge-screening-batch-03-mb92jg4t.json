@@ -1,0 +1,116 @@
+{
+  "assumptions": [
+    "Regional chains encounter material mismatches not already resolved by their POS vendor or deposit-system operator.",
+    "Retailer-side exports contain enough common identifiers for a useful CSV-first product.",
+    "The founder can use contractors or later hires for implementations while remaining within the part-time constraint."
+  ],
+  "base_score": 4.97,
+  "candidate_id": "deposit-reconciliation-rail",
+  "candidate_sha256": "f1c323e57827c3e0f7940a25ff0179a7aa752f2fd71c238762483a75624a6169",
+  "candidate_version": 1,
+  "constrained_score": 4.77,
+  "evaluation_type": "working_screening",
+  "evidence_needed_for_higher_score": "A paid regional-chain pilot using real statements that demonstrates recurring discrepancies, material labor or cash loss, a short payback period, and reliable reconciliation across at least two operator or POS formats, followed by a signed renewable integration agreement.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "A new deposit-return flow genuinely creates reconciliation across checkout, returns, logistics, and operator ledgers; the cross-operator exception layer is a coherent wedge, though its incremental need beyond existing systems is unproven.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Ledger discrepancies and staff effort can create measurable losses, but no retailer workaround cost, transaction density, paid pilot, or budget commitment establishes that the pain is large enough for the proposed spend.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Implementation fees plus recurring per-store revenue offer decent cash conversion and potential software margins, but the 60-75% contribution margin, CAC, support burden, payback, and 3,000-store wealth path are assumptions vulnerable to bespoke integrations.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Regional Polish retail chains facing multiple ledgers form a specific and potentially meaningful beachhead, although the reachable number of chains with unresolved cross-operator complexity is unknown.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "POS vendors and licensed system operators already control relevant workflows and can bundle reconciliation. A neutral cross-operator position could matter, but the company currently controls neither data nor channel.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "Successful mappings could extend across operators, POS systems, retail formats, settlement analytics, and adjacent packaging-compliance workflows.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Accumulated exception mappings and embedded workflows could create switching costs, but integrations are nonexclusive, counterparties retain the data, and incumbents can reproduce common reconciliation functions.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "A consolidated exception record may reduce close time and manual investigation, but no evidence quantifies improvement over operator dashboards, POS modules, or retailer spreadsheets.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "The system has recently begun operating, so retailers are forming processes and new transaction volumes should expose gaps; gradual packaging rollout tempers immediate urgency.",
+      "score": 8,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "Direct enterprise outreach and reseller partnerships are plausible but unsigned, socially demanding, and dependent on parties that may sell competing modules. The founder has no current retailer access.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "A CSV-first test fits the founder's capital and analytical skills, but production requires operator access, accounting accuracy, security, enterprise sales, and management of settlement liability.",
+      "score": 5,
+      "status": "scored"
+    }
+  ],
+  "final_score": 4.8,
+  "highest_value_structural_change": "Secure a distribution and data-access agreement with a POS reseller or deposit-system operator that makes the product a repeatable multi-chain exception layer rather than a series of direct bespoke integrations.",
+  "interaction_adjustment": -0.2,
+  "judge_id": "judge-screening-batch-03-mb92jg4t",
+  "main_structural_strength": "A recurring, regulation-created transaction flow can generate durable reconciliation demand and reusable cross-system exception mappings.",
+  "primary_score_limiter": "The business lacks control of the transaction data and has not shown that incumbent modules leave a sufficiently costly cross-operator gap.",
+  "qualified": false,
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 3,
+  "strongest_disconfirming_evidence": "POS suppliers and deposit-system operators may already cover most reconciliation and can bundle improvements into systems they control.",
+  "unrounded_score": 4.77
+}

@@ -1,0 +1,116 @@
+{
+  "assumptions": [
+    "A meaningful share of first operators receive malformed or invalid plot data that existing platforms do not readily repair.",
+    "Customers will pay batch minimums sufficient to cover analyst intervention rather than only low per-plot rates.",
+    "The service can contractually limit its role to technical validation while operators retain regulatory responsibility."
+  ],
+  "base_score": 5.83,
+  "candidate_id": "eudr-geolocation-normalizer",
+  "candidate_sha256": "103310c35c207be525364103d54a4efda7a0abe97d008b994247535ca1eec2d6",
+  "candidate_version": 1,
+  "constrained_score": 5.83,
+  "evaluation_type": "working_screening",
+  "evidence_needed_for_higher_score": "Several paid operator batches documenting invalid-plot incidence, remediation minutes, acceptance outcomes, avoided delays, realized contribution margin, and repeat usage, followed by an integration or referral agreement with a commodity consultant or traceability platform.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "Focusing on the narrow geometry-remediation gate avoids building a full traceability platform and targets a concrete failure mode before submission; actual invalid-file prevalence and separability are unknown.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Invalid plots can delay due diligence or shipments, making remediation valuable, but no operator has confirmed failure volume, ownership of the remediation budget, or willingness to buy a standalone tool.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Setup and usage fees can scale with activity and prepaid batches support cash flow, but low per-plot pricing may not cover analyst-heavy supplier remediation, channel costs, and required specialist overhead.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Operators in one commodity with messy supplier geometry form a precise beachhead, though the number with enough invalid plots to support a standalone vendor is not evidenced.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "API-neutral normalization and rapid remediation can win a specialist niche, but traceability suites naturally control the adjacent workflow and can bundle geometry validation.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "The error corpus and supplier workflow could extend into broader evidence QA, mapping, risk screening, other commodities, and other geospatial compliance uses.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "A permissioned error corpus and remediation playbooks can improve automation, but source data rights are absent, standard geometry checks are reproducible, and platform integrations are unsigned.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "A focused service may remediate messy inputs faster than generic suites, yet no benchmark demonstrates higher acceptance, faster turnaround, or lower total cost.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "Approaching EUDR dates create a present validation window for responsible operators, although delays and simplifications have reduced urgency for some firms.",
+      "score": 8,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "Commodity consultants and certification partners could efficiently refer affected operators, but the founder has no current access and integrations with traceability vendors may be difficult because they can build the feature.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "Paid batch validation is technically and financially feasible part-time with a geospatial contractor, but supplier support, lawful data handling, false assurance, and unpredictable remediation effort are significant.",
+      "score": 6,
+      "status": "scored"
+    }
+  ],
+  "final_score": 5.8,
+  "highest_value_structural_change": "Bundle normalization with supplier-facing remediation and obtain a traceability-platform channel agreement, so the company controls resolution outcomes and recurring volume rather than selling a commodity geometry check.",
+  "interaction_adjustment": 0,
+  "judge_id": "judge-screening-batch-03-mb92jg4t",
+  "main_structural_strength": "The narrow, measurable pre-submission failure point supports a low-capital paid service that can generate a valuable error corpus.",
+  "primary_score_limiter": "It is unproven that invalid geometry is frequent and costly enough to sustain a standalone business rather than a bundled platform feature.",
+  "qualified": false,
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 3,
+  "strongest_disconfirming_evidence": "Full traceability suites can include geometry normalization, while regulatory delays and simplifications reduce urgency and the addressable customer set.",
+  "unrounded_score": 5.83
+}

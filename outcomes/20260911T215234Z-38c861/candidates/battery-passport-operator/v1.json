@@ -1,0 +1,136 @@
+{
+  "candidate_id": "battery-passport-operator",
+  "claims": [
+    {
+      "claim_id": "battery-dpp-trigger",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://single-market-economy.ec.europa.eu/single-market/digital-product-passport/batteries_en",
+        "https://single-market-economy.ec.europa.eu/news/digital-product-passport-registry-now-live-2026-07-20_en"
+      ],
+      "statement": "The EU DPP Registry entered testing in July 2026, and passports become mandatory on 18 February 2027 for specified EV, light-transport, home-storage, and industrial batteries."
+    },
+    {
+      "claim_id": "battery-dpp-payer",
+      "claim_type": "payer_and_budget",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://single-market-economy.ec.europa.eu/single-market/digital-product-passport/batteries_en"
+      ],
+      "statement": "The economic operator placing the finished battery on the market must create and maintain the passport, making its compliance or product-data budget the likely payer."
+    },
+    {
+      "claim_id": "battery-dpp-control",
+      "claim_type": "founder_control_point_path",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://single-market-economy.ec.europa.eu/news/digital-product-passport-registry-now-live-2026-07-20_en"
+      ],
+      "statement": "A passport operator needs manufacturer data rights and compliant registry interoperability; neither is currently acquired."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Battery product, compliance, or operations director",
+    "bundling_resistance": "Large product-lifecycle platforms can bundle DPP; a Poland-focused connector for storage assemblers and importers is the wedge",
+    "customer_relationship_owner": "Unknown today; proposed direct contracts with battery assemblers and importers",
+    "distribution_origin": "Battery testing labs, renewable installers, industry associations, and direct outreach",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Assumption: 10,000-35,000 PLN per operator",
+      "cash_conversion": "Implementation milestones prepaid; annual hosting in advance",
+      "contribution_margin": "Assumption: 60-80% after data onboarding and support",
+      "delivery_and_support_costs": "Assumption: 80-300 implementation hours per product family",
+      "overhead_and_compliance": "Security, standards conformance, product-liability boundaries, backups, and legal review",
+      "revenue_basis": "Implementation plus annual fee by passport or SKU volume",
+      "variable_costs": "Identifiers, storage, registry calls, data validation, and support"
+    },
+    "likely_incumbent_response": "PLM, ERP, certification, and traceability vendors add battery-passport modules",
+    "paid_event_or_measurable_loss": "Current engineering and compliance labor mapping product data into the now-live test infrastructure before the February 2027 mandate",
+    "payer": "Economic operator placing covered finished batteries on the EU market",
+    "purchase_trigger": "Registry testing, customer tender, or inability to assemble mandatory fields before launch",
+    "renewal_event": "Annual hosting plus passport updates throughout battery life"
+  },
+  "contrary_evidence": [
+    "Detailed implementation elements continued arriving in 2026, raising scope uncertainty.",
+    "Large manufacturers may build internally or use established PLM vendors."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Proposed data-rights agreement granting product-record ingestion and passport maintenance authority; unsigned",
+    "acquisition_instrument_type": "data_rights_agreement",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Sell a schema-readiness assessment and export package without hosting passports",
+    "current_owner": "Battery economic operators own product data; the EU controls registry infrastructure",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "Unknown today; proposed direct contracts with battery assemblers and importers",
+    "duration": "Unknown until signed",
+    "exclusivity": "nonexclusive",
+    "founder_access_basis": "none",
+    "founder_access_description": "Public test documentation can support prototyping, but no manufacturer data rights exist",
+    "launch_controller": "Prospective business after customer mandate; economic operator remains legally responsible",
+    "mechanism_control": "unknown",
+    "renewal": "Proposed multi-year hosting with annual renewal; unsigned",
+    "replaceability": "replaceable",
+    "revocability": "unknown",
+    "status": "unknown",
+    "subject": "Manufacturer-authorized battery passport record and maintenance right",
+    "subject_type": "dataset",
+    "transferability": "consent_required"
+  },
+  "discovery_lane": "weak-signal",
+  "economics": {
+    "acquisition_route": "Build against the registry test environment, sell readiness audits to storage importers, then onboard one product family",
+    "capital_required_pln": 80000,
+    "founder_net_worth_path": "Assumption: 100 operators averaging 100,000 PLN annual recurring revenue yields 10m PLN ARR; specialist costs still permit a possible 5m PLN founder net-worth path in 6-10 years. Market concentration and implementation effort are unknown.",
+    "founder_time": "20-25 hours weekly until implementation staff are hired",
+    "gross_margin_basis": "Hosting and maintenance revenue less onboarding, validation, and compliance support",
+    "payback": "Assumption: 12-18 months because acquisition and implementation are enterprise-heavy",
+    "pricing": "Assumption: 30,000-150,000 PLN implementation plus 2-10 PLN per passport annually subject to minimum",
+    "retention_or_repeat": "Multi-year records updated through the battery lifecycle"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Reusable connectors and field-quality benchmarks across battery supply chains",
+    "customer": "EU battery storage assemblers and importers",
+    "distribution_mechanism": "Testing-lab and renewable-channel referrals",
+    "offer_and_business_model": "Battery-passport implementation and hosted data service",
+    "payer_and_paid_event": "Economic operator pays engineering and compliance labor to create mandatory passports",
+    "problem_trigger": "The registry is live for testing shortly before the first mandatory date"
+  },
+  "founder_fit": [
+    "Renewable-energy context offers domain adjacency without assuming family data rights.",
+    "Data engineering fits the founder's technical training.",
+    "High-value B2B work can start with a bounded readiness audit."
+  ],
+  "parent": null,
+  "risks": [
+    "Standards and access rules may still change.",
+    "Enterprise implementations may exceed part-time capacity.",
+    "Incumbent PLM vendors have strong integration advantages."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://single-market-economy.ec.europa.eu/single-market/digital-product-passport/batteries_en",
+    "https://single-market-economy.ec.europa.eu/news/digital-product-passport-registry-now-live-2026-07-20_en"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "data_or_intelligence",
+    "commercial_model_descriptor": "hosted regulated battery product records",
+    "control_point_category": "proprietary_dataset",
+    "control_point_descriptor": "customer authorized lifecycle passport record",
+    "critical_dependency_category": "regulatory_approval",
+    "critical_dependency_descriptor": "eu registry and final technical rule compatibility"
+  },
+  "structure": {
+    "commercial_archetype": "Regulated product-data operator",
+    "control_point": "Maintained passport record for each battery",
+    "critical_dependency": "Manufacturer data rights and registry conformance"
+  },
+  "thesis": "The live registry and near mandate create a time-bounded implementation market among smaller battery operators lacking enterprise PLM capability.",
+  "title": "Battery Passport Operator for Storage SMEs",
+  "uncertainties": [
+    "Number of reachable small operators is unknown.",
+    "Final service-provider obligations may affect cost.",
+    "Per-passport support burden is unknown."
+  ],
+  "version": 1
+}

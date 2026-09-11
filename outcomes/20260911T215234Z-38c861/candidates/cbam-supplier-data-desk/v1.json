@@ -1,0 +1,134 @@
+{
+  "candidate_id": "cbam-supplier-data-desk",
+  "claims": [
+    {
+      "claim_id": "cbam-trigger",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en"
+      ],
+      "statement": "CBAM's definitive regime has applied since 1 January 2026; importers over the 50-tonne threshold need authorized-declarant status, embedded-emissions declarations, and certificates."
+    },
+    {
+      "claim_id": "cbam-paid-event",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en"
+      ],
+      "statement": "Importers now buy CBAM certificates and must substantiate embedded emissions, creating both certificate spend and paid supplier-data collection work."
+    },
+    {
+      "claim_id": "cbam-payer",
+      "claim_type": "payer_and_budget",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en"
+      ],
+      "statement": "The likely payer is an import, customs, procurement, or sustainability budget owner at a mid-market importer; service price tolerance is unknown."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Customs, procurement, finance, or sustainability director",
+    "bundling_resistance": "Customs brokers and ESG suites can bundle filing; supplier chasing and auditable data provenance are the wedge",
+    "customer_relationship_owner": "Unknown today; proposed direct contracts with EU mid-market importers",
+    "distribution_origin": "Customs brokers, freight forwarders, trade associations, and targeted importer lists",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Assumption: 8,000-30,000 PLN per importer",
+      "cash_conversion": "Implementation fee upfront and annual platform/managed-service fee",
+      "contribution_margin": "Assumption: 50-70% after carbon specialist review and supplier operations",
+      "delivery_and_support_costs": "Assumption: 60-250 hours for initial supplier onboarding depending on portfolio",
+      "overhead_and_compliance": "Carbon-methodology review, professional liability, security, and multilingual supplier support",
+      "revenue_basis": "Annual base fee plus supplier or shipment tier",
+      "variable_costs": "Supplier outreach, verification support, registry operations, and specialist review"
+    },
+    "likely_incumbent_response": "Customs brokers and enterprise ESG vendors extend CBAM modules down-market",
+    "paid_event_or_measurable_loss": "Current certificate purchases, consultant fees, and staff time obtaining and validating embedded-emissions data from non-EU suppliers",
+    "payer": "EU importer of iron, steel, aluminium, cement, fertiliser, electricity, or hydrogen above applicable threshold",
+    "purchase_trigger": "Authorization filing, supplier-data gaps, first certificate forecast, or customs-broker escalation",
+    "renewal_event": "Annual CBAM declaration cycle and ongoing shipment updates"
+  },
+  "contrary_evidence": [
+    "The 50-tonne threshold removes many small importers.",
+    "Customs brokers may already own the trusted relationship."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Proposed data-rights and service agreement authorizing supplier outreach and emissions-document storage; unsigned",
+    "acquisition_instrument_type": "data_rights_agreement",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Provide importer-side templates and gap analysis without contacting suppliers or holding source documents",
+    "current_owner": "Importers and their non-EU suppliers control commercial and emissions data",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "Unknown today; proposed direct contracts with EU mid-market importers",
+    "duration": "Unknown until signed",
+    "exclusivity": "nonexclusive",
+    "founder_access_basis": "none",
+    "founder_access_description": "No importer or supplier data rights are presently held",
+    "launch_controller": "Prospective business after importer mandate; suppliers remain source-data controllers",
+    "mechanism_control": "unknown",
+    "renewal": "Proposed annual contract; unsigned",
+    "replaceability": "replaceable",
+    "revocability": "unknown",
+    "status": "unknown",
+    "subject": "Auditable supplier emissions-data collection mandate",
+    "subject_type": "right",
+    "transferability": "consent_required"
+  },
+  "discovery_lane": "weak-signal",
+  "economics": {
+    "acquisition_route": "Offer a fixed-fee supplier-data gap audit to five importers, then convert one to managed collection and registry preparation",
+    "capital_required_pln": 50000,
+    "founder_net_worth_path": "Assumption: 150 importers at 60,000 PLN annual revenue yields 9m PLN ARR; with 15-25% owner earnings and retained equity, 5m PLN founder net worth is plausible in 6-9 years. Sales cycles, specialist costs, and liability remain unknown.",
+    "founder_time": "20-25 hours weekly initially; supplier operations require early hiring",
+    "gross_margin_basis": "Managed-service revenue less multilingual operations and carbon-methodology review",
+    "payback": "Assumption: 12 months at 15,000 PLN acquisition cost and 1,500 PLN monthly contribution",
+    "pricing": "Assumption: 15,000-80,000 PLN annually plus onboarding",
+    "retention_or_repeat": "Annual declarations with continuous shipment and supplier updates"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Supplier response benchmarks, validated document mappings, and multilingual playbooks",
+    "customer": "Mid-market EU CBAM importers",
+    "distribution_mechanism": "Customs-broker and freight-forwarder referrals",
+    "offer_and_business_model": "Managed supplier emissions-data desk",
+    "payer_and_paid_event": "Importer pays for supplier-data work and to control CBAM certificate exposure",
+    "problem_trigger": "CBAM moved from transitional reporting to certificate-bearing definitive operation"
+  },
+  "founder_fit": [
+    "Data validation and financial modeling fit the founder's skills.",
+    "Can start as a scoped analytical service before software investment.",
+    "Partner distribution can reduce high-energy direct selling."
+  ],
+  "parent": null,
+  "risks": [
+    "Methodology errors create material liability.",
+    "Supplier nonresponse can make delivery uneconomic.",
+    "Brokers and ESG platforms have stronger distribution."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "managed_service",
+    "commercial_model_descriptor": "cross border embedded emissions data operations",
+    "control_point_category": "proprietary_dataset",
+    "control_point_descriptor": "permissioned supplier document and provenance ledger",
+    "critical_dependency_category": "data_provider",
+    "critical_dependency_descriptor": "non eu supplier emissions evidence"
+  },
+  "structure": {
+    "commercial_archetype": "Managed regulatory data operations",
+    "control_point": "Auditable supplier provenance ledger",
+    "critical_dependency": "Supplier cooperation and carbon-methodology expertise"
+  },
+  "thesis": "CBAM's shift to certificate-bearing operation converts messy supplier emissions data from a reporting nuisance into a cash-exposure workflow.",
+  "title": "CBAM Supplier Data Desk",
+  "uncertainties": [
+    "Polish and regional importer counts above threshold are unknown.",
+    "Supplier response rates are unknown.",
+    "Required verifier involvement and insurance cost are unknown."
+  ],
+  "version": 1
+}

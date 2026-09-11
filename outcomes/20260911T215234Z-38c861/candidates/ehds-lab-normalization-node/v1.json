@@ -1,0 +1,127 @@
+{
+  "candidate_id": "ehds-lab-normalization-node",
+  "claims": [
+    {
+      "claim_id": "future-deadline",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://health.ec.europa.eu/ehealth-digital-health-and-care/european-health-data-space-regulation-ehds_en"
+      ],
+      "statement": "EHDS phases patient summaries and prescriptions into exchange by 2029 and lab results, imaging and discharge reports by 2031, creating future interoperability work for health-data holders and EHR vendors."
+    },
+    {
+      "claim_id": "format",
+      "claim_type": "other",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1748603155427&uri=CELEX%3A32025R0327"
+      ],
+      "statement": "EHDS establishes common EHR rules and mandatory harmonized interoperability and logging components, but implementing specifications and Polish procurement routes remain material unknowns."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Private laboratory CIO, EHR product head or clinic network operations director",
+    "bundling_resistance": "Lab-specific terminology mapping, data-quality monitoring and migration tooling; EHR vendors can internalize",
+    "customer_relationship_owner": "unknown today; proposed future ownership by the prospective business under direct laboratory or EHR-vendor contracts",
+    "distribution_origin": "EHR vendors, laboratory-information-system integrators and health IT consultants",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Assumption: 10,000-30,000 PLN per institutional account",
+      "cash_conversion": "Milestone implementation billing plus annual support prepaid",
+      "contribution_margin": "Assumption: 50-70% after clinical informatics and security costs",
+      "delivery_and_support_costs": "Integration engineering, clinical terminology review and on-call support",
+      "overhead_and_compliance": "GDPR counsel, security certification, insurance and medical-software classification review",
+      "revenue_basis": "Integration license, implementation and annual monitoring",
+      "variable_costs": "Secure cloud, terminology licenses, integration and clinical specialist time"
+    },
+    "likely_incumbent_response": "EHR/LIS incumbents add native EHDS export and logging modules",
+    "paid_event_or_measurable_loss": "Paid interoperability implementation or avoided failed exchange/rework when lab data must enter EHDS-compatible records",
+    "payer": "Private laboratory network, clinic group or EHR/LIS vendor",
+    "purchase_trigger": "2029-2031 roadmap, EHR replacement or failed interoperability test",
+    "renewal_event": "Annual monitoring, specification changes and new interfaces"
+  },
+  "contrary_evidence": [
+    "National infrastructure may absorb much of the normalization layer.",
+    "Clinical integrations have long sales and certification cycles."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "No present health-data rights; proposed data-processing and workflow-integration agreements",
+    "acquisition_instrument_type": "unknown",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Use synthetic data for conformance tools or sell to an EHR vendor instead of providers",
+    "current_owner": "Patients and health providers hold data rights; EHR/LIS vendors control source systems",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "unknown today; proposed future ownership by the prospective business under direct laboratory or EHR-vendor contracts",
+    "duration": "unknown; proposed multi-year support term",
+    "exclusivity": "unknown",
+    "founder_access_basis": "none",
+    "founder_access_description": "Medical-student relationship provides no patient, clinic or university data rights",
+    "launch_controller": "Prospective business only after data-processing agreements and security validation",
+    "mechanism_control": "dependent",
+    "renewal": "unknown",
+    "replaceability": "replaceable",
+    "revocability": "unknown",
+    "status": "unknown",
+    "subject": "Laboratory-result normalization and conformance layer",
+    "subject_type": "workflow_position",
+    "transferability": "nontransferable"
+  },
+  "discovery_lane": "future-backcast",
+  "economics": {
+    "acquisition_route": "Build synthetic-data conformance tests, win one paid readiness assessment, then integrate through an established LIS partner",
+    "capital_required_pln": 90000,
+    "founder_net_worth_path": "Assumption: 60 institutions at 180,000 PLN ARR-equivalent and 22% EBITDA yields about 2.4m PLN EBITDA; 4-6x supports 5m+ founder value in years 8-12. Procurement and certification may extend timing.",
+    "founder_time": "20-25 hours weekly for prototypes; full clinical deployment likely requires leaving employment after traction",
+    "gross_margin_basis": "License and support less secure hosting, integration and clinical review",
+    "payback": "Assumption: 3-5 institutional implementations repay initial build in 24-36 months",
+    "pricing": "Assumption: 80,000-250,000 PLN implementation plus 40,000-180,000 PLN annual monitoring",
+    "retention_or_repeat": "Sticky interfaces, continuing quality monitoring and evolving specifications"
+  },
+  "fingerprint": {
+    "compounding_advantage": "De-identified mapping rules and conformance-test corpus",
+    "customer": "Polish private labs, clinics and EHR/LIS vendors",
+    "distribution_mechanism": "Health-IT integration partnerships",
+    "offer_and_business_model": "Interoperability integration license plus monitoring",
+    "payer_and_paid_event": "Health-data system owner pays at readiness and interface go-live",
+    "problem_trigger": "EHDS exchange deadlines expose inconsistent laboratory semantics"
+  },
+  "founder_fit": [
+    "Biosignal, health and data backgrounds align.",
+    "Synthetic-data validation can start without sensitive access.",
+    "High compliance load is a meaningful drawback."
+  ],
+  "parent": null,
+  "risks": [
+    "Health-data security",
+    "Medical-software classification",
+    "Incumbent control",
+    "Slow procurement"
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://health.ec.europa.eu/ehealth-digital-health-and-care/european-health-data-space-regulation-ehds_en",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1748603155427&uri=CELEX%3A32025R0327"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "licensing_or_royalty",
+    "commercial_model_descriptor": "interoperability connector license and support",
+    "control_point_category": "workflow_integration",
+    "control_point_descriptor": "laboratory result normalization interface",
+    "critical_dependency_category": "integration_platform",
+    "critical_dependency_descriptor": "ehr and lis vendor interfaces"
+  },
+  "structure": {
+    "commercial_archetype": "Licensed regulated-data connector",
+    "control_point": "Validated lab-normalization mappings inside exchange workflow",
+    "critical_dependency": "EHR/LIS integration and lawful health-data processing"
+  },
+  "thesis": "Future state: Polish laboratory results move across EHDS-compatible systems in standardized form. The missing technical mechanism is a validated normalization, logging and conformance node between heterogeneous LIS/EHR systems.",
+  "title": "EHDS Laboratory-Normalization Node",
+  "uncertainties": [
+    "Final technical specifications",
+    "Regulatory classification",
+    "Availability of vendor APIs"
+  ],
+  "version": 1
+}

@@ -1,0 +1,117 @@
+{
+  "assumptions": [
+    "The opportunity is assessed at planning stage, so absent private validation is treated as uncertainty rather than proof of no demand.",
+    "The founder remains employed and can devote no more than five hours per day while validating the business.",
+    "The managed desk does not perform accredited verification and must procure or coordinate qualified external specialists where required.",
+    "Commission default values remain a practical substitute for actual supplier emissions data in at least some importer decisions."
+  ],
+  "base_score": 4.1,
+  "candidate_id": "cbam-supplier-data-desk",
+  "candidate_sha256": "54b01b4d80a8ee03cd0c9daeb43c44d440a13979efc12c61cbf26d43f1180882",
+  "candidate_version": 1,
+  "constrained_score": 3.9,
+  "evaluation_type": "working_development",
+  "evidence_needed_for_higher_score": "Paid pilots with in-scope importers showing price, budget owner, supplier response and defect rates, fully loaded delivery hours, certificate or labor savings, contribution margin, CAC and sales-cycle data, plus signed data-access and retention terms and evidence of second-cycle renewal.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "The certificate-bearing regime turns emissions-data quality into measurable cash exposure, and the recurring supplier-data burden is real. The insight is weakened because Commission default values can substitute for actual supplier data in some cases.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Regulation, certificate purchases, recurring reporting, and a named buyer using an external CBAM solution establish genuine pain and a plausible paid category. No evidence establishes willingness to buy this managed desk, its price tolerance, or the responsible budget owner.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Annual fees, onboarding revenue, and advance payment could support cash generation, but every important unit-economic input is assumed. Open-ended multilingual supplier chasing, specialist review, verification dependencies, insurance, and data defects could overwhelm the proposed margin and part-time operating model.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Covered EU importers are identifiable and regulation creates a focused segment, but the 50-tonne exemption removes the vast majority of importers and concentrates demand among fewer, larger accounts. The size and spend of a Polish or regional mid-market beachhead are unknown.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "The proposed provenance-ledger wedge does not control source measurements, accredited verification, the registry, or customer access. Customs brokers, low-priced specialist software, ESG vendors, and SAP can own or bundle the workflow, making segment domination unlikely without a sharper proprietary position.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "Supplier document mappings and regulatory-data operations could extend across covered materials, geographies, and adjacent trade-compliance workflows. Expansion depends on obtaining reusable data rights and repeatable operations, neither of which is established.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Response benchmarks, document mappings, and multilingual playbooks could improve delivery, but there is no permissioned dataset, retention right, switching-cost evidence, exclusivity, or demonstrated learning advantage. The core workflow is reproducible and exposed to incumbent bundling.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "A managed service may offer more assistance than software alone, especially for messy suppliers, but no quantified superiority in certificate savings, labor reduction, speed, accuracy, or trust is shown. A direct substitute is materially cheaper and default values can eliminate parts of the service.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "The definitive regime began in 2026, certificate prices create current financial exposure, and the first definitive annual cycle creates immediate preparation demand. This strong timing also attracts capable vendors and incumbents.",
+      "score": 8,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "Broker, forwarder, association, and targeted-importer routes are plausible but wholly unvalidated. Brokers can internalize or white-label the service, no referral agreement or pipeline exists, and larger in-scope buyers may require relationship-heavy enterprise selling.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "The founder's analytical skills, AI leverage, and 50,000 PLN starting requirement support a scoped test. Delivery nevertheless depends on supplier responsiveness, carbon-methodology expertise, regulated verification, liability controls, multilingual operations, and early hiring, creating poor fit with limited part-time capacity.",
+      "score": 4,
+      "status": "scored"
+    }
+  ],
+  "final_score": 3.9,
+  "highest_value_structural_change": "Remove open-ended supplier collection from the base offer and anchor the business in a fixed-scope importer-controlled exposure decision workflow, with supplier outreach and accredited verification sold only as prepaid, bounded add-ons.",
+  "interaction_adjustment": -0.2,
+  "judge_id": "judge-development-02-01-255nyeo0",
+  "main_structural_strength": "A live regulatory obligation and certificate expense create a recurring, measurable trigger that supports a narrowly scoped service launch before substantial software investment.",
+  "primary_score_limiter": "The business lacks control of supplier data, verification, distribution, and customer relationships while its labor-intensive economics and willingness to pay remain unvalidated.",
+  "qualified": false,
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 3,
+  "strongest_disconfirming_evidence": "Commission default values can replace actual supplier data in some cases, while low-priced CBAM software and SAP already cover or bundle much of the proposed workflow.",
+  "unrounded_score": 3.9
+}

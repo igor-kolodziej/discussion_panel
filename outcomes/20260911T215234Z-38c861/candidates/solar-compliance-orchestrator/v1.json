@@ -1,0 +1,127 @@
+{
+  "candidate_id": "solar-compliance-orchestrator",
+  "claims": [
+    {
+      "claim_id": "future-state",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high for regulatory timing; medium for willingness to pay",
+      "evidence_refs": [
+        "https://energy.ec.europa.eu/topics/energy-efficiency/energy-performance-buildings/energy-performance-buildings-directive/solar-energy-buildings_en"
+      ],
+      "statement": "By 2030, Polish property portfolios need repeatable site screening, tendering and evidence workflows because EU solar-installation requirements phase in across new and renovated buildings; the measurable loss is delayed permitting, avoidable engineering work and missed compliance dates."
+    },
+    {
+      "claim_id": "payer",
+      "claim_type": "payer_and_budget",
+      "confidence": "medium; pricing is an untested assumption",
+      "evidence_refs": [
+        "https://energy.ec.europa.eu/topics/energy-efficiency/energy-performance-buildings/energy-performance-buildings-directive/zero-emission-buildings_en"
+      ],
+      "statement": "Property owners and facility managers can plausibly fund orchestration from retrofit, engineering or compliance budgets, but Polish purchasing authority and budget size remain unknown."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Head of property, facilities director or portfolio asset manager; exact Polish budget authority unknown",
+    "bundling_resistance": "Independent cross-installer portfolio analytics, audit trail and tender comparability; installers may bundle simpler assessments",
+    "customer_relationship_owner": "unknown today; proposed future ownership by the prospective business through direct portfolio contracts",
+    "distribution_origin": "Direct outreach to commercial-property managers, energy auditors and referral partners; family installer introductions are legally usable only with consent",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Assumption: 3,000-8,000 PLN per won portfolio via targeted outbound and partners; unknown until pilots",
+      "cash_conversion": "Assumption: 30% upfront, 40% after portfolio assessment and 30% on tender completion; enterprise payment delays unknown",
+      "contribution_margin": "Assumption: 55-70% after subcontracted engineering; must be tested",
+      "delivery_and_support_costs": "Assumption: 4,000-12,000 PLN engineering and data work per portfolio plus founder QA",
+      "overhead_and_compliance": "Professional liability insurance, legal review, security, accounting and travel; amount unknown",
+      "revenue_basis": "Fixed portfolio assessment plus per-site tender/orchestration fee",
+      "variable_costs": "Licensed building data, energy-auditor review, travel and contractor time"
+    },
+    "likely_incumbent_response": "PV installers and engineering firms may add free screening to win installation work",
+    "paid_event_or_measurable_loss": "Paid portfolio assessment or avoided rework/delay when a building enters a solar-triggering construction or renovation cycle",
+    "payer": "Commercial building owner, developer or facilities-management company",
+    "purchase_trigger": "Capital plan, roof renovation, permit application or portfolio compliance review",
+    "renewal_event": "New annual capex portfolio, added sites or monitoring subscription"
+  },
+  "contrary_evidence": [
+    "Requirements apply only where suitable and feasible, narrowing addressable sites.",
+    "National implementation and enforcement may vary, and installers may provide the workflow cheaply."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "No instrument currently held; proposed workflow-integration agreement with each property portfolio",
+    "acquisition_instrument_type": "unknown",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Sell standalone screening to another owner or partner with independent energy auditors",
+    "current_owner": "Property owners control building data and procurement; installers and auditors control technical inputs",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "unknown today; proposed future ownership by the prospective business through direct portfolio contracts",
+    "duration": "unknown; proposed 12-month portfolio term",
+    "exclusivity": "unknown",
+    "founder_access_basis": "operating_relationship",
+    "founder_access_description": "Possible consent-based introductions through the parents' renewable-installation company; no company data or customer rights are assumed",
+    "launch_controller": "Prospective business only after signed customer and auditor agreements",
+    "mechanism_control": "dependent",
+    "renewal": "unknown; proposed annual renewal",
+    "replaceability": "replaceable",
+    "revocability": "unknown",
+    "status": "unknown",
+    "subject": "Portfolio-level solar compliance and procurement workflow",
+    "subject_type": "workflow_position",
+    "transferability": "unknown"
+  },
+  "discovery_lane": "future-backcast",
+  "economics": {
+    "acquisition_route": "Validate one paid multi-site assessment, then standardize data intake and add partner auditors/installers without exclusivity",
+    "capital_required_pln": 30000,
+    "founder_net_worth_path": "Assumption: reach 20 portfolios at 35,000 PLN average in year 2, 80 at 45,000 PLN by year 5 and 2.5-4.0m PLN EBITDA by years 7-9; at 4-6x plus reinvested cash, founder value could exceed 5m PLN. Demand, churn and multiples are unknown.",
+    "founder_time": "15-25 hours weekly initially; automate screening and subcontract site work before scale",
+    "gross_margin_basis": "Fees less auditor, engineering, travel, data and support costs",
+    "payback": "Assumption: pilot setup recovered after 2-3 paid portfolios within 12 months",
+    "pricing": "Assumption: 15,000-60,000 PLN per portfolio plus 1,000-3,000 PLN per site monitored",
+    "retention_or_repeat": "Annual capital-plan refresh, additional sites and tender cycles"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Reusable Polish building-rule mappings, benchmark costs and site-conversion data",
+    "customer": "Polish commercial-property portfolios",
+    "distribution_mechanism": "Direct portfolio contracts plus auditor and installer referrals",
+    "offer_and_business_model": "Portfolio solar-readiness assessment and procurement orchestration sold as projects plus monitoring",
+    "payer_and_paid_event": "Property owner pays when a construction or renovation trigger creates a compliance and capex decision",
+    "problem_trigger": "Future solar mandates collide with fragmented site data and procurement"
+  },
+  "founder_fit": [
+    "Data-science automation fits the founder's skills.",
+    "Renewable-installation context offers consent-based learning without relying on confidential assets.",
+    "Can begin with one portfolio while employed."
+  ],
+  "parent": null,
+  "risks": [
+    "Long enterprise sales cycles",
+    "Engineering liability",
+    "Policy transposition uncertainty",
+    "Channel conflict with installers"
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://energy.ec.europa.eu/topics/energy-efficiency/energy-performance-buildings/energy-performance-buildings-directive/solar-energy-buildings_en",
+    "https://energy.ec.europa.eu/topics/energy-efficiency/energy-performance-buildings/energy-performance-buildings-directive/zero-emission-buildings_en"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "managed_service",
+    "commercial_model_descriptor": "portfolio retrofit orchestration fees",
+    "control_point_category": "workflow_integration",
+    "control_point_descriptor": "building capex decision workflow",
+    "critical_dependency_category": "specialist_labor",
+    "critical_dependency_descriptor": "licensed energy auditors and engineers"
+  },
+  "structure": {
+    "commercial_archetype": "Managed compliance and procurement service",
+    "control_point": "Embedded portfolio assessment and tender record",
+    "critical_dependency": "Qualified auditors, installers and customer building data"
+  },
+  "thesis": "Future state: Polish property portfolios routinely convert solar and zero-emission-building rules into capex projects. The missing coordination mechanism is a vendor-neutral workflow joining site data, feasibility, deadlines, tender comparisons and compliance evidence.",
+  "title": "Solar-Compliance Portfolio Orchestrator",
+  "uncertainties": [
+    "Polish transposition details",
+    "Buyer willingness to separate orchestration from installation",
+    "Achievable sales cycle and price"
+  ],
+  "version": 1
+}

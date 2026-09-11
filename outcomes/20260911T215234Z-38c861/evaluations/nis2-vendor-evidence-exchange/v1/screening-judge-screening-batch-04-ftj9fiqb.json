@@ -1,0 +1,116 @@
+{
+  "assumptions": [
+    "The initial product targets one supplier type and a limited control framework.",
+    "Qualified security specialists review evidence rather than AI making unsupported assurance judgments.",
+    "Suppliers retain granular control over which evidence each buyer can access."
+  ],
+  "base_score": 5.67,
+  "candidate_id": "nis2-vendor-evidence-exchange",
+  "candidate_sha256": "4056f0d67fa0fa51430d3181935962d6a3a3b0f9e171303d06423e7477252dfe",
+  "candidate_version": 1,
+  "constrained_score": 5.47,
+  "evaluation_type": "working_screening",
+  "evidence_needed_for_higher_score": "A paid supplier cohort and at least one anchor buyer accepting the standardized profile, measured reduction in questionnaire hours, repeat reuse across buyers, viable specialist-review margins, and credible security and liability controls.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "Reusable, permissioned evidence directly addresses duplicated supplier-assurance work intensified by supply-chain security obligations.",
+      "score": 8,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Repeated questionnaires and scarce security staff imply real labor burden, but neither supplier nor buyer willingness to fund a standardized exchange is validated.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Annual prepaid subscriptions could be attractive, but 15-50 hours of onboarding, specialist review, enterprise sales, security certification, liability, and two-sided support threaten margins and payback.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Polish SME suppliers serving affected enterprises are a definable niche, though applicability, questionnaire intensity, and addressable supplier counts require segmentation.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "Local language and SME specialization may win a niche, but established GRC and procurement platforms have buyer relationships, integrations, and trust advantages.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "Accepted profiles can expand across buyers, standards, tenders, continuous monitoring, remediation partners, insurance, and additional EU geographies.",
+      "score": 8,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "A trusted supplier-buyer network and reusable mappings can compound meaningfully, but only after achieving buyer acceptance; currently no data rights or network exists.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "Evidence reuse can sharply reduce repeated work, yet buyers may still insist on proprietary questionnaires and fresh validation, limiting reuse value.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "NIS2 implementation guidance and heightened supply-chain scrutiny create a strong near-term adoption catalyst amid SME expertise constraints.",
+      "score": 8,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "Cyber advisers and buyer invitations could scale efficiently, but the founder has no anchor buyer, supplier evidence, adviser commitment, or direct security-market access.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "A narrow evidence pack is buildable, but secure custody, expert validation, breach exposure, enterprise trust, variable legal applicability, and marketplace liquidity are demanding for a part-time founder.",
+      "score": 4,
+      "status": "scored"
+    }
+  ],
+  "final_score": 5.5,
+  "highest_value_structural_change": "Start buyer-sponsored with one anchor enterprise that mandates or accepts a standardized evidence profile across its supplier cohort, solving distribution and evidence-acceptance simultaneously.",
+  "interaction_adjustment": -0.2,
+  "judge_id": "judge-screening-batch-04-ftj9fiqb",
+  "main_structural_strength": "If buyer acceptance is achieved, each additional accepted supplier profile and mapping increases reusable network value and retention.",
+  "primary_score_limiter": "The concept depends on two-sided adoption and trust, yet no anchor buyer accepts the evidence and acquisition economics are likely enterprise-heavy.",
+  "qualified": false,
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 3,
+  "strongest_disconfirming_evidence": "Entrenched GRC suites already serve major buyers, while legal applicability and acceptable evidence vary by buyer.",
+  "unrounded_score": 5.47
+}

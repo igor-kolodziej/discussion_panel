@@ -1,0 +1,116 @@
+{
+  "assumptions": [
+    "The service targets clinics with enough specialist appointment value and cancellation volume to support the stated pricing.",
+    "A clinic-managed pilot can lawfully use minimum-necessary scheduling data and messaging without requiring a full vendor integration.",
+    "Recovered revenue can be reconciled sufficiently well for performance billing without persistent disputes."
+  ],
+  "base_score": 5.71,
+  "candidate_id": "clinic-no-show-fill-rail",
+  "candidate_sha256": "18a7b6327fe235ae181305f1b4c89b0a109394a9d5cc86f70e21641302fc89c6",
+  "candidate_version": 1,
+  "constrained_score": 5.61,
+  "evaluation_type": "working_screening_secondary",
+  "evidence_needed_for_higher_score": "A controlled pilot across several Polish clinics showing baseline no-show and late-cancellation rates, incremental attended appointments attributable to the service, verified recovered contribution revenue, clinic willingness to sign at the proposed price, implementation hours, messaging costs, and a credible repeatable integration or referral channel.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "Charging against a clearly measurable recovered-appointment event aligns price with clinic value and improves on reminder-only positioning. The insight is credible, but waitlist refill and reminders are established mechanisms rather than a fundamentally novel wedge.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Unused clinical capacity creates direct economic pain, especially for higher-value specialist appointments. Evidence supports the general no-show mechanism, but Polish private-clinic loss levels, incremental refill rates, and willingness to pay 900-2,500 PLN plus a performance fee remain unvalidated.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Prepaid subscriptions, recurring schedules, and outcome fees could produce attractive retention and cash conversion. However, the proposed margin, CAC, setup effort, attribution method, and 300-clinic owner-earnings path are assumptions; integration and compliance overhead could materially reduce operating leverage.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Polish private outpatient clinics form a coherent initial segment with identifiable budget owners and recurring appointment inventory. The beachhead needs further narrowing by specialty and clinic size because recovered-slot value and workflow complexity will vary substantially.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "Vendor-neutral outcome attribution could support a useful cross-system position, but scheduling vendors already control the workflow and can add refill features. No integration rights, exclusive channel, or customer-control instrument currently supports dominance.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A successful refill rail could extend across specialties, clinic groups, diagnostics, dental care, and adjacent capacity-management workflows. Expansion depends on proving transferable integrations and lawful patient messaging.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Permissioned response data and accumulated specialty models could improve performance, while workflow embedding may add switching friction. Clinics and scheduling platforms retain the underlying data and access, and the core matching functionality is reproducible.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "One-tap cancellation, automatic waitlist matching, and outcome pricing can offer a clearer revenue proposition than basic reminders. The advantage is not yet quantified against existing scheduling products or manual clinic processes.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "Automation and inexpensive messaging make implementation increasingly practical, while clinics have ongoing pressure to improve capacity utilization. No supplied evidence establishes a discrete Polish market inflection or unusually favorable access window.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "Practice-management integrations and medical-accounting referrals could scale efficiently once established, and a CSV pilot offers a viable initial test. Both channels are only proposed, with no signed partner, protected access, clinic pipeline, or demonstrated CAC.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "The founder's analytical skills and available capital fit a measured pilot, and the work can initially remain part-time. Special-category data controls, integration dependence, patient-contact permissions, attribution disputes, and support requirements create material execution risk.",
+      "score": 5,
+      "status": "scored"
+    }
+  ],
+  "final_score": 5.6,
+  "highest_value_structural_change": "Secure a repeatable integration and distribution agreement with a practice-management vendor while making verified attended-refill attribution the embedded billing event.",
+  "interaction_adjustment": -0.1,
+  "judge_id": "judge-secondary-batch-02-axsbwhrp",
+  "main_structural_strength": "The offer ties a recurring clinic capacity problem to a measurable recovered-revenue event, enabling outcome-aligned pricing.",
+  "primary_score_limiter": "The business does not control scheduling access or distribution, and its proposed economics depend on unvalidated incremental causality and willingness to pay.",
+  "qualified": false,
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 3,
+  "strongest_disconfirming_evidence": "Existing practice-management software already provides reminders and can readily bundle waitlist refill, while those vendors control the integrations the business needs.",
+  "unrounded_score": 5.61
+}

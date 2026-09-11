@@ -1,0 +1,127 @@
+{
+  "candidate_id": "cra-incident-dossier-retainer",
+  "claims": [
+    {
+      "claim_id": "current-event",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://digital-strategy.ec.europa.eu/en/policies/cra-reporting"
+      ],
+      "statement": "From 11 September 2026, manufacturers must report actively exploited vulnerabilities and severe incidents, with early warning in 24 hours and fuller notification in 72 hours."
+    },
+    {
+      "claim_id": "future-state",
+      "claim_type": "other",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.enisa.europa.eu/news/the-cra-single-reporting-platform-is-launched"
+      ],
+      "statement": "The ENISA Single Reporting Platform is operational and main CRA cybersecurity requirements apply from 11 December 2027, so manufacturers need an internal evidence-and-response mechanism feeding the public rail."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Product-security lead, CTO or general counsel",
+    "bundling_resistance": "Pre-built product dossiers and rehearsed notification assembly; MSSPs and product-security vendors can bundle",
+    "customer_relationship_owner": "unknown today; proposed future ownership by the prospective business under direct manufacturer retainers",
+    "distribution_origin": "IoT development houses, conformity assessors, cyber insurers and law firms",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Assumption: 6,000-20,000 PLN per manufacturer",
+      "cash_conversion": "Annual retainer prepaid quarterly; incident surge fee after delivery",
+      "contribution_margin": "Assumption: 50-70% normalized, with incident spikes requiring reserved capacity",
+      "delivery_and_support_costs": "On-call analyst time, tabletop exercises, secure evidence storage and counsel review",
+      "overhead_and_compliance": "Cyber insurance, secure operations, legal counsel and staff availability",
+      "revenue_basis": "Annual readiness retainer plus incident dossier fee",
+      "variable_costs": "Incident-response specialists, counsel and forensic tooling"
+    },
+    "likely_incumbent_response": "MSSPs, insurers and law firms incorporate CRA reporting into existing retainers",
+    "paid_event_or_measurable_loss": "24-hour/72-hour notification deadline after a qualifying exploited vulnerability or severe product incident",
+    "payer": "EU digital-product manufacturer or open-source steward",
+    "purchase_trigger": "CRA reporting applicability, customer diligence or a product-security incident",
+    "renewal_event": "Annual readiness retainer and each qualifying incident"
+  },
+  "contrary_evidence": [
+    "The official platform simplifies submission and ENISA offers guidance.",
+    "True incidents are bursty and require 24/7 staffing beyond a solo founder."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "No current retainer; proposed long-term incident-readiness contract with secure access provisions",
+    "acquisition_instrument_type": "unknown",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Sell tabletop exercises and templates, or white-label through an MSSP",
+    "current_owner": "Manufacturers own product telemetry and incident decisions; ENISA operates the reporting rail",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "unknown today; proposed future ownership by the prospective business under direct manufacturer retainers",
+    "duration": "unknown; proposed 12-month retainer",
+    "exclusivity": "unknown",
+    "founder_access_basis": "none",
+    "founder_access_description": "No present product telemetry or manufacturer relationship",
+    "launch_controller": "Prospective business after signed retainer; manufacturer remains legally responsible for notification",
+    "mechanism_control": "dependent",
+    "renewal": "unknown; proposed annual renewal",
+    "replaceability": "replaceable",
+    "revocability": "unknown",
+    "status": "unknown",
+    "subject": "Pre-authorized incident dossier assembly workflow",
+    "subject_type": "relationship",
+    "transferability": "nontransferable"
+  },
+  "discovery_lane": "future-backcast",
+  "economics": {
+    "acquisition_route": "Begin with paid tabletop exercises, partner with an established MSSP for 24/7 coverage, then convert manufacturers to retainers",
+    "capital_required_pln": 60000,
+    "founder_net_worth_path": "Assumption: 150 retainers at 80,000 PLN annual revenue and 20% EBITDA yields 2.4m PLN EBITDA; 4-6x supports 5m+ value in years 7-10. Staffing and claims frequency are unknown.",
+    "founder_time": "15 hours weekly for exercises; cannot promise solo 24/7 incident response",
+    "gross_margin_basis": "Retainers and incident fees less reserved specialist capacity, tooling and counsel",
+    "payback": "Assumption: 8-12 tabletop projects or retainers cover setup within 18 months",
+    "pricing": "Assumption: 15,000-40,000 PLN tabletop and 40,000-150,000 PLN annual retainer",
+    "retention_or_repeat": "Annual drills, product releases and recurring incident readiness"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Product-specific evidence maps and rehearsed reporting playbooks",
+    "customer": "CEE manufacturers of connected and software products",
+    "distribution_mechanism": "MSSP, insurer and conformity-assessor channels",
+    "offer_and_business_model": "Incident-readiness retainer with dossier assembly",
+    "payer_and_paid_event": "Manufacturer pays for readiness and at qualifying incident deadlines",
+    "problem_trigger": "CRA creates a 24-hour reporting clock before teams can assemble evidence"
+  },
+  "founder_fit": [
+    "AI-assisted evidence assembly matches technical skills.",
+    "Retainer model is scalable through specialist partners.",
+    "24/7 operations are a poor solo fit and require explicit partnering."
+  ],
+  "parent": null,
+  "risks": [
+    "Severe liability",
+    "Unpredictable workload",
+    "MSSP dependence",
+    "Customer security clearance"
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://digital-strategy.ec.europa.eu/en/policies/cra-reporting",
+    "https://www.enisa.europa.eu/news/the-cra-single-reporting-platform-is-launched"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "managed_service",
+    "commercial_model_descriptor": "product security incident readiness retainer",
+    "control_point_category": "operating_relationship",
+    "control_point_descriptor": "pre authorized manufacturer response role",
+    "critical_dependency_category": "specialist_labor",
+    "critical_dependency_descriptor": "24 7 cyber and legal response bench"
+  },
+  "structure": {
+    "commercial_archetype": "Readiness retainer and surge response",
+    "control_point": "Pre-authorized access to product incident evidence",
+    "critical_dependency": "Specialist response coverage and manufacturer cooperation"
+  },
+  "thesis": "Future state: every digital-product manufacturer can meet CRA incident clocks. The missing coordination mechanism is a rehearsed, pre-authorized dossier process joining telemetry, legal classification, corrective action and SRP submission.",
+  "title": "CRA Incident-Dossier Retainer",
+  "uncertainties": [
+    "Retainer demand before incidents",
+    "Insurance cost",
+    "Partner response SLAs"
+  ],
+  "version": 1
+}

@@ -1,0 +1,290 @@
+{
+  "candidate_id": "repair-parts-availability-exchange",
+  "candidate_sha256": "716a66f3cce129f9d57bf8ff914c7c4d3a5994a7cf0ca7f6671ca5cce69940a7",
+  "candidate_version": 1,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "r01-regulatory-trigger",
+      "evidence_refs": [
+        "s01-ec-directive",
+        "s02-ec-qa"
+      ],
+      "statement": "EU repair rules apply from 31 July 2026 and require repair within a reasonable time and price for covered products; applicable product rules govern spare-part availability, with covered periods varying by product and part."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r02-platform-scope",
+      "evidence_refs": [
+        "s01-ec-directive",
+        "s02-ec-qa"
+      ],
+      "statement": "The planned European repair platform is a consumer-to-repairer discovery service, not a facility for concluding repair contracts or procuring parts, although it can compete for repairer discovery and visibility."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r03-adjacent-wtp",
+      "evidence_refs": [
+        "s03-repairdesk-pricing"
+      ],
+      "statement": "RepairDesk's paid plans starting at $99 per store per month demonstrate adjacent repair-shop willingness to pay for operating software that includes inventory and integrated parts ordering, but do not validate willingness to pay 150-500 PLN monthly plus commission for this candidate's narrower cross-brand exchange in Poland."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r04-incumbent-bundling",
+      "evidence_refs": [
+        "s03-repairdesk-pricing"
+      ],
+      "statement": "RepairDesk already bundles inventory control, purchase and returns management, and integrated parts ordering into repair-shop subscriptions, giving an incumbent a direct bundling response."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r05-direct-substitute",
+      "evidence_refs": [
+        "s04-partly-repair"
+      ],
+      "statement": "Partly markets a working multi-supplier parts-procurement system with live pricing and availability, delivery-time optimization, unified ordering, supplier connections, and white-label deployment; it currently states availability in New Zealand and the United Kingdom."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r06-data-rights-precedent",
+      "evidence_refs": [
+        "s05-partly-terms"
+      ],
+      "statement": "A comparable platform contractually limits service access to a non-exclusive, non-transferable internal-use license, prohibits scraping and competing-product use, and assigns ownership of service, usage data, and aggregated anonymized data to the platform or its licensors."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r07-contractibility",
+      "evidence_refs": [
+        "s05-partly-terms"
+      ],
+      "statement": "Partly's written order-form and online-terms model shows that supplier-platform access and customer-data licenses can be governed contractually, but it does not show that appliance and electronics distributors will grant this candidate durable, transferable, sufficiently broad, or exclusive catalog and fulfillment rights."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r08-public-data-pressure",
+      "evidence_refs": [
+        "s07-ec-dpp"
+      ],
+      "statement": "Digital Product Passports may expose machine-readable product identification, compatible-parts, and repair information according to product-specific rules and access rights; this could lower normalization costs while also weakening exclusivity of a compatibility graph built mainly from public information."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r09-payment-cost-floor",
+      "evidence_refs": [
+        "s06-stripe-pricing"
+      ],
+      "statement": "Stripe's current Polish standard pricing establishes a visible payment-cost floor of 1.5% plus 1 PLN for standard EEA cards, while marketplace-controlled pricing through Connect starts at an additional 0.25%; returns, support, supplier integration, insurance, tax, fraud, and catalog operations remain unquantified."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r10-fully-loaded-economics",
+      "evidence_refs": [],
+      "statement": "No sourced cohort data establishes Polish shop acquisition cost, order frequency, average parts value, take rate realized after supplier negotiation, refunds and disputes, support burden, gross margin, churn, cash conversion, or payback; therefore the proposed contribution margin and 24-month payback remain unvalidated."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r11-distribution",
+      "evidence_refs": [],
+      "statement": "No signed distributor channel, repair-association placement, public-platform integration, repair-network pilot, customer list, conversion funnel, or repeatable Polish acquisition route was provided or found."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r12-rights-held",
+      "evidence_refs": [],
+      "statement": "No executed supplier data license, inventory-feed agreement, fulfillment agreement, resale authority, trademark permission, service-level commitment, exclusivity, duration, renewal protection, revocability protection, or transferability right for this candidate was provided or found."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r13-mechanism-ownership",
+      "evidence_refs": [],
+      "statement": "There is no evidence that the prospective business currently owns the normalized availability graph, compatibility data, observed delivery history, prediction model, transaction relationships, or repair-shop customer relationships that constitute the proposed critical mechanism."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r14-demand-repeat",
+      "evidence_refs": [],
+      "statement": "No direct interviews, letters of intent, deposits, paid pilots, invoices, transaction histories, stalled-job loss measurements, renewal behavior, or Polish repair-shop order-frequency data validate urgency, willingness to pay, repeat use, or retention for the exact offer."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r15-cold-start",
+      "evidence_refs": [
+        "s04-partly-repair",
+        "s05-partly-terms"
+      ],
+      "statement": "Because useful quote-time predictions require broad supplier inventory connections and observed transaction outcomes, the candidate faces a two-sided cold start; an established substitute that already claims thousands of bodyshops and owns aggregated usage data has a stronger starting position in its automotive segment."
+    }
+  ],
+  "commercial_evidence": {
+    "buyer_or_paid_event": {
+      "claim_ids": [
+        "r03-adjacent-wtp"
+      ],
+      "source_ids": [
+        "s03-repairdesk-pricing"
+      ],
+      "status": "inference"
+    },
+    "distribution_and_acquisition": {
+      "claim_ids": [
+        "r11-distribution"
+      ],
+      "source_ids": [],
+      "status": "unknown"
+    },
+    "fully_loaded_unit_economics": {
+      "claim_ids": [
+        "r10-fully-loaded-economics"
+      ],
+      "source_ids": [],
+      "status": "unknown"
+    },
+    "rights_control_access_contractibility": {
+      "claim_ids": [
+        "r12-rights-held"
+      ],
+      "source_ids": [],
+      "status": "unknown"
+    }
+  },
+  "contrary_evidence": [
+    "Partly already offers the core multi-supplier mechanism—live price and availability comparison, delivery-time optimization, unified ordering, and supplier inventory connections—and offers white-label deployment. Its current stated regional availability is limited, but the product contradicts the premise that this transaction mechanism is generally missing and shows a credible expansion or licensing response.",
+    "RepairDesk includes inventory, purchasing, returns, and integrated parts ordering in paid repair-shop software from $99 per store per month. This contradicts strong bundling resistance because an incumbent workflow owner can include sourcing within a broader subscription.",
+    "The European repair platform will provide public consumer-to-repairer discovery. It overlaps with the candidate's proposed visibility channel, although official Commission guidance says it will not conclude repair contracts and therefore does not itself replace the parts transaction layer.",
+    "Digital Product Passports may provide machine-readable identification and compatible-parts information under product-specific access rules. Publicly accessible data could reduce the exclusivity and defensibility of a compatibility graph, while restricted role-based access could preserve dependence on external rights holders."
+  ],
+  "critical_control_point_assessment": {
+    "assessment": "unknown",
+    "claim_ids": [
+      "r13-mechanism-ownership"
+    ],
+    "source_ids": [],
+    "status": "unknown"
+  },
+  "falsification": {
+    "cold_start_and_data_moat": [
+      "r08-public-data-pressure",
+      "r15-cold-start",
+      "r13-mechanism-ownership"
+    ],
+    "control_point_obtainability": [
+      "r07-contractibility",
+      "r12-rights-held"
+    ],
+    "critical_mechanism_ownership": [
+      "r06-data-rights-precedent",
+      "r13-mechanism-ownership"
+    ],
+    "external_dependencies": [
+      "r02-platform-scope",
+      "r06-data-rights-precedent",
+      "r11-distribution",
+      "r12-rights-held"
+    ],
+    "substitutes_and_incumbent_response": [
+      "r02-platform-scope",
+      "r04-incumbent-bundling",
+      "r05-direct-substitute",
+      "r08-public-data-pressure"
+    ],
+    "willingness_urgency_and_repeat_economics": [
+      "r03-adjacent-wtp",
+      "r09-payment-cost-floor",
+      "r10-fully-loaded-economics",
+      "r14-demand-repeat"
+    ]
+  },
+  "schema_version": 3,
+  "sources": [
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "regulatory",
+      "published_at": "unknown",
+      "publisher": "European Commission",
+      "source_id": "s01-ec-directive",
+      "source_type": "official regulatory overview",
+      "stance": "supporting",
+      "title": "Directive on repair of goods",
+      "url": "https://commission.europa.eu/law/law-topic/consumer-protection-law/directive-repair-goods_en"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "regulatory",
+      "published_at": "2024-07-30",
+      "publisher": "European Commission",
+      "source_id": "s02-ec-qa",
+      "source_type": "official questions and answers PDF",
+      "stance": "context",
+      "title": "Questions & Answers: Directive (EU) 2024/1799 on common rules promoting the repair of goods",
+      "url": "https://commission.europa.eu/document/download/2d443b31-dc2a-4e54-a9ec-5fbb61c895e9_en?filename=2024_07_18_QA_Right2repair_FINAL.pdf"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "paid_event",
+      "published_at": "unknown",
+      "publisher": "RepairDesk",
+      "source_id": "s03-repairdesk-pricing",
+      "source_type": "official competitor pricing page",
+      "stance": "contradicting",
+      "title": "Pricing | Repair Shop Management System",
+      "url": "https://www.repairdesk.co/pricing/"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "incumbent",
+      "published_at": "unknown",
+      "publisher": "Partly",
+      "source_id": "s04-partly-repair",
+      "source_type": "official competitor product page",
+      "stance": "contradicting",
+      "title": "Repair: Collision Parts Procurement for repairers",
+      "url": "https://www.partly.com/integrations/repair"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "contracting",
+      "published_at": "unknown",
+      "publisher": "Partly",
+      "source_id": "s05-partly-terms",
+      "source_type": "official competitor contractual terms",
+      "stance": "context",
+      "title": "Partly Repair Terms and Conditions",
+      "url": "https://www.partly.com/partly-repair-terms-and-conditions"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "unit_economics",
+      "published_at": "unknown",
+      "publisher": "Stripe",
+      "source_id": "s06-stripe-pricing",
+      "source_type": "official payment and marketplace pricing page",
+      "stance": "context",
+      "title": "Pricing & Fees — Poland",
+      "url": "https://stripe.com/en-pl/pricing"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "rights_control_access",
+      "published_at": "unknown",
+      "publisher": "European Commission",
+      "source_id": "s07-ec-dpp",
+      "source_type": "official technical policy page",
+      "stance": "contradicting",
+      "title": "The Digital Product Passport for Repairers and Recyclers",
+      "url": "https://single-market-economy.ec.europa.eu/single-market/digital-product-passport/repairers-and-recyclers_en"
+    }
+  ],
+  "unknowns": [
+    "Whether Polish appliance or electronics repair shops will pay for the exact availability-and-SLA offer at the proposed subscription and commission levels.",
+    "Whether distributors or manufacturers will sign usable catalog, inventory, fulfillment, and service-level agreements, and on what fees, duration, revocability, exclusivity, and transferability terms.",
+    "Whether lawful public or product-passport data is sufficiently complete, current, and machine-readable to support launch without private supplier feeds.",
+    "Actual addressable Polish shop count, qualified lead volume, channel conversion, customer acquisition cost, sales-cycle duration, and onboarding cost.",
+    "Order frequency, average order value, cancellation and return rates, counterfeit exposure, dispute cost, support effort, take-rate acceptance, gross margin, retention, and payback by cohort.",
+    "Whether observed delivery data produces a prediction advantage before incumbents accumulate or expose equivalent data.",
+    "Who controls repair-shop and end-consumer relationships under future distributor, association, manufacturer, and public-platform channel terms.",
+    "Whether Poland's national implementation and platform-registration conditions create additional operating, professional, consumer-law, marketplace, payment, insurance, or data obligations.",
+    "No sourced evidence establishes illegality, an unobtainable essential right, mathematically impossible conservative economics, or non-delegable founder incompatibility; the present result is uncertainty rather than fatality."
+  ]
+}

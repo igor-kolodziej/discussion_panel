@@ -1,0 +1,175 @@
+{
+  "candidate_id": "cbam-supplier-data-desk",
+  "claims": [
+    {
+      "claim_id": "cbam-trigger-v2",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high",
+      "evidence_refs": [
+        "runs/20260911T215234Z-38c861/research/cbam-supplier-data-desk/v1.json#rc-regulatory-trigger",
+        "runs/20260911T215234Z-38c861/research/cbam-supplier-data-desk/v1.json#rc-financial-exposure"
+      ],
+      "statement": "The definitive CBAM regime creates a recurring importer decision about certificate exposure, declaration readiness, and whether verified actual emissions justify their additional collection and assurance cost."
+    },
+    {
+      "claim_id": "cbam-buyer-v2",
+      "claim_type": "payer_and_budget",
+      "confidence": "medium",
+      "evidence_refs": [
+        "runs/20260911T215234Z-38c861/research/cbam-supplier-data-desk/v1.json#rc-buyer-event",
+        "runs/20260911T215234Z-38c861/research/cbam-supplier-data-desk/v1.json#rc-market-narrowing"
+      ],
+      "statement": "Evidence supports buyer use of external CBAM data solutions, but price tolerance and the responsible budget owner for the redesigned importer-side decision service remain unvalidated."
+    },
+    {
+      "claim_id": "cbam-control-path-v2",
+      "claim_type": "founder_control_point_path",
+      "confidence": "medium-low",
+      "evidence_refs": [
+        "runs/20260911T215234Z-38c861/research/cbam-supplier-data-desk/v1.json#rc-access-obtainable",
+        "runs/20260911T215234Z-38c861/research/cbam-supplier-data-desk/v1.json#rc-default-values-substitution",
+        "runs/20260911T215234Z-38c861/research/cbam-supplier-data-desk/v1.json#rc-rights-contract-unknown"
+      ],
+      "statement": "The business can propose a direct importer workflow-integration agreement for importer-supplied shipment data and exposure analysis while treating supplier actual-emissions evidence as optional; no such agreement or customer right is presently held."
+    },
+    {
+      "claim_id": "cbam-economics-v2",
+      "claim_type": "other",
+      "confidence": "low",
+      "evidence_refs": [
+        "runs/20260911T215234Z-38c861/research/cbam-supplier-data-desk/v1.json#rc-unit-economics-unknown",
+        "runs/20260911T215234Z-38c861/research/cbam-supplier-data-desk/v1.json#rc-price-substitute"
+      ],
+      "statement": "A standardized diagnostic and monitoring subscription should require less supplier-operations labor than the original managed data desk, but realized acquisition cost, delivery cost, margin, retention, and payback remain unknown and face a low-priced software benchmark."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Finance, customs, tax, or trade-compliance director; actual owner is unvalidated",
+    "bundling_resistance": "The service is not protected from bundling; resistance depends on producing a faster independent default-versus-actual value case and an importer-owned audit trail without replacing the broker, ERP, registry, or accredited verifier",
+    "customer_relationship_owner": "Unknown today; proposed direct contracts with in-scope EU importers",
+    "distribution_origin": "Founder-controlled targeted outreach to in-scope importers, supplemented by nonexclusive accountant, customs-adviser, and trade-association referrals",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Unvalidated target: 3,000-10,000 PLN per won importer using narrow outbound lists and referral fees; measure labor, list cost, meetings, sales-cycle length, and commissions before scaling",
+      "cash_conversion": "Proposed diagnostic paid 50% at order and 50% on delivery; monitoring subscription billed quarterly or annually in advance; verifier and specialist pass-through work requires customer prepayment",
+      "contribution_margin": "Unvalidated target: 55-75% on standardized diagnostics and monitoring before fixed overhead; reject or reprice accounts whose data cleanup, specialist review, or support hours breach the quoted labor allowance",
+      "delivery_and_support_costs": "Model assumption: 12-30 founder or analyst hours for initial importer-data mapping and 2-6 hours per month for exception monitoring; actual time, language burden, and defect rates must be measured",
+      "overhead_and_compliance": "Budget for legal terms, data-processing controls, cybersecurity, professional-liability cover, regulatory-content maintenance, bookkeeping, and independent carbon-methodology review; accredited verification remains separately procured when actual values are used",
+      "revenue_basis": "Fixed-fee default-versus-actual exposure and readiness diagnostic, followed by a quarterly or annual importer-side monitoring subscription; supplier chasing and verification are optional prepaid add-ons",
+      "variable_costs": "Analyst data normalization, limited customer support, referral commission, specialist review, and any customer-approved verifier or supplier-escalation work; no open-ended supplier outreach is included in the base fee"
+    },
+    "likely_incumbent_response": "CBAM software vendors, customs brokers, and SAP are likely to add exposure comparisons and bundle them with filing or ERP workflows; the business must remain integration-neutral, show quantified time or certificate-value improvement, and avoid competing on generic record collection",
+    "paid_event_or_measurable_loss": "Importer certificate cash exposure, internal preparation labor, and the avoidable cost of collecting and verifying actual values when Commission defaults are economically preferable",
+    "payer": "In-scope EU importer with material CBAM certificate exposure; willingness to pay and exact budget owner remain unknown",
+    "purchase_trigger": "First certificate forecast, annual declaration preparation, a material change in EU ETS-linked exposure, or a decision whether supplier actual values justify collection and accredited verification",
+    "renewal_event": "Quarterly exposure refresh and annual CBAM declaration cycle, conditional on continuing imports and demonstrated decision or labor value"
+  },
+  "contrary_evidence": [
+    "The 50-tonne exemption removes the vast majority of importers and concentrates the addressable market in fewer, larger accounts.",
+    "A direct substitute offers supplier evidence requests, audit history, regulatory export, and broker white-labelling at £199-£699 per month.",
+    "SAP can bundle customs, ERP, supplier-emissions, calculation, reporting, and financial-liability workflows.",
+    "Commission default values make supplier-level actual-data collection nonessential in some cases."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Proposed nonexclusive workflow-integration and service agreement granting access to importer-controlled shipment records, authority to produce exposure analyses, and a direct paid customer interface; unsigned",
+    "acquisition_instrument_type": "workflow_integration_agreement",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Sell a fixed-fee offline diagnostic using customer-exported shipment data and public default-value rules; if the importer will not contract or supply exports, do not launch that account and pursue another in-scope importer",
+    "current_owner": "Importers control their shipment records and buying decision; the prospective business presently holds no workflow integration or customer contract",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "Unknown today; proposed direct contracts with in-scope EU importers",
+    "duration": "Unknown until signed; proposed 12-month term for monitoring and a fixed delivery term for the diagnostic",
+    "exclusivity": "nonexclusive",
+    "founder_access_basis": "none",
+    "founder_access_description": "No importer workflow right or direct customer contract is presently held; the founder can build the analytical method from lawful public rules and customer-provided exports without employer resources",
+    "launch_controller": "The prospective business controls the offer, analysis workflow, pricing, and account acceptance after an importer signs; the importer controls data disclosure and the regulatory filing",
+    "mechanism_control": "unknown",
+    "renewal": "Proposed annual renewal for monitoring; unsigned and unvalidated",
+    "replaceability": "replaceable",
+    "revocability": "for_cause",
+    "status": "unknown",
+    "subject": "Direct importer exposure-decision workflow and paid customer interface",
+    "subject_type": "workflow_position",
+    "transferability": "consent_required"
+  },
+  "discovery_lane": "weak-signal",
+  "economics": {
+    "acquisition_route": "Target a manually researched list of in-scope importers with a fixed-scope paid exposure diagnostic; require payment and a customer data export before building integrations, then test conversion to monitoring through direct contracts and nonexclusive adviser referrals",
+    "capital_required_pln": 30000,
+    "founder_net_worth_path": "Unvalidated scenario: reach 100 importers averaging 30,000 PLN annual recurring revenue for 3m PLN ARR, then 200 importers for 6m PLN ARR; at a 20-30% owner-earnings margin with retained equity and limited distributions while employed, 5m PLN founder net worth could be plausible in roughly 7-10 years. This path fails if direct CAC, support labor, renewal, or pricing do not support contribution profit and no valuation multiple is assumed as guaranteed.",
+    "founder_time": "15-25 hours weekly for the initial diagnostic and automation phase; cap concurrent accounts and hire contract analyst capacity only after prepaid work demonstrates positive contribution",
+    "gross_margin_basis": "Diagnostic and subscription revenue less analyst delivery, support, referral commissions, specialist review, and customer-specific processing; verifier fees and exceptional supplier work are prepaid pass-throughs rather than absorbed margin",
+    "payback": "Unvalidated target: acquisition spend recovered from diagnostic contribution or within six subscription months; stop the channel if a cohort does not recover fully loaded CAC within 12 months",
+    "pricing": "Test 6,000-15,000 PLN per diagnostic and 1,500-4,000 PLN per month for monitoring, with explicit data-volume and support limits; competitor software pricing makes the upper range contingent on measurable managed decision value",
+    "retention_or_repeat": "Quarterly exposure monitoring and annual declaration preparation; renewal is unproven and should be measured by paid second-cycle continuation rather than assumed regulatory recurrence"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Reusable importer exposure models, default-versus-actual decision benchmarks, and integration mappings built only from data the business may lawfully retain",
+    "customer": "In-scope EU importers with material CBAM certificate exposure",
+    "distribution_mechanism": "Founder-controlled account outreach plus nonexclusive accountant, customs-adviser, and trade-association referrals",
+    "offer_and_business_model": "Fixed-fee CBAM exposure diagnostic plus importer-side monitoring subscription with prepaid specialist add-ons",
+    "payer_and_paid_event": "Importer pays to quantify certificate exposure and decide whether actual supplier data and verification are worth their cost",
+    "problem_trigger": "CBAM moved from transitional reporting to certificate-bearing definitive operation"
+  },
+  "founder_fit": [
+    "Data validation and financial modeling fit the founder's skills.",
+    "The standardized diagnostic can begin part-time without owning supplier source data or performing regulated verification.",
+    "Founder-controlled targeted outreach reduces reliance on brokers while allowing nonexclusive referrals.",
+    "The workflow can be automated only after paid cases reveal repeatable data mappings and support load."
+  ],
+  "parent": {
+    "candidate_id": "cbam-supplier-data-desk",
+    "version": 1
+  },
+  "redesign": {
+    "changed_fingerprint_fields": [
+      "compounding_advantage",
+      "customer",
+      "distribution_mechanism",
+      "offer_and_business_model",
+      "payer_and_paid_event"
+    ],
+    "changed_structural_fields": [
+      "commercial_mechanics",
+      "critical_control_point",
+      "structural_signature"
+    ],
+    "economic_effect": "The redesign removes open-ended supplier collection from the base offer and replaces supplier cooperation as the critical mechanism with a contractible importer-side decision workflow. Fixed-scope diagnostics, capped support, advance billing, and prepaid verifier or specialist add-ons reduce delivery variance and working-capital exposure; direct acquisition may improve relationship control but its CAC, price, conversion, margins, and renewal remain unvalidated."
+  },
+  "risks": [
+    "Importers may prefer default values, broker bundles, low-priced software, or SAP and decline a separate service.",
+    "No direct importer contract, referral agreement, workflow right, or validated acquisition channel exists today.",
+    "Actual delivery hours, data quality, CAC, price tolerance, insurance cost, contribution margin, and renewal are unknown.",
+    "Regulatory or methodology mistakes could create liability even though accredited verification is not offered.",
+    "The narrowed market may produce enterprise sales cycles incompatible with part-time founder capacity.",
+    "Reusable customer data and benchmarks may be contractually restricted, limiting compounding advantage."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "runs/20260911T215234Z-38c861/research/cbam-supplier-data-desk/v1.json"
+  ],
+  "stage": "development",
+  "structural_signature": {
+    "commercial_model_category": "productized_service",
+    "commercial_model_descriptor": "fixed scope cbam exposure diagnostic and importer monitoring subscription",
+    "control_point_category": "workflow_integration",
+    "control_point_descriptor": "direct importer exposure decision workflow under a proposed service and integration agreement",
+    "critical_dependency_category": "customer_adoption",
+    "critical_dependency_descriptor": "in scope importer willingness to contract provide shipment exports and renew"
+  },
+  "structure": {
+    "commercial_archetype": "Productized regulatory exposure diagnostic with recurring monitoring",
+    "control_point": "Direct importer contract and embedded exposure-decision workflow",
+    "critical_dependency": "Importer adoption and permissioned shipment-data access; supplier actual-emissions data is optional"
+  },
+  "thesis": "CBAM's certificate-bearing operation creates a paid importer-side decision about exposure and whether verified actual values justify their collection cost; a fixed-scope decision workflow can avoid dependence on owning supplier measurements, verifier accreditation, or the official registry.",
+  "title": "CBAM Exposure Decision Desk",
+  "uncertainties": [
+    "The number, spend, and sales-cycle length of addressable regional importers above the threshold remain unknown.",
+    "No evidence establishes diagnostic price tolerance, direct conversion, CAC, delivery hours, contribution margin, or renewal.",
+    "It is unknown how often actual values produce enough certificate savings or commercial benefit to change an importer's decision.",
+    "Proposed importer workflow agreements, data rights, retention rights, and referral terms are unsigned.",
+    "Insurance, cybersecurity, specialist-review, and regulatory-maintenance costs remain unknown.",
+    "It is unknown whether lawful retained mappings and benchmarks create switching costs or defensibility against bundled incumbents."
+  ],
+  "version": 2
+}

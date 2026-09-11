@@ -1,0 +1,332 @@
+{
+  "candidate_id": "cbam-supplier-data-desk",
+  "candidate_sha256": "54b01b4d80a8ee03cd0c9daeb43c44d440a13979efc12c61cbf26d43f1180882",
+  "candidate_version": 1,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "rc-regulatory-trigger",
+      "evidence_refs": [
+        "src-ec-definitive",
+        "src-eu-2025-2083"
+      ],
+      "statement": "The definitive CBAM regime applies from 1 January 2026. Importers above the 50-tonne cumulative threshold must obtain authorised-declarant status and account for all covered imports in that calendar year; the threshold does not apply to electricity or hydrogen."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "rc-financial-exposure",
+      "evidence_refs": [
+        "src-ec-definitive",
+        "src-ec-certificate-price"
+      ],
+      "statement": "Authorised declarants must declare embedded emissions and surrender certificates whose price tracks EU ETS auctions; published prices were €75.36 for Q1 2026 and €75.28 for Q2 2026, establishing measurable importer cash exposure."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "rc-buyer-event",
+      "evidence_refs": [
+        "src-carbonchain-steelforce"
+      ],
+      "statement": "Steelforce, an importer of thousands of tonnes of steel, selected CarbonChain to automate CBAM declarations, validate input data and support ongoing reporting; this is direct buyer-use evidence for an external CBAM data solution, although the case study does not disclose price or contract value."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "rc-repeat-workflow",
+      "evidence_refs": [
+        "src-carbonchain-steelforce",
+        "src-ec-communication"
+      ],
+      "statement": "A buyer case study reports ongoing automated quarterly reporting, while current Commission guidance establishes an annual definitive-regime declaration covering 2026 imports by 30 September 2027; supplier, shipment and emissions information therefore recurs, but the case study does not establish retention rates."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "rc-price-substitute",
+      "evidence_refs": [
+        "src-cbamable"
+      ],
+      "statement": "A direct software substitute publicly offers supplier evidence requests, audit history, regulatory export and broker white-labelling for £199, £349 or £699 per month, materially below the candidate's assumed annual price range before accounting for managed human service."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "rc-distribution-channel",
+      "evidence_refs": [
+        "src-cbamable",
+        "src-sap"
+      ],
+      "statement": "Customs brokers are an obtainable but nonexclusive distribution channel because CBAMable sells broker-branded multi-client workspaces; however, the same evidence shows brokers can internalise and white-label the workflow, while SAP can bundle it into existing enterprise systems."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "rc-external-control",
+      "evidence_refs": [
+        "src-ec-registry",
+        "src-ec-verification"
+      ],
+      "statement": "The essential source data and assurance remain externally controlled: non-EU operators provide installation and emissions data, accredited independent verifiers review it, and declarants retrieve verified data through the Commission registry. A data desk neither owns the source measurements nor controls verifier accreditation or the official registry."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "rc-access-obtainable",
+      "evidence_refs": [
+        "src-ec-registry",
+        "src-ec-communication"
+      ],
+      "statement": "Permissioned access is operationally obtainable because declarants can share an EORI number with suppliers and retrieve supplier-provided information through the registry, and the Commission publishes a communication template. This supports feasibility of delegated collection but does not prove any supplier will respond or sign the candidate's proposed agreement."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "rc-unit-economics-unknown",
+      "evidence_refs": [],
+      "statement": "No candidate-specific evidence establishes realised price, onboarding hours, multilingual supplier-operation cost, specialist-review cost, professional-liability insurance, CAC, conversion rate, gross margin, contribution margin or payback; fully loaded unit economics remain unknown."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "rc-rights-contract-unknown",
+      "evidence_refs": [],
+      "statement": "No signed importer mandate, supplier data licence, referral agreement, exclusivity term, renewal right or durable data-retention right has been provided; private rights contractibility and duration remain unknown."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "rc-cold-start-unknown",
+      "evidence_refs": [],
+      "statement": "No private evidence establishes an initial importer pipeline, supplier response rate, reusable permissioned dataset, benchmark coverage, learning-rate advantage or customer switching cost, so formation of the proposed data moat remains unknown."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "rc-default-values-substitution",
+      "evidence_refs": [
+        "src-ec-communication",
+        "src-ec-verification"
+      ],
+      "statement": "Importers may use Commission default emissions values instead of actual verified values, so supplier-level collection is not universally indispensable; actual-value collection is most valuable where its expected certificate savings or commercial benefits exceed collection and verification costs."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "rc-incumbent-bundling",
+      "evidence_refs": [
+        "src-sap"
+      ],
+      "statement": "SAP announced an end-to-end declarant solution that centralises ERP, trade and supplier data, ingests supplier emissions files, calculates embedded emissions and certificate exposure, and connects them to financial accounting, directly contradicting any assumption that the workflow is protected from incumbent bundling."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "rc-verifier-dependency",
+      "evidence_refs": [
+        "src-ec-verification"
+      ],
+      "statement": "When actual emissions are used, verification must be performed by an independent verifier accredited by an EU national accreditation body; the candidate cannot substitute its own unaccredited review for this regulated assurance function."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "rc-market-narrowing",
+      "evidence_refs": [
+        "src-eu-2025-2083"
+      ],
+      "statement": "The 50-tonne exemption was designed to remove the vast majority of importers while retaining at least 99% of embedded emissions in scope, materially narrowing the small-importer market and concentrating demand among larger accounts."
+    }
+  ],
+  "commercial_evidence": {
+    "buyer_or_paid_event": {
+      "claim_ids": [
+        "rc-buyer-event"
+      ],
+      "source_ids": [
+        "src-carbonchain-steelforce"
+      ],
+      "status": "evidence"
+    },
+    "distribution_and_acquisition": {
+      "claim_ids": [
+        "rc-distribution-channel"
+      ],
+      "source_ids": [
+        "src-cbamable",
+        "src-sap"
+      ],
+      "status": "inference"
+    },
+    "fully_loaded_unit_economics": {
+      "claim_ids": [
+        "rc-unit-economics-unknown"
+      ],
+      "source_ids": [],
+      "status": "unknown"
+    },
+    "rights_control_access_contractibility": {
+      "claim_ids": [
+        "rc-external-control"
+      ],
+      "source_ids": [
+        "src-ec-registry",
+        "src-ec-verification"
+      ],
+      "status": "evidence"
+    }
+  },
+  "contrary_evidence": [
+    "Regulation (EU) 2025/2083 says the 50-tonne exemption removes the vast majority of importers while retaining at least 99% of covered emissions, contradicting a broad small-importer market thesis and concentrating the opportunity in fewer, larger accounts.",
+    "CBAMable already packages supplier evidence requests, audit history, regulatory export and white-labelled broker workflows from £199 to £699 per month, demonstrating a low-priced direct substitute and enabling brokers to own the customer relationship.",
+    "SAP's announced end-to-end CBAM product combines customs, ERP, supplier-emissions, calculation, reporting and financial-liability workflows, contradicting the proposed wedge's presumed resistance to incumbent bundling.",
+    "Commission rules permit declarations based on default values, so actual supplier-data collection is not essential in every case; its economic value depends on savings or other benefits relative to collection and verification costs."
+  ],
+  "critical_control_point_assessment": {
+    "assessment": "evidence",
+    "claim_ids": [
+      "rc-external-control"
+    ],
+    "source_ids": [
+      "src-ec-registry",
+      "src-ec-verification"
+    ],
+    "status": "externally_controlled"
+  },
+  "falsification": {
+    "cold_start_and_data_moat": [
+      "rc-cold-start-unknown",
+      "rc-price-substitute",
+      "rc-incumbent-bundling"
+    ],
+    "control_point_obtainability": [
+      "rc-access-obtainable",
+      "rc-rights-contract-unknown",
+      "rc-market-narrowing"
+    ],
+    "critical_mechanism_ownership": [
+      "rc-external-control",
+      "rc-verifier-dependency",
+      "rc-rights-contract-unknown"
+    ],
+    "external_dependencies": [
+      "rc-external-control",
+      "rc-access-obtainable",
+      "rc-verifier-dependency"
+    ],
+    "substitutes_and_incumbent_response": [
+      "rc-price-substitute",
+      "rc-default-values-substitution",
+      "rc-incumbent-bundling"
+    ],
+    "willingness_urgency_and_repeat_economics": [
+      "rc-regulatory-trigger",
+      "rc-financial-exposure",
+      "rc-buyer-event",
+      "rc-repeat-workflow",
+      "rc-unit-economics-unknown",
+      "rc-market-narrowing"
+    ]
+  },
+  "schema_version": 3,
+  "sources": [
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "regulatory",
+      "published_at": "unknown",
+      "publisher": "European Commission, Directorate-General for Taxation and Customs Union",
+      "source_id": "src-ec-definitive",
+      "source_type": "official guidance webpage",
+      "stance": "supporting",
+      "title": "CBAM definitive regime",
+      "url": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "regulatory",
+      "published_at": "2025-10-17",
+      "publisher": "Official Journal of the European Union",
+      "source_id": "src-eu-2025-2083",
+      "source_type": "EU regulation",
+      "stance": "contradicting",
+      "title": "Regulation (EU) 2025/2083 simplifying and strengthening the carbon border adjustment mechanism",
+      "url": "https://eur-lex.europa.eu/eli/reg/2025/2083/oj"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "direct_buyer",
+      "published_at": "unknown",
+      "publisher": "CarbonChain",
+      "source_id": "src-carbonchain-steelforce",
+      "source_type": "vendor case study with named customer quotation",
+      "stance": "supporting",
+      "title": "How Steelforce streamlined EU CBAM reporting with CarbonChain",
+      "url": "https://www.carbonchain.com/case-study/steelforce-cbam"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "rights_control_access",
+      "published_at": "unknown",
+      "publisher": "European Commission, Directorate-General for Taxation and Customs Union",
+      "source_id": "src-ec-registry",
+      "source_type": "official registry guidance webpage",
+      "stance": "context",
+      "title": "CBAM Registry",
+      "url": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-registry_en"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "distribution",
+      "published_at": "unknown",
+      "publisher": "CBAMable Ltd",
+      "source_id": "src-cbamable",
+      "source_type": "competitor product, pricing and terms webpage",
+      "stance": "contradicting",
+      "title": "CBAMable – CBAM workspaces for Customs brokers",
+      "url": "https://www.cbamable.com/"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "incumbent",
+      "published_at": "2026-06-09",
+      "publisher": "SAP",
+      "source_id": "src-sap",
+      "source_type": "incumbent product announcement",
+      "stance": "contradicting",
+      "title": "SAP Introduces End-to-End CBAM Declarants Solution",
+      "url": "https://news.sap.com/2026/06/sap-introduces-cbam-declarants-solution/"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "contracting",
+      "published_at": "unknown",
+      "publisher": "European Commission, Directorate-General for Taxation and Customs Union",
+      "source_id": "src-ec-verification",
+      "source_type": "official verification guidance webpage",
+      "stance": "context",
+      "title": "Verification of CBAM emissions",
+      "url": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-verification_en"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "paid_event",
+      "published_at": "unknown",
+      "publisher": "European Commission, Directorate-General for Taxation and Customs Union",
+      "source_id": "src-ec-certificate-price",
+      "source_type": "official certificate pricing webpage",
+      "stance": "supporting",
+      "title": "Price of CBAM certificates",
+      "url": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/price-cbam-certificates_en"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "rights_control_access",
+      "published_at": "2026-08-28",
+      "publisher": "European Commission, Directorate-General for Taxation and Customs Union",
+      "source_id": "src-ec-communication",
+      "source_type": "official implementation resources webpage",
+      "stance": "context",
+      "title": "CBAM communication and news",
+      "url": "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-communication-and-news_en"
+    }
+  ],
+  "unknowns": [
+    "Whether any importer will buy the candidate's fixed-fee audit or managed service, at what price, and under which budget owner.",
+    "Candidate-specific lead volume, meeting rate, proposal conversion, sales-cycle length, CAC and channel commission.",
+    "Signed access, data-processing, confidentiality, supplier-contact, retention, renewal and liability terms with importers and suppliers.",
+    "Supplier response rates, time per supplier, language mix, evidence defect rate and escalation workload.",
+    "Cost and availability of accredited verifiers, carbon-methodology specialists, professional-liability insurance, cybersecurity and multilingual support.",
+    "Realised gross margin, contribution margin, working-capital profile, CAC payback and annual retention.",
+    "Whether use of actual supplier data produces enough certificate savings or commercial value versus Commission default values to fund the service.",
+    "Whether accumulated documents can legally be reused across customers and whether they create defensible learning effects or switching costs.",
+    "Counts and addressable spend of Polish and regional importers above the threshold after the de minimis exemption.",
+    "No evidence establishes illegality, an unobtainable essential right, mathematically impossible conservative economics or a non-delegable founder incompatibility; the unresolved items are validation uncertainties rather than demonstrated fatality."
+  ]
+}

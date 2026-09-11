@@ -1,0 +1,127 @@
+{
+  "candidate_id": "ppwr-packaging-proof-vault",
+  "claims": [
+    {
+      "claim_id": "ppwr-paid-event",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/topics/waste-and-recycling/packaging-waste_en"
+      ],
+      "statement": "The PPWR generally applies from 12 August 2026 and sets requirements for packaging placed on the EU market, creating current compliance work around packaging specifications and supplier evidence."
+    },
+    {
+      "claim_id": "ppwr-payer",
+      "claim_type": "payer_and_budget",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/news/new-eu-rules-packaging-enter-application-2026-08-11_en"
+      ],
+      "statement": "Packaging manufacturers and brands face specification and compliance costs; procurement, quality or packaging leadership is a plausible payer, but exact Polish budgets are unverified."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Packaging, quality or procurement director at a brand or manufacturer",
+    "bundling_resistance": "A supplier-linked proof vault tied to each packaging SKU and approval event is harder to replace with generic document storage.",
+    "customer_relationship_owner": "The prospective business would own brand subscriptions; brands retain supplier relationships and suppliers retain source documents.",
+    "distribution_origin": "Packaging consultants, laboratories and converters refer brand accounts.",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Assumption: 6,000-15,000 PLN per brand.",
+      "cash_conversion": "Annual subscription and onboarding prepaid.",
+      "contribution_margin": "Assumption: 75-85% after support.",
+      "delivery_and_support_costs": "30-80 onboarding hours depending SKU count.",
+      "overhead_and_compliance": "Regulatory counsel, security and insurance estimated at 18,000 PLN monthly at scale.",
+      "revenue_basis": "Annual subscription by packaging SKU and supplier count.",
+      "variable_costs": "OCR, storage, supplier onboarding and specialist review."
+    },
+    "likely_incumbent_response": "PLM and packaging software vendors will add PPWR fields; win through lightweight supplier evidence collection and audit exports.",
+    "paid_event_or_measurable_loss": "Brand pays for evidence collection before approving or placing a packaging SKU on the market; missing proof causes redesign, delay or compliance cost.",
+    "payer": "Brand owner, importer or packaging manufacturer",
+    "purchase_trigger": "New packaging approval, supplier change or PPWR readiness audit.",
+    "renewal_event": "Annual subscription and every packaging or supplier revision."
+  },
+  "contrary_evidence": [
+    "Many detailed PPWR measures phase in after 2026, so urgency varies by SKU.",
+    "Large brands may extend existing PLM systems."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Unknown; proposed brand subscription and supplier data-rights terms are unsigned.",
+    "acquisition_instrument_type": "unknown",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Offer a customer-uploaded audit pack without supplier integrations and focus on mid-market brands lacking PLM.",
+    "current_owner": "Brands and converters own packaging specifications; laboratories and suppliers control supporting evidence.",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "The prospective business would own brand subscriptions; brands retain supplier relationships and suppliers retain source documents.",
+    "duration": "Unknown until contracts are signed.",
+    "exclusivity": "unknown",
+    "founder_access_basis": "none",
+    "founder_access_description": "No existing rights to brand packaging files or supplier evidence.",
+    "launch_controller": "The founder would control the proof-vault software; customers control evidence access and market decisions.",
+    "mechanism_control": "unknown",
+    "renewal": "Unknown; proposed annual subscription.",
+    "replaceability": "unknown",
+    "revocability": "unknown",
+    "status": "unknown",
+    "subject": "Packaging-SKU compliance evidence dataset",
+    "subject_type": "dataset",
+    "transferability": "unknown"
+  },
+  "discovery_lane": "mechanism-first",
+  "economics": {
+    "acquisition_route": "Sell a 10,000 PLN readiness audit, convert spreadsheets and evidence into a vault, then add supplier portals.",
+    "capital_required_pln": 75000,
+    "founder_net_worth_path": "Assumption: 150 brands at 50,000 PLN ARR yields 7.5M PLN ARR; at 22% owner earnings and 4x ARR, a 70% stake exceeds 5M PLN in years 6-9. Incumbent bundling and regulatory urgency are unknown.",
+    "founder_time": "20 hours weekly during initial audits; contract packaging specialists.",
+    "gross_margin_basis": "Subscription less supplier onboarding, storage and direct regulatory support; target 80%.",
+    "payback": "Customer payback through one avoided redesign or weeks of procurement effort; quantify during paid audit.",
+    "pricing": "10,000-25,000 PLN audit; 24,000-90,000 PLN annual subscription.",
+    "retention_or_repeat": "SKU, supplier and regulation changes keep records active."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Permissioned evidence schemas and supplier response benchmarks.",
+    "customer": "EU mid-market brands, importers and packaging manufacturers.",
+    "distribution_mechanism": "Consultant, laboratory and converter referrals.",
+    "offer_and_business_model": "Packaging evidence vault subscription.",
+    "payer_and_paid_event": "Brand pays at packaging approval and annual evidence maintenance.",
+    "problem_trigger": "PPWR readiness review, new SKU or supplier change."
+  },
+  "founder_fit": [
+    "FMCG domain familiarity without using employer resources",
+    "Data-modeling and document-AI fit",
+    "High-value asynchronous B2B workflow",
+    "75,000 PLN experiment fits capital limit"
+  ],
+  "parent": null,
+  "risks": [
+    "Strict separation from all Reckitt confidential resources is mandatory.",
+    "PLM incumbents can bundle features.",
+    "Regulatory interpretation errors create liability."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://environment.ec.europa.eu/topics/waste-and-recycling/packaging-waste_en",
+    "https://environment.ec.europa.eu/news/new-eu-rules-packaging-enter-application-2026-08-11_en"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "data_or_intelligence",
+    "commercial_model_descriptor": "packaging compliance evidence vault",
+    "control_point_category": "proprietary_dataset",
+    "control_point_descriptor": "proposed permissioned sku to evidence record",
+    "critical_dependency_category": "supply_partner",
+    "critical_dependency_descriptor": "suppliers and laboratories providing evidence"
+  },
+  "structure": {
+    "commercial_archetype": "Compliance data subscription",
+    "control_point": "Evidence record used at packaging approval",
+    "critical_dependency": "Supplier participation and regulatory interpretation"
+  },
+  "thesis": "Build the permissioned SKU-to-proof record that packaging teams consult before approval, starting with paid PPWR readiness audits.",
+  "title": "PPWR Packaging Proof Vault",
+  "uncertainties": [
+    "Immediate obligations by SKU",
+    "Mid-market budget size",
+    "Supplier participation rate"
+  ],
+  "version": 1
+}

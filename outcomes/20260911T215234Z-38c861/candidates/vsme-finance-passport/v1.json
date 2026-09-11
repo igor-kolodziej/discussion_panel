@@ -1,0 +1,127 @@
+{
+  "candidate_id": "vsme-finance-passport",
+  "claims": [
+    {
+      "claim_id": "purchase-change",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high for observed request channel; medium for monetization",
+      "evidence_refs": [
+        "https://finance.ec.europa.eu/publications/commission-presents-voluntary-sustainability-reporting-standard-ease-burden-smes_en"
+      ],
+      "statement": "The Commission recommends VSME so SMEs can answer sustainability-information requests from large customers and financial institutions and potentially improve access to sustainable finance."
+    },
+    {
+      "claim_id": "automation",
+      "claim_type": "other",
+      "confidence": "medium-high",
+      "evidence_refs": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?qid=1770584920274&uri=OJ%3AL_202501710"
+      ],
+      "statement": "The Commission recommendation explicitly explores e-invoicing extraction for VSME reporting, supporting an accounting-data automation wedge."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "SME owner/CFO, accountant or lender supplier-finance team",
+    "bundling_resistance": "Evidence-backed answers generated from Polish accounting and energy documents; accounting suites and banks can bundle",
+    "customer_relationship_owner": "unknown today; proposed future ownership by the prospective business through SME subscriptions or accountant channel contracts",
+    "distribution_origin": "Accounting firms, banks, leasing brokers and renewable installers",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Assumption: 500-2,000 PLN per SME through accountants",
+      "cash_conversion": "Annual subscription prepaid or accountant bulk billing",
+      "contribution_margin": "Assumption: 75-88% after document processing and support",
+      "delivery_and_support_costs": "Onboarding, document QA and annual report review",
+      "overhead_and_compliance": "Security, accounting integrations, legal updates and insurance",
+      "revenue_basis": "Annual company passport subscription plus lender/customer export packs",
+      "variable_costs": "OCR/model calls, energy-data connectors and accountant review"
+    },
+    "likely_incumbent_response": "Banks, accounting software and ESG platforms provide free VSME forms",
+    "paid_event_or_measurable_loss": "A lender or large customer requests sustainability information, delaying finance or supplier onboarding when evidence is missing",
+    "payer": "SME, accounting firm, lender or supply-chain sponsor",
+    "purchase_trigger": "Loan application, tender, customer questionnaire or annual reporting cycle",
+    "renewal_event": "Annual VSME refresh and each finance/tender request"
+  },
+  "contrary_evidence": [
+    "VSME is voluntary and designed to reduce burden, limiting price.",
+    "Free templates may satisfy many microbusinesses."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "No customer access held; proposed data-processing and accountant distribution agreements",
+    "acquisition_instrument_type": "unknown",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Sell direct to SMEs or through another accountant/bank",
+    "current_owner": "SMEs own evidence; accountants, banks and customers control request channels",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "unknown today; proposed future ownership by the prospective business through SME subscriptions or accountant channel contracts",
+    "duration": "unknown; proposed annual subscription",
+    "exclusivity": "unknown",
+    "founder_access_basis": "operating_relationship",
+    "founder_access_description": "Parents' company may voluntarily serve as a design partner with explicit consent; no records or rights are assumed",
+    "launch_controller": "Prospective business after customer consent and integrations",
+    "mechanism_control": "dependent",
+    "renewal": "unknown",
+    "replaceability": "replaceable",
+    "revocability": "unknown",
+    "status": "unknown",
+    "subject": "Reusable VSME evidence passport generated from operating records",
+    "subject_type": "dataset",
+    "transferability": "unknown"
+  },
+  "discovery_lane": "future-backcast",
+  "economics": {
+    "acquisition_route": "Build a consented design-partner report for one SME, sell via two accounting firms, then add standardized evidence imports",
+    "capital_required_pln": 25000,
+    "founder_net_worth_path": "Assumption: 5,000 SMEs at 2,400 PLN ARR and 22% EBITDA produces 2.64m PLN EBITDA; at 4-6x founder value exceeds 5m PLN in years 7-10. Channel conversion and ARPU are unknown.",
+    "founder_time": "12-18 hours weekly; accountant channel lowers support load",
+    "gross_margin_basis": "Subscription less document processing, support and channel commission",
+    "payback": "Assumption: 60-100 SMEs recover product cost within 18 months",
+    "pricing": "Assumption: 1,200-4,800 PLN yearly per SME; bulk channel discounts",
+    "retention_or_repeat": "Annual refresh plus recurring lender/customer exports"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Reusable evidence ledger and benchmarked questionnaire mappings",
+    "customer": "Polish SMEs receiving finance or supply-chain data requests",
+    "distribution_mechanism": "Accountant, lender and installer channels",
+    "offer_and_business_model": "Automated VSME evidence passport subscription",
+    "payer_and_paid_event": "SME or sponsor pays when finance/tender requests require answers",
+    "problem_trigger": "Sustainability questionnaires arrive without reusable evidence"
+  },
+  "founder_fit": [
+    "Excellent small-business automation fit.",
+    "Can validate in a consented family-business setting.",
+    "Low capital and low public exposure."
+  ],
+  "parent": null,
+  "risks": [
+    "Voluntary standard suppresses urgency",
+    "Low willingness to pay",
+    "Bank/accounting software bundling",
+    "Sensitive financial documents"
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://finance.ec.europa.eu/publications/commission-presents-voluntary-sustainability-reporting-standard-ease-burden-smes_en",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?qid=1770584920274&uri=OJ%3AL_202501710"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "productized_service",
+    "commercial_model_descriptor": "annual sme sustainability evidence passport",
+    "control_point_category": "customer_relationship",
+    "control_point_descriptor": "recurring sme evidence record",
+    "critical_dependency_category": "distribution_channel",
+    "critical_dependency_descriptor": "accountants lenders and supply chain sponsors"
+  },
+  "structure": {
+    "commercial_archetype": "Productized reporting subscription",
+    "control_point": "Reusable company evidence passport",
+    "critical_dependency": "Low-cost accountant or lender distribution"
+  },
+  "thesis": "Future state: SMEs answer lender and customer sustainability requests from a reusable evidence record. The missing coordination mechanism is an accounting-linked VSME passport that converts operating documents into verifiable answers.",
+  "title": "VSME Finance-and-Supplier Passport",
+  "uncertainties": [
+    "True request frequency",
+    "Channel economics",
+    "Minimum evidence acceptable to banks"
+  ],
+  "version": 1
+}

@@ -1,0 +1,127 @@
+{
+  "candidate_id": "late-invoice-recovery-marketplace",
+  "claims": [
+    {
+      "claim_id": "invoice-loss",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://single-market-economy.ec.europa.eu/system/files/2023-09/SWD_2023_314_1_EN_impact_assessment_part1_v2.pdf"
+      ],
+      "statement": "Late payments create current losses from non-payment, interest, monitoring, collection and legal work; cited EU analysis estimates these costs at about 8% of total costs for micro companies."
+    },
+    {
+      "claim_id": "invoice-payer",
+      "claim_type": "payer_and_budget",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://single-market-economy.ec.europa.eu/smes/challenges-and-resilience/late-payment/eu-payment-observatory/eu-payment-observatory-indicators-mapper_en"
+      ],
+      "statement": "SME owners and finance managers experience the cash-flow loss and can fund recovery from collected proceeds, although willingness to share recoveries is unverified."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "SME owner or finance manager",
+    "bundling_resistance": "Outcome-based routing across reminder, mediation, legal and financing options differs from fixed debt-collection software.",
+    "customer_relationship_owner": "The prospective business would own SME marketplace contracts; SMEs retain debtor relationships and collection claims.",
+    "distribution_origin": "Accountants and bookkeeping platforms refer overdue-invoice portfolios.",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Assumption: 500-1,500 PLN per SME via accountants.",
+      "cash_conversion": "Success fee deducted when debtor funds clear.",
+      "contribution_margin": "Assumption: 35-55% after recovery-partner share and payment costs.",
+      "delivery_and_support_costs": "Automated intake plus exception handling; legal work passed to licensed partners.",
+      "overhead_and_compliance": "Legal, complaints, AML/payment review and insurance estimated at 15,000 PLN monthly at scale.",
+      "revenue_basis": "Percentage of cash recovered plus optional monitoring subscription.",
+      "variable_costs": "Recovery-partner share, payment processing, data checks and support."
+    },
+    "likely_incumbent_response": "Collection agencies and invoice platforms may lower fees; neutral routing and accountant distribution are defenses.",
+    "paid_event_or_measurable_loss": "An invoice becomes overdue, impairing SME liquidity; revenue occurs only when overdue cash is recovered.",
+    "payer": "Creditor SME through a deduction from recovered proceeds",
+    "purchase_trigger": "Invoice passes 14-30 days overdue and internal reminders fail.",
+    "renewal_event": "Each overdue invoice; portfolio-monitoring subscription renews monthly."
+  },
+  "contrary_evidence": [
+    "Many SMEs avoid aggressive collection to preserve customer relationships.",
+    "Regulated legal and payment activities cannot be performed casually and require qualified partners."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Unknown; proposed accountant distribution agreements and SME recovery mandates are unsigned.",
+    "acquisition_instrument_type": "unknown",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Acquire SMEs directly through a free overdue-invoice diagnostic and route only to nonexclusive licensed partners.",
+    "current_owner": "Creditor SMEs own claims and debtor relationships; collection partners control regulated recovery capabilities.",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "The prospective business would own SME marketplace contracts; SMEs retain debtor relationships and collection claims.",
+    "duration": "Unknown until mandates are signed.",
+    "exclusivity": "unknown",
+    "founder_access_basis": "none",
+    "founder_access_description": "No existing rights to invoices, accountant channels or recovery capacity.",
+    "launch_controller": "The founder would control intake, scoring and routing; SMEs decide actions and licensed partners execute regulated steps.",
+    "mechanism_control": "unknown",
+    "renewal": "Unknown; proposed per-claim mandate.",
+    "replaceability": "unknown",
+    "revocability": "unknown",
+    "status": "unknown",
+    "subject": "Overdue-invoice routing transaction",
+    "subject_type": "transaction",
+    "transferability": "unknown"
+  },
+  "discovery_lane": "mechanism-first",
+  "economics": {
+    "acquisition_route": "Partner with one licensed collection firm, test 100 SME invoices through accountants, then add competing recovery routes.",
+    "capital_required_pln": 60000,
+    "founder_net_worth_path": "Assumption: 400M PLN annual claims routed, 15% recovered, 10% gross fee and 45% contribution yields 2.7M PLN contribution; a 70% stake at 4x owner earnings could exceed 5M PLN in years 6-9. Recovery rate and legal scope are unknown.",
+    "founder_time": "15-20 hours weekly; partner execution prevents a manual collection job.",
+    "gross_margin_basis": "Success fees less partner share, payments and direct case support; target 45%.",
+    "payback": "CAC is paid only from recovery; target platform acquisition payback on the first recovered invoice.",
+    "pricing": "8-15% of recovered cash, with higher rates for advanced legal stages.",
+    "retention_or_repeat": "SMEs generate recurring invoices and periodic delinquencies."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Permissioned recovery outcomes improve route and timing selection.",
+    "customer": "Polish micro and small B2B creditors.",
+    "distribution_mechanism": "Accountant and bookkeeping-platform referrals.",
+    "offer_and_business_model": "Outcome-priced marketplace for overdue-invoice recovery.",
+    "payer_and_paid_event": "Creditor pays a success fee only when cash is recovered.",
+    "problem_trigger": "Invoice remains unpaid after internal reminders."
+  },
+  "founder_fit": [
+    "Finance and modeling interest",
+    "Outcome data suits data-science optimization",
+    "Asynchronous accountant channel reduces social load",
+    "60,000 PLN test is within available capital"
+  ],
+  "parent": null,
+  "risks": [
+    "Regulatory boundary around legal and payment services",
+    "Adverse selection of unrecoverable invoices",
+    "Debtor disputes and reputational harm"
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://single-market-economy.ec.europa.eu/system/files/2023-09/SWD_2023_314_1_EN_impact_assessment_part1_v2.pdf",
+    "https://single-market-economy.ec.europa.eu/smes/challenges-and-resilience/late-payment/eu-payment-observatory/eu-payment-observatory-indicators-mapper_en"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "marketplace",
+    "commercial_model_descriptor": "outcome priced invoice recovery marketplace",
+    "control_point_category": "transaction_rail",
+    "control_point_descriptor": "proposed routing and recovered cash fee rail",
+    "critical_dependency_category": "rights_holder",
+    "critical_dependency_descriptor": "creditor mandates and licensed recovery partners"
+  },
+  "structure": {
+    "commercial_archetype": "Success-fee marketplace",
+    "control_point": "Recovery routing and cleared-cash event",
+    "critical_dependency": "Creditor mandates and licensed execution"
+  },
+  "thesis": "Make the overdue-invoice cash event the control point and charge only on recovery, using data to route each claim to the least destructive effective action.",
+  "title": "Late-Invoice Recovery Marketplace",
+  "uncertainties": [
+    "Polish recovery rates by invoice segment",
+    "Required licenses and mandate structure",
+    "Accountant-channel conversion"
+  ],
+  "version": 1
+}

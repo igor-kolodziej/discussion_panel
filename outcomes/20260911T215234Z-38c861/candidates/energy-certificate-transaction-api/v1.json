@@ -1,0 +1,126 @@
+{
+  "candidate_id": "energy-certificate-transaction-api",
+  "claims": [
+    {
+      "claim_id": "certificate-paid-event",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/rozwoj-technologia/Swiadectwa-charakterystyki-energetycznej"
+      ],
+      "statement": "A certificate must currently be supplied for specified building sale or rental events, and an eligible professional must prepare it; each qualifying transaction creates a paid service event."
+    },
+    {
+      "claim_id": "certificate-renewal",
+      "claim_type": "other",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/rozwoj-technologia/Swiadectwa-charakterystyki-energetycznej"
+      ],
+      "statement": "Certificates generally last ten years but expire earlier after works changing energy performance, producing event-driven repeat demand rather than annual renewal."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Property manager, estate agency operations head or notary-adjacent transaction coordinator",
+    "bundling_resistance": "Embedded ordering, document completeness and licensed-assessor capacity inside the property workflow resist a standalone certificate shop.",
+    "customer_relationship_owner": "The prospective business would own agency or property-manager service contracts; assessors retain professional responsibility and agencies retain sellers and landlords.",
+    "distribution_origin": "Workflow integrations and nonexclusive referral agreements with property managers and estate agencies.",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Assumption: 3,000-8,000 PLN per agency account.",
+      "cash_conversion": "Prepaid per order or monthly consolidated billing.",
+      "contribution_margin": "Assumption: 25-40% after assessor payout.",
+      "delivery_and_support_costs": "Assessor coordination and exception handling estimated at 30-60 minutes per order.",
+      "overhead_and_compliance": "Professional verification, security, complaints and insurance estimated at 10,000 PLN monthly.",
+      "revenue_basis": "Per-certificate transaction fee and API fee.",
+      "variable_costs": "Licensed assessor payout, payment fees and document support."
+    },
+    "likely_incumbent_response": "Certificate marketplaces may offer agency integrations; local capacity reliability and SLA become key.",
+    "paid_event_or_measurable_loss": "Owner or agent pays for a certificate at a qualifying sale, rental, completion or post-renovation event.",
+    "payer": "Property owner, manager, developer or estate agency",
+    "purchase_trigger": "Listing, lease signing, sale closing, building completion or qualifying renovation.",
+    "renewal_event": "Next transaction or performance-changing renovation; not normally annual."
+  },
+  "contrary_evidence": [
+    "Certificates remain valid for ten years absent relevant works, limiting repeat frequency per property.",
+    "Low-cost direct assessors can compress marketplace take rates."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Unknown; proposed nonexclusive assessor capacity and property-workflow integration agreements are unsigned.",
+    "acquisition_instrument_type": "unknown",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Operate direct consumer ordering with multiple replaceable assessors and CSV intake before integrations.",
+    "current_owner": "Licensed assessors control certificate issuance; property intermediaries control transaction workflows.",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "The prospective business would own agency or property-manager service contracts; assessors retain professional responsibility and agencies retain sellers and landlords.",
+    "duration": "Unknown until agreements are executed.",
+    "exclusivity": "unknown",
+    "founder_access_basis": "none",
+    "founder_access_description": "No current property-channel or assessor-capacity rights.",
+    "launch_controller": "The founder would control order routing and API; licensed assessors control professional issuance.",
+    "mechanism_control": "unknown",
+    "renewal": "Unknown; proposed annual integrations and per-order assessor terms.",
+    "replaceability": "unknown",
+    "revocability": "unknown",
+    "status": "unknown",
+    "subject": "Energy-certificate ordering workflow",
+    "subject_type": "transaction",
+    "transferability": "unknown"
+  },
+  "discovery_lane": "mechanism-first",
+  "economics": {
+    "acquisition_route": "Aggregate ten nonexclusive assessors, manually serve two agencies, then expose ordering and status APIs.",
+    "capital_required_pln": 65000,
+    "founder_net_worth_path": "Assumption: 30,000 orders annually at 180 PLN net revenue produces 5.4M PLN revenue; at 15% owner earnings and a 6x workflow-platform value, a 70% stake could approach 5M PLN in years 7-10. Order density and take rate are unknown.",
+    "founder_time": "15 hours weekly until dispatcher hire.",
+    "gross_margin_basis": "Order price less assessor payout and direct support; target 35%.",
+    "payback": "Agency saves coordination time and reduces closing delay; founder CAC target below 100 fulfilled orders.",
+    "pricing": "450-900 PLN retail with 120-250 PLN platform net; API minimum 500 PLN monthly.",
+    "retention_or_repeat": "Agencies and property managers generate recurring transaction orders."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Assessor reliability, turnaround and property-input completeness data.",
+    "customer": "Estate agencies, property managers and residential developers.",
+    "distribution_mechanism": "Embedded workflow integration and referral contracts.",
+    "offer_and_business_model": "Certificate-capacity transaction API.",
+    "payer_and_paid_event": "Property stakeholder pays per qualifying certificate event.",
+    "problem_trigger": "A sale, rental, completion or renovation requires documentation."
+  },
+  "founder_fit": [
+    "Polish market proximity",
+    "Automation and routing fit",
+    "Can start with manual dispatch",
+    "No camera-based brand required"
+  ],
+  "parent": null,
+  "risks": [
+    "Thin transaction margins",
+    "Assessor quality and liability",
+    "Channels may build direct assessor panels"
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://www.gov.pl/web/rozwoj-technologia/Swiadectwa-charakterystyki-energetycznej"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "transaction_intermediation",
+    "commercial_model_descriptor": "energy certificate ordering and capacity api",
+    "control_point_category": "contracted_capacity",
+    "control_point_descriptor": "proposed nonexclusive licensed assessor capacity",
+    "critical_dependency_category": "specialist_labor",
+    "critical_dependency_descriptor": "available licensed energy assessors"
+  },
+  "structure": {
+    "commercial_archetype": "Transaction API with capacity routing",
+    "control_point": "Certificate order embedded before property completion",
+    "critical_dependency": "Licensed assessor supply and channel integration"
+  },
+  "thesis": "Aggregate replaceable licensed-assessor capacity and embed ordering at the legally triggered property transaction.",
+  "title": "Energy Certificate Transaction API",
+  "uncertainties": [
+    "Agency order volume",
+    "Assessor payout and SLA",
+    "Integration willingness"
+  ],
+  "version": 1
+}

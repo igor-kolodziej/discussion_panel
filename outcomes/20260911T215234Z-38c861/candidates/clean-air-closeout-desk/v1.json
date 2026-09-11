@@ -1,0 +1,126 @@
+{
+  "candidate_id": "clean-air-closeout-desk",
+  "claims": [
+    {
+      "claim_id": "closeout-paid-event",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://czystepowietrze.gov.pl/wez-dofinansowanie/instrukcja-krok-po-kroku/krok-7-zrealizuj-i-rozlicz-inwestycje"
+      ],
+      "statement": "Czyste Powietrze beneficiaries currently submit payment applications and must provide specified closeout evidence; document defects can delay reimbursement and installer collection."
+    },
+    {
+      "claim_id": "closeout-founder-path",
+      "claim_type": "founder_control_point_path",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://czystepowietrze.gov.pl/wez-dofinansowanie/instrukcja-krok-po-kroku/krok-7-zrealizuj-i-rozlicz-inwestycje"
+      ],
+      "statement": "The family installer relationship provides replaceable access to observe a live closeout workflow with permission, but no right to beneficiary files is assumed."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Installation-company owner or operations manager",
+    "bundling_resistance": "Payment-contingent document QA spans installer invoices, beneficiary evidence and program forms; generic document storage does not own the closeout checklist.",
+    "customer_relationship_owner": "The prospective business would own service contracts with installers; installers and beneficiaries retain their underlying relationships.",
+    "distribution_origin": "Family installer proof, then accountant, energy-auditor and installer referrals.",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Assumption: 600-1,500 PLN per installer via referrals.",
+      "cash_conversion": "Per-case fee collected on submission or partly contingent on payment approval.",
+      "contribution_margin": "Assumption: 55-70% after reviewer labor and OCR.",
+      "delivery_and_support_costs": "One to three analyst hours per case after automation.",
+      "overhead_and_compliance": "Secure storage, GDPR documentation, professional liability and accounting estimated at 5,000 PLN monthly at scale.",
+      "revenue_basis": "Per closeout pack, optionally with a monthly minimum.",
+      "variable_costs": "Document reviewer labor, OCR, storage and specialist escalation."
+    },
+    "likely_incumbent_response": "Energy auditors and grant consultants may bundle closeout help; win on turnaround, standardized evidence and installer integrations.",
+    "paid_event_or_measurable_loss": "Installer or beneficiary pays for a compliant closeout pack to unlock or avoid delay of a subsidy payment.",
+    "payer": "Installer, beneficiary or grant operator depending contract",
+    "purchase_trigger": "Upcoming final payment application with incomplete evidence.",
+    "renewal_event": "Repeat purchase for each subsidized project; annual framework renewal for installers."
+  },
+  "contrary_evidence": [
+    "Beneficiaries can complete payment applications themselves.",
+    "Program changes can shrink volumes or make automation obsolete."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Existing informal family operating relationship for permissioned process observation; proposed case-processing contracts and data-processing agreements are unsigned.",
+    "acquisition_instrument_type": "other",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Acquire cases through independent auditors and publish a fixed-price direct beneficiary service using user-uploaded documents.",
+    "current_owner": "The installer and beneficiary currently control project evidence; NFOŚiGW/WFOŚiGW controls acceptance.",
+    "customer_relationship_control": "owned",
+    "customer_relationship_owner": "The prospective business would own service contracts with installers; installers and beneficiaries retain their underlying relationships.",
+    "duration": "Ongoing family relationship without fixed term.",
+    "exclusivity": "nonexclusive",
+    "founder_access_basis": "operating_relationship",
+    "founder_access_description": "Voluntary family-installer workflow access, excluding unconsented beneficiary documents.",
+    "launch_controller": "The founder would control the document-QA service and its installer contracts.",
+    "mechanism_control": "dependent",
+    "renewal": "Access by mutual consent; future framework contracts would specify renewal.",
+    "replaceability": "replaceable",
+    "revocability": "at_will",
+    "status": "replaceable_access",
+    "subject": "Czyste Powietrze project-closeout workflow",
+    "subject_type": "workflow_position",
+    "transferability": "nontransferable"
+  },
+  "discovery_lane": "mechanism-first",
+  "economics": {
+    "acquisition_route": "Manually QA ten permissioned packs, measure defects and turnaround, then productize reviewer checklists and installer intake.",
+    "capital_required_pln": 30000,
+    "founder_net_worth_path": "Assumption: 6,000 cases annually at 800 PLN yields 4.8M PLN revenue; at 18% owner earnings and a 5x service-software multiple, an 80% stake could exceed 5M PLN in years 6-9. Program volume and automation rate are unknown.",
+    "founder_time": "15-20 hours weekly initially; hire trained reviewers after 30 monthly cases.",
+    "gross_margin_basis": "Case revenue less direct reviewer, OCR and specialist costs; target 60%.",
+    "payback": "A customer pays 500-1,200 PLN to reduce delay risk on a materially larger subsidy or installer receivable.",
+    "pricing": "500-1,200 PLN per pack or 3,000 PLN monthly minimum.",
+    "retention_or_repeat": "Every subsidized project creates a new closeout event."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Permissioned defect taxonomy and reviewer playbooks shorten processing.",
+    "customer": "Polish retrofit installers and Czyste Powietrze beneficiaries.",
+    "distribution_mechanism": "Auditor and installer referral network.",
+    "offer_and_business_model": "Per-case managed document closeout.",
+    "payer_and_paid_event": "Installer or beneficiary pays when submitting a payment application.",
+    "problem_trigger": "A closeout deadline or returned evidence pack."
+  },
+  "founder_fit": [
+    "Family renewable business provides operating context",
+    "AI/OCR and analytical QA fit",
+    "Manual-to-product path is bootstrappable",
+    "No public-facing personal brand required"
+  ],
+  "parent": null,
+  "risks": [
+    "Regulatory program volume may fall.",
+    "Incorrect advice could delay payments.",
+    "Sensitive documents require strong security and processor controls."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://czystepowietrze.gov.pl/wez-dofinansowanie/instrukcja-krok-po-kroku/krok-7-zrealizuj-i-rozlicz-inwestycje"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "productized_service",
+    "commercial_model_descriptor": "grant closeout document qa service",
+    "control_point_category": "operating_relationship",
+    "control_point_descriptor": "replaceable installer closeout workflow access",
+    "critical_dependency_category": "specialist_labor",
+    "critical_dependency_descriptor": "trained reviewers and energy certification partners"
+  },
+  "structure": {
+    "commercial_archetype": "Productized compliance service",
+    "control_point": "Pre-submission evidence gate",
+    "critical_dependency": "Reviewer accuracy and stable program rules"
+  },
+  "thesis": "Acquire a repeatable position immediately before subsidy payment submission and charge per compliant closeout pack.",
+  "title": "Czyste Powietrze Closeout Desk",
+  "uncertainties": [
+    "Annual addressable case volume",
+    "Defect rate in installer-prepared packs",
+    "Permissible scope without regulated credentials"
+  ],
+  "version": 1
+}

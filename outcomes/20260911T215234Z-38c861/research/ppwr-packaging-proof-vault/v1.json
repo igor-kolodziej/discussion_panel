@@ -1,0 +1,333 @@
+{
+  "candidate_id": "ppwr-packaging-proof-vault",
+  "candidate_sha256": "f323952a92c55f09cf8cadb0374b7bd1c68561b25986e3ab761741b076fe31b4",
+  "candidate_version": 1,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "rc-regulatory-duty",
+      "evidence_refs": [
+        "src-eu-regulation",
+        "src-commission-application"
+      ],
+      "statement": "Regulation (EU) 2025/40 generally applies from 12 August 2026, requires manufacturers to establish technical documentation and a declaration of conformity for each packaging type, and requires suppliers to provide manufacturers the information and documentation necessary to demonstrate conformity."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "rc-buyer-workflow",
+      "evidence_refs": [
+        "src-bossard",
+        "src-oriflame"
+      ],
+      "statement": "Direct buyer-side evidence supports a real supplier-document workflow: Bossard says it is integrating PPWR requirements into supplier due diligence and requesting compliance information, while an Oriflame packaging manager reports using a centralized platform for documents and supplier instructions."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "rc-candidate-paid-validation",
+      "evidence_refs": [],
+      "statement": "No evidence establishes that a buyer has purchased, contracted for, or committed budget to this candidate's proposed audit or proof-vault subscription."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "rc-distribution-validation",
+      "evidence_refs": [],
+      "statement": "No signed referral, reseller, laboratory, converter, consultant, or other customer-acquisition agreement for this candidate is evidenced."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "rc-fully-loaded-economics",
+      "evidence_refs": [],
+      "statement": "The candidate's CAC, onboarding labor, specialist-review cost, support burden, insurance, legal overhead, gross margin, conversion rate, churn, and payback assumptions have not been validated together through actual delivery and cohort data."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "rc-rights-contracts",
+      "evidence_refs": [],
+      "statement": "No executed customer subscription, supplier data-rights agreement, processing agreement, laboratory agreement, exclusivity, durable access mandate, or transferable right to packaging evidence is evidenced."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "rc-cold-start",
+      "evidence_refs": [
+        "src-eu-regulation",
+        "src-bossard",
+        "src-specright-platform"
+      ],
+      "statement": "The vault faces a material cold start: useful records require customer and supplier inputs, and an entrant cannot infer authoritative composition, test, or conformity evidence solely from public information. Regulation-mandated supplier disclosure can facilitate collection but does not give this candidate automatic access."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "rc-mechanism-ownership",
+      "evidence_refs": [],
+      "statement": "The founder could own newly written software and schemas, but actual ownership of the proposed critical mechanism—a permissioned SKU-to-evidence dataset with supplier-response benchmarks—is unproven because no software IP provenance, populated dataset, customer permissions, or benchmark rights are evidenced."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "rc-low-price-substitutes",
+      "evidence_refs": [
+        "src-ppwrconnect",
+        "src-ppwrify"
+      ],
+      "statement": "Direct substitutes already advertise declarations, supplier tools, repositories, evidence trails, and SKU-based PPWR workflows at prices as low as €29 per month, with PPWRify offering 150 packaging units for €999 annually; this contradicts an assumption that a lightweight vault is inherently resistant to price competition."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "rc-incumbent-bundling",
+      "evidence_refs": [
+        "src-specright-platform",
+        "src-specright-ppwr"
+      ],
+      "statement": "Specright already combines packaging specifications, supplier collaboration, traceability, approvals, compliance documentation, and automated PPWR declaration reporting, demonstrating that an incumbent can bundle the proposed core workflow."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "rc-commercial-price-signals",
+      "evidence_refs": [
+        "src-erp-offer",
+        "src-ppwr-check"
+      ],
+      "statement": "Public commercial offers demonstrate that organizations charge for PPWR work: ERP lists packages from €1,999 for a workshop and assessment through €6,999 plus €749 quarterly for ongoing implementation, while PPWR Check lists annual software packages from €5,000."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "rc-phased-urgency",
+      "evidence_refs": [
+        "src-commission-application"
+      ],
+      "statement": "The Commission states that PPWR rules begin applying on a phased basis and that major recyclability, recycled-content, empty-space, reuse, and specified single-use restrictions apply from 2030, so immediate urgency and willingness to pay will vary by obligation and packaging portfolio."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "rc-repeat-demand",
+      "evidence_refs": [
+        "src-eu-regulation",
+        "src-bossard"
+      ],
+      "statement": "Retention could be supported by multi-year recordkeeping, supplier changes, packaging revisions, and continuing secondary legislation, but repeat subscription demand for this candidate remains an inference rather than observed renewal evidence."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "rc-control-obtainability",
+      "evidence_refs": [
+        "src-eu-regulation"
+      ],
+      "statement": "The control point appears obtainable only through ordinary customer and supplier contracts rather than an exclusive statutory franchise: Article 16 creates an information flow from suppliers to manufacturers, but the candidate would need customers to authorize storage, processing, reuse, and benchmarking."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "rc-no-fatal-regulatory-bar",
+      "evidence_refs": [
+        "src-eu-regulation"
+      ],
+      "statement": "The reviewed regulation permits technical documentation in electronic form and allows mandated representatives to retain and provide documentation within defined limits; it does not reveal an inherent legal prohibition on operating a contracted evidence repository, although data protection, confidentiality, security, and liability terms still require counsel."
+    }
+  ],
+  "commercial_evidence": {
+    "buyer_or_paid_event": {
+      "claim_ids": [
+        "rc-buyer-workflow",
+        "rc-commercial-price-signals"
+      ],
+      "source_ids": [
+        "src-bossard",
+        "src-oriflame",
+        "src-erp-offer",
+        "src-ppwr-check"
+      ],
+      "status": "evidence"
+    },
+    "distribution_and_acquisition": {
+      "claim_ids": [
+        "rc-distribution-validation"
+      ],
+      "source_ids": [],
+      "status": "unknown"
+    },
+    "fully_loaded_unit_economics": {
+      "claim_ids": [
+        "rc-fully-loaded-economics"
+      ],
+      "source_ids": [],
+      "status": "unknown"
+    },
+    "rights_control_access_contractibility": {
+      "claim_ids": [
+        "rc-rights-contracts"
+      ],
+      "source_ids": [],
+      "status": "unknown"
+    }
+  },
+  "contrary_evidence": [
+    "PPWR Connect advertises overlapping compliance, declaration, evidence-trail, and portfolio functions from €29 per month, substantially below the candidate's proposed 24,000–90,000 PLN annual subscription range.",
+    "PPWRify includes a supplier tool and document repository and prices a 150-unit annual plan at €999, showing that supplier-linked document management is already directly substitutable.",
+    "Specright launched automated PPWR Declaration of Conformity reporting inside an established specification-management and supplier-collaboration platform, directly validating the incumbent-bundling risk.",
+    "The European Commission says important substantive measures phase in through 2030, contradicting any claim of uniform immediate urgency across all SKUs.",
+    "These sources contradict differentiation, pricing, and urgency assumptions; they do not establish fatality because no source proves that a narrower mid-market implementation service cannot win customers."
+  ],
+  "critical_control_point_assessment": {
+    "assessment": "unknown",
+    "claim_ids": [
+      "rc-rights-contracts",
+      "rc-mechanism-ownership"
+    ],
+    "source_ids": [],
+    "status": "unknown"
+  },
+  "falsification": {
+    "cold_start_and_data_moat": [
+      "rc-cold-start",
+      "rc-mechanism-ownership"
+    ],
+    "control_point_obtainability": [
+      "rc-control-obtainability",
+      "rc-rights-contracts"
+    ],
+    "critical_mechanism_ownership": [
+      "rc-mechanism-ownership",
+      "rc-rights-contracts"
+    ],
+    "external_dependencies": [
+      "rc-rights-contracts",
+      "rc-cold-start",
+      "rc-distribution-validation"
+    ],
+    "substitutes_and_incumbent_response": [
+      "rc-low-price-substitutes",
+      "rc-incumbent-bundling"
+    ],
+    "willingness_urgency_and_repeat_economics": [
+      "rc-candidate-paid-validation",
+      "rc-commercial-price-signals",
+      "rc-phased-urgency",
+      "rc-repeat-demand",
+      "rc-fully-loaded-economics"
+    ]
+  },
+  "schema_version": 3,
+  "sources": [
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "regulatory",
+      "published_at": "2025-01-22",
+      "publisher": "Official Journal of the European Union / EUR-Lex",
+      "source_id": "src-eu-regulation",
+      "source_type": "official regulation",
+      "stance": "supporting",
+      "title": "Regulation (EU) 2025/40 on packaging and packaging waste",
+      "url": "https://eur-lex.europa.eu/eli/reg/2025/40/oj"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "regulatory",
+      "published_at": "2026-08-11",
+      "publisher": "European Commission, Directorate-General for Environment",
+      "source_id": "src-commission-application",
+      "source_type": "official news article",
+      "stance": "contradicting",
+      "title": "New EU packaging rules start to apply, including restrictions on PFAS in food-contact packaging",
+      "url": "https://environment.ec.europa.eu/news/new-eu-rules-packaging-enter-application-2026-08-11_en"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "direct_buyer",
+      "published_at": "2026-06",
+      "publisher": "Bossard Group AG",
+      "source_id": "src-bossard",
+      "source_type": "buyer customer-information document",
+      "stance": "supporting",
+      "title": "EU Packaging and Packaging Waste Regulation (PPWR): Customer Information",
+      "url": "https://assets.eu.ctfassets.net/0vp0u5uh75zd/2M0AZUR6mqgZveNYR8mCSQ/0370d257d38e7122076f94ccf025935a/PPWR_-_Customer_Information_-_June_2026_-_EN.pdf"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "direct_buyer",
+      "published_at": "unknown",
+      "publisher": "Specright, quoting Oriflame",
+      "source_id": "src-oriflame",
+      "source_type": "vendor customer quotation",
+      "stance": "supporting",
+      "title": "Using Specification Data to Improve Supplier Collaboration",
+      "url": "https://www.specright.com/blog/how-specification-data-management-transforms-supplier-collaboration/"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "incumbent",
+      "published_at": "unknown",
+      "publisher": "PPWR Connect / Veoria",
+      "source_id": "src-ppwrconnect",
+      "source_type": "competitor pricing page",
+      "stance": "contradicting",
+      "title": "PPWR Compliance Pricing: Plans from €29/month",
+      "url": "https://ppwrconnect.com/pricing"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "incumbent",
+      "published_at": "unknown",
+      "publisher": "PPWRify",
+      "source_id": "src-ppwrify",
+      "source_type": "competitor pricing page",
+      "stance": "contradicting",
+      "title": "PPWRify Pricing",
+      "url": "https://www.ppwrify.de/en/price/"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "incumbent",
+      "published_at": "unknown",
+      "publisher": "Specright",
+      "source_id": "src-specright-platform",
+      "source_type": "incumbent product page",
+      "stance": "contradicting",
+      "title": "One Source of Truth for Every Packaging Specification",
+      "url": "https://www.specright.com/industry/packaging/"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "incumbent",
+      "published_at": "2026-07-22",
+      "publisher": "Specright",
+      "source_id": "src-specright-ppwr",
+      "source_type": "incumbent press release",
+      "stance": "contradicting",
+      "title": "Specright Launches Automated PPWR Declaration of Conformity Reporting",
+      "url": "https://www.specright.com/press-releases/specright-ppwr-declaration-of-conformity-capability/"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "paid_event",
+      "published_at": "2026-03",
+      "publisher": "European Recycling Platform / Landbell Group",
+      "source_id": "src-erp-offer",
+      "source_type": "commercial service price sheet",
+      "stance": "supporting",
+      "title": "Your Roadmap to PPWR Compliance",
+      "url": "https://erp-recycling.org/de-at/wp-content/uploads/sites/57/2026/03/ProductSheet_PPWR-Pakete_EN-ERP.pdf"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "paid_event",
+      "published_at": "unknown",
+      "publisher": "PACOON / PPWR Check",
+      "source_id": "src-ppwr-check",
+      "source_type": "commercial software pricing page",
+      "stance": "supporting",
+      "title": "PPWR Check: Quickly Ensure EU Packaging Compliance Online",
+      "url": "https://ppwrcheck.com/en"
+    }
+  ],
+  "unknowns": [
+    "Whether any target Polish or EU mid-market buyer will pay 10,000–25,000 PLN for this candidate's audit or 24,000–90,000 PLN annually for its vault.",
+    "Actual conversion rate from readiness audit to subscription, sales-cycle duration, CAC, payback, churn, renewal, expansion, and contribution margin.",
+    "The number of target buyers lacking adequate PLM, specification-management, supplier-portal, consultant, or low-cost PPWR software alternatives.",
+    "Supplier response rates, document completeness, document accuracy, refresh frequency, and willingness to permit derived benchmarks.",
+    "Whether laboratories, consultants, or converters will make referrals, on what economics, and under signed durable terms.",
+    "Ownership and provenance of future software, schemas, extracted fields, annotations, benchmarks, and AI outputs.",
+    "Customer and supplier permissions for storage, subprocessors, model use, cross-customer aggregation, benchmarking, retention, deletion, portability, and post-termination access.",
+    "Security, professional-liability, regulatory-counsel, localization, support, specialist-review, and onboarding costs at representative portfolio sizes.",
+    "Which obligations create an immediate 2026 purchase trigger for each target packaging portfolio versus requirements taking effect later.",
+    "Whether the proposed dataset develops a defensible data moat rather than remaining customer-isolated records that competitors can reproduce.",
+    "No reviewed evidence supports a fatal conclusion: illegality, an unobtainable essential right, mathematically impossible conservative economics, and non-delegable founder incompatibility are all unproven."
+  ]
+}

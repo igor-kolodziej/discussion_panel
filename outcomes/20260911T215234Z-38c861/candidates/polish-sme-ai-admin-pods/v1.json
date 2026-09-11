@@ -1,0 +1,136 @@
+{
+  "candidate_id": "polish-sme-ai-admin-pods",
+  "claims": [
+    {
+      "claim_id": "ai-admin-signal",
+      "claim_type": "other",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20251211-2",
+        "https://ec.europa.eu/eurostat/documents/7870049/23260410/KS-01-26-009-EN-N.pdf/37d063cb-28cf-3b4e-91f3-c3784c970842"
+      ],
+      "statement": "EU enterprise AI use rose 6.5 percentage points to 20% in 2025, while Poland reached only 8.4%; finance, accounting, controlling, and administration are already reported AI use cases."
+    },
+    {
+      "claim_id": "ai-admin-loss",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://ec.europa.eu/eurostat/documents/7870049/23260410/KS-01-26-009-EN-N.pdf/37d063cb-28cf-3b4e-91f3-c3784c970842"
+      ],
+      "statement": "Polish service SMEs currently allocate paid staff time to inbox classification, document extraction, quoting, scheduling, and invoice processing; hours per firm require direct measurement."
+    },
+    {
+      "claim_id": "ai-admin-payer",
+      "claim_type": "payer_and_budget",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20251211-2"
+      ],
+      "statement": "The likely payer is the owner-manager using payroll or outsourced-administration budget, but low Polish adoption may reflect weak willingness or capability."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Owner-manager or operations manager",
+    "bundling_resistance": "Microsoft, Google, CRM, and accounting suites can bundle assistants; vertical workflow ownership and outcome guarantees provide resistance",
+    "customer_relationship_owner": "Unknown today; proposed direct contracts with one narrow Polish service vertical",
+    "distribution_origin": "Trade software resellers, accountants, family-business referrals under explicit agreement, and targeted outbound",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Assumption: 2,000-6,000 PLN per SME",
+      "cash_conversion": "Setup paid upfront and monthly retainer in advance",
+      "contribution_margin": "Assumption: 55-70% after monitoring and human exception handling",
+      "delivery_and_support_costs": "Assumption: 20-60 hours initial workflow mapping and 2-6 hours monthly support",
+      "overhead_and_compliance": "GDPR, AI policy, security, liability, and vendor subscriptions",
+      "revenue_basis": "Setup plus monthly managed automation pod",
+      "variable_costs": "Model inference, automation platforms, monitoring, and exception labor"
+    },
+    "likely_incumbent_response": "Horizontal productivity suites improve agents and local resellers offer implementation",
+    "paid_event_or_measurable_loss": "Current employee or outsourced-admin hours spent moving information among email, documents, calendars, quotes, and invoices",
+    "payer": "Polish 5-30 employee service-business owner",
+    "purchase_trigger": "Hiring avoidance, backlog, staff departure, or repeated administrative error",
+    "renewal_event": "Monthly if documented hours saved exceed fee"
+  },
+  "contrary_evidence": [
+    "Poland's low adoption may signal limited demand rather than untapped opportunity.",
+    "Horizontal AI suites are improving rapidly and can compress service margins."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Proposed workflow-integration agreement covering selected inbox, CRM, calendar, and accounting actions; unsigned",
+    "acquisition_instrument_type": "workflow_integration_agreement",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Deliver an offline process audit and human-operated prototype using customer-provided sample data",
+    "current_owner": "Each SME and its software vendors control workflow data and action permissions",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "Unknown today; proposed direct contracts with one narrow Polish service vertical",
+    "duration": "Unknown until signed",
+    "exclusivity": "nonexclusive",
+    "founder_access_basis": "operating_relationship",
+    "founder_access_description": "A family-business relationship may allow a formally consented renewable-installer pilot, but no customer data or employer materials are presently usable",
+    "launch_controller": "Prospective business after scoped authorization; customer retains approval for high-risk actions",
+    "mechanism_control": "unknown",
+    "renewal": "Proposed monthly agreement; unsigned",
+    "replaceability": "replaceable",
+    "revocability": "unknown",
+    "status": "unknown",
+    "subject": "Vertical administrative workflow integration",
+    "subject_type": "workflow_position",
+    "transferability": "consent_required"
+  },
+  "discovery_lane": "weak-signal",
+  "economics": {
+    "acquisition_route": "Choose one workflow in renewable installers, baseline hours for four weeks, deploy human-in-loop automation, then clone to ten firms",
+    "capital_required_pln": 20000,
+    "founder_net_worth_path": "Assumption: productizing to 500 firms at 3,000 PLN monthly yields 18m PLN ARR; at 15-25% owner earnings, founder net worth can exceed 5m PLN in 4-7 years. Support intensity and vertical concentration are unknown.",
+    "founder_time": "20-25 hours weekly until standardized onboarding and support hires exist",
+    "gross_margin_basis": "Monthly fee less model, automation, monitoring, and human exception costs",
+    "payback": "Assumption: 3-6 months at 4,000 PLN CAC and 1,000-1,500 PLN monthly contribution",
+    "pricing": "Assumption: 5,000-20,000 PLN setup plus 1,500-5,000 PLN monthly",
+    "retention_or_repeat": "Monthly while workflows remain active and savings are evidenced"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Vertical process templates, exception data, and time-saving benchmarks",
+    "customer": "Small Polish installation or field-service businesses",
+    "distribution_mechanism": "Accountant and vertical-software referrals",
+    "offer_and_business_model": "Managed AI administrative workflow pod",
+    "payer_and_paid_event": "Owner pays to replace measurable administrative labor and backlog",
+    "problem_trigger": "AI use is rising but Polish SME adoption remains unusually low"
+  },
+  "founder_fit": [
+    "Directly uses AI, data science, and workflow automation.",
+    "A renewable-installer vertical can be tested through lawful family-company cooperation.",
+    "Can bootstrap within 100,000 PLN and validate before leaving employment."
+  ],
+  "parent": null,
+  "risks": [
+    "Custom implementation can become a low-margin agency.",
+    "Sensitive email and finance access increases security exposure.",
+    "Platform vendors may commoditize core functions."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20251211-2",
+    "https://ec.europa.eu/eurostat/documents/7870049/23260410/KS-01-26-009-EN-N.pdf/37d063cb-28cf-3b4e-91f3-c3784c970842"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "managed_service",
+    "commercial_model_descriptor": "vertical human in loop administrative automation",
+    "control_point_category": "workflow_integration",
+    "control_point_descriptor": "authorized cross application service workflow",
+    "critical_dependency_category": "integration_platform",
+    "critical_dependency_descriptor": "email crm calendar and accounting apis"
+  },
+  "structure": {
+    "commercial_archetype": "Managed automation pod",
+    "control_point": "Embedded vertical admin workflow",
+    "critical_dependency": "Stable integrations and provable labor savings"
+  },
+  "thesis": "Rapid EU AI adoption alongside Poland's low base creates a service-to-software window for outcome-priced vertical administration automation.",
+  "title": "AI Admin Pods for Polish Field-Service SMEs",
+  "uncertainties": [
+    "Low adoption's true cause is unknown.",
+    "Hours saved and acceptable error rates are unknown.",
+    "How quickly the service can standardize is unknown."
+  ],
+  "version": 1
+}

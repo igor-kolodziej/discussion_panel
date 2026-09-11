@@ -1,0 +1,116 @@
+{
+  "assumptions": [
+    "The family installer will authorize a compliant opt-in pilot without granting the venture ownership of legacy customer data.",
+    "The founder can keep the initial test within roughly 15 hours per week and 35,000 PLN.",
+    "No unreported customer conversion, signed distributor commitment, or maintenance-spend validation exists."
+  ],
+  "base_score": 4.98,
+  "candidate_id": "installer-maintenance-renewal-rail",
+  "candidate_sha256": "3f53327c30170d65f44f08103add20bd6da5dfbdc30b4ddf62ed4df710ba148e",
+  "candidate_version": 1,
+  "constrained_score": 4.98,
+  "evaluation_type": "working_screening_secondary",
+  "evidence_needed_for_higher_score": "A consented pilot across a meaningful installed-base cohort showing homeowner conversion, fulfilled-service gross profit, installer incremental ROI, low opt-out or complaint rates, and repeat renewal, followed by several unaffiliated installers signing at the proposed pricing with measured CAC and setup hours.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "Installers plausibly leave repeat revenue untapped after installation, and combining consented outreach, booking, payment, and service records is more useful than a reminder alone. The premise remains conditional on there being a recurring service need worth monetizing.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Dormant installed bases may represent missed revenue, but the supplied evidence establishes installed assets rather than homeowner demand for preventive maintenance or installer willingness to pay. Low maintenance requirements and subscription rejection are credible adverse possibilities.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Prepaid platform fees plus revenue share offer good cash conversion and potentially attractive software-like margins. However, conversion, service frequency, pricing acceptance, setup effort, fulfillment costs, retention, CAC, and the projected owner-earnings path are assumptions without transaction evidence.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Polish renewable installers with 500-5,000 installed systems form a specific and reachable initial segment. Its economic depth is uncertain because the relevant market is paid recurring service revenue, not the much larger installation base itself.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "An integrated revenue rail could win a useful niche, but installers, CRMs, equipment vendors, and distributors can add reminders, payments, or service plans. The business does not control homeowner relationships or a scarce channel.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A proven workflow could extend across batteries, heat pumps, warranties, inspections, repairs, and other installed equipment, and potentially into distributor channels. Those adjacencies depend on first proving repeat demand and fulfillment economics.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Permissioned response and asset-service benchmarks could compound, while workflow integration may create modest switching costs. These benefits start weak, and access is nonexclusive, revocable, and dependent on installer-owned data and relationships.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "Outcome-linked pricing and an end-to-end collection workflow reduce installer risk and may outperform generic CRM reminders. No evidence yet shows a sufficiently large conversion, revenue, convenience, or cost advantage to change behavior reliably.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "A growing installed base of renewable assets creates more potential lifecycle events and makes service monetization increasingly relevant. Subsidized installations support asset growth but do not demonstrate urgency for annual paid care.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "The family installer relationship provides an unusually practical, low-cost pilot path that fits part-time validation. Scaling beyond that pilot relies on unproven direct sales and unsigned distributor referrals, with no automatic access to homeowner data.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "The pilot is affordable and compatible with the founder's analytical skills and time constraints. GDPR consent, data cleanup, installer authorization, technician capacity, and the risk of building a service operation rather than a scalable platform remain material.",
+      "score": 5,
+      "status": "scored"
+    }
+  ],
+  "final_score": 5,
+  "highest_value_structural_change": "Anchor the offer to objectively necessary, high-value lifecycle events such as warranty compliance, inspections, fault detection, and repair triage, then secure standardized data and referral agreements with equipment distributors rather than relying mainly on optional annual maintenance plans.",
+  "interaction_adjustment": 0,
+  "judge_id": "judge-secondary-batch-04-d9q3qjzb",
+  "main_structural_strength": "The founder has a low-cost, legally conditionable route to test the complete renewal and payment workflow inside a real installer while retaining a part-time, capital-light launch profile.",
+  "primary_score_limiter": "The underlying paid event is not validated: installed assets do not by themselves establish recurring maintenance need, homeowner conversion, or enough incremental installer profit to sustain platform fees.",
+  "qualified": false,
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 3,
+  "strongest_disconfirming_evidence": "The candidate itself acknowledges that residential PV may need little paid preventive maintenance, while its cited source proves installations rather than maintenance spending or plan demand.",
+  "unrounded_score": 4.98
+}

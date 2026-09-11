@@ -1,0 +1,335 @@
+{
+  "candidate_id": "clinic-no-show-fill-rail",
+  "candidate_sha256": "18a7b6327fe235ae181305f1b4c89b0a109394a9d5cc86f70e21641302fc89c6",
+  "candidate_version": 1,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "r01-problem-intervention",
+      "evidence_refs": [
+        "s01",
+        "s02"
+      ],
+      "statement": "Missed appointments are operationally material and can be reduced, but effect sizes are setting-specific: a 2,247-patient randomized trial reduced high-risk primary-care no-shows from 29.2% to 22.8%, while reimbursement did not differ significantly; Polish public guidance says cancellation lets another patient use the slot and improves facility efficiency."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r02-paid-event",
+      "evidence_refs": [
+        "s03"
+      ],
+      "statement": "A Warsaw private clinic requires prepayment for specified appointments and retains the full cost for cancellations within 48 hours or nonattendance, directly evidencing that private clinics attach money to reserved appointment capacity; it does not evidence payment for this candidate."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r03-buyer-budget",
+      "evidence_refs": [
+        "s04"
+      ],
+      "statement": "Polish practitioners demonstrably buy appointment-management software: ZnanyLekarz publicly prices plans at 399, 499, and 699 PLN monthly plus VAT for new customers and states that more than 100,000 customers worldwide use it. This supports an existing software budget, but candidate-specific willingness to pay at 900-2,500 PLN plus a performance fee remains unvalidated."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r04-incumbent-substitute",
+      "evidence_refs": [
+        "s04",
+        "s05"
+      ],
+      "statement": "ZnanyLekarz already bundles automatic reminders, online payments, and a waiting list that fills cancelled appointments; its clinic product also presents reminders, payments, and waiting-list filling as an integrated revenue-protection workflow. This directly contradicts differentiation based merely on combining those functions."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r05-distribution-access",
+      "evidence_refs": [
+        "s04"
+      ],
+      "statement": "ZnanyLekarz exposes external integrations only in its higher-priced plan and operates an appointment marketplace, indicating that integration-based distribution is technically conceivable but controlled by an incumbent. No public evidence establishes a referral arrangement, API entitlement, or customer-acquisition channel for the candidate."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r06-variable-economics",
+      "evidence_refs": [
+        "s04",
+        "s06"
+      ],
+      "statement": "At Twilio's current Poland rate of USD 0.0457 per outbound SMS segment, messaging alone is unlikely to consume a 900-2,500 PLN monthly fee at modest clinic volumes; however, the proposed price is materially above ZnanyLekarz's public 399-699 PLN practitioner plans before performance fees, so integration, support, sales, compliance, and attribution costs—not SMS—are the unresolved margin and payback drivers."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r07-regulatory-control",
+      "evidence_refs": [
+        "s07"
+      ],
+      "statement": "GDPR treats health data as a special category, requires a lawful Article 9 condition, requires controller-processor contracts under Article 28, and restricts solely automated decisions that produce legal or similarly significant effects under Article 22. These rules add compliance conditions but do not themselves prohibit appointment-risk scoring or clinic-directed messaging."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r08-contractibility",
+      "evidence_refs": [
+        "s08"
+      ],
+      "statement": "EU standard contractual clauses provide a recognized instrument for controller-processor arrangements and require documented instructions and specification of processing details. Lawful data-processing access is therefore contractible in principle, but only with clinic agreement and appropriate safeguards; no signed candidate contract or integration right is evidenced."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r09-control-obtained",
+      "evidence_refs": [],
+      "statement": "It is unknown whether any clinic or scheduling vendor has granted the candidate durable, exclusive, transferable, or non-revocable access to schedules, patient contact channels, attendance outcomes, or refill transactions."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r10-mechanism-owned",
+      "evidence_refs": [],
+      "statement": "There is no supplied evidence that the candidate owns protected refill logic, attribution methodology, exclusive data, intellectual property, or another critical mechanism that incumbents cannot reproduce."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r11-private-validation",
+      "evidence_refs": [],
+      "statement": "No supplied evidence establishes a paying pilot, signed letter of intent, measured Polish private-clinic no-show rate, incremental refill lift, verified recovered revenue, conversion rate, retention, churn, CAC, implementation hours, support burden, contribution margin, or payback period."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r12-cold-start",
+      "evidence_refs": [
+        "s01",
+        "s04"
+      ],
+      "statement": "A useful risk model requires clinic-specific historical appointments and observed outcomes, while a large incumbent already operates calendars and statistics. Without permissioned multi-clinic data and demonstrated incremental lift, the candidate begins with a data cold start and has no evidenced compounding moat."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r13-substitute-prepayment",
+      "evidence_refs": [
+        "s03",
+        "s05"
+      ],
+      "statement": "Clinics can mitigate no-show losses using incumbent online prepayments and cancellation policies without predictive refill software, reducing urgency and making recovered-revenue attribution harder."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r14-partner-dependencies",
+      "evidence_refs": [],
+      "statement": "The proposed practice-management integrators, medical-accounting partners, clinic CSV exports, messaging permissions, data-processing agreements, and reconciliation feeds are all unsigned or otherwise unverified dependencies."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r15-repeat-mechanism",
+      "evidence_refs": [
+        "s01",
+        "s03"
+      ],
+      "statement": "Appointment nonattendance and cancellation recur, supporting a potentially repeatable operational use case, but neither the US trial nor one Warsaw clinic's policy establishes recurring Polish buyer payments or candidate retention."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r16-referral-acquisition-route",
+      "evidence_refs": [
+        "s09"
+      ],
+      "statement": "ZnanyLekarz operates a customer referral program in Poland that rewards successful referrals of doctors and medical facilities after the referred party buys a plan or signs an agreement. This demonstrates that customer referrals are a functioning acquisition route for clinic software, but it does not establish access to that program, a comparable partner channel, or customer acquisition for the candidate."
+    }
+  ],
+  "commercial_evidence": {
+    "buyer_or_paid_event": {
+      "claim_ids": [
+        "r03-buyer-budget"
+      ],
+      "source_ids": [
+        "s04"
+      ],
+      "status": "inference"
+    },
+    "distribution_and_acquisition": {
+      "claim_ids": [
+        "r05-distribution-access",
+        "r16-referral-acquisition-route"
+      ],
+      "source_ids": [
+        "s04",
+        "s09"
+      ],
+      "status": "inference"
+    },
+    "fully_loaded_unit_economics": {
+      "claim_ids": [
+        "r06-variable-economics"
+      ],
+      "source_ids": [
+        "s04",
+        "s06"
+      ],
+      "status": "inference"
+    },
+    "rights_control_access_contractibility": {
+      "claim_ids": [
+        "r08-contractibility"
+      ],
+      "source_ids": [
+        "s08"
+      ],
+      "status": "inference"
+    }
+  },
+  "contrary_evidence": [
+    "ZnanyLekarz already sells automatic reminders, online payments, waiting-list filling, statistics, and external integrations in Poland. This is a direct bundled substitute and shows that the proposed feature combination is not independently defensible.",
+    "The randomized high-risk reminder trial reduced no-shows but found no statistically significant reimbursement difference, contradicting any assumption that improved attendance automatically produces measurable incremental revenue.",
+    "A Warsaw clinic uses mandatory prepayment and forfeiture for late cancellation or nonattendance, showing that a simpler policy and payment substitute can protect revenue without a predictive refill rail.",
+    "GDPR makes health-data processing and processor access conditional on a lawful basis, documented instructions, safeguards, and contracts; access cannot be assumed from technical feasibility."
+  ],
+  "critical_control_point_assessment": {
+    "assessment": "unknown",
+    "claim_ids": [
+      "r09-control-obtained",
+      "r10-mechanism-owned"
+    ],
+    "source_ids": [],
+    "status": "unknown"
+  },
+  "falsification": {
+    "cold_start_and_data_moat": [
+      "r10-mechanism-owned",
+      "r12-cold-start"
+    ],
+    "control_point_obtainability": [
+      "r08-contractibility",
+      "r09-control-obtained"
+    ],
+    "critical_mechanism_ownership": [
+      "r10-mechanism-owned"
+    ],
+    "external_dependencies": [
+      "r07-regulatory-control",
+      "r09-control-obtained",
+      "r14-partner-dependencies"
+    ],
+    "substitutes_and_incumbent_response": [
+      "r04-incumbent-substitute",
+      "r13-substitute-prepayment"
+    ],
+    "willingness_urgency_and_repeat_economics": [
+      "r01-problem-intervention",
+      "r02-paid-event",
+      "r03-buyer-budget",
+      "r06-variable-economics",
+      "r11-private-validation",
+      "r15-repeat-mechanism"
+    ]
+  },
+  "schema_version": 3,
+  "sources": [
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "market_context",
+      "published_at": "2016-08-08",
+      "publisher": "PubMed / U.S. National Library of Medicine",
+      "source_id": "s01",
+      "source_type": "randomized-trial abstract",
+      "stance": "supporting",
+      "title": "Targeted Reminder Phone Calls to Patients at High Risk of No-Show for Primary Care Appointment: A Randomized Trial",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27503436/"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "market_context",
+      "published_at": "2022-09-30",
+      "publisher": "Pacjent.gov.pl / Narodowy Fundusz Zdrowia",
+      "source_id": "s02",
+      "source_type": "official public-health guidance",
+      "stance": "supporting",
+      "title": "Odwołaj wizytę, jeśli nie możesz przyjść",
+      "url": "https://pacjent.gov.pl/odwolaj-wizyte-jesli-nie-mozesz-przyjsc"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "paid_event",
+      "published_at": "unknown",
+      "publisher": "NZOZ Centrum Terapii DIALOG Warszawa",
+      "source_id": "s03",
+      "source_type": "private-clinic terms",
+      "stance": "context",
+      "title": "Regulations — Appointment Prepayment and Cancellation Policy",
+      "url": "https://www.psychiatrzy.warszawa.pl/o-centrum/regulamin_en/"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "direct_buyer",
+      "published_at": "unknown",
+      "publisher": "ZnanyLekarz Sp. z o.o.",
+      "source_id": "s04",
+      "source_type": "official competitor pricing and feature page",
+      "stance": "contradicting",
+      "title": "Ceny planów ZnanyLekarz",
+      "url": "https://pro.znanylekarz.pl/cennik/znanylekarz-dla-lekarzy"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "incumbent",
+      "published_at": "unknown",
+      "publisher": "ZnanyLekarz Sp. z o.o.",
+      "source_id": "s05",
+      "source_type": "official competitor product page",
+      "stance": "contradicting",
+      "title": "Oprogramowanie medyczne dla placówek",
+      "url": "https://pro.znanylekarz.pl/produkty/oprogramowanie-medyczne-znanylekarz-dla-placowek"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "unit_economics",
+      "published_at": "unknown",
+      "publisher": "Twilio Inc.",
+      "source_id": "s06",
+      "source_type": "official supplier pricing",
+      "stance": "context",
+      "title": "SMS Pricing in Poland for Text Messaging",
+      "url": "https://www.twilio.com/en-us/sms/pricing/pl"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "regulatory",
+      "published_at": "2016-04-27",
+      "publisher": "European Union",
+      "source_id": "s07",
+      "source_type": "official regulation",
+      "stance": "context",
+      "title": "Regulation (EU) 2016/679 (General Data Protection Regulation)",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "contracting",
+      "published_at": "2021-06-04",
+      "publisher": "European Commission",
+      "source_id": "s08",
+      "source_type": "official implementing decision and standard contractual clauses",
+      "stance": "supporting",
+      "title": "Commission Implementing Decision (EU) 2021/915 on standard contractual clauses between controllers and processors",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32021D0915"
+    },
+    {
+      "accessed_at": "2026-09-12",
+      "evidence_class": "acquisition",
+      "published_at": "unknown",
+      "publisher": "ZnanyLekarz Sp. z o.o.",
+      "source_id": "s09",
+      "source_type": "official customer referral program page",
+      "stance": "context",
+      "title": "Program Poleceń w ZnanyLekarz",
+      "url": "https://pro.znanylekarz.pl/pl-pl/program-polecen"
+    }
+  ],
+  "unknowns": [
+    "Candidate-specific willingness to pay and authority of the actual clinic budget owner are unvalidated.",
+    "No direct buyer interview, paid pilot, invoice, conversion, renewal, or churn evidence was supplied or found.",
+    "Polish private-clinic no-show rates, cancellation lead times, refill demand, and attainable appointment values by specialty remain unknown.",
+    "Incremental filled-slot causality and the rules for attributing recovered revenue remain untested.",
+    "Clinic acquisition cost, sales-cycle duration, implementation labor, ongoing support, insurance, legal, security, and payment-processing costs are unknown.",
+    "No partner, clinic, processor, or scheduling-system agreement is signed or evidenced.",
+    "The availability, price, limits, duration, revocability, transferability, and exclusivity of scheduling APIs or CSV access are unknown.",
+    "No permissioned proprietary dataset, validated model advantage, or mechanism-level intellectual property is evidenced.",
+    "Patient communication permissions, applicable Article 9 basis, controller instructions, DPIA need, retention schedule, subprocessor approvals, and international-transfer architecture require case-specific validation.",
+    "The proposed 65-80% contribution margin, one-to-two-visit payback, 300-clinic scale, and 5 million PLN founder-net-worth path remain assumptions rather than observed economics.",
+    "No evidence establishes that medical-accounting partners or practice-management integrators will distribute the product.",
+    "There is no evidence of illegality, an unobtainable essential right, mathematically impossible conservative economics, or a non-delegable founder incompatibility; the result is uncertainty rather than demonstrated fatality."
+  ]
+}

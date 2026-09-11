@@ -1,0 +1,135 @@
+{
+  "candidate_id": "ai-literacy-evidence-ledger",
+  "claims": [
+    {
+      "claim_id": "literacy-trigger",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://digital-strategy.ec.europa.eu/en/policies/ai-talent-skills-and-literacy"
+      ],
+      "statement": "AI Act Article 4 obligations have applied since 2 February 2025 and require providers and deployers to support context-appropriate AI literacy."
+    },
+    {
+      "claim_id": "literacy-adoption",
+      "claim_type": "other",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20251211-2"
+      ],
+      "statement": "AI use rose to 20% of EU enterprises in 2025 while Poland remained at 8.4%, indicating adoption is growing from a relatively low Polish base."
+    },
+    {
+      "claim_id": "literacy-payer",
+      "claim_type": "payer_and_budget",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://digital-strategy.ec.europa.eu/en/policies/ai-talent-skills-and-literacy"
+      ],
+      "statement": "Likely payers are HR, compliance, or information-security owners already funding training; willingness to buy an evidence ledger rather than generic courses is unknown."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "HR, compliance, data-protection, or information-security lead",
+    "bundling_resistance": "Learning-management systems can bundle courses; role-specific assessments, policy attestations, and AI-use evidence are the wedge",
+    "customer_relationship_owner": "Unknown today; proposed direct employer subscriptions",
+    "distribution_origin": "HR consultants, DPOs, cyber advisers, and targeted outbound",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Assumption: 3,000-10,000 PLN per employer",
+      "cash_conversion": "Annual subscription in advance plus paid setup",
+      "contribution_margin": "Assumption: 75-85% after content review and support",
+      "delivery_and_support_costs": "Assumption: 10-30 setup hours plus quarterly content maintenance",
+      "overhead_and_compliance": "Legal-content review, security, GDPR, and insurance; exact cost unknown",
+      "revenue_basis": "Annual fee by employee band",
+      "variable_costs": "Assessment inference, hosting, support, and specialist content review"
+    },
+    "likely_incumbent_response": "LMS and compliance vendors add AI-literacy modules and attestations",
+    "paid_event_or_measurable_loss": "Current staff and adviser time spent training employees, collecting attestations, and demonstrating role-appropriate AI literacy",
+    "payer": "Employers deploying AI systems",
+    "purchase_trigger": "AI rollout, customer audit, board risk review, or missing training evidence",
+    "renewal_event": "Annual reassessment and onboarding of new staff"
+  },
+  "contrary_evidence": [
+    "The Commission says the obligation does not impose one prescribed individual literacy level.",
+    "Generic training content is abundant and cheap."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Proposed workflow-integration agreement with an employer's identity and training systems; unsigned",
+    "acquisition_instrument_type": "workflow_integration_agreement",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Provide standalone assessments and downloadable evidence without integration",
+    "current_owner": "Employers own staff records and LMS workflows; no access is currently held",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "Unknown today; proposed direct employer subscriptions",
+    "duration": "Unknown until signed",
+    "exclusivity": "nonexclusive",
+    "founder_access_basis": "none",
+    "founder_access_description": "Public regulatory material supports product development; no employer data or internal Reckitt material is usable",
+    "launch_controller": "Prospective business controls standalone assessment delivery; employer controls staff assignment and records",
+    "mechanism_control": "unknown",
+    "renewal": "Proposed annual subscription; unsigned",
+    "replaceability": "replaceable",
+    "revocability": "unknown",
+    "status": "unknown",
+    "subject": "Role-specific AI-literacy assessment and evidence workflow",
+    "subject_type": "workflow_position",
+    "transferability": "consent_required"
+  },
+  "discovery_lane": "weak-signal",
+  "economics": {
+    "acquisition_route": "Build three role-specific Polish assessments, pilot with small professional-service employers, then add LMS integration",
+    "capital_required_pln": 35000,
+    "founder_net_worth_path": "Assumption: 500 employers averaging 12,000 PLN ARR produces 6m PLN ARR; at 25% owner earnings or a recurring-software valuation, founder net worth could exceed 5m PLN in 5-8 years. Competitive pricing and renewal are unknown.",
+    "founder_time": "15-20 hours weekly after initial content build",
+    "gross_margin_basis": "Subscription less hosting, support, and recurring legal/content review",
+    "payback": "Assumption: 6-10 months at 6,000 PLN acquisition cost and 750 PLN monthly contribution",
+    "pricing": "Assumption: 6,000-30,000 PLN annually by employee count",
+    "retention_or_repeat": "Annual plus new-hire and role-change assessments"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Benchmark data linking roles, AI uses, knowledge gaps, and remediation",
+    "customer": "Polish employers deploying generative or predictive AI",
+    "distribution_mechanism": "HR/DPO/cyber adviser referrals",
+    "offer_and_business_model": "AI-literacy assessment and evidence subscription",
+    "payer_and_paid_event": "Compliance or HR pays for training administration and demonstrable evidence",
+    "problem_trigger": "AI use is rising while a literacy obligation already applies"
+  },
+  "founder_fit": [
+    "Founder understands AI deployment and can create technical assessments.",
+    "Recurring evidence workflows favor automation over live training.",
+    "Delivery avoids camera dependence and constant networking."
+  ],
+  "parent": null,
+  "risks": [
+    "Legal interpretation may evolve.",
+    "LMS vendors can bundle the workflow.",
+    "Buyers may accept simple attendance records."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://digital-strategy.ec.europa.eu/en/policies/ai-talent-skills-and-literacy",
+    "https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20251211-2"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "software_subscription",
+    "commercial_model_descriptor": "role based ai literacy evidence ledger",
+    "control_point_category": "workflow_integration",
+    "control_point_descriptor": "employee assessment and attestation record",
+    "critical_dependency_category": "customer_adoption",
+    "critical_dependency_descriptor": "employer acceptance of structured evidence beyond course attendance"
+  },
+  "structure": {
+    "commercial_archetype": "Compliance evidence subscription",
+    "control_point": "Role-specific assessment record integrated into onboarding",
+    "critical_dependency": "Employer adoption and legal-content credibility"
+  },
+  "thesis": "Growing workplace AI use plus an already-applicable literacy duty creates recurring demand for evidence, not merely another generic course.",
+  "title": "AI-Literacy Evidence Ledger",
+  "uncertainties": [
+    "Enforcement expectations remain fluid.",
+    "Polish buyers' training budgets are unknown.",
+    "Whether assessments materially outperform LMS attestations is unknown."
+  ],
+  "version": 1
+}

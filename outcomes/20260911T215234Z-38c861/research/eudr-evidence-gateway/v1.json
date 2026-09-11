@@ -1,0 +1,376 @@
+{
+  "candidate_id": "eudr-evidence-gateway",
+  "candidate_sha256": "cbc7e20e39976fbfe2df0f643d005879edb59a2134302197f753077c9de809f6",
+  "candidate_version": 1,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "rc-regulatory-trigger",
+      "evidence_refs": [
+        "src-eudr-regulation",
+        "src-ec-implementation"
+      ],
+      "statement": "From 30 December 2026, large and medium operators must perform due diligence before placing covered products on the EU market or exporting them; qualifying micro and small operators generally follow from 30 June 2027, with an earlier exception for timber products previously covered by the EUTR."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "rc-required-inputs",
+      "evidence_refs": [
+        "src-eudr-regulation",
+        "src-eudr-api"
+      ],
+      "statement": "The required workflow includes product and operator data, production country, plot geolocation, deforestation evidence and legality evidence; the official API requires GeoJSON and specifies polygons for non-cattle plots over four hectares."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "rc-buyer-use",
+      "evidence_refs": [
+        "src-private-sector-workshop",
+        "src-brainstack-case"
+      ],
+      "statement": "There is direct buyer-side evidence of the problem and software adoption: Continental Tires reported using a software platform for GeoJSON verification and compliance data, while an anonymized mid-sized European coffee importer engaged an implementer to build EUDR workflows into Odoo."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "rc-supplier-dependency",
+      "evidence_refs": [
+        "src-private-sector-workshop",
+        "src-ec-implementation"
+      ],
+      "statement": "Upstream cooperation is an essential external dependency: Continental Tires reported that operators depend on suppliers for critical data and cannot directly access smallholder supply chains, while the Commission states that non-EU producers may be asked to provide production-location information."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "rc-contractible-representation",
+      "evidence_refs": [
+        "src-eudr-regulation",
+        "src-eudr-api"
+      ],
+      "statement": "Submission work is contractible in a limited form: an EU-established service provider can act as an authorised representative after receiving a written mandate, and the official API supports the representative-operator role."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "rc-operator-retains-responsibility",
+      "evidence_refs": [
+        "src-eudr-regulation",
+        "src-clearlane"
+      ],
+      "statement": "A service contract does not transfer the operator's substantive compliance responsibility; the Regulation leaves responsibility with the operator, and a competing vendor expressly leaves the Articles 9–11 risk conclusion and compliance judgment with the customer."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "rc-public-infrastructure-control",
+      "evidence_refs": [
+        "src-ec-information-system",
+        "src-eudr-api"
+      ],
+      "statement": "The Commission controls the legally relevant Information System and its production-access process, schemas, lifecycle rules and API versions; private gateways integrate with or hand off to this infrastructure rather than owning it."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "rc-incumbent-substitution",
+      "evidence_refs": [
+        "src-compliance-compass",
+        "src-fordaq",
+        "src-clearlane"
+      ],
+      "statement": "The proposed gateway faces strong direct substitution because existing vendors already combine supplier portals, evidence validation, audit trails, ERP import or connectors, and official-system workflows."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "rc-price-pressure",
+      "evidence_refs": [
+        "src-fordaq",
+        "src-clearlane"
+      ],
+      "statement": "Public competitor prices of €62.50–€187.50 per month for Fordaq plans and €149 per workspace per month for Clearlane imply material price pressure below part of the candidate's assumed 1,000–5,000 PLN monthly range, although service depth is not identical."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "rc-free-substitute",
+      "evidence_refs": [
+        "src-preferred-toolkit"
+      ],
+      "statement": "Preferred by Nature offers a free, open-source due-diligence toolkit covering supply-chain mapping, deforestation and legality risk assessment, and mitigation planning, providing a genuine low-cost substitute for some readiness and process-design work."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "rc-distribution-validation-unknown",
+      "evidence_refs": [],
+      "statement": "No verified referral agreement, qualified pipeline, acquisition conversion rate or customer-acquisition cost was found for the proposed customs-broker and ERP-consultant channel."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "rc-unit-economics-unknown",
+      "evidence_refs": [],
+      "statement": "No candidate-specific evidence establishes realised price, paid onboarding, specialist-review hours, geospatial cost per shipment or plot, support load, gross margin, churn, CAC, payback, or contribution margin after liability, security and regulatory-update overhead."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "rc-data-rights-unknown",
+      "evidence_refs": [],
+      "statement": "No signed importer authorization, supplier data license, reuse right, exclusivity term, renewal right, revocation protection or transferable right to build the proposed cross-customer supplier-evidence graph was provided or found."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "rc-mechanism-ownership-unknown",
+      "evidence_refs": [],
+      "statement": "The prospective business does not presently own the critical supplier and geolocation dataset, a contracted customer relationship, or exclusive access to the validation mechanism."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "rc-cold-start",
+      "evidence_refs": [
+        "src-private-sector-workshop",
+        "src-compliance-compass"
+      ],
+      "statement": "Cold start is likely to be customer-by-customer and supplier-by-supplier because essential source data remains with upstream parties and an incumbent already has participating mill partners maintaining permits and coordinates in its portal."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "rc-repeat-trigger",
+      "evidence_refs": [
+        "src-eudr-api",
+        "src-compliance-compass"
+      ],
+      "statement": "Repeated shipments, new suppliers, evidence changes and statement lifecycle events can create recurring workflow demand, but these operational repeats do not by themselves establish annual retention or willingness to pay for this candidate."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "rc-rule-change",
+      "evidence_refs": [
+        "src-ec-july-update",
+        "src-eudr-api"
+      ],
+      "statement": "The Commission updated EUDR product scope and support tools in July 2026, while the official operator interface is now documented as a V3 service with specific amendment, withdrawal and customs-lock behavior, supporting a continuing regulatory-maintenance need."
+    }
+  ],
+  "commercial_evidence": {
+    "buyer_or_paid_event": {
+      "claim_ids": [
+        "rc-buyer-use"
+      ],
+      "source_ids": [
+        "src-private-sector-workshop",
+        "src-brainstack-case"
+      ],
+      "status": "evidence"
+    },
+    "distribution_and_acquisition": {
+      "claim_ids": [
+        "rc-distribution-validation-unknown"
+      ],
+      "source_ids": [],
+      "status": "unknown"
+    },
+    "fully_loaded_unit_economics": {
+      "claim_ids": [
+        "rc-unit-economics-unknown"
+      ],
+      "source_ids": [],
+      "status": "unknown"
+    },
+    "rights_control_access_contractibility": {
+      "claim_ids": [
+        "rc-contractible-representation"
+      ],
+      "source_ids": [
+        "src-eudr-regulation",
+        "src-eudr-api"
+      ],
+      "status": "evidence"
+    }
+  },
+  "contrary_evidence": [
+    "src-preferred-toolkit contradicts the premise that every readiness and process-design need requires paid proprietary software because it supplies a free, open-source due-diligence toolkit.",
+    "src-fordaq and src-clearlane contradict the assumed pricing power by advertising directly substitutable workflow capabilities at €62.50–€187.50 and €149 per month respectively.",
+    "src-compliance-compass demonstrates an incumbent with live named timber-business use, supplier participation, ERP connectors and approximately three-minute statements, weakening the claim that a new entrant can readily own a distinctive evidence graph.",
+    "src-eudr-regulation and src-clearlane show that an authorised representative or software provider cannot displace the operator's substantive responsibility, limiting liability transfer and control-point ownership."
+  ],
+  "critical_control_point_assessment": {
+    "assessment": "evidence",
+    "claim_ids": [
+      "rc-public-infrastructure-control",
+      "rc-supplier-dependency",
+      "rc-operator-retains-responsibility"
+    ],
+    "source_ids": [
+      "src-ec-information-system",
+      "src-eudr-api",
+      "src-private-sector-workshop",
+      "src-ec-implementation",
+      "src-eudr-regulation",
+      "src-clearlane"
+    ],
+    "status": "externally_controlled"
+  },
+  "falsification": {
+    "cold_start_and_data_moat": [
+      "rc-cold-start",
+      "rc-data-rights-unknown"
+    ],
+    "control_point_obtainability": [
+      "rc-contractible-representation",
+      "rc-data-rights-unknown",
+      "rc-supplier-dependency"
+    ],
+    "critical_mechanism_ownership": [
+      "rc-mechanism-ownership-unknown",
+      "rc-public-infrastructure-control",
+      "rc-operator-retains-responsibility"
+    ],
+    "external_dependencies": [
+      "rc-supplier-dependency",
+      "rc-public-infrastructure-control",
+      "rc-rule-change"
+    ],
+    "substitutes_and_incumbent_response": [
+      "rc-incumbent-substitution",
+      "rc-free-substitute",
+      "rc-price-pressure"
+    ],
+    "willingness_urgency_and_repeat_economics": [
+      "rc-regulatory-trigger",
+      "rc-buyer-use",
+      "rc-repeat-trigger",
+      "rc-distribution-validation-unknown",
+      "rc-unit-economics-unknown"
+    ]
+  },
+  "schema_version": 3,
+  "sources": [
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "regulatory",
+      "published_at": "2025-12-26",
+      "publisher": "EUR-Lex",
+      "source_id": "src-eudr-regulation",
+      "source_type": "consolidated EU regulation",
+      "stance": "supporting",
+      "title": "Consolidated Regulation (EU) 2023/1115",
+      "url": "https://eur-lex.europa.eu/eli/reg/2023/1115"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "regulatory",
+      "published_at": "unknown",
+      "publisher": "European Commission Directorate-General for Environment",
+      "source_id": "src-ec-implementation",
+      "source_type": "official implementation portal",
+      "stance": "supporting",
+      "title": "Implementing the EU Deforestation Regulation (EUDR)",
+      "url": "https://green-forum.ec.europa.eu/nature-and-biodiversity/deforestation-regulation-implementation_en"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "rights_control_access",
+      "published_at": "unknown",
+      "publisher": "European Commission",
+      "source_id": "src-ec-information-system",
+      "source_type": "official system documentation",
+      "stance": "context",
+      "title": "The Information System of the Deforestation Regulation",
+      "url": "https://green-forum.ec.europa.eu/nature-and-biodiversity/deforestation-regulation-implementation/information-system-deforestation-regulation_en"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "contracting",
+      "published_at": "unknown",
+      "publisher": "European Commission",
+      "source_id": "src-eudr-api",
+      "source_type": "official API reference",
+      "stance": "supporting",
+      "title": "Due Diligence Statement (DDS) — V3 API Reference",
+      "url": "https://eudr.webcloud.ec.europa.eu/tracesnt/help/eudr-documentation/operator/api/due-diligence-statement-v3.html"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "regulatory",
+      "published_at": "2026-07-13",
+      "publisher": "European Commission Directorate-General for Environment",
+      "source_id": "src-ec-july-update",
+      "source_type": "official news release",
+      "stance": "supporting",
+      "title": "Commission updates product scope and tools to support EUDR",
+      "url": "https://environment.ec.europa.eu/news/commission-updates-product-scope-and-tools-support-eudr-2026-07-13_en"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "direct_buyer",
+      "published_at": "2026-02",
+      "publisher": "Zero Deforestation Hub",
+      "source_id": "src-private-sector-workshop",
+      "source_type": "private-sector workshop report",
+      "stance": "supporting",
+      "title": "EUDR Private Sector Workshop Report",
+      "url": "https://zerodeforestationhub.eu/wp-content/uploads/2026/02/FINALPrivate-Sector-Workshop-EUDR.pdf"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "direct_buyer",
+      "published_at": "2025-10",
+      "publisher": "Brainstack Technologies",
+      "source_id": "src-brainstack-case",
+      "source_type": "vendor customer case study",
+      "stance": "supporting",
+      "title": "Odoo ERP + EUDR Compliance Case Study",
+      "url": "https://www.brainstacktechnologies.com/case-study/odoo"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "incumbent",
+      "published_at": "unknown",
+      "publisher": "Compliance Compass",
+      "source_id": "src-compliance-compass",
+      "source_type": "competitor product and customer page",
+      "stance": "contradicting",
+      "title": "EUDR software for the timber industry",
+      "url": "https://eudr.compliancecompass.de/en/"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "unit_economics",
+      "published_at": "unknown",
+      "publisher": "Fordaq",
+      "source_id": "src-fordaq",
+      "source_type": "competitor pricing page",
+      "stance": "contradicting",
+      "title": "Radix Tree EUDR platform",
+      "url": "https://eudr.fordaq.com/"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "unit_economics",
+      "published_at": "unknown",
+      "publisher": "Finarc Labs",
+      "source_id": "src-clearlane",
+      "source_type": "competitor pricing and terms page",
+      "stance": "contradicting",
+      "title": "Clearlane EUDR compliance software pricing",
+      "url": "https://www.clearlane.eu/pricing/"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "incumbent",
+      "published_at": "unknown",
+      "publisher": "Preferred by Nature",
+      "source_id": "src-preferred-toolkit",
+      "source_type": "open-source toolkit page",
+      "stance": "contradicting",
+      "title": "Preferred by Nature Due Diligence Toolkit",
+      "url": "https://www.preferredbynature.org/EUDR"
+    }
+  ],
+  "unknowns": [
+    "Whether any importer will pay this prospective business for an evidence-gap audit, onboarding project or recurring subscription.",
+    "Candidate-specific conversion rate, sales cycle, CAC by channel, referral economics and payback period.",
+    "Real delivery effort and cost for supplier chasing, Polish-language support, legality review, geospatial exception handling, security, insurance and regulatory maintenance.",
+    "Retention, churn and expansion behavior after initial compliance setup or after suppliers become data-ready.",
+    "Signed access to importer systems, supplier documents, plot data, official production API credentials and permission to reuse derived data across customers.",
+    "Whether supplier contracts permit durable, transferable and non-revocable use of evidence or only shipment-specific processing.",
+    "Accuracy and false-positive rates of the proposed geospatial and document-validation methods on the intended commodity mix.",
+    "Whether a normalized cross-customer graph can lawfully and commercially compound given confidentiality settings, data-protection duties and supplier restrictions.",
+    "Whether customs brokers or ERP consultants will refer customers, demand revenue share, build competing modules or prefer established platforms.",
+    "No evidence establishes illegality, an unobtainable essential right, mathematically impossible conservative economics or a non-delegable founder incompatibility; the result is uncertainty rather than a fatal finding."
+  ]
+}

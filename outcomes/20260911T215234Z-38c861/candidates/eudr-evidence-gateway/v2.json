@@ -1,0 +1,177 @@
+{
+  "candidate_id": "eudr-evidence-gateway",
+  "claims": [
+    {
+      "claim_id": "v2-paid-trigger",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high on regulatory trigger; willingness to pay for this offer remains unvalidated",
+      "evidence_refs": [
+        "runs/20260911T215234Z-38c861/research/eudr-evidence-gateway/v1.json#rc-regulatory-trigger",
+        "runs/20260911T215234Z-38c861/research/eudr-evidence-gateway/v1.json#rc-buyer-use"
+      ],
+      "statement": "Operators face a dated due-diligence requirement, and buyer-side examples show software adoption, but no evidence yet establishes payment to this prospective business."
+    },
+    {
+      "claim_id": "v2-contract-path",
+      "claim_type": "founder_control_point_path",
+      "confidence": "high that representation is legally contractible; low that any importer will sign",
+      "evidence_refs": [
+        "runs/20260911T215234Z-38c861/research/eudr-evidence-gateway/v1.json#rc-contractible-representation",
+        "runs/20260911T215234Z-38c861/research/eudr-evidence-gateway/v1.json#rc-operator-retains-responsibility"
+      ],
+      "statement": "A written mandate can contract an EU-established authorised representative for submission work, while the importer retains substantive compliance responsibility; this supports a contract-controlled workflow service rather than ownership of compliance or source data."
+    },
+    {
+      "claim_id": "v2-budget",
+      "claim_type": "payer_and_budget",
+      "confidence": "medium on likely budget owner; candidate-specific purchasing evidence is absent",
+      "evidence_refs": [
+        "runs/20260911T215234Z-38c861/research/eudr-evidence-gateway/v1.json#rc-buyer-use",
+        "runs/20260911T215234Z-38c861/research/eudr-evidence-gateway/v1.json#rc-unit-economics-unknown"
+      ],
+      "statement": "The likely payer is a mid-market operator funding compliance implementation or operations, but realised pricing, procurement authority and contribution economics remain unknown."
+    },
+    {
+      "claim_id": "v2-dependency-shift",
+      "claim_type": "other",
+      "confidence": "high on continuing external constraints; medium on the coherence of the proposed operating model",
+      "evidence_refs": [
+        "runs/20260911T215234Z-38c861/research/eudr-evidence-gateway/v1.json#rc-supplier-dependency",
+        "runs/20260911T215234Z-38c861/research/eudr-evidence-gateway/v1.json#rc-public-infrastructure-control",
+        "runs/20260911T215234Z-38c861/research/eudr-evidence-gateway/v1.json#rc-data-rights-unknown"
+      ],
+      "statement": "The redesign removes the cross-customer proprietary-data-graph premise and makes the importer workflow the proposed contractible control point; supplier truth and Commission infrastructure remain external operating inputs."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Importer compliance, procurement or supply-chain lead; actual authority remains unverified",
+    "bundling_resistance": "Polish-language exception resolution, fixed-scope ERP integration and accountable submission operations can differentiate, but incumbents can bundle all three and compete on price",
+    "customer_relationship_owner": "Prospective business after an importer signs the master services agreement and written representative mandate; no customer relationship is currently owned or contracted",
+    "distribution_origin": "Founder-led paid evidence-gap diagnostic sold directly to one narrow importer segment, followed by a nonexclusive implementation and operating contract; broker and ERP referrals are optional rather than launch-critical",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Unvalidated planning range: 3,000-8,000 PLN of founder time, targeted outreach and presales effort per signed importer; abort the channel if two paid pilots imply CAC above first-year contribution",
+      "cash_conversion": "Require 50% of fixed implementation fees at signature, 50% at configured acceptance, and monthly operating retainers prepaid; importer funds third-party remediation and pays pass-through usage charges to avoid financing supplier cleanup",
+      "contribution_margin": "Unvalidated target: 45-65% on implementation and 55-70% on recurring operations after delivery labor and usage costs; calculate by customer and do not scale until founder time, specialist review, insurance and support are included",
+      "delivery_and_support_costs": "Planning assumption per initial importer: 40-80 hours for mapping, configuration, supplier templates and training, then 4-12 hours monthly for monitoring and exceptions; specialist legality or geospatial review is separately scoped or passed through",
+      "overhead_and_compliance": "Planning allowance: 30,000-60,000 PLN annually at early scale for legal updates, security tooling, professional-liability cover, audit logging and accounting, plus founder regulatory-maintenance time; actual quotations are unknown",
+      "revenue_basis": "Paid diagnostic credited against a fixed implementation fee, then prepaid monthly workflow-operations retainer plus per-supplier activation or exceptional review charges; no fee is contingent on transferring the operator's legal responsibility",
+      "variable_costs": "Founder or contractor delivery labor, specialist review, geospatial and document-processing usage, translation, customer support and any referral fee; supplier remediation and extraordinary legal opinions remain customer-funded"
+    },
+    "likely_incumbent_response": "Existing EUDR vendors and ERP implementers can undercut software pricing, add local service partners or bundle authorised-representative workflows; defensibility therefore depends on low-cost narrow integrations and reliable operations under direct contracts, not proprietary supplier data",
+    "paid_event_or_measurable_loss": "Importer pays at a failed evidence-gap diagnostic, new supplier activation or recurring statement workload before covered goods are placed on or exported from the EU market",
+    "payer": "The operator/importer retaining EUDR responsibility",
+    "purchase_trigger": "A dated EUDR obligation combined with an evidence gap, new supplier, ERP implementation need or insufficient internal operating capacity",
+    "renewal_event": "Monthly prepaid operating renewal, with expansion at each new supplier, commodity or statement-volume band; retention remains unvalidated"
+  },
+  "contrary_evidence": [
+    "A free open-source toolkit can substitute for readiness and process-design work.",
+    "Public competitor pricing is materially below part of the parent candidate's assumed subscription range.",
+    "Incumbents already offer supplier portals, validation, audit trails, ERP connections and official-system workflows.",
+    "A representative mandate cannot transfer the operator's substantive compliance responsibility."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Proposed importer-specific master services agreement, data-processing terms, scoped ERP workflow-integration schedule and separate written authorised-representative mandate; none is currently signed",
+    "acquisition_instrument_type": "workflow_integration_agreement",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Sell only a prepaid, fixed-scope evidence-gap diagnostic using customer-provided exports, or approach another importer; do not build an integration, submit statements or retain reusable customer data without the required agreements",
+    "current_owner": "Each importer controls its internal workflow and customer-side authorization; suppliers control source evidence and the Commission controls the legally relevant Information System",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "Prospective business after an importer signs the master services agreement and written representative mandate; no customer relationship is currently owned or contracted",
+    "duration": "Proposed 12-month services term with a separately revocable representative mandate; no duration is currently contracted",
+    "exclusivity": "nonexclusive",
+    "founder_access_basis": "none",
+    "founder_access_description": "No present importer workflow, production credential, supplier-data or customer-contract access; access would begin only after signature and customer-controlled provisioning",
+    "launch_controller": "Prospective business controls whether to launch only after an importer signs and prepays the implementation agreement, executes any required written mandate and provisions test access",
+    "mechanism_control": "dependent",
+    "renewal": "Proposed annual services renewal with monthly prepaid operations; mandate continuation and customer access must be reconfirmed",
+    "replaceability": "replaceable",
+    "revocability": "for_cause",
+    "status": "unknown",
+    "subject": "Importer-specific configured evidence-intake, exception and authorised-submission workflow",
+    "subject_type": "workflow_position",
+    "transferability": "consent_required"
+  },
+  "discovery_lane": "future-backcast",
+  "economics": {
+    "acquisition_route": "Sell a prepaid evidence-gap diagnostic directly to Polish mid-market importers using Odoo or manual workflows; convert only diagnosed gaps into a signed fixed-scope integration and optional authorised-representative operating mandate",
+    "capital_required_pln": 60000,
+    "founder_net_worth_path": "Unvalidated scenario: reach 30 customers averaging 60,000 PLN annual revenue at 20% fully loaded EBITDA, then 75 customers at the same average for 1.35m PLN EBITDA at 30%. At a hypothetical 4x multiple and majority founder ownership, business equity could exceed 5m PLN in years 6-9; CAC, capacity, churn, price and multiple are unknown, and founder cash is not double-counted.",
+    "founder_time": "Maximum 20-25 hours weekly while employed, concentrated on productization, sales and exception analytics; cap active pilots at two until delivery hours are measured, then use trained contractors for documented implementation and support",
+    "gross_margin_basis": "Collected diagnostic, implementation, retainer and activation revenue less all delivery labor at market rates, specialist review, usage charges, support, referral fees and customer-specific hosting; EBITDA additionally deducts security, insurance, legal updates and administration",
+    "payback": "Require each implementation deposit to cover initial third-party and contractor cash outlay; provisional acquisition payback gate is within six months of collected gross profit, but no candidate-specific payback evidence exists",
+    "pricing": "Test, not validated: 4,000-8,000 PLN prepaid diagnostic; 12,000-30,000 PLN fixed implementation; 1,500-4,000 PLN monthly prepaid operations plus 100-300 PLN per activated supplier or separately quoted expert exception",
+    "retention_or_repeat": "Recurring statement lifecycle, supplier and rule changes can support repeat usage, but annual retention is unproven; use a 12-month service proposal with monthly operating checkpoints and measure logo churn, supplier expansion and support hours"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Reusable importer-owned integration adapters, exception playbooks and anonymized operating benchmarks, without assuming rights to a cross-customer supplier graph",
+    "customer": "Polish mid-market operators importing covered commodities through Odoo or manual compliance workflows",
+    "distribution_mechanism": "Direct prepaid evidence-gap diagnostics that convert into importer-specific workflow contracts; referrals are optional",
+    "offer_and_business_model": "Productized EUDR workflow implementation and authorised-representative operations sold through fixed fees, prepaid retainers and supplier-activation charges",
+    "payer_and_paid_event": "Operator/importer pays for a diagnosed evidence gap, configured workflow, new supplier activation or recurring submission operations",
+    "problem_trigger": "EUDR deadlines meet missing upstream geolocation and legality evidence"
+  },
+  "founder_fit": [
+    "Document extraction, anomaly detection and workflow measurement fit the founder's data-science skills.",
+    "A prepaid diagnostic and no-code or light-integration first pilot can be run within the founder's capital and part-time limits.",
+    "The model uses targeted B2B outreach and documented delivery rather than camera-led distribution or continuous high-energy networking."
+  ],
+  "parent": {
+    "candidate_id": "eudr-evidence-gateway",
+    "version": 1
+  },
+  "redesign": {
+    "changed_fingerprint_fields": [
+      "compounding_advantage",
+      "customer",
+      "distribution_mechanism",
+      "offer_and_business_model",
+      "payer_and_paid_event"
+    ],
+    "changed_structural_fields": [
+      "commercial_mechanics",
+      "critical_control_point",
+      "structural_signature"
+    ],
+    "economic_effect": "Replaces an unowned proprietary supplier-data subscription with prepaid importer-specific implementation and operating contracts. Deposits reduce working-capital exposure, pass-through exceptions cap variable-cost risk, and direct diagnostics remove reliance on unverified referral channels; expected margins are lower and more labor-sensitive than the parent assumption, while recurring retainers and standardized adapters preserve a possible productization path."
+  },
+  "risks": [
+    "No importer may buy from the prospective business despite the regulatory trigger.",
+    "Unsigned workflow and representative instruments may be refused or revoked, leaving only diagnostic revenue.",
+    "Supplier noncooperation can block completion even under an importer contract.",
+    "Commission production access, schemas and lifecycle rules remain externally controlled.",
+    "Incumbents can bundle equivalent workflows at lower software prices.",
+    "Delivery hours, professional liability, security and specialist-review costs may eliminate contribution margin.",
+    "Customer confidentiality may prevent reuse of data or benchmarks.",
+    "Regulatory simplification may reduce scope or urgency."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "runs/20260911T215234Z-38c861/research/eudr-evidence-gateway/v1.json"
+  ],
+  "stage": "development",
+  "structural_signature": {
+    "commercial_model_category": "productized_service",
+    "commercial_model_descriptor": "fixed scope importer workflow implementation plus prepaid authorised representative operations",
+    "control_point_category": "workflow_integration",
+    "control_point_descriptor": "proposed importer specific contracted integration and operating position",
+    "critical_dependency_category": "customer_adoption",
+    "critical_dependency_descriptor": "importer signature prepayment mandate and access provisioning"
+  },
+  "structure": {
+    "commercial_archetype": "Productized EUDR implementation and delegated submission operations",
+    "control_point": "Importer-specific workflow position acquired through a prepaid integration agreement and written mandate",
+    "critical_dependency": "An importer must sign, prepay and provision access; supplier truth and Commission infrastructure remain external inputs"
+  },
+  "thesis": "Future state: a narrow importer segment operates repeatable EUDR evidence and submission workflows without buying another generic data platform. The missing mechanism is a prepaid, importer-specific integration and operating contract that gives the prospective business a bounded workflow position while leaving source-data ownership and legal responsibility with the proper parties.",
+  "title": "EUDR Contracted Workflow Operator",
+  "uncertainties": [
+    "Whether importers will buy a diagnostic, implementation or operating mandate from this prospective business",
+    "Actual sales cycle, CAC, referral economics and procurement authority",
+    "Implementation hours, monthly exception load and fully loaded contribution margin",
+    "Availability and cost of insurance, security controls and specialist review",
+    "Mandate duration, revocation behavior and production-access onboarding",
+    "Supplier cooperation and evidence accuracy",
+    "Retention after initial setup and response to lower-priced incumbent bundles"
+  ],
+  "version": 2
+}

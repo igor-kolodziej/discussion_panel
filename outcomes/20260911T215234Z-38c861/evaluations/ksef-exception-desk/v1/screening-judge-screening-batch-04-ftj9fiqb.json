@@ -1,0 +1,116 @@
+{
+  "assumptions": [
+    "Public KSeF interfaces permit a useful least-privilege monitoring workflow.",
+    "The service begins read-only with human-approved remediation.",
+    "Accounting offices experience heterogeneous exceptions not already resolved adequately by their primary software."
+  ],
+  "base_score": 5.95,
+  "candidate_id": "ksef-exception-desk",
+  "candidate_sha256": "d94ee61baa1449d49275eefe6ceac61aa972960aa713a558cfdabde15493fca3",
+  "candidate_version": 1,
+  "constrained_score": 6.05,
+  "evaluation_type": "working_screening",
+  "evidence_needed_for_higher_score": "Production pilots with two or more offices documenting exception frequency, labor saved, acceptable credentialing and security, paid conversion, low support minutes per client, and retention despite incumbent software improvements.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "Mandatory structured invoicing creates a narrow, measurable exception queue across many clients that can be automated and operationally managed.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Bookkeeper rework and payment delays are credible current costs, but exception incidence, hours saved, and willingness to pay have not been measured.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Setup fees and prepaid subscriptions can support good cash conversion and software-like margins, but human escalation, security, liability, churn, and CAC may materially reduce the modeled economics.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Independent Polish accounting offices managing many SMEs are a precise, economically meaningful beachhead with concentrated recurring workflow.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "A specialist may move faster on cross-client operations, yet accounting-suite vendors control embedded workflows and can bundle equivalent dashboards.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A trusted exception position can expand into reconciliation, payment status, VAT workflow, client controls, and other Polish finance-compliance operations.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Resolution patterns and workflow integration can compound, but customer permissions are revocable and an anonymized playbook is likely reproducible by incumbents.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "Multi-client monitoring, guided resolution, and SLA evidence could materially reduce labor versus free access tools, but superiority over upgraded accounting suites is unproven.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "Mandatory KSeF adoption is already creating a sharp transition period in which offices must establish reliable new operating routines.",
+      "score": 9,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "Accounting offices are identifiable and ERP referrals are plausible, but the founder holds no office relationship, credential access, or distribution agreement.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "A read-only monitor is feasible within budget and part-time constraints, while production security, tax-process liability, credentials, and support responsiveness demand disciplined specialist oversight.",
+      "score": 6,
+      "status": "scored"
+    }
+  ],
+  "final_score": 6.1,
+  "highest_value_structural_change": "Obtain a channel or embedded integration with an accounting-software implementer while standardizing a read-only, least-privilege exception feed across offices.",
+  "interaction_adjustment": 0.1,
+  "judge_id": "judge-screening-batch-04-ftj9fiqb",
+  "main_structural_strength": "A regulation-driven, recurring and measurable operational queue offers a narrow automation wedge with clear before-and-after labor metrics.",
+  "primary_score_limiter": "The likely incumbent bundling response and unknown exception workload make durable willingness to pay uncertain.",
+  "qualified": false,
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 3,
+  "strongest_disconfirming_evidence": "The Ministry supplies free KSeF applications, and large accounting platforms are natural owners of exception handling.",
+  "unrounded_score": 6.05
+}

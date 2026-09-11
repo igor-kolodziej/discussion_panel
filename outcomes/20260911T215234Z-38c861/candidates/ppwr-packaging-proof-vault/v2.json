@@ -1,0 +1,175 @@
+{
+  "candidate_id": "ppwr-packaging-proof-vault",
+  "claims": [
+    {
+      "claim_id": "ppwr-paid-event",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/topics/waste-and-recycling/packaging-waste_en"
+      ],
+      "statement": "The PPWR generally applies from 12 August 2026 and sets requirements for packaging placed on the EU market, creating current compliance work around packaging specifications and supplier evidence."
+    },
+    {
+      "claim_id": "ppwr-payer",
+      "claim_type": "payer_and_budget",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/news/new-eu-rules-packaging-enter-application-2026-08-11_en"
+      ],
+      "statement": "Packaging manufacturers and brands face specification and compliance costs; procurement, quality or packaging leadership is a plausible payer, but exact Polish budgets are unverified."
+    },
+    {
+      "claim_id": "ppwr-workflow-control-path",
+      "claim_type": "founder_control_point_path",
+      "confidence": "medium-low",
+      "evidence_refs": [
+        "runs/20260911T215234Z-38c861/research/ppwr-packaging-proof-vault/v1.json#rc-control-obtainability",
+        "runs/20260911T215234Z-38c861/research/ppwr-packaging-proof-vault/v1.json#rc-rights-contracts"
+      ],
+      "statement": "A customer can potentially appoint the business under an ordinary workflow-integration agreement to operate its evidence-request queue and retain authorized records, but no such agreement or evidence right is currently executed."
+    },
+    {
+      "claim_id": "ppwr-managed-service-demand",
+      "claim_type": "other",
+      "confidence": "medium",
+      "evidence_refs": [
+        "runs/20260911T215234Z-38c861/research/ppwr-packaging-proof-vault/v1.json#rc-buyer-workflow",
+        "runs/20260911T215234Z-38c861/research/ppwr-packaging-proof-vault/v1.json#rc-commercial-price-signals"
+      ],
+      "statement": "Buyer-side supplier-document activity and public paid PPWR service offers support testing a fixed-scope evidence-operations service, although they do not validate demand for this specific offer."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Packaging, quality or procurement director at a brand or manufacturer",
+    "bundling_resistance": "Resistance comes from operating the customer's approval queue, evidence request cadence and exception log under a service-level agreement, not from generic document storage; this is still reproducible by PLM vendors and consultants.",
+    "customer_relationship_owner": "The prospective business would own the direct brand contract and service relationship; each brand would retain its supplier relationships, source-document ownership and approval authority.",
+    "distribution_origin": "Founder-controlled direct outbound to mid-market brands, followed only by nonexclusive paid referral agreements with consultants or laboratories if obtainable; no referral access is currently contracted.",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Unvalidated planning range: 4,000-12,000 PLN in founder time, prospecting, discovery and proposal work per won customer; stop the channel if paid-pilot gross profit does not recover CAC within 12 months.",
+      "cash_conversion": "Require 50% of setup fees at signing, 50% at delivery, and managed-service retainers quarterly in advance; supplier chasing beyond the included allowance is prepaid to limit working-capital exposure.",
+      "contribution_margin": "Unvalidated target: 45-65% on the managed service after delivery labor, specialist review and software costs, materially below the prior subscription assumption; calculate from time sheets and vendor invoices for every pilot.",
+      "delivery_and_support_costs": "Planning case per initial portfolio: 40-100 hours for intake, evidence mapping and exception setup, then 8-20 hours monthly for supplier follow-up, updates and support; work beyond the contracted SKU, supplier and request limits is separately billed.",
+      "overhead_and_compliance": "Planning case: 6,000-15,000 PLN monthly once operating, covering independent regulatory counsel allocation, professional and cyber insurance, security tooling, accounting and privacy documentation; regulatory conclusions remain with qualified counsel or the customer.",
+      "revenue_basis": "Fixed-fee onboarding for a defined packaging portfolio plus a quarterly prepaid managed evidence-operations retainer with explicit SKU, supplier-request and review allowances.",
+      "variable_costs": "Contract operations labor, independent packaging or regulatory review, OCR and storage, supplier communications and customer support; pass through extraordinary laboratory tests and translation with customer approval."
+    },
+    "likely_incumbent_response": "PLM vendors can bundle equivalent fields and portals, low-cost tools can undercut storage, and consultants can add document chasing. Defensibility therefore depends on faster implementation, accountable exception closure and exportable service records, without claiming proprietary-data exclusivity.",
+    "paid_event_or_measurable_loss": "The brand pays at a signed, fixed-scope packaging evidence baseline and again for operating each quarterly evidence-request and exception queue; the measurable loss is staff time, delayed approval or rework caused by missing supplier documentation.",
+    "payer": "Brand owner, importer or packaging manufacturer",
+    "purchase_trigger": "A dated PPWR documentation gap assessment, packaging approval backlog, supplier change or audit request with named missing evidence.",
+    "renewal_event": "Quarterly renewal only if the customer continues outsourcing evidence requests and exception closure; packaging or supplier revisions create separately measurable expansion events."
+  },
+  "contrary_evidence": [
+    "Low-price products already provide declarations, supplier tools, repositories and evidence trails, so software storage alone cannot sustain premium pricing.",
+    "An established specification-management vendor already bundles supplier collaboration, approvals and automated PPWR reporting.",
+    "Important requirements phase through 2030, so near-term urgency differs by portfolio.",
+    "No buyer, distribution agreement, rights agreement or fully loaded cohort economics for this redesigned service is currently validated."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Proposed, unsigned 12-month customer workflow-integration agreement and data-processing schedule appointing the business to run a defined evidence-request queue, receive customer-authorized supplier submissions, retain an audit log, and use only customer-specific records for service delivery; cross-customer benchmarking is excluded unless separately consented.",
+    "acquisition_instrument_type": "workflow_integration_agreement",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Sell a prepaid, customer-upload-only evidence baseline and exception register with no supplier access, no ongoing integration and no benchmarking; if the customer will not provide the minimum documents or pay for the baseline, do not launch that account.",
+    "current_owner": "Each brand or manufacturer controls its packaging specifications, supplier mandates and approval workflow; suppliers and laboratories control their source evidence, and the prospective business currently owns none of those rights.",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "The prospective business would own the direct brand contract and service relationship; each brand would retain its supplier relationships, source-document ownership and approval authority.",
+    "duration": "Proposed 12-month initial term; no duration is established until an agreement is executed.",
+    "exclusivity": "nonexclusive",
+    "founder_access_basis": "none",
+    "founder_access_description": "No present access rights are established; access would arise account by account only from the proposed customer authorization and supplier submission terms, without using confidential employer resources.",
+    "launch_controller": "The founder controls direct sales, the independently built workflow software and service staffing; the first customer controls whether it signs, supplies documents and authorizes supplier routing.",
+    "mechanism_control": "unknown",
+    "renewal": "Proposed quarterly prepaid service schedule within the initial term and annual renewal thereafter; unsigned and unvalidated.",
+    "replaceability": "replaceable",
+    "revocability": "for_cause",
+    "status": "unknown",
+    "subject": "Customer-authorized packaging evidence request and exception workflow",
+    "subject_type": "workflow_position",
+    "transferability": "consent_required"
+  },
+  "discovery_lane": "mechanism-first",
+  "economics": {
+    "acquisition_route": "Sell a prepaid 8,000-18,000 PLN customer-upload-only evidence baseline through founder-controlled direct outbound; offer the 12-month managed workflow only after documenting missing-evidence volume, delivery hours and a willing budget owner. Referrals are optional, not a launch dependency.",
+    "capital_required_pln": 55000,
+    "founder_net_worth_path": "Unvalidated planning case: reach 30 customers averaging 48,000 PLN annual managed-service revenue for 1.44M PLN revenue, then standardize delivery toward 55% contribution margin before fixed overhead. A later 100-customer operation at 60,000 PLN average revenue would produce 6M PLN revenue; 15-25% sustainable owner earnings and a 3-4x revenue value could make a retained majority stake exceed 5M PLN in roughly years 7-10. This path fails if CAC exceeds first-year gross profit, delivery remains founder-bound, or renewal is weak.",
+    "founder_time": "Cap founder work near 20-25 hours weekly: direct sales, workflow design and quality review; use independent contractors for bounded evidence operations and qualified counsel for regulatory interpretation.",
+    "gross_margin_basis": "Revenue less directly attributable operations labor, specialist review, OCR, storage, supplier communications and support; target 45-65% initially, measured per account rather than assumed from software margins.",
+    "payback": "Require the buyer to identify labor hours, approval delay or rework at baseline; proceed to the managed term only when conservative annual avoided cost exceeds the quoted first-year fee. Actual payback is unknown until paid pilots are delivered.",
+    "pricing": "8,000-18,000 PLN prepaid evidence baseline; proposed 3,500-8,000 PLN monthly managed service billed quarterly in advance, with explicit portfolio limits and separately priced excess work.",
+    "retention_or_repeat": "Quarterly continuation depends on recurring supplier requests, document expiry, packaging changes and closed exceptions; renewal and expansion remain unvalidated and are tracked by queue volume, resolution time and retained accounts."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Reusable operating playbooks, exception taxonomies and measured resolution benchmarks derived only from records the business is contractually permitted to use; no present data moat is claimed.",
+    "customer": "EU mid-market brands, importers and packaging manufacturers.",
+    "distribution_mechanism": "Founder-controlled direct outbound, with optional nonexclusive contracted referrals after launch rather than dependence on unsigned consultant, laboratory or converter introductions.",
+    "offer_and_business_model": "Prepaid packaging-evidence baseline followed by a productized managed evidence-request and exception-closure service under a customer workflow-integration agreement.",
+    "payer_and_paid_event": "Brand pays for a fixed-scope evidence baseline and quarterly operation of its supplier-document exception queue.",
+    "problem_trigger": "A dated documentation gap, approval backlog, supplier change or audit request with identifiable missing evidence."
+  },
+  "founder_fit": [
+    "FMCG domain familiarity can inform public-market workflow hypotheses while strict separation from Reckitt systems, documents, contacts and confidential knowledge remains mandatory.",
+    "Data modeling and document automation fit the evidence register and exception workflow.",
+    "Direct outbound and productized delivery can be scheduled part-time and do not require a public-facing personal brand.",
+    "The 55,000 PLN planning budget remains below available founder capital and uses prepaid pilots before substantial scaling."
+  ],
+  "parent": {
+    "candidate_id": "ppwr-packaging-proof-vault",
+    "version": 1
+  },
+  "redesign": {
+    "changed_fingerprint_fields": [
+      "compounding_advantage",
+      "distribution_mechanism",
+      "offer_and_business_model",
+      "payer_and_paid_event",
+      "problem_trigger"
+    ],
+    "changed_structural_fields": [
+      "commercial_mechanics",
+      "critical_control_point",
+      "structural_signature"
+    ],
+    "economic_effect": "The redesign abandons high-margin vault economics and unsigned referral/supplier dependence for a direct-sold, prepaid productized service. A proposed customer workflow agreement makes access contractible account by account and customer procurement authority routes supplier requests, while the upload-only baseline is the refusal fallback. This lowers required capital and working-capital exposure but adds substantial delivery labor, reduces the plausible contribution margin to 45-65%, and makes CAC recovery, capacity and renewal explicit validation gates."
+  },
+  "risks": [
+    "No workflow-integration, data-processing, customer, supplier or referral agreement is currently executed.",
+    "Customers may refuse to route supplier communications or provide sufficient source records, leaving only the lower-value baseline.",
+    "Managed delivery may remain labor-intensive, suppress contribution margin and conflict with the founder's part-time capacity.",
+    "PLM vendors, low-price tools and consultants can reproduce or bundle the workflow.",
+    "Regulatory interpretation, confidentiality, data protection, cybersecurity and professional-liability exposure require independent counsel and insurance.",
+    "Strict separation from all Reckitt confidential resources, systems, documents and relationships is mandatory."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://environment.ec.europa.eu/topics/waste-and-recycling/packaging-waste_en",
+    "https://environment.ec.europa.eu/news/new-eu-rules-packaging-enter-application-2026-08-11_en",
+    "runs/20260911T215234Z-38c861/research/ppwr-packaging-proof-vault/v1.json"
+  ],
+  "stage": "development",
+  "structural_signature": {
+    "commercial_model_category": "productized_service",
+    "commercial_model_descriptor": "prepaid packaging evidence baseline plus bounded managed exception operations",
+    "control_point_category": "workflow_integration",
+    "control_point_descriptor": "proposed customer authorized evidence request and exception queue",
+    "critical_dependency_category": "customer_adoption",
+    "critical_dependency_descriptor": "customer execution of the workflow agreement and routing of procurement authority"
+  },
+  "structure": {
+    "commercial_archetype": "Prepaid productized compliance-operations service",
+    "control_point": "Customer-authorized evidence request queue and exception log embedded in packaging approval",
+    "critical_dependency": "A customer must sign the workflow agreement, provide source records and route supplier requests; supplier referrals and a proprietary shared dataset are not required for launch."
+  },
+  "thesis": "Operate a brand's bounded packaging-evidence request and exception queue under a customer authorization, beginning with a prepaid customer-upload-only baseline and expanding only when paid delivery proves recurring work and viable account economics.",
+  "title": "PPWR Evidence Operations Desk",
+  "uncertainties": [
+    "Whether target buyers will purchase the prepaid baseline or managed term at the proposed prices",
+    "Whether customers will execute the workflow and data-processing terms and route supplier requests",
+    "Actual direct-outbound CAC, sales cycle and baseline-to-managed conversion",
+    "Delivery hours, specialist-review cost, support burden and contribution margin by portfolio size",
+    "Quarterly retention and expansion after initial documentation gaps are closed",
+    "Whether authorized aggregate benchmarks can ever be developed without compromising confidentiality",
+    "Which portfolio obligations create enough near-term urgency before later PPWR phases"
+  ],
+  "version": 2
+}

@@ -1,0 +1,170 @@
+{
+  "candidate_id": "cbam-cash-exposure-engine",
+  "claims": [
+    {
+      "claim_id": "cbam-paid-loss",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en",
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/price-cbam-certificates_en"
+      ],
+      "statement": "From 2026, covered importers above the threshold must report embedded emissions and surrender purchased CBAM certificates; certificate cash cost is a current measurable exposure."
+    },
+    {
+      "claim_id": "cbam-payer",
+      "claim_type": "payer_and_budget",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en"
+      ],
+      "statement": "The authorised CBAM declarant buys certificates, making import finance, customs or sustainability leadership a plausible budget owner."
+    },
+    {
+      "claim_id": "cbam-contractible-control",
+      "claim_type": "founder_control_point_path",
+      "confidence": "inference; unverified",
+      "evidence_refs": [
+        "runs/20260911T215234Z-38c861/research/cbam-cash-exposure-engine/v1.json#rc-access-contractible-not-secured",
+        "runs/20260911T215234Z-38c861/research/cbam-cash-exposure-engine/v1.json#rc-external-data-control"
+      ],
+      "statement": "A direct importer workflow-integration and data-processing agreement can make recurring access to importer-controlled records contractible, while the launch service can use customer-uploaded records and public defaults without depending on supplier or verifier data; no such agreement is currently signed."
+    },
+    {
+      "claim_id": "cbam-economics-unknown",
+      "claim_type": "other",
+      "confidence": "unknown",
+      "evidence_refs": [
+        "runs/20260911T215234Z-38c861/research/cbam-cash-exposure-engine/v1.json#rc-unit-economics-unvalidated",
+        "runs/20260911T215234Z-38c861/research/cbam-cash-exposure-engine/v1.json#rc-low-price-substitute"
+      ],
+      "statement": "Pricing, acquisition cost, implementation effort, contribution margin, renewal and customer savings remain unvalidated, and a low-priced direct substitute constrains achievable pricing."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "CFO or treasury lead at a covered importer, with customs leadership as operational sponsor",
+    "bundling_resistance": "The service is sold as an independent pre-purchase treasury control with a documented exposure register and variance review that can operate beside any ERP; this reduces integration lock-in but does not prevent incumbents from copying or bundling it.",
+    "customer_relationship_owner": "The prospective business would directly own importer service contracts and billing relationships; no customer contract is currently signed.",
+    "distribution_origin": "Founder-led targeted outbound to importers above the threshold, followed only by nonexclusive broker or adviser referrals under written referral agreements; no referral channel is currently validated.",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Unvalidated planning range: 4,000-12,000 PLN per customer using narrow account lists and remote sales; abandon or reprice if observed CAC exceeds first-year contribution profit.",
+      "cash_conversion": "Proposed 50% setup fee at signing, 50% at delivery, then quarterly retainers prepaid; actual payment terms and collection time are unknown.",
+      "contribution_margin": "Unvalidated target: 45-65% on setup work and 60-75% on quarterly retainers after analyst review, support and specialist costs; no cohort evidence exists.",
+      "delivery_and_support_costs": "Planning assumption: 12-25 analyst hours for initial mapping and 3-8 hours per quarterly refresh, plus customer support; automate only after paid repetitions establish stable inputs.",
+      "overhead_and_compliance": "Planning allowance: 6,000-12,000 PLN monthly at early scale for legal, security, insurance and periodic carbon-method review; accredited verification remains outside scope and is paid directly by the importer.",
+      "revenue_basis": "Fixed-fee implementation plus prepaid quarterly treasury-control retainer, priced by declarant entity and shipment-data complexity rather than supplier-data volume.",
+      "variable_costs": "Analyst QA, secure file handling, customer support and occasional independent methodology review; verifier fees and supplier evidence collection are excluded from the service."
+    },
+    "likely_incumbent_response": "SAP, customs suites and low-priced CBAM vendors can bundle dashboards and forecasting or undercut software pricing. Defensibility rests on a lightweight independent treasury-control engagement, faster deployment and documented variance reviews, not exclusive data or protected functionality.",
+    "paid_event_or_measurable_loss": "Importer purchases and surrenders CBAM certificates; the service measures forecast-to-actual certificate cash variance and the cost of procurement scenarios using importer-provided records and official defaults where verified supplier data is unavailable.",
+    "payer": "Authorised CBAM declarant or importer",
+    "purchase_trigger": "A covered importer needs an auditable certificate budget before procurement or treasury approval, or experiences a material forecast variance.",
+    "renewal_event": "Each prepaid quarterly exposure refresh and annual workflow-integration renewal, subject to demonstrated use and willingness to pay."
+  },
+  "contrary_evidence": [
+    "The 50-tonne threshold removes many small importers from the principal compliance-driven market.",
+    "Carbon Glance offers overlapping tracking, projections, procurement and supplier tools for €2,500 per year.",
+    "SAP is bundling end-to-end CBAM data, calculation, accounting, reporting and planned cash-impact forecasting.",
+    "Essential actual-emissions and verification inputs remain controlled by importers, suppliers and accredited verifiers."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Proposed direct workflow-integration and data-processing agreement requiring the importer to provide defined customs and procurement extracts, designate the exposure register as a quarterly treasury-control input, permit processing for the engagement, and pay prepaid quarterly fees; it is unsigned and grants no present rights.",
+    "acquisition_instrument_type": "workflow_integration_agreement",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Deliver a one-off, prepaid exposure diagnostic from customer-uploaded shipment records and public certificate prices/default values without ERP integration, supplier data or verifier outputs; if the importer will not provide even those records, do not launch for that account.",
+    "current_owner": "Importers currently own the source records and treasury process; suppliers and accredited verifiers retain control of actual-emissions evidence and assurance outputs. The prospective business currently owns no signed workflow position.",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "The prospective business would directly own importer service contracts and billing relationships; no customer contract is currently signed.",
+    "duration": "Proposed 12-month agreement with quarterly prepaid work orders; duration remains unestablished until signature.",
+    "exclusivity": "nonexclusive",
+    "founder_access_basis": "none",
+    "founder_access_description": "No existing importer, supplier, broker or verifier rights are established; the proposed agreement is an acquisition path, not present access.",
+    "launch_controller": "The founder controls whether to offer and deliver the public-default diagnostic and would control the exposure-register process and software templates; each importer controls whether to sign and supply its records.",
+    "mechanism_control": "unknown",
+    "renewal": "Proposed annual renewal with quarterly service confirmation; renewal behavior is unvalidated.",
+    "replaceability": "replaceable",
+    "revocability": "for_cause",
+    "status": "unknown",
+    "subject": "Contracted importer treasury exposure-register workflow using importer-provided records and a public-default fallback",
+    "subject_type": "workflow_position",
+    "transferability": "consent_required"
+  },
+  "discovery_lane": "mechanism-first",
+  "economics": {
+    "acquisition_route": "Sell a prepaid, fixed-scope exposure-register implementation directly to narrowly targeted covered importers; convert only customers that use the register in treasury decisions to prepaid quarterly retainers, and add nonexclusive referral agreements after direct-sales economics are observed.",
+    "capital_required_pln": 45000,
+    "founder_net_worth_path": "Unvalidated scenario: reach 40 retained customers at an average 48,000 PLN annual retainer plus 20 implementations at 12,000 PLN, producing 2.16M PLN annual revenue. At 25% owner earnings and a 3x revenue valuation, a 70% founder stake could exceed 4.5M PLN in business equity, with reinvested earnings potentially taking founder net worth above 5M PLN in roughly years 7-10. This fails if retention, delivery leverage, pricing or acquisition economics do not hold.",
+    "founder_time": "15-20 hours weekly during validation, capped by fixed-scope implementations; contract analyst QA only after prepaid demand and standardized delivery are observed.",
+    "gross_margin_basis": "Implementation and retainer revenue less analyst QA, support, secure data handling and specialist review; target ranges are hypotheses until paid delivery data exists.",
+    "payback": "Require each implementation to document a forecast variance, avoided manual effort or procurement decision worth at least the fee; no 1-3% certificate saving is assumed, and payback remains unproven.",
+    "pricing": "Proposed 10,000-18,000 PLN prepaid implementation and 9,000-15,000 PLN prepaid quarterly retainer; test against the €2,500 annual substitute and reduce scope rather than claim premium willingness.",
+    "retention_or_repeat": "Quarterly price changes, shipment updates and annual declarations create repeat work, but renewal is conditional on the exposure register being used in treasury approval and remains unvalidated."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Reusable exposure-register templates, importer-specific variance histories and permissioned workflow learning; no exclusive regulatory-data moat is assumed.",
+    "customer": "EU mid-market importers of steel, aluminium, cement, fertilisers, electricity or hydrogen.",
+    "distribution_mechanism": "Direct account-based importer sales first; nonexclusive written broker or adviser referrals only after direct acquisition economics are measured.",
+    "offer_and_business_model": "Prepaid exposure-register implementation plus quarterly productized treasury-control service using importer-provided records and public-default fallback.",
+    "payer_and_paid_event": "Importer pays subscription against certificate purchase and surrender events.",
+    "problem_trigger": "Covered import volume crosses threshold or treasury exposure becomes material."
+  },
+  "founder_fit": [
+    "Finance-oriented quantitative modeling fit",
+    "Data integration and AI leverage",
+    "Fixed-scope remote delivery can remain compatible with part-time availability during validation",
+    "Prepaid diagnostics limit initial capital exposure and create observable delivery economics"
+  ],
+  "parent": {
+    "candidate_id": "cbam-cash-exposure-engine",
+    "version": 1
+  },
+  "redesign": {
+    "changed_fingerprint_fields": [
+      "compounding_advantage",
+      "distribution_mechanism",
+      "offer_and_business_model"
+    ],
+    "changed_structural_fields": [
+      "commercial_mechanics",
+      "critical_control_point",
+      "structural_signature"
+    ],
+    "economic_effect": "Replaces speculative high-priced SaaS and uncontrolled supplier-data dependence with a directly contracted, prepaid treasury-control service that can launch on importer-uploaded records and public defaults. Capital need and onboarding effort fall, verifier and supplier costs move outside scope, and cash conversion improves through prepayment; margins and scale potential are lower and remain unvalidated until paid implementations establish CAC, labor, retention and price tolerance."
+  },
+  "risks": [
+    "No importer has signed the proposed workflow-integration agreement or paid for the redesigned service.",
+    "The low-priced substitute and SAP bundling may cap price or eliminate demand for an independent treasury-control layer.",
+    "Customer-uploaded records and public defaults may produce insufficient decision value to support quarterly retention.",
+    "Enterprise trust, security review and sales cycles may exceed the founder's part-time capacity.",
+    "Regulatory or methodology errors create liability; the service must not represent itself as accredited verification."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en",
+    "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/price-cbam-certificates_en",
+    "runs/20260911T215234Z-38c861/research/cbam-cash-exposure-engine/v1.json"
+  ],
+  "stage": "development",
+  "structural_signature": {
+    "commercial_model_category": "productized_service",
+    "commercial_model_descriptor": "prepaid cbam treasury exposure register implementation and quarterly control service",
+    "control_point_category": "workflow_integration",
+    "control_point_descriptor": "proposed direct importer agreement placing an exposure register in quarterly treasury approval with a no integration public default fallback",
+    "critical_dependency_category": "customer_adoption",
+    "critical_dependency_descriptor": "importer signature provision of defined records and recurring use of the exposure register in treasury decisions"
+  },
+  "structure": {
+    "commercial_archetype": "Prepaid productized treasury-control service",
+    "control_point": "Directly contracted quarterly exposure register used in importer treasury approval",
+    "critical_dependency": "Importer adoption and provision of defined customs and procurement extracts; supplier and verifier data are optional rather than launch-critical"
+  },
+  "thesis": "Acquire a contractible position in the importer's recurring treasury-control workflow and deliver useful CBAM cash-variance decisions from defined importer records and public defaults, without making supplier evidence or accredited verification a launch dependency.",
+  "title": "CBAM Treasury Exposure Register",
+  "uncertainties": [
+    "Whether covered importers will sign the proposed workflow-integration terms and pay the implementation or quarterly fees",
+    "Observed direct-sales CAC, sales cycle, delivery hours, security burden, contribution margin and renewal",
+    "Whether public-default and importer-record analysis creates sufficient incremental value beside €2,500 software and bundled ERP tools",
+    "Whether the founder can standardize delivery enough to reach the modeled customer count within part-time constraints"
+  ],
+  "version": 2
+}

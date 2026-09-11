@@ -1,0 +1,322 @@
+{
+  "candidate_id": "installer-maintenance-renewal-rail",
+  "candidate_sha256": "3f53327c30170d65f44f08103add20bd6da5dfbdc30b4ddf62ed4df710ba148e",
+  "candidate_version": 1,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "r1-installed-base",
+      "evidence_refs": [
+        "s1-ure-2026"
+      ],
+      "statement": "Poland had 1,636,673 grid-connected renewable microinstallations at year-end 2025, 99.9% of which were photovoltaic, establishing a large addressable installed asset base but not maintenance demand."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r2-paid-service-event",
+      "evidence_refs": [
+        "s2-energa-service"
+      ],
+      "statement": "Energa publicly offers separately priced residential photovoltaic service events, including an inverter inspection for 799 PLN gross and an electrical-installation inspection for 1,160 PLN gross; this establishes that a purchasable service event exists, but not its transaction volume or annual-plan conversion."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r3-low-maintenance-contrary",
+      "evidence_refs": [
+        "s3-doe-maintenance"
+      ],
+      "statement": "The US Department of Energy states that photovoltaic modules have no moving parts and require very little maintenance, while identifying repairs involving module damage, inverters, and wiring; this directly weakens the premise that most homeowners urgently need an annual preventive-maintenance plan."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r4-incumbent-bundling",
+      "evidence_refs": [
+        "s4-sable-crm",
+        "s9-hubspot-pricing"
+      ],
+      "statement": "Existing software can bundle material parts of the proposed workflow: Sable CRM advertises solar service history, service-call scheduling, automated client touchpoints, payments, and a client portal, while HubSpot sells contact-based marketing automation. The renewal rail therefore competes with configurable incumbent software rather than an empty category."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r5-repeat-event-shape",
+      "evidence_refs": [
+        "s2-energa-service",
+        "s3-doe-maintenance"
+      ],
+      "statement": "Fault diagnosis, inverter work, electrical checks, and occasional repairs can create repeat service revenue, but the cited evidence supports episodic technical events more strongly than a universal annual subscription cadence."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r6-variable-cost-floor",
+      "evidence_refs": [
+        "s7-stripe-pricing",
+        "s8-twilio-pricing"
+      ],
+      "statement": "At current public list prices, payment processing and outbound messaging are measurable variable costs: Stripe lists 1.5% plus 1 PLN for standard EEA cards in Poland, while Twilio lists outbound Polish SMS at USD 0.0457 per segment before possible additional fees. These inputs do not validate the candidate's 60-75% contribution-margin, CAC, support, tax, insurance, dispatch, refund, or bad-debt assumptions."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r7-data-contractibility",
+      "evidence_refs": [
+        "s5-gdpr",
+        "s6-uodo-right-object",
+        "s1-ure-2026"
+      ],
+      "statement": "Installer-held customer records can in principle be processed through a documented controller-processor or other lawful arrangement, but GDPR requires a lawful basis and purpose analysis, and direct-marketing recipients retain an unconditional right to object. URE also publishes only aggregate microinstallation data because underlying records predominantly concern protected individuals, so public registry data cannot replace installer authorization."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r8-control-point-replaceable",
+      "evidence_refs": [
+        "s5-gdpr",
+        "s6-uodo-right-object",
+        "s1-ure-2026"
+      ],
+      "statement": "The critical control point is best characterized as replaceable access: campaign logic and payment software can be built, but access to each installed base remains controlled by installers and affected by data-subject rights. No reviewed source shows that the candidate owns or has durably or exclusively contracted this access."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r9-private-validation-unknown",
+      "evidence_refs": [],
+      "statement": "No permitted evidence establishes signed installer customers, homeowner opt-ins, completed maintenance-plan sales, renewal rates, service capacity commitments, or collected revenue for this candidate."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r10-distribution-unknown",
+      "evidence_refs": [],
+      "statement": "No permitted evidence establishes a signed distributor referral agreement, a repeatable installer-acquisition channel, lead volume, close rate, CAC, sales-cycle length, or exclusivity."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r11-fully-loaded-economics-unknown",
+      "evidence_refs": [],
+      "statement": "Fully loaded unit economics remain unknown because there is no observed price acceptance, conversion rate, fulfilled-service frequency, revenue-share collection history, churn, CAC, labor utilization, support burden, compliance cost, gross margin, or payback data."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r12-data-moat-unknown",
+      "evidence_refs": [],
+      "statement": "No evidence establishes access to sufficient permissioned response and service-outcome data, cross-installer pooling rights, statistically useful lift from optimization, or a durable data advantage over installer CRMs and equipment vendors."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r13-mechanism-ownership-unknown",
+      "evidence_refs": [],
+      "statement": "No evidence establishes ownership of proprietary campaign logic, payment routing, cross-brand service records, patents, exclusive datasets, or signed installer contracts; the proposed critical mechanism is not yet demonstrably owned."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r14-partner-dependencies-unknown",
+      "evidence_refs": [],
+      "statement": "The family installer relationship, distributor channel, legacy customer-data access, homeowner permissions, payment-provider access, and technician fulfillment capacity are unsigned or otherwise unverified dependencies."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r15-urgency-and-wtp-unknown",
+      "evidence_refs": [],
+      "statement": "Installer willingness to pay 750-2,500 PLN monthly plus 8-15% of service revenue, homeowner urgency, annual repeat behavior, and recovery of platform fees through five to ten incremental monthly plans are unvalidated."
+    }
+  ],
+  "commercial_evidence": {
+    "buyer_or_paid_event": {
+      "claim_ids": [
+        "r2-paid-service-event"
+      ],
+      "source_ids": [
+        "s2-energa-service"
+      ],
+      "status": "evidence"
+    },
+    "distribution_and_acquisition": {
+      "claim_ids": [
+        "r10-distribution-unknown"
+      ],
+      "source_ids": [],
+      "status": "unknown"
+    },
+    "fully_loaded_unit_economics": {
+      "claim_ids": [
+        "r6-variable-cost-floor"
+      ],
+      "source_ids": [
+        "s7-stripe-pricing",
+        "s8-twilio-pricing"
+      ],
+      "status": "inference"
+    },
+    "rights_control_access_contractibility": {
+      "claim_ids": [
+        "r7-data-contractibility"
+      ],
+      "source_ids": [
+        "s5-gdpr",
+        "s6-uodo-right-object",
+        "s1-ure-2026"
+      ],
+      "status": "inference"
+    }
+  },
+  "contrary_evidence": [
+    "The US Department of Energy says PV modules have no moving parts and require very little maintenance. This is genuinely adverse because low routine maintenance need can suppress homeowner urgency, annual-plan conversion, repeat frequency, and the service revenue pool on which both the platform fee and revenue share depend.",
+    "Sable CRM already combines solar service history, service scheduling, automated customer communications, payments, and a client portal. This contradicts the claim that CRM reminders cannot materially substitute for the proposed collection workflow and shows a plausible incumbent bundling response.",
+    "URE's withholding of individual-level microinstallation data for privacy reasons contradicts any assumption that the national installed base is directly obtainable as a prospecting dataset; installer-controlled records and lawful outreach remain necessary."
+  ],
+  "critical_control_point_assessment": {
+    "assessment": "inference",
+    "claim_ids": [
+      "r8-control-point-replaceable"
+    ],
+    "source_ids": [
+      "s5-gdpr",
+      "s6-uodo-right-object",
+      "s1-ure-2026"
+    ],
+    "status": "replaceable_access"
+  },
+  "falsification": {
+    "cold_start_and_data_moat": [
+      "r12-data-moat-unknown",
+      "r9-private-validation-unknown"
+    ],
+    "control_point_obtainability": [
+      "r7-data-contractibility",
+      "r8-control-point-replaceable",
+      "r10-distribution-unknown"
+    ],
+    "critical_mechanism_ownership": [
+      "r13-mechanism-ownership-unknown",
+      "r8-control-point-replaceable"
+    ],
+    "external_dependencies": [
+      "r14-partner-dependencies-unknown",
+      "r7-data-contractibility"
+    ],
+    "substitutes_and_incumbent_response": [
+      "r4-incumbent-bundling",
+      "r3-low-maintenance-contrary"
+    ],
+    "willingness_urgency_and_repeat_economics": [
+      "r2-paid-service-event",
+      "r3-low-maintenance-contrary",
+      "r5-repeat-event-shape",
+      "r6-variable-cost-floor",
+      "r11-fully-loaded-economics-unknown",
+      "r15-urgency-and-wtp-unknown"
+    ]
+  },
+  "schema_version": 3,
+  "sources": [
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "market_context",
+      "published_at": "2026-03-19",
+      "publisher": "Urząd Regulacji Energetyki",
+      "source_id": "s1-ure-2026",
+      "source_type": "official regulator webpage",
+      "stance": "supporting",
+      "title": "Raport URE: w Polsce mamy już ponad 1,6 mln mikroinstalacji OZE",
+      "url": "https://ure.gov.pl/pl/urzad/informacje-ogolne/aktualnosci/13173,Raport-URE-w-Polsce-mamy-juz-ponad-16-mln-mikroinstalacji-OZE.html"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "paid_event",
+      "published_at": "unknown",
+      "publisher": "Energa Obrót",
+      "source_id": "s2-energa-service",
+      "source_type": "incumbent service price page",
+      "stance": "supporting",
+      "title": "Usługi serwisowe dla klientów Energi Obrotu",
+      "url": "https://www.energa.pl/produkty-oze/dla-domu/uslugi-serwisowe"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "market_context",
+      "published_at": "unknown",
+      "publisher": "U.S. Department of Energy",
+      "source_id": "s3-doe-maintenance",
+      "source_type": "official technical guidance",
+      "stance": "contradicting",
+      "title": "Optimizing Solar Photovoltaic Performance for Longevity",
+      "url": "https://www.energy.gov/cmei/femp/optimizing-solar-photovoltaic-performance-longevity"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "incumbent",
+      "published_at": "unknown",
+      "publisher": "Sable CRM",
+      "source_id": "s4-sable-crm",
+      "source_type": "competitor product and pricing page",
+      "stance": "contradicting",
+      "title": "CRM for Solar Companies",
+      "url": "https://www.sablecrm.com/industries/solar/"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "rights_control_access",
+      "published_at": "2016-05-04",
+      "publisher": "European Union",
+      "source_id": "s5-gdpr",
+      "source_type": "official regulation",
+      "stance": "context",
+      "title": "Regulation (EU) 2016/679 (General Data Protection Regulation)",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "regulatory",
+      "published_at": "unknown",
+      "publisher": "Urząd Ochrony Danych Osobowych",
+      "source_id": "s6-uodo-right-object",
+      "source_type": "official data-protection guidance PDF",
+      "stance": "context",
+      "title": "Prawo do sprzeciwu wobec marketingu bezpośredniego",
+      "url": "https://www.uodo.gov.pl/pl/file/4133"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "unit_economics",
+      "published_at": "unknown",
+      "publisher": "Stripe",
+      "source_id": "s7-stripe-pricing",
+      "source_type": "official payment pricing page",
+      "stance": "context",
+      "title": "Pricing & Fees — Poland",
+      "url": "https://stripe.com/en-pl/pricing"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "unit_economics",
+      "published_at": "unknown",
+      "publisher": "Twilio",
+      "source_id": "s8-twilio-pricing",
+      "source_type": "official messaging pricing page",
+      "stance": "context",
+      "title": "SMS Pricing in Poland for Text Messaging",
+      "url": "https://www.twilio.com/en-us/sms/pricing/pl"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "incumbent",
+      "published_at": "unknown",
+      "publisher": "HubSpot",
+      "source_id": "s9-hubspot-pricing",
+      "source_type": "competitor pricing page",
+      "stance": "contradicting",
+      "title": "HubSpot for Marketers Software Pricing",
+      "url": "https://www.hubspot.com/pricing/marketing-plus"
+    }
+  ],
+  "unknowns": [
+    "Whether any installer will sign and pay for the proposed platform and revenue-share structure.",
+    "Whether homeowners will opt in and purchase annual care plans at commercially sufficient rates.",
+    "Observed CAC, close rate, sales cycle, onboarding labor, churn, gross margin, contribution margin, and payback.",
+    "Actual frequency and value of preventive versus break-fix photovoltaic service events in the target installer cohorts.",
+    "Whether installers possess valid permissions or another lawful basis for each intended outreach use and will execute required data-processing terms.",
+    "Whether the family installer will authorize a pilot, provide usable records, and allocate technician capacity.",
+    "Whether equipment distributors will sign referral or white-label agreements.",
+    "Whether service technicians can fulfill generated demand within acceptable response times and margins.",
+    "Whether permissioned multi-installer data can legally and contractually be pooled into a defensible benchmark asset.",
+    "Whether the proposed campaign, payment, and service-record mechanism can be owned or differentiated from existing CRM and field-service products.",
+    "There is no sourced evidence of illegality, an unobtainable essential right, mathematically impossible conservative economics, or non-delegable founder incompatibility; the present gaps are uncertainties rather than proof of fatality."
+  ]
+}

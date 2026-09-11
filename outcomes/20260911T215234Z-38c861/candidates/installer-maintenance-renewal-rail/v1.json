@@ -1,0 +1,126 @@
+{
+  "candidate_id": "installer-maintenance-renewal-rail",
+  "claims": [
+    {
+      "claim_id": "maintenance-paid-event",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://przydomowemagazyny.gov.pl/pme-czesc-1-z-kpo/"
+      ],
+      "statement": "Installed PV and battery assets create current paid installation events and an installed base requiring monitoring, warranty administration and potential maintenance; the source confirms connected-and-paid assets but not maintenance spending."
+    },
+    {
+      "claim_id": "maintenance-founder-path",
+      "claim_type": "founder_control_point_path",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://przydomowemagazyny.gov.pl/pme-czesc-1-z-kpo/"
+      ],
+      "statement": "The family installer relationship offers a realistic, nonexclusive route to test customer-consented renewal offers without transferring its customer book."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Owner of a renewable installer or service department",
+    "bundling_resistance": "A revenue-share renewal rail aligns fees to collected service revenue and can coordinate multiple equipment warranties; CRM reminders alone do not provide the collection workflow.",
+    "customer_relationship_owner": "The prospective business would own installer subscription or revenue-share contracts; installers retain all homeowner relationships.",
+    "distribution_origin": "Family installer pilot followed by white-label offers through equipment distributors.",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Assumption: 2,000-4,000 PLN per installer through direct sales; unknown until pilots.",
+      "cash_conversion": "Platform fee prepaid monthly and revenue share collected when homeowner pays.",
+      "contribution_margin": "Assumption: 60-75% after messaging, payment and service coordination.",
+      "delivery_and_support_costs": "Initial data-cleaning and campaign setup estimated at 20-40 hours per installer.",
+      "overhead_and_compliance": "Consent management, processor agreements, accounting and insurance estimated at 4,000 PLN monthly after 20 customers.",
+      "revenue_basis": "Monthly platform fee plus 8-15% of collected maintenance-plan revenue.",
+      "variable_costs": "SMS, payment processing, support and optional contracted technician dispatch."
+    },
+    "likely_incumbent_response": "Installer CRMs and equipment distributors may bundle reminders; revenue-linked pricing and cross-brand service records provide resistance.",
+    "paid_event_or_measurable_loss": "Homeowner pays for a maintenance visit or annual care plan; the installer loses repeat revenue when installed-base customers are not contacted.",
+    "payer": "Installer pays platform fees; homeowner funds the underlying service event.",
+    "purchase_trigger": "Installer has more than 500 installed systems but little repeat-service revenue.",
+    "renewal_event": "Annual platform renewal tied to collected maintenance revenue."
+  },
+  "contrary_evidence": [
+    "Residential PV systems may require little paid preventive maintenance.",
+    "The cited subsidy material proves installed assets, not demand for annual plans."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Existing informal family operating relationship for voluntary service-workflow testing; any customer outreach requires installer authorization and valid customer consent.",
+    "acquisition_instrument_type": "other",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Recruit another installer and run opt-in campaigns from newly completed installations rather than importing legacy customer data.",
+    "current_owner": "Each installer owns its customer contracts and service history.",
+    "customer_relationship_control": "owned",
+    "customer_relationship_owner": "The prospective business would own installer subscription or revenue-share contracts; installers retain all homeowner relationships.",
+    "duration": "Ongoing relationship with no fixed term.",
+    "exclusivity": "nonexclusive",
+    "founder_access_basis": "operating_relationship",
+    "founder_access_description": "Family-business access can validate workflow and economics, but gives no automatic right to homeowner data.",
+    "launch_controller": "The founder would control campaign logic, payment routing and installer contracts if launched.",
+    "mechanism_control": "dependent",
+    "renewal": "Mutual-consent operating access; proposed commercial contracts would define annual renewal.",
+    "replaceability": "replaceable",
+    "revocability": "at_will",
+    "status": "replaceable_access",
+    "subject": "Renewable installer service-renewal workflow",
+    "subject_type": "relationship",
+    "transferability": "nontransferable"
+  },
+  "discovery_lane": "mechanism-first",
+  "economics": {
+    "acquisition_route": "Run an opt-in cohort on new installations, prove service conversion, then sell to installers with 500-5,000 assets.",
+    "capital_required_pln": 35000,
+    "founder_net_worth_path": "Assumption: 100 installers averaging 2,500 PLN platform MRR plus 15,000 PLN annual revenue share yields about 4.5M PLN revenue; at 25% owner earnings and 4x value, an 80% stake could pass 5M PLN in years 6-8. Conversion and service frequency remain unknown.",
+    "founder_time": "15 hours weekly for pilot; outsource campaign operations after ten installers.",
+    "gross_margin_basis": "Platform and revenue-share income less messaging, payments and direct support; target 65%.",
+    "payback": "Installer should recover fees from 5-10 incremental service plans monthly; target founder CAC payback under six months.",
+    "pricing": "750-2,500 PLN monthly plus 8-15% of collected service revenue.",
+    "retention_or_repeat": "Installed-base growth and annual warranty or inspection cycles support repeat usage."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Permissioned response and asset-service benchmarks improve renewal timing.",
+    "customer": "Residential renewable installers with substantial installed bases.",
+    "distribution_mechanism": "White-label installer channel and equipment-distributor referrals.",
+    "offer_and_business_model": "Managed renewal rail with platform fee and revenue share.",
+    "payer_and_paid_event": "Installer pays platform fee; homeowner payment for service generates shared revenue.",
+    "problem_trigger": "A large dormant installed base and weak repeat-service revenue."
+  },
+  "founder_fit": [
+    "Family installer offers legally usable workflow access",
+    "Quantitative campaign optimization suits the founder",
+    "Can begin part-time with opt-in records",
+    "Capital need is below available 100,000 PLN"
+  ],
+  "parent": null,
+  "risks": [
+    "Homeowners may reject maintenance subscriptions.",
+    "Consent and data-processing mistakes could create GDPR exposure.",
+    "Installer service capacity may constrain fulfilled demand."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://przydomowemagazyny.gov.pl/pme-czesc-1-z-kpo/"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "transaction_intermediation",
+    "commercial_model_descriptor": "installer maintenance renewal revenue rail",
+    "control_point_category": "operating_relationship",
+    "control_point_descriptor": "replaceable access to installer renewal workflow",
+    "critical_dependency_category": "supply_partner",
+    "critical_dependency_descriptor": "installers or technicians fulfilling booked service"
+  },
+  "structure": {
+    "commercial_archetype": "Revenue-share renewal platform",
+    "control_point": "Opt-in service renewal and payment event",
+    "critical_dependency": "Installer service capacity and homeowner conversion"
+  },
+  "thesis": "Turn renewable installers' dormant installed bases into recurring service revenue through a consented renewal and payment rail.",
+  "title": "Installer Maintenance Renewal Rail",
+  "uncertainties": [
+    "Homeowner service-plan conversion",
+    "Actual preventive-maintenance need",
+    "Installer capacity and acceptable revenue share"
+  ],
+  "version": 1
+}

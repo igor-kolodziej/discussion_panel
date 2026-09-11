@@ -1,0 +1,335 @@
+{
+  "candidate_id": "pv-battery-yield-verification",
+  "candidate_sha256": "0ef1576ae93225f8b3c823b987ea46be80491fd1d7b4c060cf0b9b2da41bfe6c",
+  "candidate_version": 1,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "r1-market-spend",
+      "evidence_refs": [
+        "s1-pme"
+      ],
+      "statement": "Poland's official household-energy-storage program has a 335 million PLN budget and supports natural-person prosumers using net billing, evidencing current subsidized expenditure on household PV/storage assets but not demand for independent yield verification."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r2-measurable-benefit",
+      "evidence_refs": [
+        "s2-arena"
+      ],
+      "statement": "An Australian Renewable Energy Agency monitoring project reported estimated annual savings of AUD 132 per site and described active monitoring detecting faults, supporting the proposition that monitoring can produce measurable economic benefit in deployed systems."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r3-paid-monitoring-comparables",
+      "evidence_refs": [
+        "s2-arena",
+        "s3-solaredge-plan"
+      ],
+      "statement": "A measurable monitoring benefit plus SolarEdge's purchasable annual connectivity-and-monitoring plans makes payment for monitoring plausible, but does not establish that Polish installers, lenders, insurers, or asset owners will buy this candidate's independent verification offer."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r4-direct-buyer-validation",
+      "evidence_refs": [],
+      "statement": "No signed order, paid pilot, buyer interview, conversion rate, renewal, or identified Polish institutional budget for the candidate was provided or found."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r5-acquisition-path",
+      "evidence_refs": [
+        "s4-solarfleet"
+      ],
+      "statement": "SolarFleet demonstrates a low-friction acquisition pattern—two free sites, self-service connection to real vendor accounts, then annual per-site billing—that the candidate could test through a consented installer pilot, but the family relationship and downstream distributor, lender, or insurer channels remain unsigned."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r6-economics-benchmark",
+      "evidence_refs": [
+        "s3-solaredge-plan",
+        "s4-solarfleet",
+        "s5-tigo"
+      ],
+      "statement": "Public comparables range from SolarFleet at GBP 3-5 per site monthly, Tigo EI Premium at USD 20 per site yearly plus module charges and EI Professional at USD 199 yearly, to SolarEdge connectivity/monitoring at USD 44.99-249.99 yearly by site size; these benchmarks make recurring software revenue feasible but put the candidate's 15-40 PLN monthly residential price under competitive pressure and do not validate its assumed CAC, labor, liability, connector expense, 65-80% contribution margin, or payback."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r7-data-access-contractibility",
+      "evidence_refs": [
+        "s6-data-act",
+        "s7-gdpr"
+      ],
+      "statement": "The EU Data Act requires readily available connected-product data and interpretive metadata to be accessible to the user and permits sharing with a third party of the user's choice, while personal-data processing still requires a GDPR legal basis and consent can be withdrawn; lawful access is therefore contractible but neither owned nor irrevocable."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r8-verification-method",
+      "evidence_refs": [
+        "s8-iec-monitoring",
+        "s9-iec-performance"
+      ],
+      "statement": "IEC 61724-1 defines terminology, equipment, and methods for PV performance monitoring, while IEC TS 61724-2 defines a power-performance-index test against design-expected output and notes contractual-performance-guarantee use; an independent verification method is technically grounded but must control test conditions, boundaries, and filtering."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r9-baseline-uncertainty",
+      "evidence_refs": [
+        "s10-pvgis"
+      ],
+      "statement": "The European Commission Joint Research Centre states that solar-radiation data are the largest uncertainty in estimated solar output and that module performance also depends on irradiance, spectrum, temperature, and wind, directly supporting the risk that weather and model uncertainty can confound fault attribution."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r10-incumbent-substitutes",
+      "evidence_refs": [
+        "s3-solaredge-plan",
+        "s4-solarfleet",
+        "s5-tigo",
+        "s11-fronius"
+      ],
+      "statement": "Direct substitutes already provide fleet monitoring, fault alerts, cross-brand integrations, reporting, commissioning support, API or export access, and paid annual plans; Fronius also bundles extensive free monitoring, yield analysis, remote fault monitoring, and paid forecasting into its vendor portal."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r11-external-dependencies",
+      "evidence_refs": [],
+      "statement": "No executed homeowner consent, telemetry license, vendor API agreement, installer pilot contract, data-processing agreement, distributor arrangement, lender channel, insurer channel, or inspection-partner agreement was provided."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r12-data-moat",
+      "evidence_refs": [],
+      "statement": "No permissioned cross-brand dataset, labeled fault corpus, remediation outcomes, exclusive data contribution terms, minimum data volume, or demonstrated learning curve exists yet, so cold-start resolution and moat formation are unproven."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r13-mechanism-ownership",
+      "evidence_refs": [],
+      "statement": "No deployed proprietary verification engine, registered intellectual property, exclusive methodology, or controlled production data pipeline was evidenced; a future founder-authored analysis method would not by itself establish ownership of telemetry or durable control of the workflow."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r14-repeat-economics",
+      "evidence_refs": [],
+      "statement": "The proposed annual monitoring renewal, 2,000 PLN account CAC, 1,000-5,000 PLN detected-loss threshold, churn, sales cycle, support load, warranty-dispute conversion, gross margin, and customer payback have not been measured for this candidate."
+    }
+  ],
+  "commercial_evidence": {
+    "buyer_or_paid_event": {
+      "claim_ids": [
+        "r3-paid-monitoring-comparables"
+      ],
+      "source_ids": [
+        "s2-arena",
+        "s3-solaredge-plan"
+      ],
+      "status": "inference"
+    },
+    "distribution_and_acquisition": {
+      "claim_ids": [
+        "r5-acquisition-path"
+      ],
+      "source_ids": [
+        "s4-solarfleet"
+      ],
+      "status": "inference"
+    },
+    "fully_loaded_unit_economics": {
+      "claim_ids": [
+        "r6-economics-benchmark"
+      ],
+      "source_ids": [
+        "s3-solaredge-plan",
+        "s4-solarfleet",
+        "s5-tigo"
+      ],
+      "status": "inference"
+    },
+    "rights_control_access_contractibility": {
+      "claim_ids": [
+        "r7-data-access-contractibility"
+      ],
+      "source_ids": [
+        "s6-data-act",
+        "s7-gdpr"
+      ],
+      "status": "evidence"
+    }
+  },
+  "contrary_evidence": [
+    "Fronius provides an extensive free monitoring tier with installer fleet views, yield analysis, and remote fault monitoring; this contradicts the premise that basic monitoring and fault visibility create a strong standalone paid wedge and shows a credible bundling response.",
+    "SolarFleet sells cross-brand monitoring, inverter integrations, fault detection, and standards-based reports for GBP 3-5 per site monthly, with two sites free; this directly challenges differentiation and the candidate's proposed 15-40 PLN monthly pricing.",
+    "The European Commission Joint Research Centre identifies solar-radiation data as the largest uncertainty in output estimation; this makes savings attribution and fault-versus-weather separation materially harder than comparing telemetry with a simple modeled baseline."
+  ],
+  "critical_control_point_assessment": {
+    "assessment": "evidence",
+    "claim_ids": [
+      "r7-data-access-contractibility"
+    ],
+    "source_ids": [
+      "s6-data-act",
+      "s7-gdpr"
+    ],
+    "status": "replaceable_access"
+  },
+  "falsification": {
+    "cold_start_and_data_moat": [
+      "r12-data-moat"
+    ],
+    "control_point_obtainability": [
+      "r7-data-access-contractibility",
+      "r11-external-dependencies"
+    ],
+    "critical_mechanism_ownership": [
+      "r13-mechanism-ownership"
+    ],
+    "external_dependencies": [
+      "r7-data-access-contractibility",
+      "r11-external-dependencies"
+    ],
+    "substitutes_and_incumbent_response": [
+      "r10-incumbent-substitutes"
+    ],
+    "willingness_urgency_and_repeat_economics": [
+      "r2-measurable-benefit",
+      "r3-paid-monitoring-comparables",
+      "r4-direct-buyer-validation",
+      "r6-economics-benchmark",
+      "r14-repeat-economics"
+    ]
+  },
+  "schema_version": 3,
+  "sources": [
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "market_context",
+      "published_at": "unknown",
+      "publisher": "Narodowy Fundusz Ochrony Środowiska i Gospodarki Wodnej",
+      "source_id": "s1-pme",
+      "source_type": "official program webpage",
+      "stance": "supporting",
+      "title": "PME Część 1 z KPO – Przydomowe Magazyny Energii",
+      "url": "https://przydomowemagazyny.gov.pl/pme-czesc-1-z-kpo/"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "paid_event",
+      "published_at": "2021-07",
+      "publisher": "Australian Renewable Energy Agency",
+      "source_id": "s2-arena",
+      "source_type": "official project final report",
+      "stance": "supporting",
+      "title": "Solar Analytics Monitoring for Better Energy Outcomes Final Report",
+      "url": "https://arena.gov.au/assets/2021/07/solar-analytics-monitoring-for-better-energy-outcomes-final-report.pdf"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "paid_event",
+      "published_at": "unknown",
+      "publisher": "SolarEdge Technologies",
+      "source_id": "s3-solaredge-plan",
+      "source_type": "official product pricing webpage",
+      "stance": "supporting",
+      "title": "SolarEdge Data Plan",
+      "url": "https://www.solaredge.com/us/solaredge-data-plan-renewal"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "distribution",
+      "published_at": "unknown",
+      "publisher": "InspireGreen Ltd.",
+      "source_id": "s4-solarfleet",
+      "source_type": "competitor pricing and onboarding webpage",
+      "stance": "contradicting",
+      "title": "Solar O&M Software Pricing",
+      "url": "https://solarfleet.io/pricing"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "unit_economics",
+      "published_at": "unknown",
+      "publisher": "Tigo Energy",
+      "source_id": "s5-tigo",
+      "source_type": "competitor product and pricing webpage",
+      "stance": "contradicting",
+      "title": "Energy Intelligence Solar Monitoring",
+      "url": "https://www.tigoenergy.com/monitoring"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "rights_control_access",
+      "published_at": "2023-12-13",
+      "publisher": "European Union",
+      "source_id": "s6-data-act",
+      "source_type": "official regulation",
+      "stance": "supporting",
+      "title": "Regulation (EU) 2023/2854 on Harmonised Rules on Fair Access to and Use of Data",
+      "url": "https://eur-lex.europa.eu/eli/reg/2023/2854/oj?locale=en"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "rights_control_access",
+      "published_at": "2016-04-27",
+      "publisher": "European Union",
+      "source_id": "s7-gdpr",
+      "source_type": "official regulation",
+      "stance": "context",
+      "title": "Regulation (EU) 2016/679 General Data Protection Regulation",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "other",
+      "published_at": "2021-07-21",
+      "publisher": "International Electrotechnical Commission",
+      "source_id": "s8-iec-monitoring",
+      "source_type": "official standard catalogue entry",
+      "stance": "supporting",
+      "title": "IEC 61724-1:2021 Photovoltaic System Performance – Part 1: Monitoring",
+      "url": "https://webstore.iec.ch/en/publication/65561"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "contracting",
+      "published_at": "2025-09-22",
+      "publisher": "International Electrotechnical Commission",
+      "source_id": "s9-iec-performance",
+      "source_type": "official technical specification catalogue entry",
+      "stance": "supporting",
+      "title": "IEC TS 61724-2:2025 Power Performance Index and Capacity Evaluation Method",
+      "url": "https://webstore.iec.ch/en/publication/66710"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "other",
+      "published_at": "unknown",
+      "publisher": "European Commission Joint Research Centre",
+      "source_id": "s10-pvgis",
+      "source_type": "official technical webpage",
+      "stance": "contradicting",
+      "title": "PVGIS General Information",
+      "url": "https://joint-research-centre.ec.europa.eu/photovoltaic-geographical-information-system-pvgis/general-information_en"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "incumbent",
+      "published_at": "unknown",
+      "publisher": "Fronius International",
+      "source_id": "s11-fronius",
+      "source_type": "official incumbent product webpage",
+      "stance": "contradicting",
+      "title": "Fronius Solar.web: PV Monitoring for Your Photovoltaic System",
+      "url": "https://www.fronius.com/en/solar-energy/solar-solutions/apps-software/solar-web"
+    }
+  ],
+  "unknowns": [
+    "Whether any target Polish installer, distributor, commercial owner, lender, or insurer will pay for independent verification rather than use an OEM or O&M portal.",
+    "Whether the family installer will execute a durable pilot, data-processing, customer-introduction, or telemetry-access agreement.",
+    "Asset-level telemetry availability, resolution, history, retention, API stability, rate limits, compensation, and vendor coverage across the intended Polish fleet.",
+    "Whether homeowner or commercial-user authority plus GDPR compliance will consistently permit ongoing third-party telemetry processing and model training.",
+    "Real fault prevalence, recoverable lost yield, false-positive rates, remediation success, dispute liability, and statistically defensible baselines in Polish conditions.",
+    "Actual CAC, sales cycle, activation rate, price realization, analyst and support labor, inspection frequency, connector cost, insurance cost, gross margin, churn, renewal, and payback.",
+    "Whether permissioned cross-brand fault signatures and remediation outcomes can accumulate quickly enough, with reusable training rights, to form a defensible data advantage.",
+    "No sourced evidence establishes illegality, an unobtainable essential right, mathematically impossible conservative economics, or a non-delegable founder incompatibility; the principal adverse findings are competitive pressure and missing private validation rather than fatality."
+  ]
+}

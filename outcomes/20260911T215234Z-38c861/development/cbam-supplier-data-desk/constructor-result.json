@@ -1,0 +1,73 @@
+{
+  "base_candidate_sha256": "54b01b4d80a8ee03cd0c9daeb43c44d440a13979efc12c61cbf26d43f1180882",
+  "base_candidate_version": 1,
+  "candidate_id": "cbam-supplier-data-desk",
+  "constructor_id": "constructor-construction-02-l9fj0z5n",
+  "falsification": {
+    "cold_start_and_data_moat": [
+      "rc-cold-start-unknown",
+      "rc-price-substitute",
+      "rc-incumbent-bundling"
+    ],
+    "control_point_obtainability": [
+      "rc-access-obtainable",
+      "rc-rights-contract-unknown",
+      "rc-market-narrowing"
+    ],
+    "critical_mechanism_ownership": [
+      "rc-external-control",
+      "rc-verifier-dependency",
+      "rc-rights-contract-unknown"
+    ],
+    "external_dependencies": [
+      "rc-external-control",
+      "rc-access-obtainable",
+      "rc-verifier-dependency"
+    ],
+    "substitutes_and_incumbent_response": [
+      "rc-price-substitute",
+      "rc-default-values-substitution",
+      "rc-incumbent-bundling"
+    ],
+    "willingness_urgency_and_repeat_economics": [
+      "rc-regulatory-trigger",
+      "rc-financial-exposure",
+      "rc-buyer-event",
+      "rc-repeat-workflow",
+      "rc-unit-economics-unknown",
+      "rc-market-narrowing"
+    ]
+  },
+  "final_candidate_sha256": "0110980c31f1c55a4942dc361073b1f9a6280db0702e107b352b58e99762f7b0",
+  "final_candidate_version": 2,
+  "outcome": "redesigned",
+  "rationale": "The redesign changes the paid product from open-ended supplier-data operations to a fixed-scope importer exposure decision workflow. It removes supplier cooperation, verifier accreditation, and registry control from the base delivery mechanism by using importer-provided shipment exports and permitting default-value analysis; actual-data collection and accredited verification become optional, prepaid external work. A proposed direct workflow-integration agreement makes access and the customer interface contractible without claiming present rights. The route remains development-stage because customer adoption, signed access, price, CAC, delivery load, margins, and renewal are unknown, while low-priced software, broker white-labelling, SAP bundling, and market narrowing remain material threats.",
+  "schema_version": 3,
+  "structural_change": {
+    "control_instrument": "Unsigned proposed nonexclusive workflow-integration and service agreement covering importer-provided shipment exports, exposure analysis, data handling, direct payment, and bounded support; no present right is claimed",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "Unknown today; proposed direct contracts with in-scope EU importers",
+    "dependency_change": "Removes non-EU supplier cooperation and accredited verification as mandatory base-service dependencies; replaces them with contractible importer data access and customer adoption, while treating actual supplier data and verification as optional prepaid add-ons",
+    "distribution_instrument": "Founder-controlled targeted account outreach and proposed nonexclusive written referral agreements with accountants, customs advisers, and trade associations; no referral access is presently contracted",
+    "fully_loaded_economic_effects": "Fixed-scope diagnostics, capped monthly support, advance billing, and prepaid specialist or verifier work reduce labor variance and working-capital exposure versus open-ended supplier chasing. Target pricing is 6,000-15,000 PLN per diagnostic and 1,500-4,000 PLN monthly monitoring, but CAC, delivery hours, overhead, contribution margin, payback, and retention remain unvalidated and must be cohort-tested against low-priced substitutes.",
+    "incumbent_response_defensibility": "Brokers, CBAM software vendors, and SAP can bundle the core functions, so defensibility cannot rest on generic collection or filing. The proposed defense is integration-neutral quantified default-versus-actual decision value, direct importer service, and reusable lawful mappings; its effectiveness and data compounding are unproven.",
+    "resulting_control_point_status": "unknown",
+    "supporting_research_claim_ids": [
+      "rc-regulatory-trigger",
+      "rc-financial-exposure",
+      "rc-buyer-event",
+      "rc-repeat-workflow",
+      "rc-price-substitute",
+      "rc-distribution-channel",
+      "rc-external-control",
+      "rc-access-obtainable",
+      "rc-unit-economics-unknown",
+      "rc-rights-contract-unknown",
+      "rc-cold-start-unknown",
+      "rc-default-values-substitution",
+      "rc-incumbent-bundling",
+      "rc-verifier-dependency",
+      "rc-market-narrowing"
+    ]
+  }
+}

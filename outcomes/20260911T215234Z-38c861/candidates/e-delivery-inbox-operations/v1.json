@@ -1,0 +1,127 @@
+{
+  "candidate_id": "e-delivery-inbox-operations",
+  "claims": [
+    {
+      "claim_id": "edelivery-paid-loss",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/rozwoj-technologia/e-doreczenia-dla-przedsiebiorcow"
+      ],
+      "statement": "Existing CEIDG firms registered by the end of 2024 must have an e-Delivery address from 1 October 2026; missed or mishandled official correspondence creates measurable staff time and deadline risk."
+    },
+    {
+      "claim_id": "edelivery-free-alternative",
+      "claim_type": "other",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/rozwoj-technologia/e-doreczenia-dla-przedsiebiorcow"
+      ],
+      "statement": "The public provider offers a free inbox, so a paid service must monetize triage, accountability and workflow rather than mailbox access."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "SME owner, office manager or accounting-firm partner",
+    "bundling_resistance": "The service sells response ownership, deadline extraction and evidence trails across many client entities, not a duplicate mailbox.",
+    "customer_relationship_owner": "The prospective business would own SME or accounting-firm subscriptions; the public provider retains mailbox infrastructure.",
+    "distribution_origin": "Accounting firms distribute a multi-entity triage service to existing clients.",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Assumption: 300-800 PLN per SME through accountants.",
+      "cash_conversion": "Monthly subscription prepaid.",
+      "contribution_margin": "Assumption: 60-75% after human escalation.",
+      "delivery_and_support_costs": "Shared analyst handles exceptions; 10-20 minutes per active entity monthly assumed.",
+      "overhead_and_compliance": "Security, processor agreements, insurance and audit logging estimated at 12,000 PLN monthly.",
+      "revenue_basis": "Per-entity monthly subscription.",
+      "variable_costs": "Document parsing, secure storage, notifications and analyst escalation."
+    },
+    "likely_incumbent_response": "Accounting suites may bundle inbox alerts; defend with multi-provider workflows and accountable escalation SLAs.",
+    "paid_event_or_measurable_loss": "SME pays monthly to ensure official messages are triaged and assigned before deadlines; measurable loss is staff handling time or a missed response.",
+    "payer": "SME or accounting firm",
+    "purchase_trigger": "Mandatory activation, first confusing official message or accountant managing many entities.",
+    "renewal_event": "Monthly while the entity maintains official correspondence."
+  },
+  "contrary_evidence": [
+    "The government mailbox is free and supports administrator delegation.",
+    "A 2026 legislative proposal would remove some outbound-use obligations, creating scope uncertainty."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Unknown; proposed mailbox authorization and accounting-firm distribution agreements are unsigned.",
+    "acquisition_instrument_type": "unknown",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Provide secure user-forwarding and checklist triage without direct mailbox integration; sell directly to multi-entity owners.",
+    "current_owner": "The public or qualified provider controls mailbox infrastructure; each enterprise controls administrator access.",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "The prospective business would own SME or accounting-firm subscriptions; the public provider retains mailbox infrastructure.",
+    "duration": "Unknown until authorization and subscriptions are signed.",
+    "exclusivity": "unknown",
+    "founder_access_basis": "none",
+    "founder_access_description": "No existing mailbox access or accounting distribution rights.",
+    "launch_controller": "The founder would control triage and audit workflow; customers control authorization and official responses.",
+    "mechanism_control": "unknown",
+    "renewal": "Unknown; proposed monthly subscription and revocable mailbox authorization.",
+    "replaceability": "unknown",
+    "revocability": "unknown",
+    "status": "unknown",
+    "subject": "Official-message triage workflow",
+    "subject_type": "workflow_position",
+    "transferability": "unknown"
+  },
+  "discovery_lane": "mechanism-first",
+  "economics": {
+    "acquisition_route": "Pilot forwarded-message triage for 30 entities through one accountant, then seek formal provider integrations.",
+    "capital_required_pln": 45000,
+    "founder_net_worth_path": "Assumption: 8,000 entities at 79 PLN monthly creates 7.6M PLN ARR; at 20% owner earnings and 4x ARR, a 70% stake exceeds 5M PLN in years 6-9. Accountant channel economics and support load are unknown.",
+    "founder_time": "12-18 hours weekly; analyst coverage required before SLA promises.",
+    "gross_margin_basis": "Subscription less parsing, secure delivery and direct analyst escalation; target 70%.",
+    "payback": "Target SME payback from under one hour saved monthly or one avoided missed deadline; channel CAC payback under six months.",
+    "pricing": "49-149 PLN per entity monthly; accountant portfolio discounts.",
+    "retention_or_repeat": "Official correspondence continues indefinitely."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Permissioned document-type and resolution playbooks improve routing.",
+    "customer": "Polish SMEs and accounting firms managing many legal entities.",
+    "distribution_mechanism": "Accountant portfolio distribution.",
+    "offer_and_business_model": "Managed e-Delivery triage subscription.",
+    "payer_and_paid_event": "SME pays monthly around receipt and handling of official correspondence.",
+    "problem_trigger": "Mandatory inbox activation or a missed-message scare."
+  },
+  "founder_fit": [
+    "AI document classification fit",
+    "Asynchronous accountant-led distribution",
+    "Low initial capital requirement",
+    "Can be tested alongside employment"
+  ],
+  "parent": null,
+  "risks": [
+    "Free mailbox and administrator tools may be sufficient.",
+    "Sensitive official correspondence raises severe security liability.",
+    "Direct integrations may be unavailable."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://www.gov.pl/web/rozwoj-technologia/e-doreczenia-dla-przedsiebiorcow",
+    "https://www.gov.pl/web/e-doreczenia/projekt-nowelizacji-przepisow-o-e-doreczeniach--najnowsze-zmiany"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "managed_service",
+    "commercial_model_descriptor": "managed official inbox triage subscription",
+    "control_point_category": "workflow_integration",
+    "control_point_descriptor": "proposed message receipt assignment gate",
+    "critical_dependency_category": "integration_platform",
+    "critical_dependency_descriptor": "lawful e delivery message access"
+  },
+  "structure": {
+    "commercial_archetype": "Managed inbox operations",
+    "control_point": "Official-message receipt and deadline assignment",
+    "critical_dependency": "Mailbox authorization and accountant distribution"
+  },
+  "thesis": "Monetize accountable handling rather than free mailbox access by owning the triage-to-assignee workflow for SMEs and accountants.",
+  "title": "e-Delivery Inbox Operations",
+  "uncertainties": [
+    "Integration access",
+    "Actual message frequency",
+    "Liability and support cost per entity"
+  ],
+  "version": 1
+}

@@ -1,0 +1,344 @@
+{
+  "candidate_id": "pv-quote-margin-guard",
+  "candidate_sha256": "8f8cd61e8401647f71c52b7247b1862611573a0d15d2462fdea673fa283b756c",
+  "candidate_version": 1,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "rc-regulatory-workflow",
+      "evidence_refs": [
+        "src-gov-micro",
+        "src-tauron-micro",
+        "src-pge-rules"
+      ],
+      "statement": "Polish micro-installation connection is a document-dependent workflow: the national guidance requires a notification, electrical diagram, technical characteristics, equipment conformity evidence, legal-title statement and installer statement; an incomplete submission triggers a correction request with a deadline of at least 30 days. Current TAURON materials also use operator-specific forms and attachments, while PGE publishes its own notification requirements."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "rc-process-streamlined",
+      "evidence_refs": [
+        "src-gov-micro",
+        "src-tauron-micro"
+      ],
+      "statement": "Contrary to a broad paperwork-urgency thesis, qualifying micro-installations use a notification rather than a license or full connection application, the service is free, and TAURON offers an online submission form that assists completion. Paperwork alone may therefore create limited willingness to pay for routine cases."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "rc-incumbent-bundling",
+      "evidence_refs": [
+        "src-reonic",
+        "src-ecocrm"
+      ],
+      "statement": "Established vertical-software vendors already bundle substantial parts of the proposed workflow: Reonic advertises PV and storage design, quotations, document management, standardized quality checklists and grid-compliant electrical diagrams, while ecoCRM generates audits, quotations and agreements and states that it checks document completeness and versions."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "rc-low-price-substitute",
+      "evidence_refs": [
+        "src-hydo",
+        "src-solaredge"
+      ],
+      "statement": "Direct and adjacent substitutes exert strong price pressure: Hydo targets small installation businesses with margin calculation, product-price import and unlimited quotations for 89 PLN net monthly, including a free tier, while SolarEdge offers installers a proposal tool with 3D solar-and-storage modeling and cost simulation at no additional fee."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "rc-differentiation-narrow",
+      "evidence_refs": [
+        "src-reonic",
+        "src-ecocrm",
+        "src-hydo"
+      ],
+      "statement": "The candidate's defensible paid wedge would have to be narrower than generic quoting, CRM, document generation or checklists—most plausibly verified cross-OSD and equipment-rule maintenance plus measurable margin-loss prevention—because those adjacent functions are already bundled by incumbents."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "rc-public-rule-access",
+      "evidence_refs": [
+        "src-gov-micro",
+        "src-tauron-docs",
+        "src-pge-rules"
+      ],
+      "statement": "Core regulatory forms and baseline submission rules are publicly obtainable from government and distribution-operator sites, so initial rule acquisition does not require an exclusive license. Operator-specific versions and requirements can change, illustrated by TAURON's current form version and effective date."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "rc-contractibility",
+      "evidence_refs": [
+        "src-gdpr",
+        "src-tauron-docs"
+      ],
+      "statement": "A SaaS provider can in principle contract for processing installer customer data under GDPR Article 28 and can build against publicly available operator documents, but this requires a binding controller-processor agreement and does not confer ownership of installer customer records, OSD acceptance decisions or the underlying forms."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "rc-rights-unsigned",
+      "evidence_refs": [],
+      "statement": "No signed design-partner agreement, data-processing agreement, customer-data license, wholesaler agreement, association agreement or subscriber contract has been evidenced for this candidate."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "rc-paid-validation",
+      "evidence_refs": [],
+      "statement": "No direct installer interview, paid pilot, subscription, invoice, purchase order, conversion rate or measured historical margin loss has been evidenced; the existence of required paperwork does not establish that installers will buy this product."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "rc-distribution-validation",
+      "evidence_refs": [],
+      "statement": "No evidence establishes reachable audience size, response rate, lead cost, close rate or signed distribution access through wholesalers, installer associations or targeted email."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "rc-unit-economics",
+      "evidence_refs": [],
+      "statement": "The proposed CAC, onboarding effort, support load, variable cost, contribution margin, churn, payback and 3,000-6,000 PLN setup plus 900-1,800 PLN monthly price have not been validated with transactions or operating data, so fully loaded unit economics are unknown."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "rc-price-risk",
+      "evidence_refs": [
+        "src-hydo",
+        "src-ecocrm"
+      ],
+      "statement": "The proposed recurring price is roughly an order of magnitude above Hydo's 89 PLN monthly Pro price, although ecoCRM's implementation pricing starts at 10,000 PLN net. This supports the possibility of budget for valuable workflow software but also implies that the candidate must prove materially greater value than lightweight quoting tools."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "rc-cold-start",
+      "evidence_refs": [],
+      "statement": "No permissioned corpus of historical quote errors, rejected packs, equipment compatibility rules or labeled outcomes has been evidenced, and it is unknown whether enough repeatable errors exist to form a useful taxonomy or proprietary data advantage."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "rc-mechanism-ownership",
+      "evidence_refs": [],
+      "statement": "The proposed rules engine, equipment-rule library, validation logic and anonymized benchmark dataset have not yet been shown to exist or to be owned by the prospective business; prospective future development is not current ownership."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "rc-external-change-risk",
+      "evidence_refs": [
+        "src-tauron-docs",
+        "src-gov-micro",
+        "src-reonic"
+      ],
+      "statement": "The product would remain externally dependent on OSD form changes, equipment conformity material and installer-supplied data, while an incumbent with an installed workflow can add or update equivalent checklist and document features."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "rc-repeat-urgency",
+      "evidence_refs": [],
+      "statement": "The frequency, severity and preventability of quote-margin errors and rejected handover packs, weekly usage, annual renewal behavior and customer payback from avoided losses are unknown."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "rc-tauron-online-workflow",
+      "evidence_refs": [
+        "src-tauron-micro"
+      ],
+      "statement": "TAURON's official micro-installation page provides an online notification route and specifies required applicant, property and equipment data, an installer statement, statutory and electrical-diagram attachments, and additional technical documentation when an inverter is not on the certified-equipment list."
+    }
+  ],
+  "commercial_evidence": {
+    "buyer_or_paid_event": {
+      "claim_ids": [
+        "rc-paid-validation"
+      ],
+      "source_ids": [],
+      "status": "unknown"
+    },
+    "distribution_and_acquisition": {
+      "claim_ids": [
+        "rc-distribution-validation"
+      ],
+      "source_ids": [],
+      "status": "unknown"
+    },
+    "fully_loaded_unit_economics": {
+      "claim_ids": [
+        "rc-unit-economics"
+      ],
+      "source_ids": [],
+      "status": "unknown"
+    },
+    "rights_control_access_contractibility": {
+      "claim_ids": [
+        "rc-contractibility"
+      ],
+      "source_ids": [
+        "src-gdpr",
+        "src-tauron-docs"
+      ],
+      "status": "inference"
+    }
+  },
+  "contrary_evidence": [
+    "Official guidance says qualifying micro-installations follow a free notification process, and TAURON provides an assisted online submission route; this contradicts any assumption that routine paperwork is necessarily complex enough by itself to create high urgency.",
+    "Reonic already advertises quotations, document management, standardized compliance checklists and grid-compliant diagrams in an all-in-one installer platform; this contradicts the claim that generic or incumbent software does not encode adjacent checks.",
+    "Hydo offers small installers margin calculation, price-list import and unlimited quotations for 89 PLN net monthly, with a free tier; this directly challenges willingness to pay 900-1,800 PLN monthly without demonstrated superior loss prevention.",
+    "SolarEdge offers eligible installers proposal design and system-cost simulation at no additional fee, showing that equipment vendors can bundle important proposal functionality and compress standalone software pricing."
+  ],
+  "critical_control_point_assessment": {
+    "assessment": "inference",
+    "claim_ids": [
+      "rc-contractibility",
+      "rc-differentiation-narrow"
+    ],
+    "source_ids": [
+      "src-gdpr",
+      "src-tauron-docs",
+      "src-reonic",
+      "src-ecocrm",
+      "src-hydo"
+    ],
+    "status": "replaceable_access"
+  },
+  "falsification": {
+    "cold_start_and_data_moat": [
+      "rc-cold-start",
+      "rc-rights-unsigned"
+    ],
+    "control_point_obtainability": [
+      "rc-public-rule-access",
+      "rc-contractibility",
+      "rc-rights-unsigned"
+    ],
+    "critical_mechanism_ownership": [
+      "rc-mechanism-ownership",
+      "rc-differentiation-narrow"
+    ],
+    "external_dependencies": [
+      "rc-rights-unsigned",
+      "rc-external-change-risk",
+      "rc-contractibility"
+    ],
+    "substitutes_and_incumbent_response": [
+      "rc-incumbent-bundling",
+      "rc-low-price-substitute",
+      "rc-differentiation-narrow",
+      "rc-price-risk"
+    ],
+    "willingness_urgency_and_repeat_economics": [
+      "rc-regulatory-workflow",
+      "rc-process-streamlined",
+      "rc-paid-validation",
+      "rc-unit-economics",
+      "rc-price-risk",
+      "rc-repeat-urgency"
+    ]
+  },
+  "schema_version": 3,
+  "sources": [
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "regulatory",
+      "published_at": "unknown",
+      "publisher": "Ministry of Climate and Environment, Republic of Poland",
+      "source_id": "src-gov-micro",
+      "source_type": "official government guidance",
+      "stance": "supporting",
+      "title": "Micro-system Notification",
+      "url": "https://www.gov.pl/web/national-contact-point-for-renewable-energy-sources/micro-system-notification"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "rights_control_access",
+      "published_at": "unknown",
+      "publisher": "TAURON Dystrybucja S.A.",
+      "source_id": "src-tauron-docs",
+      "source_type": "official operator document index",
+      "stance": "context",
+      "title": "Dokumenty do pobrania",
+      "url": "https://www.tauron-dystrybucja.pl/przylaczenie-do-sieci/dokumenty-do-pobrania"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "regulatory",
+      "published_at": "unknown",
+      "publisher": "PGE Dystrybucja S.A.",
+      "source_id": "src-pge-rules",
+      "source_type": "official distribution-network operating rules",
+      "stance": "supporting",
+      "title": "Instrukcja Ruchu i Eksploatacji Sieci Dystrybucyjnej",
+      "url": "https://pgedystrybucja.pl/content/download/537c29630d1429e0f6a7a3bbf895d3ac/file/1e9fe67ba77e01a266ca8b312a239a40.pdf?contentId=15520&inLanguage=pol-PL&version=1"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "incumbent",
+      "published_at": "unknown",
+      "publisher": "Reonic GmbH",
+      "source_id": "src-reonic",
+      "source_type": "official product page",
+      "stance": "contradicting",
+      "title": "Dla instalatorów fotowoltaiki",
+      "url": "https://reonic.com/pl-pl/industry/solar/"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "incumbent",
+      "published_at": "unknown",
+      "publisher": "DQH Solutions Sp. z o.o.",
+      "source_id": "src-ecocrm",
+      "source_type": "official product and pricing page",
+      "stance": "contradicting",
+      "title": "ecoCRM - CRM dla firm fotowoltaicznych",
+      "url": "https://dqh.pl/ecocrm/"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "incumbent",
+      "published_at": "unknown",
+      "publisher": "Hydo",
+      "source_id": "src-hydo",
+      "source_type": "official product and pricing page",
+      "stance": "contradicting",
+      "title": "Program do ofertowania i wycen dla instalatorów",
+      "url": "https://hydo.pl/"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "incumbent",
+      "published_at": "unknown",
+      "publisher": "SolarEdge Technologies",
+      "source_id": "src-solaredge",
+      "source_type": "official product page",
+      "stance": "contradicting",
+      "title": "SolarEdge Proposal",
+      "url": "https://marketing.solaredge.com/solaredge-proposal"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "contracting",
+      "published_at": "2016-04-27",
+      "publisher": "European Parliament and Council of the European Union",
+      "source_id": "src-gdpr",
+      "source_type": "official regulation",
+      "stance": "context",
+      "title": "Regulation (EU) 2016/679, Article 28 — Processor",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679"
+    },
+    {
+      "accessed_at": "2026-09-12",
+      "evidence_class": "regulatory",
+      "published_at": "unknown",
+      "publisher": "TAURON Dystrybucja S.A.",
+      "source_id": "src-tauron-micro",
+      "source_type": "official operator guidance",
+      "stance": "supporting",
+      "title": "Mikroinstalacja (fotowoltaika)",
+      "url": "https://www.tauron-dystrybucja.pl/przylaczenie-do-sieci/przylaczenie/mikroinstalacja"
+    }
+  ],
+  "unknowns": [
+    "Whether any independent installer has experienced sufficiently frequent and costly preventable quote or handover errors.",
+    "Whether installer owners will pay the proposed setup and monthly prices, and which company size has budget and urgency.",
+    "Whether the family company will sign workflow-access, confidentiality, intellectual-property and data-processing terms.",
+    "Whether historical customer files can lawfully and practically be anonymized or processed for validation.",
+    "Whether wholesalers or associations will agree to distribution and what resulting CAC and conversion would be.",
+    "True onboarding labor, ongoing support burden, rule-maintenance cost, hosting and model cost, liability-insurance cost and gross margin.",
+    "Subscription churn, annual renewal, expansion revenue, customer payback and founder CAC payback.",
+    "Whether OSD and equipment variations can be maintained accurately enough within the founder's part-time limit.",
+    "Whether incumbents can reproduce the proposed validation layer faster or bundle it without a separate fee.",
+    "Whether a permissioned error taxonomy and rule library will become proprietary, accurate and difficult to replicate."
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "assumptions": [
+    "The initial beachhead is Polish independent appliance repair shops, with electronics and other categories treated as later expansion.",
+    "The business initially forwards orders and does not finance or hold parts inventory.",
+    "The cited regulation and competitor evidence accurately describe conditions as of the research artifact's access date.",
+    "Absent signed access, customer commitments, or cohort data is treated as uncertainty rather than proof of failure.",
+    "The founder retains full-time employment during validation and can commit approximately 20 hours per week within the stated capital limit."
+  ],
+  "base_score": 4.65,
+  "candidate_id": "repair-parts-availability-exchange",
+  "candidate_sha256": "716a66f3cce129f9d57bf8ff914c7c4d3a5994a7cf0ca7f6671ca5cce69940a7",
+  "candidate_version": 1,
+  "constrained_score": 4.45,
+  "evaluation_type": "working_research",
+  "evidence_needed_for_higher_score": "A paid pilot across one tightly defined category with at least two signed distributor data and fulfillment agreements and 20 or more shops, showing quote-to-order conversion, repeat monthly usage, order frequency, average order value, realized take rate, refunds, disputes, support cost, contribution margin, churn, CAC, and payback; agreements should specify durable data rights, SLA obligations, customer ownership, renewal, revocability, and transferability. Competitive tests should also show materially better coverage, completion prediction, or economics than bundled shop software and direct substitutes.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "Quote-time uncertainty about compatible-part price and delivery is a credible operational bottleneck, and combining multi-supplier availability with observed completion data could improve repair acceptance and scheduling. However, Partly already implements a similar procurement mechanism, so the insight is a promising category application rather than a demonstrably missing mechanism.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "A stalled accepted repair creates measurable delay, administrative work, and potential lost revenue. Adjacent software pricing shows that repair shops pay for workflow and inventory tools, but there is no direct evidence that Polish appliance or electronics repairers will pay the proposed subscription plus commission, or that the pain is frequent and costly enough to drive retention.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Subscription plus transaction commission offers recurring and usage-linked revenue without initially holding inventory. The proposed margins, CAC, order frequency, take rate, churn, support burden, returns, disputes, cash conversion, and 24-month payback are assumptions without cohort evidence; payment fees and marketplace operations create a material cost floor, while supplier bargaining may compress the commission.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "A single appliance category in Poland with two distributors and 20 shops is a focused pilot wedge, and regulation supplies a relevant demand backdrop. Yet the economically reachable shop count, parts volume, category concentration, and ability of a Polish beachhead to support the required scale are not established.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "Cross-brand aggregation can be valuable where individual distributors and authorized networks are fragmented. Nonetheless, Partly demonstrates a direct substitute, RepairDesk can bundle ordering into the broader shop workflow, and manufacturers or distributors can improve APIs or steer work to authorized networks; no exclusive supply, channel, or customer control supports likely domination.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "A successful appliance-category exchange could extend across electronics, additional repair categories, CEE geographies, shop workflow, SLA analytics, and white-label supplier services. These adjacencies become credible only after obtaining reusable data rights, supplier coverage, and sufficient transaction density.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "A compatibility graph and observed delivery history could compound with transaction volume, creating data and workflow switching benefits. Currently those assets are unowned, supplier access is nonexclusive and replaceable, comparable platforms assert strong rights over their usage data, and Digital Product Passport information may reduce the exclusivity of public-data normalization.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "One interface for live cross-brand availability, compatible alternatives, unified ordering, and predicted completion could be materially more convenient than manual supplier checks. The evidence does not establish superior coverage, accuracy, speed, price, or workflow integration versus existing procurement and repair-management products, so behavior-changing advantage remains plausible but unproven.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "EU repair rules applying from 31 July 2026 create a concrete regulatory catalyst, and product-passport infrastructure may lower identification and normalization costs. The public repair platform does not itself procure parts, leaving room for a transaction layer, although the same policy and data changes can strengthen incumbents and reduce proprietary differentiation.",
+      "score": 8,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "Distributor channels and repair associations could efficiently reach fragmented shops without founder-led personal branding. No distributor agreement, association placement, public-platform integration, customer list, conversion funnel, or repeatable acquisition route exists, and channel owners may bundle the service or retain the customer relationship.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "A forwarding model can be piloted within the stated 45,000 PLN budget, and catalog normalization and prediction fit the founder's data-science skills and part-time constraints. Success still depends on supplier licenses and feeds, fulfillment reliability, returns and counterfeit controls, payments, marketplace compliance, support operations, and two-sided onboarding; relationships and operating expertise cannot be replaced by AI alone.",
+      "score": 5,
+      "status": "scored"
+    }
+  ],
+  "final_score": 4.5,
+  "highest_value_structural_change": "Secure a durable distributor-backed wedge in one high-frequency category through contractual live inventory and fulfillment access, while embedding the exchange in the shop's quoting workflow and retaining rights to aggregated transaction and SLA data. This would turn replaceable aggregation into a controlled workflow and compounding proprietary-data position.",
+  "interaction_adjustment": -0.2,
+  "judge_id": "judge-working-12-x7va2sei",
+  "main_structural_strength": "The concept links a concrete paid operational event—an accepted repair requiring a part—to a focused cross-brand transaction workflow, with regulatory timing and a capital-light pilot model that fit the founder's technical skills and constraints.",
+  "primary_score_limiter": "The business does not control its essential supply data, fulfillment access, distribution, or customer relationships, while direct and bundled substitutes exist and the exact demand and fully loaded economics remain unvalidated.",
+  "qualified": false,
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 3,
+  "strongest_disconfirming_evidence": "Partly already offers live multi-supplier price and availability, delivery optimization, unified ordering, supplier connections, and white-label deployment, while RepairDesk bundles inventory and integrated parts ordering into paid repair-shop software. Together they contradict both the premise that the mechanism is broadly missing and the expectation of strong bundling resistance.",
+  "unrounded_score": 4.45
+}

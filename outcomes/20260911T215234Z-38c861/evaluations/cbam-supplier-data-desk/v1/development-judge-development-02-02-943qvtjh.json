@@ -1,0 +1,116 @@
+{
+  "assumptions": [
+    "The founder can lawfully develop the service without using confidential employer resources.",
+    "Prospective importers can grant operational access to relevant shipment and supplier records, although no such mandate is currently signed.",
+    "The candidate does not itself perform the legally required accredited verification of actual emissions."
+  ],
+  "base_score": 4.33,
+  "candidate_id": "cbam-supplier-data-desk",
+  "candidate_sha256": "54b01b4d80a8ee03cd0c9daeb43c44d440a13979efc12c61cbf26d43f1180882",
+  "candidate_version": 1,
+  "constrained_score": 4.13,
+  "evaluation_type": "working_development",
+  "evidence_needed_for_higher_score": "Paid importer pilots showing price acceptance, supplier response and defect rates, fully loaded delivery hours, contribution margin, CAC and payback; signed importer mandates and data-retention terms; paid renewal; and evidence that actual-value collection creates savings exceeding collection and verification costs.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "CBAM's definitive, certificate-bearing regime clearly converts emissions-data quality into a recurring cash-exposure and compliance problem. The weaker part of the insight is assuming supplier-level actual-data collection is generally necessary when Commission default values can substitute.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Certificate purchases, declaration duties, and internal data work create material pain, and a named importer has adopted an external CBAM solution. Candidate-specific willingness to pay, budget ownership, and demand for this managed supplier desk at the proposed price remain unknown.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Annual fees, onboarding revenue, and recurring shipment updates could support a viable service, but all price, CAC, delivery-hour, margin, payback, and retention figures are assumptions. Multilingual supplier chasing, specialist review, insurance, and variable nonresponse threaten margins and operating leverage.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Mid-market EU importers are identifiable and economically exposed, but the 50-tonne exemption removes most importers and concentrates demand in fewer, larger accounts. Regional account counts, spend, and sales-cycle length are unestablished.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "The proposed provenance-led managed service could differentiate on hands-on execution, but brokers control trusted relationships, CBAMable supports white-labelled broker workflows, and SAP can bundle the full process. No evidence shows a segment in which the candidate can become dominant.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "Validated document mappings and multilingual playbooks could extend across CBAM sectors, countries, and adjacent trade-compliance workflows. Expansion is conditional on acquiring reusable data rights and repeatable operations, neither of which is established.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "A permissioned provenance ledger and response benchmarks could compound, but no durable retention rights, proprietary dataset, switching costs, exclusivity, or learning advantage currently exists. Essential source data, verification, and registry infrastructure remain externally controlled.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "Managed supplier outreach may save importer staff time and address messy exceptions better than software alone. Its measurable superiority is unproven, actual-value collection may be avoidable, and substantially cheaper software and bundled incumbent solutions constrain pricing.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "The definitive regime began in 2026, certificate prices create immediate measurable exposure, and declaration workflows now recur. This is a strong regulatory trigger, although incumbents are responding at the same time.",
+      "score": 8,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "Broker, forwarder, association, and targeted-importer routes are plausible, but no pipeline, referral agreement, conversion evidence, or customer-relationship control is held. Brokers can internalise or white-label the workflow, weakening the proposed primary channel.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "The founder's analytical skills, AI leverage, and available capital fit an initial audit, but supplier coordination, multilingual operations, methodology liability, accredited-verifier dependence, and 20-25 weekly hours make scaled delivery difficult alongside full-time employment.",
+      "score": 4,
+      "status": "scored"
+    }
+  ],
+  "final_score": 4.1,
+  "highest_value_structural_change": "Make the base offer independent of supplier cooperation by productizing an importer-side default-versus-actual exposure decision and readiness diagnostic, with supplier outreach and accredited verification offered only as prepaid, tightly scoped add-ons.",
+  "interaction_adjustment": -0.2,
+  "judge_id": "judge-development-02-02-943qvtjh",
+  "main_structural_strength": "A compulsory, recurring regulatory workflow is tied to measurable certificate cash exposure and can initially be served through a capital-light analytical service.",
+  "primary_score_limiter": "The model depends on externally controlled supplier data and partner distribution while lacking validated unit economics, customer rights, or a defensible position against brokers, low-priced software, and ERP incumbents.",
+  "qualified": false,
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 3,
+  "strongest_disconfirming_evidence": "Commission default values can remove the need for actual supplier data, while CBAMable and SAP already offer low-priced or bundled substitutes for evidence collection, audit history, calculation, reporting, and financial exposure.",
+  "unrounded_score": 4.13
+}

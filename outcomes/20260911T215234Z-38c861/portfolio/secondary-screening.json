@@ -1,0 +1,84 @@
+{
+  "batches": [
+    {
+      "candidate_refs": [
+        {
+          "candidate_id": "clinic-no-show-fill-rail",
+          "candidate_sha256": "18a7b6327fe235ae181305f1b4c89b0a109394a9d5cc86f70e21641302fc89c6",
+          "version": 1
+        },
+        {
+          "candidate_id": "e-delivery-inbox-operations",
+          "candidate_sha256": "2bb2a673b3e13f1e3ac57cde50984e3ee2752b96d2b8d24d5030dd3f27f820fa",
+          "version": 1
+        }
+      ],
+      "cutoff_margin": 0,
+      "primary_batch_id": "batch-02",
+      "primary_inputs": [
+        {
+          "candidate_ref": {
+            "candidate_id": "clinic-no-show-fill-rail",
+            "candidate_sha256": "18a7b6327fe235ae181305f1b4c89b0a109394a9d5cc86f70e21641302fc89c6",
+            "version": 1
+          },
+          "evaluation_path": "evaluations/clinic-no-show-fill-rail/v1/screening-judge-screening-batch-02-0lmtg05v.json",
+          "evaluation_sha256": "305b6881805ed7ba2f35848803be3066531584a37a9d56e39370964f24a73d8c",
+          "final_score": 6
+        },
+        {
+          "candidate_ref": {
+            "candidate_id": "e-delivery-inbox-operations",
+            "candidate_sha256": "2bb2a673b3e13f1e3ac57cde50984e3ee2752b96d2b8d24d5030dd3f27f820fa",
+            "version": 1
+          },
+          "evaluation_path": "evaluations/e-delivery-inbox-operations/v1/screening-judge-screening-batch-02-0lmtg05v.json",
+          "evaluation_sha256": "e1fa5ae05259e1e3d78446d7f6af255abef0ad8681b8223eb971eb77d46f63d1",
+          "final_score": 6
+        }
+      ],
+      "secondary_batch_id": "secondary-batch-02"
+    },
+    {
+      "candidate_refs": [
+        {
+          "candidate_id": "installer-maintenance-renewal-rail",
+          "candidate_sha256": "3f53327c30170d65f44f08103add20bd6da5dfbdc30b4ddf62ed4df710ba148e",
+          "version": 1
+        },
+        {
+          "candidate_id": "late-invoice-recovery-marketplace",
+          "candidate_sha256": "08cffc3dfccc6f3b8bb1401878bb8e8c6d4ff483f73dd7893f975176104c8148",
+          "version": 1
+        }
+      ],
+      "cutoff_margin": 0,
+      "primary_batch_id": "batch-04",
+      "primary_inputs": [
+        {
+          "candidate_ref": {
+            "candidate_id": "installer-maintenance-renewal-rail",
+            "candidate_sha256": "3f53327c30170d65f44f08103add20bd6da5dfbdc30b4ddf62ed4df710ba148e",
+            "version": 1
+          },
+          "evaluation_path": "evaluations/installer-maintenance-renewal-rail/v1/screening-judge-screening-batch-04-ftj9fiqb.json",
+          "evaluation_sha256": "31dc2902994e4aeeb92892424d60e8b596eff1afc911976d26ec6de0c4176828",
+          "final_score": 6
+        },
+        {
+          "candidate_ref": {
+            "candidate_id": "late-invoice-recovery-marketplace",
+            "candidate_sha256": "08cffc3dfccc6f3b8bb1401878bb8e8c6d4ff483f73dd7893f975176104c8148",
+            "version": 1
+          },
+          "evaluation_path": "evaluations/late-invoice-recovery-marketplace/v1/screening-judge-screening-batch-04-ftj9fiqb.json",
+          "evaluation_sha256": "94485c1da255e1aadbbec2736e4c883cc319c30a23f96a09888ddae3f117db69",
+          "final_score": 6
+        }
+      ],
+      "secondary_batch_id": "secondary-batch-04"
+    }
+  ],
+  "schema_version": 3,
+  "screening_batches_sha256": "5f9e0682b2533d6a689c4cbee58b87098a93add03f9f7c41a49879dbb63a1167"
+}

@@ -1,0 +1,136 @@
+{
+  "candidate_id": "deposit-reconciliation-rail",
+  "claims": [
+    {
+      "claim_id": "drs-trigger",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/climate/the-deposit-refund-system-starts-in-october--how-to-prepare",
+        "https://www.gov.pl/web/climate/deposit-refund-system-in-poland"
+      ],
+      "statement": "Poland's deposit-return system began in October 2025; covered retailers collect deposits, larger shops accept returns, and system operators require agreements and records."
+    },
+    {
+      "claim_id": "drs-payer",
+      "claim_type": "payer_and_budget",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://www.gov.pl/web/climate/deposit-refund-system-in-poland"
+      ],
+      "statement": "Independent retail chains may pay from store-operations budgets to reconcile deposits, returns, operator statements, and material pickups; actual budget is unknown."
+    },
+    {
+      "claim_id": "drs-control",
+      "claim_type": "founder_control_point_path",
+      "confidence": "low",
+      "evidence_refs": [
+        "https://www.gov.pl/web/climate/the-deposit-refund-system-starts-in-october--how-to-prepare"
+      ],
+      "statement": "The proposed transaction rail requires signed retailer and operator integrations; none are currently held."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Retail operations or finance director",
+    "bundling_resistance": "POS vendors and deposit operators can bundle reconciliation; cross-operator exception handling is the wedge",
+    "customer_relationship_owner": "Unknown today; proposed direct contracts with independent retail chains",
+    "distribution_origin": "Direct outreach to regional chains, POS resellers, and waste-logistics firms",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Assumption: 8,000-25,000 PLN per chain through enterprise outbound and pilots",
+      "cash_conversion": "Implementation fee upfront; platform fee monthly",
+      "contribution_margin": "Assumption: 60-75% after integrations and exception support at mature deployments",
+      "delivery_and_support_costs": "Assumption: 80-200 implementation hours per chain and ongoing settlement support",
+      "overhead_and_compliance": "Deposit-accounting review, security, data processing, and contractual liability; unknown",
+      "revenue_basis": "Per store plus return-transaction tier",
+      "variable_costs": "Integration maintenance, transaction hosting, support, and partner commissions"
+    },
+    "likely_incumbent_response": "POS suites and system operators expose bundled reconciliation modules",
+    "paid_event_or_measurable_loss": "Current cashier, finance, and logistics labor reconciling collected deposits, accepted packaging, operator settlements, and discrepancies",
+    "payer": "Regional grocery, convenience, or beverage retail chain",
+    "purchase_trigger": "Unreconciled deposit balances, growing return volume, or multiple-operator complexity",
+    "renewal_event": "Monthly if close time, discrepancies, and staff effort stay below baseline"
+  },
+  "contrary_evidence": [
+    "Operators and POS suppliers may already cover most reconciliation.",
+    "Packaging bearing the deposit mark appeared gradually, delaying transaction density."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Proposed workflow-integration agreements with retailers and at least one deposit-system operator; unsigned",
+    "acquisition_instrument_type": "workflow_integration_agreement",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Offer retailer-side CSV reconciliation without operator API access",
+    "current_owner": "Retailers, POS vendors, and licensed deposit-system operators control transaction records",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "Unknown today; proposed direct contracts with independent retail chains",
+    "duration": "Unknown until signed",
+    "exclusivity": "nonexclusive",
+    "founder_access_basis": "none",
+    "founder_access_description": "No present retail or operator data rights",
+    "launch_controller": "Prospective business only after counterparties grant integrations",
+    "mechanism_control": "unknown",
+    "renewal": "Proposed annual agreement; unsigned",
+    "replaceability": "replaceable",
+    "revocability": "unknown",
+    "status": "unknown",
+    "subject": "Deposit-return reconciliation transaction rail",
+    "subject_type": "transaction",
+    "transferability": "consent_required"
+  },
+  "discovery_lane": "weak-signal",
+  "economics": {
+    "acquisition_route": "Validate with anonymized statement samples, build CSV reconciliation, and pursue one regional-chain pilot before API work",
+    "capital_required_pln": 60000,
+    "founder_net_worth_path": "Assumption: 3,000 stores at 250 PLN monthly equals 9m PLN ARR; even 15% owner earnings or a modest software multiple could support 5m PLN founder net worth in 6-10 years. Sales cycles and integration cost are unknown.",
+    "founder_time": "20-25 hours weekly during pilot; implementation capacity must later be hired",
+    "gross_margin_basis": "Store subscriptions less integration support and transaction infrastructure",
+    "payback": "Assumption: 12-18 months due to enterprise acquisition and implementation costs",
+    "pricing": "Assumption: 10,000-40,000 PLN implementation plus 150-500 PLN per store monthly",
+    "retention_or_repeat": "Recurring while stores participate in the deposit system"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Exception mappings across POS systems and deposit operators",
+    "customer": "Regional Polish retail chains",
+    "distribution_mechanism": "POS-reseller and direct enterprise channel",
+    "offer_and_business_model": "Deposit reconciliation transaction software",
+    "payer_and_paid_event": "Retail operations pays when deposit balances and returns require manual reconciliation",
+    "problem_trigger": "A new deposit-marked packaging flow crosses checkout, return, logistics, and operator ledgers"
+  },
+  "founder_fit": [
+    "Data reconciliation suits the founder's analytical background.",
+    "Can begin with CSV workflows before capital-intensive hardware.",
+    "Does not depend on a public personal brand."
+  ],
+  "parent": null,
+  "risks": [
+    "Operator API access may be refused.",
+    "Enterprise selling may exceed preferred social intensity.",
+    "Settlement errors could create financial liability."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://www.gov.pl/web/climate/the-deposit-refund-system-starts-in-october--how-to-prepare",
+    "https://www.gov.pl/web/climate/deposit-refund-system-in-poland"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "transaction_intermediation",
+    "commercial_model_descriptor": "multi ledger deposit return reconciliation",
+    "control_point_category": "transaction_rail",
+    "control_point_descriptor": "mapping between pos deposits returns and operator settlements",
+    "critical_dependency_category": "integration_platform",
+    "critical_dependency_descriptor": "pos and deposit operator transaction exports"
+  },
+  "structure": {
+    "commercial_archetype": "Transaction reconciliation rail",
+    "control_point": "Cross-ledger deposit exception record",
+    "critical_dependency": "Retail and operator data integrations"
+  },
+  "thesis": "The newly operating deposit system creates a recurring cross-ledger reconciliation burden that is poorly served by single-system dashboards.",
+  "title": "Deposit-Return Reconciliation Rail",
+  "uncertainties": [
+    "Return-volume economics per store are unknown.",
+    "Operator data formats and access policies are unknown.",
+    "Retailers' current workaround costs are unknown."
+  ],
+  "version": 1
+}

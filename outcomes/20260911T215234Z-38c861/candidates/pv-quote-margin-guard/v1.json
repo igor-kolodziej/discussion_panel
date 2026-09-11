@@ -1,0 +1,126 @@
+{
+  "candidate_id": "pv-quote-margin-guard",
+  "claims": [
+    {
+      "claim_id": "pv-current-paid-event",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/national-contact-point-for-renewable-energy-sources/micro-system-notification"
+      ],
+      "statement": "Polish PV installers are currently paid for completed installations, while a valid grid notification requires specified forms and technical attachments; omissions can delay the customer handover and final invoice."
+    },
+    {
+      "claim_id": "pv-founder-path",
+      "claim_type": "founder_control_point_path",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.gov.pl/web/national-contact-point-for-renewable-energy-sources/micro-system-notification"
+      ],
+      "statement": "The founder has an existing, legally usable operating relationship with a seven-person family renewable-installation company that can serve as a nonexclusive design partner; no customer data rights are assumed."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Owner or sales manager of a small renewable-energy installer",
+    "bundling_resistance": "The product protects quote margin and produces an auditable handover pack across inverter, battery and OSD variants; generic CRM quoting does not encode these checks.",
+    "customer_relationship_owner": "The prospective business would own contracts with subscribing installers; the family installer retains its own end-customer relationships.",
+    "distribution_origin": "Begin with the family installer as a design partner, then sell asynchronously through Polish installer associations, wholesalers and targeted email.",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Assumption: 1,200 PLN per installer initially, falling below 700 PLN with channel referrals; unknown until 20 sales conversations.",
+      "cash_conversion": "Monthly prepaid subscription; implementation fee collected before configuration.",
+      "contribution_margin": "Assumption: 78-88% after hosting and support at 30-100 customers.",
+      "delivery_and_support_costs": "Assumption: 3-6 onboarding hours plus 1 hour monthly support per customer initially.",
+      "overhead_and_compliance": "Budget 3,000 PLN monthly at scale for legal, accounting, security and liability cover.",
+      "revenue_basis": "Per-branch subscription plus setup and optional per-document overage.",
+      "variable_costs": "LLM/OCR, document storage and occasional implementation support; estimated 80-220 PLN per account monthly."
+    },
+    "likely_incumbent_response": "Polish solar CRMs may add checklist templates; defend with continuously maintained equipment/OSD validation and margin benchmarks.",
+    "paid_event_or_measurable_loss": "Installer receives payment for an accepted installation; rework, underquoted components or an incomplete OSD pack reduces margin or delays collection.",
+    "payer": "Renewable-installation SME",
+    "purchase_trigger": "Two recent margin misses, rejected paperwork or hiring a new estimator.",
+    "renewal_event": "Annual renewal after measured reduction in quote errors and handover delay."
+  },
+  "contrary_evidence": [
+    "For micro-installations at or below the property's connection capacity, the process is relatively streamlined, limiting willingness to pay for paperwork alone.",
+    "The family relationship provides access for validation but does not establish software demand or transferable customer rights."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Existing informal family operating relationship permitting voluntary workflow observation and synthetic or customer-consented examples; proposed software subscription rights remain unsigned.",
+    "acquisition_instrument_type": "other",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Use synthetic cases and recruit independent installers through paid discovery interviews; do not use family customer records without consent.",
+    "current_owner": "The family company owns its workflows and customer relationships; each OSD controls its forms and acceptance process.",
+    "customer_relationship_control": "owned",
+    "customer_relationship_owner": "The prospective business would own contracts with subscribing installers; the family installer retains its own end-customer relationships.",
+    "duration": "Existing relationship is ongoing with no fixed contractual duration.",
+    "exclusivity": "nonexclusive",
+    "founder_access_basis": "operating_relationship",
+    "founder_access_description": "Legally usable family-company relationship for voluntary process access, excluding confidential employer resources and ungranted customer data.",
+    "launch_controller": "The founder would control the rules engine and installer subscriptions if built and sold.",
+    "mechanism_control": "dependent",
+    "renewal": "Operating access can continue by mutual consent; customer subscriptions would renew annually if signed.",
+    "replaceability": "replaceable",
+    "revocability": "at_will",
+    "status": "replaceable_access",
+    "subject": "Installer quoting and handover workflow access",
+    "subject_type": "workflow_position",
+    "transferability": "nontransferable"
+  },
+  "discovery_lane": "mechanism-first",
+  "economics": {
+    "acquisition_route": "Validate on 50 historical or synthetic quotes with permission, charge a 3,000-6,000 PLN setup and 900-1,800 PLN monthly per branch, then partner with wholesalers.",
+    "capital_required_pln": 25000,
+    "founder_net_worth_path": "Assumption: 250 customers at 1,300 PLN monthly creates 3.9M PLN ARR; at 25% owner earnings plus a conservative 4x recurring-revenue value, an 80% stake could exceed 5M PLN in years 5-7. Unknowns are churn and channel CAC; do not double-count retained earnings.",
+    "founder_time": "12-18 hours weekly until repeatable onboarding; compatible with the 5-hour daily ceiling.",
+    "gross_margin_basis": "Software subscription less OCR/LLM, hosting and direct support; target 80% before sales and overhead.",
+    "payback": "Target customer payback within one avoided 4,000-10,000 PLN margin error; founder CAC payback under four months.",
+    "pricing": "3,000-6,000 PLN setup plus 900-1,800 PLN monthly.",
+    "retention_or_repeat": "Recurring quote checks, equipment updates and OSD handover packs create weekly use."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Permissioned anonymized error taxonomy and equipment-rule library improve checks without relying on confidential data.",
+    "customer": "Polish PV, heat-pump and battery installers with 5-50 staff.",
+    "distribution_mechanism": "Design-partner proof followed by wholesaler and installer-association referrals.",
+    "offer_and_business_model": "Quote-margin validation and handover-pack SaaS.",
+    "payer_and_paid_event": "Installer owner pays a subscription around the accepted-installation invoice event.",
+    "problem_trigger": "A rejected grid pack, margin miss or estimator onboarding."
+  },
+  "founder_fit": [
+    "Existing family renewable-installation operating relationship",
+    "Data-science and automation skill fit",
+    "Part-time asynchronous sales and product delivery",
+    "25,000 PLN test fits available capital"
+  ],
+  "parent": null,
+  "risks": [
+    "Small installers may tolerate spreadsheet-based quoting.",
+    "Equipment and OSD rules require continuous maintenance.",
+    "Bad validation could create liability; human approval must remain explicit."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://www.gov.pl/web/national-contact-point-for-renewable-energy-sources/micro-system-notification"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "software_subscription",
+    "commercial_model_descriptor": "installer quote validation and handover subscription",
+    "control_point_category": "operating_relationship",
+    "control_point_descriptor": "replaceable family installer workflow access",
+    "critical_dependency_category": "customer_adoption",
+    "critical_dependency_descriptor": "independent installers adopting a new quote gate"
+  },
+  "structure": {
+    "commercial_archetype": "Vertical workflow SaaS",
+    "control_point": "Rules engine inserted before quote approval and final handover",
+    "critical_dependency": "Installer adoption and permissioned workflow examples"
+  },
+  "thesis": "Use replaceable family-company workflow access to prove that an automated quote and handover gate prevents losses, then sell the maintained rules layer to Polish installation SMEs.",
+  "title": "PV Installer Quote-Margin Guard",
+  "uncertainties": [
+    "Frequency and value of preventable errors",
+    "Willingness to pay by installer size",
+    "Ability to maintain equipment and OSD rule coverage"
+  ],
+  "version": 1
+}

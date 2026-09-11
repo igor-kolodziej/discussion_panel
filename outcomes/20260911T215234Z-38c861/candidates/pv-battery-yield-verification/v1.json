@@ -1,0 +1,126 @@
+{
+  "candidate_id": "pv-battery-yield-verification",
+  "claims": [
+    {
+      "claim_id": "yield-paid-event",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://przydomowemagazyny.gov.pl/pme-czesc-1-z-kpo/"
+      ],
+      "statement": "Polish prosumers currently pay for connected PV and storage systems partly to reduce purchased-energy costs; underperformance is a measurable loss against modeled savings."
+    },
+    {
+      "claim_id": "yield-founder-path",
+      "claim_type": "founder_control_point_path",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://przydomowemagazyny.gov.pl/pme-czesc-1-z-kpo/"
+      ],
+      "statement": "A family installer can voluntarily provide access to a consented pilot workflow, while inverter telemetry remains controlled by homeowners, installers or vendors."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Installer owner, equipment distributor or commercial asset owner",
+    "bundling_resistance": "Independent cross-brand verification separates installer claims from manufacturer dashboards and ties findings to remediation.",
+    "customer_relationship_owner": "The prospective business would own verification contracts; installers retain installation customers and asset owners retain telemetry rights.",
+    "distribution_origin": "Family installer pilot, then insurers, lenders and distributors that need independent post-install evidence.",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Assumption: 2,000 PLN per installer or distributor account.",
+      "cash_conversion": "Per-asset fee prepaid; monitoring subscription billed annually.",
+      "contribution_margin": "Assumption: 65-80% after telemetry connectors and analyst review.",
+      "delivery_and_support_costs": "Two hours setup and 30 minutes monthly exception review per commercial portfolio.",
+      "overhead_and_compliance": "Security, telemetry agreements, liability insurance and accounting estimated at 6,000 PLN monthly at scale.",
+      "revenue_basis": "Commissioning verification fee plus monitoring subscription.",
+      "variable_costs": "API/connectivity, analyst review and occasional site-inspection partner."
+    },
+    "likely_incumbent_response": "Inverter vendors may improve analytics; independence and cross-brand remediation evidence are the wedge.",
+    "paid_event_or_measurable_loss": "Customer pays for commissioning verification or monitoring when measured energy yield or storage behavior misses the contracted/modelled baseline.",
+    "payer": "Installer, commercial asset owner, lender or insurer",
+    "purchase_trigger": "Customer complaint, warranty dispute or portfolio acquisition.",
+    "renewal_event": "Annual monitoring renewal and post-remediation reverification."
+  },
+  "contrary_evidence": [
+    "Vendor portals already expose production data.",
+    "Weather and household-load variance make savings attribution contentious."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Existing informal family operating relationship for permissioned pilot design; telemetry access requires separate owner consent and remains unacquired.",
+    "acquisition_instrument_type": "other",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Use customer-exported files and partner with independent electricians; reject assets without lawful telemetry access.",
+    "current_owner": "Asset owners and equipment-platform vendors control telemetry; installers control their customer relationships.",
+    "customer_relationship_control": "owned",
+    "customer_relationship_owner": "The prospective business would own verification contracts; installers retain installation customers and asset owners retain telemetry rights.",
+    "duration": "Family operating relationship has no fixed duration.",
+    "exclusivity": "nonexclusive",
+    "founder_access_basis": "operating_relationship",
+    "founder_access_description": "Family-installer access supports pilot recruitment only; no telemetry or customer data is presumed granted.",
+    "launch_controller": "The founder would control analysis methodology and verification contracts if launched.",
+    "mechanism_control": "dependent",
+    "renewal": "Mutual-consent pilot access; future telemetry consents and commercial contracts require explicit renewal terms.",
+    "replaceability": "replaceable",
+    "revocability": "at_will",
+    "status": "replaceable_access",
+    "subject": "Post-install performance-verification workflow",
+    "subject_type": "workflow_position",
+    "transferability": "nontransferable"
+  },
+  "discovery_lane": "mechanism-first",
+  "economics": {
+    "acquisition_route": "Verify 20 customer-consented systems against modeled baselines, price remediation value, then sell portfolio monitoring to distributors and lenders.",
+    "capital_required_pln": 50000,
+    "founder_net_worth_path": "Assumption: 25,000 monitored assets at 20 PLN monthly plus 2,000 annual verifications at 1,000 PLN creates 8M PLN revenue; at 20% owner earnings and 4x value, a 70% stake could exceed 5M PLN in years 7-10. Telemetry access and churn are unknown.",
+    "founder_time": "12-18 hours weekly during analytics build; field work outsourced.",
+    "gross_margin_basis": "Fees less telemetry, analyst exception review and inspection partners; target 70%.",
+    "payback": "Customer payback depends on detecting at least 1,000-5,000 PLN of annual lost yield or avoiding a warranty dispute.",
+    "pricing": "500-1,500 PLN commissioning check plus 15-40 PLN per asset monthly.",
+    "retention_or_repeat": "Continuous monitoring and annual savings verification."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Permissioned cross-brand fault signatures and remediation outcomes.",
+    "customer": "PV and battery installers, portfolio owners, lenders and insurers.",
+    "distribution_mechanism": "Installer pilots followed by distributor and finance partnerships.",
+    "offer_and_business_model": "Independent commissioning and yield-verification service.",
+    "payer_and_paid_event": "Asset stakeholder pays at commissioning, dispute or annual monitoring renewal.",
+    "problem_trigger": "Observed yield shortfall or portfolio diligence."
+  },
+  "founder_fit": [
+    "Renewable family-company access reserve",
+    "Strong time-series data-science fit",
+    "Interest in sensors and monitoring",
+    "Field labor can be outsourced"
+  ],
+  "parent": null,
+  "risks": [
+    "Telemetry APIs may be unavailable or unstable.",
+    "Baseline disputes create liability.",
+    "Residential willingness to pay may be low."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://przydomowemagazyny.gov.pl/pme-czesc-1-z-kpo/"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "data_or_intelligence",
+    "commercial_model_descriptor": "independent renewable asset yield verification",
+    "control_point_category": "operating_relationship",
+    "control_point_descriptor": "replaceable installer pilot relationship",
+    "critical_dependency_category": "data_provider",
+    "critical_dependency_descriptor": "lawful asset telemetry access"
+  },
+  "structure": {
+    "commercial_archetype": "Monitoring and verification intelligence",
+    "control_point": "Independent performance baseline and exception record",
+    "critical_dependency": "Telemetry permissions and reliable normalization"
+  },
+  "thesis": "Use permissioned installer pilots to build an independent, cross-brand verification layer that monetizes measurable energy underperformance.",
+  "title": "PV and Battery Yield Verification",
+  "uncertainties": [
+    "Telemetry connector availability",
+    "Statistical separability of faults from weather and load",
+    "Which institutional payer values independence most"
+  ],
+  "version": 1
+}

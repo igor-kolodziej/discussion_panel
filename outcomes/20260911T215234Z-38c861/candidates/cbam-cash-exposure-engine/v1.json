@@ -1,0 +1,128 @@
+{
+  "candidate_id": "cbam-cash-exposure-engine",
+  "claims": [
+    {
+      "claim_id": "cbam-paid-loss",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en",
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/price-cbam-certificates_en"
+      ],
+      "statement": "From 2026, covered importers above the threshold must report embedded emissions and surrender purchased CBAM certificates; certificate cash cost is a current measurable exposure."
+    },
+    {
+      "claim_id": "cbam-payer",
+      "claim_type": "payer_and_budget",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en"
+      ],
+      "statement": "The authorised CBAM declarant buys certificates, making import finance, customs or sustainability leadership a plausible budget owner."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "CFO, head of customs or sustainability director at a covered importer",
+    "bundling_resistance": "The tool connects purchase orders, supplier emissions evidence and quarterly certificate prices into cash exposure; generic ESG software often stops at reporting.",
+    "customer_relationship_owner": "The prospective business would own importer subscriptions; importers retain supplier and customs relationships.",
+    "distribution_origin": "Customs brokers and trade-finance advisers refer importers; founder-led outbound can be asynchronous.",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Assumption: 8,000-20,000 PLN per mid-market importer due to enterprise trust requirements.",
+      "cash_conversion": "Annual subscription and onboarding prepaid.",
+      "contribution_margin": "Assumption: 75-85% after data support.",
+      "delivery_and_support_costs": "20-50 onboarding hours per importer; quarterly data QA.",
+      "overhead_and_compliance": "Legal review, security, insurance and carbon-method specialists estimated at 20,000 PLN monthly at scale.",
+      "revenue_basis": "Annual subscription by import volume and supplier count.",
+      "variable_costs": "Supplier-data ingestion, support and specialist review."
+    },
+    "likely_incumbent_response": "Customs suites and ESG platforms will add CBAM modules; defend through cash forecasting and supplier evidence quality scoring.",
+    "paid_event_or_measurable_loss": "Importer purchases and surrenders CBAM certificates; poor emissions data or procurement choices increase the certificate cash requirement.",
+    "payer": "Authorised CBAM declarant or importer",
+    "purchase_trigger": "First material covered shipment, supplier default-value shock or treasury forecast variance.",
+    "renewal_event": "Annual contract and each quarterly certificate-price update."
+  },
+  "contrary_evidence": [
+    "The 50-tonne threshold removes many small importers.",
+    "Large importers may buy CBAM capability from existing customs or ERP vendors."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Unknown; proposed importer subscription and data-processing agreement are unsigned.",
+    "acquisition_instrument_type": "unknown",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Offer spreadsheet-based exposure diagnostics using customer-uploaded customs data; if importer access fails, sell supplier evidence preparation instead.",
+    "current_owner": "Importers own purchase and customs records; suppliers control primary emissions evidence; the Commission publishes certificate prices.",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "The prospective business would own importer subscriptions; importers retain supplier and customs relationships.",
+    "duration": "Unknown until an importer contract is signed.",
+    "exclusivity": "unknown",
+    "founder_access_basis": "none",
+    "founder_access_description": "No existing importer or supplier data rights are established.",
+    "launch_controller": "The founder would control the forecasting software; importers control data access and compliance decisions.",
+    "mechanism_control": "unknown",
+    "renewal": "Unknown; proposed annual subscription.",
+    "replaceability": "unknown",
+    "revocability": "unknown",
+    "status": "unknown",
+    "subject": "Importer CBAM cash-exposure workflow",
+    "subject_type": "workflow_position",
+    "transferability": "unknown"
+  },
+  "discovery_lane": "mechanism-first",
+  "economics": {
+    "acquisition_route": "Sell a fixed-price cash-exposure diagnostic to 10 Polish importers, then convert recurring users to annual forecasting subscriptions.",
+    "capital_required_pln": 70000,
+    "founder_net_worth_path": "Assumption: 120 customers at 60,000 PLN ARR yields 7.2M PLN ARR; at 25% owner earnings and 4x ARR, a 70% stake exceeds 5M PLN in years 6-9. Enterprise CAC and incumbent pressure are unknown.",
+    "founder_time": "20 hours weekly during validation; specialist contractors handle methodology review.",
+    "gross_margin_basis": "Subscription less ingestion, support and specialist QA; target 80%.",
+    "payback": "Target customer payback through a 1-3% reduction in certificate exposure or one avoided forecast error; must be proven per importer.",
+    "pricing": "15,000 PLN diagnostic; 36,000-120,000 PLN annual subscription.",
+    "retention_or_repeat": "Quarterly prices, shipments and annual declarations create recurring work."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Permissioned supplier evidence-quality benchmarks and exposure scenarios.",
+    "customer": "EU mid-market importers of steel, aluminium, cement, fertilisers, electricity or hydrogen.",
+    "distribution_mechanism": "Customs-broker and trade-finance referral channel.",
+    "offer_and_business_model": "Annual CBAM cash forecasting and supplier evidence SaaS.",
+    "payer_and_paid_event": "Importer pays subscription against certificate purchase and surrender events.",
+    "problem_trigger": "Covered import volume crosses threshold or treasury exposure becomes material."
+  },
+  "founder_fit": [
+    "Finance-oriented quantitative modeling fit",
+    "Data integration and AI leverage",
+    "High contract value limits customer count",
+    "Can validate with diagnostics before full build"
+  ],
+  "parent": null,
+  "risks": [
+    "Enterprise sales may exceed part-time capacity.",
+    "Regulatory calculation mistakes create liability.",
+    "ERP and customs incumbents can bundle functionality."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en",
+    "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/price-cbam-certificates_en"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "software_subscription",
+    "commercial_model_descriptor": "cbam cash exposure forecasting subscription",
+    "control_point_category": "workflow_integration",
+    "control_point_descriptor": "proposed procurement to treasury cbam forecast gate",
+    "critical_dependency_category": "data_provider",
+    "critical_dependency_descriptor": "supplier emissions and importer customs data"
+  },
+  "structure": {
+    "commercial_archetype": "Enterprise compliance-finance SaaS",
+    "control_point": "Forecast used before procurement and certificate budgeting",
+    "critical_dependency": "Importer and supplier data access"
+  },
+  "thesis": "Own the decision layer between supplier emissions evidence and treasury cash planning, where CBAM creates a current certificate cost.",
+  "title": "CBAM Cash-Exposure Engine",
+  "uncertainties": [
+    "Polish importer count above threshold",
+    "Accuracy attainable with supplier data",
+    "Sales cycle and integration burden"
+  ],
+  "version": 1
+}

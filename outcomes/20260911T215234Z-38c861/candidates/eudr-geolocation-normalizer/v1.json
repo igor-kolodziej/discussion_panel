@@ -1,0 +1,126 @@
+{
+  "candidate_id": "eudr-geolocation-normalizer",
+  "claims": [
+    {
+      "claim_id": "eudr-paid-event",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://green-forum.ec.europa.eu/nature-and-biodiversity/deforestation-regulation-implementation/roles-and-responsibilities_en"
+      ],
+      "statement": "EUDR begins applying to large and medium enterprises on 30 December 2026 and most micro and small enterprises on 30 June 2027, creating current paid preparation and supplier-data work."
+    },
+    {
+      "claim_id": "eudr-scope-caveat",
+      "claim_type": "other",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://green-forum.ec.europa.eu/nature-and-biodiversity/deforestation-regulation-implementation/roles-and-responsibilities_en"
+      ],
+      "statement": "2025 simplifications reduced obligations for some downstream actors, so the initial customer must be an operator with primary due-diligence responsibility rather than a generic trader."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Responsible sourcing, procurement or compliance head at an EUDR operator",
+    "bundling_resistance": "The service normalizes messy plot files and validates geometry before statement preparation; generic ESG tools may not handle supplier remediation.",
+    "customer_relationship_owner": "The prospective business would own operator service contracts; operators retain supplier relationships and regulatory responsibility.",
+    "distribution_origin": "Commodity consultants and testing/certification partners refer operators.",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Assumption: 8,000-18,000 PLN per operator.",
+      "cash_conversion": "Setup prepaid; usage billed monthly.",
+      "contribution_margin": "Assumption: 60-75% after analyst remediation.",
+      "delivery_and_support_costs": "Analyst effort depends on supplier file quality; assumed 10-40 minutes per plot batch.",
+      "overhead_and_compliance": "Geospatial specialist, legal review, security and insurance estimated at 20,000 PLN monthly.",
+      "revenue_basis": "Setup plus per-supplier or per-plot validation usage.",
+      "variable_costs": "Geospatial compute, analyst remediation and supplier support."
+    },
+    "likely_incumbent_response": "Traceability platforms will bundle geometry checks; compete on API-neutral normalization and remediation turnaround.",
+    "paid_event_or_measurable_loss": "Operator pays to correct and validate supplier geolocation evidence before a due-diligence submission or shipment release.",
+    "payer": "EUDR operator importing or placing relevant commodities on the EU market",
+    "purchase_trigger": "Supplier uploads invalid plot geometry or an EUDR readiness deadline approaches.",
+    "renewal_event": "Each new plot, supplier, shipment cohort or annual supplier refresh."
+  },
+  "contrary_evidence": [
+    "Application was delayed and obligations simplified, weakening near-term urgency for some firms.",
+    "Full traceability suites may include normalization."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Unknown; proposed operator contracts and supplier data-rights agreements are unsigned.",
+    "acquisition_instrument_type": "unknown",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Process customer-uploaded files without persistent supplier rights and integrate with multiple traceability platforms.",
+    "current_owner": "Operators and upstream suppliers control plot and sourcing data; the EU controls its information system.",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "The prospective business would own operator service contracts; operators retain supplier relationships and regulatory responsibility.",
+    "duration": "Unknown until data-processing contracts are signed.",
+    "exclusivity": "unknown",
+    "founder_access_basis": "none",
+    "founder_access_description": "No current rights to operator or supplier geolocation data.",
+    "launch_controller": "The founder would control normalization software; operators control submission and supplier access.",
+    "mechanism_control": "unknown",
+    "renewal": "Unknown; proposed usage-based agreement.",
+    "replaceability": "unknown",
+    "revocability": "unknown",
+    "status": "unknown",
+    "subject": "Supplier plot-geometry normalization workflow",
+    "subject_type": "workflow_position",
+    "transferability": "unknown"
+  },
+  "discovery_lane": "mechanism-first",
+  "economics": {
+    "acquisition_route": "Offer paid batch validation for coffee, cocoa, wood or rubber operators, then integrate with traceability vendors.",
+    "capital_required_pln": 80000,
+    "founder_net_worth_path": "Assumption: 100 operators at 70,000 PLN annual revenue yields 7M PLN; at 20% owner earnings and 4x value, a 70% stake can exceed 5M PLN in years 7-10. Supplier remediation intensity is unknown.",
+    "founder_time": "20 hours weekly; hire geospatial contractor before production commitments.",
+    "gross_margin_basis": "Usage revenue less compute, analyst remediation and supplier support; target 68%.",
+    "payback": "Avoiding one blocked shipment or weeks of supplier cleanup should cover a 10,000-30,000 PLN engagement; must be verified.",
+    "pricing": "8,000-25,000 PLN setup plus 2-10 PLN per validated plot or supplier-batch minimums.",
+    "retention_or_repeat": "New sourcing plots and supplier changes generate repeat validations."
+  },
+  "fingerprint": {
+    "compounding_advantage": "Permissioned geometry-error corpus and supplier remediation playbooks.",
+    "customer": "EU operators handling EUDR commodities.",
+    "distribution_mechanism": "Commodity-consultant and traceability-platform referrals.",
+    "offer_and_business_model": "Usage-based geolocation normalization service.",
+    "payer_and_paid_event": "Operator pays per validated batch before due-diligence or shipment release.",
+    "problem_trigger": "Invalid supplier geometry or approaching application date."
+  },
+  "founder_fit": [
+    "Data-science and geospatial automation fit",
+    "Usage-based scalable service",
+    "Can begin with narrow paid batches",
+    "EU regulatory context is accessible from Poland"
+  ],
+  "parent": null,
+  "risks": [
+    "Regulatory delay or further simplification",
+    "Supplier data quality may make margins labor-heavy",
+    "Traceability incumbents may bundle the function"
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://green-forum.ec.europa.eu/nature-and-biodiversity/deforestation-regulation-implementation/roles-and-responsibilities_en"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "usage_based_service",
+    "commercial_model_descriptor": "per batch supplier geolocation normalization",
+    "control_point_category": "workflow_integration",
+    "control_point_descriptor": "proposed pre submission geometry validation gate",
+    "critical_dependency_category": "data_provider",
+    "critical_dependency_descriptor": "upstream suppliers providing lawful plot data"
+  },
+  "structure": {
+    "commercial_archetype": "Usage-based data normalization",
+    "control_point": "Geometry validation before due-diligence submission",
+    "critical_dependency": "Supplier plot data quality"
+  },
+  "thesis": "Control the narrow pre-submission geometry gate where operators already incur supplier-cleanup costs, without attempting a full traceability suite.",
+  "title": "EUDR Geolocation Normalizer",
+  "uncertainties": [
+    "Volume of invalid plots",
+    "Who owns remediation budget",
+    "Integration access to traceability tools"
+  ],
+  "version": 1
+}

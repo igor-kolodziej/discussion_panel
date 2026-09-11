@@ -1,0 +1,116 @@
+{
+  "assumptions": [
+    "Licensed partners execute regulated legal and collection actions.",
+    "Success fees are deducted only after cleared funds under a compliant payment structure.",
+    "The initial portfolio excludes disputed and clearly unrecoverable claims."
+  ],
+  "base_score": 6.1,
+  "candidate_id": "late-invoice-recovery-marketplace",
+  "candidate_sha256": "08cffc3dfccc6f3b8bb1401878bb8e8c6d4ff483f73dd7893f975176104c8148",
+  "candidate_version": 1,
+  "constrained_score": 6,
+  "evaluation_type": "working_screening",
+  "evidence_needed_for_higher_score": "A controlled portfolio showing recovery rates and time by claim segment, positive contribution after partner share and support, creditor acceptance of fees, low dispute and complaint rates, repeat accountant referrals, and a reviewed legal and payment structure.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "Charging on cleared cash aligns value with a painful outcome and data-driven routing may preserve debtor relationships better than default escalation.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Late payment creates direct liquidity and recovery costs, and a success fee lowers purchase friction, though willingness to share the proposed percentage remains untested.",
+      "score": 8,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "No-recovery-no-fee pricing is attractive to creditors but invites adverse selection, delayed cash conversion, partner sharing, disputes, compliance overhead, and uncertain recovery-adjusted margins.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Polish micro and small B2B creditors reached through accountants form a large, coherent beachhead, although claim quality and average recoverable value matter more than headline invoice volume.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "Neutral routing could establish a differentiated aggregator position, but collection agencies, legal firms, and invoice platforms already own capabilities and relationships.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "Successful routing can extend into monitoring, credit scoring, reminders, mediation, legal recovery, insurance, and working-capital products.",
+      "score": 8,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Recovery outcomes can improve route selection and accountant distribution can compound, but mandates are nonexclusive and capable incumbents can accumulate similar data.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "Outcome pricing and least-destructive route selection offer a meaningful convenience and risk advantage over choosing a collection provider directly.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "Late-payment pressure is persistent and digitized bookkeeping aids intake, but the supplied evidence does not identify a uniquely temporary opening.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "Accountants are a logical repeatable referral channel, but no agreement or invoice access exists and advisers may avoid reputational exposure.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "A partner-led test fits available capital, yet legal boundaries, debtor disputes, payment handling, adverse selection, brand risk, and partner quality create substantial operational complexity.",
+      "score": 5,
+      "status": "scored"
+    }
+  ],
+  "final_score": 6,
+  "highest_value_structural_change": "Secure an exclusive or preferred accountant-platform intake channel with standardized claim data and pre-screening that rejects disputed or low-probability invoices before costly recovery work.",
+  "interaction_adjustment": -0.1,
+  "judge_id": "judge-screening-batch-04-ftj9fiqb",
+  "main_structural_strength": "The revenue event is directly tied to recovered customer cash, producing strong value alignment and measurable routing outcomes.",
+  "primary_score_limiter": "Adverse-selection-adjusted recovery economics and compliant execution are unknown, while access to both claims and capable partners is unsigned.",
+  "qualified": false,
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 3,
+  "strongest_disconfirming_evidence": "Many SMEs avoid aggressive recovery to protect customer relationships, and regulated legal or payment activity requires qualified partners.",
+  "unrounded_score": 6
+}

@@ -1,0 +1,138 @@
+{
+  "candidate_id": "prosumer-flex-optimizer",
+  "claims": [
+    {
+      "claim_id": "flex-signal",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.ure.gov.pl/pl/urzad/informacje-ogolne/aktualnosci/13308%2CJuz-ponad-48-tys-gospodarstw-domowych-korzysta-z-umow-z-cenami-dynamicznymi.html",
+        "https://www.gov.pl/web/klimat/korzystne-zmiany-dla-prosumentow"
+      ],
+      "statement": "Dynamic-price household contracts grew from 135 to 4,836 during 2025, 48% of customers had smart meters, and hourly prosumer settlement rewards active consumption management."
+    },
+    {
+      "claim_id": "flex-loss",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ure.gov.pl/pl/oze/swiadectwa-pochodzenia/ceny-ujemne?page=0"
+      ],
+      "statement": "URE recorded 33 hours of negative wholesale prices across five June 2025 dates, evidencing periods when poorly timed export or consumption destroys value."
+    },
+    {
+      "claim_id": "flex-payer",
+      "claim_type": "payer_and_budget",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://www.gov.pl/web/national-contact-point-for-renewable-energy-sources/questions-and-answers"
+      ],
+      "statement": "Likely payers are prosumers and installers seeking higher battery or flexible-load savings; the investable saving per site is unknown."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Household prosumer or small-business energy owner",
+    "bundling_resistance": "Inverter and retailer apps can bundle scheduling; independence across brands and tariff-aware verified savings must justify purchase",
+    "customer_relationship_owner": "Unknown today; proposed installer-referred direct contracts with prosumers",
+    "distribution_origin": "Renewable-energy installers, including a legally separate pilot channel through the family company if formally agreed",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Assumption: 300-900 PLN per activated site through installer channels; unknown",
+      "cash_conversion": "Hardware/setup payment upfront and software annually in advance",
+      "contribution_margin": "Assumption: 55-75% blended margin after gateway, cloud, and installer commission",
+      "delivery_and_support_costs": "Assumption: 2-4 remote hours per installation plus field work performed and charged by installer",
+      "overhead_and_compliance": "Electrical-product safety, cybersecurity, warranties, and GDPR; exact certification scope unknown",
+      "revenue_basis": "Setup fee plus annual optimization subscription",
+      "variable_costs": "Gateway, connectivity, price feeds, cloud, installer commission, and support"
+    },
+    "likely_incumbent_response": "Inverter manufacturers and energy retailers add native tariff optimization",
+    "paid_event_or_measurable_loss": "Current electricity-bill loss from exporting or consuming in unfavorable hourly periods and from underused batteries or flexible loads",
+    "payer": "PV-and-battery prosumer or small business",
+    "purchase_trigger": "Switch to hourly settlement, battery installation, or evidence of poor export timing",
+    "renewal_event": "Annual renewal after a savings report shows value above subscription price"
+  },
+  "contrary_evidence": [
+    "Only 4,836 households used dynamic contracts at end-2025, so the immediate segment remains small.",
+    "Four of ten suppliers produced average prices below the former cap, meaning savings are profile-dependent rather than automatic."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Proposed nonexclusive installer distribution and customer device-data authorization agreements; unsigned",
+    "acquisition_instrument_type": "distribution_agreement",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Sell a read-only tariff simulator from customer-uploaded bills and standard inverter exports",
+    "current_owner": "Customers own devices and authorize data; inverter vendors control APIs; no rights are currently held",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "Unknown today; proposed installer-referred direct contracts with prosumers",
+    "duration": "Unknown until signed",
+    "exclusivity": "nonexclusive",
+    "founder_access_basis": "operating_relationship",
+    "founder_access_description": "A family operating relationship may support a legally documented pilot, but no family-company customer list, device data, or distribution right is assumed",
+    "launch_controller": "Prospective business for recommendations after authorization; customer and inverter remain execution controllers",
+    "mechanism_control": "unknown",
+    "renewal": "Proposed annual customer renewal; unsigned",
+    "replaceability": "replaceable",
+    "revocability": "unknown",
+    "status": "unknown",
+    "subject": "Cross-brand access to meter, inverter, battery, and tariff data",
+    "subject_type": "dataset",
+    "transferability": "consent_required"
+  },
+  "discovery_lane": "weak-signal",
+  "economics": {
+    "acquisition_route": "Start with bill-and-production simulation, validate savings on 20 consented sites, then add one inverter integration and installer resale",
+    "capital_required_pln": 70000,
+    "founder_net_worth_path": "Assumption: 8,000 sites at 600 PLN annual recurring revenue plus setup revenue can support over 1m PLN owner earnings or a 5m+ PLN recurring-software equity value in 6-9 years; API access, churn, and savings dispersion are unknown.",
+    "founder_time": "15-25 hours weekly initially; field work delegated to installers",
+    "gross_margin_basis": "Subscription and setup revenue less gateway hardware, feeds, cloud, channel commission, and support",
+    "payback": "Assumption: 6-12 months if a 500 PLN channel cost yields 60-100 PLN monthly contribution",
+    "pricing": "Assumption: 800-1,500 PLN setup and 40-80 PLN monthly",
+    "retention_or_repeat": "Annual while dynamic tariffs, batteries, and flexible loads remain in use"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Cross-brand performance benchmarks and verified dispatch outcomes",
+    "customer": "Polish residential and microbusiness PV/battery owners",
+    "distribution_mechanism": "Installer point-of-sale referral",
+    "offer_and_business_model": "Tariff-aware energy optimizer with setup plus subscription",
+    "payer_and_paid_event": "Prosumer pays to recover bill value lost to mistimed export and consumption",
+    "problem_trigger": "Hourly settlement and dynamic tariffs make passive energy behavior economically visible"
+  },
+  "founder_fit": [
+    "Family renewable-energy context offers a potential arm's-length pilot path.",
+    "Quantitative optimization fits the founder's data-science background.",
+    "A partner-led installation model limits constant selling."
+  ],
+  "parent": null,
+  "risks": [
+    "Savings may be too small for many households.",
+    "Closed inverter APIs can block automation.",
+    "Electrical or control failures could create warranty disputes."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://www.ure.gov.pl/pl/urzad/informacje-ogolne/aktualnosci/13308%2CJuz-ponad-48-tys-gospodarstw-domowych-korzysta-z-umow-z-cenami-dynamicznymi.html",
+    "https://www.gov.pl/web/klimat/korzystne-zmiany-dla-prosumentow",
+    "https://ure.gov.pl/pl/oze/swiadectwa-pochodzenia/ceny-ujemne?page=0",
+    "https://www.gov.pl/web/national-contact-point-for-renewable-energy-sources/questions-and-answers"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "software_subscription",
+    "commercial_model_descriptor": "cross brand household flexibility optimization",
+    "control_point_category": "distribution_access",
+    "control_point_descriptor": "installer mediated activation at battery commissioning",
+    "critical_dependency_category": "data_provider",
+    "critical_dependency_descriptor": "customer authorized meter and inverter telemetry"
+  },
+  "structure": {
+    "commercial_archetype": "Energy optimization subscription",
+    "control_point": "Activation during installer commissioning",
+    "critical_dependency": "Reliable device APIs and measurable customer savings"
+  },
+  "thesis": "Rapid growth in dynamic tariffs and hourly prosumer settlement creates a new purchasing window for independently verified load and battery optimization.",
+  "title": "Tariff-Aware Prosumer Flex Optimizer",
+  "uncertainties": [
+    "Savings distribution by household profile is unknown.",
+    "Family-company willingness to pilot is unknown.",
+    "Supported inverter coverage and warranty implications are unknown."
+  ],
+  "version": 1
+}

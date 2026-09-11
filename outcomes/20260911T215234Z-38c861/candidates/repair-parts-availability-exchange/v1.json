@@ -1,0 +1,127 @@
+{
+  "candidate_id": "repair-parts-availability-exchange",
+  "claims": [
+    {
+      "claim_id": "market-event",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://commission.europa.eu/law/law-topic/consumer-protection-law/directive-repair-goods_en"
+      ],
+      "statement": "From 31 July 2026, covered manufacturers must repair within reasonable time and price, provide repair information and make spare parts available at reasonable prices; an EU repair platform is planned."
+    },
+    {
+      "claim_id": "value",
+      "claim_type": "payer_and_budget",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://www.consilium.europa.eu/en/policies/right-to-repair-products/"
+      ],
+      "statement": "Repairers gain visibility and consumers gain comparison tools, but whether Polish repair networks will pay for parts sourcing and SLA prediction is unknown."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Repair-network operations head, manufacturer service director or independent repair shop owner",
+    "bundling_resistance": "Cross-brand parts availability and predicted repair completion; manufacturers and distributors control supply and can bundle",
+    "customer_relationship_owner": "unknown today; proposed future ownership by the prospective business for repair-shop accounts while consumer ownership depends on channel terms",
+    "distribution_origin": "Repair associations, parts distributors and the future public repair-platform ecosystem",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Assumption: 300-1,500 PLN per repair shop through distributor channels",
+      "cash_conversion": "Monthly subscription and transaction fee after completed order",
+      "contribution_margin": "Assumption: 55-75% after payment, support and data costs",
+      "delivery_and_support_costs": "Catalog normalization, dispute handling and supplier onboarding",
+      "overhead_and_compliance": "Consumer law, payments, insurance and marketplace terms",
+      "revenue_basis": "Repair-shop subscription plus parts-order commission",
+      "variable_costs": "Payment processing, returns, catalog APIs and support"
+    },
+    "likely_incumbent_response": "Parts distributors expose better APIs; manufacturers direct repair traffic to authorized networks",
+    "paid_event_or_measurable_loss": "A repair quote or job stalls because a compatible part, price or delivery date cannot be confirmed",
+    "payer": "Repair shop, service network or parts distributor",
+    "purchase_trigger": "Accepted repair request requiring a part and promised completion time",
+    "renewal_event": "Monthly shop subscription and each parts transaction"
+  },
+  "contrary_evidence": [
+    "The public European repair platform may solve discovery without a private layer.",
+    "Parts data is fragmented and rights holders may refuse access."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "No distribution rights held; proposed nonexclusive supplier data and distribution agreements",
+    "acquisition_instrument_type": "unknown",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Use public catalogs, onboard alternate distributors or sell shop workflow without transaction inventory",
+    "current_owner": "Manufacturers and distributors own parts inventory data and fulfillment; repairers own their customer relationships",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "unknown today; proposed future ownership by the prospective business for repair-shop accounts while consumer ownership depends on channel terms",
+    "duration": "unknown; proposed annual supplier and shop terms",
+    "exclusivity": "unknown",
+    "founder_access_basis": "none",
+    "founder_access_description": "No present repair-network or parts-data access",
+    "launch_controller": "Prospective business after signed supplier and repairer agreements",
+    "mechanism_control": "dependent",
+    "renewal": "unknown",
+    "replaceability": "replaceable",
+    "revocability": "unknown",
+    "status": "unknown",
+    "subject": "Normalized parts-availability and repair-SLA transaction exchange",
+    "subject_type": "transaction",
+    "transferability": "unknown"
+  },
+  "discovery_lane": "future-backcast",
+  "economics": {
+    "acquisition_route": "Pilot one appliance category with two distributors and 20 shops, initially forwarding orders without holding stock",
+    "capital_required_pln": 45000,
+    "founder_net_worth_path": "Assumption: 2,000 shops at 300 PLN monthly plus 3m PLN annual transaction margin yields 10.2m PLN revenue; at 18% EBITDA and 4-6x, value can exceed 5m PLN in years 8-11. Supply access and shop density are unknown.",
+    "founder_time": "20 hours weekly; catalog and support operations need hiring at scale",
+    "gross_margin_basis": "Subscription and commission less payments, returns, data and support",
+    "payback": "Assumption: 150 shops plus transaction volume recover setup in 24 months",
+    "pricing": "Assumption: 150-500 PLN monthly per shop plus 3-8% parts-order commission",
+    "retention_or_repeat": "Frequent repair jobs and growing cross-brand catalog utility"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Cross-brand compatibility graph and observed delivery/SLA history",
+    "customer": "Independent appliance and electronics repairers",
+    "distribution_mechanism": "Parts-distributor channels and repair associations",
+    "offer_and_business_model": "Parts intelligence subscription plus transaction commission",
+    "payer_and_paid_event": "Repairer pays when sourcing a part for an accepted job",
+    "problem_trigger": "Right-to-repair demand rises but parts discovery and timing remain fragmented"
+  },
+  "founder_fit": [
+    "Data normalization and prediction fit.",
+    "Marketplace can start without inventory.",
+    "Channel sales reduce need for personal brand."
+  ],
+  "parent": null,
+  "risks": [
+    "Supplier refusal",
+    "Thin transaction margins",
+    "Returns and counterfeit parts",
+    "Public-platform overlap"
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://commission.europa.eu/law/law-topic/consumer-protection-law/directive-repair-goods_en",
+    "https://www.consilium.europa.eu/en/policies/right-to-repair-products/"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "marketplace",
+    "commercial_model_descriptor": "repair parts sourcing exchange",
+    "control_point_category": "distribution_access",
+    "control_point_descriptor": "normalized multi distributor parts availability",
+    "critical_dependency_category": "rights_holder",
+    "critical_dependency_descriptor": "manufacturer and distributor catalog access"
+  },
+  "structure": {
+    "commercial_archetype": "B2B parts marketplace",
+    "control_point": "Compatibility and availability graph at quote time",
+    "critical_dependency": "Nonexclusive supplier data and fulfillment agreements"
+  },
+  "thesis": "Future state: repairers can quote covered repairs with reliable part price and timing. The missing transaction mechanism is a cross-brand availability exchange connecting repair jobs to compatible inventory and predicted SLAs.",
+  "title": "Repair-Parts Availability Exchange",
+  "uncertainties": [
+    "Catalog licensing",
+    "Public platform scope",
+    "Order frequency per shop"
+  ],
+  "version": 1
+}

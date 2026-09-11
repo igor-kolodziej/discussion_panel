@@ -1,0 +1,127 @@
+{
+  "candidate_id": "battery-passport-host",
+  "claims": [
+    {
+      "claim_id": "deadline",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://single-market-economy.ec.europa.eu/single-market/digital-product-passport/batteries_en"
+      ],
+      "statement": "Battery passports become mandatory for relevant categories on 18 February 2027, creating a paid compliance event for producers and importers."
+    },
+    {
+      "claim_id": "architecture",
+      "claim_type": "other",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://single-market-economy.ec.europa.eu/single-market/digital-product-passport/dpp-registry_en"
+      ],
+      "statement": "The EU registry stores identifiers and metadata while operators remain responsible for decentralized product data and may use service providers, leaving a hosting and evidence-operation layer to supply."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Battery producer/importer compliance, product or IT lead",
+    "bundling_resistance": "Polish-language onboarding, supplier evidence collection and managed exception handling; generic DPP platforms can bundle all of it",
+    "customer_relationship_owner": "unknown today; proposed future ownership by the prospective business under direct producer contracts",
+    "distribution_origin": "Battery compliance consultants, testing labs and targeted outbound",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Assumption: 5,000-15,000 PLN per producer",
+      "cash_conversion": "Assumption: implementation fee upfront and annual hosting prepaid",
+      "contribution_margin": "Assumption: 65-80% after cloud, support and specialist review",
+      "delivery_and_support_costs": "Data mapping, onboarding and exception review; 5,000-20,000 PLN per account assumed",
+      "overhead_and_compliance": "Security audits, legal review, insurance and backup obligations; certification requirements unknown",
+      "revenue_basis": "Implementation fee plus annual per-SKU or per-passport subscription",
+      "variable_costs": "Cloud storage, QR/data carriers, API operations and compliance specialist time"
+    },
+    "likely_incumbent_response": "ERP, PLM and established DPP vendors add battery modules and price aggressively",
+    "paid_event_or_measurable_loss": "Mandatory passport registration before covered batteries are placed on the EU market",
+    "payer": "Battery producer, importer or responsible economic operator",
+    "purchase_trigger": "Covered battery launch, import or 2027 compliance readiness",
+    "renewal_event": "Annual hosting renewal, new models and continuing passport updates"
+  },
+  "contrary_evidence": [
+    "Large manufacturers may self-host or extend existing PLM systems.",
+    "Certification and backup-service rules may favor established providers."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "No current rights; proposed workflow-integration agreement with each responsible operator",
+    "acquisition_instrument_type": "unknown",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Serve another battery niche or sell readiness/data-mapping projects without hosting",
+    "current_owner": "Responsible operators own product evidence; EU authorities control the registry",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "unknown today; proposed future ownership by the prospective business under direct producer contracts",
+    "duration": "unknown; proposed annual subscription",
+    "exclusivity": "unknown",
+    "founder_access_basis": "none",
+    "founder_access_description": "No present battery-producer data access or customer contract",
+    "launch_controller": "Prospective business only after customer authorization and registry-compatible implementation",
+    "mechanism_control": "dependent",
+    "renewal": "unknown; proposed automatic annual renewal subject to termination terms",
+    "replaceability": "replaceable",
+    "revocability": "unknown",
+    "status": "unknown",
+    "subject": "Hosted battery-passport evidence and registry workflow",
+    "subject_type": "workflow_position",
+    "transferability": "unknown"
+  },
+  "discovery_lane": "future-backcast",
+  "economics": {
+    "acquisition_route": "Sell paid readiness mappings to 3 Polish battery importers, then convert one repeatable schema into hosted service",
+    "capital_required_pln": 50000,
+    "founder_net_worth_path": "Assumption: 250 accounts at 35,000 PLN ARR and 72% gross margin could support 2m+ PLN EBITDA; at 4-6x, founder value can pass 5m PLN in years 6-9. Market concentration and price are unknown.",
+    "founder_time": "20 hours weekly for MVP; specialist onboarding must be hired after 10-15 accounts",
+    "gross_margin_basis": "Subscription and implementation revenue less cloud, support and specialist validation",
+    "payback": "Assumption: 5-8 implementation customers recover setup within 18 months",
+    "pricing": "Assumption: 15,000-50,000 PLN implementation plus 12,000-60,000 PLN annual subscription",
+    "retention_or_repeat": "Regulatory record continuity, new SKUs and supplier updates"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Reusable battery schemas and supplier-evidence resolution history",
+    "customer": "Polish and CEE battery producers and importers",
+    "distribution_mechanism": "Compliance-lab and consultant referrals plus direct sales",
+    "offer_and_business_model": "Managed battery-passport hosting and evidence operations subscription",
+    "payer_and_paid_event": "Responsible operator pays before placing a covered battery on the market",
+    "problem_trigger": "A hard 2027 passport deadline meets fragmented supplier data"
+  },
+  "founder_fit": [
+    "Data engineering and AI-assisted document extraction are strong matches.",
+    "Low-capital MVP is possible alongside employment.",
+    "No public persona is required."
+  ],
+  "parent": null,
+  "risks": [
+    "Crowded DPP vendor market",
+    "Unsettled service-provider requirements",
+    "Security liability",
+    "Narrow initial market"
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://single-market-economy.ec.europa.eu/single-market/digital-product-passport/batteries_en",
+    "https://single-market-economy.ec.europa.eu/single-market/digital-product-passport/dpp-registry_en"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "software_subscription",
+    "commercial_model_descriptor": "hosted compliance data subscription",
+    "control_point_category": "workflow_integration",
+    "control_point_descriptor": "battery evidence to registry workflow",
+    "critical_dependency_category": "customer_adoption",
+    "critical_dependency_descriptor": "responsible operators outsourcing passport operations"
+  },
+  "structure": {
+    "commercial_archetype": "Vertical compliance SaaS with managed onboarding",
+    "control_point": "Embedded passport evidence workflow",
+    "critical_dependency": "Producer adoption and authoritative supplier data"
+  },
+  "thesis": "Future state: every covered battery entering the EU carries a maintained passport. The missing operational mechanism for smaller producers is a secure evidence-to-registry workflow that continuously resolves supplier data gaps.",
+  "title": "Battery-Passport Host for CEE Producers",
+  "uncertainties": [
+    "Final certification and backup obligations",
+    "Addressable Polish producer count",
+    "Integration effort per ERP"
+  ],
+  "version": 1
+}

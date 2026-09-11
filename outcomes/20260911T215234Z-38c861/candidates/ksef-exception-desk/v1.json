@@ -1,0 +1,136 @@
+{
+  "candidate_id": "ksef-exception-desk",
+  "claims": [
+    {
+      "claim_id": "ksef-live-trigger",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/zakres-obowiazkowego-ksef/",
+        "https://ksef.podatki.gov.pl/ksef-news/wystawianie-i-otrzymywanie-faktur/"
+      ],
+      "statement": "Polish businesses must already receive invoices through KSeF and most taxpayers have had to issue through it since 1 April 2026; rejected, missing, or mishandled invoices create paid bookkeeping rework and payment-delay risk."
+    },
+    {
+      "claim_id": "ksef-payer",
+      "claim_type": "payer_and_budget",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/zakres-obowiazkowego-ksef/"
+      ],
+      "statement": "The likely payer is an accounting office or SME finance owner using its bookkeeping, integration, or compliance budget; willingness to pay remains unverified."
+    },
+    {
+      "claim_id": "ksef-control-path",
+      "claim_type": "founder_control_point_path",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://ksef.podatki.gov.pl/ksef-news/wystawianie-i-otrzymywanie-faktur/"
+      ],
+      "statement": "A launch can use customer-granted KSeF credentials and documented exception workflows, but no customer authorization or accounting-office distribution agreement is currently held."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Accounting-office owner or SME finance lead; unverified",
+    "bundling_resistance": "Generic accounting suites can absorb basic KSeF handling; defensibility must come from cross-client exception resolution and response-time evidence",
+    "customer_relationship_owner": "Unknown today; proposed direct contracts with accounting offices",
+    "distribution_origin": "Direct outreach to Polish accounting offices and ERP implementers",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Assumption: 1,000-3,000 PLN per accounting-office customer through targeted outbound and partner referrals; unknown until tested",
+      "cash_conversion": "Assumption: setup fee upfront and subscription monthly in advance",
+      "contribution_margin": "Assumption: 65-80% after cloud and exception support at 10-30 offices; unproven",
+      "delivery_and_support_costs": "Assumption: 4-10 hours onboarding plus 1-3 hours monthly support per office",
+      "overhead_and_compliance": "Data-processing agreements, security review, professional liability, and Polish tax-process review; exact cost unknown",
+      "revenue_basis": "Per accounting office plus invoice-volume tier",
+      "variable_costs": "API hosting, monitoring, document processing, and human escalation"
+    },
+    "likely_incumbent_response": "Accounting software vendors add stronger exception dashboards or bundle support",
+    "paid_event_or_measurable_loss": "Current paid bookkeeper time resolving KSeF exceptions, retrieving invoices, and reconciling failures; delayed invoice handling can defer payment or VAT workflow",
+    "payer": "Accounting office or SME finance function",
+    "purchase_trigger": "Repeated KSeF exceptions after mandatory adoption or inability to monitor multiple clients efficiently",
+    "renewal_event": "Monthly continuation if exception backlog and handling time remain measurably lower"
+  },
+  "contrary_evidence": [
+    "The Ministry provides free KSeF applications, reducing willingness to pay for basic access.",
+    "Large accounting platforms are natural bundlers."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Proposed workflow-integration agreement granting least-privilege access to each accounting office's authorized KSeF workflows; unsigned",
+    "acquisition_instrument_type": "workflow_integration_agreement",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Use sandbox demonstrations and serve individual SMEs through their own credentials; no production monitoring without authorization",
+    "current_owner": "Each taxpayer controls its KSeF permissions; accounting platforms control embedded workflows",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "Unknown today; proposed direct contracts with accounting offices",
+    "duration": "Unknown until signed",
+    "exclusivity": "nonexclusive",
+    "founder_access_basis": "none",
+    "founder_access_description": "No present customer credentials or partner rights; founder can build against public KSeF documentation outside employer resources",
+    "launch_controller": "Prospective business after customer authorization, while taxpayers retain permission control",
+    "mechanism_control": "unknown",
+    "renewal": "Proposed monthly subscription; unsigned",
+    "replaceability": "replaceable",
+    "revocability": "unknown",
+    "status": "unknown",
+    "subject": "Authorized multi-client KSeF exception workflow",
+    "subject_type": "workflow_position",
+    "transferability": "consent_required"
+  },
+  "discovery_lane": "weak-signal",
+  "economics": {
+    "acquisition_route": "Build a read-only exception monitor, pilot with 2-3 independent accounting offices, then add guided resolution and SLA reporting",
+    "capital_required_pln": 30000,
+    "founder_net_worth_path": "Assumption: 300 offices at 1,200 PLN monthly yields 4.32m PLN ARR; at 25% owner earnings plus a 3-4x recurring-revenue equity value, retained equity and reinvested cash could exceed 5m PLN in roughly 5-8 years. Unknowns are churn, support intensity, and bundling.",
+    "founder_time": "15-25 hours weekly during pilot, compatible with the 5-hour daily ceiling if support is scheduled and automated",
+    "gross_margin_basis": "Subscription revenue less cloud, document processing, and paid exception support; target 70%, unverified",
+    "payback": "Assumption: under 4 months on 2,000 PLN acquisition cost and 700 PLN monthly contribution; test required",
+    "pricing": "Assumption: 500-2,000 PLN monthly per office plus 2,000-6,000 PLN onboarding",
+    "retention_or_repeat": "Monthly while the office manages active taxpayers and exceptions"
+  },
+  "fingerprint": {
+    "compounding_advantage": "An anonymized library of failure patterns and resolution playbooks, subject to lawful data rights",
+    "customer": "Polish accounting offices serving many SMEs",
+    "distribution_mechanism": "Direct specialist outbound plus ERP referrals",
+    "offer_and_business_model": "Managed KSeF exception monitor sold as recurring software-enabled service",
+    "payer_and_paid_event": "Accounting-office owner pays when staff spend time resolving invoice exceptions",
+    "problem_trigger": "Mandatory KSeF receipt and issuance shifts invoice handling into a new structured workflow"
+  },
+  "founder_fit": [
+    "Data-science and automation skills fit exception classification and monitoring.",
+    "Can validate part-time with low capital and no camera-led distribution.",
+    "Polish location and language improve access to local accounting workflows."
+  ],
+  "parent": null,
+  "risks": [
+    "Tax-processing errors could create liability.",
+    "Platform vendors may bundle the feature.",
+    "Customer credentials and invoice data require strong security."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/zakres-obowiazkowego-ksef/",
+    "https://ksef.podatki.gov.pl/ksef-news/wystawianie-i-otrzymywanie-faktur/"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "managed_service",
+    "commercial_model_descriptor": "recurring multi client invoice exception operations",
+    "control_point_category": "workflow_integration",
+    "control_point_descriptor": "authorized accounting office ksef exception queue",
+    "critical_dependency_category": "integration_platform",
+    "critical_dependency_descriptor": "continued ksef api and accounting system interoperability"
+  },
+  "structure": {
+    "commercial_archetype": "Software-enabled compliance operations",
+    "control_point": "Authorized placement in an accounting office's exception queue",
+    "critical_dependency": "KSeF and bookkeeping integrations"
+  },
+  "thesis": "Mandatory KSeF adoption creates a narrow, measurable exception workload that a small Polish operator can automate before broad accounting suites perfect it.",
+  "title": "KSeF Exception Desk for Accounting Offices",
+  "uncertainties": [
+    "Exception frequency and labor cost per client are unknown.",
+    "Accounting-office willingness to grant access is unknown.",
+    "Required tax-adviser supervision is unknown."
+  ],
+  "version": 1
+}

@@ -1,0 +1,65 @@
+{
+  "base_candidate_sha256": "f323952a92c55f09cf8cadb0374b7bd1c68561b25986e3ab761741b076fe31b4",
+  "base_candidate_version": 1,
+  "candidate_id": "ppwr-packaging-proof-vault",
+  "constructor_id": "constructor-construction-04-vg9l601h",
+  "falsification": {
+    "cold_start_and_data_moat": [
+      "rc-cold-start",
+      "rc-mechanism-ownership"
+    ],
+    "control_point_obtainability": [
+      "rc-control-obtainability",
+      "rc-rights-contracts"
+    ],
+    "critical_mechanism_ownership": [
+      "rc-mechanism-ownership",
+      "rc-rights-contracts"
+    ],
+    "external_dependencies": [
+      "rc-rights-contracts",
+      "rc-cold-start",
+      "rc-distribution-validation"
+    ],
+    "substitutes_and_incumbent_response": [
+      "rc-low-price-substitutes",
+      "rc-incumbent-bundling"
+    ],
+    "willingness_urgency_and_repeat_economics": [
+      "rc-candidate-paid-validation",
+      "rc-commercial-price-signals",
+      "rc-phased-urgency",
+      "rc-repeat-demand",
+      "rc-fully-loaded-economics"
+    ]
+  },
+  "final_candidate_sha256": "c3287849c8f9f636059491d92784efb262687e8e526c668f690524f163d61354",
+  "final_candidate_version": 2,
+  "outcome": "redesigned",
+  "rationale": "The evidence supports a real supplier-document workflow and paid PPWR work but not this candidate's buyers, rights, distribution or subscription economics. The redesign makes the critical workflow obtainable through a specific customer agreement, replaces supplier/referral dependence with customer-routed requests and direct outbound, and retains a customer-upload-only paid fallback. Because no agreement is signed, control honestly remains unknown. The service model is economically coherent as a bounded prepaid test, but its lower 45-65% planning margin, CAC recovery, founder capacity and renewal require paid validation.",
+  "schema_version": 3,
+  "structural_change": {
+    "control_instrument": "Proposed, unsigned 12-month workflow-integration agreement plus data-processing schedule authorizing a defined evidence-request queue, customer-specific retention and audit logging; no cross-customer benchmark right is presumed.",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "The prospective business would own the direct brand contract and service relationship; each brand would retain its supplier relationships, source-document ownership and approval authority.",
+    "dependency_change": "Removes launch dependence on a proprietary shared dataset, voluntary supplier relationships and unsigned referral channels. It replaces them with customer-authorized procurement routing under an account-level agreement; if refused, the paid customer-upload-only baseline is deliverable without supplier integration.",
+    "distribution_instrument": "Founder-controlled direct outbound and direct customer service agreement; optional future nonexclusive written referral agreements are additive and are not represented as present access.",
+    "fully_loaded_economic_effects": "Changes the model from a presumed 75-85% subscription margin to a labor-bearing productized service targeting an unvalidated 45-65% contribution margin. Setup is 50% prepaid, retainers are quarterly prepaid, excess work and external tests are separately funded, planned CAC is 4,000-12,000 PLN, initial delivery is 40-100 hours, ongoing work is 8-20 hours monthly, and allocated compliance/security overhead is planned at 6,000-15,000 PLN monthly. These ranges require pilot time sheets, invoices, conversion and retention data.",
+    "incumbent_response_defensibility": "Incumbents are likely to bundle the workflow and low-price tools will undercut storage. The defensible wedge is faster bounded implementation and accountable exception closure inside the customer's process, but it is replaceable and no durable moat is claimed.",
+    "resulting_control_point_status": "unknown",
+    "supporting_research_claim_ids": [
+      "rc-buyer-workflow",
+      "rc-commercial-price-signals",
+      "rc-control-obtainability",
+      "rc-rights-contracts",
+      "rc-cold-start",
+      "rc-mechanism-ownership",
+      "rc-distribution-validation",
+      "rc-fully-loaded-economics",
+      "rc-low-price-substitutes",
+      "rc-incumbent-bundling",
+      "rc-phased-urgency",
+      "rc-repeat-demand"
+    ]
+  }
+}

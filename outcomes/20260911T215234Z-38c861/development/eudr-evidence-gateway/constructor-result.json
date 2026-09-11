@@ -1,0 +1,65 @@
+{
+  "base_candidate_sha256": "cbc7e20e39976fbfe2df0f643d005879edb59a2134302197f753077c9de809f6",
+  "base_candidate_version": 1,
+  "candidate_id": "eudr-evidence-gateway",
+  "constructor_id": "constructor-construction-03-p8ubvxeq",
+  "falsification": {
+    "cold_start_and_data_moat": [
+      "rc-cold-start",
+      "rc-data-rights-unknown"
+    ],
+    "control_point_obtainability": [
+      "rc-contractible-representation",
+      "rc-data-rights-unknown",
+      "rc-supplier-dependency"
+    ],
+    "critical_mechanism_ownership": [
+      "rc-mechanism-ownership-unknown",
+      "rc-public-infrastructure-control",
+      "rc-operator-retains-responsibility"
+    ],
+    "external_dependencies": [
+      "rc-supplier-dependency",
+      "rc-public-infrastructure-control",
+      "rc-rule-change"
+    ],
+    "substitutes_and_incumbent_response": [
+      "rc-incumbent-substitution",
+      "rc-free-substitute",
+      "rc-price-pressure"
+    ],
+    "willingness_urgency_and_repeat_economics": [
+      "rc-regulatory-trigger",
+      "rc-buyer-use",
+      "rc-repeat-trigger",
+      "rc-distribution-validation-unknown",
+      "rc-unit-economics-unknown"
+    ]
+  },
+  "final_candidate_sha256": "165fb33f9e1530f7308a32c4bcaa2558069b36eaa544d479aa14ccba4e5e0dca",
+  "final_candidate_version": 2,
+  "outcome": "redesigned",
+  "rationale": "The redesign abandons the externally controlled supplier-data graph as the commercial control point and substitutes a legally bounded, importer-specific workflow position obtainable only through a prepaid services agreement, integration schedule and written representative mandate. This is coherent because representation is contractible, while the operator explicitly retains substantive responsibility. It does not claim present access or demand: control remains unknown until signature, and fully loaded acquisition, labor, support, compliance, working-capital and retention economics are modeled as gates rather than validated facts.",
+  "schema_version": 3,
+  "structural_change": {
+    "control_instrument": "Proposed prepaid master services agreement with data-processing terms, fixed workflow-integration schedule and separate written authorised-representative mandate; no instrument is currently signed",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "Prospective business after an importer signs the master services agreement and written representative mandate; no customer relationship is currently owned or contracted",
+    "dependency_change": "Removes ownership of a cross-customer supplier-evidence dataset as the required control point and replaces it with a contractible importer workflow position. Importer adoption becomes the acquisition dependency; supplier cooperation and Commission infrastructure remain external inputs rather than claimed assets.",
+    "distribution_instrument": "Direct prepaid evidence-gap diagnostic converting into a nonexclusive importer-specific implementation and operating agreement; unverified broker and ERP referrals are not required for launch",
+    "fully_loaded_economic_effects": "Requires deposits and prepaid retainers to avoid financing implementations, prices specialist exceptions and usage separately, includes market-rate delivery labor plus security, insurance and regulatory overhead, and gates scaling on six-month collected-gross-profit CAC payback. Target margins and retention remain unvalidated and may be materially below the parent subscription assumptions.",
+    "incumbent_response_defensibility": "Incumbents can lower prices, bundle integrations or recruit local service partners. The limited defense is narrow Polish/Odoo implementation efficiency, direct contracted operations and reusable non-customer-specific playbooks; there is no claimed exclusive data moat or protected infrastructure.",
+    "resulting_control_point_status": "unknown",
+    "supporting_research_claim_ids": [
+      "rc-contractible-representation",
+      "rc-operator-retains-responsibility",
+      "rc-public-infrastructure-control",
+      "rc-supplier-dependency",
+      "rc-data-rights-unknown",
+      "rc-unit-economics-unknown",
+      "rc-distribution-validation-unknown",
+      "rc-incumbent-substitution",
+      "rc-price-pressure"
+    ]
+  }
+}

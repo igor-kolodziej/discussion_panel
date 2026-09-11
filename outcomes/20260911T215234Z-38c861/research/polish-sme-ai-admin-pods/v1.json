@@ -1,0 +1,276 @@
+{
+  "candidate_id": "polish-sme-ai-admin-pods",
+  "candidate_sha256": "e9c7e7592fca1c947d03e7e5a9f6cb8ddefb191f32dc736dd79d48205e28daa4",
+  "candidate_version": 1,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "r1-market-adoption",
+      "evidence_refs": [
+        "s1-eurostat-news",
+        "s2-eurostat-report"
+      ],
+      "statement": "In 2025, 20.0% of EU enterprises with at least 10 employees used AI, versus 8.4% in Poland; among small Polish enterprises the reported rate was 5.8%. This establishes low adoption but does not establish unmet demand."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r2-direct-buyer-validation",
+      "evidence_refs": [],
+      "statement": "No direct interview, signed order, paid pilot, invoice, deposit, or renewal evidence from a Polish field-service SME was provided or found, so payer willingness, urgency, acceptable price, and the existence of a recurring paid event remain unvalidated."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r3-distribution-validation",
+      "evidence_refs": [],
+      "statement": "No signed accountant, reseller, trade-software, association, or referral agreement and no measured outbound funnel were provided or found; customer acquisition cost and repeatability of the proposed channels are unknown."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r4-fully-loaded-economics",
+      "evidence_refs": [],
+      "statement": "The proposed setup price, monthly fee, 55-70% contribution margin, support hours, 2,000-6,000 PLN acquisition cost, and 3-6 month payback have no observed customer-level cohort or time-and-cost evidence; fully loaded margins after implementation, exception handling, sales, security, insurance, compliance, churn, and founder labor are unknown."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r5-contractibility",
+      "evidence_refs": [
+        "s6-gdpr"
+      ],
+      "statement": "A customer can in principle authorize personal-data processing through a binding controller-processor contract specifying subject, duration, purpose, data types, and obligations under GDPR Article 28; therefore lawful access appears contractible, but this does not establish that any SME has signed or will accept the required scope, liability, subprocessors, or permissions."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r6-external-control",
+      "evidence_refs": [
+        "s5-zapier-terms"
+      ],
+      "statement": "Representative automation-platform terms grant only limited, non-transferable, revocable access, restrict use to internal business purposes, require necessary rights for customer content and triggered actions, and leave third-party-service availability and terms outside the automation provider's control. The proposed cross-application workflow position therefore depends on customer permissions and vendors rather than an owned essential right."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r7-incumbent-bundling",
+      "evidence_refs": [
+        "s3-microsoft-pricing",
+        "s4-google-pricing"
+      ],
+      "statement": "Microsoft sells Copilot embedded in Outlook, Word, Excel, Teams and related applications, including connectors and agents, while Google includes Gemini in Workspace business plans. These incumbents can bundle overlapping email, document, scheduling, search, and agent functions at per-user subscription prices far below the candidate's proposed monthly managed-service fee."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r8-software-cost-floor",
+      "evidence_refs": [
+        "s7-make-pricing"
+      ],
+      "statement": "Make publicly offers 10,000 monthly automation credits from $12 for Core, $21 for Pro, and $38 for Teams, suggesting that base orchestration software alone need not consume much of a 1,500-5,000 PLN monthly fee. However, this cannot validate contribution margin because integration labor, model usage, monitoring, exceptions, support, and acquisition may dominate costs."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r9-data-moat",
+      "evidence_refs": [],
+      "statement": "No consented production corpus, reusable exception dataset, measured cross-customer benchmark, exclusive data right, or demonstrated learning loop exists in the supplied evidence; whether ten heterogeneous firms produce transferable templates or a defensible data moat is unknown."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "r10-mechanism-ownership",
+      "evidence_refs": [],
+      "statement": "No proprietary workflow engine, exclusive integration, patent, controlled distribution asset, signed customer relationship, or owned critical dataset was demonstrated; actual ownership of the critical mechanism is unknown."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "r11-regulatory-operability",
+      "evidence_refs": [
+        "s6-gdpr",
+        "s8-ai-act"
+      ],
+      "statement": "The cited EU rules impose contracting, governance, data-quality, and human-oversight duties rather than a general prohibition on administrative automation. A scoped human-in-the-loop service appears legally operable in principle, but classification, lawful basis, security measures, records, impact assessments, and responsibility for consequential actions require case-specific review."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "r12-low-adoption-contrary-signal",
+      "evidence_refs": [
+        "s1-eurostat-news",
+        "s2-eurostat-report"
+      ],
+      "statement": "Poland was among the EU countries with the lowest enterprise AI use in 2025, and only 5.8% of small Polish enterprises reported use. This is genuinely contrary to treating the gap itself as demand: it is also consistent with low readiness, low willingness to pay, weak digital infrastructure, or implementation friction."
+    }
+  ],
+  "commercial_evidence": {
+    "buyer_or_paid_event": {
+      "claim_ids": [
+        "r2-direct-buyer-validation"
+      ],
+      "source_ids": [],
+      "status": "unknown"
+    },
+    "distribution_and_acquisition": {
+      "claim_ids": [
+        "r3-distribution-validation"
+      ],
+      "source_ids": [],
+      "status": "unknown"
+    },
+    "fully_loaded_unit_economics": {
+      "claim_ids": [
+        "r4-fully-loaded-economics"
+      ],
+      "source_ids": [],
+      "status": "unknown"
+    },
+    "rights_control_access_contractibility": {
+      "claim_ids": [
+        "r5-contractibility"
+      ],
+      "source_ids": [
+        "s6-gdpr"
+      ],
+      "status": "inference"
+    }
+  },
+  "contrary_evidence": [
+    "Eurostat reports only 8.4% AI adoption among Polish enterprises and 5.8% among small Polish enterprises. The same observation supporting a possible adoption gap contradicts the inference that the gap represents ready demand; it may instead reflect weak willingness, capability, or readiness.",
+    "Microsoft already embeds Copilot across Outlook, Word, Excel, Teams, connectors, and agents, and Google bundles Gemini into Workspace business plans. These directly overlap with the proposed inbox, document, scheduling, search, and workflow functions and can compress willingness to pay for a separate managed pod.",
+    "Low-cost automation infrastructure such as Make reduces the scarcity of the technical orchestration layer. This contradicts any assumption that assembling cross-application automation alone creates durable differentiation or justifies the proposed fee."
+  ],
+  "critical_control_point_assessment": {
+    "assessment": "evidence",
+    "claim_ids": [
+      "r6-external-control"
+    ],
+    "source_ids": [
+      "s5-zapier-terms"
+    ],
+    "status": "externally_controlled"
+  },
+  "falsification": {
+    "cold_start_and_data_moat": [
+      "r9-data-moat",
+      "r12-low-adoption-contrary-signal"
+    ],
+    "control_point_obtainability": [
+      "r5-contractibility",
+      "r6-external-control"
+    ],
+    "critical_mechanism_ownership": [
+      "r6-external-control",
+      "r10-mechanism-ownership"
+    ],
+    "external_dependencies": [
+      "r6-external-control",
+      "r11-regulatory-operability"
+    ],
+    "substitutes_and_incumbent_response": [
+      "r7-incumbent-bundling",
+      "r8-software-cost-floor"
+    ],
+    "willingness_urgency_and_repeat_economics": [
+      "r2-direct-buyer-validation",
+      "r3-distribution-validation",
+      "r4-fully-loaded-economics",
+      "r8-software-cost-floor",
+      "r12-low-adoption-contrary-signal"
+    ]
+  },
+  "schema_version": 3,
+  "sources": [
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "market_context",
+      "published_at": "2025-12-11",
+      "publisher": "Eurostat",
+      "source_id": "s1-eurostat-news",
+      "source_type": "official statistical news article",
+      "stance": "context",
+      "title": "20% of EU enterprises use AI technologies",
+      "url": "https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20251211-2"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "market_context",
+      "published_at": "2026-03-26",
+      "publisher": "Eurostat",
+      "source_id": "s2-eurostat-report",
+      "source_type": "official statistical report",
+      "stance": "contradicting",
+      "title": "The use of artificial intelligence (AI) technologies in the European Union",
+      "url": "https://ec.europa.eu/eurostat/documents/7870049/23260410/KS-01-26-009-EN-N.pdf/37d063cb-28cf-3b4e-91f3-c3784c970842"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "incumbent",
+      "published_at": "unknown",
+      "publisher": "Microsoft",
+      "source_id": "s3-microsoft-pricing",
+      "source_type": "official product pricing page",
+      "stance": "contradicting",
+      "title": "Microsoft 365 Copilot — plans and pricing for business",
+      "url": "https://www.microsoft.com/pl-pl/microsoft-365-copilot/pricing"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "incumbent",
+      "published_at": "unknown",
+      "publisher": "Google Workspace",
+      "source_id": "s4-google-pricing",
+      "source_type": "official product pricing page",
+      "stance": "contradicting",
+      "title": "Google Workspace plans and pricing",
+      "url": "https://workspace.google.com/pricing?hl=pl"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "rights_control_access",
+      "published_at": "2026-04-08",
+      "publisher": "Zapier",
+      "source_id": "s5-zapier-terms",
+      "source_type": "official terms of service",
+      "stance": "contradicting",
+      "title": "Zapier Terms of Service",
+      "url": "https://zapier.com/legal/terms-of-service"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "contracting",
+      "published_at": "2016-04-27",
+      "publisher": "European Union",
+      "source_id": "s6-gdpr",
+      "source_type": "official regulation",
+      "stance": "supporting",
+      "title": "Regulation (EU) 2016/679, Article 28 — Processor",
+      "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "unit_economics",
+      "published_at": "unknown",
+      "publisher": "Make",
+      "source_id": "s7-make-pricing",
+      "source_type": "official product pricing page",
+      "stance": "context",
+      "title": "Make pricing and subscription packages",
+      "url": "https://www.make.com/en/pricing"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "regulatory",
+      "published_at": "2024-06-13",
+      "publisher": "European Union",
+      "source_id": "s8-ai-act",
+      "source_type": "official regulation",
+      "stance": "context",
+      "title": "Regulation (EU) 2024/1689 laying down harmonised rules on artificial intelligence",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"
+    }
+  ],
+  "unknowns": [
+    "No direct Polish field-service SME buyer validation, paid pilot, deposit, invoice, renewal, or churn evidence.",
+    "No measured baseline of administrative hours, error costs, backlog, acceptable error rate, or realized savings per target firm.",
+    "No signed customer workflow authorization, data-processing agreement, partner agreement, reseller agreement, referral agreement, or API access commitment.",
+    "No observed conversion rate, sales-cycle length, channel volume, customer acquisition cost, or payback period.",
+    "No fully loaded delivery record covering founder labor, implementation, monitoring, exceptions, security, insurance, compliance, taxes, support, and vendor costs.",
+    "No evidence that workflow templates transfer across firms without substantial customization or that exception data can be lawfully pooled and retained.",
+    "No demonstrated proprietary critical mechanism, exclusive right, durable customer control, or defensible dataset.",
+    "No evidence establishing that Poland's low adoption reflects urgent unmet demand rather than low readiness or willingness to pay.",
+    "No evidence that monthly savings persist above the proposed fee or that customers renew after initial automation.",
+    "No source establishes fatal illegality, an unobtainable essential right, mathematically impossible conservative economics, or a non-delegable founder incompatibility."
+  ]
+}

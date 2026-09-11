@@ -1,0 +1,127 @@
+{
+  "candidate_id": "eudr-evidence-gateway",
+  "claims": [
+    {
+      "claim_id": "deadline",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://green-forum.ec.europa.eu/nature-and-biodiversity/deforestation-regulation-implementation/roles-and-responsibilities_en"
+      ],
+      "statement": "EUDR applies from 30 December 2026 to large and medium enterprises and from 30 June 2027 to most micro and small enterprises; operators must complete due diligence and submit statements when risk is negligible."
+    },
+    {
+      "claim_id": "change",
+      "claim_type": "other",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://environment.ec.europa.eu/news/commission-updates-product-scope-and-tools-support-eudr-2026-07-13_en"
+      ],
+      "statement": "The Commission updated product scope and the Information System in July 2026, so workflows must track current rules rather than frozen checklists."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Importer compliance, procurement or supply-chain lead",
+    "bundling_resistance": "Supplier chase, geolocation QA and Polish-language exception handling; trade-compliance suites can bundle",
+    "customer_relationship_owner": "unknown today; proposed future ownership by the prospective business under direct importer subscriptions",
+    "distribution_origin": "Customs brokers, commodity accountants, ERP consultants and outbound",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Assumption: 4,000-12,000 PLN per importer",
+      "cash_conversion": "Implementation upfront; subscription monthly or annual prepaid",
+      "contribution_margin": "Assumption: 60-75% after specialist review and data services",
+      "delivery_and_support_costs": "Supplier onboarding, geospatial validation and exception support",
+      "overhead_and_compliance": "Security, legal updates, professional liability and audit logs",
+      "revenue_basis": "Subscription by supplier/commodity volume plus onboarding",
+      "variable_costs": "Geospatial APIs, translation, support and specialist review"
+    },
+    "likely_incumbent_response": "ERP and customs platforms add EUDR modules; consultants offer manual compliance",
+    "paid_event_or_measurable_loss": "Due-diligence evidence and statement required before an in-scope commodity is placed on or exported from the EU market",
+    "payer": "First operator placing covered goods on the EU market",
+    "purchase_trigger": "EUDR application date, new supplier or failed evidence check",
+    "renewal_event": "Annual subscription and each new shipment/supplier evidence cycle"
+  },
+  "contrary_evidence": [
+    "2025 simplifications reduced downstream obligations and data load.",
+    "Commodity traders may consolidate around global platforms."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "No current data rights; proposed data-rights and workflow agreements with each importer",
+    "acquisition_instrument_type": "unknown",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Serve a different commodity chain or provide one-off supplier-readiness audits",
+    "current_owner": "Importers and upstream suppliers own documents and geolocation data; the Commission controls submission infrastructure",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "unknown today; proposed future ownership by the prospective business under direct importer subscriptions",
+    "duration": "unknown; proposed annual term",
+    "exclusivity": "unknown",
+    "founder_access_basis": "none",
+    "founder_access_description": "No present commodity-chain data access",
+    "launch_controller": "Prospective business after signed importer authorization and supplier participation",
+    "mechanism_control": "dependent",
+    "renewal": "unknown",
+    "replaceability": "replaceable",
+    "revocability": "unknown",
+    "status": "unknown",
+    "subject": "Supplier evidence and geolocation workflow feeding EUDR due diligence",
+    "subject_type": "dataset",
+    "transferability": "unknown"
+  },
+  "discovery_lane": "future-backcast",
+  "economics": {
+    "acquisition_route": "Start with paid evidence-gap audits for one commodity, then productize recurring supplier intake and geolocation checks",
+    "capital_required_pln": 40000,
+    "founder_net_worth_path": "Assumption: 400 customers at 24,000 PLN ARR and 25% EBITDA could create 2.4m PLN EBITDA; 4-6x valuation supports 5m+ founder value in years 6-9. Customer count and churn are unknown.",
+    "founder_time": "20 hours weekly for product and sales; compliance specialists handle edge cases",
+    "gross_margin_basis": "Subscription less geospatial, support and expert-review costs",
+    "payback": "Assumption: 8-12 customers recover product cost inside 18 months",
+    "pricing": "Assumption: 10,000-30,000 PLN onboarding and 1,000-5,000 PLN monthly",
+    "retention_or_repeat": "Ongoing shipment, supplier and rule changes"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Supplier-resolution graph and recurring evidence-quality benchmarks",
+    "customer": "CEE importers of wood, coffee, cocoa, rubber and other covered goods",
+    "distribution_mechanism": "Customs-broker and ERP-consultant referrals",
+    "offer_and_business_model": "Managed evidence gateway sold by subscription",
+    "payer_and_paid_event": "First operator pays when covered trade requires defensible due diligence",
+    "problem_trigger": "EUDR deadlines meet missing upstream geolocation and legality evidence"
+  },
+  "founder_fit": [
+    "Document AI and anomaly detection fit.",
+    "Bootstrappable with one commodity.",
+    "Low-camera B2B workflow."
+  ],
+  "parent": null,
+  "risks": [
+    "Regulatory simplification shrinks scope",
+    "Supplier noncooperation",
+    "Liability for false evidence",
+    "Strong global competitors"
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://green-forum.ec.europa.eu/nature-and-biodiversity/deforestation-regulation-implementation/roles-and-responsibilities_en",
+    "https://environment.ec.europa.eu/news/commission-updates-product-scope-and-tools-support-eudr-2026-07-13_en"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "data_or_intelligence",
+    "commercial_model_descriptor": "supplier evidence validation subscription",
+    "control_point_category": "proprietary_dataset",
+    "control_point_descriptor": "resolved supplier and geolocation evidence graph",
+    "critical_dependency_category": "data_provider",
+    "critical_dependency_descriptor": "upstream supplier evidence cooperation"
+  },
+  "structure": {
+    "commercial_archetype": "Compliance data gateway",
+    "control_point": "Normalized supplier-evidence graph",
+    "critical_dependency": "Truthful upstream geolocation and legality data"
+  },
+  "thesis": "Future state: covered imports clear EUDR checks through traceable supplier evidence. The missing data-coordination mechanism is a gateway that chases, validates, versions and transmits geolocation and legality evidence.",
+  "title": "EUDR Supplier-Evidence Gateway",
+  "uncertainties": [
+    "Post-simplification addressable scope",
+    "Geospatial false-positive rates",
+    "Supplier onboarding friction"
+  ],
+  "version": 1
+}

@@ -1,0 +1,137 @@
+{
+  "candidate_id": "nis2-vendor-evidence-exchange",
+  "claims": [
+    {
+      "claim_id": "nis2-signal",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.enisa.europa.eu/topics/state-of-cybersecurity-in-the-eu/cybersecurity-policies/nis-directive-2",
+        "https://www.enisa.europa.eu/publications/nis2-technical-implementation-guidance"
+      ],
+      "statement": "NIS2 raises security and reporting requirements and explicitly elevates supply-chain and vulnerability management; ENISA issued detailed implementation guidance in June 2025."
+    },
+    {
+      "claim_id": "nis2-loss",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.enisa.europa.eu/sites/default/files/2025-12/NIS%20Investments%202025%20-%20Main%20report_0.pdf"
+      ],
+      "statement": "ENISA reports SMEs face budget and skilled-personnel constraints, supporting a current measurable burden from security questionnaires and evidence preparation."
+    },
+    {
+      "claim_id": "nis2-payer",
+      "claim_type": "payer_and_budget",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://www.enisa.europa.eu/topics/state-of-cybersecurity-in-the-eu/cybersecurity-policies/nis-directive-2"
+      ],
+      "statement": "Likely payers are suppliers answering customer assurance requests and regulated buyers reviewing them; which side pays first is unknown."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Supplier security lead or regulated buyer's procurement/security function",
+    "bundling_resistance": "GRC suites bundle questionnaires; verified reusable evidence for small Polish suppliers and buyer-specific mappings provide resistance",
+    "customer_relationship_owner": "Unknown today; proposed supplier subscriptions and buyer-sponsored invitations",
+    "distribution_origin": "Cybersecurity consultancies, procurement advisers, insurers, and anchor-buyer invitations",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Assumption: 2,000-8,000 PLN per supplier or 15,000-50,000 PLN per anchor buyer",
+      "cash_conversion": "Annual supplier fee in advance; buyer implementation prepaid",
+      "contribution_margin": "Assumption: 65-80% after evidence review",
+      "delivery_and_support_costs": "Assumption: 15-50 hours initial supplier evidence assembly",
+      "overhead_and_compliance": "Security certification, penetration testing, professional liability, and GDPR",
+      "revenue_basis": "Supplier subscription plus buyer workspace fee",
+      "variable_costs": "Evidence review, secure storage, integrations, and partner commissions"
+    },
+    "likely_incumbent_response": "GRC and procurement platforms introduce lighter supplier portals",
+    "paid_event_or_measurable_loss": "Current security-team and supplier labor repeatedly answering questionnaires, collecting controls evidence, and remediating missing documentation",
+    "payer": "Initially SME technology or industrial suppliers; potentially regulated anchor buyers",
+    "purchase_trigger": "New customer questionnaire, NIS2 readiness program, tender, or renewal review",
+    "renewal_event": "Annual evidence refresh and each new buyer request"
+  },
+  "contrary_evidence": [
+    "NIS2 applicability depends on national implementation and entity classification.",
+    "Entrenched GRC suites already serve large buyers."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Proposed data-rights agreement for reusable supplier evidence and buyer-specific sharing permissions; unsigned",
+    "acquisition_instrument_type": "data_rights_agreement",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Sell a local offline evidence pack without exchange or buyer access",
+    "current_owner": "Each supplier owns its control evidence; buyers own questionnaire workflows",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "Unknown today; proposed supplier subscriptions and buyer-sponsored invitations",
+    "duration": "Unknown until signed",
+    "exclusivity": "nonexclusive",
+    "founder_access_basis": "none",
+    "founder_access_description": "No supplier evidence or buyer workflow access is currently held",
+    "launch_controller": "Prospective business after supplier sharing consent; each buyer controls acceptance",
+    "mechanism_control": "unknown",
+    "renewal": "Proposed annual subscription; unsigned",
+    "replaceability": "replaceable",
+    "revocability": "unknown",
+    "status": "unknown",
+    "subject": "Permissioned reusable supplier-security evidence exchange",
+    "subject_type": "dataset",
+    "transferability": "consent_required"
+  },
+  "discovery_lane": "weak-signal",
+  "economics": {
+    "acquisition_route": "Productize one Polish supplier evidence pack, recruit five suppliers through a cyber adviser, then invite one shared buyer",
+    "capital_required_pln": 45000,
+    "founder_net_worth_path": "Assumption: 2,000 suppliers at 4,000 PLN ARR produces 8m PLN ARR; network retention and 20% owner earnings could create a 5m PLN net-worth path in 6-9 years. Buyer pull and evidence liability are unknown.",
+    "founder_time": "15-25 hours weekly with security review subcontracted",
+    "gross_margin_basis": "Subscriptions less secure storage, evidence review, and customer success",
+    "payback": "Assumption: 6-12 months for suppliers; longer for anchor buyers",
+    "pricing": "Assumption: 3,000-10,000 PLN annually per supplier and 20,000-100,000 PLN per buyer workspace",
+    "retention_or_repeat": "Annual refresh plus repeated tender and questionnaire use"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Reusable control mappings and a permissioned supplier-buyer network",
+    "customer": "Polish SME suppliers to NIS2-affected enterprises",
+    "distribution_mechanism": "Cyber-adviser referrals and buyer invitations",
+    "offer_and_business_model": "Two-sided security evidence exchange",
+    "payer_and_paid_event": "Supplier or buyer pays to reduce repeated questionnaire and review labor",
+    "problem_trigger": "Supply-chain security scrutiny expands while SME expertise remains constrained"
+  },
+  "founder_fit": [
+    "Structured evidence and automation suit the founder's analytical profile.",
+    "Can launch with a narrow questionnaire pack.",
+    "Partner-led distribution reduces direct networking intensity."
+  ],
+  "parent": null,
+  "risks": [
+    "Sensitive evidence creates a high-value breach target.",
+    "Marketplace liquidity may not emerge.",
+    "Legal applicability and accepted evidence vary by buyer."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://www.enisa.europa.eu/topics/state-of-cybersecurity-in-the-eu/cybersecurity-policies/nis-directive-2",
+    "https://www.enisa.europa.eu/publications/nis2-technical-implementation-guidance",
+    "https://www.enisa.europa.eu/sites/default/files/2025-12/NIS%20Investments%202025%20-%20Main%20report_0.pdf"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "marketplace",
+    "commercial_model_descriptor": "permissioned reusable supplier assurance exchange",
+    "control_point_category": "customer_relationship",
+    "control_point_descriptor": "supplier evidence profile reused across buyer requests",
+    "critical_dependency_category": "customer_adoption",
+    "critical_dependency_descriptor": "anchor buyers accepting standardized evidence"
+  },
+  "structure": {
+    "commercial_archetype": "B2B assurance marketplace",
+    "control_point": "Reusable supplier evidence profile",
+    "critical_dependency": "Buyer acceptance and secure specialist review"
+  },
+  "thesis": "NIS2-driven supply-chain scrutiny and SME expertise constraints create demand for evidence reuse across buyers rather than repeated spreadsheet questionnaires.",
+  "title": "NIS2 Vendor Evidence Exchange",
+  "uncertainties": [
+    "Polish transposition details and affected segments require legal validation.",
+    "Anchor-buyer adoption is unknown.",
+    "Security-certification cost is unknown."
+  ],
+  "version": 1
+}

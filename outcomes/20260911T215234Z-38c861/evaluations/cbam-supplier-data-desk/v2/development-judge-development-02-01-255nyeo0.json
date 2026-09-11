@@ -1,0 +1,117 @@
+{
+  "assumptions": [
+    "The opportunity is assessed at planning stage, so missing private validation is uncertainty rather than proof that the model cannot work.",
+    "The founder remains employed and limits work to five hours per day, using contractors only after prepaid demand supports them.",
+    "The base service provides analysis and monitoring but does not perform accredited emissions verification or control the regulatory filing.",
+    "Customers can lawfully provide shipment exports under ordinary service and data-processing agreements, although no such agreement is currently signed."
+  ],
+  "base_score": 5.2,
+  "candidate_id": "cbam-supplier-data-desk",
+  "candidate_sha256": "0110980c31f1c55a4942dc361073b1f9a6280db0702e107b352b58e99762f7b0",
+  "candidate_version": 2,
+  "constrained_score": 5.3,
+  "evaluation_type": "working_development",
+  "evidence_needed_for_higher_score": "Multiple paid diagnostics from in-scope importers showing quantified certificate or labor value, actual price tolerance and budget ownership, fully loaded delivery hours, CAC and sales cycles, conversion into prepaid monitoring, renewal or second-cycle payment, and signed rights permitting useful retention of mappings and anonymized benchmarks.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "The redesign identifies the more controllable decision: quantify certificate exposure and determine whether actual-value collection and verification are economically worthwhile. This directly incorporates the availability of default values instead of assuming supplier data is always essential.",
+      "score": 8,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Importers face real certificate exposure and recurring compliance work, and external CBAM solutions have buyer-use evidence. However, there is no proof that buyers will separately pay 6,000-15,000 PLN for this diagnostic or 1,500-4,000 PLN monthly for monitoring rather than use brokers, software, SAP, or internal analysis.",
+      "score": 5.5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Fixed scope, capped support, advance billing, pass-through specialist costs, and optional supplier work materially reduce delivery and working-capital risk. Pricing, delivery hours, CAC, conversion, contribution margin, retention, and owner earnings are still modeled rather than observed, with a much cheaper software benchmark constraining price.",
+      "score": 5.5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "In-scope importers with material certificate exposure form a more precise and economically coherent beachhead than broad mid-market importers. The exemption sharply narrows account count, regional spend is unknown, and the remaining larger buyers may have enterprise systems and longer procurement cycles.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "An integration-neutral default-versus-actual decision layer is more differentiated than generic data collection, but it is still readily addable by brokers, specialist vendors, and SAP. No exclusive channel, embedded workflow position, or proprietary method currently supports domination.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "Paid diagnostics can lead to recurring monitoring, bounded supplier escalation, adjacent commodities, more geographies, and other exposure or trade-compliance decisions. Those adjacencies become credible only if initial contracts permit lawful reuse of mappings and customers renew.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Reusable exposure models, integration mappings, and decision benchmarks could compound after enough paid cases. Current data rights are unsigned, benchmarks may be contractually restricted, switching costs are unproven, and incumbents can replicate the analytical feature.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "The proposed service can be more focused and lower-friction than a full implementation and could prevent uneconomic actual-data collection. Its claimed superiority in savings, speed, independence, and auditability has not been quantified, and customers have cheaper bundled or software alternatives.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "The definitive regime, published certificate prices, and approaching declaration cycles create an immediate decision window and recurring exposure updates. Competitive momentum is equally strong, as established vendors are already expanding their offerings.",
+      "score": 8,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "Founder-controlled account outreach avoids total dependence on brokers, while accountant, customs-adviser, and association referrals offer supplemental paths. No pipeline, referral agreement, conversion rate, sales-cycle evidence, or CAC exists, and the narrowed larger-account market may demand substantial direct selling.",
+      "score": 4.5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "The standardized diagnostic fits the founder's analytical skills, capital limit, AI leverage, and part-time schedule better than supplier-heavy operations. Key risks remain regulatory liability, data quality, cybersecurity, specialist oversight, enterprise sales cycles, and obtaining importer contracts and exports.",
+      "score": 6,
+      "status": "scored"
+    }
+  ],
+  "final_score": 5.3,
+  "highest_value_structural_change": "Secure a repeatable distribution and workflow foothold through signed importer or adviser agreements that embed the diagnostic in a recurring decision cycle and permit lawful reuse of anonymized mappings and benchmarks.",
+  "interaction_adjustment": 0.1,
+  "judge_id": "judge-development-02-01-255nyeo0",
+  "main_structural_strength": "The productized importer-side decision workflow avoids making supplier cooperation and ownership of verified emissions data essential to the base service, improving scope control, cash conversion, and part-time executability.",
+  "primary_score_limiter": "There is still no demonstrated reason for importers to pay a separate premium service, nor evidence that direct acquisition, renewal, and bounded delivery costs yield attractive fully loaded economics against cheap and bundled alternatives.",
+  "qualified": false,
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 3,
+  "strongest_disconfirming_evidence": "Specialist software already offers evidence collection, audit history, regulatory exports, and broker white-labelling for £199-£699 per month, while SAP can bundle exposure analysis into existing enterprise workflows.",
+  "unrounded_score": 5.3
+}

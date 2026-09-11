@@ -1,0 +1,338 @@
+{
+  "candidate_id": "eudr-geolocation-normalizer",
+  "candidate_sha256": "103310c35c207be525364103d54a4efda7a0abe97d008b994247535ca1eec2d6",
+  "candidate_version": 1,
+  "claims": [
+    {
+      "assessment": "evidence",
+      "claim_id": "rc-regulatory-trigger",
+      "evidence_refs": [
+        "src-eu-roles"
+      ],
+      "statement": "The EUDR applies to large and medium enterprises from 30 December 2026 and most micro and small enterprises from 30 June 2027; upstream operators must complete due diligence and submit a statement before placing relevant products on the EU market or exporting them."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "rc-technical-validation-need",
+      "evidence_refs": [
+        "src-eu-geojson",
+        "src-eu-validation"
+      ],
+      "statement": "The Commission system accepts production-place data in prescribed GeoJSON structures and applies concrete validation constraints, including WGS84 coordinates, valid geometries, point-area rules, coordinate ranges, producer limits, and a 25 MB geolocation-data limit per statement."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "rc-direct-buyer-adoption",
+      "evidence_refs": [
+        "src-osapiens-dek"
+      ],
+      "statement": "Deutsche Extrakt Kaffee selected the osapiens HUB for EUDR to combine supplier data, traceability, and compliance processes and integrate them with its SAP environment, demonstrating an identifiable operator buying an EUDR workflow solution, though the price and contract value are undisclosed."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "rc-referral-distribution-unknown",
+      "evidence_refs": [],
+      "statement": "No inspected evidence establishes signed referral arrangements, conversion rates, or repeatable customer acquisition through commodity consultants, certification firms, or traceability platforms for this candidate."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "rc-market-price-benchmark",
+      "evidence_refs": [
+        "src-eudrsoftware-pricing",
+        "src-radix-pricing"
+      ],
+      "statement": "Adjacent EUDR software is advertised from €62.50 per month for a limited relationship plan and at planned prices of €499 or €999 per month for broader compliance suites; these benchmarks suggest software budget exists but do not validate the candidate's proposed setup fee, per-plot pricing, CAC, labor cost, or margin."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "rc-own-unit-economics-unknown",
+      "evidence_refs": [],
+      "statement": "There is no direct evidence for this candidate's customer acquisition cost, analyst minutes per batch, contribution margin, overhead, payback period, renewal rate, or cash-conversion assumptions."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "rc-contractibility",
+      "evidence_refs": [
+        "src-eu-roles"
+      ],
+      "statement": "Operator service and processing access appear contractible because EU rules allow an EU-based company to act as an authorised representative under a formal written mandate, but that does not confer ownership of supplier plot data and no mandate, data-processing agreement, or customer contract exists for this candidate."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "rc-control-external",
+      "evidence_refs": [
+        "src-eu-roles",
+        "src-eu-system"
+      ],
+      "statement": "The essential workflow access is externally controlled: operators remain responsible for compliance and submission, suppliers or producers originate plot information, and access to the Commission Information System belongs to registered operators, traders, or their representatives."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "rc-incumbent-bundling",
+      "evidence_refs": [
+        "src-osapiens-dek",
+        "src-radix-pricing",
+        "src-eudrsoftware-pricing"
+      ],
+      "statement": "Direct substitutes already bundle supplier onboarding or connectivity, automated data validation, traceability, risk analysis, due-diligence statements, APIs, and ERP integration, placing a narrow normalization service under credible bundling pressure."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "rc-free-substitute",
+      "evidence_refs": [
+        "src-free-validator"
+      ],
+      "statement": "A free browser-based tool already validates EUDR GeoJSON, converts CSV, KML/KMZ, shapefiles and WKT into WGS84 GeoJSON, and provides map-based boundary editing, directly contradicting the premise that basic normalization and format validation alone command meaningful prices."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "rc-data-quality-dependency",
+      "evidence_refs": [
+        "src-thailand-study",
+        "src-eu-geojson"
+      ],
+      "statement": "Implementation depends on upstream data and capabilities: an EU-supported Thailand assessment identified gaps involving digital access, record keeping, geolocation data and traceability tools, while Commission specifications require precise compatible geometries and reject multiple malformed representations."
+    },
+    {
+      "assessment": "inference",
+      "claim_id": "rc-repeat-limited",
+      "evidence_refs": [
+        "src-eu-strategy"
+      ],
+      "statement": "The Commission states that producer geolocation can be obtained with relatively simple technical means and generally established once; therefore repeat normalization demand cannot be assumed for unchanged plots and must come from supplier turnover, new plots, changed source data, remediation, or broader workflow services."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "rc-cold-start-unknown",
+      "evidence_refs": [],
+      "statement": "No permissioned geometry-error corpus, exclusive supplier-data feed, customer feedback loop, or measured improvement curve has been demonstrated, so the proposed data moat and its cold-start path remain unvalidated."
+    },
+    {
+      "assessment": "unknown",
+      "claim_id": "rc-mechanism-ownership-unknown",
+      "evidence_refs": [],
+      "statement": "No deployed proprietary normalization software, registered intellectual property, exclusive rules corpus, production integration, or customer-controlled validation gate has been evidenced; only prospective software ownership is asserted."
+    },
+    {
+      "assessment": "evidence",
+      "claim_id": "rc-scope-reduction",
+      "evidence_refs": [
+        "src-eu-roles"
+      ],
+      "statement": "The December 2025 simplification removed due-diligence-statement submission duties from downstream operators and traders and gave qualifying micro or small primary operators simplified declarations, narrowing the addressable urgent buyer set relative to an all-supply-chain interpretation."
+    }
+  ],
+  "commercial_evidence": {
+    "buyer_or_paid_event": {
+      "claim_ids": [
+        "rc-direct-buyer-adoption"
+      ],
+      "source_ids": [
+        "src-osapiens-dek"
+      ],
+      "status": "evidence"
+    },
+    "distribution_and_acquisition": {
+      "claim_ids": [
+        "rc-referral-distribution-unknown"
+      ],
+      "source_ids": [],
+      "status": "unknown"
+    },
+    "fully_loaded_unit_economics": {
+      "claim_ids": [
+        "rc-market-price-benchmark"
+      ],
+      "source_ids": [
+        "src-eudrsoftware-pricing",
+        "src-radix-pricing"
+      ],
+      "status": "inference"
+    },
+    "rights_control_access_contractibility": {
+      "claim_ids": [
+        "rc-contractibility"
+      ],
+      "source_ids": [
+        "src-eu-roles"
+      ],
+      "status": "inference"
+    }
+  },
+  "contrary_evidence": [
+    "The free EUDR Geolocation Toolkit performs local GeoJSON validation, multi-format conversion, reprojection and map editing, showing that basic format normalization has a zero-price substitute and may be a feature rather than a standalone product.",
+    "Existing suites already combine supplier connectivity, real-time data validation, traceability, risk analysis, due-diligence statements, APIs and ERP integration, making incumbent bundling an observed product capability rather than a hypothetical response.",
+    "The 2025 simplification removed statement-submission duties from downstream operators and traders and introduced lighter reporting for qualifying micro or small primary operators, reducing the number and urgency of potential buyers.",
+    "The Commission says producer geolocation generally needs to be established only once, weakening an assumption of naturally recurring validation revenue for static plots."
+  ],
+  "critical_control_point_assessment": {
+    "assessment": "evidence",
+    "claim_ids": [
+      "rc-control-external"
+    ],
+    "source_ids": [
+      "src-eu-roles",
+      "src-eu-system"
+    ],
+    "status": "externally_controlled"
+  },
+  "falsification": {
+    "cold_start_and_data_moat": [
+      "rc-cold-start-unknown",
+      "rc-data-quality-dependency"
+    ],
+    "control_point_obtainability": [
+      "rc-contractibility",
+      "rc-control-external"
+    ],
+    "critical_mechanism_ownership": [
+      "rc-mechanism-ownership-unknown",
+      "rc-control-external"
+    ],
+    "external_dependencies": [
+      "rc-data-quality-dependency",
+      "rc-control-external",
+      "rc-referral-distribution-unknown"
+    ],
+    "substitutes_and_incumbent_response": [
+      "rc-incumbent-bundling",
+      "rc-free-substitute",
+      "rc-scope-reduction"
+    ],
+    "willingness_urgency_and_repeat_economics": [
+      "rc-regulatory-trigger",
+      "rc-direct-buyer-adoption",
+      "rc-market-price-benchmark",
+      "rc-own-unit-economics-unknown",
+      "rc-repeat-limited",
+      "rc-scope-reduction"
+    ]
+  },
+  "schema_version": 3,
+  "sources": [
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "rights_control_access",
+      "published_at": "unknown",
+      "publisher": "European Commission",
+      "source_id": "src-eu-roles",
+      "source_type": "official regulatory implementation webpage",
+      "stance": "context",
+      "title": "Understand roles and responsibilities under the EU Deforestation Regulation",
+      "url": "https://green-forum.ec.europa.eu/nature-and-biodiversity/deforestation-regulation-implementation/roles-and-responsibilities_en"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "regulatory",
+      "published_at": "2026-08-17",
+      "publisher": "European Commission",
+      "source_id": "src-eu-geojson",
+      "source_type": "official technical documentation",
+      "stance": "supporting",
+      "title": "EUDR GeoJSON File Description",
+      "url": "https://eudr.webcloud.ec.europa.eu/tracesnt/help/eudr-documentation/operator/geojson-description.html"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "regulatory",
+      "published_at": "unknown",
+      "publisher": "European Commission",
+      "source_id": "src-eu-validation",
+      "source_type": "official API and UI technical documentation",
+      "stance": "supporting",
+      "title": "API and UI Validation Rules",
+      "url": "https://eudr.webcloud.ec.europa.eu/tracesnt/help/eudr-documentation/operator/validation-rules.html"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "direct_buyer",
+      "published_at": "2026-07-30",
+      "publisher": "osapiens",
+      "source_id": "src-osapiens-dek",
+      "source_type": "vendor customer case study",
+      "stance": "supporting",
+      "title": "From Raw Coffee to the Field: How DEK Brings Transparency to Complex Supply Chains",
+      "url": "https://osapiens.com/en/resources/customer-case-studies/2026/from-raw-coffee-to-the-field-how-dek-brings-transparency-to-complex-supply-chains"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "unit_economics",
+      "published_at": "unknown",
+      "publisher": "EUDR Software",
+      "source_id": "src-eudrsoftware-pricing",
+      "source_type": "official vendor pricing page",
+      "stance": "contradicting",
+      "title": "EUDR-Software Preise & Tarife",
+      "url": "https://eudrsoftware.de/preise"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "unit_economics",
+      "published_at": "unknown",
+      "publisher": "Fordaq / Radix Tree",
+      "source_id": "src-radix-pricing",
+      "source_type": "official vendor product and pricing page",
+      "stance": "contradicting",
+      "title": "Radix Tree EUDR Supply Chain Platform",
+      "url": "https://eudr.fordaq.com/"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "incumbent",
+      "published_at": "unknown",
+      "publisher": "EUDR Geolocation Toolkit",
+      "source_id": "src-free-validator",
+      "source_type": "direct substitute product page",
+      "stance": "contradicting",
+      "title": "Free EUDR GeoJSON Validator & Converter",
+      "url": "https://www.eudrgeolocation.com/"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "market_context",
+      "published_at": "2025-11",
+      "publisher": "European Union External Action Service",
+      "source_id": "src-thailand-study",
+      "source_type": "official commissioned assessment PDF",
+      "stance": "context",
+      "title": "Assessment of Thailand's Existing Standards and Tools for EUDR Compliance",
+      "url": "https://www.eeas.europa.eu/sites/default/files/2025/documents/EUDR%20Study%201%20Assessment%20of%20Thailand%E2%80%99s%20Existing%20Standards%20and%20Tools%20for%20EUDR%20Compliance.pdf"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "rights_control_access",
+      "published_at": "unknown",
+      "publisher": "European Commission",
+      "source_id": "src-eu-system",
+      "source_type": "official information-system webpage",
+      "stance": "context",
+      "title": "The Information System of the Deforestation Regulation",
+      "url": "https://green-forum.ec.europa.eu/deforestation-regulation-implementation/deforestation-due-diligence-registry_en"
+    },
+    {
+      "accessed_at": "2026-09-11",
+      "evidence_class": "market_context",
+      "published_at": "unknown",
+      "publisher": "European Commission",
+      "source_id": "src-eu-strategy",
+      "source_type": "official policy communication annex",
+      "stance": "contradicting",
+      "title": "Strategic Framework for International Cooperation Engagement in the Context of the EUDR",
+      "url": "https://green-forum.ec.europa.eu/document/download/98053bb7-bb73-4157-bf35-a9ffa35e2ee2_en?filename=Annex+to+Communication+Strategic+Framework+for+International+Cooperation+EUDR.pdf"
+    }
+  ],
+  "unknowns": [
+    "No candidate-specific buyer interview, invoice, paid pilot, signed letter of intent, purchase order, or revenue evidence was found.",
+    "No candidate-specific CAC, lead-to-close conversion, sales-cycle length, channel commission, or acquisition payback evidence was found.",
+    "No signed consultant, certification-body, traceability-platform, operator, or supplier relationship was evidenced.",
+    "No fully loaded model based on observed plot volumes, remediation minutes, geospatial labor rates, hosting, security, insurance, legal review, support, failed batches, refunds, taxes, or channel costs was evidenced.",
+    "No evidence establishes willingness to pay the proposed 8,000-25,000 PLN setup fee or 2-10 PLN per-plot price for a narrow normalization service.",
+    "No evidence establishes renewal frequency, churn, annual contract value, gross retention, or whether operators treat normalization as recurring work rather than one-time cleanup.",
+    "No evidence establishes lawful persistent access to supplier plot data, permission to reuse error examples for model improvement, exclusivity, transferability, revocability, or post-termination retention rights.",
+    "No proprietary production mechanism, exclusive dataset, protected workflow integration, or measurable normalization-quality advantage was evidenced.",
+    "The volume and distribution of invalid supplier geometries across target commodities and operator sizes remain unknown.",
+    "It remains unknown whether further regulatory amendment, technical-system change, or deadline movement will alter urgency or required validation behavior.",
+    "No evidence demonstrates that the candidate can be delivered within the founder's part-time availability while meeting enterprise security, support, legal, and remediation requirements.",
+    "No inspected evidence makes the business legally impossible or proves an essential right unobtainable; the result is substantial commercial and control uncertainty, not demonstrated fatality."
+  ]
+}

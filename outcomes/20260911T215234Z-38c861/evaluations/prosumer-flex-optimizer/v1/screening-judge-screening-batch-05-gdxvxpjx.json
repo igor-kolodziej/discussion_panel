@@ -1,0 +1,116 @@
+{
+  "assumptions": [
+    "Any family-company pilot and installer distribution use explicit arm's-length agreements and customer consent.",
+    "The initial product begins read-only and adds control only after savings and technical reliability are demonstrated.",
+    "No broad device compatibility or warranty-safe control access is assumed."
+  ],
+  "base_score": 5.26,
+  "candidate_id": "prosumer-flex-optimizer",
+  "candidate_sha256": "18422089f62ba02467bd6c37ff3e76f9025ceeeabc5cf9458df8a3918145f396",
+  "candidate_version": 1,
+  "constrained_score": 5.06,
+  "evaluation_type": "working_screening",
+  "evidence_needed_for_higher_score": "A consented 20-site cohort showing net annual savings by profile, paid conversion at proposed prices, one reliable inverter integration, installer acquisition economics, low support burden, and renewal after a verified savings report.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "Hourly settlement makes timing losses visible, and a cross-brand optimizer could address gaps left by vendor-specific apps.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Negative-price periods demonstrate possible value loss, but savings are profile-dependent and the customer's investable annual benefit is unknown.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Setup plus annual software revenue is attractive in principle, but hardware, installation, commissions, support, churn, and savings dispersion threaten payback and margins.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "PV-and-battery owners are identifiable, yet only 4,836 households used dynamic contracts at end-2025 and compatible high-savings sites may be a small subset.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "Cross-brand independence is useful, but inverter manufacturers, retailers, and installers already control device interfaces and customer touchpoints.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "Success could extend from households to microbusinesses, EV charging, heat pumps, more devices, tariffs, and geographic markets.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Verified dispatch outcomes could accumulate into useful benchmarks, but API dependence and replaceable nonexclusive distribution weaken durability.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "Independent tariff optimization may improve savings and convenience, but no evidence shows gains large enough to overcome setup cost and incumbent apps.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "Smart-meter rollout and rapid dynamic-contract growth provide momentum from a very small base.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "Installer activation at commissioning is an efficient potential channel and fits the family context, but no rights, agreements, or CAC evidence exist.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "Simulation is a feasible low-risk start, but closed APIs, device heterogeneity, cybersecurity, electrical liability, and warranty disputes complicate automation.",
+      "score": 5,
+      "status": "scored"
+    }
+  ],
+  "final_score": 5.1,
+  "highest_value_structural_change": "Shift initial monetization toward installer-bundled optimization for newly commissioned batteries with guaranteed compatible hardware and a savings-linked fee.",
+  "interaction_adjustment": -0.2,
+  "judge_id": "judge-screening-batch-05-gdxvxpjx",
+  "main_structural_strength": "Installer-timed distribution and quantitative optimization create a capital-efficient route to test a recurring energy software offer.",
+  "primary_score_limiter": "The immediate high-value customer segment is small and per-site savings may not support acquisition, hardware, and support costs.",
+  "qualified": false,
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 3,
+  "strongest_disconfirming_evidence": "Only 4,836 households used dynamic contracts at end-2025, and supplier-price evidence indicates savings are not automatic across customer profiles.",
+  "unrounded_score": 5.06
+}

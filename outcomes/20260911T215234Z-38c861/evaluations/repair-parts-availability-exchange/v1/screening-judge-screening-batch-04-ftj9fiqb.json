@@ -1,0 +1,116 @@
+{
+  "assumptions": [
+    "The initial service forwards orders and does not hold inventory.",
+    "At least two distributors permit lawful use of sufficiently current catalog and availability data.",
+    "The public EU platform does not provide complete transaction-grade parts availability and SLA prediction."
+  ],
+  "base_score": 5.8,
+  "candidate_id": "repair-parts-availability-exchange",
+  "candidate_sha256": "716a66f3cce129f9d57bf8ff914c7c4d3a5994a7cf0ca7f6671ca5cce69940a7",
+  "candidate_version": 1,
+  "constrained_score": 5.7,
+  "evaluation_type": "working_screening",
+  "evidence_needed_for_higher_score": "Signed distributor data terms, a 20-shop pilot demonstrating frequent searches and paid conversion, measurable reductions in quote and completion time, positive margin after returns and support, and clarity on overlap with the public EU platform.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "Reliable compatibility, availability, price, and delivery information at quote time addresses a concrete bottleneck between repair demand and completion.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Stalled jobs consume repairer time and revenue, but evidence of Polish shops paying subscriptions or commissions for sourcing intelligence is absent.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Subscriptions plus commissions diversify revenue and avoid inventory initially, but catalog normalization, supplier commissions, low order values, returns, disputes, support, and thin transaction margins may erode economics.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "One appliance category, two distributors, and 20 shops is a sensible beachhead, although repair frequency and achievable revenue per shop remain unknown.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "A cross-brand graph could lead a fragmented niche, but manufacturers and major distributors control the essential data and fulfillment and can improve their own tools.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "Winning one category enables additional appliances, electronics, geographies, repair quoting, warranty routing, logistics, and refurbished-part supply.",
+      "score": 8,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Observed compatibility and delivery performance can compound, but access is nonexclusive and replaceable, with no current catalog rights or transaction density.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "A dependable cross-brand answer at quote time could substantially improve turnaround and conversion versus manual catalog searches, provided the data is complete and current.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "Right-to-repair obligations taking effect and the planned EU repair platform create a strong market-shaping moment, though the public platform may also absorb discovery value.",
+      "score": 8,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "Distributor channels and repair associations offer leverage, but the founder has no supplier, shop, or association access and distributors may prefer direct ownership.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "A forwarding pilot is capital-feasible and technically aligned, but data licensing, normalization, counterfeit risk, returns, fulfillment disputes, and ongoing catalog operations are substantial.",
+      "score": 5,
+      "status": "scored"
+    }
+  ],
+  "final_score": 5.7,
+  "highest_value_structural_change": "Secure transaction-grade catalog and inventory feeds from a distributor consortium with preferred fulfillment economics, making the exchange their cross-brand shop-facing channel rather than an unprivileged overlay.",
+  "interaction_adjustment": -0.1,
+  "judge_id": "judge-screening-batch-04-ftj9fiqb",
+  "main_structural_strength": "A cross-brand compatibility and observed-delivery graph can improve with transactions and support multiple adjacent repair workflows.",
+  "primary_score_limiter": "The business depends on supplier-controlled data and fulfillment without holding access rights, while transaction frequency and margin per shop remain unvalidated.",
+  "qualified": false,
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 3,
+  "strongest_disconfirming_evidence": "The planned public European repair platform may solve discovery, and parts-data rights holders may refuse access.",
+  "unrounded_score": 5.7
+}

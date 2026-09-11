@@ -1,0 +1,127 @@
+{
+  "candidate_id": "heat-pump-performance-guarantee",
+  "claims": [
+    {
+      "claim_id": "future-loss",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high for deployment bottlenecks; low-medium for guarantee demand",
+      "evidence_refs": [
+        "https://energy.ec.europa.eu/topics/energy-efficiency/heat-pumps_en"
+      ],
+      "statement": "EU sources identify high installation cost, complex customer journeys, installer shortages and unstable financing among heat-pump barriers; 750,000 more installers are estimated to be needed."
+    },
+    {
+      "claim_id": "market-growth",
+      "claim_type": "other",
+      "confidence": "medium-high",
+      "evidence_refs": [
+        "https://energy.ec.europa.eu/topics/energy-efficiency/heat-pumps/heat-pump-accelerator-platform_en"
+      ],
+      "statement": "Preliminary 2025 data cited by the Commission shows 2.34 million new heat pumps across 13 EU countries and 11% growth, supporting a future installed base requiring performance assurance."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "Homeowner, housing cooperative, installer or financing partner",
+    "bundling_resistance": "Independent pre-install prediction and post-install measured guarantee; OEMs and installers can bundle warranties",
+    "customer_relationship_owner": "unknown today; proposed future ownership by the prospective business under direct guarantee contracts, subject to installer-channel terms",
+    "distribution_origin": "Heat-pump installers, lenders, housing managers and energy auditors",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Assumption: 500-1,500 PLN per installation through installer channels",
+      "cash_conversion": "Guarantee fee at commissioning; claims paid later from reserved funds or insurer",
+      "contribution_margin": "Unknown until loss data exists; target 35-55% after monitoring, service and risk premium",
+      "delivery_and_support_costs": "Sensor/API integration, diagnostics, inspections and claim handling",
+      "overhead_and_compliance": "Insurance/legal structuring, reserves, actuarial review and consumer protection",
+      "revenue_basis": "Commissioning fee plus annual measured-performance protection",
+      "variable_costs": "Monitoring, inspections, remediation contribution and claims"
+    },
+    "likely_incumbent_response": "Installers, OEMs, utilities and insurers add performance guarantees",
+    "paid_event_or_measurable_loss": "Measured seasonal performance or heating-cost outcome falls below a contractually defined weather-normalized baseline",
+    "payer": "Property owner, installer seeking sales conversion or financing partner",
+    "purchase_trigger": "Heat-pump purchase and uncertainty about realized operating cost",
+    "renewal_event": "Annual monitoring and guarantee renewal"
+  },
+  "contrary_evidence": [
+    "Performance depends on occupant behavior, weather and tariffs, complicating claims.",
+    "Risk-transfer activity may require an authorized insurer and substantial reserves."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "No guarantee book or data rights held; proposed monitoring consent, installer workflow agreement and licensed insurer contract",
+    "acquisition_instrument_type": "unknown",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Sell non-guaranteed commissioning analytics or partner with a different insurer/installer",
+    "current_owner": "Owners control buildings and usage data; installers/OEMs control commissioning; licensed insurers control regulated risk capacity",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "unknown today; proposed future ownership by the prospective business under direct guarantee contracts, subject to installer-channel terms",
+    "duration": "unknown; proposed 3-year cover",
+    "exclusivity": "unknown",
+    "founder_access_basis": "operating_relationship",
+    "founder_access_description": "Parents' installer company could voluntarily support a consented pilot, but no customer data, contracts or capacity are currently granted",
+    "launch_controller": "Prospective business only with signed homeowner, installer and insurer agreements",
+    "mechanism_control": "dependent",
+    "renewal": "unknown",
+    "replaceability": "unknown",
+    "revocability": "unknown",
+    "status": "unknown",
+    "subject": "Weather-normalized heat-pump performance guarantee and monitoring dataset",
+    "subject_type": "right",
+    "transferability": "consent_required"
+  },
+  "discovery_lane": "future-backcast",
+  "economics": {
+    "acquisition_route": "Start as paid commissioning analytics on 30-50 consented installs, build loss curves, then seek insurer-backed guarantee capacity",
+    "capital_required_pln": 100000,
+    "founder_net_worth_path": "Assumption: 20,000 covered systems at 600 PLN annual net revenue yields 12m PLN revenue; at 15% EBITDA and a 5-7x specialty-services value, founder equity may exceed 5m PLN in years 9-13. Loss ratios and regulatory feasibility are unknown.",
+    "founder_time": "15-20 hours weekly for analytics pilot; regulated product launch needs specialists and insurer operations",
+    "gross_margin_basis": "Fees less monitoring, channel share, servicing and risk/insurance premium",
+    "payback": "Analytics pilot may repay in 18-24 months; guarantee book payback unknown until loss history",
+    "pricing": "Assumption: 1,000-2,500 PLN commissioning analysis plus 300-900 PLN annual cover",
+    "retention_or_repeat": "Multi-year monitoring, renewals and installer portfolio growth"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Weather-normalized Polish installation performance and failure dataset",
+    "customer": "Polish homeowners, housing groups and heat-pump installers",
+    "distribution_mechanism": "Installer and lender point-of-sale channels",
+    "offer_and_business_model": "Analytics evolving into insurer-backed performance protection",
+    "payer_and_paid_event": "Owner or channel pays at commissioning; claim event is underperformance",
+    "problem_trigger": "Electrified heating scales faster than trusted installation outcomes"
+  },
+  "founder_fit": [
+    "Renewable installation and quantitative modeling fit.",
+    "A consented analytics pilot is capital-feasible.",
+    "Regulated risk transfer exceeds solo-founder competence and requires partners."
+  ],
+  "parent": null,
+  "risks": [
+    "Adverse selection",
+    "Regulatory authorization",
+    "Sparse loss data",
+    "Installer channel conflict"
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://energy.ec.europa.eu/topics/energy-efficiency/heat-pumps_en",
+    "https://energy.ec.europa.eu/topics/energy-efficiency/heat-pumps/heat-pump-accelerator-platform_en"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "risk_transfer_or_financing",
+    "commercial_model_descriptor": "measured heat pump performance protection",
+    "control_point_category": "proprietary_dataset",
+    "control_point_descriptor": "weather normalized installation outcome history",
+    "critical_dependency_category": "capital_provider",
+    "critical_dependency_descriptor": "licensed insurer and claims capacity"
+  },
+  "structure": {
+    "commercial_archetype": "Data-led performance guarantee",
+    "control_point": "Installation-specific baseline and loss dataset",
+    "critical_dependency": "Insurer capacity and consented telemetry"
+  },
+  "thesis": "Future state: heat-pump buyers purchase a measured outcome, not just equipment. The missing financial mechanism is an insurer-backed, weather-normalized performance guarantee grounded in commissioning and operating data.",
+  "title": "Heat-Pump Performance Guarantee",
+  "uncertainties": [
+    "Insurance classification",
+    "Minimum credible dataset",
+    "Loss-ratio distribution"
+  ],
+  "version": 1
+}

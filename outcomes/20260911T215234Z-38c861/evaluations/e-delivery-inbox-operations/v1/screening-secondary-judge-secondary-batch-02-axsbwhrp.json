@@ -1,0 +1,116 @@
+{
+  "assumptions": [
+    "The stated October 2026 obligation remains sufficiently intact to create near-term demand among the targeted firms.",
+    "Customers can lawfully forward or authorize access to messages for a limited pilot.",
+    "Accounting firms are willing to distribute a third-party triage service if liability, access, and commercial terms are acceptable."
+  ],
+  "base_score": 5.19,
+  "candidate_id": "e-delivery-inbox-operations",
+  "candidate_sha256": "2bb2a673b3e13f1e3ac57cde50984e3ee2752b96d2b8d24d5030dd3f27f820fa",
+  "candidate_version": 1,
+  "constrained_score": 4.99,
+  "evaluation_type": "working_screening_secondary",
+  "evidence_needed_for_higher_score": "A paid pilot through at least one accounting firm covering 30 or more entities, with measured message frequency, handling time saved, deadline-error reduction, portfolio conversion, retention after initial activation, analyst minutes per entity, security and liability costs, and written evidence of scalable mailbox authorization or integration access.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "Positioning around accountable triage, deadline assignment, and evidence trails rather than duplicating a free mailbox is a sound reframing. It addresses the operational layer where multi-entity users may experience complexity.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Official correspondence can create consequential deadline risk, but the public inbox is free and supports administrator delegation. Actual message frequency, handling burden, and paid demand for a managed layer have not been demonstrated.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Prepaid recurring per-entity subscriptions offer good cash conversion and portfolio distribution could lower CAC. At 49-149 PLN monthly, analyst escalation, security, insurance, onboarding, and support can consume margins; the assumed 8,000-entity scale and 70% target margin lack validation.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Accounting firms managing many Polish entities provide a focused beachhead with aggregated workflow pain and meaningful portfolio reach. The economically active segment may be much narrower if most SMEs receive few messages or find native delegation adequate.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "Multi-provider workflow and escalation SLAs could earn a niche position, but public providers and accounting-software vendors control adjacent infrastructure and can add alerts or routing. There is no exclusive access, authorization, or signed accounting channel.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "The workflow could expand into broader official-document operations, compliance calendars, response coordination, and other European administrative channels. Regulatory and provider differences may limit how readily the playbook transfers.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Resolution playbooks and workflow history could improve routing and produce moderate switching costs. Document classification is replicable, customers can revoke access, and incumbents can bundle similar functions into software already used by accountants.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "Accountable assignment and human escalation may be materially more reliable than passive mailbox alerts for multi-entity operators. The advantage over native administration tools and existing accounting workflows is not quantified, and low message volume could make it marginal.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "The stated October 2026 obligation creates a near-term activation and education window for existing CEIDG firms. The opportunity is weakened by legislative scope uncertainty and the possibility that onboarding demand is temporary rather than durable operational demand.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "One accounting partner can expose the service to many entities, giving the proposed channel strong theoretical leverage and compatibility with part-time validation. No accountant commitment, portfolio conversion evidence, or demonstrated 300-800 PLN CAC is supplied.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "A forwarded-message pilot is inexpensive and well aligned with the founder's AI and data skills. Sensitive correspondence, deadline liability, authorization, unavailable integrations, analyst coverage, and security obligations make dependable SLA delivery substantially harder than the classifier itself.",
+      "score": 5,
+      "status": "scored"
+    }
+  ],
+  "final_score": 5,
+  "highest_value_structural_change": "Make accounting firms the contracted portfolio customer and embed the service into their multi-entity operating workflow with durable authorization, audit trails, and minimum-volume commitments.",
+  "interaction_adjustment": -0.2,
+  "judge_id": "judge-secondary-batch-02-axsbwhrp",
+  "main_structural_strength": "Accounting-firm portfolio distribution can aggregate a fragmented compliance workflow and make low-priced per-entity subscriptions economically reachable.",
+  "primary_score_limiter": "The free delegated mailbox may already be sufficient for most SMEs, leaving message volume, willingness to pay, and support-adjusted unit economics uncertain.",
+  "qualified": false,
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 3,
+  "strongest_disconfirming_evidence": "The government mailbox is free and supports administrator delegation, while proposed legislative changes introduce uncertainty about the breadth and urgency of the mandated workflow.",
+  "unrounded_score": 4.99
+}

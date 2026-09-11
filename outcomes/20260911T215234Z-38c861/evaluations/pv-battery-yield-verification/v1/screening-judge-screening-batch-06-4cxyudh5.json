@@ -1,0 +1,116 @@
+{
+  "assumptions": [
+    "Customer-consented telemetry exports or APIs can be obtained for an initial cross-brand sample.",
+    "At least one institutional payer experiences losses large enough to justify recurring monitoring.",
+    "The founder can limit manual review sufficiently to preserve software-like margins."
+  ],
+  "base_score": 6.02,
+  "candidate_id": "pv-battery-yield-verification",
+  "candidate_sha256": "0ef1576ae93225f8b3c823b987ea46be80491fd1d7b4c060cf0b9b2da41bfe6c",
+  "candidate_version": 1,
+  "constrained_score": 6.12,
+  "evaluation_type": "working_screening",
+  "evidence_needed_for_higher_score": "A permissioned 20-system pilot showing reproducible fault detection, quantified recovered value, low false-positive rates, and at least two paid renewals or institutional monitoring commitments.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "Independent cross-brand evidence can resolve the trust gap between vendor telemetry, modeled output, and remediation responsibility.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Lost yield and warranty disputes create measurable value, but the frequency, recoverable loss, and best-paying institutional customer remain unvalidated.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Prepaid checks and recurring monitoring could support strong margins, yet connector, analyst, liability, and acquisition costs are assumptions and the 25,000-asset path is demanding.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "A consented installer pilot is narrow and reachable, but the initial residential segment may have low willingness to pay and the institutional beachhead is not selected.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "Vendor-neutral verification is differentiated, though vendors, installers, and existing monitoring providers can cover much of the workflow.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "Validated performance data can extend from commissioning into portfolio diligence, warranty support, insurance, lending, and commercial assets.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Permissioned fault signatures and remediation outcomes could compound, but telemetry access is nonexclusive, revocable, and vendor-dependent.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "Independence and cross-brand diagnosis may improve trust and remediation, but superiority over portal analytics has not been quantified.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "Growing paired PV-storage deployment increases the installed base and complexity that require performance verification.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "Family-installer access enables a credible pilot, while scalable access to distributors, lenders, or insurers is still hypothetical.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "The founder fits time-series analytics and can outsource fieldwork, but lawful telemetry, normalization, API stability, and attribution liability are material risks.",
+      "score": 6,
+      "status": "scored"
+    }
+  ],
+  "final_score": 6.1,
+  "highest_value_structural_change": "Choose one institutional beachhead and secure durable portfolio telemetry rights plus outcome-linked remediation data under a multi-year contract.",
+  "interaction_adjustment": 0.1,
+  "judge_id": "judge-screening-batch-06-4cxyudh5",
+  "main_structural_strength": "The service ties independent, cross-brand analytics to measurable asset underperformance and recurring remediation evidence.",
+  "primary_score_limiter": "The business lacks durable telemetry control and validated willingness to pay from a clearly selected institutional customer.",
+  "qualified": false,
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 3,
+  "strongest_disconfirming_evidence": "Vendor portals already expose production data, while weather and household-load variance can make incremental diagnosis and savings attribution contentious.",
+  "unrounded_score": 6.12
+}

@@ -1,0 +1,116 @@
+{
+  "assumptions": [
+    "Preventable quote or handover errors occur often enough in the target installer segment to create annual savings above subscription cost.",
+    "Permissioned historical or synthetic cases adequately support initial validation without customer-data rights.",
+    "Human approval can contain liability without eliminating the product's labor savings."
+  ],
+  "base_score": 6.62,
+  "candidate_id": "pv-quote-margin-guard",
+  "candidate_sha256": "8f8cd61e8401647f71c52b7247b1862611573a0d15d2462fdea673fa283b756c",
+  "candidate_version": 1,
+  "constrained_score": 6.82,
+  "evaluation_type": "working_screening",
+  "evidence_needed_for_higher_score": "A blinded test on at least 50 permissioned quotes showing material errors caught, measured avoided losses, acceptable false positives, and several independent installers paying and renewing at the proposed price.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "Embedding maintained equipment and OSD checks at quote approval and handover directly targets preventable margin leakage and delayed invoices.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Margin errors and rejected paperwork can be costly, but their frequency and installer willingness to pay 900-1,800 PLN monthly are untested.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "Prepaid setup plus recurring SaaS offers good cash conversion and plausible high margins, although support, rule maintenance, churn, CAC, and owner earnings remain modeled.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Polish renewable installers with 5-50 staff form a coherent, reachable niche with repeat workflows, though very small firms may remain spreadsheet users.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "A Polish equipment-and-OSD rules layer can win a focused workflow, but CRM vendors and wholesalers can add similar validation.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "The product can extend into batteries, heat pumps, procurement, estimator training, compliance packs, and margin benchmarking.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "An anonymized error taxonomy and continuously maintained rules library can compound, but inputs are obtainable and access is nonexclusive.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "Preventing one material quote error could repay the product quickly, giving a clear value proposition if detection accuracy is demonstrated.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "Equipment variety and administrative handover complexity support adoption, but the micro-installation process can be relatively streamlined.",
+      "score": 6,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "The family installer is a practical design route and wholesalers or associations could aggregate demand, although no channel or subscription is committed.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "The low-capital, AI-assisted product fits part-time technical execution; principal risks are rule upkeep, workflow integration, and liability from incorrect checks.",
+      "score": 7,
+      "status": "scored"
+    }
+  ],
+  "final_score": 6.8,
+  "highest_value_structural_change": "Turn the rules engine into a wholesaler-embedded quote gate with contracted distribution and continuously supplied product-data updates.",
+  "interaction_adjustment": 0.2,
+  "judge_id": "judge-screening-batch-06-4cxyudh5",
+  "main_structural_strength": "A narrow recurring workflow connects an avoidable financial loss to a low-capital subscription product that suits the founder's access and skills.",
+  "primary_score_limiter": "Neither the actual loss frequency nor willingness to adopt and pay for a new approval gate has been demonstrated beyond the family access path.",
+  "qualified": false,
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 3,
+  "strongest_disconfirming_evidence": "Small installers may tolerate spreadsheets, and streamlined micro-installation paperwork could make the proposed subscription cost exceed the recurring pain.",
+  "unrounded_score": 6.82
+}

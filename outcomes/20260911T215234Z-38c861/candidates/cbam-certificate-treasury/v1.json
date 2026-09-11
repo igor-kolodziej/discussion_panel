@@ -1,0 +1,126 @@
+{
+  "candidate_id": "cbam-certificate-treasury",
+  "claims": [
+    {
+      "claim_id": "paid-event",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en"
+      ],
+      "statement": "From 2026, qualifying importers must declare embedded emissions and surrender CBAM certificates, whose price tracks EU ETS auctions, creating cash, forecasting and evidence exposure."
+    },
+    {
+      "claim_id": "payer",
+      "claim_type": "payer_and_budget",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en"
+      ],
+      "statement": "Authorized CBAM declarants importing more than the stated 50-tonne threshold are the direct economic actors, but appetite for outsourced treasury operations is unknown."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "CFO, tax director or trade-compliance head",
+    "bundling_resistance": "Joint emissions-data and cash-exposure forecast; customs brokers and Big Four firms can bundle",
+    "customer_relationship_owner": "unknown today; proposed future ownership by the prospective business under direct declarant mandates",
+    "distribution_origin": "Customs brokers, freight forwarders and finance advisers",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Assumption: 8,000-25,000 PLN per importer",
+      "cash_conversion": "Retainer prepaid monthly; certificate cash remains customer-owned",
+      "contribution_margin": "Assumption: 55-70% after analyst review and partner fees",
+      "delivery_and_support_costs": "Data reconciliation, scenario modeling and filing support",
+      "overhead_and_compliance": "Legal advice, insurance, secure controls and segregation of duties",
+      "revenue_basis": "Monthly retainer plus volume tier; no speculative certificate trading",
+      "variable_costs": "Data feeds, customs partner and carbon-accounting review"
+    },
+    "likely_incumbent_response": "Customs brokers, accountants and ERP vendors extend CBAM services",
+    "paid_event_or_measurable_loss": "Certificate purchase and annual surrender against verified embedded emissions; measurable loss is excess working capital, penalties or shipment friction",
+    "payer": "Authorized CBAM declarant or indirect customs representative",
+    "purchase_trigger": "Crossing the import threshold, annual declaration or volatile certificate exposure",
+    "renewal_event": "Monthly import cycle and annual surrender"
+  },
+  "contrary_evidence": [
+    "Customers may retain treasury internally due to liability.",
+    "Simplified thresholds reduce the smaller-importer market."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "No present mandate; proposed workflow-integration and advisory agreement without custody of customer funds",
+    "acquisition_instrument_type": "unknown",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Sell scenario software without operational mandate or partner with another customs broker",
+    "current_owner": "Declarants control imports, funds and filings; national authorities control certificate accounts",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "unknown today; proposed future ownership by the prospective business under direct declarant mandates",
+    "duration": "unknown; proposed annual advisory term",
+    "exclusivity": "unknown",
+    "founder_access_basis": "none",
+    "founder_access_description": "No present importer mandate or registry access",
+    "launch_controller": "Prospective business only after customer authorization; certificate execution remains with declarant or regulated partner",
+    "mechanism_control": "dependent",
+    "renewal": "unknown",
+    "replaceability": "replaceable",
+    "revocability": "unknown",
+    "status": "unknown",
+    "subject": "CBAM exposure forecasting and certificate-surrender workflow",
+    "subject_type": "transaction",
+    "transferability": "nontransferable"
+  },
+  "discovery_lane": "future-backcast",
+  "economics": {
+    "acquisition_route": "Sell fixed-fee exposure diagnostics, avoid fund custody, then integrate recurring forecasts with one customs partner",
+    "capital_required_pln": 35000,
+    "founder_net_worth_path": "Assumption: 180 customers at 60,000 PLN annual revenue and 25% EBITDA yields 2.7m PLN EBITDA; 4-6x supports 5m+ founder equity in years 6-8. Liability, sales cycles and pricing are unknown.",
+    "founder_time": "15-20 hours weekly until analyst and trade specialist are hired",
+    "gross_margin_basis": "Retainers less carbon-accounting review, integrations and customer support",
+    "payback": "Assumption: 6-10 diagnostics repay build cost within 12 months",
+    "pricing": "Assumption: 8,000-25,000 PLN diagnostic and 3,000-12,000 PLN monthly retainer",
+    "retention_or_repeat": "Recurring imports, price changes and annual declarations"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Importer-specific emissions/cash forecast history and reconciliation rules",
+    "customer": "CEE importers of CBAM goods",
+    "distribution_mechanism": "Customs and finance-adviser referrals",
+    "offer_and_business_model": "Managed certificate-exposure treasury without custody",
+    "payer_and_paid_event": "Declarant pays around certificate purchases and annual surrender",
+    "problem_trigger": "Variable carbon-certificate liability enters import working capital"
+  },
+  "founder_fit": [
+    "Finance and data-science interests align.",
+    "Software-first start avoids regulated custody.",
+    "B2B analytical delivery limits social exposure."
+  ],
+  "parent": null,
+  "risks": [
+    "Advisory liability",
+    "Broker disintermediation",
+    "Scope changes",
+    "Customers resist sharing procurement data"
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "managed_service",
+    "commercial_model_descriptor": "carbon certificate exposure treasury retainer",
+    "control_point_category": "transaction_rail",
+    "control_point_descriptor": "embedded import to surrender reconciliation workflow",
+    "critical_dependency_category": "rights_holder",
+    "critical_dependency_descriptor": "authorized declarant retains registry and fund control"
+  },
+  "structure": {
+    "commercial_archetype": "Managed treasury and compliance analytics",
+    "control_point": "Import-emissions-certificate reconciliation workflow",
+    "critical_dependency": "Declarant authorization and verified producer emissions"
+  },
+  "thesis": "Future state: CBAM certificates are a recurring treasury exposure for importers. The missing financial-coordination mechanism is a non-custodial workflow forecasting liability, reconciling evidence and scheduling surrender.",
+  "title": "CBAM Certificate-Treasury Desk",
+  "uncertainties": [
+    "Permissible advisory boundary",
+    "Customer savings versus internal process",
+    "Certificate-price volatility impact"
+  ],
+  "version": 1
+}

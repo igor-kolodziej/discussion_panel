@@ -1,0 +1,116 @@
+{
+  "assumptions": [
+    "EHDS implementation will leave meaningful normalization responsibility with laboratories or their software vendors.",
+    "Synthetic-data conformance testing can produce a sellable readiness product before access to patient data.",
+    "Specialist clinical and regulatory expertise can be contracted without making early account economics unattractive."
+  ],
+  "base_score": 4.71,
+  "candidate_id": "ehds-lab-normalization-node",
+  "candidate_sha256": "7dbd0e96dd7227df768b7a88e5e8957007fa125b584028df50a9ac9a6af01ea6",
+  "candidate_version": 1,
+  "constrained_score": 4.51,
+  "evaluation_type": "working_screening",
+  "evidence_needed_for_higher_score": "A paid readiness engagement with a laboratory or LIS vendor, access to representative de-identified schemas, a demonstrated normalization-quality advantage, and written partner intent to embed or resell the node under the emerging specifications.",
+  "factors": [
+    {
+      "effective_weight": 2,
+      "name": "Core insight",
+      "original_weight": 2,
+      "rationale": "Heterogeneous laboratory semantics are a real interoperability problem, and a validated normalization and conformance node is logically positioned between LIS and EHR systems; the eventual architecture may assign that function elsewhere.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 15,
+      "name": "Customer pain and willingness to pay",
+      "original_weight": 15,
+      "rationale": "Failed exchange and implementation rework can justify institutional spending, but the main lab-result deadline is distant and there is no private evidence of present budgets, failed tests, or willingness to buy a separate node.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 22,
+      "name": "Business model and economics",
+      "original_weight": 22,
+      "rationale": "High implementation and annual monitoring prices could support valuable accounts and sticky revenue, but clinical review, integration, security, certification, and slow procurement constrain margins and make the projected 60-account path uncertain.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Market and beachhead",
+      "original_weight": 8,
+      "rationale": "Polish private laboratories or an LIS partner provide an identifiable beachhead, yet buyer ownership is split among labs, clinics, vendors, and national infrastructure, and the economically accessible account count is unclear.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 9,
+      "name": "Competitive position and domination potential",
+      "original_weight": 9,
+      "rationale": "Established LIS/EHR vendors control interfaces and can internalize mandatory exports. A specialist could dominate a narrow terminology niche only with vendor endorsement or an authoritative mapping corpus.",
+      "score": 4,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 5,
+      "name": "Expansion potential",
+      "original_weight": 5,
+      "rationale": "The capability could extend from laboratory results to imaging, discharge records, other countries, data-quality monitoring, migrations, and conformance testing.",
+      "score": 7,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 10,
+      "name": "Defensibility and durability",
+      "original_weight": 10,
+      "rationale": "Validated mappings, test cases, audit history, and embedded integrations could compound, but data rights are absent and common standards or national tooling may commoditize much of the layer.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 8,
+      "name": "Strength of advantage",
+      "original_weight": 8,
+      "rationale": "A focused node could offer better lab terminology quality and monitoring than generic interfaces, but no benchmark shows superior accuracy, implementation time, or compliance outcomes.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Timing and momentum",
+      "original_weight": 4,
+      "rationale": "EHDS creates clear long-run momentum, but lab exchange phases toward 2031 and implementing specifications and Polish procurement routes remain unresolved, making this early for a production product.",
+      "score": 5,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 13,
+      "name": "Distribution",
+      "original_weight": 13,
+      "rationale": "Health-IT integrators and LIS vendors are logical channels, but none is committed, incumbents control access, institutional procurement is slow, and direct selling is poorly matched to the founder's preferences.",
+      "score": 3,
+      "status": "scored"
+    },
+    {
+      "effective_weight": 4,
+      "name": "Execution and risks",
+      "original_weight": 4,
+      "rationale": "Synthetic conformance tooling is feasible part-time, but deployment needs clinical informatics, lawful processing, security assurance, possibly medical-software analysis, vendor interfaces, and long enterprise support cycles near the founder's capital limit.",
+      "score": 3,
+      "status": "scored"
+    }
+  ],
+  "final_score": 4.5,
+  "highest_value_structural_change": "Recast the initial customer as an established LIS vendor and obtain an embedded distribution agreement with access to representative schemas, reducing both channel and interface-control risk.",
+  "interaction_adjustment": -0.2,
+  "judge_id": "judge-screening-batch-03-mb92jg4t",
+  "main_structural_strength": "Evolving mandatory interoperability can create sticky, high-value integration and monitoring work with reusable semantic assets.",
+  "primary_score_limiter": "The opportunity is distant and depends on specifications, procurement, data rights, and interfaces controlled by powerful healthcare incumbents.",
+  "qualified": false,
+  "rubric_id": "holistic-11-v1",
+  "rubric_sha256": "3460cbf1226930081478cc5b87f8b49c28c6f6b21f037cf5d831b552a8b230cc",
+  "schema_version": 3,
+  "strongest_disconfirming_evidence": "National infrastructure or incumbent EHR/LIS vendors may absorb the normalization function, leaving little standalone product demand.",
+  "unrounded_score": 4.51
+}

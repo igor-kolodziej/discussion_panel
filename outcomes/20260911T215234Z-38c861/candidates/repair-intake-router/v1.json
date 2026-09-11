@@ -1,0 +1,136 @@
+{
+  "candidate_id": "repair-intake-router",
+  "claims": [
+    {
+      "claim_id": "repair-trigger",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://commission.europa.eu/news-and-media/news/right-repair-new-consumer-rights-easy-and-attractive-repairs-2026-07-31_en",
+        "https://www.consilium.europa.eu/en/policies/right-to-repair-products/"
+      ],
+      "statement": "New EU repair rights have applied since 31 July 2026, extend seller liability by at least 12 months when repair is chosen, and require accessible repair information and reasonable access to repair."
+    },
+    {
+      "claim_id": "repair-transaction",
+      "claim_type": "paid_event_or_measurable_loss",
+      "confidence": "high",
+      "evidence_refs": [
+        "https://www.consilium.europa.eu/en/policies/right-to-repair-products/"
+      ],
+      "statement": "Consumers currently pay repairers for covered appliance and electronics repairs, while manufacturers and sellers bear intake, routing, parts, and guarantee-administration costs."
+    },
+    {
+      "claim_id": "repair-payer",
+      "claim_type": "payer_and_budget",
+      "confidence": "medium",
+      "evidence_refs": [
+        "https://commission.europa.eu/news-and-media/news/right-repair-new-consumer-rights-easy-and-attractive-repairs-2026-07-31_en"
+      ],
+      "statement": "A manufacturer, retailer, insurer, or repair network may pay per routed case; the future EU platform may reduce their willingness to use a private router."
+    }
+  ],
+  "commercial_mechanics": {
+    "budget_owner": "After-sales service, warranty, or operations director",
+    "bundling_resistance": "The planned public EU platform will aid discovery; private value must come from triage, capacity confirmation, SLA routing, and case evidence",
+    "customer_relationship_owner": "Unknown today; proposed contracts with repair networks and retailers",
+    "distribution_origin": "White-label retailer intake, insurer partnerships, and search acquisition",
+    "fully_loaded_economics": {
+      "acquisition_cost": "Assumption: 20,000-80,000 PLN per anchor retailer or 50-150 PLN per consumer repair",
+      "cash_conversion": "Platform minimum monthly plus per completed repair",
+      "contribution_margin": "Assumption: 45-65% after intake support and payment costs",
+      "delivery_and_support_costs": "Assumption: automated triage with 5-15 minutes human exception time per case",
+      "overhead_and_compliance": "Consumer law, payment terms, warranty boundaries, insurance, and GDPR",
+      "revenue_basis": "Per completed repair plus network software fee",
+      "variable_costs": "Consumer acquisition, triage, payment processing, disputes, and repairer onboarding"
+    },
+    "likely_incumbent_response": "Retailers, manufacturers, and the EU platform improve native repair routing",
+    "paid_event_or_measurable_loss": "Current consumer repair payments and business labor spent diagnosing, quoting, locating capacity, routing parts, and documenting warranty extensions",
+    "payer": "Retailer, manufacturer, insurer, repair network, or consumer depending channel",
+    "purchase_trigger": "Repair request for a covered product, unavailable local capacity, or retailer warranty intake",
+    "renewal_event": "Each repair transaction; annual network contracts"
+  },
+  "contrary_evidence": [
+    "A European repair platform is expected in 2027 and may commoditize discovery.",
+    "Repair quality and economics vary sharply by product and geography."
+  ],
+  "critical_control_point": {
+    "acquisition_instrument": "Proposed nonexclusive repairer capacity reservations and retailer intake agreements; unsigned",
+    "acquisition_instrument_type": "capacity_reservation",
+    "confidential_employer_resource_dependency": "none",
+    "counterparty_refusal_fallback": "Operate as a quote-comparison directory without guaranteed slots or warranty routing",
+    "current_owner": "Repairers control capacity; retailers and manufacturers control warranty intake",
+    "customer_relationship_control": "unknown",
+    "customer_relationship_owner": "Unknown today; proposed contracts with repair networks and retailers",
+    "duration": "Unknown until signed",
+    "exclusivity": "nonexclusive",
+    "founder_access_basis": "none",
+    "founder_access_description": "No current repair capacity, retailer intake, or customer relationship is controlled",
+    "launch_controller": "Prospective business after counterparties reserve slots; repairers control fulfillment",
+    "mechanism_control": "unknown",
+    "renewal": "Proposed rolling capacity agreement; unsigned",
+    "replaceability": "replaceable",
+    "revocability": "unknown",
+    "status": "unknown",
+    "subject": "Verified local repair capacity and triaged case routing",
+    "subject_type": "capacity",
+    "transferability": "consent_required"
+  },
+  "discovery_lane": "weak-signal",
+  "economics": {
+    "acquisition_route": "Start in Warsaw with one appliance category, manually validate ten repairers, route 100 paid cases, then sell white-label intake",
+    "capital_required_pln": 75000,
+    "founder_net_worth_path": "Assumption: 50,000 annual completed repairs at 100 PLN net revenue yields 5m PLN revenue; at 15% owner earnings plus network equity, 5m PLN net worth may take 7-12 years. Capacity density, CAC, and disputes are unknown.",
+    "founder_time": "20-25 hours weekly initially; dispatch and support need hiring before scale",
+    "gross_margin_basis": "Transaction and platform revenue less acquisition, triage, payment, and dispute costs",
+    "payback": "Assumption: consumer CAC payback within the first job; enterprise acquisition within 18 months",
+    "pricing": "Assumption: 50-150 PLN platform revenue per completed repair plus 2,000-10,000 PLN monthly white-label minimum",
+    "retention_or_repeat": "Low consumer frequency but repeated retailer volume and repairer utilization"
+  },
+  "fingerprint": {
+    "compounding_advantage": "Failure-mode, quote, completion, and repairer reliability data",
+    "customer": "Retailers and consumers needing covered appliance repair",
+    "distribution_mechanism": "White-label retail intake and local search",
+    "offer_and_business_model": "Triaged repair-capacity marketplace",
+    "payer_and_paid_event": "Retailer or consumer pays when a repair is booked and completed",
+    "problem_trigger": "New repair rights increase formal repair intake and warranty administration"
+  },
+  "founder_fit": [
+    "Founder can build data-driven triage and reliability scoring.",
+    "Warsaw offers a dense pilot geography.",
+    "Operations are measurable, though more people-intensive than preferred."
+  ],
+  "parent": null,
+  "risks": [
+    "The public platform may disintermediate discovery.",
+    "Repair disputes and low-quality providers can damage trust.",
+    "Marketplace operations may exceed part-time capacity."
+  ],
+  "schema_version": 3,
+  "source_refs": [
+    "https://commission.europa.eu/news-and-media/news/right-repair-new-consumer-rights-easy-and-attractive-repairs-2026-07-31_en",
+    "https://www.consilium.europa.eu/en/policies/right-to-repair-products/"
+  ],
+  "stage": "discovery",
+  "structural_signature": {
+    "commercial_model_category": "marketplace",
+    "commercial_model_descriptor": "triaged local repair capacity routing",
+    "control_point_category": "contracted_capacity",
+    "control_point_descriptor": "reserved verified repair slots by category and postcode",
+    "critical_dependency_category": "capacity_provider",
+    "critical_dependency_descriptor": "reliable independent repairer supply"
+  },
+  "structure": {
+    "commercial_archetype": "Capacity marketplace",
+    "control_point": "Verified repair slots linked to diagnostic intake",
+    "critical_dependency": "Repairer density, quality, and public-platform positioning"
+  },
+  "thesis": "The newly applicable right-to-repair regime shifts repair from informal discovery toward documented intake, creating room for a capacity-aware router before the public platform matures.",
+  "title": "Repair Intake and Capacity Router",
+  "uncertainties": [
+    "Case volume caused by the new rules is unknown.",
+    "Repairer willingness to reserve capacity is unknown.",
+    "Who will pay the routing fee is unresolved."
+  ],
+  "version": 1
+}
