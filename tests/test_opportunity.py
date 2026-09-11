@@ -2957,6 +2957,116 @@ class ScoreBracketWorkflowTests(OpportunityTestCase):
         self.assertTrue(op.correction_content_differences(research, changed, "research"))
         self.assertTrue(op.correction_content_differences({"score": 4}, {"score": 5}, "evaluation"))
 
+    def research_supplement_fixture(self) -> tuple[dict, dict, dict]:
+        self.set_stage("research")
+        candidate = self.candidate("research-supplement")
+        self.store_candidate(candidate)
+        original = self.research(candidate)
+        original["sources"][1]["evidence_class"] = "market_context"
+        supplemented = copy.deepcopy(original)
+        source = copy.deepcopy(original["sources"][1])
+        source.update(source_id="new-distribution", url="https://example.org/new-channel",
+                      title="New channel evidence", evidence_class="distribution")
+        supplemented["sources"].append(source)
+        supplemented["claims"].append({
+            "claim_id": "new-channel-finding", "statement": "A documented channel exists; access is unvalidated.",
+            "assessment": "evidence", "evidence_refs": ["new-distribution"],
+        })
+        coverage = supplemented["commercial_evidence"]["distribution_and_acquisition"]
+        coverage["claim_ids"].append("new-channel-finding")
+        coverage["source_ids"].append("new-distribution")
+        return candidate, original, supplemented
+
+    def test_research_supplement_cli_preserves_original_and_completion(self) -> None:
+        candidate, original, supplemented = self.research_supplement_fixture()
+        first = self.root / "first-research.json"
+        last = self.root / "supplemented-research.json"
+        first.write_bytes(op.canonical_json_bytes(original))
+        last.write_bytes(op.canonical_json_bytes(supplemented))
+        before = [(self.run_dir / name).read_bytes() for name in ("state.json", "events.jsonl")]
+        selection = {"candidate_refs": [self.candidate_ref(candidate)]}
+        args = ["--runs-dir", str(self.runs_dir), "preflight", self.run_id,
+                "--kind", "research", "--job-id", "research-supplement",
+                "--input", str(last), "--original-input", str(first)]
+        with mock.patch.object(op, "effective_portfolio_selection", return_value=selection):
+            code, report, error = self.run_cli(args)
+            self.assertEqual(code, 2, error)  # Default corrections still reject additions.
+            self.assertNotIn("preflight_receipt", report["validation"])
+            code, report, error = self.run_cli(args + ["--research-supplement"])
+            self.assertEqual(code, 0, error)
+            self.assertEqual(report["research_supplement"]["added_source_ids"], ["new-distribution"])
+            self.assertEqual(report["validation"]["original_input_sha256"], op.sha256_file(first))
+            self.assertTrue(report["validation"]["correction_content_preserved"])
+            self.assertEqual(before, [(self.run_dir / name).read_bytes() for name in ("state.json", "events.jsonl")])
+            op.start_job(self.run_dir, "research-supplement", None)
+            op.complete_job(
+                self.run_dir, "research-supplement", last, "research",
+                report["validation"]["input_sha256"],
+                report["validation"]["preflight_receipt"]["receipt_sha256"],
+            )
+            stored = op.load_json(self.run_dir / op.research_relpath(candidate["candidate_id"], 1))
+            self.assertEqual(stored["sources"][:len(original["sources"])], original["sources"])
+            code, report, error = self.run_cli(args + ["--research-supplement"])
+            self.assertEqual(code, 2, error)
+            self.assertIn("already admitted", str(report["validation"]["errors"]))
+
+    def test_research_supplement_rejects_rewritten_or_reused_evidence(self) -> None:
+        _, original, supplemented = self.research_supplement_fixture()
+        manifest, state = self.load()
+        def verify(value: dict) -> dict:
+            return op.validate_research_supplement(original, value, manifest, state, self.run_dir)
+        self.assertEqual(verify(supplemented)["added_claim_ids"], ["new-channel-finding"])
+        variants = []
+        def changed(label: str, mutate) -> None:
+            value = copy.deepcopy(supplemented)
+            mutate(value)
+            variants.append((label, value))
+        changed("source class", lambda v: v["sources"][1].update(evidence_class="distribution"))
+        changed("claim", lambda v: v["claims"][0].update(statement="Better finding"))
+        changed("status", lambda v: v["critical_control_point_assessment"].update(status="unknown"))
+        changed("unknowns", lambda v: v.update(unknowns=[]))
+        changed("contrary evidence", lambda v: v.update(contrary_evidence=[]))
+        changed("removed refs", lambda v: v["commercial_evidence"]["distribution_and_acquisition"].update(
+            claim_ids=["new-channel-finding"], source_ids=["new-distribution"]))
+        changed("duplicate URL", lambda v: v["sources"][-1].update(url=original["sources"][0]["url"] + "#different"))
+        changed("duplicate source ID", lambda v: v["sources"][-1].update(source_id="source-0"))
+        changed("duplicate claim ID", lambda v: v["claims"][-1].update(claim_id="research-claim-1"))
+        changed("no new evidence for claim", lambda v: v["claims"][-1].update(evidence_refs=["source-1"]))
+        changed("no new claims", lambda v: v.update(claims=v["claims"][:-1]))
+        changed("source limit", lambda v: v["sources"].extend([v["sources"][-1]] * manifest["config"]["sources_max"]))
+        for label, value in variants:
+            with self.subTest(label=label), self.assertRaises(op.WorkflowError):
+                verify(value)
+
+    def test_research_supplement_requires_invalid_original_and_explicit_scope(self) -> None:
+        _, original, supplemented = self.research_supplement_fixture()
+        manifest, state = self.load()
+        valid_original = copy.deepcopy(original)
+        valid_original["sources"][1]["evidence_class"] = "distribution"
+        valid_supplement = copy.deepcopy(supplemented)
+        valid_supplement["sources"][1]["evidence_class"] = "distribution"
+        with self.assertRaisesRegex(op.InputError, "valid original"):
+            op.validate_research_supplement(valid_original, valid_supplement, manifest, state, self.run_dir)
+        with self.assertRaisesRegex(op.InputError, "only during research"):
+            op.validate_research_supplement(original, supplemented, manifest, {**state, "stage": "development"}, self.run_dir)
+        with self.assertRaisesRegex(op.InputError, "requires --kind research"):
+            op.preflight_artifact(self.run_dir, "candidate", research_supplement=True)
+        with self.assertRaisesRegex(op.InputError, "requires --kind research"):
+            op.preflight_artifact(self.run_dir, "research", research_supplement=True)
+        for changed_type in (True, 1.0):
+            invalid_identity = copy.deepcopy(original)
+            invalid_identity["candidate_version"] = changed_type
+            with self.subTest(version=changed_type), self.assertRaisesRegex(op.InputError, "original authored content"):
+                op.validate_research_supplement(invalid_identity, supplemented, manifest, state, self.run_dir)
+
+    def test_research_supplement_can_supply_missing_source_without_rewriting_claim(self) -> None:
+        _, original, supplemented = self.research_supplement_fixture()
+        original["claims"][0]["evidence_refs"].append("new-distribution")
+        supplemented["claims"][0] = copy.deepcopy(original["claims"][0])
+        manifest, state = self.load()
+        result = op.validate_research_supplement(original, supplemented, manifest, state, self.run_dir)
+        self.assertEqual(result["added_source_ids"], ["new-distribution"])
+
     def test_redesign_research_fragments_bind_listed_parent_research(self) -> None:
         self.set_stage("development")
         base = self.candidate("research-fragments")

@@ -24,6 +24,7 @@ import tempfile
 import unicodedata
 from decimal import Decimal, InvalidOperation, ROUND_HALF_UP
 from typing import Any, Iterator, Mapping, Sequence
+from urllib.parse import urldefrag
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -11736,6 +11737,15 @@ def preflight_contract(
             ),
         }
 
+    if kind == "research":
+        constraints["append_only_supplement"] = (
+            "Only an invalid, unadmitted response may receive new source evidence, "
+            "within the existing source and mechanical-attempt limits. Preserve "
+            "every original record and finding; append distinct new source URLs, "
+            "claims each citing a new source, and category/control references only. "
+            "Main-agent preflight requires --research-supplement and --original-input. "
+            "Never use this path to reconsider a valid judgment."
+        )
     constraints["string_whitespace"] = (
         "String fields must not contain surrounding whitespace. A same-author "
         "correction may trim only surrounding string whitespace; internal "
@@ -11923,13 +11933,86 @@ def correction_content_differences(
     return [] if original == corrected else [pointer]
 
 
+def validate_research_supplement(
+    original: Any, supplemented: Any, manifest: Mapping[str, Any],
+    state: Mapping[str, Any], run_dir: Path,
+) -> dict[str, Any]:
+    """Allow new evidence for invalid, unadmitted research; preserve every finding."""
+    if state["stage"] != "research":
+        raise InputError("research supplements are available only during research")
+    before = expect_object(original, "original research")
+    after = expect_object(supplemented, "supplemented research")
+    # Validate the result with the authoritative validator before inspecting its
+    # shape. In particular, normal source limits and unique IDs still apply.
+    canonical = validate_research(after, manifest, run_dir)
+    if (run_dir / research_relpath(
+        canonical["candidate_id"], canonical["candidate_version"],
+    )).exists():
+        raise InputError("cannot supplement already admitted research")
+    try:
+        validate_research(before, manifest, run_dir)
+    except WorkflowError:
+        pass
+    else:
+        raise InputError("cannot supplement a valid original research response")
+    unchanged = dict(after)
+    additions = {}
+    for field in ("sources", "claims"):
+        old = before.get(field)
+        new = after[field]
+        if not isinstance(old, list) or new[:len(old)] != old or len(new) <= len(old):
+            raise InputError(f"research supplement must append {field} without changing original records")
+        additions[field] = new[len(old):]
+        unchanged[field] = old
+    new_source_ids = {item["source_id"] for item in additions["sources"]}
+    urls = {urldefrag(item["url"])[0].rstrip("/") for item in before["sources"]}
+    for item in additions["sources"]:
+        url = urldefrag(item["url"])[0].rstrip("/")
+        if url in urls:
+            raise InputError("research supplement sources must use new, distinct URLs")
+        urls.add(url)
+    for claim in additions["claims"]:
+        if not new_source_ids.intersection(claim["evidence_refs"]):
+            raise InputError("each research supplement claim must cite a new source")
+    # References may only grow; all statuses, contrary findings, unknowns,
+    # falsification mappings and identity fields must remain byte-content equal.
+    for field in ("commercial_evidence", "critical_control_point_assessment"):
+        if field not in before or field not in after:
+            continue
+        original_groups = expect_object(before[field], f"original research.{field}")
+        new_groups = after[field]
+        if field == "critical_control_point_assessment":
+            original_groups = {field: original_groups}
+            new_groups = {field: new_groups}
+        restored = {}
+        for key, group in new_groups.items():
+            old_group = expect_object(original_groups.get(key), f"original research.{field}.{key}")
+            restored[key] = dict(group)
+            for ref in ("claim_ids", "source_ids"):
+                old_refs = old_group.get(ref)
+                if not isinstance(old_refs, list) or group[ref][:len(old_refs)] != old_refs:
+                    raise InputError("research supplement must preserve original category references")
+                restored[key][ref] = old_refs
+        unchanged[field] = restored[field] if field == "critical_control_point_assessment" else restored
+    if canonical_json_bytes(unchanged) != canonical_json_bytes(before):
+        raise InputError("research supplement changes original authored content")
+    return {
+        "mode": "append_only_research_supplement",
+        "added_source_ids": sorted(new_source_ids),
+        "added_claim_ids": [item["claim_id"] for item in additions["claims"]],
+    }
+
+
 def preflight_artifact(
     run_dir: Path,
     kind: str,
     input_path: Path | None = None,
     job_id: str | None = None,
     original_input_path: Path | None = None,
+    research_supplement: bool = False,
 ) -> tuple[dict[str, Any], bool]:
+    if research_supplement and (kind != "research" or original_input_path is None):
+        raise InputError("--research-supplement requires --kind research and --original-input")
     if original_input_path is not None and input_path is None:
         raise InputError("--original-input requires --input")
     manifest, state = load_run(run_dir)
@@ -11989,9 +12072,15 @@ def preflight_artifact(
     if original_input_path is not None:
         try:
             original_digest = sha256_file(original_input_path)
-            differences = correction_content_differences(
-                load_json(original_input_path), load_json(input_path), kind,
-            )
+            if research_supplement:
+                result["research_supplement"] = validate_research_supplement(
+                    load_json(original_input_path), load_json(input_path), manifest, state, run_dir,
+                )
+                differences = []
+            else:
+                differences = correction_content_differences(
+                    load_json(original_input_path), load_json(input_path), kind,
+                )
             for pointer in differences:
                 correction_blocked = True
                 _append_preflight_error(
@@ -13191,6 +13280,7 @@ def build_parser() -> argparse.ArgumentParser:
     preflight.add_argument("--kind", choices=tuple(sorted(PREFLIGHT_ARTIFACT_KINDS)), required=True)
     preflight.add_argument("--input", type=Path)
     preflight.add_argument("--original-input", type=Path, help="Preserved first response for content-preserving correction checks")
+    preflight.add_argument("--research-supplement", action="store_true", help="Validate append-only new evidence for invalid, unadmitted research against its preserved first response")
     preflight.add_argument("--job-id")
 
     scout = subparsers.add_parser("scout-contract", help="emit discovery-safe context and an exact-size output schema")
@@ -13328,6 +13418,7 @@ def dispatch(args: argparse.Namespace) -> int:
             args.input.resolve() if args.input is not None else None,
             args.job_id,
             args.original_input.resolve() if args.original_input is not None else None,
+            args.research_supplement,
         )
         emit(result)
         return 0 if valid else InputError.exit_code
